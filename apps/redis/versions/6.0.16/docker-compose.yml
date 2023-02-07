@@ -1,6 +1,6 @@
 version: '3'
 services:
-  redis-6.0.16:
+  redis:
     image: redis:6.0.16
     restart: always
     networks:

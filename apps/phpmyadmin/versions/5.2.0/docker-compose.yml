@@ -1,6 +1,6 @@
 version: '3'
 services:
-  1panel_phpmyadmin:
+  phpmyadmin:
     image: phpmyadmin/phpmyadmin:5.2.0
     container_name: 1panel_phpmyadmin
     ports:

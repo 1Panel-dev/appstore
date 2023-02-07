@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  mysql5.7:
+  mysql:
     image: mysql:5.7.39
     container_name: ${CONTAINER_NAME}
     restart: always
