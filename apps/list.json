@@ -29,6 +29,7 @@
       "required": [],
       "crossVersionUpdate": false,
       "limit": 1,
+      "recommend": 5,
       "website": "https://www.mysql.com",
       "github": "https://github.com/mysql/mysql-server",
       "document": "https://dev.mysql.com/doc/"
@@ -43,6 +44,7 @@
       "required": [],
       "limit": 1,
       "crossVersionUpdate": true,
+      "recommend": 4,
       "website": "https://openresty.org",
       "github": "https://github.com/openresty/openresty",
       "document": "http://openresty.org/cn/getting-started.html"
@@ -55,6 +57,7 @@
       "shortDesc": "开源博客软件和内容管理系统",
       "type": "website",
       "required": ["mysql"],
+      "recommend": 1,
       "limit": 0,
       "crossVersionUpdate": true,
       "website": "https://wordpress.org/",
@@ -84,6 +87,7 @@
       "type": "website",
       "required": ["mysql"],
       "limit": 0,
+      "recommend": 2,
       "crossVersionUpdate": true,
       "website": "https://halo.run/",
       "github": "https://github.com/halo-dev/halo",
@@ -130,6 +134,21 @@
       "website": "https://min.io/download",
       "github": "https://github.com/minio/minio",
       "document": "https://min.io/docs/minio/kubernetes/upstream"
+    },
+    {
+      "key": "dataease",
+      "name": "DataEase",
+      "tags": ["Tool"],
+      "versions": ["1.18.2"],
+      "shortDesc": "人人可用的开源数据可视化分析工具",
+      "type": "tool",
+      "required": [],
+      "limit": 1,
+      "recommend": 3,
+      "crossVersionUpdate": true,
+      "website": "https://dataease.io/",
+      "github": "https://github.com/dataease/dataease",
+      "document": "https://dataease.io/docs/"
     }
   ]
 }
