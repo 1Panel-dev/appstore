@@ -11,8 +11,8 @@
     },
     {
       "type": "password",
-      "labelZh": "密码",
-      "labelEn": "Password",
+      "labelZh": "Redis 密码",
+      "labelEn": "Redis Password",
       "required": true,
       "default": "eYVX7EwVmmxKPCDmwMtyKVge8oLd2t81",
       "envKey": "PANEL_DB_ROOT_PASSWORD"

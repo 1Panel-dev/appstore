@@ -7,7 +7,7 @@ services:
       -  ${PANEL_APP_PORT_HTTP}:80
     restart: always
     networks:
-      - 1panel
+      - 1panel-network
     volumes:
       - ./data:/var/www/html
     environment:
@@ -20,5 +20,5 @@ services:
       createdBy: "Apps"
 
 networks:
-  1panel:
+  1panel-network:
     external: true

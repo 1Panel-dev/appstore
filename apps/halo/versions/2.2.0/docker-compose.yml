@@ -5,7 +5,7 @@ services:
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
-      - 1panel
+      - 1panel-network
     volumes:
       - ./data:/root/.halo
     ports:
@@ -22,5 +22,5 @@ services:
       createdBy: "Apps"
 
 networks:
-  1panel:
+  1panel-network:
     external: true

@@ -17,12 +17,12 @@ services:
           max-file: "10"
         driver: json-file
       networks:
-        - 1panel
+        - 1panel-network
       volumes:
         - ./data:/data
       labels:
         createdBy: "Apps"
 
 networks:
-  1panel:
+  1panel-network:
     external: true

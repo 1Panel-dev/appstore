@@ -8,7 +8,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: ${PANEL_DB_ROOT_PASSWORD}
     networks:
-      - 1panel
+      - 1panel-network
     ports:
       - ${PANEL_APP_PORT_HTTP}:3306
     volumes:
@@ -23,5 +23,5 @@ services:
     labels:
       createdBy: "Apps"
 networks:
-  1panel:
+  1panel-network:
     external: true

@@ -8,10 +8,10 @@ services:
     environment:
       - PMA_HOST=${PANEL_DB_HOST}
     networks:
-      - 1panel
+      - 1panel-network
     labels:
       createdBy: "Apps"
 
 networks:
-  1panel:
+  1panel-network:
     external: true

@@ -6,7 +6,7 @@ services:
     image: rediscommander/redis-commander:latest
     restart: always
     networks:
-      - 1panel
+      - 1panel-network
     environment:
       - REDIS_HOSTS=1panel:${PANEL_REDIS_HOST}:6379:0:${PANEL_DB_ROOT_PASSWORD}
     ports:
@@ -14,5 +14,5 @@ services:
     labels:
       createdBy: "Apps"
 networks:
-  1panel:
+  1panel-network:
     external: true
