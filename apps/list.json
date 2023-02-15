@@ -1,5 +1,5 @@
 {
-  "version": "0.0.6",
+  "version": "v0.0.37",
   "tags": [
     {
       "key": "WebSite",
@@ -83,7 +83,7 @@
       "name": "Halo",
       "tags": ["WebSite"],
       "versions": ["2.2.0"],
-      "shortDesc": "好用又强大的开源建站工具",
+      "shortDesc": "强大易用的开源建站工具",
       "type": "website",
       "required": ["mysql"],
       "limit": 0,
