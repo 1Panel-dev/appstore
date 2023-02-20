@@ -50,6 +50,14 @@
       "envKey": "HALO_ADMIN_PASSWORD"
     },
     {
+      "type": "text",
+      "labelZh": "外部访问地址",
+      "labelEn": "External URL",
+      "required": true,
+      "default": "localhost",
+      "envKey": "HALO_EXTERNAL_URL"
+    },
+    {
       "type": "number",
       "labelZh": "端口",
       "labelEn": "Port",

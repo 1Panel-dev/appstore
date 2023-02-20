@@ -15,7 +15,7 @@ services:
       - --spring.r2dbc.username=${PANEL_DB_USER}
       - --spring.r2dbc.password=${PANEL_DB_USER_PASSWORD}
       - --spring.sql.init.platform=mysql
-      - --halo.external-url=http://localhost:${PANEL_APP_PORT_HTTP}/
+      - --halo.external-url=http://${HALO_EXTERNAL_URL}:${PANEL_APP_PORT_HTTP}/
       - --halo.security.initializer.superadminusername=${HALO_ADMIN}
       - --halo.security.initializer.superadminpassword=${HALO_ADMIN_PASSWORD}
     labels:
