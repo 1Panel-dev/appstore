@@ -54,7 +54,7 @@
       "labelZh": "外部访问地址",
       "labelEn": "External URL",
       "required": true,
-      "default": "localhost:8080",
+      "default": "http://localhost:8080",
       "envKey": "HALO_EXTERNAL_URL"
     },
     {
