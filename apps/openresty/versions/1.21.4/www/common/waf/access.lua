@@ -56,31 +56,6 @@ local function log(method,url,data,ruletag)
     end
 end
 ------------------------------------规则读取函数-------------------------------------------------------------------
---local function read_rule(var)
---    file = io.open(rulepath..'/'..var,"r")
---    if file==nil then
---        return
---    end
---    t = {}
---    for line in file:lines() do
---        table.insert(t,line)
---    end
---    file:close()
---    return(t)
---end
-
---local function read_json(var)
---    file = io.open(rulepath..'/'..var,"r")
---    if file==nil then
---        return
---    end
---    str = file:read("*a")
---    file:close()
---    list = cjson.decode(str)
---    return list
---end
-
-
 local function read_json(var)
     file = io.open(rulepath..'/'..var .. '.json',"r")
     if file==nil then
@@ -92,14 +67,12 @@ local function read_json(var)
     return list
 end
 
-
 local function select_rules(rules)
     if not rules then return {} end
     new_rules = {}
     for i,v in ipairs(rules) do
-        if v[1] == 1 then
-            print("111")
-            table.insert(new_rules,v[2])
+        if v[3] == 1 then
+            table.insert(new_rules,v[1])
         end
     end
     return new_rules
