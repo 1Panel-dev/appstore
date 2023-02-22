@@ -204,9 +204,24 @@
       "required": [],
       "limit": 1,
       "crossVersionUpdate": false,
-      "website": "https://about.gitlab.com/",
+      "website": "https://www.postgresql.org/",
       "github": "https://github.com/postgres/postgres",
-      "document": "https://docs.gitlab.com/"
+      "document": "https://www.postgresql.org/docs/"
+    },
+    {
+      "key": "mongodb",
+      "name": "MongoDB",
+      "tags": ["Database"],
+      "versions": ["6.0.4"],
+      "shortDescZh": "分布式文件存储数据库",
+      "shortDescEn": "Fractional file storage database",
+      "type": "runtime",
+      "required": [],
+      "limit": 1,
+      "crossVersionUpdate": false,
+      "website": "https://www.mongodb.com/",
+      "github": "https://github.com/mongodb/mongo",
+      "document": "https://www.mongodb.com/docs/"
     }
   ]
 }

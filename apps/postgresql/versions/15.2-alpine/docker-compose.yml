@@ -5,7 +5,7 @@ services:
     image: postgres:15.2-alpine
     restart: always
     environment:
-      - POSTGRES_USER=${PANEL_DB_USER}
+      - POSTGRES_USER=${PANEL_DB_ROOT_USER}
       - POSTGRES_PASSWORD=${PANEL_DB_ROOT_PASSWORD}
     ports:
       - ${PANEL_APP_PORT_HTTP}:5432
