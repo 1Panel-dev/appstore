@@ -2,6 +2,7 @@ version: '3'
 services:
   openresty:
     image: openresty/openresty:1.21.4.1-3-alpine
+    container_name: ${CONTAINER_NAME}
     restart: always
     network_mode: host
     volumes:

@@ -16,6 +16,10 @@
     {
       "key": "Tool",
       "name": "工具"
+    },
+    {
+      "key": "CI/CD",
+      "name": "CI/CD"
     }
   ],
   "items": [
@@ -36,7 +40,7 @@
       "document": "https://dev.mysql.com/doc/"
     },
     {
-      "key": "nginx",
+      "key": "openresty",
       "name": "OpenResty",
       "tags": ["Server"],
       "versions": ["1.21.4"],
@@ -158,6 +162,51 @@
       "website": "https://dataease.io/",
       "github": "https://github.com/dataease/dataease",
       "document": "https://dataease.io/docs/"
+    },
+    {
+      "key": "jenkins",
+      "name": "Jenkins",
+      "tags": ["CI/CD"],
+      "versions": ["2.391"],
+      "shortDescZh": "构建伟大，无所不能",
+      "shortDescEn": "Build great things at any scale",
+      "type": "tool",
+      "required": [],
+      "limit": 1,
+      "crossVersionUpdate": false,
+      "website": "https://www.jenkins.io/",
+      "github": "https://github.com/jenkinsci/jenkins",
+      "document": "https://www.jenkins.io/doc/book/"
+    },
+    {
+      "key": "gitlab",
+      "name": "GitLab",
+      "tags": ["CI/CD"],
+      "versions": ["15.8.3"],
+      "shortDescZh": "项目管理和代码托管平台",
+      "shortDescEn": "Project management and code hosting platform",
+      "type": "tool",
+      "required": [],
+      "limit": 1,
+      "crossVersionUpdate": false,
+      "website": "https://about.gitlab.com/",
+      "github": "https://github.com/gitlabhq/gitlabhq",
+      "document": "https://docs.gitlab.com/"
+    },
+    {
+      "key": "postgresql",
+      "name": "PostgreSQL",
+      "tags": ["Database"],
+      "versions": ["15.2-alpine"],
+      "shortDescZh": "开源关系型数据库",
+      "shortDescEn": "Open Source Relational Database",
+      "type": "runtime",
+      "required": [],
+      "limit": 1,
+      "crossVersionUpdate": false,
+      "website": "https://about.gitlab.com/",
+      "github": "https://github.com/postgres/postgres",
+      "document": "https://docs.gitlab.com/"
     }
   ]
 }

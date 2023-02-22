@@ -3,6 +3,7 @@ services:
   redis:
     image: redis:6.0.16
     restart: always
+    container_name: ${CONTAINER_NAME}
     networks:
       - 1panel-network
     ports:

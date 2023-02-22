@@ -1,0 +1,25 @@
+version: '3'
+services:
+  gitlab:
+    image: 'gitlab/gitlab-ce:15.8.3-ce.0'
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    hostname: ${GITLAB_HOSTNAME}
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'http://${GITLAB_HOSTNAME}:${PANEL_APP_PORT_HTTP}'
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:${PANEL_APP_PORT_HTTP}
+      - ${PANEL_APP_PORT_HTTPS}:443
+      - ${JENKINS_SSH_PORT}:22
+    volumes:
+      -  ./config:/etc/gitlab
+      - ./logs:/var/log/gitlab
+      - ./data:/var/opt/gitlab
+    shm_size: '256m'
+    networks:
+      - 1panel-network
+
+networks:
+  1panel-network:
+    external: true

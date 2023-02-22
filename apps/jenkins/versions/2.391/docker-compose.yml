@@ -1,0 +1,20 @@
+version: '3'
+services:
+  jenkins:
+    container_name: ${CONTAINER_NAME}
+    image: jenkins/jenkins:2.391
+    restart: unless-stopped
+    privileged: true
+    user: root
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8080
+    volumes:
+      - ./jenkins:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /usr/local/bin/docker:/usr/local/bin/docker
+    networks:
+      - 1panel-network
+
+networks:
+  1panel-network:
+    external: true

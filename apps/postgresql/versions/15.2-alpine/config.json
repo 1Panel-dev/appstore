@@ -1,0 +1,28 @@
+{
+  "formFields": [
+    {
+      "type": "text",
+      "labelZh": "用户名",
+      "labelEn": "Username",
+      "required": true,
+      "default": "random",
+      "envKey": "PANEL_DB_USER"
+    },
+    {
+      "type": "password",
+      "labelZh": "用户密码",
+      "labelEn": "Password",
+      "required": true,
+      "default": "random",
+      "envKey": "PANEL_DB_ROOT_PASSWORD"
+    },
+    {
+      "type": "number",
+      "labelZh": "端口",
+      "labelEn": "Port",
+      "required": true,
+      "default": 5432,
+      "envKey": "PANEL_APP_PORT_HTTP"
+    }
+  ]
+}

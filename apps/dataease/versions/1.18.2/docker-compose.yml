@@ -2,7 +2,7 @@ version: '3'
 services:
   dataease:
     image: registry.cn-qingdao.aliyuncs.com/dataease/dataease:v1.18.2
-    container_name: dataease
+    container_name: ${CONTAINER_NAME}
     ports:
       - ${PANEL_APP_PORT_HTTP}:8081
     volumes:
