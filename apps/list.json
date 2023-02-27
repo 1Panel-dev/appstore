@@ -3,11 +3,11 @@
   "tags": [
     {
       "key": "WebSite",
-      "name": "网站"
+      "name": "建站"
     },
     {
       "key": "Server",
-      "name": "服务器"
+      "name": "Web 服务器"
     },
     {
       "key": "Database",
@@ -222,6 +222,51 @@
       "website": "https://www.mongodb.com/",
       "github": "https://github.com/mongodb/mongo",
       "document": "https://www.mongodb.com/docs/"
+    },
+    {
+      "key": "mariadb",
+      "name": "MariaDB",
+      "tags": ["Database"],
+      "versions": ["10.9.5"],
+      "shortDescZh": "MYSQL 复刻版",
+      "shortDescEn": "The open source relational database",
+      "type": "runtime",
+      "required": [],
+      "crossVersionUpdate": false,
+      "limit": 1,
+      "website": "https://mariadb.org/",
+      "github": "https://github.com/MariaDB/server/",
+      "document": "https://mariadb.org/documentation/"
+    },
+    {
+      "key": "docker-registry",
+      "name": "Docker Registry",
+      "tags": ["CI/CD"],
+      "versions": ["2.8.1"],
+      "shortDescZh": "Docker 镜像的存储和分发系统",
+      "shortDescEn": "A storage and distribution system for named Docker images",
+      "type": "runtime",
+      "required": [],
+      "crossVersionUpdate": false,
+      "limit": 1,
+      "website": "https://hub.docker.com/_/registry",
+      "github": "https://github.com/distribution/distribution",
+      "document": "https://docs.docker.com/registry/"
+    },
+    {
+      "key": "nexus",
+      "name": "Nexus Repository",
+      "tags": ["CI/CD"],
+      "versions": ["3.47.1"],
+      "shortDescZh": "开源存储库",
+      "shortDescEn": "An open source repository for build artifacts",
+      "type": "runtime",
+      "required": [],
+      "crossVersionUpdate": false,
+      "limit": 1,
+      "website": "https://www.sonatype.com/products/nexus-repository",
+      "github": "https://github.com/sonatype/docker-nexus3",
+      "document": "https://help.sonatype.com/repomanager3"
     }
   ]
 }
