@@ -15,6 +15,7 @@
       "labelEn": "Port",
       "required": true,
       "default": 8089,
+      "rule": "paramPort",
       "envKey": "PANEL_APP_PORT_HTTP"
     }
   ]

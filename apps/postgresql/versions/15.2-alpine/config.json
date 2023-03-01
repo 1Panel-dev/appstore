@@ -5,7 +5,9 @@
       "labelZh": "用户名",
       "labelEn": "Username",
       "required": true,
-      "default": "random",
+      "default": "pg",
+      "random": true,
+      "rule": "paramCommon",
       "envKey": "PANEL_DB_ROOT_USER"
     },
     {
@@ -13,7 +15,9 @@
       "labelZh": "用户密码",
       "labelEn": "Password",
       "required": true,
-      "default": "random",
+      "default": "pg",
+      "random": true,
+      "rule": "paramComplexity",
       "envKey": "PANEL_DB_ROOT_PASSWORD"
     },
     {
@@ -22,6 +26,7 @@
       "labelEn": "Port",
       "required": true,
       "default": 5432,
+      "rule": "paramPort",
       "envKey": "PANEL_APP_PORT_HTTP"
     }
   ]

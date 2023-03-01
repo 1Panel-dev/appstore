@@ -14,7 +14,7 @@
       "labelZh": "Redis 密码",
       "labelEn": "Redis Password",
       "required": true,
-      "default": "eYVX7EwVmmxKPCDmwMtyKVge8oLd2t81",
+      "default": "",
       "envKey": "PANEL_DB_ROOT_PASSWORD"
     },
     {
@@ -23,6 +23,7 @@
       "labelEn": "Port",
       "required": true,
       "default": 8089,
+      "rule": "paramPort",
       "envKey": "PANEL_APP_PORT_HTTP"
     }
   ]

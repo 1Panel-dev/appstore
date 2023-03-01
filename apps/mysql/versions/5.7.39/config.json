@@ -5,7 +5,9 @@
       "labelZh": "root用户密码",
       "labelEn": "RootPassword",
       "required": true,
-      "default": "random",
+      "default": "mysql",
+      "random": true,
+      "rule": "paramComplexity",
       "envKey": "PANEL_DB_ROOT_PASSWORD"
     },
     {
@@ -14,6 +16,7 @@
       "labelEn": "Port",
       "required": true,
       "default": 3306,
+      "rule": "paramPort",
       "envKey": "PANEL_APP_PORT_HTTP"
     }
   ]

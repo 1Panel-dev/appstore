@@ -6,6 +6,7 @@
       "labelEn": "Port",
       "required": true,
       "default": 5000,
+      "rule": "paramPort",
       "envKey": "PANEL_APP_PORT_HTTP"
     }
   ]

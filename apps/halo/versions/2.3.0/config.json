@@ -14,7 +14,9 @@
       "labelZh": "数据库名",
       "labelEn": "Database",
       "required": true,
-      "default": "random",
+      "default": "halo",
+      "random": true,
+      "rule": "paramCommon",
       "envKey": "PANEL_DB_NAME"
     },
     {
@@ -22,7 +24,9 @@
       "labelZh": "数据库用户",
       "labelEn": "User",
       "required": true,
-      "default": "random",
+      "default": "halo",
+      "random": true,
+      "rule": "paramCommon",
       "envKey": "PANEL_DB_USER"
     },
     {
@@ -30,7 +34,9 @@
       "labelZh": "数据库用户密码",
       "labelEn": "Password",
       "required": true,
-      "default": "random",
+      "default": "halo",
+      "random": true,
+      "rule": "paramComplexity",
       "envKey": "PANEL_DB_USER_PASSWORD"
     },
     {
@@ -39,6 +45,8 @@
       "labelEn": "Admin Username",
       "required": true,
       "default": "admin",
+      "random": true,
+      "rule": "paramCommon",
       "envKey": "HALO_ADMIN"
     },
     {
@@ -46,7 +54,9 @@
       "labelZh": "超级管理员密码",
       "labelEn": "Admin Password",
       "required": true,
-      "default": "random",
+      "default": "halo",
+      "random": true,
+      "rule": "paramComplexity",
       "envKey": "HALO_ADMIN_PASSWORD"
     },
     {
@@ -55,6 +65,7 @@
       "labelEn": "External URL",
       "required": true,
       "default": "http://localhost:8080",
+      "rule": "paramExtUrl",
       "envKey": "HALO_EXTERNAL_URL"
     },
     {
@@ -63,6 +74,7 @@
       "labelEn": "Port",
       "required": true,
       "default": 8080,
+      "rule": "paramPort",
       "envKey": "PANEL_APP_PORT_HTTP"
     }
   ]

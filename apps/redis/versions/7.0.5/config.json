@@ -5,7 +5,9 @@
       "labelZh": "密码",
       "labelEn": "Password",
       "required": true,
-      "default": "random",
+      "default": "jhkdjhkjdhsIUTYURTUYGHJGFFJ",
+      "random": true,
+      "rule": "paramComplexity",
       "envKey": "PANEL_DB_ROOT_PASSWORD"
     },
     {
@@ -14,6 +16,7 @@
       "labelEn": "Port",
       "required": true,
       "default": 6379,
+      "rule": "paramPort",
       "envKey": "PANEL_APP_PORT_HTTP"
     }
   ]

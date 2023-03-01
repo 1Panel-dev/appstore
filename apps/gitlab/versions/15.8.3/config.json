@@ -16,6 +16,7 @@
       "labelEn": "HTTP Port",
       "required": true,
       "default": 8090,
+      "rule": "paramPort",
       "envKey": "PANEL_APP_PORT_HTTP"
     },
     {
@@ -24,6 +25,7 @@
       "labelEn": "HTTPS Port",
       "required": true,
       "default": 8443,
+      "rule": "paramPort",
       "envKey": "PANEL_APP_PORT_HTTPS"
     },
     {
@@ -32,6 +34,7 @@
       "labelEn": "SSH Port",
       "required": true,
       "default": 2229,
+      "rule": "paramPort",
       "envKey": "JENKINS_SSH_PORT"
     }
   ]

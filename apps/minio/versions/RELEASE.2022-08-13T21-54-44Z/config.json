@@ -5,7 +5,9 @@
       "labelZh": "用户",
       "labelEn": "User",
       "required": true,
-      "default": "random",
+      "default": "minio",
+      "random": true,
+      "rule": "paramCommon",
       "envKey": "MINIO_ROOT_USER"
     },
     {
@@ -13,7 +15,9 @@
       "labelZh": "密码",
       "labelEn": "Password",
       "required": true,
-      "default": "random",
+      "default": "minio",
+      "random": true,
+      "rule": "paramComplexity",
       "envKey": "MINIO_ROOT_PASSWORD"
     },
     {
@@ -22,6 +26,7 @@
       "labelEn": "Port",
       "required": true,
       "default": 9000,
+      "rule": "paramPort",
       "envKey": "PANEL_APP_PORT_HTTP"
     },
     {
@@ -30,6 +35,7 @@
       "labelEn": "Port",
       "required": true,
       "default": 9001,
+      "rule": "paramPort",
       "envKey": "PORT_API"
     }
   ]
