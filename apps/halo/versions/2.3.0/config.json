@@ -1,13 +1,39 @@
 {
+
   "formFields": [
     {
-      "type": "service",
-      "key": "mysql",
+      "type": "apps",
       "labelZh": "数据库服务",
       "labelEn": "Database Service",
       "required": true,
-      "default": "",
-      "envKey": "PANEL_DB_HOST"
+      "default": "mysql",
+      "values": [{
+        "label": "MySQL",
+        "value": "mysql"
+      }],
+      "envKey": "HALO_PLATFORM",
+      "child": {
+        "type": "service",
+        "labelZh": "数据库服务",
+        "labelEn": "Database Service",
+        "required": true,
+        "default": "",
+        "envKey": "PANEL_DB_HOST"
+      },
+      "params": [
+        {
+          "type": "param",
+          "key": "mysql",
+          "value": "3306",
+          "envKey": "HALO_DB_PORT"
+        },
+        {
+          "type": "param",
+          "key": "postgresql",
+          "value": "5432",
+          "envKey": "HALO_DB_PORT"
+        }
+      ]
     },
     {
       "type": "text",

@@ -5,7 +5,7 @@
       "labelZh": "用户名",
       "labelEn": "Username",
       "required": true,
-      "default": "pg",
+      "default": "user",
       "random": true,
       "rule": "paramCommon",
       "envKey": "PANEL_DB_ROOT_USER"
@@ -15,7 +15,7 @@
       "labelZh": "用户密码",
       "labelEn": "Password",
       "required": true,
-      "default": "pg",
+      "default": "password",
       "random": true,
       "rule": "paramComplexity",
       "envKey": "PANEL_DB_ROOT_PASSWORD"

@@ -3,7 +3,7 @@
     {
       "type": "password",
       "labelZh": "root用户密码",
-      "labelEn": "RootPassword",
+      "labelEn": "Root Password",
       "required": true,
       "default": "mysql",
       "random": true,

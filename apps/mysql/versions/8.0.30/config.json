@@ -7,7 +7,7 @@
       "required": true,
       "default": "mysql",
       "random": true,
-      "rule": "paramCommon",
+      "rule": "paramComplexity",
       "envKey": "PANEL_DB_ROOT_PASSWORD"
     },
     {

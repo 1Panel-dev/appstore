@@ -11,10 +11,10 @@ services:
     ports:
       - ${PANEL_APP_PORT_HTTP}:8090
     command:
-      - --spring.r2dbc.url=r2dbc:pool:mysql://${PANEL_DB_HOST}:3306/${PANEL_DB_NAME}
+      - --spring.r2dbc.url=r2dbc:pool:${HALO_PLATFORM}://${PANEL_DB_HOST}:${HALO_DB_PORT}/${PANEL_DB_NAME}
       - --spring.r2dbc.username=${PANEL_DB_USER}
       - --spring.r2dbc.password=${PANEL_DB_USER_PASSWORD}
-      - --spring.sql.init.platform=mysql
+      - --spring.sql.init.platform=${HALO_PLATFORM}
       - --halo.external-url=${HALO_EXTERNAL_URL}
       - --halo.security.initializer.superadminusername=${HALO_ADMIN}
       - --halo.security.initializer.superadminpassword=${HALO_ADMIN_PASSWORD}
