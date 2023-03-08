@@ -7,7 +7,7 @@
       "labelEn": "Redis Service",
       "required": true,
       "default": "",
-      "envKey": "PANEL_REDIS_HOST"
+      "envKey": "PANEL_DB_HOST"
     },
     {
       "type": "password",
