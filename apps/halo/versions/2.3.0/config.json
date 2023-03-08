@@ -43,7 +43,8 @@
       "default": "halo",
       "random": true,
       "rule": "paramCommon",
-      "envKey": "PANEL_DB_NAME"
+      "envKey": "PANEL_DB_NAME",
+      "edit": true
     },
     {
       "type": "text",
@@ -53,7 +54,8 @@
       "default": "halo",
       "random": true,
       "rule": "paramCommon",
-      "envKey": "PANEL_DB_USER"
+      "envKey": "PANEL_DB_USER",
+      "edit": true
     },
     {
       "type": "password",
@@ -63,7 +65,8 @@
       "default": "halo",
       "random": true,
       "rule": "paramComplexity",
-      "envKey": "PANEL_DB_USER_PASSWORD"
+      "envKey": "PANEL_DB_USER_PASSWORD",
+      "edit": true
     },
     {
       "type": "text",
@@ -73,7 +76,8 @@
       "default": "admin",
       "random": true,
       "rule": "paramCommon",
-      "envKey": "HALO_ADMIN"
+      "envKey": "HALO_ADMIN",
+      "edit": true
     },
     {
       "type": "password",
@@ -83,7 +87,8 @@
       "default": "halo",
       "random": true,
       "rule": "paramComplexity",
-      "envKey": "HALO_ADMIN_PASSWORD"
+      "envKey": "HALO_ADMIN_PASSWORD",
+      "edit": true
     },
     {
       "type": "text",
@@ -92,7 +97,8 @@
       "required": true,
       "default": "http://localhost:8080",
       "rule": "paramExtUrl",
-      "envKey": "HALO_EXTERNAL_URL"
+      "envKey": "HALO_EXTERNAL_URL",
+      "edit": true
     },
     {
       "type": "number",
@@ -101,7 +107,8 @@
       "required": true,
       "default": 8080,
       "rule": "paramPort",
-      "envKey": "PANEL_APP_PORT_HTTP"
+      "envKey": "PANEL_APP_PORT_HTTP",
+      "edit": true
     }
   ]
 }

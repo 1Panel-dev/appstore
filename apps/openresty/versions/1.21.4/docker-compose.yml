@@ -11,5 +11,6 @@ services:
       - ./conf/conf.d:/usr/local/openresty/nginx/conf/conf.d/
       - ./www:/www
       - ./root:/usr/share/nginx/html
+      - /etc/localtime:/etc/localtime
     labels:
       createdBy: "Apps"
