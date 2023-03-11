@@ -3,7 +3,7 @@ services:
   jenkins:
     container_name: ${CONTAINER_NAME}
     image: jenkins/jenkins:2.391
-    restart: unless-stopped
+    restart: always
     privileged: true
     user: root
     ports:

@@ -7,7 +7,7 @@ services:
     networks:
       - 1panel-network
     volumes:
-      - ./data:/root/.halo
+      - ./data:/root/.halo2
     ports:
       - ${PANEL_APP_PORT_HTTP}:8090
     command:

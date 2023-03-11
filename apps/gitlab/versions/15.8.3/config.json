@@ -2,7 +2,7 @@
   "formFields": [
     {
       "type": "text",
-      "labelZh": "访问地址",
+      "labelZh": "域名或IP",
       "labelEn": "Address",
       "required": true,
       "default": "",

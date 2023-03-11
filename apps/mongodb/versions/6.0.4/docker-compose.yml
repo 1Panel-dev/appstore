@@ -3,6 +3,7 @@ services:
   mongodb:
     container_name: ${CONTAINER_NAME}
     image: mongo:6.0.4
+    restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: ${PANEL_DB_ROOT_USER}
       MONGO_INITDB_ROOT_PASSWORD: ${PANEL_DB_ROOT_PASSWORD}

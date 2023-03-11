@@ -2,6 +2,7 @@ version: '3'
 services:
   mariadb:
     container_name: ${CONTAINER_NAME}
+    restart: always
     networks:
       - 1panel-network
     image: "mariadb:10.9.5"

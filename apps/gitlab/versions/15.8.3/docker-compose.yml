@@ -6,6 +6,7 @@ services:
     restart: always
     hostname: ${GITLAB_HOSTNAME}
     environment:
+      TZ: 'Asia/Shanghai'
       GITLAB_OMNIBUS_CONFIG: |
         external_url 'http://${GITLAB_HOSTNAME}:${PANEL_APP_PORT_HTTP}'
     ports:

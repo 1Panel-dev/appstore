@@ -3,6 +3,7 @@ services:
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:5.2.0
     container_name: ${CONTAINER_NAME}
+    restart: always
     ports:
       - ${PANEL_APP_PORT_HTTP}:80
     environment:

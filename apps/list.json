@@ -169,20 +169,6 @@
       "document": "https://www.jenkins.io/doc/book/"
     },
     {
-      "key": "gitlab",
-      "name": "GitLab",
-      "tags": ["CI/CD"],
-      "versions": ["15.8.3"],
-      "shortDescZh": "项目管理和代码托管平台",
-      "shortDescEn": "Project management and code hosting platform",
-      "type": "tool",
-      "limit": 1,
-      "crossVersionUpdate": false,
-      "website": "https://about.gitlab.com/",
-      "github": "https://github.com/gitlabhq/gitlabhq",
-      "document": "https://docs.gitlab.com/"
-    },
-    {
       "key": "postgresql",
       "name": "PostgreSQL",
       "tags": ["Database"],
