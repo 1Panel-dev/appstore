@@ -45,10 +45,8 @@
       "labelEn": "Admin Password",
       "required": true,
       "default": "admin",
-      "random": true,
-      "rule": "paramCommon",
       "envKey": "DE_ADMIN",
-      "disabled": true
+      "disabled":true
     },
     {
       "type": "text",
@@ -56,10 +54,8 @@
       "labelEn": "Admin Password",
       "required": true,
       "default": "dataease",
-      "random": true,
-      "rule": "paramComplexity",
       "envKey": "DE_ADMIN_PASSWORD",
-      "disabled": true
+      "disabled":true
     },
     {
       "type": "number",
