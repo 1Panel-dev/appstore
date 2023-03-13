@@ -1,5 +1,5 @@
 local match = string.match
-local ngxmatch=ngx.re.match
+local ngxMatch=ngx.re.match
 local unescape=ngx.unescape_uri
 local get_headers = ngx.req.get_headers
 local cjson = require "cjson"
@@ -11,19 +11,9 @@ local function optionIsOn(options)
     return options == "on" or options == "On" or options == "ON"
 end
 
-local logpath = ngx.var.logdir
-local rulepath = ngx.var.RulePath
-local attacklog = optionIsOn(ngx.var.attackLog)
-local Redirect=optionIsOn(ngx.var.redirect)
-local CCDeny = optionIsOn(ngx.var.CCDeny)
-local UrlBlockDeny = optionIsOn(ngx.var.urlBlockDeny)
-local UrlWhiteAllow = optionIsOn(ngx.var.urlWhiteAllow)
-local IpBlockDeny = optionIsOn(ngx.var.ipBlockDeny)
-local IpWhiteAllow = optionIsOn(ngx.var.ipWhiteAllow)
+local logPath = ngx.var.logdir
+local rulePath = ngx.var.RulePath
 local PostDeny = optionIsOn(ngx.var.postDeny)
-local ArgsDeny = optionIsOn(ngx.var.argsDeny)
-local CookieDeny = optionIsOn(ngx.var.cookieDeny)
-local FileExtDeny = optionIsOn(ngx.var.fileExtDeny)
 
 local function getClientIp()
     IP  = ngx.var.remote_addr
@@ -40,7 +30,8 @@ local function write(logfile,msg)
     fd:close()
 end
 local function log(method,url,data,ruletag)
-    if attacklog then
+    local attackLog = optionIsOn(ngx.var.attackLog)
+    if attackLog then
         local realIp = getClientIp()
         local ua = ngx.var.http_user_agent
         local servername=ngx.var.server_name
@@ -51,13 +42,13 @@ local function log(method,url,data,ruletag)
         else
             line = realIp.." ["..time.."] \""..method.." "..servername..url.."\" \""..data.."\" - \""..ruletag.."\"\n"
         end
-        local filename = logpath..'/'..servername.."_"..ngx.today().."_sec.log"
+        local filename = logPath..'/'..servername.."_"..ngx.today().."_sec.log"
         write(filename,line)
     end
 end
 ------------------------------------规则读取函数-------------------------------------------------------------------
 local function read_json(var)
-    file = io.open(rulepath..'/'..var .. '.json',"r")
+    file = io.open(rulePath..'/'..var .. '.json',"r")
     if file==nil then
         return
     end
@@ -79,7 +70,7 @@ local function select_rules(rules)
 end
 
 local function read_str(var)
-    file = io.open(rulepath..'/'..var,"r")
+    file = io.open(rulePath..'/'..var,"r")
     if file==nil then
         return
     end
@@ -88,22 +79,11 @@ local function read_str(var)
     return str
 end
 
-local argsCheckList=select_rules(read_json('args_check'))
-local postCheckList=select_rules(read_json('post_check'))
-local cookieBlockList=select_rules(read_json('cookie_block'))
-local uarules=select_rules(read_json('user_agent'))
-
-local urlWhiteList=read_json('url_white')
-local urlBlockList=read_json('url_block')
-local ipWhiteList=read_json('ip_white')
-local ipBlockList=read_json('ip_block')
-local fileExtBlockList = read_json('file_ext_block')
-
-local ccRate=read_str('cc.json')
 local html=read_str('html')
 
 local function say_html()
-    if Redirect then
+    local redirect = optionIsOn(ngx.var.redirect)
+    if redirect then
         ngx.header.content_type = "text/html"
         ngx.status = ngx.HTTP_FORBIDDEN
         ngx.say(html)
@@ -111,11 +91,13 @@ local function say_html()
     end
 end
 
-local function whiteurl()
-    if UrlWhiteAllow then
-        if urlWhiteList ~=nil then
-            for _,rule in pairs(urlWhiteList) do
-                if ngxmatch(ngx.var.uri,rule,"isjo") then
+local function whiteUrlCheck()
+    local urlWhiteAllow = optionIsOn(ngx.var.urlWhiteAllow)
+    if urlWhiteAllow then
+        local urlWhiteList = read_json('url_white')
+        if urlWhiteList ~= nil then
+            for _, rule in pairs(urlWhiteList) do
+                if ngxMatch(ngx.var.uri, rule, "isjo") then
                     return true
                 end
             end
@@ -123,8 +105,11 @@ local function whiteurl()
     end
     return false
 end
+
 local function fileExtCheck(ext)
-    if FileExtDeny then
+    local fileExtDeny = optionIsOn(ngx.var.fileExtDeny)
+    if fileExtDeny then
+        local fileExtBlockList = read_json('fileExtBlockList')
         local items = Set(fileExtBlockList)
         ext=string.lower(ext)
         if ext then
@@ -144,8 +129,10 @@ function Set (list)
     return set
 end
 
-local function args()
-    if ArgsDeny then
+local function getArgsCheck()
+    local argsDeny = optionIsOn(ngx.var.argsDeny)
+    if argsDeny then
+        local argsCheckList=select_rules(read_json('args_check'))
         if argsCheckList then
             for _,rule in pairs(argsCheckList) do
                 local uriArgs = ngx.req.get_uri_args()
@@ -162,7 +149,7 @@ local function args()
                     else
                         data=val
                     end
-                    if data and type(data) ~= "boolean" and rule ~="" and ngxmatch(unescape(data),rule,"isjo") then
+                    if data and type(data) ~= "boolean" and rule ~="" and ngxMatch(unescape(data),rule,"isjo") then
                         log('GET',ngx.var.request_uri,"-",rule)
                         say_html()
                         return true
@@ -175,11 +162,13 @@ local function args()
 end
 
 
-local function url()
-    if UrlBlockDeny then
-        for _,rule in pairs(urlBlockList) do
-            if rule ~="" and ngxmatch(ngx.var.request_uri,rule,"isjo") then
-                log('GET',ngx.var.request_uri,"-",rule)
+local function blockUrlCheck()
+    local urlBlockDeny = optionIsOn(ngx.var.urlBlockDeny)
+    if urlBlockDeny then
+        local urlBlockList=read_json('url_block')
+        for _, rule in pairs(urlBlockList) do
+            if rule ~= "" and ngxMatch(ngx.var.request_uri, rule, "isjo") then
+                log('GET', ngx.var.request_uri, "-", rule)
                 say_html()
                 return true
             end
@@ -191,8 +180,9 @@ end
 function ua()
     local ua = ngx.var.http_user_agent
     if ua ~= nil then
-        for _,rule in pairs(uarules) do
-            if rule ~="" and ngxmatch(ua,rule,"isjo") then
+        local uaRules = select_rules(read_json('user_agent'))
+        for _,rule in pairs(uaRules) do
+            if rule ~="" and ngxMatch(ua,rule,"isjo") then
                 log('UA',ngx.var.request_uri,"-",rule)
                 say_html()
                 return true
@@ -202,8 +192,9 @@ function ua()
     return false
 end
 function body(data)
+    local postCheckList = select_rules(read_json('post_check'))
     for _,rule in pairs(postCheckList) do
-        if rule ~="" and data~="" and ngxmatch(unescape(data),rule,"isjo") then
+        if rule ~="" and data~="" and ngxMatch(unescape(data),rule,"isjo") then
             log('POST',ngx.var.request_uri,data,rule)
             say_html()
             return true
@@ -211,11 +202,13 @@ function body(data)
     end
     return false
 end
-local function cookie()
+local function cookieCheck()
     local ck = ngx.var.http_cookie
-    if CookieDeny and ck then
+    local cookieDeny = optionIsOn(ngx.var.cookieDeny)
+    if cookieDeny and ck then
+        local cookieBlockList = select_rules(read_json('cookie_block'))
         for _,rule in pairs(cookieBlockList) do
-            if rule ~="" and ngxmatch(ck,rule,"isjo") then
+            if rule ~="" and ngxMatch(ck,rule,"isjo") then
                 log('Cookie',ngx.var.request_uri,"-",rule)
                 say_html()
                 return true
@@ -225,23 +218,25 @@ local function cookie()
     return false
 end
 
-local function denycc()
-    if CCDeny and ccRate then
+local function denyCC()
+    local ccRate = read_str('cc.json')
+    local ccDeny = optionIsOn(ngx.var.CCDeny)
+    if ccDeny and ccRate then
         local uri=ngx.var.uri
-        CCcount=tonumber(string.match(ccRate,'(.*)/'))
-        CCseconds=tonumber(string.match(ccRate,'/(.*)'))
-        local uri = getClientIp()..uri
+        ccCount=tonumber(string.match(ccRate,'(.*)/'))
+        ccSeconds=tonumber(string.match(ccRate,'/(.*)'))
+        local access_uri = getClientIp()..uri
         local limit = ngx.shared.limit
-        local req,_=limit:get(uri)
+        local req,_=limit:get(access_uri)
         if req then
-            if req > CCcount then
+            if req > ccCount then
                 ngx.exit(503)
                 return true
             else
-                limit:incr(token,1)
+                limit:incr(access_uri,1)
             end
         else
-            limit:set(uri,1,CCseconds)
+            limit:set(access_uri,1,ccSeconds)
         end
     end
     return false
@@ -265,8 +260,10 @@ local function get_boundary()
     return match(header, ";%s*boundary=([^\",;]+)")
 end
 
-local function whiteip()
-    if IpWhiteAllow then
+local function whiteIpCheck()
+    local ipWhiteAllow = optionIsOn(ngx.var.ipWhiteAllow)
+    if ipWhiteAllow then
+        local ipWhiteList=read_json('ip_white')
         if next(ipWhiteList) ~= nil then
             for _,ip in pairs(ipWhiteList) do
                 if getClientIp()==ip then
@@ -278,8 +275,10 @@ local function whiteip()
     return false
 end
 
-local function blockip()
-    if IpBlockDeny then
+local function blockIpCheck()
+    local ipBlockDeny = optionIsOn(ngx.var.ipBlockDeny)
+    if ipBlockDeny then
+        local ipBlockList=read_json('ip_block')
         if next(ipBlockList) ~= nil then
             for _,ip in pairs(ipBlockList) do
                 if getClientIp()==ip then
@@ -292,39 +291,41 @@ local function blockip()
     return false
 end
 
+local function handleBodyKeyOrVal(kv)
+    if type(kv) == "table" then
+        if type(kv[1]) == "boolean" then
+            return
+        end
+        data = table.concat(kv, ", ")
+    else
+        data = kv
+    end
+    if data then
+        if type(data) ~= "boolean" then
+            body(data)
+        end
+    end
+end
 
-
-if whiteip() then
-elseif blockip() then
-elseif denycc() then
-elseif ngx.var.http_Acunetix_Aspect then
-    ngx.exit(444)
-elseif ngx.var.http_X_Scan_Memo then
-    ngx.exit(444)
-elseif whiteurl() then
-elseif ua() then
-elseif url() then
-elseif args() then
-elseif cookie() then
-elseif PostDeny then
-    if method=="POST" then
+local function postCheck()
+    if method == "POST" then
         local boundary = get_boundary()
         if boundary then
             local len = string.len
-            local sock, err = ngx.req.socket()
+            local sock = ngx.req.socket()
             if not sock then
                 return
             end
             ngx.req.init_body(128 * 1024)
             sock:settimeout(0)
-            local content_length = nil
-            content_length=tonumber(ngx.req.get_headers()['content-length'])
+            local contentLength = nil
+            contentLength = tonumber(ngx.req.get_headers()['content-length'])
             local chunk_size = 4096
-            if content_length < chunk_size then
-                chunk_size = content_length
+            if contentLength < chunk_size then
+                chunk_size = contentLength
             end
             local size = 0
-            while size < content_length do
+            while size < contentLength do
                 local data, err, partial = sock:receive(chunk_size)
                 data = data or partial
                 if not data then
@@ -335,15 +336,15 @@ elseif PostDeny then
                     return true
                 end
                 size = size + len(data)
-                local m = ngxmatch(data,[[Content-Disposition: form-data;(.+)filename="(.+)\\.(.*)"]],'ijo')
+                local m = ngxMatch(data, 'Content-Disposition: form-data; (.+)filename="(.+)\\.(.*)"', 'ijo')
                 if m then
                     fileExtCheck(m[3])
-                    filetranslate = true
+                    fileTranslate = true
                 else
-                    if ngxmatch(data,"Content-Disposition:",'isjo') then
-                        filetranslate = false
+                    if ngxMatch(data, "Content-Disposition:", 'isjo') then
+                        fileTranslate = false
                     end
-                    if filetranslate==false then
+                    if fileTranslate == false then
                         if body(data) then
                             return true
                         end
@@ -357,25 +358,32 @@ elseif PostDeny then
             ngx.req.finish_body()
         else
             ngx.req.read_body()
-            local args = ngx.req.get_post_args()
-            if not args then
+            local bodyObj = ngx.req.get_post_args()
+            if not bodyObj then
                 return
             end
-            for key, val in pairs(args) do
-                if type(val) == "table" then
-                    if type(val[1]) == "boolean" then
-                        return
-                    end
-                    data=table.concat(val, ", ")
-                else
-                    data=val
-                end
-                if data and type(data) ~= "boolean" and body(data) then
-                    body(key)
-                end
+            for key, val in pairs(bodyObj) do
+                handleBodyKeyOrVal(key)
+                handleBodyKeyOrVal(val)
             end
         end
     end
+end
+
+if whiteIpCheck() then
+elseif blockIpCheck() then
+elseif denyCC() then
+elseif ngx.var.http_Acunetix_Aspect then
+    ngx.exit(444)
+elseif ngx.var.http_X_Scan_Memo then
+    ngx.exit(444)
+elseif whiteUrlCheck() then
+elseif ua() then
+elseif blockUrlCheck() then
+elseif getArgsCheck() then
+elseif cookieCheck() then
+elseif PostDeny then
+    postCheck()
 else
     return
 end
