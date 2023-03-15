@@ -1,7 +1,7 @@
 version: "3"
 services:
   halo:
-    image: halohub/halo:2.3.0
+    image: halohub/halo:2.3.2
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
