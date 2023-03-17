@@ -42,7 +42,7 @@
       "default": "halo",
       "random": true,
       "rule": "paramCommon",
-      "envKey": "PANEL_DB_NAME",
+      "envKey": "PANEL_DB_NAME"
     },
     {
       "type": "text",
@@ -52,7 +52,7 @@
       "default": "halo",
       "random": true,
       "rule": "paramCommon",
-      "envKey": "PANEL_DB_USER",
+      "envKey": "PANEL_DB_USER"
     },
     {
       "type": "password",
@@ -62,7 +62,7 @@
       "default": "halo",
       "random": true,
       "rule": "paramComplexity",
-      "envKey": "PANEL_DB_USER_PASSWORD",
+      "envKey": "PANEL_DB_USER_PASSWORD"
     },
     {
       "type": "text",
@@ -72,7 +72,7 @@
       "default": "admin",
       "random": true,
       "rule": "paramCommon",
-      "envKey": "HALO_ADMIN",
+      "envKey": "HALO_ADMIN"
     },
     {
       "type": "password",
@@ -82,7 +82,7 @@
       "default": "halo",
       "random": true,
       "rule": "paramComplexity",
-      "envKey": "HALO_ADMIN_PASSWORD",
+      "envKey": "HALO_ADMIN_PASSWORD"
     },
     {
       "type": "text",

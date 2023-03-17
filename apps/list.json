@@ -115,7 +115,7 @@
       "key": "redis-commander",
       "name": "Redis-Commander",
       "tags": ["Tool"],
-      "versions": ["0.8.0"],
+      "versions": ["0.8.1"],
       "shortDescZh": "Redis web 管理工具",
       "shortDescEn": "Redis web management tool",
       "type": "tool",

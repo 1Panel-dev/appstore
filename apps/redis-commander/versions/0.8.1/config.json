@@ -18,13 +18,36 @@
       "envKey": "PANEL_DB_ROOT_PASSWORD"
     },
     {
+      "type": "text",
+      "labelZh": "登录用户名",
+      "labelEn": "Username",
+      "required": true,
+      "default": "root",
+      "random": true,
+      "rule": "paramCommon",
+      "envKey": "COMMANDER_ADMIN",
+      "edit": true
+    },
+    {
+      "type": "text",
+      "labelZh": "登录密码",
+      "labelEn": "Password",
+      "required": true,
+      "default": "P@ssword@redis",
+      "random": true,
+      "rule": "paramComplexity",
+      "envKey": "COMMANDER_PASSWORD",
+      "edit": true
+    },
+    {
       "type": "number",
       "labelZh": "端口",
       "labelEn": "Port",
       "required": true,
       "default": 8089,
       "rule": "paramPort",
-      "envKey": "PANEL_APP_PORT_HTTP"
+      "envKey": "PANEL_APP_PORT_HTTP",
+      "edit": true
     }
   ]
 }
