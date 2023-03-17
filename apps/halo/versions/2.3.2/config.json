@@ -43,7 +43,6 @@
       "random": true,
       "rule": "paramCommon",
       "envKey": "PANEL_DB_NAME",
-      "edit": true
     },
     {
       "type": "text",
@@ -54,7 +53,6 @@
       "random": true,
       "rule": "paramCommon",
       "envKey": "PANEL_DB_USER",
-      "edit": true
     },
     {
       "type": "password",
@@ -65,7 +63,6 @@
       "random": true,
       "rule": "paramComplexity",
       "envKey": "PANEL_DB_USER_PASSWORD",
-      "edit": true
     },
     {
       "type": "text",
@@ -76,7 +73,6 @@
       "random": true,
       "rule": "paramCommon",
       "envKey": "HALO_ADMIN",
-      "edit": true
     },
     {
       "type": "password",
@@ -87,7 +83,6 @@
       "random": true,
       "rule": "paramComplexity",
       "envKey": "HALO_ADMIN_PASSWORD",
-      "edit": true
     },
     {
       "type": "text",
