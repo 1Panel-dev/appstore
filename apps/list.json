@@ -237,6 +237,20 @@
       "website": "https://www.sonatype.com/products/nexus-repository",
       "github": "https://github.com/sonatype/docker-nexus3",
       "document": "https://help.sonatype.com/repomanager3"
+    },
+    {
+      "key": "uptime-kuma",
+      "name": "Uptime Kuma",
+      "tags": ["Tool"],
+      "versions": ["1.20.2"],
+      "shortDescZh": "一个自托管服务监控工具",
+      "shortDescEn": "A fancy self-hosted monitoring tool",
+      "type": "tool",
+      "limit": 0,
+      "crossVersionUpdate": false,
+      "website": "https://uptime.kuma.pet/",
+      "github": "https://github.com/louislam/uptime-kuma",
+      "document": "https://github.com/louislam/uptime-kuma/wiki"
     }
   ]
 }
