@@ -239,6 +239,20 @@
       "document": "https://help.sonatype.com/repomanager3"
     },
     {
+      "key": "wikijs",
+      "name": "Wiki.js",
+      "tags": ["WebSite"],
+      "versions": ["2.5.298"],
+      "shortDescZh": "一个基于 Node.js 构建的现代而强大的 Wiki 应用程序。",
+      "shortDescEn": "A modern and powerful wiki app built on Node.js",
+      "type": "website",
+      "limit": 0,
+      "crossVersionUpdate": false,
+      "website": "https://js.wiki/",
+      "github": "https://github.com/requarks/wiki",
+      "document": "https://docs.requarks.io/"
+     },
+     { 
       "key": "uptime-kuma",
       "name": "Uptime Kuma",
       "tags": ["Tool"],
