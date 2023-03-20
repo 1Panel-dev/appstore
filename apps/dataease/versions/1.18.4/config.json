@@ -50,7 +50,7 @@
     },
     {
       "type": "text",
-      "labelZh": "管理员密码",
+      "labelZh": "管理员默认密码",
       "labelEn": "Admin Password",
       "required": true,
       "default": "dataease",
