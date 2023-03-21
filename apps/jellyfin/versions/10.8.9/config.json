@@ -1,0 +1,35 @@
+
+{  
+  "formFields": [ 
+    {  
+      "type": "number",
+      "labelZh": "网页端口",  
+      "labelEn": "WebUI Port",  
+      "required": true,  
+      "default": 8096,  
+      "rule": "paramPort",  
+      "envKey": "WEBUI_PORT",  
+      "edit": true  
+    },
+    {  
+      "type": "text",
+      "labelZh": "媒体文件夹路径",  
+      "labelEn": "Media folder path",  
+      "required": true,  
+      "default": "./data/media",  
+      "rule": "paramCommon",  
+      "envKey": "MEDIA_FOLDER_PATH",  
+      "edit": true  
+    },
+    {  
+      "type": "text",
+      "labelZh": "缓存文件夹路径",  
+      "labelEn": "Cache folder path",  
+      "required": true,  
+      "default": "./data/cache",  
+      "rule": "paramCommon",  
+      "envKey": "CACHE_FOLDER_PATH",  
+      "edit": true  
+    }
+  ]  
+}

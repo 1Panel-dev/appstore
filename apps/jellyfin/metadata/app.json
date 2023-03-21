@@ -1,0 +1,15 @@
+
+{  
+  "key": "Jellyfin",
+  "name": "Jellyfin",
+  "tags": ["Tools"],
+  "versions": ["10.8.9"],
+  "shortDescZh": "Jellyfin是一套多媒体应用程序软件套装",
+  "shortDescEn": "Jellyfin is a multimedia application software suite",
+  "type": "Tools",
+  "limit": 0,
+  "crossVersionUpdate": false,
+  "website": "https://jellyfin.org/",
+  "github": "https://github.com/jellyfin/jellyfin",
+  "document": "https://jellyfin.org/docs/"
+}
