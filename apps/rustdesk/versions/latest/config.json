@@ -1,0 +1,37 @@
+
+{  
+  "formFields": [ 
+    {  
+      "type": "number",
+      "labelZh": "hbbs端口(配合IP/域名使用)",  
+      "labelEn": "hbbs port (used with IP/domain)",  
+      "required": true,  
+      "default": 21116,  
+      "rule": "paramPort",  
+      "envKey": "HBBS_PORT",  
+      "edit": true  
+    },
+    {  
+      "type": "number",
+      "labelZh": "hbbr端口(客户端中继服务器端口)",  
+      "labelEn": "hbbr port (client relay server port)",  
+      "required": true,  
+      "default": 21117,  
+      "rule": "paramPort",  
+      "envKey": "HBBR_PORT",  
+      "edit": true  
+    },
+    {  
+      "type": "text",
+      "labelZh": "IP地址或域名(必改项)",  
+      "labelEn": "IP address or domain name (must change item)",  
+      "required": true,  
+      "default": "172.17.0.1",  
+      "rule": "paramCommon",  
+      "envKey": "HOST_ADDRESS",  
+      "edit": true  
+    }
+  ]  
+}
+
+
