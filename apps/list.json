@@ -101,7 +101,7 @@
       "key": "phpmyadmin",
       "name": "phpMyAdmin",
       "tags": ["Tool"],
-      "versions": ["5.2.0"],
+      "versions": ["5.2.1"],
       "shortDescZh": "MySQL 数据库管理工具",
       "shortDescEn": "MySQL database management tools",
       "type": "tool",

@@ -8,10 +8,6 @@
       "default": "postgresql",
       "values": [
         {
-          "label": "PostgreSQL",
-          "value": "postgresql"
-        },
-        {
           "label": "MySQL",
           "value": "mysql"
         }

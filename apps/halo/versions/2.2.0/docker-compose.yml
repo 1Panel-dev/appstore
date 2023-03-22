@@ -10,6 +10,12 @@ services:
       - ./data:/root/.halo2
     ports:
       - ${PANEL_APP_PORT_HTTP}:8090
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8090/actuator/health/readiness" ]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
     command:
       - --spring.r2dbc.url=r2dbc:pool:${HALO_PLATFORM}://${PANEL_DB_HOST}:${HALO_DB_PORT}/${PANEL_DB_NAME}
       - --spring.r2dbc.username=${PANEL_DB_USER}
