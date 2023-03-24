@@ -18,6 +18,79 @@
       "envKey": "PANEL_DB_ROOT_PASSWORD"
     },
     {
+      "type": "select",
+      "labelZh": "数据库",
+      "labelEn": "Database",
+      "required": true,
+      "default": "0",
+      "values": [
+        {
+          "label": "db0",
+          "value": "0"
+        },
+        {
+          "label": "db1",
+          "value": "1"
+        },
+        {
+          "label": "db2",
+          "value": "2"
+        },
+        {
+          "label": "db3",
+          "value": "3"
+        },
+        {
+          "label": "db4",
+          "value": "4"
+        },
+        {
+          "label": "db5",
+          "value": "5"
+        },
+        {
+          "label": "db6",
+          "value": "6"
+        },
+        {
+          "label": "db7",
+          "value": "7"
+        },
+        {
+          "label": "db8",
+          "value": "8"
+        },        {
+          "label": "db9",
+          "value": "9"
+        },
+        {
+          "label": "db10",
+          "value": "10"
+        },
+        {
+          "label": "db11",
+          "value": "11"
+        },
+        {
+          "label": "db12",
+          "value": "12"
+        },
+        {
+          "label": "db13",
+          "value": "13"
+        },        {
+          "label": "db14",
+          "value": "14"
+        },
+        {
+          "label": "db15",
+          "value": "15"
+        }
+      ],
+      "envKey": "REDIS_DB",
+      "edit": true
+    },
+    {
       "type": "text",
       "labelZh": "登录用户名",
       "labelEn": "Username",
