@@ -1,6 +1,6 @@
 version: '3'
 services:
-  uptime-kuma:
+  vocechat:
     image: privoce/vocechat-server:latest
     container_name: ${CONTAINER_NAME}
     restart: always
