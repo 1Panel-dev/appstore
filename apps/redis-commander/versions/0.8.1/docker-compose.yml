@@ -5,7 +5,7 @@ services:
   redis-commander-XnlR:
     container_name: ${CONTAINER_NAME}
     environment:
-      - REDIS_HOSTS=1panel:${PANEL_DB_HOST}:6379:0:${PANEL_DB_ROOT_PASSWORD}
+      - REDIS_HOSTS=1panel:${PANEL_DB_HOST}:6379:${REDIS_DB}:${PANEL_DB_ROOT_PASSWORD}
       - HTTP_USER=${COMMANDER_ADMIN}
       - HTTP_PASSWORD=${COMMANDER_PASSWORD}
     hostname: redis-commander
