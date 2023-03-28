@@ -1,7 +1,7 @@
 version: "3.5"
 
 services:
-  app:
+  kodbox:
     image: kodcloud/kodbox
     container_name: ${CONTAINER_NAME}
     ports:
