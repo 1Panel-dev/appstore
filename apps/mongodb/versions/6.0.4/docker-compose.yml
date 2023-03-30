@@ -13,6 +13,8 @@ services:
       - ${PANEL_APP_PORT_HTTP}:27017
     volumes:
       - ./data:/data/db
+    labels:
+      createdBy: "Apps"
 
 networks:
   1panel-network:
