@@ -9,7 +9,7 @@ services:
     ports:
       - ${PANEL_APP_PORT_HTTP}:8081
     volumes:
-      - ./data/nexus:/nexus-data
+      - ./data:/nexus-data
     networks:
       - 1panel-network
     labels:
