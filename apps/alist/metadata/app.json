@@ -1,0 +1,14 @@
+{
+  "key": "alist",  
+  "name": "alist", 
+  "tags": ["Tools"], 
+  "versions": ["3.15.0"],  
+  "shortDescZh": "一个支持多种存储，支持网页浏览和 WebDAV 的文件列表程序，由 gin 和 Solidjs 驱动。",
+  "shortDescEn": "A file list program that supports multiple storage, and supports web browsing and webdav, powered by gin and Solidjs.", 
+  "type": "Tools", 
+  "limit": 0, 
+  "crossVersionUpdate": false,  
+  "website": "https://alist.nn.ci/zh/",  
+  "github": "https://github.com/alist-org/alist",
+  "document": "https://alist.nn.ci/zh/guide/"
+}
