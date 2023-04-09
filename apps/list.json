@@ -46,7 +46,7 @@
       "key": "openresty",
       "name": "OpenResty",
       "tags": ["Server"],
-      "versions": ["1.21.4"],
+      "versions": ["1.21.4.1"],
       "shortDescZh": "基于 NGINX 和 LuaJIT 的 Web 平台",
       "shortDescEn": "High performance web platform based on Nginx and LuaJIT",
       "type": "runtime",
@@ -269,6 +269,51 @@
       "website": "https://uptime.kuma.pet/",
       "github": "https://github.com/louislam/uptime-kuma",
       "document": "https://github.com/louislam/uptime-kuma/wiki"
+    },
+    {
+      "key": "php5",
+      "name": "PHP 5",
+      "tags": ["Runtime"],
+      "versions": ["5.6.40"],
+      "shortDescZh": "PHP5 运行环境",
+      "shortDescEn": "PHP5 Runtime",
+      "type": "php",
+      "limit": 0,
+      "recommend": 9998,
+      "crossVersionUpdate": false,
+      "website": "https://www.php.net/",
+      "github": "https://github.com/php/php-src",
+      "document": "https://www.php.net/docs.php"
+    },
+    {
+      "key": "php7",
+      "name": "PHP 7",
+      "tags": ["Runtime"],
+      "versions": ["7.4.33"],
+      "shortDescZh": "PHP7 运行环境",
+      "shortDescEn": "PHP7 Runtime",
+      "type": "php",
+      "limit": 0,
+      "recommend": 9997,
+      "crossVersionUpdate": false,
+      "website": "https://www.php.net/",
+      "github": "https://github.com/php/php-src",
+      "document": "https://www.php.net/docs.php"
+    },
+    {
+      "key": "php8",
+      "name": "PHP 8",
+      "tags": ["Runtime"],
+      "versions": ["8.2.0"],
+      "shortDescZh": "PHP8 运行环境",
+      "shortDescEn": "PHP8 Runtime",
+      "type": "php",
+      "limit": 0,
+      "recommend": 9996,
+      "crossVersionUpdate": false,
+      "website": "https://www.php.net/",
+      "github": "https://github.com/php/php-src",
+      "document": "https://www.php.net/docs.php"
     }
   ]
 }
