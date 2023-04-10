@@ -10,6 +10,10 @@
       "name": "Web 服务器"
     },
     {
+      "key": "Runtime",
+      "name": "运行环境"
+    },
+    {
       "key": "Database",
       "name": "数据库"
     },
@@ -22,8 +26,8 @@
       "name": "CI/CD"
     },
     {
-      "key": "Runtime",
-      "name": "运行环境"
+      "key": "Local",
+      "name": "本地"
     }
   ],
   "items": [

@@ -18,5 +18,3 @@ services:
     restart: always
     cap_add:
       - SYS_PTRACE
-    networks:
-      - default
