@@ -10,6 +10,8 @@ services:
       - 1panel-network
     volumes:
       - ./data:/var/lib/registry
+    labels:
+      createdBy: "Apps"
 
 networks:
   1panel-network:

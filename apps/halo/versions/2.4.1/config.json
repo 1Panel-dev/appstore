@@ -6,13 +6,11 @@
       "labelEn": "Database Service",
       "required": true,
       "default": "mysql",
-      "values": [
-        {
-          "label": "MySQL",
-          "value": "mysql"
-        }
-      ],
-      "envKey": "WIKI_PLATFORM",
+      "values": [{
+        "label": "MySQL",
+        "value": "mysql"
+      }],
+      "envKey": "HALO_PLATFORM",
       "child": {
         "type": "service",
         "labelZh": "数据库服务",
@@ -26,13 +24,13 @@
           "type": "param",
           "key": "mysql",
           "value": "3306",
-          "envKey": "WIKI_DB_PORT"
+          "envKey": "HALO_DB_PORT"
         },
         {
           "type": "param",
           "key": "postgresql",
           "value": "5432",
-          "envKey": "WIKI_DB_PORT"
+          "envKey": "HALO_DB_PORT"
         }
       ]
     },
@@ -41,7 +39,7 @@
       "labelZh": "数据库名",
       "labelEn": "Database",
       "required": true,
-      "default": "wiki",
+      "default": "halo",
       "random": true,
       "rule": "paramCommon",
       "envKey": "PANEL_DB_NAME"
@@ -51,7 +49,7 @@
       "labelZh": "数据库用户",
       "labelEn": "User",
       "required": true,
-      "default": "wikijs",
+      "default": "halo",
       "random": true,
       "rule": "paramCommon",
       "envKey": "PANEL_DB_USER"
@@ -61,17 +59,46 @@
       "labelZh": "数据库用户密码",
       "labelEn": "Password",
       "required": true,
-      "default": "wikijsrocks",
+      "default": "halo",
       "random": true,
       "rule": "paramComplexity",
       "envKey": "PANEL_DB_USER_PASSWORD"
+    },
+    {
+      "type": "text",
+      "labelZh": "超级管理员用户名",
+      "labelEn": "Admin Username",
+      "required": true,
+      "default": "admin",
+      "rule": "paramCommon",
+      "envKey": "HALO_ADMIN"
+    },
+    {
+      "type": "password",
+      "labelZh": "超级管理员密码",
+      "labelEn": "Admin Password",
+      "required": true,
+      "default": "halo",
+      "random": true,
+      "rule": "paramComplexity",
+      "envKey": "HALO_ADMIN_PASSWORD"
+    },
+    {
+      "type": "text",
+      "labelZh": "外部访问地址",
+      "labelEn": "External URL",
+      "required": true,
+      "default": "http://localhost:8080",
+      "rule": "paramExtUrl",
+      "envKey": "HALO_EXTERNAL_URL",
+      "edit": true
     },
     {
       "type": "number",
       "labelZh": "端口",
       "labelEn": "Port",
       "required": true,
-      "default": 3000,
+      "default": 8080,
       "rule": "paramPort",
       "envKey": "PANEL_APP_PORT_HTTP",
       "edit": true

@@ -13,6 +13,8 @@ services:
       - ./data:/var/lib/postgresql/data
     networks:
       - 1panel-network
+    labels:
+      createdBy: "Apps"
 
 networks:
   1panel-network:
