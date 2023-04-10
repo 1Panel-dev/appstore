@@ -93,6 +93,10 @@
         {
           "label": "igbinary",
           "value": "igbinary"
+        },
+        {
+          "label": "mysqli",
+          "value": "mysqli"
         }
       ],
       "envKey": "PHP_EXTENSIONS",
