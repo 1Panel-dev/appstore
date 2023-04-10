@@ -277,22 +277,18 @@
     {
       "key": "kodbox",
       "name": "Kodbox",
-      "tags": [
-        "FileServer"
-      ],
-      "versions": [
-        "1.37.03"
-      ],
-      "shortDescZh": "KodBox是可道云推出的企业级私有云存储解决方案，旨在为中小企业提供安全可控、可靠易用的一站式在线文件存储管理与协同办公平台。",
+      "tags": ["Tool"],
+      "versions": ["1.37.03"],
+      "shortDescZh": "可道云推出的企业级私有云存储解决方案",
       "shortDescEn": "Kodbox is a file manager for web. It is also a web code editor, which allows you to develop websites directly within the web browser.",
-      "type": "FileServer",
+      "type": "tool",
       "limit": 0,
-      "recommend": 1,
       "crossVersionUpdate": true,
       "website": "https://kodcloud.com/",
       "github": "https://github.com/kalcaddle/kodbox",
       "document": "https://docs.kodcloud.com/"
     },
+    {
       "key": "php5",
       "name": "PHP 5",
       "tags": ["Runtime"],
