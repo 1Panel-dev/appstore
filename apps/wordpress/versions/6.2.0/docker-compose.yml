@@ -1,7 +1,7 @@
 version: '3'
 services:
   wordpress:
-    image: wordpress:6.0.2
+    image: wordpress:6.2.0
     container_name: ${CONTAINER_NAME}
     ports:
       -  ${PANEL_APP_PORT_HTTP}:80
@@ -10,6 +10,7 @@ services:
       - 1panel-network
     volumes:
       - ./data:/var/www/html
+      - ./conf/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
     environment:
       WORDPRESS_DB_HOST: ${PANEL_DB_HOST}
       WORDPRESS_DB_NAME: ${PANEL_DB_NAME}
