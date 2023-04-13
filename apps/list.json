@@ -65,7 +65,7 @@
       "key": "wordpress",
       "name": "WordPress",
       "tags": ["WebSite"],
-      "versions": ["6.0.1","6.0.2"],
+      "versions": ["6.2.0"],
       "shortDescZh": "著名的开源博客软件和 CMS 系统",
       "shortDescEn": "Open source blogging software and content management system",
       "type": "website",
