@@ -2,11 +2,11 @@
 {  
   "key": "qBittorrent",
   "name": "qBittorrent",
-  "tags": ["WebSite"],
+  "tags": ["Tool"],
   "versions": ["4.3.5","4.5.2"],
   "shortDescZh": "qBittorrent是一个跨平台的开源BitTorrent客户端",
   "shortDescEn": "qBittorrent is a cross-platform open source BitTorrent client",
-  "type": "website",
+  "type": "tool",
   "limit": 0,
   "crossVersionUpdate": false,
   "website": "https://www.qbittorrent.org/",
