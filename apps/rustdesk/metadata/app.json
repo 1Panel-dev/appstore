@@ -2,11 +2,11 @@
 {  
   "key": "RustDesk",
   "name": "RustDesk",
-  "tags": ["Tools"],
+  "tags": ["Tool"],
   "versions": ["latest"],
   "shortDescZh": "RustDesk是一款开源的远程桌面软件",
   "shortDescEn": "RustDesk is an open source remote desktop software",
-  "type": "Tools",
+  "type": "tool",
   "limit": 0,
   "crossVersionUpdate": false,
   "website": "https://rustdesk.com/zh/",
