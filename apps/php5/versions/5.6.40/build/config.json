@@ -97,6 +97,22 @@
         {
           "label": "mysqli",
           "value": "mysqli"
+        },
+        {
+          "label": "pdo_mysql",
+          "value": "pdo_mysql"
+        },
+        {
+          "label": "mbstring",
+          "value": "mbstring"
+        },
+        {
+          "label": "gd",
+          "value": "gd"
+        },
+        {
+          "label": "curl",
+          "value": "curl"
         }
       ],
       "envKey": "PHP_EXTENSIONS",
