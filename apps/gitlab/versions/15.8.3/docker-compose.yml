@@ -20,6 +20,8 @@ services:
     shm_size: '256m'
     networks:
       - 1panel-network
+    labels:
+      createdBy: "Apps"
 
 networks:
   1panel-network:

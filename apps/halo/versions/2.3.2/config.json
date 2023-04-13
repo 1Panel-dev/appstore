@@ -70,7 +70,6 @@
       "labelEn": "Admin Username",
       "required": true,
       "default": "admin",
-      "random": true,
       "rule": "paramCommon",
       "envKey": "HALO_ADMIN"
     },
