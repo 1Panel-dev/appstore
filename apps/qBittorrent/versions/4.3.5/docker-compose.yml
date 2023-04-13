@@ -3,6 +3,8 @@ services:
   qbittorrent:
     container_name: ${CONTAINER_NAME}
     restart: unless-stopped
+    networks:
+      - 1panel-network
     environment:
         - UID=1000
         - GID=1000
