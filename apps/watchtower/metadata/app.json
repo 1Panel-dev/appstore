@@ -1,0 +1,15 @@
+
+{  
+  "key": "watchtower",
+  "name": "watchtower",
+  "tags": ["Tool"],
+  "versions": ["latest"],
+  "shortDescZh": "自动更新Docker容器基础镜像的工具。",
+  "shortDescEn": "Tool to automatically update Docker container base images.",
+  "type": "tool",
+  "limit": 1,
+  "crossVersionUpdate": false,
+  "website": "https://github.com/containrrr/watchtower",
+  "github": "https://github.com/containrrr/watchtower",
+  "document": "https://containrrr.dev/watchtower/"
+}

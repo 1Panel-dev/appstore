@@ -1,0 +1,20 @@
+version: "3"
+services:
+  jellyfin:
+    container_name: ${CONTAINER_NAME}
+    restart: unless-stopped
+    networks:
+      - 1panel-network
+    ports:
+        - "${WEBUI_PORT}:8096"
+    volumes:
+        - "./data/config:/config"
+        - "${CACHE_FOLDER_PATH}:/cache"
+        - "${MEDIA_FOLDER_PATH}:/media/media"
+    image: "jellyfinjellyfinunstable"
+    labels:  
+      createdBy: "Apps"
+   
+networks:  
+  1panel-network:  
+    external: true

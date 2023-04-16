@@ -1,0 +1,27 @@
+version: "3"
+services:
+  qbittorrent:
+    container_name: ${CONTAINER_NAME}
+    networks:
+      - 1panel-network
+    environment:
+        - UID=1000
+        - GID=1000
+        - PEER_PORT=40150
+        - WEB_PORT=40155
+    ports:
+        - "${PEER_PORT_Value}:40150"
+        - "${PEER_PORT_Value}:40150/udp"
+        - "${WEBUI_PORT_Value}:40155"
+    volumes:
+        - "./data/.config:/data/.config"
+        - "./data/.local:/data/.local"
+        - "${CACHE_PATH}:/data/.cache"
+        - "${DOWNLOAD_PATH}:/data/downloads"
+    image: "jarylc/qbittorrent:latest"
+    labels:  
+      createdBy: "Apps"
+   
+networks:  
+  1panel-network:  
+    external: true

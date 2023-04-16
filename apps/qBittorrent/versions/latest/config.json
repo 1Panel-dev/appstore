@@ -1,0 +1,43 @@
+
+{  
+  "formFields": [ 
+    {  
+      "type": "number",
+      "labelZh": "网页端口",  
+      "labelEn": "WebUI Port",  
+      "required": true,  
+      "default": 40155,  
+      "rule": "paramPort",  
+      "envKey": "WEBUI_PORT_Value",  
+      "edit": true  
+    },
+    {  
+      "type": "number",
+      "labelZh": "BT端口",  
+      "labelEn": "Peer Port",  
+      "required": true,  
+      "default": 40150,  
+      "rule": "paramPort",  
+      "envKey": "PEER_PORT_Value",  
+      "edit": true  
+    },
+    {  
+      "type": "text",
+      "labelZh": "缓存文件夹路径",  
+      "labelEn": "Cache folder path",  
+      "required": true,  
+      "default": "./data/.cache",  
+      "envKey": "CACHE_PATH",  
+      "edit": true  
+    },
+    {  
+      "type": "text",
+      "labelZh": "下载文件夹路径",  
+      "labelEn": "Download folder path",  
+      "required": true,  
+      "default": "./data/downloads",  
+      "envKey": "DOWNLOAD_PATH",  
+      "edit": true  
+    }
+  ]  
+}

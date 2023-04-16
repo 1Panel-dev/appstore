@@ -1,0 +1,41 @@
+
+{  
+  "formFields": [ 
+    {  
+      "type": "number",
+      "labelZh": "网页端口",  
+      "labelEn": "WebUI Port",  
+      "required": true,  
+      "default": 5244,  
+      "rule": "paramPort",  
+      "envKey": "PANEL_APP_PORT_HTTP",  
+      "edit": true  
+    },
+    {  
+      "type": "text",
+      "labelZh": "数据文件夹路径",  
+      "labelEn": "Data folder path",  
+      "required": true,  
+      "default": "./data/data",  
+      "envKey": "DATA_PATH",  
+      "edit": true  
+    },
+    {  
+      "type": "text",
+      "labelZh": "挂载文件夹路径",  
+      "labelEn": "Mount folder path",  
+      "required": true,  
+      "default": "./data/mnt",  
+      "envKey": "MOUNT_PATH",  
+      "edit": true  
+    },
+    {  
+      "type": "text",
+      "labelZh": "管理员账户密码获取：容器终端输入./alist admin",  
+      "labelEn": "Administrator account password retrieval: container terminal enter . /alist admin",  
+      "required": false,  
+      "default": "这是一个提示/This is a tip",  
+      "edit": true  
+    }
+  ]  
+}

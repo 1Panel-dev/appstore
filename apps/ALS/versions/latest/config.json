@@ -1,0 +1,15 @@
+
+{  
+  "formFields": [ 
+    {  
+      "type": "number",
+      "labelZh": "网页端口",  
+      "labelEn": "WebUI Port",  
+      "required": true,  
+      "default": 20080,  
+      "rule": "paramPort",  
+      "envKey": "PANEL_APP_PORT_HTTP",  
+      "edit": true  
+    }
+  ]  
+}
