@@ -18,7 +18,7 @@ services:
         - "./data/.local:/data/.local"
         - "${CACHE_PATH}:/data/.cache"
         - "${DOWNLOAD_PATH}:/data/downloads"
-    image: "jarylc/qbittorrent:4.5.2_2.0.8"
+    image: "jarylc/qbittorrent:latest"
     labels:  
       createdBy: "Apps"
    

@@ -2,7 +2,6 @@ version: "3"
 services:
   qbittorrent:
     container_name: ${CONTAINER_NAME}
-    restart: unless-stopped
     networks:
       - 1panel-network
     environment:
@@ -15,7 +14,10 @@ services:
         - "${PEER_PORT_Value}:40150/udp"
         - "${WEBUI_PORT_Value}:40155"
     volumes:
-        - "./data:/data"
+        - "./data/.config:/data/.config"
+        - "./data/.local:/data/.local"
+        - "${CACHE_PATH}:/data/.cache"
+        - "${DOWNLOAD_PATH}:/data/downloads"
     image: "jarylc/qbittorrent:4.3.5_1.2.14"
     labels:  
       createdBy: "Apps"
