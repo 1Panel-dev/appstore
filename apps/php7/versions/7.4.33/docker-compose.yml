@@ -13,7 +13,7 @@ services:
       - ./log:/var/log/php
       - ./composer:/tmp/composer
     ports:
-      - ${PANEL_APP_PORT_HTTP}:9000
+      - 127.0.0.1:${PANEL_APP_PORT_HTTP}:9000
     labels:
       createdBy: "Apps"
 networks:
