@@ -8,7 +8,7 @@
       "required": true,  
       "default": 8096,  
       "rule": "paramPort",  
-      "envKey": "WEBUI_PORT",  
+      "envKey": "PANEL_APP_PORT_HTTP",  
       "edit": true  
     },
     {  

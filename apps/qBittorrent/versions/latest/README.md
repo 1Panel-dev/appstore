@@ -1,6 +1,5 @@
 
 # 本应用介绍
-这是个民间制作的"qBittorrent-nox"的"1Panel"商店版本应用;
 
 基于镜像
 > - https://hub.docker.com/r/jarylc/qbittorrent

@@ -6,7 +6,7 @@ services:
     networks:
       - 1panel-network
     ports:
-        - "${WEBUI_PORT}:8096"
+        - "${PANEL_APP_PORT_HTTP}:8096"
     volumes:
         - "./data/config:/config"
         - "${CACHE_FOLDER_PATH}:/cache"

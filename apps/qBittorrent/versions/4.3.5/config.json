@@ -8,7 +8,7 @@
       "required": true,  
       "default": 40155,  
       "rule": "paramPort",  
-      "envKey": "WEBUI_PORT_Value",  
+      "envKey": "PANEL_APP_PORT_HTTP",  
       "edit": true  
     },
     {  
@@ -18,7 +18,7 @@
       "required": true,  
       "default": 40150,  
       "rule": "paramPort",  
-      "envKey": "PEER_PORT_Value",  
+      "envKey": "PEER_PORT_VALUE",  
       "edit": true  
     },
     {  

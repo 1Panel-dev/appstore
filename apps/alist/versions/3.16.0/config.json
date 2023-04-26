@@ -35,7 +35,7 @@
       "labelEn": "Administrator account password retrieval: container terminal enter . /alist admin",  
       "required": false,  
       "default": "这是一个提示/This is a tip",  
-      "edit": true  
+      "edit": false  
     }
   ]  
 }

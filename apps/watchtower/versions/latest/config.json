@@ -24,7 +24,7 @@
       "labelEn": "See the official documentation for more parameter commands",  
       "required": false,  
       "default": "这是一个提示/This is a tip",  
-      "edit": true  
+      "edit": false  
     }
   ]  
 }
