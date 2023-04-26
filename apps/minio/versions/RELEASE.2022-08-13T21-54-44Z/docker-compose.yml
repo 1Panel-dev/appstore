@@ -11,6 +11,7 @@ services:
       environment:
         MINIO_ROOT_USER: ${MINIO_ROOT_USER}
         MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+        MINIO_SERVER_URL: ${MINIO_SERVER_URL}:${PORT_API}
       logging:
         options:
           max-size: "5M"

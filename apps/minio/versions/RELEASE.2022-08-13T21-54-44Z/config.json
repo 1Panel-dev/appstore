@@ -37,6 +37,16 @@
       "default": 9001,
       "rule": "paramPort",
       "envKey": "PORT_API"
+    },
+    {
+      "type": "text",
+      "labelZh": "分享文件地址",
+      "labelEn": "SHARE ADRESS",
+      "required": true,
+      "default": "http://localhost",
+      "rule": "paramExtUrl",
+      "envKey": "MINIO_SERVER_URL",
+      "edit": true
     }
   ]
 }
