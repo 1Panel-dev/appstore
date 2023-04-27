@@ -35,7 +35,7 @@
       "key": "mysql",
       "name": "MySQL",
       "tags": ["Database"],
-      "versions": ["5.7.39","8.0.30"],
+      "versions": ["5.5.62","5.6.51","5.7.39","8.0.30"],
       "shortDescZh": "MySQL 开源关系型数据库",
       "shortDescEn": "Open source relational database management system",
       "type": "runtime",
@@ -333,7 +333,21 @@
       "github": "https://github.com/php/php-src",
       "document": "https://www.php.net/docs.php"
     },
-    {
+    {  
+      "key": "gitea",
+      "name": "Gitea",
+      "tags": ["CI/CD"],
+      "versions": ["1.19.1"],
+      "shortDescZh": "一个自托管的 Git 服务",
+      "shortDescEn": "a self-hosted Git service",
+      "type": "tool",
+      "limit": 0,
+      "crossVersionUpdate": false,
+      "website": "https://gitea.io/",
+      "github": "https://github.com/go-gitea/gitea",
+      "document": "https://docs.gitea.io/"
+    },
+    {  
       "key": "qBittorrent",
       "name": "qBittorrent",
       "tags": ["Tool"],
@@ -416,6 +430,20 @@
       "website": "https://flarum.org/",
       "github": "https://github.com/flarum/flarum",
       "document": "https://docs.flarum.org/"
+    },
+    {  
+      "key": "baidunetdisk",
+      "name": "百度网盘",
+      "tags": ["Tool"],
+      "versions": ["4.14.6","4.17.7","latest"],
+      "shortDescZh": "百度网盘是百度推出的一项云存储服务。",
+      "shortDescEn": "BaiduNetdisk is a cloud storage service launched by Baidu.",
+      "type": "tool",
+      "limit": 0,
+      "crossVersionUpdate": true,
+      "website": "https://pan.baidu.com/",
+      "github": "https://github.com/gshang2017/docker/tree/master/baidunetdisk",
+      "document": "https://github.com/gshang2017/docker/tree/master/baidunetdisk"
     }
   ]
 }
