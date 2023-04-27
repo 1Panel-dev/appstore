@@ -332,6 +332,20 @@
       "website": "https://www.php.net/",
       "github": "https://github.com/php/php-src",
       "document": "https://www.php.net/docs.php"
+    },
+    {
+      "key": "gitea",
+      "name": "Gitea",
+      "tags": ["CI/CD"],
+      "versions": ["1.19.1"],
+      "shortDescZh": "一个自托管的 Git 服务",
+      "shortDescEn": "a self-hosted Git service",
+      "type": "tool",
+      "limit": 0,
+      "crossVersionUpdate": false,
+      "website": "https://gitea.io/",
+      "github": "https://github.com/go-gitea/gitea",
+      "document": "https://docs.gitea.io/"
     }
   ]
 }
