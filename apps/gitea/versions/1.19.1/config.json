@@ -46,7 +46,7 @@
       "required": true,
       "default": 3000,
       "rule": "paramPort",
-      "envKey": "GITEA_PORT_HTTP"
+      "envKey": "PANEL_APP_PORT_HTTP"
     },
     {
       "type": "number",
@@ -55,7 +55,7 @@
       "required": true,
       "default": 222,
       "rule": "paramPort",
-      "envKey": "GITEA_PORT_SSH"
+      "envKey": "PANEL_APP_PORT_SSH"
     }
   ]
 }
