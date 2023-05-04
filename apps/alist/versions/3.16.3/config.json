@@ -1,0 +1,33 @@
+
+{  
+  "formFields": [ 
+    {  
+      "type": "number",
+      "labelZh": "网页端口",  
+      "labelEn": "WebUI Port",  
+      "required": true,  
+      "default": 5244,  
+      "rule": "paramPort",  
+      "envKey": "PANEL_APP_PORT_HTTP",  
+      "edit": true  
+    },
+    {
+      "type": "text",
+      "labelZh": "数据文件夹路径",
+      "labelEn": "Data folder path",
+      "required": true,
+      "default": "./data/data",
+      "envKey": "DATA_PATH",
+      "edit": true
+    },
+    {
+      "type": "text",
+      "labelZh": "挂载文件夹路径",
+      "labelEn": "Mount folder path",
+      "required": true,
+      "default": "./data/mnt",
+      "envKey": "MOUNT_PATH",
+      "edit": true
+    }
+  ]  
+}
