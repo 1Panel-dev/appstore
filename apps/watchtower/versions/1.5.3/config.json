@@ -1,0 +1,22 @@
+{  
+  "formFields": [ 
+    {  
+      "type": "text",
+      "labelZh": "环境参数(以;分割)",  
+      "labelEn": "Environmental parameters (split by ;)",  
+      "required": true,  
+      "default": "WATCHTOWER_NO_STARTUP_MESSAGE",  
+      "envKey": "ENV1",  
+      "edit": true  
+    },
+    {  
+      "type": "text",
+      "labelZh": "命令参数(以空格分割)",  
+      "labelEn": "Command parameters (separated by spaces)",  
+      "required": true,  
+      "default": "--interval 3600 --cleanup",  
+      "envKey": "COMMAND1",  
+      "edit": true  
+    }
+  ]  
+}
