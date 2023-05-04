@@ -17,14 +17,6 @@
       "default": "--interval 3600 --cleanup",  
       "envKey": "COMMAND1",  
       "edit": true  
-    },
-    {  
-      "type": "text",
-      "labelZh": "更多参数命令看官方文档获取",  
-      "labelEn": "See the official documentation for more parameter commands",  
-      "required": false,  
-      "default": "这是一个提示/This is a tip",  
-      "edit": false  
     }
   ]  
 }

@@ -35,7 +35,7 @@
       "key": "mysql",
       "name": "MySQL",
       "tags": ["Database"],
-      "versions": ["5.5.62","5.6.51","5.7.39","8.0.30"],
+      "versions": ["5.7.39","8.0.30"],
       "shortDescZh": "MySQL 开源关系型数据库",
       "shortDescEn": "Open source relational database management system",
       "type": "runtime",
@@ -376,24 +376,10 @@
       "document": "https://jellyfin.org/docs/"
     },
     {  
-      "key": "ALS",
-      "name": "ALS",
-      "tags": ["Tool"],
-      "versions": ["latest"],
-      "shortDescZh": "Another Looking-glass Server，测速服务端",
-      "shortDescEn": "Another Looking-glass Server,Speed measurement server",
-      "type": "tool",
-      "limit": 0,
-      "crossVersionUpdate": false,
-      "website": "https://github.com/wikihost-opensource/als",
-      "github": "https://github.com/wikihost-opensource/als",
-      "document": "https://github.com/wikihost-opensource/als"
-    },
-    {  
       "key": "alist",
       "name": "alist",
       "tags": ["Tool"],
-      "versions": ["3.16.0","latest"],
+      "versions": ["3.16.3"],
       "shortDescZh": "一个支持多存储的文件列表程序。",
       "shortDescEn": "A file list program that supports multiple storage.",
       "type": "tool",
@@ -407,7 +393,7 @@
       "key": "watchtower",
       "name": "watchtower",
       "tags": ["Tool"],
-      "versions": ["latest"],
+      "versions": ["1.5.3"],
       "shortDescZh": "自动更新Docker容器基础镜像的工具。",
       "shortDescEn": "Tool to automatically update Docker container base images.",
       "type": "tool",
@@ -421,7 +407,7 @@
       "key": "flarum",
       "name": "flarum",
       "tags": ["WebSite"],
-      "versions": ["1.7.1","latest"],
+      "versions": ["1.7.1"],
       "shortDescZh": "新一代的论坛软件，使在线讨论变得有趣。",
       "shortDescEn": "The next-generation forum software that makes online discussion fun.",
       "type": "website",
@@ -431,19 +417,19 @@
       "github": "https://github.com/flarum/flarum",
       "document": "https://docs.flarum.org/"
     },
-    {  
-      "key": "baidunetdisk",
-      "name": "百度网盘",
+    {
+      "key": "adminer",
+      "name": "adminer",
       "tags": ["Tool"],
-      "versions": ["4.14.6","4.17.7","latest"],
-      "shortDescZh": "百度网盘是百度推出的一项云存储服务。",
-      "shortDescEn": "BaiduNetdisk is a cloud storage service launched by Baidu.",
-      "type": "tool",
-      "limit": 0,
-      "crossVersionUpdate": true,
-      "website": "https://pan.baidu.com/",
-      "github": "https://github.com/gshang2017/docker/tree/master/baidunetdisk",
-      "document": "https://github.com/gshang2017/docker/tree/master/baidunetdisk"
+      "versions": ["4.8.1"],
+      "shortDescZh": "PHP轻量级数据库管理工具",
+      "shortDescEn": "Database management in a single PHP file",
+      "type": "website",
+      "limit": 1,
+      "crossVersionUpdate": false,
+      "website": "https://www.adminer.org/",
+      "github": "https://github.com/xiahao90/adminer",
+      "document": "https://github.com/xiahao90/adminer"
     }
   ]
 }
