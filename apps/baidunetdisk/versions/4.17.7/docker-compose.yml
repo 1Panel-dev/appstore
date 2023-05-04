@@ -1,0 +1,23 @@
+version: "3"
+services:
+  baidunetdisk:
+    container_name: ${CONTAINER_NAME}
+    restart: unless-stopped
+    networks:
+      - 1panel-network
+    environment:
+      USER_ID: "1000"
+      GROUP_ID: "1000"
+      VNC_PASSWORD: "${VNC_PASSWORD}"
+      NOVNC_LANGUAGE: "zh_Hans"
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:5800"
+    volumes:
+      - "${CONFIG_PATH}:/config"
+      - "${DOWNLOAD_PATH}:/config/baidunetdiskdownload"
+    image: johngong/baidunetdisk:v_4.17.7
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true

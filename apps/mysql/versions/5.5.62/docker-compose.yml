@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql:5.5.62
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${PANEL_DB_ROOT_PASSWORD}
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:3306
+    volumes:
+      - ./data/:/var/lib/mysql
+      - ./conf/my.cnf:/etc/mysql/my.cnf
+      - ./log:/var/log/mysql
+    command:
+      --lower-case-table-names=1
+      --character-set-server=utf8
+      --collation-server=utf8_general_ci
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true
