@@ -11,7 +11,7 @@ services:
         - "./data/config:/config"
         - "${CACHE_FOLDER_PATH}:/cache"
         - "${MEDIA_FOLDER_PATH}:/media/media"
-    image: "jellyfinjellyfinunstable"
+    image: "jellyfin/jellyfin:unstable"
     labels:  
       createdBy: "Apps"
    
