@@ -113,6 +113,10 @@
         {
           "label": "curl",
           "value": "curl"
+        },
+        {
+          "label": "sg11",
+          "value": "sourceguardian"
         }
       ],
       "envKey": "PHP_EXTENSIONS",
