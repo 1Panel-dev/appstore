@@ -8,12 +8,12 @@ services:
     environment:
         - UID=1000
         - GID=1000
-        - PEER_PORT=40150
-        - WEB_PORT=40155
+        - PEER_PORT=${PEER_PORT_VALUE}
+        - WEB_PORT=${PANEL_APP_PORT_HTTP}
     ports:
-        - "${PEER_PORT_VALUE}:40150"
-        - "${PEER_PORT_VALUE}:40150/udp"
-        - "${PANEL_APP_PORT_HTTP}:40155"
+        - "${PEER_PORT_VALUE}:${PEER_PORT_VALUE}"
+        - "${PEER_PORT_VALUE}:${PEER_PORT_VALUE}/udp"
+        - "${PANEL_APP_PORT_HTTP}:${PANEL_APP_PORT_HTTP}"
     volumes:
         - "./data/.config:/data/.config"
         - "./data/.local:/data/.local"
