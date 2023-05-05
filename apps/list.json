@@ -424,7 +424,7 @@
       "versions": ["4.8.1"],
       "shortDescZh": "PHP轻量级数据库管理工具",
       "shortDescEn": "Database management in a single PHP file",
-      "type": "website",
+      "type": "tool",
       "limit": 1,
       "crossVersionUpdate": false,
       "website": "https://www.adminer.org/",
