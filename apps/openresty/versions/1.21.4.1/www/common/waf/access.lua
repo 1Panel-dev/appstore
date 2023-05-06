@@ -79,7 +79,7 @@ local function read_str(var)
     return str
 end
 
-local html=read_str('html')
+local html=read_str('warn.html')
 
 local function say_html()
     local redirect = optionIsOn(ngx.var.redirect)
