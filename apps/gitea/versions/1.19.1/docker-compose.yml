@@ -19,8 +19,8 @@ services:
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     ports:
-      - "${GITEA_PORT_HTTP}:3000"
-      - "${GITEA_PORT_SSH}:22"
+      - "${PANEL_APP_PORT_HTTP}:3000"
+      - "${PANEL_APP_PORT_SSH}:22"
     labels:
       createdBy: "Apps"
 
