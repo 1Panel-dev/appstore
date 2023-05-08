@@ -365,7 +365,7 @@
       "key": "jellyfin",
       "name": "Jellyfin",
       "tags": ["Tool"],
-      "versions": ["10.8.9","unstable"],
+      "versions": ["10.8.9"],
       "shortDescZh": "Jellyfin是一套多媒体应用程序软件套装",
       "shortDescEn": "Jellyfin is a multimedia application software suite",
       "type": "tool",
