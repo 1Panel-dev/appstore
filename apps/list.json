@@ -260,7 +260,7 @@
       "github": "https://github.com/requarks/wiki",
       "document": "https://docs.requarks.io/"
      },
-     { 
+     {
       "key": "uptime-kuma",
       "name": "Uptime Kuma",
       "tags": ["Tool"],
@@ -333,7 +333,7 @@
       "github": "https://github.com/php/php-src",
       "document": "https://www.php.net/docs.php"
     },
-    {  
+    {
       "key": "gitea",
       "name": "Gitea",
       "tags": ["CI/CD"],
@@ -347,7 +347,7 @@
       "github": "https://github.com/go-gitea/gitea",
       "document": "https://docs.gitea.io/"
     },
-    {  
+    {
       "key": "qBittorrent",
       "name": "qBittorrent",
       "tags": ["Tool"],
@@ -361,7 +361,7 @@
       "github": "https://github.com/qbittorrent/qBittorrent",
       "document": "http://wiki.qbittorrent.org/"
     },
-    {  
+    {
       "key": "jellyfin",
       "name": "Jellyfin",
       "tags": ["Tool"],
@@ -375,7 +375,7 @@
       "github": "https://github.com/jellyfin/jellyfin",
       "document": "https://jellyfin.org/docs/"
     },
-    {  
+    {
       "key": "alist",
       "name": "alist",
       "tags": ["Tool"],
@@ -389,7 +389,7 @@
       "github": "https://github.com/alist-org/alist",
       "document": "https://alist.nn.ci/zh/"
     },
-    {  
+    {
       "key": "watchtower",
       "name": "watchtower",
       "tags": ["Tool"],
@@ -403,7 +403,7 @@
       "github": "https://github.com/containrrr/watchtower",
       "document": "https://containrrr.dev/watchtower/"
     },
-    {  
+    {
       "key": "flarum",
       "name": "flarum",
       "tags": ["WebSite"],
@@ -430,6 +430,20 @@
       "website": "https://www.adminer.org/",
       "github": "https://github.com/xiahao90/adminer",
       "document": "https://github.com/xiahao90/adminer"
+    },
+    {
+      "key": "tailchat",
+      "name": "Tailchat",
+      "tags": ["WebSite"],
+      "versions": ["1.7.3"],
+      "shortDescZh": "在你自己工作区的下一代noIM应用",
+      "shortDescEn": "The next-generation noIM Application in your own workspace",
+      "type": "website",
+      "limit": 1,
+      "crossVersionUpdate": true,
+      "website": "https://tailchat.msgbyte.com/",
+      "github": "https://github.com/msgbyte/tailchat",
+      "document": "https://tailchat.msgbyte.com/docs/intro"
     },
     {  
       "key": "nps",
