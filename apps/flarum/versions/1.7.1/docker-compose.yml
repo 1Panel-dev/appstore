@@ -27,7 +27,7 @@ services:
       - DB_PREFIX=${PANEL_DB_PREFIX}
       - DB_NOPREFIX=false
       - DB_TIMEOUT=60
-      - FLARUM_BASE_URL=http://${Dockerized_HOST}:${PANEL_APP_PORT_HTTP}
+      - FLARUM_BASE_URL=${FLARUM_EXTERNAL_URL}
     image: crazymax/flarum:1.7.1
     labels:
       createdBy: Apps

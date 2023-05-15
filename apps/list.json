@@ -137,7 +137,7 @@
       "key": "minio",
       "name": "MinIO",
       "tags": ["Tool"],
-      "versions": ["RELEASE.2022-08-13T21-54-44Z"],
+      "versions": ["RELEASE.2023-05-04T21-44-30Z"],
       "shortDescZh": "开源的对象存储服务器",
       "shortDescEn": "Open source object storage server",
       "type": "tool",
@@ -260,7 +260,7 @@
       "github": "https://github.com/requarks/wiki",
       "document": "https://docs.requarks.io/"
      },
-     { 
+     {
       "key": "uptime-kuma",
       "name": "Uptime Kuma",
       "tags": ["Tool"],
@@ -333,7 +333,7 @@
       "github": "https://github.com/php/php-src",
       "document": "https://www.php.net/docs.php"
     },
-    {  
+    {
       "key": "gitea",
       "name": "Gitea",
       "tags": ["CI/CD"],
@@ -347,12 +347,12 @@
       "github": "https://github.com/go-gitea/gitea",
       "document": "https://docs.gitea.io/"
     },
-    {  
+    {
       "key": "qBittorrent",
       "name": "qBittorrent",
       "tags": ["Tool"],
       "versions": ["4.3.5","4.5.2"],
-      "shortDescZh": "qBittorrent是一个跨平台的开源BitTorrent客户端",
+      "shortDescZh": "qBittorrent 是一个跨平台的开源 BitTorrent 客户端",
       "shortDescEn": "qBittorrent is a cross-platform open source BitTorrent client",
       "type": "tool",
       "limit": 0,
@@ -361,12 +361,12 @@
       "github": "https://github.com/qbittorrent/qBittorrent",
       "document": "http://wiki.qbittorrent.org/"
     },
-    {  
+    {
       "key": "jellyfin",
       "name": "Jellyfin",
       "tags": ["Tool"],
-      "versions": ["10.8.9","unstable"],
-      "shortDescZh": "Jellyfin是一套多媒体应用程序软件套装",
+      "versions": ["10.8.9"],
+      "shortDescZh": "Jellyfin 是一套多媒体应用程序软件套装",
       "shortDescEn": "Jellyfin is a multimedia application software suite",
       "type": "tool",
       "limit": 0,
@@ -375,11 +375,11 @@
       "github": "https://github.com/jellyfin/jellyfin",
       "document": "https://jellyfin.org/docs/"
     },
-    {  
+    {
       "key": "alist",
       "name": "alist",
       "tags": ["Tool"],
-      "versions": ["3.16.3"],
+      "versions": ["3.17.0"],
       "shortDescZh": "一个支持多存储的文件列表程序",
       "shortDescEn": "A file list program that supports multiple storage",
       "type": "tool",
@@ -389,12 +389,12 @@
       "github": "https://github.com/alist-org/alist",
       "document": "https://alist.nn.ci/zh/"
     },
-    {  
+    {
       "key": "watchtower",
       "name": "watchtower",
       "tags": ["Tool"],
       "versions": ["1.5.3"],
-      "shortDescZh": "自动更新Docker容器基础镜像的工具",
+      "shortDescZh": "自动更新 Docker 容器基础镜像的工具",
       "shortDescEn": "Tool to automatically update Docker container base images",
       "type": "tool",
       "limit": 1,
@@ -403,7 +403,7 @@
       "github": "https://github.com/containrrr/watchtower",
       "document": "https://containrrr.dev/watchtower/"
     },
-    {  
+    {
       "key": "flarum",
       "name": "flarum",
       "tags": ["WebSite"],
@@ -422,14 +422,42 @@
       "name": "adminer",
       "tags": ["Tool"],
       "versions": ["4.8.1"],
-      "shortDescZh": "PHP轻量级数据库管理工具",
+      "shortDescZh": "PHP 轻量级数据库管理工具",
       "shortDescEn": "Database management in a single PHP file",
-      "type": "website",
+      "type": "tool",
       "limit": 1,
       "crossVersionUpdate": false,
       "website": "https://www.adminer.org/",
       "github": "https://github.com/xiahao90/adminer",
       "document": "https://github.com/xiahao90/adminer"
+    },
+    {
+      "key": "tailchat",
+      "name": "Tailchat",
+      "tags": ["WebSite"],
+      "versions": ["1.7.3"],
+      "shortDescZh": "在你自己工作区的下一代noIM应用",
+      "shortDescEn": "The next-generation noIM Application in your own workspace",
+      "type": "website",
+      "limit": 1,
+      "crossVersionUpdate": true,
+      "website": "https://tailchat.msgbyte.com/",
+      "github": "https://github.com/msgbyte/tailchat",
+      "document": "https://tailchat.msgbyte.com/docs/intro"
+    },
+    {  
+      "key": "nps",
+      "name": "nps",
+      "tags": ["Tool"],
+      "versions": ["0.26.10"], 
+      "shortDescZh": "轻量级、高性能、功能强大的内网穿透代理服务器", 
+      "shortDescEn": "Lightweight, high-performance, powerful intranet penetration proxy server",
+      "type": "tool", 
+      "limit": 1,
+      "crossVersionUpdate": true,
+      "website": "https://ehang-io.github.io/nps",
+      "github": "https://github.com/ehang-io/nps",
+      "document": "https://ehang-io.github.io/nps"
     }
   ]
 }

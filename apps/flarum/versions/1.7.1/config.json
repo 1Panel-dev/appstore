@@ -92,11 +92,11 @@
     },
     {
       "type": "text",
-      "labelZh": "本机IP",
-      "labelEn": "Local IP",
+      "labelZh": "外部访问地址",
+      "labelEn": "External URL",
       "required": true,
-      "default": "127.0.0.1",
-      "envKey": "Dockerized_HOST",
+      "default": "http://localhost:40020",
+      "envKey": "FLARUM_EXTERNAL_URL",
       "edit": true
     }
   ]

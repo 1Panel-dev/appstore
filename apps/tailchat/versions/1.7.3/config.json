@@ -1,0 +1,175 @@
+{
+  "formFields": [
+    {
+      "type": "number",
+      "labelZh": "端口",
+      "labelEn": "Port",
+      "required": true,
+      "default": 11000,
+      "rule": "paramPort",
+      "envKey": "PANEL_APP_PORT_HTTP",
+      "edit": true
+    },
+    {
+      "type": "service",
+      "key": "redis",
+      "labelZh": "缓存服务服务",
+      "labelEn": "Redis Service",
+      "required": true,
+      "default": "",
+      "envKey": "REDIS_HOST",
+      "edit": true
+    },
+    {
+      "type": "number",
+      "labelZh": "缓存服务服务端口",
+      "labelEn": "Redis Service Port",
+      "required": true,
+      "default": "6379",
+      "envKey": "REDIS_PORT",
+      "rule": "paramPort",
+      "edit": true
+    },
+    {
+      "type": "password",
+      "labelZh": "缓存服务服务密码",
+      "labelEn": "Redis Service Password",
+      "required": true,
+      "default": "",
+      "rule": "paramCommon",
+      "envKey": "REDIS_PASS",
+      "edit": true
+    },
+    {
+      "type": "service",
+      "key": "mongodb",
+      "labelZh": "数据库服务",
+      "labelEn": "Database Service",
+      "required": true,
+      "default": "",
+      "envKey": "MONGO_HOST",
+      "edit": true
+    },
+    {
+      "type": "number",
+      "labelZh": "数据库服务端口",
+      "labelEn": "Database Service Port",
+      "required": true,
+      "default": "27017",
+      "envKey": "MONGO_PORT",
+      "rule": "paramPort",
+      "edit": true
+    },
+    {
+      "type": "text",
+      "labelZh": "数据库名",
+      "labelEn": "Database Name",
+      "required": true,
+      "default": "tailchat",
+      "rule": "paramCommon",
+      "envKey": "MONGO_DB",
+      "edit": true
+    },
+    {
+      "type": "text",
+      "labelZh": "数据库用户名",
+      "labelEn": "Database User Name",
+      "required": true,
+      "default": "",
+      "rule": "paramCommon",
+      "envKey": "MONGO_USER",
+      "edit": true
+    },
+    {
+      "type": "password",
+      "labelZh": "数据库密码",
+      "labelEn": "Database User Password",
+      "required": true,
+      "default": "",
+      "rule": "paramCommon",
+      "envKey": "MONGO_PASS",
+      "edit": true
+    },
+    {
+      "type": "service",
+      "key": "minio",
+      "labelZh": "文件存储服务",
+      "labelEn": "Storage Service",
+      "required": true,
+      "default": "",
+      "envKey": "MINIO_HOST",
+      "edit": true
+    },
+    {
+      "type": "number",
+      "labelZh": "文件存储服务API端口",
+      "labelEn": "Storage Service Port",
+      "required": true,
+      "default": "9001",
+      "envKey": "MINIO_PORT",
+      "rule": "paramPort",
+      "edit": true
+    },
+    {
+      "type": "text",
+      "labelZh": "文件存储服务用户名",
+      "labelEn": "User",
+      "required": true,
+      "default": "",
+      "rule": "paramCommon",
+      "envKey": "MINIO_USER",
+      "edit": true
+    },
+    {
+      "type": "password",
+      "labelZh": "文件存储服务密码",
+      "labelEn": "User",
+      "required": true,
+      "default": "",
+      "rule": "paramComplexity",
+      "envKey": "MINIO_PASS",
+      "edit": true
+    },
+    {
+      "type": "text",
+      "labelZh": "秘钥",
+      "labelEn": "Secret",
+      "required": true,
+      "default": "any-random-text",
+      "random": true,
+      "rule": "paramExtUrl",
+      "envKey": "SECRET",
+      "edit": true
+    },
+    {
+      "type": "text",
+      "labelZh": "外部访问地址",
+      "labelEn": "External URL",
+      "required": true,
+      "default": "http://localhost:11000",
+      "rule": "paramExtUrl",
+      "envKey": "API_URL",
+      "edit": true
+    },
+    {
+      "type": "text",
+      "labelZh": "邮件服务发送人",
+      "labelEn": "SMTP Sender",
+      "required": false,
+      "default": "",
+      "rule": "paramExtUrl",
+      "envKey": "SMTP_SENDER",
+      "edit": true
+    },
+    {
+      "type": "text",
+      "labelZh": "邮件服务URI",
+      "labelEn": "SMTP Sender",
+      "required": false,
+      "default": "",
+      "rule": "paramExtUrl",
+      "envKey": "SMTP_URI",
+      "edit": true
+    }
+  ]
+}
