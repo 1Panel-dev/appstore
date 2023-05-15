@@ -2,7 +2,7 @@ version: "3"
 services:
   qbittorrent:
     container_name: ${CONTAINER_NAME}
-    restart: unless-stopped
+    restart: always
     networks:
       - 1panel-network
     environment:
