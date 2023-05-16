@@ -2,7 +2,7 @@ version: '3'
 services:
   alist:
     container_name: ${CONTAINER_NAME}
-    restart: unless-stopped
+    restart: always
     networks:
       - 1panel-network
     ports:
@@ -14,7 +14,7 @@ services:
       - PUID=0
       - PGID=0
       - UMASK=022
-    image: xhofe/alist:v3.16.3
+    image: xhofe/alist:v3.17.0
     labels:  
       createdBy: "Apps"
 
