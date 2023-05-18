@@ -1,0 +1,20 @@
+name: Gitea
+tags:
+    - CI/CD
+title: 一个自托管的 Git 服务
+type: CI/CD
+description: 一个自托管的 Git 服务
+additionalProperties:
+    key: gitea
+    name: Gitea
+    tags:
+        - CI/CD
+    shortDescZh: 一个自托管的 Git 服务
+    shortDescEn: a self-hosted Git service
+    type: tool
+    crossVersionUpdate: false
+    limit: 0
+    recommend: 0
+    website: https://gitea.io/
+    github: https://github.com/go-gitea/gitea
+    document: https://docs.gitea.io/

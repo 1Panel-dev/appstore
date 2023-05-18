@@ -1,0 +1,20 @@
+name: Docker Registry
+tags:
+    - CI/CD
+title: Docker 镜像存储库
+type: CI/CD
+description: Docker 镜像存储库
+additionalProperties:
+    key: docker-registry
+    name: Docker Registry
+    tags:
+        - CI/CD
+    shortDescZh: Docker 镜像存储库
+    shortDescEn: A storage and distribution system for named Docker images
+    type: runtime
+    crossVersionUpdate: false
+    limit: 1
+    recommend: 0
+    website: https://hub.docker.com/_/registry
+    github: https://github.com/distribution/distribution
+    document: https://docs.docker.com/registry/

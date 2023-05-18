@@ -1,0 +1,20 @@
+name: Tailchat
+tags:
+    - 建站
+title: 在你自己工作区的下一代noIM应用
+type: 建站
+description: 在你自己工作区的下一代noIM应用
+additionalProperties:
+    key: tailchat
+    name: Tailchat
+    tags:
+        - WebSite
+    shortDescZh: 在你自己工作区的下一代noIM应用
+    shortDescEn: The next-generation noIM Application in your own workspace
+    type: website
+    crossVersionUpdate: true
+    limit: 1
+    recommend: 0
+    website: https://tailchat.msgbyte.com/
+    github: https://github.com/msgbyte/tailchat
+    document: https://tailchat.msgbyte.com/docs/intro

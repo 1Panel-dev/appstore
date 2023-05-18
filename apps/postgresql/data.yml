@@ -1,0 +1,20 @@
+name: PostgreSQL
+tags:
+    - 数据库
+title: PostgreSQL 开源关系型数据库
+type: 数据库
+description: PostgreSQL 开源关系型数据库
+additionalProperties:
+    key: postgresql
+    name: PostgreSQL
+    tags:
+        - Database
+    shortDescZh: PostgreSQL 开源关系型数据库
+    shortDescEn: Open Source Relational Database
+    type: runtime
+    crossVersionUpdate: false
+    limit: 1
+    recommend: 0
+    website: https://www.postgresql.org/
+    github: https://github.com/postgres/postgres
+    document: https://www.postgresql.org/docs/

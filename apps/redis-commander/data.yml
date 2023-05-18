@@ -1,0 +1,20 @@
+name: Redis-Commander
+tags:
+    - 工具
+title: Redis Web 管理工具
+type: 工具
+description: Redis Web 管理工具
+additionalProperties:
+    key: redis-commander
+    name: Redis-Commander
+    tags:
+        - Tool
+    shortDescZh: Redis Web 管理工具
+    shortDescEn: Redis web management tool
+    type: tool
+    crossVersionUpdate: true
+    limit: 1
+    recommend: 0
+    website: http://joeferner.github.io/redis-commander/
+    github: https://github.com/joeferner/redis-commander
+    document: https://github.com/joeferner/redis-commander/blob/master/docs/configuration.md
