@@ -1,0 +1,20 @@
+name: WordPress
+tags:
+    - 建站
+title: 著名的开源博客软件和 CMS 系统
+type: 建站
+description: 著名的开源博客软件和 CMS 系统
+additionalProperties:
+    key: wordpress
+    name: WordPress
+    tags:
+        - WebSite
+    shortDescZh: 著名的开源博客软件和 CMS 系统
+    shortDescEn: Open source blogging software and content management system
+    type: website
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 1
+    website: https://wordpress.org/
+    github: https://github.com/WordPress/WordPress
+    document: https://cn.wordpress.org/support/

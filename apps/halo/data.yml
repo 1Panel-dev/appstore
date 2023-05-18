@@ -1,0 +1,20 @@
+name: Halo
+tags:
+    - 建站
+title: 强大易用的开源建站工具
+type: 建站
+description: 强大易用的开源建站工具
+additionalProperties:
+    key: halo
+    name: Halo
+    tags:
+        - WebSite
+    shortDescZh: 强大易用的开源建站工具
+    shortDescEn: Powerful and easy-to-use open source website builder
+    type: website
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 2
+    website: https://halo.run/
+    github: https://github.com/halo-dev/halo
+    document: https://docs.halo.run/
