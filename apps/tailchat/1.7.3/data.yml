@@ -1,0 +1,139 @@
+additionalProperties:
+    formFields:
+        - default: 11000
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: Port
+          labelZh: 端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: ""
+          edit: true
+          envKey: REDIS_HOST
+          key: redis
+          labelEn: Redis Service
+          labelZh: 缓存服务服务
+          required: true
+          type: service
+        - default: "6379"
+          edit: true
+          envKey: REDIS_PORT
+          labelEn: Redis Service Port
+          labelZh: 缓存服务服务端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: ""
+          edit: true
+          envKey: REDIS_PASS
+          labelEn: Redis Service Password
+          labelZh: 缓存服务服务密码
+          required: true
+          rule: paramCommon
+          type: password
+        - default: ""
+          edit: true
+          envKey: MONGO_HOST
+          key: mongodb
+          labelEn: Database Service
+          labelZh: 数据库服务
+          required: true
+          type: service
+        - default: "27017"
+          edit: true
+          envKey: MONGO_PORT
+          labelEn: Database Service Port
+          labelZh: 数据库服务端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: tailchat
+          edit: true
+          envKey: MONGO_DB
+          labelEn: Database Name
+          labelZh: 数据库名
+          required: true
+          rule: paramCommon
+          type: text
+        - default: ""
+          edit: true
+          envKey: MONGO_USER
+          labelEn: Database User Name
+          labelZh: 数据库用户名
+          required: true
+          rule: paramCommon
+          type: text
+        - default: ""
+          edit: true
+          envKey: MONGO_PASS
+          labelEn: Database User Password
+          labelZh: 数据库密码
+          required: true
+          rule: paramCommon
+          type: password
+        - default: ""
+          edit: true
+          envKey: MINIO_HOST
+          key: minio
+          labelEn: Storage Service
+          labelZh: 文件存储服务
+          required: true
+          type: service
+        - default: "9001"
+          edit: true
+          envKey: MINIO_PORT
+          labelEn: Storage Service Port
+          labelZh: 文件存储服务API端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: ""
+          edit: true
+          envKey: MINIO_USER
+          labelEn: User
+          labelZh: 文件存储服务用户名
+          required: true
+          rule: paramCommon
+          type: text
+        - default: ""
+          edit: true
+          envKey: MINIO_PASS
+          labelEn: User
+          labelZh: 文件存储服务密码
+          required: true
+          rule: paramComplexity
+          type: password
+        - default: any-random-text
+          edit: true
+          envKey: SECRET
+          labelEn: Secret
+          labelZh: 秘钥
+          random: true
+          required: true
+          rule: paramExtUrl
+          type: text
+        - default: http://localhost:11000
+          edit: true
+          envKey: API_URL
+          labelEn: External URL
+          labelZh: 外部访问地址
+          required: true
+          rule: paramExtUrl
+          type: text
+        - default: ""
+          edit: true
+          envKey: SMTP_SENDER
+          labelEn: SMTP Sender
+          labelZh: 邮件服务发送人
+          required: false
+          rule: paramExtUrl
+          type: text
+        - default: ""
+          edit: true
+          envKey: SMTP_URI
+          labelEn: SMTP Sender
+          labelZh: 邮件服务URI
+          required: false
+          rule: paramExtUrl
+          type: text

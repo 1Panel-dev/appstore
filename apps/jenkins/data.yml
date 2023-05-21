@@ -1,0 +1,20 @@
+name: Jenkins
+tags:
+    - CI/CD
+title: 开源的持续集成工具
+type: CI/CD
+description: 开源的持续集成工具
+additionalProperties:
+    key: jenkins
+    name: Jenkins
+    tags:
+        - CI/CD
+    shortDescZh: 开源的持续集成工具
+    shortDescEn: Build great things at any scale
+    type: tool
+    crossVersionUpdate: false
+    limit: 1
+    recommend: 0
+    website: https://www.jenkins.io/
+    github: https://github.com/jenkinsci/jenkins
+    document: https://www.jenkins.io/doc/book/

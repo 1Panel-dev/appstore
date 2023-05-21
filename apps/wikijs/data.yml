@@ -1,0 +1,20 @@
+name: Wiki.js
+tags:
+    - 建站
+title: 一个基于 Node.js 构建的现代而强大的 Wiki 应用程序。
+type: 建站
+description: 一个基于 Node.js 构建的现代而强大的 Wiki 应用程序。
+additionalProperties:
+    key: wikijs
+    name: Wiki.js
+    tags:
+        - WebSite
+    shortDescZh: 一个基于 Node.js 构建的现代而强大的 Wiki 应用程序。
+    shortDescEn: A modern and powerful wiki app built on Node.js
+    type: website
+    crossVersionUpdate: false
+    limit: 0
+    recommend: 0
+    website: https://js.wiki/
+    github: https://github.com/requarks/wiki
+    document: https://docs.requarks.io/

@@ -1,0 +1,20 @@
+name: PHP 8
+tags:
+    - 运行环境
+title: PHP8 运行环境
+type: 运行环境
+description: PHP8 运行环境
+additionalProperties:
+    key: php8
+    name: PHP 8
+    tags:
+        - Runtime
+    shortDescZh: PHP8 运行环境
+    shortDescEn: PHP8 Runtime
+    type: php
+    crossVersionUpdate: false
+    limit: 0
+    recommend: 9996
+    website: https://www.php.net/
+    github: https://github.com/php/php-src
+    document: https://www.php.net/docs.php

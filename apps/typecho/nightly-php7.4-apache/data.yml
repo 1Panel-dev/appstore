@@ -1,0 +1,69 @@
+additionalProperties:
+    formFields:
+        - default: ""
+          envKey: PANEL_DB_HOST
+          key: mysql
+          labelEn: Database Service
+          labelZh: 数据库服务
+          required: true
+          type: service
+        - default: typecho
+          envKey: PANEL_DB_NAME
+          labelEn: Database
+          labelZh: 数据库名
+          random: true
+          required: true
+          rule: paramCommon
+          type: text
+        - default: typecho
+          envKey: PANEL_DB_USER
+          labelEn: Database User
+          labelZh: 数据库用户
+          random: true
+          required: true
+          rule: paramCommon
+          type: text
+        - default: typecho
+          envKey: PANEL_DB_USER_PASSWORD
+          labelEn: Database User Password
+          labelZh: 数据库用户密码
+          random: true
+          required: true
+          rule: paramComplexity
+          type: password
+        - default: typecho
+          disabled: true
+          envKey: TYPECHO_USER_NAME
+          labelEn: User
+          labelZh: 管理员
+          required: true
+          type: text
+        - default: typecho
+          disabled: true
+          envKey: TYPECHO_USER_PASSWORD
+          labelEn: Password
+          labelZh: 管理员默认密码
+          required: true
+          type: text
+        - default: 8080
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: Port
+          labelZh: 端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: typecho@typecho.com
+          edit: true
+          envKey: TYPECHO_USER_MAIL
+          labelEn: User Email
+          labelZh: 用户邮箱
+          required: true
+          type: text
+        - default: http://localhost:8080
+          edit: true
+          envKey: TYPECHO_EXTERNAL_URL
+          labelEn: External URL
+          labelZh: 外部访问地址
+          required: true
+          rule: paramExtUrl
+          type: text

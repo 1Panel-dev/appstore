@@ -1,0 +1,24 @@
+additionalProperties:
+    formFields:
+        - default: 5244
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: WebUI Port
+          labelZh: 网页端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: ./data/data
+          edit: true
+          envKey: DATA_PATH
+          labelEn: Data folder path
+          labelZh: 数据文件夹路径
+          required: true
+          type: text
+        - default: ./data/mnt
+          edit: true
+          envKey: MOUNT_PATH
+          labelEn: Mount folder path
+          labelZh: 挂载文件夹路径
+          required: true
+          type: text
