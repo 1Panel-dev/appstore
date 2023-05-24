@@ -14,7 +14,6 @@ additionalProperties:
     type: website
     crossVersionUpdate: true
     limit: 0
-    recommend: 2
     website: https://typecho.org/
     github: https://github.com/typecho/typecho
     document: https://docs.typecho.org/doku.php

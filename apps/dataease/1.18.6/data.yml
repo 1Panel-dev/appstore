@@ -34,7 +34,7 @@ additionalProperties:
         - default: admin
           disabled: true
           envKey: DE_ADMIN
-          labelEn: Admin Password
+          labelEn: Admin User
           labelZh: 管理员
           required: true
           type: text
