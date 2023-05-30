@@ -54,7 +54,7 @@ additionalProperties:
           labelEn: Admin Username
           labelZh: 超级管理员用户名
           required: true
-          rule: paramCommon
+          rule: paramSimple
           type: text
         - default: halo
           envKey: HALO_ADMIN_PASSWORD
