@@ -1,0 +1,14 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base"],
+  "gitIgnoredAuthors": [
+    "githubaction@githubaction.com"
+  ],
+  "packageRules": [
+    {
+      "packageNames": ["docker-compose"],
+      "automerge": true
+    }
+  ],
+  "prCreation": "immediate"
+}
