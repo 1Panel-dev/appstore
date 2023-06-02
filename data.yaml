@@ -1,2 +1,18 @@
 name: 1Panel
 title: 新一代的 Linux 服务器运维管理面板
+additionalProperties:
+  tags:
+    - key: WebSite
+      name: 建站
+    - key: Server
+      name: Web 服务器
+    - key: Runtime
+      name: 运行环境
+    - key: Database
+      name: 数据库
+    - key: Tool
+      name: 工具
+    - key: CI/CD
+      name: CI/CD
+    - key: Local
+      name: 本地
