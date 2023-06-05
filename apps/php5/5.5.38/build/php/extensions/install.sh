@@ -211,7 +211,12 @@ fi
 
 if [[ -z "${EXTENSIONS##*,ioncube_loader,*}" ]]; then
     echo "---------- Install ioncube_loader ----------"
-	install-php-extensions ioncube_loader
+	  install-php-extensions ioncube_loader
+fi
+
+if [[ -z "${EXTENSIONS##*,imagick,*}" ]]; then
+    echo "---------- Install imagick ----------"
+	  install-php-extensions imagick
 fi
 
 if [[ -z "${EXTENSIONS##*,gd,*}" ]]; then
