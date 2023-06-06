@@ -1,73 +1,13 @@
-# Distribution
+# docker-registry
 
-The toolset to pack, ship, store, and deliver content.
+**docker-registry** 是一个开源的镜像仓库，用于存储和管理 Docker 镜像。它允许您在 Linux 服务器上创建私有的 Docker 镜像仓库，以便团队成员共享和访问镜像。
 
-This repository's main product is the Open Source Registry implementation
-for storing and distributing container images using the
-[OCI Distribution Specification](https://github.com/opencontainers/distribution-spec).
-The goal of this project is to provide a simple, secure, and scalable base
-for building a large scale registry solution or running a simple private registry.
-It is a core library for many registry operators including Docker Hub, GitHub Container Registry,
-GitLab Container Registry and DigitalOcean Container Registry, as well as the CNCF Harbor
-Project, and VMware Harbor Registry.
+docker-registry 的特点包括：
 
-<img src="/distribution-logo.svg" width="200px" />
+- **镜像存储和管理**：docker-registry 提供了功能强大的仓库系统，用于存储和管理 Docker 镜像，方便团队成员之间的共享和访问。
+- **私有化部署**：您可以在自己的 Linux 服务器上搭建私有的 docker-registry，以满足安全和隐私要求。
+- **访问控制**：docker-registry 支持设置访问权限，可以控制谁可以拉取和推送镜像，以保护您的镜像和数据的安全性。
+- **标签和版本管理**：您可以为镜像设置标签和版本，方便对镜像进行分类和管理。
+- **兼容性**：docker-registry 兼容 Docker 镜像仓库的标准 API，您可以使用 Docker CLI 或其他 Docker 客户端工具与之交互。
 
-[![Build Status](https://github.com/distribution/distribution/workflows/CI/badge.svg?branch=main&event=push)](https://github.com/distribution/distribution/actions?query=workflow%3ACI)
-[![GoDoc](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square)](https://pkg.go.dev/github.com/distribution/distribution)
-[![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](LICENSE)
-[![codecov](https://codecov.io/gh/distribution/distribution/branch/main/graph/badge.svg)](https://codecov.io/gh/distribution/distribution)
-[![FOSSA Status](https://app.fossa.com/api/projects/custom%2B162%2Fgithub.com%2Fdistribution%2Fdistribution.svg?type=shield)](https://app.fossa.com/projects/custom%2B162%2Fgithub.com%2Fdistribution%2Fdistribution?ref=badge_shield)
-[![OCI Conformance](https://github.com/distribution/distribution/workflows/conformance/badge.svg)](https://github.com/distribution/distribution/actions?query=workflow%3Aconformance)
-
-This repository contains the following components:
-
-|**Component**       |Description                                                                                                                                                                                         |
-|--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **registry**       | An implementation of the [OCI Distribution Specification](https://github.com/opencontainers/distribution-spec).                                                                                                 |
-| **libraries**      | A rich set of libraries for interacting with distribution components. Please see [godoc](https://pkg.go.dev/github.com/distribution/distribution) for details. **Note**: The interfaces for these libraries are **unstable**. |
-| **documentation**  | Docker's full documentation set is available at [docs.docker.com](https://docs.docker.com). This repository [contains the subset](docs/) related just to the registry.                                                                                                                                          |
-
-### How does this integrate with Docker, containerd, and other OCI client?
-
-Clients implement against the OCI specification and communicate with the
-registry using HTTP. This project contains a client implementation which
-is currently in use by Docker, however, it is deprecated for the
-[implementation in containerd](https://github.com/containerd/containerd/tree/master/remotes/docker)
-and will not support new features.
-
-### What are the long term goals of the Distribution project?
-
-The _Distribution_ project has the further long term goal of providing a
-secure tool chain for distributing content. The specifications, APIs and tools
-should be as useful with Docker as they are without.
-
-Our goal is to design a professional grade and extensible content distribution
-system that allow users to:
-
-* Enjoy an efficient, secured and reliable way to store, manage, package and
-  exchange content
-* Hack/roll their own on top of healthy open-source components
-* Implement their own home made solution through good specs, and solid
-  extensions mechanism.
-
-## Contribution
-
-Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to contribute
-issues, fixes, and patches to this project. If you are contributing code, see
-the instructions for [building a development environment](BUILDING.md).
-
-## Communication
-
-For async communication and long running discussions please use issues and pull requests on the github repo.
-This will be the best place to discuss design and implementation.
-
-For sync communication we have a #distribution channel in the [CNCF Slack](https://slack.cncf.io/)
-that everyone is welcome to join and chat about development.
-
-## Licenses
-
-The distribution codebase is released under the [Apache 2.0 license](LICENSE).
-The README.md file, and files in the "docs" folder are licensed under the
-Creative Commons Attribution 4.0 International License. You may obtain a
-copy of the license, titled CC-BY-4.0, at http://creativecommons.org/licenses/by/4.0/.
+使用 docker-registry，您可以轻松地构建、存储和管理自己的 Docker 镜像，为团队成员提供方便的访问和共享渠道。无论是个人项目还是团队开发，docker-registry 都是一个强大的工具，帮助您更好地利用 Docker 技术。

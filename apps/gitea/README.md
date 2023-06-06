@@ -1,92 +1,40 @@
-## Purpose
+<p align="center">
+  <a href="https://gitea.io/">
+    <img alt="Gitea" src="https://raw.githubusercontent.com/go-gitea/gitea/main/public/img/gitea.svg" width="220"/>
+  </a>
+</p>
+<h1 align="center">Gitea - Git with a cup of tea</h1>
 
-The goal of this project is to make the easiest, fastest, and most
-painless way of setting up a self-hosted Git service.
+## 简介
 
-As Gitea is written in Go, it works across **all** the platforms and
-architectures that are supported by Go, including Linux, macOS, and
-Windows on x86, amd64, ARM and PowerPC architectures.
-You can try it out using [the online demo](https://try.gitea.io/).
-This project has been
-[forked](https://blog.gitea.io/2016/12/welcome-to-gitea/) from
-[Gogs](https://gogs.io) since November of 2016, but a lot has changed.
+**gitea** 是一个轻量级的自托管Git服务，用于在Linux服务器上搭建私有的Git存储库和代码托管平台。它提供了一个简单易用的Web界面，使您能够方便地管理和协作开发项目。
 
-## Building
+gitea 具有以下特点：
 
-From the root of the source tree, run:
+- **轻量级**：gitea 资源消耗较低，适合运行在较小的服务器上，占用的存储空间较小。
+- **易于安装和部署**：gitea 提供了简单的安装方法，并且可以在不同的 Linux 发行版上运行。
+- **功能丰富**：gitea 提供了许多功能，包括代码版本控制、问题跟踪、代码审查、维基文档、持续集成等。
+- **多用户和团队支持**：gitea 允许创建多个用户和组织，并为每个项目设置不同的访问权限。
+- **可扩展性**：gitea 支持插件系统，可以根据需要扩展功能。
 
-    TAGS="bindata" make build
+使用 gitea，您可以进行以下操作：
 
-or if SQLite support is required:
+- 创建和管理代码存储库。
+- 进行代码版本控制，包括提交、分支、合并等操作。
+- 跟踪和解决问题。
+- 进行代码审查和合并请求。
+- 创建和编辑维基文档。
+- 集成持续集成和部署流程。
 
-    TAGS="bindata sqlite sqlite_unlock_notify" make build
+通过 gitea 的用户友好的界面和丰富的功能，您可以轻松地进行团队协作和项目管理，提高开发效率和代码质量。
 
-The `build` target is split into two sub-targets:
+请注意，在使用 gitea 时，建议采取适当的安全措施，如设置强密码、启用双因素身份验证以及定期备份数据，以确保代码和项目的安全性和可靠性。
 
-- `make backend` which requires [Go Stable](https://go.dev/dl/), required version is defined in [go.mod](/go.mod).
-- `make frontend` which requires [Node.js LTS](https://nodejs.org/en/download/) or greater and Internet connectivity to download npm dependencies.
 
-When building from the official source tarballs which include pre-built frontend files, the `frontend` target will not be triggered, making it possible to build without Node.js and Internet connectivity.
+## 截图
 
-Parallelism (`make -j <num>`) is not supported.
-
-More info: https://docs.gitea.io/en-us/install-from-source/
-
-## Using
-
-    ./gitea web
-
-NOTE: If you're interested in using our APIs, we have experimental
-support with [documentation](https://try.gitea.io/api/swagger).
-
-## Contributing
-
-Expected workflow is: Fork -> Patch -> Push -> Pull Request
-
-NOTES:
-
-1. **YOU MUST READ THE [CONTRIBUTORS GUIDE](CONTRIBUTING.md) BEFORE STARTING TO WORK ON A PULL REQUEST.**
-2. If you have found a vulnerability in the project, please write privately to **security@gitea.io**. Thanks!
-
-## Translating
-
-Translations are done through Crowdin. If you want to translate to a new language ask one of the managers in the Crowdin project to add a new language there.
-
-You can also just create an issue for adding a language or ask on discord on the #translation channel. If you need context or find some translation issues, you can leave a comment on the string or ask on Discord. For general translation questions there is a section in the docs. Currently a bit empty but we hope to fill it as questions pop up.
-
-https://docs.gitea.io/en-us/translation-guidelines/
-
-[![Crowdin](https://badges.crowdin.net/gitea/localized.svg)](https://crowdin.com/project/gitea)
-
-## Further information
-
-For more information and instructions about how to install Gitea, please look at our [documentation](https://docs.gitea.io/en-us/).
-If you have questions that are not covered by the documentation, you can get in contact with us on our [Discord server](https://discord.gg/Gitea) or create  a post in the [discourse forum](https://discourse.gitea.io/).
-
-We maintain a list of Gitea-related projects at [gitea/awesome-gitea](https://gitea.com/gitea/awesome-gitea).
-
-The Hugo-based documentation theme is hosted at [gitea/theme](https://gitea.com/gitea/theme).
-
-The official Gitea CLI is developed at [gitea/tea](https://gitea.com/gitea/tea).
-
-## Authors
-
-- [Maintainers](https://github.com/orgs/go-gitea/people)
-- [Contributors](https://github.com/go-gitea/gitea/graphs/contributors)
-- [Translators](options/locale/TRANSLATORS)
-
-## FAQ
-
-**How do you pronounce Gitea?**
-
-Gitea is pronounced [/ɡɪ’ti:/](https://youtu.be/EM71-2uDAoY) as in "gi-tea" with a hard g.
-
-**Why is this not hosted on a Gitea instance?**
-
-We're [working on it](https://github.com/go-gitea/gitea/issues/1029).
-
-## License
-
-This project is licensed under the MIT License.
-See the [LICENSE](https://github.com/go-gitea/gitea/blob/main/LICENSE) file
-for the full license text.
+|![Dashboard](https://dl.gitea.io/screenshots/home_timeline.png)|![User Profile](https://dl.gitea.io/screenshots/user_profile.png)|![Global Issues](https://dl.gitea.io/screenshots/global_issues.png)|
+|:---:|:---:|:---:|
+|![Branches](https://dl.gitea.io/screenshots/branches.png)|![Web Editor](https://dl.gitea.io/screenshots/web_editor.png)|![Activity](https://dl.gitea.io/screenshots/activity.png)|
+|![New Migration](https://dl.gitea.io/screenshots/migration.png)|![Migrating](https://dl.gitea.io/screenshots/migration.gif)|![Pull Request View](https://image.ibb.co/e02dSb/6.png)
+![Pull Request Dark](https://dl.gitea.io/screenshots/pull_requests_dark.png)|![Diff Review Dark](https://dl.gitea.io/screenshots/review_dark.png)|![Diff Dark](https://dl.gitea.io/screenshots/diff_dark.png)|
