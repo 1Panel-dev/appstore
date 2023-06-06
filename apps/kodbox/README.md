@@ -9,61 +9,20 @@
 
 ---
 
-- [Change log](./ChangeLog.md)
-- [English Document](http://kodcloud.com#lang=en)
-- [中文文档](http://kodcloud.com/#lang=zh_CN)
-- [Donate](https://www.paypal.me/kalcaddle)
+# Kodbox
 
-# Features
+**Kodbox** 是一个开源的在线文件管理器，提供了方便的文件浏览、上传、下载和共享功能。它可以让您通过 web 浏览器访问和管理您的文件，无论是个人使用还是团队协作都非常便捷。
 
-- Use experience like operating system, Rich context menu and toolbar, drag and drop, shortcut keys......
-- Available in more than 40 languages.
-- File Manage
-  - All operations with files and folders on a remote server(copy,cute,paste,move,remove,upload,create folder/file,rename,etc.)
-  - Multi-User support,custom role group.
-  - Flexible configuration of access rights,file types restriction, user - interface and other
-  - Clipboard: copy, cut, paste, clear
-  - Selectable files & folders support (mouse click & Ctrl & Shift & words & Keyboard shortcuts)
-  - Keyboard shortcuts: delete deletion, ctrl+A select, ctrl+C replication, ctrl+X splicing, up/down/left/right/home/end etc.
-  - Multiple actions support for selected files & folders: move,copy,cute,remove,rename,open,archive,delete,download etc.
-  - Double or single click setup to open files & folders
-  - Filetree: allow to open and display multiple subfolders at a time
-  - Implemented natural sorting on the client-side
-  - List,Icons and Split view;
-  - Move/Copy/Clone/Delete files with Drag & Drop
-  - Share files or folder to others.
-  - Add folder to your favorites
-  - Calculate directory sizes
-  - Thumbnails for image files
-  - Normalizer:UTF-8 Normalizer of file-name and file-path etc.
-  - Muti Charset support, in a variety of circumstances garbled solution;Sanitizer of file-name and file-path etc.
-  - Multiple & chunked uploads support,
-  - Background file upload with Drag & Drop HTML5 support;Folder upload with Chrome, Firefox and Edge
-  - Upload form URL (or list)
-  - Direct extraction to the current working directory (you do not want - to create a folder)
-  - Search: search by filename & file contents
-  - File exclusion based on name
-  - Copy direct file URL
-  - Archives create/extract/preview (zip, rar, 7z, tar, gzip, tgz)
-  - Quicklook, preview for common file types; image file,text file,pdf,swf,document file etc.
-  - Video and audio player relying on web browser capabilities
-- Editor
-  - Syntax highlighting for over 120 languages
-  - Multiple label, Drag & Drop the label.
-  - Over 15 themes,Choose your favorite programming style
-  - Web development: HTML/JS/CSS editor with Emmet integrated
-  - Automatic indent and outdent;Line wrapping;Code folding
-  - Multiple cursors and selections;(Middle key select;Ctrl+Command+G)
-  - Autocomplete.
-  - Fully customizable key bindings including vim and Emacs modes
-  - Search and replace with regular expressions;Highlight matching parentheses
-  - Toggle between soft tabs and real tabs
-  - Displays hidden characters
-  - Drag and drop text using the mouse
-  - Live syntax checker (JavaScript/CoffeeScript/CSS/XQuery/HTML/PHP etc.)
-  - Cut, copy, and paste functionality
-  - Markdown support.(live preview;convert to html etc.)
-  - Format: JavaScript/CSS/HTML/JSON/PHP etc.
-  - Cross-platform, even on mobile devices
-  - Easy to integrate with other systems
-  - Developed by kod itself, this is a nice try.
+Kodbox 的特点包括：
+
+- **直观友好的界面**：Kodbox 提供了直观简洁的用户界面，使您可以轻松地浏览和管理文件，无需复杂的配置和学习曲线。
+- **强大的文件管理功能**：Kodbox 支持文件的上传、下载、复制、剪切、重命名和删除等常用操作，方便您对文件进行管理和整理。
+- **文件共享和协作**：Kodbox 允许您通过链接或密码共享文件，方便与他人进行文件共享和协作，提高团队工作效率。
+- **多种文件预览模式**：Kodbox 支持多种文件预览模式，包括文本预览、图片预览、音频预览和视频预览等，方便快速查看文件内容。
+- **权限管理**：Kodbox 支持对文件和文件夹设置权限，您可以控制谁可以访问、编辑或共享您的文件，保护您的文件安全和隐私。
+- **插件扩展**：Kodbox 提供了丰富的插件系统，允许您根据需要添加额外的功能和扩展，满足个性化的文件管理需求。
+
+使用 Kodbox，您可以随时随地通过浏览器访问和管理您的文件，方便地进行文件共享和团队协作。无论是个人使用还是企业部署，Kodbox 都是一个实用且可靠的在线文件管理工具。
+
+
+
