@@ -1,0 +1,20 @@
+name: heimdall
+tags:
+    - 工具
+title: 个人网站导航工具
+type: 工具
+description: Heimdall 是一种以简单的方式组织您最常用的网站和 Web 应用程序的所有链接的方法。
+additionalProperties:
+    key: heimdall
+    name: heimdall
+    tags:
+        - Tool
+    shortDescZh: Heimdall 是一种以简单的方式组织您最常用的网站和 Web 应用程序的所有链接的方法。
+    shortDescEn: Heimdall is a way to organise all those links to your most used web sites and web applications in a simple way.
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://github.com/linuxserver/docker-heimdall
+    github: https://github.com/linuxserver/docker-heimdall
+    document: https://github.com/linuxserver/docker-heimdall/blob/master/README.md
