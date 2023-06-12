@@ -1,0 +1,18 @@
+version: '2'
+services:
+  qinglong:
+    # alpine 基础镜像版本
+    image: whyour/qinglong:v2.15.15
+    container_name: ${CONTAINER_NAME}  #固定写法，勿改
+    networks:  
+      - 1panel-network
+    # debian-slim 基础镜像版本
+    # image: whyour/qinglong:debian  
+    volumes:
+      - "${DATA_PATH}:/opt/qinglong/data"
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:5700"
+    restart: always
+networks:  
+  1panel-network:  
+    external: true
