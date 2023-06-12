@@ -3,7 +3,7 @@ tags:
     - 工具
 title: 简单好用的DDNS
 type: 工具
-description: 简单好用的DDNS。自动更新域名解析到公网IP,适用于家里用公网ip的设备。
+description: 简单好用的DDNS。自动更新域名解析到公网IP,适用于家里用公网ip的设备！
 additionalProperties:
     key: ddns-go
     name: ddns-go
