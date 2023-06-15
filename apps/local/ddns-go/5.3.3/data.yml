@@ -1,0 +1,17 @@
+additionalProperties:
+    formFields:
+        - default: 9876
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: Port
+          labelZh: 端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: ./ddns-go/config
+          edit: true
+          envKey: CONFIG_PATH
+          labelEn: Config folder path
+          labelZh: 配置文件夹
+          required: true
+          type: text

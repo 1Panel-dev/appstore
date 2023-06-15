@@ -1,0 +1,20 @@
+name: ddns-go
+tags:
+    - 工具
+title: 简单好用的DDNS
+type: 工具
+description: 简单好用的DDNS。自动更新域名解析到公网IP,适用于家里用公网ip的设备！
+additionalProperties:
+    key: ddns-go
+    name: ddns-go
+    tags:
+        - Tool
+    shortDescZh: 简单好用的DDNS。自动更新域名解析到公网IP(支持阿里云、腾讯云、Dnspod、Cloudflare、Callback、华为云、百度云、Porkbun、GoDaddy、Google Domain)
+    shortDescEn: Simple to use DDNS. Automatically update the Domain name resolution to the public IP (support ali cloud cloud, tencent, Dnspod, Cloudflare, Callback, huawei cloud, cloud, Porkbun, go, baidu Google Domain)
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://github.com/jeessy2/ddns-go
+    github: https://github.com/jeessy2/ddns-go
+    document: https://github.com/jeessy2/ddns-go/blob/master/README.md

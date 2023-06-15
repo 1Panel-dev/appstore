@@ -1,0 +1,18 @@
+version: '3'
+services:
+  ddns-go:
+    image: jeessy/ddns-go:v5.3.3
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    volumes:
+      - "${CONFIG_PATH}:/root"
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:9876"
+    labels:
+      createdBy: "Apps"
+
+networks:
+  1panel-network:
+    external: true
