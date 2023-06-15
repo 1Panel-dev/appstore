@@ -12,64 +12,17 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/jenkins/jenkins.svg)](https://hub.docker.com/r/jenkins/jenkins/)
 [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/3538/badge)](https://bestpractices.coreinfrastructure.org/projects/3538)
 
-In a nutshell, Jenkins is the leading open-source automation server.
-Built with Java, it provides over 1,800 [plugins](https://plugins.jenkins.io/) to support automating virtually anything,
-so that humans can spend their time doing things machines cannot.
 
-# What to Use Jenkins for and When to Use It
+**Jenkins** 是一个开源的自动化服务器软件，用于实现持续集成和持续交付（CI/CD）流程。它提供了强大的工具和插件来帮助开发团队自动构建、测试和部署软件。
 
-Use Jenkins to automate your development workflow, so you can focus on work that matters most. Jenkins is commonly used for:
+Jenkins 的特点包括：
 
-- Building projects
-- Running tests to detect bugs and other issues as soon as they are introduced
-- Static code analysis
-- Deployment
+- **持续集成**：Jenkins 支持自动构建和集成代码，确保团队成员的改动被及时合并和测试，减少代码冲突和集成问题。
+- **自动化测试**：Jenkins 提供了广泛的测试工具和插件，可以自动运行单元测试、集成测试、端到端测试等，确保软件质量和稳定性。
+- **自动化部署**：Jenkins 可以与各种部署工具和平台集成，自动化软件的部署和发布过程，实现快速、可靠的交付。
+- **可扩展性**：Jenkins 拥有丰富的插件生态系统，可以根据需求扩展和定制功能，满足不同项目和团队的需求。
+- **易于配置和管理**：Jenkins 提供了用户友好的界面和脚本化配置选项，使管理员能够轻松配置和管理 Jenkins 实例。
 
-Execute repetitive tasks, save time, and optimize your development process with Jenkins.
+使用 Jenkins，开发团队可以实现持续集成和持续交付的最佳实践，提高软件开发过程的效率和质量。无论是小型项目还是大型企业级应用，Jenkins 都是一个强大而可靠的自动化服务器工具。
 
-# Downloads
-
-The Jenkins project provides official distributions as WAR files, Docker images, native packages and installers for platforms including several Linux distributions and Windows.
-See the [Downloads](https://www.jenkins.io/download) page for references.
-
-For all distributions Jenkins offers two release lines:
-
-- [Weekly](https://www.jenkins.io/download/weekly/) -
-  Frequent releases which include all new features, improvements, and bug fixes.
-- [Long-Term Support (LTS)](https://www.jenkins.io/download/lts/) -
-  Older release line which gets periodically updated via bug fix backports.
-
-Latest releases:
-[![Jenkins Regular Release](https://img.shields.io/endpoint?url=https%3A%2F%2Fwww.jenkins.io%2Fchangelog%2Fbadge.json)](https://www.jenkins.io/changelog)
-[![Jenkins LTS Release](https://img.shields.io/endpoint?url=https%3A%2F%2Fwww.jenkins.io%2Fchangelog-stable%2Fbadge.json)](https://www.jenkins.io/changelog-stable)
-
-# Source
-
-Our latest and greatest source of Jenkins can be found on [GitHub](https://github.com/jenkinsci/jenkins). Fork us!
-
-# Contributing to Jenkins
-
-Follow the [contributing guidelines](CONTRIBUTING.md) if you want to propose a change in the Jenkins core.
-For more information about participating in the community and contributing to the Jenkins project,
-see [this page](https://www.jenkins.io/participate/).
-
-Documentation for Jenkins core maintainers is in the [maintainers guidelines](docs/MAINTAINERS.adoc).
-
-# News and Website
-
-All information about Jenkins can be found on our [website](https://www.jenkins.io/).
-Follow us on [Twitter](https://twitter.com/jenkinsci) or [LinkedIn](https://www.linkedin.com/company/jenkins-project/).
-
-# Governance
-
-See the [Jenkins Governance Document](https://www.jenkins.io/project/governance/) for information about the project's open governance, our philosophy and values, and development practices.
-Jenkins Code of Conduct can be found [here](https://www.jenkins.io/project/conduct/).
-
-# Adopters
-
-Jenkins is used by millions of users and thousands of companies.
-See [adopters](https://www.jenkins.io/project/adopters/) for the list of Jenkins adopters and their success stories.
-
-# License
-
-Jenkins is **licensed** under the **[MIT License](https://github.com/jenkinsci/jenkins/blob/master/LICENSE.txt)**.
+请注意，Jenkins 是一个自由开源的项目，您可以从官方网站下载并自行部署和使用。

@@ -32,17 +32,15 @@ additionalProperties:
           rule: paramComplexity
           type: password
         - default: typecho
-          disabled: true
           envKey: TYPECHO_USER_NAME
           labelEn: User
           labelZh: 管理员
           required: true
           type: text
         - default: typecho
-          disabled: true
           envKey: TYPECHO_USER_PASSWORD
           labelEn: Password
-          labelZh: 管理员默认密码
+          labelZh: 管理员密码
           required: true
           type: text
         - default: 8080

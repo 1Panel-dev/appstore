@@ -208,6 +208,16 @@ if [[ -z "${EXTENSIONS##*,hprose,*}" ]]; then
     docker-php-ext-enable hprose
 fi
 
+if [[ -z "${EXTENSIONS##*,ioncube_loader,*}" ]]; then
+    echo "---------- Install ioncube_loader ----------"
+	  install-php-extensions ioncube_loader
+fi
+
+if [[ -z "${EXTENSIONS##*,imagick,*}" ]]; then
+    echo "---------- Install imagick ----------"
+	  install-php-extensions imagick
+fi
+
 if [[ -z "${EXTENSIONS##*,gd,*}" ]]; then
     echo "---------- Install gd ----------"
     isPhpVersionGreaterOrEqual 8 0

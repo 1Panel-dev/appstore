@@ -310,7 +310,12 @@ end
 local function postCheck()
     if method == "POST" then
         local boundary = get_boundary()
-        if boundary then
+        local fileExtDeny = optionIsOn(ngx.var.fileExtDeny)
+        if boundary and fileExtDeny then
+            local protocol = ngx.var.server_protocol
+            if protocol == "HTTP/2.0" then
+                return
+            end
             local len = string.len
             local sock = ngx.req.socket()
             if not sock then

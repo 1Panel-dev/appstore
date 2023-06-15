@@ -1,3 +1,19 @@
+# flarum
+
+**flarum** 是一个现代化、轻量级的开源社区论坛软件。它提供了简洁而美观的用户界面，并具有丰富的功能，可用于构建和管理在线社区。
+
+flarum 的特点包括：
+
+- **简洁美观**：flarum 的界面设计简洁、现代，提供了良好的用户体验，使用户能够轻松浏览和参与社区讨论。
+- **可扩展性**：flarum 支持插件系统，可以根据需要扩展功能，定制和增强社区论坛的各个方面。
+- **强大的权限管理**：flarum 提供了灵活的权限管理机制，允许管理员对用户、用户组、板块等进行细粒度的权限设置。
+- **多语言支持**：flarum 支持多种语言，可以轻松创建和管理多语言的社区论坛。
+- **社交登录集成**：flarum 可与社交媒体账户（如 Google、Facebook、Twitter 等）进行集成，允许用户通过其社交账户登录和参与社区。
+- **响应式布局**：flarum 的界面具有响应式布局，适应不同设备上的不同屏幕大小，使用户在桌面、平板和手机等设备上都能获得良好的浏览体验。
+
+使用 flarum，您可以创建一个功能强大、易于管理的在线社区论坛。不论是支持技术讨论、产品交流还是社交互动，flarum 都是一个值得考虑的选择。
+
+
 # 使用说明
 ## 账户密码
 - 初始账户: flarum
@@ -23,47 +39,5 @@ php flarum cache:clear
 > 项目链接
 >> - https://hub.docker.com/r/crazymax/flarum
 >> - https://github.com/crazy-max/docker-flarum
-
-# 原始相关
-
-<p align="center">
-<a href="https://flarum.org/"><img src="https://flarum.org/assets/img/logo.png"></a>
-</p>
-
-<p align="center">
-<a href="https://packagist.org/packages/flarum/core"><img src="https://poser.pugx.org/flarum/core/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/flarum/core"><img src="https://poser.pugx.org/flarum/core/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/flarum/core"><img src="https://poser.pugx.org/flarum/core/license.svg" alt="License"></a>
-</p>
-
-## About Flarum
-
-**[Flarum](https://flarum.org/) is a delightfully simple discussion platform for your website.** It's fast and easy to use, with all the features you need to run a successful community. It is designed to be:
-
-* **Fast and simple.** No clutter, no bloat, no complex dependencies. Flarum is built with PHP so it’s quick and easy to deploy. The interface is powered by Mithril, a performant JavaScript framework with a tiny footprint.
-
-* **Beautiful and responsive.** This is forum software for humans. Flarum is carefully designed to be consistent and intuitive across platforms, out-of-the-box.
-
-* **Powerful and extensible.** Customize, extend, and integrate Flarum to suit your community. Flarum’s architecture is amazingly flexible, with a powerful Extension API.
-
-![screenshot](https://flarum.org/assets/img/home-screenshot.png)
-
-## Installation
-
-Read the **[Installation guide](https://docs.flarum.org/install)** to get started. For support, refer to the [documentation](https://docs.flarum.org/), and ask questions on the [community forum](https://discuss.flarum.org/) or [Discord chat](https://flarum.org/discord/).
-
-## Contributing
-
-Thank you for considering contributing to Flarum! Please read the **[Contributing guide](https://docs.flarum.org/contributing)** to learn how you can help.
-
-This repository only holds the Flarum skeleton application. Most development happens in [flarum/core](https://github.com/flarum/core).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Flarum, please follow our [security policy](https://github.com/flarum/core/security/policy) so we can address it promptly.
-
-## License
-
-Flarum is open-source software licensed under the [MIT License](https://github.com/flarum/flarum/blob/master/LICENSE).
 
 
