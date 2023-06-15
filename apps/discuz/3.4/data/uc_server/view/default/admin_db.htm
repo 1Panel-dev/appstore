@@ -1,0 +1,184 @@
+{template header}
+
+<script src="js/common.js" type="text/javascript"></script>
+
+<div class="container">
+	<!--{if $operate == 'list'}-->
+		<h3 class="marginbot">
+			<a href="admin.php?m=db&a=ls&o=export" class="sgbtn">{lang db_export}</a>
+			{lang db_list}
+		</h3>
+		<div class="note fixwidthdec">
+			<p class="i">{lang db_list_tips}</p>
+		</div>
+		<div class="note fixwidthdec">
+			<p class="i">{lang db_security_tips}</p>
+		</div>
+		<div class="mainbox">
+			<form id="theform">
+				<table class="datalist" onmouseover="addMouseEvent(this);">
+					<tr>
+						<th nowrap="nowrap"><input type="checkbox" name="chkall" id="chkall" onclick="checkall('operate[]')" class="checkbox" /><label for="chkall">{lang delete}</label></th>
+						<th nowrap="nowrap">{lang db_backup_dir}</th>
+						<th nowrap="nowrap">{lang db_backup_date}</th>
+						<th nowrap="nowrap">{lang db_operation}</th>
+						<th nowrap="nowrap">&nbsp;</th>
+						<th nowrap="nowrap">&nbsp;</th>
+					</tr>
+					<!--{loop $baklist $bak}-->
+						<tr>
+							<td width="50"><input type="checkbox" name="operate[]" value="{$bak[name]}" class="checkbox" /></td>
+							<td width="200"><a href="admin.php?m=db&a=ls&o=view&dir={$bak[name]}">$bak[name]</a></td>
+							<td width="120">$bak[date]</td>
+							<td><a href="admin.php?m=db&a=ls&o=view&dir={$bak[name]}">{lang db_detail}</a></td>
+							<td id="db_operate_{$bak[name]}"></td>
+							<td><iframe id="operate_iframe_{$bak[name]}" style="display:none" width="0" height="0"></iframe></td>
+						</tr>
+					<!--{/loop}-->
+					<tr class="nobg">
+						<td colspan="6"><input type="button" value="{lang submit}" onclick="db_delete($('theform'))" class="btn" /></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	<!--{elseif $operate == 'view'}-->
+		<h3 class="marginbot">
+			<a href="admin.php?m=db&a=ls&o=export" class="sgbtn">{lang db_export}</a>
+			{lang db_list}
+		</h3>
+		<div class="note fixwidthdec">
+			<p class="i">{lang db_import_tips}</p>
+		</div>
+		<div class="mainbox">
+			<form id="theform">
+			<table class="datalist" onmouseover="addMouseEvent(this);">
+				<tr>
+					<th nowrap="nowrap"><input type="checkbox" name="chkall" id="chkall" onclick="checkall('operate[]')" class="checkbox" /><label for="chkall">{lang db_import}</label></th>
+					<th nowrap="nowrap">{lang app_id}</th>
+					<th nowrap="nowrap">{lang app_name}</th>
+					<th nowrap="nowrap">{lang app_url}</th>
+					<th nowrap="nowrap">&nbsp;</th>
+					<th nowrap="nowrap">&nbsp;</th>
+				</tr>
+				<tr>
+					<td width="50"><input type="checkbox" name="operate_uc" class="checkbox" /></td>
+					<td width="35"></td>
+					<td><strong>UCenter</strong></td>
+					<td></td>
+					<td id="db_operate_0"><img src="images/correct.gif" border="0" class="statimg" /><span class="green">{lang dumpfile_exists}</span></td>
+					<td><iframe id="operate_iframe_0" style="display:none" width="0" height="0"></iframe></td>
+				</tr>
+				<!--{loop $applist $app}-->
+					<tr>
+						<td width="50"><input type="checkbox" name="operate[]" value="$app[appid]" class="checkbox" /></td>
+						<td width="35">$app[appid]</td>
+						<td width="160"><a href="admin.php?m=app&a=detail&appid=$app[appid]"><strong>$app[name]</strong></a></td>
+						<td><a href="$app[url]" target="_blank">$app[url]</a></td>
+						<td id="db_operate_{$app[appid]}"></td>
+						<td><iframe id="operate_iframe_{$app[appid]}" src="admin.php?m=db&a=ls&o=ping&appid={$app[appid]}&dir={$dir}" style="display:none" width="0" height="0"></iframe></td>
+					</tr>
+				<!--{/loop}-->
+				<tr class="nobg">
+					<td colspan="6"><input type="button" value="{lang submit}" onclick="db_operate($('theform'), 'import')" class="btn" /></td>
+				</tr>
+			</table>
+			</form>
+		</div>
+	<!--{else}-->
+		<h3 class="marginbot">
+			{lang db_export}
+			<a href="admin.php?m=db&a=ls&o=list" class="sgbtn">{lang db_list}</a>
+		</h3>
+		<div class="note fixwidthdec">
+			<p class="i">{lang db_security_tips}</p>
+		</div>
+		<div class="mainbox">
+			<form id="theform">
+			<table class="datalist" onmouseover="addMouseEvent(this);">
+				<tr>
+					<th nowrap="nowrap"><input type="checkbox" name="chkall" id="chkall" checked="checked" onclick="checkall('operate[]')" class="checkbox" /><label for="chkall">{lang db_export}</label></th>
+					<th nowrap="nowrap">{lang app_id}</th>
+					<th nowrap="nowrap">{lang app_name}</th>
+					<th nowrap="nowrap">{lang app_url}</th>
+					<th nowrap="nowrap">&nbsp;</th>
+					<th nowrap="nowrap">&nbsp;</th>
+				</tr>
+				<tr>
+					<td width="50"><input type="checkbox" name="operate_uc" disabled="disabled" checked="checked" class="checkbox" /></td>
+					<td width="35"></td>
+					<td><strong>UCenter</strong></td>
+					<td></td>
+					<td id="db_operate_0"></td>
+					<td><iframe id="operate_iframe_0" style="display:none" width="0" height="0"></iframe></td>
+				</tr>
+				<!--{loop $applist $app}-->
+					<tr>
+						<td width="50"><input type="checkbox" name="operate[]" value="$app[appid]" checked="checked" class="checkbox" /></td>
+						<td width="35">$app[appid]</td>
+						<td width="160"><a href="admin.php?m=app&a=detail&appid=$app[appid]"><strong>$app[name]</strong></a></td>
+						<td><a href="$app[url]" target="_blank">$app[url]</a></td>
+						<td id="db_operate_{$app[appid]}"></td>
+						<td><iframe id="operate_iframe_{$app[appid]}" style="display:none" width="0" height="0"></iframe></td>
+					</tr>
+				<!--{/loop}-->
+				<tr class="nobg">
+					<td colspan="6"><input type="button" value="{lang submit}" onclick="db_operate($('theform'), 'export')" class="btn" /></td>
+				</tr>
+			</table>
+			</form>
+		</div>
+	<!--{/if}-->
+</div>
+
+<script type="text/javascript">
+var import_status = new Array();
+function db_delete(theform) {
+	var lang_tips = '{lang db_start_delete_dumpfile}';
+	if(!confirm('{lang db_delete_dumpfile_confirm}')) {
+		return;
+	}
+	for(i = 0; theform[i] != null; i++) {
+		ele = theform[i];
+		if(/^operate\[/.test(ele.name) && ele.type == "checkbox" && ele.checked) {
+			show_status(ele.value, lang_tips);
+			$('operate_iframe_'+ele.value).src = 'admin.php?m=db&a=delete&backupdir='+ele.value;
+		}
+	}
+}
+
+function db_operate(theform, operate) {
+	operate = operate == 'import' ? 'import' : 'export';
+	if(operate == 'export') {
+		var lang_tips = '{lang db_start_export_dumpfile}';
+	} else {
+		if(!confirm('{lang db_import_dumpfile_confirm}')) {
+			return;
+		}
+		if(theform.operate_uc.checked && !confirm('{lang db_import_uc_dumpfile_confirm}')) {
+			return;
+		}
+		var lang_tips = '{lang db_start_import_dumpfile}';
+	}
+
+	if(theform.operate_uc.checked) {
+		show_status(0, lang_tips);
+		$('operate_iframe_0').src = 'admin.php?m=db&a=operate&t='+operate+'&appid=0&backupdir={$dir}&sid={$sid}';
+	}
+	for(i = 0; theform[i] != null; i++) {
+		ele = theform[i];
+		if(/^operate\[\]$/.test(ele.name) && ele.type == "checkbox" && ele.checked) {
+			if(operate != 'import' || import_status[ele.value] != false) {
+				show_status(ele.value, lang_tips);
+				$('operate_iframe_'+ele.value).src = 'admin.php?m=db&a=operate&t='+operate+'&appid='+ele.value+'&backupdir={$dir}&sid={$sid}';
+			}
+		}
+	}
+}
+
+function show_status(extid, msg) {
+	var o = $('db_operate_'+extid);
+	o.innerHTML = msg;
+}
+</script>
+
+{template footer}

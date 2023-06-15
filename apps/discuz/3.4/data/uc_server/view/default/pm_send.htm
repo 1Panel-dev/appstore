@@ -1,0 +1,78 @@
+{template header_client}
+{template pm_nav}
+
+<script type="text/javascript">
+function switchfirendls() {
+	if(document.getElementById('friendls').style.display == '') {
+		document.getElementById('friendls').style.display = 'none';
+		document.getElementById('pmcontent').className = 'pmcontent noside';
+	} else {
+		document.getElementById('friendls').style.display = '';
+		document.getElementById('pmcontent').className = 'pmcontent';
+	}
+}
+</script>
+
+<div class="ucinfo">
+	<!--{if $pmid && $do == 'forward'}-->
+		<h1><span><button onclick="location.href='index.php?m=pm_client&a=view&touid=$touid&plid=$plid&$extra'">{lang back}</button></span></h1>
+	<!--{/if}-->
+
+	<form method="post" id="postpmform" name="postpmform" action="index.php?m=pm_client&a=send&$extra">
+	<input type="hidden" name="formhash" value="{FORMHASH}">
+	<!--{if $sendpmseccode}--><input type="hidden" name="seccodehidden" value="$seccodeinit" /><!--{/if}-->
+	<div class="pmcontent{if !$friends} noside{/if}" id="pmcontent">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="newpm">
+		<tbody>
+			<tr>
+				<td class="sel"></td>
+				<th>{lang pm_to}:</th>
+				<td>
+				<input class="ucinput" type="text" name="msgto" size="65" value="$touser" />
+				</td>
+			</tr>
+			<tr>
+				<td class="sel"></td>
+				<th>{lang pm_message}:</th>
+				<td>
+				{template pm_editorbar}
+				<textarea class="listarea" id="pm_textarea" rows="15" cols="10" style="height: 210px" name="message" onKeyDown="ctlent(event)">$message</textarea>
+				</td>
+			</tr>
+			<!--{if $sendpmseccode}-->
+			<tr>
+				<td class="sel"></td>
+				<th>{lang login_seccode}:</th>
+				<td>
+					<label><input type="text" name="seccode" value="" size="5" /> <img width="70" height="21" src="admin.php?m=seccode&seccodeauth=$seccodeinit&{eval echo rand();}" /></label>
+				</td>
+			</tr>
+			<!--{/if}-->
+		</tbody>
+
+		<tfoot>
+			<tr>
+				<td class="sel"></td>
+				<th></th>
+				<td>
+				<button name="pmsubmit" type="submit" class="pmsubmit">{lang pm_sendpm}</button>
+				<input type="checkbox" name="type" value="1" checked="checked" />{lang chatpm}
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+	</div>
+	<!--{if $friends}-->
+	<div class="pmside" id="friendls">
+		<h3><input type="checkbox" name="chkall" onclick="checkall(this.form, 'friend')" value="$pm[pmid]" /> {lang pm_tofriends}</h3>
+		<ul>
+		<!--{loop $friends $friend}-->
+			<li><input type="checkbox" name="friend[]" value="$friend[friendid]"> $friend[username]</li>
+		<!--{/loop}-->
+		</ul>
+	</div>
+	<!--{/if}-->
+	</form>
+</div>
+
+{template footer_client}

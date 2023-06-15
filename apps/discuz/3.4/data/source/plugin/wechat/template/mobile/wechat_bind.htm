@@ -1,0 +1,84 @@
+<!--{template wechat:wechat_header}-->
+
+<!--{if $_G['wechat']['setting']['wechat_allowregister']}-->
+	<form id="registerform"method="post" class="block" autocomplete="off" action="{$selfurl}register">
+		<input type="hidden" name="formhash" value="{FORMHASH}" />
+		<input type="hidden" name="wxopenid" value="$wxopenid" />
+		<input type="hidden" name="avatar" value="$_GET[avatar]" />
+		<input type="hidden" name="submit" value="yes" />
+		<div class="loginbox registerbox">
+			<div class="login_from">
+				<li><input type="text" tabindex="1" class="px p_fre" size="30" autocomplete="off" value="$defaultusername" name="username" placeholder="{lang registerinputtip}" fwin="login"></li>
+			</div>
+			<div class="btn_register"><button tabindex="7" value="true" name="submit" type="submit" class="formdialog pn pnc"><span>{lang wechat:quickregister}</span></button></div>
+		</div>
+	</form>
+<!--{/if}-->
+
+<form id="loginform" method="post" autocomplete="off" action="{$selfurl}login">
+	<input type="hidden" name="formhash" value="{FORMHASH}" />
+	<input type="hidden" name="wxopenid" value="$wxopenid" />
+	<input type="hidden" name="submit" value="yes" />
+	<div class="loginbox">
+		<div class="login_from">
+			<ul>
+				<li><input type="text" value="" tabindex="1" class="px p_fre" size="30" autocomplete="off" value="" name="username" placeholder="{lang wechat:inputyourname}" fwin="login"></li>
+				<li><input type="password" tabindex="2" class="px p_fre" size="30" value="" name="password" placeholder="{lang login_password}" fwin="login"></li>
+				<li class="questionli">
+					<div class="login_select">
+					<span class="login-btn-inner">
+						<span class="login-btn-text">
+							<span class="span_question">{lang security_question}</span>
+						</span>
+						<span class="icon-arrow">&nbsp;</span>
+					</span>
+					<select id="questionid_{$loginhash}" name="questionid" class="sel_list">
+						<option value="0" selected="selected">{lang security_question}</option>
+						<option value="1">{lang security_question_1}</option>
+						<option value="2">{lang security_question_2}</option>
+						<option value="3">{lang security_question_3}</option>
+						<option value="4">{lang security_question_4}</option>
+						<option value="5">{lang security_question_5}</option>
+						<option value="6">{lang security_question_6}</option>
+						<option value="7">{lang security_question_7}</option>
+					</select>
+					</div>
+				</li>
+				<li class="bl_none answerli" style="display:none;"><input type="text" name="answer" id="answer_{$loginhash}" class="px p_fre" size="30" placeholder="{lang security_a}"></li>
+			</ul>
+		</div>
+		<div class="btn_login"><button tabindex="3" value="true" name="submit" type="submit" class="formdialog pn pnc"><span>{lang mobile:qqregmode2}</span></button></div>
+		<!--{if $connecturl}-->
+			<p>{lang useqqconnectlogin}</p>
+			<div class="btn_qqlogin"><a href="$connecturl">{lang qqconnect:connect_mobile_login}</a></div>
+		<!--{/if}-->
+		</div>
+	</div>
+</form>
+
+<script type="text/javascript">
+	(function() {
+		$(document).on('change', '.sel_list', function() {
+			var obj = $(this);
+			$('.span_question').text(obj.find('option:selected').text());
+			if(obj.val() == 0) {
+				$('.answerli').css('display', 'none');
+				$('.questionli').addClass('bl_none');
+			} else {
+				$('.answerli').css('display', 'block');
+				$('.questionli').removeClass('bl_none');
+			}
+		});
+	 })();
+	 function succeedhandle_registerform(s) {
+	 	location.href = s;
+	 }
+	 function succeedhandle_loginform(s) {
+	 	location.href = s;
+	 }
+</script>
+
+<div id="mask" style="display:none;"></div>
+
+</body>
+</html>

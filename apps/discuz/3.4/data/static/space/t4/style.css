@@ -1,0 +1,31 @@
+/*
+[name]猫猫[/name]
+Powered by Discuz! X
+*/
+
+body { background: #6A8FA1 url(images/bg.png) repeat-x 0 25px; color:#000; }
+
+a, a:hover, a:active{ color:#000; }
+	a:visited{ color:#333;}
+#hd { border-bottom: 4px solid #101A22; background: url(images/header.png) no-repeat 100px 10px; color: #FFF; }
+
+#nv li { background-color: #101A22; opacity: 1; filter: alpha(opacity=100); }
+	#nv li a, #nv li a:visited { color: #B9DEF2; }
+	#nv li a:hover { background-image: none !important; }
+#ct, .n, .w { background: transparent none !important; }
+.block .title, .bbda, .el li { border-bottom-color: #4E6778; }
+.tl .th { background: none; }
+.bm, .bm_h { border: none; background: none; }
+
+.el a{ color:#000;}
+	.el .d{ color:#333;}
+.xg1, .xg1 a, .xg1 a:hover, .xg1 a:visited{ color:#333 !important;}
+.tl th a:visited{ color:#333; }
+.tl td em, .tl td em a{ color:#ccc;}
+.tl .th{ border-bottom:1px solid #333;}
+.tl td, .tl th{ border-bottom:1px solid #333;}
+
+.tbmu a{ color:#000; }
+.pipe{ color:#333;}
+
+#ft{ border-top:1px solid #333;}

@@ -1,0 +1,27 @@
+/*
+wysiwyg CSS file for Discuz! X
+(C) Comsenz Inc.
+https://www.discuz.vip
+*/
+* { margin: 0; padding: 0; word-wrap: break-word; }
+html, body { border: 0 !important; }
+body { background: #FFF; font: {FONTSIZE} {FONT}; font-size: {MSGFONTSIZE}; color: {TABLETEXT}; height: 400px; }
+li { list-style-type: disc; margin-left: 2em; }
+ol { *margin: 0; padding: 0; }
+.litype_1 li, ol li { list-style-type: decimal; }
+.litype_2 li { list-style-type: lower-alpha; }
+.litype_3 li { list-style-type: upper-alpha; }
+a { color: {HIGHLIGHTLINK}; }
+	a:hover { text-decoration: none; }
+	a img { border: none; }
+hr.l { height: 1px; border: none; background: {COMMONBORDER}; color: {COMMONBORDER}; }
+table { empty-cells: show; border-collapse: collapse; }
+table td { padding: 4px; border: 1px solid {COMMONBORDER}; }
+th { font-weight: 400; }
+div.quote, div.blockcode { margin: 10px 0; padding: 10px 10px 10px 65px; }
+div.quote { padding-bottom: 5px; background: #F9F9F9 url({IMGDIR}/icon_quote_s.gif) no-repeat 20px 6px; }
+	div.quote blockquote { margin: 0; padding: 0 65px 5px 0; background: url({IMGDIR}/icon_quote_e.gif) no-repeat 100% 100%; line-height: 1.6em; }
+div.blockcode { border: 1px solid #CCC; background: #F7F7F7 url({IMGDIR}/codebg.gif) repeat-y 0 0; }
+	div.blockcode blockquote { margin: 0; }
+.float td { border: 0; padding: 0; }
+img { max-width:400px; }

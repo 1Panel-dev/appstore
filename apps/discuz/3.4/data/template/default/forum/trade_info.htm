@@ -1,0 +1,272 @@
+<!--{template common/header}-->
+<!--{if $postlist[$post[pid]]['invisible'] != 0}-->
+	<div class="trdb">{lang post_trade_removed}</div>
+	<!--{template common/footer}-->
+	{eval exit;}
+<!--{/if}-->
+<!--{if !$_G[inajax]}-->
+
+<script type="text/javascript" src="{$_G[setting][jspath]}forum_viewthread.js?{VERHASH}"></script>
+
+<div id="pt" class="bm cl">
+	<div class="z">
+		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a>$navigation <em>&rsaquo;</em> <!--{if $_GET[from]=='home'}--><a href="home.php?mod=space&do=trade">{lang trade}</a> <em>&rsaquo;</em><!--{/if}--> <a href="forum.php?mod=viewthread&tid=$_G[tid]">{lang user_threads}</a>
+	</div>
+</div>
+
+<!--{if $_G['forum']['ismoderator']}-->
+	<script type="text/javascript">var fid = parseInt('$_G[fid]'), tid = parseInt('$_G[tid]');</script>
+	<script type="text/javascript" src="{$_G['setting']['jspath']}forum_moderate.js?{VERHASH}"></script>
+	<form method="post" autocomplete="off" name="modactions" id="modactions">
+	<input type="hidden" name="formhash" value="{FORMHASH}" />
+	<input type="hidden" name="optgroup" />
+	<input type="hidden" name="operation" />
+	<input type="hidden" name="listextra" value="" />
+	</form>
+<!--{/if}-->
+
+<div id="ct" class="wp ct2 cl">
+<div class="mn">
+	<div class="bm bw0">
+
+<div class="ih cl bbda">
+	<div class="icn avt"><a href="home.php?mod=space&uid=$trade[sellerid]"><!--{avatar($trade[sellerid],small)}--></a></div>
+	<dl>
+		<dt class="ptn">
+			<span class="y">
+				<a href="home.php?mod=spacecp&ac=pm&op=showmsg&handlekey=showmsg_$post[authorid]&touid=$post[authorid]&pmid=0&daterange=2" onclick="showWindow('sendpm', this.href)" style="font-weight: 200"><img src="{IMGDIR}/pmto.gif" style="vertical-align:middle" />{lang send_pm}</a>&nbsp;
+				<!--{if $post['qq']}-->&nbsp;<a href="//wpa.qq.com/msgrd?v=3&uin=$post[qq]&site=$_G['setting']['bbname']&menu=yes&from=discuz" target="_blank" title="QQ"><img src="{IMGDIR}/qq.gif" alt="QQ" style="vertical-align:middle" /></a><!--{/if}-->
+				<!--{if $post['icq']}-->&nbsp;<a href="//wwp.icq.com/scripts/search.dll?to=$post[icq]" target="_blank" title="ICQ"><img src="{IMGDIR}/icq.gif" alt="ICQ" style="vertical-align:middle" /></a><!--{/if}-->
+				<!--{if $post['yahoo']}-->&nbsp;<a href="//edit.yahoo.com/config/send_webmesg?.target=$post[yahoo]&.src=pg" target="_blank" title="Yahoo"><img src="{IMGDIR}/yahoo.gif" alt="Yahoo!" style="vertical-align:middle" /></a><!--{/if}-->
+				<!--{if $post['taobao']}-->&nbsp;<a href="javascript:;" onclick="window.open('//amos.im.alisoft.com/msg.aw?v=2&uid='+encodeURIComponent('$post[taobaoas]')+'&site=cntaobao&s=2&charset=utf-8')" title="{lang taobao}"><img src="{IMGDIR}/taobao.gif" alt="{lang taobao}" style="vertical-align:middle" /></a><!--{/if}-->
+			</span>
+			$trade[seller]
+			<!--{if $_G['setting']['verify']['enabled']}-->
+				<!--{loop $_G['setting']['verify'] $vid $verify}-->
+					<!--{if $verify['available'] && $post['verify'.$vid] == 1}-->
+						<a href="home.php?mod=spacecp&ac=profile&op=verify&vid=$vid" target="_blank"><!--{if $verify[icon]}--><img src="$verify[icon]" class="vm" alt="$verify[title]" title="$verify[title]" /><!--{else}-->$verify[title]<!--{/if}--></a>&nbsp;
+					<!--{/if}-->
+				<!--{/loop}-->
+			<!--{/if}-->
+			<!--{if $online}--> <img class="vm" title="{lang on_line}" alt="online" src="{IMGDIR}/ol.gif"><!--{/if}-->
+		</dt>
+		<dd class="mtn"><a href="forum.php?mod=viewthread&tid=$_G[tid]{if $_GET[from]}&from=$_GET[from]{/if}">$_G['forum_thread'][subject]</a> <em>&rsaquo;</em> {lang trade_viewtrade}</dd>
+	</dl>
+</div>
+<!--{if $_G[inajax]}--><span class="y"><a href="javascript:;" onclick="$('tradeinfo$trade[pid]').style.display = 'none';display('trade$trade[pid]');" title="{lang pack_up}"><img src="{STATICURL}image/common/collapsed_no.gif" alt="" class="vm" /> {lang pack_up}</a></span><!--{/if}-->
+		<h1 class="ph mtm"><a href="forum.php?mod=viewthread&tid=$_G[tid]&do=tradeinfo&pid=$post[pid]{if !empty($_GET[modthreadkey])}&modthreadkey=$_GET[modthreadkey]{/if}" target="_blank">$trade[subject]</a></h1>
+<!--{/if}-->
+
+
+<div class="bbda ptm act cl"{if $_G[inajax]} style="border:0"{/if}>
+	<div class="cl">
+		<div class="spvimg">
+		<!--{if $trade['displayorder'] > 0}--><em class="hot">{lang post_trade_sticklist}</em><!--{/if}-->
+		<!--{if $trade['thumb']}-->
+			<a href="javascript:;"><img src="$trade[thumb]" onclick="zoom(this, '$trade[attachurl]')" width="{if $trade[width] > 300}300{else}$trade[width]{/if}" _width="300" _height="300" alt="$trade[subject]" /></a>
+		<!--{else}-->
+			<img src="{IMGDIR}/nophoto.gif" alt="$trade[subject]" />
+		<!--{/if}-->
+		<!--{if !$_G['forum_thread']['is_archived']}-->
+			<!--{if (($_G['forum']['ismoderator'] && $_G['group']['alloweditpost'] && (!in_array($post['adminid'], array(1, 2, 3)) || $_G['adminid'] < $post['adminid'])) || ($_G['forum']['alloweditpost'] && $_G['uid'] && $post['authorid'] == $_G['uid'])) && !$post['first'] || $_G['forum']['ismoderator'] && $_G['group']['allowdelpost']}-->
+				<p class="ptm pbm">
+					<!--{if $_G['forum']['ismoderator'] && $_G['group']['allowdelpost']}--><span class="y"><a href="javascript:;" onclick="modaction('delpost', $_GET[pid])">{lang delete}</a>&nbsp;&nbsp;<!--{/if}--><!--{if $_G['forum']['picstyle'] && ($_G['forum']['ismoderator'] || ($_G['uid'] == $_G['thread']['authorid'] && $_G['forum_thread']['closed'] == 0))}--><a onclick="showWindow('setcover_$trade[aid]',this.href)" href="forum.php?mod=ajax&action=setthreadcover&aid=$trade[aid]&fid=$_G[fid]">{lang set_cover}</a>&nbsp;&nbsp;<!--{/if}--></span>
+					<a class="editp xi1 xw1" style="padding-left: 20px; " href="forum.php?mod=post&action=edit&fid=$_G[fid]&tid=$_G[tid]&pid=$post[pid]{if !empty($_GET[modthreadkey])}&modthreadkey=$_GET[modthreadkey]{/if}&page=$page">{lang edit_trade}</a>
+				</p>
+			<!--{/if}-->
+		<!--{/if}-->
+		</div>
+
+		<div class="spi cl">
+			<!--{if $_G[inajax]}-->
+				<span class="y"><a href="javascript:;" onclick="$('tradeinfo$trade[pid]').style.display = 'none';display('trade$trade[pid]');" title="{lang pack_up}"><img src="{STATICURL}image/common/collapsed_no.gif" alt="" class="vm" /> {lang pack_up}</a></span>
+				<h4 class="wx mbm bbda"><a href="forum.php?mod=viewthread&tid=$_G[tid]&do=tradeinfo&pid=$post[pid]{if !empty($_GET[modthreadkey])}&modthreadkey=$_GET[modthreadkey]{/if}" target="_blank">$trade[subject]</a></h4>
+			<!--{/if}-->
+			<dl>
+			<dt>{lang trade_type_viewthread}:</dt>
+			<dd>
+				<!--{if $trade['quality'] == 1}-->{lang trade_new}<!--{/if}-->
+				<!--{if $trade['quality'] == 2}-->{lang trade_old}<!--{/if}-->
+				{lang trade_type_buy}
+			</dd>
+			<dt>{lang trade_transport}:</dt>
+			<dd>
+				<!--{if $trade['transport'] == 0}-->{lang post_trade_transport_offline}<!--{/if}-->
+				<!--{if $trade['transport'] == 1}-->{lang post_trade_transport_seller}<!--{/if}-->
+				<!--{if $trade['transport'] == 2 || $trade['transport'] == 4}-->
+					<!--{if $trade['transport'] == 4}-->{lang post_trade_transport_physical}<!--{/if}-->
+					<!--{if !empty($trade['ordinaryfee']) || !empty($trade['expressfee']) || !empty($trade['emsfee'])}-->
+						<!--{if !empty($trade['ordinaryfee'])}-->{lang post_trade_transport_mail} $trade[ordinaryfee] {lang payment_unit}<!--{/if}-->
+						<!--{if !empty($trade['expressfee'])}--> {lang post_trade_transport_express} $trade[expressfee] {lang payment_unit}<!--{/if}-->
+						<!--{if !empty($trade['emsfee'])}--> EMS $trade[emsfee] {lang payment_unit}<!--{/if}-->
+					<!--{elseif $trade['transport'] == 2}-->
+						{lang post_trade_transport_none}
+					<!--{/if}-->
+				<!--{/if}-->
+				<!--{if $trade['transport'] == 3}-->{lang post_trade_transport_virtual}<!--{/if}-->
+			</dd>
+			<dt>{lang trade_remaindays}:</dt>
+			<dd>
+			<!--{if $trade[closed]}-->
+				<em>{lang trade_timeout}</em>
+			<!--{elseif $trade[expiration] > 0}-->
+				{$trade[expiration]} {lang days} {$trade[expirationhour]} {lang trade_hour}
+			<!--{elseif $trade[expiration] == 0}-->
+				{$trade[expirationhour]} {lang trade_hour}
+			<!--{elseif $trade[expiration] == -1}-->
+				<em>{lang trade_timeout}</em>
+			<!--{else}-->
+				&nbsp;
+			<!--{/if}-->
+			</dd>
+			<dt>{lang post_trade_number}:</dt><dd>$trade[amount]</dd>
+			<!--{if $trade[locus]}--><dt>{lang trade_locus}:</dt><dd>$trade[locus]</dd><!--{/if}-->
+			<dt>{lang post_trade_buynumber}:</dt><dd>$trade[totalitems]</dd>
+		</dl>
+		<dl class="nums">
+			<dt>{lang trade_price}:</dt>
+			<dd>
+				<!--{if $trade[price] > 0}-->
+					<p><em>$trade[price]</em>&nbsp;{lang payment_unit}</p>
+				<!--{/if}-->
+				<!--{if $_G['setting']['creditstransextra'][5] != -1 && $trade[credit]}-->
+					<p><!--{if $trade[price] > 0}-->{lang trade_additional} <!--{/if}--><em>$trade[credit]</em>&nbsp;{$_G[setting][extcredits][$_G['setting']['creditstransextra'][5]][unit]}{$_G[setting][extcredits][$_G['setting']['creditstransextra'][5]][title]}</p>
+				<!--{/if}-->
+			</dd>
+		</dl>
+		<dl>
+			<!--{if $trade[price] && $trade['costprice'] > 0 || $_G['setting']['creditstransextra'][5] != -1 && $trade[credit] && $trade['costcredit'] > 0}-->
+				<dt>{lang trade_costprice}:</dt>
+				<dd class="xg1">
+					<!--{if $trade['costprice'] > 0}-->
+						<del>$trade[costprice] {lang payment_unit}</del><br />
+					<!--{/if}-->
+					<!--{if $_G['setting']['creditstransextra'][5] != -1 && $trade['costcredit'] > 0}-->
+						<del><!--{if $trade[costprice] > 0}-->{lang trade_additional} <!--{/if}-->$trade[costcredit] {$_G[setting][extcredits][$_G['setting']['creditstransextra'][5]][unit]}{$_G[setting][extcredits][$_G['setting']['creditstransextra'][5]][title]}</del>
+					<!--{/if}-->
+				</dd>
+			<!--{/if}-->
+			<!--{hook/viewthread_tradeinfo_extra}-->
+		</dl>
+
+		<!--{if $post['authorid'] != $_G['uid'] && empty($thread['closed']) && $trade[expiration] > -1}-->
+			<p class="pns mbm">
+			<!--{if $trade[amount]}-->
+				<button onclick="{if $_G['uid']}window.open('forum.php?mod=trade&tid=$post[tid]&pid=$post[pid]','','');{else}showWindow('login', 'member.php?mod=logging&action=login&guestmessage=yes');{/if}" class="pn"><span>{lang attachment_buy}</span></button> &nbsp;
+			<!--{else}-->
+				<button disabled="yes" class="pn"><span>{lang sold_out}</span></button> &nbsp;
+			<!--{/if}-->
+			<!--{if $_G['uid']}--><button onclick="showWindow('sendpm', 'home.php?mod=spacecp&ac=pm&op=showmsg&handlekey=showmsg_$post[authorid]&touid=$post[authorid]&pmid=0&daterange=2&tradeid=$post[pid]')" class="pn"><span><!--{if $online}-->{lang on_line}<!--{/if}-->{lang trade_bargain}</span></button><!--{/if}-->
+			</p>
+		<!--{/if}-->
+		<!--{if $trade['tenpayaccount']}-->
+			<p><em>({lang post_trade_support_tenpay})</em></p>
+		<!--{/if}-->
+		</div>
+	</div>
+	<div class="cl mtw">
+		<div class="c pbm">
+			$post[message]
+		</div>
+		<!--{if $post['attachment']}-->
+			<div class="notice postattach">{lang attachment}: <em>{lang attach_nopermission}</em></div>
+		<!--{elseif $post['imagelist'] || $post['attachlist']}-->
+			<div class="pattl">
+				<!--{if $post['imagelist']}-->
+					 <!--{echo showattach($post, 1)}-->
+				<!--{/if}-->
+				<!--{if $post['attachlist']}-->
+					 <!--{echo showattach($post)}-->
+				<!--{/if}-->
+			</div>
+		<!--{/if}-->
+
+		<!--{if !$_G[inajax]}--><div id="comment_$post[pid]" class="cl tpst cm"></div><!--{/if}-->
+	</div>
+	<!--{if !$_G[inajax] && $allowpostreply && $post['allowcomment'] && $_G['setting']['commentnumber']}--><div class="pob"><em><a class="fastre" href="javascript:;" onclick="showWindow('comment', 'forum.php?mod=misc&action=comment&pid=$post[pid]', 'get', 0)">{lang comments}</a></em></div><!--{/if}-->
+</td></tr>
+</td></tr></table></div>
+
+<!--{if !empty($aimgs[$post[pid]])}-->
+<script type="text/javascript" reload="1">
+	var aimgcount = new Array();
+	aimgcount[{$post[pid]}] = [<!--{echo dimplode($aimgs[$post[pid]]);}-->];
+	attachimggroup($post['pid']);
+	<!--{if empty($_G['setting']['lazyload'])}-->
+		attachimgshow($post[pid]);
+	<!--{/if}-->
+</script>
+<!--{/if}-->
+<!--{if !$_G[inajax] && $post[comment]}-->
+<script type="text/javascript" reload="1">ajaxget('forum.php?mod=misc&action=commentmore&tid=$post[tid]&pid=$post[pid]', 'comment_$post[pid]');</script>
+<!--{/if}-->
+
+<!--{if !$_G[inajax]}-->
+	</div></div>
+	<div class="sd">
+		<div class="bm">
+			<div class="bm_h">
+				<h2>{lang trade_rate}</h2>
+			</div>
+			<div class="bm_c">
+				<table cellpadding="4" cellspacing="4" border="0" width="100%">
+					<tr><th width="60">{lang trade_seller_real_name}</th><td><!--{if $post[realname]}-->$post[realname]<!--{/if}--></td></tr>
+					<tr><th width="60">{lang eccredit_buyerinfo}</th><td><a href="home.php?mod=space&uid=$post[authorid]&do=trade&view=eccredit#sellcredit" target="_blank">$post[buyercredit]&nbsp;<img src="{STATICURL}image/traderank/buyer/$post[buyerrank].gif" border="0" style="vertical-align: middle"></a></td></tr>
+					<tr><th>{lang eccredit_sellerinfo}</th><td><a href="home.php?mod=space&uid=$post[authorid]&do=trade&view=eccredit#buyercredit" target="_blank">$post[sellercredit]&nbsp;<img src="{STATICURL}image/traderank/seller/$post[sellerrank].gif" border="0" style="vertical-align: middle"></a></td></tr>
+				</table>
+			</div>
+		</div>
+		<!--{if $usertrades}-->
+			<div class="bm">
+				<div class="bm_h">
+					<h2>{lang trade_other_goods}</h2>
+				</div>
+				<div class="bm_c">
+					<div class="xld cl">
+						<!--{loop $usertrades $usertrade}-->
+						<dl class="cl">
+							<dd class="m">
+								<a href="forum.php?mod=viewthread&tid=$usertrade[tid]&do=tradeinfo&pid=$usertrade[pid]{if !empty($_GET[modthreadkey])}&modthreadkey=$_GET[modthreadkey]{/if}" class="tn">
+									<!--{if $usertrade['displayorder'] > 0}--><em class="hot">{lang post_trade_sticklist}</em><!--{/if}-->
+									<!--{if $usertrade['aid']}--><img src="{echo getforumimg($usertrade[aid])}" width="60" alt="$usertrade[subject]" /><!--{else}--><img src="{IMGDIR}/nophoto.gif" width="130" alt="$usertrade[subject]" /><!--{/if}-->
+								</a>
+							</dd>
+							<dt><a href="forum.php?mod=viewthread&tid=$usertrade[tid]&do=tradeinfo&pid=$usertrade[pid]{if !empty($_GET[modthreadkey])}&modthreadkey=$_GET[modthreadkey]{/if}">$usertrade[subject]</a></dt>
+							<dd>
+								<!--{if $usertrade[price] > 0}-->
+								<p class="p">&yen; <em class="xi1">$usertrade[price]</em></p>
+								<!--{/if}-->
+								<!--{if $_G['setting']['creditstransextra'][5] != -1 && $usertrade[credit]}-->
+								<p class="{if $usertrade[price] > 0}xg1{else}p{/if}"><!--{if $usertrade[price] > 0}-->{lang trade_additional} <!--{/if}--><em class="xi1">$usertrade[credit]</em>&nbsp;{$_G[setting][extcredits][$_G['setting']['creditstransextra'][5]][unit]}{$_G[setting][extcredits][$_G['setting']['creditstransextra'][5]][title]}</p>
+								<!--{/if}-->
+							</dd>
+						</dl>
+						<!--{/loop}-->
+					</div>
+				</div>
+			</div>
+		<!--{/if}-->
+		<!--{if $userthreads}-->
+			<div class="bm">
+				<div class="bm_h">
+					<h2>{lang trade_seller_other_goods}</h2>
+				</div>
+				<div class="bm_c cl xl">
+					<ul>
+					<!--{loop $userthreads $userthread}-->
+						<li><span class="z xg1">[<!--{date($userthread[dateline], 'n-j')}-->]</span>&nbsp;<a href="forum.php?mod=viewthread&tid=$userthread[tid]">$userthread[subject]</a></li>
+					<!--{/loop}-->
+					</ul>
+				</div>
+			</div>
+		<!--{/if}-->
+	</div>
+	</div>
+
+	<!--{if !IS_ROBOT && !empty($_G[setting][lazyload])}-->
+		<script type="text/javascript">
+		new lazyload();
+		</script>
+	<!--{/if}-->
+<!--{/if}-->
+<!--{template common/footer}-->

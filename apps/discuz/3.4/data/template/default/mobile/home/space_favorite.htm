@@ -1,0 +1,26 @@
+<!--{template common/header}-->
+<div class="box"><a href="{if $forcefid}forum.php?mod=forumdisplay{$forcefid}{else}forum.php{/if}" title="{lang return_forum}">{lang return_forum}</a> </div>
+<div class="box"><a href="home.php?mod=space&uid={$_G[uid]}&do=favorite&view=me&type=forum" <!--{if $_GET[type] == 'forum'}-->class="xw1"<!--{/if}-->>{lang my_favorites_forums}</a> <span class="pipe">|</span> <a href="home.php?mod=space&uid={$_G[uid]}&do=favorite&view=me&type=thread" <!--{if $_GET[type] == 'thread'}-->class="xw1"<!--{/if}-->>{lang my_favorites_thread}</a></div>
+<div class="bm mtn">
+	<div class="bm_h">
+    	<!--{if $_GET[type] == 'forum'}-->{lang my_favorites_forums}<!--{elseif $_GET[type] == 'thread'}-->{lang my_favorites_thread}<!--{else}-->{lang title_memcp_favorite}<!--{/if}-->
+    </div>
+    <!--{if $list}-->
+
+        <!--{loop $list $k $value}-->
+            <div class="bm_c">
+                <a href="$value[url]" target="_blank">$value[title]</a>
+                <p>
+                <!--{if $value[description]}-->
+					<span class="xg1">$value[description]</span>
+                <!--{/if}--><span class="xg1"><!--{date($value[dateline], 'u')}--></span>
+                <a class="o" id="a_delete_$k" href="home.php?mod=spacecp&ac=favorite&op=delete&favid=$k&type={$_GET[type]}" >{lang favorite_delete}</a>
+                </p>
+            </div>
+        <!--{/loop}-->
+    <!--{else}-->
+    	<div class="bm_c">{lang no_favorite_yet}</div>
+    <!--{/if}-->
+<!--{if $multi}--><div class="pgs cl mtm">$multi</div><!--{/if}-->
+</div>
+<!--{template common/footer}-->

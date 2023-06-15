@@ -1,0 +1,50 @@
+<!--{subtemplate common/header}-->
+<link rel="stylesheet" type="text/css" href="source/plugin/mobile/template/style.css" />
+<!--{if $_G['adminid'] == 1}-->
+<script type="text/javascript">
+	function hiddentips() {
+		setcookie("mobiletips", "1");
+		display('admintips');
+	}
+</script>
+<!--{/if}-->
+<div id="ct" class="wp cl ptw pbw">
+<!--{if $_G['cache']['mobileoem_data']['iframeUrl']}-->
+	<iframe frameborder="0" width="100%" scrolling="no" height="810" src="{$_G['cache']['mobileoem_data']['iframeUrl']}"></iframe>
+<!--{else}-->
+<!--{if $_G['adminid'] == 1 && !$_G[cookie][mobiletips]}-->
+  <div class="wrap">
+	<div id="admintips" class="tips"><span class="y"><a href="javascript:hiddentips();" class="close">{lang close}</a></span>{lang mobile:admin_tips}</div>
+    <!--{/if}-->
+	<div class="content">
+		<ul class="platform">
+			<li><a href="https://discuz.dismall.com/mobile.php?platform=ios"><img src="./source/plugin/mobile/template/image/iphone.jpg" alt="{lang mobile:iphone_alt}"/></a></li>
+			<li><a href="https://discuz.dismall.com/mobile.php?platform=android"><img src="./source/plugin/mobile/template/image/android.jpg" alt="{lang mobile:android_alt}"/></a></li>
+			<li><a href="https://discuz.dismall.com/mobile.php?platform=windowsphone"><img src="./source/plugin/mobile/template/image/wp7.jpg" alt="{lang mobile:windowsphone_alt}"/></a></li>
+		</ul>
+		<div class="inner cl">
+			<div class="intro z">
+				<h2><img src="./source/plugin/mobile/template/image/title_intro.jpg" alt="{lang mobile:discuzmobile_alt}"></h2>
+				<dl>
+					<dt>{lang mobile:tips_1}</dt>
+					<dd>{lang mobile:tips_1_desc}</dd>
+					<dt>{lang mobile:tips_2}</dt>
+					<dd>{lang mobile:tips_2_desc}</dd>
+					<dt>{lang mobile:tips_3}</dt>
+					<dd>{lang mobile:tips_3_desc}</dd>
+				</dl>
+			</div>
+			<div class="code y">
+				<dl>
+					<dt class="shoot">{lang mobile:qr_desc}</dt>
+					<dd class="code_img"><img src="data/cache/mobile_siteqrcode.png" alt="{lang mobile:qr}"/></dd>
+					<dt>{lang mobile:wapmode}</dt>
+					<dd class="url"><a href="$_G['siteurl']" target="_blank">{$_G['siteurl']}</a></dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+<!--{/if}-->
+</div>
+</div>
+<!--{subtemplate common/footer}-->

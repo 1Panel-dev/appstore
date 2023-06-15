@@ -1,0 +1,67 @@
+<!--{template common/header}-->
+<!--{if !$_G[inajax]}-->
+	<div id="pt" class="bm cl">
+		<div class="z"><a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em> <a href="home.php">$_G[setting][navs][4][navname]</a></div>
+	</div>
+	<div id="ct" class="ct2_a wp cl">
+		<div class="mn">
+			<div class="bm">
+<!--{/if}-->
+<!--{if $_GET['op'] == 'delete'}-->
+	<h3 class="flb">
+		<em id="return_$_GET[handlekey]">{lang delete_favorite}</em>
+		<!--{if $_G[inajax]}--><span><a href="javascript:;" onclick="hideWindow('$_GET[handlekey]');" class="flbc" title="{lang close}">{lang close}</a></span><!--{/if}-->
+	</h3>
+	<form id="favoriteform_{$favid}" name="favoriteform_{$favid}" method="post" autocomplete="off" action="home.php?mod=spacecp&ac=favorite&op=delete&favid=$favid&type=$_GET[type]" {if $_G[inajax] && $_GET[type]!='view'} onsubmit="ajaxpost(this.id, 'return_$_GET[handlekey]');"{/if}>
+		<input type="hidden" name="referer" value="{echo dreferer()}" />
+		<input type="hidden" name="deletesubmit" value="true" />
+		<input type="hidden" name="formhash" value="{FORMHASH}" />
+		<!--{if $_G[inajax]}--><input type="hidden" name="handlekey" value="$_GET[handlekey]" /><!--{/if}-->
+		<div class="c">{lang delete_favorite_message}</div>
+		<p class="o pns">
+			<button type="submit" name="deletesubmitbtn" value="true" class="pn pnc"><strong>{lang determine}</strong></button>
+		</p>
+	</form>
+	<!--{if $_G[inajax] && $_GET[type]!='view'}-->
+	<script type="text/javascript">
+		function succeedhandle_$_GET[handlekey](url, msg, values) {
+			hideWindow('$_GET[handlekey]');
+		}
+	</script>
+	<!--{/if}-->
+<!--{else}-->
+	<h3 class="flb">
+		<em id="return_$_GET[handlekey]">{lang favorite}</em>
+		<!--{if $_G[inajax]}--><span><a href="javascript:;" onclick="hideWindow('$_GET[handlekey]');" class="flbc" title="{lang close}">{lang close}</a></span><!--{/if}-->
+	</h3>
+	<form method="post" autocomplete="off" id="favoriteform_{$id}" name="favoriteform_{$id}" action="home.php?mod=spacecp&ac=favorite&type=$type&id=$id&spaceuid=$spaceuid" {if $_G[inajax]}onsubmit="ajaxpost(this.id, 'return_$_GET[handlekey]'{if $type == 'thread'}, null, null, null, 'favoriteupdate()'{/if});"{/if}>
+		<input type="hidden" name="favoritesubmit" value="true" />
+		<input type="hidden" name="referer" value="{echo dreferer()}" />
+		<input type="hidden" name="formhash" value="{FORMHASH}" />
+		<!--{if $_G[inajax]}--><input type="hidden" name="handlekey" value="$_GET[handlekey]" /><!--{/if}-->
+		<div class="c">
+			<p>{lang favorite_count}</p>
+			<p>{lang favorite_description}:</p>
+			<textarea id="general_{$id}" name="description" cols="50" rows="5" class="pt mtn" style="width: 400px;" onkeydown="ctrlEnter(event, 'favoritesubmit_btn')">$description</textarea>
+		</div>
+		<p class="o pns">
+			<button type="submit" name="favoritesubmit_btn" id="favoritesubmit_btn" class="pn pnc" value="true"><strong>{lang determine}</strong></button>
+		</p>
+	</form>
+	<!--{if $_G[inajax]}-->
+	<script type="text/javascript">
+		function succeedhandle_$_GET[handlekey](url, msg, values) {
+			favorite_delete(values['favid']);            
+			hideWindow('$_GET[handlekey]');
+		}
+	</script>
+	<!--{/if}-->
+<!--{/if}-->
+
+<!--{if !$_G[inajax]}-->
+		</div>
+	</div>
+	<div class="appl"><!--{subtemplate common/userabout}--></div>
+</div>
+<!--{/if}-->
+<!--{template common/footer}-->

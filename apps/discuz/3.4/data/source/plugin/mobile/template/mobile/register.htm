@@ -1,0 +1,216 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="{CHARSET}" />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="MobileOptimized" content="320" />
+<style>
+	body { background:#f7f7f7; font-size: 100%; }
+	UL, LI{ list-style:none; padding:0; margin:0; }
+	.xg1 { color: #999999; }
+	.xs8 { font-size: 80%; }
+	.cl:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; } .cl { zoom: 1; }
+	.y { float: right; }
+	.txt, .px{ background: #FFF; border: 1px #efefef solid; width: 60%; padding:5px; }
+	.reg_c  UL { margin-bottom: 10px; }
+	.reg_c  UL LI { padding:8px; border: 1px #bababa solid; border-bottom:none;  background: #FFFFFF;}
+	.reg_c  UL LI strong{ width: 90px; display:inline-block; }
+	.reg_c  UL LI:first-child{ border: 1px #bababa solid; border-bottom: none; -webkit-border-top-left-radius: 8px; -webkit-border-top-right-radius: 8px;}
+	.reg_c  UL LI:last-child{ border: 1px #bababa solid; -webkit-border-bottom-left-radius: 8px; -webkit-border-bottom-right-radius: 8px;}
+	.secstyle { margin-top: 4px; }
+	.submitbox{ text-align:center; }
+	#registerformsubmit { font-size:100%; padding: 10px 20px; border: 1px #595959 solid; background: -webkit-gradient(linear, 0 0, 0 100%, from(#f3f3f3), to(#dfdfdf)); -webkit-border-top-left-radius: 8px; -webkit-border-top-right-radius: 8px;-webkit-border-bottom-left-radius: 8px; -webkit-border-bottom-right-radius: 8px; }
+	.tb {border-bottom:1px solid #CDCDCD;line-height:30px;padding-top:10px;float:left;width:100%;background:#f7f7f7;}
+	.tb li {float:left;margin:0 3px -1px 0;}
+	.tb li:first-child{margin-left:5px;}
+	* html .tb .a {position:relative;}
+	.tb a {background:none repeat scroll 0 0 #E7F0F7;border:1px solid #CDCDCD;display:block;padding:0 10px;text-decoration:none;}
+	.tb .a a {background:none repeat scroll 0 0 #FFFFFF;border-bottom-color:#FFFFFF;font-weight:700;}
+	#main2 form{display:none;}
+	#main2 form.block{display:block;}
+</style>
+</head>
+<body>
+<!--{if $isconnect}-->
+<script type="text/javascript">
+<!--
+function settab(m,n){
+	var tli=document.getElementById("tb"+m).getElementsByTagName("li");
+	var mli=document.getElementById("main"+m).getElementsByTagName("form");
+	for(i=0;i<tli.length;i++){
+		tli[i].className=i==n?"a":"";
+		mli[i].style.display=i==n?"block":"none";
+	}
+}
+// -->
+</script>
+<ul id="tb2" class="tb cl">
+	<li onClick="settab(2,0)" class="a"><a href="#">{lang mobile:qqregmode1}</a></li>
+	<li onClick="settab(2,1)"><a href="#">{lang mobile:qqregmode2}</a></li>
+</ul>
+<!--{/if}-->
+<div id="main2" class="cl">
+<form method="post" class="block" autocomplete="off" enctype="multipart/form-data" action="$_G[siteurl]api/mobile/index.php?module={if $_GET[mod] == 'connect'}connect{else}register&mod=$_GET[mod]{/if}&version=$_G[mobile_version]&mobilemessage={$_GET[mobilemessage]}">
+	<input type="hidden" name="regsubmit" value="yes" />
+	<input type="hidden" name="formhash" value="{FORMHASH}" />
+    <input type="hidden" id="auth_hash" name="auth_hash" value="{$_G['qc']['connect_auth_hash']}" />
+	<input type="hidden" id="is_notify" name="is_notify" value="{$_G['qc']['connect_is_notify']}" />
+	<input type="hidden" id="is_feed" name="is_feed" value="{$_G['qc']['connect_is_feed']}" />
+	<!--{if $_G['setting']['sendregisterurl']}-->
+		<input type="hidden" name="hash" value="$_GET[hash]" />
+	<!--{/if}-->
+<div class="regbox">
+	<div class="reg_c">
+    <ul>
+	<!--{if $sendurl}-->
+		<li>
+			<label><strong>{lang mobile:email}:</strong></label>
+			<input type="email" class="txt" name="{$_G['setting']['reginput']['email']}" />
+		</li>
+        <li>
+        	{lang mobile:register_validate_email_tips}
+        </li>
+	<!--{else}-->
+		<!--{if $invite && !$invite['uid']}-->
+			<li>
+				<label><strong>{lang mobile:invite_code}:</strong></label>
+				<input type="text" class="txt" name="invitecode" />
+			</li>
+		<!--{/if}-->
+
+		<!--{if empty($invite) && $this->setting['regstatus'] == 2 && !$invitestatus}-->
+			<li>
+				<label><strong>{lang mobile:invite_code}:</strong></label>
+				<input type="text" class="txt" name="invitecode" />
+			</li>
+		<!--{/if}-->
+
+		<li>
+			<label><strong>{lang mobile:username}:</strong></label>
+			<input type="text" class="txt" name="{$_G['setting']['reginput']['username']}" />
+		</li>
+
+		<!--{if !$isconnect}-->
+			<li>
+				<label><strong>{lang mobile:password}:</strong></label>
+				<input type="password" class="txt" name="{$_G['setting']['reginput']['password']}" />
+			</li>
+			<li>
+				<label><strong>{lang mobile:password_confirm}:</strong></label>
+				<input type="password" class="txt" name="{$_G['setting']['reginput']['password2']}" />
+			</li>
+		<!--{/if}-->
+
+		<li>
+			<label><strong>{lang mobile:email}:</strong></label>
+			<input type="email" class="txt" name="{$_G['setting']['reginput']['email']}" />
+		</li>
+	<!--{/if}-->
+
+	<!--{if $this->setting['regverify'] == 2}-->
+		<li>
+			<label><strong>{lang mobile:register_message}:</strong></label>
+			<input type="text" class="txt" name="regmessage" />
+		</li>
+	<!--{/if}-->
+
+	<!--{if empty($invite) && $this->setting['regstatus'] == 3}-->
+		<li>
+			<label><strong>{lang mobile:invite_code}:</strong></label>
+			<input type="text" class="txt" name="invitecode" />
+		</li>
+	<!--{/if}-->
+
+	<!--{loop $_G['cache']['fields_register'] $field}-->
+		<!--{if $htmls[$field['fieldid']]}-->
+			<li>
+				$field[title]:
+				$htmls[$field['fieldid']]
+			</li>
+		<!--{/if}-->
+	<!--{/loop}-->
+	
+</ul>
+	<!--{if $seccodecheck || $secqaacheck}-->
+		{eval $sechash = random(8);}
+		<input type="hidden" class="txt" name="sechash" value="$sechash" />
+	<ul>
+		<!--{if $seccodecheck}-->
+			<li>
+				<label><strong>{lang mobile:seccode}:</strong></label>
+				<span id="seccode"></span>
+				<a href="javascript:;" onClick="updateseccode()">{lang mobile:change_seccode}</a>
+				<input type="text" class="txt" name="seccodeverify" />
+				<script type="text/javascript">
+				var updateseccode = function () {document.getElementById('seccode').innerHTML = '<img id="seccode" src="$_G[siteurl]api/mobile/index.php?module=seccode&sechash=$sechash&mobile=no&version={if empty($_GET['secversion'])}1{else}$_GET['secversion']{/if}&random=' + Math.random() + '" />';}
+				updateseccode();
+				</script>
+			</li>
+		<!--{/if}-->
+		<!--{if $secqaacheck}-->
+			<li>
+				<label><strong>{lang mobile:secqaa}:</strong></label>
+				{echo make_secqaa();}
+				<input type="text" class="txt" name="secanswer" />
+			</li>
+		<!--{/if}-->
+		</ul>
+	<!--{/if}-->
+	<ul>
+		<li class="submitbox">
+		<input type="hidden" name="agreebbrule" value="$bbrulehash" />
+			<button type="submit" id="registerformsubmit">{lang submit}</button>
+		</li>
+	</ul>
+	</div>
+</div>
+</form>
+	
+<!--{if $isconnect}-->
+<form method="post" autocomplete="off" enctype="multipart/form-data" action="$_G[siteurl]api/mobile/index.php?module=connect&action=login&loginsubmit=yes&mobilemessage={$_GET[mobilemessage]}">
+	<input type="hidden" id="auth_hash" name="auth_hash" value="{$_G['qc']['connect_auth_hash']}" />
+	<input type="hidden" id="is_notify" name="is_notify" value="{$_G['qc']['connect_is_notify']}" />
+	<input type="hidden" id="is_feed" name="is_feed" value="{$_G['qc']['connect_is_feed']}" />
+<div class="regbox">
+	<div class="reg_c">
+	<ul>
+		<li>
+			<label><strong>{lang login_id}:</strong></label>
+			<input type="text" class="txt" name="username" />
+		</li>
+		<li>
+			<label><strong>{lang login_password}:</strong></label>
+			<input type="password" class="txt" name="password" />
+		</li>
+		<li>
+			<label><strong>{lang security_q}:</strong></label>
+			<select name="questionid">
+				<option value="0">{lang security_question}</option>
+				<option value="1">{lang security_question_1}</option>
+				<option value="2">{lang security_question_2}</option>
+				<option value="3">{lang security_question_3}</option>
+				<option value="4">{lang security_question_4}</option>
+				<option value="5">{lang security_question_5}</option>
+				<option value="6">{lang security_question_6}</option>
+				<option value="7">{lang security_question_7}</option>
+			</select>
+		</li>
+		<li>
+			<label><strong>{lang security_a}:</strong></label>
+			<input type="text" class="txt" name="answer" />
+		</li>
+	</ul>
+	<ul>
+		<li class="submitbox">
+		<input type="hidden" name="agreebbrule" value="$bbrulehash" />
+			<button type="submit" id="registerformsubmit">{lang submit}</button>
+		</li>
+	</ul>
+	</div>
+</div>
+</form>
+<!--{/if}-->
+</div>
+</body>
+</html>

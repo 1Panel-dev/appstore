@@ -1,0 +1,112 @@
+<script id="TopArea" type="text/html">
+    <div class="customArea only">
+    <div class="caCon">
+        <div class="customNotice">
+            <%== stripCode(html, 0, '#topcontainer', /\.caCon/ig) %>
+        </div>
+    </div>
+</div>
+</script>
+
+<script id="tmpl_header_item" type="text/html">
+    <div class="detailTitle pr">
+        <h2 class="c6 f16">帖子来自：<span class="c7"><%== stripCode(name) %></span><a href="javascript:;" class="follow attentionBtn">关注</a></h2>
+        <span class="iconArrowR db pa c9 commF"></span>
+    </div>
+</script>
+
+<script id="tmpl_post_header" type="text/html">
+    <div class="hotLabel">
+        <h3 class="fl allTitle pr"><i class="iconDetailReply cf f16 mr5 c7"></i>全部回复</h3>
+        <span class="sortCon fr db">
+            <% if (!authorid) { %>
+                <a href="javascript:;" class="db c6 f12" authorid="1"><i class="incoAuthor cf mr5 f12"></i>只看楼主</a>
+            <% } else { %>
+                <a href="javascript:;" class="db c6 f12" authorid="0"><i class="incoAuthor cf mr5 f12"></i>查看全部</a>
+            <% } %>
+            <% if (ordertype != 1) { %>
+                <a href="javascript:;" class="db c6 f12" ordertype="1"><i class="iconReverse cf mr5 f16"></i>倒序排列</a>
+            <% } else { %>
+                <a href="javascript:;" class="db c6 f12" ordertype="2"><i class="iconSequence cf mr5 f16"></i>正序排列</a>
+            <% } %>
+        </span>
+    </div>
+</script>
+
+<script id="tmpl_post_item" type="text/html">
+    <div class="tb">
+        <div class="topicCon">
+            <p class="personImgDate">
+                <span class="perImg db">
+                    <img data-original="<% if(avatar) { %><%= avatar %><% } else { %><%= ucenterurl %>/avatar.php?uid=<%= authorid %>&size=small<% } %>" onerror="javascript:this.src=DATA_DIR+'/images/personImg.jpg'" class="bImg lazy" width="38" height="38" uid="<%= authorid %>" alt="头像"></a>
+                    <span class="timeT">
+                        <span id="aut_<%= pid %>"><%= author %></span>
+                        <% if(firstAuthor) { %><span class="gBg1 cardBtn brSmall fb f8 c2">楼主</span><% } %>
+                        <% if(authorLv) { %><span class="gBg1 brSmall fb f8 c2">LV<%= authorLv %></span><% } %>
+                        <% if(hook_author_info) { %>
+                            <em><%== stripCode(hook_author_info) %></em>
+						<% } %>
+                    </span>
+                    <span class="floorNum db">
+                        <%if(number != -1){ %>
+                            <%= number %>楼
+                        <%} else {%>
+                            推荐
+                        <% } %>
+                    </span>
+                </span>
+                <span class="perDate db view" tid="<%= tid %>" pid="<%= pid %>"<% if(status & 1) {%> ban="1"<%}%>>
+                    <a href="javascript:;" class="incoA db"></a>
+                </span>
+                <span class="perPop" pid="<%= pid %>" style="display:none"></span>
+            </p>
+            <div class="detailCon">
+                <div id="msg_<%= pid %>">
+                    <%== stripCode(message, 1) %>
+                </div>
+                <% if(!firstAuthor && isReward) { %><span><a href="javascript:;" class="reward_answer" tid="<%= tid %>" pid="<%= pid %>">最佳答案</a></span> <% } %>
+                <% if(hook_post_bottom) { %>
+                    <p><%== stripCode(hook_post_bottom) %></p>
+                <% } %>
+                <p>
+                    <span class="time c9 fl">
+                        <%= dateline %>
+                        <% if(rewardfloor) { %><span class="cardBtn1 brSmall f11 f8 c2 vlm">抢中</span><%} %>
+                        <% if(replycredit > 0) { %><span class="showBtn br f11 c2 db vlm">回帖奖励 +<%= replycredit %></span><%} %>
+                    </span>
+                    <span class="replyShare db fr">
+                        <a class="topicadminMsg" tid="<%= tid %>" pid="<%= pid %>"><% if(status & 1) {%>已屏蔽<%}%></a>
+                        <a href="javascript:;" class="replyByPid" tid="<%= tid %>" pid="<%= pid %>" first="<%= first %>"><i class="incoR"></i></a>
+                    </span>
+                </p>
+                <% if(comments && comments.length > 0) { %>
+                <div class="replyPop">
+                    <div class="replyBg brSmall pr commentBox">
+                        <div class="topicList">
+                            <ul>
+                            <% for(i = 0; i< comments.length; i++) { %>
+                                <li><a href="javascript:;" class="f13 c3"><span class="c7"><%==comments[i].author%><% if(comments[i].authorid == authorid) { %><i class="cardBtn br fn db c2">楼主</i><% } %>：</span><%== stripCode(comments[i].comment) %></a></li>
+                            <% } %>
+                            </ul>
+                            <% if(commentCount > 5) { %>
+                            <a href="javascript:;" class="db f12 moreInReply viewcommentBtn" tid="<%= tid %>" pid="<%= pid %>">更多</a>
+                            <% } %>
+                        </div>
+                    </div>
+               </div>
+               <% } %>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script id="bottomBar" type="text/html">
+<div class="bottomBarCon">
+    <a href="javascript:;" class="backBtn"><i class="iconAnswer commF back db"></i></a>
+    <a href="javascript:;" class="replyBtn db"><i class="incoR"></i>回复</a>
+    <a href="javascript:;" id="info_center" class="moreC db">
+        <i class="circle">●</i><i class="circle">●</i><i class="circle">●</i>
+        <i class="db numP" style="display:none;">0</i>
+    </a>
+</div>
+</script>

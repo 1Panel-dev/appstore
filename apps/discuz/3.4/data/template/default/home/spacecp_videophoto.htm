@@ -1,0 +1,47 @@
+<!--{template common/header}-->
+			<!--{template home/spacecp_header}-->
+
+			<!--{subtemplate home/spacecp_profile_nav}-->
+			<table summary="" cellspacing="0" cellpadding="0" class="tfm">
+				<caption>
+					<h2><!--{if $space[videophotostatus]}-->{lang my_video_photo}<!--{else}-->{lang for_video_authentication}<!--{/if}--></h2>
+					<p>
+					<!--{if $space[videophotostatus]}-->
+					{lang video_auth_message_1}
+					<!--{else}-->
+					{lang video_auth_message_2}
+					<!--{/if}-->
+					</p>
+				</caption>
+				<tr>
+					<td>
+						<!--{if $space[videophotostatus]}-->
+						<img src="$videophoto" id="avatar" alt="" width="400" />
+						<!--{elseif $_G['setting']['verify'][7]['available']}-->
+						<a href="userapp.php?mod=app&id=1036584&my_suffix=Lw%3D%3D"><img src="{IMGDIR}/videophoto_btn.gif" alt=""></a>
+						<!--{/if}-->
+					</td>
+				</tr>
+			</table>
+
+			<!--{if checkperm('managevideophoto')}-->
+			<table summary="" cellspacing="0" cellpadding="0" class="tfm">
+				<caption>
+					<h2>{lang video_certification_audit}</h2>
+					<p>{lang video_cer_audit_message}</p>
+				</caption>
+				<tr>
+					<td>
+						<a href="userapp.php?mod=app&id=1036584">{lang video_cer_audit_manage}</a>
+					</td>
+				</tr>
+			</table>
+			<!--{/if}-->
+
+		</div>
+	</div>
+	<div class="appl">
+		<!--{subtemplate home/spacecp_footer}-->
+	</div>
+</div>
+<!--{template common/footer}-->

@@ -1,0 +1,81 @@
+<!--{template common/header}-->
+<p>
+	<!--{if $_G['forum_thread']['typeid'] && $_G['forum']['threadtypes']['types'][$_G['forum_thread']['typeid']]}-->
+		[{$_G['forum']['threadtypes']['types'][$_G['forum_thread']['typeid']]}]
+	<!--{/if}-->
+	<!--{if $threadsorts && $_G['forum_thread']['sortid']}-->
+		[{$_G['forum']['threadsorts']['types'][$_G['forum_thread']['sortid']]}]
+	<!--{/if}-->
+
+	<!--{if $_G['forum_thread']['digest'] > 0}-->
+		 [{lang digest}]
+	<!--{/if}-->
+	<!--{if $_G['forum_thread'][displayorder] == -2}--> <span class="xg1">({lang moderating})</span>
+	<!--{elseif $_G['forum_thread'][displayorder] == -3}--> <span class="xg1">({lang have_ignored})</span>
+	<!--{elseif $_G['forum_thread'][displayorder] == -4}--> <span class="xg1">({lang draft})</span>
+	<!--{/if}-->
+	$thread[subject]<br />
+	<a href="home.php?mod=space&uid=$thread[authorid]"><!--{if $post['authorid'] && $post['username'] && !$post['anonymous']}-->$thread[author]<!--{else}-->{lang anonymous}<!--{/if}--></a>(<!--{eval echo dgmdate($thread['dateline']);}-->)<br /><br />
+</p>
+
+<!--{hook/viewthread_top_mobile}-->
+        <!--{eval $postcount = 0;}-->
+        <!--{loop $postlist $post}-->
+        	<!--{eval $needhiddenreply = ($hiddenreplies && $_G['uid'] != $post['authorid'] && $_G['uid'] != $_G['forum_thread']['authorid'] && !$post['first'] && !$_G['forum']['ismoderator']);}-->
+        	<!--{hook/viewthread_posttop_mobile $postcount}-->
+
+                	<!--{if $post['warned']}-->
+                        <em>{lang warn_get}</em>
+                    <!--{/if}-->
+                    <!--{if $_G['adminid'] != 1 && $_G['setting']['bannedmessages'] & 1 && (($post['authorid'] && !$post['username']) || ($post['groupid'] == 4 || $post['groupid'] == 5) || $post['status'] == -1 || $post['memberstatus'])}-->
+                        <em>{lang message_banned}</em>
+                    <!--{elseif $_G['adminid'] != 1 && $post['status'] & 1}-->
+                        <em>{lang message_single_banned}</em>
+                    <!--{elseif $needhiddenreply}-->
+                        <em>{lang message_ishidden_hiddenreplies}</em>
+                    <!--{elseif $post['first'] && $_G['forum_threadpay']}-->
+                        <!--{template forum/viewthread_pay}-->
+                    <!--{else}-->
+
+                    	<!--{if $_G['setting']['bannedmessages'] & 1 && (($post['authorid'] && !$post['username']) || ($post['groupid'] == 4 || $post['groupid'] == 5))}-->
+                            <em>{lang admin_message_banned}</em>
+                        <!--{elseif $post['status'] & 1}-->
+                            <em>{lang admin_message_single_banned}</em>
+                        <!--{/if}-->
+                        <!--{if $_G['forum_thread']['price'] > 0 && $_G['forum_thread']['special'] == 0}-->
+                            {lang pay_threads}: <em>$_G[forum_thread][price] {$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][unit]}{$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][title]} </em> <a href="forum.php?mod=misc&action=viewpayments&tid=$_G[tid]" >{lang pay_view}</a>
+                        <!--{/if}-->
+						<p><!--{if $post['position'] > 1}-->#$post['position'] <!--{/if}-->{echo str_replace('&nbsp;', ' ', strip_tags($post[message]))}</p>
+                    <!--{/if}-->
+
+					<!--{if $post['first'] && $thread['allreplies'] > 1}-->{lang replylist}($thread['allreplies'])|<!--{/if}-->
+				<!--{if $postcount == 0}--><a href="forum.php?mod=post&action=reply&fid=$_G[fid]&tid=$_G[tid]">{lang join_thread}</a>|<a href="forum.php?mod=post&action=newthread&fid=$_G[fid]">{lang send_threads}</a><!--{/if}-->
+				<!--{if !$post['first'] }-->
+					<!--{if $post['authorid'] && $post['username'] && !$post['anonymous']}-->
+						<a href="home.php?mod=space&uid=$post['authorid']">$post[author]</a>
+					<!--{/if}-->
+					<!--{if !$_G[setting][mobile][mobilesimpletype]}-->
+						<!--{eval $post[dateline] = str_replace('&nbsp;', ' ', strip_tags($post[dateline]));}-->
+						<!--{if $post['authorid'] && !$post['anonymous']}-->
+							<small>($post[dateline])</small>
+						<!--{elseif $post['authorid'] && $post['username'] && $post['anonymous']}-->
+							{lang anonymous}
+							<small>($post[dateline])</small>
+						<!--{elseif !$post['authorid'] && !$post['username']}-->
+							{lang guest}
+							<small>($post[dateline])</small>
+						<!--{/if}-->
+					<!--{/if}-->
+				<!--{/if}-->
+
+        <!--{hook/viewthread_postbottom_mobile $postcount}-->
+        <!--{eval $postcount++;}-->
+        <!--{/loop}-->
+        <!--{echo str_replace('&amp;amp;', '&amp;', str_replace('&', '&amp;', $multipage));}-->
+		<br/><br/>&lt;&lt;<a href="forum.php?mod=redirect&goto=nextoldset&tid=$_G['tid']">{lang last_thread}</a><br/>
+		&gt;&gt;<a href="forum.php?mod=redirect&goto=nextnewset&tid=$_G['tid']">{lang next_thread}</a><br/>
+		<a href="forum.php?mod=forumdisplay&fid=$thread['fid']">{lang return_forum}</a>
+
+<!--{hook/viewthread_bottom_mobile}-->
+
+<!--{template common/footer}-->

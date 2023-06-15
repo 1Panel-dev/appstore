@@ -1,0 +1,30 @@
+<!--{template common/header}-->
+<!--{hook/index_top_mobile}-->
+<p>
+<!--{if $_G['setting']['mobile']['mobilehotthread']}-->
+	<!--{if $_GET['forumlist'] != 1}-->
+		<!--{eval dheader('Location:forum.php?mod=guide&view=hot');exit;}-->
+	<!--{/if}-->
+		<a href="forum.php?mod=guide&view=hot">{lang hot_thread}</a>
+		<a href="forum.php">{lang forum_list}</a>
+<!--{/if}-->
+
+<!--{if $forum_favlist}-->
+	<b>{lang my_favorites_forums}</b>
+	<!--{loop $forum_favlist $key $val}-->
+	<!--{eval $favfids[$val[id]] = $val[id];}-->
+	<a href="forum.php?mod=forumdisplay&fid={$val['id']}">$val['title']</a><br/>
+	<!--{/loop}-->
+<!--{/if}-->
+
+<!--{loop $catlist $key $cat}-->
+	$cat[name]<br/>
+    <!--{loop $cat[forums] $forumid}-->
+		<!--{eval $forum=$forumlist[$forumid];}-->
+			<a href="forum.php?mod=forumdisplay&fid={$forum['fid']}" {if $forum_favlist[$forumid]}class="xi1"{/if}>{$forum[name]}</a>
+		<br/>
+	<!--{/loop}-->
+<!--{/loop}-->
+</p>
+<!--{hook/index_middle_mobile}-->
+<!--{template common/footer}-->

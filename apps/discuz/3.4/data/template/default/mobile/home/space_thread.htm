@@ -1,0 +1,38 @@
+<!--{template common/header}-->
+<div class="box"><a href="{if $forcefid}forum.php?mod=forumdisplay{$forcefid}{else}forum.php{/if}" title="{lang return_forum}">{lang return_forum}</a></div>
+<div class="bm mtn">
+	<div class="bm_h">
+    	{lang my_posts}
+    </div>
+	<form method="post" autocomplete="off" name="delform" id="delform" action="home.php?mod=space&do=thread&view=all&order=dateline" onsubmit="showDialog('{lang del_select_thread_confirm}', 'confirm', '', '$(\'delform\').submit();'); return false;">
+        <input type="hidden" name="formhash" value="{FORMHASH}" />
+        <input type="hidden" name="delthread" value="true" />
+        <!--{if $list}-->
+        
+            <!--{loop $list $thread}-->
+            	<div class="bm_c">
+                    <!--{if $viewtype == 'reply' || $viewtype == 'postcomment'}-->
+                        <a href="forum.php?mod=redirect&goto=findpost&ptid=$thread[tid]&pid=$thread[pid]" target="_blank">$thread[subject]</a>
+                    <!--{else}-->
+                        <a href="forum.php?mod=viewthread&tid=$thread[tid]" target="_blank" {if $thread['displayorder'] == -1}class="recy"{/if}>$thread[subject]</a>
+                    <!--{/if}-->
+                <!--{if $viewtype != 'postcomment'}-->
+                    <!--{if !$actives[me]}-->
+<a href="home.php?mod=space&uid=$thread[authorid]">$thread[author]</a>$thread[dateline]
+                    <!--{/if}-->
+                    <span class="xg1">{lang forum_posts}$thread[replies]</span>
+                <!--{/if}-->
+            </div>
+            <!--{/loop}-->
+        <!--{else}-->
+        	<div class="bm_c">
+            {lang no_related_posts}
+            </div>
+        <!--{/if}-->
+        </table>
+    </form>
+<!--{if $multi}--><div class="pgs cl mtm">$multi</div><!--{/if}-->
+</div>
+
+
+<!--{template common/footer}-->

@@ -1,0 +1,14 @@
+<!--{template wechat:wechat_header}-->
+
+<div class="loginbox" align="center">
+	<!--{if $_GET['confirm'] == 'delete'}-->
+		{lang wechat:wechat_qrcode_input_cancel}
+	<!--{else}-->
+		{lang wechat:wechat_qrcode_input_confirm}<br /><br />
+		<div class="btn_register mbm"><button tabindex="7" value="true" name="button" type="submit" class="pn pnc" onclick="location.href='{$selfurl}$ac&confirm=yes'"><span>{lang wechat:wechat_qrcode_input_confirm_yes}</span></button></div>
+		<div class="btn_register"><button tabindex="7" value="true" name="button" type="submit" class="pn pnc" onclick="location.href='{$selfurl}$ac&confirm=delete'"><span>{lang cancel}</span></button></div>
+	<!--{/if}-->
+</div>
+
+</body>
+</html>

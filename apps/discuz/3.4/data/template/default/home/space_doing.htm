@@ -1,0 +1,147 @@
+<!--{if $diymode}-->
+	<!--{if $_G[setting][homepagestyle]}-->
+		<!--{subtemplate home/space_header}-->
+		<div id="ct" class="ct2 wp cl">
+			<div class="mn">
+				<div class="bm">
+					<div class="bm_h">
+						<h1 class="mt">{lang doing}</h1>
+					</div>
+				<div class="bm_c">
+	<!--{else}-->
+		<!--{template common/header}-->
+		<div id="pt" class="bm cl">
+			<div class="z">
+				<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em>
+				<a href="home.php?mod=space&uid=$space[uid]">{$space[username]}</a> <em>&rsaquo;</em>
+				<a href="home.php?mod=space&uid=$space[uid]&do=doing&view=me&from=space">{lang doing}</a>
+			</div>
+		</div>
+		<style id="diy_style" type="text/css"></style>
+		<div class="wp">
+			<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+		</div>
+		<!--{template home/space_menu}-->
+		<div id="ct" class="ct1 wp cl">
+			<div class="mn">
+				<!--[diy=diycontenttop]--><div id="diycontenttop" class="area"></div><!--[/diy]-->
+				<div class="bm bw0">
+					<div class="bm_c">
+	<!--{/if}-->
+	<!--{if $space[self] && helper_access::check_module('doing')}--><!--{template home/space_doing_form}--><!--{/if}-->
+<!--{else}-->
+	<!--{template common/header}-->
+	<div id="pt" class="bm cl">
+		<div class="z">
+			<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em>
+			<a href="home.php?mod=space&do=doing">{lang doing}</a>
+		</div>
+	</div>
+
+	<style id="diy_style" type="text/css"></style>
+	<div class="wp">
+		<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+	</div>
+	<div id="ct" class="ct2_a wp cl">
+		<!--{if $_G[setting][homestyle]}-->
+			<div class="appl">
+				<!--{subtemplate common/userabout}-->
+			</div>
+			<div class="mn pbm">
+				<!--{hook/space_doing_top}-->
+				<!--[diy=diycontenttop]--><div id="diycontenttop" class="area"></div><!--[/diy]-->
+				<div class="bm bw0">
+					<!--{if helper_access::check_module('doing')}-->
+					<!--{template home/space_doing_form}-->
+					<!--{/if}-->
+					<!--{hook/space_doing_bottom}-->
+					<ul class="tb cl">
+						<li$actives[we]><a href="home.php?mod=space&do=$do&view=we">{lang me_friend_doing}</a></li>
+						<li$actives[me]><a href="home.php?mod=space&do=$do&view=me">{lang doing_view_me}</a></li>
+						<li$actives[all]><a href="home.php?mod=space&do=$do&view=all">{lang view_all}</a></li>
+					</ul>
+				</div>
+		<!--{else}-->
+			<div class="appl">
+				<div class="tbn">
+					<h2 class="mt bbda">{lang doing}</h2>
+					<ul>
+						<li$actives[we]><a href="home.php?mod=space&do=$do&view=we">{lang me_friend_doing}</a></li>
+						<li$actives[me]><a href="home.php?mod=space&do=$do&view=me">{lang doing_view_me}</a></li>
+						<li$actives[all]><a href="home.php?mod=space&do=$do&view=all">{lang view_all}</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="mn pbm">
+			<!--[diy=diycontenttop]--><div id="diycontenttop" class="area"></div><!--[/diy]-->
+			<!--{if $space[self] && helper_access::check_module('doing')}--><!--{template home/space_doing_form}--><!--{/if}-->
+		<!--{/if}-->
+		
+<!--{/if}-->
+		
+		<!--{if $searchkey}-->
+			<p class="tbmu">{lang doing_search_record} <span style="color: red; font-weight: 700;">$searchkey</span> {lang doing_record_list}</p>
+		<!--{/if}-->
+		
+		<!--{if $dolist}-->
+			<div class="xld {if empty($diymode)}xlda{/if}">
+			<!--{loop $dolist $dv}-->
+			<!--{eval $doid = $dv[doid];}-->
+			<!--{eval $_GET[key] = $key = random(8);}-->
+				<dl id="{$key}dl{$doid}" class="pbn bbda cl">
+					<!--{if empty($diymode)}--><dd class="m avt"><a href="home.php?mod=space&uid=$dv[uid]" c="1"><!--{avatar($dv[uid],small)}--></a></dd><!--{/if}-->
+					<dd class="{if empty($diymode)}ptm{else}ptw{/if} xs2">
+					<!--{if empty($diymode)}--><a href="home.php?mod=space&uid=$dv[uid]">$dv[username]</a>: <!--{/if}--><span>$dv[message]</span> <!--{if $dv[status] == 1}--> <span style="font-weight: bold;">({lang moderate_need})</span><!--{/if}-->
+					</dd>
+					<!--{eval $list = $clist[$doid];}-->
+					<dd class="cmt brm" id="{$key}_$doid"{if empty($list) || !$showdoinglist[$doid]} style="display:none;"{/if}>
+						<span id="{$key}_form_{$doid}_0"></span>
+						<!--{template home/space_doing_li}-->
+					</dd>
+					<dd class="ptn xg1">
+						<span class="y"><!--{date($dv['dateline'], 'u')}--></span>
+						<!--{if helper_access::check_module('doing')}-->
+						<a href="javascript:;" onclick="docomment_form($doid, 0, '$key');">{lang reply}</a><span class="pipe">|</span>
+						<!--{/if}-->
+						<!--{if $dv[uid]==$_G[uid]}--><a href="home.php?mod=spacecp&ac=doing&op=delete&doid=$doid&id=$dv[id]&handlekey=doinghk_{$doid}_$dv[id]" id="{$key}_doing_delete_{$doid}_{$dv[id]}" onclick="showWindow(this.id, this.href, 'get', 0);">{lang delete}</a><!--{/if}-->
+						
+						<!--{if checkperm('managedoing')}-->
+						<span class="pipe">IP: $dv[ip]</span>
+						<!--{/if}-->
+					</dd>
+				</dl>
+			<!--{/loop}-->
+			<!--{if $pricount}-->
+				<p class="mtm">{lang hide_doing}</p>
+			<!--{/if}-->
+			</div>
+			<!--{if $multi}-->
+			<div class="pgs cl mtm">$multi</div>
+			<!--{elseif $_GET[highlight]}-->
+			<div class="pgs cl mtm"><div class="pg"><a href="home.php?mod=space&do=doing&view=me">{lang viewmore}</a></div></div>
+			<!--{/if}-->
+		<!--{else}-->
+			<p class="emp">{lang doing_no_replay}<!--{if $space[self]}-->{lang doing_now}<!--{/if}--></p>
+		<!--{/if}-->
+		
+		<!--{if !$_G[setting][homepagestyle]}--><!--[diy=diycontentbottom]--><div id="diycontentbottom" class="area"></div><!--[/diy]--><!--{/if}-->
+
+		<!--{if $diymode}-->
+					</div>
+				</div>
+			<!--{if $_G[setting][homepagestyle]}-->
+			</div>
+			<div class="sd">
+				<!--{subtemplate home/space_userabout}-->
+			<!--{/if}-->
+		<!--{/if}-->
+		</div>
+	</div>
+
+<!--{if !$_G[setting][homepagestyle]}-->
+	<div class="wp mtn">
+		<!--[diy=diy3]--><div id="diy3" class="area"></div><!--[/diy]-->
+	</div>
+<!--{/if}-->
+
+<!--{template common/footer}-->

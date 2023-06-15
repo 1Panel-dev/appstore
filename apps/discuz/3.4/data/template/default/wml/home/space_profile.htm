@@ -1,0 +1,37 @@
+<!--{template common/header}-->
+<p>
+	<table colnums="2">
+		<tr><td>{$space[username]} (UID: {$space[uid]})</td></tr>
+	</table>
+		{lang basic_information}<br/>
+	<table colnums="2">
+		<tr><td><!--{if in_array($_G[adminid], array(1, 2))}-->Email:$space[email]<!--{/if}--></td></tr>
+		<tr><td>{lang friends_num} $space[friends]</td></tr>
+		<tr><td>{lang doings_num} $space[doings]</td></tr>
+		<tr><td>{lang blogs_num} $space[blogs]</td></tr>
+		<tr><td>{lang albums_num} $space[albums]</td></tr>
+		<!--{loop $profiles $value}-->
+			<tr><td>$value[title]:$value[value]</td></tr>
+		<!--{/loop}-->
+		<tr><td>{lang active_profile}</td></tr>
+		<!--{if $space[adminid] > 0}-->
+			<tr><td>{lang management_team}:{$space[admingroup][grouptitle]} {$space[admingroup][icon]}</td></tr>
+		<!--{/if}-->
+		<tr><td>{lang usergroup}: {$space[group][grouptitle]}{$space[group][icon]}</td></tr>
+		<!--{if $space[extgroupids]}-->
+			<tr><td>{lang group_expiry_type_ext}: $space[extgroupids]</td></tr>
+		<!--{/if}-->
+		<tr><td>{lang online_time}: $space[oltime] {lang hours}</td></tr>
+		<tr><td>{lang regdate}: $space[regdate]</td></tr>
+		<tr><td>{lang last_visit}: $space[lastvisit]</td></tr>
+		<!--{if $_G[uid] == $space[uid] || $_G[group][allowviewip]}-->
+			<tr><td>{lang register_ip}: $space[regip] - $space[regip_loc]</td></tr>
+			<tr><td>{lang last_visit_ip}: $space[lastip] - $space[lastip_loc]</td></tr>
+		<!--{/if}-->
+		<tr><td>{lang last_activity_time}: $space[lastactivity]</td></tr>
+		<tr><td>{lang last_post_time}: $space[lastpost]</td></tr>
+		<tr><td>{lang last_send_email}: $space[lastsendmail]</td></tr>
+		<tr><td>{lang time_offset}:<!--{eval $timeoffset = array({lang timezone});}-->$timeoffset[$space[timeoffset]]</td></tr>
+	</table>
+</p>
+<!--{template common/footer}-->

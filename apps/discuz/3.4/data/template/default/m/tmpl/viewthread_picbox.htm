@@ -1,0 +1,31 @@
+<script id="picBox" type="text/html">
+    <div class="listShow">
+        <ul>
+            <li id="picBoxL"></li>
+            <li id="picBoxR"></li>
+        </ul>
+    </div>
+</script>
+
+<script id="subPicBox" type="text/html">
+    <div id="post<%=pid%>" class="listShowCon" pid="<%=pid%>" page="<%=page%>">
+        <div class="showImg">
+            <img class="lazy" data-original="<%=coverpath%>" alt="pic">
+            <% if(top) { %><span class="badge db"><%= top %></span><% } %>
+        </div>
+        <span class="pageNewNum db"><%=imagenumber%>张</span>
+        <p class="showInfo"><span class="fl db"><%=author%></span><a href="javascript:;" class="fr db praiseBtn" pid="<%=pid%>"><i class="noPraise"></i><span><%=voters%></span></a></p>
+    </div>
+</script>
+
+<script id="tmpl_picbox_item" type="text/html">
+    <div class="titShow detailCon">
+        <h3><%== stripCode(thread.subject) %></h3>
+        <p>截止时间：<%= expiration %></p>
+        <div id="showDetail" class="detailShow"><%== stripCode(post.message, 1) %><a class="incoA db" href="javascript:;"></a></div>
+    </div>
+    <div class="topicTab threeCol">
+        <a href="javascript:;" id="showTabNew"<% if(!viewhot) { %>class="on"<% } %>><span>最新</span></a>
+        <a href="javascript:;" id="showTabTop"<% if(viewhot) { %>class="on"<% } %>><span>最热</span></a>
+    </div>
+</script>

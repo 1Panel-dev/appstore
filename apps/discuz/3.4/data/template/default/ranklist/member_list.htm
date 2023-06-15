@@ -1,0 +1,82 @@
+<!--{if $select_form}-->
+	<p class="tbmu">
+		{lang order}
+		<select id="mySelect" onchange="select_form()">
+		  <option value="uid" {$order_selected['uid']}>{lang top_orderby_uid}</option>
+		  <option value="posts" {$order_selected['posts']}>{lang top_orderby_posts}</option>
+		  <option value="blogs" {$order_selected['blogs']}>{lang top_orderby_blogs}</option>
+		  <option value="credits" {$order_selected['credits']}>{lang top_orderby_credits}</option>
+		</select>
+		<script type="text/javascript">
+			function select_form() {
+				x = $('mySelect');
+				y = x.options[x.options.selectedIndex].value;
+				location.href = location.href.replace(/\&select.*/, '') +  '&select=' + y;
+			}
+		</script>
+	</p>
+<!--{/if}-->
+<!--{if $postsrank_change}-->
+<p id="orderby" class="tbmu">
+	<a href="misc.php?mod=ranklist&type=member&view=post&orderby=posts" id="posts"{if $now_choose == 'posts'} class="a"{/if}>{lang post_num}</a><span class="pipe">|</span>
+	<a href="misc.php?mod=ranklist&type=member&view=post&orderby=digestposts" id="digestposts"{if $now_choose == 'digestposts'} class="a"{/if}>{lang digest_num}</a><span class="pipe">|</span>
+	<a href="misc.php?mod=ranklist&type=member&view=post&orderby=thismonth" id="thismonth"{if $now_choose == 'thismonth'} class="a"{/if}>{lang month_post_num}</a><span class="pipe">|</span>
+	<a href="misc.php?mod=ranklist&type=member&view=post&orderby=today" id="today"{if $now_choose == 'today'} class="a"{/if}>{lang day_post_num}</a>
+</p>
+<!--{/if}-->
+<!--{if $inviterank_change}-->
+<p id="orderby" class="tbmu">
+	<a href="misc.php?mod=ranklist&type=member&view=invite&orderby=thisweek" id="thisweek"{if $now_choose == 'thisweek'} class="a"{/if}>{lang ranklist_week}</a><span class="pipe">|</span>
+	<a href="misc.php?mod=ranklist&type=member&view=invite&orderby=thismonth" id="thismonth"{if $now_choose == 'thismonth'} class="a"{/if}>{lang ranklist_month}</a><span class="pipe">|</span>
+	<a href="misc.php?mod=ranklist&type=member&view=invite&orderby=today" id="today"{if $now_choose == 'today'} class="a"{/if}>{lang ranklist_today}</a><span class="pipe">|</span>
+	<a href="misc.php?mod=ranklist&type=member&view=invite&orderby=all" id="all"{if $now_choose == 'all'} class="a"{/if}>{lang all}</a>
+</p>
+<!--{/if}-->
+<!--{if $onlinetimerank_change}-->
+<p id="orderby" class="tbmu">
+	<a href="misc.php?mod=ranklist&type=member&view=onlinetime&orderby=thismonth" id="thismonth"{if $now_choose == 'thismonth'} class="a"{/if}>{lang ranklist_month}</a><span class="pipe">|</span>
+	<a href="misc.php?mod=ranklist&type=member&view=onlinetime&orderby=all" id="all"{if $now_choose == 'all'} class="a"{/if}>{lang all}</a>
+</p>
+<!--{/if}-->
+<!--{if $list}-->
+	<div class="xld xlda hasrank">
+		<!--{loop $list $key $value}-->
+		<dl class="bbda cl">
+			<dd class="ranknum"><!--{if $value[rank] <= 3}--><img src="{IMGDIR}/rank_$value[rank].gif" alt="$value[rank]" /><!--{else}-->$value[rank]<!--{/if}--></dd>
+			<dd class="m avt"><a href="home.php?mod=space&uid=$value[uid]" target="_blank" c="1"><!--{avatar($value[uid],small)}--></a></dd>
+			<dt class="y">
+				<p class="xw0"><a href="home.php?mod=space&uid=$value[uid]" target="_blank">{lang visit_friend}</a></p>
+				<p class="xw0"><a href="home.php?mod=spacecp&ac=poke&op=send&uid=$value[uid]" id="a_poke_$key" onclick="showWindow(this.id, this.href, 'get', 0);" title="{lang say_hi}">{lang say_hi}</a></p>
+				<p class="xw0"><a href="home.php?mod=spacecp&ac=pm&op=showmsg&handlekey=showmsg_$value[uid]&touid=$value[uid]&pmid=0&daterange=2" id="a_sendpm_$key" onclick="showWindow('showMsgBox', this.href, 'get', 0)">{lang send_pm}</a></p>
+				<!--{if isset($value['isfriend']) && !$value['isfriend']}--><p class="xw0"><a href="home.php?mod=spacecp&ac=friend&op=add&uid=$value[uid]" id="a_friend_$key" onclick="showWindow('friend_$key', this.href, 'get', 0)" title="{lang add_friend}">{lang add_friend}</a></p><!--{/if}-->
+			</dt>
+			<dt>
+				<a href="home.php?mod=space&uid=$value[uid]" target="_blank"{eval g_color($value[groupid]);}>$value[username]</a>
+				<!--{if $ols[$value[uid]]}--><img src="{IMGDIR}/ol.gif" alt="online" title="{lang online}" class="vm" /> <!--{/if}-->
+			</dt>
+			<dd>
+				<p>
+					{$_G['cache']['usergroups'][$value['groupid']]['grouptitle']} <!--{eval g_icon($value[groupid]);}-->
+					<!--{if $value['credits']}-->{lang credit_num}: $value[credits]<!--{/if}-->
+					<!--{if $value['extcredits']}-->{$extcredits[$now_choose][title]}: $value[extcredits] {$extcredits[$now_choose][unit]}<!--{/if}-->
+					<!--{if $value['invitenum']}-->{lang invite_num}: <a href="home.php?mod=spacecp&ac=invite" target="_blank">$value[invitenum]</a><!--{/if}-->
+					<!--{if $value['posts']}-->{lang posts_num}: <a href="home.php?mod=space&uid=$value[uid]&do=thread&view=me&from=space" target="_blank">$value[posts]</a><!--{/if}-->
+					<!--{if $value['blogs']}-->{lang blogs_num}: <a href="home.php?mod=space&uid=$value[uid]&do=blog&view=me&from=space" target="_blank">$value[blogs]</a><!--{/if}-->
+					<!--{if $value['views']}-->{lang views} $value[views]<!--{/if}-->
+					<!--{if $value['onlinetime']}-->{lang online_time}: $value[onlinetime] {lang minute}<!--{/if}-->
+				</p>
+
+				<!--{if $value['friends']}--><p>{lang friends_num}: $value[friends]</p><!--{/if}-->
+				<!--{if $value['lastactivity']}--><p>{lang last_activity}: $value[lastactivity]</p><!--{/if}-->
+				<!--{if $value['unitprice']}--><p>{lang show_unitprice}: <span id="{if $value[uid] == $_G[uid]}show_unitprice{/if}">$value[unitprice]</span><!--{if $value[uid] == $_G[uid]}-->&nbsp;<a href="home.php?mod=spacecp&ac=common&op=modifyunitprice" id="a_modify_unitprice" onclick="showWindow(this.id, this.href, 'get', 0);">({lang modify})</a><!--{/if}--></p><!--{/if}-->
+				<!--{if $value['show_credit']}--><p>{lang show_credit}{$extcredits[$creditid][title]}: $value[show_credit] {$extcredits[$creditid][unit]}</p><!--{/if}-->
+				<!--{if $value['show_note']}--><p>{lang show_credit_note}: $value[show_note]</p><!--{/if}-->
+			</dd>
+		</dl>
+		<!--{/loop}-->
+		<!--{if $multi}--><div class="pgs cl mtm">$multi</div><!--{/if}-->
+	</div>
+<!--{else}-->
+	<div class="emp">{lang no_members_of}</div>
+<!--{/if}-->
+<!--{if $cachetip}--><div class="notice">{lang ranklist_update}</div><!--{/if}-->

@@ -1,0 +1,38 @@
+<!--{template common/header}-->
+<!--{if in_array($_GET[action], array('delpost', 'banpost', 'warn'))}-->
+	<form id="topicadminform" method="post" autocomplete="off" action="forum.php?mod=topicadmin&action=$_GET[action]&modsubmit=yes&modclick=yes&mobile=yes" >
+		<input type="hidden" name="formhash" value="{FORMHASH}" />
+		<input type="hidden" name="fid" value="$_G[fid]" />
+		<input type="hidden" name="tid" value="$_G[tid]" />
+		<input type="hidden" name="reason" value="{lang topicadmin_mobile_mod}" />
+    <!--{if $_GET[action] == 'delpost'}-->
+    	<div class="box ban pbn">
+            <p>{lang admin_delpost_confirm}</p>
+            $deleteid
+            <p><input type="button" onclick="javascript:history.back();return false;" value="{lang goback}"><input type="submit" name="modsubmit" id="modsubmit" value="{lang confirms}" /></p>
+        </div>
+	<!--{elseif $_GET[action] == 'banpost'}-->
+        <div class="box ban pbn">
+            <p>{lang admin_banpost_confirm}</p>
+            $banid
+            <p><label><input type="radio" name="banned" class="pr" value="1" $checkban />{lang admin_banpost}</label></p>
+            <p><label><input type="radio" name="banned" class="pr" value="0" $checkunban />{lang admin_unbanpost}</label></p>
+            <p><input type="button" onclick="javascript:history.back();return false;" value="{lang goback}"> <input type="submit" name="modsubmit" id="modsubmit" value="{lang confirms}" /></p>
+        </div>
+    <!--{elseif $_GET[action] == 'warn'}-->
+    	<div class="box ban pbn">
+            <p>{lang admin_warn_confirm}</p>
+            $warnpid
+            <p><label><input type="radio" name="warned" class="pr" value="1" $checkwarn />{lang topicadmin_warn_add}</label></p>
+            <p><label><input type="radio" name="warned" class="pr" value="0" $checkunwarn />{lang topicadmin_warn_delete}</label></p>
+            <p><input type="button" onclick="javascript:history.back();return false;" value="{lang goback}" /><input type="submit" name="modsubmit" id="modsubmit" value="{lang confirms}" /></p>
+        </div>
+    <!--{/if}-->
+    </form>
+<!--{else}-->
+	<div class="box ban pbn">
+    	<p>{lang admin_threadtopicadmin_error}</p>
+    	<input type="button" onclick="javascript:history.back();return false;" value="{lang goback}" />
+    </div>
+<!--{/if}-->
+<!--{template common/footer}-->

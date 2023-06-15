@@ -1,0 +1,53 @@
+{template header}
+
+<script src="js/common.js" type="text/javascript"></script>
+<div class="container">
+	<h3 class="marginbot">
+		<a href="admin.php?m=feed&a=ls" class="sgbtn">{lang feed_list}</a>
+		<!--{if $user['allowadminnote'] || $user['isfounder']}--><a href="admin.php?m=note&a=ls" class="sgbtn">{lang note_list}</a><!--{/if}-->
+		<!--{if $user['allowadminlog'] || $user['isfounder']}--><a href="admin.php?m=log&a=ls" class="sgbtn">{lang menu_log}</a><!--{/if}-->
+		{lang mail_queue}
+	</h3>
+	<!--{if $status == 2}-->
+		<div class="correctmsg"><p>{lang mail_list_updated}</p></div>
+	<!--{/if}-->
+	<div class="mainbox">
+		<!--{if $maillist}-->
+			<form action="admin.php?m=mail&a=ls" method="post">
+			<input type="hidden" name="formhash" value="{FORMHASH}">
+			<table class="datalist" onmouseover="addMouseEvent(this);" style="table-layout:fixed">
+				<tr>
+					<th width="60"><input type="checkbox" name="chkall" id="chkall" onclick="checkall('delete[]')" class="checkbox" /><label for="chkall">{lang mail_delete}</label></th>
+					<th width="130">{lang mail_subject}</th>
+					<th width="60">{lang mail_to_username}</th>
+					<th width="80">{lang mail_add_time}</th>
+					<th width="140">{lang mail_failures}</th>
+					<th width="100">{lang mail_from_app}</th>
+					<th width="60">{lang mail_operate}</th>
+				</tr>
+				<!--{loop $maillist $mail}-->
+					<tr>
+						<td><input type="checkbox" name="delete[]" value="$mail[mailid]" class="checkbox" /></td>
+						<td>{$mail[subject]}</td>
+						<td><a href="mailto:{$mail[email]}">{if $mail[username]}{$mail[username]}{else}{lang anonymity}{/if}</td>
+						<td>{$mail[dateline]}</td>
+						<td>{$mail[failures]}</td>
+						<td>{$mail[appname]}</td>
+						<td><a href="admin.php?m=mail&a=send&mailid={$mail[mailid]}">{lang mail_send}</a></td>
+					</tr>
+				<!--{/loop}-->
+				<tr class="nobg">
+					<td><input type="submit" value="{lang submit}" class="btn" /></td>
+					<td class="tdpage" colspan="{eval echo count($applist) + 4;}">$multipage</td>
+				</tr>
+			</table>
+			</form>
+		<!--{else}-->
+			<div class="mail">
+				<p class="i">{lang list_empty}</p>
+			</div>
+		<!--{/if}-->
+	</div>
+</div>
+
+{template footer}

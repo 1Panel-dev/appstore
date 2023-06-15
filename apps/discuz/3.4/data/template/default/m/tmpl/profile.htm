@@ -1,0 +1,47 @@
+<script id="headerTpl" type="text/html">
+<div class="header personH">
+    <i class="topicLogo fl db">
+        <img src="<%= Variables.ucenterurl %>/avatar.php?uid=<%= Variables.space.uid %>&size=small" onerror="javascript:this.src=DATA_DIR+'/images/personImg.jpg'" class="tImg" width="78" height="78" alt="标志">
+        <% if(Variables.space.avatarHtml) { %><%== Variables.space.avatarHtml %><% } %>
+    </i>
+    <h3>
+        <%= Variables.space.username %>
+        <% if(Variables.space.authorLv) { %><span class="gBg1 brSmall fb f8 c2">LV<%= Variables.space.authorLv %></span><% } %>
+        <% if(Variables.hook_author_info) { %>
+            <em><%== stripCode(Variables.hook_author_info) %></em>
+        <% } %>
+    </h3>
+    <p class="subTitle"><span><%= Variables.space.customstatus %></span></p>
+</div>
+</script>
+
+<script id="customTpl" type="text/html">
+<ul>
+    <li class="topicRank pShow">
+        <span><%== name %></span>
+        <% if (value) { %>
+            <span class="fr"><%== stripCode(value) %></span>
+        <% } else if(link) { %>
+            <a class="incoAnswer db rkArrow" href="<%= link %>"></a>
+        <% } %>
+    </li>
+</ul>
+</script>
+
+<script id="groupTpl" type="text/html">
+<ul>
+    <li class="topicRank pShow">
+        <span><%= name %></span>
+        <span class="fr"><%== stripCode(value) %></span>
+    </li>
+</ul>
+</script>
+
+<script id="infoTpl" type="text/html">
+<ul>
+    <li class="topicRank pShow">
+        <span><%== name %></span>
+        <span class="fr"><%== stripCode(value) %></span>
+    </li>
+</ul>
+</script>

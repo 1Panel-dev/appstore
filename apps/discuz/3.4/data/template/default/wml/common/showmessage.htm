@@ -1,0 +1,14 @@
+<!--{template common/header}-->
+		<p><!--{echo str_replace('&amp;amp;', '&amp;', str_replace('&', '&amp;', $show_message));}--></p>
+        <!--{if $_G['forcemobilemessage']}-->
+        	<p >
+                <prev>{lang goback}</prev>
+            </p>
+        <!--{/if}-->
+		<!--{if $url_forward}-->
+			<p><a href="$url_forward">{lang message_forward_mobile}</a></p>
+		<!--{elseif $allowreturn}-->
+			<p><prev>{lang message_go_back}</prev></p>
+		<!--{/if}-->
+
+<!--{template common/footer}-->

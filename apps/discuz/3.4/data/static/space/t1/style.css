@@ -1,0 +1,18 @@
+/*
+[name]默认风格[/name]
+Powered by Discuz! X
+*/
+
+body { background: #F8F8F8; }
+a { color: #069; }
+#hd { margin-top: 30px; width: 948px; height: 133px; border: 1px solid #D3DFDF; background: #FAFAFA url(images/header.jpg) no-repeat 100% 0; color: #069; }
+	#hd h2 { padding: 20px 0 0 30px; line-height: 115%; }
+	#nv { bottom: 10px; }
+		#nv li { background: none; filter:progid:DXImageTransform.Microsoft.gradient(startColorstr = #00FFFFFF, endColorstr = #00FFFFFF); font-size: 14px; }
+		#nv li a, #nv li a:visited { color: #069; }
+		#nv li a:hover { background-image: none !important; }
+.block { border: 1px solid #DDD; background: #FFF; }
+	.block .title { border-bottom: 1px solid #DDD; background: #EAF1F2 url(images/title.png) repeat-x 0 0; }
+.tl .th { background: none; }
+#ft { border-top: 1px solid #CCC; _margin-top: 10px; }
+

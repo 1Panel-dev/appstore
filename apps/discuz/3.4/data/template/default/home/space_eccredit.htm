@@ -1,0 +1,193 @@
+{eval
+	$filter = array( 'common' => '{lang have_posted}', 'save' => '{lang draft}', 'close' => '{lang closed}', 'aduit' => '{lang pending}', 'recyclebin' => '{lang recyclebin}');
+	$_G[home_tpl_spacemenus][] = "<a href=\"home.php?mod=space&uid=$space[uid]&do=thread&view=me\">{lang credit_rating}</a>";
+}
+<!--{if empty($_GET['sns'])}-->
+<!--{template common/header}-->
+<div id="pt" class="bm cl">
+	<div class="z">
+		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em>
+		<a href="home.php?mod=space&do=thread">{lang post}</a> <em>&rsaquo;</em>
+		<a href="home.php?mod=space&uid=$space[uid]&do=trade&view=me">{lang trade}</a> <em>&rsaquo;</em>
+		<a href="home.php?mod=space&do=trade&view=eccredit">{lang credit_rating}</a>
+	</div>
+</div>
+
+<style id="diy_style" type="text/css"></style>
+<div class="wp">
+	<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+</div>
+
+<div id="ct" class="ct2_a wp cl">
+	<div class="mn">
+		<!--[diy=diycontenttop]--><div id="diycontenttop" class="area"></div><!--[/diy]-->
+		<div class="bm bw0">
+		<!--{if (!$_G['uid'] && !$space[uid]) || $space[self]}-->
+			<h1 class="mt"><img alt="trade" src="{IMGDIR}/tradesmall.gif" class="vm" /> {lang trade}</h1>
+		<!--{/if}-->
+		<!--{if $space[self]}-->
+			<ul class="tb cl">
+				<li><a href="home.php?mod=space&do=trade&view=we">{lang friend_trade}</a></li>
+				<li><a href="home.php?mod=space&do=trade&view=me">{lang my_trade}</a></li>
+				<li><a href="home.php?mod=space&do=trade&view=tradelog">{lang trade_log}</a></li>
+				<li class="a"><a href="home.php?mod=space&do=trade&view=eccredit">{lang credit_rating}</a></li>
+				<!--{if $_G[group][allowposttrade]}-->
+					<li class="o">
+						<!--{if $_G[setting][tradeforumid]}-->
+						<a href="forum.php?mod=post&action=newthread&fid=$_G[setting][tradeforumid]&special=2">{lang create_new_trade}</a>
+						<!--{else}-->
+						<a href="forum.php?mod=misc&action=nav&special=2" onclick="showWindow('nav', this.href)">{lang create_new_trade}</a>
+						<!--{/if}-->
+					</li>
+				<!--{/if}-->
+			</ul>
+		<!--{else}-->
+
+			<!--{template home/space_menu}-->
+			<p class="tbmu cl">
+				<span class="y">
+					<!--{if $space[uid] > 0}-->
+					<a href="home.php?mod=space&do=trade&view=onlyuser">{lang sale_of_goods}</a><span class="pipe">|</span>
+					<a href="home.php?mod=space&do=trade&view=eccredit">{lang credit_rating}</a>
+					<!--{/if}-->
+				</span>
+			</p>
+		<!--{/if}-->
+
+<!--{else}-->
+<!--{template home/space_header}-->
+	<div id="ct" class="ct2 wp cl">
+		<div class="mn">
+			<div class="bm">
+				<div class="bm_h cl">
+					<h1 class="mt">{lang credit_rating}</h1>
+<!--{/if}-->
+				</div>
+				<div class="bm_c">
+
+			<style id="diy_style" type="text/css"></style>
+			<div class="wp">
+				<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+			</div>
+
+			<script type="text/javascript" src="{$_G[setting][jspath]}forum.js?{VERHASH}"></script>
+
+			<p class="mtm mbw">
+				<!--{if $member['alipay']}--><a href="https://www.alipay.com/trade/i_credit.do?email=$member[alipay]" target="_blank"><img src="{IMGDIR}/alipaysmall.gif" alt="{lang payto_creditinfo}" class="vm" /></a>&nbsp;&nbsp;<!--{/if}-->
+				<!--{if $member['taobao']}--><script type="text/javascript">document.write('<a target="_blank" href="https://amos1.taobao.com/msg.ww?v=2&uid='+encodeURIComponent('$member[taobaoas]')+'&s=2"><img src="https://amos1.taobao.com/online.ww?v=2&uid='+encodeURIComponent('$member[taobaoas]')+'&s=1" alt="{lang taobao}" class="vm" /></a>&nbsp;');</script>&nbsp;&nbsp;<!--{/if}-->
+				{lang eccredit_buyerpercent}: $sellerpercent%;&nbsp;&nbsp;
+				{lang eccredit_sellerpercent}: $buyerpercent%;&nbsp;&nbsp;
+				{lang regdate}: $member[regdate]
+			</p>
+			<table id="sellcredit" summary="eccredit" cellspacing="0" cellpadding="0" class="dt">
+				<caption><h3 class="pbm">{lang eccredit_sellerinfo} $member[sellercredit] <img src="{STATICURL}image/traderank/seller/$member['sellerrank'].gif" alt="seller rank" class="vm" /></h3></caption>
+				<tr class="alt">
+					<td style="width: 45px;">&nbsp;</td>
+					<td>{lang eccredit_1week}</td>
+					<td>{lang eccredit_1month}</td>
+					<td>{lang eccredit_6month}</td>
+					<td>{lang eccredit_6monthbefore}</td>
+					<td>{lang eccredit_total}</td>
+				</tr>
+				<tr>
+					<td><img src="{STATICURL}image/traderank/good.gif" width="14" height="16" alt="good" class="vm" /> <span style="color:red">{lang eccredit_good}</span></td>
+					<td><a href="home.php?mod=spacecp&ac=eccredit&op=list&uid=$uid&from=seller&filter=thisweek&level=good#" onclick="ajaxget(this.href, 'ajaxrate', 'specialposts');doane(event);">$caches[sellercredit][thisweek][good]</a></td>
+					<td><a href="home.php?mod=spacecp&ac=eccredit&op=list&uid=$uid&from=seller&filter=thismonth&level=good#" onclick="ajaxget(this.href, 'ajaxrate', 'specialposts');doane(event);">$caches[sellercredit][thismonth][good]</a></td>
+					<td><a href="home.php?mod=spacecp&ac=eccredit&op=list&uid=$uid&from=seller&filter=halfyear&level=good#" onclick="ajaxget(this.href, 'ajaxrate', 'specialposts');doane(event);">$caches[sellercredit][halfyear][good]</a></td>
+					<td><a href="home.php?mod=spacecp&ac=eccredit&op=list&uid=$uid&from=seller&filter=before&level=good#" onclick="ajaxget(this.href, 'ajaxrate', 'specialposts');doane(event);">$caches[sellercredit][before][good]</a></td>
+					<td>$caches[sellercredit][all][good]</td>
+				</tr>
+				<tr>
+					<td><img src="{STATICURL}image/traderank/soso.gif" width="14" height="16" alt="soso" class="vm" /> <span style="color:green">{lang eccredit_soso}</span></td>
+					<td><a href="home.php?mod=spacecp&ac=eccredit&op=list&uid=$uid&from=seller&filter=thisweek&level=soso#" onclick="ajaxget(this.href, 'ajaxrate', 'specialposts');doane(event);">$caches[sellercredit][thisweek][soso]</a></td>
+					<td><a href="home.php?mod=spacecp&ac=eccredit&op=list&uid=$uid&from=seller&filter=thismonth&level=soso#" onclick="ajaxget(this.href, 'ajaxrate', 'specialposts');doane(event);">$caches[sellercredit][thismonth][soso]</a></td>
+					<td><a href="home.php?mod=spacecp&ac=eccredit&op=list&uid=$uid&from=seller&filter=halfyear&level=soso#" onclick="ajaxget(this.href, 'ajaxrate', 'specialposts');doane(event);">$caches[sellercredit][halfyear][soso]</a></td>
+					<td><a href="home.php?mod=spacecp&ac=eccredit&op=list&uid=$uid&from=seller&filter=before&level=soso#" onclick="ajaxget(this.href, 'ajaxrate', 'specialposts');doane(event);">$caches[sellercredit][before][soso]</a></td>
+					<td>$caches[sellercredit][all][soso]</td>
+				</tr>
+				<tr>
+					<td><img src="{STATICURL}image/traderank/bad.gif" width="14" height="16" alt="bad" class="vm" /> {lang eccredit_bad}</td>
+					<td><a href="home.php?mod=spacecp&ac=eccredit&op=list&uid=$uid&from=seller&filter=thisweek&level=bad#" onclick="ajaxget(this.href, 'ajaxrate', 'specialposts');doane(event);">$caches[sellercredit][thisweek][bad]</a></td>
+					<td><a href="home.php?mod=spacecp&ac=eccredit&op=list&uid=$uid&from=seller&filter=thismonth&level=bad#" onclick="ajaxget(this.href, 'ajaxrate', 'specialposts');doane(event);">$caches[sellercredit][thismonth][bad]</a></td>
+					<td><a href="home.php?mod=spacecp&ac=eccredit&op=list&uid=$uid&from=seller&filter=halfyear&level=bad#" onclick="ajaxget(this.href, 'ajaxrate', 'specialposts');doane(event);">$caches[sellercredit][halfyear][bad]</a></td>
+					<td><a href="home.php?mod=spacecp&ac=eccredit&op=list&uid=$uid&from=seller&filter=before&level=bad#" onclick="ajaxget(this.href, 'ajaxrate', 'specialposts');doane(event);">$caches[sellercredit][before][bad]</a></td>
+					<td>$caches[sellercredit][all][bad]</td>
+				</tr>
+				<tr>
+					<td>{lang eccredit_total}</td>
+					<td><a href="home.php?mod=spacecp&ac=eccredit&op=list&uid=$uid&from=seller&filter=thisweek#" onclick="ajaxget(this.href, 'ajaxrate', 'specialposts');doane(event);">$caches[sellercredit][thisweek][total]</a></td>
+					<td><a href="home.php?mod=spacecp&ac=eccredit&op=list&uid=$uid&from=seller&filter=thismonth#" onclick="ajaxget(this.href, 'ajaxrate', 'specialposts');doane(event);">$caches[sellercredit][thismonth][total]</a></td>
+					<td><a href="home.php?mod=spacecp&ac=eccredit&op=list&uid=$uid&from=seller&filter=halfyear#" onclick="ajaxget(this.href, 'ajaxrate', 'specialposts');doane(event);">$caches[sellercredit][halfyear][total]</a></td>
+					<td><a href="home.php?mod=spacecp&ac=eccredit&op=list&uid=$uid&from=seller&filter=before#" onclick="ajaxget(this.href, 'ajaxrate', 'specialposts');doane(event);">$caches[sellercredit][before][total]</a></td>
+					<td>$caches[sellercredit][all][total]</td>
+				</tr>
+			</table>
+
+			<table id="buyercredit" summary="eccredit" cellspacing="0" cellpadding="0" class="dt">
+				<caption><h3 class="ptw pbm">{lang eccredit_buyerinfo} $member[buyercredit] <img src="{STATICURL}image/traderank/buyer/$member['buyerrank'].gif" alt="buyer rank" class="vm" /></h3></caption>
+				<tr class="alt">
+					<td style="width: 45px;">&nbsp;</td>
+					<td>{lang eccredit_1week}</td>
+					<td>{lang eccredit_1month}</td>
+					<td>{lang eccredit_6month}</td>
+					<td>{lang eccredit_6monthbefore}</td>
+					<td>{lang eccredit_total}</td>
+				</tr>
+				<tr>
+					<td><img src="{STATICURL}image/traderank/good.gif" width="14" height="16" alt="good" class="vm" /> <span style="color:red">{lang eccredit_good}</span></td><td><a href="home.php?mod=spacecp&ac=eccredit&op=list&uid=$uid&from=seller&filter=thisweek&level=good" onclick="ajaxget(this.href, 'ajaxrate', 'specialposts');doane(event);">$caches[buyercredit][thisweek][good]</a></td>
+					<td><a href="home.php?mod=spacecp&ac=eccredit&op=list&uid=$uid&from=buyer&filter=thismonth&level=good#" onclick="ajaxget(this.href, 'ajaxrate', 'specialposts');doane(event);">$caches[buyercredit][thismonth][good]</a></td>
+					<td><a href="home.php?mod=spacecp&ac=eccredit&op=list&uid=$uid&from=buyer&filter=halfyear&level=good#" onclick="ajaxget(this.href, 'ajaxrate', 'specialposts');doane(event);">$caches[buyercredit][halfyear][good]</a></td>
+					<td><a href="home.php?mod=spacecp&ac=eccredit&op=list&uid=$uid&from=buyer&filter=before&level=good#" onclick="ajaxget(this.href, 'ajaxrate', 'specialposts');doane(event);">$caches[buyercredit][before][good]</a></td>
+					<td>$caches[buyercredit][all][good]</td>
+				</tr>
+				<tr>
+					<td><img src="{STATICURL}image/traderank/soso.gif" width="14" height="16" alt="soso" class="vm" /> <span style="color:green">{lang eccredit_soso}</span></td>
+					<td><a href="home.php?mod=spacecp&ac=eccredit&op=list&uid=$uid&from=buyer&filter=thisweek&level=soso#" onclick="ajaxget(this.href, 'ajaxrate', 'specialposts');doane(event);">$caches[buyercredit][thisweek][soso]</a></td>
+					<td><a href="home.php?mod=spacecp&ac=eccredit&op=list&uid=$uid&from=buyer&filter=thismonth&level=soso#" onclick="ajaxget(this.href, 'ajaxrate', 'specialposts');doane(event);">$caches[buyercredit][thismonth][soso]</a></td>
+					<td><a href="home.php?mod=spacecp&ac=eccredit&op=list&uid=$uid&from=buyer&filter=halfyear&level=soso#" onclick="ajaxget(this.href, 'ajaxrate', 'specialposts');doane(event);">$caches[buyercredit][halfyear][soso]</a></td>
+					<td><a href="home.php?mod=spacecp&ac=eccredit&op=list&uid=$uid&from=buyer&filter=before&level=soso" onclick="ajaxget(this.href, 'ajaxrate', 'specialposts');doane(event);">$caches[buyercredit][before][soso]</a></td>
+					<td>$caches[buyercredit][all][soso]</td>
+				</tr>
+				<tr>
+					<td><img src="{STATICURL}image/traderank/bad.gif" width="14" height="16" alt="bad" class="vm" /> {lang eccredit_bad}</td>
+					<td><a href="home.php?mod=spacecp&ac=eccredit&op=list&uid=$uid&from=buyer&filter=thisweek&level=bad#" onclick="ajaxget(this.href, 'ajaxrate', 'specialposts');doane(event);">$caches[buyercredit][thisweek][bad]</a></td>
+					<td><a href="home.php?mod=spacecp&ac=eccredit&op=list&uid=$uid&from=buyer&filter=thismonth&level=bad#" onclick="ajaxget(this.href, 'ajaxrate', 'specialposts');doane(event);">$caches[buyercredit][thismonth][bad]</a></td>
+					<td><a href="home.php?mod=spacecp&ac=eccredit&op=list&uid=$uid&from=buyer&filter=halfyear&level=bad#" onclick="ajaxget(this.href, 'ajaxrate', 'specialposts');doane(event);">$caches[buyercredit][halfyear][bad]</a></td>
+					<td><a href="home.php?mod=spacecp&ac=eccredit&op=list&uid=$uid&from=buyer&filter=before&level=bad#" onclick="ajaxget(this.href, 'ajaxrate', 'specialposts');doane(event);">$caches[buyercredit][before][bad]</a></td>
+					<td>$caches[buyercredit][all][bad]</td>
+				</tr>
+				<tr>
+					<td>{lang eccredit_total}</td>
+					<td><a href="home.php?mod=spacecp&ac=eccredit&op=list&uid=$uid&from=buyer&filter=thisweek#" onclick="ajaxget(this.href, 'ajaxrate', 'specialposts');doane(event);">$caches[buyercredit][thisweek][total]</a></td>
+					<td><a href="home.php?mod=spacecp&ac=eccredit&op=list&uid=$uid&from=buyer&filter=thismonth#" onclick="ajaxget(this.href, 'ajaxrate', 'specialposts');doane(event);">$caches[buyercredit][thismonth][total]</a></td>
+					<td><a href="home.php?mod=spacecp&ac=eccredit&op=list&uid=$uid&from=buyer&filter=halfyear#" onclick="ajaxget(this.href, 'ajaxrate', 'specialposts');doane(event);">$caches[buyercredit][halfyear][total]</a></td>
+					<td><a href="home.php?mod=spacecp&ac=eccredit&op=list&uid=$uid&from=buyer&filter=before#" onclick="ajaxget(this.href, 'ajaxrate', 'specialposts');doane(event);">$caches[buyercredit][before][total]</a></td>
+					<td>$caches[buyercredit][all][total]</td>
+				</tr>
+			</table>
+			<div id="ajaxrate"></div>
+			<!--{if $_G['uid']}-->
+				<script type="text/javascript">ajaxget('home.php?mod=spacecp&ac=eccredit&op=list&uid=$uid', 'ajaxrate');var explainmenu='ajax_explain_menu';</script>
+			<!--{/if}-->
+
+			</div>
+		</div>
+	<!--{if empty($_GET['sns'])}-->
+			<div class="appl">
+				<!--{subtemplate home/space_thread_nav}-->
+
+				<div class="drag">
+					<!--[diy=diy2]--><div id="diy2" class="area"></div><!--[/diy]-->
+				</div>
+
+			</div>
+		</div>
+	<!--{else}-->
+		</div>
+		<div class="sd">
+			<!--{subtemplate home/space_userabout}-->
+		</div>
+	<!--{/if}-->
+</div>
+
+<!--{template common/footer}-->

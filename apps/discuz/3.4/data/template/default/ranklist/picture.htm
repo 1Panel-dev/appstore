@@ -1,0 +1,65 @@
+<!--{template common/header}-->
+<div id="pt" class="bm cl">
+	<div class="z">
+		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em>
+		<a href="misc.php?mod=ranklist">{lang ranklist}</a> <em>&rsaquo;</em>
+		{lang ranklist_picture}
+	</div>
+</div>
+
+<style id="diy_style" type="text/css"></style>
+
+<!--[diy=diyranklisttop]--><div id="diyranklisttop" class="area"></div><!--[/diy]-->
+
+<div class="ct2_a wp cl">
+	<div class="mn">
+		<!--[diy=diycontenttop]--><div id="diycontenttop" class="area"></div><!--[/diy]-->
+		<div class="bm bw0">
+			<h1 class="mt">{lang ranklist_picture}</h1>
+			<ul class="tb cl">
+				<li{if $_GET[view] == 'hot'} class="a"{/if}><a href="misc.php?mod=ranklist&type=picture&view=hot&orderby=$orderby">{lang hot_pic_ranklist}</a></li>
+				<!--{if $clicks}-->
+				<!--{loop $clicks $key $value}-->
+				<li{if $_GET[view] == $key} class="a"{/if}><a href="misc.php?mod=ranklist&type=picture&view=$key&orderby=$orderby">$value[name]{lang ranklist}</a></li>
+				<!--{/loop}-->
+				<!--{/if}-->
+				<li{if $_GET[view] == 'sharetimes'} class="a"{/if}><a href="misc.php?mod=ranklist&type=picture&view=sharetimes&orderby=$orderby">{lang ranklist_share}</a></li>
+			</ul>
+			<p id="before" class="tbmu">
+				<a href="misc.php?mod=ranklist&type=picture&view=$_GET[view]&orderby=thismonth" id="2592000" {if $orderby == 'thismonth'}class="a"{/if} />{lang ranklist_month}</a><span class="pipe">|</span>
+				<a href="misc.php?mod=ranklist&type=picture&view=$_GET[view]&orderby=thisweek" id="604800" {if $orderby == 'thisweek'}class="a"{/if} />{lang ranklist_week}</a><span class="pipe">|</span>
+				<a href="misc.php?mod=ranklist&type=picture&view=$_GET[view]&orderby=today" id="86400" {if $orderby == 'today'}class="a"{/if} />{lang ranklist_today}</a><span class="pipe">|</span>
+				<a href="misc.php?mod=ranklist&type=picture&view=$_GET[view]&orderby=all" id="all" {if $orderby == 'all'}class="a"{/if} />{lang all}</a>
+			</p>
+			<!--{if $picturelist}-->
+				<ul class="ptw ml mla cl">
+				<!--{loop $picturelist $picture}-->
+					<li class="d">
+						<div class="c">
+							<!--{if $picture['rank'] <= 3}--><img src="{IMGDIR}/rank_$picture['rank'].gif" alt="$picture['rank']" class="picrank" /><!--{/if}-->
+							<a href="home.php?mod=space&uid=$picture['uid']&do=album&picid=$picture['picid']" title="$picture['albumname']" target="_blank"><img src="{$picture['url']}" alt="" /></a>
+						</div>
+						<!--{if $_GET[view] == 'hot'}--><p class="ptm">{lang views} $picture[hot]</p>
+						<!--{elseif $_GET[view] == 'sharetimes'}--><p class="ptm">{lang ranklist_thread_share} $picture[sharetimes]</p>
+						<!--{else}--><p class="ptm">$clicks[$_GET[view]][name] $picture['click'.$_GET[view]]</p><!--{/if}-->
+						<span><a href="home.php?mod=space&uid=$picture['uid']" target="_blank">$picture[username]</a></span>
+					</li>
+				<!--{/loop}-->
+				</ul>
+			<!--{else}-->
+				<div class="emp">{lang none_data}</div>
+			<!--{/if}-->
+			<div class="notice">{lang ranklist_update}</div>
+		</div>
+		<!--[diy=diycontentbottom]--><div id="diycontentbottom" class="area"></div><!--[/diy]-->
+	</div>
+	<div class="appl">
+		<!--[diy=diysidetop]--><div id="diysidetop" class="area"></div><!--[/diy]-->
+		<!--{subtemplate ranklist/side_left}-->
+		<!--[diy=diysidebottom]--><div id="diysidebottom" class="area"></div><!--[/diy]-->
+	</div>
+</div>
+
+<!--[diy=diyranklistbottom]--><div id="diyranklistbottom" class="area"></div><!--[/diy]-->
+
+<!--{template common/footer}-->

@@ -1,0 +1,296 @@
+{eval
+function tpl_global_login_extra() {
+global $_G;
+}
+<!--{block return}-->
+	<div class="fastlg_fm y" style="margin-right: 10px; padding-right: 10px">
+		<p><a href="$_G[connect][login_url]&statfrom=login_simple"><img src="{IMGDIR}/qq_login.gif" class="vm" alt="{lang qqconnect:connect_header_login}" /></a></p>
+		<p class="hm xg1" style="padding-top: 2px;">{lang qqconnect:connect_header_login_tip}</p>
+	</div>
+<!--{/block}-->
+<!--{eval return $return;}-->
+{eval
+}
+
+function tpl_global_usernav_extra1() {
+global $_G;
+}
+<!--{block return}-->
+<!--{if CURMODULE != 'connect'}-->
+	<!--{if $_G['connectguest']}-->
+	<span class="pipe">|</span><a href="member.php?mod=connect" target="_blank" title="{lang qqconnect:connect_member_register_button_tip}">{lang qqconnect:connect_register_profile}</a><span class="pipe">|</span><a href="member.php?mod=connect&ac=bind" target="_blank" title="{lang qqconnect:connect_member_loginbind_button_tip}">{lang qqconnect:connect_register_bind}</a>
+	<!--{else}-->
+	<span class="pipe">|</span><a href="connect.php?mod=config" target="_blank"><img src="{IMGDIR}/qq_bind_small.gif" class="qq_bind" align="absmiddle" alt="{lang qqconnect:connect_config}" /></a>
+	<!--{/if}-->
+<!--{/if}-->
+<!--{/block}-->
+<!--{eval return $return;}-->
+{eval
+}
+
+function tpl_login_bar() {
+global $_G;
+}
+<!--{block return}-->
+	<!--{if !$_G['connectguest']}-->
+	<a href="$_G[connect][login_url]&statfrom=login" target="_top" rel="nofollow"><img src="{IMGDIR}/qq_login.gif" class="vm" /></a>
+	<!--{/if}-->
+<!--{/block}-->
+<!--{eval return $return;}-->
+{eval
+}
+
+function tpl_viewthread_share_method() {
+global $_G;
+if (!$_G['setting']['connect']['allow']) return;
+$connect_thread_subject = addslashes(strip_tags($_G['thread']['subject']));
+}
+<!--{block return}-->
+	<a href="{$_G[connect][qq_share_url]}" id="k_share_to_qq" title="{lang qqconnect:connect_viewthread_share_to_qq}" target="_blank"><i><img src="{IMGDIR}/qq_share.png" alt="{lang qqconnect:connect_viewthread_share_to_qq}" />{lang qqconnect:connect_viewthread_share_to_qq}</i></a>
+	<a href="#" id="k_qqshare" onclick="postToQzone();return false;" title="{lang qqconnect:connect_viewthread_share_to_qzone}"><i><img src="{IMGDIR}/qzone.gif" alt="{lang qqconnect:connect_viewthread_share_to_qzone}" />{lang qqconnect:connect_viewthread_share_to_qzone}</i></a>
+<!--{/block}-->
+<!--{eval return $return;}-->
+{eval
+}
+
+function tpl_viewthread_bottom($jsurl) {
+global $_G;
+}
+<!--{block return}-->
+	<script type="text/javascript">
+		function postToQzone(){
+			var _url = encodeURIComponent(document.location.href);
+			var _site = encodeURIComponent("{$_G['setting']['bbname']}");
+			var _title = encodeURIComponent("{$connect_thread_subject}");
+			var _pics = "{$_G['connect']['share_images']}";
+			var _from = 'discuz';
+			var _u = '{$_G['connect']['qzone_public_share_url']}?url='+_url+'&site='+_site+'&title='+_title+'&pics='+_pics+'&from='+_from;
+			window.open(_u);
+		}
+	</script>
+	<!--{if $_G['member']['conisbind']}-->
+		<div id="connect_share_unbind" style="display: none;">
+			<div class="c hm">
+				<div style="font-size:14px; margin:10px 0;">{lang qqconnect:connect_post_unbind}</div>
+				<div><a href="connect.php?mod=config&connect_autoshare=1" target="_blank"><img src="{IMGDIR}/qq_bind.gif" align="absmiddle" style="margin-top:5px;" /></a></div>
+			</div>
+			<input type="hidden" id="connect_thread_title" name="connect_thread_title" value="$_G[forum_thread][subject]" />
+		</div>
+	<!--{/if}-->
+	<!--{if $jsurl}-->
+		<script type="text/javascript">_attachEvent(window, 'load', function () { appendscript('{$jsurl}', '', 1, 'utf-8') }, document);</script>
+	<!--{/if}-->
+<!--{/block}-->
+<!--{eval return $return;}-->
+{eval
+}
+
+function tpl_register_input() {
+global $_G;
+
+$connect_app_id = $_G['qc']['connect_app_id'];
+$connect_openid = $_G['qc']['connect_openid'];
+}
+<!--{block return}-->
+	<input type="hidden" id="auth_hash" name="auth_hash" value="{$_G['qc']['connect_auth_hash']}" />
+	<input type="hidden" id="is_notify" name="is_notify" value="{$_G['qc']['connect_is_notify']}" />
+	<input type="hidden" id="is_feed" name="is_feed" value="{$_G['qc']['connect_is_feed']}" />
+<!--{/block}-->
+<!--{eval return $return;}-->
+{eval
+}
+
+function tpl_register_bottom() {
+global $_G;
+
+$loginhash = 'L'.random(4);
+$change_qq_url = $_G['connect']['discuz_change_qq_url'];
+$qq_nick = $_G['qc']['qq_nick'];
+$connect_app_id = $_G['qc']['connect_app_id'];
+$connect_openid = $_G['qc']['connect_openid'];
+$connect_tab_1 = $_GET['ac'] != 'bind' && $_G['setting']['regconnect'] ? ' class="a"' : '';
+$connect_tab_2 = $_GET['ac'] == 'bind' ? ' class="a"' : '';
+}
+<!--{block js2}-->	
+	<!--{if $_GET['ac'] == 'bind' || $_G['setting']['regconnect']}-->
+	<div id="loggingbox" class="loggingbox">
+		<div class="loging_tit cl">			
+			<div class="z">
+				<p class="welcome mbn cl" style="clear:both; width:100%; "><strong>Hi</strong>,<strong>$_G['member']['username']</strong>, <span class="xg2">{lang connect_member_login_tip}</span></p>
+				<ul class="tb cl z">
+					<li id="connect_tab_1"$connect_tab_1><a id="loginlist" href="javascript:;" onclick="connect_switch(1);this.blur();" tabindex="900">{lang connect_register_profile}</a></li>
+					<li id="connect_tab_2"$connect_tab_2><a id="loginlist2" href="javascript:;" onclick="connect_switch(2);this.blur();" tabindex="900">{lang connect_register_bind}</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--{/if}-->
+<!--{/block}-->
+{eval
+$js2 = str_replace(array("'", "\r", "\n"), array("\'", '', ''), $js2);
+}
+<!--{block return}-->
+	<div class="b1lr">
+		<form method="post" autocomplete="off" name="login" id="loginform_$loginhash" class="cl"{if $_G['setting']['regconnect']} style="display:none"{/if} onsubmit="ajaxpost('loginform_$loginhash', 'returnmessage4', 'returnmessage4', 'onerror');return false;" action="member.php?mod=connect&action=login&loginsubmit=yes{if !empty($_GET['handlekey'])}&handlekey=$_GET[handlekey]{/if}&loginhash=$loginhash">
+			<div class="c cl bm_c">
+				<input type="hidden" name="formhash" value="{FORMHASH}" />
+				<input type="hidden" name="referer" value="{$_G['qc']['dreferer']}" />
+				<input type="hidden" id="auth_hash" name="auth_hash" value="{$_G['qc']['connect_auth_hash']}" />
+				<input type="hidden" id="is_notify" name="is_notify" value="{$_G['qc']['connect_is_notify']}" />
+				<input type="hidden" id="is_feed" name="is_feed" value="{$_G['qc']['connect_is_feed']}" />
+				<!--{if $_G['qc']['uinlimit']}-->
+				<div class="rfm">
+					<table>
+						<tr>
+							<th><img src="{IMGDIR}/connect_qq.gif" alt="QQ" class="mtn" /></th>
+							<td>
+								{lang qqconnect:connect_uin_limit}
+							</td>
+						</tr>
+					</table>
+				</div>
+				<!--{/if}-->
+				<div class="rfm">
+					<table>
+						<tr>
+							<th>
+							<!--{if $_G['setting']['autoidselect']}-->
+								<label for="username">{lang login_id}:</label>
+							<!--{else}-->
+								<span class="login_slct">
+									<select name="loginfield" style="float: left;" width="45" id="loginfield_$loginhash">
+										<option value="username">{lang username}</option>
+										<option value="uid">{lang uid}</option>
+										<option value="email">{lang email}</option>
+									</select>
+								</span>
+							<!--{/if}-->
+							</th>
+							<td><input type="text" name="username" id="username_$loginhash" autocomplete="off" size="36" class="txt" tabindex="1" value="$username" /></td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="rfm">
+					<table>
+						<tr>
+							<th><label for="password3_$loginhash">{lang login_password}:</label></th>
+							<td><input type="password" id="password3_$loginhash" name="password" size="36" class="txt" tabindex="1" /></td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="rfm">
+					<table>
+						<tr>
+							<th>{lang security_q}:</th>
+							<td><select id="loginquestionid_$loginhash" width="213" name="questionid" onchange="if($('loginquestionid_$loginhash').value > 0) $('loginanswer_row_$loginhash').style.display=''; else $('loginanswer_row_$loginhash').style.display='none'">
+								<option value="0">{lang security_question}</option>
+								<option value="1">{lang security_question_1}</option>
+								<option value="2">{lang security_question_2}</option>
+								<option value="3">{lang security_question_3}</option>
+								<option value="4">{lang security_question_4}</option>
+								<option value="5">{lang security_question_5}</option>
+								<option value="6">{lang security_question_6}</option>
+								<option value="7">{lang security_question_7}</option>
+							</select></td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="rfm" id="loginanswer_row_$loginhash" style="display:none">
+					<table>
+						<tr>
+							<th>{lang security_a}:</th>
+							<td><input type="text" name="answer" id="loginanswer_$loginhash" autocomplete="off" size="36" class="txt" tabindex="1" /></td>
+						</tr>
+					</table>
+				</div>				
+			</div>
+			<div class="rfm mbw bw0">
+				<table>
+					<tr>
+						<th>&nbsp;</th>
+						<td><button class="pn pnc" type="submit" name="loginsubmit" value="true" tabindex="1"><strong>{lang qqconnect:connect_register_bind_window_button}</strong></button></td>
+					</tr>
+				</table>
+			</div>
+		</form>
+	</div>
+	<style type="text/css">
+		.loggingbox { width: 760px; margin: 40px auto 0; }
+		.loging_tit { border-bottom: 1px solid #CCC; _overflow:hidden; }
+		.ie_all .loging_tit { height:66px;}
+		.loggingbox .fm_box { border-bottom:0; padding: 20px 0; }
+		.loggingbox .welcome { font-size:14px; width:100%; line-height:30px;}
+		.loggingbox .welcome span { font-size:12px; }
+		.loggingbox .avt img { margin: 0 5px 5px 0; padding:0; border:0; width:60px; height:60px; }
+		.loggingbox .tb{ border-bottom: 0; margin-top: 0; padding-left: 0px; }
+		.loggingbox .tb a { background:#F6F6F6; padding:0 20px; }
+		.loggingbox .tb .a a { background:#FFF; }
+	</style>
+	<script type="text/javascript">
+		<!--{if $_G['setting']['regconnect']}-->
+			$('reginfo_a').parentNode.className = '';
+			$('{$_G['setting']['reginput']['password']}').parentNode.parentNode.parentNode.parentNode.parentNode.style.display = 'none';
+			$('{$_G['setting']['reginput']['username']}').outerHTML += '$js1';
+			$('{$_G['setting']['reginput']['password']}').required = 0;
+			$('{$_G['setting']['reginput']['password2']}').parentNode.parentNode.parentNode.parentNode.parentNode.style.display = 'none';
+			$('{$_G['setting']['reginput']['password2']}').required = 0;
+			$('main_hnav').outerHTML = '$js2';
+			function connect_switch(op) {
+				$('returnmessage4').className='';
+				$('returnmessage4').innerHTML='';
+				if(op == 1) {
+					$('loginform_$loginhash').style.display='none';$('registerform').style.display='block';
+					$('connect_tab_1').className = 'a';
+					$('connect_tab_2').className = '';
+					//$('connect_login_register_tip').style.display = '';
+					//$('connect_login_bind_tip').style.display = 'none';
+					
+				} else {
+					$('loginform_$loginhash').style.display='block';$('registerform').style.display='none';
+					$('connect_tab_2').className = 'a';
+					$('connect_tab_1').className = '';
+					//$('connect_login_register_tip').style.display = 'none';
+					//$('connect_login_bind_tip').style.display = '';
+				}
+			}
+			function connect_use_available(value) {
+				$('{$_G['setting']['reginput']['username']}').value = value;
+				checkusername(value);
+			}
+			<!--{if $_G['qc']['uinlimit']}-->
+				$('registerformsubmit').disabled = true;
+			<!--{/if}-->
+			<!--{if $_GET[action] != 'activation'}-->
+				$('registerformsubmit').innerHTML = '<span>{lang qqconnect:connect_register_finish}</span>';
+			<!--{/if}-->
+		<!--{else}-->
+			$('layer_reginfo_t').innerHTML = '{lang qqconnect:connect_register_bind}';
+		<!--{/if}-->
+		<!--{if $_GET[action] != 'activation'}-->
+			<!--{if !$_G['setting']['autoidselect']}-->
+				simulateSelect('loginfield_$loginhash');
+			<!--{/if}-->
+		<!--{/if}-->
+		
+		<!--{if $_G['setting']['regconnect'] && $_GET['ac'] != 'bind'}-->
+		function connect_get_user_info() {
+			var x = new Ajax();
+			x.get('connect.php?mod=user&op=get&hash={FORMHASH}&inajax=1&_r='+Math.random(), function(s){
+				var nick = s;
+				if(nick) {
+					document.getElementById('{$_G['setting']['reginput']['username']}').value = nick;
+				}
+			});
+		}
+		window.load=connect_get_user_info();
+		<!--{/if}-->
+</script>
+<!--{/block}-->
+<!--{eval return $return;}-->
+{eval
+}
+
+}

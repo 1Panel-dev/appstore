@@ -1,0 +1,60 @@
+<!--{eval
+	$_G['home_tpl_titles'] = array('{lang invite_friend}');
+}-->
+<!--{template common/header}-->
+<div id="pt" class="bm cl">
+	<div class="z"><a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em> {lang invite_friends}</div>
+</div>
+<div id="ct" class="ct2 wp cl">
+	<div class="mn">
+		<div class="bm bml">
+			<h1 class="bm_h mt">{lang welcome}<a href="home.php?mod=space&uid=$uid" target="_blank">{$space[username]}</a> {lang invite_you_to_friends}.</h1>
+			<div class="bm_c">
+				{lang become_friend}
+			</div>
+			<hr class="da mtm mbm" />
+			<div class="bm_c">
+				<table cellpadding="0" cellspacing="0" class="tfm">
+					<tr>
+						<td valign="top" width="140">
+							<div class="avt avtm"><a href="home.php?mod=space&uid=$uid"><!--{avatar($space[uid],middle)}--></a></div>
+						</td>
+						<td>
+							<h4 class="xs2"><a href="home.php?mod=space&$url_plus">{$space[username]}</a></h4>
+							<!--{if !empty($space['resideprovince'])&&!empty($space['residecity'])}--><p>{lang comefrom} $space[resideprovince] $space[residecity]</p><!--{/if}-->
+							{lang friend_information}
+							<!--{if $space[recentnote]}--><div class="quote"><blockquote>$space[recentnote]</blockquote></div><!--{/if}-->
+							<p class="mtw cl">
+							<!--{if $_G['uid']}-->
+								<a href="home.php?mod=invite&accept=yes" class="pn pnc z"><strong class="z">{lang accept_invitation}</strong></a>
+								<a href="home.php?mod=invite&accept=no" class="pn z"><strong class="z">{lang lgnore_invitation}</strong></a>
+							<!--{else}-->
+								<!--{if $_G['setting']['regstatus']}-->
+								<a href="member.php?mod={$_G[setting][regname]}&referer=$jumpurl" class="pn z"><strong class="z">{lang want_to_register}</strong></a>
+								<!--{/if}-->
+								<a href="member.php?mod=logging&action=login&referer=$jumpurl" onclick="showWindow('login', this.href)" class="pn z"><strong class="z">{lang register_immediately}</strong></a>
+							<!--{/if}-->
+							</p>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="sd">
+		<div class="bm">
+			<h3 class="bm_h">{$space[username]}{lang somebody_friends}</h3>
+			<div class="bm_c">
+				<ul class="ml mls cl">
+					<!--{loop $flist $key $value}-->
+					<li>
+						<div class="avt"><a href="home.php?mod=space&uid=$value[uid]"><!--{avatar($value[uid],small)}--></a></div>
+						<p><a href="home.php?mod=space&uid=$value[uid]" title="$value[username]">$value[username]</a></p>
+					</li>
+					<!--{/loop}-->
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!--{template common/footer}-->

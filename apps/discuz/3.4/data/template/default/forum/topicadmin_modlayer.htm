@@ -1,0 +1,52 @@
+<div id="mdly" style="display: none;{if $_G['forum']['picstyle']} margin-top: 20px;{/if}">
+	<input type="hidden" name="optgroup" />
+	<input type="hidden" name="operation" />
+	<a class="cp" href="javascript:;" title="{lang minimize}" onclick="$('mdly').className='cpd'">{lang minimize}</a>
+	<label><input type="checkbox" name="chkall" class="pc" onclick="if(!($('mdct').innerHTML = modclickcount = checkall(this.form, 'moderate'))) {$('mdly').style.display = 'none';}" />{lang checkall}</label>
+	<h6><span>{lang admin_select}</span><strong onclick="$('mdly').className='';" onmouseover="this.title='{lang maximize}'" id="mdct"></strong><span>{lang piece}: </span></h6>
+	<p>
+		<!--{if $_G['group']['allowdelpost']}-->
+			<strong><a href="javascript:;" onclick="tmodthreads(3, 'delete');return false;">{lang delete}</a></strong>
+			<span class="pipe">|</span>
+		<!--{/if}-->
+		<!--{if $_G['group']['allowmovethread'] && $_G['forum']['status'] != 3}-->
+			<strong><a href="javascript:;" onclick="tmodthreads(2, 'move');return false;">{lang thread_moved}</a></strong>
+			<span class="pipe">|</span>
+		<!--{/if}-->
+		<!--{if $_G['group']['allowedittypethread']}-->
+			<strong><a href="javascript:;" onclick="tmodthreads(2, 'type');return false;">{lang types}</a></strong>
+		<!--{/if}-->
+		<!--{if $_G['forum']['status'] == 3 && in_array($_G['adminid'], array('1','2'))}-->
+			<span class="pipe">|</span>
+			<strong><a href="javascript:;" onclick="tmodthreads(5, 'recommend_group');return false;">{lang topicadmin_recommend_forum}</a></strong>
+		<!--{/if}-->
+		<!--{if CURMODULE == 'forumdisplay'}-->
+			<!--{hook/forumdisplay_modlayer}-->
+		<!--{elseif CURMODULE == 'modcp'}-->
+			<!--{hook/modcp_modlayer}-->
+		<!--{/if}-->
+	</p>
+	<p>
+		<!--{if $_G['group']['allowstickthread']}-->
+			<a href="javascript:;" onclick="tmodthreads(1, 'stick');return false;">{lang thread_stick}</a>
+		<!--{/if}-->
+		<!--{if $_G['group']['allowdigestthread']}-->
+			<a href="javascript:;" onclick="tmodthreads(1, 'digest');return false;">{lang thread_digest}</a>
+		<!--{/if}-->
+		<!--{if $_G['group']['allowhighlightthread']}-->
+			<a href="javascript:;" onclick="tmodthreads(1, 'highlight');return false;">{lang thread_highlight}</a>
+		<!--{/if}-->
+		<!--{if $_G['group']['allowrecommendthread'] && $_G['forum']['modrecommend']['open'] && $_G['forum']['modrecommend']['sort'] != 1}-->
+			<a href="javascript:;" onclick="tmodthreads(1, 'recommend');return false;">{lang recommend}</a>
+		<!--{/if}-->
+		<!--{if $_G['group']['allowbumpthread'] || $_G['group']['allowclosethread']}-->
+			<span class="pipe">|</span>
+		<!--{/if}-->
+		<!--{if $_G['group']['allowbumpthread']}-->
+			<a href="javascript:;" onclick="tmodthreads(3, 'bump');return false;">{lang admin_bump_down}</a>
+		<!--{/if}-->
+		<!--{if $_G['forum']['status'] != 3 && $_G['group']['allowclosethread']}-->
+			<a href="javascript:;" onclick="tmodthreads(4);return false;">{lang admin_openclose}</a>
+		<!--{/if}-->
+	</p>
+</div>

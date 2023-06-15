@@ -1,0 +1,31 @@
+<div class="tbn">
+	<h2 class="mt bbda">$_G[setting][navs][8][navname]</h2>
+	<ul>
+		<li class="cl{if $_GET['type'] == 'index' || !$_GET['type']} a{/if}"><a href="misc.php?mod=ranklist">{lang all}</a></li>
+		<!--{if $ranklist_setting['member']['available']}-->
+		<li class="cl{if $_GET['type'] == 'member'} a{/if}"><a href="misc.php?mod=ranklist&type=member">{lang user}</a></li>
+		<!--{/if}-->
+		<!--{if $ranklist_setting['thread']['available']}-->
+		<li class="cl{if $_GET['type'] == 'thread'} a{/if}"><a href="misc.php?mod=ranklist&type=thread&view=replies&orderby=thisweek">{lang posts}</a></li>
+		<!--{/if}-->
+		<!--{if helper_access::check_module('blog') && $ranklist_setting['blog']['available']}-->
+		<li class="cl{if $_GET['type'] == 'blog'} a{/if}"><a href="misc.php?mod=ranklist&type=blog&view=heats&orderby=thisweek">{lang blogs}</a></li>
+		<!--{/if}-->
+		<!--{if $ranklist_setting['poll']['available']}-->
+		<li class="cl{if $_GET['type'] == 'poll'} a{/if}"><a href="misc.php?mod=ranklist&type=poll&view=heats&orderby=thisweek">{lang poll}</a></li>
+		<!--{/if}-->
+		<!--{if $ranklist_setting['activity']['available']}-->
+		<li class="cl{if $_GET['type'] == 'activity'} a{/if}"><a href="misc.php?mod=ranklist&type=activity&view=heats&orderby=thismonth">{lang activity}</a></li>
+		<!--{/if}-->
+		<!--{if helper_access::check_module('album') && $ranklist_setting['picture']['available']}-->
+		<li class="cl{if $_GET['type'] == 'picture'} a{/if}"><a href="misc.php?mod=ranklist&type=picture&view=hot&orderby=thismonth">{lang pics}</a></li>
+		<!--{/if}-->
+		<!--{if $ranklist_setting['forum']['available']}-->
+		<li class="cl{if $_GET['type'] == 'forum'} a{/if}"><a href="misc.php?mod=ranklist&type=forum&view=threads">{lang forum}</a></li>
+		<!--{/if}-->
+		<!--{if $ranklist_setting['group']['available']&&$_G[setting]['groupstatus']}-->
+		<li class="cl{if $_GET['type'] == 'group'} a{/if}"><a href="misc.php?mod=ranklist&type=group&view=credit">{lang group}</a></li>
+		<!--{/if}-->
+	</ul>
+	<!--{hook/ranklist_nav_extra}-->
+</div>

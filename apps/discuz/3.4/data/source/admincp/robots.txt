@@ -1,0 +1,28 @@
+#
+# robots.txt for Discuz! {ver}
+#
+
+User-agent: *
+Allow: {path}data/attachment/
+Allow: {path}data/cache/
+Allow: {path}uc_server/data/avatar/
+Disallow: {path}api/
+Disallow: {path}data/
+Disallow: {path}source/
+Disallow: {path}install/
+Disallow: {path}template/default/
+Disallow: {path}config/
+Disallow: {path}uc_client/
+Disallow: {path}uc_server/
+Disallow: {path}admin.php
+Disallow: {path}search.php
+Disallow: {path}member.php
+Disallow: {path}api.php
+Disallow: {path}misc.php
+Disallow: {path}connect.php
+Disallow: {path}forum.php?mod=redirect*
+Disallow: {path}forum.php?mod=post*
+Disallow: {path}home.php?mod=spacecp*
+Disallow: {path}*?mod=misc*
+Disallow: {path}*?mod=attachment*
+Disallow: {path}*mobile=yes*

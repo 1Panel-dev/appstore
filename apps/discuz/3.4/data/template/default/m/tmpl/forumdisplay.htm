@@ -1,0 +1,127 @@
+<script id="headerTpl" type="text/html">
+<div class="header">
+	<i class="topicLogo fl db"><img data-original="<%= header.logo %>" class="tImg lazy" width="78" height="78" alt="标志"></i>
+	<h3><%= header.name %><a href="javascript:;" class="follow attentionBtn">关注</a></h3>
+	<p class="subTitle">
+        <span><em><%= Variables.transtotalposts %></em>话题</span>
+        <% if(Variables.transtotalmembers){ %>
+        <span><em><%= Variables.transtotalmembers %></em>成员</span>
+        <% } %>
+        <span><a href="javascript:;" class="mobilesign"></a></span>
+    </p>
+    <% if(hook_headerbar) { %>
+        <div id="headerbar">
+            <%== stripCode(hook_headerbar, 0, '#headerbar') %>
+        </div>
+    <% } %>
+</div>
+</script>
+
+<script id="TopList" type="text/html">
+<ul>
+    <%
+	count = 0;
+    for(i = 0; i < Variables.forum_threadlist.length; i++){
+        if(Variables.forum_threadlist[i].displayorder != 1 || Variables.forum_threadlist[i].showactivity || count > 2) continue;
+		count++;
+    %>
+        <li class="wot" tid="<%= Variables.forum_threadlist[i].tid %>"><span class="<% if(Variables.forum_threadlist[i].displayorder > 1) { %>noticeBtn<% } else { %>dynamicBtn<% } %> db">置顶</span><%= Variables.forum_threadlist[i].subject %></li>
+    <% } %>
+</ul>
+</script>
+
+<script id="TopArea" type="text/html">
+    <div class="customArea<% if(only) { %> only<% } %>" id="top_<%= thisi %>"<% if(thisi > 0) { %> style="display:none"<% } %>>
+	<div class="caCon">
+        <% if(!noheader) { %>
+            <h3><i class="incoNotice commF"></i><%= name %><% if(more) { %><a href="<%= more %>" class="iMore">更多>></a><% } %></h3>
+        <% } %>
+        <div class="customNotice">
+        	<%== stripCode(html, 0, '#topcontainer', /\.customArea|\.caCon|\.caSide/ig) %>
+		</div>
+        <% if(!only) { %>
+            <div class="caSide">
+                <h4><%= nextname %></h4>
+                <a href="javascript:;" class="incoPage db commF" thisi="<%= thisi %>" nexti="<%= nexti %>"></a>
+            </div>
+        <% } %>
+    </div>
+</div>
+</script>
+
+<script id="topicBox" type="text/html">
+    <div class="topicBox threadList" tid="<%= Variables.forum_threadlist[i].tid %>" page="<%= Variables.page %>" id="thread<%= Variables.forum_threadlist[i].tid %>">
+        <div class="topicCon">
+                <p class="personImgDate">
+                    <span class="perImg db">
+                        <img data-original="<% if(Variables.forum_threadlist[i].avatar) { %><%= Variables.forum_threadlist[i].avatar %><% } else { %><%= Variables.ucenterurl %>/avatar.php?uid=<%= Variables.forum_threadlist[i].authorid %>&size=small<% } %>" onerror="javascript:this.src=DATA_DIR+'/images/personImg.jpg'" class="bImg lazy" width="35" height="35" uid="<%= Variables.forum_threadlist[i].authorid %>" alt="头像">
+                        <% if(Variables.forum_threadlist[i].avatarHtml) { %><%== Variables.forum_threadlist[i].avatarHtml %><% } %>
+                        <span class="timeT">
+                            <%= Variables.forum_threadlist[i].author %>
+                            <% if(Variables.forum_threadlist[i].authorLv) { %><span class="gBg1">LV<%= Variables.forum_threadlist[i].authorLv %></span><% } %>
+                            <% if(Variables.forum_threadlist[i].hook_author_info) { %>
+                                <em><%== stripCode(Variables.forum_threadlist[i].hook_author_info) %></em>
+                            <% } %>
+                            <i><%= Variables.forum_threadlist[i].lastpost %></i>
+                        </span>
+                    </span>
+                    <span class="perDate db" tid="<%= Variables.forum_threadlist[i].tid %>" fid="<%= Variables.forum.fid %>">
+                        <a href="javascript:;" class="incoA db"></a>
+                    </span>
+                    <span class="perPop" tid="<%= Variables.forum_threadlist[i].tid %>" style="display:none"></span>
+                 </p>
+                <div class="detailCon">
+                    <p>
+                    <% if(Variables.forum_threadlist[i].special == 3 && Variables.forum_threadlist[i].price > 0) { %><a href="javascript:;" class="showBtn br f11 c2 db">悬赏 <%= Variables.forum_threadlist[i].price %> <%= Variables.reward_unit %></a><% } %>
+                    <% if(Variables.forum_threadlist[i].special == 3 && Variables.forum_threadlist[i].price < 0) { %><a href="javascript:;" class="showBtn br f11 c2 db">已解决</a><% } %>
+                    <% if(Variables.forum_threadlist[i].special == 1) { %><a href="javascript:;" class="showBtn br f11 c2 db">投票</a><% } %>
+                    <% if(Variables.forum_threadlist[i].special == 4) { %><a href="javascript:;" class="showBtn br f11 c2 db">活动</a><% } %>
+                    <% if(Variables.forum_threadlist[i].replycredit > 0) { %><a href="javascript:;" class="showBtn br f11 c2 db">回帖奖励 <%= Variables.forum_threadlist[i].replycredit %></a><% } %>
+                    <% if(Variables.forum_threadlist[i].rushreply == 1) { %><a href="javascript:;" class="showBtn br f11 c2 db">抢楼</a><% } %>
+                    <% if(Variables.forum_threadlist[i].typeid > 0 && Variables.threadtypes && Variables.threadtypes.types[Variables.forum_threadlist[i].typeid]){ %><a href="javascript:;" class="studioBtn db"><%== stripCode(Variables.threadtypes.types[Variables.forum_threadlist[i].typeid]) %></a><%}%>
+                    <%= Variables.forum_threadlist[i].subject %>
+                    <% if(Variables.forum_threadlist[i].attachment == 2){ %>
+                        <a class="photoInco db" href="javascript:;">图</a>
+                    <% } %>
+                    </p>
+                    <span class="replyShare db fr">
+                        <a class="topicadminMsg" tid="<%= Variables.forum_threadlist[i].tid %>"></a>
+                        <% if (Variables.member_uid != "0"){%>
+                        <a href="javascript:;" class="praiseBtn" tid="<%= Variables.forum_threadlist[i].tid %>">
+                            <i class=<%=Variables.forum_threadlist[i].recommend == 1 ? "praise" : "noPraise"%>></i>
+                            <span><%= Variables.forum_threadlist[i].recommend_add == 0 ? "" : Variables.forum_threadlist[i].recommend_add%></span>
+                        </a>
+                        <% } %>
+                        <a href="javascript:;" class="incoRBtn" tid="<%= Variables.forum_threadlist[i].tid %>"><i class="incoR spr"></i><%= Variables.forum_threadlist[i].replies == 0 ? "" : Variables.forum_threadlist[i].replies%></a>
+                    </span>
+                    <% if(Variables.forum_threadlist[i].hook_thread_bottom) { %>
+                        <span class="fl tl"><%== stripCode(Variables.forum_threadlist[i].hook_thread_bottom) %></span>
+                    <% } %>
+                </div>
+        </div>
+        <% if(Variables.forum_threadlist[i].reply && Variables.forum_threadlist[i].reply.length != 0){ %>
+        <div class="topicList">
+            <ul>
+                <% for(j = 0; j < Variables.forum_threadlist[i].reply.length; j ++) { %>
+                <li><img data-original="<% if(Variables.forum_threadlist[i].reply[j].avatar) { %><%= Variables.forum_threadlist[i].reply[j].avatar %><% } else { %><%= Variables.ucenterurl %>/avatar.php?uid=<%= Variables.forum_threadlist[i].reply[j].authorid %>&size=small<% } %>" onerror="javascript:this.src=DATA_DIR+'/images/personImg.jpg'" class="sImg db fl lazy" width="25" height="25" alt="头像"><a href="javascript:;" class="sW fl"><span><%= Variables.forum_threadlist[i].reply[j].author %>：</span><%= Variables.forum_threadlist[i].reply[j].message %></a></li>
+                <% } %>
+            </ul>
+            <% if(Variables.forum_threadlist[i].replies > 3) { %>
+                <p class="more"><a href="javascript:;" title="">查看全部<%= Variables.forum_threadlist[i].replies %>条回复</a></p>
+            <% } %>
+        </div>
+        <% } %>
+    </div>
+</script>
+
+<script id="bottomBar" type="text/html">
+    <div class="bottomBarCon">
+	    <a href="javascript:;" class="backBtn"><i class="iconAnswer commF back db"></i></a>
+	    <a href="javascript:;" id="forumlist" class="blockSec db"><i class="incoSec"></i>版块</a>
+	    <a href="javascript:;" id="post_thread" class="publish ml db"><i class="iconPost f18 mr5 commF"></i>发帖</a>
+        <a href="javascript:;" id="info_center" class="moreC db">
+            <i class="circle">●</i><i class="circle">●</i><i class="circle">●</i>
+            <i class="db numP" style="display:none;">0</i>
+        </a>
+    </div>
+</script>

@@ -1,0 +1,355 @@
+<!--{if $status != 2}-->
+	<!--{if $livethread}-->
+		<div id="livethread" class="tl bm bmw cl" style="padding:10px 15px;">
+			<div class="livethreadtitle vm">
+				<span class="replynumber xg1">{lang reply} <span id="livereplies" class="xi1">$livethread[replies]</span></span>
+				<a href="forum.php?mod=viewthread&tid=$livethread[tid]" target="_blank">$livethread[subject]</a> <img src="{IMGDIR}/livethreadtitle.png" />
+			</div>
+			<div class="livethreadcon">$livemessage</div>
+			<div id="livereplycontentout">
+				<div id="livereplycontent">
+				</div>
+			</div>
+			<div id="liverefresh">{lang group_live_newreply_refresh}</div>
+			<div id="livefastreply">
+				<form id="livereplypostform" method="post" action="forum.php?mod=post&action=reply&fid=$_G[fid]&tid=$livethread[tid]&replysubmit=yes&infloat=yes&handlekey=livereplypost&inajax=1" onsubmit="return livereplypostvalidate(this)">
+					<div id="livefastcomment">
+						<textarea id="livereplymessage" name="message" style="color:gray;<!--{if !$liveallowpostreply}-->display:none;<!--{/if}-->">{lang group_live_fastreply_notice}</textarea>
+						<!--{if !$liveallowpostreply}-->
+							<div>
+								<!--{if !$_G[uid]}-->
+									{lang login_to_reply} <a href="member.php?mod=logging&action=login" onclick="showWindow('login', this.href)" class="xi2">{lang login}</a> | <a href="member.php?mod={$_G[setting][regname]}" class="xi2">$_G['setting']['reglinkname']</a>
+								<!--{else}-->
+									{lang no_permission_to_post}<a href="javascript:;" onclick="ajaxpost('livereplypostform', 'livereplypostreturn', 'livereplypostreturn', 'onerror', $('livereplysubmit'));" class="xi2">{lang click_to_show_reason}</a>
+								<!--{/if}-->
+							</div>
+						<!--{/if}-->
+					</div>
+					<div id="livepostsubmit" style="display:none;">
+					<!--{if $secqaacheck || $seccodecheck}-->
+						<!--{block sectpl}--><sec> <span id="sec<hash>" onclick="showMenu(this.id)"><sec></span><div id="sec<hash>_menu" class="p_pop p_opt" style="display:none"><sec></div><!--{/block}-->
+						<div class="mtm sec" style="text-align:right;"><!--{subtemplate common/seccheck}--></div>
+					<!--{/if}-->
+					<p class="ptm pnpost" style="margin-bottom:10px;">
+					<button type="submit" name="replysubmit" class="pn pnc vm" style="float:right;" value="replysubmit" id="livereplysubmit">
+						<strong>{lang group_live_post}</strong>
+					</button>
+					</p>
+					</div>
+					<input type="hidden" name="formhash" value="{FORMHASH}">
+					<input type="hidden" name="subject" value="  ">
+				</form>
+			</div>
+			<span id="livereplypostreturn"></span>
+		</div>
+		<script type="text/javascript" src="{$_G['setting']['jspath']}seditor.js?{VERHASH}"></script>
+		<script type="text/javascript">
+			var postminchars = parseInt('$_G['setting']['minpostsize']');
+			var postmaxchars = parseInt('$_G['setting']['maxpostsize']');
+			var disablepostctrl = parseInt('{$_G['group']['disablepostctrl']}');
+			var replycontentlist = new Array();
+			var addreplylist = new Array();
+			var timeoutid = timeid = movescrollid = waitescrollid = null;
+			var replycontentnum = 0;
+			getnewlivepostlist(1);
+			timeid = setInterval(getnewlivepostlist, 5000);
+			$('livereplycontent').style.width = ($('livereplycontentout').clientWidth - 50) + 'px';
+			$('livereplymessage').onfocus = function() {
+				if(this.style.color == 'gray') {
+					this.value = '';
+					this.style.color = 'black';
+					$('livepostsubmit').style.display = 'block';
+					this.style.height = '56px';
+					$('livefastcomment').style.height = '57px';
+				}
+			};
+			$('livereplymessage').onblur = function() {
+				if(this.value == '') {
+					this.style.color = 'gray';
+					this.value = '{lang group_live_fastreply_notice}';
+				}
+			};
+
+			$('liverefresh').onclick = function() {
+				$('livereplycontent').style.position = 'absolute';
+				getnewlivepostlist();
+				this.style.display = 'none';
+			};
+
+			$('livereplycontentout').onmouseover = function(e) {
+
+				if($('livereplycontent').style.position == 'absolute' && $('livereplycontent').clientHeight > 215) {
+					$('livereplycontent').style.position = 'static';
+					this.scrollTop = this.scrollHeight;
+				}
+
+				if(this.scrollTop + this.clientHeight != this.scrollHeight) {
+					clearInterval(timeid);
+					clearTimeout(timeoutid);
+					clearInterval(movescrollid);
+					timeid = timeoutid = movescrollid = null;
+
+					if(waitescrollid == null) {
+						waitescrollid = setTimeout(function() {
+							$('liverefresh').style.display = 'block';
+						}, 60000 * 10);
+					}
+				} else {
+					clearTimeout(waitescrollid);
+					waitescrollid = null;
+				}
+			};
+
+			$('livereplycontentout').onmouseout = function(e) {
+
+				if(this.scrollTop + this.clientHeight == this.scrollHeight) {
+					$('livereplycontent').style.position = 'absolute';
+					clearInterval(timeid);
+					timeid = setInterval(getnewlivepostlist, 10000);
+				}
+			};
+
+			function getnewlivepostlist(first) {
+				var x = new Ajax('JSON');
+				x.getJSON('forum.php?mod=misc&action=livelastpost&fid=$livethread[fid]', function(s, x) {
+					var count = s.data.count;
+					$('livereplies').innerHTML = count;
+					var newpostlist = s.data.list;
+					for(i in newpostlist) {
+						var postid = i;
+						var postcontent = '';
+						postcontent += '<dt><a href="home.php?mod=space&uid=' + newpostlist[i].authorid + '" target="_blank">' + newpostlist[i].avatar + '</a></dt>';
+						postcontent += '<dd><a href="home.php?mod=space&uid=' + newpostlist[i].authorid + '" target="_blank">' + newpostlist[i].author + '</a></dd>';
+						postcontent += '<dd>' + newpostlist[i].message + '</dd>';
+						postcontent += '<dd class="dateline">' + newpostlist[i].dateline + '</dd>';
+						if(replycontentlist[postid]) {
+							$('livereply_' + postid).innerHTML = postcontent;
+							continue;
+						}
+						addreplylist[postid] = '<dl id="livereply_' + postid + '">' + postcontent + '</dl>';
+					}
+					if(first) {
+						for(i in addreplylist) {
+							replycontentlist[i] = addreplylist[i];
+							replycontentnum++;
+							var div = document.createElement('div');
+							div.innerHTML = addreplylist[i];
+							$('livereplycontent').appendChild(div);
+							delete addreplylist[i];
+						}
+					} else {
+						livecontentfacemove();
+					}
+				});
+			}
+
+			function livecontentfacemove() {
+				//note 从队列中取出数据
+				var reply = '';
+				for(i in addreplylist) {
+					reply = replycontentlist[i] = addreplylist[i];
+					replycontentnum++;
+					delete addreplylist[i];
+					break;
+				}
+				if(reply) {
+					var div = document.createElement('div');
+					div.innerHTML = reply;
+					var oldclientHeight = $('livereplycontent').clientHeight;
+					$('livereplycontent').appendChild(div);
+					$('livereplycontentout').style.overflowY = 'hidden';
+					$('livereplycontent').style.bottom = oldclientHeight - $('livereplycontent').clientHeight + 'px';
+
+					if(replycontentnum > 20) {
+						$('livereplycontent').removeChild($('livereplycontent').firstChild);
+						for(i in replycontentlist) {
+							delete replycontentlist[i];
+							break;
+						}
+						replycontentnum--;
+					}
+
+					if(!movescrollid) {
+						movescrollid = setInterval(function() {
+							if(parseInt($('livereplycontent').style.bottom) < 0) {
+								$('livereplycontent').style.bottom =
+									((parseInt($('livereplycontent').style.bottom) + 5) > 0 ? 0 : (parseInt($('livereplycontent').style.bottom) + 5)) + 'px';
+							} else {
+								$('livereplycontentout').style.overflowY = 'auto';
+								clearInterval(movescrollid);
+								movescrollid = null;
+								timeoutid = setTimeout(livecontentfacemove, 1000);
+							}
+						}, 100);
+					}
+				}
+			}
+
+			function livereplypostvalidate(theform) {
+				var s;
+				if(theform.message.value == '' || $('livereplymessage').style.color == 'gray') {
+					s = '{lang group_live_nocontent_error}';
+				}
+				if(s) {
+					showError(s);
+					doane();
+					$('livereplysubmit').disabled = false;
+					return false;
+				}
+				$('livereplysubmit').disabled = true;
+				theform.message.value = theform.message.value.replace(/([^>=\]"'\/]|^)((((https?|ftp):\/\/)|www\.)([\w\-]+\.)*[\w\-\u4e00-\u9fa5]+\.([\.a-zA-Z0-9]+|\u4E2D\u56FD|\u7F51\u7EDC|\u516C\u53F8)((\?|\/|:)+[\w\.\/=\?%\-&~`@':+!]*)+\.(jpg|gif|png|bmp))/ig, '$1[img]$2[/img]');
+				theform.message.value = parseurl(theform.message.value);
+				ajaxpost('livereplypostform', 'livereplypostreturn', 'livereplypostreturn', 'onerror', $('livereplysubmit'));
+				return false;
+			}
+
+			function succeedhandle_livereplypost(url, msg, param) {
+				$('livereplymessage').value = '';
+				$('livereplycontent').style.position = 'absolute';
+				if(param['sechash']) {
+					updatesecqaa(param['sechash']);
+					updateseccode(param['sechash']);
+				}
+				getnewlivepostlist();
+			}
+		</script>
+	<!--{/if}-->
+	<!--{if helper_access::check_module('group')}-->
+	<div id="pgt" class="bm bw0 pgs cl">
+		<div class="pg">
+			<a href="forum.php?mod=forumdisplay&action=list&fid=$_G[fid]" class="nxt">{lang view_all_threads}</a>
+		</div>
+		<a href="javascript:;" id="newspecial" onmouseover="$('newspecial').id = 'newspecialtmp';this.id = 'newspecial';showMenu({'ctrlid':this.id})" onclick="showWindow('newthread', 'forum.php?mod=post&action=newthread&fid=$_G[fid]')" title="{lang send_posts}"><img src="{IMGDIR}/pn_post.png" alt="{lang send_posts}" /></a>
+	</div>
+	<!--{/if}-->
+	<div class="tl bm bml">
+		<div class="th">
+			<table cellpadding="0" cellspacing="0" border="0">
+			<thead>
+				<tr>
+					<td class="icn">&nbsp;</td>
+					<th>{lang latest_threads}</th>
+					<td class="by">{lang author}/{lang dateline_range}</td>
+					<td class="num">{lang replies}</td>
+					<td class="by">{lang lastpost}</td>
+				</tr>
+			</thead>
+			</table>
+		</div>
+		<div class="bm_c">
+		<!--{if $newthreadlist['dateline']['data']}-->
+			<table cellpadding="0" cellspacing="0" border="0">
+				<tbody id="$thread[id]">
+				<!--{loop $newthreadlist['dateline']['data'] $thread}-->
+						<tr>
+							<td class="icn">
+								<a href="forum.php?mod=viewthread&tid=$thread[tid]" title="{lang target_blank}" target="_blank">
+								<!--{if $thread[folder] == 'lock'}-->
+									<img src="{IMGDIR}/folder_lock.gif" />
+								<!--{elseif $thread['special'] == 1}-->
+									<img src="{IMGDIR}/pollsmall.gif" alt="{lang thread_poll}" />
+								<!--{elseif $thread['special'] == 2}-->
+									<img src="{IMGDIR}/tradesmall.gif" alt="{lang thread_trade}" />
+								<!--{elseif $thread['special'] == 3}-->
+									<img src="{IMGDIR}/rewardsmall.gif" alt="{lang thread_reward}" />
+								<!--{elseif $thread['special'] == 4}-->
+									<img src="{IMGDIR}/activitysmall.gif" alt="{lang thread_activity}" />
+								<!--{elseif $thread['special'] == 5}-->
+									<img src="{IMGDIR}/debatesmall.gif" alt="{lang thread_debate}" />
+								<!--{elseif in_array($thread['displayorder'], array(1, 2, 3, 4))}-->
+								<img src="{IMGDIR}/pin_$thread[displayorder].gif" alt="$_G[setting][threadsticky][3-$thread[displayorder]]" />
+								<!--{else}-->
+									<img src="{IMGDIR}/folder_$thread[folder].gif" />
+								<!--{/if}-->
+								</a>
+							</td>
+							<th>
+								<span id="thread_$thread[tid]"><a href="forum.php?mod=viewthread&tid=$thread[tid]" class="xst">$thread[subject]</a></span>
+							</th>
+							<td class="by">
+								<cite>
+								<!--{if $thread['authorid'] && $thread['author']}-->
+									<a href="home.php?mod=space&uid=$thread[authorid]">$thread[author]</a>
+								<!--{else}-->
+									<!--{if $_G['forum']['ismoderator']}-->
+										<a href="home.php?mod=space&uid=$thread[authorid]">{lang anonymous}</a>
+									<!--{else}-->
+										{lang anonymous}
+									<!--{/if}-->
+								<!--{/if}-->
+								</cite>
+								<em>$thread[dateline]</em>
+							</td>
+							<td class="num">
+								<a class="xi2" href="forum.php?mod=viewthread&tid=$thread[tid]">$thread[allreplies]</a><em>$thread[views]</em>
+							</td>
+							<td class="by">
+								<cite>
+									<!--{if $thread['lastposterenc']}-->
+										<a href="{if $thread[digest] != -2}home.php?mod=space&username=$thread[lastposterenc]{else}forum.php?mod=viewthread&tid=$thread[tid]&page={echo max(1, $thread[pages]);}{/if}">$thread[lastposter]</a>
+									<!--{else}-->
+										{lang anonymous}
+									<!--{/if}-->
+								</cite>
+								<em><a href="{if $thread[digest] != -2}forum.php?mod=redirect&tid=$thread[tid]&goto=lastpost#lastpost{else}forum.php?mod=viewthread&tid=$thread[tid]&page={echo max(1, $thread[pages]);}{/if}">$thread[lastpost]</a></em>
+							</td>
+						</tr>
+				<!--{/loop}-->
+				</tbody>
+				<!--{if $_G['forum']['threads'] > 10}-->
+					<tbody>
+						<tr class="bw0_all">
+							<td colspan="5" class="ptm"><a href="forum.php?mod=forumdisplay&action=list&fid=$_G[fid]#groupnav" class="y xi2">{lang click_to_readmore}</a></td>
+						</tr>
+					</tbody>
+				<!--{/if}-->
+			</table>
+		<!--{else}-->
+			<p class="emp">{lang forum_nothreads}</p>
+		<!--{/if}-->
+		</div>
+	</div>
+	<div class="bm bml">
+		<div class="bm_h cl">
+			<h2>{lang group_member_status}</h2>
+		</div>
+		<div class="bm_c">
+			<!--{if $groupfeedlist}-->
+				<ul class="el">
+					<!--{loop $groupfeedlist $feed}-->
+						<li>
+							<img src="$feed[icon_image]" class="t" />
+							<!--{if !empty($feed[title_template])}-->$feed[title_template]<!--{/if}--> <!--{if !empty($feed[body_data][subject])}-->$feed[body_data][subject]<!--{/if}-->
+						</li>
+					<!--{/loop}-->
+				</ul>
+			<!--{else}-->
+				<p class="emp">{lang group_no_latest_feeds}</p>
+			<!--{/if}-->
+		</div>
+	</div>
+	<!--{if $_G['group']['allowpost'] && ($_G['group']['allowposttrade'] || $_G['group']['allowpostpoll'] || $_G['group']['allowpostreward'] || $_G['group']['allowpostactivity'] || $_G['group']['allowpostdebate'] || $_G['setting']['threadplugins'] || $_G['forum']['threadsorts'])}-->
+		<ul class="p_pop" id="newspecial_menu" style="display: none">
+			<!--{if !$_G['forum']['allowspecialonly']}--><li><a href="forum.php?mod=post&action=newthread&fid=$_G[fid]" onclick="showWindow('newthread', this.href);doane(event)">{lang post_newthread}</a></li><!--{/if}-->
+			<!--{if $_G['group']['allowpostpoll']}--><li class="poll"><a href="forum.php?mod=post&action=newthread&fid=$_G[fid]&special=1">{lang post_newthreadpoll}</a></li><!--{/if}-->
+			<!--{if $_G['group']['allowpostreward']}--><li class="reward"><a href="forum.php?mod=post&action=newthread&fid=$_G[fid]&special=3">{lang post_newthreadreward}</a></li><!--{/if}-->
+			<!--{if $_G['group']['allowpostdebate']}--><li class="debate"><a href="forum.php?mod=post&action=newthread&fid=$_G[fid]&special=5">{lang post_newthreaddebate}</a></li><!--{/if}-->
+			<!--{if $_G['group']['allowpostactivity']}--><li class="activity"><a href="forum.php?mod=post&action=newthread&fid=$_G[fid]&special=4">{lang post_newthreadactivity}</a></li><!--{/if}-->
+			<!--{if $_G['group']['allowposttrade']}--><li class="trade"><a href="forum.php?mod=post&action=newthread&fid=$_G[fid]&special=2">{lang post_newthreadtrade}</a></li><!--{/if}-->
+			<!--{if $_G['setting']['threadplugins']}-->
+				<!--{loop $_G['forum']['threadplugin'] $tpid}-->
+					<!--{if array_key_exists($tpid, $_G['setting']['threadplugins']) && @in_array($tpid, $_G['group']['allowthreadplugin'])}-->
+						<li class="popupmenu_option"{if $_G['setting']['threadplugins'][$tpid][icon]} style="background-image:url($_G[setting][threadplugins][$tpid][icon])"{/if}><a href="forum.php?mod=post&action=newthread&fid=$_G[fid]&specialextra=$tpid">{$_G[setting][threadplugins][$tpid][name]}</a></li>
+					<!--{/if}-->
+				<!--{/loop}-->
+			<!--{/if}-->
+			<!--{if $_G['forum']['threadsorts'] && !$_G['forum']['allowspecialonly']}-->
+				<!--{loop $_G['forum']['threadsorts']['types'] $id $threadsorts}-->
+					<!--{if $_G['forum']['threadsorts']['show'][$id]}-->
+						<li class="popupmenu_option"><a href="forum.php?mod=post&action=newthread&fid=$_G[fid]&extra=$extra&sortid=$id">$threadsorts</a></li>
+					<!--{/if}-->
+				<!--{/loop}-->
+			<!--{/if}-->
+		</ul>
+	<!--{/if}-->
+<!--{/if}-->

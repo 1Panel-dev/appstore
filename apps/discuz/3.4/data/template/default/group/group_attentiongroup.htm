@@ -1,0 +1,78 @@
+<!--{template common/header}-->
+	<h3 class="flb">
+		<em id="return_$_GET[handlekey]">{lang select_focus_group}</em>
+		<!--{if $_G[inajax]}--><span><a href="javascript:;" onclick="hideWindow('$_GET[handlekey]');" class="flbc" title="{lang close}">{lang close}</a></span><!--{/if}-->
+	</h3>
+	<form method="post" autocomplete="off" id="attentionform" name="attentionform" action="group.php?mod=attentiongroup" onsubmit="ajaxpost('attentionform', 'return_attentiongroup', 'return_attentiongroup', 'onerror');return false;">
+		<!--{if $_G[inajax]}--><input type="hidden" name="handlekey" value="$_GET[handlekey]" /><!--{/if}-->
+		<input type="hidden" name="referer" value="{echo dreferer()}" />
+		<input type="hidden" name="formhash" value="{FORMHASH}" />
+		<div class="cl">
+			<div class="bm_c attgroup cl">
+				<ul>
+				<!--{loop $usergroups['groups'] $groupid $groupname}-->
+					<!--{if in_array($groupid, $attentiongroup)}-->
+					<li id="li$groupid"><label for="attentiongroupid_$groupid"><input type="checkbox" name="attentiongroupid[]" id="attentiongroupid_$groupid" class="pc" value="$groupid" checked="checked" onclick="attention_checkbox(this, 'attentionform', 'attentiongroupid', 5)" />$groupname</label></li>
+					<!--{/if}-->
+				<!--{/loop}-->
+					<li id="heightline"></li>
+				</ul>
+			</div>
+			<hr class="l" />
+			<div class="bm_c attgroup cl">
+				<ul>
+					<!--{loop $usergroups['groups'] $groupid $groupname}-->
+						<!--{if !in_array($groupid, $attentiongroup)}-->
+						<li id="li$groupid"><label for="attentiongroupid_$groupid"><input type="checkbox" name="attentiongroupid[]" id="attentiongroupid_$groupid" class="pc" value="$groupid" onclick="attention_checkbox(this, 'attentionform', 'attentiongroupid', 5)" />$groupname</label></li>
+						<!--{/if}-->
+					<!--{/loop}-->
+					<li id="lowerline"></li>
+				</ul>
+			</div>
+		</div>
+		<p class="o pns">
+			<input type="hidden" name="attentionsubmit" value="true" />
+			<button type="submit" class="pn pnc"><strong>{lang confirms}</strong></button>
+		</p>
+		<script language="javascript">
+			var p = $counttype;
+			function attention_checkbox(obj, formid, checkname, max_obj) {
+				if(obj.checked) {
+					p++;
+					for (var i = 0; i < $(formid).elements.length; i++) {
+						var e = $(formid).elements[i];
+						if(p == max_obj+1) {
+							if(e.name.match(checkname) && !e.checked) {
+								e.disabled = true;
+							}
+						}
+					}
+				} else {
+					p--;
+					for (var i = 0; i < $(formid).elements.length; i++) {
+						var e = $(formid).elements[i];
+						if(e.name.match(checkname) && e.disabled) {
+							e.disabled = false;
+						}
+					}
+				}
+				if(p > max_obj) {
+					p--;
+					obj.checked = false;
+					alert('{lang max_can_select}'+max_obj+'{lang unit}.');
+					return;
+				}
+				var oldNode = $('li'+obj.value);
+				var realvalue = obj.checked;
+				if(obj.checked) {
+					var line = $('heightline');
+				} else {
+					var line = $('lowerline');
+				}
+				oldNode.parentNode.removeChild(oldNode);
+				line.parentNode.insertBefore(oldNode,line);
+				obj.checked = realvalue;
+			}
+		</script>
+	</form>
+<!--{template common/footer}-->

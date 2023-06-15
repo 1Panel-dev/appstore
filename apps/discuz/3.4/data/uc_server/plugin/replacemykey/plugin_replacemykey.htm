@@ -1,0 +1,18 @@
+{template plugin_header}
+<p class="i">{lang plugin_replacemykey_tips}</p>
+<form method="post">
+<input type="hidden" name="formhash" value="{FORMHASH}">
+<table class="dbtb" style="height:123px;">
+<tr>
+<td class="tbtitle">{lang plugin_replacemykey_confirm}:</td>
+<td><input type="checkbox" name="reconfkey" id="reconfkey" class="checkbox" /><label for="reconfkey">{lang plugin_replacemykey_confirm_tips}</label></td>
+</tr>
+<tr>
+<td></td>
+<td>
+<input type="submit" name="submit" value="{lang submit}" class="btn" />
+</td>
+</tr>
+</table>
+</form>
+{template plugin_footer}

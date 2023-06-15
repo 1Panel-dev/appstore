@@ -1,0 +1,20 @@
+name: QianDao
+tags:
+    - 工具
+title: 一个HTTP请求定时任务自动执行框架
+type: 工具
+description: 一个HTTP请求定时任务自动执行框架
+additionalProperties:
+    key: qiandao
+    name: QianDao
+    tags:
+        - Tool
+    shortDescZh: 一个HTTP请求定时任务自动执行框架
+    shortDescEn: An HTTP request timed task automation framework
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://hub.docker.com/r/a76yyyy/qiandao
+    github: https://github.com/qiandao-today/qiandao
+    document: https://qiandao-today.github.io/qiandao/zh_CN/

@@ -1,0 +1,66 @@
+<!--{eval $needhiddenreply = ($hiddenreplies && $_G['uid'] != $post['authorid'] && $_G['uid'] != $_G['forum_thread']['authorid'] && !$post['first'] && !$_G['forum']['ismoderator']);}-->
+<dl class="bbda cl">
+	<!--{if empty($post['deleted'])}-->
+		<!--{if $post[author] && !$post['anonymous']}-->
+		<dd class="m avt"><a href="home.php?mod=space&uid=$post[authorid]"><!--{avatar($post[authorid], small)}--></a></dd>
+		<!--{else}-->
+		<dd class="m avt"><img src="{STATICURL}image/magic/hidden.gif" alt="hidden" /></dd>
+		<!--{/if}-->
+		<dt>
+			<span class="y xw0">
+				<!--{if $allowpostreply && $post['invisible'] == 0}-->
+					<!--{if !$needhiddenreply}-->
+						<!--{if $post['first']}-->
+							<a href="forum.php?mod=post&action=reply&fid=$_G[fid]&tid=$_G[tid]&reppost=$post[pid]&extra=$_GET[extra]&page=$page{if $_GET[from]}&from=$_GET[from]{/if}" onclick="changecontentdivid($_G[tid]);showWindow('reply', this.href)">{lang reply}</a>
+						<!--{else}-->
+							<a href="forum.php?mod=post&action=reply&fid=$_G[fid]&tid=$_G[tid]&repquote=$post[pid]&extra=$_GET[extra]&page=$page{if $_GET[from]}&from=$_GET[from]{/if}" onclick="changecontentdivid($_G[tid]);showWindow('reply', this.href)">{lang reply}</a>
+						<!--{/if}-->
+					<!--{/if}-->
+				<!--{/if}-->
+				<!--{if (($_G['forum']['ismoderator'] && $_G['group']['alloweditpost'] && (!in_array($post['adminid'], array(1, 2, 3)) || $_G['adminid'] <= $post['adminid'])) || ($_G['forum']['alloweditpost'] && $_G['uid'] && ($post['authorid'] == $_G['uid'] && $_G['forum_thread']['closed'] == 0) && !(!$alloweditpost_status && $edittimelimit && TIMESTAMP - $post['dbdateline'] > $edittimelimit)))}-->
+					<a href="forum.php?mod=post&action=edit&fid=$_G[fid]&tid=$_G[tid]&pid=$post[pid]{if !empty($_GET[modthreadkey])}&modthreadkey=$_GET[modthreadkey]{/if}&page=$page{if $_GET[from]}&from=$_GET[from]{/if}"><!--{if $_G['forum_thread']['special'] == 2 && !$post['message']}-->{lang post_add_aboutcounter}<!--{else}-->{lang edit}<!--{/if}--></a>
+				<!--{/if}-->
+
+			</span>
+			<!--{if $post['authorid'] && !$post['anonymous']}-->
+				<a href="home.php?mod=space&uid=$post[authorid]" target="_blank" class="xi2">$post[author]</a>$authorverifys
+				<!--{hook/viewthread_postheader $postcount}-->
+				<em id="author_$post[pid]"> {lang poston}</em>
+			<!--{elseif $post['authorid'] && $post['username'] && $post['anonymous']}-->
+				{lang anonymous}
+				<!--{hook/viewthread_postheader $postcount}-->
+				<em id="author_$post[pid]"> {lang poston}</em>
+			<!--{elseif !$post['authorid'] && !$post['username']}-->
+				{lang guest}
+				<!--{hook/viewthread_postheader $postcount}-->
+				<em id="author_$post[pid]"> {lang poston}</em>
+			<!--{/if}-->
+			<span class="xg1 xw0">$post[dateline]</span>
+		</dt>
+		<dd class="z previewPost">
+			<!--{subtemplate forum/viewthread_node_body}-->
+		</dd>
+	<!--{else}-->
+		<dd>{lang post_deleted}</dd>
+	<!--{/if}-->
+</dl>
+
+
+<!--{if !empty($aimgs[$post[pid]])}-->
+<script type="text/javascript" reload="1">
+	aimgcount[{$post[pid]}] = [<!--{echo dimplode($aimgs[$post[pid]]);}-->];
+	attachimggroup($post['pid']);
+	<!--{if empty($_G['setting']['lazyload'])}-->
+		<!--{if !$post['imagelistthumb']}-->
+			attachimgshow($post[pid]);
+		<!--{else}-->
+			attachimgshow($post[pid], 1);
+		<!--{/if}-->
+	<!--{/if}-->
+	<!--{if $post['imagelistthumb']}-->
+		attachimglstshow($post['pid'], <!--{echo intval($_G['setting']['lazyload'])}-->, 0, '{$_G[setting][showexif]}');
+	<!--{/if}-->
+</script>
+<!--{/if}-->
+<!--{hook/viewthread_endline $postcount}-->
+

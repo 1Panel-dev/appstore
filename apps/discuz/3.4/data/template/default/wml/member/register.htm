@@ -1,0 +1,47 @@
+<!--{template common/header}-->
+<a href="member.php?mod={$_G[setting][regname]}">{$_G['setting']['reglinkname']}</a>
+
+	<input type="hidden" name="agreebbrule" value="$bbrulehash" id="agreebbrule" checked="checked" />
+	<p><strong>{lang username}*</strong><br/><input type="text" id="username" name="{$_G['setting']['reginput']['username']}" autocomplete="off" size="25" maxlength="15" value="" class="txt" /><small><br/><em class="xg1">{lang reg_username}</em></small></p>
+	<p><strong>{lang password}*</strong><br/><input type="password" name="{$_G['setting']['reginput']['password']}" size="25" id="password" class="txt" /></p>
+	<p><strong>{lang password_confirm}*</strong><br/><input type="password" name="{$_G['setting']['reginput']['password2']}" size="25" id="password2" value="" class="txt" /></p>
+	<p><strong>{lang email}*</strong><br/><input type="text" name="{$_G['setting']['reginput']['email']}" autocomplete="off" size="25" id="email" class="txt" /> </p>
+<!--{if empty($invite) && ($_G['setting']['regstatus'] == 2 || $_G['setting']['regstatus'] == 3)}-->
+	<p><strong>{lang invite_code}<!--{if $_G['setting']['regstatus'] == 2 && !$invitestatus}-->*<!--{/if}--></strong><br/><input type="text" name="invitecode" autocomplete="off" size="25" id="invitecode" class="txt" /></p>
+<!--{/if}-->
+<!--{if $_G['setting']['regverify'] == 2}-->
+	<p><strong>{lang register_message}*:</strong><input type="text" id="regmessage" name="regmessage" autocomplete="off" size="25" tabindex="1" class="txt" /> </p>
+	<p class="xg1">{lang register_message1}</p>
+<!--{/if}-->
+
+<!--{if $secqaacheck || $seccodecheck}-->
+	<!--{subtemplate common/seccheck}-->
+<!--{/if}-->
+
+<anchor title="{lang submit}">{lang submit}
+	<go method="post" href="member.php?mod={$_G[setting][regname]}&mobile=3">
+	<postfield name="agreebbrule" value="$(agreebbrule)" />
+	<postfield name="{$_G['setting']['reginput']['username']}" value="$({$_G['setting']['reginput']['username']})" />
+	<postfield name="{$_G['setting']['reginput']['password']}" value="$({$_G['setting']['reginput']['password']})" />
+	<postfield name="{$_G['setting']['reginput']['password2']}" value="$({$_G['setting']['reginput']['password2']})" />
+	<postfield name="{$_G['setting']['reginput']['email']}" value="$({$_G['setting']['reginput']['email']})" />
+	<!--{if empty($invite) && ($_G['setting']['regstatus'] == 2 || $_G['setting']['regstatus'] == 3)}-->
+		<postfield name="invitecode" value="$(invitecode)" />
+	<!--{/if}-->
+	<!--{if $_G['setting']['regverify'] == 2}-->
+		<postfield name="regmessage" value="$(regmessage)" />
+	<!--{/if}-->
+	<postfield name="formhash" value="{FORMHASH}" />
+	<postfield name="regsubmit" value="1" />
+	<postfield name="activationauth" value="{if $_GET[action] == 'activation'}$activationauth{/if}" />
+	<!--{eval $dreferer = str_replace('&amp;', '&', dreferer());}-->
+	<postfield name="referer" id="referer" value="<!--{if dreferer()}-->{echo dreferer()}<!--{else}-->forum.php?mobile=3<!--{/if}-->" />
+	<!--{if $secqaacheck || $seccodecheck}-->
+	<postfield name="sechash" value="$(sechash)" />
+	<postfield name="secanswer" value="$(secanswer)" />
+	<postfield name="seccodeverify" value="$(seccodeverify)" />
+	<!--{/if}-->
+	</go>
+</anchor>
+<!--{eval updatesession();}-->
+<!--{template common/footer}-->

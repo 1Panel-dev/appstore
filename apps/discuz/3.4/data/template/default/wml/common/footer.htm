@@ -1,0 +1,18 @@
+		<!--{hook/global_footer_mobile}-->
+		<p>
+			<!--{if CURMODULE !== 'index'}-->
+				<anchor title="confirm"><prev/>{lang back}</anchor> <a href="forum.php">{lang mobilehome}</a><br />
+			<!--{/if}-->
+			<!--{if $_G['uid']}-->
+			<a href="member.php?mod=logging&amp;action=logout&amp;formhash={FORMHASH}">$_G['username']:{lang logout}</a>
+			<!--{else}-->
+			<a href="member.php?mod=logging&action=login">{lang login}</a> <a href="member.php?mod=register">{lang register}</a><br /><br />
+			<!--{/if}-->
+			<br/><br/>
+			<em>{lang extremelysimplemobiletype}</em>|<a href="forum.php?mobile=1">{lang no_simplemobiletype}</a><br/>
+			<small>Powered by Discuz!</small>
+		</p>
+	</card>
+</wml>
+<!--{eval updatesession();}-->
+<!--{eval output();}-->

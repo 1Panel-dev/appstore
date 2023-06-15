@@ -1,0 +1,87 @@
+<!--{template common/header}-->
+
+<a href="forum.php" title="$_G['setting']['navs'][2]['navname']">$_G['setting']['navs'][2]['navname']</a>&gt;<a href="forum.php?mod=forumdisplay&fid={$_G['forum']['fid']}">{$_G['forum']['name']}</a> <a href="forum.php?mod=post&action=newthread&fid=$_G[fid]">{lang send_threads}</a><br /><br />
+
+<!--{hook/forumdisplay_top_mobile}-->
+<!--{if !$subforumonly}-->
+			<!--{if $_G['forum_threadcount']}-->
+				<!--{loop $_G['forum_threadlist'] $key $thread}-->
+					<!--{if !$_G['setting']['mobile']['mobiledisplayorder3'] && $thread['displayorder'] > 0}-->
+						{eval continue;}
+					<!--{/if}-->
+                	<!--{if $thread['displayorder'] > 0 && !$displayorder_thread}-->
+                		{eval $displayorder_thread = 1;}
+                    <!--{/if}-->
+                    <!--{if !$thread['forumstick'] && ($thread['isgroup'] == 1 || $thread['fid'] != $_G['fid'])}-->
+                        <!--{if $thread['related_group'] == 0 && $thread['closed'] > 1}-->
+                            <!--{eval $thread[tid]=$thread[closed];}-->
+                        <!--{/if}-->
+                        <!--{if $groupnames[$thread[tid]]}-->
+                            [<a href="forum.php?mod=forumdisplay&fid={$groupnames[$thread[tid]][fid]}">{lang group}</a>]
+                        <!--{/if}-->
+                    <!--{/if}-->
+					<!--{if $thread['moved']}-->
+						<!--{eval $thread[tid]=$thread[closed];}-->
+					<!--{/if}-->
+                    <!--{hook/forumdisplay_thread_mobile $key}-->
+                    <a href="forum.php?mod=viewthread&tid=$thread[tid]" >
+                    <!--{if $_G['setting']['mobile']['mobilesimpletype'] == 0}-->
+                        <!--{if $thread[folder] == 'lock'}-->
+                            <img src="{IMGDIR}/folder_lock.gif" />
+                        <!--{elseif $thread['special'] == 1}-->
+                            <img src="{IMGDIR}/pollsmall.gif" alt="{lang thread_poll}" />
+                        <!--{elseif $thread['special'] == 2}-->
+                            <img src="{IMGDIR}/tradesmall.gif" alt="{lang thread_trade}" />
+                        <!--{elseif $thread['special'] == 3}-->
+                            <img src="{IMGDIR}/rewardsmall.gif" alt="{lang thread_reward}" />
+                        <!--{elseif $thread['special'] == 4}-->
+                            <img src="{IMGDIR}/activitysmall.gif" alt="{lang thread_activity}" />
+                        <!--{elseif $thread['special'] == 5}-->
+                            <img src="{IMGDIR}/debatesmall.gif" alt="{lang thread_debate}" />
+                        <!--{elseif in_array($thread['displayorder'], array(1, 2, 3, 4))}-->
+                            <img src="{IMGDIR}/pin_$thread[displayorder].gif" alt="$_G[setting][threadsticky][3-$thread[displayorder]]" />
+                        <!--{/if}-->
+                    <!--{else}-->
+                    	<!--{if in_array($thread['displayorder'], array(1, 2, 3, 4))}-->
+                        	[{lang thread_sticky}]
+                        <!--{/if}-->
+                    <!--{/if}-->
+                   	{$thread[subject]}</a>
+                    <!--{if $_G['setting']['mobile']['mobilesimpletype'] == 0}-->
+                        <!--{if $thread['displayorder'] == 0}-->
+                                <!--{if $thread[recommendicon] && $filter != 'recommend'}-->
+                                    <img src="{IMGDIR}/recommend_$thread[recommendicon].gif" align="absmiddle" alt="recommend" title="{lang thread_recommend} $thread[recommends]" />
+                                <!--{/if}-->
+                                <!--{if $thread['digest'] > 0 && $filter != 'digest'}-->
+                                    <img src="{IMGDIR}/digest_$thread[digest].gif" align="absmiddle" alt="digest" title="{lang thread_digest} $thread[digest]" />
+                                <!--{/if}-->
+                        <!--{/if}-->
+                    <!--{elseif $_G['setting']['mobile']['mobilesimpletype'] == 1}-->
+                    	<!--{if $thread['displayorder'] == 0}-->
+                                <!--{if $thread[recommendicon] && $filter != 'recommend'}-->
+                                    [{lang thread_recommend}]
+                                <!--{/if}-->
+
+                                <!--{if $thread['digest'] > 0 && $filter != 'digest'}-->
+                                    [{lang thread_digest}]
+                                <!--{/if}-->
+                        <!--{/if}-->
+                    <!--{/if}-->
+					<span class="ui-li-count">{lang forum_posts}{$thread[replies]}</span>
+					<br/>
+                <!--{/loop}-->
+                <!--{echo str_replace('&amp;amp;', '&amp;', str_replace('&', '&amp;', $multipage));}-->
+            <!--{else}-->
+			{lang empty}
+			<!--{/if}-->
+<!--{/if}-->
+
+<!--{hook/forumdisplay_bottom_mobile}-->
+
+<!--{if $subexists && $_G['page'] == 1}-->
+	{lang forum_subforums}
+    <!--{loop $sublist $sub}-->
+	<a href="forum.php?mod=forumdisplay&fid={$sub[fid]}" class="block_a">{$sub['name']}</a><br/>
+	<!--{/loop}-->
+<!--{/if}-->
+<!--{template common/footer}-->

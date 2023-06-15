@@ -1,0 +1,40 @@
+{template header}
+
+<script src="js/common.js" type="text/javascript"></script>
+<div class="container">
+	<h3 class="marginbot">
+		{lang feed_list}
+		<!--{if $user['allowadminnote'] || $user['isfounder']}--><a href="admin.php?m=note&a=ls" class="sgbtn">{lang note_list}</a><!--{/if}-->
+		<!--{if $user['allowadminlog'] || $user['isfounder']}--><a href="admin.php?m=log&a=ls" class="sgbtn">{lang menu_log}</a><!--{/if}-->
+		<a href="admin.php?m=mail&a=ls" class="sgbtn">{lang mail_queue}</a>
+	</h3>
+	<div class="mainbox">
+		<!--{if $feedlist}-->
+			<form action="admin.php?m=note&a=ls" method="post">
+			<input type="hidden" name="formhash" value="{FORMHASH}">
+			<table class="datalist" style="table-layout:fixed">
+				<tr>
+					<th width="100">{lang dateline}</th>
+					<th>&nbsp;</th>
+				</tr>
+				<!--{loop $feedlist $feed}-->
+					<tr>
+						<td>$feed[dateline]</td>
+						<td>$feed[title_template]</td>
+					</tr>
+				<!--{/loop}-->
+				<tr class="nobg">
+					<td></td>
+					<td class="tdpage">$multipage</td>
+				</tr>
+			</table>
+			</form>
+		<!--{else}-->
+			<div class="note">
+				<p class="i">{lang list_empty}</p>
+			</div>
+		<!--{/if}-->
+	</div>
+</div>
+
+{template footer}

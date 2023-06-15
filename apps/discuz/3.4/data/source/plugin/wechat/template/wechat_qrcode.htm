@@ -1,0 +1,98 @@
+<!--{template common/header}-->
+
+<div class="f_c">
+	<!--{if $_G['uid'] && !$qrauth}-->
+		<h3 class="flb">
+			<em id="return_$_GET['handlekey']"><!--{if $_G['uid']}-->{lang wechat:wechat_bind}<!--{else}-->{lang wechat:wechat_login}<!--{/if}--></em>
+			<span>
+				<a href="javascript:;" class="flbc" onclick="hideWindow('$_GET['handlekey']')" title="{lang close}">{lang close}</a>
+			</span>
+		</h3>
+		<form id="confirmform" method="post" autocomplete="off" action="plugin.php?id=wechat:bind&infloat=yes&confirmsubmit=yes" onsubmit="ajaxpost('confirmform', 'return_$_GET['handlekey']', 'return_$_GET['handlekey']', 'onerror');return false;">
+			<div class="c cl">
+				<!--{if !empty($_GET['infloat'])}--><input type="hidden" name="handlekey" value="$_GET['handlekey']" /><!--{/if}-->
+				<input type="hidden" name="formhash" value="{FORMHASH}" />
+				{lang wechat:wechat_bind_comfirm_prompt}
+				<div class="rfm mtn">
+					<table>
+						<tr>
+							<th><label for="passwordconfirm">{lang login_password}:</label></th>
+							<td><input type="password" id="passwordconfirm" name="passwordconfirm" size="30" class="px p_fre" tabindex="1" /></td>
+							<td class="tipcol"></td>
+						</tr>
+					</table>
+				</div>
+				<div class="rfm mbw bw0">
+					<table width="100%">
+						<tr>
+							<th>&nbsp;</th>
+							<td>
+								<button class="pn pnc" type="submit" name="confirmsubmit" value="true" tabindex="1"><strong>{lang submit}</strong></button>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</form>
+	<!--{/if}-->
+	<!--{if !$_G['uid'] || $_G['uid'] && $qrauth}-->
+		{eval $codelang = $_G['uid'] ? 'lang_wechat_bind' : 'lang_wechat_login';}
+		<h3 class="flb">
+			<em id="return_$_GET['handlekey']"><!--{if $_G['uid']}-->{lang wechat:wechat_bind}<!--{else}-->{lang wechat:wechat_login}<!--{/if}--></em>
+			<span>
+				<a href="javascript:;" class="flbc" onclick="clearTimeout(wechat_checkST);hideWindow('$_GET['handlekey']')" title="{lang close}">{lang close}</a>
+			</span>
+		</h3>
+		<div class="c" align='center'>
+			<img src="$qrcodeurl" width="200" height="200" />
+			<br />
+			<!--{if !$isqrapi}-->
+				{$_G['Plang'][$codelang]}<br />{lang wechat:wechat_qrcode_inputcode}
+				<h1 class="xs1 xi1">$code</h1>
+			<!--{else}-->
+				{$_G['Plang'][$codelang]}
+			<!--{/if}-->
+		</div>
+	<!--{/if}-->
+</div>
+
+<script type="text/javascript">
+<!--{if !$_G['uid'] || $_G['uid'] && $qrauth}-->
+var wechat_checkST = null, wechat_checkCount = 0;
+function wechat_checkstart() {
+	wechat_checkST = setTimeout(function () {wechat_check()}, 5000);
+}
+function wechat_check() {
+	var x = new Ajax();
+	x.get('plugin.php?id=wechat:bind&check=$codeenc', function(s, x) {
+		s = trim(s);
+		if(s != 'done') {
+			if(s == '1') {
+				wechat_checkstart();
+			}
+			wechat_checkCount++;
+			if(wechat_checkCount >= 12) {
+				clearTimeout(wechat_checkST);
+				hideWindow('$_GET['handlekey']');
+			}
+		} else {
+			clearTimeout(wechat_checkST);
+			location.href = location.href;
+		}
+	});
+}
+wechat_checkstart();
+<!--{/if}-->
+<!--{if $_G['uid'] && !$qrauth}-->
+function succeedhandle_$_GET['handlekey']() {
+	hideWindow('$_GET['handlekey']');
+	{if $_G['wechat']['setting']['wechat_qrtype']}
+		location.href = 'plugin.php?id=wechat:login';
+	{else}
+		showWindow('wechat_bind', 'plugin.php?id=wechat:bind');
+	{/if}
+}
+<!--{/if}-->
+</script>
+
+<!--{template common/footer}-->

@@ -1,0 +1,64 @@
+<!--{block return}-->
+	<!--{if $thread[special] == 1}-->
+		<form method="post" autocomplete="off" action="forum.php">
+			<input type="hidden" name="mod" value="misc">
+			<input type="hidden" name="action" value="votepoll">
+			<input type="hidden" name="fid" value="$fid">
+			<input type="hidden" name="tid" value="$tid">
+			<input type="hidden" name="pollsubmit" value="yes">
+		<ul class="side_poll">
+		<!--{loop $polloptions $key $option}-->
+			<li>
+				<label>
+					<input type="$optiontype" name="pollanswers[]" id="option_$key" class="pc" value="$option[polloptionid]" />
+					$option[polloption]
+				</label>
+			</li>
+		<!--{/loop}-->
+		</ul>
+		<p class="ptn pns"><button type="submit" name="submit" id="submit" value="true" class="pn"><em>{lang thread_poll}</em></button></p>
+		</form>
+	<!--{elseif $thread[special] == 2}-->
+		<ul class="side_trade cl">
+		<!--{loop $trades[$tid] $key $trade}-->
+			<li class="cl">
+				<!--{if $trade[aid]}-->
+					<a href="forum.php?mod=viewthread&do=tradeinfo&tid=$tid&pid=$trade[pid]" target="_blank"><img src="$trade[aid]" width="80" alt="$trade[subject]" /></a>
+				<!--{else}-->
+					<a href="forum.php?mod=viewthread&do=tradeinfo&tid=$tid&pid=$trade[pid]" target="_blank"><img src="{IMGDIR}/nophoto.gif" width="80" alt="$trade[subject]" /></a>
+				<!--{/if}-->
+				<!--{if $trade[price] > 0}-->
+					&yen; $trade[price]
+				<!--{/if}-->
+				<!--{if $trade[credit] > 0}-->
+					<!--{if $trade[price] > 0}-->{lang additional} <!--{/if}--> $trade[credit] {$_G[setting][extcredits][$_G['setting']['creditstransextra'][5]][unit]}{$_G[setting][extcredits][$_G['setting']['creditstransextra'][5]][title]}
+				<!--{/if}-->
+				<p><a href="forum.php?mod=viewthread&do=tradeinfo&tid=$tid&pid=$trade[pid]" target="_blank">$trade[subject]</a></p>
+			</li>
+		<!--{/loop}-->
+		</ul>
+	<!--{elseif $thread[special] == 3}-->
+		<label {if $rewardend}style="text-decoration: line-through"{/if}>[+$rewardprice]</label><div>$message</div>
+	<!--{elseif $thread[special] == 4}-->
+		<div>$message</div>
+		<!--{if $activity[aid]}-->
+			<a href="forum.php?mod=viewthread&tid=$tid" target="_blank"><img src="$activity[aid]" width="80" alt="$activity[subject]" /></a>
+		<!--{else}-->
+			<a href="forum.php?mod=viewthread&tid=$tid" target="_blank"><img src="{IMGDIR}/nophoto.gif" width="80" alt="$activity[subject]" /></a>
+		<!--{/if}-->
+		<p>{lang activity_already} $activity[applynumber]</p>
+		<!--{if $activity[number]}-->
+			<p>{lang activity_about_member}: $activity[aboutmember]</p>
+		<!--{/if}-->
+	<!--{elseif $thread[special] == 5}-->
+		<div>$message</div>
+		<div class="chart">
+			<strong class="debater1">$debate[affirmvotes]</strong>
+			<div class="chart1" style="height: $debate[affirmvoteswidth]%;">&nbsp;</div>
+			<strong class="debater2">$debate[negavotes]</strong>
+			<div class="chart2" style="height: $debate[negavoteswidth]%;">&nbsp;</div>
+		</div>
+		<p>{lang debate_square}: $debate[affirmpoint]</p>
+		<p>{lang debate_opponent}: $debate[negapoint]</p>
+	<!--{else}-->$message<!--{/if}-->
+<!--{/block}-->

@@ -1,0 +1,16 @@
+<script id="picBox" type="text/html">
+    <div class="listShow">
+        <ul>
+            <li id="picBoxL"></li>
+            <li id="picBoxR"></li>
+        </ul>
+    </div>
+</script>
+
+<script id="subPicBox" type="text/html">
+    <div class="listShowCon" tid="<%=tid%>">
+        <div class="showImg"><img data-original="<%=coverpath%>" alt="pic" class="lazy"></div>
+        <p class="showInfo"><span class="fl db"><%=author%></span><a href="javascript:;" class="fr db praiseBtn" tid="<%=tid%>"><i class="noPraise"></i><span><%=recommend_add%></span></a></p>
+        <p class="showSum db"><%=subject%></p>
+    </div>
+</script>

@@ -1,0 +1,26 @@
+/*
+[name]庭院[/name]
+Powered by Discuz! X
+*/
+
+body { background: #000 url(images/bg.png) repeat-x 0 25px; }
+
+#ct { color: #FFF; }
+#ct a { color: #8DBE00; }
+
+#hd { background: url(images/header.png) no-repeat 50% 100%; color: #FFF; }
+#nv { bottom: auto; left: auto; top: 45px; right: 0; }
+#nv li { padding: 0px 2px; }
+	#nv li a, #nv li a:visited { padding: 0px 10px; color: #333; }
+	#nv li a:hover { background-image: none !important; }
+
+#ct, .n, .w { background: transparent none !important; }
+.block .title { padding: 0 10px; border-bottom: none; background: #301E10; }
+	.block .title, .block .title a { color: #FFF; }
+.bbda, .el li { border-bottom-color: #301E10; }
+.bm { border: none; background: none; }
+	.bm_h { border: none; background: #301E10; }
+
+.vw .ph, .vw .d{ color: #FFF; }
+.tl .th { background: none; }
+#doingform { background: none; }

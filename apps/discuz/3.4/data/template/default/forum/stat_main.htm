@@ -1,0 +1,79 @@
+<!--{template common/header}-->
+<div id="pt" class="bm cl">
+	<div class="z">
+		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a><em>&rsaquo;</em> {lang stats}
+	</div>
+</div>
+<div id="ct" class="ct2_a wp cl">
+	<div class="mn">
+		<div class="bm bw0">
+			<h1 class="mt">{lang stats_main}</h1>
+			<table summary="{lang stats_main_member}" class="dt bm mbw">
+				<caption><h2 class="mbn">{lang stats_main_member}</h2></caption>
+				<tr>
+					<th width="16%">{lang stats_main_members}</th>
+					<td width="34%">$members</td>
+					<th width="16%">{lang stats_main_posters}</th>
+					<td width="34%">$mempost</td>
+				</tr>
+				<tr>
+					<th>{lang stats_main_admins}</th>
+					<td>$admins</td>
+					<th>{lang stats_main_nonposters}</th>
+					<td>$memnonpost</td>
+				</tr>
+				<tr>
+					<th>{lang stats_main_new}</th>
+					<td>$lastmember</td>
+					<th>{lang stats_main_posters_percent}</th>
+					<td>$mempostpercent%</td>
+				</tr>
+				<tr>
+					<th>{lang stats_main_topposter}</th>
+					<td><!--{if $bestmemposts}-->$bestmem <em title="{lang stats_main_total_posted}">($bestmemposts)</em><!--{else}--><em>{lang none}</em><!--{/if}--></td>
+					<th>{lang stats_main_posts_avg}</th>
+					<td>$mempostavg</td>
+				</tr>
+			</table>
+
+			<table summary="{lang stats}" class="dt bm">
+				<caption><h2 class="mbn">{lang stats}</h2></caption>
+				<tr>
+					<th width="150">{lang stats_main_forums_count}</th>
+					<td width="60">$forums</td>
+					<th width="150">{lang stats_main_nppd}</th>
+					<td width="60">$postsaddavg</td>
+					<th width="150">{lang stats_main_hot_forum}</th>
+					<td><a href="forum.php?mod=forumdisplay&fid=$hotforum[fid]" target="_blank">$hotforum[name]</a></td>
+				</tr>
+				<tr>
+					<th>{lang stats_main_threads_count}</th>
+					<td>$threads</td>
+					<th>{lang stats_main_nmpd}</th>
+					<td>$membersaddavg</td>
+					<th>{lang stats_main_threads_count}</th>
+					<td>$hotforum[threads]</td>
+				</tr>
+				<tr>
+					<th>{lang stats_main_posts_count}</th>
+					<td>$posts</td>
+					<th>{lang stats_main_todays_newposts}</th>
+					<td>$postsaddtoday</td>
+					<th>{lang stats_main_posts_count}</th>
+					<td>$hotforum[posts]</td>
+				</tr>
+				<tr>
+					<th>{lang stats_main_rpt}</th>
+					<td>$threadreplyavg</td>
+					<th>{lang stats_main_members_count}</th>
+					<td>$membersaddtoday</td>
+					<th>{lang stats_main_board_activity}</th>
+					<td>$activeindex</td>
+				</tr>
+			</table>
+			<div class="notice">{lang stats_update}</div>
+		</div>
+	</div>
+	<!--{subtemplate common/stat}-->
+</div>
+<!--{template common/footer}-->

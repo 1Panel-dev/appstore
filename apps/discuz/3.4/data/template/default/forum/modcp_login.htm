@@ -1,0 +1,27 @@
+<div class="bm bw0 mdcp">
+	<h1 class="mt">{lang panel_login}</h1>
+	<div class="mbw">{lang panel_notice_login}</div>
+	<form method="post" autocomplete="off" action="{$cpscript}?mod=modcp&action=login" class="exfm">
+		<input type="hidden" name="formhash" value="{FORMHASH}">
+		<input type="hidden" name="fid" value="{$_G[fid]}">
+		<input type="hidden" name="submit" value="yes">
+		<input type="hidden" name="login_panel" value="yes">
+		<table cellspacing="0" cellpadding="5">
+			<tr>
+				<th width="60">{lang panel_login_username}:</th>
+				<td>{$_G[member][username]}</td>
+			</tr>
+			<tr>
+				<th>{lang panel_login_password}:</th>
+				<td><input type="password" name="cppwd" id="cppwd" class="px" /></td>
+			</tr>
+			<tr>
+				<th>&nbsp;</th>
+				<td><button type="submit" name="submit" id="submit" class="pn" value="true"><strong>{lang submit}</strong></button></td>
+			</tr>
+		</table>
+	</form>
+</div>
+<script type="text/javascript">
+	$("cppwd").focus();
+</script>

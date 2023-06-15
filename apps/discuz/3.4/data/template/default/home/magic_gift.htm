@@ -1,0 +1,22 @@
+<!--{if $op=='show'}-->
+<table class="dt">
+	<tr>
+		<td>{lang credits_type}</td>
+		<td>
+			<select name="credittype" class="ps">
+				<!--{loop $extcredits $key $value}-->
+				<option value="$key">$value</option>
+				<!--{/loop}-->
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>{lang hide_credits}</td>
+		<td><input type="text" name="credits" value="10" class="px" /></td>
+	</tr>
+	<tr>
+		<td>{lang credits_per_part}</td>
+		<td><input type="text" name="percredit" value="1" class="px" /></td>
+	</tr>
+</table>
+<!--{/if}-->

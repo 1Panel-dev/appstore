@@ -1,0 +1,79 @@
+<!--{template common/header}-->
+<!--{if ($op == 'search')}-->
+	<!--{if $taglist}-->
+		<!--{loop $taglist $var}-->
+			<a href="javascript:;" onclick="if(this.className == 'xi2') { window.onbeforeunload = null; parent.document.getElementById('tags').value += parent.document.getElementById('tags').value == '' ? '$var[tagname]' : ',$var[tagname]'; doane(); this.className += ' marked'; }" class="xi2">$var[tagname]</a>
+		<!--{/loop}-->
+	<!--{else}-->
+		<p class="emp">{lang none_tag}</p>
+	<!--{/if}-->
+<!--{elseif ($op == 'set')}-->
+<!--{elseif ($op == 'manage')}-->
+	<h3 class="flb">
+		<em>{lang post_tag}</em>
+	</h3>
+	<div class="c bart">
+		<p>
+			<input type="text" name="tags" id="tags" class="px vm" value="$tags" size="60" />
+			<img src="{IMGDIR}/faq.gif" alt="Tip" class="vm" tip="{lang posttag_comment}" onmouseover="showTip(this)" />
+			<input type="hidden" name="tid" id="tid" value="$_GET[tid]" />
+		</p>
+		<!--{if $recent_use_tag}-->
+		<p class="mtn">{lang recent_use_tag}
+			<!--{eval $tagi = 0;}-->
+			<!--{loop $recent_use_tag $var}-->
+				<!--{if $tagi}-->, <!--{/if}--><a href="javascript:;" class="xi2" onclick="$('tags').value == '' ? $('tags').value += '$var' : $('tags').value += ',$var';">$var</a>
+				<!--{eval $tagi++;}-->
+			<!--{/loop}-->
+		</p>
+		<!--{/if}-->
+	</div>
+	<p class="o pns">
+		<button type="button" name="search_button" class="pn" value="false" onclick="tagset();"><strong>{lang submit}</strong></button>
+		<button type="button" id="closebtn" class="pn" onclick="hideWindow('$_GET[handlekey]');"><strong>{lang close}</strong></button>
+	</p>
+<!--{else}-->
+	<h3 class="flb">
+		<em>{lang choosetag}</em>
+		<!--{if $_G[inajax]}--><span><a href="javascript:;" onclick="hideWindow('$_GET[handlekey]');" class="flbc" title="{lang close}">{lang close}</a></span><!--{/if}-->
+	</h3>
+	<div class="c bart">
+		<div class="pns mbn cl">
+			<input type="text" name="searchkey" id="searchkey" class="px vm" value="$searchkey" size="30" />&nbsp;
+			<button type="button" name="search_button" class="pn vm" value="false" onclick="tagsearch();"><em>{lang search}</em></button>
+			<img tip="{lang tag_search}" onmouseover="showTip(this)" class="vm" alt="Tip" src="{IMGDIR}/faq.gif" />
+		</div>
+		<div id="taglistarea" style="width: 400px;"></div>
+	</div>
+	<p class="o pns">
+		<button type="button" class="pn pnc" id="closebtn" onclick="hideWindow('$_GET[handlekey]');"><strong>{lang close}</strong></button>
+	</p>
+<!--{/if}-->
+	<script type="text/javascript">
+	function tagsearch() {
+		$('taglistarea').innerHTML = '';
+		var searchkey = $('searchkey').value;
+		var url = 'forum.php?mod=tag&op=search&inajax=1&searchkey='+searchkey;
+		var x = new Ajax();
+		x.get(url, function(s){
+			if(s) {
+				$('taglistarea').innerHTML = s;
+			}
+		});
+	}
+
+	function tagset() {
+		var tags = $('tags').value;
+		var tid = $('tid').value;
+		tags = BROWSER.ie && document.charset == 'utf-8' ? encodeURIComponent(tags) : tags;
+		var url = 'forum.php?mod=tag&op=set&inajax=1&tags='+tags+'&tid='+tid+'&formhash={FORMHASH}';
+		var x = new Ajax();
+		x.get(url, function(s){
+			if(s) {
+				hideWindow('$_GET[handlekey]');
+				window.location.reload();
+			}
+		});
+	}
+	</script>
+<!--{template common/footer}-->

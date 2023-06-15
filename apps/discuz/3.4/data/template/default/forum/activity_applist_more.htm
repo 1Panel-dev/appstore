@@ -1,0 +1,30 @@
+<!--{template common/header}-->
+<!--{if $applylist}-->
+		<h2>{lang activity_new_join} ($activity[applynumber] {lang activity_member_unit})</h2>
+		<table class="dt">
+			<tr>
+				<th width="140">&nbsp;</th>
+				<th>{lang leaveword}</th>
+				<!--{if $activity['cost']}-->
+				<th width="60">{lang activity_payment}</th>
+				<!--{/if}-->
+				<th width="110">{lang activity_jointime}</th>
+			</tr>
+			<!--{loop $applylist $apply}-->
+				<tr>
+					<td>
+						<a target="_blank" href="home.php?mod=space&uid=$apply[uid]" class="ratl vm"><!--{echo avatar($apply[uid], 'small')}--></a> 
+						<a target="_blank" href="home.php?mod=space&uid=$apply[uid]">$apply[username]</a>
+					</td>
+					<td><!--{if $apply[message]}--><p>$apply[message]</p><!--{/if}--></td>
+					<!--{if $activity['cost']}-->
+					<td><!--{if $apply[payment] >= 0}-->$apply[payment] {lang payment_unit}<!--{else}-->{lang activity_self}<!--{/if}--></td>
+					<!--{/if}-->
+					<td>$apply[dateline]</td>
+				</tr>
+			<!--{/loop}-->
+		</table>
+<!--{/if}-->
+<br \>
+<div class="pgs mbm cl">$multi</div>
+<!--{template common/footer}-->

@@ -1,0 +1,31 @@
+{template header}
+
+<div class="container">
+	<!--{if $status}-->
+		<div class="correctmsg"><p>{lang clearpm_deleted}: $delnum</p></div>
+	<!--{/if}-->
+	<div class="hastabmenu" style="height: 180px;">
+		<ul class="tabmenu">
+			<li><a href="admin.php?m=pm&a=ls">{lang pm_search}</a></li>
+			<li class="tabcurrent"><a href="javascript:;" class="tabcurrent">{lang pm_clear}</a></li>
+		</ul>
+		<div class="tabcontentcur">
+			<form action="admin.php?m=pm&a=clear" method="post">
+				<input type="hidden" name="formhash" value="{FORMHASH}">
+				<table class="opt">
+					<tr>
+						<th>{lang clearpm_usernames}:</th>
+					</tr>
+					<tr>
+						<td>{lang clearpm_usernames_comment}</td>
+					</tr>
+					<tr>
+						<td><input type="text" class="txt" name="usernames"> <input type="submit" name="submit" value=" {lang submit} " class="btn" tabindex="3" /></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+</div>
+
+{template footer}

@@ -1,0 +1,310 @@
+<div id="icoImg_image_menu" style="display: none" unselectable="on">
+	<table width="100%" cellpadding="0" cellspacing="0" class="fwin"><tr><td class="t_l"></td><td class="t_c"></td><td class="t_r"></td></tr><tr><td class="m_l">&nbsp;&nbsp;</td><td class="m_c"><div class="mtm mbm">
+	<ul class="tb tb_s cl" id="icoImg_image_ctrl" style="margin-top:0;margin-bottom:0;">
+		<li class="y"><span class="flbc" onclick="hideAttachMenu('icoImg_image_menu')">{lang close}</span></li>
+		<!--{if $_G['basescript'] == 'home' && $_G['group']['allowupload'] || $_G['basescript'] == 'portal'}-->
+		<li class="current" id="icoImg_btn_imgattachlist"><a href="javascript:;" hidefocus="true" onclick="switchImagebutton('imgattachlist');">{lang upload_pic}</a></li>
+		<!--{/if}-->
+		<!--{if helper_access::check_module('album')}-->
+		<li id="icoImg_btn_albumlist" {if $_G['basescript'] == 'home' && !$_G['group']['allowupload']} class="current"{/if}><a href="javascript:;" hidefocus="true" onclick="switchImagebutton('albumlist');">{lang e_img_albumlist}</a></li>
+		<!--{/if}-->
+		<li id="icoImg_btn_www" {if $_G['basescript'] == 'home' && !$_G['group']['allowupload'] && !helper_access::check_module('album')} class="current"{/if}><a href="javascript:;" hidefocus="true" onclick="switchImagebutton('www');">{lang e_img_www}</a></li>
+	</ul>
+	<div class="p_opt popupfix" unselectable="on" id="icoImg_www" {if $_G['basescript'] == 'home' && ($_G['group']['allowupload'] || helper_access::check_module('album')) || $_G['basescript'] == 'portal'} style="display: none"{/if}>
+		<table cellpadding="0" cellspacing="0" width="100%">
+			<tr class="xg1">
+				<th>{lang e_img_inserturl}</th>
+				<th>{lang e_img_width}</th>
+				<th>{lang e_img_height}</th>
+			</tr>
+			<tr>
+				<td width="74%"><input type="text" id="icoImg_image_param_1" onchange="loadimgsize(this.value)" style="width: 95%;" value="" class="px" autocomplete="off" /></td>
+				<td width="13%"><input id="icoImg_image_param_2" size="3" value="" class="px p_fre" autocomplete="off" /></td>
+				<td width="13%"><input id="icoImg_image_param_3" size="3" value="" class="px p_fre" autocomplete="off" /></td>
+			</tr>
+			<tr>
+				<td colspan="3" class="pns ptn">
+					<button type="button" class="pn pnc" onclick="insertWWWImg();"><strong>{lang submit}</strong></button>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="p_opt" unselectable="on" id="icoImg_imgattachlist"{if $_G['basescript'] == 'home' && !$_G['group']['allowupload']} style="display: none;"{/if}>
+		<div class="pbm bbda cl">
+			<div id="uploadPanel" class="y">
+				<!--{if $_G['basescript'] != 'portal'}-->
+					{lang aim_album}
+					<select name="savealbumid" id="savealbumid" class="ps vm" onchange="if(this.value == '-1') {selectCreateTab(0);}">
+						<option value="0">{lang default_album}</option>
+						<!--{loop $albums $value}-->
+						<option value="$value[albumid]">$value[albumname]</option>
+						<!--{/loop}-->
+						<option value="-1" style="color:red;">+{lang create_new_album}</option>
+					</select>
+				<!--{/if}-->
+			</div>
+			<div id="createalbum" class="y" style="display:none">
+				<input type="text" name="newalbum" id="newalbum" class="px vm" value="{lang input_album_name}"  onfocus="if(this.value == '{lang input_album_name}') {this.value = '';}" onblur="if(this.value == '') {this.value = '{lang input_album_name}';}" />
+				<button type="button" class="pn pnc" onclick="createNewAlbum();"><span>{lang create}</span></button>
+				<button type="button" class="pn" onclick="selectCreateTab(1);"><span>{lang cancel}</span></button>
+			</div>
+			<span id="imgSpanButtonPlaceholder"></span>
+		</div>
+		<div class="upfilelist upfl bbda">
+			<div id="imgattachlist">
+				<!--{if $_G['basescript'] == 'portal'}-->$article[attachs]<!--{/if}-->
+			</div>
+			<div class="fieldset flash" id="imgUploadProgress"></div>
+		</div>
+		<p class="notice">{lang click_pic_to_editor}</p>
+	</div>
+	<!--{if helper_access::check_module('album')}-->
+		<div class="p_opt" unselectable="on" id="icoImg_albumlist" {if $_G['basescript'] == 'home' && $_G['group']['allowupload'] || $_G['basescript'] == 'portal'} style="display: none;"{/if}>
+			<div class="upfilelist pbm bbda">
+				{lang select_album}:
+				<select name="view_albumid" onchange="picView(this.value, 'albumphoto')" class="ps">
+					<option value="none">{lang select_album}</option>
+					<option value="0">{lang default_album}</option>
+					<!--{loop $albums $value}-->
+					<option value="$value[albumid]">$value[albumname]</option>
+					<!--{/loop}-->
+				</select>
+				<div id="albumphoto"></div>
+			</div>
+			<p class="notice">{lang click_pic_to_editor}</p>
+		</div>
+	<!--{/if}-->
+	</div></td><td class="m_r"></td></tr><tr><td class="b_l"></td><td class="b_c"></td><td class="b_r"></td></tr></table>
+</div>
+
+
+<div id="icoAttach_attach_menu" style="display: none" unselectable="on">
+	<table width="100%" cellpadding="0" cellspacing="0" class="fwin">
+		<tr>
+			<td class="t_l"></td>
+			<td class="t_c"></td>
+			<td class="t_r"></td>
+		</tr>
+		<tr>
+			<td class="m_l">&nbsp;&nbsp;</td>
+			<td class="m_c">
+				<div class="mtm mbm">
+					<ul class="tb tb_s cl" id="icoAttach_attach_ctrl" style="margin-top:0;margin-bottom:0;">
+						<li class="y"><span class="flbc" onclick="hideAttachMenu('icoAttach_attach_menu')">{lang close}</span></li>
+						<li class="current" id="icoAttach_btn_attachlist"><a href="javascript:;" hidefocus="true" onclick="switchAttachbutton('attachlist');">{lang upload_attach}</a></li>
+					</ul>
+					<div class="p_opt post_tablelist" unselectable="on" id="icoAttach_attachlist">
+						<div class="pbm bbda">
+							<span id="spanButtonPlaceholder"></span>
+						</div>
+						<table cellpadding="0" cellspacing="0" border="0" width="100%" id="attach_tblheader" class="mtn bbs" style="display: none;">
+							<tr>
+								<td class="atnu"></td>
+								<td class="atna pbn">{lang filename}</td>
+								<td class="atds pbn">{lang file_size}</td>
+								<td class="attc"></td>
+							</tr>
+						</table>
+						<div class="upfl">
+							<div id="attachlist"></div>
+							<div class="fieldset flash" id="fsUploadProgress"></div>
+						</div>
+						<div class="notice upnf">
+							<p id="attach_notice">{lang click_filename_to_article}</p>
+						</div>
+					</div>
+				</div>
+			</td>
+			<td class="m_r"></td>
+		</tr>
+		<tr>
+			<td class="b_l"></td>
+			<td class="b_c"></td>
+			<td class="b_r"></td>
+		</tr>
+	</table>
+</div>
+
+<iframe name="attachframe" id="attachframe" style="display: none;"></iframe>
+
+<!--{if $_G['basescript'] == 'home' && empty($_G['setting']['pluginhooks']['spacecp_blog_upload_extend']) || $_G['basescript'] == 'portal' && empty($_G['setting']['pluginhooks']['portalcp_top_upload_extend'])}-->
+	<!--{subtemplate common/upload}-->
+	<script type="text/javascript">
+		var attachUpload = new SWFUpload({
+			// Backend Settings
+			upload_url: "{$_G[siteurl]}misc.php?mod=swfupload&action=swfupload&operation=<!--{if $_G['basescript'] == 'portal'}-->portal<!--{else}-->album<!--{/if}-->",
+			post_params: {"uid" : "$_G[uid]", "hash":"$swfconfig[hash]"<!--{if $_G['basescript'] == 'portal'}-->,"aid":$aid,"catid":$catid<!--{/if}-->},
+
+			// File Upload Settings
+			file_size_limit : "$swfconfig[max]",	// 100MB
+			<!--{if $_G['basescript'] == 'portal'}-->
+			file_types : "$swfconfig[attachexts][ext]",
+			file_types_description : "$swfconfig[attachexts][depict]",
+			<!--{else}-->
+			file_types : "$swfconfig[imageexts][ext]",
+			file_types_description : "$swfconfig[imageexts][depict]",
+			<!--{/if}-->
+			file_upload_limit : 0,
+			file_queue_limit : 0,
+
+			// Event Handler Settings (all my handlers are in the Handler.js file)
+			swfupload_preload_handler : preLoad,
+			swfupload_load_failed_handler : loadFailed,
+			file_dialog_start_handler : fileDialogStart,
+			file_queued_handler : fileQueued,
+			file_queue_error_handler : fileQueueError,
+			file_dialog_complete_handler : fileDialogComplete,
+			upload_start_handler : uploadStart,
+			upload_progress_handler : uploadProgress,
+			upload_error_handler : uploadError,
+			upload_success_handler : uploadSuccess,
+			upload_complete_handler : uploadComplete,
+
+			// Button Settings
+			button_image_url : "{IMGDIR}/uploadbutton.png",
+			button_placeholder_id : "spanButtonPlaceholder",
+			button_width: 100,
+			button_height: 25,
+			button_cursor:SWFUpload.CURSOR.HAND,
+			button_window_mode: "transparent",
+
+			custom_settings : {
+				progressTarget : "fsUploadProgress",
+				uploadSource: 'portal',
+				uploadType: 'attach',
+				imgBoxObj: $('attachlist')
+				//thumbnail_height: 400,
+				//thumbnail_width: 400,
+				//thumbnail_quality: 100
+			},
+
+			// Debug Settings
+			debug: false
+		});
+		var upload = new SWFUpload({
+			// Backend Settings
+			upload_url: "{$_G[siteurl]}misc.php?mod=swfupload&action=swfupload&operation=<!--{if $_G['basescript'] == 'portal'}-->portal<!--{else}-->album<!--{/if}-->",
+			post_params: {"uid" : "$_G[uid]", "hash":"$swfconfig[hash]"<!--{if $_G['basescript'] == 'portal'}-->,"aid":$aid,"catid":$catid<!--{/if}-->},
+
+			// File Upload Settings
+			file_size_limit : "$swfconfig[max]",	// 100MB
+			file_types : "$swfconfig[imageexts][ext]",
+			file_types_description : "$swfconfig[imageexts][depict]",
+			file_upload_limit : 0,
+			file_queue_limit : 0,
+
+			// Event Handler Settings (all my handlers are in the Handler.js file)
+			swfupload_preload_handler : preLoad,
+			swfupload_load_failed_handler : loadFailed,
+			file_dialog_start_handler : fileDialogStart,
+			file_queued_handler : fileQueued,
+			file_queue_error_handler : fileQueueError,
+			file_dialog_complete_handler : fileDialogComplete,
+			upload_start_handler : uploadStart,
+			upload_progress_handler : uploadProgress,
+			upload_error_handler : uploadError,
+			upload_success_handler : uploadSuccess,
+			upload_complete_handler : uploadComplete,
+
+			// Button Settings
+			button_image_url : "{IMGDIR}/uploadbutton.png",
+			button_placeholder_id : "imgSpanButtonPlaceholder",
+			button_width: 100,
+			button_height: 25,
+			button_cursor:SWFUpload.CURSOR.HAND,
+			button_window_mode: "transparent",
+
+			custom_settings : {
+				progressTarget : "imgUploadProgress",
+				uploadSource: 'portal',
+				uploadType: <!--{if $_G['basescript'] == 'portal'}-->'portal'<!--{else}-->'blog'<!--{/if}-->,
+				imgBoxObj: $('imgattachlist')
+				//thumbnail_height: 400,
+				//thumbnail_width: 400,
+				//thumbnail_quality: 100
+			},
+
+			// Debug Settings
+			debug: false
+		});
+	</script>
+<!--{else}-->
+	<!--{if $_G['basescript'] == 'home'}-->
+		<!--{hook/spacecp_blog_upload_extend}-->
+	<!--{elseif $_G['basescript'] == 'portal'}-->
+		<!--{hook/portalcp_top_upload_extend}-->
+	<!--{/if}-->
+<!--{/if}-->
+<script type="text/javascript">
+	function switchImagebutton(btn) {
+		switchButton(btn, 'image');
+		$('icoImg_image_menu').style.height = '';
+		doane();
+	}
+	function hideAttachMenu(id) {
+		if($(id)) {
+			$(id).style.visibility = 'hidden';
+		}
+	}
+
+	function insertWWWImg() {
+		var urlObj = $('icoImg_image_param_1');
+		if(urlObj.value != '') {
+			var widthObj = $('icoImg_image_param_2');
+			var heightObj = $('icoImg_image_param_3');
+			insertImage(urlObj.value, null, widthObj.value, heightObj.value);
+			urlObj.value = widthObj.value = heightObj.value = '';
+			hideMenu('', 'win');
+		}
+	}
+	//note 选择图片
+	function picView(albumid, listid) {
+		if(albumid == 'none') {
+			$(listid).innerHTML = '';
+		} else {
+			ajaxget('home.php?mod=misc&ac=ajax&op=album&id='+albumid+'&ajaxdiv=albumpic_body', listid);
+		}
+	}
+	function createNewAlbum() {
+		var inputObj = $('newalbum');
+		if(inputObj.value == '' || inputObj.value == '{lang input_album_name}') {
+			inputObj.value = '{lang input_album_name}';
+		} else {
+			var x = new Ajax();
+			x.get('home.php?mod=misc&ac=ajax&op=createalbum&inajax=1&name=' + inputObj.value, function(s){
+				var aid = parseInt(s);
+				var albumList = $('savealbumid');
+				var haveoption = false;
+				for(var i = 0; i < albumList.options.length; i++) {
+					if(albumList.options[i].value == aid) {
+						albumList.selectedIndex = i;
+						haveoption = true;
+						break;
+					}
+				}
+				if(!haveoption) {
+					var oOption = document.createElement("OPTION");
+					oOption.text = trim(inputObj.value);
+					oOption.value = aid;
+					albumList.options.add(oOption);
+					albumList.selectedIndex = albumList.options.length-1;
+				}
+				inputObj.value = ''
+			});
+			selectCreateTab(1)
+		}
+	}
+	function selectCreateTab(flag) {
+		var vwObj = $('uploadPanel');
+		var opObj = $('createalbum');
+		var selObj = $('savealbumid');
+		if(flag) {
+			vwObj.style.display = '';
+			opObj.style.display = 'none';
+			selObj.value = selObj.options[0].value;
+		} else {
+			vwObj.style.display = 'none';
+			opObj.style.display = '';
+		}
+	}
+</script>

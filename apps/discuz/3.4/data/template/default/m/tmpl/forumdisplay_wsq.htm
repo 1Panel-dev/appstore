@@ -1,0 +1,26 @@
+<script id="topicBox_wsq" type="text/html">
+    <div class="topicBox threadList wsqThread" tid="<%= tId %>" page="0" id="threadwsq<%= tId %>">
+        <% if(picUrls) { %>
+            <div class="imgShow"><img data-original="<%= picUrls[0].middle %>" class="lazy" alt="图片"></div>
+        <% } %>
+        <div class="topicCon">
+            <div class="detailCon">
+                <% if(threadType == 7) { %>
+                    <h2 class="dTitle f18 c5 fn wot"><a href="javascript:;" class="showBtn br f11 c2 db">晒图</a><%= title %></h2>
+                    <% if(fEndTime) { %>
+                        <p class="dTime c9 f12"><i class="iconTime f16 mr5 commF"></i>截止时间：<%= fEndTime %><a href="javascript:;" class="topBtn br f11 ml5 c2 db joinBox" tid="<%= tId %>">点击参加</a></p>
+                    <% } %>
+                <% } else if(threadType == 9) { %>
+                    <h2 class="dTitle f18 c7 fn wot">#<%= title %>#</h2>
+                <% } %>
+                <div class="dCon f16">
+                    <%== summary %>
+                    <a class="showAll f11 evtShowAllPic" href="javascript:;" title="查看全文">查看全文</a>
+                </div>
+                <div class="dNum pr">
+                    <span class="db c7 f12 pa">已有<%= joinNumber %>人参加</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>

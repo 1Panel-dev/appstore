@@ -1,0 +1,44 @@
+<script id="tmpl_header_item" type="text/html">
+    <div class="detailTitle pr">
+        <h2 class="c6 f16">图片来自：<span class="c7"><%== stripCode(thread.subject) %></span></h2>
+        <span class="iconArrowR db pa c9 commF"></span>
+    </div>
+</script>
+
+<script id="tmpl_post_item" type="text/html">
+    <div class="tb">
+        <div class="topicCon">
+            <p class="personImgDate">
+                <span class="perImg db">
+                    <img data-original="<%= avatar %>" onerror="javascript:this.src=DATA_DIR+'/images/personImg.jpg'" class="bImg lazy" width="38" height="38" uid="<%= authorid %>" alt="头像"></a>
+                    <span class="timeT" id="aut_<%= pid %>">
+                        <%= author %>
+                        <% if(authorLv) { %><span class="gBg1 brSmall fb f8 c2">LV<%= authorLv %></span><% } %>
+                    </span>
+                </span>
+             </p>
+            <div class="detailCon">
+                <div id="msg_<%= pid %>">
+                    <%== stripCode(comment, 1) %>
+                    <% for(var i in imagelist ) {%>
+                        <% if(attachments[imagelist[i]].attachment.indexOf('http') != -1) { %>
+                            <br><img src="<%= attachments[imagelist[i]].attachment%>" alt="" />
+                        <% } else { %>
+                            <br><img src="<%= siteDomain + attachments[imagelist[i]].url + attachments[imagelist[i]].attachment%>" alt="" />
+                        <% } %>
+                    <%}%>
+                </div>
+                <p>
+                    <span class="time c9 fl"><%= dateline %></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script id="bottomBar" type="text/html">
+<div class="bottomBarCon">
+    <a href="javascript:;" class="backBtn"><i class="iconAnswer commF back db"></i></a>
+    <a href="javascript:;" class="replyBtn db"><i class="incoR"></i>回复</a>
+</div>
+</script>

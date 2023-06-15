@@ -1,0 +1,98 @@
+<!--{if $debate[umpire]}-->
+	<!--{if $debate['umpirepoint']}-->
+	<div id="umpirepoint">
+		<p class="dbresult">
+			<!--{if $debate[winner]}-->
+			<!--{if $debate[winner] == 1}-->
+			<label class="winner_1"><strong>{lang debate_square}</strong>{lang debate_winner}</label>
+			<!--{elseif $debate[winner] == 2}-->
+			<label class="winner_2"><strong>{lang debate_opponent}</strong>{lang debate_winner}</label>
+			<!--{else}-->
+			<label class="winner_0"><strong>{lang debate_draw}</strong></label>
+			<!--{/if}-->
+			<!--{/if}-->
+			<em>{lang debate_comment_dateline}: $debate[endtime]</em>
+		</p>
+		<!--{if $debate[umpirepoint]}--><p class="umpirepoint"><strong>{lang debate_umpirepoint}</strong>: $debate[umpirepoint]</p><!--{/if}-->
+		<!--{if $debate[bestdebater]}--><p class="bestdebater"><strong>{lang debate_bestdebater}</strong>: $debate[bestdebater]</p><!--{/if}-->
+	</div>
+	<!--{/if}-->
+<!--{/if}-->
+<table cellspacing="0" cellpadding="0"><tr><td class="t_f" id="postmessage_$post[pid]">$post[message]</td></tr></table>
+
+<!--{if $debate[endtime]}-->
+	<p class="dtm">{lang endtime}: $debate[endtime] <!--{if $debate[umpire]}-->{lang debate_umpire}: $debate[umpire]<!--{/if}--></p>
+<!--{/if}-->
+
+<!--{if $debate[umpire] && $_G['username'] && $debate[umpire] == $_G['member']['username']}-->
+	<p class="dtm pns">
+	<!--{if $debate[remaintime] && !$debate[umpirepoint]}-->
+	 <button type="button" class="pn" onclick="showWindow('debate', 'forum.php?mod=misc&action=debateumpire&tid=$_G[tid]&pid=$post[pid]{if $_GET[from]}&from=$_GET[from]{/if}')"><span>{lang debate_umpire_end}</span></button>
+	<!--{elseif TIMESTAMP - $debate['dbendtime'] < 3600}-->
+	 <button type="button" class="pn" onclick="showWindow('debate', 'forum.php?mod=misc&action=debateumpire&tid=$_G[tid]&pid=$post[pid]{if $_GET[from]}&from=$_GET[from]{/if}')"><span>{lang debate_umpirepoint_edit}</span></button>
+	<!--{/if}-->
+	</p>
+<!--{/if}-->
+
+<div class="ds">
+	<table summary="{lang debate_all_point}" cellspacing="0" cellpadding="0">
+		<tr>
+			<td class="si_1">
+				<div class="point">
+					<strong>{lang debate_square_point} ($debate[affirmvotes])</strong>
+					<p>$debate[affirmpoint]</p>
+				</div>
+			</td>
+			<td class="sc_1">
+				<div class="point_chart">
+					<div class="chart" style="height: {echo $debate[affirmvoteswidth]}%;" title="{lang debate_square} ($debate[affirmvotes])"></div>
+				</div>
+			</td>
+			<th><div></div></th>
+			<td class="sc_2">
+				<div class="point_chart">
+					<div class="chart" style="height: {echo $debate[negavoteswidth]}%;" title="{lang debate_opponent} ($debate[negavotes])"></div>
+				</div>
+			</td>
+			<td class="si_2">
+				<div class="point">
+					<strong>{lang debate_opponent_point} ($debate[negavotes])</strong>
+					<p>$debate[negapoint]</p>
+				</div>
+			</td>
+		</tr>
+	</table>
+</div>
+<div class="dr">
+	<table summary="{lang debate_all_point}" cellspacing="0" cellpadding="0">
+		<!--{if !$_G['forum_thread']['is_archived']}-->
+		<tr>
+			<td class="sr_1 pns">
+				<button href="forum.php?mod=misc&action=debatevote&tid=$_G[tid]&stand=1" id="affirmbutton" onclick="{if $_G['uid']}ajaxmenu(this);{else}showWindow('login', 'member.php?mod=logging&action=login&guestmessage=yes');{/if}doane(event);" class="pn"{if $post['invisible'] < 0} disabled{/if}><span>{lang debate_support}</span></button>
+				<h5>{lang debater}:$debate[affirmdebaters] ( <a href="forum.php?mod=post&action=reply&fid=$_G[fid]&tid=$_G[tid]&stand=1{if $_GET[from]}&from=$_GET[from]{/if}" onclick="showWindow('reply', this.href)">{lang debate_join}</a> )</h5>
+				<ul class="ml mls cl">
+					<!--{loop $debate[affirmavatars] $user}-->
+					<li style="float: right;">
+						<a title="$user[author]" target="_blank" href="home.php?mod=space&uid=$user[authorid]" class="avt">$user[avatar]</a>
+						<p><a href="home.php?mod=space&uid=$user[authorid]">$user[author]</a></p>
+					</li>
+					<!--{/loop}-->
+				</ul>
+			</td>
+			<th>&nbsp;</th>
+			<td class="sr_2 pns">
+				<h5>{lang debater}:$debate[negadebaters] ( <a href="forum.php?mod=post&action=reply&fid=$_G[fid]&tid=$_G[tid]&stand=2{if $_GET[from]}&from=$_GET[from]{/if}" onclick="showWindow('reply', this.href)">{lang debate_join}</a> )</h5>
+				<button href="forum.php?mod=misc&action=debatevote&tid=$_G[tid]&stand=2" id="negabutton" onclick="{if $_G['uid']}ajaxmenu(this);{else}showWindow('login', 'member.php?mod=logging&action=login&guestmessage=yes');{/if}doane(event);" class="pn"{if $post['invisible'] < 0} disabled{/if}><span>{lang debate_support}</span></button>
+				<ul class="ml mls cl">
+					<!--{loop $debate[negaavatars] $user}-->
+					<li>
+						<a title="$user[author]" target="_blank" href="home.php?mod=space&uid=$user[authorid]" class="avt">$user[avatar]</a>
+						<p><a href="home.php?mod=space&uid=$user[authorid]">$user[author]</a></p>
+					</li>
+					<!--{/loop}-->
+				</ul>
+			</td>
+		</tr>
+		<!--{/if}-->
+	</table>
+</div>

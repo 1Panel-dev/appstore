@@ -1,0 +1,129 @@
+<!--{template common/header}-->
+<!--[name]{lang portalcategory_listtworanktplname}[/name]-->
+<!--{eval $data = array();}-->
+<!--{eval $wheresql = category_get_wheresql($cat);}-->
+<!--{eval $data = category_get_list_more($cat, $wheresql);}-->
+
+<div id="pt" class="bm cl">
+	<div class="z">
+		<a href="index.php" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em>
+		<a href="$_G[setting][navs][1][filename]">{lang portal}</a> <em>&rsaquo;</em>
+		<!--{loop $cat[ups] $value}--> <a href="{echo getportalcategoryurl($value[catid])}">$value[catname]</a><em>&rsaquo;</em><!--{/loop}-->
+		$cat[catname]
+	</div>
+</div>
+
+<style id="diy_style" type="text/css"></style>
+<div class="wp">
+	<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+</div>
+
+<div id="ct" class="ct2 wp cl">
+	<div class="mn">
+		<!--[diy=listlooptop]--><div id="listlooptop" class="area"></div><!--[/diy]-->
+		<!--{if $cat[subs]}-->
+			<div class="bm bm2 bw0 cl">
+			<!--{eval $counter = 1;}-->
+			<!--{loop $data $key $item}-->
+			<!--{eval $subcatid = intval(str_replace('subcate', '', $key));}-->
+			<!--{if !empty($portalcategory[$subcatid])}-->
+				<div class="bm2_b {echo swapclass('bm2_b_y');}">
+					<div class="bm_h cl">
+						<span class="y xi2">
+							<!--{if ($_G['group']['allowpostarticle'] || $_G['group']['allowmanagearticle'] || $categoryperm[$catid]['allowmanage'] || $categoryperm[$catid]['allowpublish']) && empty($portalcategory[$subcatid]['disallowpublish'])}-->
+								<a href="portal.php?mod=portalcp&ac=article&catid=$subcatid">{lang article_publish}</a>
+								<span class="pipe">|</span>
+							<!--{/if}-->
+							<a href="{$portalcategory[$subcatid]['caturl']}">{lang more}&rsaquo;</a>
+						</span>
+						<h2>{$portalcategory[$subcatid]['catname']}</h2>
+					</div>
+					<div class="bm_c">
+						<ul class="xl xl1">
+						<!--{loop $item $value}-->
+							<!--{eval $article_url = fetch_article_url($value);}-->
+							<li><span class="xl1_elp">&bull; <a href="$article_url" target="_blank">$value[title]</a></span>
+								<em><!--{eval echo dgmdate($value['timestamp'], 'm-d')}--></em>
+							</li>
+						<!--{/loop}-->
+						</ul>
+					</div>
+				</div>
+				<!--{if $counter % 2 == 0}--></div><div class="bm bm2 bw0 cl"><!--{/if}-->
+				<!--{eval $counter++;}-->
+			<!--{/if}-->
+			<!--{/loop}-->
+			</div>
+		<!--{/if}-->
+
+		<!--[diy=listloopbottom]--><div id="listloopbottom" class="area"></div><!--[/diy]-->
+	</div>
+	<div class="sd">
+
+		<div class="drag">
+			<!--[diy=diyrighttop]--><div id="diyrighttop" class="area"></div><!--[/diy]-->
+		</div>
+
+<!--{if $cat[others]}-->
+		<div class="bm">
+			<div class="bm_h cl">
+				<h2>{lang category_related}</h2>
+			</div>
+			<div class="bm_c">
+				<ul class="xl xl2 cl">
+					<!--{loop $cat[others] $value}-->
+					<li><a href="{echo getportalcategoryurl($value[catid])}">$value[catname]</a></li>
+					<!--{/loop}-->
+				</ul>
+			</div>
+		</div>
+<!--{/if}-->
+
+		<div class="drag">
+			<!--[diy=newarticletop]--><div id="newarticletop" class="area"></div><!--[/diy]-->
+		</div>
+
+<!--{if $data['portalnewarticle']}-->
+		<div class="bm">
+			<div class="bm_h cl">{lang article_last}</div>
+			<div class="bm_c">
+				<ul class="xl xl1">
+					<!--{loop $data['portalnewarticle'] $value}-->
+						<!--{eval $article_url = fetch_article_url($value);}-->
+						<li><a href="$article_url">$value[title]</a></li>
+					<!--{/loop}-->
+				</ul>
+			</div>
+		</div>
+<!--{/if}-->
+
+		<div class="drag">
+			<!--[diy=hotarticletop]--><div id="hotarticletop" class="area"></div><!--[/diy]-->
+		</div>
+
+<!--{if $data['portalhotarticle']}-->
+		<div class="bm">
+			<div class="bm_h cl">{lang article_hot}</div>
+			<div class="bm_c">
+				<ul class="xl xl1">
+					<!--{loop $data['portalhotarticle'] $value}-->
+						<!--{eval $article_url = fetch_article_url($value);}-->
+						<li><a href="$article_url">$value[title]</a></li>
+					<!--{/loop}-->
+				</ul>
+			</div>
+		</div>
+<!--{/if}-->
+
+		<div class="drag">
+			<!--[diy=diy2]--><div id="diy2" class="area"></div><!--[/diy]-->
+		</div>
+
+	</div>
+</div>
+
+<div class="wp mtn">
+	<!--[diy=diy3]--><div id="diy3" class="area"></div><!--[/diy]-->
+</div>
+
+<!--{template common/footer}-->

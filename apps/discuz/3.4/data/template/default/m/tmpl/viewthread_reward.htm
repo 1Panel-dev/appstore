@@ -1,0 +1,64 @@
+<script id="tmpl_thread_reward" type="text/html">
+    <link rel="stylesheet" href="../template/default/m/css/vote.css?t=<%= jsversion %>">
+    <div class="detailCon reading">
+        <div class="voteTit">
+            <h4><%== stripCode(thread.subject) %></h4>
+            <div class="titInfo">
+                <% if(bestpost.length == 0) { %><i class="underway">未解决</i><% } else { %><i class="ended">已解决</i><% } %>
+                <span>悬赏<%=rewardprice%></span>
+            </div>
+        </div>
+        <div id="msg_<%= post.pid %>">
+            <% if(post.hook_thread_top) { %>
+                <%== stripCode(post.hook_thread_top) %>
+            <% } %>
+            <% if(threadsortshow) { %>
+                <% include('tmpl_thread_threadsort') %>
+            <% } %>
+            <%== stripCode(post.message, 1) %>
+            <% if(post.hook_thread_bottom) { %>
+                <%== stripCode(post.hook_thread_bottom) %>
+            <% } %>
+            <% if(bestpost.length != 0) { %>
+                <div class="voteTit">
+                    <div class="titInfo">
+                        <i class="underway">最佳答案</i>
+                    </div>
+                    <%= bestpost.author %>: <%= bestpost.message %>
+                </div>
+            <% } %>
+        </div>
+        <% if(comments && comments.length > 0) { %>
+            <div class="replyPop">
+                <div class="replyBg brSmall pr commentBox">
+                    <div class="topicList">
+                        <ul>
+                        <% for(i = 0; i< comments.length; i++) { %>
+                            <li><a href="javascript:;" class="f13 c3"><span class="c7"><%==comments[i].author%><% if(comments[i].authorid == post.authorid) { %><i class="cardBtn br fn db c2">楼主</i><% } %>：</span><%== stripCode(comments[i].comment) %></a></li>
+                        <% } %>
+                        </ul>
+                        <% if(commentCount > 5) { %>
+                        <a href="javascript:;" class="db f12 moreInReply viewcommentBtn" tid="<%= post.tid %>" pid="<%= post.pid %>">更多</a>
+                        <% } %>
+                    </div>
+                </div>
+           </div>
+        <% } %>
+        <span class="replyShare db fr">
+            <a class="topicadminMsg" tid="<%= post.tid %>" pid="<%= post.pid %>"><% if(post.status & 1) {%>已屏蔽<%}%></a>
+            <% if (member_uid != "0"){%>
+                <a href="javascript:;" id="recommendBtn">
+                    <i class=<%=thread.recommend == 1 ? "praise" : "noPraise"%>></i>
+                    <span><%= thread.recommend_add == 0 ? "" : thread.recommend_add %></span>
+                </a>
+            <% } %>
+            <% if(fromwx) { %>
+                <a href="javascript:;" id="shareBtn"><i class="incoS"></i></a>
+            <% } %>
+            <a href="javascript:;" class="replyByPid" tid="<%= post.tid %>" pid="<%= post.pid %>" first="<%= post.first %>"><i class="incoR"></i><%= thread.replies == 0 ? "" : thread.replies %></a>
+        </span>
+        <% if(post.hook_post_bottom) { %>
+            <span class="fl tl"><%== stripCode(post.hook_post_bottom) %></span>
+        <% } %>
+    </div>
+</script>

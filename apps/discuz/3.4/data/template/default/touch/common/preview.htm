@@ -1,0 +1,36 @@
+<!--{template common/header}-->
+<div id="ct" class="wp cl ptw pbw">
+	<div class="z" style="width: 370px; height: 550px; background: url({STATICURL}image/mobile/preview.png) no-repeat 0 0;">
+		<iframe id="ifm0" frameborder="0" width="240" height="360" style="margin: 102px 0 0 70px;" src="misc.php?mod=mobile&view=true"></iframe>
+	</div>
+	<div class="z" style="margin-top: 60px; width: 530px;">
+		<div class="mtw bm bw0" style="background-color: #dfeaf4;">
+			<div class="bm_c">
+				<h1 class="xw1 xs2 mbn">{lang login_mobile}</h1>
+				<p class="mbw xg2">{lang login_mobile_join}</p>
+				<p class="hm mbw" style="font-size: 18px; color: #F60;">
+					<!--{if $_G['setting']['domain']['app']['mobile']}-->
+						{$_G['scheme']}://{$_G['setting']['domain']['app']['mobile']}
+					<!--{else}-->
+						{$_G['siteurl']}forum.php
+					<!--{/if}-->
+				</p>
+			</div>
+		</div>
+		<div class="bm bw0">
+			<dl class="xld bbda">
+				<dt class="xs2">{lang mobile_favorite}</dt>
+				<dd>{lang mobile_favorite_comment}</dd>
+			</dl>
+			<dl class="xld bbda">
+				<dt class="xs2">{lang mobile_viewthread}</dt>
+				<dd>{lang mobile_viewthread_comment}</dd>
+			</dl>
+			<dl class="xld">
+				<dt class="xs2">{lang mobile_pm}</dt>
+				<dd>{lang mobile_other_1}</dd>
+			</dl>
+		</div>
+	</div>
+</div>
+<!--{template common/footer}-->

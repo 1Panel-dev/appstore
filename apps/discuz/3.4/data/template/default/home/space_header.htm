@@ -1,0 +1,111 @@
+
+<!--{eval $_G[cookie][extstyle] = false;}-->
+<!--{subtemplate common/header_common}-->
+	<script type="text/javascript" src="{$_G[setting][jspath]}home.js?{VERHASH}"></script>
+	<link rel="stylesheet" type="text/css" href='{$_G['setting']['csspath']}{STYLEID}_css_space.css?{VERHASH}' />
+	<link id="style_css" rel="stylesheet" type="text/css" href="{STATICURL}space/{if $space[theme]}$space[theme]{else}t1{/if}/style.css?{VERHASH}">
+	<style id="diy_style">$space[spacecss]</style>
+</head>
+
+<body id="space" onkeydown="if(event.keyCode==27) return false;">
+	<div id="append_parent"></div>
+	<div id="ajaxwaitid"></div>
+
+	<!--{if $space['self'] && $_GET['diy'] == 'yes' && $do == 'index' }-->
+	<link rel="stylesheet" type="text/css" href='{$_G['setting']['csspath']}{STYLEID}_css_diy.css?{VERHASH}' />
+	<!--{subtemplate home/space_diy}-->
+	<!--{/if}-->
+
+	<div id="toptb" class="cl">
+		<!--{if $_G['uid']}-->
+			<div class="y">
+				<a href="home.php?mod=space&uid=$_G[uid]" class="xw1" target="_blank" title="{lang visit_my_space}">{$_G[member][username]}</a>
+				<a href="javascript:;" id="myspace" class="showmenu cur1" onmouseover="showMenu(this.id);">{lang my_nav}</a>
+				<!--{hook/global_usernav_extra1}-->
+				<a href="home.php?mod=spacecp">{lang setup}</a>
+				<a href="home.php?mod=space&do=pm" id="pm_ntc" target="_blank"{if $_G[member][newpm]} class="new"{/if}>{lang pm_center}<!--{if $_G[member][newpm]}-->($_G[member][newpm])<!--{/if}--></a>
+				<a href="home.php?mod=space&do=notice" id="myprompt" target="_blank"{if $_G[member][newprompt]} class="new"{/if}>{lang remind}<!--{if $_G[member][newprompt]}-->($_G[member][newprompt])<!--{/if}--></a><span id="myprompt_check"></span>
+				<!--{if $_G['group']['allowmanagearticle'] || $_G['group']['allowdiy']|| getstatus($_G['member']['allowadmincp'], 4) || getstatus($_G['member']['allowadmincp'], 2) || getstatus($_G['member']['allowadmincp'], 3) || in_array($_G['uid'], $_G['setting']['ext_portalmanager'])}--><a href="portal.php?mod=portalcp">{lang portal_manage}</a><!--{/if}-->
+				<!--{if $_G['uid'] && $_G['group']['radminid'] > 1}--><a href="forum.php?mod=modcp&fid=$_G[fid]" target="_blank">{lang forum_manager}</a><!--{/if}-->
+				<!--{if $_G['uid'] && ($_G['group']['radminid'] == 1 || getstatus($_G['member']['allowadmincp'], 1))}--><a href="admin.php" target="_blank">{lang admincp}</a><!--{/if}-->
+				<!--{hook/global_usernav_extra2}-->
+				<a href="member.php?mod=logging&action=logout&formhash={FORMHASH}">{lang logout}</a>
+				<!--{if $space['self'] && $do == 'index'}--><a id="diy-tg" href="javascript:openDiy();" title="{lang dress_space}">DIY</a><!--{/if}-->
+			</div>
+		<!--{elseif !empty($_G['cookie']['loginuser'])}-->
+			<div class="y">
+				<a id="loginuser" class="xw1"><!--{echo dhtmlspecialchars($_G['cookie']['loginuser'])}--></a>
+				<a href="member.php?mod=logging&action=login" onclick="showWindow('login', this.href)">{lang activation}</a>
+				<a href="member.php?mod=logging&action=logout&formhash={FORMHASH}">{lang logout}</a>
+			</div>
+		<!--{elseif $_G['connectguest']}-->
+			<div class="y">
+				{lang connect_fill_profile_to_view}
+			</div>
+		<!--{else}-->
+			<div class="y">
+				<a href="member.php?mod={$_G[setting][regname]}">$_G['setting']['reglinkname']</a>
+				<a href="member.php?mod=logging&action=login" onclick="showWindow('login', this.href)">{lang login}</a>
+			</div>
+		<!--{/if}-->
+		<div class="z">
+			<a href="./" title="$_G['setting']['bbname']" class="xw1">$_G['setting']['bbname']</a>
+			<a href="home.php?mod=space&do=home" id="navs" class="showmenu" onmouseover="showMenu(this.id);">{lang return_homepage}</a>
+		</div>
+	</div>
+	<!--{if $space['status'] == -1 && $_G['adminid'] == 1 }-->
+		<p class="ptw xw1 xi1 hm"><img src="{IMGDIR}/locked.gif" alt="Locked" class="vm" /> {lang message_banned}</p>
+	<!--{/if}-->
+	<div id="hd" class="wp cl">
+
+		<h2 id="spaceinfoshow">
+			<!--{eval space_merge($space, 'field_home'); $space[domainurl] = space_domain($space);getuserdiydata($space);$personalnv = isset($_G['blockposition']['nv']) ? $_G['blockposition']['nv'] : '';}-->
+			<strong id="spacename" class="mbn">
+				<!--{if $space[spacename]}-->$space[spacename]<!--{else}-->$space[username]{lang somebody_space}<!--{/if}-->
+			</strong>
+			<span class="xs0 xw0">
+				<a id="domainurl" href="$space[domainurl]" onclick="setCopy('$space[domainurl]', '{lang copy_space_address}');return false;">$space[domainurl]</a>
+				<a href="javascript:;" onclick="addFavorite(location.href, document.title)">[{lang favorite}]</a>
+				<a id="domainurl" href="$space[domainurl]" onclick="setCopy('$space[domainurl]', '{lang copy_space_address}');return false;">[{lang copy}]</a>
+				<!--{if !$space['self']}-->
+					<!--{if helper_access::check_module('share')}-->
+					<a id="share_space" href="home.php?mod=spacecp&ac=share&type=space&id=$space[uid]" onclick="showWindow(this.id, this.href, 'get', 0);">[{lang share}]</a>
+					<!--{/if}-->
+					<a href="home.php?mod=rss&uid=$space[uid]">[RSS]</a>
+				<!--{/if}-->
+			</span>
+			<span id="spacedescription" class="xs1 xw0 mtn">$space[spacedescription]</span>
+		</h2>
+		<!--{subtemplate home/space_header_personalnv}-->
+	</div>
+
+	<!--{if !empty($_G['setting']['plugins']['jsmenu'])}-->
+		<ul class="p_pop h_pop" id="plugin_menu" style="display: none">
+		<!--{loop $_G['setting']['plugins']['jsmenu'] $module}-->
+		     <!--{if in_array($module['adminid'], array(0, -1)) || ($module['adminid'] && $_G['adminid'] > 0 && $module['adminid'] >= $_G['adminid'])}-->
+		     <li>$module[url]</li>
+		     <!--{/if}-->
+		<!--{/loop}-->
+		</ul>
+	<!--{/if}-->
+	$_G[setting][menunavs]
+
+<!--{eval $mnid = getcurrentnav();}-->
+<ul id="navs_menu" class="p_pop topnav_pop" style="display:none;">
+<!--{loop $_G['setting']['navs'] $nav}-->
+	<!--{eval $nav_showmenu = strpos($nav['nav'], 'onmouseover="showMenu(');}-->
+    <!--{eval $nav_navshow = strpos($nav['nav'], 'onmouseover="navShow(')}-->
+    <!--{if $nav_hidden !== false || $nav_navshow !== false}-->
+	<!--{eval $nav['nav'] = preg_replace("/onmouseover\=\"(.*?)\"/i", '',$nav['nav'])}-->
+    <!--{/if}-->
+    <!--{if $nav['available'] && (!$nav['level'] || ($nav['level'] == 1 && $_G['uid']) || ($nav['level'] == 2 && $_G['adminid'] > 0) || ($nav['level'] == 3 && $_G['adminid'] == 1))}--><li {$nav[nav]}></li><!--{/if}-->
+<!--{/loop}-->
+</ul>
+<ul id="myspace_menu" class="p_pop" style="display:none;">
+    <li><a href="home.php?mod=space">{lang my_space}</a></li>
+	<!--{loop $_G['setting']['mynavs'] $nav}-->
+		<!--{if $nav['available'] && (!$nav['level'] || ($nav['level'] == 1 && $_G['uid']) || ($nav['level'] == 2 && $_G['adminid'] > 0) || ($nav['level'] == 3 && $_G['adminid'] == 1))}-->
+			<li>$nav[code]</li>
+		<!--{/if}-->
+	<!--{/loop}-->
+</ul>

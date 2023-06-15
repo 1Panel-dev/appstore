@@ -1,0 +1,114 @@
+<!--{template common/header}-->
+<div id="wp" class="wp">
+	<div id="ct" class="wp cl">
+		<div class="mn">
+			<div class="bm">
+			<!--{if $order && $codes}-->
+				<div class="bm_h bbs">
+					<h3 class="xs2">{lang invitecode_succeed_title}</h3>
+				</div>
+				<div class="bm_c">
+					<div class="rfm bw0">
+						<p><textarea id="invitecode" class="pt" cols="40" rows="3">$codetext</textarea></p>
+						<p class="mtn"><a href="javascript:;" onclick="copyinvitecode();" class="xi2">{lang copycode}</a></p>
+						<p class="mtn">{lang invitecode_email}</p>
+						<p class="mtm cl"><a href="member.php?mod={$_G[setting][regname]}&invitecode=$codes[0]" class="pn pnc z"><strong>{lang reg_continue}</strong></a></p>
+					</div>
+					<script type="text/javascript">
+						function copyinvitecode(obj) {
+							setCopy($('invitecode').innerHTML, '{lang copycode_invite_succeed}');
+							return false;
+						}
+					</script>
+				</div>
+			<!--{else}-->
+				<div class="bm_h bbs">
+					<h3 class="xs2">{lang invitecode_buycode}</h3>
+				</div>
+				<div class="bm_c">
+					<form id="confirmform" class="postbox" method="post" autocomplete="off" action="misc.php?mod=buyinvitecode" onsubmit="ajaxpost(this.id, 'return_addfundsform');return false;">
+						<input type="hidden" name="formhash" value="{FORMHASH}" />
+						<input type="hidden" name="buysubmit" value="true" />
+						<input type="hidden" name="handlekey" value="buyinvite" />
+						<!--{if $_G['setting']['inviteconfig']['invitecodeprompt']}-->
+								<div class="rfm ptw pbm">$_G['setting'][inviteconfig][invitecodeprompt]</div>
+							<!--{/if}-->
+						<!--{if $_G['setting']['inviteconfig']['buyinvitecode'] && $_G['setting']['inviteconfig']['invitecodeprice'] && ($_G[setting][ec_tenpay_bargainor] || $_G[setting][ec_tenpay_opentrans_chnid] || $_G[setting][ec_account])}-->
+						<div class="rfm">
+							<table cellpadding="0" cellspacing="0">
+								<tr>
+									<th>{lang buy_nums}</th>
+									<td><input type="text" name="amount" id="amount" class="px p_fre vm" value="1" onkeyup="addamount()" /> {lang need_money} <strong id="desamount" class="xi1">$_G['setting']['inviteconfig']['invitecodeprice']</strong> {lang money_unit}</td>
+								</tr>
+							</table>
+						</div>
+						<div class="rfm">
+							<table cellpadding="0" cellspacing="0">
+								<tr>
+									<th>{lang active_email}</th>
+									<td><input type="text" name="email" class="px p_fre vm" value="" /> {lang active_email_comment}</td>
+								</tr>
+							</table>
+						</div>
+						<div class="rfm">
+							<table cellpadding="0" cellspacing="0">
+								<tr>
+									<th>{lang invitecode_expiration}</th>
+									<td>$maxinviteday</td>
+								</tr>
+							</table>
+						</div>
+						<div class="rfm">
+							<table cellpadding="0" cellspacing="0">
+								<tr>
+									<th>{lang trade_type}</th>
+									<td>
+										<!--{if $_G[setting][ec_ratio] && ($_G[setting][ec_tenpay_bargainor] || $_G[setting][ec_tenpay_opentrans_chnid])}-->
+											<div class="mbm pbn bbda cl">
+												<div id="div#tenpayBankList"></div><span id="#bank_type_value"></span>
+												<link rel="stylesheet" type="text/css" href="http://union.tenpay.com/bankList/css_col3.css" />
+												<script type="text/javascript">
+													$('div#tenpayBankList').html = function(){$('div#tenpayBankList').innerHTML = htmlString; };
+													$("#bank_type_value").val = function(){{if $_G[setting][card][open]}$('cardbox').style.display='none';if($('card_box_sec')){$('card_box_sec').style.display='none';}$('paybox').style.display='';{/if}};
+													appendscript('http://union.tenpay.com/bankList/bank.js', '');
+												</script>
+											</div>
+										<!--{/if}-->
+										<div class="long-logo mbw">
+											<ul>
+											<!--{if $_G[setting][ec_ratio] && $_G[setting][ec_account]}-->
+												<li class="z">
+													<input name="bank_type" type="radio" value="alipay" id="apitype_alipay" $ecchecked /><label style="width:135px;height:32px;background: #FFF url({STATICURL}image/common/alipay_logo.gif) no-repeat;border: 1px solid #DDD;vertical-align: middle;position: relative;display: inline-block;background-color: white;" for="apitype_alipay"></label>
+												</li>
+											<!--{/if}-->
+											</ul>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="rfm bw0">
+							<table cellpadding="0" cellspacing="0">
+								<tr>
+									<th>&nbsp;</th>
+									<td><button type="submit" name="buysubmit" class="pn pnc" value="true"><strong>{lang confirms}</strong></button></td>
+								</tr>
+							</table>
+						</div>
+						<script type="text/javascript">
+							function addamount() {
+								var amount = $('amount').value.replace(/^0/, '');
+								amount = parseInt(amount);
+								$('desamount').innerHTML = !isNaN(amount) ? amount * $_G['setting']['inviteconfig']['invitecodeprice'] : 0;
+							}
+						</script>
+						<!--{/if}-->
+					</form>
+					<span style="display: none" id="return_addfundsform"></span>
+				</div>
+			<!--{/if}-->
+			</div>
+		</div>
+	</div>
+</div>
+<!--{template common/footer}-->

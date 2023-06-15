@@ -1,0 +1,28 @@
+<!--{block return}-->
+<script type="text/javascript">
+var IMGDIR = '$_G[style][imgdir]';
+</script>
+<script type="text/javascript" src="{$_G[setting][jspath]}tree.js"></script>
+<style type="text/css">
+.tree { white-space: nowrap; padding-left: 0.4em; overflow-x: hidden; }
+	.tree img { border: 0px; vertical-align: middle; }
+	.tree .node a { text-decoration: none; }
+</style>
+
+<div class="sidebox">
+<script type="text/javascript">
+var tree = new dzTree('tree');
+tree.addNode(0, -1, '$_G[setting][bbname]', 'forum.php', 'main', true);
+<!--{loop $forumlist $forumdata}-->
+	<!--{if $forumdata['type'] == 'group'}-->
+		<!--{if $haschild[$forumdata['fid']]}-->
+			tree.addNode($forumdata[fid], $forumdata[fup], '$forumdata[name]', 'forum.php?mod=index&gid=$forumdata[fid]', '', false);
+		<!--{/if}-->
+	<!--{else}-->
+		tree.addNode($forumdata[fid], $forumdata[fup], '$forumdata[name]', 'forum.php?mod=forumdisplay&fid=$forumdata[fid]', '', false);
+	<!--{/if}-->
+<!--{/loop}-->
+tree.show();
+</script>
+</div>
+<!--{/block}-->

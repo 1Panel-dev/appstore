@@ -1,0 +1,100 @@
+<script id="tmpl_topic_item" type="text/html">
+    <i class="topicLogo fl db">
+        <img data-original="<% if(post.avatar) { %><%= post.avatar %><% } else { %><%= ucenterurl %>/avatar.php?uid=<%= post.authorid %>&size=small<% } %>" onerror="javascript:this.src=DATA_DIR+'/images/personImg.jpg'" class="tImg lazy" width="35" height="35" uid="<%= post.authorid %>" alt="头像">
+        <% if(post.avatarHtml) { %><%== post.avatarHtml %><% } %>
+    </i>
+    <h3><%= post.author %>
+        <% if(post.authorLv) { %><span class="gBg1 brSmall fb f8 c2">LV<%= post.authorLv %></span><% } %>
+        <% if(post.hook_author_info) { %>
+            <em><%== stripCode(post.hook_author_info) %></em>
+        <% } %>
+    </h3>
+    <p class="subTitle">
+        <span><%= post.dateline %></span>
+        <span class="perDate db view" tid="<%= thread.tid %>" pid="<%= post.pid %>" isfirst="1"<% if(post.status & 1) {%> ban="1"<%}%>>
+            <a href="javascript:;" class="incoA db"></a>
+        </span>
+    </p>
+    <span class="perPop" tid="<%= thread.tid %>" style="display:none"></span>
+    <a class="eidtInfo landlord db" href="javascript:;"><i class="incoV"></i>楼主</a>
+    <% include(thread.firstBody) %>
+</script>
+
+<script id="tmpl_thread_normal" type="text/html">
+    <div class="detailCon reading">
+        <h2>
+            <%== stripCode(thread.subject) %>
+            <% if(thread.replycredit > 0 || thread.rushreply == 1) { %>
+                <span class="db lh1">
+                <% if(thread.replycredit > 0) { %>
+                    <span class="f11 fn"><a href="javascript:;" class="showBtn br f11 c2 db">回帖奖励 <%= thread.replycredit %></a></span>
+                <% } %>
+                <% if(thread.rushreply == 1) { %>
+                    <span class="f11 fn c7">
+                        <a href="javascript:;" class="showBtn br f11 c2 db">抢楼帖</a>
+                        <% if(thread.rushresult['rewardfloor']) { %>
+                            奖励楼层 <%= thread.rushresult['rewardfloor'] %>
+                        <% } %>
+                    </span>
+                <% } %>
+                </span>
+            <% } %>
+        </h2>
+        <div id="msg_<%= post.pid %>">
+            <% if(post.hook_thread_top) { %>
+                <%== stripCode(post.hook_thread_top) %>
+            <% } %>
+            <% if(threadsortshow) { %>
+                <% include('tmpl_thread_threadsort') %>
+            <% } %>
+            <%== stripCode(post.message, 1) %>
+            <% if(post.hook_thread_bottom) { %>
+                <%== stripCode(post.hook_thread_bottom) %>
+            <% } %>
+        </div>
+        <% if( comments && comments.length > 0) { %>
+        <div class="replyPop">
+            <div class="replyBg brSmall pr commentBox" pid="<%= post.pid %>">
+                <div class="topicList">
+                    <ul>
+                        <% for(i = 0; i< comments.length; i++) { %>
+                            <li><a href="javascript:;" class="f13 c3"><span class="c7"><%==comments[i].author%><% if(comments[i].authorid == post.authorid) { %><i class="cardBtn br fn db c2">楼主</i><% } %>：</span><%==stripCode(comments[i].comment) %></a>
+                        </li>
+                        <% } %>
+                    </ul>
+                     <% if(commentCount > 5) { %>
+                        <a href="javascript:;" class="db f12 moreInReply viewcommentBtn" tid="<%= post.tid %>" pid="<%= post.pid %>">更多</a>
+                    <% } %>
+                </div>
+            </div>
+       </div>
+       <% } %>
+        <span class="replyShare db fr">
+            <a class="topicadminMsg" tid="<%= post.tid %>" pid="<%= post.pid %>"><% if(post.status & 1) {%>已屏蔽<%}%></a>
+            <% if (member_uid != "0"){%>
+                <a href="javascript:;" id="recommendBtn">
+                    <i class=<%=thread.recommend == 1 ? "praise" : "noPraise"%>></i>
+                    <span><%= thread.recommend_add == 0 ? "" : thread.recommend_add %></span>
+                </a>
+            <% } %>
+            <% if(fromwx) { %>
+                <a href="javascript:;" id="shareBtn"><i class="incoS"></i></a>
+            <% } %>
+            <a href="javascript:;" class="replyByPid" tid="<%= post.tid %>" pid="<%= post.pid %>" first="<%= post.first %>"><i class="incoR"></i><%= thread.replies == 0 ? "" : thread.replies %></a>
+        </span>
+        <% if(post.hook_post_bottom) { %>
+            <span class="fl tl"><%== stripCode(post.hook_post_bottom) %></span>
+        <% } %>
+    </div>
+</script>
+
+<script id="tmpl_thread_threadsort" type="text/html">
+    <h2><%== threadsortshow.threadsortname %></h2>
+    <ul class="threadsort">
+        <% for(var option in threadsortshow.optionlist) {%>
+            <li><%=threadsortshow.optionlist[option].title%>：
+            <span><% if(threadsortshow.optionlist[option].type == 'image') {%><%=threadsortshowImage(threadsortshow.optionlist[option].value, post.pid)%><% } else { %><%== stripCode(threadsortshow.optionlist[option].value)%><% } %></span>
+            </li>
+        <% } %>
+    </ul>
+</script>

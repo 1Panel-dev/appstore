@@ -1,0 +1,55 @@
+<!--{template common/header}-->
+
+{eval $loginhash = 'L'.random(4);}
+<p><a href="member.php?mod=logging&action=login">{lang login}</a></p>
+<p>
+	<select name="fastloginfield" id="fastloginfield_{$loginhash}" >
+		<option value="username">{lang username}</option>
+		<!--{if getglobal('setting/uidlogin')}-->
+		<option value="uid">UID</option>
+		<!--{/if}-->
+		<option value="email">Email</option>
+	</select><br/>
+	<input type="text" name="username" id="username_{$loginhash}" class="txt" />
+</p>
+<p>
+	{lang password}:<br/><input type="password" name="password" id="password3_$loginhash" class="txt" value='' />
+</p>
+<p>
+	<!--{if $seccodecheck}-->
+	<!--{subtemplate common/seccheck}-->
+	<!--{/if}-->
+</p>
+<p>
+	<select name="questionid" id="questionid_{$loginhash}" >
+	<option value="0">{lang security_question}</option>
+	<option value="1">{lang security_question_1}</option>
+	<option value="2">{lang security_question_2}</option>
+	<option value="3">{lang security_question_3}</option>
+	<option value="4">{lang security_question_4}</option>
+	<option value="5">{lang security_question_5}</option>
+	<option value="6">{lang security_question_6}</option>
+	<option value="7">{lang security_question_7}</option>
+	</select>
+	<input type="text" name="answer" id="answer_{$loginhash}" class="txt" />
+</p>
+
+<anchor title="{lang submit}">{lang submit}
+	<go method="post" href="member.php?mod=logging&action=login&loginsubmit=yes&loginhash=$loginhash&mobile=3">
+	<postfield name="fastloginfield" value="$(fastloginfield)" />
+	<postfield name="username" value="$(username)" />
+	<postfield name="password" value="$(password)" />
+	<postfield name="formhash" value="{FORMHASH}" />
+	<postfield name="questionid" value="$(questionid)" />
+	<postfield name="loginsubmit" value="1" />
+	<postfield name="answer" value="$(answer)" />
+	<postfield name="referer" id="referer" value="<!--{if dreferer()}-->{echo dreferer()}<!--{else}-->forum.php?mobile=3<!--{/if}-->" />
+	<!--{if $seccodecheck}-->
+	<postfield name="sechash" value="$(sechash)" />
+	<postfield name="secanswer" value="$(secanswer)" />
+	<postfield name="seccodeverify" value="$(seccodeverify)" />
+	<!--{/if}-->	
+	</go>
+</anchor>
+
+<!--{template common/footer}-->

@@ -1,0 +1,55 @@
+<!--{template common/header}-->
+
+<div class="bm">
+	<div class="bm_h">{lang pay_attachment}</div>
+    <form id="attachpayform" method="post" autocomplete="off" action="forum.php?mod=misc&action=attachpay&tid={$_G[tid]}&mobile=yes">
+            <input type="hidden" name="formhash" value="{FORMHASH}" />
+            <input type="hidden" name="referer" value="{echo dreferer()}" />
+            <input type="hidden" name="aid" value="$aid" />
+            <div class="bm_c">
+                <table cellspacing="5" cellpadding="5">
+                    <tr>
+                        <td>{lang author}</td>
+                        <td><a href="home.php?mod=space&uid=$attach[uid]">$attach[author]</a></td>
+                    </tr>
+                    <tr>
+                        <td>{lang attachment}</td>
+                        <td><div style="overflow:hidden">$attach[filename] <!--{if $attach['description']}-->($attach[description])<!--{/if}--></div></td>
+                    </tr>
+                    <tr>
+                        <td>{lang price}({$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][title]})</td>
+                        <td>$attach[price] {$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][unit]}</td>
+                    </tr>
+                    <!--{if $status != 1}-->
+                    <tr>
+                        <td>{lang pay_author_income}({$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][title]})</td>
+                        <td>$attach[netprice] {$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][unit]}</td>
+                    </tr>
+                    <tr>
+                        <td>{lang pay_balance}({$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][title]})</td>
+                        <td>$balance {$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][unit]}</td>
+                    </tr>
+                    <!--{/if}-->
+                    <!--{if $status == 1}-->
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>{lang status_insufficient}</td>
+                    </tr>
+                    <!--{elseif $status == 2}-->
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>{lang status_download}, <a href="forum.php?mod=attachment&aid=$aidencode" target="_blank">{lang download}</a></td>
+                    </tr>
+                    <!--{/if}-->
+                </table>
+            </div>
+            <div class="pd5">
+                <!--{if $status != 1}-->
+                    <label><input name="buyall" type="checkbox" value="yes" />{lang buy_all_attch}</label>
+                    <input type="submit" name="paysubmit" id="paysubmit" value="<!--{if $status == 0}-->{lang pay_attachment}<!--{else}-->{lang free_buy}<!--{/if}-->" />
+                <!--{/if}-->
+            </div>
+    </form>
+</div>
+
+<!--{template common/footer}-->

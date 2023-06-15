@@ -1,0 +1,24 @@
+<!--{template common/header}-->
+
+		<!--{template home/spacecp_header}-->
+		<!--{subtemplate home/spacecp_profile_nav}-->
+			<form method="post" autocomplete="off" action="home.php?mod=spacecp&ac=domain&op=">
+				<input type="hidden" name="formhash" value="{FORMHASH}" />
+				<!--{if !$space[domain] && $consume}--><p>{lang edit_domain_message}</p><!--{/if}-->
+				<div class="mtw bm bmn hm">
+					<p class="mtw mbn">
+						{$_G['scheme']}://<input type="text" name="domain" value="$space[domain]" size="20" class="px vm" />.{$_G[setting][domain][root][home]}
+						<input type="hidden" name="domainsubmit" value="true" />&nbsp;
+						<button type="submit" name="domainsubmitbtn" id="domainsubmitbtn" value="true" class="pn vm" /><em>{lang edit_domain}</em></button>
+					</p>
+					<p class="mbw">{lang space_domain_message}</p>
+				</div>
+				
+			</form>
+		</div>
+	</div>
+	<div class="appl">
+		<!--{subtemplate home/spacecp_footer}-->
+	</div>
+</div>
+<!--{template common/footer}-->

@@ -1,0 +1,58 @@
+<script id="tmpl_replyForm" type="text/html">
+	<div class="popLayer pSpace" style="width:100%;">
+		<form method="post" action="" id="replyForm">
+		<input type="hidden" name="formhash" value="" />
+		<input type="hidden" name="mobiletype" value="-1" />
+        <input type="file" style="opacity:0;position:absolute;top:-100px" id="uploadFile" accept="image/*" single="" />
+    	<div class="sendRCon">
+     	<textarea id="message" name="message" class="sInput f13" placeholder="说两句吧~"></textarea>
+        </div>
+        <div id="customHtml"></div>
+        </form>
+    </div>
+    <div class="sendNav">
+    	<ul>
+        	<li><a href="javascript:;" class="expreSelect iconExpression f21 db c9 commF"></a></li>
+            <li><a href="javascript:;" class="photoSelect iconSendImg f21 db c9 commF"></a></li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li><a href="javascript:;" class="cancelNewBtn brSmall f13 db fr c3">取消</a></li>
+            <li><a href="javascript:;" class="sendBtn brSmall f13 db c2">发送</a></li>
+        </ul>
+    </div>
+	<div class="photoList" style="display:none">
+		<ul>
+			<li class="on" id="addPic"></li>
+		</ul>
+		<p class="textTip">最多可上传8张图片</p>
+        <p id="uploadnotice" class="textTip"></p>
+	</div>
+    <div class="expreBox" style="display:none">
+        <div class="expressionTab pr"><div class="expressionMenu"></div></div>
+        <div class="expreList"></div>
+    </div>
+</script>
+
+<script id="tmpl_commentForm" type="text/html">
+	<div class="popLayer pSpace" style="width:100%;">
+		<form method="post" action="" id="replyForm">
+		<input type="hidden" name="formhash" value="" />
+		<input type="hidden" name="mobiletype" value="-1" />
+    	<div class="sendRCon">
+     	<textarea id="message" name="message" class="sInput f13" placeholder="说两句吧~"></textarea>
+        </div>
+        <div id="customHtml"></div>
+        </form>
+    </div>
+    <div class="sendNav">
+    	<ul>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li><a href="javascript:;" class="cancelNewBtn brSmall f13 db fr c3">取消</a></li>
+            <li><a href="javascript:;" class="sendBtn brSmall f13 db c2">发送</a></li>
+        </ul>
+    </div>
+</script>
+

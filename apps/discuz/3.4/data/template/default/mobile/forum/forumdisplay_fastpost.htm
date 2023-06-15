@@ -1,0 +1,20 @@
+<div class="mtn editor_box">
+  <form method="post" autocomplete="off" id="fastpostform" action="forum.php?mod=post&action=reply&fid=$_G[fid]&tid=$_G[tid]&extra=$_GET[extra]&replysubmit=yes&mobile=yes">
+   	  <input type="hidden" name="formhash" value="{FORMHASH}" />
+      <!--{if $_G[forum_thread][special] == 5 && empty($firststand)}-->
+        <div class="inbox">
+        <select id="stand" name="stand" >
+            <option value="">{lang debate_viewpoint}</option>
+            <option value="0">{lang debate_neutral}</option>
+            <option value="1">{lang debate_square}</option>
+            <option value="2">{lang debate_opponent}</option>
+        </select>
+      </div>
+      <!--{/if}-->
+      <div class="inbox"><textarea name="message" id="fastpostmessage" cols="25" rows="3" class="txt"></textarea></div>
+      <!--{if $secqaacheck || $seccodecheck}-->
+      <div class="inbox"><!--{subtemplate common/seccheck}--></div>
+      <!--{/if}-->
+      <div class="inbox"><input type="submit" name="replysubmit" id="fastpostsubmit" value="{lang reply}" /></div>
+    </form>
+</div>

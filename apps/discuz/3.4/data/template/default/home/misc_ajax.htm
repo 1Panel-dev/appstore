@@ -1,0 +1,57 @@
+<!--{template common/header}-->
+
+<!--{if $op == 'comment'}-->
+
+	<!--{loop $list $k $value}-->
+		<!--{template home/space_comment_li}-->
+	<!--{/loop}-->
+
+<!--{elseif $op == 'getfriendgroup'}-->
+	$group
+<!--{elseif $op == 'getfriendname'}-->
+	$groupname
+
+<!--{elseif $op == 'share'}-->
+
+	<!--{loop $list $value}-->
+		<!--{template home/space_share_li}-->
+	<!--{/loop}-->
+
+<!--{elseif $op == 'album'}-->
+
+	<table cellspacing="0" cellpadding="0" width="100%" class="imgl">
+		<tr>
+			<!--{eval $i = 0;}-->
+			<!--{loop $piclist $key $value}-->
+			<!--{eval $i++;}-->
+			<td valign="bottom" id="image_td_$value[picid]" width="20%"><img src="$value[pic]" alt="" width="90" onclick="insertImage('$value[bigpic]');" class="cur1" /></td>
+			<!--{if ($key+1)%5==0 && count($piclist) != $key+1}--></tr><tr><!--{/if}-->
+			<!--{/loop}-->
+			<!--{if ($imgpad = $i % 5) > 0}--><!--{echo str_repeat('<td></td>', 5 - $imgpad);}--><!--{/if}-->
+		</tr>
+	</table>
+	<!--{if $multi}--><div class="pgs cl mtm">$multi</div><!--{/if}-->
+
+<!--{elseif $op == 'getreward'}-->
+	<!--{if $rule[credit] || $rule[experience]}-->
+	<div class="popupmenu_layer">
+			<p>$rule[rulename]</p>
+			<p class="btn_line">
+				<!--{if $rule[credit]}-->{lang credits} <strong>+$rule[credit]</strong> <!--{/if}-->
+				<!--{if $rule[experience]}-->{lang experience} <strong>+$rule[experience]</strong> <!--{/if}-->
+			</p>
+			<!--{if $rule[cyclenum]}-->
+			<p>
+				{lang you_chance_pre_week}
+			</p>
+			<!--{/if}-->
+	</div>
+	<!--{/if}-->
+
+<!--{elseif $op == 'district'}-->
+$html
+<!--{elseif $op == 'createalbum'}-->
+$albumid
+<!--{/if}-->
+
+<!--{template common/footer}-->

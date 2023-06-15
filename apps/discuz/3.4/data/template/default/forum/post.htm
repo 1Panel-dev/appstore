@@ -1,0 +1,428 @@
+<!--{template common/header}-->
+
+<script type="text/javascript">
+	var allowpostattach = parseInt('{$_G['group']['allowpostattach']}');
+	var allowpostimg = parseInt('$allowpostimg');
+	var pid = parseInt('$pid');
+	var tid = parseInt('$_G[tid]');
+	var extensions = '{$_G['group']['attachextensions']}';
+	var imgexts = '$imgexts';
+	var postminchars = parseInt('$_G['setting']['minpostsize']');
+	var postmaxchars = parseInt('$_G['setting']['maxpostsize']');
+	var disablepostctrl = parseInt('{$_G['group']['disablepostctrl']}');
+	var seccodecheck = parseInt('<!--{if $seccodecheck}-->1<!--{else}-->0<!--{/if}-->');
+	var secqaacheck = parseInt('<!--{if $secqaacheck}-->1<!--{else}-->0<!--{/if}-->');
+	var typerequired = parseInt('{$_G[forum][threadtypes][required]}');
+	var sortrequired = parseInt('{$_G[forum][threadsorts][required]}');
+	var special = parseInt('$special');
+	var isfirstpost = <!--{if $isfirstpost}-->1<!--{else}-->0<!--{/if}-->;
+	var allowposttrade = parseInt('{$_G['group']['allowposttrade']}');
+	var allowpostreward = parseInt('{$_G['group']['allowpostreward']}');
+	var allowpostactivity = parseInt('{$_G['group']['allowpostactivity']}');
+	var sortid = parseInt('$sortid');
+	var special = parseInt('$special');
+	var fid = $_G['fid'];
+	var postaction = '{$_GET['action']}';
+	var ispicstyleforum = <!--{if $_G['forum']['picstyle']}-->1<!--{else}-->0<!--{/if}-->;
+</script>
+
+<!--{if $_GET[action] == 'edit'}--><!--{eval $editor[value] = $postinfo[message];}--><!--{else}--><!--{eval $editor[value] = $message;}--><!--{/if}-->
+<script type="text/javascript" src="{$_G['setting']['jspath']}forum_post.js?{VERHASH}"></script>
+
+<!--{if $isfirstpost && $sortid}-->
+	<script type="text/javascript">
+		var forum_optionlist = <!--{if $forum_optionlist}-->'$forum_optionlist'<!--{else}-->''<!--{/if}-->;
+	</script>
+	<script type="text/javascript" src="{$_G['setting']['jspath']}threadsort.js?{VERHASH}"></script>
+<!--{/if}-->
+
+<!--{block actiontitle}-->
+	<!--{if $_GET['action'] == 'newthread'}-->
+		<!--{if $special == 0}-->{lang post_newthread}
+		<!--{elseif $special == 1}-->{lang post_newthreadpoll}
+		<!--{elseif $special == 2}-->{lang post_newthreadtrade}
+		<!--{elseif $special == 3}-->{lang post_newthreadreward}
+		<!--{elseif $special == 4}-->{lang post_newthreadactivity}
+		<!--{elseif $special == 5}-->{lang post_newthreaddebate}
+		<!--{elseif $specialextra}-->{$_G['setting']['threadplugins'][$specialextra][name]}
+		<!--{/if}-->
+	<!--{elseif $_GET['action'] == 'reply' && !empty($_GET['addtrade'])}-->
+		{lang trade_add_post}
+	<!--{elseif $_GET['action'] == 'reply'}-->
+		{lang join_thread}
+	<!--{elseif $_GET['action'] == 'edit'}-->
+		<!--{if $special == 2}-->{lang edit_trade}<!--{else}-->{lang edit_thread}<!--{/if}-->
+	<!--{/if}-->
+<!--{/block}-->
+
+<!--{block icon}-->
+	<!--{if $special == 1}-->poll
+	<!--{elseif $special == 2}-->trade
+	<!--{elseif $special == 3}-->reward
+	<!--{elseif $special == 4}-->activity
+	<!--{elseif $special == 5}-->debate
+	<!--{elseif $isfirstpost && $sortid}-->sort
+	<!--{/if}-->
+<!--{/block}-->
+
+<!--{if $_GET['action'] != 'newthread'}-->
+	<!--{eval $subjectcut = cutstr($thread[subject], 30);}-->
+<!--{/if}-->
+<!--{block actionsubject}-->
+	<!--{if $_GET['action'] == 'reply'}-->
+		<em>&rsaquo;</em><a href="forum.php?mod=viewthread&tid=$thread[tid]">$subjectcut</a>
+	<!--{elseif $_GET['action'] == 'edit'}-->
+		<em>&rsaquo;</em><a href="forum.php?mod=redirect&goto=findpost&ptid=$thread[tid]&pid=$pid">$subjectcut</a>
+	<!--{/if}-->
+<!--{/block}-->
+
+<div id="pt" class="bm cl">
+	<div class="z"><a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> $navigation$actionsubject <em>&rsaquo;</em> $actiontitle</div>
+</div>
+
+<!--{eval $adveditor = $isfirstpost && $special || $special == 2 && ($_GET['action'] == 'newthread' || $_GET['action'] == 'reply' && !empty($_GET['addtrade']) || $_GET['action'] == 'edit' && $thread['special'] == 2);}-->
+<!--{eval $advmore = !$showthreadsorts && !$special || $_GET['action'] == 'reply' && empty($_GET['addtrade']) || $_GET['action'] == 'edit' && !$isfirstpost && ($thread['special'] == 2 && !$special || $thread['special'] != 2);}-->
+<form method="post" autocomplete="off" id="postform"
+	{if $_GET[action] == 'newthread'}action="forum.php?mod=post&action={if $special != 2}newthread{else}newtrade{/if}&fid=$_G[fid]&extra=$extra&topicsubmit=yes"
+	{elseif $_GET[action] == 'reply'}action="forum.php?mod=post&action=reply&fid=$_G[fid]&tid=$_G[tid]&extra=$extra&replysubmit=yes"
+	{elseif $_GET[action] == 'edit'}action="forum.php?mod=post&action=edit&extra=$extra&editsubmit=yes" $enctype
+	{/if}
+	onsubmit="return validate(this)">
+<div id="ct" class="ct2_a ct2_a_r wp cl">
+	<input type="hidden" name="formhash" id="formhash" value="{FORMHASH}" />
+	<input type="hidden" name="posttime" id="posttime" value="{TIMESTAMP}" />
+	<!--{if $_GET['action'] == 'edit'}-->
+		<input type="hidden" name="delattachop" id="delattachop" value="0" />
+	<!--{/if}-->
+	<!--{if !empty($_GET['modthreadkey'])}--><input type="hidden" name="modthreadkey" id="modthreadkey" value="$_GET['modthreadkey']" /><!--{/if}-->
+	<input type="hidden" name="wysiwyg" id="{$editorid}_mode" value="$editormode" />
+	<!--{if $_GET[action] == 'reply'}-->
+		<input type="hidden" name="noticeauthor" value="$noticeauthor" />
+		<input type="hidden" name="noticetrimstr" value="$noticetrimstr" />
+		<input type="hidden" name="noticeauthormsg" value="$noticeauthormsg" />
+		<!--{if $reppid}-->
+			<input type="hidden" name="reppid" value="$reppid" />
+		<!--{/if}-->
+		<!--{if $_GET[reppost]}-->
+			<input type="hidden" name="reppost" value="$_GET[reppost]" />
+		<!--{elseif $_GET[repquote]}-->
+			<input type="hidden" name="reppost" value="$_GET[repquote]" />
+		<!--{/if}-->
+	<!--{/if}-->
+	<!--{if $_GET[action] == 'edit'}-->
+		<input type="hidden" name="fid" id="fid" value="$_G[fid]" />
+		<input type="hidden" name="tid" value="$_G[tid]" />
+		<input type="hidden" name="pid" value="$pid" />
+		<input type="hidden" name="page" value="$_GET[page]" />
+	<!--{/if}-->
+	<!--{if $special}-->
+		<input type="hidden" name="special" value="$special" />
+	<!--{/if}-->
+	<!--{if $specialextra}-->
+		<input type="hidden" name="specialextra" value="$specialextra" />
+	<!--{/if}-->
+	<div class="bm bw0 cl"{if !$showthreadsorts && !$adveditor} id="editorbox"{/if}>
+		<!--{if $_GET[action] == 'newthread'}-->
+			<ul class="tb cl mbw">
+				<!--{if $savecount}-->
+					<li class="y"><a id="draftlist" href="javascript:;" class="xi2" onmouseover="showMenu({'ctrlid':'draftlist','ctrlclass':'a','duration':2,'pos':'34'})">{lang draftbox}(<strong>$savecount</strong>)</a></li>
+				<!--{/if}-->
+				<!--{if !$_G['forum']['threadsorts']['required'] && !$_G['forum']['allowspecialonly']}--><li$postspecialcheck[0]><a href="javascript:;" onclick="switchpost('forum.php?mod=post&action=newthread')">{lang post_newthread}</a></li><!--{/if}-->
+				<!--{loop $_G['forum']['threadsorts'][types] $tsortid $name}-->
+					<li{if $sortid == $tsortid} class="a"{/if}><a href="javascript:;" onclick="switchpost('forum.php?mod=post&action=newthread&sortid=$tsortid')"><!--{echo strip_tags($name);}--></a></li>
+				<!--{/loop}-->
+				<!--{if $_G['group']['allowpostpoll']}--><li$postspecialcheck[1]><a href="javascript:;" onclick="switchpost('forum.php?mod=post&action=newthread&special=1')">{lang post_newthreadpoll}</a></li><!--{/if}-->
+				<!--{if $_G['group']['allowpostreward']}--><li$postspecialcheck[3]><a href="javascript:;" onclick="switchpost('forum.php?mod=post&action=newthread&special=3')">{lang post_newthreadreward}</a></li><!--{/if}-->
+				<!--{if $_G['group']['allowpostdebate']}--><li$postspecialcheck[5]><a href="javascript:;" onclick="switchpost('forum.php?mod=post&action=newthread&special=5')">{lang post_newthreaddebate}</a></li><!--{/if}-->
+				<!--{if $_G['group']['allowpostactivity']}--><li$postspecialcheck[4]><a href="javascript:;" onclick="switchpost('forum.php?mod=post&action=newthread&special=4')">{lang post_newthreadactivity}</a></li><!--{/if}-->
+				<!--{if $_G['group']['allowposttrade']}--><li$postspecialcheck[2]><a href="javascript:;" onclick="switchpost('forum.php?mod=post&action=newthread&special=2')">{lang post_newthreadtrade}</a></li><!--{/if}-->
+				<!--{if $_G['setting']['threadplugins']}-->
+					<!--{loop $_G['forum']['threadplugin'] $tpid}-->
+						<!--{if array_key_exists($tpid, $_G['setting']['threadplugins']) && @in_array($tpid, $_G['group']['allowthreadplugin'])}-->
+							<li{if $specialextra==$tpid} class="a"{/if}><a href="javascript:;" onclick="switchpost('forum.php?mod=post&action=newthread&specialextra=$tpid')">{$_G[setting][threadplugins][$tpid][name]}</a></li>
+						<!--{/if}-->
+					<!--{/loop}-->
+				<!--{/if}-->
+			</ul>
+
+			<div id="draftlist_menu" style="display:none">
+				<ul class="xl xl1">
+					<!--{if $savethreads}-->
+						<!--{loop $savethreads $savethread}-->
+							<li>
+								<label>[<a href="javascript:;" title="{lang reply_quote}" onclick="insertsave($savethread[pid])">{lang reply_quote}</a>]</label>
+								<a href="forum.php?mod=post&action=edit&fid=$savethread[fid]&tid=$savethread[tid]&pid=$savethread[pid]" class="xi2" target="_blank">$savethread[subject]</a>
+								<span class="xg1">$savethread[dateline]</span>
+							</li>
+						<!--{/loop}-->
+					<!--{/if}-->
+
+					<!--{if $savethreadothers}-->
+						<!--{loop $savethreadothers $savethread}-->
+							<li>
+								<label>[<a href="javascript:;" title="{lang reply_quote}" onclick="insertsave($savethread[pid])">{lang reply_quote}</a>]</label>
+								<a href="forum.php?mod=post&action=edit&fid=$savethread[fid]&tid=$savethread[tid]&pid=$savethread[pid]" class="xi2" target="_blank">$savethread[subject]</a>
+								<span class="xg1">$savethread[dateline]</span>
+							</li>
+						<!--{/loop}-->
+					<!--{/if}-->
+					<li class="xi2"><a href="forum.php?mod=guide&view=my&type=thread&filter=save&fid=0" target="_blank">{lang post_message3}</a></li>
+				</ul>
+			</div>
+
+		<!--{elseif $_GET[action] == 'edit' && $isfirstpost && !$thread['sortid']}-->
+			<ul class="tb cl mbw">
+				<li{if !$sortid} class="a"{/if}><a href="javascript:;" onclick="switchpost('forum.php?mod=post&action=edit&tid=$_G[tid]&pid=$pid')">$actiontitle</a></li>
+				<!--{if $_GET[action] == 'edit' && $isfirstpost && !$thread['sortid']}-->
+					<!--{loop $_G['forum']['threadsorts'][types] $tsortid $name}-->
+						<li{if $sortid == $tsortid} class="a"{/if}><a href="javascript:;" onclick="switchpost('forum.php?mod=post&action=edit&tid=$_G[tid]&pid=$pid&sortid=$tsortid')"><!--{echo strip_tags($name);}--></a></li>
+					<!--{/loop}-->
+				<!--{/if}-->
+			</ul>
+		<!--{/if}-->
+
+		<div id="postbox">
+			<!--{if $_GET[action] == 'newthread' && $_G['setting']['sitemessage'][newthread] || $_GET[action] == 'reply' && $_G['setting']['sitemessage'][reply]}-->
+				<span id="custominfo" class="y cur1{if $_GET[action] != 'reply'} mtn{/if}">&nbsp;<img src="{IMGDIR}/info_small.gif" alt="{lang faq}" /></span>
+			<!--{/if}-->
+			<!--{hook/post_top}-->
+
+			<!--{subtemplate forum/post_editor_extra}-->
+
+			<!--{subtemplate forum/post_editor_body}-->
+
+			<!--{hook/post_middle}-->
+
+			<!--{subtemplate forum/post_editor_attribute}-->
+
+			<!--{if $_GET[action] != 'edit'}-->
+				<div id="seccheck">
+					<!--{if $secqaacheck || $seccodecheck}-->
+						<!--{subtemplate forum/seccheck_post}-->
+					<!--{/if}-->
+				</div>
+			<!--{/if}-->
+
+			<div class="mtm mbm pnpost">
+				<a href="home.php?mod=spacecp&ac=credit&op=rule&fid=$_G['fid']" class="y" target="_blank">{lang post_credits_rule}</a>
+				<button type="submit" id="postsubmit" class="pn pnc" value="true" name="{if $_GET[action] == 'newthread'}topicsubmit{elseif $_GET[action] == 'reply'}replysubmit{elseif $_GET[action] == 'edit'}editsubmit{/if}">
+				<!--{if $_GET[action] == 'newthread'}-->
+					<!--{if $special == 0}--><span>{lang post_newthread}</span>
+					<!--{elseif $special == 1}--><span>{lang post_newthreadpoll}</span>
+					<!--{elseif $special == 2}--><span>{lang post_newthreadtrade}</span>
+					<!--{elseif $special == 3}--><span>{lang post_newthreadreward}</span>
+					<!--{elseif $special == 4}--><span>{lang post_newthreadactivity}</span>
+					<!--{elseif $special == 5}--><span>{lang post_newthreaddebate}</span>
+					<!--{elseif $special == 127}-->
+						<span><!--{if $buttontext}-->$buttontext<!--{else}-->{lang post_newthread}<!--{/if}--></span>
+					<!--{/if}-->
+				<!--{elseif $_GET[action] == 'reply' && !empty($_GET['addtrade'])}--><span>{lang trade_add_post}</span>
+				<!--{elseif $_GET[action] == 'reply'}--><span>{lang join_thread}</span>
+				<!--{elseif $_GET[action] == 'edit' && $isfirstpost && $thread['displayorder'] == -4}-->
+					<span>{lang post_newthread}</span>
+				<!--{elseif $_GET[action] == 'edit'}--><span>{lang edit_save}</span>
+				<!--{/if}-->
+				</button>
+				<!--{if $_G['uid']}-->
+					<input type="hidden" id="postsave" name="save" value="" />
+					<!--{if $_GET[action] == 'newthread' && !$modnewthreads || $_GET[action] == 'edit' && $isfirstpost && !$modnewreplies && $thread['displayorder'] == -4}-->
+						<button type="button" id="postsubmit" class="pn" value="true" onclick="$('postsave').value = 1;$('postsubmit').click();"><em>{lang save_draft}</em></button>
+					<!--{/if}-->
+				<!--{/if}-->
+				<!--{hook/post_btn_extra}-->
+				<!--{if helper_access::check_module('follow') && $_GET[action] != 'edit'}-->
+				<span id="adddynamicspan"><label><input type="checkbox" name="adddynamic" id="adddynamic" value="true" class="pc" {if $_G['forum']['allowfeed'] && !$_G[tid] && empty($_G['forum']['viewperm'])}checked="checked"{/if} />{lang post_relay}</label></span>
+				<!--{/if}-->
+				<!--{if !empty($_G['setting']['pluginhooks']['post_sync_method'])}-->
+					<span>
+						{lang post_sync_method}:
+						<!--{hook/post_sync_method}-->
+					</span>
+				<!--{/if}-->
+				<!--{if $special == 2}-->
+					<label><input type="checkbox" name="continueadd" value="yes" class="pc" />{lang post_message2}</label>
+				<!--{/if}-->
+				<!--{if helper_access::check_module('group') && $mygroups && $_G['forum']['status'] != 3}-->
+				<span id="adddynamicspan"><label>&nbsp;&nbsp;{lang fromgroup}:<select name="mygroupid"><option value="">{lang selectmygroup}</option><!--{loop $mygroups $mygroupid $mygroupname}--><option value="{$mygroupid}__{$mygroupname}" {if $selectgroupid == $mygroupid} selected{/if}>$mygroupname</option><!--{/loop}--></select></label></span>
+				<!--{/if}-->
+			</div>
+
+			<!--{hook/post_bottom}-->
+		</div>
+	</div>
+</div>
+</form>
+<iframe name="ajaxpostframe" id="ajaxpostframe" style="display: none;"></iframe>
+
+<div id="{$editorid}_menus" class="editorrow" style="overflow: hidden; margin-top: -5px; height: 0; border: none; background: transparent;">
+	<!--{subtemplate common/editor_menu}-->
+	<!--{subtemplate forum/editor_menu_forum}-->
+</div>
+
+<!--{if $special || ($_G['group']['allowsetpublishdate'] && ($_GET[action] == 'newthread' || ($_GET[action] == 'edit' && $isfirstpost && $thread['displayorder'] == -4))) || ($_GET[action] == 'newthread' && $_G['group']['allowpostrushreply'] && $special != 2) || ($_GET[action] == 'edit' && getstatus($thread['status'], 3))}-->
+	<script type="text/javascript" src="{$_G['setting']['jspath']}calendar.js?{VERHASH}"></script>
+<!--{/if}-->
+
+<!--{if $allowuploadtoday || $special == 1}-->
+	<!--{if empty($_G['setting']['pluginhooks']['post_upload_extend'])}-->
+		<!--{subtemplate common/upload}-->
+		<script type="text/javascript">
+		<!--{if $allowpostimg}-->
+			var imgUpload = new SWFUpload({
+				upload_url: "{$_G[siteurl]}misc.php?mod=swfupload&action=swfupload&operation=upload&fid=$_G[fid]",
+				post_params: {"uid" : "$_G[uid]", "hash":"$swfconfig[hash]", "type":"image"},
+				file_size_limit : "$swfconfig[max]",
+				file_types : "$swfconfig[imageexts][ext]",
+				file_types_description : "$swfconfig[imageexts][depict]",
+				file_upload_limit : $swfconfig['limit'],
+				file_queue_limit : 0,
+				swfupload_preload_handler : preLoad,
+				swfupload_load_failed_handler : loadFailed,
+				file_dialog_start_handler : fileDialogStart,
+				file_queued_handler : fileQueued,
+				file_queue_error_handler : fileQueueError,
+				file_dialog_complete_handler : fileDialogComplete,
+				upload_start_handler : uploadStart,
+				upload_progress_handler : uploadProgress,
+				upload_error_handler : uploadError,
+				upload_success_handler : uploadSuccess,
+				upload_complete_handler : uploadComplete,
+				button_image_url : "{IMGDIR}/uploadbutton.png",
+				button_placeholder_id : "imgSpanButtonPlaceholder",
+				button_width: 100,
+				button_height: 25,
+				button_cursor:SWFUpload.CURSOR.HAND,
+				button_window_mode: "transparent",
+				custom_settings : {
+					progressTarget : "imgUploadProgress",
+					uploadSource: 'forum',
+					uploadType: 'image',
+					imgBoxObj: $('imgattachlist'),
+					<!--{if $swfconfig['maxsizeperday']}-->
+					maxSizePerDay: $swfconfig['maxsizeperday'],
+					<!--{/if}-->
+					<!--{if $swfconfig['maxattachnum']}-->
+					maxAttachNum: $swfconfig['maxattachnum'],
+					<!--{/if}-->
+					<!--{if $swfconfig['filtertype']}-->
+					filterType: $swfconfig['filtertype'],
+					<!--{/if}-->
+					singleUpload: $('{$editorid}_btn_local')
+				},
+				debug: false
+			});
+		<!--{/if}-->
+		<!--{if $_G['group']['allowpostattach']}-->
+			var upload = new SWFUpload({
+				upload_url: "{$_G[siteurl]}misc.php?mod=swfupload&action=swfupload&operation=upload&fid=$_G[fid]",
+				post_params: {"uid":"$_G[uid]", "hash":"$swfconfig[hash]"},
+				file_size_limit : "$swfconfig[max]",
+				file_types : "$swfconfig[attachexts][ext]",
+				file_types_description : "$swfconfig[attachexts][depict]",
+				file_upload_limit : $swfconfig['limit'],
+				file_queue_limit : 0,
+				swfupload_preload_handler : preLoad,
+				swfupload_load_failed_handler : loadFailed,
+				file_dialog_start_handler : fileDialogStart,
+				file_queued_handler : fileQueued,
+				file_queue_error_handler : fileQueueError,
+				file_dialog_complete_handler : fileDialogComplete,
+				upload_start_handler : uploadStart,
+				upload_progress_handler : uploadProgress,
+				upload_error_handler : uploadError,
+				upload_success_handler : uploadSuccess,
+				upload_complete_handler : uploadComplete,
+				button_image_url : "{IMGDIR}/uploadbutton.png",
+				button_placeholder_id : "spanButtonPlaceholder",
+				button_width: 100,
+				button_height: 25,
+				button_cursor:SWFUpload.CURSOR.HAND,
+				button_window_mode: "transparent",
+				custom_settings : {
+					progressTarget : "fsUploadProgress",
+					uploadSource: 'forum',
+					uploadType: 'attach',
+					<!--{if $swfconfig['maxsizeperday']}-->
+					maxSizePerDay: $swfconfig['maxsizeperday'],
+					<!--{/if}-->
+					<!--{if $swfconfig['maxattachnum']}-->
+					maxAttachNum: $swfconfig['maxattachnum'],
+					<!--{/if}-->
+					<!--{if $swfconfig['filtertype']}-->
+					filterType: $swfconfig['filtertype'],
+					<!--{/if}-->
+					singleUpload: $('{$editorid}_btn_upload')
+				},
+
+				debug: false
+			});
+		<!--{/if}-->
+		</script>
+	<!--{else}-->
+		<!--{hook/post_upload_extend}-->
+	<!--{/if}-->
+<!--{/if}-->
+
+<script type="text/javascript">
+	var editorsubmit = $('postsubmit');
+	var editorform = $('postform');
+	<!--{if $isfirstpost && !empty($_G[forum][threadtypes][types])}-->
+		simulateSelect('typeid');
+	<!--{/if}-->
+	<!--{if !$isfirstpost && $thread['special'] == 5 && empty($firststand) && $_GET[action] != 'edit'}-->
+		simulateSelect('stand');
+	<!--{/if}-->
+	function switchpost(href) {
+		editchange = false;
+		saveData(1);
+		location.href = href + '&fid=$_G[fid]&cedit=yes<!--{if !empty($_G[tid])}-->&tid=$_G[tid]<!--{/if}--><!--{if !empty($modelid)}-->&modelid=$modelid<!--{/if}-->&extra=$extra';
+		doane();
+	}
+
+	<!--{if $_GET[action] == 'newthread' && $_G['setting']['sitemessage'][newthread] || $_GET[action] == 'reply' && $_G['setting']['sitemessage'][reply]}-->
+		showPrompt('custominfo', 'mouseover', '<!--{if $_GET[action] == 'newthread'}--><!--{echo trim($_G['setting']['sitemessage'][newthread][array_rand($_G['setting']['sitemessage'][newthread])])}--><!--{elseif $_GET[action] == 'reply'}--><!--{echo trim($_G['setting']['sitemessage'][reply][array_rand($_G['setting']['sitemessage'][reply])])}--><!--{/if}-->', $_G['setting']['sitemessage'][time]);
+	<!--{/if}-->
+	<!--{if $_G['group']['allowpostattach']}-->addAttach();<!--{/if}-->
+	<!--{if $allowpostimg}-->addAttach('img');<!--{/if}-->
+
+	(function () {
+		var oSubjectbox = $('subjectbox'),
+			oSubject = $('subject'),
+			oTextarea = $('e_textarea'),
+			sLen = 0;
+		if(oSubjectbox) {
+			if(oTextarea && oTextarea.style.display == '') {
+				oTextarea.focus();
+			}
+		} else if(oSubject) {
+			if(BROWSER.chrome) {
+				sLen = oSubject.value.length;
+				oSubject.setSelectionRange(sLen, sLen);
+			}
+			oSubject.focus();
+		}
+	})();
+
+	<!--{if empty($_GET['cedit'])}-->
+		if(loadUserdata('forum_'+discuz_uid)) {
+			$('rstnotice').style.display = '';
+		}
+	<!--{/if}-->
+	<!--{if !empty($userextcredit)}-->
+		var have_replycredit = 0;
+		var creditstax = $_G['setting']['creditstax'];
+		var replycredit_result_lang = "{lang replycredit_revenue}{$_G['setting']['extcredits'][$extcreditstype][title]} ";
+		var userextcredit = $userextcredit;
+		<!--{if $thread['replycredit'] > 0}-->
+			have_replycredit = {$thread['replycredit']};
+		<!--{/if}-->
+	<!--{/if}-->
+	<!--{if $_GET[action] == 'edit'}-->
+		extraCheckall();
+	<!--{/if}-->
+</script>
+<!--{if ($_GET['action'] == 'newthread' || $_GET['action'] == 'reply' || $_GET['action'] == 'edit') && $_G['group']['allowat']}-->
+<script type="text/javascript" src="{$_G['setting']['jspath']}at.js?{VERHASH}"></script>
+<!--{/if}-->
+
+<!--{template common/footer}-->

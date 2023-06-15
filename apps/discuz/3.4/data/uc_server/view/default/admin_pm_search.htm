@@ -1,0 +1,94 @@
+{template header}
+
+<script src="js/common.js" type="text/javascript"></script>
+<script src="js/calendar.js" type="text/javascript"></script>
+
+<div class="container">
+	<div class="hastabmenu" style="height: 200px;">
+		<ul class="tabmenu">
+			<li class="tabcurrent"><a href="javascript:;" class="tabcurrent">{lang pm_search}</a></li>
+			<li><a href="admin.php?m=pm&a=clear">{lang pm_clear}</a></li>
+		</ul>
+		<div id="searchpmdiv" class="tabcontentcur">
+			<form action="admin.php?m=pm&a=ls" method="post">
+				<input type="hidden" name="formhash" value="{FORMHASH}">
+				<table class="dbtb">
+					<tr>
+						<th class="tbtitle">{lang pm_auhtor}:</th>
+						<td><input type="text" name="srchauthor" class="txt" value="$srchauthor" /></td>
+					</tr>
+					<tr>
+						<th class="tbtitle">{lang pm_message}:</th>
+						<td><input type="text" name="srchmessage" class="txt" value="$srchmessage" /></td>
+					</tr>
+					<tr>
+						<th class="tbtitle">{lang pm_dateline}:</th>
+						<td><input type="text" name="srchstarttime" class="txt" style="margin-right: 0;" value="$srchstarttime" onclick="showcalendar();" /> - <input type="text" name="srchendtime" class="txt" value="$srchendtime" onclick="showcalendar();" /></td>
+					</tr>
+					<tr>
+						<th class="tbtitle">{lang pm_whichtable}:</th>
+						<td>
+							<select name="srchtablename">
+								<option value="0"{if $srchtablename === 0} selected="selected"{/if}>pm_messages_0</option>
+								<option value="1"{if $srchtablename == 1} selected="selected"{/if}>pm_messages_1</option>
+								<option value="2"{if $srchtablename == 2} selected="selected"{/if}>pm_messages_2</option>
+								<option value="3"{if $srchtablename == 3} selected="selected"{/if}>pm_messages_3</option>
+								<option value="4"{if $srchtablename == 4} selected="selected"{/if}>pm_messages_4</option>
+								<option value="5"{if $srchtablename == 5} selected="selected"{/if}>pm_messages_5</option>
+								<option value="6"{if $srchtablename == 6} selected="selected"{/if}>pm_messages_6</option>
+								<option value="7"{if $srchtablename == 7} selected="selected"{/if}>pm_messages_7</option>
+								<option value="8"{if $srchtablename == 8} selected="selected"{/if}>pm_messages_8</option>
+								<option value="9"{if $srchtablename == 9} selected="selected"{/if}>pm_messages_9</option>
+							</select>
+							 {lang clearpm_totalnum}: $pmnum
+						</td>
+					</tr>
+					<tr>
+						<th></th>
+						<td><input type="submit" value="{lang submit}" class="btn" name="searchpmsubmit" /></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+
+	<h3>{lang pm_list}</h3>
+	<div class="mainbox">
+		<!--{if $pmlist}-->
+			<form action="admin.php?m=pm&a=delete" onsubmit="return confirm('{lang pm_delete_confirm}');" method="post">
+			<input type="hidden" name="formhash" value="{FORMHASH}">
+			<input type="hidden" name="srchtablename" value="$srchtablename">
+			<input type="hidden" name="srchauthor" value="$srchauthor">
+			<input type="hidden" name="srchstarttime" value="$srchstarttime">
+			<input type="hidden" name="srchendtime" value="$srchendtime">
+			<input type="hidden" name="srchmessage" value="$srchmessage">
+			<table class="datalist fixwidth" onmouseover="addMouseEvent(this);">
+				<tr>
+					<th width="60"><input type="checkbox" name="chkall" id="chkall" onclick="checkall('deletepmid[]')" class="checkbox" /><label for="chkall">{lang delete}</label></th>
+					<th width="150">{lang pm_author}</th>
+					<th width="120">{lang dateline}</th>
+					<th>{lang pm_message}</th>
+				</tr>
+				<!--{loop $pmlist $pm}-->
+					<tr>
+						<td><input type="checkbox" name="deletepmid[]" value="$pm[pmid]" class="checkbox" /></td>
+						<td><img src="avatar.php?uid=$pm[authorid]&size=small" align="absmiddle" width="20" /> <strong>$pm[author]</strong></td>
+						<td>$pm[dateline]</td>
+						<td>$pm[message]</td>
+					</tr>
+				<!--{/loop}-->
+				<tr class="nobg">
+					<td><input type="submit" value="{lang submit}" class="btn" /></td>
+					<td class="tdpage" colspan="3">$multipage</td>
+				</tr>
+			</table>
+			</form>
+		<!--{else}-->
+			<div class="note">
+				<p class="i">{lang list_empty}</p>
+			</div>
+		<!--{/if}-->
+	</div>
+</div>
+
+{template footer}

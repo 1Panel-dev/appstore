@@ -1,0 +1,62 @@
+<script id="sideBar_forumdisplay" type="text/html">
+<div class="sideBar" id="fwin_normal_sideBar" style="display:none;position:fixed;z-index:999999;">
+	<div class="sideBarCon">
+        <h3 class="sideTit">话题筛选</h3>
+    	<ul>
+            <li<% if(!Variables.filter){ %> class="on"<% } %>><a href="javascript:;" onclick="index.heats=0;index.digest=0;index.refreshPage();">全部</a>
+            <% if(!Variables.filter){ %><a class="iSucc s_succ db" href="javascript:;"></a><% } %></li>
+            <li<% if(Variables.filter == 'heat'){ %> class="on"<% } %>><a href="javascript:;" onclick="index.heats=1;index.digest=0;index.refreshPage();">热门</a>
+            <% if(Variables.filter == 'heat'){ %><a class="iSucc s_succ db" href="javascript:;"></a><% } %></li>
+            <li<% if(Variables.filter == 'digest'){ %> class="on"<% } %>><a href="javascript:;" onclick="index.heats=0;index.digest=1;index.refreshPage();">精华</a>
+            <% if(Variables.filter == 'digest'){ %><a class="iSucc s_succ db" href="javascript:;"></a><% } %></li>
+        </ul>
+        <% if(Variables.threadtypes || Variables.threadsorts) {%>
+            <div class="customTag">
+            <a href="javascript:;" typeid="" <% if(!Variables.threadtypeid && !Variables.threadsortid) {%> class="on" <%} %> onclick="index.typeid=0;index.sortid=0;index.refreshPage();">全部</a>
+            <% if(Variables.threadtypes) {%>
+                    <% for(typeid in Variables.threadtypes['types']) { %>
+                        <a href="javascript:;" onclick="<% if(Variables.threadsortid) { %>index.sortid=<%=Variables.threadsortid%>;<% } %>index.typeid=<%= typeid%>;index.refreshPage();" typeid="<%= typeid%>" <% if(Variables.threadtypeid == typeid){%> class="on"<%}%>><%== stripCode(Variables.threadtypes['types'][typeid]) %></a>
+                    <% } %>
+            <% } %>
+            <% if(Variables.threadsorts) {%>
+                    <% for(sortid in Variables.threadsorts['types']) { %>
+                        <a href="javascript:;" onclick="<% if(Variables.threadtypeid) { %>index.typeid=<%=Variables.threadtypeid%>;<% } %>index.sortid=<%= sortid%>;index.refreshPage();" sortid="<%= sortid%>" <% if(Variables.threadsortid == sortid){%> class="on"<%}%>><%== stripCode(Variables.threadsorts['types'][sortid]) %></a>
+                    <% } %>
+            <% } %>
+            </div>
+        <% } %>
+        <% if(hook_sidebar) { %>
+            <%== stripCode(hook_sidebar) %>
+        <% } %>
+        <ul class="sidePerMan">
+        	<li><a href="javascript:;" class="s_prfile commF"><i class="db numP" style="display:none">0</i>个人主页</a></li>
+        </ul>
+    </div>
+</div>
+</script>
+
+<script id="sideBar_viewthread" type="text/html">
+<div class="sideBar" id="fwin_normal_sideBar" style="display:none;position:fixed;z-index:999999;">
+    <div class="sideBarCon">
+        <% if(hook_sidebar) { %>
+            <%== stripCode(hook_sidebar) %>
+        <% } %>
+        <ul class="sidePerMan">
+            <li><a href="javascript:;" class="s_prfile commF"><i class="db numP" style="display:none">0</i>个人主页</a></li>
+        </ul>
+    </div>
+</div>
+</script>
+
+<script id="sideBar_forumlist" type="text/html">
+<div class="sideBar" id="fwin_normal_sideBar" style="display:none;position:fixed;z-index:999999;">
+    <div class="sideBarCon">
+        <% if(hook_sidebar) { %>
+            <%== stripCode(hook_sidebar) %>
+        <% } %>
+        <ul class="sidePerMan">
+            <li><a href="javascript:;" class="s_prfile commF"><i class="db numP" style="display:none">0</i>个人主页</a></li>
+        </ul>
+    </div>
+</div>
+</script>

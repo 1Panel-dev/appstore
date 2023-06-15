@@ -1,0 +1,145 @@
+<!--{template common/header}-->
+<div class="card_gender_$space['gender']">
+	<!--{eval $encodeusername = rawurlencode($space['username']);}-->
+	<!--{hook/space_card_top}-->
+	<div class="card_mn">
+		<div class="avt">
+			<a href="home.php?mod=space&uid=$space[uid]" target="_blank" title="{lang enter}{$space[username]}{lang someone_space}"><!--{avatar($space[uid],small)}--></a>
+		</div>
+		<div class="c">
+			<p class="pbn cl">
+				<span class="y xg1" style="color:{$space[group][color]}"{if $upgradecredit !== false} title="{lang credits} $space[credits], {lang thread_groupupgrade} $upgradecredit {lang credits}"{/if}>{$space[group][grouptitle]}</span>
+				<strong><a href="home.php?mod=space&uid=$space[uid]">$space[username]</a></strong>
+				<!--{if $_G['ols'][$space[uid]]}-->
+					<img src="{IMGDIR}/ol.gif" alt="online" title="{lang online}" class="vm" />&nbsp;
+				<!--{/if}-->
+				<!--{if $_G['setting']['verify']['enabled']}-->
+					<!--{loop $_G['setting']['verify'] $vid $verify}-->
+						<!--{if $verify['available'] && $verify['showicon']}-->
+							<!--{if $space['verify'.$vid] == 1}-->
+								<a href="home.php?mod=spacecp&ac=profile&op=verify&vid=$vid" target="_blank"><!--{if $verify['icon']}--><img src="$verify['icon']" class="vm" alt="$verify[title]" title="$verify[title]" /><!--{else}-->$verify[title]<!--{/if}--></a>&nbsp;
+							<!--{elseif !empty($verify['unverifyicon'])}-->
+								<a href="home.php?mod=spacecp&ac=profile&op=verify&vid=$vid" target="_blank"><!--{if $verify['unverifyicon']}--><img src="$verify['unverifyicon']" class="vm" alt="$verify[title]" title="$verify[title]" /><!--{/if}--></a>&nbsp;
+							<!--{/if}-->
+						<!--{/if}-->
+					<!--{/loop}-->
+				<!--{/if}-->
+			</p>
+			<!--{eval $isfriendinfo = 'home_friend_info_'.$space['uid'].'_'.$_G[uid];}-->
+			<!--{if $_G[$isfriendinfo][note]}-->
+				<p class="xg1">$_G[$isfriendinfo][note]</p>
+			<!--{/if}-->
+			<!--{hook/space_card_baseinfo_middle}-->
+			<div{if $allowupdatedoing}{eval $scdoingid='scdoing'.random(4);} id="return_$scdoingid" onclick="cardUpdatedoing('$scdoingid', 0)"{/if}>$space[spacenote]<!--{if helper_access::check_module('doing') && $allowupdatedoing}--> <a href="javascript:;" class="xi2">[{lang update_doing}]</a><!--{/if}--></div>
+			<!--{if helper_access::check_module('doing') && $allowupdatedoing}-->
+				<form id="$scdoingid" method="post" action="home.php?mod=spacecp&ac=doing&inajax=1" onsubmit="return false;" style="display:none">
+					<input type="hidden" name="addsubmit" value="true" />
+					<input type="hidden" name="fromcard" value="1" />
+					<input type="hidden" name="formhash" value="{FORMHASH}" />
+					<textarea name="message" class="card_msg pt xs1"><!--{echo strip_tags($space[spacenote])}--></textarea>
+					<p class="ptn pns cl">
+						<button type="button" onclick="cardSubmitdoing('$scdoingid');" class="pn"><span>{lang save}</span></button>
+						<span class="pipe">|</span>
+						<a href="javascript:;" onclick="cardUpdatedoing('$scdoingid', 1)">{lang cancel}</a>
+					</p>
+				</form>
+			<!--{/if}-->
+			<!--{hook/space_card_baseinfo_bottom}-->
+		</div>
+	</div>
+	<!--{if $profiles}-->
+		<ul class="card_info">
+			<!--{loop $profiles $value}-->
+				<li>
+					<div class="avt xg1">$value[title]</div>
+					<p>$value[value]</p>
+				</li>
+			<!--{/loop}-->
+		</ul>
+	<!--{/if}-->
+	<div class="o cl">
+		<!--{if $space[self]}-->
+			<!--{if $_G[setting][homepagestyle]}-->
+			<a href="home.php?mod=space&diy=yes" class="xi2">{lang diy_space}</a>
+			<!--{/if}-->
+			<!--{if helper_access::check_module('wall')}-->
+				<a href="home.php?mod=space&do=wall" class="xi2">{lang view_message}</a>
+			<!--{/if}-->
+			<a href="home.php?mod=spacecp&ac=avatar" class="xi2">{lang edit_avatar}</a>
+			<a href="home.php?mod=spacecp&ac=profile" class="xi2">{lang update_profile}</a>
+		<!--{else}-->
+			<!--{if helper_access::check_module('follow')}-->
+			<a href="home.php?mod=spacecp&ac=follow&op={if !empty($follow)}del{else}add{/if}&hash={FORMHASH}&fuid=$space[uid]" id="card_followmod_$space[uid]" onclick="showWindow(this.id, this.href, 'get', 0)" class="xi2"><!--{if !empty($follow)}-->{lang follow_del}<!--{else}-->{lang follow_add}TA<!--{/if}--></a>
+			<!--{/if}-->
+			<!--{if !$isfriend}-->
+			<a href="home.php?mod=spacecp&ac=friend&op=add&uid=$space[uid]&handlekey=addfriendhk_{$space[uid]}" id="a_friend_li_{$space[uid]}" onclick="showWindow(this.id, this.href, 'get', 0);" class="xi2">{lang add_friend}</a>
+			<!--{else}-->
+			<a href="home.php?mod=spacecp&ac=friend&op=ignore&uid=$space[uid]&handlekey=ignorefriendhk_{$space[uid]}" id="a_ignore_{$space[uid]}" onclick="showWindow(this.id, this.href, 'get', 0);" class="xi2">{lang ignore_friend}</a>
+			<!--{/if}-->
+			<a href="home.php?mod=spacecp&ac=pm&op=showmsg&handlekey=showmsg_$space[uid]&touid=$space[uid]&pmid=0&daterange=2" id="a_sendpm_$space[uid]" onclick="showWindow('showMsgBox', this.href, 'get', 0)" class="xi2">{lang send_pm}</a>
+			<a href="home.php?mod=spacecp&ac=poke&op=send&uid=$space[uid]&handlekey=propokehk_{$space[uid]}" id="a_poke_{$space[uid]}" onclick="showWindow(this.id, this.href, 'get', 0);" class="xi2">{lang say_hi}</a>
+			<!--{if helper_access::check_module('wall')}-->
+				<a href="home.php?mod=space&uid=$space[uid]&do=wall" class="xi2">{lang connect_me}</a>
+			<!--{/if}-->
+
+			<script type="text/javascript">
+				function succeedhandle_card_followmod_$space[uid](url, msg, values) {
+					var linkObj = $('card_followmod_'+values['fuid']);
+					if(linkObj) {
+						if(values['type'] == 'add') {
+							linkObj.innerHTML = '{lang follow_del}';
+							linkObj.href = 'home.php?mod=spacecp&ac=follow&op=del&fuid='+values['fuid'];
+						} else if(values['type'] == 'del') {
+							linkObj.innerHTML = '{lang follow_add}TA';
+							linkObj.href = 'home.php?mod=spacecp&ac=follow&op=add&hash={FORMHASH}&fuid='+values['fuid'];
+						}
+					}
+				}
+			</script>
+		<!--{/if}-->
+		<!--{if checkperm('allowbanuser') || checkperm('allowedituser')}-->
+			<!--{if checkperm('allowedituser')}-->
+				<a href="{if $_G[adminid] == 1}admin.php?action=members&operation=search&username=$encodeusername&submit=yes&frames=yes{else}forum.php?mod=modcp&action=member&op=edit&uid=$space[uid]{/if}" target="_blank" class="xi1">{lang user_edit}</a>
+			<!--{/if}-->
+			<!--{if checkperm('allowbanuser')}-->
+				<a href="{if $_G[adminid] == 1}admin.php?action=members&operation=ban&username=$encodeusername&frames=yes{else}forum.php?mod=modcp&action=member&op=ban&uid=$space[uid]{/if}" target="_blank" class="xi1">{lang user_ban}</a>
+			<!--{/if}-->
+			<a href="forum.php?mod=modcp&action=thread&op=post&do=search&searchsubmit=1&users=$encodeusername" target="_blank" class="xi1">{lang manage_post}</a>
+		<!--{/if}-->
+		<!--{hook/space_card_option}-->
+	</div>
+	<!--{if $_G['setting']['magicstatus']}-->
+	<div class="mgc">
+		<!--{if !empty($_G['setting']['magics']['showip'])}-->
+			<a href="home.php?mod=magic&mid=showip&idtype=user&id=$encodeusername" id="a_showip_li_{$space[pid]}" onclick="showWindow(this.id, this.href)"><img src="{STATICURL}/image/magic/showip.small.gif" class="vm" title="$_G['setting']['magics']['showip']" /> $_G['setting']['magics']['showip']</a>
+		<!--{/if}-->
+		<!--{if !empty($_G['setting']['magics']['checkonline']) && $space['uid'] != $_G['uid']}-->
+			<a href="home.php?mod=magic&mid=checkonline&idtype=user&id=$encodeusername" id="a_repent_{$space[pid]}" onclick="showWindow(this.id, this.href)"><img src="{STATICURL}/image/magic/checkonline.small.gif" class="vm" title="$_G['setting']['magics']['checkonline']" /> $_G['setting']['magics']['checkonline']</a>
+		<!--{/if}-->
+		<!--{hook/space_card_magic_user}-->
+	</div>
+	<!--{/if}-->
+	<div class="f cl"><!--{hook/space_card_bottom}--></div>
+
+	<!--{if $allowupdatedoing}-->
+		<script type="text/javascript">
+		function cardUpdatedoing(scdoing, op) {
+			if($(scdoing)) {
+				if(!op) {
+					$('return_' + scdoing).style.display = 'none';
+					$(scdoing).style.display = '';
+				} else {
+					$('return_' + scdoing).style.display = '';
+					$(scdoing).style.display = 'none';
+				}
+			}
+		}
+		function cardSubmitdoing(scdoing) {
+			ajaxpost(scdoing, 'return_' + scdoing);
+			$('return_' + scdoing).style.display = '';
+			$(scdoing).style.display = 'none';
+		}
+		</script>
+	<!--{/if}-->
+</div>
+<!--{template common/footer}-->

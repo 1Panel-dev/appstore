@@ -1,0 +1,19 @@
+/*
+[name]圣诞[/name]
+Powered by Discuz! X
+*/
+
+body { background: #FFA6A1 url(images/bg.png); }
+
+#hd { background: url(images/header.png) no-repeat 0 0; color: #FFF; }
+
+#nv, #home { bottom: 12px; }
+
+#nv li a, #nv li a:visited { color: #333; }
+	#nv li a:hover { background-image: none !important; }
+
+#ct, .n, .w { background: #FFF url(images/ct-top.png) repeat-x 0 0 !important; }
+
+#ft { background: url(images/footer.png) no-repeat 50% 0; }
+.tl .th { background: none; }
+.bm, .bm_h { border: none; background: none; }

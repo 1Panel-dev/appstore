@@ -1,0 +1,18 @@
+<!--{template common/header}-->
+<div class="f_c">
+	<div id="messagetext">
+		<p>$show_message</p>
+        <!--{if $_G['forcemobilemessage']}-->
+        	<p >
+            	<a href="{$_G['setting']['mobile']['pageurl']}" class="mtn">{lang continue}</a><br />
+                <a href="javascript:history.back();">{lang goback}</a>
+            </p>
+        <!--{/if}-->
+		<!--{if $url_forward}-->
+			<p><a href="$url_forward">{lang message_forward_mobile}</a></p>
+		<!--{elseif $allowreturn}-->
+			<p><a href="javascript:history.back();">{lang message_go_back}</a></p>
+		<!--{/if}-->
+	</div>
+</div>
+<!--{template common/footer}-->

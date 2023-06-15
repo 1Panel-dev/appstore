@@ -1,0 +1,154 @@
+<!--{template common/header}-->
+
+<div id="pt" class="bm cl">
+	<div class="z"><a href="./" class="nvhm" title="{lang home}">$_G[setting][bbname]</a><em>&rsaquo;</em><a href="group.php">$_G[setting][navs][3][navname]</a>$groupnav</div>
+</div>
+
+<!--{ad/text/wp a_t}-->
+<style id="diy_style" type="text/css"></style>
+<div class="wp">
+	<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+</div>
+<div id="ct" class="ct2 wp cl">
+	<div class="mn">
+		<!--[diy=diycontenttop]--><div id="diycontenttop" class="area"></div><!--[/diy]-->
+		<div class="bm fl cl">
+			<div class="bm_h">
+				<h1 class="xs2">$curtype[name]</h1>
+			</div>
+			<!--{if $typelist}-->
+				<div class="bm_c pbm ptm bbs">
+					<p><!--{loop $typelist $fid $type}--><a href="group.php?sgid=$fid">$type[name]</a><!--{if $type[groupnum]}--><span class="xg1">($type[groupnum])</span><!--{/if}--> &nbsp; <!--{/loop}--></p>
+				</div>
+			<!--{else}-->
+				<div class="bbs"></div>
+			<!--{/if}-->
+			<!--{hook/index_top}-->
+			<!--{if $list}-->
+				<div class="tbmu cl bw0">
+					<span class="y">
+					<select title="{lang orderby}" onchange="location.href=this.value" class="ps">
+						<option value="$url" $selectorder[default]>{lang orderby_default}</option>
+						<option value="$url&orderby=thread" $selectorder[thread]>{lang stats_main_threads_count}</option>
+						<option value="$url&orderby=membernum" $selectorder[membernum]>{lang group_member_count}</option>
+						<option value="$url&orderby=dateline" $selectorder[dateline]>{lang group_create_time}</option>
+						<option value="$url&orderby=activity" $selectorder[activity]>{lang group_activities}</option>
+					</select>
+					</span>
+					{lang group_total_numbers}
+				</div>
+				<!--{if $curtype['forumcolumns'] > 1}-->
+					<div class="bm_c">
+						<table cellspacing="0" cellpadding="0" class="fl_tb">
+							<tr class="fl_row">
+								<!--{loop $list $fid $val}-->
+								<!--{if $val['orderid'] && ($val['orderid'] % $curtype['forumcolumns'] == 0)}-->
+							</tr>
+							<tr class="fl_row">
+								<!--{/if}-->
+								<td class="fl_g" style="width: $curtype[forumcolwidth]">
+									<div class="fl_icn_g"><a href="forum.php?mod=group&fid=$fid" title="$val[name]"><img width="48" height="48" src="$val[icon]" alt="$val[name]" /></a></div>
+									<dl>
+										<dt><a href="forum.php?mod=group&fid=$fid" title="$val[name]">$val[name]</a></dt>
+										<dd>{lang group_total_members_threads}</dd>
+										<dd><a href="forum.php?mod=group&fid=$fid">{lang group_founded_in}: $val[dateline]</a></dd>
+									</dl>
+								</td>
+								<!--{/loop}-->
+								$endrows
+							</tr>
+						</table>
+					</div>
+				<!--{else}-->
+					<div class="bm_c">
+						<table cellspacing="0" cellpadding="0" class="fl_tb">
+						<!--{loop $list $fid $val}-->
+							<tr class="fl_row">
+								<td class="fl_icn"><a href="forum.php?mod=group&fid=$fid" title="$val[name]"><img width="48" height="48" src="$val[icon]" alt="$val[name]" /></a></td>
+								<td>
+									<!--{hook/index_grouplist $fid}-->
+									<strong><a href="forum.php?mod=group&fid=$fid" title="$val[name]">$val[name]</a></strong>
+									<p class="xg1">$val[description]</p>
+								</td>
+								<td class="fl_i">
+									<span class="i_z z"><strong>$val[membernum]</strong><em class="xg1">{lang group_member}</em></span>
+									<span class="i_y z"><strong>$val[threads]</strong><em class="xg1">{lang threads}</em></span>
+								</td>
+							</tr>
+						<!--{/loop}-->
+						</table>
+					</div>
+				<!--{/if}-->
+				<!--{hook/index_bottom}-->
+			<!--{else}-->
+				<div class="bm emp">
+					<h2>{lang group_category_no_groups}</h2>
+					<p>{lang group_category_no_groups_detail}</p>
+				</div>
+			<!--{/if}-->
+		</div>
+		<!--{if $list}-->
+			<div class="pgs cl">
+				$multipage
+				<span class="pgb y"><a href="group.php">{lang return_index}</a></span>
+			</div>
+		<!--{/if}-->
+		<!--[diy=diycontentbottom]--><div id="diycontentbottom" class="area"></div><!--[/diy]-->
+	</div>
+	<div class="sd">
+		<!--[diy=diysidetop]--><div id="diysidetop" class="area"></div><!--[/diy]-->
+		<!--{hook/index_side_top}-->
+		<!--{if helper_access::check_module('group')}-->
+			<!--{if empty($gid) && empty($sgid)}-->
+				<div class="bm">
+					<div class="bm_h cl">
+						<h2>{lang create_group_step}</h2>
+					</div>
+					<div class="bm_c">
+						<ul id="g_guide" class="mbm">
+							<li><label><strong class="xi1">{lang group_create}</strong><span class="xg1">{lang create_group_message1}</span></label></li>
+							<li><label><strong class="xi1">{lang personality_setting}</strong><span class="xg1">{lang create_group_message2}</span></label></li>
+							<li><label><strong class="xi1">{lang invite_friend}</strong><span class="xg1">{lang create_group_message3}</span></label></li>
+							<li><label><strong class="xi1">{lang group_upgrade}</strong><span class="xg1">{lang create_group_message4}</span></label></li>
+						</ul>
+						<a href="forum.php?mod=group&action=create" id="create_group_btn"><img src="{IMGDIR}/create_group.png" alt="{lang group_create}" /></a>
+					</div>
+				</div>
+				<div class="drag">
+					<!--[diy=diy2]--><div id="diy2" class="area"></div><!--[/diy]-->
+				</div>
+			<!--{else}-->
+				<div class="bm bw0">
+					<div class="bm_c">
+						<a href="forum.php?mod=group&action=create&fupid=$fup&groupid=$sgid" id="create_group_btn"><img src="{IMGDIR}/create_group.png" alt="{lang group_create}" /></a>
+					</div>
+				</div>
+			<!--{/if}-->
+		<!--{/if}-->
+		<!--[diy=diytopgrouptop]--><div id="diytopgrouptop" class="area"></div><!--[/diy]-->
+		<!--{if $topgrouplist}-->
+			<div id="g_top" class="bm">
+				<div class="bm_h cl">
+					<h2>{lang group_hot}</h2>
+				</div>
+				<div class="bm_c">
+					<ol class="xl">
+						<!--{loop $topgrouplist $fid $group}-->
+						<li class="top1"><span class="y xi2 xg1"> $group[commoncredits]</span><a href="forum.php?mod=group&fid=$group[fid]" title="$group[name]">$group[name]</a></li>
+						<!--{/loop}-->
+					</ol>
+				</div>
+			</div>
+		<!--{/if}-->
+		<div class="drag">
+			<!--[diy=diy4]--><div id="diy4" class="area"></div><!--[/diy]-->
+		</div>
+		<!--{hook/index_side_bottom}-->
+	</div>
+</div>
+
+<div class="wp mtn">
+	<!--[diy=diy4]--><div id="diy4" class="area"></div><!--[/diy]-->
+</div>
+
+<!--{template common/footer}-->

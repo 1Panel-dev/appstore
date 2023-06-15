@@ -1,0 +1,78 @@
+<!--{if $_GET['mycenter'] && !$_G['uid']}-->
+	<!--{eval dheader('Location:member.php?mod=logging&action=login');exit;}-->
+<!--{/if}-->
+<!--{template common/header}-->
+<!--{if !$_GET['mycenter']}-->
+
+<!-- header start -->
+<header class="header">
+    <div class="nav">
+		<a href="javascript:;" onclick="history.go(-1);" class="z"><img src="{STATICURL}image/mobile/images/icon_back.png" /></a>
+		<span><!--{if $_G['uid'] == $space['uid']}-->{lang myprofile}<!--{else}-->$space[username]{lang otherprofile}<!--{/if}--></span>
+    </div>
+</header>
+<!-- header end -->
+<!-- userinfo start -->
+<div class="userinfo">
+	<div class="user_avatar">
+		<div class="avatar_m"><span><img src="<!--{avatar($space[uid], small, true)}-->" /></span></div>
+		<h2 class="name">$space[username]</h2>
+	</div>
+	<div class="user_box">
+		<ul>
+			<li><span>$space[credits]</span>{lang credits}</li>
+			<!--{loop $_G[setting][extcredits] $key $value}-->
+			<!--{if $value[title]}-->
+			<li><span>{$space["extcredits$key"]} $value[unit]</span>$value[title]</li>
+			<!--{/if}-->
+			<!--{/loop}-->
+		</ul>
+	</div>
+	<!--{if $space['uid'] == $_G['uid']}-->
+	<div class="btn_exit"><a href="member.php?mod=logging&action=logout&formhash={FORMHASH}">{lang logout_mobile}</a></div>
+	<!--{/if}-->
+</div>
+<!-- userinfo end -->
+
+<!--{else}-->
+
+<!-- header start -->
+<header class="header">
+	<div class="hdc cl">
+		<!--{if $_G['setting']['domain']['app']['mobile']}-->
+			{eval $nav = $_G['scheme'].'://'.$_G['setting']['domain']['app']['mobile'];}
+		<!--{else}-->
+			{eval $nav = "forum.php";}
+		<!--{/if}-->
+		<h2><a title="$_G[setting][bbname]" href="$nav"><img src="{STATICURL}image/mobile/images/logo.png" /></a></h2>
+		<ul class="user_fun">
+			<li><a href="search.php?mod=forum" class="icon_search">{lang search}</a></li>
+			<li><a href="forum.php?forumlist=1" class="icon_threadlist">{lang forum_list}</a></li>
+			<li class="on" id="usermsg"><a href="<!--{if $_G[uid]}-->home.php?mod=space&uid=$_G[uid]&do=profile&mycenter=1<!--{else}-->member.php?mod=logging&action=login<!--{/if}-->" class="icon_userinfo">{lang user_info}</a><!--{if $_G[member][newpm]}--><span class="icon_msg"></span><!--{/if}--></li>
+			<!--{if $_G['setting']['mobile']['mobilehotthread']}-->
+			<li><a href="forum.php?mod=guide&view=hot" class="icon_hotthread">{lang hot_thread}</a></li>
+			<!--{/if}-->
+		</ul>
+	</div>
+</header>
+<!-- header end -->
+<!-- userinfo start -->
+<div class="userinfo">
+	<div class="user_avatar">
+		<div class="avatar_m"><span><img src="<!--{avatar($_G[uid], small, true)}-->" /></span></div>
+		<h2 class="name">$_G[username]</h2>
+	</div>
+	<div class="myinfo_list cl">
+		<ul>
+			<li><a href="home.php?mod=space&uid={$_G[uid]}&do=favorite&view=me&type=thread">{lang myfavorite}</a></li>
+			<li><a href="home.php?mod=space&uid={$_G[uid]}&do=thread&view=me">{lang mythread}</a></li>
+			<li class="tit_msg"><a href="home.php?mod=space&do=pm">{lang mypm}<!--{if $_G[member][newpm]}--><img src="{STATICURL}image/mobile/images/icon_msg.png" /><!--{/if}--></a></li>
+			<li><a href="home.php?mod=space&uid={$_G[uid]}">{lang myprofile}</a></li>
+		</ul>
+	</div>
+</div>
+<!-- userinfo end -->
+
+<!--{/if}-->
+<!--{eval $nofooter = true;}-->
+<!--{template common/footer}-->

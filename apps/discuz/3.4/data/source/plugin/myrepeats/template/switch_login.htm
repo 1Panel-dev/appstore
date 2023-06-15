@@ -1,0 +1,76 @@
+<!--{template common/header}-->
+
+<!--{if empty($_GET['infloat'])}-->
+<div id="ct" class="wp w cl">
+	<div class="mn mw">
+<!--{/if}-->
+
+<div class="blr" id="main_messaqge_myrepeats" style="width:260px">
+	<div id="layer_login_myrepeats">
+		<h3 class="flb">
+			<em>{lang myrepeats:switch_title}</em>
+			<span><!--{if !empty($_GET['infloat'])}--><a href="javascript:;" class="flbc" onclick="hideWindow('$_GET[handlekey]', 0, 1);" title="{lang close}">{lang close}</a><!--{/if}--></span>
+		</h3>
+		<form method="post" autocomplete="off" name="myrepeats" id="loginform_myrepeats" class="cl" action="plugin.php?id=myrepeats:switch&myrepeatssubmit=yes&handlekey=myrepeat" onsubmit="ajaxpost('loginform_myrepeats', 'returnmessage_myrepeats', 'returnmessage_myrepeats', 'onerror');return false;">
+			<div class="c cl">
+				<input type="hidden" name="formhash" value="{FORMHASH}" />
+				<input type="hidden" name="authorfirst" value="yes" />
+				<input type="hidden" name="referer" value="$referer" />
+				<div class="lgfm nlf" style="border:0;width:240px">
+					<p class="notice">
+						{lang myrepeats:switch_tips}
+					</p>
+					<div class="ftid sipt lpsw" id="account_myrepeats">
+						<label for="username">{lang myrepeats:username}</label>
+						<input type="text" name="username" id="username_myrepeats" autocomplete="off" size="36" class="txt" tabindex="1" value="$username" readonly />
+					</div>
+					<p class="sipt lpsw">
+						<label for="password3_myrepeats">{lang myrepeats:password}</label>
+						<input type="password" id="password3_myrepeats" name="password" size="36" class="txt" tabindex="1" />
+					</p>
+
+					<div class="ftid sltp">
+						<select id="loginquestionid_myrepeats" width="213" name="questionid" change="if($('loginquestionid_myrepeats').value > 0) {$('loginanswer_myrepeats').style.display='';} else {$('loginanswer_myrepeats').style.display='none';}">
+							<option value="0">{lang myrepeats:security_question}</option>
+							<option value="1">{lang myrepeats:security_question_1}</option>
+							<option value="2">{lang myrepeats:security_question_2}</option>
+							<option value="3">{lang myrepeats:security_question_3}</option>
+							<option value="4">{lang myrepeats:security_question_4}</option>
+							<option value="5">{lang myrepeats:security_question_5}</option>
+							<option value="6">{lang myrepeats:security_question_6}</option>
+							<option value="7">{lang myrepeats:security_question_7}</option>
+						</select>
+					</div>
+					<p><input type="text" name="answer" id="loginanswer_myrepeats" style="display:none" autocomplete="off" size="36" class="sipt" tabindex="1" /></p>
+					<p id="returnmessage_myrepeats"></p>
+				</div>
+
+			</div>
+			<p class="fsb pns cl">
+				<button class="y pn pnc" type="submit" name="myrepeatssubmit" value="true" tabindex="1"><span>{lang myrepeats:confirm}</span></button>
+			</p>
+		</form>
+	</div>
+</div>
+
+<script type="text/javascript" reload="1">
+function initinput_login() {
+	document.body.focus();
+	if($('loginform_myrepeats')) {
+		$('loginform_myrepeats').password.focus();
+	}
+	simulateSelect('loginquestionid_myrepeats');
+}
+if(BROWSER.ie && BROWSER.ie < 7) {
+	setTimeout('initinput_login()', 500);
+} else {
+	initinput_login();
+}
+</script>
+
+<!--{if empty($_GET['infloat'])}-->
+	</div></div>
+</div>
+<!--{/if}-->
+
+<!--{template common/footer}-->

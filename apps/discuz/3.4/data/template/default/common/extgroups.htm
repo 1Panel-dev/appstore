@@ -1,0 +1,32 @@
+<!--{template common/header}-->
+<!--{eval $upgradecredit = $_G['uid'] && $_G['group']['grouptype'] == 'member' && $_G['group']['groupcreditslower'] != 999999999 ? $_G['group']['groupcreditslower'] - $_G['member']['credits'] : false;}-->
+<div style="width:140px">
+	<ul class="mbn">
+		<li class="hm">{echo profile_node_star($_G[group], '', '', 0)}</li>
+		<!--{if $group}-->
+			<li class="hm mtn">{echo profile_node_upgradeprogress($group, '', '', 0)}</li>
+			<li class="hm">
+				{lang thread_groupupgrade}<p class="xi1">$upgradecredit {lang credits}</p>
+			</li>
+		<!--{/if}-->
+		<!--{if $_G['member'][adminid] > 0}-->
+			<li class="hm mtn">{lang manage_grade}: <!--{if $_G['member'][adminid] == 1}-->{lang manager}
+				<!--{elseif $_G['member'][adminid] == 2}-->{lang super_forummanager}
+				<!--{elseif $_G['member'][adminid] == 3}-->{lang forummanager}
+				<!--{/if}-->
+			</li>
+		<!--{/if}-->
+	</ul>
+	<!--{if $extgroupids}-->
+		<ul class="btda ptn mbn pbn extg">
+			<li><a href="home.php?mod=spacecp&ac=usergroup&gid=$_G['member'][groupid]">{$_G[group][grouptitle]}</a></li>
+			<!--{loop $extgroupids $extgid}-->
+				<li><a href="home.php?mod=spacecp&ac=usergroup&gid=$extgid">{$_G[cache][usergroups][$extgid][grouptitle]}</a></li>
+			<!--{/loop}-->
+		</ul>
+	<!--{/if}-->
+	<!--{if $_G['setting']['buyusergroupexists']}-->
+		<div onclick="location.href='home.php?mod=spacecp&ac=usergroup&do=list'" class="xi2 ptn pbn btda" align="right"><label>{lang buy_usergroup}&raquo;</label></div>
+	<!--{/if}-->
+</div>
+<!--{template common/footer}-->

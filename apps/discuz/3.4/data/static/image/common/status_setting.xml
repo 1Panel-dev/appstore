@@ -1,0 +1,48 @@
+<settings>  
+  <font>Tahoma</font>
+  <plot_area>
+    <margins><left>60</left><top>10</top><right>40</right><bottom>60</bottom></margins>
+  </plot_area>  
+  <values>
+    <x>
+	  <enabled>true</enabled>
+
+	</x>
+    <y_left><enabled>true</enabled><min>0</min></y_left>
+  </values>
+  <grid>
+	<x>
+	  <color>#000000</color>
+	  <dashed>false</dashed>
+
+	  <dash_length>10</dash_length>
+	  <approx_count>180</approx_count>
+	</x>
+    <y_left>
+      <approx_count>10</approx_count>
+    </y_left>
+  </grid>
+
+  <legend>
+    <enabled>true</enabled>
+    <key><size>12</size></key>
+  </legend>
+  <indicator>
+    <enabled>true</enabled>
+    <x_balloon_enabled>true</x_balloon_enabled>
+
+    <y_balloon_on_off>true</y_balloon_on_off>
+  </indicator>  
+  <graphs>
+    <graph gid="0"> 
+      <color>#005eb4</color>
+      <color_hover></color_hover>
+      <fill_alpha></fill_alpha>
+      <balloon_color></balloon_color>
+      <balloon_text_color></balloon_text_color>
+      <bullet></bullet>
+      <bullet_size></bullet_size>
+      <bullet_color></bullet_color>
+    </graph>
+  </graphs>
+</settings>

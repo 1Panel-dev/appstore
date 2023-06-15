@@ -1,0 +1,41 @@
+<!--{template common/header}-->
+<h3 class="flb">
+	<em>{lang report}</em>
+	<span><a href="javascript:;" onclick="hideWindow('$_GET[handlekey]');" class="flbc" title="{lang close}">{lang close}</a></span>
+</h3>
+<form style="width:28em" method="post" autocomplete="off" id="form_$_GET[handlekey]" name="form_$_GET[handlekey]" action="misc.php?mod=report" {if $_G[inajax]}onsubmit="if(!$('report_message').value) return false;ajaxpost(this.id, 'form_$_GET[handlekey]');"{/if}>
+	<div class="reason_slct c" id="return_$_GET[handlekey]">
+		<p>{lang report_reason}</p>
+		<p class="mtn mbn" id="report_reasons"></p>
+		<div id="report_other" style="display:none">
+			<textarea id="report_message" name="message" class="reasonarea pt mtn xg1" onfocus="this.innerHTML='';this.focus=null;this.className='reasonarea pt mtn'" onkeydown="ctrlEnter(event, 'reportsubmit', 1);" onkeyup="strLenCalc(this, 'checklen');" rows="4">{lang report_reason_other}</textarea>		
+		</div>
+	</div>
+	<p class="o pns">
+		<span id="report_msg" style="display:none"><span class="z">{lang input_message1} <strong id="checklen">200</strong> {lang input_message2}</span></span>
+		<button id="report_submit" type="submit" value="true" class="pn pnc"><strong>{lang confirms}</strong></button>
+	</p>
+	<input type="hidden" name="referer" value="{echo dreferer()}" />
+	<input type="hidden" name="reportsubmit" value="true" />
+	<input type="hidden" name="rtype" value="$_GET[rtype]" />
+	<input type="hidden" name="rid" value="$_GET[rid]" />
+	<!--{if $_GET['fid']}-->
+	<input type="hidden" name="fid" value="$_GET[fid]" />
+	<!--{/if}-->
+	<!--{if $_GET['uid']}-->
+	<input type="hidden" name="uid" value="$_GET[uid]" />
+	<!--{/if}-->
+	<input type="hidden" name="url" value="$_GET[url]" />
+	<input type="hidden" name="inajax" value="$_G[inajax]" />
+	<!--{if $_G[inajax]}--><input type="hidden" name="handlekey" value="$_GET[handlekey]" /><!--{/if}-->
+	<input type="hidden" name="formhash" value="{FORMHASH}" />
+</form>
+<script type="text/javascript" reload="1">
+var reasons = {lang report_reason_message};
+var reasonstring = '';
+for (i=0; i<reasons.length; i++) {
+	reasonstring += '<label><input type="radio" name="report_select" class="pr" onclick="' + (i < reasons.length -1 ? '$(\'report_message\').innerHTML=this.value;' : '') + '$(\'report_other\').style.display=\'' + (i < reasons.length -1 ? 'none' : '') + '\';$(\'report_msg\').style.display=\'' + (i < reasons.length -1 ? 'none' : '') + '\'" value="' + reasons[i] + '"> ' + reasons[i] + '</label><br />';
+}
+$('report_reasons').innerHTML = reasonstring;
+</script>
+<!--{template common/footer}-->

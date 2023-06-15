@@ -1,0 +1,67 @@
+{template header_client}
+{template pm_nav}
+
+<div class="ucinfo">
+	<h1>
+	</h1>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="newpm">
+		<tbody>
+			<tr>
+			<!--{eval $i = 0;}-->
+			<!--{loop $members $key $member}-->
+				<td class="ava">
+					<img src="avatar.php?uid=$member&size=small" />
+					$member<!--{if $authorid == $key}-->({lang pm_author})<!--{/if}-->
+					<!--{if $authorid == $user['uid'] && $authorid != $key}-->
+						<p><a href="javascript:;" id="a_kickmmeber_$key" title="{lang tipkickmember}" onclick="if(confirm('{lang pm_confirm_kickmember}')) location.href='index.php?m=pm_client&a=member&filter=chatpm&do=kickmember&memberuid=$key&plid=$plid';">{lang kickmember}</a></p>
+					<!--{/if}-->
+				</td>
+				<!--{if $i % 2}-->
+				<tr/>
+				<tr>
+				<!--{/if}-->
+				<!--{eval $i++;}-->
+			<!--{/loop}-->
+			</tr>
+		</tbody>
+	</table>
+	<!--{if $authorid == $user['uid']}-->
+		<form action="index.php?m=pm_client&a=member&filter=chatpm&do=appendmember&plid=$plid" method="post">
+			{lang appendchatpmmember}<input type="text" id="appendmember" name="appendmember" value="" />
+			<input type="hidden" name="formhash" value="{FORMHASH}">
+			<input type="submit" value="{lang appendmember}" />
+		</form>
+	<!--{/if}-->
+	<br />
+	<div style="float:right">
+			<button onclick="location.href='index.php?m=pm_client&a=ls&filter=chatpm'">{lang return}</button>
+	</div>
+	{lang pm_history}:
+	<a href="index.php?m=pm_client&a=view&plid=$plid&filter=$filter&$extra">{lang pm_daterange_1}</a>&nbsp;
+	<a href="index.php?m=pm_client&a=view&plid=$plid&daterange=2&filter=$filter&$extra">{lang pm_daterange_2}</a>&nbsp;
+	<a href="index.php?m=pm_client&a=view&plid=$plid&daterange=3&filter=$filter&$extra">{lang pm_daterange_3}</a>&nbsp;
+	<a href="index.php?m=pm_client&a=view&plid=$plid&daterange=4&filter=$filter&$extra">{lang pm_daterange_4}</a>&nbsp;
+	<a href="index.php?m=pm_client&a=view&plid=$plid&daterange=5&filter=$filter&$extra">{lang pm_daterange_5}</a>&nbsp;
+	<a href="index.php?m=pm_client&a=member&plid=$plid&filter=$filter&$extra" class="bold">{lang pm_member}</a>&nbsp;
+
+	<!--{if $authorid == $user['uid']}-->
+	<button onclick="if(confirm('{lang pm_confirm_deletechatpm}')) location.href='index.php?m=pm_client&a=delete&deleteplid[]=$plid&filter=$filter&$extra'">{lang pm_delete_chatpm}</button>
+	<!--{else}-->
+	<button onclick="if(confirm('{lang pm_confirm_quitchatpm}')) location.href='index.php?m=pm_client&a=delete&quitchapm[]=$plid&filter=$filter&$extra'">{lang pm_quit_chatpm}</button>
+	<!--{/if}-->
+	<br style="clear: both" />
+</div>
+
+<!--{if $scroll == 'bottom'}-->
+	<script type="text/javascript">
+	window.onload = function() {
+		if(!document.postpmform) {
+			return;
+		}
+		window.scroll(0, document.body.scrollHeight);
+		document.postpmform.message.focus();
+	}
+	</script>
+<!--{/if}-->
+
+{template footer_client}

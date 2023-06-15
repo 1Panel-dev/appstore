@@ -1,0 +1,129 @@
+<!--{template common/header}-->
+<!--{if !$_G['inajax']}-->
+<div id="pt" class="bm cl">
+	<div class="z"><a href="./" class="nvhm" title="{lang homepage}">$_G['setting']['bbname']</a> <em>&rsaquo;</em> {lang invite}</div>
+</div>
+<div id="ct" class="wp cl">
+	<div class="mn">
+		<div class="bm bw0">
+			<h1 class="mt"><!--{if $at != 1}-->{lang invite_friend}<!--{/if}-->$invitename</h1>
+			<div class="usd usd2">
+<!--{else}-->
+		<div id="main_messaqge">
+			<h3 class="flb">
+				<em id="returnmessage5"><!--{if $at != 1}-->{lang invite_friend}<!--{/if}-->$invitename</em>
+				<span>
+					<!--{if $_G['inajax']}--><a href="javascript:;" class="flbc" onclick="hideWindow('invite')" title="{lang close}">{lang close}</a><!--{/if}-->
+				</span>
+			</h3>
+			<div class="usd">
+<!--{/if}-->
+				<ul class="cl">
+					<li>
+						<p>{lang invite_orderby_name}</p>
+						<p class="mtn"><input type="text" name="username" size="25" id="username" class="px" value="" autocomplete="off" /> <button class="pn pnc" onclick="clearlist=1;getUser();"><span>{lang find}</span></button></p>
+						<script type="text/javascript">
+							var invitefs;
+							var clearlist = 0;
+						</script>
+					</li>
+					<li>
+						<p>{lang invite_orderby_friend}</p>
+						<p class="mtn">
+							<select class="ps" onchange="clearlist=1;getUser(1, this.value)">
+								<option value="-1">{lang invite_all_friend}</option>
+								<!--{if $at == 1 && $_G['group']['allowat']}-->
+									<option value="-2">{lang invite_my_follow}</option>
+								<!--{/if}-->
+								<!--{loop $friendgrouplist $groupid $group}-->
+									<option value="$groupid">$group</option>
+								<!--{/loop}-->
+							</select>
+						</p>
+					</li>
+				</ul>
+				<div class="tbx">
+					<span class="y">{lang invite_still_choose}(<strong id="remainNum">0</strong>){lang unit}</span>
+					<span id="showUser_0" onclick="invitefs.showUser(0)" class="a brs">{lang invite_all_friend}</span>
+					<span id="showUser_1" onclick="invitefs.showUser(1)">{lang selected}(<strong id="selectNum">0</strong>)</span>
+					<span id="showUser_2" onclick="invitefs.showUser(2)">{lang unselected}(<cite id="unSelectTab">0</cite>)</span>
+				</div>
+			</div>
+			<ul class="usl cl{if empty($_G['inajax'])} usl2{/if}" id="friends"></ul>
+			<script type="text/javascript" reload="1">
+				var page = 1;
+				var gid = -1;
+				var showNum = 0;
+				var haveFriend = true;
+				var username = '';
+				function getUser(pageId, gid) {
+					page = parseInt(pageId);
+					gid = isUndefined(gid) ? -1 : parseInt(gid);
+					username = $('username').value;
+					var x = new Ajax();
+					x.get('home.php?mod=spacecp&ac=friend&op=getinviteuser&inajax=1&page='+ page + '&gid=' + gid + '&at={$at}&username='+ username + '&' + Math.random(), function(s) {
+						var data = eval('('+s+')');
+						var singlenum = parseInt(data['singlenum']);
+						var maxfriendnum = parseInt(data['maxfriendnum']);
+						invitefs.addDataSource(data, clearlist);
+						haveFriend = singlenum && singlenum == 20 ? true : false;
+						if(singlenum && invitefs.allNumber < 20 && invitefs.allNumber < maxfriendnum && maxfriendnum > 20 && haveFriend) {
+							page++;
+							clearlist = 0;
+							getUser(page);
+						}
+					});
+				}
+				function selector() {
+					var parameter = {'searchId':'username', 'showId':'friends', 'formId':'inviteform', 'showType':1, 'handleKey':'invitefs', 'maxSelectNumber':'20', 'selectTabId':'selectNum', 'unSelectTabId':'unSelectTab', 'maxSelectTabId':'remainNum'};
+					<!--{if $at == 1 && $_G['group']['allowat']}-->
+						parameter.maxSelectNumber = $maxselect;
+					<!--{/if}-->
+					invitefs = new friendSelector(parameter);
+					<!--{if $inviteduids}-->
+					invitefs.addFilterUser([$inviteduids]);
+					<!--{/if}-->
+					var listObj = $('friends');
+					listObj.onscroll = function() {
+						clearlist = 0;
+						if(this.scrollTop >= (this.scrollHeight/5-5)) {
+							page++;
+							gid = isUndefined(gid) ? -1 : parseInt(gid);
+							if(haveFriend) {
+								getUser(page, gid);
+							}
+						}
+					}
+					getUser(page);
+				}
+				if($('friendselector_js')) {
+					selector();
+				} else {
+					var scriptNode = document.createElement("script");
+					scriptNode.id = 'friendselector_js';
+					scriptNode.type = "text/javascript";
+					scriptNode.src = '{$_G[setting][jspath]}home_friendselector.js?{VERHASH}';
+					if(BROWSER.ie) {
+						scriptNode.onreadystatechange = function () {
+							if(scriptNode.readyState == 'loaded' || scriptNode.readyState == 'complete') {
+								selector();
+							}
+						}
+					} else {
+						scriptNode.onload = selector;
+					}
+					$('append_parent').appendChild(scriptNode);
+				}
+			</script>
+			<form method="post" autocomplete="off" name="invite" id="inviteform" action="misc.php?mod=invite&action=$_GET[action]&id=$id{if $_GET['activity']}&activity=1{/if}">
+				<input type="hidden" name="formhash" value="{FORMHASH}" />
+				<input type="hidden" name="referer" value="{echo dreferer()}" />
+				<!--{if !empty($_G['inajax'])}--><input type="hidden" name="handlekey" value="$_GET['handlekey']" /><!--{/if}-->
+				<p class="o pns{if empty($_G['inajax'])} mtw{/if}"><button type="submit" class="pn pnc" name="invitesubmit" value="yes"><strong>{lang invite_send}</strong></button></p>
+			</form>
+		</div>
+<!--{if !$_G['inajax']}-->
+	</div>
+</div>
+<!--{/if}-->
+<!--{template common/footer}-->

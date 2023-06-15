@@ -1,0 +1,65 @@
+<script id="tmpl_replyForm" type="text/html">
+
+<div class="popLayer" style="width:96%">
+<form method="post" action="/{$sId}/r/new/submit" id="replyForm">
+    <input type="hidden" name="CSRFToken" value="{$CSRFToken}">
+    <input type="hidden" name="sId" value="{$sId}">
+    <input type="hidden" name="tId" value="">
+    <input type="hidden" name="pId" value="">
+	
+    <input type="hidden" name="formhash" value="">
+    <input type="hidden" name="mobiletype" value="-1">
+    <input type="hidden" name="allowphoto" value="0">
+	
+    <div class="sendBorder">
+        <textarea id="message" name="message" cols="" rows="" class="sInput" placeholder="回两句吧..." style="overflow-y:auto"></textarea>
+    </div>
+	
+    <div class="sendOperate">
+        <a href="javascript:;" class="photoSelect" title=""></a>
+        <a href="javascript:;" class="expreSelect" title=""></a>
+        <div class="operBtn db fr">
+            <span class="pText" id="pText">140</span>
+            <a href="javascript:;" id="cBtn" class="cancelBtn db close" title="">取消</a>
+            <a href="javascript:;" id="comBtn" class="sendBtn c1 db" title="">发送</a>
+        </span>
+		
+		</div>
+	</div>
+    <div class="tipLayer mt10">
+        <div class="expreList">
+        	<div class="expreBox">
+            	<ul class="expreCon" style="margin-left:0px;">
+                	<li>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+</script>

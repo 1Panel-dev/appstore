@@ -1,0 +1,15 @@
+<script id="viewedSite" type="text/html">
+<div>
+    <% for(i = 0; i < res.sites.length; i ++){ %>
+        <div class="topicBox threadlList" siteid="<%= res.sites[i].siteid %>">
+            <div class="topicCon">
+                <a siteid="<%= res.sites[i].siteid %>" href="javascript:;" class="cBtn db" style="float:right" title="">删除</a>
+                <div class="opensite" siteid="<%= res.sites[i].siteid %>">
+                    <img src="<%= res.sites[i].sitelogo %>" width="38" height="38" />
+                    <span style="font-size:20px;margin-left:5px;line-height:32px;"><%= res.sites[i].sitename %></span>
+                </div>
+            </div>
+        </div>
+    <% } %>
+</div>
+</script>

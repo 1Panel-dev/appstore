@@ -1,0 +1,42 @@
+<!--{subtemplate mobile/common/header}-->
+<!--{hook/index_top_mobile}-->
+<!--{if $forum_favlist}-->
+<div class="fl">
+	<div class="bm">
+		<div class="bm_h">
+		<a href="home.php?mod=space&uid={$_G[uid]}&do=favorite&view=me&type=forum">{lang my_favorites_forums}</a>
+		</div>
+		{eval $i=1;}
+		<!--{loop $forum_favlist $key $val}-->
+			<div class="bm_c <!--{if $i%2 == 1}-->add<!--{else}-->even<!--{/if}-->"><a href="forum.php?mod=forumdisplay&fid={$val['id']}">$val['title']</a> <a href="home.php?mod=spacecp&ac=favorite&op=delete&favid={$val[favid]}&type=forum" title="{lang favorite_delete}" class="xg1">[x]</a></div>
+		  {eval $i++;}
+		<!--{/loop}-->
+	</div>
+</div>
+<!--{/if}-->
+
+<!--{loop $catlist $key $cat}-->
+<div class="fl">
+	<div class="bm">
+    	<div class="bm_h">
+    	<!--{if $_G[setting][mobile][mobileforumview] == 1}--><a href="forum.php?viewgid={if $cat[fid] != $_GET[viewgid]}{$cat[fid]}{else}0{/if}">$cat[name]</a><!--{else}-->$cat[name]<!--{/if}-->
+        </div>
+        <!--{if $_G[setting][mobile][mobileforumview] == 0 || ($cat[fid] == $_GET[viewgid])}-->
+            {eval $i=1;}
+            <!--{loop $cat[forums] $forumid}-->
+                <div class="bm_c <!--{if $i%2 == 1}-->add<!--{else}-->even<!--{/if}-->">
+                    <!--{eval $forum=$forumlist[$forumid];}-->
+                    <a href="forum.php?mod=forumdisplay&fid={$forum['fid']}" {if $forum_favlist[$forumid]}class="xi1"{/if}>{$forum[name]}</a> <!--{if $forum[todayposts] > 0}--><font class="xg1">($forum[todayposts])</font><!--{/if}-->
+                </div>
+                {eval $i++;}
+            <!--{/loop}-->
+        <!--{/if}-->
+    </div>
+</div>
+<!--{/loop}-->
+<!--{hook/index_middle_mobile}-->
+<div class="box">
+	{lang index_today}$todayposts<span class="pipe">|</span>{lang index_members}$_G['cache']['userstats']['totalmembers']<!--{if empty($gid) && $_G['setting']['whosonlinestatus'] && $onlinenum}--><span class="pipe">|</span>{lang online}$onlinenum<!--{/if}-->
+</div>
+<!--{hook/index_bottom_mobile}-->
+<!--{subtemplate mobile/common/footer}-->

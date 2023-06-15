@@ -1,0 +1,82 @@
+<!--{template common/header}-->
+<h3 class="flb">
+<em>{lang collection_invite}</em>
+<span><a href="javascript:;" onclick="hideWindow('$_GET['handlekey']');" class="flbc" title="{lang close}">{lang close}</a></span>
+</h3>
+
+<form action="forum.php?mod=collection&action=edit&op=invite&ctid={$ctid}" method="post">
+	<div class="c">
+		<table cellspacing="0" cellpadding="0" class="tfm pmform mtm">
+			<tr>
+				<th><label for="username">{lang collection_username}</label></th>
+				<td>
+					<div class="cl">
+						<div class="un_selector px z cl" onclick="$('username').focus();">
+							<input type="text" name="username" id="username" autocomplete="off" />
+						</div>
+						<a href="javascript:;" id="showSelectBox" class="z mtn xi2 showmenu" onclick="showMenu({'showid':this.id, 'duration':3, 'pos':'34!'});fs.showPMFriend('showSelectBox_menu','selectorBox', this);" title="{lang collection_selectfriend}">{lang collection_selectfriend}</a>
+					</div>
+					<style type="text/css">
+		.pmform{}.pmform .px{width:308px;}
+		.pmform .tedt{width:316px;}
+		.un_selector{height:auto;cursor:text;overflow:hidden;}
+		.un_selector input{width:95px;height:19px;border-width:0;outline:none;}
+		.ie6 .un_selector input,.ie7 .un_selector input{height:17px;}
+		.un_selector #subject{width:308px;}
+		.un_selector span{float:left;margin:1px 2px 1px 0;width:100px;height:19px;line-height:19px;background:#F7F6ED url(static/image/common/un_selector.png) no-repeat 0 0;color:#369;overflow:hidden;}
+		.un_selector em{padding-left:5px;width:80px;}
+		.un_selector .x{float:right;width:15px;height:19px;background:url(static/image/common/un_selector.png) no-repeat 100% -19px;text-indent:-9999px;overflow:hidden;}
+		.un_selector .x:hover{background-position:100% -38px;}a.appendmb,a.appendmb span{height:25px;line-height:25px !important;}.pmfrndl{position:absolute;margin-top:3px;padding:4px;width:120px;border:solid #DDD;border-width:0 1px 1px;background:#FFF;}.ie6 .pmfrndl,.ie7 .pmfrndl{margin-top:4px;}.pmfrndl li{display:inline;}.pmfrndl a{display:block;padding:4px 2px;color:#369;}.pmfrndl a:hover{text-decoration:none;}.pmfrndl a.a{background:#E5EDF2;}#showSelectBox_menu{padding:10px;width:300px;white-space:nowrap;}#selBox{margin:0 -10px 10px;padding-left:10px;height:110px;border:solid #CDCDCD;border-width:1px 0;overflow-y:auto;}.unfold,.fold{float:right;padding-left:10px;background:url(.static/image/common/arrwd.gif) no-repeat 0 50%;cursor:pointer;outline:none;}
+		.fold{background-image:url(static/image/common/arrow_top.gif);}
+					</style>
+					<script type="text/javascript">
+						var random='{TIMESTAMP}';
+						var page = 1;
+						var gid = -1;
+						var showNum = 0;
+						var haveFriend = true;
+						function getUser(pageId, gid) {
+							page = parseInt(pageId);
+							gid = isUndefined(gid) ? -1 : parseInt(gid);
+							var x = new Ajax();
+							x.get('home.php?mod=spacecp&ac=friend&op=getinviteuser&inajax=1&page='+ page + '&gid=' + gid + '&' + Math.random(), function(s) {
+								var data = eval('('+s+')');
+								var singlenum = parseInt(data['singlenum']);
+								var maxfriendnum = parseInt(data['maxfriendnum']);
+								fs.addDataSource(data, clearlist);
+								haveFriend = singlenum && singlenum == 20 ? true : false;
+								if(singlenum && fs.allNumber < 20 && fs.allNumber < maxfriendnum && maxfriendnum > 20 && haveFriend) {
+									page++;
+									getUser(page);
+								}
+							});
+						}
+						function selector() {
+							var parameter = {'searchId':'username', 'showId':'friends', 'formId':'', 'showType':3, 'handleKey':'fs', 'selBox':'selectorBox', 'selBoxMenu':'showSelectBox_menu', 'maxSelectNumber':'20', 'selectTabId':'selectNum', 'unSelectTabId':'unSelectTab', 'maxSelectTabId':'remainNum'};
+							fs = new friendSelector(parameter);
+							var listObj = $('selBox');
+							listObj.onscroll = function() {
+								clearlist = 0;
+								if(this.scrollTop >= this.scrollHeight/5) {
+									page++;
+									gid = isUndefined(gid) ? -1 : parseInt(gid);
+									if(haveFriend) {
+										getUser(page, gid);
+									}
+								}
+							}
+							getUser(page);
+						}
+						selector();
+					</script>
+				</td>
+			</tr>
+			</table>
+	</div>
+	<div class="o pns">
+		<span class="z">{lang collection_max_invite}</span>
+		<input type="hidden" name="formhash" id="formhash" value="{FORMHASH}" />
+		<button type="submit" value="submit" name="submitaddthread" class="pn pnc"><span>{lang invite}</span></button>
+	</div>
+</form>
+<!--{template common/footer}-->

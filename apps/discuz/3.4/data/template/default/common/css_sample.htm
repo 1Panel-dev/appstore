@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>css_sample.htm - ultrax</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+		<meta name="author" content=" Created by Dennis Lee on 6/23/10. " />
+		<link rel="stylesheet" type="text/css" href="../../../data/cache/style_1_common.css" />
+		<link rel="stylesheet" type="text/css" href="../../../data/cache/style_1_forum.css" />
+		<link rel="stylesheet" type="text/css" href="../../../data/cache/style_1_forum_forumdisplay.css" />
+		<link rel="stylesheet" type="text/css" href="../../../data/cache/style_1_forum_viewthread.css" />
+		<style type="text/css">
+			body { padding-top: 50px; }
+			div { overflow: visible !important; }
+			#output { display: none; position: fixed; bottom: 60px; left: 50%; padding: 20px; width: 260px; margin-left: -140px; border-radius: 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px; background: #000; line-height: 1.5; font-family: monospace; text-align: left; color: #FFF; font-size: 14px; opacity: 0.8; }
+		</style>
+
+		<script type="text/javascript" src="../../../static/js/common.js"></script>
+		<script type="text/javascript">
+			window.onload = function(){
+					$("output").style.display = 'block';
+					document.onmouseover = function() {
+						var e = getEvent();
+						var aim = e.target || e.srcElement;
+						aim.style.outline = '1px solid blue';
+						if(aim.parentNode.style) aim.parentNode.style.outline = '2px solid orange';
+						$("output").innerHTML = "<span style='color: #666'>&lt;" + aim.parentNode.tagName + " class=\"" + aim.parentNode.className + "\" /&gt;" + "</span><br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;" + aim.tagName + " class=\"" + aim.className + "\" /&gt;";
+					};
+					document.onmouseout = function() {
+						var e = getEvent();
+						var aim = e.target || e.srcElement;
+						aim.style.outline = 'none';
+						if(aim.parentNode.style) aim.parentNode.style.outline = 'none';
+					};
+			};
+		</script>
+	</head>
+
+	<body>
+		<div id="output"></div>
+		<div class="wp">
+			<h2 class="bm ptw bw0 xs2">单列布局</h2>
+			<div class="ct cl">
+				<div class="mn">
+					<div class="bm">
+						<div class="bm_h cl">
+							<strong>标题</strong> class="bm_h cl"
+						</div>
+						<div class="bm_c">
+							<strong>内容</strong> class="bm_c"
+						</div>
+					</div>
+					<div class="bm bmw">
+						<div class="bm_h cl">
+							<span class="o">
+								<img src="../../../static/image/common/collapsed_no.gif" alt="" />
+							</span>
+							<strong>标题</strong> class="bm_h cl"
+						</div>
+						<div class="bm_c">
+							<strong>内容</strong> class="bm_c"
+						</div>
+					</div>
+				</div>
+			</div>
+			<h2 class="bm ptw bw0 xs2">双列布局 class="ct2 cl"</h2>
+			<div class="ct2 cl">
+				<div class="mn">
+					<div class="bm bmw tl cl">
+						<div class="bm_h cl">
+							<strong>帖子列表:</strong>
+						</div>
+						<table cellspacing="0" cellpadding="0" class="th">
+							<tr>
+								<td class="icn"></td>
+								<td class="o"></td>
+								<th>主题</th>
+								<td class="by">作者</td>
+								<td class="num">回复</td>
+								<td class="by">最后发表</td>
+							</tr>
+						</table>
+						<div class="bm_c">
+							<table cellspacing="0" cellpadding="0">
+								<tr>
+									<td class="icn"><img src="../../../static/image/common/folder_new.gif" alt="" /></td>
+									<td class="o"><input type="checkbox" class="pc" /></td>
+									<th>Subject ...</th>
+									<td class="by"><cite>Author</cite><em>1970-1-1</em></td>
+									<td class="num">10/25</td>
+									<td class="by"><cite>Lastpost</cite><em>1970-1-1</em></td>
+								</tr>
+								<tr>
+									<td class="icn"><img src="../../../static/image/common/folder_new.gif" alt="" /></td>
+									<td class="o"><input type="checkbox" class="pc" /></td>
+									<th>Subject ...</th>
+									<td class="by"><cite>Author</cite><em>1970-1-1</em></td>
+									<td class="num">10/25</td>
+									<td class="by"><cite>Lastpost</cite><em>1970-1-1</em></td>
+								</tr>
+								<tr class="ts">
+									<td class="icn"></td>
+									<td class="o"></td>
+									<th>分隔条</th>
+									<td class="by"></td>
+									<td class="num"></td>
+									<td class="by"></td>
+								</tr>
+								<tr>
+									<td class="icn"><img src="../../../static/image/common/folder_new.gif" alt="" /></td>
+									<td class="o"><input type="checkbox" class="pc" /></td>
+									<th>Subject ...</th>
+									<td class="by"><cite>Author</cite><em>1970-1-1</em></td>
+									<td class="num">10/25</td>
+									<td class="by"><cite>Lastpost</cite><em>1970-1-1</em></td>
+								</tr>
+								<tr>
+									<td class="icn"><img src="../../../static/image/common/folder_new.gif" alt="" /></td>
+									<td class="o"><input type="checkbox" class="pc" /></td>
+									<th>Subject ...</th>
+									<td class="by"><cite>Author</cite><em>1970-1-1</em></td>
+									<td class="num">10/25</td>
+									<td class="by"><cite>Lastpost</cite><em>1970-1-1</em></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="bm bw0">
+						<h2>文字列表</h2>
+						<ul class="xl">
+							<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</li>
+							<li>sed diam nonummy nibh euismod tincidunt ut</li>
+							<li>laoreet dolore magna aliquam erat volutpat</li>
+							<li>Ut wisi enim ad minim veniam</li>
+							<li>quis nostrud exerci tation ullamcorper suscipit</li>
+							<li>lobortis nisl ut aliquip ex ea commodo consequat</li>
+							<li>Duis autem vel eum iriure dolor</li>
+							<li>in hendrerit in vulputate velit esse molestie consequat</li>
+							<li>vel illum dolore eu feugiat nulla facilisis at vero</li>
+							<li>eros et accumsan et iusto odio dignissim</li>
+						</ul>
+					</div>
+					<div class="bm bw0">
+						<h2>双列文字列表</h2>
+						<ul class="xl xl2 cl">
+							<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</li>
+							<li>sed diam nonummy nibh euismod tincidunt ut</li>
+							<li>laoreet dolore magna aliquam erat volutpat</li>
+							<li>Ut wisi enim ad minim veniam</li>
+							<li>quis nostrud exerci tation ullamcorper suscipit</li>
+							<li>lobortis nisl ut aliquip ex ea commodo consequat</li>
+							<li>Duis autem vel eum iriure dolor</li>
+							<li>in hendrerit in vulputate velit esse molestie consequat</li>
+							<li>vel illum dolore eu feugiat nulla facilisis at vero</li>
+							<li>eros et accumsan et iusto odio dignissim</li>
+						</ul>
+					</div>
+				</div>
+				<div class="sd">
+					<div class="bm">
+						<div class="bm_h cl">
+							<strong>标题</strong> class="bm_h cl"
+						</div>
+						<div class="bm_c">
+							<h2>单行文字列表(超出自动隐藏)</h2>
+							<ul class="xl xl1">
+								<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</li>
+								<li>sed diam nonummy nibh euismod tincidunt ut</li>
+								<li>laoreet dolore magna aliquam erat volutpat</li>
+								<li>Ut wisi enim ad minim veniam</li>
+								<li>quis nostrud exerci tation ullamcorper suscipit</li>
+								<li>lobortis nisl ut aliquip ex ea commodo consequat</li>
+								<li>Duis autem vel eum iriure dolor</li>
+								<li>in hendrerit in vulputate velit esse molestie consequat</li>
+								<li>vel illum dolore eu feugiat nulla facilisis at vero</li>
+								<li>eros et accumsan et iusto odio dignissim</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h2 class="bm ptw bw0 xs2">带应用栏的双列布局 class="ct2_a cl"</h2>
+			<div class="ct2_a cl">
+				<div class="mn">
+					<div class="tb cl">
+						<ul>
+							<li class="a"><a href="#">标签一</a></li>
+							<li><a href="#">标签二</a></li>
+							<li><a href="#">标签三</a></li>
+						</ul>
+					</div>
+					<div class="bm bw0">
+						<h2 class="ptm pbm">图片列表:48px</h2>
+						<ul class="ml mls cl">
+							<li>
+								<img src="https://discuz.dismall.com/data/attachment/album/cover/1d/9719.jpg" alt="" />
+								<p>标题</p>
+								<span>附加信息</span>
+							</li>
+							<li>
+								<img src="https://discuz.dismall.com/data/attachment/album/cover/4d/9575.jpg" alt="" />
+								<p>标题</p>
+								<span>附加信息</span>
+							</li>
+							<li>
+								<img src="https://discuz.dismall.com/data/attachment/album/cover/a0/2250.jpg" alt="" />
+								<p>标题</p>
+								<span>附加信息</span>
+							</li>
+						</ul>
+						<h2 class="ptm pbm">图片列表:120px</h2>
+						<ul class="ml mlm cl">
+							<li>
+								<img src="https://discuz.dismall.com/data/attachment/album/cover/1d/9719.jpg" alt="" />
+								<p>标题</p>
+								<span>附加信息</span>
+							</li>
+							<li>
+								<img src="https://discuz.dismall.com/data/attachment/album/cover/4d/9575.jpg" alt="" />
+								<p>标题</p>
+								<span>附加信息</span>
+							</li>
+							<li>
+								<img src="https://discuz.dismall.com/data/attachment/album/cover/a0/2250.jpg" alt="" />
+								<p>标题</p>
+								<span>附加信息</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="appl">
+					<ul>
+						<li><img src="../../../static/image/feed/doing.gif" alt="" />Applications</li>
+						<li><img src="../../../static/image/feed/doing.gif" alt="" />Applications</li>
+						<li><img src="../../../static/image/feed/doing.gif" alt="" />Applications</li>
+					</ul>
+					<hr class="l" />
+					<ul>
+						<li><img src="../../../static/image/feed/doing.gif" alt="" />Applications</li>
+						<li><img src="../../../static/image/feed/doing.gif" alt="" />Applications</li>
+						<li><img src="../../../static/image/feed/doing.gif" alt="" />Applications</li>
+					</ul>
+					<hr class="l" />
+					<ul>
+						<li><img src="../../../static/image/feed/doing.gif" alt="" />Applications</li>
+						<li><img src="../../../static/image/feed/doing.gif" alt="" />Applications</li>
+						<li><img src="../../../static/image/feed/doing.gif" alt="" />Applications</li>
+					</ul>
+				</div>
+			</div>
+			<h2 class="bm ptw bw0 xs2">带应用栏的三列布局 class="ct3_a cl"</h2>
+			<div class="ct3_a cl">
+				<div class="sd">
+					<div class="bm">
+						<div class="bm_h cl">
+							<strong>标题</strong> class="bm_h cl"
+						</div>
+						<div class="bm_c">
+							<strong>内容</strong> class="bm_c"
+						</div>
+					</div>
+				</div>
+				<div class="mn">
+					<h2 class="pbm">常规表单</h2>
+					<table cellspacing="0" cellpadding="0" class="tfm">
+						<tr>
+							<th>输入框</th>
+							<td><input type="text" name="" id="" class="px" /></td>
+						</tr>
+						<tr>
+							<th>输入框</th>
+							<td><input type="text" name="" id="" class="px" /></td>
+						</tr>
+						<tr>
+							<th>多选按钮</th>
+							<td><input type="checkbox" name="" id="" class="pc" /> Label</td>
+						</tr>
+						<tr>
+							<th>单选按钮</th>
+							<td><input type="radio" name="" id="" class="pr" /> Label</td>
+						</tr>
+						<tr>
+							<th>Label</th>
+							<td><input type="text" name="" id="" class="px" /></td>
+						</tr>
+						<tr>
+							<th>Label</th>
+							<td><input type="text" name="" id="" class="px" /></td>
+						</tr>
+						<tr>
+							<th>文本框</th>
+							<td><textarea class="pt"></textarea></td>
+						</tr>
+						<tr>
+							<th>按钮</th>
+							<td>
+								<button class="pn"><span>按钮</span></button>
+								<button class="pn pnc"><strong>按钮</strong></button>
+								<button class="pn"><span>按钮</span></button>
+								<button class="pn"><span>按钮</span></button>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="appl">
+					<ul>
+						<li><img src="../../../static/image/feed/doing.gif" alt="" />Applications</li>
+						<li><img src="../../../static/image/feed/doing.gif" alt="" />Applications</li>
+						<li><img src="../../../static/image/feed/doing.gif" alt="" />Applications</li>
+					</ul>
+					<hr class="l" />
+					<ul>
+						<li><img src="../../../static/image/feed/doing.gif" alt="" />Applications</li>
+						<li><img src="../../../static/image/feed/doing.gif" alt="" />Applications</li>
+						<li><img src="../../../static/image/feed/doing.gif" alt="" />Applications</li>
+					</ul>
+					<hr class="l" />
+					<ul>
+						<li><img src="../../../static/image/feed/doing.gif" alt="" />Applications</li>
+						<li><img src="../../../static/image/feed/doing.gif" alt="" />Applications</li>
+						<li><img src="../../../static/image/feed/doing.gif" alt="" />Applications</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

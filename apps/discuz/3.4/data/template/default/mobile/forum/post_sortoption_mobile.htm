@@ -1,0 +1,49 @@
+<input type="hidden" name="selectsortid" value="$_G['forum_selectsortid']" />
+<!--{if $_G['forum']['threadsorts']['expiration'][$_G['forum_selectsortid']]}-->
+    <div class="inbox">{lang threadtype_expiration}
+        <select name="typeexpiration"  id="typeexpiration" >
+            <option value="259200">{lang three_days}</option>
+            <option value="432000">{lang five_days}</option>
+            <option value="604800">{lang seven_days}</option>
+            <option value="2592000">{lang one_month}</option>
+            <option value="7776000">{lang three_months}</option>
+            <option value="15552000">{lang half_year}</option>
+            <option value="31536000">{lang one_year}</option>
+        </select>
+    	<!--{if $_G['forum_optiondata']['expiration']}-->{lang valid_before}: $_G[forum_optiondata][expiration]<!--{/if}-->
+    </div>
+<!--{/if}-->
+
+<!--{loop $_G['forum_optionlist'] $optionid $option}-->
+	<!--{if $option['type'] != 'image'}-->
+	<div class="inbox">
+    	$option[title] <!--{if $option['required']}--><span class="xi1">*</span><!--{/if}-->
+        <!--{if in_array($option['type'], array('number', 'text', 'email', 'calendar', 'image', 'url', 'range', 'upload', 'range'))}-->
+        	<!--{if $option['type'] == 'calendar'}-->
+            	<span class="xg2">{lang threadsort_calendar}</span>
+                <input type="text" name="typeoption[{$option[identifier]}]" id="typeoption_$option[identifier]"   value="<!--{if !empty($option[value])}-->$option[value]<!--{else}--><!--{eval echo gmdate('Y-m-d');}--><!--{/if}-->" $option[unchangeable] class="txt"/>
+            <!--{else}-->
+                <input type="text" name="typeoption[{$option[identifier]}]" id="typeoption_$option[identifier]" class="txt"  size="$option[inputsize]" value="$option[value]"/>
+            <!--{/if}-->
+        <!--{elseif in_array($option['type'], array('radio', 'checkbox', 'select'))}-->
+        	<!--{if $option[type] == 'select'}-->
+                <select name="typeoption[{$option[identifier]}]" id="typeoption_$option[identifier]"  $option[unchangeable] >
+                <!--{loop $option['choices'] $id $value}-->
+                    <option value="$id" $option['value'][$id]>$value</option>
+                <!--{/loop}-->
+                </select>
+            <!--{elseif $option['type'] == 'radio'}-->
+                <!--{loop $option['choices'] $id $value}-->
+                    <label><input type="radio" name="typeoption[{$option[identifier]}]" id="typeoption_$option[identifier]"  value="$id" $option['value'][$id] $option[unchangeable] >$value </label>
+                <!--{/loop}-->
+            <!--{elseif $option['type'] == 'checkbox'}-->
+                <!--{loop $option['choices'] $id $value}-->
+                    <label><input type="checkbox" name="typeoption[{$option[identifier]}][]" id="typeoption_$option[identifier]"  value="$id" $option['value'][$id][$id] $option[unchangeable] >$value </label>
+                <!--{/loop}-->
+            <!--{/if}-->
+        <!--{elseif in_array($option['type'], array('textarea'))}-->
+        	<textarea name="typeoption[{$option[identifier]}]"  id="typeoption_$option[identifier]" rows="1" $option[unchangeable] class="txt">$option[value]</textarea>
+        <!--{/if}-->
+    </div>
+    <!--{/if}-->
+<!--{/if}-->

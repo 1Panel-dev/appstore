@@ -1,0 +1,49 @@
+<!--{template common/header}-->
+<!--{if empty($_GET['infloat'])}-->
+<div id="ct" class="wp cl">
+	<div class="mn">
+		<div class="bm bw0">
+<!--{/if}-->
+
+<form method="post" autocomplete="off" id="postappendform" action="forum.php?mod=misc&action=postappend&tid=$post[tid]&pid=$_GET[pid]&extra=$extra{if !empty($_GET[page])}&page=$_GET[page]{/if}&postappendsubmit=yes&infloat=yes" onsubmit="this.postappendmessage.value = parseurl(this.postappendmessage.value);{if !empty($_GET['infloat'])}ajaxpost('postappendform', 'return_$_GET['handlekey']', 'return_$_GET['handlekey']', 'onerror');return false;{/if}">
+	<div class="f_c">
+		<h3 class="flb">
+			<em id="return_$_GET['handlekey']">{lang postappend}</em>
+			<span>
+				<!--{if !empty($_GET['infloat'])}--><a href="javascript:;" class="flbc" onclick="hideWindow('$_GET['handlekey']')" title="{lang close}">{lang close}</a><!--{/if}-->
+			</span>
+		</h3>
+		<input type="hidden" name="formhash" id="formhash" value="{FORMHASH}" />
+		<input type="hidden" name="handlekey" value="$_GET['handlekey']" />
+		<div class="c{if empty($_GET['infloat'])} mbm{/if}">
+			<div class="tedt">
+				<div class="bar cm">
+					<!--{eval $seditor = array('postappend', array('bold', 'color'));}-->
+					<!--{subtemplate common/seditor}-->
+					<span id="itemdiv"></span>
+				</div>
+				<div class="area">
+					<textarea rows="2" cols="50" name="postappendmessage" id="postappendmessage" onKeyUp="strLenCalc(this, 'checklen_append')" onKeyDown="seditor_ctlent(event, '$(\'postappendsubmit\').click();')" tabindex="2" class="pt" style="overflow: auto"></textarea>
+				</div>
+				<script type="text/javascript" reload="1">
+					$('postappendmessage').focus();
+				</script>
+			</div>
+			<!--{if $secqaacheck || $seccodecheck}-->
+				<!--{block sectpl}--><sec>: <span id="sec<hash>" onclick="showMenu({'ctrlid':this.id,'win':'{$_GET[handlekey]}'})"><sec></span><div id="sec<hash>_menu" class="p_pop p_opt" style="display:none"><sec></div><!--{/block}-->
+				<div class="mtm"><!--{subtemplate common/seccheck}--></div>
+			<!--{/if}-->
+		</div>
+		<div class="o pns cl">
+			<button type="submit" id="postappendsubmit" class="pn pnc z" value="true" name="postappendsubmit" tabindex="3"><span>{lang publish}</span></button>
+			<span class="y">{lang comment_message1} <strong id="checklen_append">200</strong> {lang comment_message2}</span>
+		</div>
+	</div>
+</form>
+
+<!--{if empty($_GET['infloat'])}-->
+		</div>
+	</div>
+</div>
+<!--{/if}-->
+<!--{template common/footer}-->

@@ -1,0 +1,123 @@
+/*
+Editor CSS file for Discuz! X
+(C) Comsenz Inc.
+https://www.discuz.vip
+*/
+.edt { border: 1px solid; border-color: #999 #CCC #CCC #999; }
+	.edt .bar { padding: 4px; height: 44px; border-bottom: 1px solid #DDD; background: {COMMONBG}; }
+		.edt .cst { background: {COMMONBG}; border-bottom: 1px solid #DDD; }
+		.edt .cst.nbb { border-bottom: none !important; }
+		.edt .bbar { height: 20px; border-top: 1px solid #DDD; text-align: right; background: {COMMONBG}; }
+			.edt .bbar img { vertical-align: bottom; *margin-right: -4px; cursor: row-resize; }
+			.edt .bbar em { width: 200px; height: 20px; overflow: hidden; white-space: nowrap; float: left; text-align: left; }
+		.edt .bbar, .edt .bbar a { color: #999; }
+		.edt .btn { float: left; border-right: 1px solid #FEFEFE; }
+			.edt .b1r, .edt .b2r { position: relative; float: left; padding: 0 3px; height: 44px; border-right: 1px solid #DDD; border-left: 1px solid #FEFEFE; }
+			.edt .b2r p, .edt .b2r br { clear: both; }
+		.edt .esb p { float: left; width: 25px; clear: none; }
+		.edt .esbs p { float: left; clear: none; }
+		.edt .bar a { float: left; border: 1px solid {COMMONBG}; background: transparent url({STATICURL}image/editor/editor.gif) no-repeat 0 0; overflow: hidden; }
+			.edt .b1r a { padding-top: 27px; width: 35px; height: 15px; text-align: center; font-size: 11px; font-family: Arial, PMingLiU, sans-serif; -webkit-text-size-adjust: none; }
+			.edt .b2r a { width: 20px; height: 20px; text-indent: -9999px; }
+				.edt .b2r a.dp { margin-right: 1px; padding-left: 2px; width: 78px; height: 20px; text-indent: 0; border-color: {INPUTBORDERDARKCOLOR} {INPUTBORDER} {INPUTBORDER} {INPUTBORDERDARKCOLOR}; background: #FFF url({STATICURL}image/common/newarow.gif) no-repeat 100% 0; }
+				.edt .b2r a:hover.dp { border-color: #09C; background-position: 100% -23px; }
+			.edt .nbl { border-left: none; padding-left: 0; }
+				.edt .nbr { border-right: none; padding-right: 0; }
+			.edt .bar a:hover, .edt .bar a.hover { border-color: #09C; background-color: {WRAPBG}; text-decoration: none; }
+				.edt .bar a.tblbtn_disabled:hover, .edt .bar a.hd_dsb:hover { border-color: {COMMONBG} !important; background-color: transparent !important; cursor: default; }
+	.edt .area { padding: 4px; background: {WRAPBG}; zoom: 1; }
+		.edt .pt { padding: 0 !important; width: 100%; height: 400px; border: none; background: {WRAPBG} none; font-size: {MSGFONTSIZE}; }
+			.ie8 .edt .pt { width: 800px; max-width: 100%; min-width: 100%; }
+			.edt .pt:focus { outline: none; -moz-box-shadow: none; }
+
+	.edt a.cst { background-image: none; text-align: center; text-indent: 0; }
+		.edt a.cst img { vertical-align: middle; }
+
+	.simpleedt .bar, .simpleedt .b1r, .simpleedt .b2r { height: 22px; }
+	.bar_swch { display: block; clear: both; }
+
+	#e_bold			{ background-position: 0 0; }
+	#e_fontsize		{ width: 45px; }
+	#e_italic		{ background-position: -20px 0; }
+	#e_underline		{ background-position: -40px 0; }
+	#e_forecolor		{ background-position: -60px 0; }
+	#e_backcolor		{ background-position: -80px 0; }
+
+	#e_url			{ background-position: -40px -20px; }
+	#e_unlink		{ background-position: -60px -20px; }
+	#e_justifyleft		{ background-position: -80px -20px; }
+	#e_justifycenter	{ background-position: -240px -40px; }
+	#e_justifyright		{ background-position: -260px -40px; }
+	#e_autotypeset		{ background-position: -220px -40px; }
+	#e_floatleft		{ background-position: -100px -60px; }
+	#e_floatright		{ background-position: -120px -60px; }
+	#e_insertorderedlist	{ background-position: -100px -20px; }
+	#e_insertunorderedlist	{ background-position: 0 -60px; }
+	#e_inserthorizontalrule	{ background-position: -20px -60px; }
+	#e_tbl			{ background-position: -160px -20px; }
+	.tblbtn_disabled	{ background-position: -180px -20px !important; }
+
+	#e_tool			{ background-position: 0 -40px; }
+	#e_undo			{ background-position: -20px -40px; }
+	#e_redo			{ background-position: -40px -40px; }
+	#e_removeformat		{ background-position: -60px -40px; }
+	#e_tpr			{ background-position: -80px -40px; }
+	#e_chck			{ background-position: -100px -40px; }
+	#e_hide			{ background-position: -120px -40px; }
+	.hd_dsb			{ background-position: -200px -40px !important; }
+	#e_free			{ background-position: -140px -40px; }
+	#e_svd			{ background-position: -160px -40px; }
+	#e_rst			{ background-position: -180px -40px; }
+
+	#e_sml			{ background-position: -3px -80px; }
+		.b2r #e_sml	{ background-position: -20px -20px; }
+	#e_image		{ background-position: -43px -80px; }
+		.b2r #e_image	{ background-position: 0 -20px; }
+	#e_attach		{ background-position: -83px -80px; }
+		.b2r #e_attach	{ background-position: -200px -20px; }
+	#e_code			{ background-position: -123px -80px; }
+		.b2r #e_code	{ background-position: -120px -20px; }
+	#e_quote		{ background-position: -163px -80px; }
+		.b2r #e_quote	{ background-position: -140px -20px; }
+	#e_pasteword		{ background-position: -60px -60px; }
+	#e_downremoteimg	{ background-position: -80px -60px; }
+
+	#e_page	{ background-position: -200px -60px; }
+	#e_index	{ background-position: -220px -120px; }
+	#e_password	{ background-position: -180px -120px; }
+	#e_postbg	{ background-position: -160px -120px; }
+
+	#e_fls			{ background-position: -3px -120px; }
+		.b2r #e_fls	{ background-position: -260px -20px; }
+	#e_aud			{ background-position: -43px -120px; }
+		.b2r #e_aud	{ background-position: -220px -20px; }
+	#e_vid			{ background-position: -83px -120px; }
+		.b2r #e_vid	{ background-position: -240px -20px; }
+	#e_at			{ background-position: -126px -120px; }
+		.b2r #e_at	{ background-position: -140px 0; }
+
+	#e_imagen, #e_attachn { position: absolute; top: 3px; left: 63px; width: 14px; height: 15px; background: url({STATICURL}image/editor/editor.gif) no-repeat -244px -80px; text-indent: -9999px; }
+		#e_attachn { left: 100px; }
+	.b2r #e_imagen, .b2r #e_attachn { top: -4px; left: 35px; }
+		.b2r #e_attachn { left: 57px; }
+
+	#e_switcher input{ margin-right: 4px; vertical-align: middle; }
+	#e_simple, #e_fullswitcher { padding: 0 2px; text-align: right; border: 1px solid {SPECIALBORDER}; background: url({IMGDIR}/card_btn.png) repeat-x 0 100%; }
+		#e_fullswitcher { margin-right: 3px; }
+
+	#e_beginning { background-position: -246px -120px;}
+		.b2r #e_beginning { background-position: -260px -78px; }
+
+/* 缩小编辑器演出菜单中输入框的尺寸 */
+.popupfix .px { margin-bottom: 4px; }
+
+#e_body { display: block !important; }
+#e_body_loading { display: none; }
+
+/*
+	Name:			mod_editor_menu
+	Level:			Function
+	Explain:		编辑器弹层关闭按钮在 IE8 下有问题
+	Last Modify:	Pony
+*/
+.ie8 .editortoolbar .flbc { position: relative; }

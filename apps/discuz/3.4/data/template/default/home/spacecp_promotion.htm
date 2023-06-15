@@ -1,0 +1,53 @@
+<!--{template common/header}-->
+	<!--{subtemplate home/spacecp_header}-->
+			<!--{hook/spacecp_promotion_top}-->
+			<!--{if $_G['setting']['creditspolicy']['promotion_visit'] || $_G['setting']['creditspolicy']['promotion_register']}-->
+				<div class="bbda pbm mbm">
+					<!--{if $_G['setting']['creditspolicy']['promotion_visit']}--><p>
+						{lang post_promotion_url}
+					</p><!--{/if}-->
+
+					<!--{if $_G['setting']['creditspolicy']['promotion_register']}-->
+					<p>
+					<!--{if $_G['setting']['creditspolicy']['promotion_visit']}-->
+						{lang post_promotion_reg}
+					<!--{else}-->
+						{lang post_promotion}
+					<!--{/if}-->
+					</p>
+					<!--{/if}-->
+				</div>
+				<table cellspacing="0" cellpadding="0" class="tfm">
+					<tr>
+						<th colspan="2" class="xs2 xw1">{lang mode_one}</th>
+					</tr>
+					<tr>
+						<th>{lang post_promotion_url1}</th>
+						<td class="pns">
+							<input type="text" class="px vm" onclick="this.select();setCopy('{$copystr}'+'\n'+this.value, '{lang promotion_url_copied}');" value="$_G[siteurl]?fromuid=$_G[uid]" size="50" />
+							<button type="submit" class="pn vm" onclick="setCopy('{$copystr}'+'\n'+'$_G[siteurl]?fromuid=$_G[uid]', '{lang promotion_url_copied}');"><em>{lang copy}</em></button>
+						</td>
+					</tr>
+					<tr>
+						<th>{lang post_promotion_url2}</th>
+						<td class="pns">
+							<input type="text" class="px vm" onclick="this.select();setCopy('{$copystr}'+'\n'+this.value, '{lang promotion_url_copied}');" value="$_G[siteurl]?fromuser={echo rawurlencode($_G[username])}" size="50" />
+							<button type="submit" class="pn vm" onclick="setCopy('{$copystr}'+'\n'+'$_G[siteurl]?fromuser={echo rawurlencode($_G[username])}', '{lang promotion_url_copied}');"><em>{lang copy}</em></button>
+						</td>
+					</tr>
+					<tr>
+						<th colspan="2" class="xs2 xw1 ptw">{lang mode_two}</th>
+					</tr>
+					<tr>
+						<th colspan="2">{lang mode_two_desc}</th>
+					</tr>
+				</table>
+			<!--{/if}-->
+			<!--{hook/spacecp_promotion_bottom}-->
+		</div>
+	</div>
+	<div class="appl">
+		<!--{subtemplate home/spacecp_footer}-->
+	</div>
+</div>
+<!--{template common/footer}-->

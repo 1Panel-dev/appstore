@@ -1,0 +1,138 @@
+<!--{eval $_G['home_tpl_titles'] = array('{lang remind}');}-->
+<!--{template common/header}-->
+{eval 
+	$space['isfriend'] = $space['self'];
+	if(in_array($_G['uid'], (array)$space['friends'])) $space['isfriend'] = 1;
+	space_merge($space, 'count');
+	space_merge($space, 'field_home');
+}
+
+<div id="pt" class="bm cl">
+	<div class="z">
+		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em>
+		<a href="home.php">$_G[setting][navs][4][navname]</a> <em>&rsaquo;</em> 
+		{lang privacy_prompt}
+	</div>
+</div>
+<div id="ct" class="wp cl">
+	<div class="nfl">
+		<div class="f_c mtw mbw">
+			<table cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;">
+				<tr>
+					<td valign="top" width="140" class="hm">
+						<div class="avt avtm"><a href="home.php?mod=space&uid=$space[uid]"><!--{avatar($space[uid],middle)}--></a></div>
+						<p class="mtm xw1 xi2 xs2"><a href="home.php?mod=space&uid=$space[uid]">{$space[username]}</a></p>
+					</td>
+					<td width="14"></td>
+					<td valign="top" class="xs1">
+						<h2 class="xs2">
+							{lang set_privacy}
+						</h2>
+						<p class="mtm mbm">
+							<a href="home.php?mod=space&uid=$space[uid]&do=friend">{lang view_friend_list}</a>
+							<!--{if $isfriend}-->
+							<span class="pipe">|</span><a href="home.php?mod=spacecp&ac=friend&op=ignore&uid=$space[uid]&handlekey=ignorefriendhk_{$space[uid]}" id="a_ignore" onclick="showWindow(this.id, this.href, 'get', 0);">{lang ignore_friend}</a>
+							<!--{else}-->
+							<span class="pipe">|</span><a href="home.php?mod=spacecp&ac=friend&op=add&uid=$space[uid]&handlekey=addfriendhk_{$space[uid]}" id="a_friend" onclick="showWindow(this.id, this.href, 'get', 0);">{lang add_friend}</a>
+							<!--{/if}-->
+							<span class="pipe">|</span><a href="home.php?mod=spacecp&ac=poke&op=send&uid=$space[uid]&handlekey=propokehk_{$space[uid]}" id="a_poke" onclick="showWindow(this.id, this.href, 'get', 0);">{lang say_hi}</a>
+							<span class="pipe">|</span><a href="home.php?mod=spacecp&ac=pm&op=showmsg&handlekey=showmsg_$space[uid]&touid=$space[uid]&pmid=0&daterange=4" id="a_pm" onclick="showWindow(this.id, this.href, 'get', 0);">{lang send_pm}</a>
+							<!--span class="pipe">|</span><a href="home.php?mod=spacecp&ac=common&op=report&idtype=uid&id=$space[uid]&handlekey=reportbloghk_{$space[uid]}" id="a_report" onclick="showWindow(this.id, this.href, 'get', 0);">{lang report}</a-->
+							<!--{if $_G[group][allowedituser]}-->
+							<span class="pipe">|</span><a id="a_manage" href="admin.php?action=members&operation=search&uid=$space[uid]&submit=1&frames=yes">{lang manage_member}</a>
+							<!--{/if}-->
+						</p>
+						<!--{if $space[spacenote]}-->
+						<p>$space[spacenote]</p>
+						<!--{/if}-->
+
+						<div class="mtm pbm mbm bbda cl">
+							<h2 class="mbn">{lang active_profile}</h2>
+							<ul class="xl xl2 cl">
+								<!--{if $space[adminid] > 0}--><li>{lang management_team}: <span style="color:{$space[admingroup][color]}">{$space[admingroup][grouptitle]}</span> {$space[admingroup][icon]}</li><!--{/if}-->
+								<li>{lang usergroup}: <span style="color:{$space[group][color]}">{$space[group][grouptitle]}</span> {$space[group][icon]}</li>
+								<!--{if $space[extgroupids]}--><li>{lang group_expiry_type_ext}: $space[extgroupids]</li><!--{/if}-->
+								<li>{lang regdate}: $space[regdate]</li>
+								<li>{lang last_visit}: $space[lastvisit]</li>
+								<!--{if $_G[uid] == $space[uid] || $_G[group][allowviewip]}-->
+								<li>{lang register_ip}: $space[regip] - $space[regip_loc]</li>
+								<li>{lang last_visit_ip}: $space[lastip] - $space[lastip_loc]</li>
+								<!--{/if}-->
+								<li>{lang last_activity_time}: $space[lastactivity]</li>
+								<li>{lang last_post_time}: $space[lastpost]</li>
+								<li>{lang last_send_email}: $space[lastsendmail]</li>
+								<li>{lang time_offset}: 
+									<!--{eval $timeoffset = array({lang timezone});}-->
+									$timeoffset[$space[timeoffset]]
+								</li>
+							</ul>
+						</div>
+
+						<ul class="pbm mbm bbda cl xl xl2 ">
+							<li>{lang space_visits}: $space[views]</li>
+							<li>{lang friends_num}: $space[friends]</li>
+							<li>{lang posts_num}: $space[posts]</li>
+							<li>{lang threads_num}: $space[threads]</li>
+							<li>{lang digest_num}: $space[digestposts]</li>
+							<li>{lang doings_num}: $space[doings]</li>
+							<li>{lang blogs_num}: $space[blogs]</li>
+							<li>{lang albums_num}: $space[albums]</li>
+							<li>{lang shares_num}: $space[sharings]</li>
+
+							<li>{lang used_space}: <!--{eval echo formatsize($space['attachsize'])}--></li>
+						</ul>
+
+						<ul class="pbm mbm bbda cl xl xl2 ">
+							<li>{lang credits}: $space[credits]</li>
+							<!--{loop $_G[setting][extcredits] $key $value}-->
+							<!--{if $value[title]}-->
+							<li>$value[title]: {$space["extcredits$key"]} $value[unit]</li>
+							<!--{/if}-->
+							<!--{/loop}-->
+
+							<li>{lang buyer_credit}: $space[buyercredit]</li>
+							<li>{lang seller_credit}: $space[sellercredit]</li>
+						</ul>
+
+						<!--{if $space['medals']}-->
+							<div class="pbm mbm bbda cl">
+								<h2 class="mbn">{lang medals}</h2>
+								<!--{loop $space['medals'] $medal}-->
+								<img src="{STATICURL}/image/common/$medal[image]" border="0" alt="$medal[name]" title="$medal[name]" /> &nbsp;
+								<!--{/loop}-->
+							</div>
+						<!--{/if}-->
+						<!--{if $_G['setting']['verify']['enabled']}-->
+							<!--{eval $showverify = true;}-->
+							<!--{loop $_G['setting']['verify'] $vid $verify}-->
+								<!--{if $verify['available'] && $space['verify'.$vid] == 1}-->
+									<!--{if $showverify}-->
+									<div class="pbm mbm bbda cl">
+										<h2 class="mbn">{lang profile_verify}</h2>
+										<!--{eval $showverify = false;}-->
+									<!--{/if}-->
+									<a href="home.php?mod=spacecp&ac=profile&op=verify&vid=$vid" target="_blank"><!--{if $verify[icon]}--><img src="$verify[icon]" class="vm" alt="$verify[title]" title="$verify[title]" /><!--{else}-->$verify[title]<!--{/if}--></a>&nbsp;
+								<!--{/if}-->
+							<!--{/loop}-->
+							<!--{if !$showverify}--></div><!--{/if}-->
+						<!--{/if}-->
+						<!--{if $manage_forum}-->
+							<div class="pbm mbm bbda cl">
+								<h2 class="mbn">{lang manage_forums}</h2>
+								<!--{loop $manage_forum $key $value}-->
+								<a href="forum.php?mod=forumdisplay&fid=$key" target="_blank">$value</a> &nbsp;
+								<!--{/loop}-->
+							</div>
+						<!--{/if}-->
+
+						<!--{if !$isfriend}-->
+						<p class="mtw xg1">{lang become_friend_message}</p>
+						<p class="mtm cl"><a href="home.php?mod=spacecp&ac=friend&op=add&uid=$space[uid]" id="add_friend" onclick="showWindow(this.id, this.href, 'get', 0);" class="pn z" style="text-decoration: none;"><strong class="z">{lang add_friend}</strong></a></p>
+						<!--{/if}-->
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+<!--{template common/footer}-->

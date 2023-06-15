@@ -1,0 +1,16 @@
+<script id="topicBox_showactivity" type="text/html">
+    <div class="topicBox threadList" tid="<%= Variables.forum_threadlist[i].tid %>" page="<%= Variables.page %>" id="thread<%= Variables.forum_threadlist[i].tid %>">
+        <% if(Variables.forum_threadlist[i].showactivity.thumb) { %>
+            <div class="imgShow"><img data-original="<%= Variables.forum_threadlist[i].showactivity.thumb %>" class="lazy" alt="图片"></div>
+        <% } %>
+        <div class="topicCon">
+            <div class="detailCon">
+                <h2 class="dTitle f18 c5 fn wot"><a href="javascript:;" class="showBtn br f11 c2 db">晒图</a><%= Variables.forum_threadlist[i].subject %></h2>
+                <p class="dTime c9 f12"><i class="iconTime f16 mr5 commF"></i>截止时间：<%= Variables.forum_threadlist[i].showactivity.expiration %><a href="javascript:;" class="topBtn br f11 ml5 c2 db joinBox" tid="<%= Variables.forum_threadlist[i].tid %>">点击参加</a></p>
+                <div class="dNum pr">
+                    <span class="db c7 f12 pa">已有<%= Variables.forum_threadlist[i].showactivity.applynumber %>人参加</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>

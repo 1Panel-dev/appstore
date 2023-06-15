@@ -1,0 +1,41 @@
+<!--{template common/header}-->
+<header class="header">
+	<div class="nav">
+		<a href="forum.php?mod=viewthread&tid=$_G[tid]" class="z"><img src="{STATICURL}image/mobile/images/icon_back.png" /></a>
+		<span class="name">{lang pay}</span>
+	</div>
+</header>
+
+<form id="payform" method="post" autocomplete="off" action="forum.php?mod=misc&action=pay&paysubmit=yes&infloat=yes{if !empty($_GET['from'])}&from=$_GET['from']{/if}"{if !empty($_GET['infloat'])} onsubmit="ajaxpost('payform', 'return_$_GET['handlekey']', 'return_$_GET['handlekey']', 'onerror');return false;"{/if}>
+	<div class="f_c">
+		<input type="hidden" name="formhash" value="{FORMHASH}" />
+		<input type="hidden" name="referer" value="{echo dreferer()}" />
+		<input type="hidden" name="tid" value="$_G[tid]" />
+		<input type="hidden" name="paysubmit" value="true" />
+		<!--{if !empty($_GET['infloat'])}--><input type="hidden" name="handlekey" value="$_GET['handlekey']" /><!--{/if}-->
+		<div class="clew_con c">
+			<table class="list" cellspacing="0" cellpadding="0" style="width: 400px">
+				<tr>
+					<th>{lang author}</th>
+					<td><!--{if empty($thread['authorid'])}-->$thread['author']<!--{else}--><a href="home.php?mod=space&uid=$thread['authorid']">$thread['author']</a><!--{/if}--></td>
+				</tr>
+				<tr>
+					<th valign="top">{lang price}({$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][title]})</th>
+					<td>$thread[price] {$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][unit]}</td>
+				</tr>
+				<tr>
+					<th valign="top">{lang pay_author_income}({$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][title]})</th>
+					<td>$thread[netprice] {$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][unit]}</td>
+				</tr>
+				<tr>
+					<th valign="top">{lang pay_balance}({$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][title]})</th>
+					<td>$balance {$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][unit]}</td>
+				</tr>
+			</table>
+		</div>
+		<div class="clew_con">
+			<input class="button" type="submit" name="submit" value="{lang submit}" />
+		</div>
+	</div>
+</form>
+<!--{template common/footer}-->

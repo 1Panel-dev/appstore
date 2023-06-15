@@ -1,0 +1,26 @@
+<script id="secure_tpl" type="text/html">
+    <div class="manageLayer">
+        <img id="secureimg" src="<%= seccode %>">
+        <input id="secure" name="secure" type="text" class="sInput sBg" placeholder="验证码" maxlength="10"/>
+        <button id="refreshSecure">重新获取</button>
+        <button id="sendInSecure">发送</button>
+    </div>
+</script>
+<script id="secure_tpl" type="text/html">
+    <div class="manageLayer">
+		<% if (seccode) { %>
+        <div class="verCode">
+		<iframe id="secureimg" src="<%= seccode %>"  width="200" height="80" alt="验证码" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
+		</div>
+        <div class="verCode"><input id="secure" class="v_input" name="" type="text"  placeholder="验证码" /></div>
+        <% } %>
+		<% if (secqaa) {%>
+		<div class="verCode">验证问答：<span id="secqaa"><%= secqaa %></span></div>
+		<div class="verCode"><input id="secanswer" class="v_input" name="secanswer" type="text" placeholder="验证问答答案" /></div>
+		<% } %>
+        <div class="editArea">
+            <button id="refreshSecure" class="editBtn3 db">重新获取</button>
+            <button id="sendInSecure" class="editBtn4 db">发送</button>
+        </div> 
+    </div>
+</script>

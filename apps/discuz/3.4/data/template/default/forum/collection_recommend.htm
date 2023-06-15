@@ -1,0 +1,18 @@
+<!--{template common/header}-->
+<h3 class="flb">
+	<em>{lang collection_recommend}</em>
+	<span><a href="javascript:;" onclick="hideWindow('$_GET['handlekey']');" class="flbc" title="{lang close}">{lang close}</a></span>
+</h3>
+<form action="forum.php?mod=collection&action=comment&op=recommend&ctid={$ctid}" onsubmit="ajaxpost(this.id, 'form_collectionrecommend');" id="form_collectionrecommend" name="form_collectionrecommend" method="POST">
+	<div class="c">
+		{lang collection_recommend_thread_url}
+		<input type="text" value="" name="threadurl" style="width: 400px;" class="px" />
+	</div>
+	<div class="o pns">
+		<button type="submit" class="pn pnc"><span>{lang collection_recommend_submit}</span></button>
+	</div>
+	<input type="hidden" value="{FORMHASH}" name="formhash" />
+	<input type="hidden" name="inajax" value="1">
+	<input type="hidden" name="handlekey" value="$_GET['handlekey']">
+</form>
+<!--{template common/footer}-->

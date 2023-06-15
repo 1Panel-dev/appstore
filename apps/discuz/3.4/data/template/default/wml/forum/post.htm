@@ -1,0 +1,57 @@
+<!--{template common/header}-->
+
+<!--{if $_G['forum']['type'] == 'forum'}-->
+<a href="forum.php" title="$_G['setting']['navs'][2]['navname']">$_G['setting']['navs'][2]['navname']</a>
+<a href="forum.php?mod=forumdisplay&fid={$_G['forum']['fid']}">{$_G['forum']['name']}</a>
+<!--{else}-->
+<a href="forum.php" title="$_G['setting']['navs'][2]['navname']">$_G['setting']['navs'][2]['navname']</a>
+<a href="forum.php?mod=forumdisplay&fid={$forum_up['fid']}">$forum_up['name']</a>
+<a href="forum.php?mod=forumdisplay&fid={$_G['forum']['fid']}">{$_G['forum']['name']}</a>
+<!--{/if}-->
+<!--{if $_GET[action] == 'newthread' || $_GET[action] == 'reply'}-->
+	<p>
+		<!--{if $isfirstpost && !empty($_G['forum'][threadtypes][types])}-->
+			{lang threadtype}
+			<!--{if $_G['forum'][threadtypes][required] == 1}-->
+				 {lang required}
+			<!--{/if}-->
+			<select name="typeid" id="typeid" width="80"  >
+				<option value="0">{lang select_thread_catgory}</option>
+				<!--{loop $_G['forum'][threadtypes][types] $typeid $name}-->
+					<!--{if empty($_G['forum']['threadtypes']['moderators'][$typeid]) || $_G['forum']['ismoderator']}-->
+					<option value="$typeid"{if $thread['typeid'] == $typeid || $_GET['typeid'] == $typeid} selected="selected"{/if}><!--{echo strip_tags($name);}--></option>
+					<!--{/if}-->
+				<!--{/loop}-->
+			</select>
+		<!--{/if}-->
+		<!--{if $_GET[action] == 'newthread'}-->
+			{lang thread_subject}:<input type="text" name="subject" value="" maxlength="80" format="M*m" /><br />
+		<!--{/if}-->
+			{lang thread_content}:<input type="text" name="message" value="" format="M*m" /><br />
+		<!--{if $secqaacheck || $seccodecheck}-->
+		<!--{subtemplate common/seccheck}-->
+		<!--{/if}-->
+		<anchor title="{lang submit}">{lang submit}
+		<go method="post" {if $_GET[action] == 'newthread'}href="forum.php?mod=post&action={if $special != 2}newthread{else}newtrade{/if}&fid=$_G[fid]&extra=$extra&topicsubmit=yes&mobile=3"
+		{elseif $_GET[action] == 'reply'}href="forum.php?mod=post&action=reply&fid=$_G[fid]&tid=$_G[tid]&extra=$extra&replysubmit=yes&mobile=3"
+		{elseif $_GET[action] == 'edit'}href="forum.php?mod=post&action=edit&extra=$extra&editsubmit=yes&mobile=3"
+		{/if}>
+		<!--{if $_GET[action] == 'newthread'}-->
+			<postfield name="subject" value="$(subject)" />
+		<!--{/if}-->
+		<postfield name="message" value="$(message)" />
+		<postfield name="formhash" value="{FORMHASH}" />
+		<!--{if $isfirstpost && !empty($_G['forum'][threadtypes][types])}-->
+			<postfield name="typeid" value="$(typeid)" />
+		<!--{/if}-->
+		<!--{if $secqaacheck || $seccodecheck}-->
+		<postfield name="sechash" value="$(sechash)" />
+		<postfield name="secanswer" value="$(secanswer)" />
+		<postfield name="seccodeverify" value="$(seccodeverify)" />
+		<!--{/if}-->
+		</go></anchor><br /><br />
+	</p>
+
+<!--{/if}-->
+
+<!--{template common/footer}-->

@@ -1,0 +1,64 @@
+<!--{eval $_G['home_tpl_titles'] = array('{lang pm}');}-->
+<!--{template common/header}-->
+<div class="box"><a href="{if $forcefid}forum.php?mod=forumdisplay{$forcefid}{else}forum.php{/if}" title="{lang return_forum}">{lang return_forum}</a><span class="pipe">|</span> <a href="home.php?mod=space&do=pm" title="{lang send_pm}" class="xw1">{lang pm_center}</a> <span class="pipe">|</span><a href="home.php?mod=spacecp&ac=pm" title="{lang send_pm}">{lang send_pm}</a></div>
+
+<div class="bm mtn">
+<!--{if in_array($filter, array('privatepm')) || in_array($_GET[subop], array('view'))}-->
+<div class="bm_h"><!--{if in_array($_GET[subop], array('view'))}--><a href="javascript:history.back();">[{lang back}]</a><!--{if $membernum >= 2 && $subject}-->{$membernum}{lang pm_members_message}:$subject<!--{elseif $tousername}-->{lang pm_with}{$tousername}{lang pm_totail}<!--{/if}--><!--{else}-->{lang pm}<!--{/if}--></div>
+<!--{if in_array($filter, array('privatepm'))}-->
+    <!--{loop $list $key $value}-->
+    <div class="bm_c">
+        <p class="{if $value[new]}xw1{/if}">
+        <a href="{if $value[touid]}home.php?mod=space&do=pm&subop=view&touid=$value[touid]{else}home.php?mod=space&do=pm&subop=view&plid={$value['plid']}&daterange=1&type=1{/if}"><!--{if $value['pmtype'] == 2}-->[{lang chatpm}]<!--{if $value[subject]}-->$value[subject]<br><!--{/if}--><!--{/if}--><!--{if $value['pmtype'] == 2 && $value['lastauthor']}-->$value['lastauthor'] : <!--{/if}-->$value[message]</a></p>
+        <p>
+        	<!--{if $value[touid]}-->
+			<!--{if $value[msgfromid] == $_G[uid]}-->
+				<span class="xg1">{lang me}{lang you_to}{$value[tousername]}{lang say}</span>
+			<!--{else}-->
+				<span class="xg1">{$value[tousername]}{lang you_to}{lang me}{lang say}</span>
+			<!--{/if}-->
+            <!--{elseif $value['pmtype'] == 2}-->
+			<span class="xg1">{lang chatpm_author}:$value['firstauthor']</span>
+		<!--{/if}-->
+            <span class="xg1"><!--{date($value[dateline], 'u')}--></span>
+        </p>
+    </div>
+    <!--{/loop}-->
+<!--{elseif in_array($_GET[subop], array('view'))}-->
+	<!--{if $list}-->
+		<!--{loop $list $key $value}-->
+			<!--{subtemplate home/space_pm_node}-->
+		<!--{/loop}-->
+	<!--{else}-->
+		<div class="ban pd5 mtn mbn">
+			{lang no_corresponding_pm}
+		</div>
+	<!--{/if}-->
+	$multi
+	<!--{if $list}-->
+	<div class="bm"></div>
+        <a name="last"></a>
+        <div class="bm_c">
+            <form id="pmform" class="pmform" name="pmform" method="post" action="home.php?mod=spacecp&ac=pm&op=send&pmid=$pmid&daterange=$daterange&pmsubmit=yes&mobile=yes" >
+			<input type="hidden" name="formhash" value="{FORMHASH}" />
+			<!--{if !$touid}-->
+			<input type="hidden" name="plid" value="$plid" />
+			<!--{else}-->
+			<input type="hidden" name="touid" value="$touid" />
+			<!--{/if}-->
+			<textarea rows="2" cols="40" name="message" class="txt" id="replymessage" onkeydown="ctrlEnter(event, 'pmsubmit');"></textarea>
+			<p class="mtn">
+				<input type="submit" name="pmsubmit" id="pmsubmit" value="{lang reply}" />
+			</p>
+            </form>
+        </div>
+     </div>
+    <!--{/if}-->
+<!--{/if}-->
+<!--{else}-->
+	<div class="bm_c">
+		{lang user_mobile_pm_error}
+    </div>
+<!--{/if}-->
+</div>
+<!--{template common/footer}-->

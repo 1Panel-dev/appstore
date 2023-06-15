@@ -1,0 +1,25 @@
+{template header}
+<!--{if empty($_REQUEST['inajax'])}-->
+	<div class="container">
+		<div class="ajax rtninfo">
+			<div class="ajaxbg">
+				<h4>{lang message_title}:</h4>
+				<p>$message</p>
+				<!--{if $redirect == 'BACK'}-->
+					<p><a href="###" onclick="history.back();">{lang message_back}</a></p>
+				<!--{elseif $redirect}-->
+					<p><a href="$redirect">{lang message_redirect}</a></p>
+					<script type="text/javascript">
+					function redirect(url, time) {
+						setTimeout("window.location='" + url + "'", time * 1000);
+					}
+					redirect('$redirect', 3);
+					</script>
+				<!--{/if}-->
+			</div>
+		</div>
+	</div>
+<!--{else}-->
+	$message
+<!--{/if}-->
+{template footer}

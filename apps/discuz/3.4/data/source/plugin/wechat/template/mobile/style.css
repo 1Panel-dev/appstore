@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+/* common */
+	* { word-wrap: break-word; }
+	ul,ol,li,span,p,form,h1,h2,h3,4,h5,h6,dl,dt,dd { margin: 0; padding: 0; border: 0; z-index:inherit; }
+	img,a img { border:0; margin:0; padding:0; }
+	ul,ol,li { list-style:none; }
+	* { margin:0; padding:0; }
+	html,body { height:100%; font:12px/1.6  Microsoft YaHei, Helvetica, sans-serif; color:#4C4C4C; }
+	input,select,textarea,button { font:14px/1.5  Microsoft YaHei, Helvetica, sans-serif; }
+	body, ul, ol, li, dl, dd, p, h1, h2, h3, h4, h5, h6, form, fieldset, .pr, .pc { margin: 0; padding: 0; }
+	table { empty-cells: show; border-collapse: collapse; }
+		caption, th { text-align: left; font-weight: 400; }
+	ul li, .xl li { list-style: none; }
+	h1, h2, h3, h4, h5, h6 { font-size: 1em; }
+	em, cite, i { font-style: normal; }
+		a img { border: none; }
+	label { cursor: pointer; }
+	.bg { background: url(pic_bg.jpg); }
+	.rq { color: red; }
+
+	a:link,a:visited,a:hover { color:#4C4C4C; text-decoration:none; }
+	.blue { color: #0086CE; }
+	a.blue:link, a.blue:visited, a.blue:hover { color:#0086CE; text-decoration:none; }
+	.grey { color:#9C9C9C; }
+	a.grey:link, a.grey:visited, a.grey:hover { color:#9C9C9C; text-decoration:none; }
+	.orange { color:#F60; }
+	a.orange:link,a.orange:visited,a.orange:hover{color:#F60;text-decoration:none }
+
+	.z { float: left; } .y { float: right; }
+	.cl:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; } .cl { zoom: 1; }
+	.overflow{overflow:hidden;}
+	.none { display:none; }
+	.vm { vertical-align: middle; }
+		.vm * { vertical-align: middle; }
+	.hm { text-align: center; }
+
+	.bl_none { border-bottom:0 !important; }
+	.bl_line { border-bottom:1px solid #DDD; }
+	.b_radius {border-radius:10px;}
+
+	.b_m { margin:10px;}
+	.b_p { padding:10px}
+
+	.mtn { margin-top: 5px !important; }
+	.mbn { margin-bottom: 5px !important; }
+	.mtm { margin-top: 10px !important; }
+	.mbm { margin-bottom: 10px !important; }
+	.mtw { margin-top: 20px !important; }
+	.mbw { margin-bottom: 20px !important; }
+
+	.pr, .pc { vertical-align: middle; margin: 0 5px 1px 0; padding: 0;+margin-right: 2px;_margin-right: 2px; }
+
+/*----- pop -----*/	
+	.dialogbox {  background: url(pic_bg.jpg) }	    
+
+/*----- login & register -----*/
+	.loginbox { padding:10px;}
+	.login_from { background:#FFF; border-radius:10px; border:1px solid #DDD; margin-bottom:15px; }
+	.login_from li { border-bottom:1px solid #DDD; line-height:45px; padding:0 10px; color:#AFAFAF; font-size:14px; }
+		.btn_login .pn,.btn_register .pn { background: url(login.png) no-repeat; width:289px; height:45px; display:block; line-height:46px; overflow:hidden; margin:0 auto; color:#FFF; font-size:16px; font-weight:700; text-align:center;border:0; }
+		.btn_login .pn:hover,.btn_register .pn:hover { background: url(login_on.png) no-repeat; color:#F0EFEF; }
+		.btn_qqlogin a { background: url(qqlogin.png) no-repeat; width:300px; height:45px; display:block; line-height:2000px; overflow:hidden; margin:0 auto; }
+		.btn_qqlogin a:hover { background: url(qqlogin_on.png) no-repeat; }
+		.loginbox p { line-height:35px; font-size:14px; color:#AFAFAF;}
+		.reg_link a { background: url(icon_arrow.png) no-repeat 100% center; padding-right:10px; color:#AFAFAF; }
+		.px{ border:1px solid #ddd; padding: 2px 4px; line-height: 17px; font-size:15px; }
+		.px:focus { color:#4C4C4C;}
+		.p_fre { width: auto !important; }
+		.sel_list { width:100%;border: 0; padding: 2px 4px; font-size:14px; font-weight:700; }
+		.login_select { display: block; position: relative;}
+		.login_select .login-btn-inner { display: block; font-size: 14px; font-weight:700; min-width: 0.75em; overflow: hidden; position: relative; text-overflow: ellipsis; white-space: nowrap; }
+		.login_select select { position: absolute; top: 0; width: 100%; z-index: 2; cursor: pointer; height: 3em; left: 0; max-height: 100%; min-height: 100%; opacity: 0.0001;}
+		.login-btn-text { float:left; }
+		.login_select .icon-arrow { background: url(icon_arrow.png) no-repeat 15px 17px; width:30px; height:30px; float:right; }
+
+	.login_pop { background:#F1F1F1; padding: 0 14px 20px; }
+	.log_tit { text-align:center; font-size:16px; font-weight:700; line-height:45px; }
+	.icon_close { background: url(icon_close.png) no-repeat 0 0; width:13px; height:11px; overflow:hidden; display:block; margin-top:17px; }
+	.btn_qqlogintext { margin:10px 0; }
+	.btn_qqlogintext a.text_qqlogin { background: url(qqlogintext.png) no-repeat; width:120px; height:25px; display:block; line-height:2000px; overflow:hidden; }
+	.login_pop .login_from { margin-bottom: 10px; }
+	.login_pop .login_check { margin:0 0 10px 0; color:#A5A5A5; }
+	.q_reg a { color:#A5A5A5; font-size:14px; }
+	.s_code { color:#A5A5A5; }
+	.s_code .px { color:#A5A5A5; }
+	.s_code .px:focus { color:#4C4C4C; }
+	a.other_c { color:#A5A5A5; margin-left:5px; }
+
+/*----- footer -----*/
+	.footer { text-align:center; line-height:2em; color:#A5A5A5; padding:10px 0 0 0; }
+		.footer a { margin:0 6px; color:#A5A5A5; }

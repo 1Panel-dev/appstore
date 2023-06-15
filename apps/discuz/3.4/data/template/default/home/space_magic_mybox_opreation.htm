@@ -1,0 +1,167 @@
+<!--{template common/header}-->
+<!--{if empty($_GET['infloat'])}-->
+<div id="pt" class="bm cl">
+	<div class="z"><a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em> $navigation</div>
+</div>
+<div id="ct" class="ct2_a wp cl">
+	<div class="mn">
+		<div class="bm bw0">
+<!--{/if}-->
+
+<form id="magicform" method="post" action="home.php?mod=magic&action=mybox&infloat=yes" onsubmit="ajaxpost('magicform', 'return_$_GET[handlekey]', 'return_$_GET[handlekey]', 'onerror');return false;">
+<div class="f_c">
+	<h3 class="flb">
+		<em>
+		<!--{if $operation == 'give'}-->
+			{lang magics_operation_present}{lang magic}
+		<!--{elseif $operation == 'drop'}-->
+			{lang magics_operation_drop}{lang magic}
+		<!--{elseif $operation == 'sell'}-->
+			{lang magics_operation_sell}{lang magic}
+		<!--{elseif $operation == 'use'}-->
+			{lang magics_operation_use}{lang magic}
+		<!--{/if}-->
+		</em>
+		<span><!--{if !empty($_GET['infloat'])}--><a href="javascript:;" class="flbc" onclick="hideWindow('$_GET[handlekey]');return false;" title="{lang close}">{lang close}</a><!--{/if}--></span>
+	</h3>
+	<div class="c" id="hkey_$_GET[handlekey]">
+		<div id="return_$_GET[handlekey]"></div>
+			<input type="hidden" name="formhash" value="{FORMHASH}" />
+			<input type="hidden" name="handlekey" value="$_GET[handlekey]" />
+			<input type="hidden" name="operation" value="$operation" />
+			<input type="hidden" name="magicid" value="$magicid" />
+			<!--{if $operation == 'give'}-->
+				<table cellspacing="0" cellpadding="0" class="tfm">
+					<tr>
+						<th>&nbsp;</th>
+						<td>{lang magics_operation_present}"$magic[name]"</td>
+					</tr>
+					<!--{if $_G['group']['allowmagics'] > 1 }-->
+					<tr>
+						<th>{lang magics_target_present}</th>
+						<td class="hasd cl">
+							<input type="text" id="selectedusername" name="tousername" size="12" autocomplete="off" value="" class="px p_fre" style="margin-right: 0;" />
+							<!--{if $buddyarray}-->
+							<a href="javascript:;" class="dpbtn" onclick="showselect(this, 'selectedusername', 'selectusername')">&nabla;</a>
+							<ul id="selectusername" style="display:none">
+								<!--{loop $buddyarray $buddy}-->
+								<li>$buddy[fusername]</li>
+								<!--{/loop}-->
+							</ul>
+							<!--{/if}-->
+						</td>
+					</tr>
+					<!--{/if}-->
+					<tr>
+						<th>{lang magics_num}</th>
+						<td><input name="magicnum" type="text" size="12" autocomplete="off" value="1" class="px p_fre" /></td>
+					</tr>
+					<tr>
+						<th>{lang magics_present_message}</th>
+						<td><textarea name="givemessage" rows="3" class="pt">{lang magics_present_message_text}</textarea></td>
+					</tr>
+				</table>
+				<input type="hidden" name="operatesubmit" value="yes" />
+			<!--{elseif $operation == 'use'}-->
+				<!--{if $magiclist}-->
+				<p class="mtw mbw">
+					<select name="magicid" onchange="showWindow('magics', 'home.php?mod=magic&action=mybox&operation=use&&infloat=yes&type=$typeid&pid=$pid&typeid=$typeid&magicid='+this.options[this.selectedIndex].value)" class="chosemagic">
+						<option value="0">{lang magics_select}</option>
+						<!--{loop $magiclist $magics}-->
+							<option value="$magics[magicid]" $magicselect[$magics[magicid]]>$magics[name] - $magics[description]</option>
+						<!--{/loop}-->
+					</select>
+				</p>
+				<!--{/if}-->
+				<dl class="xld cl">
+					<dd class="m"><img src="$magic[pic]" alt="$magic[name]"></dd>
+					<dt class="z">
+						$magic[name]
+						<div class="pns xw0 cl">
+							<!--{if method_exists($magicclass, 'show')}-->
+								<!--{eval $magicclass->show();}-->
+							<!--{/if}-->
+							<!--{if $useperoid !== true}-->
+								<p class="xi1"><!--{if $magic['useperoid'] == 1}-->{lang magics_outofperoid_1}<!--{elseif $magic['useperoid'] == 2}-->{lang magics_outofperoid_2}<!--{elseif $magic['useperoid'] == 3}-->{lang magics_outofperoid_3}<!--{elseif $magic['useperoid'] == 4}-->{lang magics_outofperoid_4}<!--{/if}--><!--{if $useperoid > 0}-->{lang magics_outofperoid_value}<!--{else}-->{lang magics_outofperoid_noperm}<!--{/if}--></p>
+							<!--{/if}-->
+						</div>
+					</dt>
+				</dl>
+				<input type="hidden" name="usesubmit" value="yes" />
+				<input type="hidden" name="operation" value="use" />
+				<input type="hidden" name="magicid" value="$magicid" />
+				<!--{if !empty($_GET['idtype']) && !empty($_GET['id'])}-->
+					<input type="hidden" name="idtype" value="$_GET[idtype]" />
+					<input type="hidden" name="id" value="$_GET[id]" />
+				<!--{/if}-->
+			<!--{elseif $operation == 'sell'}-->
+				<dl class="xld cl">
+					<dd class="m"><img src="$magic[pic]" alt="$magic[name]"></dd>
+					<dt class="z">
+						<p class="mtm mbm">{lang magics_operation_sell} <input name="magicnum" type="text" size="2" value="1" class="px pxs" /> {lang magics_unit}"$magic[name]"</p>
+						<p class="xw0">
+							{lang recycling_prices}:
+							<!--{if {$_G['setting']['extcredits'][$magic[credit]][unit]}}-->
+								{$_G['setting']['extcredits'][$magic[credit]][title]} $discountprice {$_G['setting']['extcredits'][$magic[credit]][unit]}/{lang magics_unit}
+							<!--{else}-->
+								$discountprice {$_G['setting']['extcredits'][$magic[credit]][title]}/{lang magics_unit}
+							<!--{/if}-->
+						</p>
+					</dt>
+				</dl>
+				<input type="hidden" name="operatesubmit" value="yes" />
+			<!--{elseif $operation == 'drop'}-->
+				<dl class="xld cl">
+					<dd class="m"><img src="$magic[pic]" alt="$magic[name]"></dd>
+					<dt class="z">
+						<p class="mtm mbm">{lang magics_operation_drop} <input name="magicnum" type="text" size="2" autocomplete="off" value="1" class="px pxs" /> {lang magics_unit}"$magic[name]"</p>
+						<p class="xw0">{lang magics_weight}: $magic[weight]</p>
+					</dt>
+				</dl>
+				<input type="hidden" name="operatesubmit" value="yes" />
+			<!--{/if}-->
+			</div>
+</div>
+
+<!--{if empty($_GET['infloat'])}--><div class="m_c"><!--{/if}-->
+<div class="o pns" id="hbtn_$_GET[handlekey]">
+	<!--{if $operation == 'give'}-->
+		<button class="pn pnc" type="submit" name="operatesubmit" id="operatesubmit" value="true" onclick="return confirmMagicOp(e)"><span>{lang magics_operation_present}</span></button>
+	<!--{elseif $operation == 'use'}-->
+		<button class="pn pnc" type="submit" name="usesubmit" id="usesubmit" value="true"><span>{lang magics_operation_use}</span></button>
+	<!--{elseif $operation == 'sell'}-->
+		<button class="pn pnc" type="submit" name="operatesubmit" id="operatesubmit" value="true" onclick="return confirmMagicOp(e)"><span>{lang magics_operation_sell}</span></button>
+	<!--{elseif $operation == 'drop'}-->
+		<button class="pn pnc" type="submit" name="operatesubmit" id="operatesubmit" value="true" onclick="return confirmMagicOp(e)"><span>{lang magics_operation_drop}</span></button>
+	<!--{/if}-->
+</div>
+<!--{if empty($_GET['infloat'])}--></div><!--{/if}-->
+</form>
+
+<script type="text/javascript" reload="1">
+	function confirmMagicOp(e) {
+		e = e ? e : window.event;
+		showDialog('{lang magics_confirm}', 'confirm', '', 'ajaxpost(\'magicform\', \'return_magics\', \'return_magics\', \'onerror\');');
+		doane(e);
+		return false;
+	}
+	function succeedhandle_$_GET[handlekey](url, msg) {
+		hideWindow('$_GET[handlekey]');
+		if(arguments[2] && arguments[2]['avatar']) {
+			msg += ' <ul class="ml mls cl"><li><a class="avt" target="_blank" href="home.php?mod=space&amp;uid='+arguments[2]['uid']+'"><em class=""></em><img src="{$_G[setting][ucenterurl]}/avatar.php?uid='+arguments[2]['uid']+'&size=small" /></a><p><a title="admin" href="home.php?mod=space&amp;uid='+arguments[2]['uid']+'" target="_blank"><b>'+arguments[2]['username']+'</b></a></p></li></ul>';
+		}
+		<!--{if !$location}-->
+			showDialog(msg, 'notice', null, function () { location.href=url; }, 0);
+		<!--{else}-->
+			showWindow('$_GET[handlekey]', 'home.php?$querystring');
+		<!--{/if}-->
+		showCreditPrompt();
+	}
+</script>
+
+<!--{if empty($_GET['infloat'])}-->
+	</div></div>
+	<div class="appl"><!--{subtemplate common/userabout}--></div>
+</div>
+<!--{/if}-->
+<!--{template common/footer}-->

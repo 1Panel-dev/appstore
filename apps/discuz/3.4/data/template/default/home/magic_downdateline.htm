@@ -1,0 +1,9 @@
+<!--{if $op == "use"}-->
+<h4 class="mtm mbn">{lang modified_time}</h4>
+<p>
+	<script type="text/javascript" src="{$_G[setting][jspath]}static/js/calendar.js?{VERHASH}"></script>
+	<input type="hidden" name="id" value="'.$id.'" />
+	<input type="hidden" name="idtype" value="'.$idtype.'" />
+	<input type="text" name="newdateline" class="px" value="$time" onclick="showcalendar(event,this,1,'1970-1-1', '$time')"/>
+</p>
+<!--{/if}-->

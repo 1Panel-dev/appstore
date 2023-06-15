@@ -1,0 +1,62 @@
+/*
+[name]青[/name]
+[iconbgcolor]#429296[/iconbgcolor]
+Powered by Discuz! X
+*/
+
+body { background: #FFF url(bgimg.jpg) no-repeat 50% 0; }
+#nv { background-color: #429296; background-image: url(nv.png); }
+	#nv li, #nv li a:hover, #nv li.hover a, #nv li.hover a:hover { background-image: url(nv_a.png) !important; }
+	#nv li.a { background-color: #005D5D; }
+
+.bm_h, .tl th, .tl td { border-bottom-color: #CDCDCD; }
+.fl .bm_h { border-color: #C5E6DF; background: #EBF5F6 url(titlebg.png) repeat-x 0 0; }
+
+/* 重定义 {SPECIALBG} */
+.bmn, .bm_h, td.pls, .ad td.plc, div.exfm, .tb a, .tb_h, .ttp li.a a, div.uo a, input#addsubmit_btn, #gh .bm .bm_h, .appnew, .apphot { background-color: #EBF5F6; }
+
+.ct2_a, .ct3_a { background-image: url(vlineb.png); }
+.tbn li.a { background: #FFF; }
+	#nv_portal.pg_portalcp .ct2_a_r, #nv_forum.pg_post .ct2_a_r, #nv_group.pg_post .ct2_a_r { background-image: none; }
+
+/* 重定义 {SPECIALBORDER} */
+.bmn, .pg a, .pgb.a, .pg strong, .card, .card .o, div.exfm  { border-color: #C5E6DF; }
+.pg strong { background-color: #C5E6DF; }
+.pn, .tb .o, .tb .o a { background-image: url(pn.png); }
+	.pnc, a.pnc, .tb .o { border-color: #066; }
+
+
+.ad td.pls { background-color: #C5E6DF; }
+
+/* 重定义字体 */
+#qmenu, .fl .bm_h h2 a, .xi1, #um .new, .topnav .new, .sch .new, .el .ec .hot em, .pll .s a.joins { color: #429296; }
+.pll .s a.go { color: #FFF; }
+.xi2, .xi2 a { color: #000; }
+
+/* 重定义按钮 */
+.pgs #newspecial, .pgs #newspecialtmp { float: left; background: url(pn_post.png) no-repeat 0 0; }
+#post_reply, #post_replytmp { float: left; background: url(pn_reply.png) no-repeat 0 0; }
+	#newspecial img, #newspecialtmp img, #post_reply img, #post_replytmp img { opacity: 0; filter: alpha(opacity=0); }
+.moodfm_btn { background-image: url(mood_input_btn.png) !important; }
+#create_group_btn { display: block; background: url(create_group.png) no-repeat 0 0; }
+	#create_group_btn img { opacity: 0; filter: alpha(opacity=0); }
+.el .ec .hot, .clct_list .xld .m { background-image: url(hotspot.gif); }
+.pll .s { background-image:url(polljoins.gif); }
+
+/* 重定义广播 */
+#uhd, #flw_header .bar, .flw_replybox { background-color: #F4F9F9; }
+.pg_follow #fastpostsubmit { background-image: url(flw_post.png); }
+.flw_replybox .pnc { background-image: url(pn_reply.png); }
+.flw_replybox td table .pnc { background-image: url(pn_rt.png); }
+#flw_post_extra .sec { background-color: #F4F9F9; }
+
+/* 重定义版块快速跳转和侧边导航 */
+#fjump_menu li.a a { background-color: #EBF5F6; }
+.bdl, .bdl dt, .bdl dd.bdl_a a { border-color: #C2D5E3; background-color: #EBF5F6; }
+	.bdl dt { background-image: url(titlebg_sd.png); }
+.bdl dd.bdl_a a { color: #429296; }
+
+/* 重定义下拉菜单 */
+.p_pop a { border-bottom-color: #EBF5F6; }
+	.p_pop a:hover, .p_pop a.a, #sctype_menu .sca { background-color: #EBF5F6; color: #429296; }
+	.blk a:hover { background-color: transparent; }

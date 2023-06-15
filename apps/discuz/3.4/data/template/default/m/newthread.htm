@@ -1,0 +1,74 @@
+{template m/header}
+
+<body>
+<form method="post" action="" id="newthread" enctype="multipart/form-data">
+<div class="warp">
+    <input type="hidden" id="formhash" name="formhash" value="">
+    <input type="hidden" id="mobiletype" name="mobiletype" value="0">
+    <input type="hidden" id="allowphoto" name="allowphoto" value="0">
+    <input type="hidden" id="typeid" name="typeid" value="0">
+    <input type="hidden" id="allownoticeauthor" name="allownoticeauthor" value="1" >
+    <input type="file" style="opacity:0;position:absolute;top:-100px" id="uploadFile" accept="image/*" single />
+    <div class="sendInfo wot pr">
+        <span id="toptitle">{lang m_new_t}</span>
+        <div class="sendOperBtn pa">
+            <span class="sendNum db c9 pText" id="pText">500</span>
+        </div>
+    </div>
+    <div class="sendCon pr">
+        <input id="subject" name="subject" type="text" class="sInput sBg" placeholder="{lang m_new_subject_ph}" maxlength="80" />
+        <textarea id="message" name="message" class="sInput sBg1" placeholder="{lang m_new_memo_ph}" style="overflow-y:auto"></textarea>
+        <span id="forumname" class="topicSec db"></span>
+    </div>
+    <div class="photoList" style="display:none">
+        <ul>
+            <li class="on" id="addPic"></li>
+        </ul>
+        <p class="textTip">{lang m_new_upload}</p>
+        <p id="uploadnotice" class="textTip"></p>
+    </div>
+</div>
+
+    <div class="sendNav">
+        <ul>
+            <li><a href="javascript:;" class="expreSelect iconExpression f21 db c9 commF"></a></li>
+            <li><a href="javascript:;" class="photoSelect iconSendImg f21 db c9 commF"></a></li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li><a href="javascript:;" class="sendBtn brSmall f13 db c2" id="submitButton">{lang m_new_submit}</a></li>
+        </ul>
+    </div>
+
+    <div class="expreBox" style="display:none">
+        <div class="expressionTab pr"><div class="expressionMenu"></div></div>
+        <div class="expreList"></div>
+    </div>
+
+    <span style="display:none;" class="topicCate fl db">{lang m_new_ttype}<a href="javascript:;"><span id="pText_typeid">{lang m_new_tsel}</span><i class="incoA"></i></a></span>
+    <br />
+    <div class="manageLayer1 br" id="span_typeid" style="display:none">
+	<div class="customTag"></div>
+</div>
+<div id="customHtml"></div>
+
+<div class="bottomBar">
+    <div class="bottomBarCon">
+        <a href="javascript:;" class="backBtn"><i class="iconAnswer commF back db"></i></a>
+    </div>
+</div>
+
+</form>
+
+<script type="text/javascript">
+    window.onload = function() {
+        JC.file("jpegmeta.js" ,OPEN_JS_T.Jpegmeta);
+        JC.file("jpeg.encoder.basic.js" ,OPEN_JS_T.JpegEncoder);
+        JC.file("image_compress.js" ,OPEN_JS_T.ImageCompress);
+		JC.file("secure.js");
+        JC.file("emotion.js");
+        JC.file("newthread.js");
+        JC.run();
+    }
+</script>
+
+{template m/footer}

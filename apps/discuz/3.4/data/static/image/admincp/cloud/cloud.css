@@ -1,0 +1,22 @@
+.stepstat{ *margin-bottom:0px; width: 100%; border-bottom: 1px dotted #D0E3F7; background: #F2F9FD; overflow: hidden; clear: both; }
+	.stepstat li{ float:left; margin-right:0px; padding: 0 6px; height: 24px; line-height: 24px; color:#999; }
+	.stepstat li span { margin-left: 12px; color:#999; }
+	.stepstat .current{ color:#090; font-weight: 700; }
+
+button::-moz-focus-inner { border: 0; padding: 0; }
+.pn { vertical-align: middle; overflow: hidden; margin-right: 3px; padding: 0; height: 23px; border: 1px solid #999; background: #E5E5E5 url(../../common/pn.png) repeat-x 0 0; cursor: pointer; -moz-box-shadow: 0 1px 0 #E5E5E5; -webkit-box-shadow: 0 1px 0 #E5E5E5; box-shadow: 0 1px 0 #E5E5E5; }
+	.pn:active { background-position: 0 -23px; }
+	.ie6 .pn { overflow-x: visible; width: 0; }
+
+	.pn em, .pn span, .pn strong { padding: 0 10px; line-height: 21px; }
+		.pn em, .pn strong  { font-weight: 700; }
+	.ie7 .pn em, .ie7 .pn span, .ie7 .pn strong { padding: 0 5px; line-height: 18px; }
+
+a.pn { height: 21px; line-height: 21px; color: {TABLETEXT} !important; }
+	a.pn:hover { text-decoration: none; }
+	.ie6 a.pn { width: auto; }
+	.ie6 a.pn em, .ie6 a.pn span, .ie6 a.pn strong { display: block; }
+	.ie7 a.pn em, .ie7 a.pn span, .ie7 a.pn strong { line-height: 21px; }
+
+.pnc, a.pnc { border-color: #235994; background-color: #06C; background-position: 0 -48px; color: #FFF !important; }
+	.pnc:active { background-position: 0 -71px; }

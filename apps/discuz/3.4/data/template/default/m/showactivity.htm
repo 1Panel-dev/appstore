@@ -1,0 +1,41 @@
+{template m/header}
+<body>
+    <div id="headerbanner" class="topicM" style="display: none"></div>
+    <div class="tipInfo" style="display:none;">
+        <p class="tipBor"></p>
+    </div>
+    <div class="maskLayer" style="position:fixed;top:0;display:none;"></div>
+    <div id="frombar" class="return" style="display:none;"></div>
+    <div class="warp">
+        <div class="header topH" style="display:none;"></div>
+        <div class="container conM"></div>
+        <div class="loading" id="loadNext" style="display:none;">
+            <div class="loadInco">
+                <span class="blockG" id="rotateG_01"></span>
+                <span class="blockG" id="rotateG_02"></span>
+                <span class="blockG" id="rotateG_03"></span>
+                <span class="blockG" id="rotateG_04"></span>
+                <span class="blockG" id="rotateG_05"></span>
+                <span class="blockG" id="rotateG_06"></span>
+                <span class="blockG" id="rotateG_07"></span>
+                <span class="blockG" id="rotateG_08"></span>
+            </div>{lang m_loading}
+        </div>
+        <div id='loadNextPos'></div>
+        <div class="bottomBar"</div>
+    </div>
+
+<script type="text/javascript">
+    window.onload = function (){
+        TC.load("showactivity.htm");
+        TC.load("viewthread_thread.htm");
+        JC.file("secure.js");
+        JC.file("quickreply.js");
+        JC.file("navmenu.js");
+        JC.file("showactivity.js");
+        JC.file("imageview.js");
+        JC.file("emotion.js");
+        JC.run();
+    };
+</script>
+{template m/footer}

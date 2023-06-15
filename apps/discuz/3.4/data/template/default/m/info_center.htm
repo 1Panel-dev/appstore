@@ -1,0 +1,24 @@
+{template m/header}
+<body>
+<div class="warp">
+	<div class="container">
+		<div class="topic"></div>
+		<div class="topicBox">
+			<a id="historyInfo" class="historyInfo db" href="javascript:;" style="display:none;><i class="infoInco"></i>{lang m_view_his}</a>
+			<div id="historyInfoAll" class="loading" style="display:none;">{lang m_its_all} </div>
+		</div>
+	</div>
+</div>
+<div class="bottomBar">
+	<div class="bottomBarCon">
+        <a href="javascript:TOOLS.pageBack();" class="backBtn"><i class="incoAnswer back db"></i></a>
+    </div>
+</div>
+
+<script type="text/javascript">
+    TC.load("infocenter.htm");
+    JC.file("info_center.js");
+    JC.run();
+</script>
+
+{template m/footer}

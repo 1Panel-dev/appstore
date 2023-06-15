@@ -1,0 +1,14 @@
+<!--{template common/header}-->
+<script type="text/javascript" reload="1">
+	$('hkey_$_GET[handlekey]').innerHTML = '<p>{lang done_doodle_notice}</p>' + AC_FL_RunContent(
+		'width', '438', 'height', '304',
+		'src', '{IMGDIR}/doodle.swf?fid={$_GET[handlekey]}&oid={$_GET[mtarget]}&from={$_GET[from]}&config=$config',
+		'quality', 'high',
+		'wmode', 'transparent',
+		'id', 'show_doodle_{$_GET[showid]}',
+		'allowScriptAccess', 'always'
+	);
+	$('hbtn_$_GET[handlekey]').style.display = 'none';
+	setMenuPosition('fwin_$_GET[handlekey]', 'fwin_$_GET[handlekey]', '00');
+</script>
+<!--{template common/footer}-->

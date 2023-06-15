@@ -1,0 +1,145 @@
+.perImg{
+	display: inline-block;
+	position: relative;
+	width: auto;
+}
+.privatelyMessage{
+	padding: 0 15px 10px;
+}
+.messageTime{
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 12px;
+	color: #acacac;
+	text-shadow: 1px 1px #fff;
+}
+.messageTime em{font-style:normal;font-weight:normal;}
+.messageCon{
+	margin: 8px 0;
+}
+.messageCon .perImg{
+	float: left;
+}
+.message{
+	display: inline-block;
+	max-width: 210px;
+	font-size: 16px;
+	line-height: 180%;
+	padding: 8px 10px 6px;
+	background: #fff;
+	border-radius: 14px;
+	margin: 5px 0 0 10px;
+	position: relative;
+	word-break:break-all;
+}
+.message .iconMessage{
+	width: 12px;
+	font-size: 10px;
+	line-height: 10px;
+	position: absolute;
+	left: -9px;
+	top: 5px;
+	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+}
+.message .iconMessage:before{
+	color: #fff;
+}
+.my{
+	text-align: right;
+}
+.my .perImg{
+	float: right;
+}
+.my .message{
+	background: #18b4ed;
+	color: #fff;
+	margin: 5px 10px 0 0;
+}
+.my .message a {
+    color: #eee;
+}
+.iconMessage:before {
+	content: "\e619";
+}
+.my .message .iconMessage{
+	left: auto;
+	right: -6px;
+	transform: rotateY(0);
+	-webkit-transform: rotateY(0);
+}
+.my .message .iconMessage:before{
+	color: #18b4ed;
+}
+.inputWrap{
+	padding: 8px 0;
+	text-align: center;
+	background: #ebecee;
+	border-top: 1px solid #b8b8b8;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.inputWrap a{
+	color: #1d1d1d;
+	font-size: 14px;
+}
+.messageInput{
+	width: 80%;
+	height: 30px;
+	padding: 0 6px;
+	border: 1px solid #cfcfcf;
+	border-radius: 5px;
+	margin-right: 6px;
+}
+.disabled .messageInput{
+	color: #c5c5c5;
+}
+.disabled a{
+	color: #c5c5c5;
+}
+
+.myPrivatelyMessage{
+	background: #fff;
+}
+.messageList li{
+	border-bottom: 1px solid #e5e5e5;
+	padding: 10px 10px 8px;
+	position: relative;
+}
+.messageList p{
+	width:84%;
+	display: inline-block;
+	margin-left: 8px;
+	line-height: 180%;
+	vertical-align: top;
+}
+.messageList p strong{
+	display: block;
+	color: #333;
+	font-size: 14px;
+	font-weight: normal;
+	white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.messageList p span{
+	color: #888;
+	font-size: 14px;
+	word-break:break-all;
+}
+.messageList .time{
+	float: right;
+	font-size: 12px;
+	color: #aaa;
+}
+.messageList .new{
+	width: 46px;
+	height: 50px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: url(../images/new.png) no-repeat;
+	background-size: 23px 25px;
+	text-indent: -9999px;
+}

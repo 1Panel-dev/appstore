@@ -1,0 +1,115 @@
+<script id="tmpl_thread_poll" type="text/html">
+    <link rel="stylesheet" href="../template/default/m/css/vote.css?t=<%= jsversion %>">
+    <div class="detailCon voteWrap">
+        <div class="voteTit">
+            <h4><%== stripCode(thread.subject) %></h4>
+            <div class="titInfo">
+                <% if(!special_poll.isEnd) { %><i class="underway">进行中</i><% } else { %><i class="ended">已结束</i><% } %><% if(special_poll.expirationsFormat) { %><span>截至时间：<%=special_poll.expirationsFormat%></span>|<% } %><span>参与人数 <%=special_poll.voterscount%></span>
+            </div>
+        </div>
+        <div id="msg_<%= post.pid %>">
+        <div class="voteTips">
+            <% if(post.hook_thread_top) { %>
+                <%== stripCode(post.hook_thread_top) %>
+            <% } %>
+            <%== stripCode(post.message, 1) %>
+            <% if(post.hook_thread_bottom) { %>
+                <%== stripCode(post.hook_thread_bottom) %>
+            <% } %>
+        </div>
+        <div class="voteCon">
+            <form method="post" action="" id="voteform">
+            <input type="hidden" id="voteformhash" name="formhash" value="">
+            <input type="hidden" name="tid" value="<%= post.tid %>">
+            <% include(special_poll.optionBody) %>
+            </form>
+            <div class="voteMes">
+                <% if(special_poll.maxchoices == 1) { %>
+                    只可单选<i>1</i>项
+                <% } else {%>
+                    最多选<i><%= special_poll.maxchoices %></i>项
+                <% } %>
+            </div>
+        </div>
+        <div class="voteBtWrap">
+            <% if(special_poll.allowvote) { %>
+            <a href="javascript:;" class="btnVote">投票</a>
+            <% } else { %>
+            <span class="btnVote disabled">投票</span>
+            <% } %>
+        </div>
+        <div class="operation oh">
+            <% if(comments && comments.length > 0) { %>
+                <div class="replyPop">
+                    <div class="replyBg brSmall pr commentBox">
+                        <div class="topicList">
+                            <ul>
+                            <% for(i = 0; i< comments.length; i++) { %>
+                                <li><a href="javascript:;" class="f13 c3"><span class="c7"><%==comments[i].author%><% if(comments[i].authorid == post.authorid) { %><i class="cardBtn br fn db c2">楼主</i><% } %>：</span><%== stripCode(comments[i].comment) %></a></li>
+                            <% } %>
+                            </ul>
+                            <% if(commentCount > 5) { %>
+                            <a href="javascript:;" class="db f12 moreInReply viewcommentBtn" tid="<%= post.tid %>" pid="<%= post.pid %>">更多</a>
+                            <% } %>
+                        </div>
+                    </div>
+               </div>
+           <% } %>
+            <span class="replyShare db fr">
+                <a class="topicadminMsg" tid="<%= post.tid %>" pid="<%= post.pid %>"><% if(post.status & 1) {%>已屏蔽<%}%></a>
+                <% if (member_uid != "0"){%>
+                    <a href="javascript:;" id="recommendBtn">
+                        <i class=<%=thread.recommend == 1 ? "praise" : "noPraise"%>></i>
+                        <span><%= thread.recommend_add == 0 ? "" : thread.recommend_add %></span>
+                    </a>
+                <% } %>
+                <% if(fromwx) { %>
+                    <a href="javascript:;" id="shareBtn"><i class="incoS"></i></a>
+                <% } %>
+                <a href="javascript:;" class="replyByPid" tid="<%= post.tid %>" pid="<%= post.pid %>" first="<%= post.first %>"><i class="incoR"></i><%= thread.replies == 0 ? "" : thread.replies %></a>
+            </span>
+            <% if(post.hook_post_bottom) { %>
+                <span class="fl tl"><%== stripCode(post.hook_post_bottom) %></span>
+            <% } %>
+         </div>
+    </div>
+</script>
+
+<script id="option_text" type="text/html">
+    <ul class="voteList<% if(!special_poll.visiblepoll) { %> unabled<% } %>">
+        <% for(var option in special_poll.polloptions) {%>
+            <li id="line_<%= option %>" class="pollclick" optionid="<%= option %>">
+                <span id="sel_<%= option %>" class="icon<% if(special_poll.maxchoices == 1) { %>Radio<% } else { %>Checkbox<% } %> cf"></span>
+                <input <% if(!special_poll.allowvote) { %>disabled <% } %>name="pollanswers[]" id="option_<%= option %>" value="<%= special_poll.polloptions[option].polloptionid %>" type="<% if(special_poll.maxchoices == 1) { %>radio<% } else { %>checkbox<% } %>" />
+                <label for="option_<%= option %>"><%== stripCode(special_poll.polloptions[option].polloption) %></label>
+                <% if(!special_poll.visiblepoll) { %>
+                    <div class="voteRate">
+                        <div class="rate"><span class="inner" style="width:<%= special_poll.polloptions[option].percent %>%;"></span></div>
+                        <p><%= special_poll.polloptions[option].votes %> (<%= special_poll.polloptions[option].percent %>%)</p>
+                    </div>
+                <% } %>
+            </li>
+        <% } %>
+    </ul>
+</script>
+
+<script id="option_image" type="text/html">
+    <ul class="picVoteList<% if(!special_poll.visiblepoll) { %> unabled<% } %>">
+        <% for(var option in special_poll.polloptions) {%>
+            <li id="line_<%= option %>" class="pollclick" optionid="<%= option %>">
+                <div class="votePic"><img class="lazy" data-original="<%= special_poll.polloptions[option].imginfo.small %>" file="<%= special_poll.polloptions[option].imginfo.big %>" alt="" /></div>
+                <p class="picLabel">
+                    <span id="sel_<%= option %>" class="icon<% if(special_poll.maxchoices == 1) { %>Radio<% } else { %>Checkbox<% } %> cf"></span>
+                    <input <% if(!special_poll.allowvote) { %>disabled <% } %>name="pollanswers[]" id="option_<%= option %>" value="<%= special_poll.polloptions[option].polloptionid %>" type="<% if(special_poll.maxchoices == 1) { %>radio<% } else { %>checkbox<% } %>" />
+                    <label for="option_<%= option %>"><%= stripCode(special_poll.polloptions[option].polloption) %></label>
+                </p>
+                <% if(!special_poll.visiblepoll) { %>
+                    <div class="voteRate">
+                        <div class="rate"><span class="inner" style="width:<%= special_poll.polloptions[option].percent %>%;"></span></div>
+                        <p><%= special_poll.polloptions[option].votes %> (<%= special_poll.polloptions[option].percent %>%)</p>
+                    </div>
+                <% } %>
+            </li>
+        <% } %>
+    </ul>
+</script>

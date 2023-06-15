@@ -1,0 +1,376 @@
+{template header}
+
+<script src="js/common.js" type="text/javascript"></script>
+<script type="text/javascript">
+var apps = new Array();
+var run = 0;
+function testlink() {
+	if(apps[run]) {
+		$('status_' + apps[run]).innerHTML = '{lang app_link}';
+		$('link_' + apps[run]).src = $('link_' + apps[run]).getAttribute('testlink') + '&sid=$sid';
+	}
+	run++;
+}
+function generatekey() {
+	var scriptNode = document.createElement('script');
+	scriptNode.type = 'text/javascript';
+	scriptNode.src = 'admin.php?m=app&a=generatekey&inajax=1&sid=$sid';
+	document.getElementsByTagName('head')[0].appendChild(scriptNode);
+}
+window.onload = testlink;
+</script>
+<div class="container">
+	<!--{if $a == 'ls'}-->
+		<h3 class="marginbot">{lang app_list}<a href="admin.php?m=app&a=add" class="sgbtn">{lang app_add}</a></h3>
+		<!--{if !$status}-->
+			<div class="note fixwidthdec">
+				<p class="i">{lang app_list_tips}</p>
+			</div>
+		<!--{elseif $status == '2'}-->
+			<div class="correctmsg"><p>{lang app_list_updated}</p></div>
+		<!--{/if}-->
+		<div class="mainbox">
+			<!--{if $applist}-->
+				<form action="admin.php?m=app&a=ls" method="post">
+					<input type="hidden" name="formhash" value="{FORMHASH}">
+					<table class="datalist fixwidth" onmouseover="addMouseEvent(this);">
+						<tr>
+							<th nowrap="nowrap"><input type="checkbox" name="chkall" id="chkall" onclick="checkall('delete[]')" class="checkbox" /><label for="chkall">{lang app_delete}</label></th>
+							<th nowrap="nowrap">{lang app_id}</th>
+							<th nowrap="nowrap">{lang app_name}</th>
+							<th nowrap="nowrap">{lang app_url}</th>
+							<th nowrap="nowrap">{lang app_linkstatus}</th>
+							<th nowrap="nowrap">{lang app_detail}</th>
+						</tr>
+						<!--{eval $i = 0;}-->
+						<!--{loop $applist $app}-->
+							<tr>
+								<td width="50"><input type="checkbox" name="delete[]" value="$app[appid]" class="checkbox" /></td>
+								<td width="35">$app[appid]</td>
+								<td><a href="admin.php?m=app&a=detail&appid=$app[appid]"><strong>$app[name]</strong></a></td>
+								<td><a href="$app[url]" target="_blank">$app[url]</a></td>
+								<td width="90"><div id="status_$app[appid]"></div><script id="link_$app[appid]" testlink="admin.php?m=app&a=ping&inajax=1&url={eval echo urlencode($app['url']);}&ip={eval echo urlencode($app['ip']);}&appid=$app[appid]&random={eval echo rand()}"></script><script>apps[$i] = '$app[appid]';</script></td>
+								<td width="40"><a href="admin.php?m=app&a=detail&appid=$app[appid]">{lang app_edit}</a></td>
+							</tr>
+							<!--{eval $i++}-->
+						<!--{/loop}-->
+						<tr class="nobg">
+							<td colspan="9"><input type="submit" value="{lang submit}" class="btn" /></td>
+						</tr>
+					</table>
+					<div class="margintop"></div>
+				</form>
+			<!--{else}-->
+				<div class="note">
+					<p class="i">{lang list_empty}</p>
+				</div>
+			<!--{/if}-->
+		</div>
+	<!--{elseif $a == 'add'}-->
+		<h3 class="marginbot">{lang app_add}<a href="admin.php?m=app&a=ls" class="sgbtn">{lang app_list_return}</a></h3>
+		<div class="note"><p>{lang app_not_add_tips}</p></div>
+		<div class="mainbox">
+			<table class="opt">
+				<tr>
+					<th>{lang app_install_type}:</th>
+				</tr>
+				<tr>
+					<td>
+						<input type="radio" name="installtype" class="radio" checked="checked" onclick="$('url').style.display='none';$('custom').style.display='';" />{lang app_install_by_custom}
+						<input type="radio" name="installtype" class="radio" onclick="$('url').style.display='';$('custom').style.display='none';" />{lang app_install_by_url}
+					</td>
+				</tr>
+			</table>
+			<div id="url" style="display:none;">
+				<form method="post" action="" target="_blank" onsubmit="document.appform.action=document.appform.appurl.value;" name="appform">
+					<table class="opt">
+						<tr>
+							<th>{lang app_install_url}:</th>
+						</tr>
+						<tr>
+							<td><input type="text" name="appurl" size="50" value="http://domainname/install/index.php" style="width:300px;" /></td>
+						</tr>
+					</table>
+					<div class="opt">
+						<input type="hidden" name="ucapi" value="{UC_API}" />
+						<input type="hidden" name="ucfounderpw" value="$md5ucfounderpw" />
+						<input type="submit" name="installsubmit"  value="{lang app_install_submit}" class="btn" />
+					</div>
+				</form>
+			</div>
+			<div id="custom">
+				<form action="admin.php?m=app&a=add" method="post">
+				<input type="hidden" name="formhash" value="{FORMHASH}">
+					<table class="opt">
+						<tr>
+							<th colspan="2">{lang app_type}:</th>
+						</tr>
+						<tr>
+							<td>
+							<select name="type">
+								<!--{loop $typelist $typeid $typename}-->
+									<option value="$typeid"> $typename </option>
+								<!--{/loop}-->
+							</select>
+							</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th colspan="2">{lang app_name}:</th>
+						</tr>
+						<tr>
+							<td><input type="text" class="txt" name="name" value="" /></td>
+							<td>{lang app_name_comment}</td>
+						</tr>
+						<tr>
+							<th colspan="2">{lang app_url}:</th>
+						</tr>
+						<tr>
+							<td><input type="text" class="txt" name="url" value="" /></td>
+							<td>{lang app_url_comment}</td>
+						</tr>
+						<tr>
+							<th colspan="2">{lang app_ip}:</th>
+						</tr>
+						<tr>
+							<td><input type="text" class="txt" name="ip" value="" /></td>
+							<td>{lang app_ip_comment}</td>
+						</tr>
+						<tr>
+							<th colspan="2">{lang app_key}:</th>
+						</tr>
+						<tr>
+							<td><input type="text" class="txt" name="authkey" value="" /></td>
+							<td>{lang app_key_comment} <a href="#" onclick="generatekey();return false;" class="green">{lang app_key_generate}</a></td>
+						</tr>
+
+
+						<tr>
+							<th colspan="2">{lang app_path}:</th>
+						</tr>
+						<tr>
+							<td>
+								<input type="text" class="txt" name="apppath" value="" />
+							</td>
+							<td>{lang app_path_comment}</td>
+						</tr>
+						<tr>
+							<th colspan="2">{lang app_viewpro_url}:</th>
+						</tr>
+						<tr>
+							<td>
+								<input type="text" class="txt" name="viewprourl" value="" />
+							</td>
+							<td>{lang app_viewpro_url_comment}</td>
+						</tr>
+						<tr>
+							<th colspan="2">{lang app_api_filename}:</th>
+						</tr>
+						<tr>
+							<td>
+								<input type="text" class="txt" name="apifilename" value="uc.php" />
+							</td>
+							<td>{lang app_api_filename_comment}</td>
+						</tr>
+						<tr>
+							<th colspan="2">{lang app_tagtemplates}:</th>
+						</tr>
+						<tr>
+							<td><textarea class="area" name="tagtemplates"></textarea></td>
+							<td valign="top">{lang app_tagtemplates_comment}</td>
+						</tr>
+
+						<tr>
+							<th colspan="2">{lang app_tagfields}:</th>
+						</tr>
+						<tr>
+							<td><textarea class="area" name="tagfields">$tagtemplates[fields]</textarea></td>
+							<td valign="top">{lang app_tagfields_comment}</td>
+						</tr>
+						<tr>
+							<th colspan="2">{lang app_login}:</th>
+						</tr>
+						<tr>
+							<td>
+								<input type="radio" class="radio" id="yes" name="synlogin" value="1" /><label for="yes">{lang yes}</label>
+								<input type="radio" class="radio" id="no" name="synlogin" value="0" checked="checked" /><label for="no">{lang no}</label>
+							</td>
+							<td>{lang app_login_comment}</td>
+						</tr>
+						<tr>
+							<th colspan="2">{lang app_recvnote}:</th>
+						</tr>
+						<tr>
+							<td>
+								<input type="radio" class="radio" id="yes" name="recvnote" value="1"/><label for="yes">{lang yes}</label>
+								<input type="radio" class="radio" id="no" name="recvnote" value="0" checked="checked" /><label for="no">{lang no}</label>
+							</td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="opt"><input type="submit" name="submit" value=" {lang submit} " class="btn" tabindex="3" /></div>
+				</form>
+			</div>
+		</div>
+	<!--{else}-->
+		<h3 class="marginbot">{lang app_setting}<a href="admin.php?m=app&a=ls" class="sgbtn">{lang app_list_return}</a></h3>
+		<!--{if $updated}-->
+			<div class="correctmsg"><p>{lang update_succeed}</p></div>
+		<!--{elseif $addapp}-->
+			<div class="correctmsg"><p>{lang app_add_succeed}</p></div>
+		<!--{/if}-->
+		<div class="mainbox">
+			<form action="admin.php?m=app&a=detail&appid=$appid" method="post">
+			<input type="hidden" name="formhash" value="{FORMHASH}">
+				<table class="opt">
+					<tr>
+						<th colspan="2">{lang app_id}: $appid</th>
+					</tr>
+					<tr>
+						<th colspan="2">{lang app_type}:</th>
+					</tr>
+					<tr>
+						<td>
+						<select name="type">
+							<!--{loop $typelist $typeid $typename}-->
+							<option value="$typeid" {if $typeid == $type}selected="selected"{/if}> $typename </option>
+							<!--{/loop}-->
+						</select>
+						</td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<th colspan="2">{lang app_name}:</th>
+					</tr>
+					<tr>
+						<td><input type="text" class="txt" name="name" value="$name" /></td>
+						<td>{lang app_name_comment}</td>
+					</tr>
+					<tr>
+						<th colspan="2">{lang app_url}:</th>
+					</tr>
+					<tr>
+						<td><input type="text" class="txt" name="url" value="$url" /></td>
+						<td>{lang app_url_comment}</td>
+					</tr>
+					<tr>
+						<th colspan="2">{lang app_extra_url}:</th>
+					</tr>
+					<tr>
+						<td><textarea name="extraurl" class="area">$extraurl</textarea></td>
+						<td>{lang app_extra_url_comment}</td>
+					</tr>
+					<tr>
+						<th colspan="2">{lang app_ip}:</th>
+					</tr>
+					<tr>
+						<td><input type="text" class="txt" name="ip" value="$ip" /></td>
+						<td>{lang app_ip_comment}</td>
+					</tr>
+					<tr>
+						<th colspan="2">{lang app_key}:</th>
+					</tr>
+					<tr>
+						<td><input type="text" class="txt" name="authkey" value="$authkey" /></td>
+						<td>{lang app_key_comment} <a href="#" onclick="generatekey();return false;" class="green">{lang app_key_generate}</a></td>
+					</tr>
+
+					<tr>
+						<th colspan="2">{lang app_path}:</th>
+					</tr>
+					<tr>
+						<td>
+							<input type="text" class="txt" name="apppath" value="$apppath" />
+						</td>
+						<td>{lang app_path_comment}</td>
+					</tr>
+					<tr>
+						<th colspan="2">{lang app_viewpro_url}:</th>
+					</tr>
+					<tr>
+						<td>
+							<input type="text" class="txt" name="viewprourl" value="$viewprourl" />
+						</td>
+						<td>{lang app_viewpro_url_comment}</td>
+					</tr>
+					<tr>
+						<th colspan="2">{lang app_api_filename}:</th>
+					</tr>
+					<tr>
+						<td>
+							<input type="text" class="txt" name="apifilename" value="$apifilename" />
+						</td>
+						<td>{lang app_api_filename_comment}</td>
+					</tr>
+
+					<tr>
+						<th colspan="2">{lang app_tagtemplates}:</th>
+					</tr>
+					<tr>
+						<td><textarea class="area" name="tagtemplates">$tagtemplates[template]</textarea></td>
+						<td valign="top">{lang app_tagtemplates_comment}</td>
+					</tr>
+					<tr>
+						<th colspan="2">{lang app_tagfields}:</th>
+					</tr>
+					<tr>
+						<td><textarea class="area" name="tagfields">$tagtemplates[fields]</textarea></td>
+						<td valign="top">{lang app_tagfields_comment}</td>
+					</tr>
+					<tr>
+						<th colspan="2">{lang app_login}:</th>
+					</tr>
+					<tr>
+						<td>
+							<input type="radio" class="radio" id="yes" name="synlogin" value="1" $synlogin[1] /><label for="yes">{lang yes}</label>
+							<input type="radio" class="radio" id="no" name="synlogin" value="0" $synlogin[0] /><label for="no">{lang no}</label>
+						</td>
+						<td>{lang app_login_comment}</td>
+					</tr>
+					<tr>
+						<th colspan="2">{lang app_recvnote}:</th>
+					</tr>
+					<tr>
+						<td>
+							<input type="radio" class="radio" id="yes" name="recvnote" value="1" $recvnotechecked[1] /><label for="yes">{lang yes}</label>
+							<input type="radio" class="radio" id="no" name="recvnote" value="0" $recvnotechecked[0] /><label for="no">{lang no}</label>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+				<div class="opt"><input type="submit" name="submit" value=" {lang submit} " class="btn" tabindex="3" /></div>
+<!--{if $isfounder}-->
+				<table class="opt">
+					<tr>
+						<th colspan="2">{lang app_code}:</th>
+					</tr>
+					<tr>
+						<th>
+<textarea class="area" onFocus="this.select()">
+define('UC_CONNECT', 'mysql');
+define('UC_DBHOST', '{UC_DBHOST}');
+define('UC_DBUSER', '{UC_DBUSER}');
+define('UC_DBPW', '{UC_DBPW}');
+define('UC_DBNAME', '{UC_DBNAME}');
+define('UC_DBCHARSET', '{UC_DBCHARSET}');
+define('UC_DBTABLEPRE', '`{UC_DBNAME}`.{UC_DBTABLEPRE}');
+define('UC_DBCONNECT', '0');
+define('UC_KEY', '$authkey');
+define('UC_API', '{UC_API}');
+define('UC_CHARSET', '{UC_CHARSET}');
+define('UC_IP', '');
+define('UC_APPID', '$appid');
+define('UC_PPP', '20');
+</textarea>
+						</th>
+						<td>{lang app_code_comment}</td>
+					</tr>
+				</table>
+<!--{/if}-->
+			</form>
+		</div>
+	<!--{/if}-->
+</div>
+
+{template footer}

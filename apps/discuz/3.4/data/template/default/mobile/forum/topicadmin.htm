@@ -1,0 +1,52 @@
+<!--{template common/header}-->
+<!--{if ($_GET['optgroup'] == 3 && $operation == 'delete') || ($_GET['optgroup'] == 4 && $operation == '')}-->
+    <form id="moderateform" method="post" autocomplete="off" action="forum.php?mod=topicadmin&action=moderate&optgroup=$optgroup&modsubmit=yes&mobile=yes" >
+        <input type="hidden" name="frommodcp" value="$frommodcp" />
+        <input type="hidden" name="formhash" value="{FORMHASH}" />
+        <input type="hidden" name="fid" value="$_G[fid]" />
+        <input type="hidden" name="redirect" value="{echo dreferer()}" />
+        <input type="hidden" name="reason" value="{lang topicadmin_mobile_mod}" />
+        <!--{loop $threadlist $thread}-->
+            <input type="hidden" name="moderate[]" value="$thread[tid]" />
+        <!--{/loop}-->
+        <!--{if $_GET['optgroup'] == 3}-->
+            <!--{if $operation == 'delete'}-->
+                <div class="box ban pbn">
+                <!--{if $_G['group']['allowdelpost']}-->
+                    <input name="operations[]" type="hidden" value="delete"/>
+                    <!--{loop $threadlist $thread}-->
+                        <p class="xw1">$thread['subject']</p>
+                    <!--{/loop}-->
+                    <p>{lang admin_delthread_confirm}</p>
+                    <input type="button" onclick="javascript:history.back();return false;" value="{lang goback}" /> <input type="submit" name="modsubmit" id="modsubmit"  value="{lang confirms}" />
+                <!--{else}-->
+                    <p>{lang admin_delthread_nopermission}</p>
+                <!--{/if}-->
+                </div>
+            <!--{/if}-->
+        <!--{elseif $_GET['optgroup'] == 4}-->
+            <div class="box ban pbn">
+                <!--{loop $threadlist $thread}-->
+                <p class="xw1">$thread['subject']</p>
+                <!--{/loop}-->
+                <p>{lang expire}:&nbsp;</p>
+                <p>
+                    <input type="text" name="expirationclose" id="expirationclose" class="px" autocomplete="off" value="$expirationclose"  />
+                </p>
+                <p>{lang admin_close_expire_comment}</p>
+                <p>
+                    <label><input type="radio" name="operations[]" class="pr" value="open" $closecheck[0] />{lang admin_open}</label></p>
+                <p>
+                    <label><input type="radio" name="operations[]" class="pr" value="close" $closecheck[1] />{lang admin_close}</label></p>
+
+                <input type="button" onclick="javascript:history.back();return false;" value="{lang goback}" /> <input type="submit" name="modsubmit" id="modsubmit"  value="{lang confirms}" />
+            </div>
+        <!--{/if}-->
+    </form>
+<!--{else}-->
+	<div class="box ban pbn">
+    	<p>{lang admin_threadtopicadmin_error}</p>
+    	<input type="button" onclick="javascript:history.back();return false;" value="{lang goback}" />
+    </div>
+<!--{/if}-->
+<!--{template common/footer}-->

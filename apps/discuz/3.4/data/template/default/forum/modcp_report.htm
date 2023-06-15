@@ -1,0 +1,64 @@
+<div class="bm bw0 mdcp">
+	<h1 class="mt">{lang modcp_report}</h1>
+	<form method="post" autocomplete="off" action="{$cpscript}?mod=modcp&action=$_GET[action]">
+		<input type="hidden" name="do" value="search">
+		<input type="hidden" name="formhash" value="{FORMHASH}">
+		<div class="exfm">
+			<table cellspacing="0" cellpadding="0">
+				<tr>
+					<th width="15%">{lang mod_option_selectforum}:</th>
+					<td width="35%">
+						<span class="ftid">
+							<select name="fid" id="fid" width="168" class="ps">
+								<option value="">{lang modcp_select_forum}</option>
+								<!--{loop $modforums[list] $id $name}-->
+								<option value="$id" {if $id == $_G[fid]}selected{/if}>$name</option>
+								<!--{/loop}-->
+							</select>
+						</span>
+					</td>
+					<th width="15%">{lang modcp_report_perpage}:</th>
+					<td width="45%"><input type="text" name="lpp" value="$lpp" size="20" class="px" /></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td colspan="3"><button value="true" id="searchsubmit" name="submit" class="pn" type="submit"><strong>{lang submit}</strong></button></td>
+				</tr>
+			</table>
+		</div>
+	</form>
+	<!--{if !empty($reportlist)}-->
+		<h2 class="mtm mbm">{lang modcp_report_waiting}</h2>
+		<form id="reportform" method="post" autocomplete="off" action="{$cpscript}?mod=modcp&action=report&fid=$_G[fid]">
+			<input type="hidden" name="formhash" value="{FORMHASH}">
+			<table id="list_modcp_logs" cellspacing="0" cellpadding="0" class="dt">
+				<thead>
+					<tr>
+						<th></th>
+						<th>{lang modcp_report_content}</th>
+						<th>{lang modcp_report_reporter}</th>
+						<th><!--{if $report_reward['max'] != $report_reward['min']}-->{lang modcp_report_reward}<!--{/if}--></th>
+					</tr>
+				</thead>
+			<!--{loop $reportlist $report}-->
+				<tr>
+					<td>
+						<input id="report_$report[id]" type="checkbox" class="checkbox" name="reportids[]" value="$report[id]" />
+						<input id="reportuids_$report[id]" type="hidden" name="reportuids[{$report[id]}]" value="$report[uid]" />
+					</td>
+					<td><strong>{lang modcp_report_post}:</strong><a href="$report[url]" target="_blank">$report[url]</a><br><strong>{lang modcp_report_reason}:</strong>$report[message]<br><strong>{lang modcp_report_time}:</strong>$report[dateline]</td>
+					<td><a href="home.php?mod=space&uid=$report[uid]">$report[username]</a></td>
+					<td><!--{if $report_reward['max'] != $report_reward['min']}-->$_G['setting']['extcredits'][$curcredits]['title']:&nbsp;<select name="creditsvalue[{$report[id]}]">$rewardlist</select><br /><br />{lang modcp_report_note}:&nbsp;<input type="text" name="msg[{$report[id]}]" class="px" value="" size="20" /><!--{/if}--></td>
+				</tr>
+			<!--{/loop}-->
+				<tr>
+					<td><label for="chkall"><input type="checkbox" name="chkall" id="chkall" class="checkbox" onclick="checkall($('reportform'), 'report')" />{lang select_all}</label></td>
+					<td colspan="3"><button type="submit" class="pn" name="reportsubmit" id="reportsubmit" value="true"><strong>{lang modcp_report_resolve}</strong></button></td>
+				</tr>
+			</table>
+		</form>
+		<!--{if !empty($multipage)}--><div class="pgs cl mtm">$multipage</div><!--{/if}-->
+	<!--{else}-->
+		{lang modcp_report_nothing}
+	<!--{/if}-->
+</div>

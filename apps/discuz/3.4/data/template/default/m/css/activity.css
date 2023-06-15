@@ -1,0 +1,40 @@
+.dzTop,.dzDetail,.dzSignDetail{padding:12px 18px;background-color:#FFF;}
+.dzImg{width:20px;height:20px;vertical-align:middle;}
+.dzShowImg{height:200px;overflow:hidden;}
+.dzShowImg img{min-height:200px;width:100%;max-width:100%;}
+.dzTitle{line-height:35px !important;}
+.dzBtn{height:18px;padding:0 5px;display:inline-block;background-color:#f87364;vertical-align:10%;line-height:18px;}
+.dzDetail .activity li{padding-bottom:3px;line-height:22px;font-size:14px;color:#333;}
+.dzDetail .activity li:nth-child(3){padding-left:19px;}
+.dzDetail i{display:inline-block;vertical-align:3%;}
+.dzDetail .iconPrfile{padding-right:0;}
+.dzDetail .iconloc{margin:0 3px 0 -2px;}
+.dzDetail .iconloc:before{font-size:18px;margin-left:0;color:#999;}
+.dzDetail .iconCategory{font-size:15px;vertical-align:-2%;}
+.dzSignBtn{height:30px;background-color:#7fbe23;border:1px solid #7fbe23;margin:20px 0;line-height:30px;text-align:center;}
+.dzCancelBtn{background-color:#fff;border:1px solid #dbdbdb;}
+.dzPerNum{margin-bottom:10px;line-height:25px;font-size:14px;}
+.dzInputBor,.dzInputPay,.dzTextareaBor{padding:0 10px;border:1px solid #aaa;margin-top:12px;}
+.dzInput{width:100%;line-height:32px;border:none;}
+.dzSex,.dzPayMessage{margin:18px 0;padding-bottom:18px;border-bottom:1px solid #ebebeb;}
+.dzSex a,.dzSex span{display:inline-block;text-align:center;}
+.dzSex a{width:49%;}
+.dzSex span{width:2%;color:#ebebeb;}
+.dzSex i:before{color: #999;}
+.dzSex .on,.dzSex .on i:before{color:#db5f40;}
+
+.dzPayMessage dt,.dzPayMessage dd{line-height:32px;color:#1d1d1d;}
+.dzPayMessage dt{font-size:18px;color:#1d1d1d;}
+.dzPayMessage input{vertical-align:-5%;outline:none;}
+.dzTextareaBor{padding:10px 10px 0;margin:5px 0;}
+.dzTextarea{width:100%;height:60px;border:none;resize:none;}
+.dzRC{margin:0 8px 0 1px;}
+.dzInputPay{width:30px;margin:0 5px;line-height:32px;}
+.dzPayMessage .on{ color:#3668b2;}
+.dzPayMessage .iconRadio,.dzPayMessage .iconCheckbox{margin:0 7px 0 -1px;}
+.dzSignSuccess,.dzPopLayer{background-color:#FFF;margin:0 auto;overflow:hidden;}
+.dzSignSuccess{width:150px;height:150px;text-align:center;line-height:21px;}
+.dzSignSuccess .iconRadio{display:block;margin:50px 0px 43px;font-size:90px;color:#7fbe23;}
+.dzPopLayer{width:95%;height:90px;padding:30px 0;text-align:center;}
+.dzOper{padding:0 20px;margin:40px auto 0;}
+.dzOper .dzSignBtn,.dzOper .dzCancelBtn{width:40%;margin:0 10px;display:inline-block;}

@@ -1,0 +1,37 @@
+<!--{if $thestyle[makethumb]}-->
+<tr>
+	<th width="80">{lang block_thumb_width}</th>
+	<td><input type="text" name="picwidth" value="$block[picwidth]" class="px" /></td>
+</tr>
+<tr>
+	<th width="80">{lang block_thumb_height}</th>
+	<td><input type="text" name="picheight" value="$block[picheight]" class="px" /></td>
+</tr>
+<!--{/if}-->
+<!--{if $thestyle[settarget]}-->
+<tr>
+	<th width="80">{lang block_link_target_type}</th>
+	<td>
+		<select name="a_target">
+			<option value="blank" $targetarr[blank]>{lang block_link_target_blank}</option>
+			<option value="self" $targetarr[self]>{lang block_link_target_self}</option>
+			<option value="top" $targetarr[top]>{lang block_link_target_top}</option>
+		</select>
+	</td>
+</tr>
+<!--{/if}-->
+<!--{if !$is_htmlblock}-->
+<tr>
+	<th width="80">{lang dateformat}</th>
+	<td>
+		<select name="dateformat">
+			<!--{loop $dateformats $value}-->
+			<option value="$value[format]"{$value[selected]}>$value[time]</option>
+			<!--{/loop}-->
+		</select>
+		&nbsp;
+		<label for="ckdateuformat"><input type="checkbox" name="dateuformat" id="ckdateuformat" class="pc" value="1"{if $block[dateuformat]} checked="checked"{/if} />{lang dateuformat}</label>
+		<img src="{IMGDIR}/faq.gif" alt="Tip" class="vm" style="margin: 0;" onmouseover="showTip(this)" tip="{lang dateuformat_tips}" />
+	</td>
+</tr>
+<!--{/if}-->

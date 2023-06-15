@@ -1,0 +1,119 @@
+<!--{eval $_G['home_tpl_titles'] = array('{lang remind}');}-->
+<!--{template common/header}-->
+<div id="pt" class="bm cl">
+	<div class="z">
+		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em>
+		<span>{lang prompt}</span> <em>&rsaquo;</em>
+		<a href="home.php?mod=space&do=notice">{lang remind}</a>
+	</div>
+</div>
+
+<style id="diy_style" type="text/css"></style>
+<div class="wp">
+	<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+</div>
+
+<div id="ct" class="ct2_a wp cl">
+	<div class="mn">
+		<div class="bm bw0">
+			<h1 class="mt"><img alt="pm" src="{STATICURL}image/feed/nts.gif" class="vm" /> {lang remind}</h1>
+			<ul class="tb cl">
+				<li class="y"><a href="home.php?mod=spacecp&ac=privacy&op=filter" target="_blank" class="xi2">{lang filter_settings}</a></li>
+				<!--{if $_G['notice_structure'][$view] && ($view == 'mypost' || $view == 'interactive')}-->
+					<!--{loop $_G['notice_structure'][$view] $subtype}-->
+						<li$readtag[$subtype]><a href="home.php?mod=space&do=notice&view=$view&type=$subtype"><!--{eval echo lang('template', 'notice_'.$view.'_'.$subtype)}--><!--{if $_G['member']['newprompt_num'][$subtype]}-->($_G['member']['newprompt_num'][$subtype])<!--{/if}--></a></li>
+					<!--{/loop}-->
+				<!--{else}-->
+					<li class="a"><a href="home.php?mod=space&do=notice&view=$view"><!--{eval echo lang('template', 'notice_'.$view)}--></a></li>
+				<!--{/if}-->
+			</ul>
+
+			<!--{if empty($list)}-->
+			<div class="emp mtw ptw hm xs2">
+				<!--{if $new == 1}-->
+					{lang no_new_notice}<a href="home.php?mod=space&do=notice&isread=1">{lang view_old_notice}</a>
+				<!--{else}-->
+					{lang no_notice}
+				<!--{/if}-->
+			</div>
+			<!--{/if}-->
+
+			<script type="text/javascript">
+
+				function deleteQueryNotice(uid, type) {
+					var dlObj = $(type + '_' + uid);
+					if(dlObj != null) {
+						var id = dlObj.getAttribute('notice');
+						var x = new Ajax();
+						x.get('home.php?mod=misc&ac=ajax&op=delnotice&inajax=1&id='+id, function(s){
+							dlObj.parentNode.removeChild(dlObj);
+						});
+					}
+				}
+
+				function errorhandle_pokeignore(msg, values) {
+					deleteQueryNotice(values['uid'], 'pokeQuery');
+				}
+				function succeedhandle_noticeignore(url,msg, values) {
+					if(values['type'] == "poke") {
+						deleteQueryNotice(values['uid'], 'pokeQuery');
+					} else if(values['type'] == "friend" ) {
+						deleteQueryNotice(values['uid'], 'pendingFriend');  
+					} else {
+						deleteQueryNotice(values['id'], 'notice');
+					}
+				}				
+			</script>
+
+			<!--{if $list}-->
+				<div class="xld xlda">
+					<div class="nts">
+						<!--{loop $list $key $value}-->
+							<dl class="cl {if $key==1}bw0{/if}" $value[rowid] notice="$value[id]" id="notice_$value[id]">
+								<dd class="m avt mbn">
+									<!--{if $value[authorid]}-->
+									<a href="home.php?mod=space&uid=$value[authorid]"><!--{avatar($value[authorid],small)}--></a>
+									<!--{else}-->
+									<img src="{IMGDIR}/systempm.png" alt="systempm" />
+									<!--{/if}-->
+								</dd>
+								<dt>
+									<a class="d b" href="home.php?mod=spacecp&ac=common&op=ignore&authorid=$value[authorid]&type=$value[type]&handlekey=noticeignore" id="a_note_$value[id]" onclick="showWindow('noticeignore', this.href, 'get', 0);" title="{lang shield}">{lang shield}</a>
+									<span class="xg1 xw0"><!--{date($value[dateline], 'u')}--></span>
+								</dt>
+								<dd class="ntc_body" style="$value[style]">
+									$value[note]
+								</dd>
+
+								<!--{if $value[from_num]}-->
+								<dd class="xg1 xw0">{lang ignore_same_notice_message}</dd>
+								<!--{/if}-->
+
+							</dl>
+						<!--{/loop}-->
+					</div>
+				</div>
+
+				<!--{if $view!='userapp' && $space[notifications]}-->
+				<div class="mtm mbm"><a href="home.php?mod=space&do=notice&ignore=all">{lang ignore_same_notice_message} <em>&rsaquo;</em></a></div>
+				<!--{/if}-->
+
+				<!--{if $multi}--><div class="pgs cl">$multi</div><!--{/if}-->
+			<!--{/if}-->
+		</div>
+	</div>
+	<div class="appl">
+		<!--{subtemplate home/space_prompt_nav}-->
+
+		<div class="drag">
+			<!--[diy=diy2]--><div id="diy2" class="area"></div><!--[/diy]-->
+		</div>
+
+	</div>
+</div>
+
+<div class="wp mtn">
+	<!--[diy=diy3]--><div id="diy3" class="area"></div><!--[/diy]-->
+</div>
+
+<!--{template common/footer}-->

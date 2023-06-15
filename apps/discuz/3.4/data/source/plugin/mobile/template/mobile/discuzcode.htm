@@ -1,0 +1,46 @@
+{eval
+function mobile_codedisp($code) {
+}
+<!--{block return}--><div class="blockcode"><span></span><ol><li>$code</ol></div><!--{/block}-->
+<!--{eval return $return;}-->
+{eval
+}
+
+function mobile_quote() {
+}
+<!--{block return}--><div class="reply_wrap">\\1</div><!--{/block}-->
+<!--{eval return $return;}-->
+{eval
+}
+
+function mobile_free() {
+}
+<!--{block return}--><div class="reply_wrap">\\1</div><!--{/block}-->
+<!--{eval return $return;}-->
+{eval
+}
+
+function mobile_image($url, $extra) {
+}
+<!--{block return}--><div class="img"><img src="$url" $extra/></div><!--{/block}-->
+<!--{eval return $return;}-->
+{eval
+}
+
+function mobile_hide_reply() {
+	global $_G;
+}
+<!--{block return}-->\\1<!--{/block}-->
+<!--{eval return $return;}-->
+{eval
+}
+
+function mobile_hide_reply_hidden() {
+	global $_G;
+}
+<!--{block return}--><div class="locked"><!--{if $_G[uid]}-->{$_G[username]}<!--{else}-->{lang guest}<!--{/if}-->{lang mobile:post_hide_reply_hidden}</div><!--{/block}-->
+<!--{eval return $return;}-->
+{eval
+}
+
+}

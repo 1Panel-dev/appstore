@@ -1,0 +1,66 @@
+<form method="post" autocomplete="off" action="home.php?mod=spacecp&ac=plugin&id=myrepeats:memcp&pluginop=add">
+<input type="hidden" name="formhash" value="{FORMHASH}" />
+<p class="tbmu">{lang myrepeats:adduser}</p>
+<table cellspacing="0" cellpadding="0" class="tfm" style="table-layout:fixed;margin-top:10px;">
+<tbody>
+	<tr><td class="mtm pns">
+		<p>
+		<!--{if !$singleprem}-->
+			{lang myrepeats:username}
+			<!--{if $permusers}-->
+				<select id="userselect" onchange="$('usernamenew').value = this.value" class="ps vm">
+				<option value="">{lang myrepeats:select_rrepeats}</option>
+				<!--{loop $permusers $user}-->
+					<option value="$user">$user</option>
+				<!--{/loop}-->
+				</select>
+			<!--{/if}-->
+			<input name="usernamenew" id="usernamenew" type="text" class="px vm" value="$username" style="width:100px" tabindex="1" />&nbsp;
+		<!--{else}-->
+			{lang myrepeats:username} <select name="usernamenew" id="usernamenew" class="ps vm">
+			<!--{loop $permusers $user}-->
+				<option value="$user"{if $user == $username} selected="selected"{/if}>$user</option>
+			<!--{/loop}-->
+			</select>
+		<!--{/if}-->
+		{lang myrepeats:password} <input type="password" name="passwordnew" class="px vm" style="width:100px" tabindex="2" />
+		<select name="questionidnew" tabindex="3" onchange="if(this.value > 0) {$('answernew').style.display='';} else {$('answernew').style.display='none';}" class="ps vm">
+			<option value="0">{lang myrepeats:security_question}</option>
+			<option value="1">{lang myrepeats:security_question_1}</option>
+			<option value="2">{lang myrepeats:security_question_2}</option>
+			<option value="3">{lang myrepeats:security_question_3}</option>
+			<option value="4">{lang myrepeats:security_question_4}</option>
+			<option value="5">{lang myrepeats:security_question_5}</option>
+			<option value="6">{lang myrepeats:security_question_6}</option>
+			<option value="7">{lang myrepeats:security_question_7}</option>
+		</select>
+		<span id="answernew" style="display:none">{lang myrepeats:security_answer} <input type="text" name="answernew" class="px vm" style="width:100px" class="txt" tabindex="4" /></span>
+		<br /><br />
+		<p>
+		{lang myrepeats:comment} <input type="text" name="commentnew" class="px vm" size="40" tabindex="5" />
+		<button type="submit" name="adduser" class="pn vm" value="yes" ><span>{lang myrepeats:add}</span></button>
+		</p>
+	</td></tr>
+</tbody>
+</table>
+</form>
+<form method="post" autocomplete="off" action="home.php?mod=spacecp&ac=plugin&id=myrepeats:memcp&pluginop=update">
+<input type="hidden" name="formhash" value="{FORMHASH}" />
+<!--{if $repeatusers}-->
+	<table cellspacing="0" cellpadding="0" class="dt mtm">
+		<thead class="alt">
+			<tr><td width="40"></td><td width="140">{lang myrepeats:username}</td><td>{lang myrepeats:commentrow}</td><td width="120">{lang myrepeats:lastswitch}</td></tr>
+		</thead>
+		<!--{loop $repeatusers $user}-->
+		<tr>
+			<td><input name="delete[]" type="checkbox" class="pc" value="$user[username]" /></td>
+			<td><b><!--{if !$user[locked]}--><a href="plugin.php?id=myrepeats:switch&username=$user[usernameenc]&formhash={FORMHASH}">$user[username]</a></b><!--{else}-->$user[username] ({lang myrepeats:locked})<!--{/if}--></td>
+			<td><input name="comment[{$user[username]}]" class="px" value="$user[comment]" size="40" /></td>
+			<td><!--{if $user[lastswitch]}-->$user[lastswitch]<!--{else}-->{lang myrepeats:nouse}<!--{/if}--></td>
+		</tr>
+		<!--{/loop}-->
+		<tr class="bw0_all"><td><label for="chkall"><input class="pc" type="checkbox" id="chkall" name="chkall" onclick="checkall(this.form);" />{lang myrepeats:delete_check}</label></td>
+		<td class="mtm pns"><button type="submit" class="pn" name="updateuser" value="yes" ><span>{lang submit}</span></button></td></tr>
+	</table>
+<!--{/if}-->
+</form>

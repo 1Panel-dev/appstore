@@ -1,0 +1,61 @@
+{template header}
+
+<script src="js/common.js" type="text/javascript"></script>
+<div class="container">
+	<!--{if $a == 'ls'}-->
+		<h3 class="marginbot">{lang menu_tag_templates}</h3>
+		<div class="mainbox">
+			<!--{if $applist}-->
+				<input type="hidden" name="formhash" value="{FORMHASH}">
+				<table class="datalist fixwidth">
+					<tr>
+						<th nowrap>{lang app_id}</th>
+						<th nowrap>{lang app_name}</th>
+					</tr>
+					<!--{loop $applist $app}-->
+						<tr>
+							<td width="35">$app[appid]</td>
+							<td><a href="admin.php?m=tag&a=detail&appid=$app[appid]"><strong>$app[name]</strong></a></td>
+						</tr>
+					<!--{/loop}-->
+				</table>
+				<div class="margintop"></div>
+			<!--{else}-->
+				<div class="note">
+					<p class="i">{lang list_empty}</p>
+				</div>
+			<!--{/if}-->
+		</div>
+	<!--{elseif $a == 'detail'}-->
+		<h3 class="marginbot">{lang menu_tag_templates}<a href="admin.php?m=tag&a=ls" class="sgbtn">{lang app_list_return}</a></h3>
+		<div class="note fixwidthdec">
+		<p>{lang tag_tips}</p></div>
+
+		<div class="mainbox">
+		<form action="admin.php?m=tag&a=detail&appid=$appid" method="post">
+		<input type="hidden" name="formhash" value="{FORMHASH}">
+		<table class="opt">
+		<tr>
+			<th colspan="2">{lang app_name}: $appname</th>
+		</th>
+		<tr>
+			<th colspan="2">{lang tag_global_template}:</th>
+		</tr>
+		<tr>
+			<td valign="top"><textarea class="bigarea" style="float:left;width:400px;height:200px" name="templatenew">$template</textarea></td>
+			<td valign="top">
+			<!--{loop $fields $field $memo}-->
+			<b>&#123;$field&#125;</b> $memo<br />
+			<!--{/loop}-->
+			<b>[node]...[/node]</b> {lang tag_template_comment}<br />
+			</td>
+		</tr>
+		<tr class="nobg">
+			<td colspan="2"><input type="submit" value="{lang submit}" class="btn" /></td>
+		</tr>
+		</table>
+		</form>
+	<!--{/if}-->
+</div>
+
+{template footer}

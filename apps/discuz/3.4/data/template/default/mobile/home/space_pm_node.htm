@@ -1,0 +1,7 @@
+<div class="bm_c">
+	<!--{if $value[msgfromid]}-->
+	<a href="home.php?mod=space&uid=$value[msgfromid]" class="xi2">{$value[msgfrom]}</a> <!--{/if}-->
+	<span class="xg1"><!--{date($value[dateline], 'u')}--></span>
+<!--{if $value[new]}--><img src="{IMGDIR}/new_pm.gif" alt="{lang unread_pm}" title="{lang unread_pm}" /><!--{/if}-->
+	<dd class="xs1">{if !$value['msgfromid'] && !$value['msgtoid']}$value[subject]<br>{/if}$value[message]</dd>
+</div>

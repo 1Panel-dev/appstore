@@ -1,0 +1,84 @@
+{eval
+	$specialarr = array(0 => array('thread', '{lang index_posts}'), 1 => array('poll', '{lang thread_poll}'), 2 => array('trade', '{lang thread_trade}'), 3 => array('reward', '{lang thread_reward}'), 4 => array('activity', '{lang thread_activity}'), 5 => array('debate', '{lang thread_debate}'));
+	$specialtype = $specialarr[$_G['forum_thread']['special']];
+	$previewspecial = $_G['forum_thread']['special'];
+	$_G[home_tpl_titles][] = $navsubject;
+	$_G[home_tpl_titles][] = $specialtype[1];
+	$_G[home_tpl_titles][] = '{lang portal}';
+}
+
+<!--{template common/header}-->
+
+<script type="text/javascript">var fid = parseInt('$_G[fid]'), tid = parseInt('$_G[tid]');</script>
+
+<form method="post" autocomplete="off" name="modactions" id="modactions">
+<input type="hidden" name="formhash" value="{FORMHASH}" />
+<input type="hidden" name="optgroup" />
+<input type="hidden" name="operation" />
+<input type="hidden" name="listextra" value="$_GET[extra]" />
+</form>
+
+<script type="text/javascript">zoomstatus = parseInt($_G['setting']['zoomstatus']);var imagemaxwidth = '{$_G['setting']['imagemaxwidth']}';var aimgcount = new Array();</script>
+
+<!--{if in_array($thread['displayorder'], array(1, 2, 3, 4))}-->
+	<!--{eval $thread['id'] = 'stickthread_'.$thread['tid'];}-->
+<!--{else}-->
+	<!--{eval $thread['id'] = 'normalthread_'.$thread['tid'];}-->
+<!--{/if}-->
+<div class="fastpreview"><span class="icon_preview"></span><a class="closeprev y" href="javascript:void(0);" onclick="previewThread('$thread[tid]', '$thread[id]');" title="{lang hide_preview}">{lang hide_preview}</a>
+	<div>
+		<div>
+			<div class="bm_c">
+			<!--{eval $postcount = 0;}-->
+			<!--{loop $postlist $postid $post}-->
+				<!--{if $postid}-->
+					<!--{eval $_G[forum_thread][special] = 0;}-->
+					<div id="post_$post[pid]" class="xld xlda mbm">
+						<!--{subtemplate forum/viewthread_preview_node}-->
+					</div>
+				<!--{/if}-->
+				<!--{eval $postcount++;}-->
+			<!--{/loop}-->
+			<div id="postlistreply_{$_G['tid']}" name="postlistreply" tid="{$_G['tid']}" class="xld xlda mbm"><div id="post_new_{$_G['tid']}" class="viewthread_table" style="display: none"></div></div>
+			<!--{if $multipage}-->
+			<div class="pgs cl">$multipage</div>
+			<!--{/if}-->
+			</div>
+
+			<!--{if $_G['setting']['fastpost'] && $allowpostreply && !$_G['forum_thread']['archiveid'] && !$secqaacheck && !$seccodecheck}-->
+			<div class="previewvfastpost" id="vfastpost">
+				<form method="post" autocomplete="off" id="vfastpostform_{$_G['tid']}" action="forum.php?mod=post&action=reply&fid=$_G[fid]&tid=$_G[tid]&fromvf=1&extra=$_G[gp_extra]&replysubmit=yes{if $_G['gp_ordertype'] != 1}&infloat=yes&handlekey=vfastpost_{$_G['tid']}{/if}{if $_G[gp_from]}&from=$_G[gp_from]{/if}" onsubmit="this.message.value = parseurl(this.message.value);changecontentdivid({$_G['tid']});ajaxpost('vfastpostform_{$_G['tid']}', 'return_reply', 'return_reply', 'onerror');return false;">
+					<input type="hidden" name="formhash" value="{FORMHASH}" />
+					<table cellspacing="0" cellpadding="0" id="vfastposttb">
+						<tr>
+							<td id="vf_l"></td>
+							<td id="vf_m"><input type="text" name="message" id="vmessage_{$_G['tid']}" onKeyDown="seditor_ctlent(event, '$(\'vreplysubmit_{$_G['tid']}\').click()');"/></td>
+							<td id="vf_r"></td>
+							<td id="vf_b"><button type="submit" class="pn pnc" name="replysubmit" id="vreplysubmit_{$_G['tid']}" value="true" style="">post_newreply</button></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			<script type="text/javascript">
+				//$('note_{$tid}').focus();
+				function succeedhandle_vfastpost_{$_G['tid']}(url, message, param) {
+					$('vmessage_{$_G['tid']}').value = '';
+					succeedhandle_fastpost(url, message, param);
+					showCreditPrompt();
+				}
+			</script>
+			<!--{/if}-->
+		</div>
+	</div>
+</div>
+
+
+
+<script type="text/javascript">
+var rnd='{TIMESTAMP}';{if $_G['page'] > 1}window.scrollTo('0',getElementOffset($('threadPreviewTR_{$_G['tid']}')).top);{/if}
+<!--{if !IS_ROBOT && !empty($_G[setting][lazyload])}-->
+new lazyload();
+<!--{/if}-->
+</script>
+
+<!--{template common/footer}-->

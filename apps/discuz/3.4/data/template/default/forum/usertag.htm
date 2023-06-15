@@ -1,0 +1,61 @@
+<!--{template common/header}-->
+	<h3 class="flb">
+		<em><!--{if $_G[thread][special] == 4}-->{lang set_tag_to_activity_users}<!--{elseif $_G[thread][special] == 1}-->{lang set_tag_to_poll_users}<!--{else}-->{lang set_tag_to_reply_users}<!--{/if}--></em>
+	</h3>
+	<form id="usertagform" method="post" autocomplete="off" action="forum.php?mod=misc&action=usertag&addusertag=yes&infloat=yes" onsubmit="ajaxpost('usertagform', 'return_$_GET[handlekey]', '', '');return false;">
+	<input type="hidden" name="formhash" value="{FORMHASH}" />
+	<input type="hidden" name="tid" value="$_G[tid]" />
+	<input type="hidden" name="handlekey" value="$_GET[handlekey]" />
+	<div class="c bart">
+		<p>
+			<input type="text" name="tags" id="tags" class="px vm" value="" size="60" />
+			<img src="{IMGDIR}/faq.gif" alt="Tip" class="vm" tip="{lang posttag_comment}" onmouseover="showTip(this)" />
+		</p>
+		<!--{if $polloptions}-->
+		<p class="mtn">{lang poll_select_option}</p>
+		<p>
+			<select multiple="multiple" name="polloptions" style="width:331px" size="5">
+				<!--{loop $polloptions $var}-->
+				<option value="$var[polloptionid]">$var[polloption]</option>
+				<!--{/loop}-->
+			</select>
+		</p><br>
+		<!--{/if}-->
+		<!--{if $recent_use_tag}-->
+		<p class="mtn">{lang recent_use_tag}
+			<!--{eval $tagi = 0;}-->
+			<!--{loop $recent_use_tag $var}-->
+				<!--{if $tagi}-->, <!--{/if}--><a href="javascript:;" class="xi2" onclick="$('tags').value == '' ? $('tags').value = '$var' : $('tags').value += ',$var';">$var</a>
+				<!--{eval $tagi++;}-->
+			<!--{/loop}-->
+		</p>
+		<!--{/if}-->
+
+		<!--{if $lastlog}-->
+		<p class="mtn">{lang set_tag_log}:</p>
+			<!--{loop $lastlog $log}-->
+				<p>$log[dateline] $log[username] : $log[reason]</p>
+			<!--{/loop}-->
+		<!--{/if}-->
+	</div>
+	<p class="o pns" id="return_$_GET[handlekey]">
+		<button type="submit" name="addusertag" class="pn" value="true"><strong>{lang submit}</strong></button>
+		<button type="button" id="closebtn" class="pn" onclick="hideWindow('$_GET[handlekey]');"><strong>{lang close}</strong></button>
+	</p>
+	</form>
+<script type="text/javascript">
+	function errorhandle_$_GET[handlekey](msg, values) {
+		var  msgmode = !values['haserror'] ? 'right' : 'alert';
+		if(values['limit']) {
+			var action = $('usertagform').getAttribute('action');
+			action = hostconvert(action);
+			$('usertagform').action = action.replace(/\&limit\=\d+/g, '')+'&limit='+values['next'];
+			$('return_$_GET[handlekey]').innerHTML = msg;
+			setTimeout("ajaxpost('usertagform', 'return_$_GET[handlekey]', '', '')", '1000');
+			return false;
+		}
+		showDialog(msg, msgmode, '', null, true, null, '', '', '', 3);
+		hideWindow('$_GET[handlekey]');
+	}
+</script>
+<!--{template common/footer}-->

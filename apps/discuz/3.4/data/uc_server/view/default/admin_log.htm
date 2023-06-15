@@ -1,0 +1,41 @@
+{template header}
+
+<div class="container">
+	<h3 class="marginbot">		
+		<a href="admin.php?m=feed&a=ls" class="sgbtn">{lang feed_list}</a>
+		<!--{if $user['allowadminnote'] || $user['isfounder']}--><a href="admin.php?m=note&a=ls" class="sgbtn">{lang note_list}</a><!--{/if}-->
+		{lang menu_log}
+		<a href="admin.php?m=mail&a=ls" class="sgbtn">{lang mail_queue}</a>
+	</h3>
+	<div class="mainbox">
+		<!--{if $loglist}-->
+			<table class="datalist">
+				<tr>
+					<th>{lang log_operator}</th>
+					<th>{lang log_ip}</th>
+					<th>{lang log_time}</th>
+					<th>{lang log_operation}</th>
+					<th>{lang log_extra}</th>
+				</tr>
+				<!--{loop $loglist $log}-->
+					<tr>
+						<td><strong>$log[1]</strong></td>
+						<td>$log[2]</td>
+						<td>$log[3]</td>
+						<td>$log[4]</td>
+						<td>$log[5]</td>
+					</tr>
+				<!--{/loop}-->
+				<tr class="nobg">
+					<td class="tdpage" colspan="5">$multipage</td>
+				</tr>
+			</table>
+		<!--{else}-->
+			<div class="note">
+				<p class="i">{lang list_empty}</p>
+			</div>
+		<!--{/if}-->
+	</div>
+</div>
+
+{template footer}

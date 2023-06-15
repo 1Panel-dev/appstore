@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="name">文件权限检查</item>
+	<item id="version">1.0.1</item>
+	<item id="author">Monkey</item>
+	<item id="date">2008-6-16</item>
+	<item id="lastmodified">2021-5-20</item>
+	<item id="copyright">Comsenz 所有</item>
+	<item id="tabindex">2</item>
+	<item id="tips">检查 UCenter 文件是否被修改。</item>
+	<item id="lang">
+		<item id="plugin_filecheck_modifed">被修改文件</item>
+		<item id="plugin_filecheck_deleted">丢失文件</item>
+		<item id="plugin_filecheck_unknow">未知文件</item>
+		<item id="plugin_filecheck_modifed_in_aweek">一周内更新</item>
+	</item>
+</root>

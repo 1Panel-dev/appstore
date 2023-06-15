@@ -1,0 +1,20 @@
+<div class="tbn">
+	<h2 class="mt bbda"><!--{if $_G['setting']['portalstatus'] }-->{lang portal_manage}<!--{else}-->{lang portal_block_manage}<!--{/if}--></h2>
+	<ul>
+	<!--{if $_G['setting']['portalstatus'] }-->
+		<!--{if $admincp2 || $_G['group']['allowmanagearticle']}--><li{if $ac == 'index'} class="a"{/if}><a href="portal.php?mod=portalcp&ac=index">{lang category_management}</a></li><!--{/if}-->
+		<!--{if $admincp2 || $admincp3 || $_G['group']['allowmanagearticle'] || $_G['group']['allowpostarticle']}--><li{if $ac == 'category'} class="a"{/if}><a href="portal.php?mod=portalcp&ac=category">{lang article_manage}</a></li><!--{/if}-->
+	<!--{/if}-->
+	<!--{if $admincp4 || $admincp6 || $_G['group']['allowdiy']}-->
+		<li{if $ac == 'portalblock' || $ac=='block'} class="a"{/if}><a href="portal.php?mod=portalcp&ac=portalblock">{lang block_management}</a></li>
+	<!--{/if}-->
+	<!--{if !$_G[inajax] && !empty($_G['setting']['plugins']['portalcp'])}-->
+		<!--{loop $_G['setting']['plugins']['portalcp'] $id $module}-->
+			<!--{if in_array($module['adminid'], array(0, -1)) || ($module['adminid'] && $_G['adminid'] > 0 && $module['adminid'] >= $_G['adminid'])}--><li{if $ac == 'plugin' && $_GET[id] == $id} class="a"{/if}><a href="portal.php?mod=portalcp&ac=plugin&id=$id">$module[name]</a></li><!--{/if}-->
+		<!--{/loop}-->
+	<!--{/if}-->
+	<!--{if !empty($modsession->islogin)}-->
+		<li><a href="portal.php?mod=portalcp&ac=logout">{lang logout}</a></li>
+	<!--{/if}-->
+	</ul>
+</div>

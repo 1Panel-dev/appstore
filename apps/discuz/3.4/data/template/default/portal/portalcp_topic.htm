@@ -1,0 +1,143 @@
+<!--{template common/header}-->
+
+<div id="pt" class="bm cl">
+	<div class="z">
+		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em>
+		<a href="portal.php">{lang portal}</a> <em>&rsaquo;</em>
+		<!--{if $topic}-->
+		<a href="portal.php?mod=portalcp&ac=topic&topicid=$topic[topicid]">{lang topic_edit}</a>
+		<!--{else}-->
+		<a href="portal.php?mod=portalcp&ac=topic">{lang topic_add}</a>
+		<!--{/if}-->
+	</div>
+</div>
+
+<div id="ct" class="wp cl">
+	<div class="mn">
+		<!--{if $op == 'add' || $op == 'edit'}-->
+		<div class="bm">
+			<div class="bm_h">
+				<h1><!--{if $topic}-->{lang topic_edit}<!--{else}-->{lang topic_add}<!--{/if}--></h1>
+			</div>
+			<div class="bm_c">
+				<form id="topicform" name="topicform" method="post" autocomplete="off" enctype="multipart/form-data" action="portal.php?mod=portalcp&ac=topic&op=$op&topicid=$topic[topicid]">
+					<table cellspacing="0" cellpadding="0" class="tfm">
+						<tr>
+							<th><span class="rq">*</span>{lang topic_submit}</th>
+							<td><input type="text" name="title" value="$topic[title]" class="px" /></td>
+						</tr>
+						<tr>
+							<th><span class="rq">*</span>{lang topic_static_name}</th>
+							<td><input type="text" name="name" value="$topic[name]" class="px" />
+								<p class="d">{lang topic_static_name_comment}</p>
+							</td>
+						</tr>
+
+						<tr>
+							<th>{lang topic_domain}</th>
+							<td>
+								<!--{if !empty($_G['setting']['domain']['root']['topic'])}-->
+								http://<input type="text" name="domain" value="$topic[domain]" class="px" style="width:100px" />.$_G['setting']['domain']['root']['topic']
+								<!--{else}-->
+								<input type="text" name="domain" value="" disabled="disabled" class="px" />
+								<!--{/if}-->
+								<p class="d">{lang topic_domain_comment}</p>
+							</td>
+						</tr>
+
+						<tr>
+							<th>{lang topic_description}</th>
+							<td><textarea name="summary" rows="4" cols="60" class="pt">$topic[summary]</textarea>
+								<p class="d">{lang topic_description_comment}</p>
+							</td>
+						</tr>
+						<tr>
+							<th>{lang topic_keyword}</th>
+							<td><textarea name="keyword" rows="4" cols="60" class="pt">$topic[keyword]</textarea>
+								<p class="d">{lang topic_keyword_comment}</p>
+							</td>
+						</tr>
+						<tr>
+							<th>{lang topic_cover}</th>
+							<td>
+								<p class="mbn">
+									<label class="lb"><input type="radio" name="cover_tg" class="pr" checked="checked" onclick="document.getElementById('cover_tg_1').style.display='block';document.getElementById('cover_tg_2').style.display='none';" />{lang link_to_internet}</label>
+									<label class="lb"><input type="radio" name="cover_tg" class="pr" onclick="document.getElementById('cover_tg_1').style.display='none';document.getElementById('cover_tg_2').style.display='block'" />{lang upload_from_local}</label>
+								</p>
+								<p id="cover_tg_1"><input type="text" name="cover" value="$coverpath" class="px" /></p>
+								<p id="cover_tg_2" style="display: none;"><input type="file" name="cover" /></p>
+								<!--{if $topic[cover]}-->
+								<p class="mtn">
+									{lang topic_cover_current}:
+									<a href="$topic[cover]" target="_blank"><img src="$topic[cover]" alt="$topic[title]" width="160" height="160" /></a>
+									<label><input type="checkbox" value="yes" name="deletecover" class="pc" />{lang delete}</label>
+								</p>
+								<!--{/if}-->
+							</td>
+						</tr>
+						<tr>
+							<th>{lang tplname}</th>
+							<td>
+							<!--{eval $pritplhide = empty($topic['primaltplname']) ? '' : ' style="display:none;"';}-->
+							<!--{eval $pritplshow = empty($topic['primaltplname']) ? ' style="display:none;"' : '';}-->
+							<span id="pritplselect"$pritplhide><select name="primaltplname">
+								<!--{loop $tpls $k $v}-->
+								<!--{eval $selected = $topic['primaltplname'] == $k ? ' selected' : '';}-->
+								<option value="$k"$selected>$v</option>
+								<!--{/loop}-->
+							</select>
+							<!--{loop $tpls $k $v}-->
+							<input type="hidden" name="signs[{echo dsign($k)}]" value="1"/>
+							<!--{/loop}-->
+							<!--{eval $pritplophide = !empty($topic['primaltplname']) ? '' : ' style="display:none;"';}-->
+							 <a href="javascript:;"$pritplophide onclick="$('pritplselect').style.display='none';$('pritplvalue').style.display='';" class="xi2">{lang cancel}</a></span>
+							<!--{eval $html = '<span id="pritplvalue"'.$pritplshow.'>'.getprimaltplname($topic['primaltplname'].'.htm').' <a href="javascript:;" onclick="$(\'pritplselect\').style.display=\'\';$(\'pritplvalue\').style.display=\'none\';" class="xi2">{lang modify}</a></span>'}-->
+							$html
+							<p class="d">{lang topic_tplname_comment}</p></td>
+						</tr>
+						<tr>
+							<th>{lang topic_allowcomment}</th>
+							<td>
+								<label class="lb"><input type="radio" name="allowcomment" value="1" class="pr"{if $topic[allowcomment]} checked="checked"{/if} />{lang yes}</label>
+								<label class="lb"><input type="radio" name="allowcomment" value="0" class="pr"{if !$topic[allowcomment]} checked="checked"{/if} />{lang no}</label>
+							</td>
+						</tr>
+						<tr>
+							<th>{lang topic_opened}</th>
+							<td>
+								<label class="lb"><input type="radio" name="closed" value="1" class="pr"{if empty($topic)}disabled="disabled"{elseif !$topic[closed]} checked="checked"{/if} />{lang yes}</label>
+								<label class="lb"><input type="radio" name="closed" value="0" class="pr"{if empty($topic)}checked="checked" disabled="disabled"{elseif $topic[closed]} checked="checked" {/if} />{lang no}</label>
+								<!--{if empty($topic)}-->
+									<p class="d">{lang topic_create_closed}</p>
+								<!--{/if}-->
+							</td>
+						</tr>
+						<tr>
+							<th>{lang topic_additional}</th>
+							<td>
+								<label for="useheader" class="lb"><input type="checkbox" id="useheader" name="useheader" class="pc"{if $topic[useheader]} checked="checked"{/if} />{lang topic_navs}</label>
+								<label for="usefooter" class="lb"><input type="checkbox" id="usefooter" name="usefooter" class="pc"{if $topic[usefooter]} checked="checked"{/if} />{lang topic_page_bottom}</label>
+							</td>
+						</tr>
+						<tr>
+							<th>&nbsp;</th>
+							<td>
+								<input type="hidden" name="editsubmit" value="true" />
+								<input type="hidden" name="formhash" value="{FORMHASH}" />
+								<button type="submit" name="editsubmit_btn" id="editsubmit_btn" value="true" class="pn pnc"><strong>{lang submit}</strong></button>
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+		<!--{elseif $op == 'diy'}-->
+
+		{lang topic_custom_start}
+
+		<!--{/if}-->
+	</div>
+</div>
+
+
+<!--{template common/footer}-->

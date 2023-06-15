@@ -1,0 +1,71 @@
+/*
+[name]绿色调[/name]
+Powered by Discuz! X
+*/
+
+/* 重定义 */
+body { color: #333; background-image: none; background: #FFF; }
+.block, .temp { margin: 0; }
+.frame, .frame-tab, #comment { border: 1px solid #B7B7B7; }
+.frame-1-1-l { width: 310px; }
+.frame-1-1-r { width: 380px; margin: 0 10px; display: inline; }
+.frame-3-1-l { width: 710px; }
+.frame-3-1-r { width: 250px; }
+.slidebox { margin-bottom: 10px; padding: 3px; border: 1px solid #B7B7B7; }
+	.slideshow span.title { padding: 0; height: 26px; line-height: 26px; font-size: 12px; }
+.block .xl1 ul li { background: url(dot_2.png) no-repeat 3px 50%; }
+	.ie_all .block .xl1 ul li { background-position: 3px 50%; }
+
+#comment .bm_h { padding-left: 13px; height: 28px; line-height: 28px; border-top: none; border-bottom-color: #B7B7B7; background-image: url(title_6.png); }
+	#comment .bm_h h3 { font-size: 14px; font-weight: 400; }
+	#comment_ul .pn, #sc .pn { border: 1px solid #47841B; background-color: #62A72E; background-image: url(btn.png); color: #FFF; }
+
+.xi2, .xi2 a, .xi3 a { color: #369; }
+
+/* 私有样式 */
+.t_ad { margin-bottom: 1px; }
+
+.t_nav { margin-bottom: 10px; padding: 0 15px; height: 30px; line-height: 28px; border: 1px solid; border-color: #7BCE3F #6CB735 #599928; background: #6CB735 url(nav.png) repeat-x; font-size: 14px; color: #FFF; }
+	.t_nav a, .t_nav .pipe { color: #FFF; }
+
+.t_focus_text { overflow: hidden; }
+	.t_focus_text dl { margin-top: -1px; border-top: 1px dashed #999; }
+		.t_focus_text dt { font-size: 16px; text-align: center; }
+		.t_focus_text dd { margin-bottom: 10px; }
+
+.t_side {}
+	.t_side .frame-title { height: 29px; line-height: 29px; background: url(title_1.png) repeat-x; font-weight: 400; color: #FFF; }
+		.t_side .frame-title .titletext { padding-left: 20px; background: url(dot_1.png) no-repeat 0 50%; }
+	.t_side .frame-1-c { padding: 10px; }
+.t_side_hasimg {}
+	.t_side_hasimg .frame-1-c { padding-top: 0; }
+	.t_side_hasimg .xld dt { padding: 5px 0; }
+	.t_side_hasimg .xlda .m { margin: 10px 0 5px -65px; }
+
+.t_side_v { background: url(title_2.png) no-repeat; }
+	.t_side_v .frame-title { background-image: none; background-color: transparent; }
+	.t_side_v .frame-1-c { padding: 0 10px 10px; }
+	.t_video { margin-bottom: 10px; border: 4px solid #B4B4B4; }
+
+.t_side_b { padding: 1px; border: none; background: url(title_3.png) no-repeat; }
+	.t_side_b .frame-title { background-image: none; background-color: transparent; }
+		.t_side_b .frame-title .titletext { padding-left: 20px; background: url(dot_5.png) no-repeat 0 50%; }
+	.t_side_b .frame-1-c { padding: 0 10px 10px; }
+	.t_side_b .xld .m { margin: 10px 10px 5px 0; }
+	.t_side_b .xld img { border: 1px solid #C8C8C8; }
+
+.t_side_p { background: url(title_4.png) no-repeat; }
+	.t_side_p .frame-title { background-image: none; background-color: transparent; font-weight: 400; color: #FFF; }
+		.t_side_p .frame-title .titletext { padding-left: 20px; }
+	.t_side_p .frame-1-c { padding: 10px 0 5px; }
+	.t_side_p .ml li { width: 113px; }
+
+.t_main { border: none; }
+	.t_main .frame-title { height: 28px; line-height: 28px; background: url(title_5.png) repeat-x; font-weight: 400; }
+		.t_main .subtitle { font-weight: 700; }
+		.t_main .frame-title .subtitle { padding-left: 15px; background: url(dot_4.png) no-repeat 0 4px; }
+	.t_main .frame-1-c { padding: 10px 10px 0; font-size: 14px; }
+
+.t_xl_1 {}
+	.t_xl_1 .xl1 ul li { padding-left: 25px; background-image: url(dot_3.png); }
+		.t_xl_1 .xl1 ul li a { color: #666; }

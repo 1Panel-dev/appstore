@@ -1,0 +1,71 @@
+<!--{if $op == 'use'}-->
+<div style="width:370px;">
+	<h4 class="mtm mbn">{lang visit_method}</h4>
+	<ul class="poke cl">
+		<li><label for="way_visit"><input type="radio" name="visitway" id="way_visit" class="pr" value="visit" checked="checked" onclick="$('visitmsgs').style.display='none';$('visitpokes').style.display='none';" />{lang visit_space}</label></li>
+		<li><label for="way_poke"><input type="radio" name="visitway" id="way_poke" class="pr" value="poke" onclick="$('visitmsgs').style.display='none';$('visitpokes').style.display='';" />{lang say_hi}</label></li>
+		<li><label for="way_comment"><input type="radio" name="visitway" id="way_comment" class="pr" value="comment" onclick="$('visitmsgs').style.display='';$('visitpokes').style.display='none';" />{lang space_message}</label></li>
+	</ul>
+
+	<div id="visitmsgs" style="display:none;">
+		<p>{lang select_one_message}</p>
+		<ul class="mtm poke cl">
+			<li><label for="visitmsg_1"><input type="radio" name="visitmsg" id="visitmsg_1" class="pr" value="{lang visitmsg_1}" checked="checked" />{lang visitmsg_1}</label></li>
+			<li><label for="visitmsg_2"><input type="radio" name="visitmsg" id="visitmsg_2" class="pr" value="{lang visitmsg_2}" />{lang visitmsg_2}</label></li>
+			<li><label for="visitmsg_3"><input type="radio" name="visitmsg" id="visitmsg_3" class="pr" value="{lang visitmsg_3}" />{lang visitmsg_3}</label></li>
+			<li><label for="visitmsg_4"><input type="radio" name="visitmsg" id="visitmsg_4" class="pr" value="{lang visitmsg_4}" />{lang visitmsg_4}</label></li>
+			<li><label for="visitmsg_5"><input type="radio" name="visitmsg" id="visitmsg_5" class="pr" value="{lang visitmsg_5}" />{lang visitmsg_5}</label></li>
+			<li><label for="visitmsg_6"><input type="radio" name="visitmsg" id="visitmsg_6" class="pr" value="{lang visitmsg_6}" />{lang visitmsg_6}</label></li>
+		</ul>
+	</div>
+	{eval
+	$icons = array(
+		1 => '<img src="'.STATICURL.'image/poke/cyx.gif" /> {lang poke_1}',
+		2 => '<img src="'.STATICURL.'image/poke/wgs.gif" /> {lang poke_2}',
+		3 => '<img src="'.STATICURL.'image/poke/wx.gif" /> {lang poke_3}',
+		4 => '<img src="'.STATICURL.'image/poke/jy.gif" /> {lang poke_4}',
+		5 => '<img src="'.STATICURL.'image/poke/pmy.gif" /> {lang poke_5}',
+		6 => '<img src="'.STATICURL.'image/poke/yb.gif" /> {lang poke_6}',
+		7 => '<img src="'.STATICURL.'image/poke/fw.gif" /> {lang poke_7}',
+		8 => '<img src="'.STATICURL.'image/poke/nyy.gif" /> {lang poke_8}',
+		9 => '<img src="'.STATICURL.'image/poke/gyq.gif" /> {lang poke_9}',
+		10 => '<img src="'.STATICURL.'image/poke/dyx.gif" /> {lang poke_10}',
+		11 => '<img src="'.STATICURL.'image/poke/yw.gif" /> {lang poke_11}',
+		12 => '<img src="'.STATICURL.'image/poke/ppjb.gif" /> {lang poke_12}',
+		13 => '<img src="'.STATICURL.'image/poke/yyk.gif" /> {lang poke_13}'
+	);
+	}
+	<div id="visitpokes" class="mtm" style="display: none;">
+		<p>{lang select_a_poke}</p>
+		<ul class="mtm poke cl">
+			<!--{loop $icons $key $value}-->
+			<li><label for="visitpoke_$key"><input id="visitpoke_$key" type="radio" name="visitpoke" value="$key"{if $key==1} checked="checked"{/if}>$value</label></li>
+			<!--{/loop}-->
+		</ul>
+	</div>
+</div>
+<!--{elseif $op=='show'}-->
+	<!--{template common/header}-->
+	<script type="text/javascript">
+		var html = ''
+	<!--{if $_POST[visitway]=='poke'}-->
+			+ '<p>{lang poke_folowing_friends}</p>'
+	<!--{elseif $_POST[visitway]=='comment'}-->
+			+ '<p>{lang friends_space_message_following}</p>'
+	<!--{else}-->
+			+ '<p>{lang space_access_following_friends}</p>'
+	<!--{/if}-->
+			+ '<ul class="mtm ml mls cl" style="width:370px;">'
+	<!--{loop $users $value}-->
+			+ "<li>"
+			+ '<div class="avt"><a href="home.php?mod=space&uid=$value[uid]" target="_blank">$value[avatar]</a></div>'
+			+ '<p><a href="home.php?mod=space&uid=$value[uid]" title="$value[username]" target="_blank">$value[username]</a></p>'
+			+ '</li>'
+	<!--{/loop}-->
+			+ '</ul>';
+		$('hkey_$_GET[handlekey]').innerHTML = html;
+		$('hbtn_$_GET[handlekey]').style.display = 'none';
+		setMenuPosition('fwin_$_GET[handlekey]', 'fwin_$_GET[handlekey]', '00');
+	</script>
+	<!--{template common/footer}-->
+<!--{/if}-->

@@ -1,0 +1,50 @@
+/* ----------------------------------
+Self-adaption Width CSS file for Discuz! X
+(C) Comsenz Inc.
+https://www.discuz.vip
+Created & Modified by Pony.
+---------------------------------- */
+
+.wp { width: 98%; }
+	#hd .wp, #wp { min-width: 960px; }
+
+.ct2 { margin-right: 235px; }
+	.ct2 .sd { margin-right: -235px; }
+		.ie7 .ct2 .sd { margin-left: 15px; }
+		.ie6 .ct2 .sd { padding-left: 15px; position: relative; }
+	.ct2 .mn { width: 100%; }
+
+.ct2 #chart, .ct2 #an { margin-right: -235px; }
+	.ie6 .ct2 #chart, .ie6 .ct2 #an { position: relative; }
+
+.ct2_a { padding-left: 150px; }
+	.ct2_a .appl { margin-left: -150px; }
+		.ie6 .ct2_a .appl { position: relative; display: inline; }
+	.ct2_a .mn { width: 99%; }
+	#nv_userapp .ct2_a .mn, .ct2_a_r .mn { width: 99%; }
+
+.ct3_a { padding: 0 240px 0 160px; }
+	.ct3_a .appl { margin-left: -160px; }
+		.ie6 .ct3_a .appl, .ie6 .ct3_a .sd { display: inline; }
+	.ct3_a .sd { margin-right: -240px; }
+	.ct3_a .mn { margin: 0; width: 100%; }
+
+#nv, #mu { border-left: 1px solid {COMMONBORDER}; border-right: 1px solid {COMMONBORDER}; }
+
+#nv { background-repeat: repeat-x; background-position: 0 -33px; }
+
+#mu ul { border-bottom: 1px solid {COMMONBORDER}; background-image: none; background-color: {COMMONBG}; }
+
+.pg_post .ct2_a { margin-left: 0; padding-left: 0; }
+	.pg_post .ct2_a .appl { margin-left: 0; background: none; }
+.pg_modcp .ct2_a, .pg_announcement .ct2_a { border: none; }
+	.pg_modcp .ct2_a .mn, .pg_announcement .ct2_a .mn { margin-right: 0; padding-top: 0; }
+
+.tdats .tdat { width: 20%; }
+.tdats .tfxf { width: 79.5%; }
+.tdats .tfx, .tdats .tb, .tscr { width: 39.5%; }
+	.tscr .tdat, .tscr .tdat th, .tscr .tdat td { width: 100%; }
+
+.widthauto #toptb #diy-tg_menu { margin: -7px 0 0 -1px; }
+.widthauto .switchwidth { background-position: 100% -18px; }
+.widthauto .switchwidth:hover { background: url({IMGDIR}/switch_width.png) no-repeat 100% -54px; }

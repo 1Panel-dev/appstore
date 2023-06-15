@@ -1,0 +1,106 @@
+<!--{eval
+	$_G[home_tpl_spacemenus][] = "<a href=\"home.php?mod=space&uid=$space[uid]&do=reward&view=me\">{lang they_reward}</a>";
+}-->
+<!--{template common/header}-->
+<div id="pt" class="bm cl">
+	<div class="z">
+		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em>
+		<a href="home.php?mod=space&do=thread">{lang post}</a> <em>&rsaquo;</em>
+		<a href="home.php?mod=space&uid=$space[uid]&do=reward&view=me">{lang reward}</a>
+	</div>
+</div>
+<style id="diy_style" type="text/css"></style>
+<div class="wp">
+	<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+</div>
+<div id="ct" class="ct2_a wp cl">
+	<div class="mn">
+		<!--[diy=diycontenttop]--><div id="diycontenttop" class="area"></div><!--[/diy]-->
+		<div class="bm bw0">
+		<!--{if (!$_G['uid'] && !$space[uid]) || $space[self]}-->
+			<h1 class="mt"><img alt="reward" src="{IMGDIR}/rewardsmall.gif" class="vm" /> {lang reward}</h1>
+		<!--{/if}-->
+		<!--{if $space[self]}-->
+			<ul class="tb cl">
+				<li$actives[we]><a href="home.php?mod=space&do=reward&view=we">{lang friend_reward}</a></li>
+				<li$actives[me]><a href="home.php?mod=space&do=reward&view=me">{lang my_reward}</a></li>
+				<!--{if $_G[group][allowpostreward]}-->
+					<li class="o">
+						<!--{if $_G[setting][rewardforumid]}-->
+						<a href="forum.php?mod=post&action=newthread&fid=$_G[setting][rewardforumid]&special=3">{lang publish_new_reward}</a>
+						<!--{else}-->
+						<a href="forum.php?mod=misc&action=nav&special=3" onclick="showWindow('nav', this.href)">{lang publish_new_reward}</a>
+						<!--{/if}-->
+					</li>
+				<!--{/if}-->
+			</ul>
+		<!--{else}-->
+			<!--{template home/space_menu}-->
+		<!--{/if}-->
+			<p class="tbmu cl">
+				<!--{eval $flag = array(0 => '{lang all}', 1 => '{lang unresolved}', -1 => '{lang has_been_resolved}');}-->
+				<span class="y">
+					<select onchange="filterFlag(this.value)">
+						<!--{loop $flag $key $str}-->
+						<option value="$key"{if $_GET[flag]==$key} selected="selected"{/if}>$str</option>
+						<!--{/loop}-->
+					</select>
+				</span>
+				<!--{if $userlist}-->
+				{lang view_by_friend}
+				<select name="fuidsel" onchange="fuidgoto(this.value);" class="ps">
+					<option value="">{lang all_friends}</option>
+					<!--{loop $userlist $value}-->
+					<option value="$value[fuid]"{$fuid_actives[$value[fuid]]}>$value[fusername]</option>
+					<!--{/loop}-->
+				</select>
+				<!--{/if}-->
+			</p>
+		<!--{if $count}-->
+			<ul class="rwdl cl">
+				<!--{loop $list $thread}-->
+				<li class="bbda">
+					<div class="uslvd {if $thread[price] < 0} slvd{/if}">
+						<cite><!--{eval echo abs($thread['price']);}--><span>$_G[setting][extcredits][$creditid][title]</span></cite>
+						<em><!--{if $thread[price] < 0}-->{lang has_been_resolved}<!--{else}-->{lang unresolved}<!--{/if}--></em>
+					</div>
+					<h4><a href="forum.php?mod=viewthread&tid=$thread[tid]" target="_blank">$thread[subject]</a></h4>
+					<p class="mtm"><a href="home.php?mod=space&uid=$thread[authorid]" c="1" target="_blank">$thread[author]</a> <span class="xg1">$thread[dateline]</span></p>
+					<p class="mtm xg1"><!--{if $thread[replies]}-->{lang have} $thread[replies] {lang unit}<!--{else}-->{lang not_yet}<!--{/if}-->{lang security_answer}<span class="pipe">|</span><a href="forum.php?mod=post&action=reply&fid=$thread[fid]&tid=$thread[tid]" target="_blank">{lang i_answer}</a></p>
+				</li>
+				<!--{/loop}-->
+				<!--{if count($list)%2!=0}-->
+				<li class="bbda">&nbsp;</li>
+				<!--{/if}-->
+			</ul>
+			<!--{if $hiddennum}-->
+				<p class="mtm">{lang hide_reward}</p>
+			<!--{/if}-->
+			<!--{if $multi}--><div class="pgs cl mtm">$multi</div><!--{/if}-->
+		<!--{else}-->
+			<div class="emp">{lang no_reward}</div>
+		<!--{/if}-->
+		</div>
+		<!--[diy=diycontentbottom]--><div id="diycontentbottom" class="area"></div><!--[/diy]-->
+	</div>
+	<div class="appl">
+		<!--{subtemplate home/space_thread_nav}-->
+
+		<div class="drag">
+			<!--[diy=diy2]--><div id="diy2" class="area"></div><!--[/diy]-->
+		</div>
+	</div>
+</div>
+<div class="wp mtn">
+	<!--[diy=diy3]--><div id="diy3" class="area"></div><!--[/diy]-->
+</div>
+<script type="text/javascript">
+	function fuidgoto(fuid) {
+		var parameter = fuid != '' ? '&fuid='+fuid : '';
+		window.location.href = 'home.php?mod=space&do=reward&view=we<!--{if $_GET[flag]}-->&flag=$_GET[flag]<!--{/if}-->'+parameter;
+	}
+	function filterFlag(flag) {
+		window.location.href = 'home.php?mod=space&do=reward&<!--{if $_GET[order]}-->order=hot&<!--{/if}-->view=$_GET[view]&<!--{if $_GET[fuid]}-->fuid=$_GET[fuid]&<!--{/if}-->flag='+flag;
+	}
+</script>
+<!--{template common/footer}-->

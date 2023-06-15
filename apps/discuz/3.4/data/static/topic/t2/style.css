@@ -1,0 +1,15 @@
+/*
+[name]皮肤2[/name]
+Powered by Discuz! X
+*/
+
+body { background: #FAF9F1 url(images/bg.png) no-repeat 50% 0; }
+#pt { margin-top: 70px; padding-left: 20px; background: none; }
+#pt, #pt a { color: #FFF; }
+#ft, #ft a { color: #FF731F; }
+.frame, .frame-tab { margin-bottom: 0; border: none; }
+.title, .block .title { margin-bottom: 10px; height: 40px; border-bottom-width: 0 !important; background: transparent url(images/title.png) no-repeat 0 100%; color: #5289C0; line-height: 40px; }
+	.title a, .block .title a { color: #5289C0; }
+.col-r .block { background: #F4F1E6; }
+	.col-r .block .title { margin-bottom: 10px; padding: 0 10px; height: 44px; background: #389CD0 url(images/title-2.png) repeat-x 0 0; color: #FFF; }
+		.col-r .block .title a { color: #FFF; }

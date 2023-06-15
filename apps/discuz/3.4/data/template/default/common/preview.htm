@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href='{$_G['setting']['csspath']}{$_GET[styleid]}_common.css?{VERHASH}' />
+<style type="text/css">
+body { padding: 10px; }
+	.premsg { padding: 5px; background-color: {$_G['style'][commonbg]}; }
+	.xst { font-family: {$_G['style'][threadtitlefont]}; font-size: {$_G['style'][threadtitlefontsize]}; }
+#ft { padding: 10px; text-align: center; }
+</style>
+</head>
+<body>
+
+<div id="hd" class="mbm">
+	<div class="hdc cl">
+		<h2>{$_G['style'][boardlogo]}</h2>
+		<div id="um">
+			<div class="avt y">
+				<!--{avatar($_G['member'],small)}-->
+			</div>
+			<p><strong><a href="#">$_G['member']['username']</a></strong><span class="xg1"> <a href="#">{lang setup}</a></span><span class="pipe">|</span><a href="#">{lang pm_center}</a></p>
+			<p>{lang credits}<span class="pipe">|</span>{lang usergroup}</p>
+		</div>
+	</div>
+	<div id="nv">
+		<ul>
+			<li><a href="#">$_G['setting']['navs'][1]['navname']<span>Home</span></a></li>
+			<li><a href="#">$_G['setting']['navs'][2]['navname']<span>BBS</span></a></li>
+			<li><a href="#">$_G['setting']['navs'][3]['navname']<span>Group</span></a></li>
+			<li><a href="#">$_G['setting']['navs'][4]['navname']<span>Space</span></a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="bm">
+	<div class="bm_h cl">
+		<h2>{lang table_header}</h2>
+	</div>
+	<div class="bm_c">
+		<div class="premsg">{lang preview_msg}</div>
+		<table class="dt">
+			<tr>
+				<td class="xs0">{lang preview_smalltext}</td>
+				<td><a href="javascript:;">{lang preview_link}</a></td>
+				<td><a href="javascript:;" class="xi2">{lang preview_highlightlink}</a></td>
+			</tr>
+			<tr>
+				<td>{lang preview_text}</td>
+				<td class="xg2">{lang preview_midtext}</td>
+				<td class="xg1">{lang preview_lighttext}</td>
+			</tr>
+			<tr class="bw0_all">
+				<td colspan="3" class="xst">{lang preview_threadtext}</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<div id="ft">
+	{lang preview_footertext}
+</div>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!--{template common/header}-->
+<div class="box">
+<!--{if $_GET['op'] == 'delete'}-->
+	<p class="xw1">{lang delete_favorite}</p>
+	<form id="favoriteform_{$favid}" name="favoriteform_{$favid}" method="post" autocomplete="off" action="home.php?mod=spacecp&ac=favorite&op=delete&favid=$favid&type=$_GET[type]&mobile=yes">
+		<input type="hidden" name="referer" value="{eval echo dreferer();}" />
+		<input type="hidden" name="deletesubmit" value="true" />
+		<input type="hidden" name="formhash" value="{FORMHASH}" />
+    <p class="xw1">$thevalue[title]</p>
+	<p>{lang delete_favorite_message}</p>
+	<p class="mtn">
+		<input type="submit" name="deletesubmitbtn" value="{lang determine}" />
+	</p>
+	</form>
+<!--{else}-->
+	<p class="xw1">{lang title_memcp_favorite}</p>
+    <p><!--{if $_GET[type] == 'forum'}-->{lang favorite_forum_confirm}<!--{elseif $_GET[type] == 'thread'}--> {lang favorite_thread_confirm}<!--{/if}--><strong>{$title}</strong></p>
+	<form method="post" autocomplete="off" id="favoriteform_{$id}" name="favoriteform_{$id}" action="home.php?mod=spacecp&ac=favorite&type=$type&id=$id&spaceuid=$spaceuid&mobile=yes" >
+		<input type="hidden" name="favoritesubmit" value="true" />
+		<input type="hidden" name="referer" value="{eval echo dreferer();}" />
+		<input type="hidden" name="formhash" value="{FORMHASH}" />
+	<p>{lang favorite_description}:</p>
+	<textarea id="general_{$id}" name="description" rows="1" class="txt mtn" ><!--{if $description}-->$description<!--{else}-->{lang favorite_description_default}<!--{/if}--></textarea>
+	<p class="mtn">
+		<input type="submit" name="favoritesubmit_btn" id="favoritesubmit_btn"  value="{lang determine}" />
+	</p>
+	</form>
+<!--{/if}-->
+</div>
+
+<!--{template common/footer}-->

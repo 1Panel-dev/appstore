@@ -1,0 +1,55 @@
+<!--{template common/header}-->
+<div id="pt" class="bm cl">
+	<div class="z"><a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em> {lang eccredit}</div>
+</div>
+<div id="ct" class="wp cl">
+	<div class="mn">
+		<h1 class="mt">3.{lang eccredit}</h1>
+		<form method="post" autocomplete="off" action="home.php?mod=spacecp&ac=eccredit&op=rate" id="postform">
+			<input type="hidden" name="formhash" value="{FORMHASH}" />
+			<input type="hidden" name="referer" value="{echo dreferer()}" />
+			<div class="bm">
+				<h3 class="bm_h">{lang eccredit_post}</h3>
+				<div class="bm_c">
+					<table cellspacing="0" cellpadding="0" class="tfm">
+						<tr>
+							<th>{lang eccredit_retee}</span></th>
+							<td>
+							<!--{if $_G['uid'] == $order[buyerid]}-->
+								<a href="home.php?mod=space&uid=$order[sellerid]" target="_blank">$order[seller]</a>
+							<!--{else}-->
+								<a href="home.php?mod=space&uid=$order[buyerid]" target="_blank">$order[buyer]</a>
+							<!--{/if}-->
+							</td>
+						</tr>
+						<tr>
+							<th>{lang eccredit_tradegoods}</th>
+							<td><a href="forum.php?mod=redirect&goto=findpost&pid=$order[pid]" target="_blank">$order[subject]</a></td>
+						</tr>
+						<tr>
+							<th>{lang rate}</th>
+							<td>
+								<label for="rate_good" class="lb"><input id="rate_good" name="score" value="1" type="radio" class="pr" checked="checked" /><span style="color:red"><img src="{STATICURL}image/traderank/good.gif" border="0" width="14" height="16" /> <strong>{lang eccredit_good}</strong><!--{if !$order[offline]}-->{lang eccredit_good_comment}<!--{/if}--></span></label>
+								<label for="rate_soso" class="lb"><input id="rate_soso" name="score" value="0" type="radio" class="pr" /><span style="color:green"><img src="{STATICURL}image/traderank/soso.gif" border="0" width="14" height="16" /> <strong>{lang eccredit_soso}</strong><!--{if !$order[offline]}-->{lang eccredit_soso_comment}<!--{/if}--></span></label>
+								<label for="rate_bad" class="lb"><input id="rate_bad" name="score" value="-1" type="radio" class="pr" /><img src="{STATICURL}image/traderank/bad.gif" border="0" width="14" height="16" /> <strong>{lang eccredit_bad}</strong><!--{if !$order[offline]}-->{lang eccredit_bad_comment}<!--{/if}--></label>
+							</td>
+						</tr>
+						<tr>
+							<th valign="top">{lang eccredit1}</th>
+							<td><textarea name="message" rows="5" cols="60" maxlength="50" class="pt"></textarea></td>
+						</tr>
+						<tr>
+							<th></th>
+							<td class="pns">
+								<input type="hidden" name="orderid" value="$orderid">
+								<input type="hidden" name="type" value="$type">
+								<button type="submit" class="pn pnc" id="postsubmit" name="ratesubmit" value="true"><strong>{lang submit}</strong></button>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+<!--{template common/footer}-->

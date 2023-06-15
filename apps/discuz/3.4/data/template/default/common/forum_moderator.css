@@ -1,0 +1,62 @@
+/*
+Moderator CSS file for Discuz! X
+(C) Comsenz Inc.
+https://www.discuz.vip
+*/
+/* ----------- 版主管理  modlayer modcount------------------- */
+
+#mdly { position: absolute; right: 0; margin-top: -16px; padding: 10px 25px; width: 250px; height: 100px; background: url({IMGDIR}/mdly.png) no-repeat 0 0; line-height: 32px; overflow: hidden; }
+	#mdly a { color: #06C; }
+	#mdly .cp { position: absolute; top: 10px; right: 10px; width: 35px; height: 32px; line-height: 100px; overflow: hidden; }
+	#mdly label { position: absolute; top: 10px; _top: 16px; right: 50px; }
+	#mdly h6 { line-height: 32px; }
+		#mdly h6 strong { margin: 0 3px; color: {NOTICETEXT}; }
+	#mdly.cpd { margin-top: 4px; margin-right: -3px; padding: 0; width: 35px; height: 32px; border: none; background-position: 0 -128px; }
+		#mdly.cpd h6 { padding-top: 40px; }
+		#mdly.cpd .cp { display: none; }
+		#mdly.cpd #mdct { display: block; position: absolute; margin: 0; left: 3px; top: 0; z-index: 999; width: 32px; height: 32px; color: {NOTICETEXT}; text-align: center; cursor: pointer; }
+	.pg_viewthread #mdly { margin: 20px 0 0 10px; padding: 0; width: 200px; height: auto; background: none; }
+
+.cmen { overflow: hidden; width: 63px; }
+	.cmen a { overflow: hidden; float:left; width: 20px; height: 20px; }
+.tpmh { height: 200px; }
+	.tpmh .thby { margin: 5px 0 15px; }
+		.tpmh .tah_body select { width: 217px; }
+.tplw { margin-bottom: 1em; }
+	.tplw table { width: 100%; }
+	.tplw td { padding: 0 5px; }
+	.tplw .txt { width: 100px; }
+		.tplw .wide .txt { width: 50px; }
+	.llst li{ padding: 4px 0; border-bottom: 1px solid {COMMONBORDER}; height: 28px; }
+	.llst .copt { height: auto; }
+.tm_c { background: #{COMMONBG}; }
+.tm_c .o { background: #EEE; }
+.tpclg { padding: 8px 0 4px; }
+	.tpclg h4 { font-weight: 400; width: 222px; }
+	.tpclg h4 span { float: left; }
+	.tpclg h4 .dpbtn { border-width: 1px; }
+	.tpclg .pt { margin: 5px 0; width: 212px; overflow: hidden; }
+		.tpcl { margin: 10px 0; border-top: 1px solid #DDD; }
+			.tpcl li { *overflow:hidden; *margin-bottom: -2px; height: 28px; line-height: 18px; border-top: 1px solid {WRAPBG}; border-bottom: 1px solid #DDD; zoom: 1; }
+			.tpcl .copt { height: auto; }
+			.dopt { visibility: hidden; overflow: hidden; white-space: nowrap; }
+			.copt .dopt { visibility: visible; }
+				.dopt p .px, .hasd .px { width: 100px; float: left; }
+				.dopt span .crl { width: 21px; height: 21px; border-style: solid; border-color: #707070 #CECECE #CECECE #ABABAB; border-width: 1px 0 1px 1px; }
+
+			.tpcl table { width: 100%; }
+				.tpcl td { vertical-align: top; padding: 5px; }
+			.tpcl .labeltxt { display: block; cursor: pointer; width: 100%; background: url({IMGDIR}/arrwd.gif) no-repeat 100% 8px; }
+				.copt .labeltxt { float: left; cursor: default; width: 45px; background: none; color: #09C; }
+			.tpcl .pc { margin: 3px; }
+				.ie7 .tpcl .pc { margin-top: -2px; }
+			.tpcl img { vertical-align: middle; }
+	.tahfx { overflow: hidden; white-space: nowrap; width: 217px; *border-right: 1px solid {WRAPBORDERCOLOR}; }
+		.tahfx select { width: 160px; *width: expression(this.offsetWidth > 180 ? 'auto':'180'); }
+
+#toolbarroot { top: 0; left: 0; width: 96%; z-index: 9000; position: fixed; height: 30px; }
+#toolbardiv { min-width:980px; height:27px; line-height:27px; padding:1px; border-bottom:1px solid {WRAPBORDERCOLOR}; background: #EEE;}
+#togglediv { width:22px; height:22px; border:1px solid #09f; position:absolute; right:5px; top:3px; z-index:9998; cursor:pointer; text-align:center;}
+
+.pg_modcp .tl { min-height: 150px; overflow: visible; }
+	.ie6 .pg_modcp .tl { height: 150px; }

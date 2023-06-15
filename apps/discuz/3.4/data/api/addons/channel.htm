@@ -1,0 +1,18 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=gbk" />
+		<script type="text/javascript">
+			var querystring = location.search.substr(1);
+			if(querystring.indexOf('/') != -1) {
+				var e = querystring.split('/');
+				var url = '../../admin.php?frames=yes&action=cloudaddons&operation=download&addonids=' + e[0] + '&md5hash=' + e[1] + '&timestamp=' + e[2];
+				try {
+					top.location.href = url;
+				} catch(e) {}
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

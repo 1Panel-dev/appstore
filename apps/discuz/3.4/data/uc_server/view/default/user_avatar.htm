@@ -1,0 +1,8 @@
+{template header_client}
+<img src="avatar.php?uid=$uid&key=$key&random=$random">
+<form method="post" action="index.php?m=user&a=avatar&appid=$appid&key=$key&random=$random" enctype="multipart/form-data">
+	<input type="hidden" name="formhash" value="{FORMHASH}">
+	<input type="file" name="attach[]" />
+	<input type="submit" name="submit" class="submit" value=" {lang upload} " />
+</form>
+{template footer_client}

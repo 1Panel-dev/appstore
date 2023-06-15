@@ -1,0 +1,53 @@
+<script type="text/html" id="tmpl_forum_list_item">
+    <%
+        var catList = json.Variables.catlist;
+        var forumList = json.Variables.forumlist;
+    %>
+    <!--循环论坛分区-->
+    <% for(var c in catList){%>
+        <% for(var forumId in catList[c]["forums"]){%>
+            <% var fId = catList[c]["forums"][forumId];%>
+            <!--循环分区下的一级版块-->
+            <% for(var f in forumList){%>
+                <% if(forumList[f]["fid"]===fId){ %>
+                <div class="interestList">
+                    <%
+                        var forum = forumList[f];
+                        var subNum=0;
+                    %>
+                    <% if(forum["sublist"]!=undefined){%>
+                        <% var subNum=forum["sublist"].length; %>
+                    <%}%>
+                    <!--展示一级版块-->
+                    <ul class="hd<%if(subNum>0){%> iL<%}%>">
+                        <li>
+                            <div onclick="openForum(<%= forum['fid']%>)">
+                            <% if(forum["icon"]) { %><i class="fl db"><a href="javascript:;"><img src="<%= forum["icon"]%>" class="iImg" width="45" height="45" alt=""></a></i><% } %>
+                            <h4 class="iText"><%== stripCode(forum["name"])%><span>(<%= forum["todayposts"]%>)</span></h4>
+                            <p class="subTitle st"><span>主题<em><%= forum["threads"]>10000 ? (forum["threads"]-forum["threads"]%1000)/10000+"万" : forum["threads"] %></em></span>
+                            <span>帖数<em><%= forum["posts"]>10000 ? (forum["posts"]-forum["posts"]%1000)/10000+"万" : forum["posts"] %></em></span><%if(subNum>0){%><span>子版块<em><%= subNum%></em></span><%}%></p>
+                            </div>
+                            <%if(subNum>0){%>
+                            <a href="javascript:;" class="iBtn db"><span class="incoA"></span></a>
+                            <%}%>
+                        </li>
+                    </ul>
+                    <!--展示当前版块的子版-->
+                    <%if(subNum>0){%>
+                    <ul class="bd" style="display:none;">
+                        <% for(var sf in forum["sublist"]){ %>
+                            <% var subForum = forum["sublist"][sf]; %>
+                        <li onclick="openForum(<%= subForum['fid']%>)">
+
+                            <h4 class="iText"><%== stripCode(subForum["name"])%><span>(<%=subForum["todayposts"]%>)</span></h4>
+                            <p class="subTitle st"><span>主题<em><%=subForum["threads"]%></em></span><span>帖数<em><%=subForum["posts"]%></em></span></p>
+                        </li>
+                        <%}%>
+                    </ul>
+                    <%}%>
+                </div>
+                <%}%>
+            <%}%>
+        <%}%>
+    <%}%>
+</script>

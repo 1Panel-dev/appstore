@@ -1,0 +1,63 @@
+body { background-color: transparent; }
+	.wp { width: 970px; }
+	#hd { margin-bottom: 0; position: relative; height: 140px; }
+		#hd h2 { padding: 25px 0 0 15px; font-size: 14px; }
+			#hd h2 strong { display: block; }
+		#nv { position: absolute; left: 10px; height: auto; bottom: 0; background: transparent none; }
+			#nv li, #home { margin-right: 1px; padding: 0 6px; border: none; height: 30px; background: rgba(255, 255, 255, 0.7); line-height: 30px; font-size: 12px; filter:progid:DXImageTransform.Microsoft.gradient(startColorstr = #70FFFFFF, endColorstr = #70FFFFFF); }
+				#nv a, #nv a:visited { padding: 0 14px; color: #333; }
+		#ct, .n, .w { padding-top: 15px; border: none; background: transparent none !important; }
+		.area { padding: 0 5px; }
+		.frame { background: transparent none; }
+		.block { padding: 0; }
+			.block .dxb_bc { padding: 5px 10px 10px; }
+		.block .title { padding: 0 10px; font-size: 12px; color: #333; }
+	#pcd .hm img { padding: 2px; background: {WRAPBG}; border: 1px solid; border-color: {COMMONBG} {COMMONBORDER} {COMMONBORDER} {COMMONBG}; }
+	#pcd h2 { margin: 10px auto 0; }
+	.mls li { width: 69px; }
+.move-span{ margin: 1px; }
+.column, #share { overflow: hidden; }
+.musicbj { width: 60px; height: 60px;}
+#spaceinfoshow { position: relative;}
+	#spaceinfoshow .oshr { float: none; margin-left: 10px; padding: 1px 5px 1px 22px; color: {HIGHLIGHTLINK}; }
+#doingform #message { width: 500px; }
+#toptb { padding: 0 10px; border-bottom: 1px solid {COMMONBORDER}; background: url({IMGDIR}/topnav.png) repeat-x; }
+#hd h2 span { display: block; }
+#hd ul.savebar { width: 450px; height: 20px; border: 1px solid #ccc;}
+#hd ul.savebar li { float:right; margin: 0 3px;}
+.ipx {background: none; height: 17px;}
+#infoedit { margin-left: 5px; padding: 0 5px; background: #369; color: #FFF; cursor: pointer; }
+#diy-tg { float: right; line-height: 30px; background: url({STATICURL}image/diy/panel-toggle-space.png) no-repeat 100% 2px; padding: 0 4px !important;}
+.topnav_pop li span{ display: none; }
+#myspace_menu li a, #navs_menu li a { background-repeat: no-repeat; background-position: -200px 0; }
+.ct2 .sd { width: 180px; }
+
+.mn { display: inline; margin-left: 10px; width: 760px !important; }
+	.mt { margin: 0; padding: 0; }
+	h1.mt { font-size: 12px; }
+	.bm { background: #FFF; zoom: 1; }
+.sd { display: inline; margin-right: 10px; min-height: 0; }
+	#pcd { padding: 15px 4px 15px 6px; }
+
+	.mla li, .mlp li { width: 133px; }
+	.buddy li { width: 156px; }
+	.pic .c img { max-width: 714px; }
+		* html .pic .c img { width: expression(this.width > 714 ? 714 : true); }
+	.ul_list {}
+		.ul_list a { padding: 2px 0 2px 20px; background-position: 0 50%; background-repeat: no-repeat; }
+		.ul_diy a { background-image: url({STATICURL}image/feed/thread_magic.gif); }
+		.ul_msg a { background-image: url({STATICURL}image/feed/wall.gif); }
+		.ul_avt a { background-image: url({STATICURL}image/feed/album.gif); }
+		.ul_profile a { background-image: url({STATICURL}image/feed/profile.gif); }
+		.ul_add a { background-image: url({STATICURL}image/feed/friend.gif); }
+		.ul_ignore a { background-image: url({STATICURL}image/feed/friend.gif); }
+		.ul_contect a { background-image: url({STATICURL}image/feed/wall.gif); }
+		.ul_poke a { background-image: url({STATICURL}image/feed/poke.gif); }
+		.ul_pm a { background-image: url({STATICURL}image/feed/pm.gif); }
+		.ul_magicgift { height: 30px !important; margin: 0 auto; line-height: 30px; }
+		.ul_broadcast a { background-image: url({IMGDIR}/ann_icon.gif); }
+		.ul_flw a { background-image: url({IMGDIR}/flw_ico.png); }
+
+#magicreceivegift { position: absolute; top: 50px; right: 20px; }
+
+.ct_vw_mn .buddy li { width: 170px; }

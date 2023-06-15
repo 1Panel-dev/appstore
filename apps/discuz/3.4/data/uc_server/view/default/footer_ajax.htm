@@ -1,0 +1,5 @@
+{eval $s = ob_get_contents();}
+{eval ob_end_clean();}
+{{eval $s = preg_replace("/([\\x00-\\x09\\x0b-\\x0c\\x0e-\\x1f])+/", ' ', $s);}}
+$s
+]]></root>{eval exit;}

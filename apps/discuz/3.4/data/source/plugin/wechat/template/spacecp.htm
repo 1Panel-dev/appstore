@@ -1,0 +1,55 @@
+<p class="pbm bbda xi1">{lang wechat:wechat_spacecp_bind_title}</p>
+<br />
+
+<!--{if $_G['wechatuser']['isregister']}-->
+	<h2>
+	<a href="javascript:;" onclick="display('unbind');" class="xi2">{lang wechat:wechat_spacecp_setpw}</a>
+	</h2>
+
+	<form id="wechatform" method="post" autocomplete="off" action="plugin.php?id=wechat:spacecp">
+		<input type="hidden" name="formhash" value="{FORMHASH}" />
+		<div class="password">
+			<table cellspacing="0" cellpadding="0" class="tfm">
+				<tr>
+					<th><label>{lang wechat:wechat_spacecp_pw}</label></th>
+					<td><input type="password" name="newpassword1" size="30" class="px p_fre" tabindex="1" /></td>
+					<td class="tipcol"></td>
+				</tr>
+				<tr>
+					<th><label>{lang wechat:wechat_spacecp_repw}</label></th>
+					<td><input type="password" name="newpassword2" size="30" class="px p_fre" tabindex="2" /></td>
+					<td class="tipcol"></td>
+				</tr>
+				<tr>
+					<th></th>
+					<td>
+						<button type="submit" name="resetpwsubmit" value="yes" class="pn pnc"><strong>{lang submit}</strong></button>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</form>
+	<br />
+<!--{/if}-->
+
+<h2>
+<a href="javascript:;" onclick="display('unbind');" class="xi2">{lang wechat:wechat_spacecp_unbind}</a>
+</h2>
+
+<div id="unbind" style="display:none;">
+	<form id="wechatform" method="post" autocomplete="off" action="plugin.php?id=wechat:spacecp">
+	<input type="hidden" name="formhash" value="{FORMHASH}" />
+	<!--{if $_G['wechatuser']['isregister']}-->
+		<p class="mtm mbm">
+		{lang wechat:wechat_spacecp_setpw_first}
+		</p>
+	<!--{else}-->
+		<p class="mtm mbm">
+		{lang wechat:wechat_spacecp_unbind}
+		</p>
+		<button type="submit" name="unbindsubmit" value="yes" class="pn pnc"><strong>{lang wechat:wechat_spacecp_unbind_button}</strong></button>
+	<!--{/if}-->
+	</form>
+</div>
+
+</form>

@@ -1,0 +1,102 @@
+<!--{template common/header}-->
+<!--{if !$_G[inajax]}-->
+	<div id="pt" class="bm cl">
+		<div class="z"><a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em>
+		<a href="home.php?mod=spacecp">{lang setup}</a> <em>&rsaquo;</em>
+		<!--{if $_GET[operation] == 'transfer'}-->{lang memcp_credits_transfer}<!--{elseif $_GET[operation] == 'exchange'}-->{lang memcp_credits_exchange}<!--{elseif $_GET[operation] == 'addfunds'}-->{lang memcp_credits_addfunds}<!--{/if}-->
+	</div>
+	</div>
+	<div id="ct" class="ct2_a wp cl">
+		<div class="mn">
+			<div class="bm bw0">
+<!--{/if}-->
+<h3 class="flb">
+	<em id="return_credit"><!--{if $_GET[operation] == 'transfer'}-->{lang memcp_credits_transfer}<!--{elseif $_GET[operation] == 'exchange'}-->{lang memcp_credits_exchange}<!--{elseif $_GET[operation] == 'addfunds'}-->{lang memcp_credits_addfunds}<!--{/if}--></em>
+	<!--{if $_G[inajax]}--><span><a href="javascript:;" onclick="hideWindow('credit');" class="flbc" title="{lang close}">{lang close}</a></span><!--{/if}-->
+</h3>
+<form id="confirmform" class="postbox" method="post" autocomplete="off" action="home.php?mod=spacecp&ac=credit&op=base&confirm=yes" {if $_G[inajax]}onsubmit="ajaxpost('confirmform', 'return_credit');"{/if}>
+	<input type="hidden" name="formhash" value="{FORMHASH}" />
+	<!--{if $_G[inajax]}--><input type="hidden" name="handlekey" value="credit" /><!--{/if}-->
+
+	<!--{if $_GET[operation] == 'transfer'}-->
+		<div class="c">
+			<input type="hidden" name="operation" value="transfer" />
+			<input type="hidden" name="transfersubmit" value="yes" />
+			<input type="hidden" name="transferamount" value="$_GET[transferamount]" />
+			<input type="hidden" name="to" value="$to[username]" />
+			<p>{lang memcp_credits_transfer_user} <strong>{$_G[setting][extcredits][$_G[setting][creditstransextra][9]][title]} $_GET[transferamount] {$_G[setting][extcredits][$_G[setting][creditstransextra][9]][unit]}</strong> {lang credits_give} <strong>{$to[username]}</strong>, {lang memcp_credits_password}</p>
+			<p class="mtn mbm"><input type="password" name="password" class="px" value="" /></p>
+			<p>{lang memcp_credits_transfer_message}</p>
+			<p class="mtn"><input type="text" name="transfermessage" class="px" size="40" /></p>
+		</div>
+		<p class="o pns">
+			<button type="submit" name="confirm" value="true" class="pn pnc"><strong>{lang confirms}</strong></button>
+		</p>
+	<!--{elseif $_GET[operation] == 'exchange'}-->
+		<div class="c">
+			<input type="hidden" name="operation" value="exchange" />
+			<input type="hidden" name="exchangeamount" value="$exchangeamount" />
+			<input type="hidden" name="fromcredits" value="$fromcredits" />
+			<input type="hidden" name="tocredits" value="$tocredits" />
+			<input type="hidden" name="exchangesubmit" value="yes" />
+			<p>{lang memcp_credits_exchange_you_need}<strong>
+				<!--{if $outexange}-->
+					$_CACHE['creditsettings'][$tocredits][title] $exchangeamount $_CACHE['creditsettings'][$tocredits][unit]
+				<!--{else}-->
+					$_G[setting][extcredits][$tocredits][title] $exchangeamount $_G[setting][extcredits][$tocredits][unit]
+				<!--{/if}-->
+				</strong>, {lang memcp_credits_exchange_you_pay}
+			</p>
+			<p class="mtn mbn">{lang memcp_credits_exchange_password}</p>
+			<p><input type="password" name="password" class="px" value="" size="20" /></p>
+		</div>
+		<p class="o pns">
+			<button type="submit" name="confirm" value="true" class="pn pnc"><strong>{lang confirms}</strong></button>
+		</p>
+	<!--{elseif $_GET[operation] == 'addfunds'}-->
+		<div class="c">
+			<input type="hidden" name="operation" value="addfunds" />
+			<input type="hidden" name="amount" value="$_GET[addfundamount]" />
+			<input type="hidden" name="addfundssubmit" value="yes" />
+			<p>{lang memcp_credits_addfunds_msg}</p>
+			<p class="mtn">
+			<!--{if $_G[setting][ec_tenpay_bargainor] || $_G[setting][ec_tenpay_opentrans_chnid]}-->
+				<label><input name="apitype" type="radio" value="tenpay" id="apitype_tenpay" checked="checked" /><img title="{lang apitype_tenpay}" alt="{lang apitype_tenpay}" onclick="$('apitype_tenpay').checked=true" src="{STATICURL}image/common/tenpay_logo.gif" /></label>
+			<!--{/if}-->
+			<!--{if $_G[setting][ec_account]}-->
+				<label><input name="apitype" type="radio" value="alipay" id="apitype_alipay" {if !($_G[setting][ec_tenpay_bargainor] || $_G[setting][ec_tenpay_opentrans_chnid])}checked="checked"{/if} /><img title="{lang apitype_alipay}" alt="{lang apitype_alipay}" onclick="$('apitype_alipay').checked=true" src="{STATICURL}image/common/alipay_logo.gif" /></label>
+			<!--{/if}-->
+			</p>
+		</div>
+		<p class="o pns">
+			<button type="submit" name="confirm" value="true" class="pn pnc"><strong>{lang confirms}</strong></button>
+		</p>
+	<!--{/if}-->
+</form>
+
+<!--{if $_G[inajax]}-->
+<script type="text/javascript">
+if(BROWSER.ie == 6) {
+	var popWindow = {
+			coversel: function (id) {
+				id = isUndefined(id) ? 'fwin_credit' : id;
+				var obj = $(id);
+				if(!obj) return false;
+				var frm = document.createElement('<iframe frameborder="0" style="position:absolute;z-index:-1;"></iframe>');
+				frm.style.width = obj.offsetWidth + 'px';
+				frm.style.height = obj.offsetHeight + 'px';
+				obj.insertBefore(frm, obj.firstChild);
+			}
+		}
+	popWindow.coversel();
+}
+</script>
+<!--{/if}-->
+
+<!--{if !$_G[inajax]}-->
+		</div>
+	</div>
+	<div class="appl"><!--{subtemplate home/spacecp_footer}--></div>
+</div>
+<!--{/if}-->
+<!--{template common/footer}-->

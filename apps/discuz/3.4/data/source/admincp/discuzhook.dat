@@ -1,0 +1,354 @@
+template/default/common/extcredits.htm *<!--{hook/spacecp_credit_extra}-->
+template/default/common/faq.htm *<!--{hook/faq_extra}-->
+template/default/common/footer.htm *<!--{hook/global_footer}-->
+template/default/common/footer.htm *<!--{hook/global_footerlink}-->
+template/default/common/header.htm *<!--{hook/global_cpnav_top}-->
+template/default/common/header.htm *<!--{hook/global_cpnav_extra1}-->
+template/default/common/header.htm *<!--{hook/global_cpnav_extra2}-->
+template/default/common/header.htm *<!--{hook/global_myitem_extra}-->
+template/default/common/header.htm *<!--{hook/global_nav_extra}-->
+template/default/common/header.htm *<!--{hook/global_header}-->
+template/default/common/header_qmenu.htm *<!--{hook/global_qmenu_top}-->
+template/default/common/header_qmenu.htm *<!--{hook/global_qmenu_bottom}-->
+template/default/common/header_userstatus.htm *<!--{hook/global_usernav_extra1}-->
+template/default/common/header_userstatus.htm *<!--{hook/global_usernav_extra4}-->
+template/default/common/header_userstatus.htm *<!--{hook/global_usernav_extra2}-->
+template/default/common/header_userstatus.htm *<!--{hook/global_usernav_extra3}-->
+template/default/common/header_userstatus.htm *<!--{hook/global_usernav_extra1}-->
+template/default/common/userabout.htm *<!--{hook/global_userabout_top $_G['basescript'].'::'.CURMODULE}-->
+template/default/common/userabout.htm *<!--{hook/global_userabout_bottom $_G['basescript'].'::'.CURMODULE}-->
+template/default/forum/collection_all.htm *<!--{hook/collection_index_top}-->
+template/default/forum/collection_all.htm *<!--{hook/collection_index_bottom}-->
+template/default/forum/collection_comment.htm *<!--{hook/collection_nav_extra}-->
+template/default/forum/collection_index.htm *<!--{hook/collection_index_top}-->
+template/default/forum/collection_index.htm *<!--{hook/collection_index_bottom}-->
+template/default/forum/collection_mycollection.htm *<!--{hook/collection_index_top}-->
+template/default/forum/collection_mycollection.htm *<!--{hook/collection_index_bottom}-->
+template/default/forum/collection_nav.htm *<!--{hook/collection_nav_extra}-->
+template/default/forum/collection_view.htm *<!--{hook/collection_viewoptions}-->
+template/default/forum/collection_view.htm *<!--{hook/collection_view_top}-->
+template/default/forum/collection_view.htm *<!--{hook/collection_threadlistbottom}-->
+template/default/forum/collection_view.htm *<!--{hook/collection_relatedop}-->
+template/default/forum/collection_view.htm *<!--{hook/collection_view_bottom}-->
+template/default/forum/collection_view.htm *<!--{hook/collection_side_bottom}-->
+template/default/forum/discuz.htm *<!--{hook/index_status_extra}-->
+template/default/forum/discuz.htm *<!--{hook/index_nav_extra}-->
+template/default/forum/discuz.htm *<!--{hook/index_top}-->
+template/default/forum/discuz.htm *<!--{hook/index_catlist_top}-->
+template/default/forum/discuz.htm *<!--{hook/index_followcollection_extra $colletion[ctid]}-->
+template/default/forum/discuz.htm *<!--{hook/index_favforum_extra $forum[fid]}-->
+template/default/forum/discuz.htm *<!--{hook/index_favforum_extra $forum[fid]}-->
+template/default/forum/discuz.htm *<!--{hook/index_catlist $cat[fid]}-->
+template/default/forum/discuz.htm *<!--{hook/index_forum_extra $forum[fid]}-->
+template/default/forum/discuz.htm *<!--{hook/index_forum_extra $forum[fid]}-->
+template/default/forum/discuz.htm *<!--{hook/index_datacollection_extra $colletion[ctid]}-->
+template/default/forum/discuz.htm *<!--{hook/index_middle}-->
+template/default/forum/discuz.htm *<!--{hook/index_bottom}-->
+template/default/forum/discuz.htm *<!--{hook/index_side_top}-->
+template/default/forum/discuz.htm *<!--{hook/index_side_bottom}-->
+template/default/forum/editor_menu_forum.htm *<!--{hook/post_image_btn_extra}-->
+template/default/forum/editor_menu_forum.htm *<!--{hook/post_image_tab_extra}-->
+template/default/forum/editor_menu_forum.htm *<!--{hook/post_attach_btn_extra}-->
+template/default/forum/editor_menu_forum.htm *<!--{hook/post_attach_tab_extra}-->
+template/default/forum/forumdisplay.htm *<!--{hook/forumdisplay_leftside_top}-->
+template/default/forum/forumdisplay.htm *<!--{hook/forumdisplay_leftside_bottom}-->
+template/default/forum/forumdisplay.htm *<!--{hook/forumdisplay_forumaction}-->
+template/default/forum/forumdisplay.htm *<!--{hook/forumdisplay_modlink}-->
+template/default/forum/forumdisplay.htm *<!--{hook/forumdisplay_top}-->
+template/default/forum/forumdisplay.htm *<!--{hook/forumdisplay_middle}-->
+template/default/forum/forumdisplay.htm *<!--{hook/forumdisplay_postbutton_top}-->
+template/default/forum/forumdisplay.htm *<!--{hook/forumdisplay_threadtype_inner}-->
+template/default/forum/forumdisplay.htm *<!--{hook/forumdisplay_filter_extra}-->
+template/default/forum/forumdisplay.htm *<!--{hook/forumdisplay_threadtype_extra}-->
+template/default/forum/forumdisplay.htm *<!--{hook/forumdisplay_bottom}-->
+template/default/forum/forumdisplay.htm *<!--{hook/forumdisplay_side_top}-->
+template/default/forum/forumdisplay.htm *<!--{hook/forumdisplay_side_bottom}-->
+template/default/forum/forumdisplay_fastpost.htm *<!--{hook/forumdisplay_fastpost_content}-->
+template/default/forum/forumdisplay_fastpost.htm *<!--{hook/forumdisplay_fastpost_func_extra}-->
+template/default/forum/forumdisplay_fastpost.htm *<!--{hook/forumdisplay_fastpost_ctrl_extra}-->
+template/default/forum/forumdisplay_fastpost.htm *<!--{hook/global_login_text}-->
+template/default/forum/forumdisplay_fastpost.htm *<!--{hook/forumdisplay_fastpost_upload_extend}-->
+template/default/forum/forumdisplay_fastpost.htm *<!--{hook/forumdisplay_fastpost_btn_extra}-->
+template/default/forum/forumdisplay_fastpost.htm *<!--{hook/forumdisplay_fastpost_sync_method}-->
+template/default/forum/forumdisplay_list.htm *<!--{hook/forumdisplay_filter_extra}-->
+template/default/forum/forumdisplay_list.htm *<!--{hook/forumdisplay_thread $key}-->
+template/default/forum/forumdisplay_list.htm *<!--{hook/forumdisplay_thread_subject $key}-->
+template/default/forum/forumdisplay_list.htm *<!--{hook/forumdisplay_author $key}-->
+template/default/forum/forumdisplay_list.htm *<!--{hook/forumdisplay_thread $key}-->
+template/default/forum/forumdisplay_list.htm *<!--{hook/forumdisplay_author $key}-->
+template/default/forum/forumdisplay_list.htm *<!--{hook/forumdisplay_threadlist_bottom}-->
+template/default/forum/forumdisplay_list.htm *<!--{hook/forumdisplay_postbutton_bottom}-->
+template/default/forum/forumdisplay_sort.htm *<!--{hook/forumdisplay_postbutton_bottom}-->
+template/default/forum/forumdisplay_subforum.htm *<!--{hook/forumdisplay_subforum_extra $sub[fid]}-->
+template/default/forum/forumdisplay_subforum.htm *<!--{hook/forumdisplay_subforum_extra $sub[fid]}-->
+template/default/forum/guide.htm *<!--{hook/guide_nav_extra}-->
+template/default/forum/guide.htm *<!--{hook/guide_top}-->
+template/default/forum/guide.htm *<!--{hook/guide_bottom}-->
+template/default/forum/index_navbar.htm *<!--{hook/index_navbar}-->
+template/default/forum/post.htm *<!--{hook/post_top}-->
+template/default/forum/post.htm *<!--{hook/post_middle}-->
+template/default/forum/post.htm *<!--{hook/post_btn_extra}-->
+template/default/forum/post.htm *<!--{hook/post_sync_method}-->
+template/default/forum/post.htm *<!--{hook/post_bottom}-->
+template/default/forum/post.htm *<!--{hook/post_upload_extend}-->
+template/default/forum/post_activity.htm *<!--{hook/post_activity_extra}-->
+template/default/forum/post_debate.htm *<!--{hook/post_debate_extra}-->
+template/default/forum/post_editor_attribute.htm *<!--{hook/post_attribute_extra}-->
+template/default/forum/post_editor_attribute.htm *<!--{hook/post_attribute_extra_body}-->
+template/default/forum/post_editor_body.htm *<!--{hook/post_editorctrl_right}-->
+template/default/forum/post_editor_body.htm *<!--{hook/post_editorctrl_left}-->
+template/default/forum/post_editor_body.htm *<!--{hook/post_editorctrl_top}-->
+template/default/forum/post_editor_body.htm *<!--{hook/post_editorctrl_bottom}-->
+template/default/forum/post_infloat.htm *<!--{hook/post_infloat_top}-->
+template/default/forum/post_infloat.htm *<!--{hook/post_infloat_middle}-->
+template/default/forum/post_infloat.htm *<!--{hook/post_infloat_btn_extra}-->
+template/default/forum/post_poll.htm *<!--{hook/post_poll_extra}-->
+template/default/forum/post_poll.htm *<!--{hook/post_poll_upload_extend}-->
+template/default/forum/post_reward.htm *<!--{hook/post_reward_extra}-->
+template/default/forum/post_trade.htm *<!--{hook/post_trade_extra}-->
+template/default/forum/topicadmin_modlayer.htm *<!--{hook/forumdisplay_modlayer}-->
+template/default/forum/topicadmin_modlayer.htm *<!--{hook/modcp_modlayer}-->
+template/default/forum/trade_info.htm *<!--{hook/viewthread_tradeinfo_extra}-->
+template/default/forum/viewthread.htm *<!--{hook/viewthread_top}-->
+template/default/forum/viewthread.htm *<!--{hook/viewthread_postbutton_top}-->
+template/default/forum/viewthread.htm *<!--{hook/viewthread_modoption}-->
+template/default/forum/viewthread.htm *<!--{hook/viewthread_beginline}-->
+template/default/forum/viewthread.htm *<!--{hook/viewthread_title_extra}-->
+template/default/forum/viewthread.htm *<!--{hook/viewthread_title_row}-->
+template/default/forum/viewthread.htm *<!--{hook/viewthread_middle}-->
+template/default/forum/viewthread.htm *<!--{hook/viewthread_bottom}-->
+template/default/forum/viewthread_activity.htm *<!--{hook/viewthread_activity_extra1}-->
+template/default/forum/viewthread_activity.htm *<!--{hook/viewthread_activity_extra2}-->
+template/default/forum/viewthread_album.htm *<!--{hook/viewthread_beginline}-->
+template/default/forum/viewthread_album.htm *<!--{hook/viewthread_useraction_prefix}-->
+template/default/forum/viewthread_album.htm *<!--{hook/viewthread_useraction}-->
+template/default/forum/viewthread_album.htm *<!--{hook/viewthread_bottom}-->
+template/default/forum/viewthread_fastpost.htm *<!--{hook/viewthread_fastpost_side}-->
+template/default/forum/viewthread_fastpost.htm *<!--{hook/viewthread_fastpost_content}-->
+template/default/forum/viewthread_fastpost.htm *<!--{hook/viewthread_fastpost_func_extra}-->
+template/default/forum/viewthread_fastpost.htm *<!--{hook/viewthread_fastpost_ctrl_extra}-->
+template/default/forum/viewthread_fastpost.htm *<!--{hook/global_login_text}-->
+template/default/forum/viewthread_fastpost.htm *<!--{hook/viewthread_fastpost_upload_extend}-->
+template/default/forum/viewthread_fastpost.htm *<!--{hook/viewthread_fastpost_btn_extra}-->
+template/default/forum/viewthread_from_node.htm *<!--{hook/viewthread_postheader $postcount}-->
+template/default/forum/viewthread_from_node.htm *<!--{hook/viewthread_postheader $postcount}-->
+template/default/forum/viewthread_from_node.htm *<!--{hook/viewthread_postheader $postcount}-->
+template/default/forum/viewthread_from_node.htm *<!--{hook/viewthread_endline $postcount}-->
+template/default/forum/viewthread_node.htm *<!--{hook/viewthread_profileside $postcount}-->
+template/default/forum/viewthread_node.htm *<!--{hook/viewthread_imicons $postcount}-->
+template/default/forum/viewthread_node.htm *<!--{hook/viewthread_magic_user $postcount}-->
+template/default/forum/viewthread_node.htm *<!--{hook/viewthread_avatar $postcount}-->
+template/default/forum/viewthread_node.htm *<!--{hook/viewthread_sidetop $postcount}-->
+template/default/forum/viewthread_node.htm *<!--{hook/viewthread_sidebottom $postcount}-->
+template/default/forum/viewthread_node.htm *<!--{hook/viewthread_postheader $postcount}-->
+template/default/forum/viewthread_node.htm *<!--{hook/viewthread_share_method}-->
+template/default/forum/viewthread_node.htm *<!--{hook/viewthread_useraction}-->
+template/default/forum/viewthread_node.htm *<!--{hook/viewthread_postsightmlafter $postcount}-->
+template/default/forum/viewthread_node.htm *<!--{hook/viewthread_postfooter $postcount}-->
+template/default/forum/viewthread_node.htm *<!--{hook/viewthread_postaction $postcount}-->
+template/default/forum/viewthread_node.htm *<!--{hook/viewthread_magic_thread}-->
+template/default/forum/viewthread_node.htm *<!--{hook/viewthread_magic_post $postcount}-->
+template/default/forum/viewthread_node.htm *<!--{hook/viewthread_endline $postcount}-->
+template/default/forum/viewthread_node_body.htm *<!--{hook/viewthread_posttop $postcount}-->
+template/default/forum/viewthread_node_body.htm *<!--{hook/global_login_text}-->
+template/default/forum/viewthread_node_body.htm *<!--{hook/viewthread_modaction}-->
+template/default/forum/viewthread_node_body.htm *<!--{hook/global_login_text}-->
+template/default/forum/viewthread_node_body.htm *<!--{hook/viewthread_postbottom $postcount}-->
+template/default/forum/viewthread_poll.htm *<!--{hook/viewthread_poll_top}-->
+template/default/forum/viewthread_poll.htm *<!--{hook/viewthread_poll_bottom}-->
+template/default/forum/viewthread_portal.htm *<!--{hook/viewthread_useraction_prefix}-->
+template/default/forum/viewthread_portal.htm *<!--{hook/viewthread_useraction}-->
+template/default/forum/viewthread_portal.htm *<!--{hook/viewthread_side_bottom}-->
+template/default/forum/viewthread_preview_node.htm *<!--{hook/viewthread_postheader $postcount}-->
+template/default/forum/viewthread_preview_node.htm *<!--{hook/viewthread_postheader $postcount}-->
+template/default/forum/viewthread_preview_node.htm *<!--{hook/viewthread_postheader $postcount}-->
+template/default/forum/viewthread_preview_node.htm *<!--{hook/viewthread_endline $postcount}-->
+template/default/forum/viewthread_trade.htm *<!--{hook/viewthread_trade_extra $key}-->
+template/default/group/group.htm *<!--{hook/group_navlink}-->
+template/default/group/group.htm *<!--{hook/forumdisplay_navlink}-->
+template/default/group/group.htm *<!--{hook/group_navlink}-->
+template/default/group/group.htm *<!--{hook/forumdisplay_navlink}-->
+template/default/group/group.htm *<!--{hook/group_top}-->
+template/default/group/group.htm *<!--{hook/forumdisplay_top}-->
+template/default/group/group.htm *<!--{hook/group_nav_extra}-->
+template/default/group/group.htm *<!--{hook/forumdisplay_nav_extra}-->
+template/default/group/group.htm *<!--{hook/group_bottom}-->
+template/default/group/group.htm *<!--{hook/forumdisplay_bottom}-->
+template/default/group/group.htm *<!--{hook/group_side_bottom}-->
+template/default/group/group.htm *<!--{hook/forumdisplay_side_bottom}-->
+template/default/group/group_list.htm *<!--{hook/forumdisplay_postbutton_top}-->
+template/default/group/group_list.htm *<!--{hook/forumdisplay_filter_extra}-->
+template/default/group/group_list.htm *<!--{hook/forumdisplay_thread $key}-->
+template/default/group/group_list.htm *<!--{hook/forumdisplay_postbutton_bottom}-->
+template/default/group/group_my.htm *<!--{hook/my_header}-->
+template/default/group/group_my.htm *<!--{hook/my_bottom}-->
+template/default/group/group_my.htm *<!--{hook/my_side_top}-->
+template/default/group/group_my.htm *<!--{hook/my_side_bottom}-->
+template/default/group/group_right.htm *<!--{hook/group_index_side}-->
+template/default/group/group_right.htm *<!--{hook/group_side_top}-->
+template/default/group/group_right.htm *<!--{hook/forumdisplay_side_top}-->
+template/default/group/index.htm *<!--{hook/index_header}-->
+template/default/group/index.htm *<!--{hook/index_top}-->
+template/default/group/index.htm *<!--{hook/index_bottom}-->
+template/default/group/index.htm *<!--{hook/index_side_top}-->
+template/default/group/index.htm *<!--{hook/index_side_bottom}-->
+template/default/group/type.htm *<!--{hook/index_top}-->
+template/default/group/type.htm *<!--{hook/index_grouplist $fid}-->
+template/default/group/type.htm *<!--{hook/index_bottom}-->
+template/default/group/type.htm *<!--{hook/index_side_top}-->
+template/default/group/type.htm *<!--{hook/index_side_bottom}-->
+template/default/home/editor_image_menu.htm *<!--{hook/spacecp_blog_upload_extend}-->
+template/default/home/editor_image_menu.htm *<!--{hook/portalcp_top_upload_extend}-->
+template/default/home/follow_feed.htm *<!--{hook/follow_nav_extra}-->
+template/default/home/follow_feed.htm *<!--{hook/follow_top}-->
+template/default/home/follow_feed.htm *<!--{hook/follow_upload_extend}-->
+template/default/home/follow_feed.htm *<!--{hook/follow_nav_extra}-->
+template/default/home/spacecp_avatar.htm *<!--{hook/spacecp_avatar_top}-->
+template/default/home/spacecp_avatar.htm *<!--{hook/spacecp_avatar_bottom}-->
+template/default/home/spacecp_blog.htm *<!--{hook/spacecp_blog_top}-->
+template/default/home/spacecp_blog.htm *<!--{hook/spacecp_blog_middle}-->
+template/default/home/spacecp_blog.htm *<!--{hook/spacecp_blog_bottom}-->
+template/default/home/spacecp_credit_base.htm *<!--{hook/spacecp_credit_top}-->
+template/default/home/spacecp_credit_base.htm *<!--{hook/spacecp_credit_extra}-->
+template/default/home/spacecp_credit_base.htm *<!--{hook/spacecp_credit_bottom}-->
+template/default/home/spacecp_credit_log.htm *<!--{hook/spacecp_credit_top}-->
+template/default/home/spacecp_credit_log.htm *<!--{hook/spacecp_credit_bottom}-->
+template/default/home/spacecp_privacy.htm *<!--{hook/spacecp_privacy_top}-->
+template/default/home/spacecp_privacy.htm *<!--{hook/spacecp_privacy_base_extra}-->
+template/default/home/spacecp_privacy.htm *<!--{hook/spacecp_privacy_feed_extra}-->
+template/default/home/spacecp_privacy.htm *<!--{hook/spacecp_privacy_bottom}-->
+template/default/home/spacecp_profile.htm *<!--{hook/spacecp_profile_top}-->
+template/default/home/spacecp_profile.htm *<!--{hook/spacecp_profile_extra}-->
+template/default/home/spacecp_profile.htm *<!--{hook/spacecp_profile_bottom}-->
+template/default/home/spacecp_promotion.htm *<!--{hook/spacecp_promotion_top}-->
+template/default/home/spacecp_promotion.htm *<!--{hook/spacecp_promotion_bottom}-->
+template/default/home/spacecp_upload.htm *<!--{hook/spacecp_upload_extend}-->
+template/default/home/spacecp_usergroup.htm *<!--{hook/spacecp_usergroup_top}-->
+template/default/home/spacecp_usergroup.htm *<!--{hook/spacecp_usergroup_bottom}-->
+template/default/home/spacecp_usergroup.htm *<!--{hook/spacecp_usergroup_top}-->
+template/default/home/spacecp_usergroup.htm *<!--{hook/spacecp_usergroup_bottom}-->
+template/default/home/spacecp_usergroup.htm *<!--{hook/spacecp_usergroup_top}-->
+template/default/home/spacecp_usergroup.htm *<!--{hook/spacecp_usergroup_bottom}-->
+template/default/home/space_album_pic.htm *<!--{hook/space_album_pic_top}-->
+template/default/home/space_album_pic.htm *<!--{hook/space_album_pic_op_extra}-->
+template/default/home/space_album_pic.htm *<!--{hook/space_album_pic_bottom}-->
+template/default/home/space_album_pic.htm *<!--{hook/space_album_pic_face_extra}-->
+template/default/home/space_album_view.htm *<!--{hook/space_album_op_extra}-->
+template/default/home/space_blog_list.htm *<!--{hook/space_blog_list_status $k}-->
+template/default/home/space_blog_view.htm *<!--{hook/space_blog_title}-->
+template/default/home/space_blog_view.htm *<!--{hook/space_blog_share_method}-->
+template/default/home/space_blog_view.htm *<!--{hook/space_blog_op_extra}-->
+template/default/home/space_blog_view.htm *<!--{hook/space_blog_face_extra}-->
+template/default/home/space_card.htm *<!--{hook/space_card_top}-->
+template/default/home/space_card.htm *<!--{hook/space_card_baseinfo_middle}-->
+template/default/home/space_card.htm *<!--{hook/space_card_baseinfo_bottom}-->
+template/default/home/space_card.htm *<!--{hook/space_card_option}-->
+template/default/home/space_card.htm *<!--{hook/space_card_magic_user}-->
+template/default/home/space_card.htm *<!--{hook/space_card_bottom}-->
+template/default/home/space_comment_li.htm *<!--{hook/global_space_comment_op $k}-->
+template/default/home/space_comment_li.htm *<!--{hook/global_comment_bottom}-->
+template/default/home/space_doing.htm *<!--{hook/space_doing_top}-->
+template/default/home/space_doing.htm *<!--{hook/space_doing_bottom}-->
+template/default/home/space_favorite.htm *<!--{hook/space_favorite_nav_extra}-->
+template/default/home/space_friend.htm *<!--{hook/space_interaction_extra}-->
+template/default/home/space_header.htm *<!--{hook/global_usernav_extra1}-->
+template/default/home/space_header.htm *<!--{hook/global_usernav_extra2}-->
+template/default/home/space_home.htm *<!--{hook/space_home_navlink}-->
+template/default/home/space_home.htm *<!--{hook/space_home_side_top}-->
+template/default/home/space_home.htm *<!--{hook/space_home_side_bottom}-->
+template/default/home/space_home.htm *<!--{hook/space_home_top}-->
+template/default/home/space_home.htm *<!--{hook/space_home_navlink}-->
+template/default/home/space_home.htm *<!--{hook/space_home_bottom}-->
+template/default/home/space_magic.htm *<!--{hook/magic_nav_extra}-->
+template/default/home/space_medal.htm *<!--{hook/medal_nav_extra}-->
+template/default/home/space_menu.htm *<!--{hook/space_menu_extra}-->
+template/default/home/space_profile_body.htm *<!--{hook/space_profile_baseinfo_top}-->
+template/default/home/space_profile_body.htm *<!--{hook/follow_profile_baseinfo_top}-->
+template/default/home/space_profile_body.htm *<!--{hook/space_profile_baseinfo_middle}-->
+template/default/home/space_profile_body.htm *<!--{hook/follow_profile_baseinfo_middle}-->
+template/default/home/space_profile_body.htm *<!--{hook/space_profile_baseinfo_bottom}-->
+template/default/home/space_profile_body.htm *<!--{hook/follow_profile_baseinfo_bottom}-->
+template/default/home/space_profile_body.htm *<!--{hook/space_profile_extrainfo}-->
+template/default/home/space_profile_body.htm *<!--{hook/follow_profile_extrainfo}-->
+template/default/home/space_share_li.htm *<!--{hook/space_share_comment_op $k}-->
+template/default/home/space_status.htm *<!--{hook/space_home_doing_sync_method}-->
+template/default/home/space_wall.htm *<!--{hook/space_wall_face_extra}-->
+template/default/member/login.htm *<!--{hook/logging_side_top}-->
+template/default/member/login.htm *<!--{hook/logging_top}-->
+template/default/member/login.htm *<!--{hook/logging_input}-->
+template/default/member/login.htm *<!--{hook/logging_method}-->
+template/default/member/login_simple.htm *<!--{hook/global_login_extra}-->
+template/default/member/register.htm *<!--{hook/register_side_top}-->
+template/default/member/register.htm *<!--{hook/register_top}-->
+template/default/member/register.htm *<!--{hook/register_input}-->
+template/default/member/register.htm *<!--{hook/register_logging_method}-->
+template/default/member/register.htm *<!--{hook/register_bottom}-->
+template/default/mobile/common/footer.htm *<!--{hook/global_footer_mobile}-->
+template/default/mobile/common/header.htm *<!--{hook/global_header_mobile}-->
+template/default/mobile/forum/discuz.htm *<!--{hook/index_top_mobile}-->
+template/default/mobile/forum/discuz.htm *<!--{hook/index_middle_mobile}-->
+template/default/mobile/forum/discuz.htm *<!--{hook/index_bottom_mobile}-->
+template/default/mobile/forum/forumdisplay.htm *<!--{hook/forumdisplay_top_mobile}-->
+template/default/mobile/forum/forumdisplay.htm *<!--{hook/forumdisplay_thread_mobile $key}-->
+template/default/mobile/forum/forumdisplay.htm *<!--{hook/forumdisplay_bottom_mobile}-->
+template/default/mobile/forum/viewthread.htm *<!--{hook/viewthread_top_mobile}-->
+template/default/mobile/forum/viewthread.htm *<!--{hook/viewthread_posttop_mobile $postcount}-->
+template/default/mobile/forum/viewthread.htm *<!--{hook/viewthread_postbottom_mobile $postcount}-->
+template/default/mobile/forum/viewthread.htm *<!--{hook/viewthread_bottom_mobile}-->
+template/default/portal/portalcp_article.htm *<!--{hook/portalcp_top}-->
+template/default/portal/portalcp_article.htm *<!--{hook/portalcp_extend}-->
+template/default/portal/portalcp_article.htm *<!--{hook/portalcp_middle}-->
+template/default/portal/portalcp_article.htm *<!--{hook/portalcp_bottom}-->
+template/default/portal/view.htm *<!--{hook/view_article_top}-->
+template/default/portal/view.htm *<!--{hook/view_article_subtitle}-->
+template/default/portal/view.htm *<!--{hook/view_article_summary}-->
+template/default/portal/view.htm *<!--{hook/view_article_content}-->
+template/default/portal/view.htm *<!--{hook/view_share_method}-->
+template/default/portal/view.htm *<!--{hook/view_article_op_extra}-->
+template/default/portal/view.htm *<!--{hook/view_article_side_top}-->
+template/default/portal/view.htm *<!--{hook/view_article_side_bottom}-->
+template/default/ranklist/side_left.htm *<!--{hook/ranklist_nav_extra}-->
+template/default/search/album.htm *<!--{hook/album_top}-->
+template/default/search/album.htm *<!--{hook/album_bottom}-->
+template/default/search/blog.htm *<!--{hook/blog_top}-->
+template/default/search/blog.htm *<!--{hook/blog_bottom}-->
+template/default/search/collection.htm *<!--{hook/collection_top}-->
+template/default/search/collection.htm *<!--{hook/collection_bottom}-->
+template/default/search/footer.htm *<!--{hook/global_footer}-->
+template/default/search/footer.htm *<!--{hook/global_footerlink}-->
+template/default/search/forum.htm *<!--{hook/forum_top}-->
+template/default/search/forum.htm *<!--{hook/forum_bottom}-->
+template/default/search/group.htm *<!--{hook/group_top}-->
+template/default/search/group.htm *<!--{hook/group_bottom}-->
+template/default/search/header.htm *<!--{hook/global_usernav_extra1}-->
+template/default/search/header.htm *<!--{hook/global_usernav_extra2}-->
+template/default/search/portal.htm *<!--{hook/portal_top}-->
+template/default/search/portal.htm *<!--{hook/portal_bottom}-->
+template/default/touch/common/footer.htm *<!--{hook/global_footer_mobile}-->
+template/default/touch/common/header.htm *<!--{hook/global_header_mobile}-->
+template/default/touch/forum/discuz.htm *<!--{hook/index_top_mobile}-->
+template/default/touch/forum/discuz.htm *<!--{hook/index_middle_mobile}-->
+template/default/touch/forum/forumdisplay.htm *<!--{hook/forumdisplay_top_mobile}-->
+template/default/touch/forum/forumdisplay.htm *<!--{hook/forumdisplay_thread_mobile $key}-->
+template/default/touch/forum/forumdisplay.htm *<!--{hook/forumdisplay_bottom_mobile}-->
+template/default/touch/forum/forumdisplay_fastpost.htm *<!--{hook/viewthread_fastpost_button_mobile}-->
+template/default/touch/forum/post.htm *<!--{hook/post_middle_mobile}-->
+template/default/touch/forum/post.htm *<!--{hook/post_bottom_mobile}-->
+template/default/touch/forum/post_editor_attribute.htm *<!--{hook/post_attribute_extra}-->
+template/default/touch/forum/post_editor_attribute.htm *<!--{hook/post_attribute_extra_body}-->
+template/default/touch/forum/viewthread.htm *<!--{hook/viewthread_top_mobile}-->
+template/default/touch/forum/viewthread.htm *<!--{hook/viewthread_posttop_mobile $postcount}-->
+template/default/touch/forum/viewthread.htm *<!--{hook/viewthread_postbottom_mobile $postcount}-->
+template/default/touch/forum/viewthread.htm *<!--{hook/viewthread_bottom_mobile}-->
+template/default/touch/member/login.htm *<!--{hook/logging_bottom_mobile}-->
+template/default/wml/common/footer.htm *<!--{hook/global_footer_mobile}-->
+template/default/wml/common/header.htm *<!--{hook/global_header_mobile}-->
+template/default/wml/forum/discuz.htm *<!--{hook/index_top_mobile}-->
+template/default/wml/forum/discuz.htm *<!--{hook/index_middle_mobile}-->
+template/default/wml/forum/forumdisplay.htm *<!--{hook/forumdisplay_top_mobile}-->
+template/default/wml/forum/forumdisplay.htm *<!--{hook/forumdisplay_thread_mobile $key}-->
+template/default/wml/forum/forumdisplay.htm *<!--{hook/forumdisplay_bottom_mobile}-->
+template/default/wml/forum/viewthread.htm *<!--{hook/viewthread_top_mobile}-->
+template/default/wml/forum/viewthread.htm *<!--{hook/viewthread_posttop_mobile $postcount}-->
+template/default/wml/forum/viewthread.htm *<!--{hook/viewthread_postbottom_mobile $postcount}-->
+template/default/wml/forum/viewthread.htm *<!--{hook/viewthread_bottom_mobile}-->

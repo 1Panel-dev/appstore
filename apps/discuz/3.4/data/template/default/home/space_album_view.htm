@@ -1,0 +1,157 @@
+<!--{eval $_G['home_tpl_titles'] = array($album['albumname'], '{lang album}');}-->
+<!--{eval $friendsname = array(1 => '{lang friendname_1}',2 => '{lang friendname_2}',3 => '{lang friendname_3}',4 => '{lang friendname_4}');}-->
+
+
+<!--{if $_G[setting][homepagestyle]}-->
+	<!--{subtemplate home/space_header}-->
+	<div id="ct" class="ct2 wp cl">
+		<div class="mn">
+			<div class="bm">
+				<div class="bm_h">
+					<!--{if $space[self] && helper_access::check_module('album')}--><span class="xi2 y"><a href="home.php?mod=spacecp&ac=upload" class="addnew">{lang upload_pic}</a></span><!--{/if}-->
+					<h1 class="mt">{lang album}</h1>
+				</div>
+			<div class="bm_c">
+<!--{else}-->
+	<!--{template common/header}-->
+	<div id="pt" class="bm cl">
+		<div class="z">
+			<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em>
+			<a href="home.php?mod=space&uid=$space[uid]">{$space[username]}</a> <em>&rsaquo;</em>
+			<a href="home.php?mod=space&uid=$space[uid]&do=album&view=me&from=space">{lang album}</a>
+		</div>
+	</div>
+	<style id="diy_style" type="text/css"></style>
+	<div class="wp">
+		<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+	</div>
+	<!--{template home/space_menu}-->
+	<div id="ct" class="ct1 wp cl">
+		<div class="mn">
+			<!--[diy=diycontenttop]--><div id="diycontenttop" class="area"></div><!--[/diy]-->
+			<div class="bm bw0">
+				<div class="bm_c">
+<!--{/if}-->
+		
+		<div class="tbmu cl">
+			<!--{if $album[albumid]>0}-->
+			<a href="home.php?mod=spacecp&ac=favorite&type=album&id=$album[albumid]&spaceuid=$space[uid]&handlekey=sharealbumhk_{$album[albumid]}" id="a_favorite" onclick="showWindow(this.id, this.href, 'get', 0);" class="oshr ofav">{lang favorite}</a>
+			<!--{if helper_access::check_module('share')}--><a href="home.php?mod=spacecp&ac=share&type=album&id=$album[albumid]&handlekey=sharealbumhk_{$album[albumid]}" id="a_share" onclick="showWindow(this.id, this.href, 'get', 0);" class="oshr">{lang share}</a><!--{/if}-->
+			<!--{/if}-->
+			<div class="y">
+				<!--{hook/space_album_op_extra}-->
+				<!--{if $space[self]}--><a href="{if $album[albumid] > 0}home.php?mod=spacecp&ac=album&op=edit&albumid=$album[albumid]{else}home.php?mod=spacecp&ac=album&op=editpic&albumid=0{/if}">{lang edit}</a><span class="pipe">|</span><!--{/if}-->
+				<!--{if ($_G[uid] == $album[uid] || checkperm('managealbum')) && $album[albumid] > 0}-->
+					<a href="home.php?mod=spacecp&ac=album&op=delete&albumid=$album[albumid]&uid=$album[uid]&handlekey=delalbumhk_{$album[albumid]}" id="album_delete_$album[albumid]" onclick="showWindow(this.id, this.href, 'get', 0);">{lang delete}</a><span class="pipe">|</span>
+				<!--{/if}-->
+				<!--{if $_G[uid] != $album[uid]}-->
+				<a href="javascript:;" onclick="showWindow('miscreport$album[albumid]', 'misc.php?mod=report&rtype=album&uid=$album[uid]&rid=$album[albumid]', 'get', -1);return false;">{lang report}</a><span class="pipe">|</span>
+				<!--{/if}-->
+			</div>
+			<!--{if $album['catname']}-->
+			<span class="xg1">{lang system_cat}</span><a href="home.php?mod=space&do=album&catid=$album[catid]&view=all">$album[catname]</a><span class="pipe">|</span>
+			<!--{/if}-->
+			<!--{if $album[picnum]}-->{lang total} $album[picnum] {lang album_pics}<!--{/if}-->
+			<!--{if $album['friend']}-->
+			<span class="xg1"> &nbsp; {$friendsname[$album[friend]]}</span>
+			<!--{/if}-->
+		</div>
+		
+		<!--{if $list}-->
+			<!--{if $album[depict]}--><p class="tbmu">$album[depict]</p><!--{/if}-->
+			<ul class="ptw ml mlp cl">
+			<!--{loop $list $key $value}-->
+				<li>
+				<a href="home.php?mod=space&uid=$value[uid]&do=$do&picid=$value[picid]"><!--{if $value[pic]}--><img src="$value[pic]" alt="" /><!--{/if}--></a><!--{if $value[status] == 1}--><b>({lang moderate_need})</b><!--{/if}-->
+				</li>
+			<!--{/loop}-->
+			</ul>
+			<!--{if $pricount}--><p>{lang hide_pic}</p><!--{/if}-->
+			<!--{if $multi}--><div class="pgs cl mtm">$multi</div><!--{/if}-->
+		<!--{else}-->
+			<!--{if !$pricount}--><p class="emp">{lang no_pics}</p><!--{/if}-->
+			<!--{if $pricount}--><p>{lang hide_pic}</p><!--{/if}-->
+		<!--{/if}-->
+		
+		<!--{if $albumlist}-->
+		<div class="bm mtm bw0">
+			<div class="bm_h cl">
+				<!--{if $albumlist}-->
+				<div class="y mtn">
+						<a href="javascript:;" id="sabup" onclick="switchAlbum(0);this.blur();return false;" title="{lang previous_album}"><img src="{STATICURL}image/common/pic_nv_prev.gif" alt="{lang previous_album}"/></a> 
+						<a href="javascript:;" id="sabdown" onclick="switchAlbum(1);this.blur();return false;" title="{lang next_album}"><img src="{STATICURL}image/common/pic_nv_next.gif" alt="{lang next_album}"/></a>
+				</div>
+				<!--{/if}-->
+				<h2>{lang switch_pics}</h2>
+			</div>
+			<div class="bm_c">
+				<div id="pnv" class="bn pns cl">
+					<!--{if $albumlist}-->	
+					<!--{loop $albumlist $key $albums}-->
+					<ul id="albumbox_$key" class="ptm ml z" {if !isset($albums[$id]) && !($key==0 && $id<0)} style="display: none;"{else}{eval $nowalbum=$key;}{/if}>
+						<!--{loop $albums $akey $value}-->
+						<!--{eval $pwdkey = 'view_pwd_album_'.$value['albumid'];}-->
+						<li style="width: 136px;">
+							<div class="c">
+								<a href="home.php?mod=space&uid=$value[uid]&do=album&id=$value[albumid]" title="$value[albumname]" {if $value[uid]!=$_G[uid] && $_G['adminid'] != 1 && $value[friend]=='4' && $value[password] && empty($_G[cookie][$pwdkey])} onclick="showWindow('right_album_$value[albumid]', this.href, 'get', 0);"{/if}><!--{if $value[pic]}--><img src="$value[pic]" alt="$value[albumname]" width="120" height="120" /><!--{/if}--></a>
+								<p><a href="home.php?mod=space&uid=$value[uid]&do=album&id=$value[albumid]" title="$value[albumname]" {if $value[uid]!=$_G[uid] && $_G['adminid'] != 1 && $value[friend]=='4' && $value[password] && empty($_G[cookie][$pwdkey])} onclick="showWindow('right_album_$value[albumid]', this.href, 'get', 0);"{/if}>$value[albumname]</a></p>
+							</div>
+						</li>
+						<!--{/loop}-->
+					</ul>
+					<!--{/loop}-->
+					<script type="text/javascript">
+						var nowAlbum = $nowalbum;
+						var maxAlbum = $maxalbum;
+						function switchAlbum(down) {
+							if(down) {
+								if(nowAlbum + 1 < maxAlbum) {
+									$('albumbox_'+nowAlbum).style.display = 'none';
+									nowAlbum++;
+									$('albumbox_'+nowAlbum).style.display = '';
+								}
+							} else {
+								if(nowAlbum - 1 >= 0) {
+									$('albumbox_'+nowAlbum).style.display = 'none';
+									nowAlbum--;
+									$('albumbox_'+nowAlbum).style.display = '';
+								}
+							}
+							initSwitchButton();
+						}
+						function initSwitchButton(){
+							$('sabdown').style.display = maxAlbum-nowAlbum == 1 ? 'none' : '';
+							$('sabup').style.display = nowAlbum ? '' : 'none';
+						}
+						window.onload = function () {initSwitchButton();}
+					</script>
+					<!--{/if}-->
+				</div>
+			</div>
+		</div>
+		<!--{/if}-->
+		
+		<!--{if !$_G[setting][homepagestyle]}--><!--[diy=diycontentbottom]--><div id="diycontentbottom" class="area"></div><!--[/diy]--><!--{/if}-->
+
+
+					</div>
+				</div>
+			<!--{if $_G[setting][homepagestyle]}-->
+			</div>
+			<div class="sd">
+				<!--{subtemplate home/space_userabout}-->
+			<!--{/if}-->
+		</div>
+	</div>
+
+<!--{if !$_G[setting][homepagestyle]}-->
+	<div class="wp mtn">
+		<!--[diy=diy3]--><div id="diy3" class="area"></div><!--[/diy]-->
+	</div>
+<!--{/if}-->
+
+	
+
+
+
+<!--{template common/footer}-->

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Style]]></item>
+	<item id="Data">
+		<item id="name"><![CDATA[默认风格]]></item>
+		<item id="templateid"><![CDATA[1]]></item>
+		<item id="tplname"><![CDATA[默认模板套系]]></item>
+		<item id="directory"><![CDATA[./template/default]]></item>
+		<item id="copyright"><![CDATA[Discuz!]]></item>
+		<item id="style">
+			<item id="smfont"><![CDATA[Arial]]></item>
+			<item id="threadtitlefontsize"><![CDATA[14px]]></item>
+			<item id="threadtitlefont"><![CDATA[Tahoma,'Microsoft Yahei','Simsun']]></item>
+			<item id="smfontsize"><![CDATA[0.83em]]></item>
+			<item id="tabletext"><![CDATA[#444]]></item>
+			<item id="midtext"><![CDATA[#666]]></item>
+			<item id="lighttext"><![CDATA[#999]]></item>
+			<item id="link"><![CDATA[#333]]></item>
+			<item id="highlightlink"><![CDATA[#369]]></item>
+			<item id="noticetext"><![CDATA[#F26C4F]]></item>
+			<item id="bgcolor"><![CDATA[#FFF background.png repeat-x 0 0]]></item>
+			<item id="msgfontsize"><![CDATA[14px]]></item>
+			<item id="sidebgcolor"><![CDATA[ vlineb.png repeat-y 0 0]]></item>
+			<item id="headerborder"><![CDATA[0]]></item>
+			<item id="headerbgcolor"><![CDATA[]]></item>
+			<item id="inputborderdarkcolor"><![CDATA[#848484]]></item>
+			<item id="stypeid"><![CDATA[1]]></item>
+			<item id="inputbg"><![CDATA[#FFF]]></item>
+			<item id="commonborder"><![CDATA[#CDCDCD]]></item>
+			<item id="commonbg"><![CDATA[#F2F2F2]]></item>
+			<item id="specialborder"><![CDATA[#C2D5E3]]></item>
+			<item id="specialbg"><![CDATA[#E5EDF2]]></item>
+			<item id="dropmenuborder"><![CDATA[#DDD]]></item>
+			<item id="floatmaskbgcolor"><![CDATA[#000]]></item>
+			<item id="dropmenubgcolor"><![CDATA[#FEFEFE]]></item>
+			<item id="floatbgcolor"><![CDATA[#FFF]]></item>
+			<item id="lightlink"><![CDATA[#FFF]]></item>
+			<item id="menuhoverbgcolor"><![CDATA[#005AB4 nv_a.png no-repeat 50% -33px]]></item>
+			<item id="titlebgcolor"><![CDATA[#E5EDF2 titlebg.png repeat-x 0 0]]></item>
+			<item id="fontsize"><![CDATA[12px/1.5]]></item>
+			<item id="font"><![CDATA[Tahoma,'Microsoft Yahei','Simsun']]></item>
+			<item id="styleimgdir"><![CDATA[]]></item>
+			<item id="imgdir"><![CDATA[]]></item>
+			<item id="boardimg"><![CDATA[logo.png]]></item>
+			<item id="available"><![CDATA[]]></item>
+			<item id="headertext"><![CDATA[#444]]></item>
+			<item id="footertext"><![CDATA[#666]]></item>
+			<item id="menubgcolor"><![CDATA[#2B7ACD nv.png no-repeat 0 0]]></item>
+			<item id="menutext"><![CDATA[#FFF]]></item>
+			<item id="menuhovertext"><![CDATA[#FFF]]></item>
+			<item id="wrapbg"><![CDATA[#FFF]]></item>
+			<item id="wrapbordercolor"><![CDATA[#CCC]]></item>
+			<item id="contentwidth"><![CDATA[630px]]></item>
+			<item id="contentseparate"><![CDATA[#C2D5E3]]></item>
+			<item id="inputborder"><![CDATA[#E0E0E0]]></item>
+		</item>
+		<item id="version"><![CDATA[X3.1,X3,2,X3.3,X3.4]]></item>
+	</item>
+</root>

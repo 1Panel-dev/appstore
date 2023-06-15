@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[掌上论坛]]></item>
+			<item id="identifier"><![CDATA[mobile]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[mobile/]]></item>
+			<item id="copyright"><![CDATA[Comsenz Inc.]]></item>
+			<item id="version"><![CDATA[1.4.8]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[mobile]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[28]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[mobile]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2.5,X3,X3.1,X3.2,X3.3,X3.4]]></item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="mobile_tip_ios"><![CDATA[<a href="https://discuz.dismall.com/mobile.php?platform=ios">用掌上论坛访问本站,拥有更好阅读体验</a>]]></item>
+				<item id="mobile_tip_android"><![CDATA[<a href="https://discuz.dismall.com/mobile.php?platform=android">用掌上论坛访问本站,拥有更好阅读体验</a>]]></item>
+				<item id="mobile_tip_wp7"><![CDATA[<a href="https://discuz.dismall.com/mobile.php?platform=windowsphone">用掌上论坛访问本站,拥有更好阅读体验</a>]]></item>
+				<item id="mobile_extend_newthread"><![CDATA[最新发表]]></item>
+				<item id="mobile_extend_newreply"><![CDATA[最新回复]]></item>
+				<item id="mobile_extend_digest"><![CDATA[最新精华]]></item>
+				<item id="mobile_extend_newpic"><![CDATA[最新图片]]></item>
+				<item id="mobile_fromtype_ios"><![CDATA[来自: iPhone客户端]]></item>
+				<item id="mobile_fromtype_android"><![CDATA[来自: Android客户端]]></item>
+				<item id="mobile_fromtype_windowsphone"><![CDATA[来自: WindowsPhone客户端]]></item>
+				<item id="mobile_post_author_visible"><![CDATA[该帖仅作者可见]]></item>
+                <item id="mobilesign_formhash_failed"><![CDATA[formhash验证失败或未登录]]></item>
+                <item id="mobilesign_success"><![CDATA[签到成功]]></item>
+                <item id="mobilesign_failed"><![CDATA[已进行过签到]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="mobile_tips"><![CDATA[推荐使用二维码收藏并访问论坛<br />使用二维码收藏论坛的方法：<br />1，装掌上论坛应用后，点击使用二维码收藏论坛。<br />2，将二维码置于相机焦点中即可收藏成功。]]></item>
+				<item id="username"><![CDATA[用户名]]></item>
+				<item id="password"><![CDATA[密码]]></item>
+				<item id="password_confirm"><![CDATA[确认密码]]></item>
+				<item id="email"><![CDATA[Email]]></item>
+				<item id="invite_code"><![CDATA[邀请码]]></item>
+				<item id="register_message"><![CDATA[注册原因]]></item>
+				<item id="seccode"><![CDATA[验证码]]></item>
+				<item id="change_seccode"><![CDATA[换一个]]></item>
+				<item id="secqaa"><![CDATA[验证问答]]></item>
+				<item id="close"><![CDATA[关闭]]></item>
+				<item id="admin_tips"><![CDATA[尊敬的站长，您可以在Discuz!程序根目录上传"mobile.png"图片(尺寸178x178)，以确保论坛客户端能成功获得到论坛的logo]]></item>
+				<item id="iphone_alt"><![CDATA[iphone-适用于苹果手机]]></item>
+				<item id="android_alt"><![CDATA[Android-适用于装有安卓系统的三星/HTC/小米等手机]]></item>
+				<item id="windowsphone_alt"><![CDATA[WinodwsPhone-适用于装有微软WindowsPhone7 系统的手机]]></item>
+				<item id="discuzmobile_alt"><![CDATA[掌上论坛优势]]></item>
+				<item id="tips_1"><![CDATA[随时随地，快速访问]]></item>
+				<item id="tips_1_desc"><![CDATA[只要手机在手，您都可以快速、方便地看贴发帖，与论坛好友收发短消息。]]></item>
+				<item id="tips_2"><![CDATA[极致优化，畅快"悦"读]]></item>
+				<item id="tips_2_desc"><![CDATA[独有的论坛界面和触屏设计，手机论坛也变得赏心悦目，操作自如。]]></item>
+				<item id="tips_3"><![CDATA[即拍即发，分享生活]]></item>
+				<item id="tips_3_desc"><![CDATA[不管是风景图画，还是新闻现场，拍照发帖一气呵成，让您在论坛出尽风头。]]></item>
+				<item id="qr_desc"><![CDATA[下载客户端后，拍摄二维码快速访问本站:]]></item>
+				<item id="qr"><![CDATA[二维码]]></item>
+				<item id="wapmode"><![CDATA[或者通过以下地址访问:]]></item>
+				<item id="qqregmode1"><![CDATA[完善账号信息]]></item>
+				<item id="qqregmode2"><![CDATA[绑定已有账号]]></item>
+				<item id="register_validate_email_tips"><![CDATA[注册需要验证邮箱，请务必填写正确的邮箱，提交后请及时查收邮件。]]></item>
+				<item id="post_hide_reply_hidden"><![CDATA[如果您要查看本帖隐藏内容请回复]]></item>
+			</item>
+            <item id="installlang">
+                <item id="mobilesign"><![CDATA[微社区签到]]></item>
+            </item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+	</item>
+</root>

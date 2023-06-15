@@ -1,0 +1,34 @@
+<!--{block return}-->
+<!--{if $_G[uid]}-->
+	<div style="float:left; margin-right: 16px;">$avatar</div>
+	<a href="home.php?mod=space&uid=$_G[uid]" target="_blank">$_G[member][username]</a><br />
+	<a href="forum.php?mod=faq&action=grouppermission" target="_blank">$_G[group][grouptitle]</a><br />
+	<ul id="mycredits_menu" class="popupmenu_popup headermenu_popup" style="width:137px;display:none">
+	<!--{loop $_G[setting][extcredits] $id $credit}-->
+		<li>$credit[title]: $extcredits[$id] $credit[unit]</li>
+	<!--{/loop}-->
+	</ul>
+	<div style="clear: both">
+		<div style="float:right;width:60%">
+		<span id="mycredits_hover" class="dropmenu" onmouseover="showMenu({'ctrlid':this.id,'showid':'mycredits'})">{lang credits}: $_G[member][credits]</span><br />
+		<!--{if $creditupgrade !== ''}-->
+			<span title="{lang index_upgrade_tips}">{lang index_upgrade}: $creditupgrade</span><br />
+		<!--{/if}-->
+		</div>
+	</div>
+<!--{else}-->
+	<div style="float:left; text-align:left; width:40%;"><img src="{UC_API}/images/noavatar_small.gif"></div>
+	<a href="member.php?mod={$_G[setting][regname]}">$_G[setting][reglinkname]</a><br />
+	<a href="member.php?mod=logging&action=login" onclick="showWindow('login', this.href)">{lang login}</a>
+<!--{/if}-->
+<!--{if $_G[uid] && $GLOBALS[prompt]}-->
+	<hr class="l" />
+	<div class="sidebox">
+		<ul>
+		<!--{loop $GLOBALS[prompts] $promptkey $promptdata}-->
+			<!--{if $promptkey && $promptdata[new]}--><li><a href="{if $promptdata[script]}$promptdata[script]{else}forum.php?mod=notice&filter=$promptkey{/if}" target="_blank">$promptdata[name]($promptdata[new])</a></li><!--{/if}-->
+		<!--{/loop}-->
+		</ul>
+	</div>
+<!--{/if}-->
+<!--{/block}-->

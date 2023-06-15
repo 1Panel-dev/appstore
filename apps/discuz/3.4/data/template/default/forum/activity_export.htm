@@ -1,0 +1,24 @@
+$activity[class]: $thread[subject]
+<!--{echo "\n";}-->
+{lang activity_starttime}: <!--{if $activity['starttimeto']}-->{lang activity_start_between}<!--{else}-->$activity[starttimefrom]<!--{/if}-->
+<!--{echo "\n";}-->
+{lang activity_space}: $activity[place]
+<!--{echo "\n";}-->
+<!--{if $activity['cost']}-->
+{lang activity_payment}: $activity[cost] {lang payment_unit}
+<!--{echo "\n";}-->
+<!--{/if}-->
+{lang gender}: <!--{if $activity['gender'] == 1}-->{lang male}<!--{elseif $activity['gender'] == 2}-->{lang female}<!--{else}-->{lang unlimited}<!--{/if}-->
+<!--{echo "\n";}-->
+<!--{if $activity['expiration']}-->{lang activity_totime}: $activity[expiration]<!--{/if}-->
+<!--{echo "\n";}-->
+{lang activity_already}: $applynumbers {lang activity_member_unit}
+<!--{echo "\n\n";}-->
+{lang activity_content}: "$activity[message]"
+<!--{echo "\n\n";}-->
+{lang activity_join_members},{lang leaveword},<!--{if $activity['cost']}-->{lang activity_payment},<!--{/if}-->{lang activity_jointime},{lang status}$ufield
+<!--{echo "\n";}-->
+<!--{loop $applylist $apply}-->
+	$apply[username],$apply[message],<!--{if $activity['cost']}--><!--{if $apply[payment] >= 0}-->$apply[payment] {lang payment_unit}<!--{else}-->{lang activity_self}<!--{/if}-->,<!--{/if}-->$apply[dateline],<!--{if $apply[verified]}-->{lang activity_allow_join}<!--{else}-->{lang activity_cant_audit}<!--{/if}--><!--{if $apply[fielddata]}-->$apply[fielddata]<!--{/if}-->
+	<!--{echo "\n";}-->
+<!--{/loop}-->

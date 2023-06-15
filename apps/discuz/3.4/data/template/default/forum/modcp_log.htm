@@ -1,0 +1,50 @@
+<div class="bm bw0 mdcp">
+	<h1 class="mt">{lang modcp_logs}</h1>
+	<div class="exfm">
+		<form method="post" autocomplete="off" action="{$cpscript}?mod=modcp&action=log">
+			<input type="hidden" name="action" value="log">
+			<table cellspacing="0" cellpadding="0">
+				<tr>
+					<th width="15%">{lang keyword}:</th>
+					<td width="45%"><input type="text" name="keyword" value="$keyword" size="20" class="px" /></td>
+					<th width="15%">{lang modcp_logs_perpage}:</th>
+					<td width="45%"><input type="text" name="lpp" value="$lpp" size="20" class="px" /></td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td colspan="3"><button type="submit" class="pn" name="submit" id="searchsubmit" value="true"><strong>{lang modcp_logs_search}</strong></button></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<!--{if !empty($loglist)}-->
+		<h2 class="mtm mbm">{lang modcp_logs_list_1}</h2>
+			<table id="list_modcp_logs" cellspacing="0" cellpadding="0" class="dt">
+				<thead>
+					<tr>
+						<th width="12%">{lang time}</th>
+						<th width="15%">{lang username}</th>
+						<th width="15%">IP</td>
+						<th width="15%">{lang modcp_logs_action}</th>
+						<th width="13%">{lang forum}</th>
+						<th width="30%">{lang modcp_logs_other}</th>
+					</tr>
+				</thead>
+				<!--{if $loglist}-->
+					<!--{loop $loglist $log}-->
+						<tr>
+							<td>$log[1]</td>
+							<td><span class="xi2">$log[2]</span><br /><span class="xg1"><!--{if $log[3] == 1}--> {lang admin} <!--{elseif $log[3] == 2}--> {lang supermod} <!--{elseif $log[3] == 3}--> {lang moderator} <!--{else}--> GID $log[3] <!--{/if}--></span></td>
+							<td>$log[4]</td>
+							<td>$log[5] <br />$log[6]</td>
+							<td class="xi2">$log[7]</td>
+							<td>$log[8]</td>
+						</tr>
+					<!--{/loop}-->
+				<!--{else}-->
+					<tr><td colspan="6"><p class="emp">{lang search_nomatch}</p></td></tr>
+				<!--{/if}-->
+			</table>
+			<!--{if !empty($multipage)}--><div class="pgs cl mtm">$multipage</div><!--{/if}-->
+	<!--{/if}-->
+</div>

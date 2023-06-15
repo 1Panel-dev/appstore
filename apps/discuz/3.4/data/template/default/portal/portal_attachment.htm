@@ -1,0 +1,39 @@
+<!--{subtemplate common/header_ajax}-->
+<!--{if $_GET['type'] == 'attach'}-->
+	<table cellpadding="0" cellspacing="0" id="attach_list_$attach[attachid]" summary="post_attachbody" border="0" width="100%">
+		<tbody>
+			<tr>
+				<td class="attswf">
+					<p id="attach$attach[attachid]">
+						<span>$attach[filetype] <a href="javascript:;" class="xi2" id="attachname$attach[attachid]" isimage="{if $attach['isimage']}1{else}0{/if}" onclick="{if $attach['isimage']}insertImage('$bigimg'){else}insertFile('$attach[filename]', 'portal.php?mod=attachment&id=$attach['attachid']'){/if};doane(event);">{$attach[filename]}</a></span>
+					</p>
+				</td>
+				<td class="atds">$attach[filesize]</td>
+				<td class="attc"><a href="javascript:;" class="d" onclick="deleteAttach($attach[attachid], 'portal.php?mod=attachment&id=$attach[attachid]&op=delete&formhash={FORMHASH}');;return false;" title="{lang delete}">{lang delete}</a></td>
+			</tr>
+		</tbody>
+	</table>
+<!--{else}-->
+	<a href="javascript:;" class="opattach">
+		<span class="opattach_ctrl">
+			<span onclick="insertImage('$bigimg');" class="cur1">{lang portal_attachment_big_img}</span><span class="pipe">|</span>
+			<span onclick="insertImage('$smallimg', '$bigimg');" class="cur1">{lang portal_attachment_small_img}</span>
+		</span>
+		<img src="{if $smallimg}$smallimg{else}$bigimg{/if}" onclick="insertImage('$bigimg');" class="cur1" />
+	</a>
+	<label for="setconver$attach['attachid']" class="cur1 xi2">
+		<input type="radio" name="setconver" id="setconver$attach['attachid']" class="pr" value="1" onclick="setConver(this.getAttribute('coverstr'))" coverstr='$coverstr'>{lang portal_attachment_set_cover}
+	</label>
+	<span class="pipe">|</span>
+	<span class="cur1 xi2" onclick="deleteAttach('$attach['attachid']', 'portal.php?mod=attachment&id=$attach['attachid']&op=delete&formhash={FORMHASH}');">{lang delete}</span>
+
+<!--{/if}-->
+<script type="text/javascript">
+	parent.$('attach_ids').value += ',' + '$attach['attachid']';
+	<!--{if $coverstr}-->
+		if(parent.$('conver').value == '') {
+			parent.$('conver').value = '$coverstr';
+		}
+	<!--{/if}-->
+</script>
+<!--{subtemplate common/footer_ajax}-->

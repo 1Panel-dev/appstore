@@ -1,0 +1,28 @@
+<!--{template common/header}-->
+
+<div class="bm">
+	<div class="bm_h">{lang pay_view}</div>
+
+	<div class="bm_c">
+		<table class="list" cellspacing="5" cellpadding="5">
+			<tr>
+				<th>{lang username}</th>
+				<th>{lang time}</th>
+				<th>{$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][title]}</th>
+			</tr>
+			<!--{if $loglist}-->
+				<!--{loop $loglist $log}-->
+					<tr>
+						<td><a href="home.php?mod=space&uid=$log[uid]">$log[username]</a></td>
+						<td>$log[dateline]</td>
+						<td>{$log[$extcreditname]} {$_G[setting][extcredits][$_G[setting][creditstransextra][1]][unit]}</td>
+					</tr>
+				<!--{/loop}-->
+			<!--{else}-->
+				<tr><td colspan="3"><div class="xg1">{lang attachment_buy_not}</div></td></tr>
+			<!--{/if}-->
+		</table>
+	</div>
+</div>
+
+<!--{template common/footer}-->

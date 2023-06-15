@@ -1,0 +1,164 @@
+<script id="tmpl_thread_activity" type="text/html">
+    <link rel="stylesheet" href="../template/default/m/css/activity.css?t=<%= jsversion %>">
+    <div class="dzDetail">
+        <% if(special_activity.thumb) { %>
+        <div class="dzShowImg">
+            <img class="lazy" data-original="<%= special_activity.thumb %>" file="<%= special_activity.attachurl %>" alt="" />
+        </div>
+        <% } %>
+        <h4 class="dzTitle f18 c3 wot"><%== stripCode(thread.subject) %><% if(special_activity.closed == 0) { %><a href="javascript:;" class="dzBtn ml5 br fn f12 c2">进行中</a><% } %></h4>
+        <ul class="activity">
+            <li><i class="iconloc f18 c9 mr5 cf"></i>活动地点：<%== stripCode(special_activity.place) %></li>
+            <li><i class="iconTime f14 c9 mr5 cf"></i>活动时间：<%== stripCode(special_activity.starttimefrom) %><% if(special_activity.starttimeto != '0') { %> 至 <%== stripCode(special_activity.starttimeto) %><% } %></li>
+            <li>报名截止：<%= special_activity.expiration %></li>
+            <li><i class="iconPrfile f14 c9 mr5 cf"></i>人数限制：<%= special_activity.number %>人<% if(special_activity.gender == 1) { %> 仅限男士<% } %><% if(special_activity.gender == 2) { %> 仅限女士<% } %></li>
+            <li><i class="iconCost f14 c9 mr5 cf"></i>活动费用：<%= special_activity.cost %> 元</li>
+            <li><i class="iconCategory f14 c9 mr5 cf"></i>活动类别：<%== stripCode(special_activity.class) %></li>
+        </ul>
+        <div id="activitybtn">
+            <% if(special_activity.button == 'cancel') { %>
+                <a href="javascript:;" id="cancelBtn" class="dzSignBtn dzCancelBtn c3 db f16 br">取消报名</a>
+            <% } %>
+            <% if(special_activity.button == 'join') { %>
+                <a href="javascript:;" id="joinBtn" class="dzSignBtn c2 db f16 br"><% if(special_activity.status == 'join') { %>我要报名<% } else { %>完善资料<% } %></a>
+            <% } %>
+        </div>
+        <div id="joinbox" style="display:none"></div>
+        <div id="cancelbox" style="display:none"></div>
+        <% if(special_activity.status == 'wait') { %>
+            <p class="c9">您的加入申请已发出</p>
+        <% } %>
+        <% if(special_activity.status == 'joined') { %>
+            <p class="c9">您已经参加了此活动</p>
+        <% } %>
+        <p class="c9 dzPerNum">
+            参与人数：<%= special_activity.allapplynum %>
+        </p>
+        <div class="detailCon">
+            <div id="msg_<%= post.pid %>">
+                <% if(post.hook_thread_top) { %>
+                    <%== stripCode(post.hook_thread_top) %>
+                <% } %>
+                <%== stripCode(post.message, 1) %>
+                <% if(post.hook_thread_bottom) { %>
+                    <%== stripCode(post.hook_thread_bottom) %>
+                <% } %>
+            </div>
+        </div>
+        <div class="operation oh">
+            <% if(comments && comments.length > 0) { %>
+                <div class="replyPop">
+                    <div class="replyBg brSmall pr commentBox">
+                        <div class="topicList">
+                            <ul>
+                            <% for(i = 0; i< comments.length; i++) { %>
+                                <li><a href="javascript:;" class="f13 c3"><span class="c7"><%==comments[i].author%><% if(comments[i].authorid == post.authorid) { %><i class="cardBtn br fn db c2">楼主</i><% } %>：</span><%== stripCode(comments[i].comment) %></a></li>
+                            <% } %>
+                            </ul>
+                            <% if(commentCount > 5) { %>
+                            <a href="javascript:;" class="db f12 moreInReply viewcommentBtn" tid="<%= post.tid %>" pid="<%= post.pid %>">更多</a>
+                            <% } %>
+                        </div>
+                    </div>
+               </div>
+            <% } %>
+         </div>
+            <span class="replyShare db fr">
+                <a class="topicadminMsg" tid="<%= post.tid %>" pid="<%= post.pid %>"><% if(post.status & 1) {%>已屏蔽<%}%></a>
+                <% if (member_uid != "0"){%>
+                    <a href="javascript:;" id="recommendBtn">
+                        <i class=<%=thread.recommend == 1 ? "praise" : "noPraise"%>></i>
+                        <span><%= thread.recommend_add == 0 ? "赞" : thread.recommend_add %></span>
+                    </a>
+                <% } %>
+                <% if(fromwx) { %>
+                    <a href="javascript:;" id="shareBtn"><i class="incoS"></i>分享</a>
+                <% } %>
+                <a href="javascript:;" class="replyByPid" tid="<%= post.tid %>" pid="<%= post.pid %>" first="<%= post.first %>"><i class="incoR"></i><%= thread.replies == 0 ? "回复" : thread.replies %></a>
+            </span>
+            <% if(post.hook_post_bottom) { %>
+                <span class="fl tl"><%== stripCode(post.hook_post_bottom) %></span>
+            <% } %>
+    </div>
+</script>
+
+<script id="joinfield" type="text/html">
+    <% if(formtype == 'text') { %>
+        <dt><%= title %><% if(require) { %> *<% } %></dt>
+        <dd class="dzTextareaBor br"><input name="<%= fieldid %>" type="text" value="<%= value %>" class="dzInput db" /></dd>
+    <% } %>
+    <% if(formtype == 'textarea') { %>
+        <dt><%= title %><% if(require) { %> *<% } %></dt>
+        <dd class="dzTextareaBor br"><textarea name="<%= fieldid %>" class="dzTextarea"><%= value %></textarea></dd>
+    <% } %>
+    <% if(formtype == 'checkbox' || formtype == 'list') { %>
+        <dt><%= title %><% if(require) { %> *<% } %></dt>
+        <% for(var i in choices) { %>
+            <% check = inArray(i, value) %>
+            <dd class="c_<%= fieldid %> f16 checkbox<% if(check) { %> on<% } %>">
+                <label>
+                    <span class="iconRadio f16 cf"<% if(!check) { %> style="display:none"<% } %>></span>
+                    <input name="<%= fieldid %>[]"<% if(check) { %> style="display:none" checked<% } %> type="checkbox" value="<%= i %>" class="dzRC" /><%= choices[i] %>
+                </label>
+            </dd>
+        <% } %>
+    <% } %>
+    <% if(formtype == 'radio' || formtype == 'select') { %>
+        <dt><%= title %><% if(require) { %> *<% } %></dt>
+        <% for(var i in choices) { %>
+            <% check = i == value; %>
+            <dd class="c_<%= fieldid %> f16 radio<% if(check) { %> on<% } %>">
+                <label>
+                    <span class="iconCheckbox f16 cf"<% if(!check) { %> style="display:none"<% } %>></span>
+                    <input name="<%= fieldid %>"<% if(check) { %> style="display:none" checked<% } %> type="radio" value="<%= i %>" class="dzRC" /><%= choices[i] %>
+                </label>
+            </dd>
+        <% } %>
+    <% } %>
+</script>
+
+<script id="joinform" type="text/html">
+    <form method="post" action="" id="actjoinform">
+    <div class="dzSignDetail">
+        <div class="dzBaseInfo">
+            <% if(creditcost) { %>参加此活动将扣除您 <%= creditcost %><% } %>
+            <dl class="dzPayMessage">
+                <dt>支付方式</dt>
+                <dd class="c_payment f16 radio<% if(basefield.payment == -1) { %> on<% } %>">
+                    <label>
+                        <span class="iconRadio f16 cf"<% if(basefield.payment != -1) { %> style="display:none"<% } %>></span>
+                        <input name="payment" type="radio" value="0" class="dzRC"<% if(basefield.payment == -1) { %> style="display:none" checked<% } %> />承担自己应支付的花销
+                    </label>
+                </dd>
+                <dd class="c_payment f16 radio<% if(basefield.payment != -1) { %> on<% } %>">
+                    <label>
+                        <span class="iconRadio f16 cf"<% if(basefield.payment == -1) { %> style="display:none"<% } %>></span>
+                        <input name="payment" type="radio" value="1" class="dzRC"<% if(basefield.payment != -1) { %> style="display:none" checked<% } %> />支付<input name="payvalue" type="text" class="dzInputPay br" value="<% if(basefield.payment != -1) { %><%= basefield.payment %><% } %>" />元
+                    </label>
+                </dd>
+            </dl>
+            <dl class="dzPayMessage">
+                <%== joinHtml %>
+            </dl>
+            <input type="hidden" id="actjoinformhash" name="formhash" value="">
+            <a href="javascript:;" id="submitJoinBtn" class="dzSignBtn c2 db f16 br">提交报名</a>
+            <a href="javascript:;" id="closeJBtn" class="dzSignBtn dzCancelBtn c3 db f16 br">取消</a>
+        </div>
+    </div>
+    </form>
+</script>
+
+<script id="cancelform" type="text/html">
+    <form method="post" action="" id="actcancelform">
+    <div class="dzSignDetail">
+        <div class="dzBaseInfo">
+            <dl class="dzPayMessage">
+                <%== cancelHtml %>
+            </dl>
+            <input type="hidden" id="actcancelformhash" name="formhash" value="">
+            <a href="javascript:;" id="cancelJoinBtn" class="dzSignBtn c2 db f16 br">取消报名</a>
+            <a href="javascript:;" id="closeCBtn" class="dzSignBtn dzCancelBtn c3 db f16 br">取消</a>
+        </div>
+    </div>
+    </form>
+</script>

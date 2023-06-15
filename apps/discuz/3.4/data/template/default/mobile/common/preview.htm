@@ -1,0 +1,19 @@
+<!--{template common/header}-->
+<div id="ct" class="wp cl ptw pbw">
+	<table style="margin:0 auto"><tr><td>
+	<div class="z" style="width: 500px; height: 650px; background: url({STATICURL}image/mobile/browser_big.jpg) no-repeat 0 0;">
+		<iframe id="ifm0" frameborder="0" width="425" height="530" style="margin: 115px 0 0 23px;" src="{if $_G['setting']['mobile']['allowmnew']}m/{else}misc.php?mod=mobile&view=true{/if}"></iframe>
+	</div>
+	<div class="z" style="margin-top: 60px; width: 430px;">
+		<div class="mtw bm bw0" style="background-color: #dfeaf4;">
+			<div class="bm_c">
+				<h1 class="xw1 xs2 mbn">{lang login_mobile}</h1>
+				<p class="mbw xg2">{lang login_mobile_join}</p>
+				<p class="hm mbw" style="font-size: 18px; color: #F60;">
+					<img src="data/cache/$file" />
+				</p>
+			</div>
+		</div>
+	</div></td></tr></table>
+</div>
+<!--{template common/footer}-->

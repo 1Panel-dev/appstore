@@ -1,0 +1,27 @@
+<div class="tl">
+	<div class="sttl mbn">
+		<h2><!--{if $keyword}-->{lang search_result_keyword}<!--{else}-->{lang search_result}<!--{/if}--></h2>
+	</div>
+	<!--{ad/search/y mtw}-->
+	<!--{if empty($articlelist)}-->
+		<p class="emp xg2 xs2">{lang search_nomatch}</p>
+	<!--{else}-->
+		<div class="slst mtw">
+			<ul>
+				<!--{loop $articlelist $article}-->
+				<li class="pbw">
+					<h3 class="xs3"><a href="{echo fetch_article_url($article);}" target="_blank">$article[title]</a></h3>
+					<p class="xg1">$article[commentnum] {lang a_comment} - $article[viewnum] {lang a_visit}</p>
+					<p>$article[summary]</p>
+					<p>
+						<span>$article[dateline]</span>
+						 -
+						<span><a href="home.php?mod=space&uid=$article[uid]" target="_blank">$article[username]</a></span>
+					</p>
+				</li>
+				<!--{/loop}-->
+			</ul>
+		</div>
+	<!--{/if}-->
+	<!--{if !empty($multipage)}--><div class="pgs cl mbm">$multipage</div><!--{/if}-->
+</div>

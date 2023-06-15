@@ -1,0 +1,57 @@
+channel
+{
+	font-size: 12px;
+	background: white;
+	font-family: 宋体, 新宋体, verdana, arial, helvetica, sans-serif;
+	margin: 0px auto;
+	width: 100%;
+	padding:10px 10px 15px 10px;
+	text-align: center;
+}
+
+channel title
+{
+	display: block;
+	font-weight: bold;
+	font-size: 18px;
+	z-index: 1;
+	position: relative;
+	height: auto;
+}
+
+item
+{
+	padding:10px 10px 2px 10px;
+	display: block;
+	font-size: 14px;
+	margin: 20px 0px;
+	width: 90%;
+	line-height: 100%;
+	text-align: left;
+}
+
+
+
+image, image title, image height, image width, image url, category, ttl, generator, guid, language, docs, comments,pubDate
+{ 
+	display: none; 
+}
+
+rss, item title, item link, item description,  item pubDate, item author, item
+{
+	display: block;
+	font-weight: normal;
+	font-size: 14px;
+	margin: 5px;
+	background: #F0F8FB;
+}
+
+item title { font-weight: bold; font-size: 16px; display: block; height: auto; position: relative; z-index: 1}
+item link { margin-bottom: 0; }
+link { display: block; color: blue; text-decoration: underline; }
+info { display: block; margin: 3em 4em 3em 4em; color: Black; text-align: center; padding: 1.5em; font-family: mono; font-size: small; }
+
+managingEditor, webMaster, title, link, description, copyright, lastBuildDate, pubDate 
+{ 
+	display: block; font-size: 14px; line-height:150%; 
+}

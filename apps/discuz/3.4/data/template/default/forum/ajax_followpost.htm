@@ -1,0 +1,48 @@
+<!--{template common/header_ajax}-->
+<!--{if $_GET['action'] == 'getpostfeed'}-->
+
+	<!--{if !empty($_GET['type'])}-->
+		$post['message']
+	<!--{else}-->
+	<div class="z flw_avt">
+		<a href="home.php?mod=space&uid=$feed[uid]" class="z" c="1"><!--{avatar($feed[uid],'small')}--></a>
+		<span class="cnr"></span>
+	</div>
+	<div class="flw_article">
+		<div class="flw_author pbm">
+		<a href="home.php?mod=space&uid=$feed[uid]" c="1">$feed['username']</a>
+		<span class="xg1">&nbsp;<!--{eval echo dgmdate($feed['dateline'], 'u');}--></span>
+		</div>
+		<!--{if $feed['note']}-->
+		<div class="flw_quotenote xs2 pbw">
+			$feed['note']
+		</div>
+		<div class="flw_quote">
+		<!--{/if}-->
+		<!--{if $thread[fid] != $_G[setting][followforumid]}-->
+		<h2 class="wx pbm">
+			<a href="forum.php?mod=viewthread&tid=$thread['tid']&extra=page%3D1">$thread['subject']</a>
+		</h2>
+		<!--{/if}-->
+
+		<div class="pbm c cl" id="original_content_$feed[feedid]">$feed['content']</div>
+		<div class="xg1 cl">
+			<span class="y">
+			<!--{if $feed[uid] == $_G[uid] || $_G['adminid'] == 1}-->
+			&nbsp; <a href="home.php?mod=spacecp&ac=follow&feedid=$feed[feedid]&op=delete" id="c_delete_$feed['feedid']" onclick="showWindow(this.id, this.href, 'get', 0);" class="flw_delete">{lang delete}</a>
+			<!--{/if}-->
+			<a href="javascript:;" id="relay_$feed[feedid]" onclick="quickrelay($feed['feedid'], $thread['tid']);">{lang follow_relay}($feed['relay'])</a>&nbsp; 
+			<a href="javascript:;" onclick="quickreply($thread['fid'], $thread['tid'], $feed['feedid'])">{lang follow_quickreply}($thread['replies'])</a>
+			</span>
+			<!--{if $feed['note']}--><a href="home.php?mod=space&uid=$feed[uid]">$thread['author']</a> {lang poston} <!--{date($thread['dateline'])}-->&nbsp;<!--{/if}--><!--{if $thread[fid] != $_G[setting][followforumid] && $_G['cache']['forums'][$thread['fid']]['name']}-->#<a href="forum.php?mod=forumdisplay&fid=$thread['fid']">$_G['cache']['forums'][$thread['fid']]['name']</a><!--{/if}-->
+		</div>
+		<!--{if $feed['note']}--></div><!--{/if}-->
+	</div>
+	<div id="replybox_$feed['feedid']" class="flw_replybox cl" style="display: none;"></div>
+	<div id="relaybox_$feed['feedid']" class="flw_replybox cl" style="display: none;"></div>
+
+	<!--{/if}-->
+<!--{else}-->
+	<a href="home.php?mod=space&uid=$post['authorid']" class="d xg1">$post['author']:</a>$post['message']
+<!--{/if}-->
+<!--{template common/footer_ajax}-->

@@ -1,0 +1,38 @@
+<!--{template common/header}-->
+
+<!--{if in_array($op, array('cancelflicker', 'cancelcolor'))}-->
+	<h3 class="flb">
+		<em id="return_$_GET[handlekey]">{lang cancel_magics_effects}</em>
+		<!--{if $_G[inajax]}--><span><a href="javascript:;" onclick="hideWindow('$_GET[handlekey]');" class="flbc" title="{lang close}">{lang close}</a></span><!--{/if}-->
+	</h3>
+	<form method="post" autocomplete="off" id="cancelform" name="cancelform" action="home.php?mod=spacecp&ac=magic&op=$op&id=$_GET[id]&idtype=$_GET[idtype]" {if $_G[inajax]}onsubmit="ajaxpost(this.id, 'return_$_GET[handlekey]');"{/if}>
+		<input type="hidden" name="formhash" value="{FORMHASH}" />
+		<input type="hidden" name="referer" value="{echo dreferer()}">
+		<input type="hidden" name="cancelsubmit" value="1" />
+		<!--{if $_G[inajax]}--><input type="hidden" name="handlekey" value="$_GET[handlekey]" /><!--{/if}-->
+		<div class="c altw">
+			<p>{lang cancel_effects_message}</p>
+		</div>
+		<p class="o pns">
+			<button type="submit" class="pn pnc"><strong>{lang determine}</strong></button>
+		</p>
+	</form>
+<!--{elseif $op == 'retiregift'}-->
+	<h3 class="flb">
+		<em id="return_$_GET[handlekey]">{lang return_redbag}</em>
+		<!--{if $_G[inajax]}--><span><a href="javascript:;" onclick="hideWindow('$_GET[handlekey]');" class="flbc" title="{lang close}">{lang close}</a></span><!--{/if}-->
+	</h3>
+	<form method="post" autocomplete="off" id="cancelform" name="cancelform" action="home.php?mod=spacecp&ac=magic&op=$op" {if $_G[inajax]}onsubmit="ajaxpost(this.id, 'return_$_GET[handlekey]');"{/if}>
+		<input type="hidden" name="formhash" value="{FORMHASH}" />
+		<input type="hidden" name="referer" value="{echo dreferer()}">
+		<input type="hidden" name="cancelsubmit" value="1" />
+		<!--{if $_G[inajax]}--><input type="hidden" name="handlekey" value="$_GET[handlekey]" /><!--{/if}-->
+		<div class="c altw">
+			<p>{lang spacecp_magic_message1}({lang spacecp_magic_message2} {$leftcredit} {$credittype})</p>
+		</div>
+		<p class="o pns">
+			<button type="submit" class="pn pnc"><strong>{lang determine}</strong></button>
+		</p>
+	</form>
+<!--{/if}-->
+<!--{template common/footer}-->

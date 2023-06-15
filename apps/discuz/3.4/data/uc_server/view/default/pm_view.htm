@@ -1,0 +1,91 @@
+{template header_client}
+{template pm_nav}
+
+<div class="ucinfo">
+	<h1>
+	</h1>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="newpm">
+	<!--{loop $pms $pm}-->
+		<tbody>
+			<tr class="{if $pm[authorid] != $user[uid]}ontouser {/if}">
+				<td class="sel"><!--{if $pm[isnew]}--><em class="new"></em><!--{/if}--></td>
+				<td class="ava">
+				<!--{if $pm[authorid] != $user[uid]}--><img src="avatar.php?uid=$pm[authorid]&size=small" /><!--{/if}-->
+				</td>
+				<td class="title">
+				<p>$pm[dateline]</p>
+				$pm[message]</td>
+				<td class="ava">
+					<!--{if $pm[authorid] == $user[uid]}-->
+						<img src="avatar.php?uid=$pm[authorid]&size=small" />
+					<!--{else}-->
+						<a href="index.php?m=pm_client&a=send&pmid=$pm[pmid]&touid=$touid&plid=$plid&daterange=$daterange&do=forward&folder=send&$extra">{lang pm_transmit}</a>
+					<!--{/if}-->
+				</td>
+			</tr>
+		</tbody>
+	<!--{/loop}-->
+	</table>
+	<div style="float:right">
+		<!--{if $touid}-->
+			<button onclick="location.href='index.php?m=pm_client&a=ls&filter=privatepm'">{lang return}</button>
+		<!--{elseif $plid}-->
+			<button onclick="location.href='index.php?m=pm_client&a=ls&filter=chatpm'">{lang return}</button>
+		<!--{/if}-->
+	</div>
+	{lang pm_history}:
+	<!--{if $touid}-->
+	<a href="index.php?m=pm_client&a=view&touid=$touid&filter=$filter&$extra"{if $daterange == 1} class="bold"{/if}>{lang pm_daterange_1}</a>&nbsp;
+	<a href="index.php?m=pm_client&a=view&touid=$touid&daterange=2&filter=$filter&$extra"{if $daterange == 2} class="bold"{/if}>{lang pm_daterange_2}</a>&nbsp;
+	<a href="index.php?m=pm_client&a=view&touid=$touid&daterange=3&filter=$filter&$extra"{if $daterange == 3} class="bold"{/if}>{lang pm_daterange_3}</a>&nbsp;
+	<a href="index.php?m=pm_client&a=view&touid=$touid&daterange=4&filter=$filter&$extra"{if $daterange == 4} class="bold"{/if}>{lang pm_daterange_4}</a>&nbsp;
+	<a href="index.php?m=pm_client&a=view&touid=$touid&daterange=5&filter=$filter&$extra"{if $daterange == 5} class="bold"{/if}>{lang pm_daterange_5}</a>&nbsp;
+	<!--{elseif $plid}-->
+	<a href="index.php?m=pm_client&a=view&plid=$plid&filter=$filter&$extra"{if $daterange == 1} class="bold"{/if}>{lang pm_daterange_1}</a>&nbsp;
+	<a href="index.php?m=pm_client&a=view&plid=$plid&daterange=2&filter=$filter&$extra"{if $daterange == 2} class="bold"{/if}>{lang pm_daterange_2}</a>&nbsp;
+	<a href="index.php?m=pm_client&a=view&plid=$plid&daterange=3&filter=$filter&$extra"{if $daterange == 3} class="bold"{/if}>{lang pm_daterange_3}</a>&nbsp;
+	<a href="index.php?m=pm_client&a=view&plid=$plid&daterange=4&filter=$filter&$extra"{if $daterange == 4} class="bold"{/if}>{lang pm_daterange_4}</a>&nbsp;
+	<a href="index.php?m=pm_client&a=view&plid=$plid&daterange=5&filter=$filter&$extra"{if $daterange == 5} class="bold"{/if}>{lang pm_daterange_5}</a>&nbsp;
+	<a href="index.php?m=pm_client&a=member&plid=$plid&filter=$filter&$extra">{lang pm_member}</a>&nbsp;
+	<!--{/if}-->
+	<!--{if $touid}-->
+		<button onclick="if(confirm('{lang pm_confirm_delete}')) location.href='index.php?m=pm_client&a=delete&deleteuid[]=$touid&filter=$filter&$extra'">{lang pm_delete_all}</button>
+	<!--{elseif $plid}-->
+		<!--{if $founderuid == $user['uid']}-->
+		<button onclick="if(confirm('{lang pm_confirm_deletechatpm}')) location.href='index.php?m=pm_client&a=delete&deleteplid[]=$plid&filter=$filter&$extra'">{lang pm_delete_chatpm}</button>
+		<!--{else}-->
+		<button onclick="if(confirm('{lang pm_confirm_quitchatpm}')) location.href='index.php?m=pm_client&a=delete&quitchapm[]=$plid&filter=$filter&$extra'">{lang pm_quit_chatpm}</button>
+		<!--{/if}-->
+	<!--{/if}-->
+	<br style="clear: both" />
+
+	<!--{if $replypmid}-->
+		<form method="post" id="postpmform" name="postpmform" action="index.php?m=pm_client&a=send&replypmid=$replypmid&$extra">
+		<!--{if $sendpmseccode}--><input type="hidden" name="seccodehidden" value="$seccodeinit" /><!--{/if}-->
+		<input type="hidden" name="formhash" value="{FORMHASH}">
+		<input type="hidden" name="touid" value="$touid">
+		<input type="hidden" name="daterange" value="$daterange">
+		{template pm_editorbar}
+		<textarea class="listarea" id="pm_textarea" rows="6" cols="10" name="message" onKeyDown="ctlent(event)"></textarea>
+		<!--{if $sendpmseccode}-->
+			<p><label><input type="text" name="seccode" value="" size="5" /> <img width="70" height="21" src="admin.php?m=seccode&seccodeauth=$seccodeinit&{eval echo rand();}" /></label></p>
+		<!--{/if}-->
+		<p class="pages_btns"><button name="pmsubmit" class="pmsubmit" type="submit">{lang pm_sendpm}</button></p>
+		</form>
+	<!--{/if}-->
+
+</div>
+
+<!--{if $scroll == 'bottom'}-->
+	<script type="text/javascript">
+	window.onload = function() {
+		if(!document.postpmform) {
+			return;
+		}
+		window.scroll(0, document.body.scrollHeight);
+		document.postpmform.message.focus();
+	}
+	</script>
+<!--{/if}-->
+
+{template footer_client}

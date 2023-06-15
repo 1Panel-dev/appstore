@@ -1,0 +1,50 @@
+{template m/header}
+<link rel="stylesheet" href="{$_G[siteurl]}{$_G[style][tpldir]}/m/css/login.css?$jsglobal[jsversion]">
+<div>
+<div>
+<div class="logo_dz">
+	<img id="siteLogo" width="78" height="78" alt="logo">
+    <h2 id="siteName"></h2>
+</div>
+<div class="qqpwd_set">
+<form id="loginBox" class="qqpwd_set">
+<input type="hidden" name="referer" id="referer" value="{echo dhtmlspecialchars($_GET['referer'])}">
+<p>
+<label class="qq_label">{lang m_login_user}</label>
+<input type="text" name="username" id="username" placeholder="{lang m_login_user_ph}" value="">
+</p>
+<p>
+<label class="pwd_label">{lang m_login_pw}</label>
+<input type="password" name="password" id="password" placeholder="{lang m_login_pw_ph}">
+</p>
+<p>
+<label class="qq_label">{lang m_login_a}</label>
+<input type="text" id="questionclick" placeholder="{lang m_login_q_ph}" value="">
+<input type="hidden" name="questionid" id="questionid" value="0">
+</p>
+<p id="qainput" style="display:none">
+<label class="qq_label">{lang m_login_a}</label>
+<input type="text" name="answer" id="answer" placeholder="{lang m_login_a_ph}">
+</p>
+<div class="log_bar"><input id="loginBtn" type="button" value="{lang m_login_submit}" class="lb_lq_btn"></div>
+<div class="qqLoginBox" style="display:none">
+<p>{lang m_login_orQQ}</p>
+<a href="javascript:;" class="qqLogin">{lang m_login_QQ}</a>
+</div>
+<div class="wxLoginBox" style="display:none">
+<p>{lang m_login_orWX}</p>
+<a href="javascript:;" class="wxLogin">{lang m_login_WX}</a>
+</div>
+</form>
+</div>
+</div>
+
+<script type="text/javascript">
+    window.onload = function (){
+    	TC.load("login.htm");
+	JC.file("secure.js");
+    	JC.file("login.js");
+        JC.run();
+    };
+</script>
+{template m/footer}

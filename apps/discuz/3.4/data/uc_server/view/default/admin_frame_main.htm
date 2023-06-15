@@ -1,0 +1,115 @@
+{template header}
+{if $iframe}
+<script type="text/javascript">
+	var uc_menu_data = new Array();
+	o = document.getElementById('header_menu_menu');
+	elems = o.getElementsByTagName('A');
+	for(i = 0; i<elems.length; i++) {
+		uc_menu_data.push(elems[i].innerHTML);
+		uc_menu_data.push(elems[i].href);
+	}
+	try {
+		parent.uc_left_menu(uc_menu_data);
+		parent.uc_modify_sid('{$sid}');
+	} catch(e) {}
+</script>
+{/if}
+<div class="container">
+	<h3>{lang home_stats}</h3>
+	<ul class="memlist fixwidth">
+		<li><em><!--{if $user['allowadminapp'] || $user['isfounder']}--><a href="admin.php?m=app&a=ls">{lang home_app_count}</a><!--{else}-->{lang home_app_count}<!--{/if}-->:</em>$apps</li>
+		<li><em><!--{if $user['allowadminuser'] || $user['isfounder']}--><a href="admin.php?m=user&a=ls">{lang home_member_count}</a><!--{else}-->{lang home_member_count}<!--{/if}-->:</em>$members</li>
+		<li><em><!--{if $user['allowadminpm'] || $user['isfounder']}--><a href="admin.php?m=pm&a=ls">{lang home_pm_count}</a><!--{else}-->{lang home_pm_count}<!--{/if}-->:</em>$pms</li>
+		<li><em>{lang home_friend_count}:</em>$friends</li>
+	</ul>
+	
+	<h3>{lang note_status}</h3>
+	<ul class="memlist fixwidth">
+		<li><em><!--{if $user['allowadminnote'] || $user['isfounder']}--><a href="admin.php?m=note&a=ls">{lang home_note_count}</a><!--{else}-->{lang home_note_count}<!--{/if}-->:</em>$notes</li>
+		<!--{if $errornotes}-->
+			<li><em><!--{if $user['allowadminnote'] || $user['isfounder']}--><a href="admin.php?m=note&a=ls">{lang note_fail_apps}</a><!--{else}-->{lang note_fail_apps}<!--{/if}-->:</em>		
+			<!--{loop $errornotes $appid $error}-->
+				$applist[$appid][name]&nbsp;
+			<!--{/loop}-->
+		<!--{/if}-->
+	</ul>
+
+	<h3>{lang home_envstatus}</h3>
+	<ul class="memlist fixwidth">
+		<!--{if $envstatus['status']}-->
+		<li class="green"><em>{lang envstatus_result}:</em>{lang envstatus_ok}</li>
+		<!--{else}-->
+		<li class="red"><em>{lang envstatus_result}:</em>
+			<!--{if $envstatus['now_ver']}-->
+				{lang envstatus_ver_too_low}
+			<!--{else}-->
+				{lang envstatus_not_found}
+			<!--{/if}-->
+		</li>
+		<!--{/if}-->
+	</ul>
+	<h3>{lang home_env}</h3>
+	<ul class="memlist fixwidth">
+		<li><em>{lang home_version}:</em>UCenter {UC_SERVER_VERSION} Release {UC_SERVER_RELEASE} <a href="https://discuz.dismall.com/forum-151-1.html" target="_blank">{lang view_new_version}</a> 
+		<li><em>{lang home_environment}:</em>$serverinfo</li>
+		<li><em>{lang home_server_software}:</em>$_SERVER[SERVER_SOFTWARE]</li>
+		<li><em>{lang home_database}:</em>$dbversion</li>
+		<li><em>{lang home_upload_perm}:</em>$fileupload</li>
+		<li><em>{lang home_database_size}:</em>$dbsize</li>		
+		<li><em>{lang home_server_ip}:</em>$_SERVER[SERVER_NAME] ($_SERVER[SERVER_ADDR]:$_SERVER[SERVER_PORT])</li>
+		<li><em>magic_quote_gpc:</em>$magic_quote_gpc</li>
+		<li><em>allow_url_fopen:</em>$allow_url_fopen</li>		
+	</ul>
+	<h3>{lang home_team}</h3>
+	<ul class="memlist fixwidth">
+		<li>
+			<em>{lang home_dev_copyright}:</em>
+			<em class="memcont">&#x817e;&#x8baf;&#x4e91;&#x8ba1;&#x7b97;&#xff08;&#x5317;&#x4eac;&#xff09;&#x6709;&#x9650;&#x8d23;&#x4efb;&#x516c;&#x53f8;</em>
+		</li>
+		<li>
+			<em>{lang home_dev_manager}:</em>
+			<em class="memcont"><a href="https://discuz.dismall.com/home.php?mod=space&uid=1" target="_blank">&#x6234;&#x5FD7;&#x5EB7; (Kevin 'Crossday' Day)</a></em>
+		</li>
+		<li>
+			<em>{lang home_dev_team}:</em>
+			<em class="memcont">
+				<a href="https://discuz.dismall.com/home.php?mod=space&uid=859" target="_blank">Hypo 'cnteacher' Wang</a>,
+				<a href="https://discuz.dismall.com/home.php?mod=space&uid=80629" target="_blank">Ning 'Monkey' Hou</a>,				
+				<a href="https://discuz.dismall.com/home.php?mod=space&uid=875919" target="_blank">Jie 'tom115701' Zhang</a>
+			</em>
+		</li>
+		<li>
+			<em>{lang home_safe_team}:</em>
+			<em class="memcont">
+				<a href="https://discuz.dismall.com/home.php?mod=space&uid=859" target="_blank">Hypo 'cnteacher' Wang</a>,
+				<a href="https://discuz.dismall.com/home.php?mod=space&uid=492114" target="_blank">Liang 'Metthew' Xu</a>,
+				<a href="https://discuz.dismall.com/home.php?mod=space&uid=285706" target="_blank">Wei (Sniffer) Yu</a>
+			</em>
+		</li>
+		<li>
+			<em>{lang home_supported_ui}:</em>
+			<em class="memcont">
+				<a href="https://discuz.dismall.com/home.php?mod=space&uid=294092" target="_blank">Fangming 'Lushnis' Li</a>,
+				<a href="https://discuz.dismall.com/home.php?mod=space&uid=717854" target="_blank">Ruitao 'Pony.M' Ma</a>
+			</em>
+		</li>
+		<li>
+			<em>{lang home_supported_thanks}:</em>
+			<em class="memcont">
+				<a href="https://discuz.dismall.com/home.php?mod=space&uid=122246" target="_blank">Heyond</a>
+			</em>
+		</li>
+		<li>
+			<em>{lang home_dev_project_site}:</em>
+			<em class="memcont"><a href="https://www.discuz.vip/" target="_blank">https://www.discuz.vip</a></em>
+		</li>
+		<li>
+			<em>{lang home_dev_community}:</em>
+			<em class="memcont"><a href="https://www.dismall.com/" target="_blank">https://www.dismall.com</a></em>
+		</li>
+	</ul>
+</div>
+
+$ucinfo
+
+{template footer}

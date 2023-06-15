@@ -1,0 +1,384 @@
+<!--{template common/header}-->
+<div id="pt" class="bm cl">
+	<div class="z">
+		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em>
+		<a href="forum.php?mod=collection{if $fromop}&op={$fromop}{/if}{if $fromtid}&tid={$fromtid}{/if}">{lang collection}</a> <em>&rsaquo;</em>
+		<!--{if !$op}-->
+		{$_G['collection']['name']}
+		<!--{elseif $op == 'related'}-->
+		<a href="forum.php?mod=collection&action=view&ctid={$ctid}&fromop={$fromop}&fromtid={$fromtid}">{$_G['collection']['name']}</a> <em>&rsaquo;</em>
+		{lang collection_cloud_link}
+		<!--{/if}-->
+	</div>
+</div>
+<script type="text/javascript" src="{$_G[setting][jspath]}home_friendselector.js?{VERHASH}"></script>
+<script type="text/javascript">
+	var fs;
+	var clearlist = 0;
+	var followstatus = <!--{if $collectionfollowdata['ctid']}-->1<!--{else}-->0<!--{/if}-->;
+	
+	function succeedhandle_addComment(url, msg, commentdata) {
+		$("btnCommentSubmit").disabled='';
+		showDialog(msg, 'right', '', 'location.href="' + url + '"', null, null, null, null, null, null, 3);
+	}
+	function errorhandle_addComment(msg, commentdata) {
+		$("btnCommentSubmit").disabled='';
+		showError(msg);
+	}
+	function succeedhandle_followcollection(url, msg, collectiondata) {
+		if(collectiondata['status'] == 1) { //关注成功
+			followstatus = 1;
+			$("followlink").innerHTML = '<i class="u">{lang collection_unfollow}</i>';
+			$("followlink").href = followcollectionurl();
+			$("rightcolfollownum").innerHTML = $("follownum_display").innerHTML = parseInt($("follownum_display").innerHTML) + 1;
+		} else if(collectiondata['status'] == 2) { //取消关注成功
+			followstatus = 0;
+			$("followlink").innerHTML = '<i>{lang collection_follow}</i>';
+			$("followlink").href = followcollectionurl();
+			$("rightcolfollownum").innerHTML = $("follownum_display").innerHTML = parseInt($("follownum_display").innerHTML) - 1;
+		}
+	}
+	function errorhandle_followcollection(msg, collectiondata) {
+		showError(msg);
+	}
+	function followcollectionurl() {
+		return 'forum.php?mod=collection&action=follow&op='+(followstatus ? 'unfo': 'follow')+'&ctid={$_G['collection']['ctid']}&formhash={FORMHASH}';
+	}
+</script>
+<div id="username_menu" style="display: none;">
+	<ul id="friends" class="pmfrndl"></ul>
+</div>
+<div class="p_pof" id="showSelectBox_menu" unselectable="on" style="display:none;">
+	<div class="pbm">
+		<select class="ps" onchange="clearlist=1;getUser(1, this.value)">
+			<option value="-1">{lang collection_inviteallfriend}</option>
+			<!--{loop $friendgrouplist $groupid $group}-->
+				<option value="$groupid">$group</option>
+			<!--{/loop}-->
+		</select>
+	</div>
+	<div id="selBox" class="ptn pbn">
+		<ul id="selectorBox" class="xl xl2 cl"></ul>
+	</div>
+	<div class="cl">
+		<button type="button" class="y pn" onclick="fs.showPMFriend('showSelectBox_menu','selectorBox', $('showSelectBox'));doane(event)"><span>{lang close}</span></button>
+	</div>
+</div>
+<div id="ct" class="ct2 wp cl">
+	<div class="mn">
+		<div class="bm bml pbn">
+			<div class="bm_h cl">
+				<h1 class="xs2 z">
+					<a href="forum.php?mod=collection&action=view&ctid={$_G['collection']['ctid']}">{$_G['collection']['name']}</a>
+				</h1>
+				<div class="clct_flw">
+					<strong class="xi1" id="follownum_display">{$_G['collection']['follownum']}</strong>
+					<!--{if $_G['group']['allowfollowcollection'] && $_G['collection']['uid'] != $_G['uid']}-->
+						<!--{if !$collectionfollowdata['ctid']}-->
+							<a href="javascript;" id="followlink" onclick="ajaxget(followcollectionurl());doane(event);"><i>{lang collection_follow}</i></a>
+						<!--{else}-->
+							<a href="javascript;" id="followlink" onclick="ajaxget(followcollectionurl());doane(event);"><i class="u">{lang collection_unfollow}</i></a>
+						<!--{/if}-->
+					<!--{else}-->
+						<i>{lang collection_follow}</i>
+					<!--{/if}-->
+				</div>
+			</div>
+			<div class="bm_c">
+				<div class="cl">
+					<div class="ptn y">
+						<!--{hook/collection_viewoptions}-->
+						<!--{if $permission}-->
+							<a href="forum.php?mod=collection&action=edit&op=invite&ctid=$ctid" id="k_invite" onclick="showWindow(this.id, this.href, 'get', 0);" class="xi2">{lang collection_invite_team}</a>
+							<span class="pipe">|</span>
+							<a href="forum.php?mod=collection&action=edit&op=edit&ctid={$_G['collection']['ctid']}&formhash={FORMHASH}" class="xi2">{lang edit}</a>
+							<span class="pipe">|</span>
+							<a href="forum.php?mod=collection&action=edit&op=remove&ctid={$_G['collection']['ctid']}&formhash={FORMHASH}" onclick="showDialog('{lang collection_delete_confirm}','confirm','','window.location=\''+this.href+'\';');return false;" class="xi2">{lang delete}</a>
+						<!--{/if}-->
+						<!--{if $_G['uid']!=$_G['collection']['uid']}-->
+							<!--{if $permission}-->
+								<span class="pipe">|</span>
+							<!--{/if}-->
+							<a href="forum.php?mod=collection&action=comment&op=recommend&ctid=$ctid" id="k_recommened" onclick="showWindow(this.id, this.href, 'get', 0);" class="xi2">{lang collection_recommend}</a>
+						<!--{/if}-->
+						<!--{if $isteamworkers}-->
+							<span id="exitpipe" class="pipe">|</span>
+							<span><a href="forum.php?mod=collection&action=edit&op=removeworker&ctid={$_G['collection']['ctid']}&uid={$_G['uid']}&formhash={FORMHASH}"  onclick="showDialog('{lang collection_exit_team_confirm}','confirm','','window.location=\''+this.href+'\';');return false;" class="xi2">{lang collection_exit_team}</a></span>
+						<!--{/if}-->
+					</div>
+					<div title="$avgrate" class="ptn pbn xg1 cl">
+						<!--{if $_G['collection']['ratenum'] > 0}-->
+							<span class="clct_ratestar"><span class="star star$star">&nbsp;</span></span>
+							 &nbsp;{lang collection_totalrates}
+						<!--{else}-->
+							{lang collection_norate}
+						<!--{/if}-->
+					</div>
+				</div>
+				<div class="mbn cl">
+					<!--{if $_G['collection']['arraykeyword']}-->
+						<p class="mbn">
+							{lang collection_keywords}
+							<!--{loop $_G['collection']['arraykeyword'] $unique_keyword}-->
+								<a href="search.php?mod={if $_G['setting']['search']['collection']['status']}collection{else}forum{/if}&srchtxt={echo rawurlencode($unique_keyword)}&formhash={FORMHASH}&searchsubmit=true&source=collectionsearch" target="_blank" class="xi2">$unique_keyword</a>&nbsp;
+							<!--{/loop}-->
+						</p>
+					<!--{/if}-->
+					<p>
+						{lang collection_creator}<a href="home.php?mod=space&uid={$_G['collection']['uid']}" class="xi2" c="1">{$_G['collection']['username']}</a>
+						<!--{if $collectionteamworker}-->
+							<span class="pipe">|</span>
+							{lang collection_teamworkers}
+							<!--{loop $collectionteamworker $collectionworker}-->
+								<span id="k_worker_uid_{$collectionworker['uid']}">
+								<a href="home.php?mod=space&uid={$collectionworker['uid']}" c="1" class="xi2">{$collectionworker['username']}</a>&nbsp;
+								<!--{if $permission}-->
+									<a href="forum.php?mod=collection&action=edit&op=removeworker&ctid={$_G['collection']['ctid']}&uid={$collectionworker['uid']}&formhash={FORMHASH}"  onclick="showDialog('{lang collection_delete_worker}','confirm','','ajaxget(\''+this.href+'\',\'k_worker_uid_{$collectionworker['uid']}\')');return false;" class="xi2">[{lang delete}]</a>&nbsp;
+								<!--{/if}-->
+								</span>
+							<!--{/loop}-->
+						<!--{/if}-->
+					</p>
+				</div>
+				<div>{$_G['collection']['desc']}</div>
+			</div>
+		</div>
+		<!--{hook/collection_view_top}-->
+		<!--{if !$op}-->
+			<div class="tl bm">
+				<!--{if $threadlist}-->
+					<!--{if $permission}-->
+						<form action="forum.php?mod=collection&action=edit&op=delthread" method="POST">
+					<!--{/if}-->
+					<div class="th">
+						<table cellspacing="0" cellpadding="0">
+							<tr>
+								<td class="icn">&nbsp;</td>
+								<!--{if $permission}--><td class="o"><label class="z" onclick="checkall(this.form, 'delthread')"><input class="pc" type="checkbox" name="chkall" title="{lang checkall}" /></label></td><!--{/if}-->
+								<td class="common">{lang collection_thread}</td>
+								<td class="by">{lang author}</td>
+								<td class="num">{lang replies}</td>
+								<td class="by">{lang lastpost}</td>
+							</tr>
+						</table>
+					</div>
+
+					<div class="bm_c">
+						<table cellspacing="0" cellpadding="0">
+						<!--{loop $collectiontids $thread}-->
+							<tr>
+								<td class="icn">
+									<!--{if $thread[folder] == 'lock'}-->
+										<img src="{IMGDIR}/folder_lock.gif" />
+									<!--{elseif $thread['special'] == 1}-->
+										<img src="{IMGDIR}/pollsmall.gif" alt="{lang thread_poll}" />
+									<!--{elseif $thread['special'] == 2}-->
+										<img src="{IMGDIR}/tradesmall.gif" alt="{lang thread_trade}" />
+									<!--{elseif $thread['special'] == 3}-->
+										<img src="{IMGDIR}/rewardsmall.gif" alt="{lang thread_reward}" />
+									<!--{elseif $thread['special'] == 4}-->
+										<img src="{IMGDIR}/activitysmall.gif" alt="{lang thread_activity}" />
+									<!--{elseif $thread['special'] == 5}-->
+										<img src="{IMGDIR}/debatesmall.gif" alt="{lang thread_debate}" />
+									<!--{elseif in_array($thread['displayorder'], array(1, 2, 3, 4))}-->
+										<img src="{IMGDIR}/pin_$thread[displayorder].gif" alt="$_G[setting][threadsticky][3-$thread[displayorder]]" />
+									<!--{else}-->
+										<img src="{IMGDIR}/folder_common.gif" />
+									<!--{/if}-->
+								</td>
+								<!--{if $permission}-->
+								<td class="o"><input type="checkbox" value="$thread[tid]" name="delthread[]" /></td>
+								<!--{/if}-->
+								<th{if $thread['reason']} title="{lang collection_recommended_reason}: $thread['reason']"{/if}>
+									<a href="forum.php?mod=viewthread&tid=$thread[tid]{if !$memberrate AND $_G['uid']}&ctid=$ctid{/if}" target="_blank" class="xst {if $thread[updatedthread]}xw1 xi2{/if}" title="$thread['htmlsubject']">$thread['cutsubject']</a>
+									<!--{if $thread['readperm']}--> - [{lang readperm} <span class="xw1">$thread[readperm]</span>]<!--{/if}-->
+									<!--{if $thread['price'] > 0}-->
+										<!--{if $thread['special'] == '3'}-->
+										- <span style="color: #C60">[{lang thread_reward} <span class="xw1">$thread[price]</span> {$_G[setting][extcredits][$_G['setting']['creditstransextra'][2]][unit]}{$_G[setting][extcredits][$_G['setting']['creditstransextra'][2]][title]}]</span>
+										<!--{else}-->
+										- [{lang price} <span class="xw1">$thread[price]</span> {$_G[setting][extcredits][$_G['setting']['creditstransextra'][1]][unit]}{$_G[setting][extcredits][$_G['setting']['creditstransextra'][1]][title]}]
+										<!--{/if}-->
+									<!--{elseif $thread['special'] == '3' && $thread['price'] < 0}-->
+										- [{lang reward_solved}]
+									<!--{/if}-->
+									<!--{if $thread['attachment'] == 2}-->
+										<img src="{STATICURL}image/filetype/image_s.gif" alt="attach_img" title="{lang attach_img}" align="absmiddle" />
+									<!--{elseif $thread['attachment'] == 1}-->
+										<img src="{STATICURL}image/filetype/common.gif" alt="attachment" title="{lang attachment}" align="absmiddle" />
+									<!--{/if}-->
+									<!--{if $thread['digest'] > 0 && $filter != 'digest'}-->
+										<img src="{IMGDIR}/digest_$thread[digest].gif" align="absmiddle" alt="digest" title="{lang thread_digest} $thread[digest]" />
+									<!--{/if}-->
+								</th>
+								<td class="by">
+									<cite>
+										<!--{if $thread['authorid'] && $thread['author']}-->
+											<a href="home.php?mod=space&uid=$thread[authorid]" c="1">$thread[author]</a>
+										<!--{else}-->
+											{lang anonymous}
+										<!--{/if}-->
+									</cite>
+									<em class="xi1">$thread[dateline]</em>
+								</td>
+								<td class="num">
+									<a href="forum.php?mod=viewthread&tid=$thread[tid]" class="xi2">$thread[replies]</a>
+									<em>$thread[views]</em>
+								</td>
+								<td class="by">
+									<cite><!--{if $thread['lastposter']}--><a href="{if $thread[digest] != -2}home.php?mod=space&username=$thread[lastposterenc]{else}forum.php?mod=viewthread&tid=$thread[tid]&page={echo max(1, $thread[pages]);}{/if}" c="1">$thread[lastposter]</a><!--{else}-->$_G[setting][anonymoustext]<!--{/if}--></cite>
+															<em><a href="{if $thread[digest] != -2}forum.php?mod=redirect&tid=$thread[tid]&goto=lastpost$highlight#lastpost{else}forum.php?mod=viewthread&tid=$thread[tid]&page={echo max(1, $thread[pages]);}{/if}">$thread[lastpost]</a></em>
+								</td>
+							</tr>
+							<!--{/loop}-->
+						</table>
+					</div>
+
+					<!--{if $permission}-->
+					<div class="bm_c cl">
+						<input type="hidden" value="{$ctid}" name="ctid" />
+					    <input type="hidden" name="formhash" id="formhash" value="{FORMHASH}" />
+
+						<button type="submit" class="pn pnc"><span>{lang delete}</span></button>
+					</div>
+					</form>
+					<!--{/if}-->
+				<!--{else}-->
+					<div class="emp hm">
+					<!--{if $search_status && $isteamworkers && $permission}-->
+					{lang collection_cloud_search}
+					<!--{else}-->
+					{lang no_content}
+					<!--{/if}-->
+					</div>
+				<!--{/if}-->
+				
+				<!--{hook/collection_threadlistbottom}-->
+			</div>
+			<!--{if $multipage}--><div class="pgs mtm cl">$multipage</div><br /><!--{/if}-->
+		<!--{elseif $op == 'related'}-->
+			<!--{hook/collection_relatedop}-->
+		<!--{/if}-->
+		
+		<!--{if $_G['collection']['commentnum'] > 0}-->
+		<div class="bm">
+			<div class="bm_h">
+				<span class="y"><a href="forum.php?mod=collection&action=view&op=comment&ctid=$ctid" class="xi2">{lang collection_allcomment}</a></span>
+				<h2>{lang collection_newcomment}</h2>
+			</div>
+			<div class="bm_c">
+			<!--{loop $commentlist $comment}-->
+				<div class="pbn">
+					<a href="home.php?mod=space&uid={$comment['uid']}" class="xi2 xw1" c="1">$comment[username]</a>
+					<span class="xg1">$comment[dateline]:</span>
+				</div>
+				<div class="pbm">
+					$comment[message]
+					<!--{if $comment[rateimg]}-->
+						<!--{if trim($comment[message])}--><br /><!--{/if}-->
+						<span class="clct_ratestar"><span class="star star$comment[rateimg]"></span></span><br />
+					<!--{/if}-->
+				</div>
+			<!--{/loop}-->
+			</div>
+		</div>
+		<!--{/if}-->
+		
+		<!--{if $_G['group']['allowcommentcollection']}-->
+		<div class="bm">
+			<form action="forum.php?mod=collection&action=comment&ctid={$_G['collection']['ctid']}" method="POST" onsubmit="$('btnCommentSubmit').disabled=true;ajaxpost(this.id, 'ajaxreturn');" id="form_addComment" name="form_addComment">
+			<div class="bm_h">
+				<h2>{lang collection_ratecollection}</h2>
+			</div>
+			<div class="bm_c {if $memberrate}bbda{/if}">
+				<!--{if !$memberrate}-->
+				<div class="cl">
+					<input type="hidden" name="ratescore" id="ratescore" />
+					<span class="clct_ratestar">
+						<span class="btn">
+							<a href="javascript:;" onmouseover="rateStarHover('clct_ratestar_star',1)" onmouseout="rateStarHover('clct_ratestar_star',0)" onclick="rateStarSet('clct_ratestar_star',1,'ratescore')">1</a>
+							<a href="javascript:;" onmouseover="rateStarHover('clct_ratestar_star',2)" onmouseout="rateStarHover('clct_ratestar_star',0)" onclick="rateStarSet('clct_ratestar_star',2,'ratescore')">2</a>
+							<a href="javascript:;" onmouseover="rateStarHover('clct_ratestar_star',3)" onmouseout="rateStarHover('clct_ratestar_star',0)" onclick="rateStarSet('clct_ratestar_star',3,'ratescore')">3</a>
+							<a href="javascript:;" onmouseover="rateStarHover('clct_ratestar_star',4)" onmouseout="rateStarHover('clct_ratestar_star',0)" onclick="rateStarSet('clct_ratestar_star',4,'ratescore')">4</a>
+							<a href="javascript:;" onmouseover="rateStarHover('clct_ratestar_star',5)" onmouseout="rateStarHover('clct_ratestar_star',0)" onclick="rateStarSet('clct_ratestar_star',5,'ratescore')">5</a>
+						</span>
+						<span id="clct_ratestar_star" class="star star$memberrate"></span>
+					</span>
+				</div>
+				<!--{/if}-->
+				<div class="pbn">
+					<textarea name="message" rows="4" class="pt" style="width: 94%"></textarea>
+				</div>
+				<div><button type="submit" class="pn pnc" id="btnCommentSubmit"><span>{lang collection_comment_submit}</span></button></div>
+			</div>
+			<!--{if $memberrate}-->
+				<div class="bm_c ptn pbn cl">
+					<span class="z">{lang collection_rated}&nbsp;</span>
+					<span class="clct_ratestar"><span class="star star$memberrate"></span></span>
+				</div>
+			<!--{/if}-->
+			<input type="hidden" name="inajax" value="1">
+			<input type="hidden" name="handlekey" value="k_addComment">
+			</form>
+		</div>
+		<!--{/if}-->
+		
+		<!--{hook/collection_view_bottom}-->
+	</div>
+	<div class="sd">
+		<div class="bm bml tns">
+			<table cellspacing="0" cellpadding="4">
+				<tr>
+					<th>
+						<p>{$_G['collection']['threadnum']}</p>{lang collection_threadnum}
+					</th>
+					<th>
+						<p>{$_G['collection']['commentnum']}</p>{lang collection_commentnum}
+					</th>
+					<td>
+						<p><span id="rightcolfollownum">{$_G['collection']['follownum']}</span></p>{lang collection_follow}
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<!--{if $followers}-->
+		<div class="bm">
+			<div class="bm_h">
+				<span class="y"><a href="forum.php?mod=collection&action=view&op=followers&ctid=$ctid" class="xi2">{lang collection_allfollowers}</a></span>
+				<h2>{lang collection_newfollowers}</h2>
+			</div>
+			<div class="bm_c">
+				<ul class="ml mls cl">
+					<!--{loop $followers $follower}-->
+						<li>
+							<a href="home.php?mod=space&uid=$follower[uid]" class="avt"><!--{avatar($follower[uid],small)}--></a>
+							<p><a href="home.php?mod=space&uid=$follower[uid]" c="1">$follower[username]</a></p>
+						</li>
+					<!--{/loop}-->
+				</ul>
+			</div>
+		</div>
+		<!--{/if}-->
+		
+		<!--{if $userCollections}-->
+		<div class="bm">
+			<div class="bm_h">
+				<h2>{lang collection_creators}</h2>
+			</div>
+			<div class="bm_c">
+			<!--{loop $userCollections $ucollection}-->
+				<div class="pbn">
+					<a href="forum.php?mod=collection&action=view&ctid={$ucollection['ctid']}" class="xi2 xw1">$ucollection[name]</a>
+				</div>
+				<div class="pbm">
+					{lang collection_threadnum} $ucollection[threadnum], {lang collection_follow} $ucollection[follownum], {lang collection_commentnum} $ucollection[commentnum]
+				</div>
+			<!--{/loop}-->
+			</div>
+		</div>
+		<!--{/if}-->
+		<!--{hook/collection_side_bottom}-->
+	</div>
+</div>
+<span id='ajaxreturn' style='display:none;'></span>
+<!--{template common/footer}-->

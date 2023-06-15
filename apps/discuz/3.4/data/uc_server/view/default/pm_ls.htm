@@ -1,0 +1,81 @@
+{template header_client}
+{template pm_nav}
+
+<div class="ucinfo">
+<form method="post" action="index.php?m=pm_client&a=delete&filter=$filter&$extra">
+<input type="hidden" name="formhash" value="{FORMHASH}" />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="pmlist">
+{eval $pmrange = 0;}
+<!--{if $pmlist}-->
+	<tr class="ctrlbar">
+		<td class="sel"><input type="checkbox" name="chkall" onclick="checkall(this.form, 'delete')" /></td>
+		<td class="ava"><button name="pmsend" type="submit">{lang delete}</button></td>
+		<td class="pef"></td>
+		<td class="">
+			<!--{if $multipage}-->$multipage<!--{/if}-->
+		</td>
+	</tr>
+	<!--{loop $pmlist $pm}-->
+		<tr<!--{if $pm[isnew] == 1}--> class="onset"<!--{/if}-->>
+			<td class="sel">
+			<!--{if $pm['pmtype'] == 1}-->
+				<input type="checkbox" name="deleteuid[]" value="$pm[touid]" />
+			<!--{elseif $pm['pmtype'] == 2 && $pm[authorid] == $user['uid']}-->
+				<input type="checkbox" name="deleteplid[]" value="$pm[plid]" />
+			<!--{elseif $pm['pmtype'] == 2 && $pm[authorid] != $user['uid']}-->
+				<input type="checkbox" name="deletequitplid[]" value="$pm[plid]" />
+			<!--{/if}-->
+			</td>
+				<td class="ava">
+				<!--{if $pm[lastauthorid]}--><img src="avatar.php?uid=$pm[lastauthorid]&size=small" /><!--{/if}-->
+				</td>
+				<td class="per">
+				<!--{if $pm['pmtype'] == 1}-->
+					<!--{if $pm['lastauthorid'] == $user['uid']}-->
+						{lang pm_author}$pm[tousername]
+					<!--{else}-->
+						{lang fromto}$pm[lastauthor]
+					<!--{/if}-->
+				<!--{elseif $pm['pmtype'] == 2}-->
+					<!--{if $pm['lastauthorid'] == $user['uid']}-->
+						{lang sendeveryone}
+					<!--{else}-->
+						{lang fromto}$pm[lastauthor]
+					<!--{/if}-->
+				<!--{/if}-->
+				<p>$pm[lastdateline]</p>
+				</td>
+				<td class="title">
+				<h2>
+				<!--{if $pm['pmtype'] == 1}-->
+					<a href="index.php?m=pm_client&a=view&touid=$pm[touid]&daterange=$pm[daterange]&filter=$pm[filter]&scroll=bottom&$extra" id="pm_view_$pm[pmid]">{lang privatewithwho}</a>
+				<!--{else}-->
+					<a href="index.php?m=pm_client&a=view&plid=$pm[plid]&daterange=$pm[daterange]&filter=$pm[filter]&scroll=bottom&$extra" id="pm_view_$pm[pmid]">$pm[subject]</a>({lang chatpmmembernum}$pm[members])
+				<!--{/if}-->
+				</h2>
+				<p <!--{if $pm[isnew]}-->class="boldtext" <!--{/if}-->>$pm[message]</p>
+			</td>
+		</tr>
+	<!--{/loop}-->
+	</tbody>
+		<tfoot>
+			<tr class="ctrlbar">
+				<td class="sel"><input type="checkbox" onclick="this.form.chkall.click()" /></td>
+				<td class="ava"><button onclick="this.form.pmsend.click()" type="button">{lang delete}</button></td>
+				<td class="pef"></td>
+				<td class="">
+					<!--{if $multipage}-->$multipage<!--{/if}-->
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+<!--{else}-->
+	<tr>
+		<td colspan="4">{lang pm_none_record}</td>
+	</tr>
+	</table>
+<!--{/if}-->
+</form>
+</div>
+
+{template footer_client}

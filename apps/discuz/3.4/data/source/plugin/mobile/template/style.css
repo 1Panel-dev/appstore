@@ -1,0 +1,20 @@
+input,button,select,textarea{outline:none}
+textarea{resize:none}
+.tips{height:67px;line-height:67px;font-weight:700;background:url(image/tipsbg.jpg) no-repeat 0 0;text-indent:86px;font-size:14px;}
+	.tips .close{background:url(image/close.jpg) no-repeat 0 0;width:30px;height:30px;display:block;overflow:hidden;text-indent:-9999px;margin-top:20px;margin-right:20px;}
+.content{position:relative;background:url(image/wrapbg.jpg) no-repeat 0 0;padding-top:389px;}
+	.platform{position:absolute;top:145px;left:557px;}
+		.platform li{padding-bottom:18px;}
+	.inner{padding-left:70px;padding-right:11px;}
+		.intro{margin-top:60px;width:420px;}
+			.intro h2{margin-bottom:16px;}
+			.intro dl{}
+			.intro dt{font-size:14px;padding-bottom:9px;font-weight:700;}
+			.intro dd{padding-bottom:12px;}
+		.code{width:387px;height:297px;background:url(image/codebg.jpg) no-repeat 0 0;font-size:14px;}
+			.code dl{}
+			.code dt{font-weight:700;color:#000;text-indent:23px;}
+			.code dt.shoot{height:40px;line-height:40px;text-indent:65px;margin-top:16px;margin-bottom:8px;}
+				.code_img{height:160px;}
+				.code_img img{margin-left:132px;margin-top:4px;}
+			.code dd.url{text-indent:23px;padding-top:10px;}

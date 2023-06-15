@@ -1,0 +1,37 @@
+<!--{template common/header}-->
+
+<!--{if $_GET['share']}-->
+	<div class="f_c">
+		<h3 class="flb">
+			<em id="return_$_GET['handlekey']">{lang wechat:wechat_sharetitle}</em>
+			<span>
+				<a href="javascript:;" class="flbc" onclick="hideWindow('$_GET['handlekey']')" title="{lang close}">{lang close}</a>
+			</span>
+		</h3>
+		<div class="c" align='center'>
+			<img src="plugin.php?id=wechat:qrcode&tid={$tid}&access=yes" width="200" height="200" />
+			<br />
+			{lang wechat:wsq_threadqr}
+		</div>
+	</div>
+<!--{elseif $_GET['showactivity']}-->
+	<div class="f_c">
+		<h3 class="flb">
+			<em id="return_$_GET['handlekey']">{lang wechat:wechat_sharetitle}</em>
+			<span>
+				<a href="javascript:;" class="flbc" onclick="hideWindow('$_GET['handlekey']')" title="{lang close}">{lang close}</a>
+			</span>
+		</h3>
+		<div class="c" align='center'>
+			<img src="plugin.php?id=wechat:qrcode&tid={$tid}&pid=$_GET[pid]&access=yes" width="200" height="200" />
+			<br />
+			{lang wechat:show_scanqr}
+		</div>
+	</div>
+<!--{else}-->
+	<div class="f_c xg1" align="center">
+		<img src="plugin.php?id=wechat:qrcode&tid={$tid}&access=yes" width="98" /><br />{lang wechat:wsq_indexqr}
+	</div>
+<!--{/if}-->
+
+<!--{template common/footer}-->

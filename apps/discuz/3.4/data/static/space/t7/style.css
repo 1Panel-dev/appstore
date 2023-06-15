@@ -1,0 +1,23 @@
+/*
+[name]牛仔[/name]
+Powered by Discuz! X
+*/
+
+body { background: #373D45 url(images/bg.png) 0 0; }
+
+#hd { background: transparent url(images/header.png) no-repeat 0 100%; color: #FFF; }
+	#hd h2 a { color: #FFF; }
+
+#nv li a, #nv li a:visited { color: #333; }
+	#nv li a:hover { background-image: none !important; }
+
+#ct, .n, .w { background: #E3DFCE url(images/ct.png) 0 -41px !important; }
+
+.block .title { padding-left: 35px; background: transparent url(images/title.png) no-repeat 5px 50%; }
+
+#ft { background: url(images/header.png) repeat-x 0 0; }
+	#ft, #ft a { color: #FFF; }
+
+.bm, .bm_h { border: none; background: none;  }
+.tl .th { background: none; }
+.bm_h { padding-left: 35px; background: transparent url(images/title.png) no-repeat 5px 50%; }

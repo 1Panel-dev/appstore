@@ -1,0 +1,409 @@
+<!--{template common/header}-->
+
+<!--{if $op == 'delete'}-->
+
+<h3 class="flb">
+	<em>{lang article_delete}</em>
+	<!--{if $_G[inajax]}--><span><a href="javascript:;" onclick="hideWindow('$_GET[handlekey]');" class="flbc" title="{lang close}">{lang close}</a></span><!--{/if}-->
+</h3>
+
+<form method="post" autocomplete="off" action="portal.php?mod=portalcp&ac=article&op=delete&aid=$_GET[aid]">
+	<div class="c">
+		<!--{if $_G['group']['allowpostarticlemod'] && $article['status'] == 1}-->
+		{lang article_delete_sure}
+		<input type="hidden" name="optype" value="0" class="pc" />
+		<!--{else}-->
+		<label class="lb"><input type="radio" name="optype" value="0" class="pc" />{lang article_delete_direct}</label>
+		<label class="lb"><input type="radio" name="optype" value="1" class="pc" checked="checked" />{lang article_delete_recyclebin}</label>
+		<!--{/if}-->
+	</div>
+	<p class="o pns">
+		<button type="submit" name="btnsubmit" value="true" class="pn pnc"><strong>{lang confirms}</strong></button>
+	</p>
+	<input type="hidden" name="aid" value="$_GET[aid]" />
+	<input type="hidden" name="referer" value="{echo dreferer()}" />
+	<input type="hidden" name="deletesubmit" value="true" />
+	<input type="hidden" name="formhash" value="{FORMHASH}" />
+</form>
+<!--{elseif $op == 'verify'}-->
+<h3 class="flb">
+	<em id="return_$_GET[handlekey]">{lang moderate_article}</em>
+	<!--{if $_G[inajax]}--><span><a href="javascript:;" onclick="hideWindow('$_GET[handlekey]');" class="flbc" title="{lang close}">{lang close}</a></span><!--{/if}-->
+</h3>
+
+<form method="post" autocomplete="off" id="aritcle_verify_$aid" action="portal.php?mod=portalcp&ac=article&op=verify&aid=$aid">
+	<div class="c">
+		<label for="status_0" class="lb"><input type="radio" class="pr" name="status" value="0" id="status_0"{if $article[status]=='1'} checked="checked"{/if} />{lang passed}</label>
+		<label for="status_x" class="lb"><input type="radio" class="pr" name="status" value="-1" id="status_x" />{lang delete}</label>
+		<label for="status_2" class="lb"><input type="radio" class="pr" name="status" value="2" id="status_2"{if $article[status]=='2'} checked="checked"{/if} />{lang ignore}</label>
+	</div>
+	<p class="o pns">
+		<button type="submit" name="btnsubmit" value="true" class="pn pnc"><strong>{lang confirms}</strong></button>
+	</p>
+	<input type="hidden" name="aid" value="$aid" />
+	<input type="hidden" name="referer" value="{echo dreferer()}" />
+	<input type="hidden" name="handlekey" value="$_GET['handlekey']" />
+	<input type="hidden" name="verifysubmit" value="true" />
+	<input type="hidden" name="formhash" value="{FORMHASH}" />
+</form>
+<!--{elseif $op == 'related'}-->
+
+	<!--{if $ra}-->
+	<li id="raid_li_$ra[aid]"><input type="hidden" name="raids[]" value="$ra[aid]" size="5">[ $ra[aid] ] <a href="{echo fetch_article_url($ra);}" target="_blank">$ra[title]</a> <a href="javascript:;" onclick="raid_delete($ra[aid]);">{lang delete}</a></li>
+	<!--{/if}-->
+
+<!--{elseif $op == 'pushplus'}-->
+<h3 class="flb">
+	<em>{lang article_pushplus}</em>
+	<!--{if $_G[inajax]}--><span><a href="javascript:;" onclick="hideWindow('$_GET[handlekey]');" class="flbc" title="{lang close}">{lang close}</a></span><!--{/if}-->
+</h3>
+<form method="post" target="_blank" action="portal.php?mod=portalcp&ac=article&tid=$tid&aid=$aid">
+	<div class="c">
+		<b>$pushcount</b> {lang portalcp_article_message1}<a href="$article_url" target="_blank" class="xi2">({lang view_article})</a>
+		<!--{if $pushedcount}--><br />{lang portalcp_article_message2}<!--{/if}-->
+		<div id="pushplus_list">
+		<!--{loop $pids $pid}-->
+		<input type="hidden" name="pushpluspids[]" value="$pid" />
+		<!--{/loop}-->
+		</div>
+	</div>
+	<p class="o pns">
+		<input type="hidden" name="formhash" value="{FORMHASH}" />
+		<input type="hidden" name="pushplussubmit" value="1" />
+
+		<input type="hidden" name="toedit" value="1" />
+		<button type="submit" class="pn pnc vm"><span>{lang submit}</span></button>
+	</p>
+</form>
+<!--{elseif $op == 'add_success'}-->
+<div class="nfl">
+	<div class="f_c altw">
+		<div class="alert_right">
+			<p>{lang article_send_succeed}</p>
+			<p class="alert_btnleft">
+				<a href="{$article_add_url}&op=edit&aid=$aid">{lang article_edit}</a>
+				<span class="pipe">|</span>
+				<a href="$article_add_url">{lang article_send_continue}</a>
+				<span class="pipe">|</span>
+				<a href="portal.php?mod=view&aid=$aid" target="_blank">{lang view_article}</a>
+				<!--{if $htmlstatus}-->
+					<span class="pipe">|</span>
+					<span id='makehtml_' mktitle="{lang article}"></span>
+				<!--{/if}-->
+			</p>
+		</div>
+	</div>
+</div>
+<script src="{STATICURL}js/makehtml.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--{if !empty($_G['cookie']['clearUserdata']) && $_G['cookie']['clearUserdata'] == 'home'}-->
+	saveUserdata('home', '')
+<!--{/if}-->
+make_html('portal.php?mod=view&aid={$aid}', $('makehtml_'));
+</script>
+<!--{else}-->
+
+<div id="pt" class="bm cl">
+	<div class="z">
+		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em>
+		<a href="$_G[setting][navs][1][filename]">$_G[setting][navs][1][navname]</a> <em>&rsaquo;</em>
+		<!--{if $catid }-->
+		<a href="$portalcategory[$catid]['caturl']">$portalcategory[$catid]['catname']</a> <em>&rsaquo;</em>
+		<!--{/if}-->
+		<!--{if !empty($aid)}-->
+		<a href="portal.php?mod=portalcp&ac=article&aid=$article[aid]">{lang article_edit}</a>
+		<!--{else}-->
+		<a href="portal.php?mod=portalcp&ac=article&catid=$catid">{lang article_publish}</a>
+		<!--{/if}-->
+	</div>
+</div>
+
+<div id="ct" class="wp cl">
+	<div class="mn">
+		<div class="bm bw0">
+			<h1 class="mbm bbs mt"><!--{if !empty($aid)}-->{lang article_edit}<!--{else}-->{lang article_publish}<!--{/if}--></h1>
+			<script type="text/javascript" src="{$_G[setting][jspath]}calendar.js?{VERHASH}"></script>
+			<form method="post" autocomplete="off" id="articleform" action="portal.php?mod=portalcp&ac=article{if $_GET[modarticlekey]}&modarticlekey=$_GET[modarticlekey]{/if}" enctype="multipart/form-data">
+				<!--{hook/portalcp_top}-->
+				<div class="dopt cl">
+					<span class="z mtn" style="width: 80px;">{lang article_title}:&nbsp;</span>
+					<input type="text" name="title" id="title" class="px" value="$article[title]" size="80" />
+					<input type="button" id="color_style" class="pn colorwd" title="{lang select_color}" fwin="eleStyle" onclick="change_title_color(this.id);" style="background-color:$stylecheck[0]" />
+					<input type="hidden" id="highlight_style_0" name="highlight_style[0]" value="$stylecheck[0]" />
+					<input type="hidden" id="highlight_style_1" name="highlight_style[1]" value="$stylecheck[1]" />
+					<input type="hidden" id="highlight_style_2" name="highlight_style[2]" value="$stylecheck[2]" />
+					<input type="hidden" id="highlight_style_3" name="highlight_style[3]" value="$stylecheck[3]" />
+					<a href="javascript:;" id="highlight_op_1" onclick="switchhl(this, 1)" class="dopt_b{if $stylecheck[1]} cnt{/if}" style="text-decoration:none;font-weight:700" title="{lang e_bold}">B</a>
+					<a href="javascript:;" id="highlight_op_2" onclick="switchhl(this, 2)" class="dopt_i{if $stylecheck[2]} cnt{/if}" style="text-decoration:none;font-style:italic" title="{lang e_italic}">I</a>
+					<a href="javascript:;" id="highlight_op_3" onclick="switchhl(this, 3)" class="dopt_l{if $stylecheck[3]} cnt{/if}" style="text-decoration:underline" title="{lang e_underline}">U</a>
+				</div>
+				<div id="htmlname_" class="dopt mtn cl"{if !$htmlstatus} style="display: none"{/if}>
+					<span class="z mtn" style="width: 80px;">HTML{lang filename}:</span>
+					<input type="text" name="htmlname" id="htmlname" class="px" value="$article[htmlname]" size="80" onblur="check_htmlname_exists(this)"/>.{$_G['setting']['makehtml']['extendname']}
+					<strong id="checkhtmlnamemsg"></strong>
+					<input type="hidden" name="oldhtmlname" id="oldhtmlname" value="$article[htmlname]" />
+				</div>
+				<div id="pagetitle_" class="dopt mtn cl"{if $article[contents] < 2} style="display: none"{/if}>
+					<span class="z mtn" style="width: 80px;">{lang page_title}:&nbsp;</span>
+					<input type="text" name="pagetitle" id="pagetitle" class="px" value="$article_content[title]" size="80" />
+				</div>
+
+				<div class="exfm pns cl">
+					<div class="sinf sppoll z">
+						<dl>
+							<!--{if $_G['cache']['portalcategory'] && $categoryselect}-->
+								<dt>{lang article_category}</dt>
+								<dd><div class="ftid">$categoryselect</div><script type="text/javascript">simulateSelect('catid', 158);</script></dd>
+							<!--{/if}-->
+
+							<dt>{lang article_source}</dt>
+							<dd>
+								<input type="text" id="from" name="from" class="px p_fre" value="$article[from]" {if $from_cookie}size="10"{else}size="30"{/if} />
+								<!--{if $from_cookie}-->
+								<select name="from_cookie" id="from_cookie" class="ps" onchange="$('from').value=this.value;" style="width:96px;">
+									<option value="" selected>{lang choose_please}</option>
+									<!--{loop $from_cookie $var}-->
+									<option value="$var">$var</option>
+									<!--{/loop}-->
+								</select>
+								<!--{/if}-->
+							</dd>
+							<dt>{lang article_source_url}</dt>
+							<dd><input type="text" name="fromurl" class="px p_fre" value="$article[fromurl]" size="30" /></dd>
+							<dt>{lang article_dateline}</dt>
+							<dd><input type="text" name="dateline" class="px p_fre" value="$article[dateline]" size="30" onclick="showcalendar(event, this, true)" /></dd>
+
+						</dl>
+					</div>
+					<div class="sadd z">
+						<dl>
+							<!--{if empty($article['aid'])}-->
+								<dt>{lang article_auto_grab}</dt>
+								<dd>
+									<span class="ftid">
+										<select name="from_idtype" id="from_idtype" class="ps" change="$('ele_getauthorall').style.display=($('from_idtype').value=='tid' ? '' : 'none');">
+											<option value="tid"$idtypes[tid]>{lang thread} tid</option>
+											<option value="blogid"$idtypes[blogid]>{lang blog} id</option>
+										</select>
+
+									</span>
+									<script type="text/javascript">simulateSelect('from_idtype', 81);</script>
+									<input type="text" name="from_id" id="from_id" value="$_GET[from_id]" size="8" class="px p_fre vm" />&nbsp;
+									<!--{if $_GET['from_idtype'] == 'tid'}-->
+										<span id="ele_getauthorall">
+											<label for="getauthorall"><input type="checkbox" name="getauthorall" id="getauthorall" value="1" class="pc" {if $_GET['getauthorall']}checked="checked"{/if}/>{lang article_getauthorall}</label>
+										</span>
+									<!--{/if}-->
+									<button type="button" name="from_button" class="pn vm" onclick="return from_get();"><em>{lang grab}</em></button>
+									<input type="hidden" name="id" value="$_GET[from_id]" />
+									<input type="hidden" name="idtype" value="$_GET[from_idtype]" />
+								</dd>
+							<!--{/if}-->
+							<dt>{lang article_url}</dt>
+							<dd><input type="text" class="px p_fre" name="url" value="$article[url]" size="30" /></dd>
+							<dt>{lang article_author}</dt>
+							<dd><input type="text" name="author" class="px p_fre" value="$article[author]" size="30" /></dd>
+							<!--{if $category[$catid][allowcomment]}-->
+								<dt>{lang article_comment_setup}</dt>
+								<dd><label for="ck_allowcomment"><input type="checkbox" name="forbidcomment" id="ck_allowcomment" class="pc" value="1"{if isset($article['allowcomment']) && empty($article['allowcomment'])}checked="checked"{/if} />{lang article_forbidcomment_description}</label></dd>
+							<!--{/if}-->
+						</dl>
+						<div><input type="hidden" id="conver" name="conver" value="" /></div>
+					</div>
+					<!--{hook/portalcp_extend}-->
+				</div>
+
+				<div class="pbw">
+					<script type="text/javascript" language="javascript" src="{STATICURL}image/editor/editor_function.js?{VERHASH}"></script>
+					<!--{subtemplate home/editor_image_menu}-->
+					<textarea class="userData" name="content" id="uchome-ttHtmlEditor" style="height: 100%; width: 100%; display: none; border: 0px">$article_content[content]</textarea>
+					<div style="border:1px solid #C5C5C5;height:400px;"><iframe src="home.php?mod=editor&charset={CHARSET}&allowhtml=1&isportal=1" name="uchome-ifrHtmlEditor" id="uchome-ifrHtmlEditor" scrolling="no" border="0" frameborder="0" style="width:100%;height:100%;position:relative;"></iframe></div>
+				</div>
+
+				<!--{hook/portalcp_middle}-->
+
+				<div class="bm bml">
+					<div class="bm_h cl">
+						<h2>{lang article_description}</h2>
+					</div>
+					<div class="bm_c"><textarea name="summary" cols="80" class="pt" style="width: 98.7%; height: 51px;">$article[summary]</textarea></div>
+				</div>
+
+				<div class="bm bml">
+					<div class="bm_h cl">
+						<h2>{lang article_tag}</h2>
+					</div>
+					<div class="bm_c">
+						<!--{loop $article_tags $key $tag}-->
+						<input type="checkbox" name="tag[$key]" id="article_tag_$key" class="pc"{if $article_tags[$key]} checked="checked"{/if} />
+						<label for="article_tag_$key" class="lb">$tag_names[$key]</label>
+						<!--{/loop}-->
+					</div>
+				</div>
+
+				<div class="exfm">
+					<h2>{lang article_related} <a id="related_article" href="portal.php?mod=portalcp&ac=related&aid=$aid" class="xi2" style="text-decoration: underline;" onclick="showWindow(this.id, this.href+'&catid='+$('catid').value, 'get', 0);return false;">{lang select}</a></h2>
+					<ul id="raid_div" class="xl">
+						<!--{if $article[related]}-->
+							<!--{loop $article[related] $raid $rtitle}-->
+								<li id="raid_li_$raid"><input type="hidden" name="raids[]" value="$raid" size="5"><a href="portal.php?mod=view&aid=$raid" target="_blank">$rtitle</a> ({lang article_id}: $raid) <a href="javascript:;" onclick="raid_delete($raid);" class="xg1">{lang delete}</a></li>
+							<!--{/loop}-->
+						<!--{/if}-->
+					</ul>
+				</div>
+
+				<!--{hook/portalcp_bottom}-->
+
+				<!--{if $secqaacheck || $seccodecheck}-->
+					<!--{block sectpl}--><sec> <span id="sec<hash>" onclick="showMenu(this.id)"><sec></span><div id="sec<hash>_menu" class="p_pop p_opt" style="display:none"><sec></div><!--{/block}-->
+					<div class="exfm pns"><!--{subtemplate common/seccheck}--></div>
+				<!--{/if}-->
+
+				<div class="ptm pbm">
+					<button type="button" id="issuance" class="pn pnc" name="articlebutton" onclick="validate(this);"><strong>{lang submit}</strong></button>
+					<label id="innernavele"{if $article[contents] < 2} style="display: none"{/if} for="ck_showinnernav"><input type="checkbox" name="showinnernav" id="ck_showinnernav" class="pc" value="1"{if !empty($article['showinnernav'])}checked="checked"{/if} />{lang article_show_inner_navigation}</label>
+				</div>
+
+				<input type="hidden" id="aid" name="aid" value="$article[aid]" />
+				<input type="hidden" name="cid" value="$article_content[cid]" />
+				<input type="hidden" id="attach_ids" name="attach_ids" value="0" />
+				<input type="hidden" name="articlesubmit" value="true" />
+				<input type="hidden" name="formhash" value="{FORMHASH}" />
+			</form>
+		</div>
+	</div>
+</div>
+<iframe id="uploadframe" name="uploadframe" width="0" height="0" marginwidth="0" frameborder="0" src="about:blank"></iframe>
+<script type="text/javascript">
+function from_get() {
+	var el = $('catid');
+	var catid = el ? el.value : 0;
+	window.location.href='portal.php?mod=portalcp&ac=article&from_idtype='+$('from_idtype').value+'&catid='+catid+'&from_id='+$('from_id').value+'&getauthorall='+($('getauthorall').checked ? '1' : '');
+	return true;
+}
+function validate(obj) {
+	var title = $('title');
+	if(title) {
+		var slen = strlen(title.value);
+		if (slen < 1 || slen > 80) {
+			alert("{lang article_validate_title}");
+			title.focus();
+			return false;
+		}
+	}
+	if(!check_catid()) {
+		return false;
+	}
+	edit_save();
+	window.onbeforeunload = null;
+	obj.form.submit();
+	return false;
+}
+function check_catid(){
+	var catObj = $("catid");
+	if(catObj) {
+		if (catObj.value < 1) {
+			alert("{lang article_validate_category}");
+			catObj.focus();
+			return false;
+		}
+	}
+	return true;
+}
+function raid_add() {
+	var raid = $('raid').value;
+	if($('raid_li_'+raid)) {
+		alert('{lang article_validate_has_added}');
+		return false;
+	}
+	var url = 'portal.php?mod=portalcp&ac=article&op=related&inajax=1&aid={$article[aid]}&raid='+raid;
+	var x = new Ajax();
+	x.get(url, function(s){
+		s = trim(s);
+		if(s) {
+			$('raid_div').innerHTML += s;
+		} else {
+			alert('{lang article_validate_noexist}');
+			return false;
+		}
+	});
+}
+function raid_delete(aid) {
+	var node = $('raid_li_'+aid);
+	var p;
+	if(p = node.parentNode) {
+		p.removeChild(node);
+	}
+}
+function switchhl(obj, v) {
+	if(parseInt($('highlight_style_' + v).value)) {
+		$('highlight_style_' + v).value = 0;
+		obj.className = obj.className.replace(/ cnt/, '');
+	} else {
+		$('highlight_style_' + v).value = 1;
+		obj.className += ' cnt';
+	}
+}
+function change_title_color(hlid) {
+	var showid = hlid;
+	if(!$(showid + '_menu')) {
+		var str = '';
+		var coloroptions = {'0' : '#000', '1' : '#EE1B2E', '2' : '#EE5023', '3' : '#996600', '4' : '#3C9D40', '5' : '#2897C5', '6' : '#2B65B7', '7' : '#8F2A90', '8' : '#EC1282'};
+		var menu = document.createElement('div');
+		menu.id = showid + '_menu';
+		menu.className = 'cmen';
+		menu.style.display = 'none';
+		for(var i in coloroptions) {
+			str += '<a href="javascript:;" onclick="$(\'highlight_style_0\').value=\'' + coloroptions[i] + '\';$(\'' + showid + '\').style.backgroundColor=\'' + coloroptions[i] + '\';hideMenu(\'' + menu.id + '\')" style="background:' + coloroptions[i] + ';color:' + coloroptions[i] + ';">' + coloroptions[i] + '</a>';
+		}
+		menu.innerHTML = str;
+		$('append_parent').appendChild(menu);
+	}
+	showMenu({'ctrlid':hlid + '_ctrl','evt':'click','showid':showid});
+}
+if($('title')) {
+	$('title').focus();
+}
+function setConver(attach) {
+	$('conver').value = attach;
+}
+
+function deleteAttach(attachid, url) {
+	ajaxget(url);
+	$('attach_list_' + attachid).style.display = 'none';
+	if($('setconver' + attachid).checked) {
+		$('conver').value = '';
+	}
+}
+<!--{if !empty($article['conver'])}-->
+setConver('$article[conver]');
+<!--{/if}-->
+function check_htmlname_exists(obj) {
+	name = obj.value;
+	var msg = $('checkhtmlnamemsg');
+	if(name && $('oldhtmlname').value != name) {
+		var catid = $('catid').value;
+		var aid = $('aid').value;
+		var x = new Ajax();
+		x.getJSON('portal.php?mod=portalcp&ac=article&op=checkhtmlname&htmlname='+name+'&catid='+catid+'&aid='+aid, function(s){
+			if(s['message'] == 'html_existed') {
+				obj.focus();
+				msg.style.color = 'red';
+				msg.style.paddingLeft = '10px';
+				msg.innerHTML = '{lang article_html_existed}';
+				$('issuance').disabled = 'disabled';
+			} else {
+				msg.innerHTML = '';
+				$('issuance').disabled = '';
+			}
+		});
+	} else {
+		msg.innerHTML = '';
+		$('issuance').disabled = '';
+	}
+}
+</script>
+
+<!--{/if}-->
+
+<!--{template common/footer}-->

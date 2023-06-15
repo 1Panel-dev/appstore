@@ -1,0 +1,50 @@
+<!--{template common/header}-->
+<!--{if !$_G[inajax]}-->
+<div id="pt" class="bm cl">
+	<div class="z"><a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em> <a href="home.php">$_G[setting][navs][4][navname]</a></div>
+</div>
+
+<div id="ct" class="ct2_a wp cl">
+	<div class="mn">
+		<div class="bm bw0" style="margin: 70px 0 0 150px;">
+			<h1 class="mt">{lang password_authentication}</h1>
+<!--{else}-->
+			<h3 class="flb">
+				<em id="return_$_GET[handlekey]">{lang password_authentication}</em>
+				<span><a href="javascript:;" onclick="hideWindow('$_GET[handlekey]');" class="flbc" title="{lang close}">{lang close}</a></span>
+			</h3>
+<!--{/if}-->
+			<form method="post" autocomplete="off"  id="invalueform" name="invalueform" action="home.php?mod=misc&ac=inputpwd" {if $_G[inajax]}onsubmit="ajaxpost(this.id, 'return_$_GET[handlekey]');"{/if}>
+				<!--{if $_G[inajax]}--><input type="hidden" name="handlekey" value="$_GET[handlekey]" /><!--{/if}-->
+				<input type="hidden" name="refer" value="$_SERVER[REQUEST_URI]" />
+				<input type="hidden" name="blogid" value="$invalue[blogid]" />
+				<input type="hidden" name="albumid" value="$invalue[albumid]" />
+				<input type="hidden" name="pwdsubmit" value="true" />
+				<input type="hidden" name="formhash" value="{FORMHASH}" />
+				<div class="c mbn">
+					{lang enter_password} <br />
+					<input type="password" name="viewpwd" value="" class="px mtn" />
+				</div>
+				<p class="o pns">
+					<button type="submit" name="submit" value="true" class="pn pnc"><strong>{lang submit}</strong></button>
+				</p>
+			</form>
+			<!--{if $_G[inajax]}-->
+			<script type="text/javascript">
+				function succeedhandle_$_GET[handlekey](url, msg, values) {
+					if(values['succeed'] == 1) {
+						window.location.href = url;
+					}
+				}
+			</script>
+			<!--{/if}-->
+<!--{if !$_G[inajax]}-->
+		</div>
+	</div>
+	<div class="appl">
+		<!--{subtemplate common/userabout}-->
+	</div>
+</div>
+<!--{/if}-->
+
+<!--{template common/footer}-->

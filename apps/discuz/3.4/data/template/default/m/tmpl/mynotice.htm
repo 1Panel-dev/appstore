@@ -1,0 +1,18 @@
+<script id="headerTpl" type="text/html">
+<div class="header" style="height:auto;">
+    <h3 style="padding-right:0;text-align:center;"><%= title %></h3>
+</div>
+</script>
+
+<script id="noticeBox" type="text/html">
+<%
+for(i = 0; i < Variables.list.length; i ++){
+%>
+<div class="topicBox">
+    <div class="infoCon">
+        <i class="infoPer db"><img src="<%= ucenterurl %>/avatar.php?uid=<%= Variables.list[i].authorid %>&size=small" onerror="javascript:this.src=DATA_DIR+'/images/personImg.jpg'" class="bImg" width="38" height="38" alt="头像"></i>
+        <p class="infoT"><%== stripCode(Variables.list[i].note) %></p>
+    </div>
+</div>
+<% } %>
+</script>

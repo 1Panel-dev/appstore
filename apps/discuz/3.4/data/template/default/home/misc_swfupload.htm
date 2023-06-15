@@ -1,0 +1,141 @@
+<!--{if !empty($uploadResponse)}-->
+<uploadResponse>
+	<message><!--{if $status=="success"}-->{lang done}<!--{else}-->$uploadfiles<!--{/if}--></message>
+	<status>$status</status>
+	<proid>$proid</proid>
+	<albumid>$albumid</albumid>
+	<picid>$picid</picid>
+	<!--{if $fileurl}--><filepath>$fileurl</filepath><!--{/if}-->
+</uploadResponse>
+<!--{else}-->
+<parameter>
+	<!--{if $iscamera}-->
+		<images>
+			<!--{loop $dirarr $key $val}-->
+			<categories name="$val[0]" directory="$val[1]">
+				<!--{loop $val[2] $ikey $value}-->
+					<img name="$value"/>
+				<!--{/loop}-->
+			</categories>
+			<!--{/loop}-->
+		</images>
+	<!--{elseif $isdoodle}-->
+		<background>
+			<!--{loop $filearr $key $filename}-->
+			<bg url="{STATICURL}image/doodle/big/{$filename}" thumb="{STATICURL}image/doodle/thumb/{$filename}"/>
+			<!--{/loop}-->
+		</background>
+	<!--{elseif $isupload}-->
+		<allowsExtend>
+			<extend depict="All Image File(*.jpg,*.jpeg,*.gif,*.png)">*.jpg,*.gif,*.png,*.jpeg</extend>
+		</allowsExtend>
+	<!--{/if}-->
+	<language>
+			<create>{lang create}</create>
+			<notCreate>{lang cancel}</notCreate>
+			<albumName>{lang album_name}</albumName>
+			<createTitle>{lang create_new_album}</createTitle>
+			<categoryDesc>{lang album_type}</categoryDesc>
+			<categoryPrompt>{lang select_album_type}</categoryPrompt>
+		<!--{if !$isdoodle}-->
+			<okbtn>{lang continue}</okbtn>
+			<cancelbtn>{lang show}</cancelbtn>
+			<!--{if $isupload}-->
+				<fileName>{lang filename}</fileName>
+				<depict>{lang depict}</depict>
+				<size>{lang file_size}</size>
+				<stat>{lang upload_stat}</stat>
+				<aimAlbum>{lang aim_album}</aimAlbum>
+				<browser>{lang browser}</browser>
+				<delete>{lang delete}</delete>
+				<upload>{lang upload}</upload>
+				<okTitle>{lang upload_ok}</okTitle>
+				<okMsg>{lang upload_ok_message}</okMsg>
+				<uploadTitle>{lang uploading}</uploadTitle>
+				<uploadMsg1>{lang tatal_of}</uploadMsg1>
+				<uploadMsg2>{lang uploading_message}</uploadMsg2>
+				<uploadMsg3>{lang a_file}</uploadMsg3>
+				<bigFile>{lang file_too_big}</bigFile>
+				<uploaderror>{lang upload_error}</uploaderror>
+			<!--{elseif $iscamera}-->
+				<desultory>{lang desultory}</desultory>
+				<series>{lang series}</series>
+				<save>{lang save}</save>
+				<pageup>{lang pageup}</pageup>
+				<pagedown>{lang pagedown}</pagedown>
+				<clearbg>{lang clear_bg}</clearbg>
+				<reload>{lang reload}</reload>
+				<cancel>{lang cancel}</cancel>
+				<siteerror>{lang site_error_message}</siteerror>
+				<ver1>{lang ver_message_1}</ver1>
+				<ver2>{lang ver_message_2}</ver2>
+				<refuse>{lang refuse_camera_message}</refuse>
+				<countdown>{lang count_backwards}</countdown>
+				<second>{lang second}</second>
+				<nocam>{lang no_camera_message}</nocam>
+				<autoShooting>{lang auto_shooting}</autoShooting>
+				<explain>{lang set_parameter}:</explain>
+				<okTitle>{lang upload_ok}</okTitle>
+				<okMsg>{lang camera_pic_upload_ok}</okMsg>
+				<saveTitle>{lang uploading}</saveTitle>
+				<saveToNote>{lang save_to}</saveToNote>
+				<saveMsg1>{lang tatal_of}</saveMsg1>
+				<saveMsg2>{lang save_pic_message_1}</saveMsg2>
+				<saveMsg3>{lang save_pic_message_2}</saveMsg3>
+			<!--{/if}-->
+		<!--{else}-->
+			<reload>{lang redraw}</reload>
+			<save>{lang save}</save>
+			<notDraw>{lang no_draw_message}</notDraw>
+		<!--{/if}-->
+	</language>
+	<config>
+		<userid>$_G[uid]</userid>
+		<hash>$hash</hash>
+		<maxupload>$max</maxupload>
+		<uploadurl>$uploadurl</uploadurl>
+		<feedurl>$feedurl</feedurl>
+		<albumurl>$albumurl</albumurl>
+		<categoryStat>$categorystat</categoryStat>
+		<categoryRequired>$categoryrequired</categoryRequired>
+		<!--{if $iscamera}-->
+			<countdown>3</countdown>
+			<countBy>2000</countBy>
+		<!--{/if}-->
+	</config>
+	<!--{if $isdoodle}-->
+	<filters>
+		<filter id="0">{lang filter_disable}</filter>
+		<filter id="1">{lang filter_shadow}</filter>
+		<filter id="2">{lang filter_fuzzy}</filter>
+		<filter id="3">{lang filter_light}</filter>
+		<filter id="4">{lang filter_watercolor}</filter>
+		<filter id="5">{lang filter_splash}</filter>
+		<filter id="6">{lang filter_gyrosigma}</filter>
+	</filters>
+	<!--{/if}-->
+	<albums>
+		<album id="-1">{lang select_album_please}</album>
+		<!--{loop $albums $key $value}-->
+			<album id="$value[albumid]">$value['albumname']</album>
+		<!--{/loop}-->
+		<album id="add">+{lang create_new_album}</album>
+	</albums>
+	<!--{if $_G['setting']['albumcategorystat'] && $categorys}-->
+	<categorys>
+		<category catid="0">{lang select_type}</category>
+		<!--{loop $categorys $key $value}-->
+			<!--{if $value[level] == 0}-->
+			<category catid="$key">$value[catname]</category>
+			<!--{loop $value['children'] $catid}-->
+				<category catid="$categorys[$catid][catid]">--$categorys[$catid][catname]</category>
+				<!--{loop $categorys[$catid]['children'] $catid2}-->
+				<category catid="$categorys[$catid2][catid]">----$categorys[$catid2][catname]</category>
+				<!--{/loop}-->
+			<!--{/loop}-->
+			<!--{/if}-->
+		<!--{/loop}-->
+	</categorys>
+	<!--{/if}-->
+</parameter>
+<!--{/if}-->

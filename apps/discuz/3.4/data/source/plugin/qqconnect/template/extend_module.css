@@ -1,0 +1,25 @@
+/** forum::viewthread,group::viewthread **/
+#share_picture_list { float: left; margin: 10px auto; padding: 0; }
+	#share_picture_list div.share_picture_box { float: left; text-align: center; width: 120px; }
+	#share_picture_list div.share_picture_box a { padding: 2px; border: #ddd 2px solid; display: block; width: 100px; height: 100px;}
+	#share_picture_list div.share_picture_box a:hover { padding: 2px; border: #74CBEC 2px solid; display: block; width: 100px; height: 100px;}
+
+	#share_picture_list div.select a { border-color: #74CBEC; }
+	#share_picture_list div.share_picture_box a img { width: 100px; height: 100px; }
+	#share_picture_list div div.badge { position: absolute; z-index: 1; margin: -2px 0 0 -2px; width: 112px; height: 112px; display: block; background: transparent url({IMGDIR}/transparent.gif) no-repeat 0 0; cursor: pointer; }
+	#share_picture_list div.select div.badge { background: transparent url({IMGDIR}/share_img.png) no-repeat 0 0; }
+#share_picture_title { overflow: hidden; padding: 0 15px; width: 100%; clear: both; }
+	#cancel_share_picture_title { padding: 5px 0; }
+/** end **/
+
+/** forum,group,home **/
+	.syn_qq, .syn_tqq, .syn_qq_check, .syn_tqq_check { display: inline-block; margin-top: 3px; width: 19px; height: 19px; background: transparent url({IMGDIR}/connect_post_syn.png) no-repeat 0 0; line-height: 64px; overflow: hidden; vertical-align: top; cursor: pointer; }
+		.ie6 .syn_qq, .ie6 .syn_tqq, .ie6 .syn_qq_check, .ie6 .syn_tqq_check { display: inline; }
+		.syn_qq_check { background-position: -22px 0; }
+		.syn_tqq { background-position: 0 -22px; margin-left: 5px; }
+		.syn_tqq_check { background-position: -22px -22px; margin-left: 5px; }
+/** end **/
+
+/** member **/
+	.qqregtb { margin-top: 0; padding-top: 5px; background-color: {SPECIALBG}; }
+/** end **/

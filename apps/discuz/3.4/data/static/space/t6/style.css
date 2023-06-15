@@ -1,0 +1,20 @@
+/*
+[name]绿墙[/name]
+Powered by Discuz! X
+*/
+
+body { background: #D5B48A url(images/bg.png) repeat-x 0 25px; }
+
+#hd { background: none; color: #FFF; }
+#hd h2 { padding-top: 33px; }
+
+#nv { bottom: auto; left: auto; top: 45px; right: 0; }
+	#nv li { padding: 0 2px; background: transparent; opacity: 1; filter: alpha(opacity=100); }
+		#nv li a, #nv li a:visited { padding: 0px 4px; color: #333; }
+		#nv li a:hover { background-image: none !important; }
+
+#ct, .n, .w { background: #FFF url(images/ct-top.png) no-repeat 0 0 !important; }
+
+#ft { background: url(images/footer.png) no-repeat 50% 100%; }
+.tl .th { background: none; }
+.bm, .bm_h { border: none; }

@@ -1,0 +1,32 @@
+<!--{template common/header}-->
+
+<div id="pt" class="bm cl">
+	<div class="z">
+		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em>
+		<a href="home.php?mod=task">{lang task}</a>
+	</div>
+</div>
+
+<div id="ct" class="ct2_a wp cl">
+	<div class="mn">
+		<div class="bm bw0">
+		<!--{if empty($do)}-->
+			<!--{subtemplate home/space_task_list}-->
+		<!--{elseif $do == 'view'}-->
+			<!--{subtemplate home/space_task_detail}-->
+		<!--{/if}-->
+		</div>
+	</div>
+	<div class="appl">
+		<div class="tbn">
+			<h2 class="mt bbda">{lang task}</h2>
+			<ul>
+				<li$actives[new]><a href="home.php?mod=task&item=new">{lang task_new}</a></li>
+				<li$actives[doing]><a href="home.php?mod=task&item=doing">{lang task_doing}</a></li>
+				<li$actives[done]><a href="home.php?mod=task&item=done">{lang task_done}</a></li>
+				<li$actives[failed]><a href="home.php?mod=task&item=failed">{lang task_failed}</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!--{template common/footer}-->

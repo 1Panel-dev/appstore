@@ -1,0 +1,145 @@
+<div class="bm bw0 mdcp">
+	<h1 class="mt">{lang mod_option_subject}</h1>
+	<ul class="tb cl">
+		<li><a href="{$cpscript}?mod=modcp&action=thread&op=thread{$forcefid}" hidefocus="true">{lang mod_option_subject_forum}</a></li>
+		<li><a href="{$cpscript}?mod=modcp&action=thread&op=post{$forcefid}" hidefocus="true">{lang mod_option_subject_delete}</a></li>
+		<li><a href="{$cpscript}?mod=modcp&action=recyclebin{$forcefid}" hidefocus="true">{lang mod_option_subject_recyclebin}</a></li>
+		<li class="a"><a href="{$cpscript}?mod=modcp&action=recyclebinpost{$forcefid}" hidefocus="true">{lang mod_option_subject_recyclebinpost}</a></li>
+	</ul>
+	<script type="text/javascript" src="{$_G[setting][jspath]}calendar.js?{VERHASH}"></script>
+	<div class="datalist">
+		<form method="post" autocomplete="off" action="{$cpscript}?mod=modcp&action=$_GET[action]&op=search">
+			<input type="hidden" name="formhash" value="{FORMHASH}">
+			<div class="exfm">
+				<table cellspacing="0" cellpadding="0">
+					<tr>
+						<th width="15%">{lang mod_option_selectforum}:</th>
+						<td width="35%">
+							<span class="ftid">
+								<select name="fid" id="fid" class="ps" width="168">
+									<option value="">{lang modcp_select_forum}</option>
+									<!--{loop $modforums[list] $id $name}-->
+										<!--{if $modforums['recyclebins'][$id]}-->
+											<option value="$id" {if $id == $_G[fid]}selected{/if}>$name</option>
+										<!--{/if}-->
+									<!--{/loop}-->
+								</select>
+							</span>
+						</td>
+						<th>{lang modcp_posts_keyword}:</th>
+						<td><input type="text" name="keywords" class="px" size="20" value="$result[keywords]" style="width: 180px"/></td>
+					</tr>
+					<tr>
+						<th>{lang modcp_posts_author}:</th>
+						<td><input type="text" name="users" class="px" size="20" value="$result[users]" style="width: 180px"/></td>
+						<th>{lang modcp_dateline_range}:</th>
+						<td><input type="text" name="starttime" class="px" size="10" value="$result[starttime]" onclick="showcalendar(event, this);" /> {lang modcp_posts_to} <input type="text" name="endtime" class="px" size="10" value="$result[endtime]" onclick="showcalendar(event, this);" /></td>
+					</tr>
+					<!--{if $posttableselect}-->
+					<tr>
+						<th width="10%">{lang table_branch}</th>
+						<td>
+							<span class="ftid">
+							$posttableselect
+							</span>
+						</td>
+					</tr>
+					<!--{/if}-->
+					<tr>
+						<td>&nbsp;</td>
+						<td colspan="3">
+							<button type="submit" name="searchsubmit" id="searchsubmit" class="pn" value="true"><strong>{lang submit}</strong></button>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</form>
+	</div>
+
+	<!--{if $_G[fid]}-->
+		<h2 class="mtm mbm">{lang modcp_forum}: <a href="forum.php?mod=forumdisplay&fid=$_G[fid]" target="_blank" class="xi2">$_G['forum'][name]</a></h2>
+		<!--{if $postlist}-->
+		<div id="threadlist" class="tl">
+			<form method="post" autocomplete="off" name="moderate" id="moderate" action="$cpscript?mod=modcp&fid=$_G[fid]&action=$_GET[action]">
+				<input type="hidden" name="formhash" value="{FORMHASH}" />
+				<input type="hidden" name="op" value="" />
+				<input type="hidden" name="oldop" value="$op" />
+				<input type="hidden" name="dosubmit" value="submit" />
+				<input type="hidden" name="posttableid" value="$posttableid" />
+				<table cellspacing="0" cellpadding="0">
+					<tr class="th">
+						<td class="o">&nbsp;</td>
+						<td>&nbsp;</td>
+						<td class="by">{lang author}</td>
+						<!--{if $_G['forum']['ismoderator'] && $_G['group']['allowviewip']}-->
+							<td class="num">IP</td>
+						<!--{/if}-->
+						<td class="by">{lang ishtmlon}</td>
+						<td class="by">{lang dateline}</td>
+					</tr>
+					<!--{loop $postlist $post}-->
+						<tbody id="$post[pid]">
+							<tr>
+								<td class="o"><input class="pc" type="checkbox" name="moderate[]" value="$post[pid]" /></td>
+								<td><a href="forum.php?mod=redirect&goto=findpost&pid=$post[pid]&ptid=$post[tid]&modthreadkey=$post[modthreadkey]" target="_blank">$post[message]</a>
+								<!--{if $post['attachment'] == 2}-->
+										<img src="{STATICURL}image/filetype/image_s.gif" alt="{lang attach_img}" align="absmiddle" />
+								<!--{elseif $post['attachment'] == 1}-->
+										<img src="{STATICURL}image/filetype/common.gif" alt="{lang attachment}" align="absmiddle" />
+								<!--{/if}-->
+								</td>
+								<td class="by">
+									<!--{if $post['authorid'] && $post['author']}-->
+										<a href="home.php?mod=space&uid=$post[authorid]" target="_blank">$post[author]</a>
+									<!--{else}-->
+										<a href="home.php?mod=space&uid=$post[authorid]" target="_blank">{lang anonymous}</a>
+									<!--{/if}-->
+								</td>
+								<!--{if $_G['forum']['ismoderator'] && $_G['group']['allowviewip']}-->
+									<td class="num">$post[useip]{if $post[port]}:$post[port]{/if}</td>
+								<!--{/if}-->
+								<td class="by">
+									<!--{if $post[htmlon]}-->{lang yes}<!--{else}-->{lang no}<!--{/if}-->
+								</td>
+								<td class="by">
+									$post[dateline]
+								</td>
+							</tr>
+						</tbody>
+					<!--{/loop}-->
+					<tbody>
+						<tr class="bw0_all">
+							<td><input class="pc" type="checkbox" onclick="checkall(this.form, 'moderate')" name="chkall" id="chkall"/></td>
+							<td colspan="5" class="ptm">
+								<!--{if $multipage}-->$multipage<!--{/if}-->
+								<!--{if $_G['group']['allowclearrecycle']}-->
+								<button onclick="modthreads('delete')" class="pn"><strong>{lang delete}</strong></button>
+								<!--{/if}-->
+								<button onclick="modthreads('restore')" class="pn"><strong>{lang modcp_restore}</strong></button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+		<!--{/if}-->
+		<!--{if !$total}-->
+			<p class="emp">{lang modcp_thread_msg}</p>
+		<!--{/if}-->
+		<script type="text/javascript">
+			function modthreads(operation) {
+				document.moderate.op.value = operation;
+				document.moderate.submit();
+			}
+		</script>
+
+	<!--{else}-->
+		<p class="xi1">{lang modcp_forum_select_msg}</p>
+	<!--{/if}-->
+</div>
+<script type="text/javascript" reload="1">
+	simulateSelect('fid');
+	if($('posttableid')) {
+		simulateSelect('posttableid');
+	}
+</script>

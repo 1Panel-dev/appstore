@@ -1,0 +1,40 @@
+<!--{if $_G['group']['magicsdiscount'] || $_G['group']['maxmagicsweight']}-->
+	<!--{if $_G['group']['maxmagicsweight']}-->
+		<p class="tbmu">{lang magics_capacity}: <span class="xi1">$totalweight</span>/{$_G['group']['maxmagicsweight']}</p>
+	<!--{/if}-->
+<!--{/if}-->
+<!--{if $mymagiclist}-->
+	<ul class="mtm mgcl cl">
+	<!--{loop $mymagiclist $key $mymagic}-->
+		<li>
+			<div id="magic_$mymagic[identifier]_menu" class="tip tip_4" style="display:none">
+				<div class="tip_horn"></div>
+				<div class="tip_c" style="text-align:left">$mymagic[description]</div>
+			</div>
+			<div id="magic_$mymagic[identifier]" class="mg_img" onmouseover="showMenu({'ctrlid':this.id, 'menuid':'magic_$mymagic[identifier]_menu', 'pos':'12!'});">
+
+				<img src="$mymagic[pic]" alt="$mymagic[name]" />
+
+			</div>
+			<p><strong>$mymagic[name]</strong></p>
+			<p>{lang magics_num}: <font class="xi1 xw1">$mymagic[num]</font>, {lang magics_user_totalnum}: <font class="xi1">$mymagic[weight]</font></p>
+			<p class="mtn">
+				<!--{if $mymagic['useevent']}-->
+					<a href="home.php?mod=magic&action=mybox&operation=use&magicid=$mymagic[magicid]" onclick="showWindow('magics', this.href, 'get', 0);return false;" class="xi2"><strong>{lang magics_operation_use}</strong></a><em class="pipe">|</em>
+				<!--{/if}-->
+				<!--{if $_G['group']['allowmagics'] > 1}-->
+					<a href="home.php?mod=magic&action=mybox&operation=give&magicid=$mymagic[magicid]" onclick="showWindow('magics', this.href, 'get', 0);return false;" class="xi2">{lang magics_operation_present}</a><em class="pipe">|</em>
+				<!--{/if}-->
+				<!--{if $_G['setting']['magicdiscount']}-->
+					<a href="home.php?mod=magic&action=mybox&operation=sell&magicid=$mymagic[magicid]" onclick="showWindow('magics', this.href, 'get', 0);return false;" class="xi2">{lang magics_operation_sell}</a>
+				<!--{else}-->
+					<a href="home.php?mod=magic&action=mybox&operation=drop&magicid=$mymagic[magicid]" onclick="showWindow('magics', this.href, 'get', 0);return false;" class="xi2">{lang magics_operation_drop}</a>
+				<!--{/if}-->
+			</p>
+		</li>
+	<!--{/loop}-->
+	</ul>
+	<!--{if $multipage}--><div class="pgs cl mtm">$multipage</div><!--{/if}-->
+<!--{else}-->
+	<p class="emp">{lang data_nonexistence}</p>
+<!--{/if}-->

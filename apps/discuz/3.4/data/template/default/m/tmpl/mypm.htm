@@ -1,0 +1,71 @@
+<script id="headerTpl" type="text/html">
+<div class="header" style="height:auto;">
+    <h3 style="padding-right:0;text-align:center;"><%= title %></h3>
+</div>
+</script>
+
+<script id="pmListBox" type="text/html">
+<ul class="myPrivatelyMessage messageList">
+<%
+for(i = 0; i < Variables.list.length; i ++){
+if(!Variables.list[i]) { continue; }
+%>
+    <li touid="<%= Variables.list[i].touid %>">
+        <% if(Variables.list[i].isnew == '1') { %><span class="new">新</span><% } %>
+        <% if(Variables.list[i].msgfromid && Variables.list[i].msgfromid != Variables.member_uid) { %>
+        <i class="perImg">
+            <img src="<%= ucenterurl %>/avatar.php?uid=<%= Variables.list[i].msgfromid %>&size=small" onerror="javascript:this.src=DATA_DIR+'/images/personImg.jpg'" class="brBig" width="35" height="35" alt="头像">
+        </i>
+        <% } else { %>
+        <i class="perImg">
+            <img src="<%= ucenterurl %>/avatar.php?uid=<%= Variables.list[i].touid %>&size=small" onerror="javascript:this.src=DATA_DIR+'/images/personImg.jpg'" class="brBig" width="35" height="35" alt="头像">
+        </i>
+        <% } %>
+        <p>
+            <span class="time"><%= Variables.list[i].vdateline %></span>
+            <% if(Variables.list[i].msgfromid && Variables.list[i].msgfromid != Variables.member_uid) { %>
+                <strong><%= Variables.list[i].msgfrom %></strong>
+            <% } else { %>
+                <strong><%= Variables.list[i].tousername %></strong>
+            <% } %>
+            <% if(Variables.list[i].message) { %>
+                <span><%== stripCode(Variables.list[i].message) %></span>
+            <% } else { %>
+                <span><%== stripCode(Variables.list[i].subject) %></span>
+            <% } %>
+        </p>
+    </li>
+<% } %>
+</ul>
+</script>
+
+<script id="pmContentBox" type="text/html">
+<div class="privatelyMessage">
+<%
+for(i = 0; i < Variables.list.length; i ++){
+if(!Variables.list[i]) { continue; }
+%>
+        <div class="messageTime"><%= Variables.list[i].vdateline %></div>
+        <% if(Variables.list[i].msgfromid != Variables.member_uid) { %>
+        <div class="messageCon">
+            <i class="perImg">
+                <img src="<%= ucenterurl %>/avatar.php?uid=<%= Variables.list[i].msgfromid %>&size=small" onerror="javascript:this.src=DATA_DIR+'/images/personImg.jpg'" class="brBig" width="35" height="35" alt="头像">
+            </i>
+            <div class="message"><i class="cf iconMessage"></i><%== stripCode(Variables.list[i].message) %></div>
+        </div>
+        <% } else { %>
+        <div class="messageCon my">
+            <div class="message"><i class="cf iconMessage"></i><%== stripCode(Variables.list[i].message) %></div>
+            <i class="perImg">
+                <img src="<%= ucenterurl %>/avatar.php?uid=<%= Variables.list[i].msgfromid %>&size=small" onerror="javascript:this.src=DATA_DIR+'/images/personImg.jpg'" class="brBig" width="35" height="35" alt="头像">
+            </i>
+        </div>
+        <% } %>
+<% } %>
+</div>
+<% if(Variables.first) { %>
+<div class="inputWrap">
+    <input type="text" class="messageInput" /><a href="#">发送</a>
+</div>
+<% } %>
+</script>

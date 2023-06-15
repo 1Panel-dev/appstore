@@ -1,0 +1,52 @@
+<!--{template common/header_ajax}-->
+<span class="cnr"></span>
+<form method="post" autocomplete="off" id="postform_{$_GET['feedid']}" action="forum.php?mod=post&action=reply&fid=$_GET[fid]&extra=$extra&tid=$_GET[tid]&replysubmit=yes" onsubmit="this.message.value = parseurl(this.message.value);{if !empty($_GET['inajax'])}ajaxpost(this.id, 'return_$_GET['handlekey']', 'return_$_GET['handlekey']', 'onerror');return false;{/if}" class="mbm">
+	<input type="hidden" name="formhash" id="formhash" value="{FORMHASH}" />
+	<input type="hidden" name="handlekey" value="$_GET['handlekey']" />
+	<span id="subjectbox" style="display: none;"><input name="subject" id="subject" class="px" value="" tabindex="21" style="width: 25em" /></span>
+	<table cellspacing="0" cellspacing="0">
+		<tr>
+			<td><span class="flw_autopt"><textarea name="message" id="postmessage_{$_GET[tid]}_{$_GET['feedid']}" class="pts" cols="80" rows="4" onkeyup="resizeTx(this);" onkeydown="resizeTx(this);" onpropertychange="resizeTx(this);" oninput="resizeTx(this);"></textarea></span><button type="submit" id="postsubmit" class="pn pnc" value="true" name="{if $_GET[action] == 'newthread'}topicsubmit{elseif $_GET[action] == 'reply'}replysubmit{/if}" tabindex="23"><span>{lang reply}</span></button></td>
+			<!--{if helper_access::check_module('follow')}-->
+			<td style="vertical-align: top;"><label class="ptn y"><input type="checkbox" name="adddynamic" class="pr" value="1" />{lang post_meanwhile_relay}</label></td>
+			<!--{/if}-->
+		</tr>
+	</table>
+	<!--{if $secqaacheck || $seccodecheck}-->
+		<!--{block sectpl}--><ul><li><em class="d"><sec></em><span id="sec<hash>" onclick="showMenu({'ctrlid':this.id,'win':'{$_GET[handlekey]}'})"><sec></span><div id="sec<hash>_menu" class="p_pop p_opt" style="display:none"><sec></div></li></ul><!--{/block}-->
+		<div class="mtm"><!--{subtemplate common/seccheck}--></div>
+	<!--{/if}-->
+</form>
+<ul id="newreply_{$_GET[tid]}_{$_GET['feedid']}">
+	<!--{loop $list $pid $post}-->
+	<li><a href="home.php?mod=space&uid=$post['authorid']" class="d xi2">$post['author']:</a>$post['message']</li>
+	<!--{/loop}-->
+</ul>
+<div class="cl">
+	<a href="javascript:;" onclick="display('replybox_{$_GET['feedid']}')" class="y xg1">&uarr; {lang close}</a>
+	<!--{if $fid != $_G[setting][followforumid]}-->
+	<a href="forum.php?mod=viewthread&tid={$_GET[tid]}&extra=page%3D1" target="_blank" class="xi2">&rarr; {lang view_all_replies}</a>
+	<!--{/if}-->
+</div>
+<script type="text/javascript">
+	function succeedhandle_$_GET[handlekey](url, msg, values) {
+		var x = new Ajax();
+		x.get('forum.php?mod=ajax&action=getpost&inajax=1&tid='+values.tid+'&fid='+values.fid+'&pid='+values.pid, function(s){
+			newli = document.createElement("li");
+			newli.innerHTML = s;
+			var ulObj = $('newreply_'+values.tid+'_{$_GET['feedid']}');
+			ulObj.insertBefore(newli, ulObj.firstChild);
+			$('postmessage_{$_GET[tid]}_{$_GET['feedid']}').value = '';
+			if(values.sechash) {
+				updatesecqaa(values.sechash);
+				updateseccode(values.sechash);
+				$('seccodeverify_'+values.sechash).value='';
+			}
+		});
+		
+		if(parseInt(values.feedid)) {
+			getNewFollowFeed(values.tid, values.fid, values.pid, values.feedid);
+		}
+	}
+</script>
+<!--{template common/footer_ajax}-->
