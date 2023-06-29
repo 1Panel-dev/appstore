@@ -83,8 +83,12 @@ if [[ -z "${EXTENSIONS##*,imagick,*}" ]]; then
     echo "---------- Install imagick ----------"
 	  install-php-extensions imagick
 fi
-# end
 
+if [[ -z "${EXTENSIONS##*,sourceguardian,*}" ]]; then
+    echo "---------- Install sourceguardian ----------"
+	  install-php-extensions sourceguardian
+fi
+# end
 
 if [[ -z "${EXTENSIONS##*,pdo_mysql,*}" ]]; then
     echo "---------- Install pdo_mysql ----------"
