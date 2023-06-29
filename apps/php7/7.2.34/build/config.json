@@ -121,6 +121,10 @@
         {
           "label": "sg11",
           "value": "sourceguardian"
+        },
+        {
+          "label": "imagick",
+          "value": "imagick"
         }
       ],
       "envKey": "PHP_EXTENSIONS",
