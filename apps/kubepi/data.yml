@@ -1,0 +1,20 @@
+name: KubePi
+tags:
+    - 工具
+title: 一个现代化的 K8s 面板
+type: 工具
+description: 一个现代化的 K8s 面板
+additionalProperties:
+    key: kubepi
+    name: KubePi
+    tags:
+        - Tool
+    shortDescZh: 一个现代化的 K8s 面板
+    shortDescEn: A modernized K8s dashboard
+    type: tool
+    crossVersionUpdate: false
+    limit: 0
+    recommend: 6
+    website: https://github.com/1Panel-dev/
+    github: https://github.com/1Panel-dev/KubePi
+    document: https://github.com/1Panel-dev/KubePi/blob/master/README.md
