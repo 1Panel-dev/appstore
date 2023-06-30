@@ -1,0 +1,34 @@
+additionalProperties:
+    formFields:
+        - default: 18083
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: Port
+          labelZh: Dashboard 控制台端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: 1883
+          edit: true
+          envKey: EMQX_PORT_1883
+          labelEn: Port
+          labelZh: MQTT 协议端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: 8083
+          edit: true
+          envKey: EMQX_PORT_8083
+          labelEn: Port
+          labelZh: WebSocket 端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: 8081
+          edit: true
+          envKey: EMQX_PORT_8081
+          labelEn: Port
+          labelZh: HTTP API 端口
+          required: true
+          rule: paramPort
+          type: number
