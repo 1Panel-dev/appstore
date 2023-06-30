@@ -142,7 +142,7 @@ services:
       # - NEW_TASK_DELAY=1
       # - MAIL_SSL=True
       # - MAILGUN_KEY=
-    image: a76yyyy/qiandao:20230601
+    image: a76yyyy/qiandao:20230618
     # image: a76yyyy/qiandao:latest
     # image: a76yyyy/qiandao:lite-latest
     labels:  
