@@ -1,0 +1,9 @@
+additionalProperties:
+    formFields:
+        - default: 24900
+          envKey: PORT
+          labelEn: Port
+          labelZh: WEB端口
+          required: true
+          rule: paramPort
+          type: number

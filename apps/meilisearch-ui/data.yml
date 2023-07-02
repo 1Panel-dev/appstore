@@ -1,0 +1,20 @@
+name: meilisearch-ui
+tags:
+    - 工具
+title: An open-source, pretty, simple and fast meilisearch admin dashboard UI for managing your meilisearch instances
+type: 工具
+description: Apache Doris An open-source, pretty, simple and fast meilisearch admin dashboard UI for managing your meilisearch instances
+additionalProperties:
+    key: meilisearch-ui
+    name: meilisearch-ui
+    tags:
+        - Tool
+    shortDescZh: 这是一个开源的、漂亮、简单且快速的 meilisearch 管理面板 UI，用于管理您的 meilisearch 实例。
+    shortDescEn:  An open-source, pretty, simple and fast meilisearch admin dashboard UI for managing your meilisearch instances
+    type: tool
+    crossVersionUpdate: false
+    limit: 1
+    recommend: 4
+    website: https://github.com/riccox/meilisearch-ui
+    github: https://github.com/riccox/meilisearch-ui
+    document: https://github.com/riccox/meilisearch-ui

@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  meilisearch-ui:
+    image: riccoxie/meilisearch-ui:latest
+    ports:
+      - ${PORT}:24900
+    restart: always
+    container_name: meilisearch-ui
+
+networks:
+  1panel-network:
+    external: true

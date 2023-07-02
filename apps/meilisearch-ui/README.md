@@ -1,0 +1,1 @@
+An open-source, pretty, simple and fast meilisearch admin dashboard UI for managing your meilisearch instances
