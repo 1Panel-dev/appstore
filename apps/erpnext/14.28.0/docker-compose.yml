@@ -2,7 +2,7 @@ version: "3"
 
 services:
   backend:
-    image: frappe/erpnext:v14.28.0
+    image: frappe/erpnext:v14.28.1
     deploy:
       restart_policy:
         condition: on-failure
@@ -11,7 +11,7 @@ services:
       - ./data/logs:/home/frappe/frappe-bench/logs
 
   configurator:
-    image: frappe/erpnext:v14.28.0
+    image: frappe/erpnext:v14.28.1
     deploy:
       restart_policy:
         condition: none
@@ -40,7 +40,7 @@ services:
     
 
   create-site:
-    image: frappe/erpnext:v14.28.0
+    image: frappe/erpnext:v14.28.1
     deploy:
       restart_policy:
         condition: none
@@ -92,7 +92,7 @@ services:
     
 
   frontend:
-    image: frappe/erpnext:v14.28.0
+    image: frappe/erpnext:v14.28.1
     deploy:
       restart_policy:
         condition: on-failure
@@ -115,7 +115,7 @@ services:
     
 
   queue-default:
-    image: frappe/erpnext:v14.28.0
+    image: frappe/erpnext:v14.28.1
     deploy:
       restart_policy:
         condition: on-failure
@@ -130,7 +130,7 @@ services:
     
 
   queue-long:
-    image: frappe/erpnext:v14.28.0
+    image: frappe/erpnext:v14.28.1
     deploy:
       restart_policy:
         condition: on-failure
@@ -145,7 +145,7 @@ services:
     
 
   queue-short:
-    image: frappe/erpnext:v14.28.0
+    image: frappe/erpnext:v14.28.1
     deploy:
       restart_policy:
         condition: on-failure
@@ -187,7 +187,7 @@ services:
     
 
   scheduler:
-    image: frappe/erpnext:v14.28.0
+    image: frappe/erpnext:v14.28.1
     deploy:
       restart_policy:
         condition: on-failure
@@ -200,7 +200,7 @@ services:
     
 
   websocket:
-    image: frappe/erpnext:v14.28.0
+    image: frappe/erpnext:v14.28.1
     deploy:
       restart_policy:
         condition: on-failure
