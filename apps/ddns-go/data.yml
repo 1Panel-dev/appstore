@@ -9,12 +9,11 @@ additionalProperties:
     name: DDNS-GO
     tags:
         - Tool
-    shortDescZh:
+    shortDescZh: 简单好用的 DDNS
     shortDescEn: Simple and easy to use DDNS.
     type: tool
     crossVersionUpdate: false
     limit: 1
-    recommend: 4
     website: https://github.com/jeessy2/ddns-go
     github: https://github.com/jeessy2/ddns-go
     document: https://github.com/jeessy2/ddns-go
