@@ -72,7 +72,7 @@ services:
         bench new-site frontend --no-mariadb-socket --admin-password=admin --db-root-password=admin --install-app erpnext --set-default;
     
   db:
-    image: mariadb:10.6
+    image: mariadb:11.0
     healthcheck:
       test: mysqladmin ping -h localhost --password=admin
       interval: 1s
