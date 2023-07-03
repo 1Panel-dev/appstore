@@ -1,0 +1,20 @@
+name: DDNS-GO
+tags:
+    - 数据可视化
+title: 强大的开源数据可视化平台
+type: 工具
+description: 自动获得你的公网 IPv4 或 IPv6 地址，并解析到对应的域名服务。
+additionalProperties:
+    key: ddnsGo
+    name: DDNS-GO
+    tags:
+        - Tool
+    shortDescZh: 自动获得你的公网 IPv4 或 IPv6 地址，并解析到对应的域名服务。
+    shortDescEn: Automatically retrieve your public IPv4 or IPv6 address and map it to the corresponding domain name service.
+    type: tool
+    crossVersionUpdate: false
+    limit: 1
+    recommend: 4
+    website: https://github.com/jeessy2/ddns-go
+    github: https://github.com/jeessy2/ddns-go
+    document: https://github.com/jeessy2/ddns-go
