@@ -1,0 +1,22 @@
+additionalProperties:
+    formFields:
+        - default: rabbitmq
+          envKey: RABBITMQ_DEFAULT_USER
+          labelEn: RabbitMQ User
+          labelZh: 管理员
+          required: true
+          type: text
+        - default: rabbitmq
+          envKey: RABBITMQ_DEFAULT_PASS
+          labelEn: RabbitMQ User Password
+          labelZh: 管理员密码
+          required: true
+          type: text
+        - default: 15672
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: Port
+          labelZh: 端口
+          required: true
+          rule: paramPort
+          type: number
