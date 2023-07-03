@@ -1,0 +1,20 @@
+name: emqx
+tags:
+    - 工具
+title: 开源物联网 MQTT 消息服务器
+type: 工具
+description: 开源物联网 MQTT 消息服务器
+additionalProperties:
+    key: emqx
+    name: emqx
+    tags:
+        - Tool
+    shortDescZh: 开源物联网 MQTT 消息服务器
+    shortDescEn: Open-source IoT MQTT Message Server
+    type: tool
+    crossVersionUpdate: false
+    limit: 0
+    recommend: 0
+    website: https://www.emqx.io/
+    github: https://github.com/emqx/emqx
+    document: https://www.emqx.io/docs/en/v5.0/
