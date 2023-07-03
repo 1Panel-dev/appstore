@@ -1,15 +1,13 @@
 name: mblog
 tags:
-  - Tool
-  - WebSite
+  - 建站
 title: 开源自部署的个人微博
-type: website
+type: 建站
 description: 开源自部署的个人微博
 additionalProperties:
   key: mblog
   name: MBlog
   tags:
-    - Tool
     - WebSite
   shortDescZh: 开源自部署的个人微博
   shortDescEn: Open source self hosted personal micro blog platform

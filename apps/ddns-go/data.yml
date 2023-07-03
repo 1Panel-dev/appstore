@@ -1,16 +1,16 @@
 name: DDNS-GO
 tags:
     - 数据可视化
-title: 强大的开源数据可视化平台
+title: 简单好用的 DDNS
 type: 工具
 description: 自动获得你的公网 IPv4 或 IPv6 地址，并解析到对应的域名服务。
 additionalProperties:
-    key: ddnsGo
+    key: ddns-go
     name: DDNS-GO
     tags:
         - Tool
-    shortDescZh: 自动获得你的公网 IPv4 或 IPv6 地址，并解析到对应的域名服务。
-    shortDescEn: Automatically retrieve your public IPv4 or IPv6 address and map it to the corresponding domain name service.
+    shortDescZh:
+    shortDescEn: Simple and easy to use DDNS.
     type: tool
     crossVersionUpdate: false
     limit: 1

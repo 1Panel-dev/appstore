@@ -5,12 +5,12 @@ title: 基于 MPP 架构的高性能、实时的分析型数据库
 type: 数据库
 description: Apache Doris 是一个基于 MPP 架构的高性能、实时的分析型数据库
 additionalProperties:
-    key: ApacheDoris
+    key: apache-doris
     name: Apache Doris-单机版
     tags:
         - Tool
     shortDescZh: 基于 MPP 架构的高性能、实时的分析型数据库
-    shortDescEn:  a high-performance, real-time analytical database based on MPP architecture
+    shortDescEn: a high-performance, real-time analytical database based on MPP architecture
     type: tool
     crossVersionUpdate: false
     limit: 1
