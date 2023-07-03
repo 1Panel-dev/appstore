@@ -2,16 +2,16 @@ additionalProperties:
     formFields:
         - default: mongo
           envKey: PANEL_DB_ROOT_USER
-          labelEn: Root Username
-          labelZh: Root 用户名
+          labelEn: Username
+          labelZh: 用户名
           random: true
           required: true
           rule: paramCommon
           type: text
         - default: mongo
           envKey: PANEL_DB_ROOT_PASSWORD
-          labelEn: Root Password
-          labelZh: Root 用户密码
+          labelEn: Password
+          labelZh: 用户密码
           random: true
           required: true
           rule: paramComplexity

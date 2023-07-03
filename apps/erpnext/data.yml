@@ -1,7 +1,7 @@
 name: erpnext
 tags:
     - 工具
-title: 全球最敏捷的ERP,ERPNext是世界上最好的免费开源ERP
+title: 开源 ERP
 type: 工具
 description: The most agile ERP on the planet
 additionalProperties:
@@ -9,12 +9,11 @@ additionalProperties:
     name: erpnext
     tags:
         - Tool
-    shortDescZh: 全球最敏捷的ERP
-    shortDescEn: The most agile ERP on the planet
+    shortDescZh: 开源 ERP
+    shortDescEn: OpenSource ERP
     type: tool
     crossVersionUpdate: false
     limit: 1
-    recommend: 4
     website: https://erpnext.com/
     github: https://github.com/frappe/erpnext
     document: https://docs.erpnext.com/
