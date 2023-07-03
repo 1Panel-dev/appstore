@@ -1,0 +1,16 @@
+additionalProperties:
+    formFields:
+        - default: 8030
+          envKey: PANEL_APP_PORT_HTTP_WEB
+          labelEn: Port
+          labelZh: WEB端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: 9030
+          envKey: PANEL_APP_PORT_HTTP_query_port
+          labelEn: Port
+          labelZh: query端口
+          required: true
+          rule: paramPort
+          type: number
