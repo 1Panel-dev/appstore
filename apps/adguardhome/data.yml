@@ -14,7 +14,6 @@ additionalProperties:
     type: tool
     crossVersionUpdate: true
     limit: 0
-    recommend: 0
     website: https://hub.docker.com/r/adguard/adguardhome
     github: https://github.com/AdguardTeam/AdGuardHome
     document: https://github.com/AdguardTeam/AdGuardHome/wiki
