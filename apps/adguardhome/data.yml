@@ -1,0 +1,20 @@
+name: AdGuardHome
+tags:
+    - 工具
+title: 自由且开源的，功能强大的网络广告和跟踪器屏蔽DNS服务器
+type: 工具
+description: 自由且开源的，功能强大的网络广告和跟踪器屏蔽DNS服务器
+additionalProperties:
+    key: adguardhome
+    name: AdGuardHome
+    tags:
+        - Tool
+    shortDescZh: 自由且开源的，功能强大的网络广告和跟踪器屏蔽DNS服务器
+    shortDescEn: Free and open source, powerful network-wide ads & trackers blocking DNS server
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://hub.docker.com/r/adguard/adguardhome
+    github: https://github.com/AdguardTeam/AdGuardHome
+    document: https://github.com/AdguardTeam/AdGuardHome/wiki
