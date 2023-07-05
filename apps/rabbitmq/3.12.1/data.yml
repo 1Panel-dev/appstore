@@ -15,8 +15,16 @@ additionalProperties:
         - default: 15672
           edit: true
           envKey: PANEL_APP_PORT_HTTP
-          labelEn: Port
-          labelZh: 端口
+          labelEn: Dashboard Port
+          labelZh: Dashboard 端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: 5672
+          edit: true
+          envKey: PANEL_APP_PORT_SERVICE
+          labelEn: Service Port
+          labelZh: 服务端口
           required: true
           rule: paramPort
           type: number

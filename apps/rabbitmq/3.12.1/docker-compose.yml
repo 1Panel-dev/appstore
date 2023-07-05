@@ -4,7 +4,7 @@ services:
     image: rabbitmq:3.12.1-management-alpine
     container_name: ${CONTAINER_NAME}
     ports:
-        - 5672:5672
+        - ${PANEL_APP_PORT_SERVICE}:5672
         - ${PANEL_APP_PORT_HTTP}:15672
     environment:
       - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
