@@ -1,0 +1,20 @@
+name: code-server
+tags:
+    - 工具
+title: 在任何地方的任何计算机上运行VS Code并在浏览器中访问它
+type: 工具
+description: 在任何地方的任何计算机上运行VS Code并在浏览器中访问它
+additionalProperties:
+    key: code-server
+    name: code-server
+    tags:
+        - Tool
+    shortDescZh: 在任何地方的任何计算机上运行VS Code并在浏览器中访问它
+    shortDescEn: Run VS Code on any machine anywhere and access it in the browser
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://coder.com/
+    github: https://github.com/coder/code-server
+    document: https://coder.com/docs/code-server/latest
