@@ -1,6 +1,6 @@
 version: '3'
 services:
-  onenav:
+  code:
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
