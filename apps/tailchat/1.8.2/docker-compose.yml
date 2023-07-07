@@ -3,7 +3,7 @@ services:
   tailchat:
     container_name: ${CONTAINER_NAME}
     restart: unless-stopped
-    image: "moonrailgun/tailchat:1.8.2"
+    image: moonrailgun/tailchat:1.8.2
     networks:
       - 1panel-network
     environment:
@@ -22,7 +22,7 @@ services:
       - SECRET=${SECRET}
       - API_URL=${API_URL}
     ports:
-      - "${PANEL_APP_PORT_HTTP}:11000"
+      - ${PANEL_APP_PORT_HTTP}:11000
     labels:
       createdBy: "Apps"
 
