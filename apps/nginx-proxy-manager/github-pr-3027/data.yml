@@ -2,7 +2,7 @@ additionalProperties:
     formFields:
         - default: 30080
           edit: true
-          envKey: PANEL_APP_PORT_HTTP
+          envKey: PANEL_APP_PORT_HTTP1
           labelEn: HTTP Port
           labelZh: HTTP端口
           required: true
@@ -10,7 +10,7 @@ additionalProperties:
           type: number
         - default: 30081
           edit: true
-          envKey: PANEL_APP_PORT_HTTP1
+          envKey: PANEL_APP_PORT_HTTP
           labelEn: Console Port
           labelZh: 控制台端口
           required: true
