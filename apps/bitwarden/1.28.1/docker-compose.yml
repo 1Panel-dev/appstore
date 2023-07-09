@@ -9,7 +9,7 @@ services:
       - "${PANEL_APP_PORT_HTTP}:80"
     volumes:
       - "${DATA_PATH}:/data"
-    image: vaultwarden/server:1.28.1-alpine
+    image: vaultwarden/server:1.29.0-alpine
     labels:  
       createdBy: "Apps"
 
