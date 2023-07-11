@@ -1,0 +1,10 @@
+additionalProperties:
+    formFields:
+        - default: sqlite:///database/database.db
+          edit: true
+          envKey: DB_CONNECT_URL
+          labelEn: database connect url
+          labelZh: 数据库链接
+          required: true
+          type: text
+
