@@ -1,0 +1,20 @@
+name: Memos
+tags:
+    - 工具
+title: 轻量级、自托管的备忘录中心
+type: 工具
+description: 轻量级、自托管的备忘录中心
+additionalProperties:
+    key: memos
+    name: Memos
+    tags:
+        - Tool
+    shortDescZh: 轻量级、自托管的备忘录中心
+    shortDescEn: A lightweight, self-hosted memo hub
+    type: tool
+    crossVersionUpdate: false
+    limit: 0
+    recommend: 0
+    website: https://usememos.com/
+    github: https://github.com/usememos/memos
+    document: https://usememos.com/docs
