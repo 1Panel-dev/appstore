@@ -1,0 +1,20 @@
+name: Nginx UI
+tags:
+    - 工具
+title: Nginx 网络管理界面
+type: 工具
+description: Nginx 网络管理界面
+additionalProperties:
+    key: nginx-ui
+    name: Nginx UI
+    tags:
+        - Tool
+    shortDescZh: Nginx 网络管理界面
+    shortDescEn: Yet another WebUI for Nginx
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://nginxui.com/
+    github: https://github.com/0xJacky/nginx-ui
+    document: https://nginxui.com/

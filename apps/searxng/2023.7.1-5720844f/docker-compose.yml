@@ -1,15 +1,17 @@
 version: '3'
 services:
-  bitwarden:
+  searxng:
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
       - 1panel-network
     ports:
-      - "${PANEL_APP_PORT_HTTP}:80"
+      - "${PANEL_APP_PORT_HTTP}:8080"
     volumes:
-      - "${DATA_PATH}:/data"
-    image: vaultwarden/server:1.28.1-alpine
+      - "${DATA_PATH}:/etc/searxng"
+    environment:
+      - BASE_URL=${SEARXNG_EXTERNAL_URL}
+    image: searxng/searxng:2023.7.1-5720844f
     labels:  
       createdBy: "Apps"
 

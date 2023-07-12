@@ -1,0 +1,32 @@
+additionalProperties:
+    formFields:
+        - default: 31080
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: Console Port
+          labelZh: 控制台端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: 31443
+          edit: true
+          envKey: PANEL_APP_PORT_HTTPS
+          labelEn: HTTPS Port
+          labelZh: HTTPS端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: ./data
+          edit: true
+          envKey: DATA_PATH
+          labelEn: Data folder path
+          labelZh: 数据文件夹路径
+          required: true
+          type: text
+        - default: ./data/www
+          edit: true
+          envKey: WEB_PATH
+          labelEn: WEB folder path
+          labelZh: 网页文件夹路径
+          required: true
+          type: text
