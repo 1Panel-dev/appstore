@@ -62,16 +62,15 @@ installExtensionFromTgz()
     tgzName=$1
     para1=
     extensionName="${tgzName%%-*}"
-    if [  $2 ]; then  
+    if [  $2 ]; then
         para1=$2
-    fi  
+    fi
     mkdir ${extensionName}
     tar -xf ${tgzName}.tgz -C ${extensionName} --strip-components=1
     ( cd ${extensionName} && phpize && ./configure ${para1} && make ${MC} && make install )
 
     docker-php-ext-enable ${extensionName}
 }
-
 
 # install use  install-php-extensions
 if [[ -z "${EXTENSIONS##*,ioncube_loader,*}" ]]; then
@@ -87,6 +86,11 @@ fi
 if [[ -z "${EXTENSIONS##*,sourceguardian,*}" ]]; then
     echo "---------- Install sourceguardian ----------"
 	  install-php-extensions sourceguardian
+fi
+
+if [[ -z "${EXTENSIONS##*,memcached,*}" ]]; then
+    echo "---------- Install memcached ----------"
+	  install-php-extensions memcached
 fi
 # end
 
@@ -363,13 +367,6 @@ if [[ -z "${EXTENSIONS##*,psr,*}" ]]; then
     docker-php-ext-enable psr
 fi
 
-if [[ -z "${EXTENSIONS##*,imagick,*}" ]]; then
-    echo "---------- Install imagick ----------"
-	apk add --no-cache file-dev
-	apk add --no-cache imagemagick-dev
-    printf "\n" | pecl install imagick-3.4.4
-    docker-php-ext-enable imagick
-fi
 
 if [[ -z "${EXTENSIONS##*,rar,*}" ]]; then
     echo "---------- Install rar ----------"
@@ -544,7 +541,7 @@ if [[ -z "${EXTENSIONS##*,amqp,*}" ]]; then
     && printf '\n' | pecl install amqp \
     && docker-php-ext-enable amqp \
     && apk del .phpize-deps-configure
-    
+
 fi
 
 if [[ -z "${EXTENSIONS##*,redis,*}" ]]; then
@@ -604,7 +601,7 @@ fi
 
 
 if [[ -z "${EXTENSIONS##*,swoole,*}" ]]; then
-    echo "---------- Install swoole ----------"    
+    echo "---------- Install swoole ----------"
     isPhpVersionGreaterOrEqual 8 0
     if [[ "$?" = "1" ]]; then
         installExtensionFromTgz swoole-5.0.2 --enable-openssl

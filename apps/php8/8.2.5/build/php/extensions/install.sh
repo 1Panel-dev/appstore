@@ -87,6 +87,11 @@ if [[ -z "${EXTENSIONS##*,sourceguardian,*}" ]]; then
     echo "---------- Install sourceguardian ----------"
 	  install-php-extensions sourceguardian
 fi
+
+if [[ -z "${EXTENSIONS##*,memcached,*}" ]]; then
+    echo "---------- Install memcached ----------"
+	  install-php-extensions memcached
+fi
 # end
 
 
@@ -362,13 +367,6 @@ if [[ -z "${EXTENSIONS##*,psr,*}" ]]; then
     docker-php-ext-enable psr
 fi
 
-if [[ -z "${EXTENSIONS##*,imagick,*}" ]]; then
-    echo "---------- Install imagick ----------"
-	apk add --no-cache file-dev
-	apk add --no-cache imagemagick-dev
-    printf "\n" | pecl install imagick-3.4.4
-    docker-php-ext-enable imagick
-fi
 
 if [[ -z "${EXTENSIONS##*,rar,*}" ]]; then
     echo "---------- Install rar ----------"
