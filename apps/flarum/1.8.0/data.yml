@@ -62,13 +62,6 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
-        - default: ./data
-          edit: true
-          envKey: DATA_PATH
-          labelEn: Data storage folder
-          labelZh: 数据存放文件夹
-          required: true
-          type: text
         - default: http://localhost:40020
           edit: true
           envKey: FLARUM_EXTERNAL_URL

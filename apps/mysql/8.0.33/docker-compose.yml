@@ -21,7 +21,6 @@ services:
       createdBy: "Apps"
     command:
       - --default-authentication-plugin=mysql_native_password
-
 networks:
   1panel-network:
     external: true

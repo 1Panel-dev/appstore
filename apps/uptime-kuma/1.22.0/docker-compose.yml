@@ -13,7 +13,6 @@ services:
       - ${PANEL_APP_PORT_HTTP}:3001
     labels:
       createdBy: "Apps"
-
 networks:
   1panel-network:
     external: true

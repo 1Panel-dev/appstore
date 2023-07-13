@@ -14,7 +14,6 @@ services:
       MYSQL_ROOT_PASSWORD: ${PANEL_DB_ROOT_PASSWORD}
     labels:
       createdBy: "Apps"
-
 networks:
   1panel-network:
     external: true

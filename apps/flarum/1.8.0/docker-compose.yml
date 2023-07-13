@@ -1,4 +1,4 @@
-version: "3"
+version: '3'
 services:
   flarum:
     container_name: ${CONTAINER_NAME}
@@ -8,7 +8,7 @@ services:
     ports:
       - "${PANEL_APP_PORT_HTTP}:8000"
     volumes:
-      - "${DATA_PATH}:/data"
+      - ./data:/data
     environment:
       - TZ=Asia/Shanghai
       - PUID=1000
@@ -30,7 +30,7 @@ services:
       - FLARUM_BASE_URL=${FLARUM_EXTERNAL_URL}
     image: crazymax/flarum:1.8.0
     labels:
-      createdBy: Apps
+      createdBy: "Apps"
 networks:
   1panel-network:
     external: true

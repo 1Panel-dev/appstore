@@ -1,6 +1,4 @@
-networks:
-  1panel-network:
-    external: true
+version: '3'
 services:
   redis-commander-XnlR:
     container_name: ${CONTAINER_NAME}
@@ -17,4 +15,6 @@ services:
     ports:
       - ${PANEL_APP_PORT_HTTP}:8081
     restart: always
-version: "3"
+networks:
+  1panel-network:
+    external: true

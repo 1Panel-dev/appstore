@@ -10,12 +10,11 @@ services:
       - "${PANEL_APP_PORT_HTTP}:81"
       - "${PANEL_APP_PORT_HTTP2}:443"
     volumes:
-      - "${DATA_PATH}:/data"
-      - "${SSL_PATH}:/etc/letsencrypt"
+      - ./data/data:/data
+      - ./data/ssl:/etc/letsencrypt
     image: jc21/nginx-proxy-manager:github-pr-3027
     labels:  
       createdBy: "Apps"
-
 networks:  
   1panel-network:  
     external: true

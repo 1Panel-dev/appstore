@@ -22,7 +22,6 @@ services:
         - ./data:/data
       labels:
         createdBy: "Apps"
-
 networks:
   1panel-network:
     external: true

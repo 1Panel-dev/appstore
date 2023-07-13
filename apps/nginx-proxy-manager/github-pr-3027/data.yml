@@ -24,17 +24,3 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
-        - default: ./data/data
-          edit: true
-          envKey: DATA_PATH
-          labelEn: Data folder path
-          labelZh: 数据文件夹路径
-          required: true
-          type: text
-        - default: ./data/ssl
-          edit: true
-          envKey: SSL_PATH
-          labelEn: SSL folder path
-          labelZh: 证书文件夹路径
-          required: true
-          type: text

@@ -1,4 +1,4 @@
-version: "3"
+version: '3'
 services:
   lskypro:
     container_name: ${CONTAINER_NAME}
@@ -6,7 +6,7 @@ services:
     networks:
       - 1panel-network
     volumes:
-      - "${DATA_PATH}:/var/www/html/"
+      - ./data:/var/www/html/
     ports:
       - "${PANEL_APP_PORT_HTTP}:8089"
     environment:
@@ -14,7 +14,6 @@ services:
     image: halcyonazure/lsky-pro-docker:latest
     labels:  
       createdBy: "Apps"
-
 networks:  
   1panel-network:  
     external: true

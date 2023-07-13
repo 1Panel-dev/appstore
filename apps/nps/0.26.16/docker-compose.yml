@@ -1,4 +1,4 @@
-version: "3"
+version: '3'
 services:
   nps:
     image: yisier1/nps:v0.26.16
@@ -28,7 +28,6 @@ services:
       - 1panel-network
     labels:
       createdBy: "Apps"
-
 networks:
   1panel-network:
     external: true

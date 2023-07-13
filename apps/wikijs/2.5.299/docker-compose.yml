@@ -1,4 +1,4 @@
-version: "3"
+version: '3'
 services:
   wiki:
     image: requarks/wiki:2.5.299
@@ -17,7 +17,6 @@ services:
       DB_NAME: ${PANEL_DB_NAME}
     labels:
       createdBy: "Apps"
-
 networks:
   1panel-network:
     external: true

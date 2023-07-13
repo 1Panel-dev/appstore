@@ -15,7 +15,6 @@ services:
       - ./logs:/logs
     labels:
       createdBy: "Apps"
-
 networks:
   1panel-network:
     external: true

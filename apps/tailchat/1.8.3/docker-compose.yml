@@ -1,4 +1,4 @@
-version: "3"
+version: '3'
 services:
   tailchat:
     container_name: ${CONTAINER_NAME}
@@ -25,7 +25,6 @@ services:
       - ${PANEL_APP_PORT_HTTP}:11000
     labels:
       createdBy: "Apps"
-
 networks:
   1panel-network:
     external: true
