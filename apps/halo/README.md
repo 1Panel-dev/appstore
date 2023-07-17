@@ -1,25 +1,3 @@
-<p align="center">
-    <a href="https://halo.run" target="_blank" rel="noopener noreferrer">
-        <img width="100" src="https://halo.run/logo" alt="Halo logo" />
-    </a>
-</p>
-
-<p align="center"><b>Halo</b> [ˈheɪloʊ]，强大易用的开源建站工具。</p>
-
-<p align="center">
-<a href="https://github.com/halo-dev/halo/releases"><img alt="GitHub release" src="https://img.shields.io/github/release/halo-dev/halo.svg?style=flat-square&include_prereleases" /></a>
-<a href="https://hub.docker.com/r/halohub/halo"><img alt="Docker pulls" src="https://img.shields.io/docker/pulls/halohub/halo?style=flat-square" /></a>
-<a href="https://github.com/halo-dev/halo/commits"><img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/halo-dev/halo.svg?style=flat-square" /></a>
-<a href="https://github.com/halo-dev/halo/actions"><img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/halo-dev/halo/halo.yaml?branch=main&style=flat-square" /></a>
-<a href="https://codecov.io/gh/halo-dev/halo"><img alt="Codecov percentage" src="https://img.shields.io/codecov/c/github/halo-dev/halo/main?style=flat-square&token=YsRUg9fall"/></a>
-<br />
-<a href="https://halo.run">官网</a>
-<a href="https://docs.halo.run">文档</a>
-<a href="https://bbs.halo.run">社区</a>
-<a href="https://gitee.com/halo-dev">Gitee</a>
-<a href="https://t.me/halo_dev">Telegram 频道</a>
-</p>
-
 # halo
 
 **halo** 是一个简洁、高效的开源博客平台。它提供了易于使用的界面和丰富的功能，使用户可以轻松地创建个人博客或专业网站。

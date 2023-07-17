@@ -1,17 +1,4 @@
-# 关于 1panel 安装
-
-本应用不包含开放平台OAuth相关能力与Admin管理平台
-
-如需要相关能力需要另行安装.
-
-# 本应用介绍
-
-官方网站: [https://tailchat.msgbyte.com/](https://tailchat.msgbyte.com/)
-
-Github: [https://github.com/msgbyte/tailchat](https://github.com/msgbyte/tailchat)
-
-![tailchat](https://socialify.git.ci/msgbyte/tailchat/image?description=1&font=Inter&forks=1&issues=1&language=1&logo=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F86033898%3Fs%3D200%26v%3D4&name=1&owner=1&pattern=Circuit%20Board&stargazers=1&theme=Light)
-
+> 本应用不包含开放平台OAuth相关能力与Admin管理平台，如需要相关能力需要另行安装.
 
 ## 在您自己工作区中的下一代 noIM 应用程序
 

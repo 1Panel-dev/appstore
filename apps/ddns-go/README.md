@@ -1,17 +1,6 @@
 # ddns-go
 
-[![GitHub release](https://img.shields.io/github/release/jeessy2/ddns-go.svg?logo=github&style=flat-square) ![GitHub release downloads](https://img.shields.io/github/downloads/jeessy2/ddns-go/total?logo=github)](https://github.com/jeessy2/ddns-go/releases/latest) [![Go version](https://img.shields.io/github/go-mod/go-version/jeessy2/ddns-go)](https://github.com/jeessy2/ddns-go/blob/master/go.mod) [![](https://goreportcard.com/badge/github.com/jeessy2/ddns-go/v5)](https://goreportcard.com/report/github.com/jeessy2/ddns-go/v5) [![](https://img.shields.io/docker/image-size/jeessy/ddns-go)](https://registry.hub.docker.com/r/jeessy/ddns-go) [![](https://img.shields.io/docker/pulls/jeessy/ddns-go)](https://registry.hub.docker.com/r/jeessy/ddns-go)
-
 自动获得你的公网 IPv4 或 IPv6 地址，并解析到对应的域名服务。
-
-- [特性](#特性)
-- [系统中使用](#系统中使用)
-- [Docker中使用](#docker中使用)
-- [使用IPv6](#使用ipv6)
-- [Webhook](#webhook)
-- [Callback](#callback)
-- [界面](#界面)
-- [开发&自行编译](#开发自行编译)
 
 ## 特性
 
@@ -30,46 +19,6 @@
 - 支持部分DNS服务商[传递自定义参数](https://github.com/jeessy2/ddns-go/wiki/传递自定义参数)，实现地域解析等功能
 
 > **Note** 建议在启用公网访问时，使用 Nginx 等反向代理软件启用 HTTPS 访问，以保证安全性。[FAQ](https://github.com/jeessy2/ddns-go/wiki/FAQ)
-
-## 系统中使用
-
-- 从 [Releases](https://github.com/jeessy2/ddns-go/releases) 下载并解压 ddns-go
-- 双击运行, 如没有找到配置, 程序将自动打开 http://127.0.0.1:9876
-- [可选] 安装服务
-    - Mac/Linux: `sudo ./ddns-go -s install`
-    - Win(以管理员打开cmd): `.\ddns-go.exe -s install`
-- [可选] 服务卸载
-    - Mac/Linux: `sudo ./ddns-go -s uninstall`
-    - Win(以管理员打开cmd): `.\ddns-go.exe -s uninstall`
-- [可选] 支持安装或启动时带参数 `-l`监听地址 `-f`同步间隔时间(秒) `-c`自定义配置文件路径 `-noweb`不启动web服务 `-skipVerify`跳过证书验证。如：`./ddns-go -s install -l :9877 -f 600 -c /Users/name/ddns-go.yaml`
-
-## Docker中使用
-
-- 挂载主机目录, 使用docker host模式。可把 `/opt/ddns-go` 替换为你主机任意目录, 配置文件为隐藏文件
-
-  ```bash
-  docker run -d --name ddns-go --restart=always --net=host -v /opt/ddns-go:/root jeessy/ddns-go
-  ```
-
-- 在浏览器中打开`http://主机IP:9876`，修改你的配置，成功
-
-- [可选] 使用 `ghcr.io` 镜像
-
-  ```bash
-  docker run -d --name ddns-go --restart=always --net=host -v /opt/ddns-go:/root ghcr.io/jeessy2/ddns-go
-  ```
-
-- [可选] 支持启动带参数 `-l`监听地址 `-f`间隔时间(秒)
-
-  ```bash
-  docker run -d --name ddns-go --restart=always --net=host -v /opt/ddns-go:/root jeessy/ddns-go -l :9877 -f 600
-  ```
-
-- [可选] 不使用docker host模式
-
-  ```bash
-  docker run -d --name ddns-go --restart=always -p 9876:9876 -v /opt/ddns-go:/root jeessy/ddns-go
-  ```
 
 ## 使用IPv6
 

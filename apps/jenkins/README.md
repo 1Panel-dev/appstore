@@ -1,17 +1,4 @@
-<a href="https://jenkins.io">
-  <picture>
-    <source width="400" media="(prefers-color-scheme: dark)" srcset="https://www.jenkins.io/images/jenkins-logo-title-dark.svg">
-    <img width="400" src="https://www.jenkins.io/images/jenkins-logo-title.svg">
-  </picture>
-</a>
-
 # About
-
-[![Jenkins Regular Release](https://img.shields.io/endpoint?url=https%3A%2F%2Fwww.jenkins.io%2Fchangelog%2Fbadge.json)](https://www.jenkins.io/changelog)
-[![Jenkins LTS Release](https://img.shields.io/endpoint?url=https%3A%2F%2Fwww.jenkins.io%2Fchangelog-stable%2Fbadge.json)](https://www.jenkins.io/changelog-stable)
-[![Docker Pulls](https://img.shields.io/docker/pulls/jenkins/jenkins.svg)](https://hub.docker.com/r/jenkins/jenkins/)
-[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/3538/badge)](https://bestpractices.coreinfrastructure.org/projects/3538)
-
 
 **Jenkins** 是一个开源的自动化服务器软件，用于实现持续集成和持续交付（CI/CD）流程。它提供了强大的工具和插件来帮助开发团队自动构建、测试和部署软件。
 

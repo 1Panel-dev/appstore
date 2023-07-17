@@ -13,7 +13,6 @@ flarum 的特点包括：
 
 使用 flarum，您可以创建一个功能强大、易于管理的在线社区论坛。不论是支持技术讨论、产品交流还是社交互动，flarum 都是一个值得考虑的选择。
 
-
 # 使用说明
 ## 账户密码
 - 初始账户: flarum
@@ -39,5 +38,3 @@ php flarum cache:clear
 > 项目链接
 >> - https://hub.docker.com/r/crazymax/flarum
 >> - https://github.com/crazy-max/docker-flarum
-
-

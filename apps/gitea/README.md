@@ -1,10 +1,3 @@
-<p align="center">
-  <a href="https://gitea.io/">
-    <img alt="Gitea" src="https://raw.githubusercontent.com/go-gitea/gitea/main/public/img/gitea.svg" width="220"/>
-  </a>
-</p>
-<h1 align="center">Gitea - Git with a cup of tea</h1>
-
 ## 简介
 
 **gitea** 是一个轻量级的自托管Git服务，用于在Linux服务器上搭建私有的Git存储库和代码托管平台。它提供了一个简单易用的Web界面，使您能够方便地管理和协作开发项目。
@@ -29,12 +22,3 @@ gitea 具有以下特点：
 通过 gitea 的用户友好的界面和丰富的功能，您可以轻松地进行团队协作和项目管理，提高开发效率和代码质量。
 
 请注意，在使用 gitea 时，建议采取适当的安全措施，如设置强密码、启用双因素身份验证以及定期备份数据，以确保代码和项目的安全性和可靠性。
-
-
-## 截图
-
-|![Dashboard](https://dl.gitea.io/screenshots/home_timeline.png)|![User Profile](https://dl.gitea.io/screenshots/user_profile.png)|![Global Issues](https://dl.gitea.io/screenshots/global_issues.png)|
-|:---:|:---:|:---:|
-|![Branches](https://dl.gitea.io/screenshots/branches.png)|![Web Editor](https://dl.gitea.io/screenshots/web_editor.png)|![Activity](https://dl.gitea.io/screenshots/activity.png)|
-|![New Migration](https://dl.gitea.io/screenshots/migration.png)|![Migrating](https://dl.gitea.io/screenshots/migration.gif)|![Pull Request View](https://image.ibb.co/e02dSb/6.png)
-![Pull Request Dark](https://dl.gitea.io/screenshots/pull_requests_dark.png)|![Diff Review Dark](https://dl.gitea.io/screenshots/review_dark.png)|![Diff Dark](https://dl.gitea.io/screenshots/diff_dark.png)|

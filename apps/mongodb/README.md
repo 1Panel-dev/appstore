@@ -6,52 +6,9 @@ Welcome to MongoDB!
 - `mongos` - Sharding router.
 - `mongo`  - The database shell (uses interactive javascript).
 
-
-## Download MongoDB
-- https://www.mongodb.com/try/download/community
-- Using homebrew `brew tap mongodb/brew`
-- Using docker image `docker pull mongo`
-
-
-## Building
-
-See [Building MongoDB](docs/building.md).
-
-## Running
-
-For command line options invoke:
-
-  ```bash
-  $ ./mongod --help
-  ```
-
-To run a single server database:
-
-  ```bash
-    $ sudo mkdir -p /data/db
-    $ ./mongod
-    $
-    $ # The mongo javascript shell connects to localhost and test database by default:
-    $ ./mongo
-    > help
-  ```
-
-## Installing Compass
-
-You can install compass using the `install_compass` script packaged with MongoDB:
-
-  ```bash
-    $ ./install_compass
-  ```
-
-This will download the appropriate MongoDB Compass package for your platform
-and install it.
-
 ## Drivers
 
-Client drivers for most programming languages are available at
-https://docs.mongodb.com/manual/applications/drivers/. Use the shell
-(`mongo`) for administrative tasks.
+Client drivers for most programming languages are available at https://docs.mongodb.com/manual/applications/drivers/. Use the shell (`mongo`) for administrative tasks.
 
 ## Bug Reports
 
@@ -82,12 +39,6 @@ https://www.mongodb.com/cloud/atlas
 
   Technical questions about building and developing MongoDB.
 
-
 ## LICENSE
 
-MongoDB is free and the source is available. Versions released prior to
-October 16, 2018 are published under the AGPL. All versions released after
-October 16, 2018, including patch fixes for prior versions, are published
-under the [Server Side Public License (SSPL) v1](LICENSE-Community.txt).
-See individual files for details.
-
+MongoDB is free and the source is available. Versions released prior to October 16, 2018 are published under the AGPL. All versions released after October 16, 2018, including patch fixes for prior versions, are published under the [Server Side Public License (SSPL) v1](LICENSE-Community.txt). See individual files for details.

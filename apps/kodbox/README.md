@@ -1,14 +1,3 @@
----
-
-[![Home page](https://img.shields.io/badge/home-page-yellow.svg?style=flat)](http://kodcloud.com) [![GPLV3 License](https://img.shields.io/badge/Licence-GPLV3-green.svg?style=flat)](http://kodcloud.com)
-
-> Kodbox is a file manager for web. It is also a web code editor, which allows you to develop websites directly within the web browser.You can run kodbox either online or locally,on Linux, Windows or Mac based platforms. The only requirement is to have PHP 5 available.
-
-![](https://raw.githubusercontent.com/kalcaddle/static/master/images/kod/common2.png)
-![](https://raw.githubusercontent.com/kalcaddle/static/master/images/kod/common3.png)
-
----
-
 # Kodbox
 
 **Kodbox** 是一个开源的在线文件管理器，提供了方便的文件浏览、上传、下载和共享功能。它可以让您通过 web 浏览器访问和管理您的文件，无论是个人使用还是团队协作都非常便捷。
@@ -23,6 +12,3 @@ Kodbox 的特点包括：
 - **插件扩展**：Kodbox 提供了丰富的插件系统，允许您根据需要添加额外的功能和扩展，满足个性化的文件管理需求。
 
 使用 Kodbox，您可以随时随地通过浏览器访问和管理您的文件，方便地进行文件共享和团队协作。无论是个人使用还是企业部署，Kodbox 都是一个实用且可靠的在线文件管理工具。
-
-
-

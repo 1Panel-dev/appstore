@@ -1,14 +1,5 @@
 # Uptime Kuma
 
-<a target="_blank" href="https://github.com/louislam/uptime-kuma"><img src="https://img.shields.io/github/stars/louislam/uptime-kuma" /></a> <a target="_blank" href="https://hub.docker.com/r/louislam/uptime-kuma"><img src="https://img.shields.io/docker/pulls/louislam/uptime-kuma" /></a> <a target="_blank" href="https://hub.docker.com/r/louislam/uptime-kuma"><img src="https://img.shields.io/docker/v/louislam/uptime-kuma/latest?label=docker%20image%20ver." /></a> <a target="_blank" href="https://github.com/louislam/uptime-kuma"><img src="https://img.shields.io/github/last-commit/louislam/uptime-kuma" /></a>  <a target="_blank" href="https://opencollective.com/uptime-kuma"><img src="https://opencollective.com/uptime-kuma/total/badge.svg?label=Open%20Collective%20Backers&color=brightgreen" /></a>
-[![GitHub Sponsors](https://img.shields.io/github/sponsors/louislam?label=GitHub%20Sponsors)](https://github.com/sponsors/louislam) <a href="https://weblate.kuma.pet/projects/uptime-kuma/uptime-kuma/">
-<img src="https://weblate.kuma.pet/widgets/uptime-kuma/-/svg-badge.svg" alt="Translation status" />
-</a>
-
-<div align="center" width="100%">
-    <img src="./public/icon.svg" width="128" alt="" />
-</div>
-
 Uptime Kuma is an easy-to-use self-hosted monitoring tool.
 
 <img src="https://user-images.githubusercontent.com/1336778/212262296-e6205815-ad62-488c-83ec-a5b0d0689f7c.jpg" width="700" alt="" />
@@ -35,70 +26,6 @@ It is a temporary live demo, all data will be deleted after 10 minutes. Use the 
 * Proxy support
 * 2FA support
 
-## 🔧 How to Install
-
-### 🐳 Docker
-
-```bash
-docker run -d --restart=always -p 3001:3001 -v uptime-kuma:/app/data --name uptime-kuma louislam/uptime-kuma:1
-```
-
-⚠️ Please use a **local volume** only. Other types such as NFS are not supported.
-
-Uptime Kuma is now running on http://localhost:3001
-
-### 💪🏻 Non-Docker
-
-Required Tools: 
-- [Node.js](https://nodejs.org/en/download/) >= 14
-- [npm](https://docs.npmjs.com/cli/) >= 7
-- [Git](https://git-scm.com/downloads) 
-- [pm2](https://pm2.keymetrics.io/) - For running Uptime Kuma in the background
-
-```bash
-# Update your npm to the latest version
-npm install npm -g
-
-git clone https://github.com/louislam/uptime-kuma.git
-cd uptime-kuma
-npm run setup
-
-# Option 1. Try it
-node server/server.js
-
-# (Recommended) Option 2. Run in background using PM2
-# Install PM2 if you don't have it: 
-npm install pm2 -g && pm2 install pm2-logrotate
-
-# Start Server
-pm2 start server/server.js --name uptime-kuma
-
-
-```
-Uptime Kuma is now running on http://localhost:3001
-
-More useful PM2 Commands
-
-```bash
-# If you want to see the current console output
-pm2 monit
-
-# If you want to add it to startup
-pm2 save && pm2 startup
-```
-
-### Advanced Installation
-
-If you need more options or need to browse via a reverse proxy, please read:
-
-https://github.com/louislam/uptime-kuma/wiki/%F0%9F%94%A7-How-to-Install
-
-## 🆙 How to Update
-
-Please read:
-
-https://github.com/louislam/uptime-kuma/wiki/%F0%9F%86%99-How-to-Update
-
 ## 🆕 What's Next?
 
 I will mark requests/issues to the next milestone.
@@ -108,30 +35,6 @@ https://github.com/louislam/uptime-kuma/milestones
 Project Plan:
 
 https://github.com/users/louislam/projects/4/views/1
-
-## ❤️ Sponsors
-
-Thank you so much! (GitHub Sponsors will be updated manually. OpenCollective sponsors will be updated automatically, the list will be cached by GitHub though. It may need some time to be updated)
-
-<img src="https://uptime.kuma.pet/sponsors?v=6" alt />
-
-## 🖼 More Screenshots
-
-Light Mode:
-
-<img src="https://uptime.kuma.pet/img/light.jpg" width="512" alt="" />
-
-Status Page:
-
-<img src="https://user-images.githubusercontent.com/1336778/134628766-a3fe0981-0926-4285-ab46-891a21c3e4cb.png" width="512" alt="" />
-
-Settings Page:
-
-<img src="https://louislam.net/uptimekuma/2.jpg" width="400" alt="" />
-
-Telegram Notification Sample:
-
-<img src="https://louislam.net/uptimekuma/3.jpg" width="400" alt="" />
 
 ## Motivation
 
