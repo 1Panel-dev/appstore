@@ -1,7 +1,7 @@
 additionalProperties:
   formFields:
-    - default: v3.4.3
-      disabled: true
+    - default: latest
+      edit: true
       envKey: VERSION
       labelEn: JumpServer version
       labelZh: JumpServer 版本
@@ -14,14 +14,14 @@ additionalProperties:
       labelZh: 数据目录
       required: true
       type: text
-    - default: vYneAbsXUhe4BghEeedNL7nfWLwaTTmhnwQMvjYOIG25Ofzghk
+    - default: ""
       edit: true
       envKey: SECRET_KEY
       labelEn: Cryptographic signing
       labelZh: 加密签名
       required: true
       type: password
-    - default: K1ffDfLSIK8SV2PZj6VaxOiv8KuawlJK
+    - default: ""
       edit: true
       envKey: BOOTSTRAP_TOKEN
       labelEn: Bootstrap token
@@ -56,26 +56,26 @@ additionalProperties:
           value: "ERROR"
         - label: CRITICAL
           value: "CRITICAL"
-    - default: mysql
-      disabled: true
+    - default: ""
+      edit: true
       envKey: DB_HOST
       labelEn: Database host
       labelZh: 数据库主机
       type: text
     - default: 3306
-      disabled: true
+      edit: true
       envKey: DB_PORT
       labelEn: Database port
       labelZh: 数据库端口
       rule: paramPort
       type: number
-    - default: root
-      disabled: true
+    - default: jumpserver
+      edit: true
       envKey: DB_USER
       labelEn: Database user
       labelZh: 数据库用户
       type: text
-    - default: Np2qgqtiUayA857GpuVI0Wtg
+    - default: ""
       edit: true
       envKey: DB_PASSWORD
       labelEn: Database password
@@ -88,20 +88,20 @@ additionalProperties:
       labelZh: 数据库名称
       required: true
       type: text
-    - default: redis
-      disabled: true
+    - default: ""
+      edit: true
       envKey: REDIS_HOST
       labelEn: Redis host
       labelZh: Redis 主机
       type: text
     - default: 6379
-      disabled: true
+      edit: true
       envKey: REDIS_PORT
       labelEn: Redis port
       labelZh: Redis 端口
       rule: paramPort
       type: number
-    - default: KoJqlTDu1d5HwfXgJ4QTbZQt
+    - default: ""
       edit: true
       envKey: REDIS_PASSWORD
       labelEn: Redis password
