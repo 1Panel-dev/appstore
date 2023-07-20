@@ -1,3 +1,9 @@
+name: JumpServer
+tags:
+    - 工具
+title: JumpServer 开源堡垒机
+type: 工具
+description: JumpServer 开源堡垒机
 additionalProperties:
   key: jumpserver
   name: JumpServer
