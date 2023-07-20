@@ -1,8 +1,10 @@
 version: '3.8'
 services:
-  mysql:
+  jms_mysql:
     image: mariadb:10.6
     restart: always
+    labels:
+      createdBy: "Apps"
     environment:
       MARIADB_ROOT_PASSWORD: ${DB_PASSWORD}
       MARIADB_DATABASE: ${DB_NAME}
@@ -17,9 +19,11 @@ services:
     networks:
       - 1panel-network
 
-  redis:
+  jms_redis:
     image: redis:6.2
     restart: always
+    labels:
+      createdBy: "Apps"
     command: redis-server --requirepass ${REDIS_PASSWORD} --maxmemory-policy allkeys-lru
     environment:
       REDIS_PASSWORD: ${REDIS_PASSWORD}
@@ -34,11 +38,13 @@ services:
     networks:
       - 1panel-network
 
-  jumpserver:
+  jms_all:
     image: jumpserver/jms_all:v3.4.3
     container_name: ${CONTAINER_NAME}
     privileged: true
     restart: always
+    labels:
+      createdBy: "Apps"
     environment:
       SECRET_KEY: ${SECRET_KEY}
       BOOTSTRAP_TOKEN: ${BOOTSTRAP_TOKEN}
@@ -62,9 +68,9 @@ services:
       - ${MAGNUS_MARIADB_PORT}:33062
       - ${MAGNUS_REDIS_PORT}:63790
     depends_on:
-      mysql:
+      jms_mysql:
         condition: service_healthy
-      redis:
+      jms_redis:
         condition: service_healthy
     healthcheck:
       test: "curl -fsL http://localhost/api/health/ > /dev/null"
@@ -83,3 +89,4 @@ services:
 
 networks:
   1panel-network:
+    external: true

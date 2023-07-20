@@ -49,7 +49,7 @@ additionalProperties:
           value: "ERROR"
         - label: CRITICAL
           value: "CRITICAL"
-    - default: mysql
+    - default: jms_mysql
       disabled: true
       envKey: DB_HOST
       labelEn: Database host
@@ -81,7 +81,7 @@ additionalProperties:
       labelZh: 数据库名称
       required: true
       type: text
-    - default: redis
+    - default: jms_redis
       disabled: true
       envKey: REDIS_HOST
       labelEn: Redis host
