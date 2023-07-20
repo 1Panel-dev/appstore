@@ -9,7 +9,7 @@ services:
       - "${PANEL_APP_PORT_HTTP}:9876"
     volumes:
       - ./data:/root
-    image: jeessy/ddns-go:v5.3.6
+    image: jeessy/ddns-go:v5.4.1
     labels:
       createdBy: "Apps"
 networks:
