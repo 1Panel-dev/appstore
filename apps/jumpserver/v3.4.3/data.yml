@@ -1,12 +1,5 @@
 additionalProperties:
   formFields:
-    - default: v3.4.3
-      disabled: true
-      envKey: VERSION
-      labelEn: JumpServer version
-      labelZh: JumpServer 版本
-      required: true
-      type: text
     - default: ./data
       edit: true
       envKey: VOLUME_DIR
