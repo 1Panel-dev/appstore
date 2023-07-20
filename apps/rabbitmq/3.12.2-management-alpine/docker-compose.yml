@@ -1,7 +1,7 @@
 version: '3'
 services:
   rabbitmq:
-    image: rabbitmq:3.12.1-management-alpine
+    image: rabbitmq:3.12.2-management-alpine
     container_name: ${CONTAINER_NAME}
     ports:
         - ${PANEL_APP_PORT_SERVICE}:5672
