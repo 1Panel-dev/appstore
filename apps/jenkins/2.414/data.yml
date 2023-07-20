@@ -1,5 +1,16 @@
 additionalProperties:
     formFields:
+        - default: "true"
+          envKey: PRIVILEGED
+          labelEn: Privileged
+          labelZh: 特权模式
+          required: true
+          type: select
+          values:
+            - label: 开启
+              value: "true"
+            - label: 关闭
+              value: "false"
         - default: 8080
           envKey: PANEL_APP_PORT_HTTP
           labelEn: Port
