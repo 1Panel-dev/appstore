@@ -1,7 +1,7 @@
 version: '3'
 services:
   kubepi:
-    image: kubeoperator/kubepi-server:v1.6.4
+    image: kubeoperator/kubepi-server:v1.6.5
     container_name: ${CONTAINER_NAME}
     restart: unless-stopped
     networks:
