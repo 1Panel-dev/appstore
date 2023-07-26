@@ -1,0 +1,20 @@
+name: Pingvin Share
+tags:
+    - 工具
+title: 一个可自建的文件分享平台
+type: 工具
+description: 一个可自建的文件分享平台
+additionalProperties:
+    key: pingvin-share
+    name: Pingvin Share
+    tags:
+        - Tool
+    shortDescZh: 一个可自建的文件分享平台
+    shortDescEn: s self-hosted file sharing platform
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://github.com/stonith404/pingvin-share
+    github: https://github.com/stonith404/pingvin-share
+    document: https://github.com/stonith404/pingvin-share
