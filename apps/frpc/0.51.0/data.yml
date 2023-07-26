@@ -1,0 +1,9 @@
+additionalProperties:
+    formFields:
+        - default: ./data/frpc.ini
+          edit: true
+          envKey: CONFIG_FILE_PATH
+          labelEn: Configuration file path
+          labelZh: 配置文件路径
+          required: true
+          type: text

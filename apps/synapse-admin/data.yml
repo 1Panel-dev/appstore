@@ -1,0 +1,20 @@
+name: Synapse-admin
+tags:
+    - 工具
+title: Synapse管理界面
+type: 工具
+description: Synapse管理界面
+additionalProperties:
+    key: synapse-admin
+    name: Synapse-admin
+    tags:
+        - Tool
+    shortDescZh: Synapse管理界面
+    shortDescEn: Synapse admin ui
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://hub.docker.com/r/awesometechnologies/synapse-admin
+    github: https://github.com/Awesome-Technologies/synapse-admin
+    document: https://github.com/Awesome-Technologies/synapse-admin

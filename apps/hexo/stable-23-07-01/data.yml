@@ -1,0 +1,31 @@
+additionalProperties:
+    formFields:
+        - default: 40064
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: Port
+          labelZh: 端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: ./data
+          edit: true
+          envKey: DATA_PATH
+          labelEn: Data folder path
+          labelZh: 数据文件夹路径
+          required: true
+          type: text
+        - default: ""
+          edit: true
+          envKey: GIT_USERNAME
+          labelEn: Git username
+          labelZh: Git 用户名
+          required: true
+          type: text
+        - default: ""
+          edit: true
+          envKey: GIT_MAIL
+          labelEn: Git Email
+          labelZh: Git 邮箱
+          required: true
+          type: text
