@@ -3,6 +3,7 @@ services:
   zentao:
     image: easysoft/zentao:18.5
     container_name: ${CONTAINER_NAME}
+    restart: always
     ports:
       - ${PANEL_APP_PORT_HTTP}:80
       - ${ZENTAO_MYSQL_PORT}:3306
