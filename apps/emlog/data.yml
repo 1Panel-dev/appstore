@@ -1,0 +1,19 @@
+name: emlog
+tags:
+    - 建站
+title: 一款轻量级博客及CMS建站系统
+type: 建站
+description: 一款轻量级博客及CMS建站系统。
+additionalProperties:
+    key: emlog
+    name: emlog
+    tags:
+        - WebSite
+    shortDescZh: 一款轻量级博客及CMS建站系统
+    shortDescEn: A lightweight blog and cms site building system
+    type: website
+    crossVersionUpdate: true
+    limit: 0
+    website: https://www.emlog.net/
+    github: https://github.com/emlog/emlog
+    document: https://www.emlog.net/docs/#/

@@ -1,0 +1,60 @@
+additionalProperties:
+  formFields:
+    - default: ""
+      envKey: PANEL_DB_HOST
+      key: mysql
+      labelEn: Database Service
+      labelZh: 数据库服务
+      required: true
+      type: service
+    - default: emlog
+      envKey: PANEL_DB_NAME
+      labelEn: Database
+      labelZh: 数据库名
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: emlog
+      envKey: PANEL_DB_USER
+      labelEn: Database User
+      labelZh: 数据库用户
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: emlog
+      envKey: PANEL_DB_USER_PASSWORD
+      labelEn: Database User Password
+      labelZh: 数据库用户密码
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+    - default: 80
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: localhost
+      edit: true
+      envKey: EMLOG_EXTERNAL_URL
+      labelEn: External URL
+      labelZh: 外部访问地址
+      required: true
+      rule: paramExtUrl
+      type: text
+    - default: false
+      edit: true
+      envKey: EMLOG_ENABLE_HTTPS
+      labelEn: Enable https
+      labelZh: 开启HTTPS
+      required: true
+      type: select
+      values:
+        - label: 开启
+          value: true
+        - label: 不开启
+          value: false
