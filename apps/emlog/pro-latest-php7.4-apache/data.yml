@@ -42,7 +42,7 @@ additionalProperties:
       edit: true
       envKey: EMLOG_EXTERNAL_URL
       labelEn: External URL
-      labelZh: 外部访问地址
+      labelZh: 绑定的域名，如 emlog.net ，不带http
       required: true
       rule: paramExtUrl
       type: text
@@ -50,7 +50,7 @@ additionalProperties:
       edit: true
       envKey: EMLOG_ENABLE_HTTPS
       labelEn: Enable https
-      labelZh: 开启HTTPS
+      labelZh: 开启HTTPS，开启需将证书certificate.crt、private.key上传到应用ssl目录下
       required: true
       type: select
       values:

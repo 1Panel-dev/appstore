@@ -1,13 +1,12 @@
 version: '3'
 services:
-  typecho:
+  emlog:
     image: emlog/emlog:pro-latest-php7.4-apache
     container_name: ${CONTAINER_NAME}
     restart: always
     environment:
       - EMLOG_DB_HOST=${PANEL_DB_HOST}
       - EMLOG_DB_NAME=${PANEL_DB_NAME}
-      - EMLOG_DB_PORT=3306
       - EMLOG_DB_USER=${PANEL_DB_USER}
       - EMLOG_DB_PASSWORD=${PANEL_DB_USER_PASSWORD}
       - EMLOG_DOMAIN_NAME=${EMLOG_EXTERNAL_URL}
