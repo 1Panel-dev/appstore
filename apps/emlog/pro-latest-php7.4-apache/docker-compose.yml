@@ -10,14 +10,12 @@ services:
       - EMLOG_DB_USER=${PANEL_DB_USER}
       - EMLOG_DB_PASSWORD=${PANEL_DB_USER_PASSWORD}
       - EMLOG_DOMAIN_NAME=${EMLOG_EXTERNAL_URL}
-      - EMLOG_ENABLE_HTTPS=${EMLOG_ENABLE_HTTPS}
     ports:
       - ${PANEL_APP_PORT_HTTP}:80
     networks:
       - 1panel-network
     volumes:
       - ./data:/app
-      - ./ssl:/ssl
     labels:
       createdBy: "Apps"
 networks:

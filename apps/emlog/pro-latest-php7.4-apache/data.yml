@@ -41,20 +41,8 @@ additionalProperties:
     - default: localhost
       edit: true
       envKey: EMLOG_EXTERNAL_URL
-      labelEn: External URL
+      labelEn: site domain
       labelZh: 绑定的域名，如 emlog.net ，不带http
       required: true
       rule: paramExtUrl
       type: text
-    - default: false
-      edit: true
-      envKey: EMLOG_ENABLE_HTTPS
-      labelEn: Enable https
-      labelZh: 开启HTTPS，开启需将证书certificate.crt、private.key上传到应用ssl目录下
-      required: true
-      type: select
-      values:
-        - label: 开启
-          value: true
-        - label: 不开启
-          value: false
