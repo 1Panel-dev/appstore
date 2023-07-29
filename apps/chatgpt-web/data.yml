@@ -1,0 +1,20 @@
+name: ChatGPT Web
+tags:
+    - 工具
+title: 使用express和vue3搭建的支持ChatGPT双模型演示网页
+type: 工具
+description: 使用express和vue3搭建的支持ChatGPT双模型演示网页
+additionalProperties:
+    key: chatgpt-web
+    name: ChatGPT Web
+    tags:
+        - Tool
+    shortDescZh: 使用express和vue3搭建的支持ChatGPT双模型演示网页
+    shortDescEn: ChatGPT-enabled dual-model demo page built with express and vue3
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://github.com/Chanzhaoyu/chatgpt-web
+    github: https://github.com/Chanzhaoyu/chatgpt-web
+    document: https://github.com/Chanzhaoyu/chatgpt-web
