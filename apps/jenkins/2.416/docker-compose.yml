@@ -4,14 +4,14 @@ services:
     container_name: ${CONTAINER_NAME}
     image: jenkins/jenkins:2.416
     restart: always
-    privileged: true
+    privileged: ${PRIVILEGED}
     user: root
     ports:
       - ${PANEL_APP_PORT_HTTP}:8080
     volumes:
       - ./jenkins:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
-      - /usr/local/bin/docker:/usr/local/bin/docker
+      - ${DOCKER_BINARY}:${DOCKER_BINARY}
     networks:
       - 1panel-network
     labels:
