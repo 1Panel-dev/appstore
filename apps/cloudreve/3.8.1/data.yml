@@ -8,17 +8,3 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
-        - default: ./data/uploads
-          edit: true
-          envKey: UPLOAD_PATH
-          labelEn: The upload file save path
-          labelZh: 上传文件保存路径
-          required: true
-          type: text
-        - default: ./data/data
-          edit: true
-          envKey: TMP_PATH
-          labelEn: Temp folder path
-          labelZh: 临时文件夹路径
-          required: true
-          type: text
