@@ -3,6 +3,7 @@ services:
   rabbitmq:
     image: rabbitmq:3.12.2-management-alpine
     container_name: ${CONTAINER_NAME}
+    restart: always
     ports:
         - ${PANEL_APP_PORT_SERVICE}:5672
         - ${PANEL_APP_PORT_HTTP}:15672
