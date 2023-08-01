@@ -13,7 +13,7 @@ services:
       - "./data/conf.ini:/cloudreve/conf.ini"
       - "./data/cloudreve.db:/cloudreve/cloudreve.db"
       - "./data/avatar:/cloudreve/avatar"
-    image: cloudreve/cloudreve:3.8.0
+    image: cloudreve/cloudreve:3.8.1
     labels:  
       createdBy: "Apps"
 networks:  
