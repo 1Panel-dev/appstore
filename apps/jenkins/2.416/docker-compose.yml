@@ -4,7 +4,7 @@ services:
     container_name: ${CONTAINER_NAME}
     image: jenkins/jenkins:2.416
     restart: always
-    privileged: ${PRIVILEGED}
+    privileged: true
     user: root
     ports:
       - ${PANEL_APP_PORT_HTTP}:8080

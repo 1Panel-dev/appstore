@@ -1,17 +1,5 @@
 additionalProperties:
     formFields:
-        - default: "true"
-          disabled: true
-          envKey: PRIVILEGED
-          labelEn: Privileged
-          labelZh: 特权模式
-          required: true
-          type: select
-          values:
-            - label: 开启
-              value: "true"
-            - label: 关闭
-              value: "false"
         - default: /usr/bin/docker
           edit: true
           envKey: DOCKER_BINARY
