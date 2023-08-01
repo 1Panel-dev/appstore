@@ -1,8 +1,11 @@
 name: Update app version in Renovate Branches
 
 on:
+  schedule:
+    - cron: "0 0 * * *"
   push:
-    branches: [ 'renovate/*' ]
+    branches:
+      branches: [ 'renovate/*' ]
 
 jobs:
   update-app-version:
