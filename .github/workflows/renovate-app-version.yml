@@ -5,6 +5,11 @@ on:
     - cron: "0 0 * * *"
   push:
     branches: [ 'renovate/*' ]
+  workflow_dispatch:
+    inputs:
+      manual-trigger:
+        description: 'Manually trigger Renovate'
+        default: ''
 
 jobs:
   update-app-version:
