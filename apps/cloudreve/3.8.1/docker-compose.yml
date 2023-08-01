@@ -8,8 +8,8 @@ services:
     ports:
       - "${PANEL_APP_PORT_HTTP}:5212"
     volumes:
-      - "${UPLOAD_PATH}:/cloudreve/uploads"
-      - "${TMP_PATH}:/data"
+      - "./data/uploads:/cloudreve/uploads"
+      - "./data/data:/data"
       - "./data/conf.ini:/cloudreve/conf.ini"
       - "./data/cloudreve.db:/cloudreve/cloudreve.db"
       - "./data/avatar:/cloudreve/avatar"
