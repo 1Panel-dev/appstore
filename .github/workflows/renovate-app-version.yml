@@ -4,8 +4,7 @@ on:
   schedule:
     - cron: "0 0 * * *"
   push:
-    branches:
-      branches: [ 'renovate/*' ]
+    branches: [ 'renovate/*' ]
 
 jobs:
   update-app-version:
