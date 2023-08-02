@@ -1,0 +1,19 @@
+name: JumpServer
+tags:
+    - 工具
+title: JumpServer 开源堡垒机
+type: 工具
+description: JumpServer 开源堡垒机
+additionalProperties:
+  key: jumpserver
+  name: JumpServer
+  tags:
+    - Tool
+  shortDescZh: JumpServer 是广受欢迎的开源堡垒机，是符合 4A 规范的专业运维安全审计系统。
+  shortDescEn: JumpServer is the world's first open-source Bastion Host and is licensed under the GPLv3.
+  type: tool
+  crossVersionUpdate: true
+  limit: 1
+  website: https://www.jumpserver.org
+  github: https://github.com/jumpserver/jumpserver
+  document: https://docs.jumpserver.org
