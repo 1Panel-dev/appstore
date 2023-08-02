@@ -1,0 +1,20 @@
+name: SFTPGo
+tags:
+    - 工具
+title: 支持自定义 HTTP/S，FTP/S 和 WebDAV 的 SFTP 服务
+type: 工具
+description: 支持自定义 HTTP/S，FTP/S 和 WebDAV 的 SFTP 服务
+additionalProperties:
+    key: sftpgo
+    name: SFTPGo
+    tags:
+        - Tool
+    shortDescZh: 支持自定义 HTTP/S，FTP/S 和 WebDAV 的 SFTP 服务
+    shortDescEn: Support for custom HTTP/S, FTP/S, and WebDAV in SFTP service
+    type: tool
+    crossVersionUpdate: false  
+    limit: 1
+    recommend: 0
+    website: https://sftpgo.com/
+    github: https://github.com/drakkan/sftpgo/
+    document: https://github.com/drakkan/sftpgo/blob/main/docs/howto/getting-started.md
