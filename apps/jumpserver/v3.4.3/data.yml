@@ -1,12 +1,5 @@
 additionalProperties:
   formFields:
-    - default: ./data
-      edit: true
-      envKey: VOLUME_DIR
-      labelEn: Data directory
-      labelZh: 数据目录
-      required: true
-      type: text
     - default: vYneAbsXUhe4BghEeedNL7nfWLwaTTmhnwQMvjYOIG25Ofzghk
       edit: true
       envKey: SECRET_KEY
@@ -49,71 +42,65 @@ additionalProperties:
           value: "ERROR"
         - label: CRITICAL
           value: "CRITICAL"
-    - default: jms_mysql
-      disabled: true
-      envKey: DB_HOST
-      labelEn: Database host
-      labelZh: 数据库主机
-      type: text
-    - default: 3306
-      disabled: true
-      envKey: DB_PORT
-      labelEn: Database port
-      labelZh: 数据库端口
-      rule: paramPort
-      type: number
-    - default: root
-      disabled: true
-      envKey: DB_USER
-      labelEn: Database user
-      labelZh: 数据库用户
-      type: text
-    - default: Np2qgqtiUayA857GpuVI0Wtg
-      edit: true
-      envKey: DB_PASSWORD
-      labelEn: Database password
-      labelZh: 数据库密码
+    - default: ""
+      envKey: PANEL_DB_HOST
+      key: mysql
+      labelEn: Database Service
+      labelZh: 数据库服务
       required: true
-      type: password
+      type: service
     - default: jumpserver
-      envKey: DB_NAME
-      labelEn: Database name
-      labelZh: 数据库名称
+      envKey: PANEL_DB_NAME
+      labelEn: Database
+      labelZh: 数据库名
+      random: true
       required: true
+      rule: paramCommon
       type: text
-    - default: jms_redis
-      disabled: true
-      envKey: REDIS_HOST
-      labelEn: Redis host
-      labelZh: Redis 主机
-      type: text
-    - default: 6379
-      disabled: true
-      envKey: REDIS_PORT
-      labelEn: Redis port
-      labelZh: Redis 端口
-      rule: paramPort
-      type: number
-    - default: KoJqlTDu1d5HwfXgJ4QTbZQt
-      edit: true
-      envKey: REDIS_PASSWORD
-      labelEn: Redis password
-      labelZh: Redis 密码
+    - default: jumpserver
+      envKey: PANEL_DB_USER
+      labelEn: Database User
+      labelZh: 数据库用户
+      random: true
       required: true
+      rule: paramCommon
+      type: text
+    - default: jumpserver
+      envKey: PANEL_DB_USER_PASSWORD
+      labelEn: Database User Password
+      labelZh: 数据库用户密码
+      random: true
+      required: true
+      rule: paramComplexity
       type: password
-    - default: 80
+    - default: ""
       edit: true
-      envKey: HTTP_PORT
-      labelEn: JumpServer Web port
-      labelZh: JumpServer Web 端口
+      envKey: REDIS_HOST
+      key: redis
+      labelEn: Redis Service
+      labelZh: 缓存服务服务
+      required: true
+      type: service
+    - default: ""
+      edit: true
+      envKey: REDIS_PASS
+      labelEn: Redis Service Password
+      labelZh: 缓存服务服务密码
+      required: true
+      rule: paramCommon
+      type: password
+    - default: 8080
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Web Port
+      labelZh: Web 端口
       required: true
       rule: paramPort
       type: number
     - default: 2222
       edit: true
       envKey: SSH_PORT
-      labelEn: JumpServer SSH port
-      labelZh: JumpServer SSH 端口
+      labelEn: SSH port
+      labelZh: SSH 端口
       required: true
       rule: paramPort
       type: number
