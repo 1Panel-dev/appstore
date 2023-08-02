@@ -7,7 +7,7 @@ services:
     ports:
       - ${PANEL_APP_PORT_HTTP}:80
     environment:
-      - PMA_HOST=${PANEL_DB_HOST}
+      - PMA_ARBITRARY=1
     networks:
       - 1panel-network
     volumes:
