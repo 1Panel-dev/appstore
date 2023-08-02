@@ -8,12 +8,11 @@ services:
     ports:
       - "${PANEL_APP_PORT_HTTP}:8000"
     volumes:
-      - "${DATA_PATH}/database:/app/database"
-      - "${DATA_PATH}/logs:/app/logs"
+      - "./data/database:/app/database"
+      - "./data/logs:/app/logs"
     image: mouday/domain-admin:v1.5.8
     labels:  
       createdBy: "Apps"
-
 networks:  
   1panel-network:  
     external: true
