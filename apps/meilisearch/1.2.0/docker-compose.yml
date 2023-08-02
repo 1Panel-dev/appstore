@@ -1,0 +1,33 @@
+version: "3"
+networks:
+  1panel-network:
+    external: true
+
+services:
+  meilisearch:
+    container_name: ${CONTAINER_NAME}
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    networks:
+      - 1panel-network
+    image: getmeili/meilisearch:v1.2.0
+    command:
+      - /bin/sh
+      - -c
+      - /bin/meilisearch ${MEILI_NO_ANALYTICS}
+    labels:
+      createdBy: Apps
+    restart: unless-stopped
+    ports:
+      - ${HOST_IP}:${MEILI_HTTP_ADDR}:7700
+    environment:
+      MEILI_CONFIG_FILE_PATH: /config/config.toml
+      MEILI_MASTER_KEY: ${MEILI_MASTER_KEY}
+    volumes:
+      - ./config:/config 
+      - ./data:/meili_data
+      - ./dumps:/dumps
+      - ./snapshots:/snapshots
