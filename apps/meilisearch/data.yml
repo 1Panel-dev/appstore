@@ -1,13 +1,19 @@
+name: MeiliSearch
+tags:
+    - 工具
+title: 一个开源、快如闪电且高度相关的搜索引擎，可以轻松融入您的工作流程。
+type: 工具
+description: 一个开源、快如闪电且高度相关的搜索引擎，可以轻松融入您的工作流程。
 additionalProperties:
-  key: meilisearch  #应用的 key ，仅限英文，用于在 Linux 创建文件夹
-  name: MeiliSearch #应用名称
+  key: meilisearch
+  name: MeiliSearch
   tags:
-    - Tool #应用标签，可以有多个，请参照下方的标签列表
-  shortDescZh: 一个开源、快如闪电且高度相关的搜索引擎，可以轻松融入您的工作流程。 #应用中文描述，不要超过30个字
-  shortDescEn: An open-source, lightning-fast, and hyper-relevant search engine that fits effortlessly into your workflow.  #应用英文描述
-  type: tool  #应用类型，区别于应用分类，只能有一个，请参照下方的类型列表
-  crossVersionUpdate:  false #是否可以跨大版本升级
-  limit: 0 #应用安装数量限制，0 代表无限制
-  website:  https://www.meilisearch.com #官网地址
-  github:  https://github.com/meilisearch/meilisearch #github 地址
-  document: https://www.meilisearch.com/docs #文档地址
+    - Tool
+  shortDescZh: 一个开源、快如闪电且高度相关的搜索引擎，可以轻松融入您的工作流程
+  shortDescEn: An open-source, lightning-fast, and hyper-relevant search engine that fits effortlessly into your workflow
+  type: tool
+  crossVersionUpdate: false
+  limit: 0
+  website: https://www.meilisearch.com
+  github: https://github.com/meilisearch/meilisearch
+  document: https://www.meilisearch.com/docs

@@ -1,6 +1,6 @@
 additionalProperties:
   formFields:
-    - envKey: MEILI_HTTP_ADDR
+    - envKey: PANEL_APP_PORT_HTTP
       default: 7700
       labelEn: Port
       labelZh: 端口
@@ -8,7 +8,6 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-
     - envKey: MEILI_MASTER_KEY
       default: HmPEKZhcoANzRt3DTPhRQVRxPEVZw7m2TymKwKhs
       labelEn: MasterKey
@@ -18,27 +17,14 @@ additionalProperties:
       random: true
       rule: paramComplexity
       type: password
-
-    - envKey: MEILI_ENV
-      default: development
-      labelEn: environment
-      labelZh: 环境
-      edit: true
-      required: true
-      type: select
-      values:
-        - label: development
-          value: development
-        - label: production
-          value: production
     - envKey: MEILI_NO_ANALYTICS
-      default: ' '
+      default: ''
       labelEn: Meilisearch's built-in telemetry
       labelZh: Meilisearch 的内置遥测
       edit: true
       type: select
       values:
-        - label: disable
+        - label: 开启
+          value: ''
+        - label: 关闭
           value: --no-analytics
-        - label: enable
-          value: ' '
