@@ -1,24 +1,26 @@
 additionalProperties:
-  formFields:
-    - default: 80
-      edit: true
-      envKey: PANEL_APP_PORT_HTTP
-      labelEn: Web Port
-      labelZh: Web 端口
-      required: true
-      rule: paramPort
-      type: number
-    - default: admin@1panel.cn
-      edit: true
-      envKey: PGADMIN_DEFAULT_EMAIL
-      labelEn: Admin Email
-      labelZh: 管理员邮箱
-      required: true
-      type: text
-    - default: hgraZPD3v00I5AwuzSpL
-      edit: true
-      envKey: PGADMIN_DEFAULT_PASSWORD
-      labelEn: Admin Password
-      labelZh: 管理员密码
-      required: true
-      type: password
+    formFields:
+        - default: 40084
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: Port
+          labelZh: 端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: admin@example.com
+          edit: true
+          envKey: PGADMIN_EMAIL
+          labelEn: Admin Email
+          labelZh: 管理员邮箱
+          required: true
+          type: text
+        - default: pgadmin4
+          edit: true
+          envKey: PGADMIN_PASSWORD
+          labelEn: Admin Password
+          labelZh: 管理员密码
+          random: false
+          required: true
+          rule: paramComplexity
+          type: password
