@@ -1,7 +1,7 @@
 additionalProperties:
     formFields:
         - default: jhkdjhkjdhsIUTYURT
-          envKey: PANEL_DB_ROOT_PASSWORD
+          envKey: PANEL_REDIS_ROOT_PASSWORD
           labelEn: Password
           labelZh: 密码
           random: true
