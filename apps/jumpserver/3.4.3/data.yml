@@ -83,7 +83,7 @@ additionalProperties:
       type: service
     - default: ""
       edit: true
-      envKey: REDIS_PASS
+      envKey: PANEL_REDIS_ROOT_PASSWORD
       labelEn: Redis Service Password
       labelZh: 缓存服务服务密码
       required: true
