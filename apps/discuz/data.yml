@@ -1,0 +1,20 @@
+name: Discuz!
+tags:
+    - 建站
+title: 开源社交建站系统
+type: 建站
+description: 开源社交建站系统
+additionalProperties:
+    key: discuz
+    name: Discuz!
+    tags:
+        - WebSite
+    shortDescZh: 开源社交建站系统
+    shortDescEn: Open Source Social Building System
+    type: website
+    crossVersionUpdate: false
+    limit: 0
+    recommend: 0
+    website: https://www.discuz.vip/
+    github: https://gitee.com/Discuz/DiscuzX
+    document: https://open.dismall.com/?ac=document&page=dev
