@@ -7,7 +7,7 @@ services:
     networks:
       - 1panel-network
     ports:
-      - "${PANEL_APP_PORT_HTTP}:443"
+      - "${PANEL_APP_PORT_HTTPS}:443"
     volumes:
       - "./data/config:/config"
       - "./data/data:/data"

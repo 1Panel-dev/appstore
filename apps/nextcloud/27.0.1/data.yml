@@ -2,7 +2,7 @@ additionalProperties:
     formFields:
         - default: 40069
           edit: true
-          envKey: PANEL_APP_PORT_HTTP
+          envKey: PANEL_APP_PORT_HTTPS
           labelEn: HTTPS Port
           labelZh: HTTPS 端口
           required: true
