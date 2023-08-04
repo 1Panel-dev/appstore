@@ -2,11 +2,18 @@ additionalProperties:
     formFields:
         - default: 40069
           edit: true
-          envKey: PANEL_APP_PORT_HTTPS
+          envKey: PANEL_APP_PORT_HTTP
           labelEn: HTTPS Port
-          labelZh: HTTPS端口
+          labelZh: HTTPS 端口
           required: true
           rule: paramPort
           type: number
+        - default: Asia/Shanghai
+          edit: true
+          envKey: TIME_ZONE
+          labelEn: Time zone
+          labelZh: 时区
+          required: true
+          type: text
 
 
