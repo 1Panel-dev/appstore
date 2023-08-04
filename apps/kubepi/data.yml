@@ -14,7 +14,7 @@ additionalProperties:
     type: tool
     crossVersionUpdate: false
     limit: 0
-    recommend: 6
+    recommend: 100
     website: https://github.com/1Panel-dev/
     github: https://github.com/1Panel-dev/KubePi
     document: https://github.com/1Panel-dev/KubePi/blob/master/README.md
