@@ -1,0 +1,20 @@
+name: Nextcloud
+tags:
+    - 建站
+title: Nextcloud服务器，所有数据的安全家园
+type: 建站
+description: Nextcloud服务器，所有数据的安全家园
+additionalProperties:
+    key: nextcloud
+    name: Nextcloud
+    tags:
+        - WebSite
+    shortDescZh: Nextcloud服务器，所有数据的安全家园
+    shortDescEn: Nextcloud server, a safe home for all your data
+    type: website
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://nextcloud.com/
+    github: https://github.com/nextcloud/server
+    document: https://docs.nextcloud.com/
