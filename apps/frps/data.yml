@@ -1,15 +1,15 @@
-name: frps-frp服务端
+name: frps-frp 服务端
 tags:
     - 工具
-title: frp是一种反向代理工具，常用于内网穿透(服务端)
+title: frp 是一种反向代理工具，常用于内网穿透(服务端)
 type: 工具
-description: frp是一种反向代理工具，常用于内网穿透(服务端)
+description: frp 是一种反向代理工具，常用于内网穿透(服务端)
 additionalProperties:
     key: frps
-    name: frps-frp服务端
+    name: frps-frp 服务端
     tags:
         - Tool
-    shortDescZh: frp是一种反向代理工具，常用于内网穿透(服务端)
+    shortDescZh: frp 是一种反向代理工具，常用于内网穿透(服务端)
     shortDescEn: frp is a reverse proxy tool that is commonly used for intranet penetration(Server)
     type: tool
     crossVersionUpdate: true

@@ -5,7 +5,7 @@ services:
     restart: always
     network_mode: "host"
     volumes:
-        - "${CONFIG_FILE_PATH}:/etc/frp/frpc.ini"
+        - "./data/frpc.ini:/etc/frp/frpc.ini"
     image: "snowdreamtech/frpc:0.51.2"
     labels:  
       createdBy: "Apps"

@@ -1,9 +1,9 @@
 additionalProperties:
     formFields:
-        - default: ./data/frps.ini
-          edit: false
-          envKey: CONFIG_FILE_PATH
-          labelEn: Configuration file path
-          labelZh: 配置文件路径
+        - default: 7000
+          disabled: true
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: Port
+          labelZh: 端口
           required: true
-          type: text
+          type: number
