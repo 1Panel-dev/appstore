@@ -1,34 +1,10 @@
 additionalProperties:
     formFields:
-        - default: 20053
-          edit: true
-          envKey: PLAIN_DNS_PORT
-          labelEn: Plain DNS port
-          labelZh: 普通DNS端口
-          required: true
-          rule: paramPort
-          type: number
-        - default: 20067
-          edit: true
-          envKey: DHCP_PORT1
-          labelEn: DHCP service port 1
-          labelZh: DHCP服务端口1
-          required: true
-          rule: paramPort
-          type: number
-        - default: 20068
-          edit: true
-          envKey: DHCP_PORT2
-          labelEn: DHCP service port 2
-          labelZh: DHCP服务端口2
-          required: true
-          rule: paramPort
-          type: number
         - default: 23000
           edit: true
-          envKey: HTTP_PORT
+          envKey: PANEL_APP_PORT_HTTP_1
           labelEn: HTTP web port
-          labelZh: HTTP网页端口
+          labelZh: HTTP 网页端口
           required: true
           rule: paramPort
           type: number
@@ -40,57 +16,67 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+        - default: 20053
+          edit: true
+          envKey: PANEL_APP_PORT_DNS
+          labelEn: Plain DNS port
+          labelZh: 普通 DNS 端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: 20067
+          edit: true
+          envKey: PANEL_APP_PORT_DHCP_1
+          labelEn: DHCP service port 1
+          labelZh: DHCP 服务端口 1
+          required: true
+          rule: paramPort
+          type: number
+        - default: 20068
+          edit: true
+          envKey: PANEL_APP_PORT_DHCP_2
+          labelEn: DHCP service port 2
+          labelZh: DHCP 服务端口 2
+          required: true
+          rule: paramPort
+          type: number
         - default: 20443
           edit: true
-          envKey: DOH_PORT
+          envKey: PANEL_APP_PORT_DOH
           labelEn: DOH service port
-          labelZh: DOH服务端口
+          labelZh: DOH 服务端口
           required: true
           rule: paramPort
           type: number
         - default: 853
           edit: true
-          envKey: DOT_PORT
+          envKey: PANEL_APP_PORT_DOT
           labelEn: DOT service port
-          labelZh: DOT服务端口
+          labelZh: DOT 服务端口
           required: true
           rule: paramPort
           type: number
         - default: 20784
           edit: true
-          envKey: QUIC_PORT1
+          envKey: PANEL_APP_PORT_QUIC_1
           labelEn: QUIC service port 1
-          labelZh: QUIC服务端口1
+          labelZh: QUIC 服务端口 1
           required: true
           rule: paramPort
           type: number
         - default: 8853
           edit: true
-          envKey: QUIC_PORT2
+          envKey: PANEL_APP_PORT_QUIC_2
           labelEn: QUIC service port 2
-          labelZh: QUIC服务端口2
+          labelZh: QUIC 服务端口 2
           required: true
           rule: paramPort
           type: number
         - default: 5443
           edit: true
-          envKey: DNS_CRYPT_PORT
+          envKey: PANEL_APP_PORT_DNS_CRYPT
           labelEn: DNS Crypt service port
-          labelZh: DNS Crypt服务端口
+          labelZh: DNS Crypt 服务端口
           required: true
           rule: paramPort
           type: number
-        - default: ./data/work
-          edit: true
-          envKey: WORK_PATH
-          labelEn: Work data folder path
-          labelZh: 工作数据文件夹路径
-          required: true
-          type: text
-        - default: ./data/conf
-          edit: true
-          envKey: CONFIG_PATH
-          labelEn: Configuration folder path
-          labelZh: 配置文件夹路径
-          required: true
-          type: text
