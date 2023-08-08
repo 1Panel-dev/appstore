@@ -14,7 +14,6 @@ additionalProperties:
     type: php
     crossVersionUpdate: false
     limit: 0
-    recommend: 9998
     website: https://www.php.net/
     github: https://github.com/php/php-src
     document: https://www.php.net/docs.php
