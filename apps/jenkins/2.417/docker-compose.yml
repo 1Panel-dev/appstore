@@ -2,7 +2,7 @@ version: '3'
 services:
   jenkins:
     container_name: ${CONTAINER_NAME}
-    image: jenkins/jenkins:2.417
+    image: jenkins/jenkins:2.418
     restart: always
     privileged: true
     user: root
