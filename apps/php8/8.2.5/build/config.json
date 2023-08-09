@@ -5,7 +5,7 @@
       "multiple": true,
       "labelZh": "扩展",
       "labelEn": "Extensions",
-      "default": [],
+      "default": ["mysqli","pdo_mysql"],
       "values": [
         {
           "label": "opcache",
@@ -109,6 +109,10 @@
         {
           "label": "gd",
           "value": "gd"
+        },
+        {
+          "label": "ioncube_loader",
+          "value": "ioncube_loader"
         },
         {
           "label": "curl",
