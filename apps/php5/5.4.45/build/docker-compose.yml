@@ -4,7 +4,7 @@ services:
     build:
       context: ./php
       args:
-        PHP_IMAGE: php:${PHP_VERSION}-fpm-alpine
+        PHP_IMAGE: php:${PHP_VERSION}-fpm
         CONTAINER_PACKAGE_URL: ${CONTAINER_PACKAGE_URL}
         PHP_EXTENSIONS: ${PHP_EXTENSIONS}
         TZ: ${TZ}
