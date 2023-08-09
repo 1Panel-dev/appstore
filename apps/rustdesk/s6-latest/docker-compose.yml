@@ -6,16 +6,16 @@ services:
     networks:
       - 1panel-network
     ports:
-      - "${NAT_TEST_PORT}:21115"
-      - "${HBBS_PORT}:21116"
-      - "${HBBS_PORT}:21116/udp"
-      - "${HBBR_PORT}:21117"
-      - "${WEB_CLIENT_PORT1}:21118"
-      - "${WEB_CLIENT_PORT2}:21119"
+      - "${PANEL_APP_PORT_NAT}:21115"
+      - "${PANEL_APP_PORT_HBBS}:21116"
+      - "${PANEL_APP_PORT_HBBS}:21116/udp"
+      - "${PANEL_APP_PORT_HBBR}:21117"
+      - "${PANEL_APP_PORT_WEB_CLIENT_1}:21118"
+      - "${PANEL_APP_PORT_WEB_CLIENT_2}:21119"
     volumes:
       - "./data/hbbs:/data"
     environment:
-      - "RELAY=${HOST_ADDRESS}:${HBBR_PORT}"
+      - "RELAY=${HOST_ADDRESS}:${PANEL_APP_PORT_HBBR}"
       - "ENCRYPTED_ONLY=1"
     image: rustdesk/rustdesk-server-s6:latest
     labels:  

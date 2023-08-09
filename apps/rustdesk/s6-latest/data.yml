@@ -2,7 +2,7 @@ additionalProperties:
     formFields:
         - default: 21115
           edit: true
-          envKey: NAT_TEST_PORT
+          envKey: PANEL_APP_PORT_HTTP_NAT
           labelEn: NAT type test port
           labelZh: NAT类型测试端口
           required: true
@@ -10,7 +10,7 @@ additionalProperties:
           type: number
         - default: 21116
           edit: true
-          envKey: HBBS_PORT
+          envKey: PANEL_APP_PORT_HBBS
           labelEn: hbbs port (used with IP/domain)
           labelZh: hbbs端口(配合IP/域名使用)
           required: true
@@ -18,7 +18,7 @@ additionalProperties:
           type: number
         - default: 21117
           edit: true
-          envKey: HBBR_PORT
+          envKey: PANEL_APP_PORT_HBBR
           labelEn: hbbr port (client relay server port)
           labelZh: hbbr端口(客户端中继服务器端口)
           required: true
@@ -26,7 +26,7 @@ additionalProperties:
           type: number
         - default: 21118
           edit: true
-          envKey: WEB_CLIENT_PORT1
+          envKey: PANEL_APP_PORT_WEB_CLIENT_1
           labelEn: Web Client Support Port 1
           labelZh: 网页客户端支持端口1
           required: true
@@ -34,7 +34,7 @@ additionalProperties:
           type: number
         - default: 21119
           edit: true
-          envKey: WEB_CLIENT_PORT2
+          envKey: PANEL_APP_PORT_WEB_CLIENT_2
           labelEn: Web Client Support Port 2
           labelZh: 网页客户端支持端口2
           required: true

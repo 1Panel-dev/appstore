@@ -10,7 +10,7 @@ additionalProperties:
           type: number
         - default: 2022
           edit: true
-          envKey: SFTP_PORT
+          envKey: PANEL_APP_PORT_SFTP
           labelEn: SFTP Port
           labelZh: SFTP 端口
           required: true
@@ -18,7 +18,7 @@ additionalProperties:
           type: number
         - default: 2121
           edit: true
-          envKey: FTP_PORT
+          envKey: PANEL_APP_PORT_FTP
           labelEn: FTP Port
           labelZh: FTP 端口
           required: true
@@ -50,7 +50,7 @@ additionalProperties:
           type: text
         - default: 10080
           edit: true
-          envKey: WEBDAV_PORT
+          envKey: PANEL_APP_PORT_WEBDAV
           labelEn: WebDAV Port
           labelZh: WebDAV 端口
           required: true
