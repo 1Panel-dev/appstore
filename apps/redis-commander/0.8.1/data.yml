@@ -8,7 +8,7 @@ additionalProperties:
           required: true
           type: service
         - default: ""
-          envKey: PANEL_DB_ROOT_PASSWORD
+          envKey: PANEL_REDIS_ROOT_PASSWORD
           labelEn: Redis Password
           labelZh: Redis 密码
           required: true
