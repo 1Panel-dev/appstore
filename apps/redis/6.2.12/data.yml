@@ -5,7 +5,6 @@ additionalProperties:
           labelEn: Password
           labelZh: 密码
           random: true
-          required: true
           rule: paramComplexity
           type: password
         - default: 6379
