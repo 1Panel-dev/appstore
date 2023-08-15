@@ -1,0 +1,20 @@
+name: HertzBeat
+tags:
+    - 工具
+title: 一个易用友好的开源实时监控告警系统
+type: 工具
+description: 一个易用友好的开源实时监控告警系统
+additionalProperties:
+    key: hertzbeat
+    name: HertzBeat
+    tags:
+        - Tool
+    shortDescZh: 一个易用友好的开源实时监控告警系统
+    shortDescEn: An open source, real-time monitoring system with custom-monitoring
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://hertzbeat.com/
+    github: https://github.com/dromara/hertzbeat
+    document: https://hertzbeat.com/docs/
