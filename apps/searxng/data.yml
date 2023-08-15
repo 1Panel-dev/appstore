@@ -1,0 +1,20 @@
+name: SearXNG
+tags:
+    - 建站
+title: 一个免费的互联网元聚合搜索引擎
+type: 建站
+description: 一个免费的互联网元聚合搜索引擎
+additionalProperties:
+    key: searxng
+    name: SearXNG
+    tags:
+        - WebSite
+    shortDescZh: 一个免费的互联网元聚合搜索引擎
+    shortDescEn: A free internet meta-aggregator search engine
+    type: website
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://github.com/searxng/searxng
+    github: https://github.com/searxng/searxng
+    document: https://docs.searxng.org/
