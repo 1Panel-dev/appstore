@@ -10,7 +10,7 @@ services:
       nofile:
         soft: 102400
         hard: 102400
-    container_name: uuwaf
+    container_name:  ${CONTAINER_NAME}
     networks:
       - 1panel-network
     ports:
@@ -29,7 +29,7 @@ services:
 
   wafdb:
     image: percona:8
-    container_name: wafdb
+    container_name:  ${CONTAINER_NAME}-db
     networks:
       - 1panel-network
     volumes:
