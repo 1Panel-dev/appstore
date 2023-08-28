@@ -16,3 +16,4 @@ additionalProperties:
       name: CI/CD
     - key: Local
       name: 本地
+  version: v1.5.0

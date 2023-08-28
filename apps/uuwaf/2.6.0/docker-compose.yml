@@ -1,18 +1,10 @@
 networks:
-  wafnet:
-    name: wafnet
-    driver: bridge
-    ipam:
-      driver: default
-      config:
-        - gateway: 172.22.0.1
-          subnet: 172.22.0.0/24
-    driver_opts:
-      com.docker.network.bridge.name: wafnet
+  1panel-network:
+    external: true
 
 services:
   uuwaf:
-    image: uusec/nanqiang:v2.5.1
+    image: uusec/nanqiang:v2.6.0
     ulimits:
       nproc: 65535
       nofile:
@@ -20,8 +12,7 @@ services:
         hard: 102400
     container_name: uuwaf
     networks:
-      wafnet:
-        ipv4_address: 172.22.0.3
+      - 1panel-network
     ports:
       - ${PANEL_APP_PORT_HTTP1}:80
       - ${PANEL_APP_PORT_HTTPS2}:443
@@ -40,8 +31,7 @@ services:
     image: percona:8
     container_name: wafdb
     networks:
-      wafnet:
-        ipv4_address: 172.22.0.7
+      - 1panel-network
     volumes:
       - wafshared:/docker-entrypoint-initdb.d
       - wafdata:/var/lib/mysql
