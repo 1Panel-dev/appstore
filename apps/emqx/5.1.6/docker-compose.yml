@@ -11,7 +11,8 @@ services:
       - ${PANEL_APP_PORT_HTTP}:18083
       - ${EMQX_PORT_1883}:1883
       - ${EMQX_PORT_8083}:8083
-      - ${EMQX_PORT_8081}:8081
+      - ${EMQX_PORT_8084}:8084
+      - ${EMQX_PORT_8883}:8883
     volumes:
       - ./data:/opt/emqx/data
       - ./log:/opt/emqx/log
