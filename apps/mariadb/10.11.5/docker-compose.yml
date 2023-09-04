@@ -10,6 +10,7 @@ services:
       - ${PANEL_APP_PORT_HTTP}:3306
     volumes:
       - ./db/data:/var/lib/mysql
+      - ./conf/my.cnf:/etc/mysql/my.cnf
     environment:
       MYSQL_ROOT_PASSWORD: ${PANEL_DB_ROOT_PASSWORD}
     labels:
