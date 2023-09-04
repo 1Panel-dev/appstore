@@ -13,7 +13,7 @@ services:
       DEBUG: ${DEBUG:-FALSE}
       LOG_LEVEL: ${LOG_LEVEL}
       DB_HOST: ${PANEL_DB_HOST}
-      DB_PORT: 3306
+      DB_PORT: ${PANEL_DB_PORT}
       DB_USER: ${PANEL_DB_USER}
       DB_PASSWORD: ${PANEL_DB_USER_PASSWORD}
       DB_NAME: ${PANEL_DB_NAME}

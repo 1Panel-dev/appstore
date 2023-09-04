@@ -42,13 +42,22 @@ additionalProperties:
           value: "ERROR"
         - label: CRITICAL
           value: "CRITICAL"
-    - default: ""
-      envKey: PANEL_DB_HOST
-      key: mysql
+    - child:
+        default: ""
+        envKey: PANEL_DB_HOST
+        required: true
+        type: service
+      default: mysql
+      envKey: PANEL_DB_TYPE
       labelEn: Database Service
       labelZh: 数据库服务
       required: true
-      type: service
+      type: apps
+      values:
+        - label: MySQL
+          value: mysql
+        - label: MariaDB
+          value: mariadb
     - default: jumpserver
       envKey: PANEL_DB_NAME
       labelEn: Database
