@@ -9,8 +9,8 @@ additionalProperties:
   name: JumpServer
   tags:
     - Tool
-  shortDescZh: JumpServer 是广受欢迎的开源堡垒机，是符合 4A 规范的专业运维安全审计系统。
-  shortDescEn: JumpServer is the world's first open-source Bastion Host and is licensed under the GPLv3.
+  shortDescZh: 广受欢迎的开源堡垒机
+  shortDescEn: The world's first open-source Bastion Host
   type: tool
   crossVersionUpdate: true
   limit: 1

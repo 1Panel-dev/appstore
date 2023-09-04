@@ -1,15 +1,15 @@
 name: QianDao
 tags:
     - 工具
-title: 一个HTTP请求定时任务自动执行框架
+title: 一个 HTTP 请求定时任务自动执行框架
 type: 工具
-description: 一个HTTP请求定时任务自动执行框架
+description: 一个 HTTP 请求定时任务自动执行框架
 additionalProperties:
     key: qiandao
     name: QianDao
     tags:
         - Tool
-    shortDescZh: 一个HTTP请求定时任务自动执行框架
+    shortDescZh: 一个 HTTP 请求定时任务自动执行框架
     shortDescEn: An HTTP request timed task automation framework
     type: tool
     crossVersionUpdate: true

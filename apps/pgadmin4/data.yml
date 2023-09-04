@@ -9,8 +9,8 @@ additionalProperties:
   name: PGAdmin4
   tags:
     - Tool
-  shortDescZh: PGAdmin4 是 Postgres 的开源管理工具。
-  shortDescEn: PGAdmin4 is an open source management tool for Postgres.
+  shortDescZh: Postgres 的开源管理工具。
+  shortDescEn: An open source management tool for Postgres.
   type: tool
   crossVersionUpdate: true
   limit: 1
