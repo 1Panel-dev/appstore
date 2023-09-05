@@ -1,19 +1,3 @@
-What is Redis?
---------------
+## Redis
 
-Redis is often referred to as a *data structures* server. What this means is that Redis provides access to mutable data structures via a set of commands, which are sent using a *server-client* model with TCP sockets and a simple protocol. So different processes can query and modify the same data structures in a shared way.
-
-Data structures implemented into Redis have a few special properties:
-
-* Redis cares to store them on disk, even if they are always served and modified into the server memory. This means that Redis is fast, but that it is also non-volatile.
-* The implementation of data structures emphasizes memory efficiency, so data structures inside Redis will likely use less memory compared to the same data structure modelled using a high-level programming language.
-* Redis offers a number of features that are natural to find in a database, like replication, tunable levels of durability, clustering, and high availability.
-
-Another good example is to think of Redis as a more complex version of memcached, where the operations are not just SETs and GETs, but operations that work with complex data types like Lists, Sets, ordered data structures, and so forth.
-
-If you want to know more, this is a list of selected starting points:
-
-* Introduction to Redis data types. https://redis.io/topics/data-types-intro
-* Try Redis directly inside your browser. https://try.redis.io
-* The full list of Redis commands. https://redis.io/commands
-* There is much more inside the official Redis documentation. https://redis.io/documentation
+Redis 是一个开源的、内存中的数据结构存储系统，可用作数据库、缓存和消息代理。它支持多种数据结构，如字符串、哈希、列表、集合、有序集合、位图、hyperloglogs 和地理空间索引。由于其高性能和低延迟特性，Redis 被广泛用于各种应用中，特别是需要快速数据访问的场景。除了内存存储，Redis 还提供了持久化功能，确保数据的安全性。其丰富的 API 和广泛的客户端库使得 Redis 可以轻松地与多种编程语言和框架集成。

@@ -1,3 +1,5 @@
+## JumpServer
+
 JumpServer 是广受欢迎的开源堡垒机，是符合 4A 规范的专业运维安全审计系统。JumpServer 堡垒机帮助企业以更安全的方式管控和登录各种类型的资产，包括：
 
 - **SSH**: Linux / Unix / 网络设备 等；
@@ -19,10 +21,6 @@ JumpServer 是广受欢迎的开源堡垒机，是符合 4A 规范的专业运�
 ## UI 展示
 
 ![UI展示](https://docs.jumpserver.org/zh/v3/img/dashboard.png)
-
-## 在线体验
-
-- 环境地址：<https://demo.jumpserver.org/>
 
 ## 快速开始
 

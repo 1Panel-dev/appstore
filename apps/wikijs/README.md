@@ -1,3 +1,3 @@
-##### A modern, lightweight and powerful wiki app built on NodeJS
+## Wiki.js
 
-Wiki.js is an open source project that has been made possible due to the generous contributions by community [backers](https://js.wiki/about). If you are interested in supporting this project, please consider [becoming a sponsor](https://github.com/users/NGPixel/sponsorship), [becoming a patron](https://www.patreon.com/requarks), donating to our [OpenCollective](https://opencollective.com/wikijs), via [Paypal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FLV5X255Z9CJU&source=url) or via Ethereum (`0xe1d55c19ae86f6bcbfb17e7f06ace96bdbb22cb5`).
+Wiki.js 是一个现代化、开源的维基软件，基于 Node.js 构建。它提供了一个直观的用户界面和强大的编辑功能，支持 Markdown、WYSIWYG 和其他多种格式。Wiki.js 设计为自托管，允许用户在自己的服务器上部署，确保数据的私有性和安全性。其模块化的架构和插件系统使得用户可以轻松地扩展功能和定制外观。Wiki.js 还支持多种身份验证方法、版本控制和实时同步，满足现代团队的协作需求。

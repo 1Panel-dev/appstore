@@ -1,20 +1,3 @@
-Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+## MySQL
 
-This is a release of MySQL, an SQL database server.
-
-License information can be found in the LICENSE file.
-
-In test packages where this file is renamed README-test, the license
-file is renamed LICENSE-test.
-
-This distribution may include materials developed by third parties.
-For license and attribution notices for these materials,
-please refer to the LICENSE file.
-
-For further information on MySQL or additional documentation, visit
-http://dev.mysql.com/doc/
-
-For additional downloads and the source of MySQL, visit
-http://dev.mysql.com/downloads/
-
-MySQL is brought to you by the MySQL team at Oracle.
+MySQL 是一个著名的开源关系型数据库管理系统(RDBMS)。它为各种应用提供了一个多线程、多用户的 SQL 数据库服务器。由于其高性能、稳定性、丰富的功能集和低总体拥有成本，MySQL 已经成为了许多世界上最大的网站和应用的首选数据库。它支持标准的 SQL 语言，并提供了多种存储引擎，如 InnoDB 和 MyISAM，以满足不同的性能和事务需求。
