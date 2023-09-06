@@ -1,9 +1,7 @@
 name: Update app version in Renovate Branches
 
 on:
-  schedule:
-    - cron: "0 0 * * *"
-  push:
+  pull_request:
     branches: [ 'renovate/*' ]
   workflow_dispatch:
     inputs:
