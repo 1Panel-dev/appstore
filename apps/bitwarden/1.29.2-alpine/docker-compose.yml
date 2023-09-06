@@ -9,7 +9,7 @@ services:
       - "${PANEL_APP_PORT_HTTP}:80"
     volumes:
       - ./data:/data
-    image: vaultwarden/server:1.29.2-alpine@sha256:271382b474072d1c3dfd2d29f93d254a280eaa3683df5018565c23d4dbdce634
+    image: vaultwarden/server:1.29.2-alpine
     labels:  
       createdBy: "Apps"
 networks:  
