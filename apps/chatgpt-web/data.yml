@@ -1,16 +1,16 @@
 name: ChatGPT Web
 tags:
     - 工具
-title: 使用 express 和 vue3 搭建的支持 ChatGPT 双模型演示网页
+title: ChatGPT Web
 type: 工具
-description: 使用 express 和 vue3 搭建的支持 ChatGPT 双模型演示网页
+description: ChatGPT Web
 additionalProperties:
     key: chatgpt-web
     name: ChatGPT Web
     tags:
         - Tool
-    shortDescZh: 使用 express 和 vue3 搭建的支持 ChatGPT 双模型演示网页
-    shortDescEn: ChatGPT-enabled dual-model demo page built with express and vue3
+    shortDescZh: ChatGPT Web
+    shortDescEn: ChatGPT Web
     type: tool
     crossVersionUpdate: true
     limit: 0

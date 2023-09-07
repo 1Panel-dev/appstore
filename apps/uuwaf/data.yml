@@ -1,16 +1,16 @@
 name: 南墙 Web 应用防火墙
 tags:
   - 工具
-title: 一款社区驱动的免费、高性能、高扩展顶级 Web 应用和 API 安全防护产品
+title: API 和 Web 应用 防火墙
 type: 工具
-description: 一款社区驱动的免费、高性能、高扩展顶级 Web 应用和 API 安全防护产品
+description: API 和 Web 应用 防火墙
 additionalProperties:
   key: uuwaf
   name: 南墙 Web 应用防火墙
   tags:
     - Tool
-  shortDescZh: 一款社区驱动的免费、高性能、高扩展顶级 Web 应用和 API 安全防护产品
-  shortDescEn: A community-driven, free, high-performance, highly scalable top-tier Web application and API security protection product
+  shortDescZh: API 和 Web 应用 防火墙
+  shortDescEn: API and Web application protection product
   type: tool
   crossVersionUpdate: false
   limit: 1

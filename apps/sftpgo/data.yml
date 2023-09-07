@@ -1,16 +1,16 @@
 name: SFTPGo
 tags:
     - 工具
-title: 支持自定义 HTTP/S，FTP/S 和 WebDAV 的 SFTP 服务
+title: 功能齐全且高度可配置的 SFTP 服务器
 type: 工具
-description: 支持自定义 HTTP/S，FTP/S 和 WebDAV 的 SFTP 服务
+description: 功能齐全且高度可配置的 SFTP 服务器
 additionalProperties:
     key: sftpgo
     name: SFTPGo
     tags:
         - Tool
-    shortDescZh: 支持自定义 HTTP/S，FTP/S 和 WebDAV 的 SFTP 服务
-    shortDescEn: Support for custom HTTP/S, FTP/S, and WebDAV in SFTP service
+    shortDescZh: 功能齐全且高度可配置的 SFTP 服务器
+    shortDescEn: Fully featured and highly configurable SFTP server
     type: tool
     crossVersionUpdate: false  
     limit: 1
