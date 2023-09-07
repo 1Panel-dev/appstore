@@ -1,15 +1,13 @@
 name: Update app version in Renovate Branches
 
 on:
-  pull_request:
-    branches:
-      - 'renovate/*'
+  push:
+    branches: [ 'renovate/*' ]
   workflow_dispatch:
     inputs:
       manual-trigger:
         description: 'Manually trigger Renovate'
         default: ''
-
 jobs:
   update-app-version:
     runs-on: ubuntu-latest
