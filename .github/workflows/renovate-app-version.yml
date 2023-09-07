@@ -3,15 +3,15 @@ name: Update app version in Renovate Branches
 on:
   pull_request:
     branches:
-      - 'renovate/*'
+      - 'dev'
   workflow_dispatch:
     inputs:
       manual-trigger:
         description: 'Manually trigger Renovate'
         default: ''
-
 jobs:
   update-app-version:
+    if: (github.event_name == 'workflow_dispatch') || (contains(github.head_ref, 'renovate/'))
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
