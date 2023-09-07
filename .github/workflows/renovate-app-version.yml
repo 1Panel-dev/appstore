@@ -2,7 +2,8 @@ name: Update app version in Renovate Branches
 
 on:
   pull_request:
-    branches: [ 'renovate/*' ]
+    branches:
+      - 'renovate/*'
   workflow_dispatch:
     inputs:
       manual-trigger:
