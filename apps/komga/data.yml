@@ -12,7 +12,7 @@ additionalProperties:
   shortDescZh: 免费开源的漫画、杂志媒体服务
   shortDescEn: Komga is a media server for your comics, mangas, BDs and magazines.
   type: website
-  crossVersionUpdate: 1
+  crossVersionUpdate: true
   limit: 1
   recommend: 0
   website: https://komga.org/
