@@ -40,21 +40,6 @@ additionalProperties:
           required: true
           rule: paramComplexity
           type: password
-        - default: admin
-          envKey: HALO_ADMIN
-          labelEn: Admin Username
-          labelZh: 超级管理员用户名
-          required: true
-          rule: paramSimple
-          type: text
-        - default: halo
-          envKey: HALO_ADMIN_PASSWORD
-          labelEn: Admin Password
-          labelZh: 超级管理员密码
-          random: true
-          required: true
-          rule: paramComplexity
-          type: password
         - default: http://localhost:8080
           edit: true
           envKey: HALO_EXTERNAL_URL
