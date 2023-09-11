@@ -1,17 +1,15 @@
 version: '3.0'
 services:
   zentao:
-    image: easysoft/zentao:18.6
+    image: hub.zentao.net/app/zentao:18.6
     container_name: ${CONTAINER_NAME}
     restart: always
     ports:
       - ${PANEL_APP_PORT_HTTP}:80
-      - ${ZENTAO_MYSQL_PORT}:3306
     volumes:
-      - ./data/data:/www/zentaopms
-      - ./data/mysql:/var/lib/mysql
+      - ./data:/data
     environment:
-      - MYSQL_ROOT_PASSWORD=${ZENTAO_MYSQL_PASSWORD}
+      - MYSQL_INTERNAL=true
     networks:
       - 1panel-network
     labels:
