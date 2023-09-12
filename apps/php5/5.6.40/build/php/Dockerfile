@@ -5,9 +5,7 @@ ARG TZ
 ARG PHP_EXTENSIONS
 ARG CONTAINER_PACKAGE_URL
 
-
-
-RUN if [ "$CONTAINER_PACKAGE_URL" ]; then sed -i 's|http://dl-cdn.alpinelinux.org/alpine/v3.4|https://${CONTAINER_PACKAGE_URL}/alpine/v3.12|g' /etc/apk/repositories; fi
+RUN if [ "$CONTAINER_PACKAGE_URL" ]; then sed -i "s|http://dl-cdn.alpinelinux.org/alpine/v3.4|https://${CONTAINER_PACKAGE_URL}/alpine/v3.12|g" /etc/apk/repositories; fi
 
 COPY ./extensions /tmp/extensions
 WORKDIR /tmp/extensions
