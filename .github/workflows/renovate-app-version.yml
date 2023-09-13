@@ -1,6 +1,8 @@
 name: Update app version in Renovate Branches
 
 on:
+  push:
+    branches: [ 'renovate/*' ]
   workflow_dispatch:
     inputs:
       manual-trigger:
