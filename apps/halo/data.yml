@@ -14,7 +14,7 @@ additionalProperties:
     type: website
     crossVersionUpdate: true
     limit: 0
-    recommend: 2
+    recommend: 3
     website: https://halo.run/
     github: https://github.com/halo-dev/halo
     document: https://docs.halo.run/

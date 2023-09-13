@@ -14,7 +14,7 @@ additionalProperties:
     type: tool
     crossVersionUpdate: true
     limit: 0
-    recommend: 9
+    recommend: 10
     website: https://github.com/alist-org/alist
     github: https://github.com/alist-org/alist
     document: https://alist.nn.ci/zh/
