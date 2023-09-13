@@ -15,6 +15,6 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 0
     recommend: 0
-    website: https://hub.docker.com/r/a76yyyy/qiandao
-    github: https://github.com/qiandao-today/qiandao
-    document: https://qiandao-today.github.io/qiandao/zh_CN/
+    website: https://hub.docker.com/r/qdtoday/qd
+    github: https://github.com/qd-today/qd
+    document: https://qd-today.github.io/qd/zh_CN/
