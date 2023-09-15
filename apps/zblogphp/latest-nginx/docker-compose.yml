@@ -1,0 +1,27 @@
+version: '3'
+services:
+  zbp_def:
+    image: wdssmq/zblogphp-nginx:latest
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:80
+    environment:
+      ZC_DB_HOST: ${PANEL_DB_HOST}
+      ZC_DB_NAME: ${PANEL_DB_NAME}
+      ZC_DB_USER: ${PANEL_DB_USER}
+      ZC_DB_PWDD: ${PANEL_DB_USER_PASSWORD}
+      ZC_BLOG_USER: ${PANEL_ZC_BLOG_USER}
+      ZC_BLOG_PWDD: ${PANEL_ZC_BLOG_PWDD}
+      ZC_SKIP_TC_PLUGINS: 1
+      TZ: "Asia/Shanghai"
+    labels:
+      createdBy: "Apps"
+    volumes:
+      - ./data/www/zbp_def:/app
+    networks:
+      - 1panel-network
+
+networks:
+  1panel-network:
+    external: true

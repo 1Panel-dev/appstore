@@ -1,0 +1,19 @@
+name: Z-BlogPHP
+tags:
+  - 建站
+title: 开源免费、小巧强大的博客程序与 CMS 建站系统
+type: 建站
+description: 开源免费、小巧强大的博客程序与 CMS 建站系统
+additionalProperties:
+  key: zblogphp
+  name: Z-BlogPHP
+  tags:
+    - WebSite
+  shortDescZh: 开源免费、小巧强大的博客程序与 CMS 建站系统
+  shortDescEn: Open source, lightweight and powerful blogging software and content management system #应用英文描述
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  website: https://www.zblogcn.com/
+  github: https://github.com/zblogcn/zblogphp
+  document: https://docs.zblogcn.com/php/#/
