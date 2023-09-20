@@ -1,8 +1,8 @@
 name: Bitwarden
 tags:
-    - 工具
+    - 实用工具
 title: 一个开源的密码管理服务
-type: 工具
+type: 实用工具
 description: 一个开源的密码管理服务
 additionalProperties:
     key: bitwarden

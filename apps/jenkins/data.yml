@@ -1,14 +1,14 @@
 name: Jenkins
 tags:
-    - CI/CD
+    - DevOps
 title: 开源的持续集成工具
-type: CI/CD
+type: DevOps
 description: 开源的持续集成工具
 additionalProperties:
     key: jenkins
     name: Jenkins
     tags:
-        - CI/CD
+        - DevOps
     shortDescZh: 开源的持续集成工具
     shortDescEn: Build great things at any scale
     type: tool

@@ -1,8 +1,8 @@
 name: ddns-go
 tags:
-    - 工具
+    - 实用工具
 title: 简单好用的 DDNS
-type: 工具
+type: 实用工具
 description: 简单好用的 DDNS
 additionalProperties:
     key: ddns-go

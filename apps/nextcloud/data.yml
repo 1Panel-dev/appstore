@@ -1,8 +1,8 @@
 name: Nextcloud
 tags:
-    - 工具
+    - 实用工具
 title: Nextcloud 服务器，所有数据的安全家园
-type: 工具
+type: 实用工具
 description: Nextcloud 服务器，所有数据的安全家园
 additionalProperties:
     key: nextcloud

@@ -1,8 +1,8 @@
 name: Synapse
 tags:
-    - 工具
+    - 实用工具
 title: 开源的 Matrix 家庭服务器，自建聊天服务端
-type: 工具
+type: 实用工具
 description: 开源的 Matrix 家庭服务器，自建聊天服务端
 additionalProperties:
     key: synapse

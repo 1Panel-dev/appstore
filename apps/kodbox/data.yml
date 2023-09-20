@@ -1,8 +1,8 @@
 name: Kodbox
 tags:
-    - 工具
+    - 实用工具
 title: 可道云推出的企业级私有云存储解决方案
-type: 工具
+type: 实用工具
 description: 可道云推出的企业级私有云存储解决方案
 additionalProperties:
     key: kodbox

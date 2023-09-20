@@ -1,8 +1,8 @@
 name: ZFile
 tags:
-    - 工具
+    - 实用工具
 title: 基于 Java 的在线网盘程序
-type: 工具
+type: 实用工具
 description: 基于 Java 的在线网盘程序
 additionalProperties:
     key: zfile

@@ -1,8 +1,8 @@
 name: Memos
 tags:
-    - 工具
+    - 实用工具
 title: 轻量级、自托管的备忘录中心
-type: 工具
+type: 实用工具
 description: 轻量级、自托管的备忘录中心
 additionalProperties:
     key: memos

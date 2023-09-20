@@ -1,8 +1,8 @@
 name: AList
 tags:
-    - 工具
+    - 实用工具
 title: 支持多存储的文件列表程序
-type: 工具
+type: 实用工具
 description: 支持多存储的文件列表程序
 additionalProperties:
     key: alist

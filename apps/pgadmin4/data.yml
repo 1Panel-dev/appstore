@@ -1,14 +1,14 @@
 name: PGAdmin4
 tags:
-  - 工具
+  - 开发工具
 title: PostgreSQL 开源管理工具
-type:  工具
+type: 开发工具
 description: PostgreSQL 开源管理工具
 additionalProperties:
   key: pgadmin4
   name: PGAdmin4
   tags:
-    - Tool
+    - DevTool
   shortDescZh: Postgres 的开源管理工具。
   shortDescEn: An open source management tool for Postgres.
   type: tool

@@ -1,8 +1,8 @@
 name: Drawio
 tags:
-    - 工具
+    - 实用工具
 title: 免费和开源的跨平台图形绘制软件
-type: 工具
+type: 实用工具
 description: 免费和开源的跨平台图形绘制软件
 additionalProperties:
     key: drawio

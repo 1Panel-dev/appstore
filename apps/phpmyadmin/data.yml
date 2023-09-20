@@ -1,14 +1,14 @@
 name: phpMyAdmin
 tags:
-    - 工具
+    - 开发工具
 title: 基于 Web 的 MySQL 数据库管理工具
-type: 工具
+type: 开发工具
 description: 基于 Web 的 MySQL 数据库管理工具
 additionalProperties:
     key: phpmyadmin
     name: phpMyAdmin
     tags:
-        - Tool
+        - DevTool
     shortDescZh: 基于 Web 的 MySQL 数据库管理工具
     shortDescEn: MySQL database management tools
     type: tool

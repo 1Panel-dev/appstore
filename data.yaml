@@ -11,9 +11,17 @@ additionalProperties:
     - key: Database
       name: 数据库
     - key: Tool
-      name: 工具
-    - key: CI/CD
-      name: CI/CD
+      name: 实用工具
+    - key: DevOps
+      name: DevOps
     - key: Local
       name: 本地
+    - key: DevTool
+      name: 开发工具
+    - key: Security
+      name: 安全
+    - key: BI
+      name: BI
+    - key: Middleware
+      name: 中间件
   version: v1.5.0
