@@ -1,17 +1,17 @@
 name: Nextcloud
 tags:
-    - 建站
+    - 工具
 title: Nextcloud 服务器，所有数据的安全家园
-type: 建站
+type: 工具
 description: Nextcloud 服务器，所有数据的安全家园
 additionalProperties:
     key: nextcloud
     name: Nextcloud
     tags:
-        - WebSite
+        - Tool
     shortDescZh: Nextcloud 服务器，所有数据的安全家园
     shortDescEn: Nextcloud server, a safe home for all your data
-    type: website
+    type: tool
     crossVersionUpdate: true
     limit: 0
     recommend: 0

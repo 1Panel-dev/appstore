@@ -1,17 +1,17 @@
 name: Tailchat
 tags:
-    - 建站
+    - 工具
 title: 在你自己工作区的下一代 noIM 应用
-type: 建站
+type: 工具
 description: 在你自己工作区的下一代 noIM 应用
 additionalProperties:
     key: tailchat
     name: Tailchat
     tags:
-        - WebSite
+        - Tool
     shortDescZh: 在你自己工作区的下一代 noIM 应用
     shortDescEn: The next-generation noIM Application in your own workspace
-    type: website
+    type: tool
     crossVersionUpdate: true
     limit: 1
     recommend: 0
