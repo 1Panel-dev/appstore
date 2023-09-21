@@ -1,286 +1,44 @@
-# pgAdmin 4 
-
-pgAdmin 4 is a rewrite of the popular pgAdmin3 management tool for the
-PostgreSQL (http://www.postgresql.org) database. 
-
-In the following documentation and examples, *$PGADMIN4_SRC/* is used to denote
-the top-level directory of a copy of the pgAdmin source tree, either from a
-tarball or a git checkout.
-
-## Architecture
-
-pgAdmin 4 is written as a web application in Python, using jQuery and Bootstrap
-for the client side processing and UI. On the server side, Flask is being
-utilised.
-
-Although developed using web technologies, pgAdmin 4 can be deployed either on
-a web server using a browser, or standalone on a workstation. The runtime/
-subdirectory contains an NWjs based runtime application intended to allow this,
-which will execute the Python server and display the UI.
-
-## Building the Runtime
-
-To build the runtime, the following packages must be installed:
-
-* NodeJS 12+
-* Yarn
-
-Change into the runtime directory, and run *yarn install*. This will install the
-dependencies required.
-
-In order to use the runtime in a development environment, you'll need to copy
-*dev_config.json.in* file to *dev_config.json*, and edit the paths to the Python
-executable and *pgAdmin.py* file, otherwise the runtime will use the default
-paths it would expect to find in the standard package for your platform.
-
-You can then execute the runtime by running something like:
-
-```bash
-node_modules/nw/nwjs/nw .
-```
-
-or on macOS:
-
-```bash
-node_modules/nw/nwjs/nwjs.app/Contents/MacOS/nwjs .
-```
-
-# Configuring the Python Environment
-
-In order to run the Python code, a suitable runtime environment is required.
-Python version 3.7 and later are currently supported. It is recommended that a
-Python Virtual Environment is setup for this purpose, rather than using the
-system Python environment. On Linux and Mac systems, the process is fairly
-simple - adapt as required for your distribution:
-
-1. Create a virtual environment in an appropriate directory. The last argument is
-   the name of the environment; that can be changed as desired:
-
-   ```bash
-   $ python3 -m venv venv
-   ```
-   
-2. Now activate the virtual environment:
-
-   ```bash
-   $ source venv/bin/activate
-   ```
-   
-3. Some of the components used by pgAdmin require a very recent version of *pip*,
-   so update that to the latest:
-   
-   ```bash
-   $ pip install --upgrade pip
-   ```
-   
-4. Ensure that a PostgreSQL installation's bin/ directory is in the path (so
-   pg_config can be found for building psycopg3), and install the required
-   packages:
-
-   ```bash
-   (venv) $ PATH=$PATH:/usr/local/pgsql/bin pip install -r $PGADMIN4_SRC/requirements.txt
-   ```
-   
-   If you are planning to run the regression tests, you also need to install
-   additional requirements from web/regression/requirements.txt:
-
-   ```bash
-   (venv) $ pip install -r $PGADMIN4_SRC/web/regression/requirements.txt
-   ```
-   
-5. Create a local configuration file for pgAdmin. Edit
-   $PGADMIN4_SRC/web/config_local.py and add any desired configuration options
-   (use the config.py file as a reference - any settings duplicated in
-   config_local.py will override those in config.py). A typical development
-   configuration may look like:
-   
-    ```python
-    from config import *
-
-    # Debug mode
-    DEBUG = True
-
-    # App mode
-    SERVER_MODE = True
-
-    # Enable the test module
-    MODULE_BLACKLIST.remove('test')
-
-    # Log
-    CONSOLE_LOG_LEVEL = DEBUG
-    FILE_LOG_LEVEL = DEBUG
-
-    DEFAULT_SERVER = '127.0.0.1'
-
-    UPGRADE_CHECK_ENABLED = True
-
-    # Use a different config DB for each server mode.
-    if SERVER_MODE == False:
-        SQLITE_PATH = os.path.join(
-            DATA_DIR,
-            'pgadmin4-desktop.db'
-        )
-    else:
-        SQLITE_PATH = os.path.join(
-            DATA_DIR,
-            'pgadmin4-server.db'
-        )
-   ```
-   
-   This configuration allows easy switching between server and desktop modes
-   for testing.
-
-6. The initial setup of the configuration database is interactive in server
-   mode, and non-interactive in desktop mode. You can run it either by
-   running:
-
-   ```bash
-   (venv) $ python3 $PGADMIN4_SRC/web/setup.py
-   ```
-   
-   or by starting pgAdmin 4:
-
-   ```bash
-   (venv) $ python3 $PGADMIN4_SRC/web/pgAdmin4.py
-   ```
-   
-   Whilst it is possible to automatically run setup in desktop mode by running
-   the runtime, that will not work in server mode as the runtime doesn't allow
-   command line interaction with the setup program.
-
-At this point you will be able to run pgAdmin 4 from the command line in either
-server or desktop mode, and access it from a web browser using the URL shown in
-the terminal once pgAdmin has started up.
-
-Setup of an environment on Windows is somewhat more complicated unfortunately,
-please see *pkg/win32/README.txt* for complete details.
+# PGAdmin 4
 
-# Building the Web Assets
+PGAdmin 4 是一款用于管理和维护PostgreSQL数据库的强大工具。它提供了丰富的功能，帮助数据库管理员和开发人员轻松管理他们的数据库。
 
-pgAdmin is dependent on a number of third party Javascript libraries. These,
-along with it's own Javascript code, SCSS/CSS code and images must be
-compiled into a "bundle" which is transferred to the browser for execution
-and rendering. This is far more efficient than simply requesting each
-asset as it's needed by the client.
+## 主要功能：
 
-To create the bundle, you will need the 'yarn' package management tool to be
-installed. Then, you can run the following commands on a *nix system to
-download the required packages and build the bundle:
+### 数据库连接管理
 
-```bash
-(venv) $ cd $PGADMIN4_SRC
-(venv) $ make install-node
-(venv) $ make bundle
-```
+- **数据库连接**：PGAdmin 4允许您轻松连接到多个PostgreSQL数据库服务器。
+- **服务器组**：您可以将数据库服务器分组以更好地组织和管理它们。
 
-On Windows systems (where "make" is not available), the following commands
-can be used:
+### 数据库对象管理
 
-```
-C:\> cd $PGADMIN4_SRC\web
-C:\$PGADMIN4_SRC\web> yarn install
-C:\$PGADMIN4_SRC\web> yarn run bundle
-```
+- **表格管理**：您可以查看、编辑和删除数据库中的表格，以及执行SQL查询。
+- **视图管理**：管理数据库中的视图，包括创建、修改和删除视图。
+- **索引和约束**：创建和管理索引和约束以提高数据库性能和数据完整性。
+- **函数和存储过程**：管理数据库中的函数和存储过程。
+- **触发器**：创建和管理数据库中的触发器，以在特定事件发生时执行操作。
+- **外部数据导入和导出**：导入和导出数据以进行备份和数据迁移。
 
-# Creating pgAdmin themes
+### 查询工具
 
-To create a pgAdmin theme, you need to create a directory under
-*web/pgadmin/static/scss/resources*.
-Copy the sample file *_theme.variables.scss.sample* to the new directory and
-rename it to *_theme.variables.scss*. Change the desired hexadecimal values of
-the colors and bundle pgAdmin. You can also add a preview image in the theme
-directory with the name as *\<dir name>_preview.png*. It is recommended that the
-preview image should not be larger in size as it may take time to load on slow
-networks. Run the *yarn run bundle* and you're good to go. No other changes are
-required, pgAdmin bundle will read the directory and create other required
-entries to make them available in preferences.
+- **SQL查询编辑器**：执行SQL查询并查看结果，支持SQL语法高亮显示和查询历史记录。
+- **可视化查询构建器**：通过拖放方式构建SQL查询，无需编写SQL代码。
 
-The name of the theme is derived from the directory name. Underscores (_) and
-hyphens (-) will be replaced with spaces and the result will be camel cased.
+### 数据可视化
 
-# Building the documentation
+- **表格数据查看**：以表格形式查看数据库中的数据。
+- **图表和图形**：创建图表和图形以更直观地呈现数据。
 
-In order to build the docs, an additional Python package is required in the
-virtual environment. This can be installed with the pip package manager:
+### 数据库备份和恢复
 
-```bash
-$ source venv/bin/activate
-(venv) $ pip install Sphinx
-(venv) $ pip install sphinxcontrib-youtube
-```
+- **数据库备份**：创建数据库备份，以防止数据丢失。
+- **数据库恢复**：从备份文件中还原数据库。
 
-The docs can then be built using the Makefile in *$PGADMIN4_SRC*, e.g.
+### 安全性和权限管理
 
-```bash
-(venv) $ make docs
-```
+- **用户和角色管理**：管理数据库用户和角色，以控制数据库访问权限。
+- **对象权限**：定义和管理数据库对象的访问权限。
+- **SSL支持**：加强数据库连接的安全性。
 
-The output can be found in *$PGADMIN4_SRC/docs/en_US/_build/html/index.html*
+### 扩展性
 
-# Building packages
-
-Most packages can be built using the Makefile in $PGADMIN4_SRC, provided all
-the setup and configuration above has been completed.
-
-To build a source tarball:
-
-```bash
-(venv) $ make src
-```
-
-To build a PIP Wheel, activate either a Python 3 virtual environment, configured 
-with all the required packages, and then run:
-
-```bash
-(venv) $ make pip
-```
-
-To build the macOS AppBundle, please see *pkg/mac/README*.
-
-To build the Windows installer, please see *pkg/win32/README.txt*.
-# Create Database Migrations
-
-In order to make changes to the SQLite DB, navigate to the 'web' directory:
-
-```bash
-(venv) $ cd $PGADMIN4_SRC/web
-```
-
-Create a migration file with the following command:
-
-```bash
-(venv) $ FLASK_APP=pgAdmin4.py flask db revision
-```
-
-This will create a file in: $PGADMIN4_SRC/web/migrations/versions/ .
-Add any changes to the 'upgrade' function.
-Increment the SCHEMA_VERSION in $PGADMIN4_SRC/web/pgadmin/model/__init__.py file.
-
-There is no need to increment the SETTINGS_SCHEMA_VERSION.
-
-# Support
-
-See https://www.pgadmin.org/support/ for support options.
-
-# Security Issues
-
-If you would like to report a security issue with pgAdmin, please email
-**security (at) pgadmin (dot) org**.
-    
-Note that this address should only be used for reporting security issues
-that you believe you've found in the design or code of pgAdmin, pgAgent,
-and the pgAdmin website. It should not be used to ask security questions.
-
-# Project info
-
-A GitHub project for pgAdmin 4 can be found at the address below:
-
-https://github.com/pgadmin-org/pgadmin4
-
-Please submit any changes as Pull Requests against the *master* branch of the
-*pgadmin-org/pgadmin4* repository.
-
-If you wish to discuss pgAdmin 4, or contribute to the project, please use the
-pgAdmin Hackers mailing list:
-
-pgadmin-hackers@postgresql.org
+- **插件支持**：通过插件系统扩展PGAdmin 4的功能。

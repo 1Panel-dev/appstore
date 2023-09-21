@@ -1,20 +1,35 @@
-# Uptime Kuma
+# Uptime Kuma 功能简介
 
-Uptime Kuma is an easy-to-use self-hosted monitoring tool.
+Uptime Kuma 是一款开源的服务器监控和状态检测工具，它帮助您跟踪服务器的可用性、性能和健康状态。
 
-<img src="https://user-images.githubusercontent.com/1336778/212262296-e6205815-ad62-488c-83ec-a5b0d0689f7c.jpg" width="700" alt="" />
+## 主要功能：
 
-## ⭐ Features
+### 1. 服务器监控
 
-* Monitoring uptime for HTTP(s) / TCP / HTTP(s) Keyword / Ping / DNS Record / Push / Steam Game Server / Docker Containers
-* Fancy, Reactive, Fast UI/UX
-* Notifications via Telegram, Discord, Gotify, Slack, Pushover, Email (SMTP), and [90+ notification services, click here for the full list](https://github.com/louislam/uptime-kuma/tree/master/src/components/notifications)
-* 20 second intervals
-* [Multi Languages](https://github.com/louislam/uptime-kuma/tree/master/src/lang)
-* Multiple status pages
-* Map status pages to specific domains
-* Ping chart
-* Certificate info
-* Proxy support
-* 2FA support
+- Uptime Kuma 可以监控多个服务器，包括 Web 服务器、数据库服务器、应用程序服务器等。
+- 它会定期发送请求来检查服务器的可用性，并记录响应时间和状态。
 
+### 2. 自定义检测
+
+- 您可以配置自定义检测规则，以满足特定需求。例如，检测特定端口的开放状态或特定内容的存在。
+- 可以使用不同的协议（如HTTP、TCP、ICMP）进行检测。
+
+### 3. 通知和警报
+
+- Uptime Kuma 可以配置通知和警报，以便在服务器状态异常时及时通知您。支持通知方式包括电子邮件、Slack、Webhook等。
+- 您可以设置阈值，当服务器响应时间超过或服务器不可用时，会触发警报。
+
+### 4. 历史记录和报告
+
+- 工具会保存服务器的监控历史记录，以便您可以查看过去的性能和可用性数据。
+- 可以生成定期报告，帮助您分析服务器状态的趋势和模式。
+
+### 5. 用户友好的界面
+
+- Uptime Kuma 提供直观的用户界面，使您可以轻松地配置监控和查看监控结果。
+- 支持多种语言和主题，以满足用户的个性化需求。
+
+### 6. 开源和扩展性
+
+- Uptime Kuma 是开源的，可自由定制和扩展。您可以根据需要添加新的插件和功能。
+- 社区支持和活跃的开发者社区，确保工具的持续改进和更新。

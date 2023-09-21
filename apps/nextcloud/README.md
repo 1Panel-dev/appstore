@@ -1,33 +1,29 @@
-# Nextcloud Server ☁
+# Nextcloud
 
-**A safe home for all your data.**
+Nextcloud 是一款开源的自托管云存储和协作平台，它提供了一系列功能，旨在帮助您管理和共享文件、日历、联系人、任务等，同时保护您的数据隐私。
 
-![](https://raw.githubusercontent.com/nextcloud/screenshots/master/nextcloud-hub-files-25-preview.png)
+## 主要功能：
 
-## Why is this so awesome? 🤩
+### 1. 文件存储和同步
 
-* 📁 **Access your Data** You can store your files, contacts, calendars, and more on a server of your choosing.
-* 🔄 **Sync your Data** You keep your files, contacts, calendars, and more synchronized amongst your devices.
-* 🙌 **Share your Data** …by giving others access to the stuff you want them to see or to collaborate with.
-* 🚀 **Expandable with hundreds of Apps** ...like [Calendar](https://github.com/nextcloud/calendar), [Contacts](https://github.com/nextcloud/contacts), [Mail](https://github.com/nextcloud/mail), [Video Chat](https://github.com/nextcloud/spreed) and all those you can discover in our [App Store](https://apps.nextcloud.com)
-* 🔒 **Security** with our encryption mechanisms, [HackerOne bounty program](https://hackerone.com/nextcloud) and two-factor authentication.
+Nextcloud允许您轻松地上传、存储和同步文件。您可以访问您的文件，无论是在计算机、手机还是平板电脑上，都可以随时随地访问和共享它们。
 
-Do you want to learn more about how you can use Nextcloud to access, share and protect your files, calendars, contacts, communication & more at home and in your organization? [**Learn about all our Features**](https://nextcloud.com/athome/).
+### 2. 日历和联系人
 
-## Get your Nextcloud 🚚
+Nextcloud包括一个功能强大的日历和联系人应用程序，可以帮助您组织约会、任务和联系人信息。您可以与其他用户共享日历，并协同工作。
 
-- ☑️ [**Simply sign up**](https://nextcloud.com/signup/) at one of our providers either through our website or through the apps directly.
-- 🖥 [**Install** a server by yourself](https://nextcloud.com/install/#instructions-server) on your hardware or by using one of our ready to use **appliances**
-- 📦 Buy one of the [awesome **devices** coming with a preinstalled Nextcloud](https://nextcloud.com/devices/)
-- 🏢 Find a [service **provider**](https://nextcloud.com/providers/) who hosts Nextcloud for you or your company
+### 3. 文件共享和协作
 
-Enterprise? Public Sector or Education user? You may want to have a look into [**Nextcloud Enterprise**](https://nextcloud.com/enterprise/) provided by Nextcloud GmbH.
+您可以轻松地与其他用户共享文件和文件夹，设置不同的权限级别，以控制对文件的访问权限。还可以协同编辑文档、制定计划等。
 
-## Get in touch 💬
+### 4. 数据隐私和安全
 
-* [📋 Forum](https://help.nextcloud.com)
-* [👥 Facebook](https://www.facebook.com/nextclouders)
-* [🐣 Twitter](https://twitter.com/Nextclouders)
-* [🐘 Mastodon](https://mastodon.xyz/@nextcloud)
+Nextcloud非常注重数据隐私和安全性。它提供了端到端的加密、双因素认证、文件版本控制等功能，以确保您的数据受到最佳的保护。
 
-You can also [get support for Nextcloud](https://nextcloud.com/support)!
+### 5. 扩展性和插件
+
+Nextcloud具有丰富的插件生态系统，允许您根据自己的需求扩展功能。您可以添加各种应用程序和插件，以满足不同的用例需求。
+
+### 6. 自托管
+
+您可以将Nextcloud部署在自己的服务器上，完全掌握您的数据。这意味着您不必依赖第三方云服务提供商，可以更好地控制您的数字生活。

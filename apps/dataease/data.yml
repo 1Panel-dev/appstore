@@ -1,14 +1,14 @@
 name: DataEase
 tags:
-    - BI
+    - 工具
 title: 人人可用的开源数据可视化分析工具
-type: BI
+type: 工具
 description: 人人可用的开源数据可视化分析工具
 additionalProperties:
     key: dataease
     name: DataEase
     tags:
-        - BI
+        - Tool
     shortDescZh: 人人可用的开源数据可视化分析工具
     shortDescEn: Open source data visualization and analysis tools available to everyone
     type: tool

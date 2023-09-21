@@ -1,8 +1,8 @@
 name: ChatGPT Web
 tags:
-    - 实用工具
+    - 工具
 title: ChatGPT Web
-type: 实用工具
+type: 工具
 description: ChatGPT Web
 additionalProperties:
     key: chatgpt-web

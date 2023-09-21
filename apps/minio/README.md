@@ -1,107 +1,37 @@
-# MinIO Quickstart Guide
+# MinIO
 
-MinIO is a High Performance Object Storage released under GNU Affero General Public License v3.0. It is API compatible with Amazon S3 cloud storage service. Use MinIO to build high performance infrastructure for machine learning, analytics and application data workloads.
+MinIO 是根据 GNU Affero 通用公共许可证 v3.0 发布的高性能对象存储。它与 Amazon S3 云存储服务 API 兼容。使用 MinIO 为机器学习、分析和应用程序数据工作负载构建高性能基础架构。
 
-This README provides quickstart instructions on running MinIO on bare metal hardware, including container-based installations. For Kubernetes environments, use the [MinIO Kubernetes Operator](https://github.com/minio/operator/blob/master/README.md).
+## 主要功能：
 
-## Deployment Recommendations
+### 1. 高度可扩展
 
-### Allow port access for Firewalls
+MinIO 采用分布式架构，可以轻松扩展以满足不断增长的数据存储需求。您可以根据需要添加新的存储节点，无需中断服务。
 
-By default MinIO uses the port 9000 to listen for incoming connections. If your platform blocks the port by default, you may need to enable access to the port.
+### 2. 高性能
 
-### ufw
+MinIO 具有卓越的性能，能够提供高速的对象存储服务。它支持并行读写操作，同时具备低延迟，适用于需要快速访问大量数据的应用。
 
-For hosts with ufw enabled (Debian based distros), you can use `ufw` command to allow traffic to specific ports. Use below command to allow access to port 9000
+### 3. 数据安全
 
-```
-ufw allow 9000
-```
+MinIO 提供数据加密和访问控制功能，以确保数据的安全性和隐私保护。您可以使用SSL/TLS进行数据传输加密，并配置访问策略以限制访问权限。
 
-Below command enables all incoming traffic to ports ranging from 9000 to 9010.
+### 4. S3兼容性
 
-```
-ufw allow 9000:9010/tcp
-```
+MinIO 与Amazon S3兼容，这意味着您可以使用现有的S3工具和应用程序与MinIO进行集成。这种兼容性使得迁移和扩展现有S3工作负载变得更加容易。
 
-### firewall-cmd
+### 5. 多租户支持
 
-For hosts with firewall-cmd enabled (CentOS), you can use `firewall-cmd` command to allow traffic to specific ports. Use below commands to allow access to port 9000
+MinIO 支持多租户环境，允许您在单个MinIO实例中为不同的组织或用户提供独立的存储空间和访问控制。
 
-```
-firewall-cmd --get-active-zones
-```
+### 6. 版本控制
 
-This command gets the active zone(s). Now, apply port rules to the relevant zones returned above. For example if the zone is `public`, use
+MinIO 支持对象版本控制，您可以保留和管理对象的不同版本，以便进行数据恢复和审计。
 
-```
-firewall-cmd --zone=public --add-port=9000/tcp --permanent
-```
+### 7. 分层存储
 
-Note that `permanent` makes sure the rules are persistent across firewall start, restart or reload. Finally reload the firewall for changes to take effect.
+MinIO 支持将数据存储在不同的后端存储系统上，包括本地磁盘、云存储和对象存储设备，以实现灵活的数据存储架构。
 
-```
-firewall-cmd --reload
-```
+### 8. 开源和社区支持
 
-### iptables
-
-For hosts with iptables enabled (RHEL, CentOS, etc), you can use `iptables` command to enable all traffic coming to specific ports. Use below command to allow
-access to port 9000
-
-```
-iptables -A INPUT -p tcp --dport 9000 -j ACCEPT
-service iptables restart
-```
-
-Below command enables all incoming traffic to ports ranging from 9000 to 9010.
-
-```
-iptables -A INPUT -p tcp --dport 9000:9010 -j ACCEPT
-service iptables restart
-```
-
-## Test MinIO Connectivity
-
-### Test using MinIO Console
-
-MinIO Server comes with an embedded web based object browser. Point your web browser to <http://127.0.0.1:9000> to ensure your server has started successfully.
-
-> NOTE: MinIO runs console on random port by default if you wish choose a specific port use `--console-address` to pick a specific interface and port.
-
-### Things to consider
-
-MinIO redirects browser access requests to the configured server port (i.e. `127.0.0.1:9000`) to the configured Console port. MinIO uses the hostname or IP address specified in the request when building the redirect URL. The URL and port *must* be accessible by the client for the redirection to work.
-
-For deployments behind a load balancer, proxy, or ingress rule where the MinIO host IP address or port is not public, use the `MINIO_BROWSER_REDIRECT_URL` environment variable to specify the external hostname for the redirect. The LB/Proxy must have rules for directing traffic to the Console port specifically.
-
-For example, consider a MinIO deployment behind a proxy `https://minio.example.net`, `https://console.minio.example.net` with rules for forwarding traffic on port :9000 and :9001 to MinIO and the MinIO Console respectively on the internal network. Set `MINIO_BROWSER_REDIRECT_URL` to `https://console.minio.example.net` to ensure the browser receives a valid reachable URL.
-
-Similarly, if your TLS certificates do not have the IP SAN for the MinIO server host, the MinIO Console may fail to validate the connection to the server. Use the `MINIO_SERVER_URL` environment variable  and specify the proxy-accessible hostname of the MinIO server to allow the Console to use the MinIO server API using the TLS certificate.
-
-For example: `export MINIO_SERVER_URL="https://minio.example.net"`
-
-| Dashboard                                                                                   | Creating a bucket                                                                           |
-| -------------                                                                               | -------------                                                                               |
-| ![Dashboard](https://github.com/minio/minio/blob/master/docs/screenshots/pic1.png?raw=true) | ![Dashboard](https://github.com/minio/minio/blob/master/docs/screenshots/pic2.png?raw=true) |
-
-## Test using MinIO Client `mc`
-
-`mc` provides a modern alternative to UNIX commands like ls, cat, cp, mirror, diff etc. It supports filesystems and Amazon S3 compatible cloud storage services. Follow the MinIO Client [Quickstart Guide](https://min.io/docs/minio/linux/reference/minio-mc.html#quickstart) for further instructions.
-
-## Explore Further
-
-- [MinIO Erasure Code Overview](https://min.io/docs/minio/linux/operations/concepts/erasure-coding.html)
-- [Use `mc` with MinIO Server](https://min.io/docs/minio/linux/reference/minio-mc.html)
-- [Use `minio-go` SDK with MinIO Server](https://min.io/docs/minio/linux/developers/go/minio-go.html)
-- [The MinIO documentation website](https://min.io/docs/minio/linux/index.html)
-
-## Contribute to MinIO Project
-
-Please follow MinIO [Contributor's Guide](https://github.com/minio/minio/blob/master/CONTRIBUTING.md)
-
-## License
-
-- MinIO source is licensed under the GNU AGPLv3 license that can be found in the [LICENSE](https://github.com/minio/minio/blob/master/LICENSE) file.
-- MinIO [Documentation](https://github.com/minio/minio/tree/master/docs) © 2021 by MinIO, Inc is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
-- [License Compliance](https://github.com/minio/minio/blob/master/COMPLIANCE.md)
+MinIO 是开源项目，拥有活跃的社区支持。您可以自由地使用、修改和分发MinIO，同时从社区的知识和资源中获益。

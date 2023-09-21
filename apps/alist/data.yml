@@ -1,8 +1,8 @@
 name: AList
 tags:
-    - 实用工具
+    - 工具
 title: 支持多存储的文件列表程序
-type: 实用工具
+type: 工具
 description: 支持多存储的文件列表程序
 additionalProperties:
     key: alist
@@ -15,6 +15,6 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 0
     recommend: 10
-    website: https://github.com/alist-org/alist
+    website: https://alist.nn.ci/
     github: https://github.com/alist-org/alist
-    document: https://alist.nn.ci/zh/
+    document: https://alist.nn.ci/zh/guide/

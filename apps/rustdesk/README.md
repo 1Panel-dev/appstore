@@ -1,37 +1,33 @@
-# 注意事项
- 
-- 运行完容器后需要获取当前数据目录 `./data/hbbs` 下的 key，方便客户端使用。
-
-```shell
-# 面板的话在文件管理里查看即可
-# 终端的话输入以下获得
-cat ./data/hbbs/id_ed25519.pub
-```
-
-- 如果要更改 key，请删除 `./data/hbbs` 和 `./data/hbbr` 文件夹下的 `id_ed25519` 和 `id_ed25519.pub` 文件并重新启动 hbbs/hbbr，hbbs 将会产生新的密钥对。
-
 # RustDesk
 
-远程桌面软件，开箱即用，无需任何配置。您完全掌控数据，不用担心安全问题。您可以使用我们的注册/中继服务器，或者[自己设置](https://rustdesk.com/server)，亦或者[开发您的版本](https://github.com/rustdesk/rustdesk-server-demo)。
+RustDesk 是一款开源的远程支持和远程桌面工具，它旨在为用户提供便捷的远程协助和远程访问功能。
 
-## 免费的公共服务器
+## 主要功能：
 
-以下是您可以使用的、免费的、会随时更新的公共服务器列表，在国内也许网速会很慢或者无法访问。
+### 1. 远程桌面控制
 
-| Location | Vendor | Specification |
-| --------- | ------------- | ------------------ |
-| Seoul | AWS lightsail | 1 vCPU / 0.5GB RAM |
-| Germany | Hetzner | 2 vCPU / 4GB RAM |
-| Germany | Codext | 4 vCPU / 8GB RAM |
-| Finland (Helsinki) | 0x101 Cyber Security | 4 vCPU / 8GB RAM |
-| USA (Ashburn) | 0x101 Cyber Security | 4 vCPU / 8GB RAM |
+RustDesk 允许用户通过互联网远程控制其他计算机，从而实现远程支持和协助。这对于解决远程用户的计算机问题或提供培训和支持非常有用。
 
-## 依赖
+### 2. 文件传输
 
-桌面版本界面使用[sciter](https://sciter.com/), 请自行下载。
+用户可以轻松地在本地计算机和远程计算机之间传输文件，无需依赖第三方工具或云存储服务。这使得共享文件和数据变得更加便捷。
 
-[Windows](https://raw.githubusercontent.com/c-smile/sciter-sdk/master/bin.win/x64/sciter.dll) |
-[Linux](https://raw.githubusercontent.com/c-smile/sciter-sdk/master/bin.lnx/x64/libsciter-gtk.so) |
-[macOS](https://raw.githubusercontent.com/c-smile/sciter-sdk/master/bin.osx/libsciter.dylib)
+### 3. 多平台支持
 
-移动版本使用Flutter，未来会将桌面版本从Sciter迁移到Flutter。
+RustDesk 支持多种操作系统，包括 Windows、Linux 和 macOS。这意味着您可以在不同类型的计算机上安装和使用 RustDesk，以满足各种需求。
+
+### 4. 安全性
+
+RustDesk 通过加密连接来确保远程访问的安全性，保护用户的数据和隐私。它使用安全协议来防止未经授权的访问。
+
+### 5. 简单易用
+
+RustDesk 被设计成用户友好的工具，提供直观的界面和简单的设置，以确保用户能够快速上手并开始远程支持或访问。
+
+### 6. 开源
+
+作为开源项目，RustDesk 提供了可自定义和可扩展的选项，用户可以根据自己的需求进行定制和改进。
+
+### 7. 屏幕共享
+
+RustDesk 允许用户共享其屏幕以进行演示、培训或协作。这在远程工作和支持方面非常有用。
