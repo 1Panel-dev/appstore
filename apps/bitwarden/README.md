@@ -1,41 +1,15 @@
-### Alternative implementation of the Bitwarden server API written in Rust and compatible with [upstream Bitwarden clients](https://bitwarden.com/download/)*, perfect for self-hosted deployment where running the official resource-heavy service might not be ideal.
+# Bitwarden
 
----
+Bitwarden 是一款开源的密码管理器，提供强大的安全性和便捷的密码管理功能。
 
-## Features
+## 主要功能：
 
-Basically full implementation of Bitwarden API is provided including:
-
- * Organizations support
- * Attachments and Send
- * Vault API support
- * Serving the static files for Vault interface
- * Website icons API
- * Authenticator and U2F support
- * YubiKey and Duo support
- * Emergency Access
-
-## Installation
-Pull the docker image and mount a volume from the host for persistent storage:
-
-```sh
-docker pull vaultwarden/server:latest
-docker run -d --name vaultwarden -v /vw-data/:/data/ -p 80:80 vaultwarden/server:latest
-```
-This will preserve any persistent data under /vw-data/, you can adapt the path to whatever suits you.
-
-**IMPORTANT**: Most modern web browsers, disallow the use of Web Crypto APIs in insecure contexts. In this case, you might get an error like `Cannot read property 'importKey'`. To solve this problem, you need to access the web vault via HTTPS or localhost.
-
-This can be configured in [vaultwarden directly](https://github.com/dani-garcia/vaultwarden/wiki/Enabling-HTTPS) or using a third-party reverse proxy ([some examples](https://github.com/dani-garcia/vaultwarden/wiki/Proxy-examples)).
-
-If you have an available domain name, you can get HTTPS certificates with [Let's Encrypt](https://letsencrypt.org/), or you can generate self-signed certificates with utilities like [mkcert](https://github.com/FiloSottile/mkcert). Some proxies automatically do this step, like Caddy (see examples linked above).
-
-## Usage
-See the [vaultwarden wiki](https://github.com/dani-garcia/vaultwarden/wiki) for more information on how to configure and run the vaultwarden server.
-
-## Get in touch
-To ask a question, offer suggestions or new features or to get help configuring or installing the software, please use [GitHub Discussions](https://github.com/dani-garcia/vaultwarden/discussions) or [the forum](https://vaultwarden.discourse.group/).
-
-If you spot any bugs or crashes with vaultwarden itself, please [create an issue](https://github.com/dani-garcia/vaultwarden/issues/). Make sure you are on the latest version and there aren't any similar issues open, though!
-
-If you prefer to chat, we're usually hanging around at [#vaultwarden:matrix.org](https://matrix.to/#/#vaultwarden:matrix.org) room on Matrix. Feel free to join us!
+- **密码保存与自动填充**：Bitwarden 可以安全地存储您的用户名和密码，以便您无需记忆它们。它还提供自动填充功能，可在登录网站时自动填充凭据。
+- **安全密码生成器**：Bitwarden 具备内置的密码生成器，可以生成复杂、随机的密码，以增加您的在线帐户的安全性。
+- **加密存储**：所有密码和敏感信息都以最高级别的加密进行存储，确保只有您能够访问和解锁您的数据。
+- **跨平台支持**：Bitwarden 提供桌面应用、移动应用和网页扩展，支持各种操作系统和浏览器，使您可以在多个设备上轻松访问您的密码。
+- **自动同步**：您的密码库会自动同步到 Bitwarden 云，这意味着无论您在哪里访问密码库，都可以获得最新的更新。
+- **团队和家庭共享**：Bitwarden 允许您创建共享密码库，以便与家庭成员或团队成员共享敏感信息，同时保持安全和隐私。
+- **安全审计**：Bitwarden 可以检查您的密码库，提供有关密码强度和重复使用的建议，以帮助您提高帐户的安全性。
+- **二次验证 (2FA) 支持**：Bitwarden 支持多种两步验证方法，增加了帐户的安全性。
+- **开源和自托管选项**：Bitwarden 是一个开源项目，您可以选择将其自托管在自己的服务器上，以增加对数据的控制和安全性。

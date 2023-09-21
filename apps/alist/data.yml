@@ -15,6 +15,6 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 0
     recommend: 10
-    website: https://github.com/alist-org/alist
+    website: https://alist.nn.ci/
     github: https://github.com/alist-org/alist
-    document: https://alist.nn.ci/zh/
+    document: https://alist.nn.ci/zh/guide/

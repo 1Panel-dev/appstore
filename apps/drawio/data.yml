@@ -1,4 +1,4 @@
-name: Drawio
+name: Draw.io
 tags:
     - 实用工具
 title: 免费和开源的跨平台图形绘制软件
@@ -6,7 +6,7 @@ type: 实用工具
 description: 免费和开源的跨平台图形绘制软件
 additionalProperties:
     key: drawio
-    name: Drawio
+    name: Draw.io
     tags:
         - Tool
     shortDescZh: 免费和开源的跨平台图形绘制软件

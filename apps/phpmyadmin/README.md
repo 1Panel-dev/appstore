@@ -1,41 +1,42 @@
-phpMyAdmin - Readme
-===================
+# phpMyAdmin
 
-Version 5.3.0-dev
+phpMyAdmin 是一个开源的基于Web的MySQL数据库管理工具，它允许用户通过Web浏览器管理MySQL数据库。
 
-A web interface for MySQL and MariaDB.
+## 主要功能：
 
-https://www.phpmyadmin.net/
+### 1. 数据库管理
 
-Summary
--------
+- **创建数据库**：通过phpMyAdmin，您可以轻松创建新的数据库，指定数据库名称、字符集和排序规则。
+- **删除数据库**：您可以删除不再需要的数据库，以释放服务器资源。
+- **导入和导出数据**：phpMyAdmin支持从本地文件导入数据，也可以将数据库数据导出为SQL文件。
 
-phpMyAdmin is intended to handle the administration of MySQL over the web. For a summary of features, list of requirements, and installation instructions, please see the documentation in the ./doc/ folder or at https://docs.phpmyadmin.net/
+### 2. 数据表操作
 
-Copyright
----------
+- **创建数据表**：创建新的数据表，定义表的字段、类型、主键和索引。
+- **编辑数据表结构**：随时修改表的结构，添加、删除或更改字段。
+- **导入和导出表数据**：将表数据导出为SQL文件，也可以从SQL文件导入数据。
+- **优化和修复表**：对表执行优化和修复操作，提高性能和数据完整性。
 
-Copyright © 1998 onwards -- the phpMyAdmin team
+### 3. SQL查询
 
-Certain libraries are copyrighted by their respective authors; see the full copyright list for details.
+- **执行SQL查询**：通过phpMyAdmin的SQL查询编辑器，您可以执行自定义SQL查询，检索和修改数据库中的数据。
+- **查询构建器**：使用可视化查询构建器创建复杂的SQL查询，而无需编写SQL代码。
 
-For full copyright information, please see ./doc/copyright.rst
+### 4. 用户管理
 
-License
--------
+- **创建和管理用户**：管理数据库用户，分配权限和密码。
+- **权限管理**：为用户分配特定数据库和表的权限，确保数据安全性。
 
-This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License version 2, as published by the Free Software Foundation.
+### 5. 数据备份和恢复
 
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+- **数据库备份**：定期备份数据库，以防止数据丢失。
+- **数据库还原**：从备份文件中还原数据库，以恢复数据。
 
-You should have received a copy of the GNU General Public License along with this program.  If not, see <https://www.gnu.org/licenses/>.
+### 6. 状态监控
 
-Licensing of current contributions
-----------------------------------
+- **服务器状态**：查看服务器性能和运行状态，包括连接、查询和性能指标。
+- **运行日志**：查看MySQL服务器的日志文件，以便故障排除。
 
-Beginning on 2013-12-01, new contributions to this codebase are all licensed under terms compatible with GPLv2-or-later.  phpMyAdmin is currently transitioning older code to GPLv2-or-later, but work is not yet complete.
+### 7. 多语言支持
 
-Enjoy!
-------
-
-The phpMyAdmin team
+- **多语言界面**：phpMyAdmin支持多种语言，以适应不同用户的需求。

@@ -1,15 +1,16 @@
-⚡ A lightning-fast search engine that fits effortlessly into your apps, websites, and workflow 🔍
+# Meilisearch
 
-Meilisearch helps you shape a delightful search experience in a snap, offering features that work out-of-the-box to speed up your workflow.
+Meilisearch 是一款开源的全文搜索引擎，它具有高度可定制性、快速、易于使用的特点。
 
-🔥 [**Try it!**](https://where2watch.meilisearch.com/?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=demo-link) 🔥
+## 主要功能：
 
-## 📖 Documentation
-
-You can consult Meilisearch's documentation at [https://www.meilisearch.com/docs](https://www.meilisearch.com/docs/?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=docs).
-
-## 🚀 Getting started
-
-For basic instructions on how to set up Meilisearch, add documents to an index, and search for documents, take a look at our [Quick Start](https://www.meilisearch.com/docs/learn/getting_started/quick_start?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=get-started) guide.
-
-You may also want to check out [Meilisearch 101](https://www.meilisearch.com/docs/learn/getting_started/filtering_and_sorting?utm_campaign=oss&utm_source=github&utm_medium=meilisearch&utm_content=get-started) for an introduction to some of Meilisearch's most popular features.
+- **快速的全文搜索：** Meilisearch 提供出色的搜索性能，能够快速检索大量文本数据。它采用高度优化的算法，使用户可以在毫秒级别内获取搜索结果。
+- **开源和免费：** Meilisearch 是一个开源项目，可以免费使用，这使得开发者和组织可以轻松集成和部署。
+- **简单的API：** Meilisearch 提供了简单而强大的API，使开发者能够轻松与其集成。您可以使用RESTful API或客户端SDK来进行搜索和索引操作。
+- **高度可定制性：** Meilisearch 允许用户根据其特定需求进行定制。您可以定义自定义搜索字段、排序规则和筛选条件，以满足项目的独特需求。
+- **多语言支持：** Meilisearch 支持多种语言和字符集，可以用于处理不同语种的文本数据。
+- **实时索引更新：** Meilisearch 具备实时索引更新功能，可以随着数据的变化即时更新索引，确保搜索结果的及时性。
+- **全文搜索高亮：** 它支持搜索结果中关键词的高亮显示，帮助用户更容易地找到他们需要的信息。
+- **强大的排名算法：** Meilisearch 使用先进的排名算法，可以根据相关性对搜索结果进行排序，提供更准确的搜索结果。
+- **分布式部署：** 可以将 Meilisearch 部署在多个服务器上，以实现负载均衡和高可用性，确保系统的稳定性和可靠性。
+- **开发者友好：** Meilisearch 提供了丰富的文档和示例代码，以帮助开发者快速上手和解决问题。
