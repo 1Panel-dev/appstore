@@ -1,14 +1,14 @@
 name: ZFile
 tags:
-    - 实用工具
+    - 私有云存储
 title: 基于 Java 的在线网盘程序
-type: 实用工具
+type: 私有云存储
 description: 基于 Java 的在线网盘程序
 additionalProperties:
     key: zfile
     name: ZFile
     tags:
-        - Tool
+        - PrivateStorage
     shortDescZh: 基于 Java 的在线网盘程序
     shortDescEn: Java-based online disk program
     type: tool

@@ -1,14 +1,14 @@
 name: Kodbox
 tags:
-    - 实用工具
+    - 私有云存储
 title: 可道云推出的企业级私有云存储解决方案
-type: 实用工具
+type: 私有云存储
 description: 可道云推出的企业级私有云存储解决方案
 additionalProperties:
     key: kodbox
     name: Kodbox
     tags:
-        - Tool
+        - PrivateStorage
     shortDescZh: 可道云推出的企业级私有云存储解决方案
     shortDescEn: Kodbox is a file manager for web. It is also a web code editor, which allows you to develop websites directly within the web browser.
     type: tool
