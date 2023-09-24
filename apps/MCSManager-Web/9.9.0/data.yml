@@ -1,0 +1,16 @@
+additionalProperties:
+    formFields:
+      - default: ""
+        envKey: MCSM_DATA_FILES
+        labelEn: MCSM Data File localization
+        labelZh: MCSM 数据文件夹存放地址
+        required: true
+        type: number
+      - default: "23333"
+        edit: true
+        envKey: PANEL_APP_PORT
+        labelEn: MCSM http port
+        labelZh: MCSM http 端口
+        required: true
+        rule: paramPort
+        type: number
