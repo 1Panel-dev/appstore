@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  mcsm-web:
+    image: alisaqaq/mcsmanager-web:latest
+    container_name: mcsm-web
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:23333
+    volumes:
+      - ${MCSM_DATA_FILES}:/opt/mcsmanager/web/data
+    restart: unless-stopped
