@@ -18,6 +18,7 @@ services:
       interval: 30s
       timeout: 5s
       retries: 20
+    restart: always
 networks:
   1panel-network:
     external: true

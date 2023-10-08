@@ -19,7 +19,7 @@ additionalProperties:
       sort: 5
     - key: DevOps
       name: DevOps
-      sort: 6
+      sort: 10
     - key: Local
       name: 本地
       sort: 12
@@ -37,5 +37,5 @@ additionalProperties:
       sort: 11
     - key: Storage
       name: 云存储
-      sort: 10
+      sort: 6
   version: v1.6.2
