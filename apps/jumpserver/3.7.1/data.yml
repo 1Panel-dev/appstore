@@ -134,3 +134,8 @@ additionalProperties:
       labelZh: Magnus Redis 端口
       rule: paramPort
       type: number
+    - default: ""
+      edit: true
+      envKey: DOMAINS
+      labelEn: DOMAINS
+      labelZh: DOMAINS
