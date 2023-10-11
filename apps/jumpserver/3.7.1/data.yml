@@ -139,3 +139,4 @@ additionalProperties:
       envKey: DOMAINS
       labelEn: DOMAINS
       labelZh: DOMAINS
+      type: text
