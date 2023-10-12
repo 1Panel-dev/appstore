@@ -38,4 +38,4 @@ additionalProperties:
     - key: Storage
       name: 云存储
       sort: 6
-  version: v1.6.2
+  version: v1.6.0
