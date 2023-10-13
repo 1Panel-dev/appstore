@@ -6,6 +6,6 @@ services:
     network_mode: "host"
     volumes:
         - "./data/frpc.ini:/etc/frp/frpc.ini"
-    image: "snowdreamtech/frpc:0.51.3"
+    image: "snowdreamtech/frpc:0.52.1"
     labels:  
       createdBy: "Apps"
