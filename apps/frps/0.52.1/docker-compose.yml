@@ -5,7 +5,7 @@ services:
     restart: always
     network_mode: "host"
     volumes:
-        - "./data/frps.ini:/etc/frp/frps.ini"
+        - "./data/frps.toml:/etc/frp/frps.toml"
     image: "snowdreamtech/frps:0.52.1"
     labels:  
       createdBy: "Apps"
