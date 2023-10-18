@@ -1,9 +1,28 @@
 additionalProperties:
     formFields:
         - default: 7000
-          disabled: true
-          envKey: PANEL_APP_PORT_HTTP
-          labelEn: Port
-          labelZh: 端口
+          envKey: PANEL_APP_PORT_SERVICE
+          labelEn: Service Port
+          labelZh: 服务端口
           required: true
           type: number
+        - default: 7500
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: Dashboard Port
+          labelZh: Dashboard 端口
+          required: true
+          type: number
+        - default: admin
+          envKey: USER_NAME
+          labelEn: Username
+          labelZh: 用户名
+          required: true
+          type: text
+        - default: admin
+          envKey: PASSWORD
+          labelEn: Password
+          labelZh: 密码
+          required: true
+          random: true
+          rule: paramComplexity
+          type: password

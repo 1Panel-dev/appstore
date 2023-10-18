@@ -1,9 +1,8 @@
 serverAddr = "0.0.0.0"
 serverPort = 7000
 
-[[proxies]]
-name = "ssh"
-type = "tcp"
-localIP = "127.0.0.1"
-localPort = 22
-remotePort = 6001
+webServer.addr = "0.0.0.0"
+webServer.port = 40001
+webServer.user = "admin"
+webServer.password = "password123456"
+webServer.pprofEnable = false
