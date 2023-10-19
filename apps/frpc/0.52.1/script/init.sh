@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source .env
+source ./.env
 
 sed -i "s/serverAddr = \".*\"/serverAddr = \"${SERVER_ADDRESS}\"/" ./data/frpc.toml
 sed -i "s/serverPort = .*$/serverPort = ${SERVER_PORT}/" ./data/frpc.toml
