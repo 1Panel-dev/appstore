@@ -1,8 +1,8 @@
 name: Jellyfin
 tags:
-    - 工具
+    - 实用工具
 title: 多媒体应用程序软件套装
-type: 工具
+type: 实用工具
 description: 多媒体应用程序软件套装
 additionalProperties:
     key: jellyfin

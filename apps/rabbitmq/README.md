@@ -1,74 +1,37 @@
-# RabbitMQ Server
+# RabbitMQ
 
-[RabbitMQ](https://rabbitmq.com) is a [feature rich](https://rabbitmq.com/documentation.html),
-multi-protocol messaging and streaming broker. It supports:
+RabbitMQ 是一个开源的消息队列中间件，它提供了强大的消息传递功能，用于分布式应用程序之间的通信。
 
- * AMQP 0-9-1
- * AMQP 1.0
- * [RabbitMQ Stream Protocol](https://rabbitmq.com/streams.html)
- * MQTT 3.1.1
- * STOMP 1.0 through 1.2
+## 主要功能：
 
-## Installation
+### 消息队列
 
- * [Installation guides](https://rabbitmq.com/download.html) for various platforms
- * [Kubernetes Cluster Operator](https://rabbitmq.com/kubernetes/operator/operator-overview.html)
- * [Changelog](https://www.rabbitmq.com/changelog.html)
- * [Releases](https://github.com/rabbitmq/rabbitmq-server/releases) on GitHub
- * [Currently supported released series](https://www.rabbitmq.com/versions.html)
- * [Supported Erlang versions](https://www.rabbitmq.com/which-erlang.html)
+RabbitMQ 允许应用程序在分布式系统中通过消息队列进行异步通信。它可用于解耦生产者和消费者之间的组件，从而提高系统的可伸缩性和灵活性。
 
-## Tutorials and Documentation
+### 消息路由
 
- * [RabbitMQ tutorials](https://rabbitmq.com/getstarted.html)
- * [All documentation guides](https://rabbitmq.com/documentation.html)
- * [RabbitMQ blog](https://blog.rabbitmq.com/)
+RabbitMQ 支持多种消息路由模式，包括直接交换、主题交换和扇出交换等，允许消息根据不同的规则被路由到不同的队列中。
 
-Some key doc guides include
+### 可靠性
 
- * [CLI tools guide](https://rabbitmq.com/cli.html) 
- * [Clustering](https://www.rabbitmq.com/clustering.html) and [Cluster Formation](https://www.rabbitmq.com/cluster-formation.html) guides
- * [Configuration guide](https://rabbitmq.com/configure.html) 
- * [Client libraries and tools](https://rabbitmq.com/devtools.html)
- * [Monitoring](https://rabbitmq.com/monitoring.html) and [Prometheus/Grafana](https://www.rabbitmq.com/prometheus.html) guides
- * [Kubernetes Cluster Operator](https://rabbitmq.com/kubernetes/operator/operator-overview.html)
- * [Production checklist](https://rabbitmq.com/production-checklist.html)
- * [Quorum queues](https://rabbitmq.com/quorum-queues.html): a replicated, data safety- and consistency-oriented queue type
- * [Streams](https://rabbitmq.com/streams.html): a persistent and replicated append-only log with non-destructive consumer semantics
- * [Runnable tutorials](https://github.com/rabbitmq/rabbitmq-tutorials/)
+RabbitMQ 提供了可靠的消息传递机制，确保消息在发送和接收之间不会丢失。它支持消息确认和持久性，以保证消息的可靠性传递。
 
-RabbitMQ documentation is also [developed on GitHub](https://github.com/rabbitmq/rabbitmq-website/).
+### 延迟队列
 
-## Commercial Features and Support
+RabbitMQ 支持延迟队列，允许将消息推送到队列并在指定的延迟时间后再进行处理。这对于实现定时任务和调度非常有用。
 
- * [Commercial edition of RabbitMQ](https://www.vmware.com/products/rabbitmq.html)
- * [Commercial edition for Kubernetes](https://rabbitmq.com/kubernetes/tanzu/installation.html)
- * [Commercial support](https://rabbitmq.com/services.html) from [VMware](https://vmware.com) for open source RabbitMQ
+### 高可用性
 
-## Getting Help from the Community
+RabbitMQ 可以配置为具有高可用性，通过镜像队列和集群模式来确保即使出现节点故障也不会丢失消息。
 
- * [Community Discord server](https://rabbitmq.com/discord/)
- * [Community Slack](https://rabbitmq.com/slack/)
- * [GitHub Discussions](https://github.com/rabbitmq/rabbitmq-server/discussions/)
- * [RabbitMQ mailing list](https://groups.google.com/forum/#!forum/rabbitmq-users)
- * `#rabbitmq` on [Libera Chat](https://libera.chat/)
+### 插件系统
 
-## Contributing
+RabbitMQ 具有丰富的插件系统，可以扩展其功能，包括管理界面、身份验证和授权插件等。
 
-See [CONTRIBUTING.md](./CONTRIBUTING.md) and our [development process overview](https://rabbitmq.com/github.html).
+### 多种客户端库
 
-Questions about contributing, internals and so on are very welcome on the [mailing list](https://groups.google.com/forum/#!forum/rabbitmq-users).
+RabbitMQ 支持多种编程语言的客户端库，包括Java、Python、Ruby、C#等，使开发者能够轻松地与消息队列进行交互。
 
-## Licensing
+### 可视化管理界面
 
-RabbitMQ server is [licensed under the MPL 2.0](LICENSE-MPL-RabbitMQ).
-
-## Building From Source and Packaging
-
- * [Contributor resources](https://github.com/rabbitmq/contribute)
- * [Building RabbitMQ from Source](https://rabbitmq.com/build-server.html)
- * [Building RabbitMQ Distribution Packages](https://rabbitmq.com/build-server.html)
-
-## Copyright
-
-(c) 2007-2023 VMware, Inc. or its affiliates.
+RabbitMQ 提供了一个易于使用的 Web 管理界面，用于监控队列、交换、连接和节点的状态，以及进行配置和管理操作。

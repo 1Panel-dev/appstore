@@ -1,19 +1,29 @@
-KubePi 是一个现代化的 K8s 面板。
+# KubePi 功能简介
 
-KubePi 允许管理员导入多个 Kubernetes 集群，并且通过权限控制，将不同 cluster、namespace 的权限分配给指定用户。它允许开发人员管理 Kubernetes 集群中运行的应用程序并对其进行故障排查，供开发人员更好地处理 Kubernetes 集群中的复杂性。
+KubePi 是一款功能强大的 Kubernetes 管理工具，旨在简化和增强 Kubernetes 集群的管理和监控。
 
-### UI 展示
+## 主要功能：
 
-![UI展示](https://kubeoperator.oss-cn-beijing.aliyuncs.com/kubepi/img/02-dashboard.png)
+### 集群管理
 
-### License & Copyright
+KubePi 允许您轻松管理 Kubernetes 集群，包括创建、扩展、缩减和删除集群。您可以通过简单的界面完成这些操作，无需深入了解 Kubernetes 的复杂性。
 
-Copyright (c) 2014-2023 FIT2CLOUD 飞致云
+### 应用部署
 
-[https://www.fit2cloud.com](https://www.fit2cloud.com)<br>
+使用 KubePi，您可以快速部署应用程序到 Kubernetes 集群中。它支持 Helm Charts 和自定义 YAML 文件，使应用程序的部署变得简单而可控。
 
-KubePi is licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+### 监控和日志
 
-http://www.apache.org/licenses/LICENSE-2.0
+KubePi 提供了强大的监控和日志功能，帮助您实时监视集群的健康状况和应用程序的性能。它整合了 Prometheus 和 Grafana，提供了直观的仪表板，同时还能够查看容器日志。
 
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+### 配置管理
+
+通过 KubePi，您可以轻松管理配置文件，包括 ConfigMaps 和 Secrets。它提供了一个集中的界面，用于查看、编辑和更新配置。
+
+### 安全性
+
+KubePi 支持 RBAC（基于角色的访问控制），可帮助您管理用户和团队对集群资源的访问权限，从而增强安全性。
+
+### 自动化
+
+KubePi 提供了自动化工具，可以自动扩展和缩减集群，以满足应用程序的需求。它还支持自动备份和恢复操作，确保集群的可靠性。

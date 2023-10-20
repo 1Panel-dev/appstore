@@ -1,14 +1,14 @@
 name: Gitea
 tags:
-    - CI/CD
+    - DevOps
 title: 自托管的 Git 服务
-type: CI/CD
+type: DevOps
 description: 自托管的 Git 服务
 additionalProperties:
     key: gitea
     name: Gitea
     tags:
-        - CI/CD
+        - DevOps
     shortDescZh: 自托管的 Git 服务
     shortDescEn: a self-hosted Git service
     type: tool

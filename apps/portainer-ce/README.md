@@ -1,34 +1,36 @@
-## About Portainer
+# Portainer CE
 
-Portainer Community Edition (CE) is our foundation. With over half a million regular users, CE is a powerful, open source toolset that allows you to easily build and manage containers in Docker, Docker Swarm, Kubernetes and Azure ACI.
+Portainer CE（Community Edition）是一款用于容器管理的开源工具，它提供了用户友好的Web界面，用于管理和监控容器化应用程序。
 
-Portainer hides the complexity of managing containers behind an easy-to-use UI. By removing the need to use the CLI, write YAML or understand manifests, Portainer makes deploying apps and troubleshooting problems so easy that anyone can do it.
+## 主要功能：
 
-## Portainer architecture
+### 容器管理
 
-- **Overview of Portainer architecture**
+- **容器创建和启动**: Portainer CE 允许用户轻松创建、配置和启动容器。您可以选择从现有镜像创建容器，也可以导入自定义镜像。
+- **容器监控**: 通过直观的界面，您可以实时监视容器的状态、资源利用率和日志，帮助您快速发现问题并进行诊断。
+- **容器编排**: Portainer CE 支持 Docker Compose，允许您以声明性的方式定义多容器应用程序，并在单个项目中管理它们。
 
-Portainer consists of two elements: the Portainer Server and the Portainer Agent. Both run as lightweight containers on your existing containerized infrastructure. The Portainer Agent should be deployed to each node in your cluster and configured to report back to the Portainer Server container.
+### 映像管理
 
-A single Portainer Server will accept connections from any number of Portainer Agents, providing the ability to manage multiple clusters from one centralized interface. To do this, the Portainer Server container requires data persistence. The Portainer Agents are stateless, with data being shipped back to the Portainer Server container.
+- **镜像浏览和搜索**: 您可以轻松地浏览可用的Docker映像，并通过内置搜索功能查找所需的映像。
+- **镜像导入和导出**: 支持导入和导出Docker映像，以便在不同环境之间共享和备份应用程序。
 
-![The Portainer architecture](https://2914113074-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FiZWHJxqQsgWYd9sI88sO%2Fuploads%2FZDidVsHkkHwy97bVrRdM%2Fportainer-architecture-detailed.png?alt=media&token=a31751c5-f5d2-47ca-be2e-0d7f20f182ef)
+### 堆栈和服务
 
-- We don't currently support running multiple instances of the Portainer Server container to manage the same clusters. We recommend running the Portainer Server on a specific management node, with Portainer Agents deployed across the remaining nodes.
+- **堆栈管理**: Portainer CE 支持 Docker Swarm，允许您创建、管理和监视堆栈以部署分布式应用程序。
+- **服务管理**: 轻松管理Swarm服务，包括扩展、更新和滚动回滚等操作。
 
-- **Agent vs Edge Agent**
+### 用户和团队管理
 
-In standard deployments, the central Portainer Server instance and any environments it manages are assumed to be on the same network, that is, Portainer Server and the Portainer Agents are able to seamlessly communicate with one another. However, in configurations where the remote environments are on a completely separate network to Portainer Server, say, across the internet, historically we would have been unable to centrally manage these devices.
+- **用户和权限**: 可以创建多个用户帐户，并为它们分配不同的权限，以便多人协作管理容器和应用程序。
 
-With the new Edge Agent, we altered the architecture. Rather than the Portainer Server needing seamless access to the remote environment, only the remote environments need to be able to access the Portainer Server. This communication is performed over an encrypted TLS tunnel. This is important in Internet-connected configurations where there is no desire to expose the Portainer Agent to the internet.
+### 系统设置
 
-- **Security and compliance**
+- **仪表板和监控**: Portainer CE 提供仪表板，用于展示主机和容器的关键性能指标，帮助您监视整个容器化环境。
+- **存储和网络配置**: 配置存储卷和网络设置，以便容器可以互相通信和访问外部资源。
+- **应用程序模板**: 支持应用程序模板，简化常见容器化应用程序的部署。
 
-Portainer runs exclusively on your servers, within your network, behind your own firewalls. As a result, we do not currently hold any SOC or PCI/DSS compliance because we do not host any of your infrastructure. You can even run Portainer completely disconnected (air-gapped) without any impact on functionality.
+### 日志和审计
 
-While we do (optionally) collect anonymous usage analytics from Portainer installations, we remain compliant with GDPR. Data collection can be disabled when you install the product, or at any time after that. If your installation is air-gapped, collection will silently fail without any adverse effects.
-
-## Quick Start
-- [Official Website](https://www.portainer.io/)
-- [Document](https://docs.portainer.io/)
-- [Dockerhub](https://hub.docker.com/r/portainer/portainer-ce/tags)
+- **日志查看**: 轻松查看容器和服务的实时日志，有助于故障排除和监视。
+- **审计日志**: 记录用户操作，以便进行审计和安全性分析。

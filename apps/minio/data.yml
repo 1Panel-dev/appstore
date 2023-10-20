@@ -1,14 +1,14 @@
 name: MinIO
 tags:
-    - 工具
+    - 开发工具
 title: 开源的对象存储服务器
-type: 工具
+type: 开发工具
 description: 开源的对象存储服务器
 additionalProperties:
     key: minio
     name: MinIO
     tags:
-        - Tool
+        - DevTool
     shortDescZh: 开源的对象存储服务器
     shortDescEn: Open source object storage server
     type: tool

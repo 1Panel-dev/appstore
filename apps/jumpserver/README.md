@@ -1,4 +1,4 @@
-## JumpServer
+# JumpServer
 
 JumpServer 是广受欢迎的开源堡垒机，是符合 4A 规范的专业运维安全审计系统。JumpServer 堡垒机帮助企业以更安全的方式管控和登录各种类型的资产，包括：
 
@@ -9,7 +9,7 @@ JumpServer 是广受欢迎的开源堡垒机，是符合 4A 规范的专业运�
 - **Web 站点**: 各类系统的 Web 管理后台；
 - **应用**: 通过 Remote App 连接各类应用。
 
-## 产品特色
+## 产品特色：
 
 - **开源**: 零门槛，线上快速获取和安装；
 - **无插件**: 仅需浏览器，极致的 Web Terminal 使用体验；
@@ -17,14 +17,3 @@ JumpServer 是广受欢迎的开源堡垒机，是符合 4A 规范的专业运�
 - **多云支持**: 一套系统，同时管理不同云上面的资产；
 - **多租户**: 一套系统，多个子公司或部门同时使用；
 - **云端存储**: 审计录像云端存储，永不丢失；
-
-## UI 展示
-
-![UI展示](https://docs.jumpserver.org/zh/v3/img/dashboard.png)
-
-## 快速开始
-
-- [快速入门](https://docs.jumpserver.org/zh/v3/quick_start/)
-- [产品文档](https://docs.jumpserver.org)
-- [在线学习](https://edu.fit2cloud.com/page/2635362)
-- [知识库](https://kb.fit2cloud.com/categories/jumpserver)

@@ -1,0 +1,20 @@
+name: ShowDoc
+tags:
+    - DevOps
+title: 一个非常适合IT团队的在线API文档、技术文档工具
+type: DevOps
+description: 一个非常适合IT团队的在线API文档、技术文档工具
+additionalProperties:
+    key: showdoc
+    name: ShowDoc
+    tags:
+        - DevOps
+    shortDescZh: 一个非常适合IT团队的在线API文档、技术文档工具
+    shortDescEn: ShowDoc is a tool greatly applicable for an IT team to share documents online
+    type: tool
+    crossVersionUpdate: false
+    limit: 0
+    recommend: 0
+    website: https://www.showdoc.com.cn/
+    github: https://github.com/star7th/showdoc
+    document: https://www.showdoc.com.cn/help

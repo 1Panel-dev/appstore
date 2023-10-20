@@ -1,19 +1,19 @@
 name: AdGuardHome
 tags:
-    - 工具
+    - 安全
 title: 广告拦截程序
-type: 工具
+type: 安全
 description: 广告拦截程序
 additionalProperties:
     key: adguardhome
     name: AdGuardHome
     tags:
-        - Tool
+        - Security
     shortDescZh: 广告拦截程序
     shortDescEn: Ad blocker
     type: tool
     crossVersionUpdate: true
     limit: 0
-    website: https://hub.docker.com/r/adguard/adguardhome
+    website: https://adguard.com/adguard-home.html
     github: https://github.com/AdguardTeam/AdGuardHome
     document: https://github.com/AdguardTeam/AdGuardHome/wiki
