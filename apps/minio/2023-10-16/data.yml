@@ -24,7 +24,7 @@ additionalProperties:
           rule: paramPort
           type: number
         - default: 9001
-          envKey: PORT_API
+          envKey: PANEL_APP_PORT_API
           labelEn: Port
           labelZh: API 端口
           required: true
