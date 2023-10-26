@@ -60,35 +60,16 @@ isPhpVersionGreaterOrEqual()
 installExtensionFromTgz()
 {
     tgzName=$1
-    para1=
-    extensionName="${tgzName%%-*}"
-
-    if [  $2 ]; then
-        para1=$2
-    fi
+    result=""
+    extensionName="${tgzName%%-*}" 
+    shift 1
+    result=$@
     mkdir ${extensionName}
     tar -xf ${tgzName}.tgz -C ${extensionName} --strip-components=1
-    ( cd ${extensionName} && phpize && ./configure ${para1} && make ${MC} && make install )
+    ( cd ${extensionName} && phpize && ./configure ${result} && make ${MC} && make install )
 
     docker-php-ext-enable ${extensionName}
 }
-
-# install use  install-php-extensions
-if [[ -z "${EXTENSIONS##*,ioncube_loader,*}" ]]; then
-    echo "---------- Install ioncube_loader ----------"
-	  install-php-extensions ioncube_loader
-fi
-
-if [[ -z "${EXTENSIONS##*,imagick,*}" ]]; then
-    echo "---------- Install imagick ----------"
-	  install-php-extensions imagick
-fi
-
-if [[ -z "${EXTENSIONS##*,sourceguardian,*}" ]]; then
-    echo "---------- Install sourceguardian ----------"
-	  install-php-extensions sourceguardian
-fi
-# end
 
 
 if [[ -z "${EXTENSIONS##*,pdo_mysql,*}" ]]; then
@@ -469,11 +450,29 @@ if [[ -z "${EXTENSIONS##*,varnish,*}" ]]; then
 fi
 
 if [[ -z "${EXTENSIONS##*,pdo_sqlsrv,*}" ]]; then
-   install-php-extensions pdo_sqlsrv
+    isPhpVersionGreaterOrEqual 7 1
+    if [[ "$?" = "1" ]]; then
+        echo "---------- Install pdo_sqlsrv ----------"
+        apk add --no-cache unixodbc-dev
+        printf "\n" | pecl install pdo_sqlsrv
+        docker-php-ext-enable pdo_sqlsrv
+        curl -o /tmp/msodbcsql17_amd64.apk https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.1-1_amd64.apk
+        apk add --allow-untrusted /tmp/msodbcsql17_amd64.apk
+    else
+        echo "pdo_sqlsrv requires PHP >= 7.1.0, installed version is ${PHP_VERSION}"
+    fi
 fi
 
 if [[ -z "${EXTENSIONS##*,sqlsrv,*}" ]]; then
-    install-php-extensions sqlsrv
+    isPhpVersionGreaterOrEqual 7 1
+    if [[ "$?" = "1" ]]; then
+        echo "---------- Install sqlsrv ----------"
+        apk add --no-cache unixodbc-dev
+        printf "\n" | pecl install sqlsrv
+        docker-php-ext-enable sqlsrv
+    else
+        echo "pdo_sqlsrv requires PHP >= 7.1.0, installed version is ${PHP_VERSION}"
+    fi
 fi
 
 if [[ -z "${EXTENSIONS##*,mcrypt,*}" ]]; then
@@ -522,13 +521,7 @@ fi
 
 if [[ -z "${EXTENSIONS##*,redis,*}" ]]; then
     echo "---------- Install redis ----------"
-    isPhpVersionGreaterOrEqual 7 0
-    if [[ "$?" = "1" ]]; then
-        installExtensionFromTgz redis-5.2.2
-    else
-        printf "\n" | pecl install redis-4.3.0
-        docker-php-ext-enable redis
-    fi
+    installExtensionFromTgz redis-5.3.7
 fi
 
 if [[ -z "${EXTENSIONS##*,apcu,*}" ]]; then
@@ -587,12 +580,18 @@ if [[ -z "${EXTENSIONS##*,event,*}" ]]; then
     fi
 
     echo "---------- Install event again ----------"
-    installExtensionFromTgz event-2.5.6  "--ini-name event.ini"
+    mkdir event
+    tar -xf event-3.0.8.tgz -C event --strip-components=1
+    cd event && phpize && ./configure && make  && make install
+
+    docker-php-ext-enable --ini-name event.ini event
 fi
 
 if [[ -z "${EXTENSIONS##*,mongodb,*}" ]]; then
     echo "---------- Install mongodb ----------"
+    apk add --no-cache openssl-dev
     installExtensionFromTgz mongodb-1.7.4
+    docker-php-ext-configure mongodb --with-mongodb-ssl=openssl 
 fi
 
 if [[ -z "${EXTENSIONS##*,yaf,*}" ]]; then
@@ -616,7 +615,7 @@ if [[ -z "${EXTENSIONS##*,swoole,*}" ]]; then
     isPhpVersionGreaterOrEqual 7 0
 
     if [[ "$?" = "1" ]]; then
-        installExtensionFromTgz swoole-4.5.2
+        installExtensionFromTgz swoole-4.8.11 --enable-openssl
     else
         installExtensionFromTgz swoole-2.0.11
     fi

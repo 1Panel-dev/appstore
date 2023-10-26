@@ -20,8 +20,16 @@ if [[ "$RUN_INSTALL" -eq "1" ]]; then
 fi
 
 
-if [[ "$PACKAGE_MANAGER" == "npm" ]]; then
-    npm run $EXEC_SCRIPT
-elif [[ "$PACKAGE_MANAGER" == "yarn" ]]; then
-    yarn run $EXEC_SCRIPT
+if [[ "$CUSTOM_SCRIPT" -eq "1" ]]; then
+  $EXEC_SCRIPT
+else
+  if [[ "$PACKAGE_MANAGER" == "npm" ]]; then
+      npm run $EXEC_SCRIPT
+  elif [[ "$PACKAGE_MANAGER" == "yarn" ]]; then
+      yarn run $EXEC_SCRIPT
+  fi
 fi
+
+
+
+
