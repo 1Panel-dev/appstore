@@ -72,6 +72,24 @@ installExtensionFromTgz()
 }
 
 
+# install use  install-php-extensions
+if [[ -z "${EXTENSIONS##*,ioncube_loader,*}" ]]; then
+    echo "---------- Install ioncube_loader ----------"
+	  install-php-extensions ioncube_loader
+fi
+
+if [[ -z "${EXTENSIONS##*,imagick,*}" ]]; then
+    echo "---------- Install imagick ----------"
+	  install-php-extensions imagick
+fi
+
+if [[ -z "${EXTENSIONS##*,sourceguardian,*}" ]]; then
+    echo "---------- Install sourceguardian ----------"
+	  install-php-extensions sourceguardian
+fi
+# end
+
+
 if [[ -z "${EXTENSIONS##*,pdo_mysql,*}" ]]; then
     echo "---------- Install pdo_mysql ----------"
     docker-php-ext-install ${MC} pdo_mysql

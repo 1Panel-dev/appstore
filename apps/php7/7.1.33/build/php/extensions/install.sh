@@ -61,7 +61,7 @@ installExtensionFromTgz()
 {
     tgzName=$1
     result=""
-    extensionName="${tgzName%%-*}" 
+    extensionName="${tgzName%%-*}"
     shift 1
     result=$@
     mkdir ${extensionName}
@@ -70,6 +70,24 @@ installExtensionFromTgz()
 
     docker-php-ext-enable ${extensionName}
 }
+
+
+# install use  install-php-extensions
+if [[ -z "${EXTENSIONS##*,ioncube_loader,*}" ]]; then
+    echo "---------- Install ioncube_loader ----------"
+	  install-php-extensions ioncube_loader
+fi
+
+if [[ -z "${EXTENSIONS##*,imagick,*}" ]]; then
+    echo "---------- Install imagick ----------"
+	  install-php-extensions imagick
+fi
+
+if [[ -z "${EXTENSIONS##*,sourceguardian,*}" ]]; then
+    echo "---------- Install sourceguardian ----------"
+	  install-php-extensions sourceguardian
+fi
+# end
 
 
 if [[ -z "${EXTENSIONS##*,pdo_mysql,*}" ]]; then
@@ -591,7 +609,7 @@ if [[ -z "${EXTENSIONS##*,mongodb,*}" ]]; then
     echo "---------- Install mongodb ----------"
     apk add --no-cache openssl-dev
     installExtensionFromTgz mongodb-1.7.4
-    docker-php-ext-configure mongodb --with-mongodb-ssl=openssl 
+    docker-php-ext-configure mongodb --with-mongodb-ssl=openssl
 fi
 
 if [[ -z "${EXTENSIONS##*,yaf,*}" ]]; then
