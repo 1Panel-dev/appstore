@@ -1,0 +1,10 @@
+additionalProperties:
+    formFields:
+        - default: 9092
+          envKey: KAFKA_PORT
+          labelEn: Port
+          labelZh: TCP 端口
+          required: true
+          rule: paramPort
+          type: number
+
