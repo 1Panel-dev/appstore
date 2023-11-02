@@ -1,0 +1,10 @@
+additionalProperties:
+  formFields:
+    - default: 8081
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Web Port
+      labelZh: Web 端口
+      required: true
+      rule: paramPort
+      type: number
+    

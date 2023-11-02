@@ -1,0 +1,22 @@
+version: '3'
+services:
+  metersphere:
+    image: metersphere/metersphere-ce-allinone:v3.0.0-beta
+    container_name: ${CONTAINER_NAME}
+    privileged: true
+    restart: always
+    labels:
+      createdBy: "Apps"
+    environment:
+      JAVA_MAX_HEAP_RATIO: 15
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8081
+    volumes:
+      - ./mount/logs:/opt/metersphere/logs
+      - ./mount/data:/opt/metersphere/data
+      - ./mount/conf:/opt/metersphere/conf
+    networks:
+      - 1panel-network
+networks:
+  1panel-network:
+    external: true
