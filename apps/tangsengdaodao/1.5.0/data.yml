@@ -90,19 +90,19 @@ additionalProperties:
       rule: paramComplexity
       type: password
     - default: 5100
-      envKey: WK_PORT_TCP
+      envKey: PANEL_APP_PORT_WK_TCP
       labelEn: WuKongIM tcp port
       labelZh: 悟空IM TCP端口
       required: true
       type: number
     - default: 5200
-      envKey: WK_PORT_WS
+      envKey: PANEL_APP_PORT_WK_WS
       labelEn: WuKongIM ws port
       labelZh: 悟空IM WS端口
       required: true
       type: number
     - default: 5300
-      envKey: WK_PORT_WEB_SERVER
+      envKey: PANEL_APP_PORT_WK_WEB_SERVER
       labelEn: WuKongIM web port
       labelZh: 悟空IM监控端口
       required: true
@@ -127,19 +127,19 @@ additionalProperties:
       required: true
       type: text
     - default: 8090
-      envKey: TS_APP_PORT_HTTP
+      envKey: PANEL_APP_PORT_TS_APP_HTTP
       labelEn: TangSengDaoDao port
       labelZh: 唐僧叨叨端口
       required: true
       type: number
     - default: 82
-      envKey: TS_APP_PORT_WEB
+      envKey: PANEL_APP_PORT_TS_APP_WEB
       labelEn: TangSengDaoDao web port
       labelZh: 唐僧叨叨WEB端口
       required: true
       type: number
     - default: 83
-      envKey: TS_APP_PORT_MANAGER
+      envKey: PANEL_APP_PORT_TS_APP_MANAGER
       labelEn: TangSengDaoDao Management background port
       labelZh: 唐僧叨叨管理后台端口
       required: true
