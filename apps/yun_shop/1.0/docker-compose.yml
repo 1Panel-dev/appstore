@@ -1,0 +1,44 @@
+version: "3"
+services:
+  nginx:
+    image: registry.yunzmall.com/tools/nginx:1panel-1.24.0
+    container_name: nginx
+    restart: always
+    networks:
+      - 1panel-network
+    environment:
+      NGINX_HOST: ${NGINX_HOST}
+      DOCKER_BACKENDIP: ${DOCKER_BACKENDIP}
+    volumes:
+      - ./data:/data/wwwroot/yzshop
+      - /etc/localtime:/etc/localtime
+    ports:
+      - 127.0.0.1:${PANEL_APP_PORT_HTTP}:80
+    labels:
+      createdBy: "Apps"
+  php-fpm:
+    image: registry.yunzmall.com/yunzhong/shop:php-fpm-supervisor
+    container_name: php-fpm
+    restart: always
+    networks:
+      - 1panel-network
+    volumes:
+      - ./data:/data/wwwroot/yzshop
+      - /etc/localtime:/etc/localtime
+    labels:
+      createdBy: "Apps"
+  queue:
+    image: registry.yunzmall.com/yunzhong/shop:php-fpm-supervisor
+    container_name: queue
+    restart: always
+    networks:
+      - 1panel-network
+    volumes:
+      - ./data:/data/wwwroot/yzshop
+      - /etc/localtime:/etc/localtime
+    command: ["supervisord", "-c", "/etc/supervisord.conf"]
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true

@@ -1,0 +1,13 @@
+additionalProperties:
+  key: yun_shop
+  name: 芸众商城
+  tags:
+    - WebSite
+  shortDescZh: 免费商用多终端商城系统，支持分销、供应链、积分等300+应用模块。
+  shortDescEn: Free commercial multi terminal shopping mall system, supporting over 300 application modules such as distribution, supply chain, and points.
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  website: https://www.yunzmall.com
+  github:  https://github.com/yunzmall/shop.git
+  document: https://www.yunzmall.com/plugins/shop_server/knowledge/knowledge_detail/1257?base_id=17&i=10&mid=3746  #文档地址
