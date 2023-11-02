@@ -1,0 +1,20 @@
+name: MeterSphere
+tags:
+    - 实用工具
+title: MeterSphere 一站式开源持续测试平台
+type: 实用工具
+description: MeterSphere 一站式开源持续测试平台
+additionalProperties:
+  key: metersphere
+  name: MeterSphere
+  tags:
+    - Tool
+  shortDescZh: 一站式开源持续测试平台
+  shortDescEn: Open-source Continuous Testing Platform
+  type: tool
+  crossVersionUpdate: true
+  limit: 1
+  recommend: 9
+  website: https://www.metersphere.io
+  github: https://github.com/metersphere/metersphere
+  document: https://metersphere.io/docs
