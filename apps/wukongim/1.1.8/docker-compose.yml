@@ -1,14 +1,14 @@
-version: '1.0.0'
+version: '1.1.8'
 services:
   wukongim:
-    image: registry.cn-shanghai.aliyuncs.com/wukongim/wukongim:latest
+    image: registry.cn-shanghai.aliyuncs.com/wukongim/wukongim:v1.1.8
     restart: always
     ports:
-      - "${WK_PORT_API}:5001"
-      - "${WK_PORT_TCP}:5100"
-      - "${WK_PORT_WS}:5200"
-      - "${WK_PORT_WEB_SERVER}:5300"
-      - "${WK_PORT_DEMO_SERVER}:5172"
+      - "${PANEL_APP_PORT_WK_API}:5001"
+      - "${PANEL_APP_PORT_WK_TCP}:5100"
+      - "${PANEL_APP_PORT_WK_WS}:5200"
+      - "${PANEL_APP_PORT_WK_WEB_SERVER}:5300"
+      - "${PANEL_APP_PORT_WK_DEMO_SERVER}:5172"
     volumes:
       - ./wukongim:/root/wukongim
     environment:
