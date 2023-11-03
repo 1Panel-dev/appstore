@@ -1,0 +1,16 @@
+additionalProperties:
+    formFields:
+        - default: 8080
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: Port
+          labelZh: 端口
+          required: true
+          rule: paramPort
+          type: number
+        - default:
+          envKey: KAFKA_BROKERS
+          labelEn: Kafka Brokers
+          labelZh: Kafka 地址
+          required: true
+          rule: paramExtUrl
+          type: text
