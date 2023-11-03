@@ -1,0 +1,20 @@
+name: VoceChat
+tags:
+    - 工具
+title: 一款支持独立部署的个人云社交媒体聊天服务
+type: 工具
+description: 一款支持独立部署的个人云社交媒体聊天服务
+additionalProperties:
+    key: vocechat
+    name: VoceChat
+    tags:
+        - Tool
+    shortDescZh: 一款支持独立部署的个人云社交媒体聊天服务
+    shortDescEn: a secure chat software that supports independent deployment
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://voce.chat
+    github: https://github.com/Privoce/vocechat-web
+    document: https://doc.voce.chat
