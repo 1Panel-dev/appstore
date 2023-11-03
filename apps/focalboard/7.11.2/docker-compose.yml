@@ -11,7 +11,7 @@ services:
       - "./data/config.json:/opt/focalboard/config.json"   #sqlite
       #- "./data/postgres-config.json:/opt/focalboard/config.json"   #postgres，需要修改对应数据库信息
       - fbdata:/opt/focalboard/data
-    image: mattermost/focalboard:7.11.2
+    image: mattermost/focalboard:7.11.4
     labels:  
       createdBy: "Apps"
 
