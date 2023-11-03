@@ -14,7 +14,7 @@ additionalProperties:
     type: tool
     crossVersionUpdate: true
     limit: 1
-    recommend: 4
+    recommend: 0
     website: https://redpanda.com/
     github: https://github.com/redpanda-data/console
     document: https://docs.redpanda.com/current/manage/console/

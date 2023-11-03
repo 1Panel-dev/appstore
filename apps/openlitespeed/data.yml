@@ -1,15 +1,15 @@
 name: OpenLiteSpeed
 tags:
     - Web 服务器
-title: 一个高性能、轻量级、开源 的HTTP 服务器
+title: 一个高性能、轻量级、开源的 HTTP 服务器
 type: Web 服务器
-description: 一个高性能、轻量级、开源 的HTTP 服务器
+description: 一个高性能、轻量级、开源的 HTTP 服务器
 additionalProperties:
     key: openlitespeed
     name: OpenLiteSpeed
     tags:
         - Server
-    shortDescZh: 一个高性能、轻量级、开源 的HTTP 服务器
+    shortDescZh: 一个高性能、轻量级、开源的 HTTP 服务器
     shortDescEn: A high-performance, lightweight, open source HTTP server
     type: runtime
     crossVersionUpdate: true

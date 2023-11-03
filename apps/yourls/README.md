@@ -1,116 +1,19 @@
 # 使用说明
 
-- 初始化设置
+> 注意：首次实例化时，访问根文件夹将生成错误。通过路径 `/admin/` 访问 `YOURLS` 管理界面。
 
-注意：首次实例化时，访问根文件夹将生成错误。通过路径 `/admin/` 访问 `YOURLS` 管理界面。
+假如外部访问地址设置为`http://localhost:40037`，那么需要访问`http://localhost:40037/admin/`进行初始化设置。
 
-假如外部访问地址设置为`http://localhost:40037`，
+# YOURLS
 
-那么需要访问`http://localhost:40037/admin/`进行初始化设置
+**YOURLS** 是一组 PHP 脚本，允许您在服务器上运行您自己的 URL 缩短器。您将完全控制您的数据、详细统计数据、分析、插件等。它是免费且开源的。
 
+## 主要功能：
 
-# 原始相关
-
-<h1 align="center">
-  <a href="https://yourls.org">
-    <img src="https://raw.githubusercontent.com/YOURLS/YOURLS/master/images/yourls-logo.svg" width=66% alt="YOURLS">
-  </a>
-</h1>
-
-> Your Own URL Shortener
-
-![CI](https://github.com/YOURLS/YOURLS/workflows/CI/badge.svg) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/YOURLS/YOURLS/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/YOURLS/YOURLS/?branch=master) ![PHP Version Support](https://img.shields.io/packagist/php-v/yourls/yourls) [![Packagist](https://img.shields.io/packagist/v/yourls/yourls.svg)](https://packagist.org/packages/yourls/yourls) [![OpenCollective](https://opencollective.com/yourls/backers/badge.svg)](https://opencollective.com/yourls#contributors) 
-[![OpenCollective](https://opencollective.com/yourls/sponsors/badge.svg)](#sponsors)
-
-**YOURLS** is a set of PHP scripts that will allow you to run <strong>Y</strong>our <strong>O</strong>wn <strong>URL</strong> <strong>S</strong>hortener, on **your** server. You'll have full control over your data, detailed stats, analytics, plugins, and more. It's free and open-source.
-
-## Quick Start
-
-Get YOURLS :
-* Download the latest [release](https://github.com/YOURLS/YOURLS/releases)
-* Using Composer? You can simply `composer create-project yourls/yourls .` in an empty directory.
-
-Install YOURLS:
-* Read [yourls.org](https://yourls.org) for starters
-* The complete documentation is on [docs.yourls.org](https://docs.yourls.org) and contains everything from beginners to experts.
-
-## Community news, tips and tricks
-
-* Read and subscribe to the [The Official YOURLS Blog](http://blog.yourls.org)
-* Check what the user community makes: plugins, tools, guides and more on [Awesome YOURLS](https://github.com/YOURLS/awesome-yourls)
-* Engage users and ask for help in our [community discussions](https://github.com/YOURLS/YOURLS/discussions)
-* Keep track of development: "Star" and "Watch" this project, follow [commit messages](https://github.com/YOURLS/YOURLS/commits/master)
-
-## Contributing
-
-Feature suggestion? Bug to report?
-
-__Before opening any issue, please search for existing [issues](https://github.com/YOURLS/YOURLS/issues) (open and closed) and read the [Contributing Guidelines](https://github.com/YOURLS/.github/blob/master/CONTRIBUTING.md).__
-
-
-## Backers
-
-Do you use and enjoy YOURLS? [Become a backer](https://opencollective.com/yourls#backer) and show your support to our open source project.
-
-[![](https://opencollective.com/yourls/backer/0/avatar.svg)](https://opencollective.com/yourls/backer/0/website)
-[![](https://opencollective.com/yourls/backer/1/avatar.svg)](https://opencollective.com/yourls/backer/1/website)
-[![](https://opencollective.com/yourls/backer/2/avatar.svg)](https://opencollective.com/yourls/backer/2/website)
-[![](https://opencollective.com/yourls/backer/3/avatar.svg)](https://opencollective.com/yourls/backer/3/website)
-[![](https://opencollective.com/yourls/backer/4/avatar.svg)](https://opencollective.com/yourls/backer/4/website)
-[![](https://opencollective.com/yourls/backer/5/avatar.svg)](https://opencollective.com/yourls/backer/5/website)
-[![](https://opencollective.com/yourls/backer/6/avatar.svg)](https://opencollective.com/yourls/backer/6/website)
-[![](https://opencollective.com/yourls/backer/7/avatar.svg)](https://opencollective.com/yourls/backer/7/website)
-[![](https://opencollective.com/yourls/backer/8/avatar.svg)](https://opencollective.com/yourls/backer/8/website)
-[![](https://opencollective.com/yourls/backer/9/avatar.svg)](https://opencollective.com/yourls/backer/9/website)
-[![](https://opencollective.com/yourls/backer/10/avatar.svg)](https://opencollective.com/yourls/backer/10/website)
-[![](https://opencollective.com/yourls/backer/11/avatar.svg)](https://opencollective.com/yourls/backer/11/website)
-[![](https://opencollective.com/yourls/backer/12/avatar.svg)](https://opencollective.com/yourls/backer/12/website)
-[![](https://opencollective.com/yourls/backer/13/avatar.svg)](https://opencollective.com/yourls/backer/13/website)
-[![](https://opencollective.com/yourls/backer/14/avatar.svg)](https://opencollective.com/yourls/backer/14/website)
-[![](https://opencollective.com/yourls/backer/15/avatar.svg)](https://opencollective.com/yourls/backer/15/website)
-[![](https://opencollective.com/yourls/backer/16/avatar.svg)](https://opencollective.com/yourls/backer/16/website)
-[![](https://opencollective.com/yourls/backer/17/avatar.svg)](https://opencollective.com/yourls/backer/17/website)
-[![](https://opencollective.com/yourls/backer/18/avatar.svg)](https://opencollective.com/yourls/backer/18/website)
-[![](https://opencollective.com/yourls/backer/19/avatar.svg)](https://opencollective.com/yourls/backer/19/website)
-[![](https://opencollective.com/yourls/backer/20/avatar.svg)](https://opencollective.com/yourls/backer/20/website)
-[![](https://opencollective.com/yourls/backer/21/avatar.svg)](https://opencollective.com/yourls/backer/21/website)
-[![](https://opencollective.com/yourls/backer/22/avatar.svg)](https://opencollective.com/yourls/backer/22/website)
-[![](https://opencollective.com/yourls/backer/23/avatar.svg)](https://opencollective.com/yourls/backer/23/website)
-[![](https://opencollective.com/yourls/backer/24/avatar.svg)](https://opencollective.com/yourls/backer/24/website)
-[![](https://opencollective.com/yourls/backer/25/avatar.svg)](https://opencollective.com/yourls/backer/25/website)
-[![](https://opencollective.com/yourls/backer/26/avatar.svg)](https://opencollective.com/yourls/backer/26/website)
-[![](https://opencollective.com/yourls/backer/27/avatar.svg)](https://opencollective.com/yourls/backer/27/website)
-[![](https://opencollective.com/yourls/backer/28/avatar.svg)](https://opencollective.com/yourls/backer/28/website)
-[![](https://opencollective.com/yourls/backer/29/avatar.svg)](https://opencollective.com/yourls/backer/29/website)
-
-
-## Sponsors
-
-Does your company use YOURLS? Ask your manager or marketing team if your company would be interested in supporting our project. Your company logo will show here. Help support our open-source development efforts by [becoming a sponsor](https://opencollective.com/yourls).
-
-[![](https://opencollective.com/yourls/sponsor/0/avatar.svg)](https://opencollective.com/yourls/sponsor/0/website)
-[![](https://opencollective.com/yourls/sponsor/1/avatar.svg)](https://opencollective.com/yourls/sponsor/1/website)
-[![](https://opencollective.com/yourls/sponsor/2/avatar.svg)](https://opencollective.com/yourls/sponsor/2/website)
-[![](https://opencollective.com/yourls/sponsor/3/avatar.svg)](https://opencollective.com/yourls/sponsor/3/website)
-[![](https://opencollective.com/yourls/sponsor/4/avatar.svg)](https://opencollective.com/yourls/sponsor/4/website)
-[![](https://opencollective.com/yourls/sponsor/5/avatar.svg)](https://opencollective.com/yourls/sponsor/5/website)
-[![](https://opencollective.com/yourls/sponsor/6/avatar.svg)](https://opencollective.com/yourls/sponsor/6/website)
-[![](https://opencollective.com/yourls/sponsor/7/avatar.svg)](https://opencollective.com/yourls/sponsor/7/website)
-[![](https://opencollective.com/yourls/sponsor/8/avatar.svg)](https://opencollective.com/yourls/sponsor/8/website)
-[![](https://opencollective.com/yourls/sponsor/9/avatar.svg)](https://opencollective.com/yourls/sponsor/9/website)
-[![](https://opencollective.com/yourls/sponsor/10/avatar.svg)](https://opencollective.com/yourls/sponsor/10/website)
-[![](https://opencollective.com/yourls/sponsor/11/avatar.svg)](https://opencollective.com/yourls/sponsor/11/website)
-[![](https://opencollective.com/yourls/sponsor/12/avatar.svg)](https://opencollective.com/yourls/sponsor/12/website)
-[![](https://opencollective.com/yourls/sponsor/13/avatar.svg)](https://opencollective.com/yourls/sponsor/13/website)
-[![](https://opencollective.com/yourls/sponsor/14/avatar.svg)](https://opencollective.com/yourls/sponsor/14/website)
-[![](https://opencollective.com/yourls/sponsor/15/avatar.svg)](https://opencollective.com/yourls/sponsor/15/website)
-[![](https://opencollective.com/yourls/sponsor/16/avatar.svg)](https://opencollective.com/yourls/sponsor/16/website)
-[![](https://opencollective.com/yourls/sponsor/17/avatar.svg)](https://opencollective.com/yourls/sponsor/17/website)
-[![](https://opencollective.com/yourls/sponsor/18/avatar.svg)](https://opencollective.com/yourls/sponsor/18/website)
-[![](https://opencollective.com/yourls/sponsor/19/avatar.svg)](https://opencollective.com/yourls/sponsor/19/website)
-
-
-## License
-
-Free software. Do whatever the hell you want with it.  
-YOURLS is released under the [MIT license](LICENSE).
+- **自定义短网址**：您可以创建个性化的短网址，使其易于记忆和分享，例如，将长URL转换成短URL，类似于“yourls.org/x1b2c3”。
+- **统计分析**：YOURLS可以跟踪每个短网址的点击次数，为您提供详细的统计数据，包括点击时间、来源地理位置和浏览器信息。
+- **安全性**：您拥有对数据的完全控制，可以确保链接的安全性，避免被滥用或滥用。
+- **API支持**：YOURLS提供API支持，使您可以与其他应用程序和服务集成，实现自动化的URL缩短和管理。
+- **插件系统**：YOURLS的插件系统使您能够扩展其功能，根据需要添加新的功能和特性。
+- **密码保护**：您可以为某些短网址添加密码保护，以确保只有授权用户可以访问。
+- **自定义关键字**：根据需要创建自定义短网址关键字，以便更好地组织和管理链接。

@@ -1,40 +1,18 @@
-- JAVA_TOOL_OPTIONS=-Xmx2g  #RAM >= 2GB
+# Komga
 
-## Introduction
+**Komga** 是一款免费开源的漫画、杂志媒体服务。
 
-- **What is Komga?**
+## 特性：
 
-Komga is a media server for your comics, mangas, BDs and magazines.
-
-- **How it works?**
-
-Install and run Komga on a computer or NAS.
-Add libraries by type of content and let Komga do the rest.
-Use the web interface or any compatible client.
-Enjoy your books!
-
-- **What media and devices work?**
-
-- Komga supports these media file types
-
-Komga supports the following file types:
-Comic book archives: CBZ and CBR (except RAR5 and solid archives)
-Comic books in EPUB format (only images)
-PDF files
-
-- Komga server compatibility
-
-Komga can run on any system that can run Java or Docker:
-Windows
-macOS
-Linux
-Many popular NAS devices such as QNAP, Synology and more
-
-- **Demo**
-
-A demonstration website is available at: https://demo.komga.org
-
-You can log in using the following credentials:
-
-Login: demo@komga.org
-Password: komga-demo
+- 通过适用于台式机、平板电脑和手机的响应式 Web UI 浏览图书馆、丛书和书籍
+- 通过馆藏和阅读列表来组织您的图书馆
+- 编辑系列和书籍的元数据
+- 自动导入嵌入元数据
+- 具有多种阅读模式的网络阅读器
+- 通过每个库的访问控制、年龄限制和标签限制来管理多个用户
+- 提供REST API，许多社区工具和脚本可以与Komga交互
+- 下载书籍文件、整个系列或阅读列表
+- 重复文件检测
+- 重复页面检测和删除
+- 将图书馆外部的书籍直接导入到系列文件夹中
+- 导入 ComicRackcbl阅读列表

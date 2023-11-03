@@ -16,3 +16,10 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+        - default: Asia/Shanghai
+          edit: true
+          envKey: TIME_ZONE
+          labelEn: Time zone
+          labelZh: 时区
+          required: true
+          type: text

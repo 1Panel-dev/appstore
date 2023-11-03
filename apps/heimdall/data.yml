@@ -1,8 +1,8 @@
 name: Heimdall
 tags:
-    - 工具
+    - 实用工具
 title: 应用程序仪表板和启动器
-type: 工具
+type: 实用工具
 description: 应用程序仪表板和启动器
 additionalProperties:
     key: heimdall

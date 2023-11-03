@@ -2,42 +2,20 @@
 
 安装完成后，在容器功能界面，连接容器终端，执行以下命令创建管理员账户密码
 
-```
+```shell
 /usr/local/lsws/admin/misc/admpass.sh
 ```
 
-# 原始相关
+# OpenLiteSpeed
 
-OpenLiteSpeed Web Server
-========
+**OpenLiteSpeed** 是一个高性能、轻量级、开源 的HTTP 服务器。
 
-Description
---------
+# 功能简介：
 
-OpenLiteSpeed is a high-performance, lightweight, open source HTTP server developed and copyrighted by 
-LiteSpeed Technologies. Users are free to download, use, distribute, and modify OpenLiteSpeed and its 
-source code in accordance with the precepts of the GPLv3 license.
-
-This is the official repository for OpenLiteSpeed's source code. It is maintained by LiteSpeed 
-Technologies.
-
-Documentation
---------
-
-Users can find all OpenLiteSpeed documentation on the [OpenLiteSpeed site](https://openlitespeed.org), 
-but here are some quick links to important parts of the site:
-
-[Installation](https://openlitespeed.org/kb/category/installation/)
-
-[Configuration](https://openlitespeed.org/kb/category/configuration/)
-
-[Road map](https://openlitespeed.org/mediawiki/index.php/Road_Map)
-
-[Release log](https://openlitespeed.org/release-log/)
-
-Get in Touch
---------
-
-OpenLiteSpeed has a [Google Group](https://groups.google.com/forum/#!forum/openlitespeed-development). If 
-you find a bug, want to request new features, or just want to talk about OpenLiteSpeed, this is the place
-to do it.
+- **高性能**：OpenLiteSpeed 能够处理大量并发连接和请求，提供快速的响应时间和高吞吐量。
+- **内置缓存**：提供内置的高效缓存系统，可以显著提高网站的加载速度和性能。
+- **事件驱动架构**：采用事件驱动架构，有效利用系统资源，提高服务器处理能力。
+- **虚拟主机支持**：支持虚拟主机配置，允许在一台服务器上托管多个网站，提供灵活的部署选项。
+- **安全性**：内置防止 DDoS 攻击和恶意软件保护，提供可靠的安全防护措施。
+- **易于使用的 Web 管理界面**：提供直观的 Web 管理界面，方便用户配置和管理服务器设置。
+- **可扩展性**：支持各种插件和扩展，可以根据需要扩展服务器功能和性能。

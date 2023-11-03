@@ -1,14 +1,14 @@
 name: YesPlayMusic
 tags:
-    - 工具
+    - 多媒体
 title: 一款高颜值的第三方网易云播放器
-type: 工具
+type: 多媒体
 description: 一款高颜值的第三方网易云播放器
 additionalProperties:
     key: yesplaymusic
     name: YesPlayMusic
     tags:
-        - Tool
+        - Media
     shortDescZh: 一款高颜值的第三方网易云播放器
     shortDescEn: A high-end third-party NetEase cloud player
     type: tool

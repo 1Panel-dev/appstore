@@ -1,12 +1,12 @@
 version: '1.5.0'
 services:
-  tsddwukongim:  # 唐僧叨叨通讯服务（悟空IM）
+  tsddwukongim:
     image: registry.cn-shanghai.aliyuncs.com/wukongim/wukongim:v1.1.8
     restart: always
     ports:
-      - "${PANEL_APP_PORT_WK_TCP}:5100"  # tcp长连接端口（外网开放）
-      - "${PANEL_APP_PORT_WK_WS}:5200" # websocket端口（外网开放）
-      - "${PANEL_APP_PORT_WK_WEB_SERVER}:5300" # 监控端口
+      - "${PANEL_APP_PORT_WK_TCP}:5100"
+      - "${PANEL_APP_PORT_WK_WS}:5200"
+      - "${PANEL_APP_PORT_WK_WEB_SERVER}:5300"
     volumes:
       - ./wukongim:/root/wukongim
     environment:
@@ -19,7 +19,9 @@ services:
       - WK_TOKENAUTHON=true
     networks:
       - 1panel-network
-  tangsengdaodaoserver:  # 唐僧叨叨的业务服务
+    labels:  
+      createdBy: "Apps"
+  tangsengdaodaoserver:
     image: registry.cn-shanghai.aliyuncs.com/wukongim/tangsengdaodaoserver:v1.5.0
     restart: always
     command: "api"
@@ -34,7 +36,6 @@ services:
       - "${PANEL_APP_PORT_TS_APP_HTTP}:8090"
     volumes:
       - ./tsdd:/home/tsdddata
-      # - ./tsdd/configs/tsdd.yaml:/home/configs/tsdd.yaml
     environment:
       - TS_MODE=release
       - TS_WUKONGIM_APIURL=http://tsddwukongim:5001
@@ -51,7 +52,9 @@ services:
       - TS_AVATAR_DEFAULTBASEURL=https://api.multiavatar.com/{avatar}.png
     networks:
       - 1panel-network
-  tangsengdaodaoweb:  # 唐僧叨叨的web服务
+    labels:  
+      createdBy: "Apps"
+  tangsengdaodaoweb:
     image: registry.cn-shanghai.aliyuncs.com/wukongim/tangsengdaodaoweb:v1.0.0
     restart: always
     environment:
@@ -60,7 +63,9 @@ services:
       - "${PANEL_APP_PORT_TS_APP_WEB}:80"
     networks:
       - 1panel-network
-  tangsengdaodaomanager:  # 唐僧叨叨的后台管理系统
+    labels:  
+      createdBy: "Apps"
+  tangsengdaodaomanager:
     image: registry.cn-shanghai.aliyuncs.com/wukongim/tangsengdaodaomanager:v1.0.0
     restart: always
     environment:
@@ -69,6 +74,8 @@ services:
       - "${PANEL_APP_PORT_TS_APP_MANAGER}:80"
     networks:
       - 1panel-network
+    labels:  
+      createdBy: "Apps"
 networks:
   1panel-network:
     external: true

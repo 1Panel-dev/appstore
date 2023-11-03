@@ -8,13 +8,6 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
-        - default: ./data/books
-          edit: true
-          envKey: DATA_PATH
-          labelEn: Books folder path
-          labelZh: 书本文件夹路径
-          required: true
-          type: text
         - default: Asia/Shanghai
           edit: true
           envKey: TIME_ZONE

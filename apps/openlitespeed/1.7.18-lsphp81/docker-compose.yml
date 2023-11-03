@@ -15,10 +15,10 @@ services:
       - ./data/acme:/root/.acme.sh/
       - ./data/logs:/usr/local/lsws/logs/
     ports:
-      - "${PANEL_APP_PORT_HTTP}:80"
+      - "${PANEL_APP_PORT_HTTP_80}:80"
       - "${PANEL_APP_PORT_HTTPS}:443"
       - "${PANEL_APP_PORT_HTTPS}:443/udp"
-      - "${PANEL_APP_PORT_CONSOLE}:7080"
+      - "${PANEL_APP_PORT_HTTP}:7080"
     environment:
       - TZ=${TIME_ZONE}
     image: litespeedtech/openlitespeed:1.7.18-lsphp81

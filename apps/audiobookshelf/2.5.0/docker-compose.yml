@@ -8,10 +8,10 @@ services:
     ports:
       - "${PANEL_APP_PORT_HTTP}:80"
     volumes:
-      - "${DATA_PATH1}:/audiobooks"
-      - "${DATA_PATH2}:/podcasts"
-      - "${DATA_PATH}:/config"
-      - "${DATA_PATH3}:/metadata"
+      - "./data/audiobooks:/audiobooks"
+      - "./data/podcasts:/podcasts"
+      - "./data/config:/config"
+      - "./data/metadata:/metadata"
     image: advplyr/audiobookshelf:2.5.0
     labels:  
       createdBy: "Apps"

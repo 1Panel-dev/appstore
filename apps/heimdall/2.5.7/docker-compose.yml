@@ -13,7 +13,7 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Asia/Shanghai
+      - TZ=${TIME_ZONE}
     image: linuxserver/heimdall:2.5.7
     labels:  
       createdBy: "Apps"
