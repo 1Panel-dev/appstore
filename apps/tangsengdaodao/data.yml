@@ -15,6 +15,6 @@ additionalProperties:
   crossVersionUpdate: true
   limit: 0
   recommend: 0
-  website: https://tangsengdaodao.com/
+  website: https://tsdaodao.com/
   github: https://github.com/TangSengDaoDao/TangSengDaoDaoServer
-  document: https://tangsengdaodao.com/
+  document: https://tsdaodao.com/
