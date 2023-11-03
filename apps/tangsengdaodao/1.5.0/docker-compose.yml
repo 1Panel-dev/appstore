@@ -1,12 +1,12 @@
-version: '1.0.0'
+version: '1.5.0'
 services:
   tsddwukongim:  # 唐僧叨叨通讯服务（悟空IM）
-    image: registry.cn-shanghai.aliyuncs.com/wukongim/wukongim:latest
+    image: registry.cn-shanghai.aliyuncs.com/wukongim/wukongim:v1.1.8
     restart: always
     ports:
-      - "${WK_PORT_TCP}:5100"  # tcp长连接端口（外网开放）
-      - "${WK_PORT_WS}:5200" # websocket端口（外网开放）
-      - "${WK_PORT_WEB_SERVER}:5300" # 监控端口
+      - "${PANEL_APP_PORT_WK_TCP}:5100"  # tcp长连接端口（外网开放）
+      - "${PANEL_APP_PORT_WK_WS}:5200" # websocket端口（外网开放）
+      - "${PANEL_APP_PORT_WK_WEB_SERVER}:5300" # 监控端口
     volumes:
       - ./wukongim:/root/wukongim
     environment:
@@ -20,7 +20,7 @@ services:
     networks:
       - 1panel-network
   tangsengdaodaoserver:  # 唐僧叨叨的业务服务
-    image: registry.cn-shanghai.aliyuncs.com/wukongim/tangsengdaodaoserver:latest
+    image: registry.cn-shanghai.aliyuncs.com/wukongim/tangsengdaodaoserver:v1.5.0
     restart: always
     command: "api"
     healthcheck:
@@ -31,7 +31,7 @@ services:
     depends_on:
       - tsddwukongim
     ports:
-      - "${TS_APP_PORT_HTTP}:8090"
+      - "${PANEL_APP_PORT_TS_APP_HTTP}:8090"
     volumes:
       - ./tsdd:/home/tsdddata
       # - ./tsdd/configs/tsdd.yaml:/home/configs/tsdd.yaml
@@ -52,21 +52,21 @@ services:
     networks:
       - 1panel-network
   tangsengdaodaoweb:  # 唐僧叨叨的web服务
-    image: registry.cn-shanghai.aliyuncs.com/wukongim/tangsengdaodaoweb:latest
+    image: registry.cn-shanghai.aliyuncs.com/wukongim/tangsengdaodaoweb:v1.0.0
     restart: always
     environment:
-      - API_URL=http://${EXTERNAL_IP}:${TS_APP_PORT_HTTP}/
+      - API_URL=http://${EXTERNAL_IP}:${PANEL_APP_PORT_TS_APP_HTTP}/
     ports:
-      - "${TS_APP_PORT_WEB}:80"
+      - "${PANEL_APP_PORT_TS_APP_WEB}:80"
     networks:
       - 1panel-network
   tangsengdaodaomanager:  # 唐僧叨叨的后台管理系统
-    image: registry.cn-shanghai.aliyuncs.com/wukongim/tangsengdaodaomanager:latest
+    image: registry.cn-shanghai.aliyuncs.com/wukongim/tangsengdaodaomanager:v1.0.0
     restart: always
     environment:
-      - API_URL=http://${EXTERNAL_IP}:${TS_APP_PORT_HTTP}/
+      - API_URL=http://${EXTERNAL_IP}:${PANEL_APP_PORT_TS_APP_HTTP}/
     ports:
-      - "${TS_APP_PORT_MANAGER}:80"
+      - "${PANEL_APP_PORT_TS_APP_MANAGER}:80"
     networks:
       - 1panel-network
 networks:
