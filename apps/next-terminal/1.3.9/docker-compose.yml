@@ -7,7 +7,7 @@ services:
       - 1panel-network
     volumes:
       - "./data:/usr/local/next-terminal/data"
-    image: dushixiang/guacd:1.5.2
+    image: dushixiang/guacd:1.5.3
     labels:  
       createdBy: "Apps"
 
