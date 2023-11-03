@@ -1,8 +1,8 @@
 name: Uptime Kuma
 tags:
-    - 工具
+    - 实用工具
 title: 自托管的监控工具
-type: 工具
+type: 实用工具
 description: 自托管的监控工具
 additionalProperties:
     key: uptime-kuma

@@ -1,8 +1,8 @@
 name: Synapse
 tags:
-    - 工具
+    - 实用工具
 title: 开源的 Matrix 家庭服务器，自建聊天服务端
-type: 工具
+type: 实用工具
 description: 开源的 Matrix 家庭服务器，自建聊天服务端
 additionalProperties:
     key: synapse
@@ -15,6 +15,6 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 1
     recommend: 0
-    website: https://matrix.org/docs/projects/server/synapse
+    website: https://matrix-org.github.io/synapse
     github: https://github.com/matrix-org/synapse
-    document: https://matrix-org.github.io/synapse/latest/
+    document: https://matrix-org.github.io/synapse

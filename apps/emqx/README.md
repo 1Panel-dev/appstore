@@ -1,31 +1,45 @@
-EMQX 是一款全球下载量超千万的大规模分布式物联网 MQTT 服务器，单集群支持 1 亿物联网设备连接，消息分发时延低于 1 毫秒。为高可靠、高性能的物联网实时数据移动、处理和集成提供动力，助力企业构建关键业务的 IoT 平台与应用。
+# EMQX
 
-EMQX 自 2013 年在 GitHub 发布开源版本以来，获得了来自 50 多个国家和地区的 20000 余家企业用户的广泛认可，累计连接物联网关键设备超过 1 亿台。
+EMQX 是一款基于 Erlang/OTP 构建的开源 MQTT 消息代理（Broker），专门用于支持 MQTT 协议。它提供了一系列强大的功能，使其成为物联网（IoT）应用程序的理想选择。以下是 EMQX 的主要功能：
 
-更多信息请访问 [EMQX 官网](https://www.emqx.io/zh)。
+## 主要功能：
 
-## 文档
+### MQTT 3.1 和 3.1.1 支持
 
-EMQX 开源版文档：[www.emqx.io/docs/zh/latest/](https://www.emqx.io/docs/en/latest/)。
+EMQX 支持 MQTT 协议的 3.1 和 3.1.1 版本，允许设备和应用程序使用 MQTT 进行高效的消息通信。
 
-EMQX 企业版文档：[docs.emqx.com/zh/enterprise/latest/](https://docs.emqx.com/zh/enterprise/latest/)。
+### MQTT 5.0 支持
 
-EMQX Cloud 文档：[docs.emqx.com/zh/cloud/latest/](https://docs.emqx.com/zh/cloud/latest/)。
+EMQX 还支持 MQTT 5.0 协议，该协议引入了更多的功能，如属性、共享订阅、会话过期等，提高了消息传递的灵活性。
 
-## 相关资源
+### 集群支持
 
-- [MQTT 入门及进阶](https://www.emqx.com/zh/mqtt)
+EMQX 具有强大的集群功能，可以横向扩展以处理大规模的消息流量和连接请求。这确保了高可用性和可扩展性。
 
-  EMQ 提供了通俗易懂的技术文章及简单易用的客户端工具，帮助您学习 MQTT 并快速入门 MQTT 客户端编程。
+### 插件系统
 
-- [MQTT SDKs](https://www.emqx.com/zh/mqtt-client-sdk)
+EMQX 提供了丰富的插件系统，允许用户根据需要扩展其功能，包括认证、授权、数据存储、消息转发等方面的插件。
 
-  我们选取了各个编程语言中热门的 MQTT 客户端 SDK，并提供代码示例，帮助您快速掌握 MQTT 客户端库的使用。
+### 安全性
 
-- [MQTTX](https://mqttx.app/zh)
+EMQX 提供了多层次的安全性，包括基于用户名和密码的认证、TLS/SSL 支持以进行加密通信、ACL（访问控制列表）以及 MQTT 的安全功能。
 
-  优雅的跨平台 MQTT 5.0 客户端工具，提供了桌面端、命令行、Web 三种版本，帮助您更快的开发和调试 MQTT 服务和应用。
+### 遗愿消息
 
-- [车联网平台搭建从入门到精通 ](https://www.emqx.com/zh/blog/category/internet-of-vehicles)
+EMQX 支持 MQTT 遗愿消息，确保消息能够在设备断开连接后得到适当的处理。
 
-  结合 EMQ 在车联网领域的实践经验，从协议选择等理论知识，到平台架构设计等实战操作，分享如何搭建一个可靠、高效、符合行业场景需求的车联网平台。
+### 数据存储
+
+EMQX 支持多种数据存储后端，包括 Mnesia、MySQL、PostgreSQL 和 Redis，以便于灵活地存储消息数据。
+
+### 可视化监控
+
+EMQX 提供了一个用户友好的 Web 界面，用于监控连接、会话、消息发布和订阅等关键指标。
+
+### 负载均衡
+
+EMQX 具备负载均衡功能，可自动将连接和消息均匀分布到集群中的各个节点，以提高性能和稳定性。
+
+### 高可用性
+
+EMQX 支持热备份和故障切换，确保即使在节点故障时也能保持高可用性。

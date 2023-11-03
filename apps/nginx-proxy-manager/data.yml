@@ -1,12 +1,12 @@
-name: NginxProxyManager
+name: Nginx Proxy Manager
 tags:
-    - 工具
+    - 实用工具
 title: 使用简单、强大的界面管理 Nginx 代理主机
-type: 工具
+type: 实用工具
 description: 使用简单、强大的界面管理 Nginx 代理主机
 additionalProperties:
     key: nginx-proxy-manager
-    name: NginxProxyManager
+    name: Nginx Proxy Manager
     tags:
         - Tool
     shortDescZh: 使用简单、强大的界面管理 Nginx 代理主机

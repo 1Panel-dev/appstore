@@ -1,8 +1,8 @@
 name: RustDesk
 tags:
-    - 工具
+    - 实用工具
 title: 开源的远程桌面软件
-type: 工具
+type: 实用工具
 description: 开源的远程桌面软件
 additionalProperties:
     key: rustdesk

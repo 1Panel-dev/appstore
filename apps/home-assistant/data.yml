@@ -1,8 +1,8 @@
 name: Home Assistant
 tags:
-    - 工具
+    - 实用工具
 title: 开源家庭自动化，将本地控制和隐私放在首位。
-type: 工具
+type: 实用工具
 description: 开源家庭自动化，将本地控制和隐私放在首位。
 additionalProperties:
     key: home-assistant
