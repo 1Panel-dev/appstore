@@ -9,7 +9,7 @@ services:
       - "${PANEL_APP_PORT_HTTP}:80"
     volumes:
       - "./data:/data"
-    image: answerdev/answer:1.1.1
+    image: answerdev/answer:1.2.0
     labels:  
       createdBy: "Apps"
 
