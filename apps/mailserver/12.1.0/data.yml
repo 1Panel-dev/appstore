@@ -1,0 +1,50 @@
+additionalProperties:
+    formFields:
+        - default: mail.example.com
+          edit: true
+          envKey: MS_HOSTNAME
+          labelEn: domain
+          labelZh: 域名
+          required: true
+          rule: paramExtUrl
+          type: text
+        - default: 25
+          edit: true
+          envKey: PANEL_APP_PORT_SMTP
+          labelEn: Port
+          labelZh: SMTP 端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: 143
+          edit: true
+          envKey: PANEL_APP_PORT_IMAP4_143
+          labelEn: Port
+          labelZh: IMAP4 端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: 465
+          edit: true
+          envKey: PANEL_APP_PORT_ESMTP_465
+          labelEn: Port
+          labelZh: ESMTP 端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: 587
+          edit: true
+          envKey: PANEL_APP_PORT_ESMTP_587
+          labelEn: Port
+          labelZh: ESMTP 端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: 993
+          edit: true
+          envKey: PANEL_APP_PORT_IMAP4_993
+          labelEn: Port
+          labelZh: IMAP4 端口
+          required: true
+          rule: paramPort
+          type: number
