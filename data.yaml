@@ -38,7 +38,10 @@ additionalProperties:
     - key: Media
       name: 多媒体
       sort: 12
+    - key: Email
+      name: 邮件服务
+      sort: 13
     - key: Local
       name: 本地
-      sort: 13
+      sort: 14
   version: v1.6.0
