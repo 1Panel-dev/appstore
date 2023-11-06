@@ -1,13 +1,20 @@
+name: Material for MkDocs
+tags:
+    - 实用工具
+title: Markdown 文件托管平台
+type: 实用工具
+description: Markdown 文件托管平台
 additionalProperties:
-  key: mkdocs-material #应用的 key，仅限英文，用于在 Linux 创建文件夹
-  name: Material for MkDocs #应用名称
+  key: mkdocs-material
+  name: Material for MkDocs
   tags:
-    - Tool #应用标签，可以有多个，请参照下方的标签列表
-  shortDescZh: Markdown 文件托管平台 #应用中文描述，不要超过 30 个字
-  shortDescEn: Markdown File Hosting Platform #应用英文描述
-  type: tool #应用类型，区别于应用分类，只能有一个，请参照下方的类型列表
-  crossVersionUpdate: false #是否可以跨大版本升级
-  limit: 0 #应用安装数量限制，0 代表无限制
-  website: https://github.com/squidfunk/mkdocs-material #官网地址
-  github: https://github.com/squidfunk/mkdocs-material #github 地址
-  document: https://squidfunk.github.io/mkdocs-material  #文档地址
+    - Tool
+  shortDescZh: Markdown 文件托管平台
+  shortDescEn: A powerful documentation framework on top of MkDocs
+  type: tool
+  crossVersionUpdate: false
+  limit: 0
+  recommend: 0
+  website: https://squidfunk.github.io/mkdocs-material/
+  github: https://github.com/squidfunk/mkdocs-material
+  document: https://squidfunk.github.io/mkdocs-material/getting-started/

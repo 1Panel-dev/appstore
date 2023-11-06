@@ -1,42 +1,14 @@
-<p align="center">
-  <a href="https://squidfunk.github.io/mkdocs-material/">
-    <img src="https://ghproxy.com/https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/logo.svg" width="320" alt="Material for MkDocs">
-  </a>
-</p>
+# 使用帮助
 
-<p align="center">
-  <strong>
-    基于
-    <a href="https://www.mkdocs.org/">MkDocs</a> 构建的一个强大的文档框架
-  </strong>
-</p>
+进入 `/opt/1panel/apps/mkdocs-material/mkdocs-material/data/docs` 目录，开始您的撰写。
 
-使用 Markdown 编写文档，在几分钟内为您的开源或商业项目创建一个专业的静态网站 —— 可搜索，可定制，支持 60 多种语言，适用于所有设备。
+# Material for MkDocs
 
-[Github 仓库](https://github.com/squidfunk/mkdocs-material)
+**MkDocs** 是一个快速、简单且华丽的静态站点生成器，适用于构建项目文档。文档源文件是用 Markdown 编写的，并使用单个 YAML 配置文件进行配置。
 
-[文档地址](https://squidfunk.github.io/mkdocs-material)
+## 特征：
 
-# Material for MkDocs 1Panel 版本使用帮助
-
-## UI 展示
-
-![](https://ghproxy.com/https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/screenshot.png)
-
-## 工作目录
-
-本应用会在 1panel 的应用目录生成 mkdocs-material 的工作目录，如果没有改 1panel 的工作目录的话，会是下面这个。
-
-/opt/1panel/apps/local/mkdocs-material
-
-## 项目目录
-
-本应用支持创建多个项目，所以可以有多个项目目录，项目名称为安装时显示的名称。
-
-例如，您创建的项目为 1p-docs，则您可以在 `/opt/1panel/apps/local/mkdocs-material/1p-docs` 中的 docs 目录开始您的撰写。
-
-## 默认端口
-
-默认端口：8111
-
-您可以开启“高级设置 - 端口外部访问”，直接通过 8111 访问该文档项目。或使用反向代理功能，在不开启端口外部访问的情况下，反代这个文档项目。
+- 很棒的主题可供选择：MkDocs有一堆好看的主题可供使用。在内置主题之间进行选择： mkdocs和 readthedocs，选择第三方主题之一（在MkDocs 主题wiki 页面以及MkDocs Catalog上），或者构建您自己的.
+- 易于定制：通过自定义主题和/或安装一些插件 ，让您的项目文档看起来就像您想要的那样 。使用Markdown 扩展修改 Markdown 的行为。有许多配置选项可用。
+- 在工作时预览您的网站：内置的开发服务器允许您在编写文档时预览文档。每当您保存更改时，它甚至会自动重新加载并刷新您的浏览器。
+- 随处托管：MkDocs 构建完全静态的 HTML 站点，您可以将其托管在 GitHub Pages、Amazon S3 或您选择的任何其他地方。
