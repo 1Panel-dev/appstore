@@ -31,10 +31,10 @@ additionalProperties:
       required: true
       rule: paramComplexity
       type: password
-    - default: 80
+    - default: 8080
       envKey: PANEL_APP_PORT_HTTP
       labelEn: Port
-      labelZh: 端口
+      labelZh: 端口，建议填写 8080，然后在【网站】管理中安装 OpenResty，创建网站关联emlog应用，暴露80、443端口
       required: true
       rule: paramPort
       type: number
@@ -42,7 +42,7 @@ additionalProperties:
       edit: true
       envKey: EMLOG_EXTERNAL_URL
       labelEn: site domain
-      labelZh: 绑定的域名，如 emlog.net ，不带http
+      labelZh: 域名，建议填写 localhost， 然后在【网站】管理中安装 OpenResty，创建网站关联emlog应用绑定域名
       required: true
       rule: paramExtUrl
       type: text
