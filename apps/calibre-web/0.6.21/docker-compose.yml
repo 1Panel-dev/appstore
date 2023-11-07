@@ -9,17 +9,17 @@ services:
       - "${PANEL_APP_PORT_HTTP}:8083"
     volumes:
       - "./data/config:/config"
-      - "./data/books:/books"
+      - "${DATA_PATH}:/books"
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=${TIME_ZONE}
       - DOCKER_MODS=linuxserver/mods:universal-calibre #optional
       - OAUTHLIB_RELAX_TOKEN_SCOPE=1 #optional
-    image: linuxserver/calibre-web:2021.12.16
-    labels:  
+    image: linuxserver/calibre-web:0.6.21
+    labels:
       createdBy: "Apps"
 
-networks:  
-  1panel-network:  
+networks:
+  1panel-network:
     external: true
