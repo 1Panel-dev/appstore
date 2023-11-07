@@ -6,10 +6,10 @@ services:
     networks:
       - 1panel-network
     ports:
-      - "${PANEL_APP_PORT_HTTP}:4533"
+      - ${PANEL_APP_PORT_HTTP}:4533
     volumes:
-      - "./data/data:/data"
-      - "./data/music:/music:ro"
+      - ./data/data:/data
+      - ./data/music:/music:ro
     environment:
       ND_SCANSCHEDULE: 1h
       ND_LOGLEVEL: info  
