@@ -1,14 +1,14 @@
 name: Jellyfin
 tags:
-    - 实用工具
+    - 多媒体
 title: 多媒体应用程序软件套装
-type: 实用工具
+type: 多媒体
 description: 多媒体应用程序软件套装
 additionalProperties:
     key: jellyfin
     name: Jellyfin
     tags:
-        - Tool
+        - Media
     shortDescZh: 多媒体应用程序软件套装
     shortDescEn: A multimedia application software suite
     type: tool
