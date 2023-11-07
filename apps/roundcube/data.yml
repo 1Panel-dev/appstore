@@ -1,0 +1,20 @@
+name: Roundcube
+tags:
+  - 邮件服务
+title: 基于 Web 的多语言 IMAP 邮件客户端
+type: 邮件服务
+description: 基于 Web 的多语言 IMAP 邮件客户端
+additionalProperties:
+  key: roundcube
+  name: Roundcube
+  tags:
+    - Email
+  shortDescZh: 基于 Web 的多语言 IMAP 邮件客户端
+  shortDescEn: Web-based multilingual IMAP mail client
+  type: tool
+  crossVersionUpdate: false
+  limit: 0
+  recommend: 0
+  website: https://roundcube.net/
+  github: https://github.com/roundcube/roundcubemail
+  document: https://github.com/roundcube/roundcubemail/wiki
