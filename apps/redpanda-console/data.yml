@@ -1,0 +1,20 @@
+name: Redpanda Console
+tags:
+    - 开发工具
+title: Kafka Web 管理工具
+type: 开发工具
+description: Kafka Web 管理工具
+additionalProperties:
+    key: redpanda-console
+    name: Redpanda Console
+    tags:
+        - DevTool
+    shortDescZh: Kafka Web 管理工具
+    shortDescEn: Redpanda Console – A UI for Data Streaming
+    type: tool
+    crossVersionUpdate: true
+    limit: 1
+    recommend: 0
+    website: https://redpanda.com/
+    github: https://github.com/redpanda-data/console
+    document: https://docs.redpanda.com/current/manage/console/

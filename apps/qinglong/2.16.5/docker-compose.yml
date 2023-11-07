@@ -1,0 +1,17 @@
+version: '3'
+services:
+  qinglong:
+    image: whyour/qinglong:2.16.5
+    container_name: ${CONTAINER_NAME}
+    networks:
+      - 1panel-network
+    volumes:
+      - ./data:/ql/data
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:5700"
+    restart: always
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true

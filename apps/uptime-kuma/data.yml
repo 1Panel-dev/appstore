@@ -1,15 +1,15 @@
 name: Uptime Kuma
 tags:
-    - 工具
-title: 一个自托管的监控工具
-type: 工具
-description: 一个自托管的监控工具
+    - 实用工具
+title: 自托管的监控工具
+type: 实用工具
+description: 自托管的监控工具
 additionalProperties:
     key: uptime-kuma
     name: Uptime Kuma
     tags:
         - Tool
-    shortDescZh: 一个自托管的监控工具
+    shortDescZh: 自托管的监控工具
     shortDescEn: A fancy self-hosted monitoring tool
     type: tool
     crossVersionUpdate: false

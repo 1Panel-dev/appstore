@@ -1,0 +1,81 @@
+additionalProperties:
+    formFields:
+        - default: ""
+          envKey: PANEL_DB_HOST
+          key: redis
+          labelEn: Redis Service
+          labelZh: Redis 服务
+          required: true
+          type: service
+        - default: ""
+          envKey: PANEL_REDIS_ROOT_PASSWORD
+          labelEn: Redis Password
+          labelZh: Redis 密码
+          required: true
+          type: password
+        - default: "0"
+          edit: true
+          envKey: REDIS_DB
+          labelEn: Database
+          labelZh: 数据库
+          required: true
+          type: select
+          values:
+            - label: db0
+              value: "0"
+            - label: db1
+              value: "1"
+            - label: db2
+              value: "2"
+            - label: db3
+              value: "3"
+            - label: db4
+              value: "4"
+            - label: db5
+              value: "5"
+            - label: db6
+              value: "6"
+            - label: db7
+              value: "7"
+            - label: db8
+              value: "8"
+            - label: db9
+              value: "9"
+            - label: db10
+              value: "10"
+            - label: db11
+              value: "11"
+            - label: db12
+              value: "12"
+            - label: db13
+              value: "13"
+            - label: db14
+              value: "14"
+            - label: db15
+              value: "15"
+        - default: root
+          edit: true
+          envKey: COMMANDER_ADMIN
+          labelEn: Username
+          labelZh: 登录用户名
+          random: true
+          required: true
+          rule: paramCommon
+          type: text
+        - default: P@ssword@redis
+          edit: true
+          envKey: COMMANDER_PASSWORD
+          labelEn: Password
+          labelZh: 登录密码
+          random: true
+          required: true
+          rule: paramComplexity
+          type: text
+        - default: 8089
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: Port
+          labelZh: 端口
+          required: true
+          rule: paramPort
+          type: number

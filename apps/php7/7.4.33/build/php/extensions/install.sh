@@ -60,18 +60,17 @@ isPhpVersionGreaterOrEqual()
 installExtensionFromTgz()
 {
     tgzName=$1
-    para1=
+    result=""
     extensionName="${tgzName%%-*}"
-
-    if [  $2 ]; then
-        para1=$2
-    fi
+    shift 1
+    result=$@
     mkdir ${extensionName}
     tar -xf ${tgzName}.tgz -C ${extensionName} --strip-components=1
-    ( cd ${extensionName} && phpize && ./configure ${para1} && make ${MC} && make install )
+    ( cd ${extensionName} && phpize && ./configure ${result} && make ${MC} && make install )
 
     docker-php-ext-enable ${extensionName}
 }
+
 
 # install use  install-php-extensions
 if [[ -z "${EXTENSIONS##*,ioncube_loader,*}" ]]; then
@@ -540,13 +539,7 @@ fi
 
 if [[ -z "${EXTENSIONS##*,redis,*}" ]]; then
     echo "---------- Install redis ----------"
-    isPhpVersionGreaterOrEqual 7 0
-    if [[ "$?" = "1" ]]; then
-        installExtensionFromTgz redis-5.2.2
-    else
-        printf "\n" | pecl install redis-4.3.0
-        docker-php-ext-enable redis
-    fi
+    installExtensionFromTgz redis-5.3.7
 fi
 
 if [[ -z "${EXTENSIONS##*,apcu,*}" ]]; then
@@ -605,12 +598,18 @@ if [[ -z "${EXTENSIONS##*,event,*}" ]]; then
     fi
 
     echo "---------- Install event again ----------"
-    installExtensionFromTgz event-2.5.6  "--ini-name event.ini"
+    mkdir event
+    tar -xf event-3.0.8.tgz -C event --strip-components=1
+    cd event && phpize && ./configure && make  && make install
+
+    docker-php-ext-enable --ini-name event.ini event
 fi
 
 if [[ -z "${EXTENSIONS##*,mongodb,*}" ]]; then
     echo "---------- Install mongodb ----------"
+    apk add --no-cache openssl-dev
     installExtensionFromTgz mongodb-1.7.4
+    docker-php-ext-configure mongodb --with-mongodb-ssl=openssl
 fi
 
 if [[ -z "${EXTENSIONS##*,yaf,*}" ]]; then
@@ -634,7 +633,7 @@ if [[ -z "${EXTENSIONS##*,swoole,*}" ]]; then
     isPhpVersionGreaterOrEqual 7 0
 
     if [[ "$?" = "1" ]]; then
-        installExtensionFromTgz swoole-4.5.2
+        installExtensionFromTgz swoole-4.8.11 --enable-openssl
     else
         installExtensionFromTgz swoole-2.0.11
     fi

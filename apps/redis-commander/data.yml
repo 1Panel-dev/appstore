@@ -1,14 +1,14 @@
 name: Redis-Commander
 tags:
-    - 工具
+    - 开发工具
 title: Redis Web 管理工具
-type: 工具
+type: 开发工具
 description: Redis Web 管理工具
 additionalProperties:
     key: redis-commander
     name: Redis-Commander
     tags:
-        - Tool
+        - DevTool
     shortDescZh: Redis Web 管理工具
     shortDescEn: Redis web management tool
     type: tool

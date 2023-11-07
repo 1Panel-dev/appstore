@@ -1,0 +1,58 @@
+additionalProperties:
+    formFields:
+        - default: 8080
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: Web Port
+          labelZh: Web 端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: 2022
+          edit: true
+          envKey: PANEL_APP_PORT_SFTP
+          labelEn: SFTP Port
+          labelZh: SFTP 端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: 2121
+          edit: true
+          envKey: PANEL_APP_PORT_FTP
+          labelEn: FTP Port
+          labelZh: FTP 端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: 50000
+          edit: true
+          envKey: PASSIVE_PORT_RANGE_START
+          labelEn: FTP Passive Mod Start Port
+          labelZh: FTP 被动模式起始端口
+          required: true
+          rule: paramCommon
+          type: text
+        - default: 50100
+          edit: true
+          envKey: PASSIVE_PORT_RANGE_END
+          labelEn: FTP Passive Mod End Port
+          labelZh: FTP 被动模式结束端口 (大于起始端口)
+          required: true
+          rule: paramCommon
+          type: text
+        - default: <your external ip here>
+          edit: true
+          envKey: FTP_EXTERNAL_IP
+          labelEn: FTP External Ip (must change item)
+          labelZh: FTP 外部地址 (必改项)
+          required: true
+          rule: paramCommon
+          type: text
+        - default: 10080
+          edit: true
+          envKey: PANEL_APP_PORT_WEBDAV
+          labelEn: WebDAV Port
+          labelZh: WebDAV 端口
+          required: true
+          rule: paramPort
+          type: number

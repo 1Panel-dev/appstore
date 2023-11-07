@@ -1,54 +1,37 @@
 # Memcached
 
-Memcached is a high performance multithreaded event-based key/value cache
-store intended to be used in a distributed system.
+Memcached（Memory Cache Daemon）是一个开源的高性能分布式内存对象缓存系统，旨在加速应用程序的数据访问速度和减轻数据库负载。
 
-See: https://memcached.org/about
+## 主要功能：
 
-A fun story explaining usage: https://memcached.org/tutorial
+### 内存缓存
 
-If you're having trouble, try the wiki: https://memcached.org/wiki
+Memcached 将数据存储在内存中，因此能够快速读取和写入数据，相比于传统的数据库系统，响应速度更快。
 
-If you're trying to troubleshoot odd behavior or timeouts, see:
-https://memcached.org/timeouts
+### 分布式支持
 
-https://memcached.org/ is a good resource in general. Please use the mailing
-list to ask questions, github issues aren't seen by everyone!
+Memcached 支持分布式部署，可以将数据存储在多台服务器上，提高了可伸缩性和容错性。这意味着它可以处理大量的并发请求，并且不容易成为单点故障。
 
-## Dependencies
+### 键-值存储
 
-* libevent - https://www.monkey.org/~provos/libevent/ (libevent-dev)
-* libseccomp (optional, experimental, linux) - enables process restrictions for
-  better security. Tested only on x86-64 architectures.
-* openssl (optional) - enables TLS support. need relatively up to date
-  version. pkg-config is needed to find openssl dependencies (such as -lz).
+Memcached 使用简单的键-值存储模型，通过唯一的键来检索数据。这使得它适用于各种数据类型，包括文本、二进制数据和对象。
 
-## Environment
+### 数据自动过期
 
-Be warned that the -k (mlockall) option to memcached might be
-dangerous when using a large cache. Just make sure the memcached machines
-don't swap.  memcached does non-blocking network I/O, but not disk.  (it
-should never go to disk, or you've lost the whole point of it)
+Memcached 允许为缓存的数据设置过期时间，一旦数据超过过期时间，系统会自动删除它们。这有助于保持缓存中的数据的新鲜度。
 
-## Build status
+### 高性能
 
-See https://build.memcached.org/ for multi-platform regression testing status.
+Memcached 的主要目标是提供快速的数据访问速度。它能够处理高吞吐量和低延迟的请求，使应用程序能够更快地响应用户操作。
 
-## Bug reports
+### 支持多语言
 
-Feel free to use the issue tracker on github.
+Memcached 提供了多种编程语言的客户端库，可以轻松集成到各种应用程序中，包括PHP、Python、Java等。
 
-**If you are reporting a security bug** please contact a maintainer privately.
-We follow responsible disclosure: we handle reports privately, prepare a
-patch, allow notifications to vendor lists. Then we push a fix release and your
-bug can be posted publicly with credit in our release notes and commit
-history.
+### 减轻数据库负载
 
-## Website
+通过将常用的数据存储在内存中，Memcached 可以减轻数据库的负载，从而提高数据库的性能和稳定性。
 
-* https://www.memcached.org
+### 数据分片
 
-## Contributing
-
-See https://github.com/memcached/memcached/wiki/DevelopmentRepos
-
+Memcached 支持数据分片，可以将数据均匀分布在多个节点上，以确保负载均衡和可伸缩性。

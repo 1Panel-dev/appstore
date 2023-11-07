@@ -1,0 +1,19 @@
+name: Node.js
+tags:
+  - 运行环境
+title: Node.js 运行环境
+type: 运行环境
+description: Node.js 运行环境
+additionalProperties:
+  key: node
+  name: Node.js
+  tags:
+    - Runtime
+  shortDescZh: Node.js 运行环境
+  shortDescEn: Node.js Runtime
+  type: node
+  crossVersionUpdate: false
+  limit: 0
+  recommend: 101
+  website: https://nodejs.org/en
+  github: https://github.com/nodejs

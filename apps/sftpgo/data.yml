@@ -1,0 +1,20 @@
+name: SFTPGo
+tags:
+    - 实用工具
+title: 功能齐全且高度可配置的 SFTP 服务器
+type: 实用工具
+description: 功能齐全且高度可配置的 SFTP 服务器
+additionalProperties:
+    key: sftpgo
+    name: SFTPGo
+    tags:
+        - Tool
+    shortDescZh: 功能齐全且高度可配置的 SFTP 服务器
+    shortDescEn: Fully featured and highly configurable SFTP server
+    type: tool
+    crossVersionUpdate: false  
+    limit: 1
+    recommend: 12
+    website: https://sftpgo.com/
+    github: https://github.com/drakkan/sftpgo/
+    document: https://github.com/drakkan/sftpgo/blob/main/docs/howto/getting-started.md

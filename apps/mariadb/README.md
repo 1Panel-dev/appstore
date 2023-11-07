@@ -1,73 +1,38 @@
-## MariaDB: The open source relational database
+# MariaDB
 
-MariaDB was designed as a drop-in replacement of MySQL(R) with more
-features, new storage engines, fewer bugs, and better performance.
+MariaDB 是一个流行的开源关系型数据库管理系统（RDBMS），它是MySQL的一个分支，提供了丰富的功能和性能，适用于各种应用场景。
 
-MariaDB is brought to you by the MariaDB Foundation and the MariaDB Corporation.
-Please read the CREDITS file for details about the MariaDB Foundation,
-and who is developing MariaDB.
+## 核心功能
 
-MariaDB is developed by many of the original developers of MySQL who
-now work for the MariaDB Corporation, the MariaDB Foundation and by
-many people in the community.
+- **SQL支持**: MariaDB完全支持SQL（Structured Query Language），允许用户执行各种数据库操作，包括查询、插入、更新、删除等。
+- **高性能**: MariaDB通过优化的查询执行计划、索引、缓存和多线程处理，提供出色的数据库性能。
+- **跨平台**: 可在多种操作系统上运行，包括Linux、Windows、macOS等。
+- **事务支持**: 支持事务处理，包括ACID（原子性、一致性、隔离性和持久性）属性，确保数据的完整性和可靠性。
+- **复制和高可用性**: 提供数据复制和主从复制功能，以及集群支持，确保数据的高可用性和冗余备份。
 
-MySQL, which is the base of MariaDB, is a product and trademark of Oracle
-Corporation, Inc. For a list of developers and other contributors,
-see the Credits appendix.  You can also run 'SHOW authors' to get a
-list of active contributors.
+## 安全性
 
-A description of the MariaDB project and a manual can be found at:
+- **访问控制**: 支持基于角色的访问控制，可以限制用户对数据库的访问权限。
+- **数据加密**: 提供数据传输和存储的加密选项，保护敏感数据不被未经授权的访问泄露。
+- **身份验证**: 支持各种身份验证方法，包括用户名/密码、SSL证书等。
 
-https://mariadb.org
+## 数据类型
 
-https://mariadb.com/kb/en/
+- **标准数据类型**: 提供各种标准的数据类型，包括整数、浮点数、日期时间、字符串等。
+- **地理空间数据**: 支持地理信息系统（GIS）功能，用于处理地理空间数据。
 
-https://mariadb.com/kb/en/mariadb-vs-mysql-features/
+## 存储引擎
 
-https://mariadb.com/kb/en/mariadb-versus-mysql-compatibility/
+- **InnoDB**: 默认的存储引擎，支持事务和外键，适用于大多数应用。
+- **MyISAM**: 支持全文本搜索和高性能插入操作，适用于某些特定场景。
+- **其他存储引擎**: 还支持其他存储引擎，如Aria、TokuDB等，以满足不同需求。
 
-https://mariadb.com/kb/en/new-and-old-releases/
+## 扩展性
 
-Help
------
+- **存储过程和触发器**: 允许用户定义存储过程和触发器，以实现自定义的业务逻辑。
+- **插件支持**: 支持插件系统，可以轻松扩展MariaDB的功能。
 
-More help is available from the Maria Discuss mailing list
-https://launchpad.net/~maria-discuss, MariaDB's Zulip
-instance, https://mariadb.zulipchat.com/
+## 社区支持
 
-Live QA for beginner contributors
-----
-MariaDB has a dedicated time each week when we answer new contributor questions live on Zulip.
-From 8:00 to 10:00 UTC on Mondays, and 10:00 to 12:00 UTC on Thursdays,
-anyone can ask any questions they’d like, and a live developer will be available to assist.
-
-New contributors can ask questions any time, but we will provide immediate feedback during that interval.
-
-Licensing
----------
-
-***************************************************************************
-
-NOTE:
-
-MariaDB is specifically available only under version 2 of the GNU
-General Public License (GPLv2). (I.e. Without the "any later version"
-clause.) This is inherited from MySQL. Please see the README file in
-the MySQL distribution for more information.
-
-License information can be found in the COPYING file. Third party
-license information can be found in the THIRDPARTY file.
-
-***************************************************************************
-
-Bug Reports
-------------
-
-Bug and/or error reports regarding MariaDB should be submitted at:
-https://jira.mariadb.org
-
-For reporting security vulnerabilities see:
-https://mariadb.org/about/security-policy/
-
-The code for MariaDB, including all revision history, can be found at:
-https://github.com/MariaDB/server
+- **活跃社区**: MariaDB拥有活跃的开源社区，提供文档、论坛和支持，以帮助用户解决问题。
+- **开源**: MariaDB是开源软件，可以自由使用、修改和分发。

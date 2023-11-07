@@ -1,21 +1,17 @@
-Adminer - Database management in a single PHP file
-Adminer Editor - Data manipulation for end-users
+# Adminer
 
-https://www.adminer.org/
-Supports: MySQL, MariaDB, PostgreSQL, SQLite, MS SQL, Oracle, Elasticsearch, MongoDB, SimpleDB (plugin), Firebird (plugin), ClickHouse (plugin)
-Requirements: PHP 5+
-Apache License 2.0 or GPL 2
+Adminer 是一个轻量级的数据库管理工具，它允许用户通过简单的Web界面来管理各种类型的数据库，包括MySQL、PostgreSQL、SQLite等。
 
-adminer/index.php - Run development version of Adminer
-editor/index.php - Run development version of Adminer Editor
-editor/example.php - Example customization
-plugins/readme.txt - Plugins for Adminer and Adminer Editor
-adminer/plugin.php - Plugin demo
-adminer/sqlite.php - Development version of Adminer with SQLite allowed
-editor/sqlite.php - Development version of Editor with SQLite allowed
-adminer/designs.php - Development version of Adminer with adminer.css switcher
-compile.php - Create a single file version
-lang.php - Update translations
-tests/katalon.html - Katalon Automation Recorder test suite
+## 主要功能：
 
-If downloaded from Git then run: git submodule update --init
+- **跨数据库支持**：Adminer支持多种数据库系统，使您可以在一个统一的界面下管理不同类型的数据库。
+- **简单易用**：Adminer拥有直观的用户界面，无需复杂的安装或配置过程，即可快速上手。
+- **数据查询和编辑**：您可以通过Adminer执行SQL查询，查看和编辑数据库中的数据。支持自定义SQL命令。
+- **表格结构管理**：Adminer允许您创建、修改和删除表格，定义字段、主键和索引等。
+- **导入和导出**：可以轻松导入和导出数据，支持多种数据格式，如SQL、CSV和Excel等。
+- **数据库备份**：Adminer允许您创建数据库备份，以确保数据的安全性和可恢复性。
+- **权限管理**：您可以管理数据库用户和权限，控制谁可以访问和修改数据库。
+- **查询历史**：Adminer保存您执行的查询历史，方便后续查看和重复执行。
+- **多语言支持**：Adminer提供多种语言界面，以适应不同用户的需求。
+- **自定义外观**：支持自定义主题和界面样式，以使Adminer适应您的个人偏好。
+- **开源和免费**：Adminer是开源软件，可免费使用和自定义。

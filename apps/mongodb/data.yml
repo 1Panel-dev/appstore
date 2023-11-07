@@ -1,9 +1,9 @@
 name: MongoDB
 tags:
     - 数据库
-title: MongoDB 开源文档数据库
+title: 开源文档数据库
 type: 数据库
-description: MongoDB 开源文档数据库
+description: 开源文档数据库
 additionalProperties:
     key: mongodb
     name: MongoDB

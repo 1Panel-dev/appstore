@@ -4,10 +4,31 @@
   "gitIgnoredAuthors": [
     "githubaction@githubaction.com"
   ],
+  "rebaseWhen": "never",
   "packageRules": [
     {
       "packageNames": ["docker-compose"],
       "automerge": true
+    },
+    {
+      "matchFileNames": ["apps/redis/7.*/*.yml"],
+      "allowedVersions": "/^7.*/"
+    },
+    {
+      "matchFileNames": ["apps/redis/6.*/*.yml"],
+      "allowedVersions": "/^6.*/"
+    },
+    {
+      "matchFileNames": ["apps/mysql/5.6.*/*.yml"],
+      "allowedVersions": "/^5.6.*/"
+    },
+    {
+      "matchFileNames": ["apps/mysql/5.7.*/*.yml"],
+      "allowedVersions": "/^5.7.*/"
+    },
+    {
+      "matchFileNames": ["apps/mysql/8.*/*.yml"],
+      "allowedVersions": "/^8.*/"
     }
   ],
   "prCreation": "immediate"

@@ -1,16 +1,16 @@
 name: Lsky-pro
 tags:
-    - 工具
-title: Lsky Pro 是一个用于在线上传、管理图片的图床程序
-type: 工具
-description: Lsky Pro 是一个用于在线上传、管理图片的图床程序
+    - 云存储
+title: 用于在线上传、管理图片的图床程序
+type: 云存储
+description: 用于在线上传、管理图片的图床程序
 additionalProperties:
     key: lsky-pro
     name: Lsky-pro
     tags:
-        - Tool
-    shortDescZh: Lsky Pro 是一个用于在线上传、管理图片的图床程序
-    shortDescEn: Lsky Pro is an image bed program for uploading and managing images online
+        - Storage
+    shortDescZh: 用于在线上传、管理图片的图床程序
+    shortDescEn: An image bed program for uploading and managing images online
     type: tool
     crossVersionUpdate: true
     limit: 0

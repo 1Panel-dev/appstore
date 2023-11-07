@@ -1,101 +1,33 @@
-Name
-====
+# OpenResty
 
-OpenResty - Turning Nginx into a Full-Fledged Scriptable Web Platform
+OpenResty 是一个基于 Nginx 的高性能 Web 应用服务器，它将 Nginx 与 Lua 编程语言集成在一起，提供了强大的功能和灵活性。
 
-Description
-===========
+## 主要功能：
 
-OpenResty is a full-fledged web application server by bundling the standard nginx core, lots of 3rd-party nginx modules, as well as most of their external dependencies.
+### 高性能代理服务器
 
-This bundle is maintained by Yichun Zhang (agentzh).
+OpenResty 基于 Nginx 构建，继承了 Nginx 强大的反向代理和负载均衡功能。它能够处理大量并发请求，快速转发流量到后端服务器，确保网站的高性能和可用性。
 
-Because most of the nginx modules are developed by the bundle maintainers, it can ensure that all these modules are played well together.
+### 动态内容生成
 
-The bundled software components are copyrighted by the respective copyright holders.
+通过集成 Lua 编程语言，OpenResty 允许开发人员在配置文件中编写动态内容生成逻辑。这意味着您可以使用 Lua 脚本来处理请求、生成响应，甚至连接到外部数据源，从而创建高度定制化的 Web 应用程序。
 
-The homepage for this project is on [openresty.org](https://openresty.org/).
+### 高级 URL 路由
 
-For Users
----------
+OpenResty 支持灵活的 URL 路由和重写规则。您可以根据请求的 URL 对流量进行定向、分发和过滤，以满足不同的业务需求。这有助于构建 RESTful API 或处理复杂的 URL 映射。
 
-Visit the [download page](https://openresty.org/en/download.html) on the `openresty.org` web site to download the latest bundle tarball, and follow the installation instructions in the [installation page](https://openresty.org/en/installation.html).
+### 缓存和性能优化
 
-For Bundle Maintainers
-----------------------
+OpenResty 提供了强大的缓存功能，可以缓存静态资源或动态生成的内容，从而显著提高网站的响应速度。它还支持压缩、负载均衡、连接池等性能优化功能，确保最佳的用户体验。
 
-The bundle's source is at the following git repository:
+### 安全性和访问控制
 
-https://github.com/openresty/openresty
+通过 Nginx 的安全模块和 Lua 编程，OpenResty 提供了多层次的安全性控制，包括防止恶意请求、DDoS 攻击和访问控制列表。它还支持 SSL/TLS 加密，保护数据传输的安全性。
 
-To reproduce the bundle tarball, just do
+### 第三方模块和插件
 
-```
-make
-```
+OpenResty 社区和生态系统丰富，有许多第三方模块和插件可供选择，包括缓存、反爬虫、访问日志、认证等。这些扩展功能可以根据需求轻松集成到 OpenResty 中。
 
-at the top of the bundle source tree.
+### 轻量级和可扩展
 
-Please note that you may need to install some extra dependencies, like `perl`, `dos2unix`, and `mercurial`. On Fedora 22, for example, installing the dependencies is as simple as running the following commands:
-
-```
-sudo dnf install perl dos2unix mercurial
-```
-
-Additional Features
-===================
-
-In additional to the standard nginx core features, this bundle also supports the following:
-
-resolv.conf parsing
---------------------
-
-**syntax:** *resolver address ... [valid=time] [ipv6=on|off] [local=on|off|path]*
-
-**default:** *-*
-
-**context:** *http, stream, server, location*
-
-Similar to the [`resolver` directive](https://nginx.org/en/docs/http/ngx_http_core_module.html#resolver) in standard nginx core with additional support for parsing additional resolvers from the `resolv.conf` file format.
-
-When `local=on`, the standard path of `/etc/resolv.conf` will be used. You may also specify arbitrary path to be used for parsing, for example: `local=/tmp/test.conf`.
-
-When `local=off`, parsing will be disabled (this is the default).
-
-This feature is not available on Windows platforms.
-
-Mailing List
-============
-
-You're very welcome to join the English OpenResty mailing list hosted on Google Groups:
-
-https://groups.google.com/group/openresty-en
-
-The Chinese mailing list is here:
-
-https://groups.google.com/group/openresty
-
-
-Report Bugs
-===========
-
-You're very welcome to report issues on GitHub:
-
-https://github.com/openresty/openresty/issues
-
-
-Copyright & License
-===================
-
-The bundle itself is licensed under the 2-clause BSD license.
-
-Copyright (c) 2011-2019, Yichun "agentzh" Zhang (章亦春) <agentzh@gmail.com>, OpenResty Inc.
-
-This module is licensed under the terms of the BSD license.
-
-Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
-
-* Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
-* Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+OpenResty 采用模块化设计，使得它非常轻量级且易于扩展。您可以根据需要选择性地启用或禁用功能模块，以满足不同的应用场景。

@@ -1,4 +1,4 @@
-name: mblog
+name: mBlog
 tags:
   - 建站
 title: 开源自部署的个人微博
@@ -14,6 +14,6 @@ additionalProperties:
   type: website
   crossVersionUpdate: true
   limit: 0
-  website: https://github.com/kingwrcy/mblog-backend
+  website: https://mblog.club/
   github: https://github.com/kingwrcy/mblog-backend
   document: https://github.com/kingwrcy/mblog-backend

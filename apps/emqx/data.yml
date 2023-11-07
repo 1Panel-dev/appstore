@@ -1,14 +1,14 @@
-name: emqx
+name: EMQX
 tags:
-    - 工具
+    - 中间件
 title: 开源物联网 MQTT 消息服务器
-type: 工具
+type: 中间件
 description: 开源物联网 MQTT 消息服务器
 additionalProperties:
     key: emqx
-    name: emqx
+    name: EMQX
     tags:
-        - Tool
+        - Middleware
     shortDescZh: 开源物联网 MQTT 消息服务器
     shortDescEn: Open-source IoT MQTT Message Server
     type: tool

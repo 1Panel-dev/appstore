@@ -1,16 +1,16 @@
 name: ddns-go
 tags:
-    - 工具
-title: 自动获得你的公网 IPv4 或 IPv6 地址，并解析到对应的域名服务
-type: 工具
-description: 自动获得你的公网 IPv4 或 IPv6 地址，并解析到对应的域名服务
+    - 实用工具
+title: 简单好用的 DDNS
+type: 实用工具
+description: 简单好用的 DDNS
 additionalProperties:
     key: ddns-go
     name: ddns-go
     tags:
         - Tool
-    shortDescZh: 自动获得你的公网 IPv4 或 IPv6 地址，并解析到对应的域名服务
-    shortDescEn: Automatically obtain your public IPv4 or IPv6 address and resolve it to the corresponding domain name service
+    shortDescZh: 简单好用的 DDNS
+    shortDescEn: Simple and easy-to-use DDNS
     type: tool
     crossVersionUpdate: true
     limit: 0

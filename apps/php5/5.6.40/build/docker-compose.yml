@@ -15,6 +15,7 @@ services:
       - ${PHP_FPM_CONF_FILE}:/usr/local/etc/php-fpm.d/www.conf
       - ${PHP_LOG_DIR}:/var/log/php
       - ${DATA_DIR}/composer:/tmp/composer
+      - ./extensions:/php/extensions
     restart: always
     cap_add:
       - SYS_PTRACE

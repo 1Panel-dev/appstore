@@ -1,0 +1,19 @@
+name: ClickHouse
+tags:
+    - 数据库
+title: ClickHouse 一个用于联机分析(OLAP)的列式数据库管理系统(DBMS)
+type: 数据库
+description: ClickHouse 是一个用于联机分析(OLAP)的列式数据库管理系统(DBMS)
+additionalProperties:
+    key: clickhouse
+    name: ClickHouse
+    tags:
+        - Database
+    shortDescZh: ClickHouse 一个用于联机分析(OLAP)的列式数据库管理系统(DBMS)
+    shortDescEn: ClickHouse® is a high-performance, column-oriented SQL database management system (DBMS) for online analytical processing (OLAP).
+    type: runtime
+    crossVersionUpdate: false
+    limit: 0
+    website: https://clickhouse.com/
+    github: https://github.com/ClickHouse/ClickHouse
+    document: https://clickhouse.com/docs/zh

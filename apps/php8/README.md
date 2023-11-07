@@ -1,126 +1,16 @@
-# The PHP Interpreter
+# PHP
 
-PHP is a popular general-purpose scripting language that is especially suited to
-web development. Fast, flexible and pragmatic, PHP powers everything from your
-blog to the most popular websites in the world. PHP is distributed under the
+PHP（Hypertext Preprocessor）是一种流行的服务器端脚本语言，它用于开发动态网页和Web应用程序。
 
-## Documentation
+## 主要功能：
 
-The PHP manual is available at [php.net/docs](https://php.net/docs).
-
-## Installation
-
-### Prebuilt packages and binaries
-
-Prebuilt packages and binaries can be used to get up and running fast with PHP.
-
-For Windows, the PHP binaries can be obtained from
-[windows.php.net](https://windows.php.net). After extracting the archive the
-`*.exe` files are ready to use.
-
-For other systems, see the [installation chapter](https://php.net/install).
-
-### Building PHP source code
-
-*For Windows, see [Build your own PHP on Windows](https://wiki.php.net/internals/windows/stepbystepbuild_sdk_2).*
-
-For a minimal PHP build from Git, you will need autoconf, bison, and re2c. For
-a default build, you will additionally need libxml2 and libsqlite3.
-
-On Ubuntu, you can install these using:
-
-    sudo apt install -y pkg-config build-essential autoconf bison re2c \
-                        libxml2-dev libsqlite3-dev
-
-On Fedora, you can install these using:
-
-    sudo dnf install re2c bison autoconf make libtool ccache libxml2-devel sqlite-devel
-
-Generate configure:
-
-    ./buildconf
-
-Configure your build. `--enable-debug` is recommended for development, see
-`./configure --help` for a full list of options.
-
-    # For development
-    ./configure --enable-debug
-    # For production
-    ./configure
-
-Build PHP. To speed up the build, specify the maximum number of jobs using `-j`:
-
-    make -j4
-
-The number of jobs should usually match the number of available cores, which
-can be determined using `nproc`.
-
-## Testing PHP source code
-
-PHP ships with an extensive test suite, the command `make test` is used after
-successful compilation of the sources to run this test suite.
-
-It is possible to run tests using multiple cores by setting `-jN` in
-`TEST_PHP_ARGS`:
-
-    make TEST_PHP_ARGS=-j4 test
-
-Shall run `make test` with a maximum of 4 concurrent jobs: Generally the maximum
-number of jobs should not exceed the number of cores available.
-
-The [qa.php.net](https://qa.php.net) site provides more detailed info about
-testing and quality assurance.
-
-## Installing PHP built from source
-
-After a successful build (and test), PHP may be installed with:
-
-    make install
-
-Depending on your permissions and prefix, `make install` may need super user
-permissions.
-
-## PHP extensions
-
-Extensions provide additional functionality on top of PHP. PHP consists of many
-essential bundled extensions. Additional extensions can be found in the PHP
-Extension Community Library - [PECL](https://pecl.php.net).
-
-## Contributing
-
-The PHP source code is located in the Git repository at
-[github.com/php/php-src](https://github.com/php/php-src). Contributions are most
-welcome by forking the repository and sending a pull request.
-
-Discussions are done on GitHub, but depending on the topic can also be relayed
-to the official PHP developer mailing list internals@lists.php.net.
-
-New features require an RFC and must be accepted by the developers. See
-[Request for comments - RFC](https://wiki.php.net/rfc) and
-[Voting on PHP features](https://wiki.php.net/rfc/voting) for more information
-on the process.
-
-Bug fixes don't require an RFC. If the bug has a GitHub issue, reference it in
-the commit message using `GH-NNNNNN`. Use `#NNNNNN` for tickets in the old
-[bugs.php.net](https://bugs.php.net) bug tracker.
-
-    Fix GH-7815: php_uname doesn't recognise latest Windows versions
-    Fix #55371: get_magic_quotes_gpc() throws deprecation warning
-
-See [Git workflow](https://wiki.php.net/vcs/gitworkflow) for details on how pull
-requests are merged.
-
-### Guidelines for contributors
-
-See further documents in the repository for more information on how to
-contribute:
-
-- [Contributing to PHP](/CONTRIBUTING.md)
-- [PHP coding standards](/CODING_STANDARDS.md)
-- [Mailing list rules](/docs/mailinglist-rules.md)
-- [PHP release process](/docs/release-process.md)
-
-## Credits
-
-For the list of people who've put work into PHP, please see the
-[PHP credits page](https://php.net/credits.php).
+- **动态网页生成**：PHP 可以嵌入到HTML中，用于生成动态内容。这意味着您可以根据用户的请求和其他条件来生成不同的网页内容。
+- **数据库连接**：PHP 支持多种数据库系统，包括MySQL、SQLite、PostgreSQL等，使您能够轻松地连接和操作数据库。
+- **表单处理**：PHP 可以处理网页表单数据，从而实现用户输入验证、数据存储和处理用户提交的信息。
+- **会话管理**：PHP 支持会话管理，允许您跟踪用户的状态和数据，从而创建登录系统和购物车等功能。
+- **文件操作**：PHP 允许您打开、读取、写入和删除文件，以及执行文件上传和下载等操作。
+- **错误处理**：PHP 提供丰富的错误处理机制，以便您能够捕获、记录和处理应用程序中的错误和异常。
+- **服务器端脚本**：PHP 脚本在服务器上执行，生成HTML输出，这意味着客户端无法查看脚本代码，从而提高了安全性。
+- **跨平台兼容**：PHP 可以在多种操作系统上运行，包括Windows、Linux和macOS，因此非常灵活。
+- **开源和社区支持**：PHP 是一个开源项目，拥有庞大的开发者社区，可以轻松找到各种扩展和库来扩展功能。
+- **模块化和面向对象编程**：PHP 支持面向对象编程（OOP），并且具有许多内置模块和扩展，可以简化开发过程。

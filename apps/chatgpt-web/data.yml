@@ -1,0 +1,20 @@
+name: ChatGPT Web
+tags:
+    - 实用工具
+title: ChatGPT Web
+type: 实用工具
+description: ChatGPT Web
+additionalProperties:
+    key: chatgpt-web
+    name: ChatGPT Web
+    tags:
+        - Tool
+    shortDescZh: ChatGPT Web
+    shortDescEn: ChatGPT Web
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://github.com/Chanzhaoyu/chatgpt-web
+    github: https://github.com/Chanzhaoyu/chatgpt-web
+    document: https://github.com/Chanzhaoyu/chatgpt-web

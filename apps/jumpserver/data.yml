@@ -1,0 +1,20 @@
+name: JumpServer
+tags:
+    - 安全
+title: JumpServer 开源堡垒机
+type: 安全
+description: JumpServer 开源堡垒机
+additionalProperties:
+  key: jumpserver
+  name: JumpServer
+  tags:
+    - Security
+  shortDescZh: 广受欢迎的开源堡垒机
+  shortDescEn: The world's first open-source Bastion Host
+  type: tool
+  crossVersionUpdate: true
+  limit: 1
+  recommend: 9
+  website: https://www.jumpserver.org
+  github: https://github.com/jumpserver/jumpserver
+  document: https://docs.jumpserver.org

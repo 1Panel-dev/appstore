@@ -1,0 +1,20 @@
+name: Metabase
+tags:
+    - BI
+title: 一款开源的数据分析和可视化工具
+type: BI
+description: 一款开源的数据分析和可视化工具
+additionalProperties:
+    key: metabase
+    name: Metabase
+    tags:
+        - BI
+    shortDescZh: 一款开源的数据分析和可视化工具
+    shortDescEn: An open source data analysis and visualization tool
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://www.metabase.com
+    github: https://github.com/metabase/metabase
+    document: https://www.metabase.com/docs

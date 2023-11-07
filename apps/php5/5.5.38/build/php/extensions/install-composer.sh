@@ -8,9 +8,7 @@ if [ "$supportLatest" -eq "1" ]; then
     curl -o /usr/bin/composer https://mirrors.aliyun.com/composer/composer.phar \
     && chmod +x /usr/bin/composer
 else
-    curl -o /tmp/composer-setup.php https://getcomposer.org/installer  \
-    && php /tmp/composer-setup.php --install-dir=/tmp \
-    && mv /tmp/composer.phar /usr/bin/composer \
+    curl  -ksS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer --disable-tls \
     && chmod +x /usr/bin/composer \
     && rm -rf /tmp/composer-setup.php
 fi

@@ -4,15 +4,44 @@ additionalProperties:
   tags:
     - key: WebSite
       name: 建站
-    - key: Server
-      name: Web 服务器
-    - key: Runtime
-      name: 运行环境
+      sort: 1
     - key: Database
       name: 数据库
+      sort: 2
+    - key: Server
+      name: Web 服务器
+      sort: 3
+    - key: Runtime
+      name: 运行环境
+      sort: 4
     - key: Tool
-      name: 工具
-    - key: CI/CD
-      name: CI/CD
+      name: 实用工具
+      sort: 5
+    - key: Storage
+      name: 云存储
+      sort: 6
+    - key: BI
+      name: BI
+      sort: 7
+    - key: Security
+      name: 安全
+      sort: 8
+    - key: DevTool
+      name: 开发工具
+      sort: 9
+    - key: DevOps
+      name: DevOps
+      sort: 10
+    - key: Middleware
+      name: 中间件
+      sort: 11
+    - key: Media
+      name: 多媒体
+      sort: 12
+    - key: Email
+      name: 邮件服务
+      sort: 13
     - key: Local
       name: 本地
+      sort: 14
+  version: v1.6.0

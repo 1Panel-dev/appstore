@@ -1,15 +1,15 @@
 name: PostgreSQL
 tags:
     - 数据库
-title: PostgreSQL 开源关系型数据库
+title: 开源关系型数据库
 type: 数据库
-description: PostgreSQL 开源关系型数据库
+description: 开源关系型数据库
 additionalProperties:
     key: postgresql
     name: PostgreSQL
     tags:
         - Database
-    shortDescZh: PostgreSQL 开源关系型数据库
+    shortDescZh: 开源关系型数据库
     shortDescEn: Open Source Relational Database
     type: runtime
     crossVersionUpdate: false

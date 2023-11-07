@@ -1,14 +1,14 @@
 name: Cloudreve
 tags:
-    - 工具
+    - 云存储
 title: 支持多家云存储的云盘系统
-type: 工具
+type: 云存储
 description: 支持多家云存储的云盘系统
 additionalProperties:
     key: cloudreve
     name: Cloudreve
     tags:
-        - Tool
+        - Storage
     shortDescZh: 支持多家云存储的云盘系统
     shortDescEn: A cloud disk system that supports multiple cloud storage
     type: tool

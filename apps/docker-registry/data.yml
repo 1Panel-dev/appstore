@@ -1,17 +1,17 @@
 name: Docker Registry
 tags:
-    - CI/CD
+    - DevOps
 title: Docker 镜像存储库
-type: CI/CD
+type: DevOps
 description: Docker 镜像存储库
 additionalProperties:
     key: docker-registry
     name: Docker Registry
     tags:
-        - CI/CD
+        - DevOps
     shortDescZh: Docker 镜像存储库
     shortDescEn: A storage and distribution system for named Docker images
-    type: runtime
+    type: tool
     crossVersionUpdate: false
     limit: 1
     recommend: 0

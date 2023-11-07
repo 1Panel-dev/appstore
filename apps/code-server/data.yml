@@ -1,16 +1,16 @@
-name: code-server
+name: Coder
 tags:
-    - 工具
-title: 在任何地方的任何计算机上运行VS Code并在浏览器中访问它
-type: 工具
-description: 在任何地方的任何计算机上运行VS Code并在浏览器中访问它
+    - 开发工具
+title: VS Code 远程开发环境
+type: 开发工具
+description: VS Code 远程开发环境
 additionalProperties:
     key: code-server
-    name: code-server
+    name: Coder
     tags:
-        - Tool
-    shortDescZh: 在任何地方的任何计算机上运行VS Code并在浏览器中访问它
-    shortDescEn: Run VS Code on any machine anywhere and access it in the browser
+        - DevTool
+    shortDescZh: VS Code 远程开发环境
+    shortDescEn: VS Code remote development environment
     type: tool
     crossVersionUpdate: true
     limit: 0

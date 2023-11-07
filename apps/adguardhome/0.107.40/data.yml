@@ -1,0 +1,82 @@
+additionalProperties:
+    formFields:
+        - default: 23000
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP_1
+          labelEn: HTTP web port
+          labelZh: HTTP 网页端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: 23001
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: Initial setup web page port
+          labelZh: 初始设置网页端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: 20053
+          edit: true
+          envKey: PANEL_APP_PORT_DNS
+          labelEn: Plain DNS port
+          labelZh: 普通 DNS 端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: 20067
+          edit: true
+          envKey: PANEL_APP_PORT_DHCP_1
+          labelEn: DHCP service port 1
+          labelZh: DHCP 服务端口 1
+          required: true
+          rule: paramPort
+          type: number
+        - default: 20068
+          edit: true
+          envKey: PANEL_APP_PORT_DHCP_2
+          labelEn: DHCP service port 2
+          labelZh: DHCP 服务端口 2
+          required: true
+          rule: paramPort
+          type: number
+        - default: 20443
+          edit: true
+          envKey: PANEL_APP_PORT_DOH
+          labelEn: DOH service port
+          labelZh: DOH 服务端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: 853
+          edit: true
+          envKey: PANEL_APP_PORT_DOT
+          labelEn: DOT service port
+          labelZh: DOT 服务端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: 20784
+          edit: true
+          envKey: PANEL_APP_PORT_QUIC_1
+          labelEn: QUIC service port 1
+          labelZh: QUIC 服务端口 1
+          required: true
+          rule: paramPort
+          type: number
+        - default: 8853
+          edit: true
+          envKey: PANEL_APP_PORT_QUIC_2
+          labelEn: QUIC service port 2
+          labelZh: QUIC 服务端口 2
+          required: true
+          rule: paramPort
+          type: number
+        - default: 5443
+          edit: true
+          envKey: PANEL_APP_PORT_DNS_CRYPT
+          labelEn: DNS Crypt service port
+          labelZh: DNS Crypt 服务端口
+          required: true
+          rule: paramPort
+          type: number

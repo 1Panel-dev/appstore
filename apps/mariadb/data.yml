@@ -13,7 +13,7 @@ additionalProperties:
     shortDescEn: The open source relational database
     type: runtime
     crossVersionUpdate: false
-    limit: 1
+    limit: 0
     recommend: 0
     website: https://mariadb.org/
     github: https://github.com/MariaDB/server/

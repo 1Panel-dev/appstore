@@ -1,17 +1,17 @@
 name: Nexus Repository
 tags:
-    - CI/CD
+    - DevOps
 title: 开源的软件制品库
-type: CI/CD
+type: DevOps
 description: 开源的软件制品库
 additionalProperties:
     key: nexus
     name: Nexus Repository
     tags:
-        - CI/CD
+        - DevOps
     shortDescZh: 开源的软件制品库
     shortDescEn: An open source repository for build artifacts
-    type: runtime
+    type: tool
     crossVersionUpdate: false
     limit: 1
     recommend: 0

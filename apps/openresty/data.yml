@@ -14,7 +14,7 @@ additionalProperties:
     type: runtime
     crossVersionUpdate: true
     limit: 1
-    recommend: 3
+    recommend: 1
     website: https://openresty.org
     github: https://github.com/openresty/openresty
     document: http://openresty.org/cn/getting-started.html

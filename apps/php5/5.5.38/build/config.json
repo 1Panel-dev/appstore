@@ -5,7 +5,7 @@
       "multiple": true,
       "labelZh": "扩展",
       "labelEn": "Extensions",
-      "default": [],
+      "default": ["mysqli","pdo_mysql"],
       "values": [
         {
           "label": "opcache",

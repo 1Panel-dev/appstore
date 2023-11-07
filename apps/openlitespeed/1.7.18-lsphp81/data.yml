@@ -1,0 +1,33 @@
+additionalProperties:
+    formFields:
+        - default: 80
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP_80
+          labelEn: HTTP Port
+          labelZh: HTTP端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: 443
+          edit: true
+          envKey: PANEL_APP_PORT_HTTPS
+          labelEn: HTTPS Port
+          labelZh: HTTPS端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: 40113
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: Console Port
+          labelZh: 控制台端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: Asia/Shanghai
+          edit: true
+          envKey: TIME_ZONE
+          labelEn: Time zone
+          labelZh: 时区
+          required: true
+          type: text

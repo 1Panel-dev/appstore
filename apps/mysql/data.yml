@@ -13,8 +13,8 @@ additionalProperties:
     shortDescEn: Open source relational database management system
     type: runtime
     crossVersionUpdate: false
-    limit: 1
-    recommend: 4
+    limit: 0
+    recommend: 2
     website: https://www.mysql.com
     github: https://github.com/mysql/mysql-server
     document: https://dev.mysql.com/doc/

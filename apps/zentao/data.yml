@@ -1,19 +1,20 @@
 name: 禅道
 tags:
-  - 工具
+  - DevOps
 title: 国产的开源项目管理软件
-type:  工具
+type:  DevOps
 description: 国产的开源项目管理软件
 additionalProperties:
   key: zentao
   name: 禅道
   tags:
-    - Tool
+    - DevOps
   shortDescZh: 国产的开源项目管理软件
   shortDescEn: Domestic open source project management software
   type: tool
   crossVersionUpdate: true
   limit: 0
+  recommend: 11
   website: https://www.zentao.net/index.html
   github: https://github.com/easysoft/zentaopms
   document: https://www.zentao.net/book/zentaopms/38.html

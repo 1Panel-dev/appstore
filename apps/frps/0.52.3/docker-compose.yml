@@ -1,0 +1,11 @@
+version: "3"
+services:
+  frps:
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    network_mode: host
+    volumes:
+        - ./data/frps.toml:/etc/frp/frps.toml
+    image: snowdreamtech/frps:0.52.3
+    labels:  
+      createdBy: "Apps"

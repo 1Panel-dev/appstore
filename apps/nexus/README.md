@@ -1,31 +1,37 @@
-# Sonatype Nexus3 Docker: sonatype/nexus3
+# Nexus Repository
 
-A Dockerfile for Sonatype Nexus Repository Manager 3, starting with 3.18 the image is based on the [Red Hat Universal Base Image](https://www.redhat.com/en/blog/introducing-red-hat-universal-base-image) while earlier versions used CentOS.
+Nexus Repository 是一个功能强大的软件仓库管理工具，用于支持软件开发和构建过程中的软件组件管理。
 
-* [Contribution Guidlines](#contribution-guidelines)
-* [Running](#running)
-* [Building the Nexus Repository Manager image](#building-the-nexus-repository-manager-image)
-* [Chef Solo for Runtime and Application](#chef-solo-for-runtime-and-application)
-* [Testing the Dockerfile](#testing-the-dockerfile)
-* [Red Hat Certified Image](#red-hat-certified-image)
-* [Notes](#notes)
-    * [Persistent Data](#persistent-data)
-* [Getting Help](#getting-help)
+## 主要功能：
 
-## Contribution Guidelines
+### 存储和管理软件组件
 
-Go read [our contribution guidelines](https://github.com/sonatype/docker-nexus3/blob/main/.github/CONTRIBUTING.md) to get a bit more familiar with how
-we would like things to flow.
+Nexus Repository 可以存储和管理各种软件组件，如库文件、Jar包、Docker 镜像、NPM包、Maven构建等。这使得团队能够轻松地将这些组件集中存储并进行版本控制。
 
-## Getting Help
+### 代理远程仓库
 
-Looking to contribute to our Docker image but need some help? There's a few ways to get information or our attention:
+Nexus Repository 允许代理远程仓库，以便在本地缓存远程仓库中的组件。这提高了构建速度，同时减少了对外部仓库的依赖性，提高了可用性。
 
-* Chat with us on [Gitter](https://gitter.im/sonatype/nexus-developers)
-* File an issue [on our public JIRA](https://issues.sonatype.org/projects/NEXUS/)
-* Check out the [Nexus3](http://stackoverflow.com/questions/tagged/nexus3) tag on Stack Overflow
-* Check out the [Nexus Repository User List](https://groups.google.com/a/glists.sonatype.com/forum/?hl=en#!forum/nexus-users)
+### 安全和权限管理
 
-## License Disclaimer
+Nexus Repository 提供了灵活的权限和安全控制，允许管理员为不同的用户和团队分配访问权限。这有助于保护关键的软件组件免受未经授权的访问和操纵。
 
-_Nexus Repository OSS is distributed with Sencha Ext JS pursuant to a FLOSS Exception agreed upon between Sonatype, Inc. and Sencha Inc. Sencha Ext JS is licensed under GPL v3 and cannot be redistributed as part of a closed source work._
+### 丰富的搜索和元数据
+
+工具提供了强大的搜索功能，以帮助用户快速找到所需的组件。此外，它还提供了丰富的元数据，帮助开发人员更好地理解和评估组件。
+
+### 构建和部署支持
+
+Nexus Repository 可以与各种构建工具和持续集成系统（如Maven、Gradle、Jenkins等）集成，从而简化了构建和部署软件的过程。
+
+### 定制化和扩展性
+
+它具有高度可定制性和扩展性，可以根据特定的团队和项目需求进行配置。用户可以编写自定义插件以扩展其功能。
+
+### 高可用性和可伸缩性
+
+Nexus Repository 可以部署为高可用性集群，并支持横向扩展，以满足不断增长的存储和用户需求。
+
+### 用户友好的界面
+
+工具提供了直观的用户界面，使管理员和开发人员能够轻松地管理和访问软件组件。
