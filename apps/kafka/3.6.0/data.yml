@@ -1,6 +1,7 @@
 additionalProperties:
     formFields:
         - default: 9092
+          edit: true
           envKey: PANEL_APP_PORT_HTTP
           labelEn: Port
           labelZh: TCP 端口

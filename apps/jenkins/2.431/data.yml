@@ -8,6 +8,7 @@ additionalProperties:
           required: true
           type: text
         - default: 8080
+          edit: true
           envKey: PANEL_APP_PORT_HTTP
           labelEn: Port
           labelZh: 端口
