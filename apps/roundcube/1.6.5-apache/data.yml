@@ -41,8 +41,8 @@ additionalProperties:
     - default: 143
       edit: true
       envKey: IMAP_SERVER_PORT
-      labelEn: SMTP Port
-      labelZh: SMTP 端口
+      labelEn: IMAP Port
+      labelZh: IMAP 端口
       required: true
       rule: paramPort
       type: number
@@ -56,8 +56,8 @@ additionalProperties:
     - default: 587
       edit: true
       envKey: SMTP_SERVER_PORT
-      labelEn: Port
-      labelZh: IMAP4 端口
+      labelEn: SMTP Port
+      labelZh: SMTP 端口
       required: true
       rule: paramPort
       type: number
