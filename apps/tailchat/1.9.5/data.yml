@@ -111,7 +111,7 @@ additionalProperties:
           labelZh: 秘钥
           random: true
           required: true
-          rule: paramExtUrl
+          rule: paramComplexity
           type: text
         - default: http://localhost:11000
           edit: true
@@ -128,6 +128,31 @@ additionalProperties:
           labelZh: 邮件服务发送人
           required: false
           rule: paramExtUrl
+          type: text
+        - default: 11002
+          edit: true
+          envKey: PANEL_APP_PORT_ADMIN
+          labelEn: Admin Port
+          labelZh: 后台管理平台端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: "tailchat"
+          edit: true
+          envKey: ADMIN_USERNAME
+          labelEn: Admin Username
+          labelZh: 后台管理平台用户名
+          required: true
+          rule: paramCommon
+          type: text
+        - default: admin-password
+          edit: true
+          envKey: ADMIN_PASSWORD
+          labelEn: Admin Password
+          labelZh: 后台管理平台密码
+          random: true
+          required: true
+          rule: paramCommon
           type: text
         - default: ""
           edit: true

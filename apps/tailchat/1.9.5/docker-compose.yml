@@ -25,6 +25,33 @@ services:
       - ${PANEL_APP_PORT_HTTP}:11000
     labels:
       createdBy: "Apps"
+  tailchat-admin:
+    container_name: ${CONTAINER_NAME}-admin
+    restart: unless-stopped
+    image: moonrailgun/tailchat:1.9.4
+    networks:
+      - 1panel-network
+    environment:
+      - ADMIN_PORT=3000
+      - ADMIN_USER=${ADMIN_USERNAME}
+      - ADMIN_PASS=${ADMIN_PASSWORD}
+      - LOGGER=true
+      - LOGLEVEL=info
+      - REDIS_URL=redis://:${REDIS_PASS}@${REDIS_HOST}:${REDIS_PORT}
+      - TRANSPORTER=redis://:${REDIS_PASS}@${REDIS_HOST}:${REDIS_PORT}
+      - MONGO_URL=mongodb://${MONGO_USER}:${MONGO_PASS}@${MONGO_HOST}:${MONGO_PORT}/${MONGO_DB}?authSource=admin
+      - MINIO_URL=${MINIO_HOST}:${MINIO_PORT}
+      - MINIO_USER=${MINIO_USER}
+      - MINIO_PASS=${MINIO_PASS}
+      - SMTP_SENDER=${SMTP_SENDER}
+      - SMTP_URI=${SMTP_URI}
+      - SECRET=${SECRET}
+      - API_URL=${API_URL}
+    ports:
+      - ${PANEL_APP_PORT_ADMIN}:3000
+    labels:
+      createdBy: "Apps"
+    command: pnpm start:admin
 networks:
   1panel-network:
     external: true
