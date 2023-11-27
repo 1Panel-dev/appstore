@@ -1,0 +1,19 @@
+name: Prometheus
+tags:
+    - 数据库
+title: Prometheus 一个监控系统和时间序列数据库
+type: 数据库
+description: Prometheus 是一个监控系统和时间序列数据库
+additionalProperties:
+    key: prometheus
+    name: Prometheus
+    tags:
+        - Database
+    shortDescZh: Prometheus 一个监控系统和时间序列数据库
+    shortDescEn: The Prometheus monitoring system and time series database.
+    type: runtime
+    crossVersionUpdate: false
+    limit: 0
+    website: https://prometheus.io
+    github: https://github.com/prometheus/prometheus
+    document: https://prometheus.io/docs/introduction/overview/
