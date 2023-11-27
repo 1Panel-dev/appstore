@@ -3,7 +3,6 @@ additionalProperties:
   name: FileCodeBox  #应用名称
   tags:
     - Tool #应用标签，可以有多个，请参照下方的标签列表
-    - WebSite #应用标签，可以有多个，请参照下方的标签列表
   shortDescZh: 匿名口令分享文本，文件，像拿快递一样取文件 #应用中文描述，不要超过30个字
   shortDescEn: Anonymous password sharing text, files, retrieve files like taking a courier #应用英文描述
   type: tool  #应用类型，区别于应用分类，只能有一个，请参照下方的类型列表
