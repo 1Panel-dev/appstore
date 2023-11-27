@@ -7,7 +7,6 @@ services:
       - 1panel-network
     ports:
       - "${PANEL_APP_PORT_HTTP}:80"
-      - "${PANEL_APP_PORT_HTTPS}:443"
     volumes:
       - modstartcms:/server/web
     image: modstart/modstartcms:v7.6.0
