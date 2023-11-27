@@ -8,6 +8,6 @@ additionalProperties:
   type: tool  #应用类型，区别于应用分类，只能有一个，请参照下方的类型列表
   crossVersionUpdate: true #是否可以跨大版本升级
   limit: 1 #应用安装数量限制，0 代表无限制
-  website: https://github.com/vastsa/FileCodeBox #官网地址
+  website: https://share.lanol.cn #官网地址
   github: https://github.com/vastsa/FileCodeBox #github 地址
   document: https://github.com/vastsa/FileCodeBox  #文档地址
