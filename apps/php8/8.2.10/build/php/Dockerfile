@@ -5,26 +5,28 @@ ARG TZ
 ARG PHP_EXTENSIONS
 ARG CONTAINER_PACKAGE_URL
 
+
 RUN if [ $CONTAINER_PACKAGE_URL ] ; then sed -i "s/dl-cdn.alpinelinux.org/${CONTAINER_PACKAGE_URL}/g" /etc/apk/repositories ; fi
 
 ADD ./extensions/install-php-extensions  /usr/local/bin/
 RUN chmod uga+x /usr/local/bin/install-php-extensions
 
-RUN apk --no-cache add tzdata
-
 COPY ./extensions /tmp/extensions
 WORKDIR /tmp/extensions
 RUN chmod +x install.sh \
     && sh install.sh \
-    && rm -rf /tmp/extensions \
+    && rm -rf /tmp/extensions
 
-RUN apk  add tzdata \
+
+RUN apk --no-cache add tzdata \
     && cp "/usr/share/zoneinfo/$TZ" /etc/localtime \
     && echo "$TZ" > /etc/timezone
 
+RUN apk add supervisor \
+    && mkdir -p /var/log/supervisor
 
 # Fix: https://github.com/docker-library/php/issues/240
-RUN apk add gnu-libiconv libstdc++ --no-cache  --repository http://${CONTAINER_PACKAGE_URL}/alpine/edge/community/ --allow-untrusted
+RUN apk add gnu-libiconv libstdc++ --no-cache --repository http://${CONTAINER_PACKAGE_URL}/alpine/edge/community/ --allow-untrusted
 ENV LD_PRELOAD /usr/lib/preloadable_libiconv.so php
 
 

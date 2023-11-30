@@ -16,7 +16,8 @@ WORKDIR /tmp/extensions
 RUN chmod +x install.sh \
     && sh install.sh
 
-
+RUN apk add supervisor \
+    && mkdir -p /var/log/supervisor
 
 RUN apk --no-cache add tzdata \
     && cp "/usr/share/zoneinfo/$TZ" /etc/localtime \
@@ -32,7 +33,6 @@ ENV LD_PRELOAD /usr/lib/preloadable_libiconv.so php
 RUN curl -ksS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer --disable-tls \
     && chmod +x /usr/bin/composer \
     && rm -rf /tmp/composer-setup.php
-
 
 # php image's www-data user uid & gid are 82, change them to 1000 (primary user)
 RUN apk --no-cache add shadow && usermod -u 1000 www-data && groupmod -g 1000 www-data

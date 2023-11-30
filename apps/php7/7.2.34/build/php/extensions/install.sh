@@ -61,7 +61,7 @@ installExtensionFromTgz()
 {
     tgzName=$1
     result=""
-    extensionName="${tgzName%%-*}" 
+    extensionName="${tgzName%%-*}"
     shift 1
     result=$@
     mkdir ${extensionName}
@@ -609,7 +609,7 @@ if [[ -z "${EXTENSIONS##*,mongodb,*}" ]]; then
     echo "---------- Install mongodb ----------"
     apk add --no-cache openssl-dev
     installExtensionFromTgz mongodb-1.7.4
-    docker-php-ext-configure mongodb --with-mongodb-ssl=openssl 
+    docker-php-ext-configure mongodb --with-mongodb-ssl=openssl
 fi
 
 if [[ -z "${EXTENSIONS##*,yaf,*}" ]]; then

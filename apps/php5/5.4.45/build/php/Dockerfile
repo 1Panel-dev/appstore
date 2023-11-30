@@ -17,6 +17,8 @@ RUN curl -o /usr/bin/composer https://mirrors.aliyun.com/composer/composer.phar 
     && chmod +x /usr/bin/composer
 ENV COMPOSER_HOME=/tmp/composer
 
+RUN apk add supervisor \
+    && mkdir -p /var/log/supervisor
 
 # php image's www-data user uid & gid are 82, change them to 1000 (primary user)
 RUN usermod -u 1000 www-data && groupmod -g 1000 www-data
