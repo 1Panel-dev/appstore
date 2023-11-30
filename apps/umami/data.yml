@@ -1,8 +1,8 @@
 name: Umami
 tags:
-  - 工具
+  - 实用工具
 title: Umami 是 Google Analytics 的简单、快速、注重隐私的替代方案
-type:  工具
+type: 实用工具
 description: Umami 是 Google Analytics 的简单、快速、注重隐私的替代方案
 additionalProperties:
   key: umami
