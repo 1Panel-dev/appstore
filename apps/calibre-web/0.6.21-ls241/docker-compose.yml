@@ -9,7 +9,7 @@ services:
       - "${PANEL_APP_PORT_HTTP}:8083"
     volumes:
       - "./data/config:/config"
-      - "${DATA_PATH}:/books"
+      - "./data/books:/books"
     environment:
       - PUID=1000
       - PGID=1000
