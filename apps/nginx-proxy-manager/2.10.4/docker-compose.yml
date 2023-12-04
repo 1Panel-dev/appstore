@@ -12,7 +12,7 @@ services:
     volumes:
       - ./data/data:/data
       - ./data/ssl:/etc/letsencrypt
-    image: jc21/nginx-proxy-manager:github-pr-3281
+    image: jc21/nginx-proxy-manager:2.10.4
     labels:  
       createdBy: "Apps"
 networks:  
