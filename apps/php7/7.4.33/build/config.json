@@ -129,6 +129,23 @@
       ],
       "envKey": "PHP_EXTENSIONS",
       "edit": true
+    },
+    {
+      "type": "select",
+      "labelZh": "安装 Supervisor",
+      "labelEn": "Install Supervisor",
+      "default": "0",
+      "values": [
+        {
+          "label": "否",
+          "value": "0"
+        },
+        {
+          "label": "是",
+          "value": "1"
+        }
+      ],
+      "envKey": "INSTALL_SUPERVISOR"
     }
   ]
 }

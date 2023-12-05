@@ -8,6 +8,7 @@ services:
         CONTAINER_PACKAGE_URL: ${CONTAINER_PACKAGE_URL}
         PHP_EXTENSIONS: ${PHP_EXTENSIONS}
         TZ: ${TZ}
+        INSTALL_SUPERVISOR: ${INSTALL_SUPERVISOR}
     image: ${IMAGE_NAME}
     volumes:
       - ${SOURCE_DIR}:/www/

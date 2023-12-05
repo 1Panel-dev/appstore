@@ -5,7 +5,7 @@
       "multiple": true,
       "labelZh": "扩展",
       "labelEn": "Extensions",
-      "default": [],
+      "default": ["mysqli","pdo_mysql"],
       "values": [
         {
           "label": "opcache",
@@ -111,6 +111,10 @@
           "value": "gd"
         },
         {
+          "label": "ioncube_loader",
+          "value": "ioncube_loader"
+        },
+        {
           "label": "curl",
           "value": "curl"
         },
@@ -125,6 +129,23 @@
       ],
       "envKey": "PHP_EXTENSIONS",
       "edit": true
+    },
+    {
+      "type": "select",
+      "labelZh": "安装 Supervisor",
+      "labelEn": "Install Supervisor",
+      "default": "0",
+      "values": [
+        {
+          "label": "否",
+          "value": "0"
+        },
+        {
+          "label": "是",
+          "value": "1"
+        }
+      ],
+      "envKey": "INSTALL_SUPERVISOR"
     }
   ]
 }

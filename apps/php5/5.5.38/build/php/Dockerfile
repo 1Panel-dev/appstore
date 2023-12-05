@@ -16,9 +16,6 @@ WORKDIR /tmp/extensions
 RUN chmod +x install.sh \
     && sh install.sh
 
-RUN apk add supervisor \
-    && mkdir -p /var/log/supervisor
-
 RUN apk --no-cache add tzdata \
     && cp "/usr/share/zoneinfo/$TZ" /etc/localtime \
     && echo "$TZ" > /etc/timezone

@@ -17,7 +17,6 @@ services:
       - ./supervisor/supervisor.d:/etc/supervisor.d
       - ./supervisor/log/supervisord.log:/var/log/supervisord.log
       - ./supervisor/run.sh:/run.sh
-    command: sh /run.sh
     ports:
       - 127.0.0.1:${PANEL_APP_PORT_HTTP}:9000
     labels:
