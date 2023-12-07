@@ -1,6 +1,6 @@
 # Prometheus
 
-Prometheus 一个监控系统和时间序列数据库
+**Prometheus** 一个监控系统和时间序列数据库
 
 ## 主要功能：
 

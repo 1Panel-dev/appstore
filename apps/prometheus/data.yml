@@ -14,6 +14,7 @@ additionalProperties:
     type: runtime
     crossVersionUpdate: false
     limit: 0
+    recommend: 0
     website: https://prometheus.io
     github: https://github.com/prometheus/prometheus
     document: https://prometheus.io/docs/introduction/overview/

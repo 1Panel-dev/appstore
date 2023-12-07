@@ -1,13 +1,20 @@
+name: FileCodeBox
+tags:
+    - 实用工具
+title: 文件快递柜-匿名口令分享文本，文件，像拿快递一样取文件
+type: 实用工具
+description: 文件快递柜-匿名口令分享文本，文件，像拿快递一样取文件
 additionalProperties:
-  key: filecodebox   #应用的 key，仅限英文，用于在 Linux 创建文件夹
-  name: FileCodeBox  #应用名称
-  tags:
-    - Tool #应用标签，可以有多个，请参照下方的标签列表
-  shortDescZh: 匿名口令分享文本，文件，像拿快递一样取文件 #应用中文描述，不要超过30个字
-  shortDescEn: Anonymous password sharing text, files, retrieve files like taking a courier #应用英文描述
-  type: tool  #应用类型，区别于应用分类，只能有一个，请参照下方的类型列表
-  crossVersionUpdate: true #是否可以跨大版本升级
-  limit: 1 #应用安装数量限制，0 代表无限制
-  website: https://share.lanol.cn #官网地址
-  github: https://github.com/vastsa/FileCodeBox #github 地址
-  document: https://github.com/vastsa/FileCodeBox  #文档地址
+    key: filecodebox
+    name: FileCodeBox
+    tags:
+        - Tool
+    shortDescZh: 文件快递柜-匿名口令分享文本，文件，像拿快递一样取文件
+    shortDescEn: File Express Cabinet - Anonymous Passcode Sharing Text, Files, Like Taking Express Delivery for Files
+    type: tool
+    crossVersionUpdate: true
+    limit: 1
+    recommend: 0
+    website: https://share.lanol.cn
+    github: https://github.com/vastsa/FileCodeBox
+    document: https://github.com/vastsa/FileCodeBox
