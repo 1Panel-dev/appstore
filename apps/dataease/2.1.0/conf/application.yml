@@ -1,0 +1,12 @@
+server:
+  tomcat:
+    connection-timeout: 70000
+spring:
+  servlet:
+    multipart:
+      max-file-size: 500MB
+      max-request-size: 500MB
+  datasource:
+    url: jdbc:mysql://${PANEL_DB_HOST}:${PANEL_DB_PORT}/${PANEL_DB_NAME}?autoReconnect=false&useUnicode=true&characterEncoding=UTF-8&characterSetResults=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+    username: ${PANEL_DB_USER}
+    password: ${PANEL_DB_USER_PASSWORD}
