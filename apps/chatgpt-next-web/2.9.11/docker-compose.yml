@@ -12,7 +12,7 @@ services:
       - "CODE=${SECRET_KEY}"
       - "PROXY_URL=${PROXY}"
       - "BASE_URL=${API_BASE_URL}"
-    image: yidadaa/chatgpt-next-web:v2.9.11
+    image: yidadaa/chatgpt-next-web:v2.9.12
     labels:  
       createdBy: "Apps"
 
