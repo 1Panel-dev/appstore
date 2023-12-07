@@ -40,7 +40,7 @@ additionalProperties:
           type: text
         - default: ""
           edit: true
-          envKey: MONGO_USER
+          envKey: PANEL_DB_ROOT_USER
           labelEn: Database User Name
           labelZh: 数据库用户名
           required: true
@@ -48,7 +48,7 @@ additionalProperties:
           type: text
         - default: ""
           edit: true
-          envKey: MONGO_PASS
+          envKey: PANEL_DB_ROOT_PASSWORD
           labelEn: Database User Password
           labelZh: 数据库密码
           required: true
@@ -64,7 +64,7 @@ additionalProperties:
           type: service
         - default: ""
           edit: true
-          envKey: MINIO_USER
+          envKey: MINIO_ROOT_USER
           labelEn: User
           labelZh: 文件存储服务用户名
           required: true
@@ -72,7 +72,7 @@ additionalProperties:
           type: text
         - default: ""
           edit: true
-          envKey: MINIO_PASS
+          envKey: MINIO_ROOT_PASSWORD
           labelEn: User
           labelZh: 文件存储服务密码
           required: true
