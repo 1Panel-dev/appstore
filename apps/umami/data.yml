@@ -1,0 +1,19 @@
+name: Umami
+tags:
+  - 实用工具
+title: Umami 是 Google Analytics 的简单、快速、注重隐私的替代方案
+type: 实用工具
+description: Umami 是 Google Analytics 的简单、快速、注重隐私的替代方案
+additionalProperties:
+  key: umami
+  name: Umami
+  tags:
+    - Tool
+  shortDescZh: Umami 是 Google Analytics 的简单、快速、注重隐私的替代方案
+  shortDescEn: Umami is a simple, fast, privacy-focused alternative to Google Analytics
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  website: https://umami.is/
+  github: https://github.com/umami-software/umami
+  document: https://umami.is/docs
