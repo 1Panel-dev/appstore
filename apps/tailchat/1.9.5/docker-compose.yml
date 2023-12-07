@@ -11,10 +11,10 @@ services:
       - LOGGER=true
       - LOGLEVEL=info
       - PORT=11000
-      - REDIS_URL=redis://:${REDIS_PASS}@${REDIS_HOST}:${REDIS_PORT}
-      - TRANSPORTER=redis://:${REDIS_PASS}@${REDIS_HOST}:${REDIS_PORT}
-      - MONGO_URL=mongodb://${MONGO_USER}:${MONGO_PASS}@${MONGO_HOST}:${MONGO_PORT}/${MONGO_DB}?authSource=admin
-      - MINIO_URL=${MINIO_HOST}:${MINIO_PORT}
+      - REDIS_URL=redis://:${PANEL_REDIS_ROOT_PASSWORD}@${PANEL_DB_HOST}:6379
+      - TRANSPORTER=redis://:${PANEL_REDIS_ROOT_PASSWORD}@${PANEL_DB_HOST}:6379
+      - MONGO_URL=mongodb://${MONGO_USER}:${MONGO_PASS}@${MONGO_HOST}:27017/${MONGO_DB}?authSource=admin
+      - MINIO_URL=${MINIO_HOST}:9001
       - MINIO_USER=${MINIO_USER}
       - MINIO_PASS=${MINIO_PASS}
       - SMTP_SENDER=${SMTP_SENDER}
@@ -37,10 +37,10 @@ services:
       - ADMIN_PASS=${ADMIN_PASSWORD}
       - LOGGER=true
       - LOGLEVEL=info
-      - REDIS_URL=redis://:${REDIS_PASS}@${REDIS_HOST}:${REDIS_PORT}
-      - TRANSPORTER=redis://:${REDIS_PASS}@${REDIS_HOST}:${REDIS_PORT}
-      - MONGO_URL=mongodb://${MONGO_USER}:${MONGO_PASS}@${MONGO_HOST}:${MONGO_PORT}/${MONGO_DB}?authSource=admin
-      - MINIO_URL=${MINIO_HOST}:${MINIO_PORT}
+      - REDIS_URL=redis://:${PANEL_REDIS_ROOT_PASSWORD}@${PANEL_DB_HOST}:6379
+      - TRANSPORTER=redis://:${PANEL_REDIS_ROOT_PASSWORD}@${PANEL_DB_HOST}:6379
+      - MONGO_URL=mongodb://${MONGO_USER}:${MONGO_PASS}@${MONGO_HOST}:27017/${MONGO_DB}?authSource=admin
+      - MINIO_URL=${MINIO_HOST}:9001
       - MINIO_USER=${MINIO_USER}
       - MINIO_PASS=${MINIO_PASS}
       - SMTP_SENDER=${SMTP_SENDER}

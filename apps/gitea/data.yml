@@ -1,20 +1,20 @@
 name: Gitea
 tags:
     - DevOps
-title: 自托管的 Git 服务
+title: 新一代的代码托管平台
 type: DevOps
-description: 自托管的 Git 服务
+description: 新一代的代码托管平台
 additionalProperties:
     key: gitea
     name: Gitea
     tags:
         - DevOps
-    shortDescZh: 自托管的 Git 服务
-    shortDescEn: a self-hosted Git service
+    shortDescZh: 新一代的代码托管平台
+    shortDescEn: The next generation of code hosting platform
     type: tool
     crossVersionUpdate: false
     limit: 0
-    recommend: 0
+    recommend: 10
     website: https://gitea.io/
     github: https://github.com/go-gitea/gitea
     document: https://docs.gitea.io/

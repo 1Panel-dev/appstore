@@ -10,27 +10,17 @@ additionalProperties:
           type: number
         - default: ""
           edit: true
-          envKey: REDIS_HOST
+          envKey: PANEL_DB_HOST
           key: redis
           labelEn: Redis Service
           labelZh: 缓存服务服务
           required: true
           type: service
-        - default: "6379"
-          edit: true
-          envKey: REDIS_PORT
-          labelEn: Redis Service Port
-          labelZh: 缓存服务服务端口
-          required: true
-          rule: paramPort
-          type: number
         - default: ""
-          edit: true
-          envKey: REDIS_PASS
+          envKey: PANEL_REDIS_ROOT_PASSWORD
           labelEn: Redis Service Password
           labelZh: 缓存服务服务密码
           required: true
-          rule: paramCommon
           type: password
         - default: ""
           edit: true
@@ -40,14 +30,6 @@ additionalProperties:
           labelZh: 数据库服务
           required: true
           type: service
-        - default: "27017"
-          edit: true
-          envKey: MONGO_PORT
-          labelEn: Database Service Port
-          labelZh: 数据库服务端口
-          required: true
-          rule: paramPort
-          type: number
         - default: tailchat
           edit: true
           envKey: MONGO_DB
@@ -80,14 +62,6 @@ additionalProperties:
           labelZh: 文件存储服务
           required: true
           type: service
-        - default: "9001"
-          edit: true
-          envKey: MINIO_PORT
-          labelEn: Storage Service Port
-          labelZh: 文件存储服务API端口
-          required: true
-          rule: paramPort
-          type: number
         - default: ""
           edit: true
           envKey: MINIO_USER
