@@ -1,0 +1,38 @@
+additionalProperties:
+    formFields:
+        - default: 9200
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: HTTP Port
+          labelZh: HTTP端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: "true"
+          edit: true
+          envKey: ELASTIC_SECURITY
+          labelEn: Password Verification
+          labelZh: 开启密码验证
+          required: true
+          type: select
+          values:
+            - label: "True"
+              value: "true"
+            - label: "False"
+              value: "false"
+        - default: "Elastic"
+          edit: true
+          envKey: ELASTIC_PASSWORD
+          labelEn: Password
+          labelZh: 密码
+          random: true
+          required: true
+          rule: paramComplexity
+          type: password
+        - default: "ES_JAVA_OPTS=-Xlog:disable -Xlog:gc=debug:stderr -Xms512m -Xmx512m"
+          edit: true
+          envKey: P_ES_JAVA_OPTS
+          labelEn: ES JAVA OPTS
+          labelZh: ES JAVA OPTS
+          required: true
+          type: text
