@@ -1,10 +1,11 @@
-version: "3.1"
+version: '3'
 services:
   koishi:
     image: koishijs/koishi:v1.12.2
     container_name: ${CONTAINER_NAME}
+    restart: always
     environment:
-      - TZ=Asia/Shanghai
+      - TZ=${TIME_ZONE}
     networks:
       - 1panel-network
     ports:
@@ -13,7 +14,6 @@ services:
       - ./data:/koishi
     labels:  
       createdBy: "Apps"
-    restart: always
 networks:
     1panel-network:
         external: true
