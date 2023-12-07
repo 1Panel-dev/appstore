@@ -1,0 +1,10 @@
+version: "3"
+services:
+  filecodebox:
+    image: lanol/filecodebox:beta
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    volumes:
+      - /opt/FileCodeBox/:/app/data
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:12345
