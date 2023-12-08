@@ -3,22 +3,12 @@ additionalProperties:
         - child:
             default: ""
             envKey: PANEL_DB_HOST
-            labelEn: Database Service
-            labelZh: 数据库服务
             required: true
             type: service
           default: mysql
+          envKey: PANEL_DB_TYPE
           labelEn: Database Service
           labelZh: 数据库服务
-          params:
-            - envKey: YOURLS_DB_PORT
-              key: mysql
-              type: param
-              value: "3306"
-            - envKey: YOURLS_DB_PORT
-              key: postgresql
-              type: param
-              value: "5432"
           required: true
           type: apps
           values:
