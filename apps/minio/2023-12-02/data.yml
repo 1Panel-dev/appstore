@@ -1,7 +1,7 @@
 additionalProperties:
     formFields:
         - default: minio
-          envKey: MINIO_ROOT_USER
+          envKey: PANEL_MINIO_ROOT_USER
           labelEn: User
           labelZh: 用户
           random: true
@@ -9,7 +9,7 @@ additionalProperties:
           rule: paramCommon
           type: text
         - default: minio
-          envKey: MINIO_ROOT_PASSWORD
+          envKey: PANEL_MINIO_ROOT_PASSWORD
           labelEn: Password
           labelZh: 密码
           random: true
