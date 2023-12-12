@@ -10,7 +10,7 @@ services:
       command: server /data --console-address :9000 --address :9001
       environment:
         MINIO_ROOT_USER: ${PANEL_MINIO_ROOT_USER}
-        MINIO_ROOT_PASSWORD: ${PANEL_MINIO_ROOT_PASSWORDmi}
+        MINIO_ROOT_PASSWORD: ${PANEL_MINIO_ROOT_PASSWORD}
       logging:
         options:
           max-size: "5M"
