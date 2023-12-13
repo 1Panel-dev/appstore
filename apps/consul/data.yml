@@ -1,7 +1,7 @@
 name: Consul
 tags:
     - 中间件
-title: Consul
+title: 分布式、高可用且具有数据中心感知能力的解决方案
 type: 中间件
 description: 分布式、高可用且具有数据中心感知能力的解决方案
 additionalProperties:
