@@ -1,0 +1,13 @@
+additionalProperties:
+  key: openspeedtest
+  name: openspeedtest
+  tags:
+    - Tool
+  shortDescZh: SpeedTest - 免费且免费开源 HTML5 网络性能评估工具
+  shortDescEn:  SpeedTest - Free & Open-Source HTML5 Network Performance Estimation Tool
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  website: https://openspeedtest.com/
+  github: https://github.com/openspeedtest/Speed-Test
+  document: https://github.com/openspeedtest/Speed-Test
