@@ -9,6 +9,7 @@ additionalProperties:
   key: filecodebox
   name: FileCodeBox
   tags:
+    - Storage
     - Tool
   shortDescZh: 文件快递柜-匿名口令分享文本，文件，像拿快递一样取文件
   shortDescEn: File Express Cabinet - Anonymous Passcode Sharing Text, Files, Like Taking Express Delivery for Files
