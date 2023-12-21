@@ -2,7 +2,7 @@ version: '3'
 services:
   grafana:
     container_name: ${CONTAINER_NAME}
-    image: grafana/grafana:10.2.2
+    image: grafana/grafana:10.2.3
     restart: always
     user: '0'
     networks:
