@@ -1,7 +1,7 @@
 version: '3'
 services:
   koishi:
-    image: koishijs/koishi:v1.13.2
+    image: koishijs/koishi:v1.13.3
     container_name: ${CONTAINER_NAME}
     restart: always
     environment:
