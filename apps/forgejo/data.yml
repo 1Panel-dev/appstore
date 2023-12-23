@@ -1,0 +1,14 @@
+additionalProperties:
+    key: forgejo
+    name: Forgejo
+    tags:
+        - DevOps
+        - CI/CD
+    shortDescZh: Gitea 的 Soft-Fork ，提供更好的安全性和稳定性。
+    shortDescEn: A soft-fork of Gitea with better security and stablity.
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    website: https://forgejo.org/
+    github: https://codeberg.org/forgejo/forgejo
+    document: https://forgejo.org/docs/latest/
