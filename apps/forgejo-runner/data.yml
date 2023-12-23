@@ -1,0 +1,14 @@
+additionalProperties:
+    key: forgejo-runner
+    name: Forgejo Runner
+    tags:
+        - DevOps
+        - CI/CD
+    shortDescZh: 用于执行 Forgejo Actions 的 Runner 。
+    shortDescEn: The runner to run Forgejo actions.
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    website: https://forgejo.org/
+    github: https://code.forgejo.org/forgejo/runner
+    document: https://forgejo.org/docs/latest/

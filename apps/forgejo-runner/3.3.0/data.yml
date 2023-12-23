@@ -1,0 +1,26 @@
+additionalProperties:
+  formFields:
+    - default: ""
+      edit: true
+      envKey: FORGEJO_INSTANCE
+      labelEn: Forgejo Instance
+      labelZh: Forgejo 实例地址
+      required: true
+      rule: paramExtUrl
+      type: text
+    - default: "runner"
+      edit: true
+      envKey: FORGEJO_RUNNER_NAME
+      labelEn: Forgejo Runner Name
+      labelZh: Forgejo Runner 名称
+      required: true
+      rule: paramCommon
+      type: text
+    - default: ""
+      edit: true
+      envKey: FORGEJO_RUNNER_SECRET
+      labelEn: Forgejo Runner Secret
+      labelZh: Forgejo Runner 注册密钥
+      required: true
+      rule: paramComplexity
+      type: password
