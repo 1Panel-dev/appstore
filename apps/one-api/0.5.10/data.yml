@@ -1,0 +1,24 @@
+additionalProperties:
+  formFields:
+    - default: 3000
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: Asia/Shanghai
+      edit: true
+      envKey: TZ
+      labelEn: Time Zone
+      labelZh: 时区
+      required: true
+      type: text
+    - default: ''
+      edit: true
+      envKey: SQL_DSN
+      labelEn: SQL_DSN
+      labelZh: SQL_DSN
+      required: false
+      type: text
