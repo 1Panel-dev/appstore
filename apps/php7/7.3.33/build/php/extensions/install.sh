@@ -471,11 +471,7 @@ if [[ -z "${EXTENSIONS##*,pdo_sqlsrv,*}" ]]; then
     isPhpVersionGreaterOrEqual 7 1
     if [[ "$?" = "1" ]]; then
         echo "---------- Install pdo_sqlsrv ----------"
-        apk add --no-cache unixodbc-dev
-        printf "\n" | pecl install pdo_sqlsrv
-        docker-php-ext-enable pdo_sqlsrv
-        curl -o /tmp/msodbcsql17_amd64.apk https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.1-1_amd64.apk
-        apk add --allow-untrusted /tmp/msodbcsql17_amd64.apk
+        install-php-extensions pdo_sqlsrv
     else
         echo "pdo_sqlsrv requires PHP >= 7.1.0, installed version is ${PHP_VERSION}"
     fi
@@ -485,11 +481,9 @@ if [[ -z "${EXTENSIONS##*,sqlsrv,*}" ]]; then
     isPhpVersionGreaterOrEqual 7 1
     if [[ "$?" = "1" ]]; then
         echo "---------- Install sqlsrv ----------"
-        apk add --no-cache unixodbc-dev
-        printf "\n" | pecl install sqlsrv
-        docker-php-ext-enable sqlsrv
+        install-php-extensions sqlsrv
     else
-        echo "pdo_sqlsrv requires PHP >= 7.1.0, installed version is ${PHP_VERSION}"
+        echo "sqlsrv requires PHP >= 7.1.0, installed version is ${PHP_VERSION}"
     fi
 fi
 
