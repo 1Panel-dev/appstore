@@ -12,6 +12,7 @@ services:
       - 1panel-network
     volumes:
       - ./conf.d/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+      - ./conf.inc/config.user.inc.php:/etc/phpmyadmin/config.user.inc.php
     labels:
       createdBy: "Apps"
 networks:
