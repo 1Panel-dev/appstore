@@ -1,7 +1,10 @@
 
 # 账号密码
 
-容器列表点击 `终端` 按钮，进入容器内执行 `./alist admin` 命令获取密码。
+容器列表点击 `终端` 按钮，进入容器内执行命令设置密码。
+
+- **生成随机密码**：`./alist admin random`
+- **手动设置密码**：`./alist admin set NEW_PASSWORD`
 
 # Alist
 
