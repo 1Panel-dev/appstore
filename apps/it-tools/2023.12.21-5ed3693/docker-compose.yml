@@ -7,7 +7,7 @@ services:
       - 1panel-network
     ports:
       - "${PANEL_APP_PORT_HTTP}:80"
-    image: corentinth/it-tools:2023.11.2-7d94e11
+    image: corentinth/it-tools:2023.12.21-5ed3693
     labels:  
       createdBy: "Apps"
 
