@@ -6,8 +6,8 @@ services:
     environment:
       - USER_UID=1000
       - USER_GID=1000
-      - GITEA__database__DB_TYPE=mysql
-      - GITEA__database__HOST=${PANEL_DB_HOST}:3306
+      - GITEA__database__DB_TYPE=${PANEL_DB_TYPE}
+      - GITEA__database__HOST=${PANEL_DB_HOST}:${PANEL_DB_PORT}
       - GITEA__database__NAME=${PANEL_DB_NAME}
       - GITEA__database__USER=${PANEL_DB_USER}
       - GITEA__database__PASSWD=${PANEL_DB_USER_PASSWORD}

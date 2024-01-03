@@ -16,6 +16,8 @@ additionalProperties:
               value: mysql
             - label: MariaDB
               value: mariadb
+            - label: PostgreSQL
+              value: postgresql
         - default: halo
           envKey: PANEL_DB_NAME
           labelEn: Database
