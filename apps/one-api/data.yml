@@ -1,0 +1,13 @@
+additionalProperties:
+  key: one-api
+  name: one-api
+  tags:
+    - Tool
+  shortDescZh: ✨ 通过标准的 OpenAI API 格式访问所有的大模型，开箱即用 ✨
+  shortDescEn: ✨ Access all LLM through the standard OpenAI API format, easy to deploy & use ✨
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  website: https://github.com/songquanpeng/one-api
+  github: https://github.com/songquanpeng/one-api
+  document: https://github.com/songquanpeng/one-api
