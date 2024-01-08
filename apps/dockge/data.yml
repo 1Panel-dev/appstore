@@ -1,0 +1,20 @@
+name: Dockge
+tags:
+    - 实用工具
+title: 自托管的容器编排工具
+type: 实用工具
+description: 
+additionalProperties:
+  key: dockge
+  name: Dockge
+  tags:
+    - Tool
+  shortDescZh: Dockge是一款简化、易于使用的自托管容器编排工具。
+  shortDescEn: Dockge is a fancy, easy-to-use and reactive self-hosted docker compose.yaml stack-oriented manager.
+  type: tool
+  crossVersionUpdate: true
+  limit: 1
+  recommend: 0
+  website: https://dockge.kuma.pet
+  github: https://github.com/louislam/dockge
+  document: https://github.com/louislam/dockge/blob/master/README.md
