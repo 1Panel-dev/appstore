@@ -8,3 +8,10 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
+    - default: /opt/stacks
+      edit: true
+      envKey: DOCKGE_STACKS_DIR
+      labelEn: Stacks Directory
+      labelZh: 栈目录
+      required: true
+      type: text
