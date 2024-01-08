@@ -7,9 +7,12 @@ username：root
 password：123456
 ```
 
-# 主要功能
+# One API
 
-**通过标准的 OpenAI API 格式访问所有的大模型，开箱即用**
+**One API** 是一个通过标准的 OpenAI API 格式访问所有的大模型，开箱即用。
+
+## 主要功能:
+
 - 支持多种大模型：
     + [x] [OpenAI ChatGPT 系列模型](https://platform.openai.com/docs/guides/gpt/chat-completions-api)（支持 [Azure OpenAI API](https://learn.microsoft.com/en-us/azure/ai-services/openai/reference)）
     + [x] [Anthropic Claude 系列模型](https://anthropic.com)
@@ -30,7 +33,7 @@ password：123456
 - 支持**用户分组**以及**渠道分组**，支持为不同分组设置不同的倍率。
 - 支持渠道**设置模型列表**。
 - 支持**查看额度明细**。
--  支持**用户邀请奖励**。
+- 支持**用户邀请奖励**。
 - 支持以美元为单位显示额度。
 - 支持发布公告，设置充值链接，设置新用户初始额度。
 - 支持模型映射，重定向用户的请求模型，如无必要请不要设置，设置之后会导致请求体被重新构造而非直接透传，会导致部分还未正式支持的字段无法传递成功。
