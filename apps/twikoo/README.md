@@ -1,21 +1,8 @@
-<a href="https://twikoo.js.org/"><img src="https://github.com/imaegoo/twikoo/raw/main/docs/static/logo.png" width="300" alt="Twikoo"></a>
+# Twikoo
 
-----
-
-[![](https://img.shields.io/npm/v/twikoo)](https://www.npmjs.com/package/twikoo)
-[![](https://img.shields.io/bundlephobia/minzip/twikoo)](https://bundlephobia.com/result?p=twikoo)
-[![](https://img.shields.io/npm/dt/twikoo)](https://www.npmjs.com/package/twikoo)
-[![](https://data.jsdelivr.com/v1/package/npm/twikoo/badge)](https://www.jsdelivr.com/package/npm/twikoo)
-[![](https://img.shields.io/npm/l/twikoo)](./LICENSE)
-
-一个**简洁**、**安全**、**免费**的静态网站评论系统。<br>
-A **simple**, **safe**, **free** comment system.  
-**简体中文** 
+**Twikoo** 是一个**简洁**、**安全**、**免费**的静态网站评论系统。。
 
 ## 特色 | Features
-
-<details>
-<summary>点击展开</summary>
 
 ### 简单
 
@@ -72,66 +59,3 @@ A **simple**, **safe**, **free** comment system.
 ### 缺点
 
 * 不支持 IE
-
-</details>
-
-## 预览 | Preview
-
-<details>
-<summary>点击展开</summary>
-
-### 评论
-
-![评论](https://github.com/imaegoo/twikoo/raw/main/docs/static/readme-1.png)
-
-### 评论管理
-
-![评论管理](https://github.com/imaegoo/twikoo/raw/main/docs/static/readme-2.png)
-
-### 推送通知
-
-![推送通知](https://github.com/imaegoo/twikoo/raw/main/docs/static/readme-3.jpg)
-
-</details>
-
-## 快速上手 | Quick Start
-
-有关详细教程，请查看[快速上手](https://twikoo.js.org/quick-start.html)
-
-<details>
-<summary>如果你想获取更新动态、建言献策、参与测试，欢迎加入讨论群：1080829142</summary>
-<img height="300" alt="1080829142" src="https://www.imaegoo.com/gallery/2020/hello-twikoo.png" />
-</details>
-
-<!-- ## 贡献者 | Contributors -->
-
-## 特别感谢 | Special Thanks
-
-图标设计：[Maemo Lee](https://www.maemo.cc)
-
-<!-- ## 捐赠 | Donate -->
-
-## 开发 | Development
-
-如果您想在本地二次开发，可以参考以下命令：
-
-``` sh
-yarn dev # 开发 (http://localhost:9820/demo.html)
-yarn lint # 代码检查
-yarn build # 编译 (dist/twikoo.all.min.js)
-```
-
-如果您的改动能够帮助到更多人，欢迎提交 Pull Request！
-
-## 国际化 | I18N
-
-支持简体中文、繁体中文、English。欢迎[提交翻译 PR](https://github.com/imaegoo/twikoo/edit/main/src/client/utils/i18n/i18n.js)。
-
-## 许可 | License
-
-<details>
-<summary>MIT License</summary>
-
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fimaegoo%2Ftwikoo.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fimaegoo%2Ftwikoo?ref=badge_large)
-
-</details>

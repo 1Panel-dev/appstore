@@ -2,20 +2,19 @@ version: '3'
 services:
   twikoo:
     container_name: ${CONTAINER_NAME}
+    image: imaegoo/twikoo:arm32v7
     restart: always
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8080
     networks:
       - 1panel-network
-    ports:
-      - "${PANEL_APP_PORT_HTTP}:8080"
     volumes:
-      - "${DATA_PATH}:/app/data"
+      - ./data:/app/data
     environment:
       - "TWIKOO_THROTTLE=1000"
       - "TWIKOO_PORT=8080"
-    image: imaegoo/twikoo:arm32v7
-    labels:  
+    labels:
       createdBy: "Apps"
-
-networks:  
-  1panel-network:  
+networks:
+  1panel-network:
     external: true

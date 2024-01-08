@@ -1,8 +1,8 @@
 name: Twikoo
 tags:
-    - 工具
+    - 实用工具
 title: 一个简洁、安全、免费的静态网站评论系统
-type: 工具
+type: 实用工具
 description: 一个简洁、安全、免费的静态网站评论系统
 additionalProperties:
     key: twikoo
