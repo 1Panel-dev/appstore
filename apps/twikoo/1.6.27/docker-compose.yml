@@ -12,7 +12,7 @@ services:
     environment:
       - "TWIKOO_THROTTLE=1000"
       - "TWIKOO_PORT=8080"
-    image: imaegoo/twikoo:1.6.27
+    image: imaegoo/twikoo:1.6.29
     labels:  
       createdBy: "Apps"
 
