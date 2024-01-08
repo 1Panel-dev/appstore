@@ -11,7 +11,7 @@ services:
       - ./data:/app/data
       - /var/run/docker.sock:/var/run/docker.sock
       - /opt/1panel/apps/dockge/stacks:/opt/1panel/apps/dockge/stacks
-    image: louislam/dockge:1.3.5
+    image: louislam/dockge:1.4.1
     environment:
       - DOCKGE_STACKS_DIR=/opt/1panel/apps/dockge/stacks
     labels:
