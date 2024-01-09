@@ -10,8 +10,9 @@ services:
       - "DB_USER_PASSWORD=${PANEL_DB_USER_PASSWORD}"
       - "DB_NAME=${PANEL_DB_NAME}"
     volumes:
-      - ./repository:/app/data
+      - ./repository:/opt/goploy/repository
       - /var/run/docker.sock:/var/run/docker.sock
+      - /etc/localtime:/etc/localtime:ro
     ports:
       - "${PANEL_APP_PORT_HTTP}:80"
     labels:
