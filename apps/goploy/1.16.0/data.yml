@@ -8,11 +8,3 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-    - default: 2222
-      edit: true
-      envKey: PANEL_APP_PORT_SSH
-      labelEn: SSH Port
-      labelZh: SSH 端口
-      required: true
-      rule: paramPort
-      type: number
