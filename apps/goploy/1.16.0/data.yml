@@ -1,10 +1,41 @@
-additionalProperties:
-  formFields:
-    - default: 3000
-      edit: true
-      envKey: PANEL_APP_PORT_HTTP
-      labelEn: Port
-      labelZh: 端口
-      required: true
-      rule: paramPort
-      type: number
+additionalProperties:  #固定参数
+    formFields:  
+      - default: ""
+        envKey: PANEL_DB_HOST  #docker-compose 文件中的参数
+        key: mysql  #依赖应用的 key , 例如 mysql
+        labelEn: Database Service  #英文的label
+        labelZh: 数据库服务  #中文的label
+        required: true  #是否必填
+        type: service  #如果需要依赖其他应用，例如数据库，使用此 type 
+      - default: goploy  
+        envKey: PANEL_DB_NAME  
+        labelEn: Database  
+        labelZh: 数据库名
+        random: true  #是否在 default 文字后面，增加随机字符串
+        required: true  
+        rule: paramCommon  #校验规则
+        type: text  #需要手动填写的，使用此 type
+      - default: goploy  
+        envKey: PANEL_DB_USER
+        labelEn: User  
+        labelZh: 数据库用户  
+        random: true  
+        required: true  
+        rule: paramCommon  
+        type: text  
+      - default: ""
+        envKey: PANEL_DB_USER_PASSWORD  
+        labelEn: Password  
+        labelZh: 数据库用户密码  
+        random: true  
+        required: true  
+        rule: paramComplexity  
+        type: password  #密码字段使用此 type
+      - default: 8080  
+        edit: true  
+        envKey: PANEL_APP_PORT_HTTP  
+        labelEn: Port  
+        labelZh: 端口  
+        required: true  
+        rule: paramPort  
+        type: number #端口使用此 type 
