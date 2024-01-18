@@ -39,8 +39,8 @@
       "allowedVersions": "/^8.*/"
     },
     {
-      "matchFileNames": ["apps/dataease/1.18.*/*.yml"],
-      "allowedVersions": "/^1.18.*/"
+      "matchFileNames": ["apps/dataease/1.*/*.yml"],
+      "allowedVersions": "/^1.*/"
     },
     {
       "matchFileNames": ["apps/dataease/2.*/*.yml"],
