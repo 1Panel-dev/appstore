@@ -1,0 +1,19 @@
+name: sun-panel
+tags:
+    - 建站
+title: 导航面板
+type: 导航面板
+description: 一个服务器、NAS导航面板、Homepage、浏览器首页
+additionalProperties:
+    key: sun-panel
+    name: sun-panel
+    tags:
+        - WebSite
+    shortDescZh: 一个服务器、NAS导航面板、Homepage、浏览器首页
+    type: website
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 3
+    website: https://sun-panel-doc.enianteam.com/zh_cn/
+    github: https://github.com/hslr-s/sun-panel
+    document: https://sun-panel-doc.enianteam.com/zh_cn/
