@@ -35,8 +35,6 @@ Server, NAS navigation panel, Homepage, Browser homepage.
 
 Github社区板块：https://github.com/hslr-s/sun-panel/discussions
 
- <img height="300" src="./doc/images/donate/weixin.png"/> |  <img height="300" src="./doc/images/donate/alipay.png" /> |
-
 ## 🫓 TODO
 
 - [x] 分组，拖拽排序
