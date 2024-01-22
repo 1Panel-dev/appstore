@@ -1,7 +1,7 @@
 version: '3'
 services:
   umami:
-    image: ghcr.io/umami-software/umami:mysql-v2.8.0
+    image: ghcr.io/umami-software/umami:${PANEL_DB_TYPE}-v2.8.0
     container_name: ${CONTAINER_NAME}
     restart: always
     labels:
@@ -9,8 +9,8 @@ services:
     ports:
       - ${PANEL_APP_PORT_HTTP}:3000
     environment:
-      DATABASE_TYPE: mysql
-      DATABASE_URL: mysql://${PANEL_DB_USER}:${PANEL_DB_USER_PASSWORD}@${PANEL_DB_HOST}:3306/${PANEL_DB_NAME}
+      DATABASE_TYPE: ${PANEL_DB_TYPE}
+      DATABASE_URL: ${PANEL_DB_TYPE}://${PANEL_DB_USER}:${PANEL_DB_USER_PASSWORD}@${PANEL_DB_HOST}:${PANEL_DB_PORT}/${PANEL_DB_NAME}
       HASH_SALT: ${HASH_SALT}
     networks:
       - 1panel-network
