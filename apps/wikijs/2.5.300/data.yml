@@ -1,21 +1,23 @@
 additionalProperties:
     formFields:
-        - child:
-            default: ""
-            envKey: PANEL_DB_HOST
-            required: true
-            type: service
-          default: mysql
+        - default: mysql
           envKey: PANEL_DB_TYPE
           labelEn: Database Service
           labelZh: 数据库服务
           required: true
           type: apps
+          child:
+            default: ""
+            envKey: PANEL_DB_HOST
+            required: true
+            type: service
           values:
             - label: MySQL
               value: mysql
             - label: MariaDB
               value: mariadb
+            - label: PostgreSQL
+              value: postgres
         - default: wiki
           envKey: PANEL_DB_NAME
           labelEn: Database
