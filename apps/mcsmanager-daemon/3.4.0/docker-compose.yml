@@ -1,6 +1,7 @@
 version: '3'
 services:
   mcsm-daemon:
+    image: alisaqaq/mcsmanager-daemon:3.4.0
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
@@ -10,10 +11,8 @@ services:
     volumes:
       - ./data:/opt/mcsmanager/daemon/data
       - /var/run/docker.sock:/var/run/docker.sock
-    image: alisaqaq/mcsmanager-daemon:3.4.0
     labels:  
       createdBy: "Apps"
-
 networks:  
   1panel-network:  
     external: true
