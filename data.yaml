@@ -41,7 +41,10 @@ additionalProperties:
     - key: Email
       name: 邮件服务
       sort: 13
+    - key: Game
+      name: 休闲游戏
+      sort: 14
     - key: Local
       name: 本地
-      sort: 14
+      sort: 99
   version: v1.6.0
