@@ -1,0 +1,34 @@
+version: '3.9'
+services:
+  palworld-server:
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:${PANEL_APP_PORT_HTTP}/udp
+      - ${PANEL_APP_PORT_RCON}:${PANEL_APP_PORT_RCON}/tcp
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./data:/opt/palworld/Pal/Saved
+    environment:
+      - GAME_PORT=${PANEL_APP_PORT_HTTP}
+      - MAX_PLAYERS=${MAX_PLAYERS}
+      - ENABLE_MULTITHREAD=${MULTITHREAD_SWITCH}
+      - IS_PUBLIC=${PUBLIC_SWITCH}
+      - PUBLIC_IP=${PUBLIC_IP}
+      - PUBLIC_PORT=${PUBLIC_PORT}
+      - FORCE_UPDATE=${UPDATE_SWITCH}
+      - SERVER_NAME=${SERVER_NAME}
+      - SERVER_DESC=${SERVER_DESC}
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD}
+      - SERVER_PASSWORD=${SERVER_PASSWORD}
+      - RCON_ENABLED=${RCON_SWITCH}
+      - RCON_PORT=${PANEL_APP_PORT_RCON}
+    image: kagurazakanyaa/palworld:latest
+    labels:  
+      createdBy: "Apps"
+
+networks:  
+  1panel-network:  
+    external: true
