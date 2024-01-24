@@ -31,11 +31,11 @@ additionalProperties:
           labelZh: 是否启用 CPU 多线程优化 (true / false)
           required: true
           type: text
-        - default: 'false'
+        - default: 'true'
           edit: true
           envKey: PUBLIC_SWITCH
           labelEn: Setup server as a community server (true / false)
-          labelZh: 是否启将服务器设置为社区服务器 (true / false)
+          labelZh: 是否将服务器设置为社区服务器 (true / false)
           required: true
           type: text
         - default: ''
@@ -47,7 +47,7 @@ additionalProperties:
           type: text
         - default: ''
           edit: true
-          envKey: PUBLIC_PORT
+          envKey: PANEL_APP_PORT_PUBLIC
           labelEn: PUBLIC PORT (If not specified, it will be detected automatically)
           labelZh: 服务器端口 (留空自动检测)
           required: false
@@ -60,14 +60,14 @@ additionalProperties:
           labelZh: 是否每次启动都更新服务器 (true / false)
           required: true
           type: text
-        - default: 'Default Palworld Server'
+        - default: '1Panel Palworld Server'
           edit: true
           envKey: SERVER_NAME
           labelEn: Server name
           labelZh: 服务器名
           required: true
           type: text
-        - default: 'Default Palworld Server'
+        - default: '1Panel Palworld Server'
           edit: true
           envKey: SERVER_DESC
           labelEn: Server description
