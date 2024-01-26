@@ -1,0 +1,25 @@
+version: '3'
+services:
+  nacos:
+    image: nacos/nacos-server:v2.3.0
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    environment:
+      - NACOS_AUTH_ENABLE=${NACOS_AUTH_ENABLE:-FALSE}
+      - MODE=standalone
+      - PREFER_HOST_MODE=hostname
+      - NACOS_AUTH_IDENTITY_KEY=serverIdentity
+      - NACOS_AUTH_IDENTITY_VALUE=security
+      - NACOS_AUTH_TOKEN=SecretKey012345678901234567890123456789012345678901234567890123456789
+    volumes:
+      - ./data/standalone-logs/:/home/nacos/logs
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8848
+      - ${PANEL_APP_PORT_SERVER}:9848
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true

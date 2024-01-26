@@ -1,0 +1,51 @@
+additionalProperties:
+    formFields:
+        - default: "false"
+          envKey: NACOS_AUTH_ENABLE
+          labelEn: Enable Authentication
+          labelZh: 开启鉴权
+          required: true
+          type: select
+          values:
+            - label: 开启
+              value: "true"
+            - label: 关闭
+              value: "false"
+        - default: 8848
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: Main Port (HTTP port used by clients, console, and OpenAPI)
+          labelZh: 主端口（客户端、控制台及OpenAPI所使用的HTTP端口）
+          required: true
+          rule: paramPort
+          type: number
+        - default: 9848
+          edit: true
+          envKey: PANEL_APP_PORT_SERVER
+          labelEn: The client gRPC requests the server port (used for the client to initiate connection and send requests to the server)
+          labelZh: 客户端 gRPC 请求服务端端口（用于客户端向服务端发起连接和请求）
+          required: true
+          rule: paramPort
+          type: number
+        - default: serverIdentity
+          edit: true
+          envKey: NACOS_AUTH_IDENTITY_KEY
+          labelEn: nacos.core.auth.server.identity.key (optional)
+          labelZh: nacos.core.auth.server.identity.key (可选)
+          required: false
+          type: text
+        - default: security
+          edit: true
+          envKey: NACOS_AUTH_IDENTITY_VALUE
+          labelEn: nacos.core.auth.server.identity.value (optional)
+          labelZh: nacos.core.auth.server.identity.value (可选)
+          required: false
+          type: text
+        - default: SecretKey012345678901234567890123456789012345678901234567890123456789
+          edit: true
+          envKey: NACOS_AUTH_TOKEN
+          labelEn: token (optional)
+          labelZh: token (可选)
+          required: false
+          type: text
+        
