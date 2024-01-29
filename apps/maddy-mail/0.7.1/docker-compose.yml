@@ -16,7 +16,7 @@ services:
     environment:
       - MADDY_HOSTNAME=${MAIL_HOSTNAME}
       - MADDY_DOMAIN=${MAIL_DOMAIN}
-    image: foxcpp/maddy:0.7.0
+    image: foxcpp/maddy:0.7.1
     labels:  
       createdBy: "Apps"
 
