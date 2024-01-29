@@ -1,0 +1,12 @@
+version: "3"
+services:
+  "sentinel-dashboard":
+    image: bladex/sentinel-dashboard:latest
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:8858"
+      - "${COMMUNICATION_PORT}:8719"
+networks:
+  1panel-network:
+    external: true
