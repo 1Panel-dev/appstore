@@ -10,7 +10,7 @@ additionalProperties:
       type: number
     - default: 8719
       edit: true
-      envKey: COMMUNICATION_PORT
+      envKey: PANEL_APP_PORT_COMMUNICATION
       labelEn: Communication port
       labelZh: 通讯端口
       required: true
