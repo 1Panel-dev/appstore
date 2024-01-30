@@ -5,8 +5,6 @@ services:
     restart: always
     networks:
       - 1panel-network
-    logging:
-      driver: none
     volumes:
       - ./data/lsws/conf:/usr/local/lsws/conf
       - ./data/lsws/admin-conf:/usr/local/lsws/admin/conf
