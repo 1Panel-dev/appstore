@@ -1,16 +1,16 @@
-name: Palworld
+name: Palworld Server
 tags:
     - 休闲游戏
 title: 幻兽帕鲁服务端
 type: 休闲游戏
 description: 幻兽帕鲁服务端
 additionalProperties:
-    key: palworld
-    name: Palworld
+    key: palworld-server
+    name: Palworld Server
     tags:
         - Game
     shortDescZh: 幻兽帕鲁服务端
-    shortDescEn: Palworld Dedicated Server (幻兽帕鲁)
+    shortDescEn: Palworld Dedicated Server
     type: tool
     crossVersionUpdate: true
     limit: 0
