@@ -1,8 +1,8 @@
 version: "2"
 services:
   nacos:
-    image: nacos/nacos-server:v2.2.0
-    container_name: ${CONTAINER_NAME}-standalone
+    image: nacos/nacos-server:v2.3.0
+    container_name: ${CONTAINER_NAME}-mysql
     restart: always
     environment:
       - PREFER_HOST_MODE=hostname
@@ -16,9 +16,14 @@ services:
       - NACOS_AUTH_IDENTITY_VALUE=${NACOS_AUTH_IDENTITY_VALUE}
       - NACOS_AUTH_TOKEN=${NACOS_AUTH_TOKEN}
       - NACOS_SERVER_IP=${NACOS_SERVER_IP}
+      - SPRING_DATASOURCE_PLATFORM=${SPRING_DATASOURCE_PLATFORM}
+      - MYSQL_SERVICE_HOST=${MYSQL_SERVICE_HOST}
+      - MYSQL_SERVICE_PORT=${MYSQL_SERVICE_PORT}
+      - MYSQL_SERVICE_USER=${MYSQL_SERVICE_USER}
+      - MYSQL_SERVICE_PASSWORD=${MYSQL_SERVICE_PASSWORD}
+      - MYSQL_SERVICE_DB_NAME=${MYSQL_SERVICE_DB_NAME}
     volumes:
-      - ${NACOS_DATA_ROOT_PATH}/logs:/home/nacos/logs
-      - ${NACOS_DATA_ROOT_PATH}/data:/home/nacos/data
+      - ./log/standalone-logs/:/home/nacos/logs
     ports:
       - "${PANEL_APP_PORT_HTTP}:8848"
       - "${NACOS_COMMUNICATION_PORT}:9848"
