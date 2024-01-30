@@ -1,5 +1,32 @@
 additionalProperties:
   formFields:
+    - default: "false"
+      envKey: NACOS_AUTH_ENABLE
+      labelEn: Enable Authentication
+      labelZh: 开启鉴权
+      required: true
+      type: select
+      values:
+        - label: 开启
+          value: "true"
+        - label: 关闭
+          value: "false"
+    - default: 8848
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Nacos run port
+      labelZh: Nacos 运行端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 9848
+      edit: true
+      envKey: PANEL_APP_PORT_COMMUNICATION
+      labelEn: Nacos communication port
+      labelZh: Nacos 通讯端口
+      required: true
+      rule: paramPort
+      type: number
     - default: "serverIdentity"
       edit: true
       envKey: NACOS_AUTH_IDENTITY_KEY
@@ -19,29 +46,6 @@ additionalProperties:
       envKey: NACOS_AUTH_TOKEN
       labelEn: Nacos auth token
       labelZh: Nacos身份验证令牌
-      required: true
-      type: text
-    - default: 8848
-      edit: true
-      envKey: PANEL_APP_PORT_HTTP
-      labelEn: Nacos run port
-      labelZh: Nacos 运行端口
-      required: true
-      rule: paramPort
-      type: number
-    - default: 9848
-      edit: true
-      envKey: NACOS_COMMUNICATION_PORT
-      labelEn: Nacos communication port
-      labelZh: Nacos 通讯端口
-      required: true
-      rule: paramPort
-      type: number
-    - default: "/home/nacos"
-      edit: true
-      envKey: NACOS_DATA_ROOT_PATH
-      labelEn: Nacos root directory of data storage
-      labelZh: Nacos 数据存储根目录
       required: true
       type: text
     - default: ""

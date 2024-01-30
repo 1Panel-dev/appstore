@@ -1,10 +1,11 @@
-version: "2"
+version: '3'
 services:
   nacos:
     image: nacos/nacos-server:v2.3.0
     container_name: ${CONTAINER_NAME}-standalone
     restart: always
     environment:
+      - NACOS_AUTH_ENABLE=${NACOS_AUTH_ENABLE:-FALSE}
       - PREFER_HOST_MODE=hostname
       - MODE=standalone
       - JVM_XMS=${JVM_XMS}
@@ -17,11 +18,11 @@ services:
       - NACOS_AUTH_TOKEN=${NACOS_AUTH_TOKEN}
       - NACOS_SERVER_IP=${NACOS_SERVER_IP}
     volumes:
-      - ${NACOS_DATA_ROOT_PATH}/logs:/home/nacos/logs
-      - ${NACOS_DATA_ROOT_PATH}/data:/home/nacos/data
+      - ./data/logs:/home/nacos/logs
+      - ./data/data:/home/nacos/data
     ports:
       - "${PANEL_APP_PORT_HTTP}:8848"
-      - "${NACOS_COMMUNICATION_PORT}:9848"
+      - "${PANEL_APP_PORT_COMMUNICATION}:9848"
 networks:
   1panel-network:
     external: true
