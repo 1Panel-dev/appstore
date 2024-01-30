@@ -1,0 +1,19 @@
+name: sentinel-dashboard
+tags:
+  - 中间件
+title: Sentinel-Dashboard
+type: 中间件
+description: 阿里巴巴流量卫兵
+additionalProperties:
+  key: sentinel-dashboard
+  name: Sentinel-Dashboard
+  tags:
+    - Middleware
+  shortDescZh: 阿里巴巴流量卫兵
+  shortDescEn: Alibaba Traffic Guard
+  type: runtime
+  crossVersionUpdate: false
+  limit: 0
+  website: https://sentinelguard.io/
+  github: https://github.com/alibaba/Sentinel
+  document: https://sentinelguard.io/zh-cn/docs/introduction.html

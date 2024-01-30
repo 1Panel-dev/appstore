@@ -1,0 +1,18 @@
+additionalProperties:
+  formFields:
+    - default: 8858
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Web port
+      labelZh: Web 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 8719
+      edit: true
+      envKey: COMMUNICATION_PORT
+      labelEn: Communication port
+      labelZh: 通讯端口
+      required: true
+      rule: paramPort
+      type: number

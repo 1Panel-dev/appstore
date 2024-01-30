@@ -1,0 +1,88 @@
+additionalProperties:
+  formFields:
+    - default: "serverIdentity"
+      edit: true
+      envKey: NACOS_AUTH_IDENTITY_KEY
+      labelEn: Nacos auth identity key
+      labelZh: Nacos身份验证密钥键
+      required: true
+      type: text
+    - default: "security"
+      edit: true
+      envKey: NACOS_AUTH_IDENTITY_VALUE
+      labelEn: Nacos auth identity value
+      labelZh: Nacos身份验证密钥值
+      required: true
+      type: text
+    - default: "SecretKey012345678901234567890123456789012345678901234567890123456789"
+      edit: true
+      envKey: NACOS_AUTH_TOKEN
+      labelEn: Nacos auth token
+      labelZh: Nacos身份验证令牌
+      required: true
+      type: text
+    - default: 8848
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Nacos run port
+      labelZh: Nacos 运行端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 9848
+      edit: true
+      envKey: NACOS_COMMUNICATION_PORT
+      labelEn: Nacos communication port
+      labelZh: Nacos 通讯端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: "/home/nacos"
+      edit: true
+      envKey: NACOS_DATA_ROOT_PATH
+      labelEn: Nacos root directory of data storage
+      labelZh: Nacos 数据存储根目录
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: NACOS_SERVER_IP
+      labelEn: IP can be specified in multi network card mode
+      labelZh: 多网卡模式下可以指定IP
+      required: false
+      type: text
+    - default: "2g"
+      edit: true
+      envKey: JVM_XMS
+      labelEn: JVM_XMS
+      labelZh: JVM_XMS
+      required: true
+      type: text
+    - default: "2g"
+      edit: true
+      envKey: JVM_XMX
+      labelEn: JVM_XMX
+      labelZh: JVM_XMX
+      required: true
+      type: text
+    - default: "1g"
+      edit: true
+      envKey: JVM_XMN
+      labelEn: JVM_XMN
+      labelZh: JVM_XMN
+      required: true
+      type: text
+    - default: "128m"
+      edit: true
+      envKey: JVM_MS
+      labelEn: JVM_MS
+      labelZh: JVM_MS
+      required: true
+      type: text
+    - default: "320m"
+      edit: true
+      envKey: JVM_MMS
+      labelEn: JVM_MMS
+      labelZh: JVM_MMS
+      required: true
+      type: text
