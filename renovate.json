@@ -40,11 +40,11 @@
     },
     {
       "matchFileNames": ["apps/dataease/1.*/*.yml"],
-      "allowedVersions": "/^1.*/"
+      "allowedVersions": ">=1.18"
     },
     {
       "matchFileNames": ["apps/dataease/2.*/*.yml"],
-      "allowedVersions": "/^2.*/"
+      "allowedVersions": ">=2.0"
     }
   ],
   "prCreation": "immediate"
