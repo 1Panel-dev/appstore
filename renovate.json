@@ -40,7 +40,7 @@
     },
     {
       "matchFileNames": ["apps/dataease/1.*/*.yml"],
-      "allowedVersions": ">=1.18"
+      "allowedVersions": "<=1.20"
     },
     {
       "matchFileNames": ["apps/dataease/2.*/*.yml"],
