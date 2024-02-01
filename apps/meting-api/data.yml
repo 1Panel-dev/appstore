@@ -1,0 +1,19 @@
+name: Meting-API
+tags:
+    - 多媒体
+title: 🐳 Meting API 的容器化与部署
+type: 多媒体
+description: 🐳 Meting API 的容器化与部署
+additionalProperties:
+    key: meting-api
+    name: Meting-API
+    tags:
+        - Tool
+    shortDescZh: 🐳 Meting API 的容器化与部署 
+    shortDescEn: 🐳 Containerization and Deployment of Meting API
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    website: https://github.com/xizeyoupan/Meting-API
+    github: https://github.com/xizeyoupan/Meting-API
+    document: https://github.com/xizeyoupan/Meting-API
