@@ -8,9 +8,9 @@ additionalProperties:
           rule: paramPort
           type: number
         - default:
-          envKey: KAFKA_BROKERS
-          labelEn: Kafka Brokers
-          labelZh: Kafka 地址
+          envKey: KAFKA_HOST
+          labelEn: Kafka Service
+          labelZh: Kafka 服务
           required: true
-          rule: paramExtUrl
-          type: text
+          key: kafka
+          type: service
