@@ -1,0 +1,84 @@
+version: "2.2"
+
+networks:
+  ${DOCKER_NET}:
+    external: true
+
+services:
+  es-node:
+    container_name: ${CONTAINER_NAME}-${ES_NODE_NAME}
+    restart: always
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.12.0
+    volumes:
+      - ${ES_ROOT_PATH}/certs:/usr/share/elasticsearch/config/certs
+      - ${ES_ROOT_PATH}/${ES_NODE_NAME}/data:/usr/share/elasticsearch/data
+      - ${ES_ROOT_PATH}/${ES_NODE_NAME}/logs:/usr/share/elasticsearch/logs
+      - ${ES_ROOT_PATH}/${ES_NODE_NAME}/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      - ${ES_ROOT_PATH}/${ES_NODE_NAME}/plugins:/usr/share/elasticsearch/plugins
+    ports:
+      - ${PANEL_APP_PORT_HTTPS}:9200
+      - ${ES_COMMUNICATION_PORT}:9300
+    networks:
+      - ${CLUSTER_NETWORK}
+    command: >
+      bash -c '
+        echo "start es-node";
+        if [ ! -f config/certs/${ES_NODE_NAME}.zip ]; then
+          echo "Creating certs";
+          echo -ne \
+          "instances:\n"\
+          "  - name: ${ES_NODE_NAME}\n"\
+          "    dns:\n"\
+          "      - ${ES_NODE_NAME}\n"\
+          "      - localhost\n"\
+          "    ip:\n"\
+          "      - 127.0.0.1\n"\
+          > config/certs/${ES_NODE_NAME}.yml;
+          bin/elasticsearch-certutil cert --silent --pem -out config/certs/${ES_NODE_NAME}.zip --in config/certs/${ES_NODE_NAME}.yml --ca-cert config/certs/ca/ca.crt --ca-key config/certs/ca/ca.key;
+          unzip config/certs/${ES_NODE_NAME}.zip -d config/certs;
+        fi;
+        echo "Setting file permissions"
+        chown -R root:root config/certs;
+        exec /usr/local/bin/docker-entrypoint.sh elasticsearch
+      '
+    environment:
+      - node.name=${ES_NODE_NAME}
+      - cluster.name=${CLUSTER_NAME}
+      - cluster.initial_master_nodes=${ES_INITIAL_MASTER_NODES}
+      - discovery.seed_hosts=${ES_SEED_HOSTS}
+      - ELASTIC_PASSWORD=${ELASTIC_PASSWORD}
+      - bootstrap.memory_lock=true
+      - xpack.security.enabled=${ES_XPACK_SECURITY_ENABLED}
+      - xpack.security.http.ssl.enabled=${ES_XPACK_SECURITY_ENABLED}
+      - xpack.security.http.ssl.key=certs/${ES_NODE_NAME}/${ES_NODE_NAME}.key
+      - xpack.security.http.ssl.certificate=certs/${ES_NODE_NAME}/${ES_NODE_NAME}.crt
+      - xpack.security.http.ssl.certificate_authorities=certs/ca/ca.crt
+      - xpack.security.transport.ssl.enabled=${ES_XPACK_SECURITY_ENABLED}
+      - xpack.security.transport.ssl.key=certs/${ES_NODE_NAME}/${ES_NODE_NAME}.key
+      - xpack.security.transport.ssl.certificate=certs/${ES_NODE_NAME}/${ES_NODE_NAME}.crt
+      - xpack.security.transport.ssl.certificate_authorities=certs/ca/ca.crt
+      - xpack.security.transport.ssl.verification_mode=certificate
+      - xpack.license.self_generated.type=basic
+      - ES_JAVA_OPTS=-Xms${ES_JAVA_OPTS_XMS} -Xmx${ES_JAVA_OPTS_XMX}
+    mem_limit: ${MEM_LIMIT}
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: 65536
+        hard: 65536
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "curl -s --cacert config/certs/ca/ca.crt https://localhost:9200 | grep -q 'missing authentication credentials'",
+        ]
+      interval: 10s
+      timeout: 10s
+      retries: 120
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"

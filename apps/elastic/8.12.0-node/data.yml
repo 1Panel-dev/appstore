@@ -1,0 +1,98 @@
+additionalProperties:
+  formFields:
+    - default: "docker-cluster"
+      edit: true
+      envKey: CLUSTER_NAME
+      labelEn: cluster name
+      labelZh: 集群名称 与现有集群名称一致
+      required: true
+      type: text
+    - default: "elastic-net"
+      edit: true
+      envKey: CLUSTER_NETWORK
+      labelEn: cluster network
+      labelZh: 集群网络 与现有集群网络一致
+      required: true
+      type: text
+    - default: "es04"
+      edit: true
+      envKey: ES_NODE_NAME
+      labelEn: node name
+      labelZh: 节点名称 与现有节点名称不一致
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: ELASTIC_PASSWORD
+      labelEn: Password for the 'elastic' user, Numbers and letters
+      labelZh: elastic 用户的密码 数字与字母组合
+      required: true
+      type: password
+    - default: "es01,es02,es03"
+      edit: true
+      envKey: ES_SEED_HOSTS
+      labelEn: Seed hosts
+      labelZh: 其他节点的名称 节点发现
+      required: true
+      type: text
+    - default: "es01,es02,es03,es04"
+      edit: true
+      envKey: ES_INITIAL_MASTER_NODES
+      labelEn: Initial master nodes
+      labelZh: 主节点选举 es04为当前节点
+      required: true
+      type: text
+    - default: "/home/elastic/cluster"
+      edit: true
+      envKey: ES_ROOT_PATH
+      labelEn: data persistence root path
+      labelZh: 集群根路径 与现有集群根路径一致
+      required: true
+      type: text
+    - default: 1073741824
+      edit: true
+      envKey: MEM_LIMIT
+      labelEn: Increase or decrease based on the available host memory (in bytes)
+      labelZh: 根据可用主机内存增加或减少（以字节为单位）
+      required: true
+      type: number
+    - default: "9200"
+      edit: true
+      envKey: PANEL_APP_PORT_HTTPS
+      labelEn: Port to expose Elasticsearch HTTP API to the host
+      labelZh: 开放API的端口
+      required: false
+      type: text
+    - default: "9300"
+      edit: true
+      envKey: ES_COMMUNICATION_PORT
+      labelEn: Port to expose Elasticsearch communication to the host
+      labelZh: Elasticsearch通讯端口 9300
+      required: false
+      type: text
+    - default: "512m"
+      edit: true
+      envKey: ES_JAVA_OPTS_XMS
+      labelEn: JVM memory allocation pool
+      labelZh: JVM内存分配池 初始化内存
+      required: true
+      type: text
+    - default: "512m"
+      edit: true
+      envKey: ES_JAVA_OPTS_XMX
+      labelEn: JVM memory allocation pool
+      labelZh: JVM内存分配池 运行内存
+      required: true
+      type: text
+    - default: "true"
+      edit: true
+      envKey: ES_XPACK_SECURITY_ENABLED
+      labelEn: Enable security verification (recommended)
+      labelZh: 证书安全验证（推荐开启）
+      required: true
+      type: select
+      values:
+        - label: True
+          value: "true"
+        - label: False
+          value: "false"

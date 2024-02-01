@@ -1,0 +1,158 @@
+networks:
+  1panel-network:
+    external: true
+services:
+  elastic:
+    container_name: kibana-${CONTAINER_NAME}
+    depends_on:
+      es-single-es01:
+        condition: service_healthy
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    environment:
+      - SERVERNAME=kibana
+      - ELASTICSEARCH_HOSTS=https://es-single-es01:9200
+      - ELASTICSEARCH_USERNAME=kibana_system
+      - ELASTICSEARCH_PASSWORD=${KIBANA_PASSWORD}
+      - ELASTICSEARCH_SSL_CERTIFICATEAUTHORITIES=config/certs/ca/ca.crt
+    healthcheck:
+      interval: 10s
+      retries: 120
+      test:
+        - CMD-SHELL
+        - curl -s -I http://localhost:5601 | grep -q 'HTTP/1.1 302 Found'
+      timeout: 10s
+    image: docker.elastic.co/kibana/kibana:8.12.0
+    logging:
+      driver: json-file
+      options:
+        max-file: "3"
+        max-size: 10m
+    mem_limit: ${MEM_LIMIT}
+    networks:
+      - 1panel-network
+    ports:
+      - ${HOST_IP}:${PANEL_APP_PORT_HTTP}:5601
+    restart: always
+    volumes:
+      - ${ES_ROOT_PATH}/certs:/usr/share/kibana/config/certs
+      - ${ES_ROOT_PATH}/kibana/data:/usr/share/kibana/data
+      - ${ES_ROOT_PATH}/kibana/config/kibana.yml:/usr/share/kibana/config/kibana.yml
+  es-single-es01:
+    container_name: es-single-es01
+    depends_on:
+      es-single-init:
+        condition: service_healthy
+    environment:
+      - discovery.type=single-node
+      - node.name=es-single-es01
+      - ELASTIC_PASSWORD=${ELASTIC_PASSWORD}
+      - bootstrap.memory_lock=true
+      - xpack.security.enabled=${ES_XPACK_SECURITY_ENABLED}
+      - xpack.security.http.ssl.enabled=${ES_XPACK_SECURITY_ENABLED}
+      - xpack.security.http.ssl.key=certs/es-single-es01/es-single-es01.key
+      - xpack.security.http.ssl.certificate=certs/es-single-es01/es-single-es01.crt
+      - xpack.security.http.ssl.certificate_authorities=certs/ca/ca.crt
+      - xpack.security.transport.ssl.enabled=${ES_XPACK_SECURITY_ENABLED}
+      - xpack.security.transport.ssl.key=certs/es-single-es01/es-single-es01.key
+      - xpack.security.transport.ssl.certificate=certs/es-single-es01/es-single-es01.crt
+      - xpack.security.transport.ssl.certificate_authorities=certs/ca/ca.crt
+      - xpack.security.transport.ssl.verification_mode=certificate
+      - xpack.license.self_generated.type=basic
+      - ES_JAVA_OPTS=-Xms${ES_JAVA_OPTS_XMS} -Xmx${ES_JAVA_OPTS_XMX}
+    healthcheck:
+      interval: 10s
+      retries: 120
+      test:
+        - CMD-SHELL
+        - curl -s --cacert config/certs/ca/ca.crt https://localhost:9200 | grep -q 'missing authentication credentials'
+      timeout: 10s
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.12.0
+    logging:
+      driver: json-file
+      options:
+        max-file: "3"
+        max-size: 10m
+    mem_limit: ${MEM_LIMIT}
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTPS}:9200
+      - ${ES_COMMUNICATION_PORT}:9300
+    restart: always
+    ulimits:
+      memlock:
+        hard: -1
+        soft: -1
+      nofile:
+        hard: 65536
+        soft: 65536
+    volumes:
+      - ${ES_ROOT_PATH}/certs:/usr/share/elasticsearch/config/certs
+      - ${ES_ROOT_PATH}/es01/data:/usr/share/elasticsearch/data
+      - ${ES_ROOT_PATH}/es01/logs:/usr/share/elasticsearch/logs
+      - ${ES_ROOT_PATH}/es01/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      - ${ES_ROOT_PATH}/es01/plugins:/usr/share/elasticsearch/plugins
+  es-single-init:
+    command: |
+      bash -c '
+        if [ x${ELASTIC_PASSWORD} == x ]; then
+          echo "Set the ELASTIC_PASSWORD environment variable in the .env file";
+          exit 1;
+        elif [ x${KIBANA_PASSWORD} == x ]; then
+          echo "Set the KIBANA_PASSWORD environment variable in the .env file";
+          exit 1;
+        fi;
+        if [ ! -f config/certs/ca.zip ]; then
+          echo "Creating CA";
+          bin/elasticsearch-certutil ca --silent --pem -out config/certs/ca.zip;
+          unzip config/certs/ca.zip -d config/certs;
+        fi;
+        if [ ! -f config/certs/certs.zip ]; then
+          echo "Creating certs";
+          echo -ne \
+          "instances:\n"\
+          "  - name: es-single-es01\n"\
+          "    dns:\n"\
+          "      - es-single-es01\n"\
+          "      - localhost\n"\
+          "    ip:\n"\
+          "      - 127.0.0.1\n"\
+          > config/certs/instances.yml;
+          bin/elasticsearch-certutil cert --silent --pem -out config/certs/certs.zip --in config/certs/instances.yml --ca-cert config/certs/ca/ca.crt --ca-key config/certs/ca/ca.key;
+          unzip config/certs/certs.zip -d config/certs;
+        fi;
+        echo "Setting file permissions"
+        chown -R root:root config/certs;
+        find . -type d -exec chmod 750 \{\} \;;
+        find . -type f -exec chmod 640 \{\} \;;
+        echo "Waiting for Elasticsearch availability";
+        until curl -s --cacert config/certs/ca/ca.crt https://es-single-es01:9200 | grep -q "missing authentication credentials"; do sleep 30; done;
+        echo "Setting kibana_system password";
+        until curl -s -X POST --cacert config/certs/ca/ca.crt -u "elastic:${ELASTIC_PASSWORD}" -H "Content-Type: application/json" https://es-single-es01:9200/_security/user/kibana_system/_password -d "{\"password\":\"${KIBANA_PASSWORD}\"}" | grep -q "^{}"; do sleep 10; done;
+        echo "All done!";
+      '
+    container_name: elastic-init
+    healthcheck:
+      interval: 1s
+      retries: 120
+      test:
+        - CMD-SHELL
+        - '[ -f config/certs/es-single-es01/es-single-es01.crt ]'
+      timeout: 5s
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.12.0
+    logging:
+      driver: json-file
+      options:
+        max-file: "3"
+        max-size: 10m
+    networks:
+      - 1panel-network
+    user: "0"
+    volumes:
+      - ${ES_ROOT_PATH}/certs:/usr/share/elasticsearch/config/certs
+version: "2.2"
+# Template Ms 20240201

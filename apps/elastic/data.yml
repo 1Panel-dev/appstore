@@ -1,0 +1,19 @@
+name: Elastic
+tags:
+  - 中间件
+title: Elastic
+type: 中间件
+description: 分布式、RESTful 风格的搜索和数据分析引擎
+additionalProperties:
+  key: elastic
+  name: Elastic
+  tags:
+    - Middleware
+  shortDescZh: 分布式、RESTful 风格的搜索和数据分析引擎
+  shortDescEn: Distributed, RESTful search and data analytics engine
+  type: runtime
+  crossVersionUpdate: false
+  limit: 0
+  website: https://www.elastic.co/
+  github: https://github.com/elastic
+  document: https://www.elastic.co/guide/index.html
