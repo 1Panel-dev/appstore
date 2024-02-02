@@ -1,0 +1,20 @@
+name: Bark
+tags:
+  - 实用工具
+title: 通知推送工具
+type: 实用工具
+description: 通知推送工具
+additionalProperties:
+  key: bark
+  name: Bark
+  tags:
+    - Tool
+  shortDescZh: 通知推送工具
+  shortDescEn: Notification push tool
+  type: tool
+  crossVersionUpdate: false
+  limit: 0
+  recommend: 0
+  website: https://bark.day.app/
+  github: https://github.com/finb/bark
+  document: https://bark.day.app/

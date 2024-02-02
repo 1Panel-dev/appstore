@@ -1,0 +1,69 @@
+additionalProperties:
+  formFields:
+    - child:
+        default: ""
+        envKey: PANEL_DB_HOST
+        required: true
+        type: service
+      default: mysql
+      envKey: PANEL_DB_TYPE
+      labelEn: Database Service
+      labelZh: 数据库服务
+      required: true
+      type: apps
+      values:
+        - label: MySQL
+          value: mysql
+        - label: MariaDB
+          value: mariadb
+    - default: 3001
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: "/home/bark"
+      edit: true
+      envKey: BARK_ROOT_PATH
+      labelEn: Root Path
+      labelZh: 数据持久化 根路径
+      required: true
+      type: text
+    - default: "localhost"
+      edit: true
+      envKey: DB_HOSTNAME
+      labelEn: Database Host
+      labelZh: 数据库主机
+      required: true
+      type: text
+    - default: 3306
+      edit: true
+      envKey: DB_PORT
+      labelEn: Database Port
+      labelZh: 数据库端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: "root"
+      edit: true
+      envKey: DB_USERNAME
+      labelEn: Database Username
+      labelZh: 数据库 用户名
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: DB_PASSWORD
+      labelEn: Database Password
+      labelZh: 数据库 密码
+      required: true
+      type: password
+    - default: "bark"
+      edit: true
+      envKey: DB_DATABASE_NAME
+      labelEn: Database Name
+      labelZh: 数据库名称
+      required: true
+      type: text
