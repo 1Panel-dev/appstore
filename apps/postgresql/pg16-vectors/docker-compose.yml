@@ -1,0 +1,25 @@
+version: "3.8"
+
+networks:
+  1panel-network:
+    external: true
+
+name: postgresql-vectors-16
+
+services:
+  pg16-vectors:
+    container_name: postgresql-vectors-16-${CONTAINER_NAME}
+    image: tensorchord/pgvecto-rs:${RELEASE_VERSION}
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:5432
+    env_file:
+      - .env
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_DB: ${POSTGRES_DB}
+    volumes:
+      - ${POSTGRES_DATA}:/var/lib/postgresql/data
+    restart: always

@@ -1,0 +1,49 @@
+additionalProperties:
+  formFields:
+    - default: "pg16-v0.1.13"
+      edit: true
+      envKey: RELEASE_VERSION
+      labelEn: Release Version
+      labelZh: 发布版本
+      required: true
+      type: select
+      values:
+        - label: "v0.1.13"
+          value: "pg16-v0.1.13"
+        - label: "v0.1.11"
+          value: "pg16-v0.1.11"
+    - default: "/home/postgres"
+      edit: true
+      envKey: POSTGRES_DATA
+      labelEn: Postgres Data
+      labelZh: Postgres 数据持久化路径
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: POSTGRES_PASSWORD
+      labelEn: Postgres Password
+      labelZh: Postgres 密码
+      required: true
+      type: password
+    - default: 5432
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Postgres Port
+      labelZh: Postgres 端口
+      required: false
+      type: number
+    - default: "postgres"
+      edit: true
+      envKey: POSTGRES_USER
+      labelEn: Postgres User
+      labelZh: Postgres 用户（不建议改动）
+      required: false
+      type: text
+    - default: "postgres"
+      edit: true
+      envKey: POSTGRES_DB
+      labelEn: Postgres Database Name
+      labelZh: Postgres 数据库名称 （不建议改动）
+      required: false
+      type: text
