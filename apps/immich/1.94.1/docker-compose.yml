@@ -1,0 +1,80 @@
+version: "3.8"
+
+networks:
+  ${DOCKER_NET}:
+    external: true
+  1panel-network:
+    external: true
+
+name: immich
+
+services:
+  immich-machine-learning:
+    container_name: immich_machine_learning
+    image: ghcr.io/immich-app/immich-machine-learning:v1.94.1
+    networks:
+      - ${MICROSERVICES_NETWORK}
+    volumes:
+      - ${IMMICH_ROOT_PATH}/cache:/cache
+    env_file:
+      - .env
+    restart: always
+    environment:
+      NODE_ENV: ${NODE_ENV}
+
+  immich-microservices:
+    container_name: immich_microservices
+    image: ghcr.io/immich-app/immich-server:v1.94.1
+    networks:
+      - ${MICROSERVICES_NETWORK}
+    command: [ "start.sh", "microservices" ]
+    volumes:
+      - ${IMMICH_ROOT_PATH}/library:/usr/src/app/upload
+      - /etc/localtime:/etc/localtime:ro
+    env_file:
+      - .env
+    restart: always
+    environment:
+      NODE_ENV: ${NODE_ENV}
+      LOG_LEVEL: ${LOG_LEVEL}
+      DB_HOSTNAME: ${DB_HOSTNAME}
+      DB_PORT: ${DB_PORT}
+      DB_USERNAME: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_DATABASE: ${DB_DATABASE_NAME}
+      DB_DATABASE_NAME: ${DB_DATABASE_NAME}
+      REDIS_HOSTNAME: ${REDIS_HOSTNAME}
+      REDIS_PORT: ${REDIS_PORT}
+      REDIS_DBINDEX: ${REDIS_DBINDEX}
+      REDIS_USERNAME: ${REDIS_USERNAME}
+      REDIS_PASSWORD: ${REDIS_PASSWORD}
+
+  immich-server:
+    container_name: immich_server
+    image: ghcr.io/immich-app/immich-server:v1.94.1
+    networks:
+      - ${MICROSERVICES_NETWORK}
+      - 1panel-network
+    command: [ "start.sh", "immich" ]
+    volumes:
+      - ${IMMICH_ROOT_PATH}/library:/usr/src/app/upload
+      - /etc/localtime:/etc/localtime:ro
+    env_file:
+      - .env
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:3001
+    restart: always
+    environment:
+      NODE_ENV: ${NODE_ENV}
+      LOG_LEVEL: ${LOG_LEVEL}
+      DB_HOSTNAME: ${DB_HOSTNAME}
+      DB_PORT: ${DB_PORT}
+      DB_USERNAME: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_DATABASE: ${DB_DATABASE_NAME}
+      DB_DATABASE_NAME: ${DB_DATABASE_NAME}
+      REDIS_HOSTNAME: ${REDIS_HOSTNAME}
+      REDIS_PORT: ${REDIS_PORT}
+      REDIS_DBINDEX: ${REDIS_DBINDEX}
+      REDIS_USERNAME: ${REDIS_USERNAME}
+      REDIS_PASSWORD: ${REDIS_PASSWORD}

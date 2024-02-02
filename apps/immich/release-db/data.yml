@@ -1,0 +1,142 @@
+additionalProperties:
+  formFields:
+    - child:
+        default: ""
+        envKey: PANEL_REDIS_DB_HOST
+        required: true
+        type: service
+      default: redis
+      envKey: PANEL_REDIS_DB_TYPE
+      labelEn: Database Service
+      labelZh: 数据缓存服务
+      required: true
+      type: apps
+      values:
+        - label: Redis
+          value: redis
+    - default: postgresql
+      envKey: PANEL_PGSQL_DB_TYPE
+      labelEn: Automatic installation of pg14 pgvecto.rs v0.1.11 services
+      labelZh: 自动安装 pg14 pgvecto.rs v0.1.11 服务
+      required: true
+      type: select
+      values:
+        - label: PostgreSQL
+          value: postgresql
+    - default: "immich-net"
+      edit: true
+      envKey: MICROSERVICES_NETWORK
+      labelEn: microservices network
+      labelZh: 微服务网络
+      required: true
+      type: text
+    - default: "/home/immich-app"
+      edit: true
+      envKey: IMMICH_ROOT_PATH
+      labelEn: Data persistence root path
+      labelZh: 数据持久化 根路径
+      required: true
+      type: text
+    - default: 2283
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Server port
+      labelZh: 服务端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: "production"
+      edit: true
+      envKey: NODE_ENV
+      labelEn: Environment (production, development)
+      labelZh: 环境（生产、开发）
+      required: true
+      type: select
+      values:
+        - label: Production
+          value: production
+        - label: Development
+          value: development
+    - default: "log"
+      edit: true
+      envKey: LOG_LEVEL
+      labelEn: Log Level (verbose, debug, log, warn, error)
+      labelZh: 日志级别（详细、调试、日志、警告、错误）
+      required: true
+      type: select
+      values:
+        - label: Verbose
+          value: verbose
+        - label: Debug
+          value: debug
+        - label: Log
+          value: log
+        - label: Warn
+          value: warn
+        - label: Error
+          value: error
+    - default: 5432
+      edit: true
+      envKey: DB_PORT
+      labelEn: Database Port
+      labelZh: 数据库开放端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: "postgres"
+      edit: true
+      envKey: DB_USERNAME
+      labelEn: Database User
+      labelZh: 数据库-超级用户
+      required: true
+      type: text
+    - default: "postgres"
+      edit: true
+      envKey: DB_PASSWORD
+      labelEn: Database Password
+      labelZh: 数据库-超级用户密码
+      required: true
+      type: password
+    - default: "immich"
+      edit: true
+      envKey: DB_DATABASE_NAME
+      labelEn: Database Name
+      labelZh: 数据库名称
+      required: true
+      type: text
+    - default: "localhost"
+      edit: true
+      envKey: REDIS_HOSTNAME
+      labelEn: Redis Host
+      labelZh: Redis 主机
+      required: true
+      type: text
+    - default: 6379
+      edit: true
+      envKey: REDIS_PORT
+      labelEn: Redis Port
+      labelZh: Redis 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 0
+      edit: true
+      envKey: REDIS_DBINDEX
+      labelEn: Redis DB Index
+      labelZh: Redis 数据库索引
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: REDIS_USERNAME
+      labelEn: Redis Username
+      labelZh: Redis 用户名
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: REDIS_PASSWORD
+      labelEn: Redis Password
+      labelZh: Redis 密码
+      required: false
+      type: password

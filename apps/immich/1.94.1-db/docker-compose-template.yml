@@ -1,0 +1,104 @@
+name: immich
+networks:
+    immich-net:
+        external: true
+    1panel-network:
+        external: true
+services:
+    immich:
+        command:
+            - start.sh
+            - immich
+        container_name: immich_server
+        depends_on:
+            - pg14-vectors-immich
+        deploy:
+            resources:
+                limits:
+                    cpus: ${CPUS}
+                    memory: ${MEMORY_LIMIT}
+        env_file:
+            - .env
+        environment:
+            DB_DATABASE: ${DB_DATABASE_NAME}
+            DB_DATABASE_NAME: ${DB_DATABASE_NAME}
+            DB_HOSTNAME: pg14-vectors-immich
+            DB_PASSWORD: ${DB_PASSWORD}
+            DB_PORT: 5432
+            DB_USERNAME: ${DB_USERNAME}
+            LOG_LEVEL: ${LOG_LEVEL}
+            NODE_ENV: ${NODE_ENV}
+            REDIS_DBINDEX: ${REDIS_DBINDEX}
+            REDIS_HOSTNAME: ${REDIS_HOSTNAME}
+            REDIS_PASSWORD: ${REDIS_PASSWORD}
+            REDIS_PORT: ${REDIS_PORT}
+            REDIS_USERNAME: ${REDIS_USERNAME}
+        image: ghcr.io/immich-app/immich-server:v1.94.1
+        networks:
+            - ${MICROSERVICES_NETWORK}
+            - 1panel-network
+        ports:
+            - ${HOST_IP}:${PANEL_APP_PORT_HTTP}:3001
+        restart: always
+        volumes:
+            - ${IMMICH_ROOT_PATH}/library:/usr/src/app/upload
+            - /etc/localtime:/etc/localtime:ro
+    immich-machine-learning:
+        container_name: immich_machine_learning
+        env_file:
+            - .env
+        environment:
+            NODE_ENV: ${NODE_ENV}
+        image: ghcr.io/immich-app/immich-machine-learning:v1.94.1
+        networks:
+            - ${MICROSERVICES_NETWORK}
+        restart: always
+        volumes:
+            - ${IMMICH_ROOT_PATH}/cache:/cache
+    immich-microservices:
+        command:
+            - start.sh
+            - microservices
+        container_name: immich_microservices
+        depends_on:
+            - pg14-vectors-immich
+        env_file:
+            - .env
+        environment:
+            DB_DATABASE: ${DB_DATABASE_NAME}
+            DB_DATABASE_NAME: ${DB_DATABASE_NAME}
+            DB_HOSTNAME: pg14-vectors-immich
+            DB_PASSWORD: ${DB_PASSWORD}
+            DB_PORT: 5432
+            DB_USERNAME: ${DB_USERNAME}
+            LOG_LEVEL: ${LOG_LEVEL}
+            NODE_ENV: ${NODE_ENV}
+            REDIS_DBINDEX: ${REDIS_DBINDEX}
+            REDIS_HOSTNAME: ${REDIS_HOSTNAME}
+            REDIS_PASSWORD: ${REDIS_PASSWORD}
+            REDIS_PORT: ${REDIS_PORT}
+            REDIS_USERNAME: ${REDIS_USERNAME}
+        image: ghcr.io/immich-app/immich-server:v1.94.1
+        networks:
+            - ${MICROSERVICES_NETWORK}
+        restart: always
+        volumes:
+            - ${IMMICH_ROOT_PATH}/library:/usr/src/app/upload
+            - /etc/localtime:/etc/localtime:ro
+    pg14-vectors-immich:
+        container_name: postgresql-vectors-14-${CONTAINER_NAME}
+        env_file:
+            - .env
+        environment:
+            POSTGRES_DB: ${DB_DATABASE_NAME}
+            POSTGRES_PASSWORD: ${DB_PASSWORD}
+            POSTGRES_USER: ${DB_USERNAME}
+        image: tensorchord/pgvecto-rs:v0.1.11
+        networks:
+            - ${MICROSERVICES_NETWORK}
+        ports:
+            - ${DB_PORT}:5432
+        restart: always
+        volumes:
+            - ${IMMICH_ROOT_PATH}/pg14/data:/var/lib/postgresql/data
+version: "3.8"
