@@ -2,7 +2,7 @@ networks:
   1panel-network:
     external: true
 services:
-  elastic:
+  elastic-kibana:
     container_name: kibana-${CONTAINER_NAME}
     depends_on:
       es-single-es01:

@@ -2,7 +2,7 @@ networks:
   elastic-net:
     external: true
 services:
-  elastic:
+  elastic-kibana:
     container_name: kibana-${CONTAINER_NAME}
     depends_on:
       es01:
