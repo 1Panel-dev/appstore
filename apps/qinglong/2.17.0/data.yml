@@ -1,10 +1,24 @@
 additionalProperties:
-    formFields:
-        - default: 5700
-          edit: true
-          envKey: PANEL_APP_PORT_HTTP
-          labelEn: WebUI Port
-          labelZh: 网页端口
-          required: true
-          rule: paramPort
-          type: number
+  formFields:
+    - default: 5700
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: WebUI Port
+      labelZh: 网页端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: "/home/qinglong"
+      edit: true
+      envKey: QINGLONG_ROOT_PATH
+      labelEn: Root Path
+      labelZh: 数据持久化 根路径
+      required: true
+      type: text
+    - default: "/"
+      edit: true
+      envKey: QINGLONG_BASE_URL
+      labelEn: Base URL
+      labelZh: 安全访问路径 例如 /qinglong/
+      required: true
+      type: text
