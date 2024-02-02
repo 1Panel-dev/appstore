@@ -1,4 +1,3 @@
-# from https://github.com/louislam/uptime-kuma/blob/master/docker/docker-compose.yml
 version: '3'
 services:
   uptime-kuma:
@@ -8,7 +7,8 @@ services:
     networks:
       - 1panel-network
     volumes:
-      - ./data:/app/data
+      - ${UPTIME_KUMA_ROOT_PATH}/data:/app/data
+      - ${UPTIME_KUMA_DOCKER_SOCKET}:/var/run/docker.sock
     ports:
       - ${PANEL_APP_PORT_HTTP}:3001
     labels:

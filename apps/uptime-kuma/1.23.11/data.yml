@@ -1,10 +1,24 @@
 additionalProperties:
-    formFields:
-        - default: 3001
-          edit: true
-          envKey: PANEL_APP_PORT_HTTP
-          labelEn: Port
-          labelZh: 端口
-          required: true
-          rule: paramPort
-          type: number
+  formFields:
+    - default: 3001
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: "/home/uptime-kuma"
+      edit: true
+      envKey: UPTIME_KUMA_ROOT_PATH
+      labelEn: Root Path
+      labelZh: 数据持久化 根路径
+      required: true
+      type: text
+    - default: "/var/run/docker.sock"
+      edit: true
+      envKey: UPTIME_KUMA_DOCKER_SOCKET
+      labelEn: Docker Socket Path
+      labelZh: Docker宿主 容器监控
+      required: true
+      type: text
