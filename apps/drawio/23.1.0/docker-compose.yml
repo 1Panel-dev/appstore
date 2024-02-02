@@ -1,15 +1,14 @@
 version: '3'
 services:
-  redpanda-console:
-    image: redpandadata/console:v2.4.0
-    restart: always
+  drawio:
+    image: jgraph/drawio:23.1.0
     container_name: ${CONTAINER_NAME}
+    restart: unless-stopped
     networks:
       - 1panel-network
-    environment:
-      KAFKA_BROKERS: ${KAFKA_HOST}:9092
     ports:
       - ${PANEL_APP_PORT_HTTP}:8080
+      - ${PANEL_APP_PORT_HTTPS}:8443
     labels:
       createdBy: "Apps"
 networks:
