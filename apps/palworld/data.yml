@@ -5,7 +5,7 @@ title: 幻兽帕鲁服务端
 type: 休闲游戏
 description: 幻兽帕鲁服务端
 additionalProperties:
-    key: palworld-server
+    key: palworld
     name: Palworld Server
     tags:
         - Game
