@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  speedtest:
+    container_name: speedtest
+    image: ghcr.io/librespeed/speedtest:latest
+    restart: always
+    environment:
+      MODE: standalone
+      TITLE: ${SPEED_TEST_WEB_TITLE}
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:80
+    volumes:
+      - ${SPEED_TEST_ROOT_PATH}/database:/database

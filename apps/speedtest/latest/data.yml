@@ -1,0 +1,24 @@
+additionalProperties:
+  formFields:
+    - default: "/home/speedtest"
+      edit: true
+      envKey: SPEED_TEST_ROOT_PATH
+      labelEn: Data persistence root path
+      labelZh: 数据持久化 根路径
+      required: true
+      type: text
+    - default: "LibreSpeed"
+      edit: true
+      envKey: SPEED_TEST_WEB_TITLE
+      labelEn: Web title
+      labelZh: 网页标题
+      required: true
+      type: text
+    - default: 2283
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Server port
+      labelZh: 服务端口
+      required: true
+      rule: paramPort
+      type: number
