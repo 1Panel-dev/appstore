@@ -16,3 +16,17 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
+    - default: "sentinel"
+      edit: true
+      envKey: SENTINEL_DASHBOARD_AUTH_USERNAME
+      labelEn: Dashboard username
+      labelZh: 控制台 用户名
+      required: true
+      type: text
+    - default: "sentinel"
+      edit: true
+      envKey: SENTINEL_DASHBOARD_AUTH_PASSWORD
+      labelEn: Dashboard password
+      labelZh: 控制台 密码
+      required: true
+      type: text
