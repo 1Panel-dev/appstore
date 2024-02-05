@@ -1,0 +1,38 @@
+version: '3'
+
+networks:
+  1panel-network:
+    external: true
+
+services:
+  linkding:
+    container_name: ${CONTAINER_NAME}
+    image: sissbruecker/linkding:${RELEASE_VERSION}
+    restart: always
+    networks:
+      - 1panel-network
+    labels:
+      createdBy: "Apps"
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:9090"
+    volumes:
+      - "${LINKDING_ROOT_PATH}:/etc/linkding/data"
+    env_file:
+      - .env
+    environment:
+      LD_SUPERUSER_NAME: ${LD_SUPERUSER_NAME}
+      LD_SUPERUSER_PASSWORD: ${LD_SUPERUSER_PASSWORD}
+      LD_DISABLE_BACKGROUND_TASKS: ${LD_DISABLE_BACKGROUND_TASKS}
+      LD_DISABLE_URL_VALIDATION: ${LD_DISABLE_URL_VALIDATION}
+      LD_REQUEST_TIMEOUT: ${LD_REQUEST_TIMEOUT}
+      LD_SERVER_PORT: 9090
+      LD_CONTEXT_PATH: ${LD_CONTEXT_PATH}
+      LD_LOG_X_FORWARDED_FOR: ${LD_LOG_X_FORWARDED_FOR}
+      LD_FAVICON_PROVIDER: ${LD_FAVICON_PROVIDER}
+      LD_DB_ENGINE: postgres
+      LD_DB_DATABASE: ${LD_DB_DATABASE}
+      LD_DB_USER: ${LD_DB_USER}
+      LD_DB_PASSWORD: ${LD_DB_PASSWORD}
+      LD_DB_HOST: ${LD_DB_HOST}
+      LD_DB_PORT: ${LD_DB_PORT}
+      LD_DB_OPTIONS: ${LD_DB_OPTIONS}

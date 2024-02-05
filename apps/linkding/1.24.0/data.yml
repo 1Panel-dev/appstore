@@ -1,0 +1,101 @@
+additionalProperties:
+  formFields:
+    - default: "1.24.0-alpine"
+      edit: true
+      envKey: RELEASE_VERSION
+      labelEn: Release Version
+      labelZh: 发布版本
+      required: true
+      type: select
+      values:
+        - label: "1.24.0-alpine"
+          value: "1.24.0-alpine"
+        - label: "1.24.0"
+          value: "1.24.0"
+    - default: 9090
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Server port
+      labelZh: 服务端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: "/home/linkding"
+      edit: true
+      envKey: LINKDING_ROOT_PATH
+      labelEn: Data persistence root path
+      labelZh: 数据持久化 根路径
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: LD_SUPERUSER_NAME
+      labelEn: Superuser name
+      labelZh: 超级用户名称
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: LD_SUPERUSER_PASSWORD
+      labelEn: Superuser password
+      labelZh: 超级用户密码
+      required: true
+      rule: paramComplexity
+      type: password
+    - default: "False"
+      edit: true
+      envKey: LD_DISABLE_BACKGROUND_TASKS
+      labelEn: Disable background tasks
+      labelZh: 禁用后台任务
+      required: true
+      type: select
+      values:
+        - label: "False"
+          value: "False"
+        - label: "True"
+          value: "True"
+    - default: "False"
+      edit: true
+      envKey: LD_DISABLE_URL_VALIDATION
+      labelEn: Disable URL validation
+      labelZh: 禁用 URL 验证
+      required: true
+      type: select
+      values:
+        - label: "False"
+          value: "False"
+        - label: "True"
+          value: "True"
+    - default: 60
+      edit: true
+      envKey: LD_REQUEST_TIMEOUT
+      labelEn: Request timeout (seconds)
+      labelZh: 超时配置 (秒)
+      required: true
+      type: number
+    - default: ""
+      edit: true
+      envKey: LD_CONTEXT_PATH
+      labelEn: Context path
+      labelZh: 上下文路径
+      required: false
+      type: text
+    - default: "false"
+      edit: true
+      envKey: LD_LOG_X_FORWARDED_FOR
+      labelEn: Log real IP
+      labelZh: 日志记录真实IP
+      required: true
+      type: select
+      values:
+        - label: "false"
+          value: "false"
+        - label: "true"
+          value: "true"
+    - default: "https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url={url}&size=32"
+      edit: true
+      envKey: LD_FAVICON_PROVIDER
+      labelEn: Favicon provider
+      labelZh: 网站图标提供商
+      required: true
+      type: text
