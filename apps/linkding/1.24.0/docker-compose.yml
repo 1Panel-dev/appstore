@@ -19,6 +19,11 @@ services:
       - "${LINKDING_ROOT_PATH}:/etc/linkding/data"
     env_file:
       - .env
+    ulimits:
+      nproc: 65535
+      nofile:
+        soft: 20000
+        hard: 40000
     environment:
       LD_SUPERUSER_NAME: ${LD_SUPERUSER_NAME}
       LD_SUPERUSER_PASSWORD: ${LD_SUPERUSER_PASSWORD}
