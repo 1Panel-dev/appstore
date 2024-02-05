@@ -142,3 +142,10 @@ additionalProperties:
       labelZh: 数据库选项 (JSON)
       required: true
       type: text
+    - default: ""
+      edit: true
+      envKey: LD_CSRF_TRUSTED_ORIGINS
+      labelEn: CSRF trusted origins
+      labelZh: CSRF 可信来源
+      required: false
+      type: text

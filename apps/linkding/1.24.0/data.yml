@@ -99,3 +99,10 @@ additionalProperties:
       labelZh: 网站图标提供商
       required: true
       type: text
+    - default: ""
+      edit: true
+      envKey: LD_CSRF_TRUSTED_ORIGINS
+      labelEn: CSRF trusted origins
+      labelZh: CSRF 可信来源
+      required: false
+      type: text
