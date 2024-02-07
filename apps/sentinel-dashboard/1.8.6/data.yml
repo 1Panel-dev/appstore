@@ -30,3 +30,31 @@ additionalProperties:
       labelZh: 控制台 密码
       required: true
       type: text
+    - default: "host"
+      edit: true
+      envKey: NETWORK_MODE
+      labelEn: Drive path
+      labelZh: 网络模式
+      required: true
+      type: select
+      values:
+        - label: "Host"
+          value: "host"
+        - label: "Bridge"
+          value: "bridge"
+        - label: "None"
+          value: "none"
+        - label: "1panel-network"
+          value: "1panel-network"
+    - default: "false"
+      edit: true
+      envKey: SENTINEL_DASHBOARD_FEIGN_ENABLED
+      labelEn: Feign enabled
+      labelZh: Feign 支持是否启用
+      required: false
+      type: select
+      values:
+        - label: "true"
+          value: "true"
+        - label: "false"
+          value: "false"

@@ -1,11 +1,15 @@
 version: "3"
+
+networks:
+  1panel-network:
+    external: true
+
 services:
   "sentinel-dashboard":
     image: bladex/sentinel-dashboard:1.8.6
     container_name: ${CONTAINER_NAME}
     restart: always
-    networks:
-      - 1panel-network
+    network_mode: ${NETWORK_MODE}
     labels:
       createdBy: "Apps"
     ports:
@@ -20,8 +24,6 @@ services:
       - "-Dproject.name=sentinel-dashboard"
       - "-Dsentinel.dashboard.auth.username=${SENTINEL_DASHBOARD_AUTH_USERNAME}"
       - "-Dsentinel.dashboard.auth.password=${SENTINEL_DASHBOARD_AUTH_PASSWORD}"
+      - "-Dfeign.sentinel.enabled=${SENTINEL_DASHBOARD_FEIGN_ENABLED}"
       - "-jar"
       - "app.jar"
-networks:
-  1panel-network:
-    external: true
