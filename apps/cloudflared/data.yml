@@ -1,0 +1,13 @@
+additionalProperties:
+  key: cloudflared
+  name: cloudflared
+  tags:
+    - Tool
+  shortDescZh: Cloudflared 是 Cloudflare 提供的连接工具，通过 Docker 运行可轻松暴露私有服务和网络。
+  shortDescEn: Cloudflared, a tool by Cloudflare, facilitates secure connections. Easily expose private services and networks via Docker.
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  website: https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/
+  github: https://github.com/cloudflare/cloudflared
+  document: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/
