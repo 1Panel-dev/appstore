@@ -1,0 +1,19 @@
+name: Tianji
+tags:
+  - 实用工具
+title: Tianji 是一款开源的 all-in-one 数据洞察中心。Tianji = Website Analytics + Uptime Monitor + Server Status
+type: 实用工具
+description: Tianji 是一款开源的 all-in-one 数据洞察中心
+additionalProperties:
+  key: tianji
+  name: Tianji
+  tags:
+    - Tool
+  shortDescZh: Tianji 是一款开源的 all-in-one 数据洞察中心
+  shortDescEn: All-in-One Insight Hub
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  website: https://tianji.msgbyte.com/
+  github: https://github.com/msgbyte/tianji
+  document: https://tianji.msgbyte.com/

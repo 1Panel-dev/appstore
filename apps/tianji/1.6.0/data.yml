@@ -1,0 +1,73 @@
+additionalProperties:
+  formFields:
+    - default: 12345
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Web Port
+      labelZh: Web 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: ""
+      edit: true
+      envKey: PANEL_DB_HOST
+      key: postgres
+      labelEn: Database Service
+      labelZh: 数据库服务
+      required: true
+      type: service
+    - default: tianji
+      envKey: PANEL_DB_NAME
+      labelEn: Database Name
+      labelZh: 数据库名
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: tianji
+      envKey: PANEL_DB_USER
+      labelEn: Database User
+      labelZh: 数据库用户
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: tianji
+      envKey: PANEL_DB_USER_PASSWORD
+      labelEn: Database Password
+      labelZh: 数据库用户密码
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+    - default: any-random-text
+      edit: true
+      envKey: JWT_SECRET
+      labelEn: Secret
+      labelZh: 秘钥
+      random: true
+      required: true
+      rule: paramComplexity
+      type: text
+    - default: "true"
+      envKey: ALLOW_OPENAPI
+      labelEn: Allow OpenAPI
+      labelZh: 是否开启OpenAPI
+      required: true
+      type: select
+      values:
+        - label: "True"
+          value: "true"
+        - label: "False"
+          value: "false"
+    - default: "false"
+      envKey: ALLOW_REGISTER
+      labelEn: Allow Register
+      labelZh: 是否允许注册
+      required: true
+      type: select
+      values:
+        - label: "True"
+          value: "true"
+        - label: "False"
+          value: "false"
