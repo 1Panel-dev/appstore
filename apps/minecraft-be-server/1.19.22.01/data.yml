@@ -1,0 +1,18 @@
+additionalProperties:
+  formFields:
+    - default: 19132
+      edit: true
+      envKey: PANEL_APP_PORT_UDP
+      labelEn: ipv4 Port
+      labelZh: ipv4端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 19133
+      edit: true
+      envKey: PANEL_APP_PORT_UDP_V6
+      labelEn: ipv6 Port
+      labelZh: ipv6端口
+      required: true
+      rule: paramPort
+      type: number

@@ -1,0 +1,13 @@
+additionalProperties:
+  key: mcbe-server
+  name: mcbe服务器
+  tags: 
+    - Game
+  shortDescZh: 我的世界基岩版服务器
+  shortDescEn:  minecraft bedrock server
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  website: https://www.minecraft.net/zh-hans/store/minecraft-java-bedrock-edition-pc
+  github:  https://github.com/LomotHo/minecraft-bedrock
+  document:  https://github.com/LomotHo/minecraft-bedrock/blob/master/readme_zh.md

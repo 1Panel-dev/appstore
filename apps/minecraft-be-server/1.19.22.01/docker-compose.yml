@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+   mcpe:
+      container_name: ${CONTAINER_NAME}
+      image: lomot/minecraft-bedrock:1.19.22.01
+      ports:
+        - ${PANEL_APP_PORT_UDP}:19132/udp
+        - ${PANEL_APP_PORT_UDP_V6}:19133/udp
+      volumes:
+        - ./data/mcbe-data:/data
+        - /etc/localtime:/etc/localtime
+      restart: always
+      stdin_open: true
+      tty: true
+      labels:  
+        createdBy: "Apps"
+
+networks:  
+  1panel-network:  
+    external: true
