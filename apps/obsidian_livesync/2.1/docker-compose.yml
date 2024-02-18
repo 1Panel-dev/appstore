@@ -1,0 +1,20 @@
+version: "2.1"
+services:
+  couchdb:
+    image: couchdb
+    container_name: ${CONTAINER_NAME}
+    environment:
+      - COUCHDB_USER=${OBSIDIAN_LIVESYNC_USER} 
+      - COUCHDB_PASSWORD=${OBSIDIAN_LIVESYNC_USER_PASSWORD}
+    volumes:
+      - ./data/data:/opt/couchdb/data
+      - ./data/local.ini:/opt/couchdb/etc/local.ini
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:5984
+    restart: unless-stopped
+    labels:  
+      createdBy: "Apps" 
+
+networks:  
+  1panel-network:  
+    external: true

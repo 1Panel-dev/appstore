@@ -1,4 +1,13 @@
-> 转发自官方
+# 创建数据库
+CouchDB 部署成功后, 需要手动创建一个数据库, 方便插件连接并同步.
+
+访问 http://localhost:5984/_utils, 输入帐号密码后进入管理页面
+点击 Create Database, 然后根据个人喜好创建数据库
+# 从移动设备访问
+如果你想要从移动设备访问 Self-hosted LiveSync，你需要一个合法的 SSL 证书。
+
+
+> 以下转发自官方
 # Self-hosted LiveSync
 
 Self-hosted LiveSync (自搭建在线同步) 是一个社区实现的在线同步插件。  
