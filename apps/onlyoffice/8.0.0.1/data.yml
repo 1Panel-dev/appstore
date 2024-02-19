@@ -1,0 +1,19 @@
+additionalProperties:
+    formFields:
+        - default: 40156
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: HTTP Port
+          labelZh: HTTP 端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: secret
+          edit: true
+          envKey: JWT_SECRET
+          labelEn: JWT Secret
+          labelZh: JWT密码
+          random: true
+          required: true
+          rule: paramComplexity
+          type: password
