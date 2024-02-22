@@ -1,0 +1,21 @@
+version: "3"
+services:
+  v2raya:
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    network_mode: "host"
+    privileged: true
+    environment:
+      - V2RAYA_CONFIG:/etc/v2raya
+      - V2RAYA_ADDRESS=0.0.0.0:${PANEL_APP_PORT_HTTP}
+      - V2RAYA_PLUGINLISTENPORT:${PLUGIN_PORT}
+      - V2RAYA_NFTABLES_SUPPORT=${V2RAYA_NFTABLES_SUPPORT}
+      - IPTABLES_MODE=${IPTABLES_MODE}
+      - V2RAYA_V2RAY_BIN=/usr/local/bin/${V2RAYA_CORE_BIN}
+    volumes:
+      - "./data/v2raya:/etc/v2raya"
+      - "/lib/modules:/lib/modules:ro"
+      - "/etc/resolv.conf:/etc/resolv.conf"
+    image: mzz2017/v2raya:latest
+    labels:  
+      createdBy: "Apps"

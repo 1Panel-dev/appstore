@@ -1,0 +1,59 @@
+additionalProperties:
+    formFields:
+      
+        - default: 21917
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: WebUI Port
+          labelZh: 网页端口
+          required: true
+          rule: paramPort
+          type: number
+
+        - default: 32346
+          edit: true
+          envKey: PLUGIN_PORT
+          labelEn: Internal plug-in port
+          labelZh: 内部插件端口
+          required: true
+          rule: paramPort
+          type: number
+
+        - default: "off"
+          edit: true
+          envKey: V2RAYA_NFTABLES_SUPPORT
+          labelEn: V2RAYA NFTABLES SUPPORT
+          labelZh: v2raya的nftables支持(默认off可选on)
+          required: true
+          type: select
+          values:
+              - label: off
+                value: "off"
+              - label: on
+                value: "on"
+
+        - default: "legacy"
+          edit: true
+          envKey: IPTABLES_MODE
+          labelEn: IPTABLES MODE
+          labelZh: v2raya的后端模式(默认legacy可选nftables)
+          required: true
+          type: select
+          values:
+              - label: legacy
+                value: "legacy"
+              - label: nftables
+                value: "nftables"
+
+        - default: "xray"
+          edit: true
+          envKey: V2RAYA_CORE_BIN
+          labelEn: V2RAYA CORE BIN
+          labelZh: v2raya的核心(默认xray可选v2ray)
+          required: true
+          type: select
+          values:
+              - label: xray
+                value: "xray"
+              - label: v2ray
+                value: "v2ray"
