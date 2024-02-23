@@ -1,0 +1,9 @@
+additionalProperties:
+  formFields:
+    - default: ""
+      envKey: token
+      labelEn: token  
+      labelZh: 令牌  
+      random: false  
+      required: true
+      type: password
