@@ -1,0 +1,13 @@
+additionalProperties:
+  key: reader
+  name: reader
+  tags:
+    - Tool
+  shortDescZh: 阅读3服务器版
+  shortDescEn: reader-server
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  website: https://github.com/hectorqin/reader
+  github:  https://github.com/hectorqin/reader
+  document: https://github.com/hectorqin/reader/blob/master/doc.md
