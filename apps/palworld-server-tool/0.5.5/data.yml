@@ -36,10 +36,10 @@ additionalProperties:
       labelZh: 存档同步间隔
       required: true
       type: number
-    - default: '示例：./Pal/Saved/SaveGames/0/5633F58B91BB4CFDAE555321CA7E6C8E'
+    - default: '示例：./data/Pal/Saved/SaveGames/0/5633F58B91BB4CFDAE555321CA7E6C8E'
       edit: true
-      envKey: PANEL_APP_path
-      labelEn: Save Path
-      labelZh: 存档路径
+      envKey: PANEL_APP_PATH
+      labelEn: Save Path (starts with ./data)
+      labelZh: 存档路径 (以 ./data 开头)
       required: true
       type: text
