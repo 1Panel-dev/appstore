@@ -1,6 +1,7 @@
 version: '3'
 services:
   onlyoffice:
+    image: onlyoffice/documentserver:8.0.0.1
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
@@ -14,10 +15,8 @@ services:
       - ./data/db:/var/lib/postgresql
     environment:
       - JWT_SECRET=${JWT_SECRET}
-    image: onlyoffice/documentserver:8.0.0.1
     labels:  
       createdBy: "Apps"
-
 networks:  
   1panel-network:  
     external: true
