@@ -1,10 +1,16 @@
+name: cloudflared
+tags:
+    - 实用工具
+title: Cloudflare Tunnel 客户端
+type: 实用工具
+description: Cloudflare Tunnel 客户端
 additionalProperties:
   key: cloudflared
   name: cloudflared
   tags:
     - Tool
-  shortDescZh: Cloudflared 是 Cloudflare 提供的连接工具，通过 Docker 运行可轻松暴露私有服务和网络。
-  shortDescEn: Cloudflared, a tool by Cloudflare, facilitates secure connections. Easily expose private services and networks via Docker.
+  shortDescZh: Cloudflare Tunnel 客户端
+  shortDescEn: Cloudflare Tunnel client
   type: tool
   crossVersionUpdate: true
   limit: 0
