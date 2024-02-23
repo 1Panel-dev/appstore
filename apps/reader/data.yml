@@ -1,10 +1,15 @@
+name: reader
+tags:
+    - 实用工具
+title: 阅读3服务器版
+type: 实用工具
 additionalProperties:
   key: reader
   name: reader
   tags:
     - Tool
   shortDescZh: 阅读3服务器版
-  shortDescEn: reader-server
+  shortDescEn: Read 3 Server Edition
   type: tool
   crossVersionUpdate: true
   limit: 0
