@@ -1,13 +1,20 @@
+name: Obsidian LiveSync
+tags:
+    - 实用工具
+title: Obsidian 在线同步插件
+type: 实用工具
+description: Obsidian 在线同步插件
 additionalProperties:
   key: obsidian_livesync
-  name: obsidian自建同步服务器
+  name: Obsidian LiveSync
   tags:
     - Tool
-  shortDescZh: obsidian第三方自建服务器
-  shortDescEn: obsidian self hosted livesync
+  shortDescZh: Obsidian 在线同步插件
+  shortDescEn: Obsidian Self-hosted LiveSync
   type: tool
   crossVersionUpdate: true
   limit: 0
+  recommend: 0
   website:  https://github.com/vrtmrz/obsidian-livesync
   github:  https://github.com/vrtmrz/obsidian-livesync
   document:  https://github.com/vrtmrz/obsidian-livesync/blob/main/docs/setup_own_server_cn.md
