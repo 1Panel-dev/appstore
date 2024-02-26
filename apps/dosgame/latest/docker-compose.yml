@@ -2,20 +2,16 @@ version: '3'
 services:
   dosgame:
     container_name: ${CONTAINER_NAME}
+    image: oldiy/dosgame-web-docker:latest
     restart: always
     networks:
       - 1panel-network
     ports:
-      - "${PANEL_APP_PORT_HTTP}:262"
-    volumes:
-      - dosgame_data:/app/static/games
-    image: oldiy/dosgame-web-docker:latest
-    labels:  
+      - ${PANEL_APP_PORT_HTTP}:262
+    # volumes:
+    #   - ./data:/app/static/games
+    labels:
       createdBy: "Apps"
-
-volumes:
-  dosgame_data:
-
-networks:  
-  1panel-network:  
+networks:
+  1panel-network:
     external: true
