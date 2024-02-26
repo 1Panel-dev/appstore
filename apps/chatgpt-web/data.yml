@@ -1,14 +1,14 @@
 name: ChatGPT Web
 tags:
-    - 实用工具
+    - AI
 title: ChatGPT Web
-type: 实用工具
+type: AI
 description: ChatGPT Web
 additionalProperties:
     key: chatgpt-web
     name: ChatGPT Web
     tags:
-        - Tool
+        - AI
     shortDescZh: ChatGPT Web
     shortDescEn: ChatGPT Web
     type: tool

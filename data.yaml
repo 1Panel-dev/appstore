@@ -20,30 +20,33 @@ additionalProperties:
     - key: Storage
       name: 云存储
       sort: 6
+    - key: AI
+      name: AI
+      sort: 7  
     - key: BI
       name: BI
-      sort: 7
+      sort: 8
     - key: Security
       name: 安全
-      sort: 8
+      sort: 9
     - key: DevTool
       name: 开发工具
-      sort: 9
+      sort: 10
     - key: DevOps
       name: DevOps
-      sort: 10
+      sort: 11
     - key: Middleware
       name: 中间件
-      sort: 11
+      sort: 12
     - key: Media
       name: 多媒体
-      sort: 12
+      sort: 13
     - key: Email
       name: 邮件服务
-      sort: 13
+      sort: 14
     - key: Game
       name: 休闲游戏
-      sort: 14
+      sort: 15
     - key: Local
       name: 本地
       sort: 99

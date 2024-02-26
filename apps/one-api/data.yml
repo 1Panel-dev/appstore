@@ -1,14 +1,14 @@
 name: One API
 tags:
-    - 实用工具
+    - AI
 title: OpenAI 接口管理 & 分发系统
-type: 实用工具
+type: AI
 description: OpenAI 接口管理 & 分发系统
 additionalProperties:
   key: one-api
   name: One API
   tags:
-    - Tool
+    - AI
   shortDescZh: 通过标准的 OpenAI API 格式访问所有的大模型，开箱即用
   shortDescEn: Access all LLM through the standard OpenAI API format, easy to deploy & use
   type: tool
