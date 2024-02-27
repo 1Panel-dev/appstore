@@ -8,3 +8,18 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
+    - default: mixspace
+      envKey: ALLOWED_ORIGINS
+      labelEn: Allowed_Origins
+      labelZh: 允许域名（填写要绑定的域名）
+      required: true
+      rule: paramExtUrl
+      type: text
+    - default: mixspace
+      envKey: JWT_SECRET
+      labelEn: Password
+      labelZh: JWT密钥
+      random: true
+      required: true
+      rule: paramCommon
+      type: password
