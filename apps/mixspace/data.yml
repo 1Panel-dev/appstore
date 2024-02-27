@@ -1,0 +1,19 @@
+name: MixSpace
+tags:
+  - 建站
+title: 开源自部署的个人前后端分离博客系统
+type: 建站
+description: 开源自部署的个人前后端分离博客系统
+additionalProperties:
+  key: mixspace
+  name: MixSpace
+  tags:
+    - WebSite
+  shortDescZh: 开源自部署的个人前后端分离博客系统
+  shortDescEn: Open source self-deployed personal front-end and back-end separation blogging system
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  website: https://mx-space.js.org
+  github: https://github.com/mx-space/core
+  document: https://mx-space.js.org/docs
