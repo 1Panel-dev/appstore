@@ -1,15 +1,16 @@
-name: pal-server-tool
+name: Palworld Server Tool
 tags:
     - 休闲游戏
 title: 幻兽帕鲁服务可视化管理工具
 type: 休闲游戏
+description: 幻兽帕鲁服务可视化管理工具
 additionalProperties:
   key: palworld-server-tool
-  name: palworld-server-tool
+  name: Palworld Server Tool
   tags:
     - Game
   shortDescZh: 幻兽帕鲁服务可视化管理工具
-  shortDescEn: palworld-server-tool
+  shortDescEn: Palworld service visual management tool
   type: tool
   crossVersionUpdate: true
   limit: 0
