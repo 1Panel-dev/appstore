@@ -8,10 +8,12 @@ services:
       - 1panel-network
     ports:
       - ${PANEL_APP_PORT_HTTP}:262
-    # volumes:
-    #   - ./data:/app/static/games
+    volumes:
+      - dosgame_data:/app/static/games
     labels:
       createdBy: "Apps"
+volumes:
+  dosgame_data:
 networks:
   1panel-network:
     external: true

@@ -1,6 +1,6 @@
 # 使用说明
 
-需要更多游戏可以从原仓库获取，然后将游戏放到应用安装目录下 `./data` 文件夹中。
+需要更多游戏可以从原仓库获取，然后将游戏放到存储卷 `dosgame_data` 的对应目录下。
 
 > 原仓库地址：[chinese-dos-games](https://github.com/rwv/chinese-dos-games)
 
