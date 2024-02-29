@@ -1,0 +1,20 @@
+name: GitLab
+tags:
+  - DevOps
+title: 代码托管平台
+type: DevOps
+description: GitLab代码托管平台
+additionalProperties:
+  key: gitlab
+  name: GitLab
+  tags:
+    - DevOps
+  shortDescZh: GitLab代码托管平台
+  shortDescEn: GitLab code hosting platform
+  type: tool
+  crossVersionUpdate: false
+  limit: 0
+  recommend: 0
+  website: https://gitlab.com/
+  github: https://gitlab.com/
+  document: https://docs.gitlab.com/

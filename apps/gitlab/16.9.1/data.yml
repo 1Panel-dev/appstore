@@ -1,0 +1,73 @@
+additionalProperties:
+  formFields:
+    - default: "16.9.1-ee.0"
+      edit: true
+      envKey: RELEASE_VERSION
+      labelEn: Release Version
+      labelZh: 发布版本
+      required: true
+      type: select
+      values:
+        - label: "企业版"
+          value: "16.9.1-ee.0"
+        - label: "社区版"
+          value: "16.9.1-ce.0"
+    - default: "bridge"
+      edit: true
+      envKey: NETWORK_MODE
+      labelEn: Drive path
+      labelZh: 网络模式
+      required: true
+      type: select
+      values:
+        - label: "Host"
+          value: "host"
+        - label: "Bridge"
+          value: "bridge"
+        - label: "None"
+          value: "none"
+    - default: "/home/gitlab"
+      edit: true
+      envKey: GITLAB_HOME
+      labelEn: Root Path
+      labelZh: 数据持久化 根路径
+      required: true
+      type: text
+    - default: 8080
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: HTTP Web端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 8443
+      edit: true
+      envKey: PANEL_APP_PORT_HTTPS
+      labelEn: Port
+      labelZh: HTTPS Web端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 2323
+      edit: true
+      envKey: PANEL_APP_PORT_SSH
+      labelEn: Port
+      labelZh: SSH 通信端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: ""
+      edit: true
+      envKey: GITLAB_ROOT_PASSWORD
+      labelEn: Root Password
+      labelZh: Root 密码
+      required: true
+      type: password
+    - default: ""
+      edit: true
+      envKey: GITLAB_HOST_NAME
+      labelEn: Host Name
+      labelZh: 主机域名 http(s)://domain.com
+      required: true
+      type: text
