@@ -11,7 +11,7 @@ services:
     environment:
       DATABASE_TYPE: ${PANEL_DB_TYPE}
       DATABASE_URL: ${PANEL_DB_TYPE}://${PANEL_DB_USER}:${PANEL_DB_USER_PASSWORD}@${PANEL_DB_HOST}:${PANEL_DB_PORT}/${PANEL_DB_NAME}
-      HASH_SALT: ${HASH_SALT}
+      APP_SECRET: ${HASH_SALT}
     networks:
       - 1panel-network
 networks:
