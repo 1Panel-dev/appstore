@@ -1,0 +1,19 @@
+name: Immich
+tags:
+  - 工具
+title: Immich
+type: 工具
+description: 高性能自托管照片和视频备份解决方案
+additionalProperties:
+  key: immich
+  name: Immich
+  tags:
+    - Tool
+  shortDescZh: 高性能自托管照片和视频备份解决方案
+  shortDescEn: High performance self-hosted photo and video backup solution
+  type: tool
+  crossVersionUpdate: false
+  limit: 0
+  website: https://immich.app/
+  github: https://github.com/immich-app/immich
+  document: https://immich.app/docs/overview/introduction
