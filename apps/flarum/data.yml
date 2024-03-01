@@ -1,16 +1,16 @@
 name: Flarum
 tags:
     - 建站
-title: 新一代的论坛软件，使在线讨论变得有趣
+title: 用于构建优秀社区的简单论坛软件
 type: 建站
-description: 新一代的论坛软件，使在线讨论变得有趣
+description: 用于构建优秀社区的简单论坛软件
 additionalProperties:
     key: flarum
     name: Flarum
     tags:
         - WebSite
-    shortDescZh: 新一代的论坛软件，使在线讨论变得有趣
-    shortDescEn: The next-generation forum software that makes online discussion fun
+    shortDescZh: 用于构建优秀社区的简单论坛软件
+    shortDescEn: Simple forum software for building great communities
     type: website
     crossVersionUpdate: true
     limit: 0

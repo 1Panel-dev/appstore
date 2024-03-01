@@ -1,15 +1,15 @@
 name: Answer
 tags:
     - 建站
-title: 一款适合任何团队的问答平台软件
+title: 适用于任何规模团队的问答平台软件
 type: 建站
-description: 一款适合任何团队的问答平台软件
+description: 适用于任何规模团队的问答平台软件
 additionalProperties:
     key: answer
     name: Answer
     tags:
         - WebSite
-    shortDescZh: 一款适合任何团队的问答平台软件
+    shortDescZh: 适用于任何规模团队的问答平台软件
     shortDescEn: A Q&A platform software for teams at any scales
     type: website
     crossVersionUpdate: true

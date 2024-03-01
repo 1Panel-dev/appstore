@@ -1,16 +1,16 @@
 name: Changedetection.io
 tags:
     - 实用工具
-title: 网站更改检测、补货监控和通知。
+title: 免费开源网站变更检测、网站观察、补货监控和通知服务
 type: 实用工具
-description: 网站更改检测、补货监控和通知。
+description: 免费开源网站变更检测、网站观察、补货监控和通知服务
 additionalProperties:
     key: changedetectionio
     name: Changedetection.io
     tags:
         - Tool
-    shortDescZh: 网站更改检测、补货监控和通知。
-    shortDescEn: Web Site Change Detection, Restock monitoring and notifications
+    shortDescZh: 免费开源网站变更检测、网站观察、补货监控和通知服务
+    shortDescEn: free open source website change detection, website watcher, restock monitor and notification service
     type: tool
     crossVersionUpdate: true
     limit: 0

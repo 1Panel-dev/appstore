@@ -20,7 +20,6 @@ services:
     image: rustdesk/rustdesk-server-s6:latest
     labels:  
       createdBy: "Apps"
-
 networks:  
   1panel-network:  
     external: true

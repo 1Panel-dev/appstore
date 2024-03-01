@@ -1,16 +1,16 @@
 name: uuWAF
 tags:
   - 安全
-title: 南墙应用防火墙
+title: 南墙 WEB 应用防火墙
 type: 安全
-description: 南墙应用防火墙
+description: 南墙 WEB 应用防火墙
 additionalProperties:
   key: uuwaf
   name: uuWAF
   tags:
     - Security
-  shortDescZh: 南墙应用防火墙
-  shortDescEn: NanQiang WebApplication Firewall
+  shortDescZh: 南墙 WEB 应用防火墙
+  shortDescEn: NanQiang Web Application Firewall
   type: tool
   crossVersionUpdate: false
   limit: 1

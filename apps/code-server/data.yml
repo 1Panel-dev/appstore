@@ -1,16 +1,16 @@
 name: Coder
 tags:
     - 开发工具
-title: VS Code 远程开发环境
+title: 浏览器中的VS Code
 type: 开发工具
-description: VS Code 远程开发环境
+description: 浏览器中的VS Code
 additionalProperties:
     key: code-server
     name: Coder
     tags:
         - DevTool
-    shortDescZh: VS Code 远程开发环境
-    shortDescEn: VS Code remote development environment
+    shortDescZh: 浏览器中的VS Code
+    shortDescEn: VS Code in the browser
     type: tool
     crossVersionUpdate: true
     limit: 0

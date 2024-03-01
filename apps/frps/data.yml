@@ -1,16 +1,16 @@
 name: frps-frp 服务端
 tags:
     - 实用工具
-title: 反向代理工具，常用于内网穿透(服务端)
+title: 快速反向代理可帮助您将 NAT 或防火墙后面的本地服务器暴露给互联网
 type: 实用工具
-description: 反向代理工具，常用于内网穿透(服务端)
+description: 快速反向代理可帮助您将 NAT 或防火墙后面的本地服务器暴露给互联网
 additionalProperties:
     key: frps
     name: frps-frp 服务端
     tags:
         - Tool
-    shortDescZh: 反向代理工具，常用于内网穿透(服务端)
-    shortDescEn: A reverse proxy tool that is commonly used for intranet penetration(Server)
+    shortDescZh: 快速反向代理可帮助您将 NAT 或防火墙后面的本地服务器暴露给互联网
+    shortDescEn: A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet
     type: tool
     crossVersionUpdate: true
     limit: 0

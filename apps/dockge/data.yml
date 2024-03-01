@@ -1,9 +1,9 @@
 name: Dockge
 tags:
     - 实用工具
-title: 自托管的容器编排管理器
+title: 自托管 - Docker compose.yaml - 面向堆栈的管理器
 type: 实用工具
-description: 自托管的容器编排管理器
+description: 自托管 - Docker compose.yaml - 面向堆栈的管理器
 additionalProperties:
   key: dockge
   name: Dockge

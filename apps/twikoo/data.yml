@@ -1,15 +1,15 @@
 name: Twikoo
 tags:
     - 实用工具
-title: 一个简洁、安全、免费的静态网站评论系统
+title: 简洁、安全、免费的静态网站评论系统
 type: 实用工具
-description: 一个简洁、安全、免费的静态网站评论系统
+description: 简洁、安全、免费的静态网站评论系统
 additionalProperties:
     key: twikoo
     name: Twikoo
     tags:
         - Tool
-    shortDescZh: 一个简洁、安全、免费的静态网站评论系统
+    shortDescZh: 简洁、安全、免费的静态网站评论系统
     shortDescEn: A simple, safe, free comment system
     type: tool
     crossVersionUpdate: true

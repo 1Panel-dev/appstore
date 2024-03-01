@@ -1,16 +1,16 @@
 name: ddns-go
 tags:
     - 实用工具
-title: 简单好用的 DDNS
+title: 简单易用的 DDNS
 type: 实用工具
-description: 简单好用的 DDNS
+description: 简单易用的 DDNS
 additionalProperties:
     key: ddns-go
     name: ddns-go
     tags:
         - Tool
-    shortDescZh: 简单好用的 DDNS
-    shortDescEn: Simple and easy-to-use DDNS
+    shortDescZh: 简单易用的 DDNS
+    shortDescEn: Simple and easy to use DDNS
     type: tool
     crossVersionUpdate: true
     limit: 0

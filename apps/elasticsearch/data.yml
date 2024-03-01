@@ -11,7 +11,7 @@ additionalProperties:
         - Database
     shortDescZh: 免费开放、分布式、RESTful 搜索引擎
     shortDescEn: Free and Open, Distributed, RESTful Search Engine
-    type: runtime
+    type: tool
     crossVersionUpdate: false
     limit: 0
     recommend: 0

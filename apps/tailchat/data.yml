@@ -1,16 +1,16 @@
 name: Tailchat
 tags:
     - 实用工具
-title: 在你自己工作区的下一代 noIM 应用
+title: 您自己的工作空间中的下一代 noIM 应用程序
 type: 实用工具
-description: 在你自己工作区的下一代 noIM 应用
+description: 您自己的工作空间中的下一代 noIM 应用程序
 additionalProperties:
     key: tailchat
     name: Tailchat
     tags:
         - Tool
-    shortDescZh: 在你自己工作区的下一代 noIM 应用
-    shortDescEn: The next-generation noIM Application in your own workspace
+    shortDescZh: 您自己的工作空间中的下一代 noIM 应用程序
+    shortDescEn: Next generation noIM application in your own workspace
     type: tool
     crossVersionUpdate: true
     limit: 1

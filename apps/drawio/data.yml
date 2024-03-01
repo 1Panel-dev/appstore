@@ -1,18 +1,19 @@
 name: Draw.io
 tags:
     - 实用工具
-title: 免费和开源的跨平台图形绘制软件
+title: 用于一般图表绘制的 JavaScript 客户端编辑器
 type: 实用工具
-description: 免费和开源的跨平台图形绘制软件
+description: 用于一般图表绘制的 JavaScript 客户端编辑器
 additionalProperties:
     key: drawio
     name: Draw.io
     tags:
         - Tool
-    shortDescZh: 免费和开源的跨平台图形绘制软件
-    shortDescEn: Free and open source cross-platform graphics drawing software
+    shortDescZh: 用于一般图表绘制的 JavaScript 客户端编辑器
+    shortDescEn: JavaScript, client-side editor for general diagramming
     type: tool
     crossVersionUpdate: true
     limit: 0
     website: https://www.drawio.com/
     github: https://github.com/jgraph/drawio
+    document: https://github.com/jgraph/drawio/wiki

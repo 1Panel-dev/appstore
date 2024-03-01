@@ -10,7 +10,7 @@ additionalProperties:
     tags:
         - Storage
     shortDescZh: 可道云推出的企业级私有云存储解决方案
-    shortDescEn: Kodbox is a file manager for web. It is also a web code editor, which allows you to develop websites directly within the web browser.
+    shortDescEn: An enterprise-class private cloud storage solution launched by Kedao Cloud
     type: tool
     crossVersionUpdate: true
     limit: 0

@@ -11,7 +11,7 @@ additionalProperties:
     - Middleware
   shortDescZh: 流量控制、熔断降级规则统一配置和管理的入口
   shortDescEn: Unified configuration and management of flow control and circuit breaker degradation rules
-  type: runtime
+  type: tool
   crossVersionUpdate: false
   limit: 0
   website: https://sentinelguard.io/

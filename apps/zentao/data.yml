@@ -1,16 +1,16 @@
 name: 禅道
 tags:
   - DevOps
-title: 国产的开源项目管理软件
+title: 敏捷（scrum）项目管理系统/工具，永久免费升级
 type:  DevOps
-description: 国产的开源项目管理软件
+description: 敏捷（scrum）项目管理系统/工具，永久免费升级
 additionalProperties:
   key: zentao
   name: 禅道
   tags:
     - DevOps
-  shortDescZh: 国产的开源项目管理软件
-  shortDescEn: Domestic open source project management software
+  shortDescZh: 敏捷（scrum）项目管理系统/工具，永久免费升级
+  shortDescEn: An agile(scrum) project management system/tool,
   type: tool
   crossVersionUpdate: true
   limit: 0

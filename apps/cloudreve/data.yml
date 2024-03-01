@@ -10,7 +10,7 @@ additionalProperties:
     tags:
         - Storage
     shortDescZh: 支持多家云存储的云盘系统
-    shortDescEn: A cloud disk system that supports multiple cloud storage
+    shortDescEn: Self-hosted file management system with muilt-cloud support
     type: tool
     crossVersionUpdate: true
     limit: 0

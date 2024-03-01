@@ -1,16 +1,16 @@
 name: ChatGPT Web
 tags:
     - AI
-title: ChatGPT Web
+title: 用 Express 和 Vue3 搭建的 ChatGPT 演示网页
 type: AI
-description: ChatGPT Web
+description: 用 Express 和 Vue3 搭建的 ChatGPT 演示网页
 additionalProperties:
     key: chatgpt-web
     name: ChatGPT Web
     tags:
         - AI
-    shortDescZh: ChatGPT Web
-    shortDescEn: ChatGPT Web
+    shortDescZh: 用 Express 和 Vue3 搭建的 ChatGPT 演示网页
+    shortDescEn: ChatGPT demo page built with Express and Vue3
     type: tool
     crossVersionUpdate: true
     limit: 0
