@@ -23,38 +23,24 @@ additionalProperties:
       required: true
       rule: paramComplexity
       type: password
-    - default: "http://127.0.0.1"
-      envKey: MINIO_SERVER_URL
-      labelEn: Host address (proxy domain address)
-      labelZh: 服务地址 (API,控制台分享地址)
-      required: true
-      type: text
-    - default: "http://127.0.0.1/admin"
-      envKey: MINIO_BROWSER_REDIRECT_URL
-      labelEn: Host address (proxy domain address)
-      labelZh: 控制台重定向地址 (WebUI地址)
-      required: true
-      type: text
     - default: "12h"
       envKey: MINIO_BROWSER_SESSION_DURATION
       labelEn: Session duration
       labelZh: 会话持续时间 (s/秒 m/分钟 h/小时 d/天)
       required: true
       type: text
-    - default: 9000
+    - default: "9001"
       envKey: PANEL_APP_PORT_HTTP
       labelEn: Port
       labelZh: 端口
       required: true
-      rule: paramPort
-      type: number
-    - default: 9001
+      type: text
+    - default: "9000"
       envKey: PANEL_APP_PORT_API
       labelEn: Port
       labelZh: API 端口
       required: true
-      rule: paramPort
-      type: number
+      type: text
     - default: "on"
       envKey: MINIO_BROWSER
       labelEn: Enable WebUI
