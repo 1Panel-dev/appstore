@@ -1,0 +1,20 @@
+name: 飞鼠
+tags:
+    - 实用工具
+title: 简单快捷的p2p打洞工具
+type: 实用工具
+description: 简单快捷的p2p打洞工具
+additionalProperties:
+    key: feishunet
+    name: 飞鼠
+    tags:
+        - Tool
+    shortDescZh: 简单快捷的p2p打洞工具
+    shortDescEn: A simple and fast P2P drilling tool
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://feishunet.com
+    github: https://github.com/xingkongwangbin
+    document: https://feishunet.com

@@ -1,0 +1,20 @@
+version: '3'
+services:
+  ddns-go:
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    cap_add:
+      - ALL
+    devices:
+      - /dev/net/tun
+    network_mode: 
+      - host
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:9091"
+    volumes:
+      - ./conf:/data/feishu/conf
+    image: registry.cn-qingdao.aliyuncs.com/feishuwg/p2p:latest
+    environment: # 此token为客户端配置根据情况修改
+      token: u3vs9AxkjTvi2bRSNWAmjv1V4cyh8m3ep/CNjDHQWckxf8asJKFCdTaOhcf/DVH2pMfeb+R0wIbQ4HgeHg8v+BBY620AQssIKnpZQX4BTXft6Is3c+Fc3uYUvN5ipSv1LIv8OVLOmaf1vuR+/sKKOQ==
+    labels:
+      createdBy: "Apps"

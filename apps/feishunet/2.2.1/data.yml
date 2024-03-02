@@ -1,0 +1,18 @@
+additionalProperties:
+  formFields:
+    - default: 9091
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: WebUI Port
+      labelZh: 网页端口
+      required: true
+      rule: paramPort
+      type: 9091
+    - default: http://localhost:9091
+      edit: true  
+      envKey: HALO_EXTERNAL_URL  
+      labelEn: External URL  
+      labelZh: 外部访问地址  
+      required: true  
+      rule: paramExtUrl  
+      type: text  
