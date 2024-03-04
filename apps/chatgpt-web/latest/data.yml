@@ -15,7 +15,7 @@ additionalProperties:
           labelZh: OPENAI ACCESS TOKEN (与OPENAI API KEY至少填一个)(https://chat.openai.com/api/auth/session)
           required: false
           type: text
-        - default: https://bypass.duti.tech/api/conversation
+        - default: ''
           edit: true
           envKey: REVERSE_PROXY
           labelEn: API reverse proxy (optional)(enabled by default when OPENAI ACCESS TOKEN, need to pay attention to availability)
