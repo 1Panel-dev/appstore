@@ -1,5 +1,5 @@
 # 使用说明
-
+- 支持的数据库版本：MySQL >= 5.7，PostgreSQL >= 12.14.
 - 首次登录默认用户名为：admin，密码为：umami。
 
 # Umami
