@@ -13,11 +13,6 @@ services:
       - 1panel-network
     ports:
       - ${HOST_IP}:${PANEL_APP_PORT_HTTP}:${NODE_APP_PORT}
-    healthcheck:
-      test: ["CMD-SHELL", "curl -f http://localhost:${NODE_APP_PORT} || exit 1"]
-      interval: 30s
-      timeout: 5s
-      retries: 20
     restart: always
 networks:
   1panel-network:
