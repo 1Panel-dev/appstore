@@ -1,9 +1,4 @@
 version: '3'
-
-networks:
-  1panel-network:
-    external: true
-
 services:
   minio:
     image: minio/minio:RELEASE.2024-02-26T09-33-48Z
@@ -26,15 +21,18 @@ services:
         max-size: "5M"
         max-file: "10"
       driver: json-file
+    networks:
+      - 1panel-network
+    volumes:
+      - ./data:/data
+      - ./certs:/root/.minio/certs
+    labels:
+      createdBy: "Apps"
     healthcheck:
       test: [ "CMD", "curl", "-f", "http://localhost:9000/minio/health/live" ]
       interval: 30s
       timeout: 20s
       retries: 3
-    networks:
-      - 1panel-network
-    volumes:
-      - ${MINIO_ROOT_PATH}/data:/data
-      - ${MINIO_ROOT_PATH}/certs:/root/.minio/certs
-    labels:
-      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true
