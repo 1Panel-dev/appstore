@@ -15,13 +15,13 @@ services:
       interval: 30s
       timeout: 5s
       retries: 5
-      start_period: 30s
     command:
       - --spring.r2dbc.url=r2dbc:pool:${PANEL_DB_TYPE}://${PANEL_DB_HOST}:${PANEL_DB_PORT}/${PANEL_DB_NAME}
       - --spring.r2dbc.username=${PANEL_DB_USER}
       - --spring.r2dbc.password=${PANEL_DB_USER_PASSWORD}
       - --spring.sql.init.platform=${PANEL_DB_TYPE}
       - --halo.external-url=${HALO_EXTERNAL_URL}
+      - --halo.cache.page.disabled=${HALO_CACHE_PAGE_DISABLED}
     labels:
       createdBy: "Apps"
 networks:
