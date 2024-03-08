@@ -58,7 +58,7 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-    - default: false
+    - default: "false"
       edit: true
       envKey: HALO_CACHE_PAGE_DISABLED
       labelEn: Disable Page Cache
@@ -67,6 +67,6 @@ additionalProperties:
       type: select
       values:
         - label: "true"
-          value: true
+          value: "true"
         - label: "false"
-          value: false
+          value: "false"
