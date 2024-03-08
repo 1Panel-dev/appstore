@@ -28,11 +28,6 @@ services:
       - ./certs:/root/.minio/certs
     labels:
       createdBy: "Apps"
-    healthcheck:
-      test: [ "CMD", "curl", "-f", "http://localhost:9000/minio/health/live" ]
-      interval: 30s
-      timeout: 20s
-      retries: 3
 networks:
   1panel-network:
     external: true
