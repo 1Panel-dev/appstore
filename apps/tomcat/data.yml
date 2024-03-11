@@ -1,0 +1,20 @@
+name: Apache Tomcat 
+tags:
+    - 开发工具
+title: 开源的 Web 服务器和 Servlet 容器
+type: 开发工具
+description: 开源的 Web 服务器和 Servlet 容器
+additionalProperties:
+    key: tomcat
+    name: Apache Tomcat 
+    tags:
+        - DevTool
+    shortDescZh: 开源的 Web 服务器和 Servlet 容器
+    shortDescEn: An open-source web server and servlet container
+    type: tool
+    crossVersionUpdate: false
+    limit: 0
+    recommend: 0
+    website: https://tomcat.apache.org/
+    github: https://github.com/apache/tomcat
+    document: https://tomcat.apache.org/
