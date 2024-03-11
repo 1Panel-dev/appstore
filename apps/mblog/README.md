@@ -14,3 +14,6 @@ mBlog (mtons blog)开源免费的Java博客系统，是一个简单、大气、�
 - Bootstrap 前端框架
 - UEditor/Markdown编辑器
 - font-wesome 字体/图标
+
+- ## 需要注意的
+- 初始用户名密码是admin/a123456
