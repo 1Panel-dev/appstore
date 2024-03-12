@@ -1,14 +1,14 @@
-name: Apache Tomcat 
+name: Apache Tomcat
 tags:
-    - 开发工具
+    - 中间件
 title: 开源的 Web 服务器和 Servlet 容器
-type: 开发工具
+type: 中间件
 description: 开源的 Web 服务器和 Servlet 容器
 additionalProperties:
     key: tomcat
-    name: Apache Tomcat 
+    name: Apache Tomcat
     tags:
-        - DevTool
+        - Middleware
     shortDescZh: 开源的 Web 服务器和 Servlet 容器
     shortDescEn: An open-source web server and servlet container
     type: tool
