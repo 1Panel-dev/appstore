@@ -1,0 +1,121 @@
+additionalProperties:
+  formFields:
+    - default: "/home/onedev"
+      edit: true
+      envKey: ONEDEV_ROOT_PATH
+      labelEn: Root Path
+      labelZh: 数据持久化 根路径
+      required: true
+      type: text
+    - default: 6610
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: External Port
+      labelZh: 端口外部访问端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 6611
+      edit: true
+      envKey: PANEL_APP_PORT_SSH
+      labelEn: SSH Port
+      labelZh: SSH外部访问端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: "root"
+      edit: true
+      envKey: INITIAL_USER
+      labelEn: Admin Username
+      labelZh: 管理员帐户的登录名
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: INITIAL_PASSWORD
+      labelEn: Admin Password
+      labelZh: 管理员账户密码
+      required: true
+      random: true
+      type: password
+    - default: ""
+      edit: true
+      envKey: INITIAL_EMAIL
+      labelEn: Admin Email
+      labelZh: 管理员帐户的电子邮件地址
+      required: true
+      type: text
+    - default: "http://127.0.0.1:6610"
+      edit: true
+      envKey: INITIAL_SERVER_URL
+      labelEn: Server URL
+      labelZh: 外部访问地址 http(s)://
+      required: true
+      rule: paramExtUrl
+      type: text
+    - default: "ssh://127.0.0.1:6611"
+      edit: true
+      envKey: INITIAL_SSH_ROOT_URL
+      labelEn: SSH Server URL
+      labelZh: SSH外部访问地址 (ssh://127.0.0.1:6611)
+      required: false
+      rule: paramExtUrl
+      type: text
+    - default: "false"
+      edit: true
+      envKey: ENABLE_DATABASE
+      labelEn: Enable Database
+      labelZh: 是否启用外部数据库
+      required: true
+      type: select
+      values:
+        - label: "启用"
+          value: "true"
+        - label: "禁用"
+          value: "false"
+    - default: "MySQL"
+      edit: true
+      envKey: DATABASE_TYPE
+      labelEn: Database Type
+      labelZh: 数据库类型
+      required: false
+      type: select
+      values:
+        - label: "MySQL"
+          value: "MySQL"
+        - label: "PostgreSQL"
+          value: "PostgreSQL"
+        - label: "MariaDB"
+          value: "MariaDB"
+        - label: "MS SQL Server"
+          value: "MS SQL Server"
+    - default: "localhost"
+      envKey: DATABASE_HOST
+      labelEn: Database Host
+      labelZh: 数据库主机地址
+      required: false
+      type: text
+    - default: "3306"
+      envKey: DATABASE_PORT
+      labelEn: Database Port
+      labelZh: 数据库主机端口
+      required: false
+      type: text
+    - default: "onedev"
+      envKey: DATABASE_NAME
+      labelEn: Database Name
+      labelZh: 数据库名
+      required: false
+      type: text
+    - default: "onedev"
+      envKey: DATABASE_USER
+      labelEn: User
+      labelZh: 数据库用户名
+      required: false
+      type: text
+    - default: ""
+      envKey: DATABASE_PASSWORD
+      labelEn: Password
+      labelZh: 数据库用户密码
+      required: false
+      type: password

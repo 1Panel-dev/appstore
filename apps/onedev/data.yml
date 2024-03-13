@@ -1,0 +1,20 @@
+name: OneDev
+tags:
+  - DevOps
+title: DevOps平台
+type: DevOps
+description: 单一 DevOps 平台
+additionalProperties:
+  key: onedev
+  name: OneDev
+  tags:
+    - DevOps
+  shortDescZh: 单一 DevOps 平台
+  shortDescEn: Single DevOps Platform
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://onedev.io
+  github: https://github.com/theonedev/onedev
+  document: https://docs.onedev.io
