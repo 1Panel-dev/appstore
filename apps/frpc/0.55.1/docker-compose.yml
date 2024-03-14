@@ -6,7 +6,7 @@ services:
     network_mode: host
     volumes:
         - ./data/frpc.toml:/etc/frp/frpc.toml
-    image: snowdreamtech/frpc:0.54.0
+    image: snowdreamtech/frpc:0.55.1
     labels:  
       createdBy: "Apps"
 
