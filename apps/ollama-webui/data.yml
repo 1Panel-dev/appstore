@@ -1,12 +1,12 @@
-name: Open WebUI
+name: Ollama WebUI
 tags:
     - AI
 title: 面向 LLM 的用户友好型 WebUI
 type: AI
 description: 面向 LLM 的用户友好型 WebUI
 additionalProperties:
-    key: open-webui
-    name: Open WebUI
+    key: ollama-webui
+    name: Ollama WebUI
     tags:
         - AI
     shortDescZh: 面向 LLM 的用户友好型 WebUI

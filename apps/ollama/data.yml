@@ -1,20 +1,20 @@
 name: Ollama
 tags:
     - AI
-title: 启动并运行 Llama 2、Mistral、Gemma 和其他大型语言模型
+title: 本地运行 Llama 2、Mistral、Gemma 和其他大型语言模型
 type: AI
-description: 启动并运行 Llama 2、Mistral、Gemma 和其他大型语言模型
+description: 本地运行 Llama 2、Mistral、Gemma 和其他大型语言模型
 additionalProperties:
     key: ollama
     name: Ollama
     tags:
         - AI
-    shortDescZh: 启动并运行 Llama 2、Mistral、Gemma 和其他大型语言模型
-    shortDescEn: Get up and running with Llama 2, Mistral, Gemma, and other large language models
+    shortDescZh: 本地运行 Llama 2、Mistral、Gemma 和其他大型语言模型
+    shortDescEn: Locally run Llama 2, Mistral, Gemma, and other large language models
     type: tool
     crossVersionUpdate: true
     limit: 0
-    recommend: 0
+    recommend: 50
     website: https://ollama.com/
     github: https://github.com/ollama/ollama
     document: https://github.com/ollama/ollama/blob/main/docs/README.md
