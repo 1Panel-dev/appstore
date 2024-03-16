@@ -1,0 +1,27 @@
+additionalProperties:
+  formFields:
+    - default: 3000
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: '示例：http://192.168.10.100:11434'
+      edit: true
+      envKey: OLLAMA_BASE_URL
+      labelEn: Ollama Base Url
+      labelZh: Ollama 服务地址
+      required: true
+      rule: paramExtUrl
+      type: text
+    - default: 'ollama'
+      edit: true
+      envKey: WEBUI_SECRET_KEY
+      labelEn: Secret Key
+      labelZh: Secret Key
+      random: true
+      required: false
+      rule: paramComplexity
+      type: password
