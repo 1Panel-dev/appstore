@@ -1,0 +1,25 @@
+version: "3"
+services:
+  anaconda3:
+    image: continuumio/anaconda3
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - ${HOST_IP}:${PANEL_APP_PORT_HTTP}:8888
+    volumes:
+      - "./data/config/condarc:/root/.condarc"
+      - "./data/config/jupyter:/root/.jupyter" # 配置文件映射
+      - "./data/data:/root/notebooks"
+    command: # 启动命令，安装中文语言包
+      bash -c "source /opt/conda/bin/activate && pip install jupyterlab-language-pack-zh-CN && jupyter notebook --ip=0.0.0.0 --no-browser --allow-root --notebook-dir=/root/notebooks"
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=${TIME_ZONE}
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true

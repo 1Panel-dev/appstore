@@ -1,0 +1,36 @@
+additionalProperties:
+  formFields:
+    - default: 8888
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: HTTP Port
+      labelZh: HTTP 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: Asia/Shanghai
+      edit: true
+      envKey: TIME_ZONE
+      labelEn: Time zone
+      labelZh: 时区
+      required: true
+      type: text
+    - default: "true"
+      envKey: USING_PASSWORD
+      labelEn: start using password
+      labelZh: 启用密码（无效选项，请忽略）
+      required: true
+      type: select
+      values:
+        - label: 开启
+          value: "true"
+        - label: 关闭
+          value: "false"
+    - default: jupyter
+      envKey: JUPYTER_PASSWORD
+      labelEn: jupyter notebook password
+      labelZh: jupyter notebook 密码(暂时为无效选项，请忽略。只有当启用密码时，此选项可用)
+      random: true #是否在 default 文字后面，增加随机字符串
+      required: true
+      rule: paramCommon #校验规则
+      type: text #需要手动填写的，使用此 type

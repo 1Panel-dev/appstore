@@ -1,0 +1,20 @@
+name: Anaconda3
+tags:
+    - 工具
+title: Anaconda3
+type: tool
+description: Anaconda3
+additionalProperties:
+    key: anaconda3
+    name: Anaconda3
+    tags:
+        - Tool
+    shortDescZh: Anaconda3
+    shortDescEn: Anaconda3
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://www.anaconda.com/
+    github: https://www.anaconda.com/open-source
+    document: https://docs.anaconda.com/

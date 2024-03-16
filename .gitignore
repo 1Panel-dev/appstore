@@ -6,3 +6,6 @@
 
 # VSCode
 .vscode
+apps/anaconda3/3.0.0/scripts/setpasswd.sh
+apps/anaconda3/3.0.0/scripts/init.sh
+apps/anaconda3/3.0.0/data/config/jupyter/jupyter_notebook_config.py
