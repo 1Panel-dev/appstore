@@ -34,3 +34,6 @@ Jupyter Notebook（现在通常称为 JupyterLab）是 Anaconda 套装中的一�
 - 可重复性：Notebook 能够记录完整的代码执行过程和结果，便于他人复现研究或数据分析步骤。
 - 协作与分享：可以通过导出为 HTML、PDF 或其他格式分享给他人，也可以直接在线共享。
 - 数据可视化集成：内置支持多种数据可视化库，可以直接在 Notebook 中生成图表和图形。
+
+## 自定义
+- 不需要中文可以去docker-compose.yml里删除`pip install jupyterlab-language-pack-zh-CN`
