@@ -3,7 +3,7 @@ services:
   tailchat:
     container_name: ${CONTAINER_NAME}
     restart: unless-stopped
-    image: moonrailgun/tailchat:1.10.0
+    image: moonrailgun/tailchat:1.10.1
     networks:
       - 1panel-network
     environment:
@@ -28,7 +28,7 @@ services:
   tailchat-admin:
     container_name: ${CONTAINER_NAME}-admin
     restart: unless-stopped
-    image: moonrailgun/tailchat:1.10.0
+    image: moonrailgun/tailchat:1.10.1
     networks:
       - 1panel-network
     environment:
