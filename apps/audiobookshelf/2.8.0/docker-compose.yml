@@ -12,7 +12,7 @@ services:
       - "./data/podcasts:/podcasts"
       - "./data/config:/config"
       - "./data/metadata:/metadata"
-    image: advplyr/audiobookshelf:2.8.0
+    image: advplyr/audiobookshelf:2.8.1
     labels:  
       createdBy: "Apps"
 
