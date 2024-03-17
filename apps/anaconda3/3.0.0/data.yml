@@ -15,10 +15,10 @@ additionalProperties:
       labelZh: 时区
       required: true
       type: text
-    - default: "true"
+    - default: "false"
       envKey: USING_PASSWORD
       labelEn: start using password
-      labelZh: 启用密码（无效选项，请忽略）
+      labelZh: 启用密码 #（无效选项，请忽略）
       required: true
       type: select
       values:
@@ -29,7 +29,7 @@ additionalProperties:
     - default: jupyter
       envKey: JUPYTER_PASSWORD
       labelEn: jupyter notebook password
-      labelZh: jupyter notebook 密码(暂时为无效选项，请忽略。只有当启用密码时，此选项可用)
+      labelZh: jupyter notebook 密码(只有当启用密码时，此选项可用) # 暂时为无效选项，请忽略。
       random: true #是否在 default 文字后面，增加随机字符串
       required: true
       rule: paramCommon #校验规则
