@@ -38,3 +38,10 @@ additionalProperties:
       labelZh: 缓存文件夹路径
       required: true
       type: text
+    - default: "/dev/dri"
+      edit: true
+      envKey: JELLYFIN_DRIVE_PATH
+      labelEn: Drive path
+      labelZh: 驱动路径
+      required: true
+      type: text
