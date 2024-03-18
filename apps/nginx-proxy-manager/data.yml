@@ -1,20 +1,20 @@
 name: Nginx Proxy Manager
 tags:
     - 实用工具
-title: 使用简单、强大的界面管理 Nginx 代理主机
+title: Nginx 可视化管理工具
 type: 实用工具
-description: 使用简单、强大的界面管理 Nginx 代理主机
+description: Nginx 可视化管理工具
 additionalProperties:
     key: nginx-proxy-manager
     name: Nginx Proxy Manager
     tags:
         - Tool
-    shortDescZh: 使用简单、强大的界面管理 Nginx 代理主机
-    shortDescEn: managing Nginx proxy hosts with a simple, powerful interface
+    shortDescZh: Nginx 可视化管理工具
+    shortDescEn: Nginx visual management tool
     type: tool
     crossVersionUpdate: true
     limit: 0
-    recommend: 0
+    recommend: 17
     website: https://nginxproxymanager.com/
     github: https://github.com/NginxProxyManager/nginx-proxy-manager
     document: https://nginxproxymanager.com/guide/

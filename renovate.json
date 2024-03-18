@@ -49,6 +49,18 @@
     {
       "matchFileNames": ["apps/dataease/2.*/*.yml"],
       "allowedVersions": ">=2.0"
+    },
+    {
+      "matchFileNames": ["apps/tomcat/8.*/*.yml"],
+      "allowedVersions": "/^8.*/"
+    },
+    {
+      "matchFileNames": ["apps/tomcat/9.*/*.yml"],
+      "allowedVersions": "/^9.*/"
+    },
+    {
+      "matchFileNames": ["apps/tomcat/10.*/*.yml"],
+      "allowedVersions": "/^10.*/"
     }
   ],
   "prCreation": "immediate"

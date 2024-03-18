@@ -1,19 +1,20 @@
 name: 青龙
 tags: 
   - 实用工具
-title: 支持 Python3、JavaScript、Shell、Typescript 的定时任务管理平台
+title: 定时任务管理平台
 type: 实用工具
-description: 支持 Python3、JavaScript、Shell、Typescript 的定时任务管理平台
+description: 定时任务管理平台
 additionalProperties:
   key: qinglong
   name: 青龙
   tags:  
     - Tool
-  shortDescZh: 支持 Python3、JavaScript、Shell、Typescript 的定时任务管理平台
-  shortDescEn: Timed task management platform supporting Python3, JavaScript, Shell, Typescript
+  shortDescZh: 定时任务管理平台
+  shortDescEn: Scheduled Task Management Platform
   type: tool
   crossVersionUpdate: true
   limit: 0
+  recommend: 16
   website: https://github.com/whyour/qinglong/tree/master
   github: https://github.com/whyour/qinglong/tree/master
   document: https://github.com/whyour/qinglong/tree/master

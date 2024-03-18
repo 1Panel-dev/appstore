@@ -2,21 +2,21 @@ name: AList
 tags:
     - 实用工具
     - 云存储
-title: 支持多存储的文件列表程序
+title: 支持多存储的文件列表程序和私人网盘
 type: 云存储
-description: 支持多存储的文件列表程序
+description: 支持多存储的文件列表程序和私人网盘
 additionalProperties:
     key: alist
     name: AList
     tags:
         - Storage
         - Tool
-    shortDescZh: 支持多存储的文件列表程序
-    shortDescEn: A file list program that supports multiple storage
+    shortDescZh: 支持多存储的文件列表程序和私人网盘
+    shortDescEn: Supporting multi-storage file listing program and private cloud storage
     type: tool
     crossVersionUpdate: true
     limit: 0
-    recommend: 11
+    recommend: 12
     website: https://alist.nn.ci/
     github: https://github.com/alist-org/alist
     document: https://alist.nn.ci/zh/guide/

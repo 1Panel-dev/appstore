@@ -1,16 +1,16 @@
 name: Redis
 tags:
     - 数据库
-title: 持久保存在磁盘上的内存数据库
+title: 高性能的开源键值数据库
 type: 数据库
-description: 持久保存在磁盘上的内存数据库
+description: 高性能的开源键值数据库
 additionalProperties:
     key: redis
     name: Redis
     tags:
         - Database
-    shortDescZh: 持久保存在磁盘上的内存数据库
-    shortDescEn: An in-memory database that persists on disk
+    shortDescZh: 高性能的开源键值数据库
+    shortDescEn: High-performance open-source key-value database
     type: runtime
     crossVersionUpdate: true
     limit: 1
