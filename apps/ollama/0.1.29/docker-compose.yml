@@ -1,7 +1,7 @@
 version: '3'
 services:
   ollama:
-    image: ollama/ollama:latest
+    image: ollama/ollama:0.1.29
     container_name: ${CONTAINER_NAME}
     restart: unless-stopped
     ports:
