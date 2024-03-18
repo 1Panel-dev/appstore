@@ -14,7 +14,7 @@ additionalProperties:
     type: tool
     crossVersionUpdate: true
     limit: 0
-    recommend: 12
+    recommend: 13
     website: https://ollama.com/
     github: https://github.com/ollama/ollama
     document: https://github.com/ollama/ollama/blob/main/docs/README.md

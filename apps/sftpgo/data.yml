@@ -14,7 +14,7 @@ additionalProperties:
     type: tool
     crossVersionUpdate: false  
     limit: 1
-    recommend: 14
+    recommend: 15
     website: https://sftpgo.com/
     github: https://github.com/drakkan/sftpgo/
     document: https://github.com/drakkan/sftpgo/blob/main/docs/howto/getting-started.md

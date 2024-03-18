@@ -1,20 +1,20 @@
-name: frps-frp 服务端
+name: frp 服务端
 tags:
     - 实用工具
-title: 快速反向代理可帮助您将 NAT 或防火墙后面的本地服务器暴露给互联网
+title: 专注于内网穿透的高性能反向代理应用
 type: 实用工具
-description: 快速反向代理可帮助您将 NAT 或防火墙后面的本地服务器暴露给互联网
+description: 专注于内网穿透的高性能反向代理应用
 additionalProperties:
     key: frps
-    name: frps-frp 服务端
+    name: frp 服务端
     tags:
         - Tool
-    shortDescZh: 快速反向代理可帮助您将 NAT 或防火墙后面的本地服务器暴露给互联网
-    shortDescEn: A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet
+    shortDescZh: 专注于内网穿透的高性能反向代理应用
+    shortDescEn: High-performance reverse proxy application focused on intranet penetration
     type: tool
     crossVersionUpdate: true
     limit: 0
-    recommend: 0
+    recommend: 7
     website: https://github.com/fatedier/frp
     github: https://github.com/fatedier/frp
     document: https://github.com/fatedier/frp/blob/dev/README_zh.md

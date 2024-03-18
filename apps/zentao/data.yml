@@ -14,7 +14,7 @@ additionalProperties:
   type: tool
   crossVersionUpdate: true
   limit: 0
-  recommend: 13
+  recommend: 14
   website: https://www.zentao.net/index.html
   github: https://github.com/easysoft/zentaopms
   document: https://www.zentao.net/book/zentaopms/38.html
