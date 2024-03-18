@@ -1,0 +1,36 @@
+version: '3.4'
+
+networks:
+  1panel-network:
+    external: true
+
+services:
+  speedtest-tracker:
+    image: ${SPEED_TEST_IMAGE}
+    container_name: ${CONTAINER_NAME}
+    labels:
+      createdBy: "Apps"
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:80
+      - ${PANEL_APP_PORT_HTTPS}:443
+    environment:
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+      - TZ=${SP_TRACKER_TZ:-Asia/Shanghai}
+      - DB_CONNECTION=${SP_TRACKER_DB_TYPE:-sqlite}
+      - DB_HOST=${SP_TRACKER_DB_HOST}
+      - DB_PORT=${SP_TRACKER_DB_PORT}
+      - DB_DATABASE=${MYSQL_SERVICE_DB_NAME}
+      - DB_USERNAME=${SP_TRACKER_DB_USER}
+      - DB_PASSWORD=${SP_TRACKER_DB_PASSWORD}
+    volumes:
+      - ${SP_TRACKER_ROOT_PATH}/config:/config
+    healthcheck:
+      test: curl -fSs APP_URL/api/healthcheck || exit 1
+      interval: 10s
+      retries: 3
+      start_period: 30s
+      timeout: 10s

@@ -1,0 +1,115 @@
+additionalProperties:
+  formFields:
+    - default: "lscr.io/linuxserver/speedtest-tracker:0.18.3"
+      edit: true
+      envKey: SPEED_TEST_IMAGE
+      labelEn: Image source
+      labelZh: 镜像源
+      required: true
+      type: select
+      values:
+        - label: "LinuxServer"
+          value: "lscr.io/linuxserver/speedtest-tracker:0.18.3"
+        - label: "GitHub"
+          value: "ghcr.io/alexjustesen/speedtest-tracker:v0.18.3"
+    - default: "/home/speedtest-tracker"
+      edit: true
+      envKey: SP_TRACKER_ROOT_PATH
+      labelEn: Data persistence root path
+      labelZh: 数据持久化 根路径
+      required: true
+      type: text
+    - default: 8080
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Server port
+      labelZh: Web 服务端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 8443
+      edit: true
+      envKey: PANEL_APP_PORT_HTTPS
+      labelEn: Server port
+      labelZh: SSL 服务端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: "Asia/Shanghai"
+      edit: true
+      envKey: SP_TRACKER_TZ
+      labelEn: Timezone
+      labelZh: 时区
+      required: false
+      type: text
+    - default: "sqlite"
+      edit: true
+      envKey: SP_TRACKER_DB_TYPE
+      labelEn: Database type
+      labelZh: 数据库驱动类型
+      required: true
+      type: select
+      values:
+        - label: MySQL (MariaDB)
+          value: "mysql"
+        - label: SQLite
+          value: "sqlite"
+        - label: PostgreSQL
+          value: "pgsql"
+    - default: "localhost"
+      edit: true
+      envKey: SP_TRACKER_DB_HOST
+      labelEn: Database host IP
+      labelZh: 数据库主机IP
+      required: false
+      type: text
+    - default: 3306
+      edit: true
+      envKey: SP_TRACKER_DB_PORT
+      labelEn: Database Port (default 3306)
+      labelZh: 数据库端口 (默认3306)
+      required: false
+      rule: paramPort
+      type: number
+    - default: "speedtest_tracker"
+      edit: true
+      envKey: SP_TRACKER_DB_USER
+      labelEn: Database Connection Username
+      labelZh: 数据库 用户名
+      required: false
+      type: text
+    - default: "speedtest_tracker"
+      edit: true
+      envKey: SP_TRACKER_DB_PASSWORD
+      labelEn: Database Connection Password
+      labelZh: 数据库 用户名密码
+      required: false
+      type: password
+    - default: "speedtest_tracker"
+      edit: true
+      envKey: MYSQL_SERVICE_DB_NAME
+      labelEn: Database Name
+      labelZh: 数据库名称
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: SP_TRACKER_APP_KEY
+      labelEn: Application Key
+      labelZh: 加密存储数据的应用程序密钥 (Base64 开头)
+      required: false
+      type: text
+    - default: 1000
+      edit: true
+      envKey: PUID
+      labelEn: User ID
+      labelZh: 用户ID
+      required: false
+      type: number
+    - default: 1000
+      edit: true
+      envKey: PGID
+      labelEn: Group ID
+      labelZh: 组ID
+      required: false
+      type: number

@@ -1,0 +1,19 @@
+name: SpeedTest-Tracker
+tags:
+  - 工具
+title: SpeedTest-Tracker
+type: 工具
+description:
+additionalProperties:
+  key: speedtest-tracker
+  name: SpeedTest-Tracker
+  tags:
+    - Tool
+  shortDescZh: 托管互联网性能跟踪应用程序
+  shortDescEn: Hosted internet performance tracking application
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  website: https://docs.speedtest-tracker.dev/
+  github: https://github.com/alexjustesen/speedtest-tracker
+  document: https://docs.speedtest-tracker.dev/
