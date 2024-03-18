@@ -1,24 +1,40 @@
 additionalProperties:
-    formFields:
-        - default: 8096
-          edit: true
-          envKey: PANEL_APP_PORT_HTTP
-          labelEn: WebUI Port
-          labelZh: 网页端口
-          required: true
-          rule: paramPort
-          type: number
-        - default: ./data/media
-          edit: true
-          envKey: MEDIA_FOLDER_PATH
-          labelEn: Media folder path
-          labelZh: 媒体文件夹路径
-          required: true
-          type: text
-        - default: ./data/cache
-          edit: true
-          envKey: CACHE_FOLDER_PATH
-          labelEn: Cache folder path
-          labelZh: 缓存文件夹路径
-          required: true
-          type: text
+  formFields:
+    - default: "host"
+      edit: true
+      envKey: NETWORK_MODE
+      labelEn: Drive path
+      labelZh: 网络模式
+      required: true
+      type: select
+      values:
+        - label: 主机网络
+          value: "host"
+        - label: 桥接网卡
+          value: "bridge"
+        - label: 无网络
+          value: "none"
+        - label: 1panel-network
+          value: "1panel-network"
+    - default: 8096
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: WebUI Port
+      labelZh: 网页端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: ./data/media
+      edit: true
+      envKey: MEDIA_FOLDER_PATH
+      labelEn: Media folder path
+      labelZh: 媒体文件夹路径
+      required: true
+      type: text
+    - default: ./data/cache
+      edit: true
+      envKey: CACHE_FOLDER_PATH
+      labelEn: Cache folder path
+      labelZh: 缓存文件夹路径
+      required: true
+      type: text
