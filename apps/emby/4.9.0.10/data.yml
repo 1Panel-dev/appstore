@@ -1,0 +1,83 @@
+additionalProperties:
+  formFields:
+    - default: "embyserver:4.9.0.10"
+      edit: true
+      envKey: OS_VERSION
+      labelEn: os version
+      labelZh: 系统版本 (针对Arm架构用户)
+      required: true
+      type: select
+      values:
+        - label: AMD_X64
+          value: "embyserver:4.9.0.10"
+        - label: ARM64_V8
+          value: "embyserver_arm64v8:4.9.0.10"
+        - label: ARM32_V7
+          value: "embyserver_arm32v7:4.9.0.10"
+    - default: "host"
+      edit: true
+      envKey: NETWORK_MODE
+      labelEn: Drive path
+      labelZh: 网络模式 (仅Host模式支持DLNA and WoL)
+      required: true
+      type: select
+      values:
+        - label: "Host"
+          value: "host"
+        - label: "Bridge"
+          value: "bridge"
+        - label: "None"
+          value: "none"
+        - label: "1panel-network"
+          value: "1panel-network"
+    - default: 8096
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: WebUI Port
+      labelZh: 网页端口 HTTP
+      required: true
+      rule: paramPort
+      type: number
+    - default: 8920
+      edit: true
+      envKey: PANEL_APP_PORT_HTTPS
+      labelEn: WebUI Port
+      labelZh: 网页端口 HTTPS
+      required: true
+      rule: paramPort
+      type: number
+    - default: "/home/emby"
+      edit: true
+      envKey: EMBY_ROOT_PATH
+      labelEn: Data persistence root path
+      labelZh: 数据持久化 根路径
+      required: true
+      type: text
+    - default: "/dev/dri"
+      edit: true
+      envKey: EMBY_DRIVE_PATH
+      labelEn: Drive path
+      labelZh: 驱动存放路径
+      required: true
+      type: text
+    - default: 1000
+      edit: true
+      envKey: UID
+      labelEn: User ID
+      labelZh: 用户ID
+      required: true
+      type: number
+    - default: 1000
+      edit: true
+      envKey: GID
+      labelEn: Group ID
+      labelZh: 组ID
+      required: true
+      type: number
+    - default: "1000,39,998"
+      edit: true
+      envKey: GIDLIST
+      labelEn: Group ID List
+      labelZh: 组ID列表 (查看应用安装说明填写)
+      required: true
+      type: text

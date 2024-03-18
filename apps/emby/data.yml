@@ -1,0 +1,20 @@
+name: Emby
+tags:
+  - 多媒体
+title: 个人媒体服务器
+type: 多媒体
+description: Emby Server 是一款个人媒体服务器
+additionalProperties:
+  key: emby
+  name: Emby
+  tags:
+    - Media
+  shortDescZh: Emby Server 是一款个人媒体服务器
+  shortDescEn: Emby Server is a personal media server
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://emby.media/
+  github: https://github.com/MediaBrowser/Emby
+  document: https://emby.media/blog.html

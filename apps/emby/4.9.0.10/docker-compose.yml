@@ -1,0 +1,26 @@
+version: "3"
+
+networks:
+  1panel-network:
+    external: true
+
+services:
+  emby:
+    image: emby/${OS_VERSION}
+    container_name: ${CONTAINER_NAME}
+    labels:
+      createdBy: "Apps"
+    restart: always
+    network_mode: ${NETWORK_MODE}
+    environment:
+      - UID=${UID}
+      - GID=${GID}
+      - GIDLIST=${GIDLIST}
+    volumes:
+      - ${EMBY_ROOT_PATH}/config:/config
+      - ${EMBY_ROOT_PATH}/mnt:/mnt
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8096
+      - ${PANEL_APP_PORT_HTTPS}:8920
+    devices:
+      - ${EMBY_DRIVE_PATH}:/dev/dri
