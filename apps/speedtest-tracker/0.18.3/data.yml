@@ -113,3 +113,64 @@ additionalProperties:
       labelZh: 组ID
       required: false
       type: number
+    - default: "smtp"
+      edit: true
+      envKey: MAIL_MAILER
+      labelEn: Mailer
+      labelZh: 协议 (SMTP)
+      required: false
+      type: text
+    - default: "smtp.163.com"
+      edit: true
+      envKey: MAIL_HOST
+      labelEn: Mail Host
+      labelZh: 邮件服务器地址 (SMTP)
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: MAIL_USERNAME
+      labelEn: Mail Username
+      labelZh: 邮件用户名 (SMTP)
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: MAIL_PASSWORD
+      labelEn: Mail Password
+      labelZh: 邮件账户密码 (SMTP)
+      required: false
+      type: text
+    - default: "ssl"
+      edit: true
+      envKey: MAIL_ENCRYPTION
+      labelEn: Mail Encryption
+      labelZh: 邮件加密方式 (SMTP)
+      required: false
+      type: select
+      values:
+        - label: "SSL"
+          value: "ssl"
+        - label: "TLS"
+          value: "tls"
+    - default: ""
+      edit: true
+      envKey: MAIL_FROM_ADDRESS
+      labelEn: Mail From Address
+      labelZh: 邮件发送地址 (SMTP)
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: MAIL_FROM_NAME
+      labelEn: Mail From Name
+      labelZh: 邮件发送者名称 (SMTP)
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: TELEGRAM_BOT_TOKEN
+      labelEn: Bot Token ID (Telegram Notification)
+      labelZh: 机器人的令牌 ID (通知 Telegram)
+      required: false
+      type: text
