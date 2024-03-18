@@ -14,7 +14,7 @@ additionalProperties:
     type: tool
     crossVersionUpdate: false
     limit: 0
-    recommend: 10
+    recommend: 11
     website: https://gitea.io/
     github: https://github.com/go-gitea/gitea
     document: https://docs.gitea.io/

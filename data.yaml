@@ -21,7 +21,7 @@ additionalProperties:
       name: 云存储
       sort: 6
     - key: AI
-      name: AI
+      name: AI / 大模型
       sort: 7  
     - key: BI
       name: BI
