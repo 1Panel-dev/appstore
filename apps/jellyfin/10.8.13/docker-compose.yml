@@ -8,11 +8,11 @@ services:
     restart: always
     network_mode: ${NETWORK_MODE}
     ports:
-      - "${PANEL_APP_PORT_HTTP}:8096"
+      - ${PANEL_APP_PORT_HTTP}:8096
     volumes:
-      - "./data/config:/config"
-      - "${CACHE_FOLDER_PATH}:/cache"
-      - "${MEDIA_FOLDER_PATH}:/media/media"
+      - ./data/config:/config
+      - ${CACHE_FOLDER_PATH}:/cache
+      - ${MEDIA_FOLDER_PATH}:/media/media
     devices:
       - ${JELLYFIN_DRIVE_PATH}:/dev/dri
 networks:
