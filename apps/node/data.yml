@@ -2,7 +2,6 @@ name: Node.js
 tags:
   - 运行环境
 title: Node.js 运行环境
-type: 运行环境
 description: Node.js 运行环境
 additionalProperties:
   key: node

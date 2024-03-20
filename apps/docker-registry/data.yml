@@ -2,7 +2,6 @@ name: Docker Registry
 tags:
     - DevOps
 title: Docker 镜像存储库
-type: DevOps
 description: Docker 镜像存储库
 additionalProperties:
     key: docker-registry

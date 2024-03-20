@@ -2,7 +2,6 @@ name: Nextcloud
 tags:
     - 云存储
 title: Nextcloud 服务器，所有数据的安全家园
-type: 云存储
 description: Nextcloud 服务器，所有数据的安全家园
 additionalProperties:
     key: nextcloud

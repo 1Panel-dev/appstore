@@ -3,7 +3,6 @@ tags:
     - 实用工具
     - 云存储
 title: 支持多存储的文件列表程序和私人网盘
-type: 云存储
 description: 支持多存储的文件列表程序和私人网盘
 additionalProperties:
     key: alist

@@ -1,8 +1,7 @@
 name: One API
 tags:
-    - AI
+    - AI / 大模型
 title: OpenAI 接口管理 & 分发系统
-type: AI
 description: OpenAI 接口管理 & 分发系统
 additionalProperties:
   key: one-api

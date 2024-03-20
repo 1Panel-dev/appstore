@@ -2,7 +2,6 @@ name: Maddy Mail Server
 tags:
     - 邮件服务
 title: 可组合的多合一邮件服务器
-type: 邮件服务
 description: 可组合的多合一邮件服务器
 additionalProperties:
     key: maddy-mail

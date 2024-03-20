@@ -48,7 +48,7 @@ additionalProperties:
           labelEn: External URL
           labelZh: 外部访问地址
           required: true
-          rule: paramExtUrl
+          rule: paramHttp
           type: text
         - default: 8080
           edit: true

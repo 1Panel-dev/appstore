@@ -2,7 +2,6 @@ name: cloudflared
 tags:
     - 实用工具
 title: Cloudflare Tunnel 客户端
-type: 实用工具
 description: Cloudflare Tunnel 客户端
 additionalProperties:
   key: cloudflared

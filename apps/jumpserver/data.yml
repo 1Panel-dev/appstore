@@ -2,7 +2,6 @@ name: JumpServer
 tags:
     - 安全
 title: JumpServer 开源堡垒机
-type: 安全
 description: JumpServer 开源堡垒机
 additionalProperties:
   key: jumpserver

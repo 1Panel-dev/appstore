@@ -2,7 +2,6 @@ name: 中文 DOS 游戏
 tags:
     - 休闲游戏
 title: 中文 DOS 游戏合集
-type: 休闲游戏
 description: 中文 DOS 游戏合集
 additionalProperties:
     key: dosgame

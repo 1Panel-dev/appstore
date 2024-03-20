@@ -2,7 +2,6 @@ name: Kafka
 tags:
     - 中间件
 title: 开源分布式事件流平台
-type: 中间件
 description: 开源分布式事件流平台
 additionalProperties:
     key: kafka

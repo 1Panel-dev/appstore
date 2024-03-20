@@ -61,7 +61,13 @@
     {
       "matchFileNames": ["apps/tomcat/10.*/*.yml"],
       "allowedVersions": "/^10.*/"
-    }
+    },
+    {
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["ghcr.io/umami-software/umami"],
+      "versionCompatibility": "^(?<compatibility>.*)-(?<version>.*)$",
+      "versioning": "semver"
+    },
   ],
   "prCreation": "immediate"
 }
