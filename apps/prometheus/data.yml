@@ -2,7 +2,6 @@ name: Prometheus
 tags:
     - 数据库
 title: 监控系统和时间序列数据库
-type: 数据库
 description: 监控系统和时间序列数据库
 additionalProperties:
     key: prometheus

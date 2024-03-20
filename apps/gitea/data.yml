@@ -2,7 +2,6 @@ name: Gitea
 tags:
     - DevOps
 title: 新一代的代码托管平台
-type: DevOps
 description: 新一代的代码托管平台
 additionalProperties:
     key: gitea

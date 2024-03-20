@@ -2,7 +2,6 @@ name: mBlog
 tags:
   - 建站
 title: 开源自部署的个人微博
-type: 建站
 description: 开源自部署的个人微博
 additionalProperties:
   key: mblog

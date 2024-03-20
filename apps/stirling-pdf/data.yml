@@ -2,7 +2,6 @@ name: Stirling-PDF
 tags:
     - 实用工具
 title: 强大的本地托管基于 Web 的 PDF 操作工具
-type: 实用工具
 description: 强大的本地托管基于 Web 的 PDF 操作工具
 additionalProperties:
     key: stirling-pdf

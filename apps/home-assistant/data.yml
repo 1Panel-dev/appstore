@@ -1,16 +1,15 @@
 name: Home Assistant
 tags:
     - 实用工具
-title: 开源家庭自动化，将本地控制和隐私放在首位。
-type: 实用工具
-description: 开源家庭自动化，将本地控制和隐私放在首位。
+title: 开源家庭自动化，将本地控制和隐私放在首位
+description: 开源家庭自动化，将本地控制和隐私放在首位
 additionalProperties:
     key: home-assistant
     name: Home Assistant
     tags:
         - Tool
-    shortDescZh: 开源家庭自动化，将本地控制和隐私放在首位。
-    shortDescEn: Open source home automation that puts local control and privacy first.
+    shortDescZh: 开源家庭自动化，将本地控制和隐私放在首位
+    shortDescEn: Open source home automation that puts local control and privacy first
     type: tool
     crossVersionUpdate: true
     limit: 0

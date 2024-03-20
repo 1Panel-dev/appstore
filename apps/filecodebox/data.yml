@@ -3,7 +3,6 @@ tags:
   - 实用工具
   - 云存储
 title: 文件快递柜-匿名口令分享文本，文件，像拿快递一样取文件
-type: 实用工具
 description: 文件快递柜-匿名口令分享文本，文件，像拿快递一样取文件
 additionalProperties:
   key: filecodebox

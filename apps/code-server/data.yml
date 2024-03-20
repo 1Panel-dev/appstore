@@ -2,7 +2,6 @@ name: Coder
 tags:
     - 开发工具
 title: 浏览器中的VS Code
-type: 开发工具
 description: 浏览器中的VS Code
 additionalProperties:
     key: code-server

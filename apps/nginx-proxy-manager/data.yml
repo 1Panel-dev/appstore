@@ -2,7 +2,6 @@ name: Nginx Proxy Manager
 tags:
     - 实用工具
 title: Nginx 可视化管理工具
-type: 实用工具
 description: Nginx 可视化管理工具
 additionalProperties:
     key: nginx-proxy-manager

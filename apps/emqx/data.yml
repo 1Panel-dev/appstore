@@ -2,7 +2,6 @@ name: EMQX
 tags:
     - 中间件
 title: 适用于 IoT、IIoT 和联网车辆的最具可扩展性的开源 MQTT 代理
-type: 中间件
 description: 适用于 IoT、IIoT 和联网车辆的最具可扩展性的开源 MQTT 代理
 additionalProperties:
     key: emqx

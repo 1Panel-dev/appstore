@@ -2,7 +2,6 @@ name: 青龙
 tags: 
   - 实用工具
 title: 定时任务管理平台
-type: 实用工具
 description: 定时任务管理平台
 additionalProperties:
   key: qinglong

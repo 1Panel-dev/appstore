@@ -2,7 +2,6 @@ name: Nexus Repository
 tags:
     - DevOps
 title: 开源的软件制品库
-type: DevOps
 description: 开源的软件制品库
 additionalProperties:
     key: nexus

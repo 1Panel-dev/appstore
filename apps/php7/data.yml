@@ -2,7 +2,6 @@ name: PHP 7
 tags:
     - 运行环境
 title: PHP7 运行环境
-type: 运行环境
 description: PHP7 运行环境
 additionalProperties:
     key: php7

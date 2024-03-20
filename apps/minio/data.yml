@@ -2,7 +2,6 @@ name: MinIO
 tags:
     - 中间件
 title: 开源的对象存储服务器
-type: 中间件
 description: 开源的对象存储服务器
 additionalProperties:
     key: minio

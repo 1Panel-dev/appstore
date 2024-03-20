@@ -2,7 +2,6 @@ name: Tailchat
 tags:
     - 实用工具
 title: 您自己的工作空间中的下一代 noIM 应用程序
-type: 实用工具
 description: 您自己的工作空间中的下一代 noIM 应用程序
 additionalProperties:
     key: tailchat

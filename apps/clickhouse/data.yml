@@ -2,7 +2,6 @@ name: ClickHouse
 tags:
     - 数据库
 title: 一款免费的大数据分析 DBMS
-type: 数据库
 description: 一款免费的大数据分析 DBMS
 additionalProperties:
     key: clickhouse

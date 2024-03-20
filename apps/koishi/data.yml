@@ -2,7 +2,6 @@ name: Koishi
 tags:
     - 实用工具
 title: 跨平台、可扩展、高性能的聊天机器人框架 
-type: 实用工具
 description: 跨平台、可扩展、高性能的聊天机器人框架 
 additionalProperties:
     key: koishi

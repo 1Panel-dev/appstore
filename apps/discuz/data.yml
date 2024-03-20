@@ -2,7 +2,6 @@ name: Discuz!
 tags:
     - 建站
 title: 开源社交建站系统
-type: 建站
 description: 开源社交建站系统
 additionalProperties:
     key: discuz

@@ -2,7 +2,6 @@ name: Roundcube
 tags:
   - 邮件服务
 title: 基于 Web 的多语言 IMAP 邮件客户端
-type: 邮件服务
 description: 基于 Web 的多语言 IMAP 邮件客户端
 additionalProperties:
   key: roundcube

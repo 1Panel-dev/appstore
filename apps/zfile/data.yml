@@ -2,7 +2,6 @@ name: ZFile
 tags:
     - 云存储
 title: 基于 Java 的在线网盘程序
-type: 云存储
 description: 基于 Java 的在线网盘程序
 additionalProperties:
     key: zfile
