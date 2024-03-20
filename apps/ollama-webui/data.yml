@@ -1,8 +1,7 @@
 name: Ollama WebUI
 tags:
-    - AI
+    - AI / 大模型
 title: 面向 LLM 的用户友好型 WebUI
-type: AI
 description: 面向 LLM 的用户友好型 WebUI
 additionalProperties:
     key: ollama-webui

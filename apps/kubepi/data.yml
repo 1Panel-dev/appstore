@@ -2,7 +2,6 @@ name: KubePi
 tags:
     - 实用工具
 title: 现代化的 K8s 面板
-type: 实用工具
 description: 现代化的 K8s 面板
 additionalProperties:
     key: kubepi

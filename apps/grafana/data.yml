@@ -2,7 +2,6 @@ name: Grafana
 tags:
     - 实用工具
 title: 用于监控和可观察的开源平台
-type: 实用工具
 description: 用于监控和可观察的开源平台
 additionalProperties:
     key: grafana

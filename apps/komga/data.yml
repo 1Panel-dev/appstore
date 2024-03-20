@@ -2,7 +2,6 @@ name: Komga
 tags:
     - 多媒体
 title: 免费开源的漫画、杂志媒体服务
-type: 多媒体
 description: 免费开源的漫画、杂志媒体服务
 additionalProperties:
   key: komga

@@ -2,7 +2,6 @@ name: Kodbox
 tags:
     - 云存储
 title: 可道云推出的企业级私有云存储解决方案
-type: 云存储
 description: 可道云推出的企业级私有云存储解决方案
 additionalProperties:
     key: kodbox

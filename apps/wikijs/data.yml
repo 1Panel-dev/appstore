@@ -1,15 +1,14 @@
 name: Wiki.js
 tags:
     - 建站
-title: 基于 Node.js 构建的现代而强大的 Wiki 应用程序。
-type: 建站
-description: 基于 Node.js 构建的现代而强大的 Wiki 应用程序。
+title: 基于 Node.js 构建的现代而强大的 Wiki 应用程序
+description: 基于 Node.js 构建的现代而强大的 Wiki 应用程序
 additionalProperties:
     key: wikijs
     name: Wiki.js
     tags:
         - WebSite
-    shortDescZh: 基于 Node.js 构建的现代而强大的 Wiki 应用程序。
+    shortDescZh: 基于 Node.js 构建的现代而强大的 Wiki 应用程序
     shortDescEn: A modern and powerful wiki app built on Node.js
     type: website
     crossVersionUpdate: false

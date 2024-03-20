@@ -2,7 +2,6 @@ name: Halo
 tags:
     - 建站
 title: 强大易用的开源建站工具
-type: 建站
 description: 强大易用的开源建站工具
 additionalProperties:
     key: halo

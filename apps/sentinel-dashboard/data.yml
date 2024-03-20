@@ -2,7 +2,6 @@ name: Sentinel Dashboard
 tags:
   - 中间件
 title: 流量控制、熔断降级规则统一配置和管理的入口
-type: 中间件
 description: 流量控制、熔断降级规则统一配置和管理的入口
 additionalProperties:
   key: sentinel-dashboard

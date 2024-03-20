@@ -2,7 +2,6 @@ name: Elasticsearch
 tags:
     - 数据库
 title: Elasticsearch
-type: 数据库
 description: 免费开放、分布式、RESTful 搜索引擎
 additionalProperties:
     key: elasticsearch

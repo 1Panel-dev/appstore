@@ -2,7 +2,6 @@ name: Redis-Commander
 tags:
     - 开发工具
 title: Redis Web 管理工具
-type: 开发工具
 description: Redis Web 管理工具
 additionalProperties:
     key: redis-commander

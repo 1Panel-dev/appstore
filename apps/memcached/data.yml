@@ -2,7 +2,6 @@ name: Memcached
 tags:
     - 实用工具
 title: 分布式的高速缓存系统
-type: 实用工具
 description: 分布式的高速缓存系统
 additionalProperties:
     key: memcached

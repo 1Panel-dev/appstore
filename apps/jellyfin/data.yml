@@ -2,7 +2,6 @@ name: Jellyfin
 tags:
     - 多媒体
 title: 多媒体应用程序软件套装
-type: 多媒体
 description: 多媒体应用程序软件套装
 additionalProperties:
     key: jellyfin

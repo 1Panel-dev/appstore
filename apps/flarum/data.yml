@@ -2,7 +2,6 @@ name: Flarum
 tags:
     - 建站
 title: 用于构建优秀社区的简单论坛软件
-type: 建站
 description: 用于构建优秀社区的简单论坛软件
 additionalProperties:
     key: flarum
