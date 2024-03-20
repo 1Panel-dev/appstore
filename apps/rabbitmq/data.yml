@@ -2,7 +2,6 @@ name: RabbitMQ
 tags:
     - 中间件
 title: 功能丰富的多协议消息传递和流媒体代理
-type: 中间件
 description: 功能丰富的多协议消息传递和流媒体代理
 additionalProperties:
     key: rabbitmq

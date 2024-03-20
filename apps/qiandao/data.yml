@@ -2,7 +2,6 @@ name: QD
 tags:
     - 实用工具
 title: HTTP 请求定时任务自动执行框架
-type: 实用工具
 description: HTTP 请求定时任务自动执行框架
 additionalProperties:
     key: qiandao

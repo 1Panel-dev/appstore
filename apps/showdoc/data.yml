@@ -2,7 +2,6 @@ name: ShowDoc
 tags:
     - DevOps
 title: 一个非常适合 IT 团队的在线 API 文档、技术文档工具
-type: DevOps
 description: 一个非常适合 IT 团队的在线 API 文档、技术文档工具
 additionalProperties:
     key: showdoc

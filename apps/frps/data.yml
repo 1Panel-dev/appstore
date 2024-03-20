@@ -2,7 +2,6 @@ name: frp 服务端
 tags:
     - 实用工具
 title: 专注于内网穿透的高性能反向代理应用
-type: 实用工具
 description: 专注于内网穿透的高性能反向代理应用
 additionalProperties:
     key: frps

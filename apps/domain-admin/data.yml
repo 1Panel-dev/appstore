@@ -2,7 +2,6 @@ name: Domain Admin
 tags:
     - 实用工具
 title: 域名 SSL 证书监测平台
-type: 实用工具
 description: 域名 SSL 证书监测平台
 additionalProperties:
     key: domain-admin

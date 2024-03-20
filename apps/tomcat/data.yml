@@ -2,7 +2,6 @@ name: Apache Tomcat
 tags:
     - 中间件
 title: 开源的 Web 服务器和 Servlet 容器
-type: 中间件
 description: 开源的 Web 服务器和 Servlet 容器
 additionalProperties:
     key: tomcat

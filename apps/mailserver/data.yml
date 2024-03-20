@@ -2,7 +2,6 @@ name: Mailserver
 tags:
     - 邮件服务
 title: 全栈但简单的容器化邮件服务器
-type: 邮件服务
 description: 全栈但简单的容器化邮件服务器
 additionalProperties:
     key: mailserver

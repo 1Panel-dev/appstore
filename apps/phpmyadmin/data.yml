@@ -2,7 +2,6 @@ name: phpMyAdmin
 tags:
     - 开发工具
 title: MySQL 和 MariaDB 的 Web 界面
-type: 开发工具
 description: MySQL 和 MariaDB 的 Web 界面
 additionalProperties:
     key: phpmyadmin

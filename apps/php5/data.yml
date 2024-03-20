@@ -2,7 +2,6 @@ name: PHP 5
 tags:
     - 运行环境
 title: PHP5 运行环境
-type: 运行环境
 description: PHP5 运行环境
 additionalProperties:
     key: php5

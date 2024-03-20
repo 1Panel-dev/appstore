@@ -1,8 +1,7 @@
 name: ChatGPT Web
 tags:
-    - AI
+    - AI / 大模型
 title: 用 Express 和 Vue3 搭建的 ChatGPT 演示网页
-type: AI
 description: 用 Express 和 Vue3 搭建的 ChatGPT 演示网页
 additionalProperties:
     key: chatgpt-web

@@ -2,7 +2,6 @@ name: YesPlayMusic
 tags:
     - 多媒体
 title: 高颜值的第三方网易云播放器
-type: 多媒体
 description: 高颜值的第三方网易云播放器
 additionalProperties:
     key: yesplaymusic

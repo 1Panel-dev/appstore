@@ -2,7 +2,6 @@ name: File Browser
 tags:
     - 实用工具
 title: 网页文件浏览器
-type: 实用工具
 description: 网页文件浏览器
 additionalProperties:
     key: filebrowser

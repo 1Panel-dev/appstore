@@ -2,7 +2,6 @@ name: Audiobookshelf
 tags:
     - 多媒体
 title: 自托管有声读物和播客服务器
-type: 多媒体
 description: 自托管有声读物和播客服务器
 additionalProperties:
     key: audiobookshelf

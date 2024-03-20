@@ -2,7 +2,6 @@ name: SFTPGo
 tags:
     - 实用工具
 title: 功能齐全且高度可配置的 SFTP 服务器
-type: 实用工具
 description: 功能齐全且高度可配置的 SFTP 服务器
 additionalProperties:
     key: sftpgo

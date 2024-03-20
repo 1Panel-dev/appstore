@@ -1,8 +1,7 @@
 name: Ollama
 tags:
-    - AI
+    - AI / 大模型
 title: 本地运行 Llama 2、Mistral、Gemma 和其他大型语言模型
-type: AI
 description: 本地运行 Llama 2、Mistral、Gemma 和其他大型语言模型
 additionalProperties:
     key: ollama

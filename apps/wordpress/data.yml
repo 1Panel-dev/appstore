@@ -2,7 +2,6 @@ name: WordPress
 tags:
     - 建站
 title: 著名的开源博客软件和 CMS 系统
-type: 建站
 description: 著名的开源博客软件和 CMS 系统
 additionalProperties:
     key: wordpress

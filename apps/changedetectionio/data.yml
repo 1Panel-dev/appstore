@@ -2,7 +2,6 @@ name: Changedetection.io
 tags:
     - 实用工具
 title: 免费开源网站变更检测、网站观察、补货监控和通知服务
-type: 实用工具
 description: 免费开源网站变更检测、网站观察、补货监控和通知服务
 additionalProperties:
     key: changedetectionio

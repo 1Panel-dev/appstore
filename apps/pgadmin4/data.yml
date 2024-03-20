@@ -2,7 +2,6 @@ name: PGAdmin4
 tags:
   - 开发工具
 title: PostgreSQL 开源管理和开发平台
-type: 开发工具
 description: PostgreSQL 开源管理工具
 additionalProperties:
   key: pgadmin4

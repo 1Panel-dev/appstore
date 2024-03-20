@@ -2,7 +2,6 @@ name: Jenkins
 tags:
     - DevOps
 title: 开源的持续集成工具
-type: DevOps
 description: 开源的持续集成工具
 additionalProperties:
     key: jenkins

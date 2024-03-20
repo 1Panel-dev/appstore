@@ -2,7 +2,6 @@ name: Metabase
 tags:
     - BI
 title: 开源的数据分析和可视化工具
-type: BI
 description: 开源的数据分析和可视化工具
 additionalProperties:
     key: metabase
