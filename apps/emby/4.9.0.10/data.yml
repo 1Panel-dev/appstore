@@ -18,17 +18,17 @@ additionalProperties:
       edit: true
       envKey: NETWORK_MODE
       labelEn: Drive path
-      labelZh: 网络模式 (仅Host模式支持DLNA and WoL)
+      labelZh: 网络模式
       required: true
       type: select
       values:
-        - label: "Host"
+        - label: 主机模式
           value: "host"
-        - label: "Bridge"
+        - label: 桥接模式
           value: "bridge"
-        - label: "None"
+        - label: 无网络
           value: "none"
-        - label: "1panel-network"
+        - label: 1panel-network
           value: "1panel-network"
     - default: 8096
       edit: true
