@@ -24,6 +24,14 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
+    - default: 8920
+      edit: true
+      envKey: PANEL_APP_PORT_HTTPS
+      labelEn: WebUI Port
+      labelZh: 网页端口
+      required: true
+      rule: paramPort
+      type: number
     - default: ./data/media
       edit: true
       envKey: MEDIA_FOLDER_PATH

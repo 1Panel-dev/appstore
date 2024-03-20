@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NetworkConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                      xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <RequireHttps>false</RequireHttps>
+    <CertificatePath/>
+    <CertificatePassword/>
+    <BaseUrl/>
+    <PublicHttpsPort>{PANEL_APP_PORT_HTTPS}</PublicHttpsPort>
+    <HttpServerPortNumber>{PANEL_APP_PORT_HTTP}</HttpServerPortNumber>
+    <HttpsPortNumber>{PANEL_APP_PORT_HTTPS}</HttpsPortNumber>
+    <EnableHttps>false</EnableHttps>
+    <PublicPort>{PANEL_APP_PORT_HTTP}</PublicPort>
+    <UPnPCreateHttpPortMap>false</UPnPCreateHttpPortMap>
+    <UDPPortRange/>
+    <EnableIPV6>{JELLYFIN_IPV6_ENABLE}</EnableIPV6>
+    <EnableIPV4>true</EnableIPV4>
+    <EnableSSDPTracing>false</EnableSSDPTracing>
+    <SSDPTracingFilter/>
+    <UDPSendCount>2</UDPSendCount>
+    <UDPSendDelay>100</UDPSendDelay>
+    <IgnoreVirtualInterfaces>true</IgnoreVirtualInterfaces>
+    <VirtualInterfaceNames>vEthernet*</VirtualInterfaceNames>
+    <GatewayMonitorPeriod>60</GatewayMonitorPeriod>
+    <TrustAllIP6Interfaces>false</TrustAllIP6Interfaces>
+    <HDHomerunPortRange/>
+    <PublishedServerUriBySubnet/>
+    <AutoDiscoveryTracing>false</AutoDiscoveryTracing>
+    <AutoDiscovery>true</AutoDiscovery>
+    <RemoteIPFilter/>
+    <IsRemoteIPFilterBlacklist>false</IsRemoteIPFilterBlacklist>
+    <EnableUPnP>true</EnableUPnP>
+    <EnableRemoteAccess>true</EnableRemoteAccess>
+    <LocalNetworkSubnets/>
+    <LocalNetworkAddresses/>
+    <KnownProxies/>
+    <EnablePublishedServerUriByRequest>false</EnablePublishedServerUriByRequest>
+</NetworkConfiguration>

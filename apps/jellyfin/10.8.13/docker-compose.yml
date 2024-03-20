@@ -8,9 +8,11 @@ services:
     restart: always
     network_mode: ${NETWORK_MODE}
     ports:
-      - ${PANEL_APP_PORT_HTTP}:8096
+      - ${PANEL_APP_PORT_HTTP}:${PANEL_APP_PORT_HTTP}
+      - ${PANEL_APP_PORT_HTTPS}:${PANEL_APP_PORT_HTTPS}
     volumes:
       - ./data/config:/config
+      - ./data/config/config/network.xml:/config/config/network.xml
       - ${CACHE_FOLDER_PATH}:/cache
       - ${MEDIA_FOLDER_PATH}:/media/media
     devices:
