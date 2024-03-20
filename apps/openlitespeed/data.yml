@@ -2,7 +2,6 @@ name: OpenLiteSpeed
 tags:
     - Web 服务器
 title: 高性能、轻量级、开源的 HTTP 服务器
-type: Web 服务器
 description: 高性能、轻量级、开源的 HTTP 服务器
 additionalProperties:
     key: openlitespeed

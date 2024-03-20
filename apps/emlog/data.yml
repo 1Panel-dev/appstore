@@ -2,7 +2,6 @@ name: emlog
 tags:
     - 建站
 title: 轻量级开源博客及建站系统
-type: 建站
 description: 轻量级开源博客及建站系统。
 additionalProperties:
     key: emlog

@@ -2,7 +2,6 @@ name: IT-Tools
 tags:
     - 开发工具
 title: 为开发人员提供方便的在线工具集合，具有出色的用户体验
-type: 开发工具
 description: 为开发人员提供方便的在线工具集合，具有出色的用户体验
 additionalProperties:
     key: it-tools

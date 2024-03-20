@@ -2,7 +2,6 @@ name: MeiliSearch
 tags:
     - 实用工具
 title: 开源、快如闪电且高度相关的搜索引擎
-type: 实用工具
 description: 开源、快如闪电且高度相关的搜索引擎
 additionalProperties:
   key: meilisearch

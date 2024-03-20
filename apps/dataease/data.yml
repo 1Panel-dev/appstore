@@ -2,7 +2,6 @@ name: DataEase
 tags:
     - BI
 title: 人人可用的开源数据可视化分析工具
-type: BI
 description: 人人可用的开源数据可视化分析工具
 additionalProperties:
     key: dataease

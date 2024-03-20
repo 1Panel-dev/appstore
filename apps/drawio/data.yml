@@ -2,7 +2,6 @@ name: Draw.io
 tags:
     - 实用工具
 title: 用于一般图表绘制的 JavaScript 客户端编辑器
-type: 实用工具
 description: 用于一般图表绘制的 JavaScript 客户端编辑器
 additionalProperties:
     key: drawio

@@ -2,7 +2,6 @@ name: uuWAF
 tags:
   - 安全
 title: 南墙 WEB 应用防火墙
-type: 安全
 description: 南墙 WEB 应用防火墙
 additionalProperties:
   key: uuwaf

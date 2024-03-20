@@ -2,7 +2,6 @@ name: MCSManager
 tags:
     - 休闲游戏
 title: Minecraft 服务器控制面板（前端）
-type: 休闲游戏
 description: Minecraft 服务器控制面板（前端）
 additionalProperties:
     key: mcsmanager-web

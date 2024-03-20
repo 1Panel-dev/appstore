@@ -2,7 +2,6 @@ name: Material for MkDocs
 tags:
     - 实用工具
 title: Markdown 文件托管平台
-type: 实用工具
 description: Markdown 文件托管平台
 additionalProperties:
   key: mkdocs-material

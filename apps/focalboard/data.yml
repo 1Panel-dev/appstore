@@ -2,7 +2,6 @@ name: Focalboard
 tags:
     - DevOps
 title: Trello、Notion 和 Asana 的开源自托管替代方案
-type: DevOps
 description: Trello、Notion 和 Asana 的开源自托管替代方案
 additionalProperties:
     key: focalboard

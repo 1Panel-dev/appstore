@@ -2,7 +2,6 @@ name: OpenResty
 tags:
     - Web 服务器
 title: 基于 NGINX 和 LuaJIT 的 Web 平台
-type: Web 服务器
 description: 基于 NGINX 和 LuaJIT 的 Web 平台
 additionalProperties:
     key: openresty

@@ -2,7 +2,6 @@ name: Redpanda Console
 tags:
     - 开发工具
 title: Kafka Web 管理工具
-type: 开发工具
 description: Kafka Web 管理工具
 additionalProperties:
     key: redpanda-console

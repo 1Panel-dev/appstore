@@ -2,7 +2,6 @@ name: Obsidian LiveSync
 tags:
     - 实用工具
 title: Obsidian 在线同步插件
-type: 实用工具
 description: Obsidian 在线同步插件
 additionalProperties:
   key: obsidian_livesync

@@ -2,7 +2,6 @@ name: PHP 8
 tags:
     - 运行环境
 title: PHP8 运行环境
-type: 运行环境
 description: PHP8 运行环境
 additionalProperties:
     key: php8
