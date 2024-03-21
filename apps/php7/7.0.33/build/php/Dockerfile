@@ -18,7 +18,7 @@ RUN chmod +x install.sh \
 
 RUN apk --no-cache add tzdata \
     && cp "/usr/share/zoneinfo/$TZ" /etc/localtime \
-    && echo "$TZ" > /etc/timezone \
+    && echo "$TZ" > /etc/timezone 
 
 # Fix: https://github.com/docker-library/php/issues/1121
 RUN apk add --no-cache --repository http://${CONTAINER_PACKAGE_URL}/alpine/v3.13/community/ gnu-libiconv=1.15-r3
