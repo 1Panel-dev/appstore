@@ -1,7 +1,7 @@
 version: '3'
 services:
   cloudflared:
-    image: cloudflare/cloudflared:2024.2.1
+    image: cloudflare/cloudflared:2024.3.0
     container_name: ${CONTAINER_NAME}
     restart: always
     network_mode: 1panel-network
