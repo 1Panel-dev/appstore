@@ -6,6 +6,10 @@ ARG PHP_EXTENSIONS
 ARG CONTAINER_PACKAGE_URL
 ARG INSTALL_SUPERVISOR
 
+# pdo_oci charset
+ARG NLS_LANG="AMERICAN_AMERICA.AL32UTF8"
+ENV NLS_LANG $NLS_LANG 
+
 RUN if [ $CONTAINER_PACKAGE_URL ] ; then sed -i "s/dl-cdn.alpinelinux.org/${CONTAINER_PACKAGE_URL}/g" /etc/apk/repositories ; fi
 
 ADD ./extensions/install-php-extensions  /usr/local/bin/

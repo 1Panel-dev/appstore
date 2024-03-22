@@ -6,6 +6,10 @@ ARG PHP_EXTENSIONS
 ARG CONTAINER_PACKAGE_URL
 ARG INSTALL_SUPERVISOR
 
+# pdo_oci charset
+ARG NLS_LANG="AMERICAN_AMERICA.AL32UTF8"
+ENV NLS_LANG $NLS_LANG 
+
 RUN if [ $CONTAINER_PACKAGE_URL ] ; then sed -i "s/dl-cdn.alpinelinux.org/${CONTAINER_PACKAGE_URL}/g" /etc/apk/repositories ; fi
 
 ADD ./extensions/install-php-extensions  /usr/local/bin/
@@ -18,7 +22,7 @@ RUN chmod +x install.sh \
 
 RUN apk --no-cache add tzdata \
     && cp "/usr/share/zoneinfo/$TZ" /etc/localtime \
-    && echo "$TZ" > /etc/timezone \
+    && echo "$TZ" > /etc/timezone 
 
 # Fix: https://github.com/docker-library/php/issues/1121
 RUN apk add --no-cache --repository http://${CONTAINER_PACKAGE_URL}/alpine/v3.13/community/ gnu-libiconv=1.15-r3
