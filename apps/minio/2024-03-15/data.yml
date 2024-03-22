@@ -1,5 +1,17 @@
 additionalProperties:
   formFields:
+    - default: "minio/minio:RELEASE.2024-03-15T01-07-19Z"
+      edit: true
+      envKey: MINIO_IMAGE
+      labelEn: Image source
+      labelZh: 镜像源
+      required: true
+      type: select
+      values:
+        - label: Quay Registry
+          value: "quay.io/minio/minio:RELEASE.2024-03-15T01-07-19Z"
+        - label: Docker Hub
+          value: "minio/minio:RELEASE.2024-03-15T01-07-19Z"
     - default: minio
       envKey: PANEL_MINIO_ROOT_USER
       labelEn: User
@@ -30,12 +42,6 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-    - default: "12h"
-      envKey: MINIO_BROWSER_SESSION_DURATION
-      labelEn: Session duration
-      labelZh: 会话持续时间 (s/秒 m/分钟 h/小时 d/天)
-      required: true
-      type: text
     - default: "on"
       envKey: MINIO_BROWSER
       labelEn: Enable WebUI
@@ -43,9 +49,9 @@ additionalProperties:
       required: true
       type: select
       values:
-        - label: "开启"
+        - label: 开启
           value: "on"
-        - label: "关闭"
+        - label: 关闭
           value: "off"
     - default: "on"
       envKey: MINIO_BROWSER_LOGIN_ANIMATION
@@ -54,7 +60,25 @@ additionalProperties:
       required: true
       type: select
       values:
-        - label: "开启"
+        - label: 开启
           value: "on"
-        - label: "关闭"
+        - label: 关闭
           value: "off"
+    - default: "12h"
+      envKey: MINIO_BROWSER_SESSION_DURATION
+      labelEn: Session duration
+      labelZh: 会话持续时间 (s/秒 m/分钟 h/小时 d/天)
+      required: true
+      type: text
+    - default: "http://127.0.0.1:9001"
+      envKey: MINIO_BROWSER_REDIRECT_URL
+      labelEn: WebUI redirect URL
+      labelZh: WebUI 重定向 URL
+      required: true
+      type: text
+    - default: "http://127.0.0.1:9000"
+      envKey: MINIO_SERVER_URL
+      labelEn: Server URL
+      labelZh: 服务器 URL
+      required: true
+      type: text
