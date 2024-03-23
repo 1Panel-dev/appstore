@@ -1,0 +1,83 @@
+additionalProperties:
+  formFields:
+    - default: "host"
+      edit: true
+      envKey: NETWORK_MODE
+      labelEn: Drive path
+      labelZh: 网络模式
+      required: true
+      type: select
+      values:
+        - label: 主机模式
+          value: "host"
+        - label: 桥接模式
+          value: "bridge"
+        - label: 无网络
+          value: "none"
+        - label: 1panel-network
+          value: "1panel-network"
+    - default: "/home/ztncui"
+      edit: true
+      envKey: ZTNCUI_ROOT_PATH
+      labelEn: Root Path
+      labelZh: 数据持久化 根路径
+      required: true
+      type: text
+    - default: 3000
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: HTTP Port
+      labelZh: HTTP 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 3443
+      edit: true
+      envKey: PANEL_APP_PORT_HTTPS
+      labelEn: HTTPS Port
+      labelZh: HTTPS 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 9993
+      edit: true
+      envKey: ZTNCUI_COMMUNICATION_PORT
+      labelEn: HTTPS Port
+      labelZh: HTTPS 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 3180
+      edit: true
+      envKey: ZTNCUI_HTTP_SERVER_PORT
+      labelEn: HTTP Server Port
+      labelZh: HTTP 服务器端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: ""
+      edit: true
+      envKey: ZTNCUI_PASSWORD
+      labelEn: ZTNCUI Password
+      labelZh: ZTNCUI 密码
+      required: true
+      type: password
+    - default: ""
+      edit: true
+      envKey: ZTNCUI_IP
+      labelEn: ZTNCUI IP
+      labelZh: 主机 IP (公网IP)
+      required: true
+      type: text
+    - default: "yes"
+      edit: true
+      envKey: HTTP_ALL_INTERFACES
+      labelEn: HTTP All Interfaces
+      labelZh: HTTP 所有接口 (忽略HTTPS)
+      required: true
+      type: select
+      values:
+        - label: Yes
+          value: "yes"
+        - label: No
+          value: "no"
