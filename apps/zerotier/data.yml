@@ -1,0 +1,20 @@
+name: Zerotier
+tags:
+  - 实用工具
+title: 创建和管理虚拟网络
+type: 实用工具
+description: 创建和管理虚拟软件定义网络
+additionalProperties:
+  key: zerotier
+  name: Zerotier
+  tags:
+    - Tool
+  shortDescZh: 创建和管理虚拟软件定义网络
+  shortDescEn: Create and manage virtual software-defined networks
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://www.zerotier.com/
+  github: https://github.com/zerotier/ZeroTierOne
+  document: https://docs.zerotier.com/

@@ -1,0 +1,30 @@
+version: "3"
+
+networks:
+  1panel-network:
+    external: true
+
+services:
+  zerotier:
+    image: zerotier/zerotier:1.12.2
+    container_name: ${CONTAINER_NAME}
+    labels:
+      createdBy: "Apps"
+    restart: always
+    network_mode: ${NETWORK_MODE}
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:9993
+      - ${PANEL_APP_PORT_HTTP}:9993/udp
+    cap_add:
+      - NET_ADMIN
+      - SYS_ADMIN
+    devices:
+      - /dev/net/tun
+    environment:
+      - ZEROTIER_API_SECRET=${ZEROTIER_API_SECRET:-}
+      - ZEROTIER_IDENTITY_PUBLIC=${ZEROTIER_IDENTITY_PUBLIC:-}
+      - ZEROTIER_IDENTITY_SECRET=${ZEROTIER_IDENTITY_SECRET:-}
+    volumes:
+      - /var/lib/zerotier-one:/var/lib/zerotier-one
+    command:
+      - ${NETWORK_ID}

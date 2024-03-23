@@ -1,0 +1,54 @@
+additionalProperties:
+  formFields:
+    - default: 9993
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: "host"
+      edit: true
+      envKey: NETWORK_MODE
+      labelEn: Drive path
+      labelZh: 网络模式
+      required: true
+      type: select
+      values:
+        - label: 主机模式
+          value: "host"
+        - label: 桥接模式
+          value: "bridge"
+        - label: 无网络
+          value: "none"
+        - label: 1panel-network
+          value: "1panel-network"
+    - default: ""
+      edit: true
+      envKey: NETWORK_ID
+      labelEn: Network ID
+      labelZh: 网络 ID
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: ZEROTIER_API_SECRET
+      labelEn: API Secret
+      labelZh: API 密钥 (authtoken.secret)
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: ZEROTIER_IDENTITY_PUBLIC
+      labelEn: Identity Public
+      labelZh: 身份公钥 (identity.public)
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: ZEROTIER_IDENTITY_SECRET
+      labelEn: Identity Secret
+      labelZh: 身份密钥 (identity.secret)
+      required: false
+      type: text
