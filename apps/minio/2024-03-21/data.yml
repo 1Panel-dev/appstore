@@ -1,6 +1,6 @@
 additionalProperties:
   formFields:
-    - default: "minio/minio:RELEASE.2024-03-15T01-07-19Z"
+    - default: "minio/minio:RELEASE.2024-03-21T23-13-43Z"
       edit: true
       envKey: MINIO_IMAGE
       labelEn: Image source
@@ -9,9 +9,9 @@ additionalProperties:
       type: select
       values:
         - label: Quay Registry
-          value: "quay.io/minio/minio:RELEASE.2024-03-15T01-07-19Z"
+          value: "quay.io/minio/minio:RELEASE.2024-03-21T23-13-43Z"
         - label: Docker Hub
-          value: "minio/minio:RELEASE.2024-03-15T01-07-19Z"
+          value: "minio/minio:RELEASE.2024-03-21T23-13-43Z"
     - default: minio
       envKey: PANEL_MINIO_ROOT_USER
       labelEn: User
