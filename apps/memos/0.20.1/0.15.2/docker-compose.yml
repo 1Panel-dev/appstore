@@ -1,7 +1,7 @@
 version: '3'
 services:
   memos:
-    image: neosmemo/memos:0.20.1
+    image: neosmemo/memos:0.21.0
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
