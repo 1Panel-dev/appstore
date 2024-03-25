@@ -16,7 +16,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
       - name: Run Renovate
-        uses: renovatebot/github-action@89bd050bafa5a15de5d9383e3129edf210422004 # v40.1.5
+        uses: renovatebot/github-action@23b01dbf6f38965076a36aff87f802263164f204 # v40.1.6
         with:
           useSlim: false
           token: ${{ secrets.GITHUBTOKEN }}
