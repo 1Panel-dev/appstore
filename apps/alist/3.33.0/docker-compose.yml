@@ -14,7 +14,7 @@ services:
       - PUID=0
       - PGID=0
       - UMASK=022
-    image: xhofe/alist:v3.32.0
+    image: xhofe/alist:v3.33.0
     labels:  
       createdBy: "Apps"
 networks:  
