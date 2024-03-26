@@ -10,7 +10,7 @@ services:
     volumes:
       - "./data/database:/app/database"
       - "./data/logs:/app/logs"
-    image: mouday/domain-admin:v1.6.17
+    image: mouday/domain-admin:v1.6.18
     labels:  
       createdBy: "Apps"
 networks:  
