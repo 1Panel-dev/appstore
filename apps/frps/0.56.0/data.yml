@@ -28,3 +28,10 @@ additionalProperties:
           random: true
           rule: paramComplexity
           type: password
+        - default: ./data/ssl
+          disabled: true
+          envKey: SSL_FOLDER_PATH
+          labelEn: Certificate folder path (corresponding to "/etc/frp/ssl" in container)
+          labelZh: 证书文件夹路径 (对应容器内 "/etc/frp/ssl")
+          required: true
+          type: text
