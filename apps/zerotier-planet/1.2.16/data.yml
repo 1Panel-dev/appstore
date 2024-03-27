@@ -1,0 +1,42 @@
+additionalProperties:
+    formFields:
+        - default: 40119
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: Console Port
+          labelZh: 控制台端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: 9993
+          edit: true
+          envKey: PANEL_APP_PORT_SERVER
+          labelEn: ZeroTier Service Port
+          labelZh: ZeroTier服务端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: 40120
+          edit: true
+          envKey: PANEL_APP_PORT_DOWNLOAD
+          labelEn: Planet/moon file download port
+          labelZh: planet/moon文件在线下载端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: ''
+          edit: true
+          envKey: HOST_IP_ADDR
+          labelEn: Native IP address
+          labelZh: 本机IP地址
+          required: true
+          type: text
+        - default: zerotier
+          edit: true
+          envKey: PASSWORD
+          labelEn: Password
+          labelZh: 密码
+          random: true
+          required: true
+          rule: paramComplexity
+          type: password
