@@ -6,7 +6,7 @@ services:
     network_mode: host
     volumes:
         - ./data/frps.toml:/etc/frp/frps.toml
-        - "${SSL_FOLDER_PATH}:/etc/frp/ssl"
+        - ./data/ssl:/etc/frp/ssl
     image: snowdreamtech/frps:0.56.0
     labels:  
       createdBy: "Apps"
