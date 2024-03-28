@@ -58,7 +58,7 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
-        - default: false
+        - default: "false"
           edit: true
           envKey: HALO_CACHE_PAGE_DISABLED
           labelEn: Whether to disable page caching
