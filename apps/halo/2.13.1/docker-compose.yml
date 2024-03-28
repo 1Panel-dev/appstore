@@ -22,6 +22,7 @@ services:
       - --spring.r2dbc.password=${PANEL_DB_USER_PASSWORD}
       - --spring.sql.init.platform=${PANEL_DB_TYPE}
       - --halo.external-url=${HALO_EXTERNAL_URL}
+      - --halo.cache.page.disabled=${HALO_CACHE_PAGE_DISABLED}
     labels:
       createdBy: "Apps"
 networks:
