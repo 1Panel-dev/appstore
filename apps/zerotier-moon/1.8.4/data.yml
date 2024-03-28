@@ -1,0 +1,24 @@
+additionalProperties:
+    formFields:
+        - default: 9993
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: Port
+          labelZh: 端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: ''
+          edit: true
+          envKey: HOST_IPV4
+          labelEn: Native IPV4 address
+          labelZh: 本机IPV4地址
+          required: false
+          type: text
+        - default: ''
+          edit: true
+          envKey: HOST_IPV6
+          labelEn: Native IPV6 address
+          labelZh: 本机IPV6地址
+          required: false
+          type: text
