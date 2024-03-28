@@ -1,0 +1,20 @@
+name: ZeroTier-One
+tags:
+    - 工具
+title: 多点虚拟化网络解决方案
+type: 工具
+description: 多点虚拟化网络解决方案
+additionalProperties:
+    key: zerotier-one
+    name: ZeroTier-One
+    tags:
+        - Tool
+    shortDescZh: 多点虚拟化网络解决方案
+    shortDescEn: A Smart Ethernet Switch for Earth
+    type: tool
+    crossVersionUpdate: true
+    limit: 1
+    recommend: 0
+    website: https://www.zerotier.com
+    github: https://github.com/zerotier/ZeroTierOne
+    document: https://docs.zerotier.com
