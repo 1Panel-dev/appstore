@@ -1,0 +1,23 @@
+version: '3'
+services:
+  qbittorrent:
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    network_mode: host
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Shanghai
+      - UMASK_SET=022
+      - WEBUI_PORT=${PANEL_APP_PORT_HTTP}
+      - TORRENTING_PORT=${PANEL_TORRENTING_PORT}
+    ports:
+      - ${PANEL_TORRENTING_PORT}:${PANEL_TORRENTING_PORT}
+      - ${PANEL_TORRENTING_PORT}:${PANEL_TORRENTING_PORT}/udp
+      - ${PANEL_APP_PORT_HTTP}:${PANEL_APP_PORT_HTTP}
+    volumes:
+      - ./data/config:/config
+      - ${PATH_TO_DOWNLOADS}:/downloads
+    image: linuxserver/qbittorrent:4.6.3
+    labels:
+      createdBy: "Apps"

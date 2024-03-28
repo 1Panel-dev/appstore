@@ -1,0 +1,24 @@
+additionalProperties:
+  formFields:
+    - default: 8181
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: WebUI Port
+      labelZh: 网页端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 48181
+      edit: true
+      envKey: PANEL_TORRENTING_PORT
+      labelEn: Torrenting port
+      labelZh: 做种端口
+      required: true
+      type: number
+    - default: /media
+      edit: true
+      envKey: PATH_TO_DOWNLOADS
+      labelEn: Mounting a local folder into the container
+      labelZh: 下载文件夹路径
+      required: true
+      type: text
