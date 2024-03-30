@@ -1,0 +1,56 @@
+additionalProperties:
+  formFields:
+    - default: ''
+      edit: true
+      envKey: OB_ROOT_PASSWORD	
+      labelEn: password of sys@root
+      labelZh: SYS租户密码
+      required: false
+      type: password
+    - default: 2881
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: ''
+      edit: true
+      envKey: OB_INSTALL_PATH
+      labelEn: install_path
+      labelZh: 安装目录 (默认为1panel安装目录，需要最少10G空间)
+      required: false
+      type: text
+    - default: 'test'
+      edit: true
+      envKey: OB_TENANT_NAME
+      labelEn: tenant_name
+      labelZh: 租户名
+      required: true
+      rule: paramCommon
+      type: text
+    - default: 6
+      edit: true
+      envKey: OB_MEMORY_LIMIT
+      labelEn: memory_limit
+      labelZh: 内存 (单位：G)
+      required: true
+      rule: paramPort
+      type: number
+    - default: 5
+      edit: true
+      envKey: OB_DATAFILE_SIZE
+      labelEn: datafile_size
+      labelZh: 数据文件大小 (单位：G)
+      required: true
+      rule: paramPort
+      type: number
+    - default: 5
+      edit: true
+      envKey: OB_LOG_DISK_SIZE	
+      labelEn: log_disk_size
+      labelZh: 日志文件大小 (单位：G)
+      required: true
+      rule: paramPort
+      type: number
