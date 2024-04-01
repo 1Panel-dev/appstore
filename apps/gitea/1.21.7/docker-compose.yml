@@ -1,7 +1,7 @@
 version: '3'
 services:
   gitea:
-    image: gitea.cn/gitea/gitea:1.21.7
+    image: gitea.cn/gitea/gitea:1.21.10
     container_name: ${CONTAINER_NAME}
     environment:
       - USER_UID=1000
