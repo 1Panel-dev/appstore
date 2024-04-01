@@ -1,7 +1,7 @@
 version: '3'
 services:
   one-api:
-    image: justsong/one-api:v0.6.3
+    image: justsong/one-api:v0.6.4
     container_name: ${CONTAINER_NAME}
     restart: always
     ports:
