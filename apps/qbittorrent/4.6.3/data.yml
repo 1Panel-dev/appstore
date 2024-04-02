@@ -15,10 +15,10 @@ additionalProperties:
       labelZh: 做种端口
       required: true
       type: number
-    - default: /media
+    - default: Asia/Shanghai
       edit: true
-      envKey: PATH_TO_DOWNLOADS
-      labelEn: Mounting a local folder into the container
-      labelZh: 下载文件夹路径
+      envKey: TIME_ZONE
+      labelEn: Time zone
+      labelZh: 时区
       required: true
       type: text
