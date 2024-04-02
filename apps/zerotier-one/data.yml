@@ -1,12 +1,12 @@
-name: ZeroTier-One
+name: ZeroTier One
 tags:
-    - 工具
+    - 实用工具
 title: 多点虚拟化网络解决方案
-type: 工具
+type: 实用工具
 description: 多点虚拟化网络解决方案
 additionalProperties:
     key: zerotier-one
-    name: ZeroTier-One
+    name: ZeroTier One
     tags:
         - Tool
     shortDescZh: 多点虚拟化网络解决方案

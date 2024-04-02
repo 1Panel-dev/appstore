@@ -1,6 +1,7 @@
 version: '3'
 services:
   zerotier-one:
+    image: bltavares/zerotier:1.12.1
     container_name: ${CONTAINER_NAME}
     restart: always
     network_mode: host
@@ -11,6 +12,5 @@ services:
       - SYS_ADMIN
     volumes:
       - ./data:/var/lib/zerotier-one
-    image: bltavares/zerotier:1.12.1
     labels:  
       createdBy: "Apps"
