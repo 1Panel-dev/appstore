@@ -2,7 +2,7 @@ version: '3'
 
 services:  
   oceanbase:  
-    image: oceanbase/oceanbase-ce:4.2.1
+    image: oceanbase/oceanbase-ce:4.3.0
     container_name: ${CONTAINER_NAME}
     restart: always
     environment:
