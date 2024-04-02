@@ -1,6 +1,7 @@
 version: '3'
 services:
   zerotier-moon:
+    image: seedgou/zerotier-moon:v1.8.4
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
@@ -15,10 +16,8 @@ services:
       - ${HOST_IPV4}
       - "-6"
       - ${HOST_IPV6}
-    image: seedgou/zerotier-moon:v1.8.4
     labels:  
       createdBy: "Apps"
-
 networks:  
   1panel-network:  
     external: true
