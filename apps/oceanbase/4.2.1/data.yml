@@ -34,7 +34,7 @@ additionalProperties:
       edit: true
       envKey: OB_MEMORY_LIMIT
       labelEn: memory_limit
-      labelZh: 内存 (单位：G)
+      labelZh: 内存 (单位：GB)
       required: true
       rule: paramPort
       type: number
@@ -42,7 +42,7 @@ additionalProperties:
       edit: true
       envKey: OB_DATAFILE_SIZE
       labelEn: datafile_size
-      labelZh: 数据文件大小 (单位：G)
+      labelZh: 数据文件大小 (单位：GB)
       required: true
       rule: paramPort
       type: number
@@ -50,7 +50,7 @@ additionalProperties:
       edit: true
       envKey: OB_LOG_DISK_SIZE	
       labelEn: log_disk_size
-      labelZh: 日志文件大小 (单位：G)
+      labelZh: 日志文件大小 (单位：GB)
       required: true
       rule: paramPort
       type: number

@@ -9,7 +9,7 @@ additionalProperties:
   tags:
     - Database
   shortDescZh: 兼容 MySQL 的单机分布式一体化国产开源数据库
-  shortDescEn: Dstributed Cluster
+  shortDescEn: An integrated domestic open-source database that is compatible with MySQL and supports single-node distributed architecture
   type: runtime
   crossVersionUpdate: false
   limit: 0
