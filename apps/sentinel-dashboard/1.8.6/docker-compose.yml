@@ -1,7 +1,7 @@
 version: '3'
 services:
   sentinel-dashboard:
-    image: bladex/sentinel-dashboard:1.8.6
+    image: bladex/sentinel-dashboard:1.8.7
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:  
