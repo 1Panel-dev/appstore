@@ -1,7 +1,7 @@
 version: '3'
 services:
   qbittorrent:
-    image: linuxserver/qbittorrent:4.6.3
+    image: linuxserver/qbittorrent:4.6.4
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
