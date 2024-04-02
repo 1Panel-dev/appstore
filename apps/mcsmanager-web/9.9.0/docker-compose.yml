@@ -1,7 +1,7 @@
 version: '3'
 services:
   mcsm-web:
-    image: alisaqaq/mcsmanager-web:9.9.0
+    image: alisaqaq/mcsmanager-web:10.1.0
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
