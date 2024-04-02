@@ -1,0 +1,18 @@
+additionalProperties:
+    formFields:
+        - default: 40085
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: Port
+          labelZh: 端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: 40086
+          edit: true
+          envKey: PANEL_APP_PORT_SSH
+          labelEn: SSH Port
+          labelZh: SSH 端口
+          required: true
+          rule: paramPort
+          type: number
