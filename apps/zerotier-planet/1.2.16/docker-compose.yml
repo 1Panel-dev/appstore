@@ -1,6 +1,7 @@
 version: '3'
 services:
   zerotier-planet:
+    image: keynetworks/ztncui:1.2.16
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
@@ -18,10 +19,8 @@ services:
       - HTTP_PORT=4000
       - HTTP_ALL_INTERFACES=yes
       - ZTNCUI_PASSWD=${PASSWORD}
-    image: keynetworks/ztncui:1.2.16
     labels:  
       createdBy: "Apps"
-
 networks:  
   1panel-network:  
     external: true

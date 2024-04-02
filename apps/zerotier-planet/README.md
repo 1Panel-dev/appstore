@@ -1,62 +1,15 @@
 # 使用说明
 
-- 默认用户名`admin`
+- 默认用户名：`admin`
 
-# 原始相关
+# ZeroTier Planet
 
-# 一分钟自建zerotier-planet
+**ZeroTier Planet** 是 ZeroTier 公司开发的一种网络虚拟化平台，旨在提供简单、安全、高效的远程网络连接解决方案。该平台允许用户轻松地创建、管理和连接多个设备，无论它们位于世界的哪个角落。
 
-私有部署zeroteir-planet服务
-基于 [ztncui](https://github.com/key-networks/ztncui-aio) 整理成 docker-compose.yml 文件.
+# 主要功能：
 
-**特别感谢** <https://github.com/Jonnyan404/zerotier-planet/issues/11#issuecomment-1059961262> 这个issue中各位用户的贡献，基于此issue中 `@jqtmviyu` 的步骤和`kaaass`的 [mkmoonworld](https://github.com/kaaass/ZeroTierOne/releases/tag/mkmoonworld-1.0) 制作成目前的patch（集成planet和moon）。
-
-# 必要条件
-
-- 具有公网ip的服务器
-- 安装 docker
-- 安装 docker-compose
-- 防火墙开放TCP端口 4000/9993/3180 和UDP端口 9993
-
-# 用法
-
-```
-git clone https://github.com/Jonnyan404/zerotier-planet
-OR
-git clone https://gitee.com/Jonnyan404/zerotier-planet
-
-cd zerotier-planet
-docker-compose up -d
-# 以下步骤为创建planet和moon
-docker cp mkmoonworld-x86_64 ztncui:/tmp
-docker cp patch.sh ztncui:/tmp
-docker exec -it ztncui bash /tmp/patch.sh
-docker restart ztncui
-```
-
-然后浏览器访问 `http://ip:4000` 打开web控制台界面。
-
-浏览器访问 `http://ip:3180` 打开planet和moon文件下载页面（亦可在项目根目录的`./ztncui/etc/myfs/`里获取）。
-
-
-- 用户名:admin
-- 密码:mrdoc.fun
-
-# 各客户端配置planet
-
-限于篇幅，请到 <https://www.mrdoc.fun/doc/443/> 查阅
-
-
-
-### 私有 zerotier-planet 的优势:
-- 解除官方 25 的设备连接数限制
-- 提升手机客户端连接的稳定性
-
-# 同类型项目推荐
-
-https://github.com/xubiaolin/docker-zerotier-planet
-
-# Reference Link
-
-- <https://www.mrdoc.fun/doc/443/>
-- <https://github.com/key-networks/ztncui-aio>
+- **虚拟网络创建**: ZeroTier Planet 允许用户创建虚拟网络，将多个设备连接到一个虚拟网络中。这种虚拟网络不受物理位置的限制，可以轻松地跨越地域和网络边界。
+- **安全连接**: 所有的网络通信都经过加密，确保数据在传输过程中的安全性。用户可以放心地通过 ZeroTier Planet 进行远程访问和数据传输，而无需担心数据泄露或窃取。
+- **简单管理**: ZeroTier Planet 提供直观的用户界面，使用户可以轻松地管理其网络和设备。用户可以添加、删除和管理连接的设备，设置访问权限以及监控网络流量等。
+- **跨平台支持**: ZeroTier Planet 支持多种平台，包括 Windows、macOS、Linux、iOS 和 Android 等。无论用户使用何种设备或操作系统，都可以轻松地连接到 ZeroTier Planet 平台。
+- **高效性能**: ZeroTier Planet 提供高性能的网络连接，保证用户可以快速、稳定地访问远程设备和资源。这使得 ZeroTier Planet 成为远程办公、远程控制和远程监控等应用场景的理想选择。

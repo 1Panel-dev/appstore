@@ -1,12 +1,12 @@
-name: ZeroTier-Planet
+name: ZeroTier Planet
 tags:
-    - 工具
+    - 实用工具
 title: 具有 Web UI 的 ZeroTier 网络控制器
-type: 工具
+type: 实用工具
 description: 具有 Web UI 的 ZeroTier 网络控制器
 additionalProperties:
     key: zerotier-planet
-    name: ZeroTier-Planet
+    name: ZeroTier Planet
     tags:
         - Tool
     shortDescZh: 具有 Web UI 的 ZeroTier 网络控制器
