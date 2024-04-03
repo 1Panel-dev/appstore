@@ -10,7 +10,7 @@
 
 **qBittorrent** 是一款免费开源的 BitTorrent 客户端程序，用于下载和分享文件通过 BitTorrent 协议。它提供了一个直观的用户界面，支持多平台，包括 Windows、macOS、Linux、FreeBSD 等操作系统。
 
-### 主要特点：
+# 主要特点：
 
 - **轻量级**： qBittorrent 软件体积小，资源消耗低，运行稳定。
 - **多平台支持**： 用户可以在多个操作系统上使用 qBittorrent，满足不同用户的需求。
