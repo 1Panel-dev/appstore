@@ -63,6 +63,14 @@
       "allowedVersions": "/^10.*/"
     },
     {
+      "matchFileNames": ["apps/mongodb/6.*/*.yml"],
+      "allowedVersions": "/^6.*/"
+    },
+    {
+      "matchFileNames": ["apps/mongodb/7.*/*.yml"],
+      "allowedVersions": "/^7.*/"
+    },
+    {
       "matchDatasources": ["docker"],
       "matchPackageNames": ["ghcr.io/umami-software/umami"],
       "versionCompatibility": "^(?<compatibility>.*)-(?<version>.*)$",

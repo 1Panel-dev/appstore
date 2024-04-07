@@ -1,0 +1,25 @@
+additionalProperties:
+    formFields:
+        - default: mongo
+          envKey: PANEL_DB_ROOT_USER
+          labelEn: Username
+          labelZh: 用户名
+          random: true
+          required: true
+          rule: paramCommon
+          type: text
+        - default: mongo
+          envKey: PANEL_DB_ROOT_PASSWORD
+          labelEn: Password
+          labelZh: 用户密码
+          random: true
+          required: true
+          rule: paramComplexity
+          type: password
+        - default: 27017
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: Port
+          labelZh: 端口
+          required: true
+          rule: paramPort
+          type: number
