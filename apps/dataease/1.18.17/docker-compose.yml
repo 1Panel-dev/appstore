@@ -1,7 +1,7 @@
 version: '3'
 services:
   dataease:
-    image: registry.cn-qingdao.aliyuncs.com/dataease/dataease:v1.18.17
+    image: registry.cn-qingdao.aliyuncs.com/dataease/dataease:v1.18.18
     restart: always
     container_name: ${CONTAINER_NAME}
     ports:
