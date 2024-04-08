@@ -1,0 +1,30 @@
+additionalProperties:
+    formFields:  
+        - default: "/opt/siyuan/"
+          envKey: WORKSPACE_PATH
+          labelEn: Workspace Folder PATH
+          labelZh: 工作空间文件夹路径
+          required: true
+          type: text
+        - default: "/siyuan/workspace/"
+          envKey: WORKSPACE_DIR_CONTAINER
+          labelEn: Workspace Folder PATH
+          labelZh: 容器中的文件夹路径
+          required: true
+          type: text
+        - default: ""
+          envKey: ACCESS_AUTH_CODE
+          labelEn: Access Authorization Code
+          labelZh: 访问授权码
+          required: true
+          edit: true
+          rule: paramComplexity
+          type: password
+        - default: 6806
+          edit: true
+          envKey: SIYUAN_PORT
+          labelEn: Port
+          labelZh: 端口
+          required: true
+          rule: paramPort
+          type: number
