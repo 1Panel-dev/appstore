@@ -7,12 +7,13 @@ additionalProperties:
   key: siyuan
   name: 思源笔记
   tags:
-    - WebSite
+    - Tool
   shortDescZh: 隐私优先的个人知识管理系统
   shortDescEn: Privacy-Prioritized Personal Knowledge Management System
-  type: website
+  type: tool
   crossVersionUpdate: true
-  limit: 1
+  limit: 0
+  recommend: 0
   website: https://b3log.org/siyuan/
   github: https://github.com/siyuan-note/siyuan
   document: https://b3log.org/siyuan/community.html

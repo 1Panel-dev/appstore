@@ -1,0 +1,25 @@
+additionalProperties:
+  formFields:
+    - default: 6806
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: ""
+      envKey: ACCESS_AUTH_CODE
+      labelEn: Access Authorization Code
+      labelZh: 访问授权码
+      required: true
+      edit: true
+      rule: paramComplexity
+      type: password
+    - default: Asia/Shanghai
+      edit: true
+      envKey: TIME_ZONE
+      labelEn: Time zone
+      labelZh: 时区
+      required: true
+      type: text
