@@ -31,10 +31,11 @@ services:
       - ${MAGNUS_MARIADB_PORT}:33062
       - ${MAGNUS_REDIS_PORT}:63790
     volumes:
-      - ./data/core/data:/opt/jumpserver/core/data
-      - ./data/koko/data:/opt/jumpserver/koko/data
-      - ./data/lion/data:/opt/jumpserver/lion/data
-      - ./data/magnus/data:/opt/jumpserver/magnus/data
+      - ./data/core/data:/opt/jumpserver/data
+      - ./data/koko/data:/opt/koko/data
+      - ./data/lion/data:/opt/lion/data
+      - ./data/chen/data:/opt/chen/data
+      - ./data/kael/data:/opt/kael/data
       - ./data/nginx/data:/var/log/nginx
     networks:
       - 1panel-network
