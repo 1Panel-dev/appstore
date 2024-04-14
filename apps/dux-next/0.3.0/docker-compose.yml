@@ -11,7 +11,7 @@
       volumes:
         - ./data:/var/www/html/data
         - ./config:/var/www/html/config
-      user: '0'
+      user: 33:82
   networks:
     1panel-network:
       external: true
