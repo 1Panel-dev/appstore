@@ -1,18 +1,17 @@
-version: '3'
-services:
-  wordpress:
-    image: duxweb/dux-next:latest
-    container_name: ${CONTAINER_NAME}
-    ports:
-      -  ${PANEL_APP_PORT_HTTP}:80
-    restart: always
-    networks:
-      - 1panel-network
-    volumes:
-      - ./data:/var/www/html/data
-      - ./config:/var/www/html/config
-    labels:
-      createdBy: "Apps"
-networks:
-  1panel-network:
-    external: true
+  version: '3'
+  services:
+    dux:
+      image: duxweb/dux-next:latest
+      container_name: ${CONTAINER_NAME}
+      ports:
+        -  ${PANEL_APP_PORT_HTTP}:80
+      restart: always
+      networks:
+        - 1panel-network
+      volumes:
+        - ./data:/var/www/html/data
+        - ./config:/var/www/html/config
+      user: 0:1000
+  networks:
+    1panel-network:
+      external: true
