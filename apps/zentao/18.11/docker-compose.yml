@@ -1,7 +1,7 @@
 version: '3.0'
 services:
   zentao:
-    image: hub.zentao.net/app/zentao:18.11
+    image: hub.zentao.net/app/zentao:18.12
     container_name: ${CONTAINER_NAME}
     restart: always
     ports:
