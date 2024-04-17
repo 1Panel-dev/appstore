@@ -11,7 +11,7 @@ additionalProperties:
   shortDescZh: 南墙 WEB 应用防火墙
   shortDescEn: NanQiang Web Application Firewall
   type: tool
-  crossVersionUpdate: false
+  crossVersionUpdate: true
   limit: 1
   recommend: 0
   website: https://waf.uusec.com/#/
