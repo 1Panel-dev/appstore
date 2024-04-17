@@ -1,0 +1,19 @@
+name: Pterodactyl
+tags:
+    - 休闲游戏
+title: 一个免费的开源游戏服务器管理面板（前端）
+description: 一个免费的开源游戏服务器管理面板（前端）
+additionalProperties:
+    key: pterodactyl-panel
+    name: Pterodactyl
+    tags:
+        - Game
+    shortDescZh: 一个免费的开源游戏服务器管理面板（前端）
+    shortDescEn: open-source game server management panel(panel)
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 11
+    website: https://pterodactyl.top/
+    github: https://github.com/pterodactyl-china/panel
+    document: https://pterodactyl.top/

@@ -1,0 +1,88 @@
+additionalProperties:
+    formFields:
+        - default: mysql
+          envKey: PANEL_DB_TYPE
+          labelEn: Database Service
+          labelZh: 数据库服务
+          required: true
+          type: apps
+          child:
+            default: ""
+            envKey: PANEL_DB_HOST
+            required: true
+            type: service
+          values:
+            - label: MySQL
+              value: mysql
+        - default: pterodactyl
+          envKey: PANEL_DB_NAME
+          labelEn: Database
+          labelZh: 数据库名
+          random: true
+          required: true
+          rule: paramCommon
+          type: text
+        - default: pterodactyl
+          envKey: PANEL_DB_USER
+          labelEn: User
+          labelZh: 数据库用户
+          random: true
+          required: true
+          rule: paramCommon
+          type: text
+        - default: pterodactyl
+          envKey: PANEL_DB_USER_PASSWORD
+          labelEn: Password
+          labelZh: 数据库用户密码
+          random: true
+          required: true
+          rule: paramComplexity
+          type: password
+        - default: 80
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: Port
+          labelZh: HTTP 端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: http://localhost:80
+          edit: true
+          envKey: PANEL_APP_URL
+          labelEn: External URL
+          labelZh: 外部访问地址
+          required: true
+          rule: paramExtUrl
+          type: text
+        - default: ""
+          envKey: PANEL_REDIS_DB_HOST
+          key: redis
+          labelEn: Redis Service
+          labelZh: 缓存服务服务
+          required: true
+          type: service
+        - default: ""
+          envKey: PANEL_REDIS_ROOT_PASSWORD
+          labelEn: Redis Service Password
+          labelZh: 缓存服务服务密码
+          required: true
+          type: password
+        - default: noreply@example.com
+          edit: true
+          envKey: PANEL_MAIL_FROM
+          labelEn: MAIL FROM
+          labelZh: 预设作者邮箱
+          required: true
+          type: text
+        - default: "true"
+          edit: true
+          envKey: PANEL_RECAPTCHA_ENABLED
+          labelEn: RECAPTCHA ENABLED
+          labelZh: 谷歌人机验证
+          required: true
+          type: select
+          values:
+            - label: 启用
+              value: "true"
+            - label: 禁用
+              value: "false"
