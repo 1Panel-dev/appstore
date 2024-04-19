@@ -109,7 +109,7 @@
     "rule": "cc",
     "tokenTimeOut": 1800,
     "threshold": 100,
-    "duration": 20,
+    "duration": 10,
     "action": "deny",
     "ipBlock": "on",
     "ipBlockTime": 600
