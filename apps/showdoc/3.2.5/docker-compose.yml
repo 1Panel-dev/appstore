@@ -1,4 +1,3 @@
-version: '3'
 services:
   showdoc:
     image: star7th/showdoc:v3.2.5

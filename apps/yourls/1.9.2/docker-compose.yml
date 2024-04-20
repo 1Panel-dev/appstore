@@ -1,4 +1,3 @@
-version: '3'
 services:
   yourls:
     container_name: ${CONTAINER_NAME}

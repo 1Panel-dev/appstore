@@ -1,4 +1,3 @@
-version: '3'
 services:
   one-api:
     image: justsong/one-api:v0.6.5

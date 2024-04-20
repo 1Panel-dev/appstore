@@ -1,4 +1,3 @@
-version: '3'
 services:
   nexus:
     image: bitnami/tomcat:10.1.20

@@ -1,4 +1,3 @@
-version: '3'
 services:
   drawio:
     image: jgraph/drawio:24.2.7

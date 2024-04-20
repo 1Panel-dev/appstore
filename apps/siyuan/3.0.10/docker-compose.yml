@@ -1,4 +1,3 @@
-version: '3'
 services:
   siyuan:
     image: b3log/siyuan:v3.0.10

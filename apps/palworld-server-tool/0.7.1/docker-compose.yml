@@ -1,4 +1,3 @@
-version: '3'
 services:
   pst:
     image: jokerwho/palworld-server-tool:0.7.1

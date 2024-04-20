@@ -1,4 +1,3 @@
-version: '3'
 services:
   jumpserver:
     image: jumpserver/jms_all:v3.10.8

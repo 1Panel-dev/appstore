@@ -1,4 +1,3 @@
-version: '3'
 services:
   audiobookshelf:
     container_name: ${CONTAINER_NAME}

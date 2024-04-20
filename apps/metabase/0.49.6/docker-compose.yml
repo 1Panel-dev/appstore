@@ -1,4 +1,3 @@
-version: '3'
 services:
   metabase:
     image: metabase/metabase:v0.49.6

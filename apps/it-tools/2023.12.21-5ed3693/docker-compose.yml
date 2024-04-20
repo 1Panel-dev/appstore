@@ -1,4 +1,3 @@
-version: '3'
 services:
   it-tools:
     container_name: ${CONTAINER_NAME}

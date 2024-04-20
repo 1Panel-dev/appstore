@@ -1,4 +1,3 @@
-version: '3'
 services:
   mcsm-daemon:
     image: alisaqaq/mcsmanager-daemon:3.4.0

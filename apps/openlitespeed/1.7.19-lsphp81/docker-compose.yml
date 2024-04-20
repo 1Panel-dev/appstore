@@ -1,4 +1,3 @@
-version: '3'
 services:
   litespeed:
     container_name: ${CONTAINER_NAME}

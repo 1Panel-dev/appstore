@@ -1,4 +1,3 @@
-version: '3'
 services:
   clickhouse:
     container_name: ${CONTAINER_NAME}

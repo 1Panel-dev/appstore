@@ -1,4 +1,3 @@
-version: '3'
 services:
   umami:
     image: ghcr.io/umami-software/umami:${PANEL_DB_TYPE}-v2.11.2

@@ -1,4 +1,3 @@
-version: '3'
 services:
   memos:
     image: neosmemo/memos:0.21.0

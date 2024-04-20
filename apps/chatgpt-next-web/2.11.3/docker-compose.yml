@@ -1,4 +1,3 @@
-version: '3'
 services:
   chatgpt-next-web:
     container_name: ${CONTAINER_NAME}

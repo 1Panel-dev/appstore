@@ -1,4 +1,3 @@
-version: '3'
 services:
   mcsm-web:
     image: alisaqaq/mcsmanager-web:10.1.0

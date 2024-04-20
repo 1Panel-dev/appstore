@@ -1,4 +1,3 @@
-version: '3'
 services:
   adguardhome:
     container_name: ${CONTAINER_NAME}

@@ -1,4 +1,3 @@
-version: '3'
 services:
   openresty:
     image: 1panel/openresty:1.21.4.3-2-1-focal

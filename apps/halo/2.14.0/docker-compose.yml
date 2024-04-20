@@ -1,4 +1,3 @@
-version: '3'
 services:
   halo:
     image: halohub/halo-pro:2.14.0

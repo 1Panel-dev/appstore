@@ -1,5 +1,3 @@
-# from https://github.com/louislam/uptime-kuma/blob/master/docker/docker-compose.yml
-version: '3'
 services:
   uptime-kuma:
     image: louislam/uptime-kuma:1.23.12

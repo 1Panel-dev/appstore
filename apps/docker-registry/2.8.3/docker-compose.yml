@@ -1,4 +1,3 @@
-version: '3'
 services:
   docker-registry:
     image: registry:2.8.3

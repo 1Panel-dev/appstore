@@ -1,4 +1,3 @@
-version: '3.8'
 services:
   pgadmin4:
     image: dpage/pgadmin4:8.5

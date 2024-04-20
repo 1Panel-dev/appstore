@@ -1,4 +1,3 @@
-version: '3'
 services:
   wordpress:
     image: wordpress:6.5.2

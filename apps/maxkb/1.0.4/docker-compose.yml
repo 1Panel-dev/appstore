@@ -1,4 +1,3 @@
-version: '3'
 services:
   ollama:
     image: 1panel/maxkb:v1.0.4

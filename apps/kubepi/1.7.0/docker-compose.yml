@@ -1,4 +1,3 @@
-version: '3'
 services:
   kubepi:
     image: 1panel/kubepi:v1.7.0

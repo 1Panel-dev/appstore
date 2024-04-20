@@ -1,4 +1,3 @@
-version: '3'
 services:
   redis-commander-XnlR:
     container_name: ${CONTAINER_NAME}

@@ -1,4 +1,3 @@
-version: '3'
 services:
   tailchat:
     container_name: ${CONTAINER_NAME}

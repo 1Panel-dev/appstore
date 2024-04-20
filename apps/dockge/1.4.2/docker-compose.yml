@@ -1,4 +1,3 @@
-version: '3'
 services:
   dockge:
     image: louislam/dockge:1.4.2

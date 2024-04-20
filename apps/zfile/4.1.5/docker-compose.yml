@@ -1,4 +1,3 @@
-version: '3'
 services:
   zfile:
     image: zhaojun1998/zfile:4.1.5

@@ -1,4 +1,3 @@
-version: '3'
 services:
   kafka:
     container_name: ${CONTAINER_NAME}

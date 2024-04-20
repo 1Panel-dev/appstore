@@ -1,4 +1,3 @@
-version: '3'
 services:
   qinglong:
     image: whyour/qinglong:2.17.3

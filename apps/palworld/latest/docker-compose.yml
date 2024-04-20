@@ -1,4 +1,3 @@
-version: '3.9'
 services:
   palworld:
     image: kagurazakanyaa/palworld:latest

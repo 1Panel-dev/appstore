@@ -1,4 +1,3 @@
-version: '3'
 services:
   wiki:
     image: requarks/wiki:2.5.301

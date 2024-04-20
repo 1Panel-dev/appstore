@@ -1,4 +1,3 @@
-version: '3'
 services:
   zerotier-planet:
     image: keynetworks/ztncui:1.2.16

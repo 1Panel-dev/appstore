@@ -1,4 +1,3 @@
-version: "3"
 services:
   frps:
     container_name: ${CONTAINER_NAME}

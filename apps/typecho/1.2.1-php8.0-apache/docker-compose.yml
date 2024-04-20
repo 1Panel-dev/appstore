@@ -1,4 +1,3 @@
-version: '3'
 services:
   typecho:
     image: joyqi/typecho:1.2.1-php8.0-apache

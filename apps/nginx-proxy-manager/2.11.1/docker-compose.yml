@@ -1,4 +1,3 @@
-version: '3'
 services:
   nginxpm:
     container_name: ${CONTAINER_NAME}

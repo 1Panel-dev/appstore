@@ -1,4 +1,3 @@
-version: '3'
 services:
   emlog:
     image: emlog/emlog:pro-latest-php7.4-apache

@@ -1,4 +1,3 @@
-version: '3'
 services:
   jenkins:
     container_name: ${CONTAINER_NAME}

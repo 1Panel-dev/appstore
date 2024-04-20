@@ -1,4 +1,3 @@
-version: '3'
 services:
   synapse:
     container_name: ${CONTAINER_NAME}

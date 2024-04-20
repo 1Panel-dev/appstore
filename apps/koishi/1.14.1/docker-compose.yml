@@ -1,4 +1,3 @@
-version: '3'
 services:
   koishi:
     image: koishijs/koishi:v1.14.1

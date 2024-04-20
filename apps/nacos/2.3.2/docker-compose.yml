@@ -1,4 +1,3 @@
-version: '3'
 services:
   nacos:
     image: nacos/nacos-server:v2.3.2

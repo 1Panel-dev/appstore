@@ -1,4 +1,3 @@
-version: '3'
 services:
   dataease:
     image: registry.cn-qingdao.aliyuncs.com/dataease/dataease:v1.18.18

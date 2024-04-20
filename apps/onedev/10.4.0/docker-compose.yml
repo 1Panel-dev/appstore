@@ -1,4 +1,3 @@
-version: '3'
 services:
   onedev:
     image: 1dev/server:10.4.0

@@ -1,4 +1,3 @@
-version: '3.1'
 services:
   reader:
     image: hectorqin/reader:3.2.7

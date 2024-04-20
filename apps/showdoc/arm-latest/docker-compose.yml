@@ -1,4 +1,3 @@
-version: '3'
 services:
   showdoc:
     image: star7th/showdoc:arm-latest

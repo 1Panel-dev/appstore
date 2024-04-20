@@ -1,4 +1,3 @@
-version: '3'
 services:
   mailserver:
     image: ghcr.io/docker-mailserver/docker-mailserver:13.3.1

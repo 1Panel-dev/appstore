@@ -1,4 +1,3 @@
-version: '3'
 services:
   phpmyadmin:
     image: phpmyadmin:5.2.1
