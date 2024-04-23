@@ -1,0 +1,19 @@
+name: mongo-express
+tags:
+    - 开发工具
+title: 基于 Web 的 MongoDB 管理界面
+description: 基于 Web 的 MongoDB 管理界面
+additionalProperties:
+    key: mongo-express
+    name: mongo-express
+    tags:
+        - DevTool
+    shortDescZh: 基于 Web 的 MongoDB 管理界面
+    shortDescEn: Web-based MongoDB admin interface
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://github.com/mongo-express/mongo-express
+    github: https://github.com/mongo-express/mongo-express
+    document: https://github.com/mongo-express/mongo-express
