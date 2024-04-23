@@ -1,0 +1,51 @@
+additionalProperties:
+  formFields:
+    - default: 8081
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: ""
+      edit: true
+      envKey: MONGO_HOST
+      key: mongodb
+      labelEn: Database Service
+      labelZh: 数据库服务
+      required: true
+      type: service
+    - default: ""
+      edit: true
+      envKey: PANEL_DB_ROOT_USER
+      labelEn: Database UserName
+      labelZh: 数据库用户名
+      required: true
+      rule: paramCommon
+      type: text
+    - default: ""
+      edit: true
+      envKey: PANEL_DB_ROOT_PASSWORD
+      labelEn: Database Password
+      labelZh: 数据库密码
+      required: true
+      rule: paramCommon
+      type: password
+    - default: "mongo-express"
+      edit: true
+      envKey: BASICAUTH_USERNAME
+      labelEn: Management Username
+      labelZh: 管理平台用户名
+      required: true
+      rule: paramCommon
+      type: text
+    - default: "mongo-express"
+      edit: true
+      envKey: BASICAUTH_PASSWORD
+      labelEn: Management Password
+      labelZh: 管理平台密码
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
