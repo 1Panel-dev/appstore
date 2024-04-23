@@ -67,16 +67,16 @@
       "allowedVersions": "/^6.*/"
     },
     {
+      "matchFileNames": ["apps/mongodb/7.*/*.yml"],
+      "allowedVersions": "/^7.*/"
+    },
+    {
       "matchFileNames": ["apps/mariadb/10.*/*.yml"],
       "allowedVersions": "/^10.*/"
     },
     {
       "matchFileNames": ["apps/mariadb/11.*/*.yml"],
       "allowedVersions": "/^11.*/"
-    },
-    {
-      "matchFileNames": ["apps/mongodb/7.*/*.yml"],
-      "allowedVersions": "/^7.*/"
     },
     {
       "matchFileNames": ["apps/sonarqube/9.*/*.yml"],
