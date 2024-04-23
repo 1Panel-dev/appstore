@@ -18,7 +18,7 @@ services:
       - "${PANEL_APP_PORT_HTTP}:7080"
     environment:
       - TZ=${TIME_ZONE}
-    image: litespeedtech/openlitespeed:1.7.19-lsphp81
+    image: litespeedtech/openlitespeed:1.8.1-lsphp74
     labels:  
       createdBy: "Apps"
 
