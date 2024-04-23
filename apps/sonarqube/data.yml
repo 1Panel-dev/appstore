@@ -1,0 +1,19 @@
+name: SonarQube
+tags:
+    - DevOps
+title: 开源的代码质量管理平台
+description: 开源的代码质量管理平台
+additionalProperties:
+    key: sonarqube
+    name: SonarQube
+    tags:
+        - DevOps
+    shortDescZh: 开源的代码质量管理平台
+    shortDescEn: An open-source code quality management platform"
+    type: tool
+    crossVersionUpdate: false
+    limit: 0
+    recommend: 0
+    website: https://www.sonarsource.com
+    github: https://github.com/SonarSource/sonarqube
+    document: https://docs.sonarsource.com/sonarqube

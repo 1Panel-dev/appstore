@@ -79,6 +79,14 @@
       "allowedVersions": "/^7.*/"
     },
     {
+      "matchFileNames": ["apps/sonarqube/9.*/*.yml"],
+      "allowedVersions": "/^9.*/"
+    },
+    {
+      "matchFileNames": ["apps/sonarqube/10.*/*.yml"],
+      "allowedVersions": "/^10.*/"
+    },
+    {
       "matchDatasources": ["docker"],
       "matchPackageNames": ["ghcr.io/umami-software/umami"],
       "versionCompatibility": "^(?<compatibility>.*)-(?<version>.*)$",
