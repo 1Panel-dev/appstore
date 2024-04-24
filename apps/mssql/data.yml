@@ -1,0 +1,19 @@
+name: Microsoft SQL Server
+tags:
+    - 数据库
+title: SQL Server 在 Docker 资源中的官方微软存储库
+description: SQL Server 在 Docker 资源中的官方微软存储库
+additionalProperties:
+    key: mssql
+    name: Microsoft SQL Server
+    tags:
+        - Database
+    shortDescZh: SQL Server 在 Docker 资源中的官方微软存储库
+    shortDescEn: Official Microsoft repository for SQL Server in Docker resources
+    type: runtime
+    crossVersionUpdate: false
+    limit: 0
+    recommend: 0
+    website: https://github.com/microsoft/mssql-docker
+    github: https://github.com/microsoft/mssql-docker
+    document: https://github.com/microsoft/mssql-docker
