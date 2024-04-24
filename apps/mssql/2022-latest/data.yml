@@ -1,0 +1,18 @@
+additionalProperties:
+  formFields:
+    - default: 1433
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: "mssql"
+      edit: true
+      envKey: MSSQL_SA_PASSWORD
+      labelEn: SA PASSWORD
+      labelZh: SA 用户密码（至少包含8个字符，且需包含大写字母、小写字母、数字和特殊字符中的三种）
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
