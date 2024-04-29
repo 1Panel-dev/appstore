@@ -1,6 +1,6 @@
 services:
   mkdocs-material:
-    image: squidfunk/mkdocs-material:9.5.18
+    image: squidfunk/mkdocs-material:9.5.19
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
