@@ -1,0 +1,55 @@
+additionalProperties:
+    formFields:
+        - default: ""
+          envKey: APP_KEY
+          labelEn: Application Key (Must be exactly 32 characters)
+          labelZh: 应用密钥 (必须为 32 位字符)
+          required: true
+          type: text
+        - default: mysql
+          envKey: PANEL_DB_TYPE
+          labelEn: Database Service
+          labelZh: 数据库服务
+          required: true
+          type: apps
+          child:
+            default: ""
+            envKey: PANEL_DB_HOST
+            required: true
+            type: service
+          values:
+            - label: MySQL
+              value: mysql
+            - label: PostgreSQL
+              value: pgsql
+        - default: firefly
+          envKey: PANEL_DB_NAME
+          labelEn: Database
+          labelZh: 数据库名称
+          random: true
+          required: true
+          rule: paramCommon
+          type: text
+        - default: firefly
+          envKey: PANEL_DB_USER
+          labelEn: User
+          labelZh: 数据库用户
+          random: true
+          required: true
+          rule: paramCommon
+          type: text
+        - default: firefly
+          envKey: PANEL_DB_USER_PASSWORD
+          labelEn: Password
+          labelZh: 数据库用户密码
+          random: true
+          required: true
+          rule: paramComplexity
+          type: password
+        - default: 8080
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: Port
+          labelZh: HTTP 端口
+          required: true
+          rule: paramPort
+          type: number

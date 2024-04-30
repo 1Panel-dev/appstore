@@ -1,0 +1,19 @@
+name: Firefly III
+tags:
+    - 实用工具
+title: 开源的个人财务管理工具
+description: 开源的个人财务管理工具
+additionalProperties:
+    key: firefly-iii
+    name: Firefly III
+    tags:
+        - Tool
+    shortDescZh: 开源的个人财务管理工具
+    shortDescEn: A free and open source personal finance manager
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://www.firefly-iii.org/
+    github: https://github.com/firefly-iii/firefly-iii
+    document: https://docs.firefly-iii.org/
