@@ -1,6 +1,6 @@
 services:
   zentao:
-    image: hub.zentao.net/app/zentao:18.12
+    image: hub.zentao.net/app/zentao:20.0
     container_name: ${CONTAINER_NAME}
     restart: always
     ports:
