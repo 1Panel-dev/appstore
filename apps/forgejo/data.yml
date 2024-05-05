@@ -1,0 +1,19 @@
+name: Forgejo
+tags:
+    - DevOps
+title: 一个自托管的轻量级代码托管平台。
+description: 一个自托管的轻量级代码托管平台。
+additionalProperties:
+    key: forgejo
+    name: Forgejo
+    tags:
+        - DevOps
+    shortDescZh: 一个自托管的轻量级代码托管平台。
+    shortDescEn: A self-hosted lightweight software forge.
+    type: tool
+    crossVersionUpdate: false
+    limit: 0
+    recommend: 11
+    website: https://forgejo.org/
+    github: https://codeberg.org/forgejo/forgejo
+    document: https://forgejo.org/docs/latest/
