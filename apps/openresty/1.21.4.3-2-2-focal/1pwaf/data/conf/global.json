@@ -1,6 +1,6 @@
 {
   "waf": {
-    "state": "on",
+    "state": "off",
     "mode": "protection",
     "secret": ""
   },
@@ -109,7 +109,7 @@
     "rule": "cc",
     "tokenTimeOut": 1800,
     "threshold": 100,
-    "duration": 10,
+    "duration": 20,
     "action": "deny",
     "ipBlock": "on",
     "ipBlockTime": 600
@@ -165,5 +165,8 @@
     "state": "on",
     "code": 403,
     "action": "deny"
+  },
+  "cdn": {
+    "state": "off"
   }
 }

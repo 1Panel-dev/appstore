@@ -70,13 +70,6 @@
     "ipBlock": "on",
     "ipBlockTime": 600
   },
-  "unknownWebsite": {
-    "state": "on",
-    "type": "unknownWebsite",
-    "action": "deny",
-    "code": 403,
-    "res": "unknown"
-  },
   "geoRestrict": {
     "state": "off",
     "rules": [],
@@ -104,7 +97,7 @@
     "action": "deny"
   },
   "cc": {
-    "state": "on",
+    "state": "off",
     "type": "cc",
     "rule": "cc",
     "tokenTimeOut": 1800,
