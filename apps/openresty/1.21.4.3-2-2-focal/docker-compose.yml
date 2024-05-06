@@ -1,6 +1,6 @@
 services:
   openresty:
-    image: 1panel/openresty:1.21.4.3-2-1-focal
+    image: 1panel/openresty:1.21.4.3-2-2-focal
     container_name: ${CONTAINER_NAME}
     restart: always
     network_mode: host

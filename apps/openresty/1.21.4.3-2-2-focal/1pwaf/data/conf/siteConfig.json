@@ -90,5 +90,8 @@
     "state": "on",
     "code": 444,
     "action": "deny"
+  },
+  "cdn": {
+    "state": "off"
   }
 }
