@@ -12,6 +12,7 @@ services:
       - ./log:/var/log/php
       - ./composer:/tmp/composer
       - ./extensions:/php/extensions
+      - ./supervisor.d:/php/supervisor.d/extra
     ports:
       - 127.0.0.1:${PANEL_APP_PORT_HTTP}:9000
     labels:

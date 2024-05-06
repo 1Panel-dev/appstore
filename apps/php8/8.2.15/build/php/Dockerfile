@@ -35,5 +35,9 @@ ENV COMPOSER_HOME=/tmp/composer
 # php image's www-data user uid & gid are 82, change them to 1000 (primary user)
 RUN apk --no-cache add shadow && usermod -u 1000 www-data && groupmod -g 1000 www-data
 
+# Config supervisor
+COPY ./supervisor/supervisord.conf /etc/supervisord.conf
+COPY ./supervisor/php-fpm.ini /etc/supervisor.d/php-fpm.ini
+ENTRYPOINT ["supervisord", "--nodaemon", "--configuration", "/etc/supervisord.conf"]
 
 WORKDIR /www
