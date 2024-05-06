@@ -4,7 +4,7 @@ services:
     restart: always
     networks:
       - 1panel-network
-    image: sonarqube:10.5.0-community
+    image: sonarqube:10.5.1-community
     ports:
       - ${PANEL_APP_PORT_HTTP}:9000
     volumes:
