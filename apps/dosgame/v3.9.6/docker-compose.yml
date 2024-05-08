@@ -1,18 +1,16 @@
 services:
   dosgame:
     container_name: ${CONTAINER_NAME}
-    image: oldiy/dosgame-web-docker:latest
+    image: firezmc/dosgame-web-docker:v3.9.6
     restart: always
     networks:
       - 1panel-network
     ports:
-      - ${PANEL_APP_PORT_HTTP}:262
+      - ${PANEL_APP_PORT_HTTP}:8090
     volumes:
-      - dosgame_data:/app/static/games
+      - ./data/games_storage:/games_storage
     labels:
       createdBy: "Apps"
-volumes:
-  dosgame_data:
 networks:
   1panel-network:
     external: true
