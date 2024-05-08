@@ -1,0 +1,32 @@
+services:
+  mysql:
+    image: mysql:8.4.0
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=${PANEL_DB_ROOT_PASSWORD}
+      - MYSQL_INITDB_SKIP_TZINFO=1
+      - TZ=Asia/Shanghai
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:3306
+    volumes:
+      - mysql:/var/lib/mysql/
+      - ./conf/my.cnf:/etc/my.cnf
+    healthcheck:
+      test: mysqladmin ping -h 127.0.0.1 -u root --password=$$MYSQL_ROOT_PASSWORD
+      start_period: 5s
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    labels:
+      createdBy: "Apps"
+
+networks:
+  1panel-network:
+    external: true
+
+volumes:
+  mysql:
+    driver: local
