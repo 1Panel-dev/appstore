@@ -1,0 +1,20 @@
+name: 小雅 Alist (xiaoya)
+tags:
+    - 工实用具
+title: 基于 Alist 的网盘聚合站
+type: 工具
+description: 基于 Alist 的网盘聚合站
+additionalProperties:
+    key: xiaoya
+    name: 小雅 Alist (xiaoya)
+    tags:
+        - Tool
+    shortDescZh: 基于 Alist 的网盘聚合站
+    shortDescEn: Alist-based cloud disk aggregation station
+    type: tool
+    crossVersionUpdate: true
+    limit: 1
+    recommend: 0
+    website: http://alist.xiaoya.pro
+    github: https://hub.docker.com/r/xiaoyaliu/alist
+    document: https://www.notion.so/xiaoyaliu/xiaoya-docker-69404af849504fa5bcf9f2dd5ecaa75f

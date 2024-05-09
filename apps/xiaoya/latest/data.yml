@@ -1,0 +1,33 @@
+additionalProperties:
+    formFields:
+        - default: 5678
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: Port
+          labelZh: 端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: ''
+          edit: true
+          envKey: XIAOYA_OPEN_TOKEN
+          labelEn: Open Token
+          labelZh: 访问令牌
+          required: true
+          type: text
+        - default: ''
+          edit: true
+          envKey: XIAOYA_REFRESH_TOKEN
+          labelEn: Refresh Token
+          labelZh: 刷新令牌
+          required: true
+          rule: paramCommon
+          type: text
+        - default: ''
+          edit: true
+          envKey: XIAOYA_TEMP_FOLDER_ID
+          labelEn: Temporary Folder ID
+          labelZh: 转存目录ID
+          required: true
+          rule: paramCommon
+          type: text
