@@ -1,6 +1,6 @@
 services:
   nexus:
-    image: sonatype/nexus3:3.67.1
+    image: sonatype/nexus3:3.68.0
     restart: always
     container_name: ${CONTAINER_NAME}
     environment:
