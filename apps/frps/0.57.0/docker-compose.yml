@@ -6,6 +6,6 @@ services:
     volumes:
         - ./data/frps.toml:/etc/frp/frps.toml
         - ./data/ssl:/etc/frp/ssl
-    image: snowdreamtech/frps:0.57.0
+    image: snowdreamtech/frps:0.58.0
     labels:  
       createdBy: "Apps"
