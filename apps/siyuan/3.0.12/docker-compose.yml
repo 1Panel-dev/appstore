@@ -1,6 +1,6 @@
 services:
   siyuan:
-    image: b3log/siyuan:v3.0.12
+    image: b3log/siyuan:v3.0.13
     container_name: ${CONTAINER_NAME}
     restart: unless-stopped
     user: '1000:1000'
