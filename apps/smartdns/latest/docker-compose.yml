@@ -1,0 +1,23 @@
+services:
+  smartdns:
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:53/udp"
+    volumes:
+      - "./data/conf:/etc/smartdns"
+    image: pymumu/smartdns:latest
+    healthcheck:
+      test: test `nslookup dns.pub 127.0.0.1 | grep answer | wc -l` -gt 0
+      start_period: 2s
+      interval: 5s
+      timeout: 2s
+      retries: 5
+    labels:
+      createdBy: "Apps"
+
+networks:
+  1panel-network:
+    external: true

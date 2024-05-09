@@ -1,0 +1,20 @@
+name: SmartDNS
+tags:
+    - 实用工具
+title: 一个本地DNS服务器，获取最快的网站IP，获得最佳上网体验。
+type: 工具
+description: 一个本地DNS服务器，获取最快的网站IP，获得最佳上网体验，支持DoH，DoT。
+additionalProperties:
+    key: smartdns
+    name: SmartDNS
+    tags:
+        - Tool
+    shortDescZh: 一个运行在本地的 DNS 服务器
+    shortDescEn: A local DNS server
+    type: tool
+    crossVersionUpdate: true
+    limit: 1
+    recommend: 0
+    website: https://pymumu.github.io/smartdns
+    github: https://github.com/pymumu/smartdns
+    document: https://pymumu.github.io/smartdns
