@@ -131,7 +131,7 @@
     "ipBlockTime": 3000
   },
   "fileExt": {
-    "state": "on",
+    "state": "off",
     "action": "deny",
     "code": 403,
     "type": "fileExtCheck"
