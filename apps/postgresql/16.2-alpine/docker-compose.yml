@@ -10,6 +10,12 @@ services:
       - ${PANEL_APP_PORT_HTTP}:5432
     volumes:
       - ./data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-h", "127.0.0.1", "-p", "5432", "-q", "-U", "${PANEL_DB_ROOT_USER}"]
+      start_period: 20s
+      interval: 30s
+      retries: 5
+      timeout: 5s
     networks:
       - 1panel-network
     labels:
