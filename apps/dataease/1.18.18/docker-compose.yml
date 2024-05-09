@@ -1,6 +1,6 @@
 services:
   dataease:
-    image: registry.cn-qingdao.aliyuncs.com/dataease/dataease:v1.18.18
+    image: registry.cn-qingdao.aliyuncs.com/dataease/dataease:v1.18.19
     restart: always
     container_name: ${CONTAINER_NAME}
     ports:
