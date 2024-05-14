@@ -1,0 +1,185 @@
+[mysql]
+port = 3306
+socket = /var/lib/mysql/mysql.sock
+default_character_set = utf8mb4
+
+[mysqld]
+basedir = /usr
+character_set_server = utf8mb4
+collation_server = utf8mb4_unicode_ci
+default_storage_engine = InnoDB
+default_time_zone = '+8:00'
+init_connect = 'set names utf8mb4;'
+
+bind_address = 0.0.0.0
+port = 3306
+extra_port = 9306
+extra_max_connections = 10
+lower_case_table_names = 1
+skip_external_locking = 1
+tmpdir = /var/tmp
+user = mysql
+memlock = 0
+skip_name_resolve = 1
+host_cache_size = 0
+datadir = /var/lib/mysql
+pid_file = /var/lib/mysql/mysql.pid
+socket = /var/lib/mysql/mysql.sock
+event_scheduler = 1
+symbolic_links = 0
+large_pages = 0
+gtid_strict_mode = 1
+transaction_isolation = READ-COMMITTED
+
+max_connections = 100
+max_user_connections = 0
+max_connect_errors = 5000
+max_statement_time = 0
+max_prepared_stmt_count = 1048576
+back_log = 2000
+
+net_read_timeout = 3600
+net_write_timeout = 3600
+connect_timeout = 10
+interactive_timeout = 600
+wait_timeout = 600
+lock_wait_timeout = 3600
+
+thread_handling = pool-of-threads
+thread_pool_size = 4
+thread_pool_max_threads = 500
+thread_pool_idle_timeout = 60
+thread_pool_stall_limit = 500
+thread_pool_oversubscribe = 3
+
+thread_cache_size = 1024
+
+query_cache_type = 0
+query_cache_limit = 0
+query_cache_min_res_unit = 0
+query_cache_size = 0
+query_cache_strip_comments = 1
+query_cache_wlock_invalidate = 1
+
+open_files_limit = 102400
+performance_schema = 1
+sql_mode = traditional
+table_open_cache = 4096
+table_definition_cache = 4096
+join_buffer_size = 128K
+join_buffer_space_limit = 1M
+join_cache_level = 8
+
+sort_buffer_size = 1M
+read_buffer_size = 256K
+read_rnd_buffer_size = 2M
+max_heap_table_size = 32M
+tmp_table_size = 32M
+
+thread_stack = 131072
+net_buffer_length = 32K
+max_allowed_packet = 32M
+query_prealloc_size = 256K
+metadata_locks_hash_instances = 4
+metadata_locks_cache_size = 8192
+secure_file_priv = /tmp
+
+log_error = /var/lib/mysql/mysqld.log
+slow_query_log_file = /var/lib/mysql/slow_query.log
+log_output = FILE
+log_warnings = 2
+log_queries_not_using_indexes = 1
+log_slow_admin_statements = 1
+log_slow_verbosity = query_plan
+long_query_time = 1
+min_examined_row_limit = 100
+slow_query_log = 1
+
+innodb_data_home_dir = /var/lib/mysql
+
+innodb_buffer_pool_size = 128M
+innodb_compression_algorithm = zlib
+innodb_compression_level = 6
+innodb_page_size = 16K
+innodb_stats_traditional = 1
+innodb_stats_transient_sample_pages = 16
+
+innodb_force_recovery = 0
+innodb_fast_shutdown = 0
+innodb_lru_scan_depth = 100
+innodb_purge_threads = 4
+innodb_purge_batch_size = 512
+innodb_prefix_index_cluster_optimization = 1
+innodb_max_dirty_pages_pct = 75
+innodb_rollback_on_timeout = 1
+innodb_sort_buffer_size = 8M
+innodb_print_all_deadlocks = 1
+innodb_strict_mode = 1
+
+innodb_file_per_table = 1
+innodb_read_io_threads = 4
+innodb_write_io_threads = 4
+innodb_io_capacity = 200
+innodb_io_capacity_max = 300
+innodb_thread_concurrency = 0
+innodb_doublewrite = 1
+innodb_use_atomic_writes = 0
+innodb_use_native_aio = 1
+innodb_lock_wait_timeout = 60
+innodb_thread_sleep_delay = 10
+innodb_concurrency_tickets = 256
+innodb_autoinc_lock_mode = 2
+innodb_flush_neighbors = 1
+innodb_adaptive_flushing = 1
+innodb_open_files = 65536
+innodb_checksum_algorithm = crc32
+innodb_cmp_per_index_enabled = 0
+innodb_adaptive_hash_index = 1
+
+innodb_undo_directory = /var/lib/mysql
+innodb_undo_logs = 128
+
+innodb_stats_on_metadata = 0
+innodb_log_compressed_pages = 1
+innodb_max_dirty_pages_pct_lwm = 0
+innodb_online_alter_log_max_size = 16M
+
+innodb_lock_schedule_algorithm = VATS
+innodb_log_group_home_dir = /var/lib/mysql
+innodb_flush_method = O_DIRECT
+innodb_flush_log_at_trx_commit = 2
+innodb_flush_log_at_timeout = 1
+innodb_adaptive_flushing = 1
+innodb_sync_array_size = 4
+innodb_sync_spin_loops = 8
+
+binlog_cache_size = 1M
+binlog_checksum = crc32
+binlog_format = row
+binlog_annotate_row_events = 0
+log_bin = /var/lib/mysql/mysql-bin
+max_binlog_cache_size = 2M
+max_binlog_size = 128M
+sync_binlog = 1
+
+bulk_insert_buffer_size = 1M
+delay_key_write = 1
+delayed_insert_limit = 500
+delayed_insert_timeout = 60
+delayed_queue_size = 4000
+explicit_defaults_for_timestamp = true
+key_buffer_size = 1M
+key_cache_segments = 64
+myisam_sort_buffer_size = 1M
+myisam_max_sort_file_size = 2M
+myisam_repair_threads = 1
+myisam_recover_options = backup,force
+
+server_id = 1
+gtid_domain_id = 1
+
+innodb_page_cleaners = 4
+read_binlog_speed_limit = 4096
+table_open_cache_instances = 4
+log_bin_compress = 1 
+log_bin_compress_min_len = 128
