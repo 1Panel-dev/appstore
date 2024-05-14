@@ -2,7 +2,7 @@ name: RocketMQ
 tags:
     - 中间件
 title: 云原生消息传递和流媒体平台
-description: 
+description: 云原生消息传递和流媒体平台
 additionalProperties:
     key: rocketmq
     name: RocketMQ
