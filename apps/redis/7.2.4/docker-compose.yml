@@ -1,6 +1,6 @@
 services:
   redis:
-    image: redis:7.2.4
+    image: redis:7.2.4-alpine3.19
     restart: always
     container_name: ${CONTAINER_NAME}
     networks:
@@ -8,6 +8,16 @@ services:
     ports:
       - ${PANEL_APP_PORT_HTTP}:6379
     command: redis-server  /etc/redis/redis.conf --requirepass ${PANEL_REDIS_ROOT_PASSWORD}
+    environment:
+      - REDIS_PASSWORD=${PANEL_REDIS_ROOT_PASSWORD}
+      - REDIS_PORT=6379
+      - REDISCLI_AUTH=${PANEL_REDIS_ROOT_PASSWORD}
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      start_period: 5s
+      interval: 5s
+      timeout: 2s
+      retries: 5
     volumes:
       - ./data:/data
       - ./conf/redis.conf:/etc/redis/redis.conf
