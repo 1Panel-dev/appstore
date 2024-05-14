@@ -1,6 +1,6 @@
 services:
   koishi:
-    image: koishijs/koishi:v1.14.3
+    image: koishijs/koishi:v1.14.4
     container_name: ${CONTAINER_NAME}
     restart: always
     environment:
