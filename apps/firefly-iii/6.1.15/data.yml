@@ -21,7 +21,7 @@ additionalProperties:
             - label: MySQL
               value: mysql
             - label: PostgreSQL
-              value: pgsql
+              value: postgres
         - default: firefly
           envKey: PANEL_DB_NAME
           labelEn: Database
