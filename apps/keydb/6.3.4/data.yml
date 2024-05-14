@@ -1,0 +1,28 @@
+additionalProperties:
+    formFields:
+        - default: jhkdjhkjdhsIUTYURTU
+          envKey: PANEL_KEYDB_ROOT_PASSWORD
+          labelEn: Password
+          labelZh: 密码
+          random: true
+          required: true
+          rule: paramComplexity
+          type: password
+        - default: 6379
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: Port
+          labelZh: 端口
+          required: true
+          rule: paramPort
+          type: number
+        - envKey: ARCH
+          default: 'x86_64'
+          labelEn: Chip architecture
+          labelZh: 芯片架构
+          edit: true
+          type: select
+          values:
+            - label: amd64
+              value: 'x86_64'
+            - label: arm64
+              value: 'arm64'
