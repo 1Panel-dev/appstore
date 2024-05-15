@@ -1,11 +1,11 @@
 additionalProperties:
     formFields:
-        - default: jhkdjhkjdhsIUTYURT
+        - default: redis
           envKey: PANEL_REDIS_ROOT_PASSWORD
           labelEn: Password
           labelZh: 密码
           random: true
-          required: true
+          required: false
           rule: paramComplexity
           type: password
         - default: 6379
