@@ -1,0 +1,16 @@
+additionalProperties:
+  formFields:
+    - default: 7474
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Http Port
+      labelZh: http 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 7687
+      envKey: PANEL_APP_PORT_BOLT
+      labelEn: Bolt Port
+      labelZh: bolt 端口
+      required: true
+      rule: paramPort
+      type: number
