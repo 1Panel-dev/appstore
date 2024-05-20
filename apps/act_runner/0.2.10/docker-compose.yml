@@ -1,5 +1,6 @@
 services:
   act_runner:
+    image: gitea/act_runner:0.2.10
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
@@ -14,10 +15,8 @@ services:
       - GITEA_RUNNER_REGISTRATION_TOKEN=${RUNNER_REGISTRATION_TOKEN}
       - GITEA_RUNNER_NAME=${RUNNER_NAME}
       - GITEA_RUNNER_LABELS=${RUNNER_LABELS}
-    image: gitea/act_runner:0.2.10
     labels:  
       createdBy: "Apps"
-
 networks:  
   1panel-network:  
     external: true

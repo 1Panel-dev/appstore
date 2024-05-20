@@ -1,11 +1,11 @@
-name: Act runner
+name: Act Runner
 tags:
     - DevOps
 title: Gitea Actions 的 Runner
 description: Gitea Actions 的 Runner
 additionalProperties:
     key: act_runner
-    name: Act runner
+    name: Act Runner
     tags:
         - DevOps
     shortDescZh: Gitea Actions 的 Runner
