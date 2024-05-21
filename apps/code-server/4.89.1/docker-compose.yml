@@ -1,5 +1,6 @@
 services:
   code:
+    image: linuxserver/code-server:4.89.1
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
@@ -12,12 +13,11 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Asia/Shanghai
-      - PASSWORD=${WEB_PASSWORD} 
-      - SUDO_PASSWORD=${SUDO_PASSWORD} 
+      - PASSWORD=${WEB_PASSWORD}
+      - SUDO_PASSWORD=${SUDO_PASSWORD}
       - DEFAULT_WORKSPACE=/config/workspace
-    image: linuxserver/code-server:4.89.1
-    labels:  
+    labels:
       createdBy: "Apps"
-networks:  
-  1panel-network:  
+networks:
+  1panel-network:
     external: true
