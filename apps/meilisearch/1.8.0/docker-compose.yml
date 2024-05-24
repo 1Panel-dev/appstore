@@ -3,7 +3,7 @@ services:
     container_name: ${CONTAINER_NAME}
     networks:
       - 1panel-network
-    image: getmeili/meilisearch:v1.8.0
+    image: getmeili/meilisearch:v1.8.1
     command:
       - /bin/sh
       - -c
