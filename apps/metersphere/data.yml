@@ -1,0 +1,20 @@
+name: MeterSphere
+tags:
+    - 实用工具
+title: MeterSphere 新一代的测试管理和接口测试工具
+type: 实用工具
+description: MeterSphere 新一代的测试管理和接口测试工具
+additionalProperties:
+  key: metersphere
+  name: MeterSphere
+  tags:
+    - Tool
+  shortDescZh: 新一代的测试管理和接口测试工具
+  shortDescEn: Open-source Continuous Testing Platform
+  type: tool
+  crossVersionUpdate: true
+  limit: 1
+  recommend: 9
+  website: https://www.metersphere.io
+  github: https://github.com/metersphere/metersphere
+  document: https://metersphere.io/docs
