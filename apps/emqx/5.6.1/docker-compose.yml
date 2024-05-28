@@ -1,6 +1,6 @@
 services:
   emqx:
-    image: emqx/emqx:5.6.1
+    image: emqx/emqx:5.7.0
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
