@@ -10,7 +10,7 @@ services:
         - "./data/config:/config"
         - "${CACHE_FOLDER_PATH}:/cache"
         - "${MEDIA_FOLDER_PATH}:/media/media"
-    image: "jellyfin/jellyfin:10.9.2"
+    image: "jellyfin/jellyfin:10.9.3"
     labels:  
       createdBy: "Apps"
 networks:  
