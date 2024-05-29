@@ -42,6 +42,7 @@
     {
       "rule": "proxy-client-ip"
     }
-  ]
+  ],
+  "type": "headers",
+  "header": "x-real-ip"
 }
-

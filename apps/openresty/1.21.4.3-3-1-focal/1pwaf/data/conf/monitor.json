@@ -8,12 +8,18 @@
       "css",
       "js",
       "svg",
-      "jpeg"
+      "jpeg",
+      "woff",
+      "woff2",
+      "bmp",
+      "swf",
+      "icon",
+      "ttf",
+      "eot"
     ],
-    "status": [
-      301,
-      302,
-      303
+    "status": [],
+    "uri": [
+      "/favicon.ico"
     ]
   }
 }
