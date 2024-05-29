@@ -1,4 +1,3 @@
 #!/bin/bash
 
-
-chmod 777 mount/logs
+chmod 777 data/logs
