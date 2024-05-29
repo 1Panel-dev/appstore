@@ -1,0 +1,19 @@
+{
+  "state": "on",
+  "exclude": {
+    "extensions": [
+      "png",
+      "gif",
+      "jpg",
+      "css",
+      "js",
+      "svg",
+      "jpeg"
+    ],
+    "status": [
+      301,
+      302,
+      303
+    ]
+  }
+}
