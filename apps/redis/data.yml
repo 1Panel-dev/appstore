@@ -12,7 +12,7 @@ additionalProperties:
     shortDescEn: High-performance open-source key-value database
     type: runtime
     crossVersionUpdate: true
-    limit: 1
+    limit: 0
     recommend: 4
     website: https://redis.io/
     github: https://github.com/redis/redis
