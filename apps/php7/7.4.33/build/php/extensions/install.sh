@@ -85,7 +85,13 @@ fi
 
 if [[ -z "${EXTENSIONS##*,sourceguardian,*}" ]]; then
     echo "---------- Install sourceguardian ----------"
+    apk add eudev-libs
 	  install-php-extensions sourceguardian
+fi
+
+if [[ -z "${EXTENSIONS##*,ssh2,*}" ]]; then
+    echo "---------- Install ssh2 ----------"
+	  install-php-extensions ssh2
 fi
 # end
 
@@ -394,18 +400,6 @@ if [[ -z "${EXTENSIONS##*,igbinary,*}" ]]; then
     docker-php-ext-enable igbinary
 fi
 
-
-if [[ -z "${EXTENSIONS##*,ssh2,*}" ]]; then
-    isPhpVersionGreaterOrEqual 7 0
-    if [[ "$?" = "1" ]]; then
-        echo "---------- Install ssh2 ----------"
-        printf "\n" | apk add libssh2-dev
-        pecl install ssh2-1.1.2
-        docker-php-ext-enable ssh2
-    else
-        echo "ssh2 requires PHP >= 7.0.0, installed version is ${PHP_VERSION}"
-    fi
-fi
 
 if [[ -z "${EXTENSIONS##*,protobuf,*}" ]]; then
     isPhpVersionGreaterOrEqual 7 0
