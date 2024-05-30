@@ -1,6 +1,6 @@
 services:
   node:
-    image: node:${NODE_VERSION}
+    image: 1panel/node:${NODE_VERSION}
     container_name: ${CONTAINER_NAME}
     working_dir: /app
     volumes:
