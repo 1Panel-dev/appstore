@@ -1,11 +1,11 @@
-name: Coder
+name: code-server
 tags:
     - 开发工具
 title: 浏览器中的VS Code
 description: 浏览器中的VS Code
 additionalProperties:
     key: code-server
-    name: Coder
+    name: code-server
     tags:
         - DevTool
     shortDescZh: 浏览器中的VS Code
@@ -15,5 +15,5 @@ additionalProperties:
     limit: 0
     recommend: 0
     website: https://coder.com/
-    github: https://github.com/coder/code-server
+    github: https://github.com//code-server
     document: https://coder.com/docs/code-server/latest

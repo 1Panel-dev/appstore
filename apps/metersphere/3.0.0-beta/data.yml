@@ -1,0 +1,16 @@
+additionalProperties:
+  formFields:
+    - default: 8081
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Web Port
+      labelZh: Web 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 15
+      envKey: JAVA_MAX_HEAP_RATIO
+      labelEn: Java Max Heap Ratio
+      labelZh: Java 最大堆内存比例
+      required: true
+      rule: paramPort
+      type: number

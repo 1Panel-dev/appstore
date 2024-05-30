@@ -1,0 +1,19 @@
+name: KeyDB
+tags:
+  - 数据库
+title: Redis 的多线程分支
+description: Redis 的多线程分支
+additionalProperties:
+  key: keydb
+  name: KeyDB
+  tags:
+    - Database
+  shortDescZh: Redis 的多线程分支
+  shortDescEn: A Multithreaded Fork of Redis
+  type: runtime
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://docs.keydb.dev
+  github: https://github.com/Snapchat/KeyDB
+  document: https://docs.keydb.dev/docs

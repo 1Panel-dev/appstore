@@ -1,0 +1,60 @@
+additionalProperties:
+  formFields:
+    - default: minio
+      envKey: PANEL_MINIO_ROOT_USER
+      labelEn: User
+      labelZh: 用户
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: minio
+      envKey: PANEL_MINIO_ROOT_PASSWORD
+      labelEn: Password
+      labelZh: 密码
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+    - default: 9001
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 9000
+      envKey: PANEL_APP_PORT_API
+      labelEn: Port
+      labelZh: API 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: "12h"
+      envKey: MINIO_BROWSER_SESSION_DURATION
+      labelEn: Session duration
+      labelZh: 会话持续时间 (s/秒 m/分钟 h/小时 d/天)
+      required: true
+      type: text
+    - default: "on"
+      envKey: MINIO_BROWSER
+      labelEn: Enable WebUI
+      labelZh: 启用WebUI
+      required: true
+      type: select
+      values:
+        - label: "开启"
+          value: "on"
+        - label: "关闭"
+          value: "off"
+    - default: "on"
+      envKey: MINIO_BROWSER_LOGIN_ANIMATION
+      labelEn: WebUI login animation
+      labelZh: WebUI 登录动画
+      required: true
+      type: select
+      values:
+        - label: "开启"
+          value: "on"
+        - label: "关闭"
+          value: "off"

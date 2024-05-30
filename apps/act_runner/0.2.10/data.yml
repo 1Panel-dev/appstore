@@ -1,0 +1,31 @@
+additionalProperties:
+  formFields:
+    - default: http://1.2.3.4:3000
+      edit: true
+      envKey: GITEA_INSTANCE_URL
+      labelEn: Gitea Instance
+      labelZh: Gitea 实例
+      required: true
+      rule: paramExtUrl
+      type: text
+    - default: '<registration_token>'
+      edit: true
+      envKey: RUNNER_REGISTRATION_TOKEN
+      labelEn: Registration Token
+      labelZh: Registration Token
+      required: true
+      type: text
+    - default: '<runner_name>'
+      edit: true
+      envKey: RUNNER_NAME
+      labelEn: Runner Name
+      labelZh: Runner Name
+      required: true
+      type: text
+    - default: '<runner_labels>'
+      edit: true
+      envKey: RUNNER_LABELS
+      labelEn: Runner Labels
+      labelZh: Runner Labels
+      required: true
+      type: text

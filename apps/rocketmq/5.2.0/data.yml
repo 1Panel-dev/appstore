@@ -1,0 +1,58 @@
+additionalProperties:
+  formFields:
+    - default: 9876
+      edit: true
+      envKey: PANEL_APP_PORT_NAMESERVER
+      labelEn: NameServer Port
+      labelZh: NameServer 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 10911
+      edit: true
+      envKey: PANEL_APP_PORT_LISTEN
+      labelEn: Broker ListenPort
+      labelZh: Broker 监听端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 10909
+      edit: true
+      envKey: PANEL_APP_PORT_FASTLISTEN
+      labelEn: Broker FastListenPort
+      labelZh: Broker 快速监听端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 10912
+      edit: true
+      envKey: PANEL_APP_PORT_HALISTEN
+      labelEn: Broker HaListenPort
+      labelZh: Broker HA 监听端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 8080
+      edit: true
+      envKey: PANEL_APP_PORT_REMOTINGLISTEN
+      labelEn: Proxy RemotingListenPort
+      labelZh: Proxy 远程监听端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 8081
+      edit: true
+      envKey: PANEL_APP_PORT_GRPCSERVER
+      labelEn: Proxy GrpcServerPort
+      labelZh: Proxy grpc 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 8088
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Dashboard Port
+      labelZh: Dashboard 端口
+      required: true
+      rule: paramPort
+      type: number

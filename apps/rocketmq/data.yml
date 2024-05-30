@@ -1,0 +1,19 @@
+name: RocketMQ
+tags:
+    - 中间件
+title: 云原生消息传递和流媒体平台
+description: 云原生消息传递和流媒体平台
+additionalProperties:
+    key: rocketmq
+    name: RocketMQ
+    tags:
+        - Middleware
+    shortDescZh: 云原生消息传递和流媒体平台
+    shortDescEn: Cloud native messaging and streaming platform
+    type: tool
+    crossVersionUpdate: false
+    limit: 0
+    recommend: 0
+    website: https://rocketmq.apache.org/
+    github: https://github.com/apache/rocketmq/
+    document: https://rocketmq.apache.org/docs/
