@@ -1,38 +1,28 @@
 {
   "state": "on",
   "exclude": {
-    "url": [],
-    "extension": [
+    "extensions": [
       "png",
       "gif",
       "jpg",
       "css",
-      "js"
+      "js",
+      "svg",
+      "jpeg",
+      "woff",
+      "woff2",
+      "bmp",
+      "swf",
+      "icon",
+      "ttf",
+      "eot"
     ],
-    "status": [
-      301,
-      302,
-      303
+    "status": [],
+    "uri": [
+      "/favicon.ico"
     ]
   },
-  "cdn": {
-    "state": "off",
-    "headers": [
-      "x-forwarded-for",
-      "x-real-ip",
-      "x-forwarded",
-      "forwarded-for",
-      "forwarded",
-      "true-client-ip",
-      "client-ip",
-      "ali-cdn-real-ip",
-      "cdn-src-ip",
-      "cdn-real-ip",
-      "cf-connecting-ip",
-      "x-cluster-client-ip",
-      "wl-proxy-client-ip",
-      "proxy-client-ip",
-      "true-client-ip"
-    ]
+  "log": {
+    "maxDay": 180
   }
 }

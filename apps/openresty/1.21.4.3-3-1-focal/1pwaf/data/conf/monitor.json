@@ -21,5 +21,8 @@
     "uri": [
       "/favicon.ico"
     ]
+  },
+  "log": {
+    "maxDay": 180
   }
 }
