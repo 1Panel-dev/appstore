@@ -11,6 +11,7 @@ services:
       - "CODE=${SECRET_KEY}"
       - "PROXY_URL=${PROXY}"
       - "BASE_URL=${API_BASE_URL}"
+      - "WHITE_WEBDEV_ENDPOINTS=${WHITE_WEBDEV_ENDPOINTS}"
     image: yidadaa/chatgpt-next-web:v2.12.3
     labels:
       createdBy: "Apps"

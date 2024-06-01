@@ -38,3 +38,10 @@ additionalProperties:
           labelZh: API接口地址
           required: true
           type: text
+        - default: ""
+          edit: true
+          envKey: WHITE_WEBDEV_ENDPOINTS
+          labelEn: White list of webdev endpoints
+          labelZh: webdev 白名单
+          required: false
+          type: text
