@@ -1,0 +1,28 @@
+{
+  "state": "on",
+  "exclude": {
+    "extensions": [
+      "png",
+      "gif",
+      "jpg",
+      "css",
+      "js",
+      "svg",
+      "jpeg",
+      "woff",
+      "woff2",
+      "bmp",
+      "swf",
+      "icon",
+      "ttf",
+      "eot"
+    ],
+    "status": [],
+    "uri": [
+      "/favicon.ico"
+    ]
+  },
+  "log": {
+    "maxDay": 180
+  }
+}
