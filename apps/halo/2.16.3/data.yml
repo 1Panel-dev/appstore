@@ -42,7 +42,7 @@ additionalProperties:
           required: true
           rule: paramComplexity
           type: password
-        - default: http://localhost:8080
+        - default: http://localhost:8090
           edit: true
           envKey: HALO_EXTERNAL_URL
           labelEn: External URL
@@ -50,7 +50,7 @@ additionalProperties:
           required: true
           rule: paramHttp
           type: text
-        - default: 8080
+        - default: 8090
           edit: true
           envKey: PANEL_APP_PORT_HTTP
           labelEn: Port
