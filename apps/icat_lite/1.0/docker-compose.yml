@@ -1,0 +1,21 @@
+version: "3"
+services:
+  icat_lite:
+    image: bluesdo/icat_lite_public:latest
+    container_name: ${CONTAINER_NAME}
+    restart: on-failure
+    networks:
+      - 1panel-network
+    volumes:
+      - ./icat_lite/data:/icat_lite/www/data
+      - ./icat_lite/system:/icat_lite/www/public/statics/system
+      - ./icat_lite/systemBlock:/icat_lite/www/public/statics/systemBlock
+      - ./icat_lite/sticker:/icat_lite/www/public/statics/sticker
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8095
+    command: "serve.js --host 0.0.0.0 --port 8095 --dbHost ${ICAT_DB_HOST} --dbPort ${ICAT_DB_PORT} --dbName ${PANEL_DB_NAME} --dbUser ${PANEL_DB_USER} --dbPassword ${PANEL_DB_USER_PASSWORD} --pwdKey ${ICAT_PWDKEY} --alterAll"
+    labels:
+      createdBy: "Apps"
+networks:  
+  1panel-network:
+    external: true

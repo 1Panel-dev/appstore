@@ -1,0 +1,73 @@
+additionalProperties:  #固定参数
+    formFields:  
+        - default: ""  
+          envKey: PANEL_DB_HOST  #docker-compose 文件中的参数
+          key: postgres  #依赖应用的 key , 例如 mysql
+          labelEn: Database Service  #英文的label
+          labelZh: 数据库服务  #中文的label
+          required: true  #是否必填
+          type: service  #如果需要依赖其他应用，例如数据库，使用此 type 
+
+        - default: 5432
+          envKey: ICAT_DB_PORT 
+          labelEn: Database port
+          labelZh: 数据库端口 
+          random: false  #是否在 default 文字后面，增加随机字符串
+          required: true  
+          rule: paramPort  
+          type: number #端口使用此 type
+
+        
+        - default: ""
+          envKey: ICAT_DB_HOST
+          labelEn: Database host
+          labelZh: 数据库连接主机(地址)，在数据库信息里可以查询到
+          random: false  #是否在 default 文字后面，增加随机字符串
+          required: true  
+          rule: paramCommon
+          type: text 
+
+        - default: icat_lite
+          envKey: PANEL_DB_NAME  
+          labelEn: Database  
+          labelZh: 数据库名  
+          random: true  #是否在 default 文字后面，增加随机字符串
+          required: true  
+          rule: paramCommon  #校验规则
+          type: text  #需要手动填写的，使用此 type
+
+        - default: icat_lite
+          envKey: PANEL_DB_USER  
+          labelEn: User  
+          labelZh: 数据库用户  
+          random: true  
+          required: true  
+          rule: paramCommon  
+          type: text
+
+        - default: "icat_bbs"
+          envKey: PANEL_DB_USER_PASSWORD  
+          labelEn: Password  
+          labelZh: 数据库用户密码  
+          random: true  
+          required: true  
+          rule: paramComplexity  
+          type: password  #密码字段使用此 type
+
+        - default: 8095  
+          edit: true  
+          envKey: PANEL_APP_PORT_HTTP  
+          labelEn: Port  
+          labelZh: 端口  
+          required: true  
+          rule: paramPort  
+          type: number #端口使用此 type 
+
+        - default: "用于加密的密码的密钥，请务必替换成随机字符并重点保存，丢失将永久无法登录"
+          envKey: ICAT_PWDKEY  
+          labelEn: PasswordKey
+          labelZh: 密钥(Key)
+          random: true  
+          required: true  
+          rule: paramCommon
+          type: text
