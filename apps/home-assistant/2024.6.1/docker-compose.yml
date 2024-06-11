@@ -7,6 +7,6 @@ services:
       - "./data:/config"
     environment:
       - TZ=${TIME_ZONE}
-    image: homeassistant/home-assistant:2024.6.0
+    image: homeassistant/home-assistant:2024.6.1
     labels:  
       createdBy: "Apps"
