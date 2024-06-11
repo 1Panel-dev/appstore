@@ -1,6 +1,6 @@
 services:
   reader:
-    image: hectorqin/reader:3.2.8
+    image: hectorqin/reader:3.2.9
     container_name: ${CONTAINER_NAME}
     restart: always
     ports:
