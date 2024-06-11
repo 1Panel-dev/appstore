@@ -1,5 +1,5 @@
 {
-  "state": "on",
+  "state": "off",
   "exclude": {
     "extensions": [
       "png",
