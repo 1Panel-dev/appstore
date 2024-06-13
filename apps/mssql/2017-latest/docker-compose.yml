@@ -1,7 +1,7 @@
 services:
   mssql:
     container_name: ${CONTAINER_NAME}
-    image: mcr.microsoft.com/mssql/server:2017-latest
+    image: mcr.microsoft.com/mssql/server:2022-latest
     restart: unless-stopped
     networks:
       - 1panel-network
