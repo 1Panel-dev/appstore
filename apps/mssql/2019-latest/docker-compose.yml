@@ -1,0 +1,19 @@
+services:
+  mssql:
+    container_name: ${CONTAINER_NAME}
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    restart: unless-stopped
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:1433
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=${MSSQL_SA_PASSWORD}
+    volumes:
+      - ./data:/var/opt/mssql/data
+    labels:
+      createdBy: "Apps"
+networks:  
+  1panel-network:
+    external: true
