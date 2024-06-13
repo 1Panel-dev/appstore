@@ -5,6 +5,7 @@ services:
     network_mode: "host"
     volumes:
       - "./data:/config"
+      - "/run/dbus:/run/dbus:ro"
     environment:
       - TZ=${TIME_ZONE}
     image: homeassistant/home-assistant:2024.6.1
