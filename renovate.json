@@ -87,6 +87,18 @@
       "allowedVersions": "/^10.*/"
     },
     {
+      "matchFileNames": ["apps/mssql/2017.*/*.yml"],
+      "allowedVersions": "/^2017.*/"
+    },
+    {
+      "matchFileNames": ["apps/mssql/2019.*/*.yml"],
+      "allowedVersions": "/^2019.*/"
+    },
+    {
+      "matchFileNames": ["apps/mssql/2022.*/*.yml"],
+      "allowedVersions": "/^2022.*/"
+    },
+    {
       "matchDatasources": ["docker"],
       "matchPackageNames": ["ghcr.io/umami-software/umami"],
       "versionCompatibility": "^(?<compatibility>.*)-(?<version>.*)$",
