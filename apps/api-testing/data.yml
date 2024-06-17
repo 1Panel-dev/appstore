@@ -1,0 +1,19 @@
+name: API Testing
+tags:
+    - 接口测试工具
+title: 接口开发、调试、测试工具
+description: 接口开发、调试、测试工具
+additionalProperties:
+    key: api-testing
+    name: API Testing
+    tags:
+        - Tool
+    shortDescZh: 接口开发、调试、测试工具
+    shortDescEn: HTTP/gRPC interface develop, debug and testing tool
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://linuxsuren.github.io/api-testing
+    github: https://github.com/linuxsuren/api-testing
+    document: https://linuxsuren.github.io/api-testing
