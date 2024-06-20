@@ -13,6 +13,7 @@ services:
       - ./custom-drivers:/opt/dataease/custom-drivers
       - ./data/custom:/opt/dataease/data/custom
       - ./data/business:/opt/dataease/data/business
+      - ./data/exportData:/opt/dataease/data/exportData
     environment:
       PANEL_DB_HOST: ${PANEL_DB_HOST}
       PANEL_DB_PORT: 3306
