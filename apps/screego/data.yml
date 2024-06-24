@@ -14,6 +14,6 @@ additionalProperties:
   crossVersionUpdate: false
   limit: 0
   recommend: 0
-  website: https://screego.net/#/
+  website: https://screego.net/
   github: https://github.com/screego/server
-  document: https://screego.net/#/
+  document: https://screego.net/
