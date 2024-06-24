@@ -97,6 +97,11 @@ if [[ -z "${EXTENSIONS##*,xmlrpc,*}" ]]; then
     echo "---------- Install xmlrpc ----------"
 		install-php-extensions xmlrpc
 fi
+
+if [[ -z "${EXTENSIONS##*,maxminddb,*}" ]]; then
+    echo "---------- Install maxminddb ----------"
+	  install-php-extensions maxminddb
+fi
 # end
 
 
