@@ -92,6 +92,11 @@ if [[ -z "${EXTENSIONS##*,ssh2,*}" ]]; then
     echo "---------- Install ssh2 ----------"
 	  install-php-extensions ssh2
 fi
+
+if [[ -z "${EXTENSIONS##*,xmlrpc,*}" ]]; then
+    echo "---------- Install xmlrpc ----------"
+		install-php-extensions xmlrpc
+fi
 # end
 
 
@@ -287,12 +292,6 @@ if [[ -z "${EXTENSIONS##*,xsl,*}" ]]; then
     echo "---------- Install xsl ----------"
 	apk add --no-cache libxml2-dev libxslt-dev
 	docker-php-ext-install ${MC} xsl
-fi
-
-if [[ -z "${EXTENSIONS##*,xmlrpc,*}" ]]; then
-    echo "---------- Install xmlrpc ----------"
-	apk add --no-cache libxml2-dev libxslt-dev
-	docker-php-ext-install ${MC} xmlrpc
 fi
 
 if [[ -z "${EXTENSIONS##*,wddx,*}" ]]; then
