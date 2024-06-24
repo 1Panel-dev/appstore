@@ -1,6 +1,6 @@
 {
   "waf": {
-    "state": "on",
+    "state": "off",
     "mode": "protection",
     "secret": ""
   },
@@ -70,6 +70,13 @@
     "ipBlock": "on",
     "ipBlockTime": 600
   },
+  "unknownWebsite": {
+    "state": "on",
+    "type": "unknownWebsite",
+    "action": "deny",
+    "code": 403,
+    "res": "unknown"
+  },
   "geoRestrict": {
     "state": "off",
     "rules": [],
@@ -97,7 +104,7 @@
     "action": "deny"
   },
   "cc": {
-    "state": "off",
+    "state": "on",
     "type": "cc",
     "rule": "cc",
     "tokenTimeOut": 1800,
@@ -105,7 +112,8 @@
     "duration": 10,
     "action": "deny",
     "ipBlock": "on",
-    "ipBlockTime": 600
+    "ipBlockTime": 600,
+    "mode": "uri"
   },
   "ccurl": {
     "state": "off",
@@ -124,7 +132,7 @@
     "ipBlockTime": 3000
   },
   "fileExt": {
-    "state": "on",
+    "state": "off",
     "action": "deny",
     "code": 403,
     "type": "fileExtCheck"
@@ -158,5 +166,8 @@
     "state": "on",
     "code": 403,
     "action": "deny"
+  },
+  "cdn": {
+    "state": "off"
   }
 }
