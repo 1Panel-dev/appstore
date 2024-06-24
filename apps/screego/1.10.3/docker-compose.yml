@@ -1,0 +1,11 @@
+services:
+  screego:
+    container_name: ${CONTAINER_NAME}
+    image: ghcr.io/screego/server:1.10.3
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:5050
+      - ${PANEL_APP_PORT_TURN}:3478
+      - ${SCREEGO_TURN_PORT_RANGE}:50000-50200/udp
+    environment:
+      SCREEGO_EXTERNAL_IP: ${SCREEGO_EXTERNAL_IP}
+      SCREEGO_TURN_PORT_RANGE: "50000:50200"
