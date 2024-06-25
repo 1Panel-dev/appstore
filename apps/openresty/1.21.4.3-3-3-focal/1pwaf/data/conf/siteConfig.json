@@ -58,7 +58,8 @@
     "duration": 10,
     "action": "deny",
     "ipBlock": "on",
-    "ipBlockTime": 600
+    "ipBlockTime": 600,
+    "mode": "uri"
   },
   "ccurl": {
     "state": "on",

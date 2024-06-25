@@ -20,7 +20,9 @@
     "status": [],
     "uri": [
       "/favicon.ico"
-    ]
+    ],
+    "ua": [],
+    "ip": []
   },
   "log": {
     "maxDay": 180
