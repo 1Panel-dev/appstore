@@ -1,6 +1,6 @@
 services:
   nextcloud:
-    image: linuxserver/nextcloud:29.0.2
+    image: linuxserver/nextcloud:29.0.3
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
