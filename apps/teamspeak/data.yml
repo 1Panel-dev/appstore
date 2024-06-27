@@ -1,15 +1,15 @@
 name: TeamSpeak Server
 tags:
     - 实用工具
-title: TeamSpeak Server
-description: 一款出色的网络语音 (VoIP) 解决方案。
+title: 一款出色的网络语音 (VoIP) 解决方案
+description: 一款出色的网络语音 (VoIP) 解决方案
 additionalProperties:
     key: teamspeak
     name: TeamSpeak
     tags:
         - Tool
-    shortDescZh: 一款出色的网络语音 (VoIP) 解决方案。
-    shortDescEn: An out-of-this-world VoIP solution.
+    shortDescZh: 一款出色的网络语音 (VoIP) 解决方案
+    shortDescEn: An out-of-this-world VoIP solution
     type: tool
     crossVersionUpdate: true
     limit: 0
