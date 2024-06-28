@@ -31,11 +31,3 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
-        - envKey: LDAPS_PORT
-          default: 1636
-          edit: true
-          labelEn: LDAPS listening port
-          labelZh: LDAPS 监听端口
-          required: true
-          rule: paramPort
-          type: number

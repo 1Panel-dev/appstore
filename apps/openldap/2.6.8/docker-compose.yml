@@ -8,7 +8,6 @@ services:
       - 1panel-network        
     ports:
       - ${LDAP_PORT}:1389
-      - ${LDAPS_PORT}:1636
     environment:
       LDAP_ROOT: ${LDAP_ROOT}
       LDAP_ADMIN_USERNAME: ${LDAP_ADMIN_USERNAME}
