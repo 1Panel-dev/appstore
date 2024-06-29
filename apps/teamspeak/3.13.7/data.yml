@@ -1,0 +1,66 @@
+additionalProperties:
+  formFields:
+    - child:
+        default: ""
+        envKey: PANEL_DB_HOST
+        required: true
+        type: service
+      default: mariadb
+      envKey: TS3SERVER_DB_TYPE
+      labelEn: Database Service
+      labelZh: 数据库服务
+      required: true
+      type: apps
+      values:
+        - label: MariaDB
+          value: mariadb
+        - label: PostgreSQL
+          value: postgresql              
+    - default: teamspeak
+      envKey: PANEL_DB_NAME
+      labelEn: Database
+      labelZh: 数据库名
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: teamspeak
+      envKey: PANEL_DB_USER
+      labelEn: User
+      labelZh: 数据库用户
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: teamspeak
+      envKey: PANEL_DB_USER_PASSWORD
+      labelEn: Password
+      labelZh: 数据库用户密码
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+    - default: 9987
+      edit: true
+      envKey: TS3SERVER_VOICE_PORT
+      labelEn: Voice Port
+      labelZh: Voice 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 10011
+      edit: true
+      envKey: TS3SERVER_SQ_RAW_PORT
+      labelEn: ServerQuery (raw) Port
+      labelZh: ServerQuery (raw) 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 30033
+      edit: true
+      envKey: TS3SERVER_FILETRANSFER_PORT
+      labelEn: Filetransfer Port
+      labelZh: Filetransfer 端口
+      required: true
+      rule: paramPort
+      type: number

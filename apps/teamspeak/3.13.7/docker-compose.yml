@@ -1,0 +1,28 @@
+services:
+  teamspeak:
+    image: teamspeak:3.13.7
+    container_name: ${CONTAINER_NAME}    
+    restart: always
+    networks:
+      - 1panel-network    
+    ports:
+      - ${TS3SERVER_VOICE_PORT}:9987/udp
+      - ${TS3SERVER_SQ_RAW_PORT}:10011
+      - ${TS3SERVER_FILETRANSFER_PORT}:30033
+    environment:
+      TS3SERVER_DB_PLUGIN: ts3db_${TS3SERVER_DB_TYPE}
+      TS3SERVER_DB_SQLCREATEPATH: create_${TS3SERVER_DB_TYPE}
+      TS3SERVER_DB_WAITUNTILREADY: 30
+      TS3SERVER_LICENSE: accept
+      TS3SERVER_DB_HOST: ${PANEL_DB_HOST}
+      TS3SERVER_DB_NAME: ${PANEL_DB_NAME}
+      TS3SERVER_DB_PORT: ${PANEL_DB_PORT}
+      TS3SERVER_DB_USER: ${PANEL_DB_USER}
+      TS3SERVER_DB_PASSWORD: ${PANEL_DB_USER_PASSWORD}
+    volumes:
+      - ./data:/var/ts3server
+    labels:
+      createdBy: "Apps"      
+networks:
+  1panel-network:
+    external: true

@@ -1,0 +1,19 @@
+name: screego
+tags:
+  - 实用工具
+title: 开源屏幕共享工具
+description: 开源屏幕共享工具
+additionalProperties:
+  key: screego
+  name: screego
+  tags:
+    - Tool
+  shortDescZh: 开源屏幕共享工具
+  shortDescEn: Open source screen sharing tools
+  type: tool
+  crossVersionUpdate: false
+  limit: 0
+  recommend: 0
+  website: https://screego.net/
+  github: https://github.com/screego/server
+  document: https://screego.net/

@@ -1,0 +1,34 @@
+additionalProperties:
+  formFields:
+    - default: 5050
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: External access port
+      labelZh: 外部访问端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 3478
+      edit: true
+      envKey: PANEL_APP_PORT_TURN
+      labelEn: TURN Port
+      labelZh: TURN 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 127.0.0.1
+      edit: true
+      envKey: SCREEGO_EXTERNAL_IP
+      labelEn: EXTERNAL IP
+      labelZh: 外部 IP 
+      required: true
+      rule: paramCommon
+      type: text
+    - default: 50000-50200
+      edit: true
+      envKey: SCREEGO_TURN_PORT_RANGE
+      labelEn: Turn Port Range
+      labelZh: TURN 端口范围
+      required: true
+      rule: paramCommon
+      type: text
