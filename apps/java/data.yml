@@ -1,0 +1,17 @@
+name: Java
+tags:
+  - 运行环境
+title: Java 运行环境
+description: Java 运行环境
+additionalProperties:
+  key: java
+  name: Java
+  tags:
+    - Runtime
+  shortDescZh: Java 运行环境
+  shortDescEn: Java Runtime
+  type: java
+  crossVersionUpdate: false
+  limit: 0
+  recommend: 102
+  website: https://www.java.com/
