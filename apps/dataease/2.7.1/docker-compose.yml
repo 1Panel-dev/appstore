@@ -11,6 +11,7 @@ services:
       - ./data/static-resource:/opt/dataease2.0/data/static-resource
       - ./cache:/opt/dataease2.0/cache
       - ./data/geo:/opt/dataease2.0/data/geo
+      - ./data/exportData:/opt/dataease2.0/data/exportData
     environment:
       PANEL_DB_HOST: ${PANEL_DB_HOST}
       PANEL_DB_PORT: ${PANEL_DB_PORT}

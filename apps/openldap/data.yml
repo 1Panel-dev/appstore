@@ -1,18 +1,19 @@
 name: OpenLDAP
 tags:
     - 数据库
-title: OpenLDAP
-description: OpenLDAP 是一个开源的 LDAP(Lightweight Directory Access Protocol) 服务软件。
+title: 开源的 LDAP(Lightweight Directory Access Protocol) 服务软件
+description: 开源的 LDAP(Lightweight Directory Access Protocol) 服务软件
 additionalProperties:
     key: openldap
     name: OpenLDAP
     tags:
         - Database
-    shortDescZh: OpenLDAP 是一个开源的 LDAP(Lightweight Directory Access Protocol) 服务软件。
-    shortDescEn: OpenLDAP Software is an open source implementation of the Lightweight Directory Access Protocol.
+    shortDescZh: 开源的 LDAP(Lightweight Directory Access Protocol) 服务软件
+    shortDescEn: An open source implementation of the Lightweight Directory Access Protocol
     type: database
     crossVersionUpdate: true
     limit: 0
     recommend: 0
     website: https://openldap.org/
+    github: https://github.com/openldap/openldap
     document: https://hub.docker.com/r/bitnami/openldap

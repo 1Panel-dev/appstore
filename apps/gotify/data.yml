@@ -1,15 +1,15 @@
 name: Gotify
 tags:
     - 开发工具
-title: 自托管通知服务器
-description: 自托管通知服务器
+title: 简单的服务器来发送和接收消息
+description: 简单的服务器来发送和接收消息
 additionalProperties:
     key: gotify
     name: Gotify
     tags:
         - DevTool
-    shortDescZh: 自托管通知服务器
-    shortDescEn: Self-hosted notification server
+    shortDescZh: 简单的服务器来发送和接收消息
+    shortDescEn: A simple server for sending and receiving messages
     type: tool
     crossVersionUpdate: true
     limit: 0

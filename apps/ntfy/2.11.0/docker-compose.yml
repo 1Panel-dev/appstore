@@ -23,7 +23,6 @@ services:
         start_period: 40s
     labels:
       createdBy: "Apps"
-
 networks:
   1panel-network:
     external: true

@@ -1,31 +1,13 @@
-<p align="center">
-    <a href="https://github.com/gotify/logo">
-        <img height="370px" src="https://testingcf.jsdelivr.net/gh/gotify/logo@master/gotify-logo.png" />
-    </a>
-</p>
+# Gotify
 
-<h1 align="center">gotify/server</h1>
+**Gotify** 是一个简单的服务器来发送和接收消息（通过 WebSocket 实时发送和接收）
 
-<p align="center">
-    <a href="https://github.com/gotify/server/actions?query=workflow%3Abuild">
-        <img alt="Build Status" src="https://github.com/gotify/server/workflows/build/badge.svg">
-    </a>
-    <a href="https://codecov.io/gh/gotify/server">
-        <img alt="codecov" src="https://codecov.io/gh/gotify/server/branch/master/graph/badge.svg">
-    </a>
-    <a href="https://goreportcard.com/report/github.com/gotify/server">
-        <img alt="Go Report Card" src="https://goreportcard.com/badge/github.com/gotify/server">
-    </a>
-    <a href="https://matrix.to/#/#gotify:matrix.org">
-        <img alt="Matrix" src="https://img.shields.io/matrix/gotify:matrix.org.svg">
-    </a>
-    <a href="https://hub.docker.com/r/gotify/server">
-        <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/gotify/server.svg">
-    </a>
-    <a href="https://github.com/gotify/server/releases/latest">
-        <img alt="latest release" src="https://img.shields.io/github/release/gotify/server.svg">
-    </a>
-</p>
+## 特征：
 
-## 介绍
-Gotify 是一个用于通过 Web 套接字实时发送和接收消息的服务器。
+- 通过 REST-API 发送消息
+- 通过 WebSocket 接收消息
+- 管理用户、客户端和应用程序
+- [插件](https://gotify.net/docs/plugin)
+- Web-UI -> [./ui](https://github.com/gotify/server/tree/master/ui)
+- 发送消息的 CLI -> [gotify/cli](https://github.com/gotify/cli)
+- Android-APP -> [gotify/android](https://github.com/gotify/android)

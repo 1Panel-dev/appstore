@@ -1,8 +1,8 @@
 name: LobeChat
 tags:
     - AI / 大模型
-title: 现代化设计的开源 ChatGPT/LLMs 聊天应用与开发框架
-description: 现代化设计的开源 ChatGPT/LLMs 聊天应用与开发框架
+title: 开源、现代设计的 ChatGPT/LLMs UI/框架
+description: 开源、现代设计的 ChatGPT/LLMs UI/框架
 additionalProperties:
     key: lobe-chat
     name: LobeChat

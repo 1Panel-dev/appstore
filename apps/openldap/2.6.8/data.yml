@@ -1,33 +1,33 @@
 additionalProperties:
-    formFields:
-        - envKey: LDAP_ROOT
-          default: dc=example,dc=org
-          labelEn: LDAP baseDN
-          labelZh: LDAP baseDN
-          random: false
-          required: true
-          type: text
-        - envKey: LDAP_ADMIN_USERNAME
-          default: admin
-          labelEn: LDAP admin username
-          labelZh: LDAP 管理员用户名
-          random: false
-          required: true
-          rule: paramCommon
-          type: text
-        - envKey: LDAP_ADMIN_PASSWORD
-          default: adminpassword
-          labelEn: LDAP admin password
-          labelZh: LDAP 管理员密码
-          random: true
-          required: true
-          rule: paramComplexity
-          type: password
-        - envKey: LDAP_PORT
-          default: 1389
-          edit: true
-          labelEn: LDAP listening port
-          labelZh: LDAP 监听端口
-          required: true
-          rule: paramPort
-          type: number
+  formFields:
+    - envKey: LDAP_ROOT
+      default: dc=example,dc=org
+      labelEn: LDAP baseDN
+      labelZh: LDAP baseDN
+      random: false
+      required: true
+      type: text
+    - envKey: LDAP_ADMIN_USERNAME
+      default: admin
+      labelEn: LDAP admin username
+      labelZh: LDAP 管理员用户名
+      random: false
+      required: true
+      rule: paramCommon
+      type: text
+    - envKey: LDAP_ADMIN_PASSWORD
+      default: adminpassword
+      labelEn: LDAP admin password
+      labelZh: LDAP 管理员密码
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+    - envKey: LDAP_PORT
+      default: 1389
+      edit: true
+      labelEn: LDAP listening port
+      labelZh: LDAP 监听端口
+      required: true
+      rule: paramPort
+      type: number

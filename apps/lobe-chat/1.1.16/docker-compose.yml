@@ -14,7 +14,6 @@ services:
       - OPENAI_MODEL_LIST=${OPENAI_MODEL_LIST}
     labels:  
       createdBy: "Apps"
-
 networks:  
   1panel-network:  
     external: true
