@@ -1,0 +1,19 @@
+name: kkFileView
+tags:
+    - 实用工具
+title: 基于 Spring-Boot 的通用文件在线预览项目
+description: 基于 Spring-Boot 的通用文件在线预览项目
+additionalProperties:
+    key: kkfileview
+    name: kkFileView
+    tags:
+        - Tool
+    shortDescZh: 基于 Spring-Boot 的通用文件在线预览项目
+    shortDescEn: Universal File Online Preview Project based on Spring-Boot
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://kkview.cn/zh-cn/index.html
+    github: https://github.com/kekingcn/kkFileView
+    document: https://kkfileview.keking.cn/zh-cn/docs/home.html
