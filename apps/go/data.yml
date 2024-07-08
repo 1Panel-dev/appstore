@@ -1,0 +1,18 @@
+name: Go
+tags:
+  - 运行环境
+title: Go 运行环境
+description: Go 运行环境
+additionalProperties:
+  key: go
+  name: Go
+  tags:
+    - Runtime
+  shortDescZh: Go 运行环境
+  shortDescEn: Go Runtime
+  type: go
+  crossVersionUpdate: false
+  limit: 0
+  recommend: 102
+  website: https://go.dev/
+  github: https://github.com/golang/go
