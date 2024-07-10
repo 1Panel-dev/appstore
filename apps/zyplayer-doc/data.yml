@@ -1,0 +1,20 @@
+name: zyplayer-doc
+tags:
+    - 工具
+title: 一款适合企业和个人使用的WIKI知识库管理工具
+type: 工具
+description: 一款适合企业和个人使用的WIKI知识库管理工具
+additionalProperties:
+    key: zyplayer-doc
+    name: zyplayer-doc
+    tags:
+        - WebSite
+    shortDescZh: zyplayer-doc是一款适合企业和个人使用的WIKI知识库管理工具，提供在线化的知识库管理功能，专为私有化部署而设计。
+    shortDescEn: zyplayer-doc is a WIKI knowledge base management tool for enterprise and personal use, providing online knowledge base management capabilities, designed for private deployment.
+    type: website
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://doc.zyplayer.com
+    github: https://gitee.com/dromara/zyplayer-doc
+    document: https://doc.zyplayer.com

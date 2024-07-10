@@ -1,0 +1,30 @@
+services:
+  zyplayer-doc:
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:8083"
+    volumes:
+      - "${FILES_PATH}:/wiki/files"
+    environment:
+          DATASOURCE_DRIVER: "com.mysql.cj.jdbc.Driver"
+          DATASOURCE_HOST_PORT: "${PANEL_DATASOURCE_HOST}:${PANEL_DATASOURCE_PORT}"
+          DATASOURCE_DATABASE: "${PANEL_DATASOURCE_DATABASE}"
+          DATASOURCE_USER: "${PANEL_DATASOURCE_USER}"
+          DATASOURCE_PASSWORD: "${PANEL_DATASOURCE_PASSWORD}"
+          REDIS_ENABLE: "${PANEL_REDIS_ENABLE}"
+          REDIS_HOST: "${PANEL_REDIS_HOST}"
+          REDIS_PORT: "${PANEL_REDIS_PORT}"
+          REDIS_PASSWORD: "${PANEL_REDIS_PASSWORD}"
+          REDIS_DB: "${PANEL_REDIS_DB}"
+          SERVLET_MAX_FILE_SIZE: "${PANEL_SERVLET_MAX_FILE_SIZE}MB"
+          SERVLET_MAX_REQUEST_SIZE: "${PANEL_SERVLET_MAX_REQUEST_SIZE}MB"
+    image: registry.cn-beijing.aliyuncs.com/zyplayer/zyplayer-doc:2.3.9
+    labels:
+      createdBy: "Apps"
+
+networks:
+  1panel-network:
+    external: true

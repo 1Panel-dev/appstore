@@ -1,0 +1,121 @@
+additionalProperties:
+  formFields:
+    - default: 8083
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: /wiki/files
+      edit: true
+      envKey: FILES_PATH
+      labelEn: files folder path
+      labelZh: 文档附件路径
+      required: true
+      type: text
+    - default: mysql
+      envKey: PANEL_DB_TYPE
+      labelEn: Database Service
+      labelZh: 数据库服务
+      required: true
+      type: apps
+      values:
+        - label: MySQL
+          value: mysql
+      child:
+        default: ""
+        envKey: PANEL_DATASOURCE_HOST
+        labelEn: Database Service
+        labelZh: 数据库服务
+        required: true
+        type: service
+    - default: "3306"
+      edit: true
+      envKey: PANEL_DATASOURCE_PORT
+      labelEn: Mysql Service Port
+      labelZh: Mysql服务端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: zyplayer_doc
+      envKey: PANEL_DATASOURCE_DATABASE
+      labelEn: Database Name
+      labelZh: 数据库名
+      random: false
+      required: true
+      rule: paramCommon
+      type: text
+    - default: root
+      envKey: PANEL_DATASOURCE_USER
+      labelEn: Datasource User
+      labelZh: 数据库用户
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: root
+      envKey: PANEL_DATASOURCE_PASSWORD
+      labelEn: Datasource Password
+      labelZh: 数据库密码
+      random: true
+      required: true
+      type: password
+    - default: "false"
+      edit: true
+      envKey: PANEL_REDIS_ENABLE
+      labelEn: Redis Enabled
+      labelZh: 是否启用Redis
+      required: false
+      type: select
+      values:
+        - label: "True"
+          value: "true"
+        - label: "False"
+          value: "false"
+    - default: ""
+      edit: true
+      envKey: PANEL_REDIS_HOST
+      key: redis
+      labelEn: Redis Service
+      labelZh: Redis服务
+      required: false
+      type: service
+    - default: "6379"
+      edit: true
+      envKey: PANEL_REDIS_PORT
+      labelEn: Redis Service Port
+      labelZh: Redis服务端口
+      required: false
+      rule: paramPort
+      type: number
+    - default: ""
+      envKey: PANEL_REDIS_PASSWORD
+      labelEn: Redis Password
+      labelZh: Redis 密码
+      required: false
+      rule: paramComplexity
+      type: password
+    - default: ""
+      envKey: PANEL_REDIS_DB
+      labelEn: Redis Database  Name
+      labelZh: Redis 数据库名
+      required: false
+      type: text
+    - default: "500"
+      edit: true
+      envKey: PANEL_SERVLET_MAX_FILE_SIZE
+      labelEn: Upload File Limit(MB)
+      labelZh: 上传文件限制(MB)
+      required: true
+      rule: paramPort
+      type: number
+    - default: "500"
+      edit: true
+      envKey: PANEL_SERVLET_MAX_REQUEST_SIZE
+      labelEn: Request size limit(MB)
+      labelZh: 请求大小限制(MB)
+      required: true
+      rule: paramPort
+      type: number
