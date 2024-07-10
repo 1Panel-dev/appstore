@@ -12,7 +12,7 @@ services:
       - 1panel-network
     ports:
       - ${HOST_IP}:${PANEL_APP_PORT_HTTP}:${NODE_APP_PORT}
-    restart: always
+    restart: on-failure:5
 networks:
   1panel-network:
     external: true
