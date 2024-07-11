@@ -8,38 +8,30 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
-        - default: /wiki/files
+        - default: "/wiki/files"
           edit: true
           envKey: FILES_PATH
           labelEn: files folder path
           labelZh: 文档附件路径
           required: true
           type: text
-        - default: mysql
-          envKey: PANEL_DB_TYPE
-          labelEn: Database Service
-          labelZh: 数据库服务
+        - default: "127.0.0.1"
+          envKey: PANEL_DATASOURCE_HOST
+          labelEn: MySQL Database Host
+          labelZh: MySQL数据库地址
+          random: false
           required: true
-          type: apps
-          values:
-            - label: MySQL
-              value: mysql
-          child:
-            default: ""
-            envKey: PANEL_DATASOURCE_HOST
-            labelEn: Database Service
-            labelZh: 数据库服务
-            required: true
-            type: service
+          rule: paramCommon
+          type: text
         - default: "3306"
           edit: true
           envKey: PANEL_DATASOURCE_PORT
-          labelEn: Mysql Service Port
-          labelZh: Mysql服务端口
+          labelEn: MySQL Service Port
+          labelZh: MySQL服务端口
           required: true
           rule: paramPort
           type: number
-        - default: zyplayer_doc
+        - default: "zyplayer_doc"
           envKey: PANEL_DATASOURCE_DATABASE
           labelEn: Database Name
           labelZh: 数据库名
@@ -47,7 +39,7 @@ additionalProperties:
           required: true
           rule: paramCommon
           type: text
-        - default: root
+        - default: "root"
           envKey: PANEL_DATASOURCE_USER
           labelEn: Datasource User
           labelZh: 数据库用户
@@ -55,7 +47,7 @@ additionalProperties:
           required: true
           rule: paramCommon
           type: text
-        - default: root
+        - default: "root"
           envKey: PANEL_DATASOURCE_PASSWORD
           labelEn: Datasource Password
           labelZh: 数据库密码
@@ -74,14 +66,14 @@ additionalProperties:
               value: "true"
             - label: "False"
               value: "false"
-        - default: ""
-          edit: true
+        - default: "127.0.0.1"
           envKey: PANEL_REDIS_HOST
-          key: redis
-          labelEn: Redis Service
-          labelZh: Redis服务
+          labelEn: Redis Service Host
+          labelZh: Redis服务地址
+          random: false
           required: false
-          type: service
+          rule: paramCommon
+          type: text
         - default: "6379"
           edit: true
           envKey: PANEL_REDIS_PORT
