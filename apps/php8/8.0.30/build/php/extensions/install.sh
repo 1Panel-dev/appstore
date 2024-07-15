@@ -102,6 +102,11 @@ if [[ -z "${EXTENSIONS##*,maxminddb,*}" ]]; then
     echo "---------- Install maxminddb ----------"
 	  install-php-extensions maxminddb
 fi
+
+if [[ -z "${EXTENSIONS##*,zstd,*}" ]]; then
+    echo "---------- Install zstd ----------"
+	  install-php-extensions zstd
+fi
 # end
 
 
