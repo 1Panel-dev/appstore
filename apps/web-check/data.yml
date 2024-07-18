@@ -1,8 +1,8 @@
 name: Web-Check
 tags:
-    - 工具
+    - 实用工具
 title: 用于分析任何网站的多合一 OSINT 工具
-type: 工具
+type: 实用工具
 description: 用于分析任何网站的多合一 OSINT 工具
 additionalProperties:
     key: web-check
