@@ -103,6 +103,12 @@ if [[ -z "${EXTENSIONS##*,zstd,*}" ]]; then
     echo "---------- Install zstd ----------"
 	  install-php-extensions zstd
 fi
+
+if [[ -z "${EXTENSIONS##*,grpc,*}" ]]; then
+    echo "---------- Install grpc ----------"
+	  install-php-extensions grpc
+	  docker-php-ext-enable grpc
+fi
 # end
 
 
