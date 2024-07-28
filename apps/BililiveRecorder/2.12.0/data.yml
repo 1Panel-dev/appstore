@@ -1,0 +1,31 @@
+additionalProperties:
+  formFields:
+    - default: 2356
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: admin
+      envKey: USER_NAME
+      labelEn: WebUI Username
+      labelZh: WebUI的用户名
+      required: true
+      type: text
+    - default: admin
+      envKey: USER_PASSWORD
+      labelEn: WebUI access password
+      labelZh: WebUI的访问密码
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+    - default: ./rec
+      edit: true
+      envKey: WORK_SPACE_PATH
+      labelEn: work space path
+      labelZh: 工作目录路径
+      required: true
+      type: text
