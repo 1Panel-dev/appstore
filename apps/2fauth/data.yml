@@ -1,0 +1,19 @@
+name: 2FAuth
+tags:
+    - 安全
+title: 管理双因素身份验证（2FA）帐户并生成安全代码的 Web 应用程序
+description: 管理双因素身份验证（2FA）帐户并生成安全代码的 Web 应用程序
+additionalProperties:
+    key: 2fauth
+    name: 2FAuth
+    tags:
+        - Security
+    shortDescZh: 管理双因素身份验证（2FA）帐户并生成安全代码的 Web 应用程序
+    shortDescEn: A Web app to manage your Two-Factor Authentication (2FA) accounts and generate their security codes
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://docs.2fauth.app/
+    github: https://github.com/Bubka/2FAuth
+    document: https://docs.2fauth.app/
