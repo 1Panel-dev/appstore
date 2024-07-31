@@ -1,0 +1,30 @@
+additionalProperties:
+  formFields:
+    - default: 2FAuth
+      envKey: APP_NAME
+      labelEn: APP NAME
+      labelZh: 应用名称
+      required: true
+      type: text
+    - default: 8000
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: http://localhost:8000
+      edit: true
+      envKey: APP_URL
+      labelEn: APP URL
+      labelZh: 外部地址（可以添加为反向代理网站，并启用 HTTPS）
+      required: true
+      rule: paramExtUrl
+      type: text
+    - default: SomeRandomStringOf32CharsExactly
+      envKey: APP_KEY
+      labelEn: APP KEY
+      labelZh: 加密键
+      required: true
+      type: text
