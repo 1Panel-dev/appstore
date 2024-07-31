@@ -17,14 +17,14 @@ additionalProperties:
       random: true
       rule: paramComplexity
       type: password
-    - envKey: MEILI_NO_ANALYTICS
-      default: ''
+    - default: "true"
+      envKey: MEILI_NO_ANALYTICS
       labelEn: Meilisearch's built-in telemetry
       labelZh: Meilisearch 的内置遥测
       edit: true
       type: select
       values:
         - label: 开启
-          value: ''
+          value: "true"
         - label: 关闭
-          value: --no-analytics
+          value: "false"
