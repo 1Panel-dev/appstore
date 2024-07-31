@@ -22,6 +22,8 @@ services:
     ports:
       - "${PANEL_APP_PORT_HTTP}:8848"
       - "${PANEL_APP_PORT_COMMUNICATION}:9848"
+    labels:  
+      createdBy: "Apps"
 networks:
   1panel-network:
     external: true
