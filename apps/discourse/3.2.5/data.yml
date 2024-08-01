@@ -1,67 +1,41 @@
 additionalProperties:
   formFields:
     - default: ""
+      edit: true
       envKey: DISCOURSE_HOST
       labelEn: HOST
       labelZh: 访问域名
       required: true
       type: text
-    - default: 40030
+    - default: 3000
       envKey: PANEL_APP_PORT_HTTP
       labelEn: Port
       labelZh: HTTP 端口
       required: true
       rule: paramPort
       type: number
+    - default: admin
+      disabled: true
+      envKey: DISCOURSE_USERNAME
+      labelEn: Admin User
+      labelZh: 管理员
+      required: true
+      type: text
     - default: ""
+      edit: true
       envKey: DISCOURSE_EMAIL
       labelEn: email
       labelZh: 管理员邮箱
       required: true
       type: text
     - default: ""
+      edit: true
       envKey: DISCOURSE_PASSWORD
       labelEn: password(must length > 10)
       labelZh: 管理员密码(长度必须>10)
       required: true
       type: password
       rule: paramCommon
-    # - default: ""
-    #   envKey: DISCOURSE_SMTP_HOST
-    #   labelEn: SMTP HOST
-    #   labelZh: SMTP服务器地址
-    #   required: true
-    #   type: text
-    # - default: 0
-    #   envKey: DISCOURSE_SMTP_PORT_NUMBER
-    #   labelEn: SMTP PORT
-    #   labelZh: SMTP服务器端口
-    #   required: true
-    #   type: number
-    # - default: ""
-    #   envKey: DISCOURSE_SMTP_USER
-    #   labelEn: SMTP USER
-    #   labelZh: SMTP服务器账号
-    #   required: true
-    #   type: text
-    # - default: ""
-    #   envKey: DISCOURSE_SMTP_PASSWORD
-    #   labelEn: SMTP PASSWORD
-    #   labelZh: SMTP服务器密码
-    #   required: true
-    #   type: password
-    # - default: ""
-    #   envKey: DISCOURSE_SMTP_PROTOCOL
-    #   labelEn: SMTP PROTOCOL
-    #   labelZh: SMTP服务器加密协议
-    #   type: select
-    #   values:
-    #       - label: 无
-    #         value: ""
-    #       - label: TLS
-    #         value: "tls"
-    #       - label: SSL
-    #         value: "ssl"
     - default: ""
       envKey: PANEL_DB_HOST
       key: postgresql
@@ -69,7 +43,7 @@ additionalProperties:
       labelZh: postgresql数据库服务
       required: true
       type: service
-    - default: de
+    - default: discourse
       envKey: PANEL_DB_NAME
       labelEn: Database
       labelZh: 数据库名
@@ -77,7 +51,7 @@ additionalProperties:
       required: true
       rule: paramCommon
       type: text
-    - default: de
+    - default: discourse
       envKey: PANEL_DB_USER
       labelEn: User
       labelZh: 数据库用户
@@ -85,7 +59,7 @@ additionalProperties:
       required: true
       rule: paramCommon
       type: text
-    - default: de
+    - default: discourse
       envKey: PANEL_DB_USER_PASSWORD
       labelEn: Password
       labelZh: 数据库用户密码
@@ -94,13 +68,13 @@ additionalProperties:
       rule: paramComplexity
       type: password
     - default: ""
-      envKey: PANEL_REDIS_HOST  #docker-compose 文件中的参数
-      key: redis  #依赖应用的 key , 例如 mysql
-      labelEn: Redis Service  #英文的label
-      labelZh: redis 服务  #中文的label
-      required: true  #是否必填
-      type: service  #如果需要依赖其他应用，例如数据库，使用此 type
-    - default: de
+      envKey: PANEL_REDIS_HOST
+      key: redis
+      labelEn: Redis Service
+      labelZh: redis 服务
+      required: true
+      type: service
+    - default: ""
       envKey: PANEL_REDIS_ROOT_PASSWORD
       labelEn: Password
       labelZh: redis 密码
@@ -108,4 +82,3 @@ additionalProperties:
       required: true
       rule: paramComplexity
       type: password
-

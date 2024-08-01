@@ -1,7 +1,7 @@
 name: Discourse
 tags:
-    - 社区
-title: 开源社区系统
+    - 建站
+title: 社区讨论的平台。免费、开放、简单。
 description: 社区讨论的平台。免费、开放、简单。
 additionalProperties:
     key: discourse
