@@ -2,12 +2,17 @@
 - 同一个存储卷，只会在首次初始化管理员账号
 - 使用端口访问的话，不会显示图标，修改为域名即可
 
-# 设置语言
+# 配置
+## 设置语言
 /admin/site_settings/category/required
 
 default locale 设置为 简体中文
 
-# 插件安装
+## 设置SMTP
+手动编辑 docker-compose，修改 smtp相关配置
+
+
+## 插件安装
 ```shell
 cd /opt/bitnami/discourse
 # 安装插件 PLUGIN_REPO_URL 替换为插件地址
@@ -16,7 +21,7 @@ sudo RAILS_ENV=production bundle exec rake plugin:install repo=PLUGIN_REPO_URL
 sudo RAILS_ENV=production bundle exec rake assets:precompile
 ```
 
-# 插件卸载
+## 插件卸载
 ```shell
 cd /opt/bitnami/discourse/plugins
 # 删除插件目录 PLUGIN-DIR 替换为插件目录
