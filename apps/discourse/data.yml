@@ -1,0 +1,19 @@
+name: Discourse
+tags:
+    - 社区
+title: 开源社区系统
+description: 社区讨论的平台。免费、开放、简单。
+additionalProperties:
+    key: discourse
+    name: Discourse
+    tags:
+        - WebSite
+    shortDescZh: 社区讨论的平台。免费、开放、简单。
+    shortDescEn: A platform for community discussion. Free, open, simple.
+    type: website
+    crossVersionUpdate: false
+    limit: 0
+    recommend: 0
+    website: https://www.discourse.org
+    github: https://github.com/discourse/discourse
+    document: https://hub.docker.com/r/bitnami/discourse
