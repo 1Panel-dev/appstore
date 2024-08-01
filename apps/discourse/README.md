@@ -1,5 +1,10 @@
-# 注意
+# 注意事项
 所以同一个存储卷，只会在首次初始化管理员账号
+
+# 设置语言
+/admin/site_settings/category/required
+
+default locale 设置为 简体中文
 
 # 插件安装
 ```shell
