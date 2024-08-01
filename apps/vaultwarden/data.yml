@@ -1,0 +1,19 @@
+name: Vaultwarden
+tags:
+    - 密码管理器
+title: 密码管理器
+description: 密码管理器，可以安全地存储、管理和共享敏感的在线数据（如密码、密钥、信用卡等）。
+additionalProperties:
+    key: vaultwarden
+    name: vaultwarden
+    tags:
+        - WebSite
+    shortDescZh: 密码管理器，可以安全地存储、管理和共享敏感的在线数据（如密码、密钥、信用卡等）。
+    shortDescEn: the best password manager for securely storing, managing, and sharing sensitive online data such as passwords, passkeys, credit cards, and more.
+    type: website
+    crossVersionUpdate: false
+    limit: 0
+    recommend: 0
+    website: https://bitwarden.com/
+    github: https://github.com/dani-garcia/vaultwarden
+    document: https://github.com/dani-garcia/vaultwarden/wiki

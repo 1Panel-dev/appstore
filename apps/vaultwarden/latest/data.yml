@@ -1,0 +1,16 @@
+additionalProperties:
+  formFields:
+    - default: ""
+      envKey: PANEL_PASSWORD
+      labelEn: admin password
+      labelZh: 管理员密码
+      required: true
+      type: password
+      rule: paramCommon
+    - default: 40040
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: HTTP 端口
+      required: true
+      rule: paramPort
+      type: number

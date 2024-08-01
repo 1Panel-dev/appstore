@@ -1,0 +1,22 @@
+services:
+  vaultwarden:
+    image: vaultwarden/server:latest
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:80"
+    volumes:
+      - vaultwarden_data:/data
+    environment:
+      ADMIN_TOKEN: ${PANEL_PASSWORD}
+    labels:
+      createdBy: "Apps"
+
+volumes:
+  vaultwarden_data:
+
+networks:
+  1panel-network:
+    external: true
