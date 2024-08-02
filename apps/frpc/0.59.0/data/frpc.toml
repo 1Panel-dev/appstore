@@ -10,7 +10,6 @@ webServer.user = "admin"
 webServer.password = "password123456"
 webServer.pprofEnable = false
 
-
 # tls
 #transport.tls.certFile = "/etc/frp/ssl/client.crt"
 #transport.tls.keyFile = "/etc/frp/ssl/client.key"
