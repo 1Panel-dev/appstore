@@ -16,4 +16,4 @@ additionalProperties:
     recommend: 15
     website: https://sftpgo.com/
     github: https://github.com/drakkan/sftpgo/
-    document: https://github.com/drakkan/sftpgo/blob/main/docs/howto/getting-started.md
+    document: https://sftpgo.github.io/latest/
