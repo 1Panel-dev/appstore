@@ -109,6 +109,11 @@ if [[ -z "${EXTENSIONS##*,grpc,*}" ]]; then
 	  install-php-extensions grpc
 	  docker-php-ext-enable grpc
 fi
+
+if [[ -z "${EXTENSIONS##*,ftp,*}" ]]; then
+    echo "---------- Install ftp ----------"
+	  install-php-extensions ftp
+fi
 # end
 
 
