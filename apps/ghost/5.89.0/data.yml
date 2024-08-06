@@ -1,0 +1,108 @@
+additionalProperties:
+  formFields:
+    - child:
+        default: ""
+        envKey: PANEL_DB_HOST
+        required: true
+        type: service
+      default: mysql
+      edit: true
+      envKey: PANEL_DB_TYPE
+      labelZh: 数据库 服务
+      labelEn: Database Service
+      required: true
+      type: apps
+      values:
+        - label: MySQL
+          value: mysql
+        - label: MariaDB
+          value: mariadb
+    - default: 2368
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelZh: WebUI 端口
+      labelEn: WebUI port
+      required: true
+      rule: paramPort
+      type: number
+    - default: "http://127.0.0.1:2368"
+      edit: true
+      envKey: url
+      labelZh: 域名
+      labelEn: Domain
+      required: true
+      rule: paramExtUrl
+      type: text
+    - default: "http://127.0.0.1:2368"
+      edit: true
+      envKey: admin__url
+      labelZh: 域名 (后台)
+      labelEn: Domain (Admin)
+      required: true
+      rule: paramExtUrl
+      type: text
+    - default: "ghost"
+      edit: true
+      envKey: database__connection__user
+      labelZh: 数据库 用户名
+      labelEn: Database Username
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: database__connection__password
+      labelZh: 数据库 密码
+      labelEn: Database Password
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+    - default: "ghost"
+      edit: true
+      envKey: database__connection__database
+      labelZh: 数据库 名称
+      labelEn: Database Name
+      required: true
+      type: text
+    - default: "SMTP"
+      edit: true
+      envKey: mail__transport
+      labelZh: 邮件传输协议
+      labelEn: Mail Transport Protocol
+      required: true
+      type: text
+    - default: "smtp.qq.com"
+      edit: true
+      envKey: mail__options__host
+      labelZh: 邮件服务器
+      labelEn: Mail Server
+      required: true
+      type: text
+    - default: 465
+      edit: true
+      envKey: mail__options__port
+      labelZh: 邮件服务器 端口
+      labelEn: Mail Server Port
+      required: true
+      type: number
+    - default: ""
+      edit: true
+      envKey: mail__options__auth__user
+      labelZh: 邮件鉴权 用户名
+      labelEn: Mail Username
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: mail__options__auth__pass
+      labelZh: 邮件鉴权 密码
+      labelEn: Mail Password
+      required: true
+      type: password
+    - default: ""
+      edit: true
+      envKey: mail__from
+      labelZh: 邮件发送者
+      labelEn: Mail Sender
+      required: true
+      type: text

@@ -1,0 +1,34 @@
+version: "3.8"
+
+networks:
+  1panel-network:
+    external: true
+
+services:
+  ghost:
+    image: ghost:5.89.0
+    container_name: ${CONTAINER_NAME}
+    labels:
+      createdBy: "Apps"
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:2368
+    volumes:
+      - ./data:/var/lib/ghost/content
+    environment:
+      - NODE_ENV=production
+      - server__host=0.0.0.0
+      - server__port=2368
+      - database__client=mysql
+      - database__connection__host=${PANEL_DB_HOST}
+      - database__connection__port=${PANEL_DB_PORT}
+      - mail__transport=SMTP
+      - mail__from=${mail__from}
+      - mail__options__service=Email
+      - mail__options__secure=true
+      - mail__options__host=${mail__options__host}
+      - mail__options__port=${mail__options__port}
+      - mail__options__auth__user=${mail__options__auth__user}
+      - mail__options__auth__pass=${mail__options__auth__pass}
