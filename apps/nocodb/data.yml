@@ -1,0 +1,19 @@
+name: NocoDB
+tags:
+  - 数据库
+title: 无代码数据库平台
+description: 无代码数据库平台
+additionalProperties:
+  key: nocodb
+  name: NocoDB
+  tags:
+    - Database
+  shortDescZh: 无代码数据库平台
+  shortDescEn: Code-free database platform
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://nocodb.com/
+  github: https://github.com/nocodb/nocodb/
+  document: https://docs.nocodb.com/
