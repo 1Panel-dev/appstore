@@ -8,3 +8,11 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+        - default: 5426
+          edit: true
+          envKey: PANEL_APP_PORT_S3
+          labelEn: S3 Port
+          labelZh: S3 端口
+          required: true
+          rule: paramPort
+          type: number
