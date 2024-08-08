@@ -1,6 +1,6 @@
 services:
   nexus:
-    image: bitnami/tomcat:9.0.91
+    image: bitnami/tomcat:9.0.93
     restart: always
     container_name: ${CONTAINER_NAME}
     environment:
