@@ -8,6 +8,7 @@ services:
       - ./conf/nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf
       - ./conf/fastcgi_params:/usr/local/openresty/nginx/conf/fastcgi_params
       - ./conf/fastcgi-php.conf:/usr/local/openresty/nginx/conf/fastcgi-php.conf
+      - ./conf/mime.types:/usr/local/openresty/nginx/conf/mime.types
       - ./log:/var/log/nginx
       - ./conf/conf.d:/usr/local/openresty/nginx/conf/conf.d/
       - ./www:/www
