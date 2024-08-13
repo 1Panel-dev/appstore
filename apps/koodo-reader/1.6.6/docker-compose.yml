@@ -1,0 +1,14 @@
+services:
+  koodo-reader:
+    image: liwangsheng/koodo-reader:1.6.6
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:80
+    labels:  
+      createdBy: "Apps"
+networks:  
+  1panel-network:  
+    external: true
