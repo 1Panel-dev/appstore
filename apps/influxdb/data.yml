@@ -1,0 +1,19 @@
+name: InfluxDB
+tags:
+    - 数据库
+title: 用于指标、事件和实时分析的可扩展数据存储
+description: 用于指标、事件和实时分析的可扩展数据存储
+additionalProperties:
+    key: influxdb
+    name: InfluxDB
+    tags:
+        - Database
+    shortDescZh: 用于指标、事件和实时分析的可扩展数据存储
+    shortDescEn: Scalable datastore for metrics, events, and real-time analytics
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://influxdata.com/
+    github: https://github.com/influxdata/influxdb
+    document: https://docs.influxdata.com/

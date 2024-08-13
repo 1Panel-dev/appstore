@@ -1,0 +1,45 @@
+additionalProperties:
+  formFields:
+    - default: 8086
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: influxdb
+      edit: true
+      envKey: DOCKER_INFLUXDB_INIT_USERNAME
+      labelEn: User
+      labelZh: 用户
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: influxdb
+      edit: true
+      envKey: DOCKER_INFLUXDB_INIT_PASSWORD
+      labelEn: Password
+      labelZh: 密码
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+    - default: influxdb
+      edit: true
+      envKey: DOCKER_INFLUXDB_INIT_ORG
+      labelEn: Init Organization
+      labelZh: 初始化组织
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: influxdb
+      edit: true
+      envKey: DOCKER_INFLUXDB_INIT_BUCKET
+      labelEn: Init Bucket
+      labelZh: 初始化存储桶
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
