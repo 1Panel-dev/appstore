@@ -28,11 +28,11 @@
     },
     {
       "matchFileNames": ["apps/mysql/8.0.*/*.yml"],
-      "allowedVersions": "<8.1"
+      "allowedVersions": "/^8.0.*/"
     },
     {
-      "matchFileNames": ["apps/mysql/8.2.*/*.yml"],
-      "allowedVersions": ">=8.2"
+      "matchFileNames": ["apps/mysql/8.4.*/*.yml"],
+      "allowedVersions": "/^8.4.*/"
     },
     {
       "matchFileNames": ["apps/elasticsearch/7.*/*.yml"],
