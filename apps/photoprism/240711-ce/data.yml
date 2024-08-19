@@ -1,0 +1,99 @@
+additionalProperties:
+  formFields:
+    - default: admin
+      edit: true
+      envKey: ADMIN_USER
+      labelEn: Admin user
+      labelZh: 管理员用户名
+      required: true
+      type: text
+    - default: photoprism
+      edit: true
+      envKey: ADMIN_PASSWORD
+      labelEn: Admin Password
+      labelZh: 管理员密码
+      random: true
+      required: true
+      type: password
+    - default: 2342
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: http://localhost:2342/
+      edit: true
+      envKey: PHOTOPRISM_EXTERNAL_URL
+      labelEn: External URL
+      labelZh: 外部访问地址
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: PANEL_DB_HOST
+      key: mariadb
+      labelEn: MariaDB Database Service
+      labelZh: MariaDB 数据库服务
+      required: true
+      type: service
+    - default: photoprism
+      envKey: PANEL_DB_NAME
+      labelEn: Database
+      labelZh: 数据库名
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: photoprism
+      envKey: PANEL_DB_USER
+      labelEn: User
+      labelZh: 数据库用户
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: photoprism
+      envKey: PANEL_DB_USER_PASSWORD
+      labelEn: Password
+      labelZh: 数据库用户密码
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+    - default: 1000
+      edit: true
+      envKey: UID
+      labelEn: UID
+      labelZh: UID
+      required: true
+      type: number
+    - default: 1000
+      edit: true
+      envKey: GID
+      labelEn: GID
+      labelZh: GID
+      required: true
+      type: number
+    - default: ""
+      edit: true
+      envKey: SITE_DESCRIPTION
+      labelEn: Site description
+      labelZh: 网站描述
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: SITE_AUTHOR
+      labelEn: Site description
+      labelZh: 网站作者
+      required: false
+      type: text
+    - default: "AI-Powered Photos App"
+      edit: true
+      envKey: SITE_CAPTION
+      labelEn: Site caption
+      labelZh: 网站标题
+      required: false
+      type: text
