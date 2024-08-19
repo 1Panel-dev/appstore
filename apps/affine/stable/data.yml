@@ -1,0 +1,74 @@
+additionalProperties:
+  formFields:
+    - default: 3010
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Web Port
+      labelZh: HTTP 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 5555
+      envKey: PANEL_APP_PORT_HTTP_5555
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: ""
+      edit: true
+      envKey: AFFINE_ADMIN_EMAIL
+      labelEn: email
+      labelZh: 管理员邮箱
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: AFFINE_ADMIN_PASSWORD
+      labelEn: password
+      labelZh: 管理员密码
+      required: true
+      type: password
+    - default: ""
+      envKey: PANEL_DB_HOST
+      key: postgresql
+      labelEn: PostgreSQL Database Service
+      labelZh: PostgreSQL 数据库服务
+      required: true
+      type: service
+    - default: affine
+      envKey: PANEL_DB_NAME
+      labelEn: Database
+      labelZh: 数据库名
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: affine
+      envKey: PANEL_DB_USER
+      labelEn: User
+      labelZh: 数据库用户
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: affine
+      envKey: PANEL_DB_USER_PASSWORD
+      labelEn: Password
+      labelZh: 数据库用户密码
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+    - default: ""
+      envKey: PANEL_REDIS_HOST
+      key: redis
+      labelEn: Redis Service
+      labelZh: redis 服务
+      required: true
+      type: service
+    - default: ""
+      disabled: true
+      envKey: PANEL_REDIS_ROOT_PASSWORD
+      labelEn: Password
+      labelZh: redis 密码
+      type: text

@@ -1,0 +1,19 @@
+name: AFFiNE
+tags:
+    - 实用工具
+title: 将文档、白板和数据库完全整合的工作空间
+description: 将文档、白板和数据库完全整合的工作空间
+additionalProperties:
+  key: affine
+  name: AFFiNE
+  tags:
+    - Tool
+  shortDescZh: 将文档、白板和数据库完全整合的工作空间
+  shortDescEn: A workspace with fully merged docs, whiteboards and databases
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://affine.pro
+  github: https://github.com/toeverything/AFFiNE
+  document: https://docs.affine.pro/docs/self-host-affine
