@@ -1,18 +1,24 @@
 name: Bitwarden
 tags:
-    - 实用工具
+- 实用工具
 title: 开源的密码管理服务
 description: 开源的密码管理服务
 additionalProperties:
-    key: bitwarden
-    name: Bitwarden
-    tags:
-        - Tool
-    shortDescZh: 开源的密码管理服务
-    shortDescEn: Open source password management service
-    type: tool
-    crossVersionUpdate: true
-    limit: 0
-    website: https://bitwarden.com/
-    github: https://github.com/dani-garcia/vaultwarden
-    document: https://github.com/dani-garcia/vaultwarden/wiki
+  key: bitwarden
+  name: Bitwarden
+  tags:
+  - Tool
+  shortDescZh: 开源的密码管理服务
+  shortDescEn: Open source password management service
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://bitwarden.com/
+  github: https://github.com/dani-garcia/vaultwarden
+  document: https://github.com/dani-garcia/vaultwarden/wiki
+  architectures:
+  - amd64
+  - arm64
+  - arm/v7
+  - arm/v6
