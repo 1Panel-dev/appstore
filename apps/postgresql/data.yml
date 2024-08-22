@@ -4,16 +4,22 @@ tags:
 title: 开源关系型数据库
 description: 开源关系型数据库
 additionalProperties:
-    key: postgresql
-    name: PostgreSQL
-    tags:
-        - Database
-    shortDescZh: 开源关系型数据库
-    shortDescEn: Open Source Relational Database
-    type: runtime
-    crossVersionUpdate: false
-    limit: 0
-    recommend: 0
-    website: https://www.postgresql.org/
-    github: https://github.com/postgres/postgres
-    document: https://www.postgresql.org/docs/
+  key: postgresql
+  name: PostgreSQL
+  tags:
+      - Database
+  shortDescZh: 开源关系型数据库
+  shortDescEn: Open Source Relational Database
+  type: runtime
+  crossVersionUpdate: false
+  limit: 0
+  recommend: 0
+  website: https://www.postgresql.org/
+  github: https://github.com/postgres/postgres
+  document: https://www.postgresql.org/docs/
+  architectures:
+      - amd64
+      - arm/v7
+      - arm64
+      - ppc64le
+      - s390x

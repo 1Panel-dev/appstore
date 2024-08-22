@@ -4,16 +4,18 @@ tags:
 title: MySQL 开源关系型数据库
 description: MySQL 开源关系型数据库
 additionalProperties:
-    key: mysql
-    name: MySQL
-    tags:
-        - Database
-    shortDescZh: MySQL 开源关系型数据库
-    shortDescEn: Open source relational database management system
-    type: runtime
-    crossVersionUpdate: false
-    limit: 0
-    recommend: 5
-    website: https://www.mysql.com
-    github: https://github.com/mysql/mysql-server
-    document: https://dev.mysql.com/doc/
+  key: mysql
+  name: MySQL
+  tags:
+    - Database
+  shortDescZh: MySQL 开源关系型数据库
+  shortDescEn: Open source relational database management system
+  type: runtime
+  crossVersionUpdate: false
+  limit: 0
+  recommend: 5
+  website: https://www.mysql.com
+  github: https://github.com/mysql/mysql-server
+  document: https://dev.mysql.com/doc/
+  architectures:
+    - amd64

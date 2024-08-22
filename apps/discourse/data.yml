@@ -17,3 +17,6 @@ additionalProperties:
     website: https://www.discourse.org
     github: https://github.com/discourse/discourse
     document: https://hub.docker.com/r/bitnami/discourse
+    architectures:
+      - amd64
+      - arm64

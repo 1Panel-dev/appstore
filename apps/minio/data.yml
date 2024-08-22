@@ -1,19 +1,24 @@
 name: MinIO
 tags:
-    - 中间件
+- 中间件
 title: 开源的对象存储服务器
 description: 开源的对象存储服务器
 additionalProperties:
-    key: minio
-    name: MinIO
-    tags:
-        - Middleware
-    shortDescZh: 开源的对象存储服务器
-    shortDescEn: Open source object storage server
-    type: tool
-    crossVersionUpdate: true
-    limit: 1
-    recommend: 0
-    website: https://min.io/download
-    github: https://github.com/minio/minio
-    document: https://min.io/docs/minio/kubernetes/upstream
+  key: minio
+  name: MinIO
+  tags:
+  - Middleware
+  shortDescZh: 开源的对象存储服务器
+  shortDescEn: Open source object storage server
+  type: tool
+  crossVersionUpdate: true
+  limit: 1
+  recommend: 0
+  website: https://min.io/download
+  github: https://github.com/minio/minio
+  document: https://min.io/docs/minio/kubernetes/upstream
+  architectures:
+  - arm64
+  - amd64
+  - ppc64le
+  - s390x

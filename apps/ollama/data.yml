@@ -7,7 +7,7 @@ additionalProperties:
     key: ollama
     name: Ollama
     tags:
-        - AI
+      - AI
     shortDescZh: 本地运行 Llama 2、Mistral、Gemma 和其他大型语言模型
     shortDescEn: Locally run Llama 2, Mistral, Gemma, and other large language models
     type: tool
@@ -17,3 +17,6 @@ additionalProperties:
     website: https://ollama.com/
     github: https://github.com/ollama/ollama
     document: https://github.com/ollama/ollama/blob/main/docs/README.md
+    architectures:
+      - amd64
+      - arm64
