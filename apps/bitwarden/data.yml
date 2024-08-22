@@ -1,6 +1,6 @@
 name: Bitwarden
 tags:
-  - 实用工具
+    - 实用工具
 title: 开源的密码管理服务
 description: 开源的密码管理服务
 additionalProperties:
@@ -13,7 +13,6 @@ additionalProperties:
   type: website
   crossVersionUpdate: true
   limit: 0
-  recommend: 0
   website: https://bitwarden.com/
   github: https://github.com/dani-garcia/vaultwarden
   document: https://github.com/dani-garcia/vaultwarden/wiki
