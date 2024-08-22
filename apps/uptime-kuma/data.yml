@@ -26,3 +26,7 @@ additionalProperties:
     website: https://uptime.kuma.pet/
     github: https://github.com/louislam/uptime-kuma
     document: https://github.com/louislam/uptime-kuma/wiki
+    architectures:
+      - amd64
+      - arm/v7
+      - arm64

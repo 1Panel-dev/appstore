@@ -26,3 +26,10 @@ additionalProperties:
         pt-br: Um sistema de armazenamento e distribuição para imagens Docker nomeadas
         ru: Система хранения и распространения именованных образов Docker
         ko: 명명된 Docker 이미지를 위한 저장 및 배포 시스템
+    architectures:
+      - amd64
+      - arm/v6
+      - arm/v7
+      - arm64/v8
+      - ppc64le
+      - s390x

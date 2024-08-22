@@ -26,3 +26,10 @@ additionalProperties:
         pt-br: Um broker de mensagens e streaming com vários protocolos e rico em recursos
         ru: Многофункциональный брокер сообщений и потоков с поддержкой нескольких протоколов
         ko: 기능이 풍부한 다중 프로토콜 메시징 및 스트리밍 브로커
+    architectures:
+      - amd64
+      - arm/v6
+      - arm/v7
+      - arm64/v8
+      - ppc64le
+      - s390x

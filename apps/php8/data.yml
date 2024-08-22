@@ -26,3 +26,9 @@ additionalProperties:
     website: https://www.php.net/
     github: https://github.com/php/php-src
     document: https://www.php.net/docs.php
+    architectures:
+        - amd64
+        - arm64
+        - arm/v7
+        - s390x
+        - ppc64le

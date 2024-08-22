@@ -26,3 +26,10 @@ additionalProperties:
     website: https://www.adminer.org/
     github: https://github.com/xiahao90/adminer
     document: https://github.com/xiahao90/adminer
+    architectures:
+      - amd64
+      - arm/v5
+      - arm/v7
+      - arm64/v8
+      - ppc64le
+      - s390x

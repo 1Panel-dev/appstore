@@ -26,3 +26,5 @@ additionalProperties:
         pt-br: Ferramenta de gerenciamento web do Redis
         ru: Веб-инструмент управления Redis
         ko: Redis 웹 관리 도구
+    architectures:
+        - amd64

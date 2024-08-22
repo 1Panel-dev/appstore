@@ -26,4 +26,6 @@ additionalProperties:
     website: https://maddy.email
     github: https://github.com/foxcpp/maddy
     document: https://maddy.email
-    
+    architectures:
+      - amd64
+      - arm64

@@ -1,13 +1,13 @@
 name: MeterSphere
 tags:
-    - DevOps
+- DevOps
 title: 新一代的测试管理和接口测试工具
 description: 新一代的测试管理和接口测试工具
 additionalProperties:
   key: metersphere
   name: MeterSphere
   tags:
-    - DevOps
+  - DevOps
   shortDescZh: 新一代的测试管理和接口测试工具
   shortDescEn: The next-gen test management and interface testing tools
   type: tool
@@ -17,3 +17,6 @@ additionalProperties:
   website: https://www.metersphere.io
   github: https://github.com/metersphere/metersphere
   document: https://metersphere.io/docs
+  architectures:
+  - amd64
+  - arm64

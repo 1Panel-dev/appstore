@@ -26,3 +26,8 @@ additionalProperties:
     website: https://www.jenkins.io/
     github: https://github.com/jenkinsci/jenkins
     document: https://www.jenkins.io/doc/book/
+    architectures:
+      - amd64
+      - arm64
+      - s390x
+      - ppc64le

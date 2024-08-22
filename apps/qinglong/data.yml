@@ -17,3 +17,10 @@ additionalProperties:
   website: https://qinglong.online
   github: https://github.com/whyour/qinglong
   document: https://qinglong.online/guide/introduction
+  architectures:
+    - amd64
+    - arm/v6
+    - arm/v7
+    - arm64
+    - ppc64le
+    - s390x

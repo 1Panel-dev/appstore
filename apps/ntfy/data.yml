@@ -26,3 +26,7 @@ additionalProperties:
         pt-br: Um serviço de notificação pub-sub simples baseado em HTTP
         ru: Простой сервис уведомлений pub-sub на основе HTTP
         ko: HTTP 기반의 간단한 pub-sub 알림 서비스
+    architectures:
+      - amd64
+      - arm/v7
+      - arm64

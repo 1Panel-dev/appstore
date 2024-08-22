@@ -13,6 +13,10 @@ additionalProperties:
   type: runtime
   crossVersionUpdate: false
   limit: 0
+  recommend: 0
   website: https://open.oceanbase.com/
   github: https://github.com/oceanbase/oceanbase
   document: https://www.oceanbase.com/docs
+  architectures:
+    - amd64
+    - arm64

@@ -26,3 +26,6 @@ additionalProperties:
     website: https://github.com/1Panel-dev/MaxKB
     github: https://github.com/1Panel-dev/MaxKB
     document: https://github.com/1Panel-dev/MaxKB/wiki
+    architectures:
+        - amd64
+        - arm64

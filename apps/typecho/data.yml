@@ -16,3 +16,8 @@ additionalProperties:
     website: https://typecho.org/
     github: https://github.com/typecho/typecho
     document: https://docs.typecho.org/doku.php
+    architectures:
+      - ppc64le
+      - s390x
+      - amd64
+      - arm64

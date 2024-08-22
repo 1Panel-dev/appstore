@@ -26,3 +26,6 @@ additionalProperties:
         pt-br: Aplicativo Web para navegar, ler e baixar eBooks armazenados em um banco de dados Calibre
         ru: Веб-приложение для просмотра, чтения и загрузки электронных книг, хранящихся в базе данных Calibre
         ko: Calibre 데이터베이스에 저장된 전자책을 탐색, 읽기 및 다운로드하기 위한 웹 애플리케이션
+    architectures:
+      - amd64
+      - arm64/v8

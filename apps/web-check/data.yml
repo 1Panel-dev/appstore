@@ -2,7 +2,6 @@ name: Web-Check
 tags:
     - 实用工具
 title: 用于分析任何网站的多合一 OSINT 工具
-type: 实用工具
 description: 用于分析任何网站的多合一 OSINT 工具
 additionalProperties:
     key: web-check
@@ -27,3 +26,6 @@ additionalProperties:
         pt-br: Ferramenta OSINT tudo-em-um para analisar qualquer site
         ru: Универсальный инструмент OSINT для анализа любого веб-сайта
         ko: 모든 웹사이트를 분석하기 위한 올인원 OSINT 도구
+    architectures:
+      - amd64
+      - arm64

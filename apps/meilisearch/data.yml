@@ -13,6 +13,7 @@ additionalProperties:
   type: tool
   crossVersionUpdate: false
   limit: 0
+  recommend: 0
   website: https://www.meilisearch.com
   github: https://github.com/meilisearch/meilisearch
   document: https://www.meilisearch.com/docs
@@ -25,3 +26,6 @@ additionalProperties:
     pt-br: Um mecanismo de busca de código aberto, incrivelmente rápido e altamente relevante que se encaixa perfeitamente no seu fluxo de trabalho
     ru: Открытая, молниеносная и высокорелевантная поисковая система, которая легко вписывается в ваш рабочий процесс
     ko: 오픈 소스, 번개처럼 빠르고 매우 관련성 높은 검색 엔진으로 워크플로우에 쉽게 통합됩니다.
+  architectures:
+    - amd64
+    - arm64

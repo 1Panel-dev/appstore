@@ -26,3 +26,6 @@ additionalProperties:
         pt-br: Servidor Git com CI/CD, Kanban e Pacotes
         ru: Сервер Git с CI/CD, Kanban и пакетами
         ko: CI/CD, Kanban 및 패키지가 포함된 Git 서버
+    architectures:
+      - amd64
+      - arm64

@@ -1,19 +1,22 @@
 name: ChatGPT-Next-Web
 tags:
-    - AI / 大模型
+- AI / 大模型
 title: 一键拥有你自己的跨平台 ChatGPT/Gemini 应用
 description: 一键拥有你自己的跨平台 ChatGPT/Gemini 应用
 additionalProperties:
-    key: chatgpt-next-web
-    name: ChatGPT-Next-Web
-    tags:
-        - AI
-    shortDescZh: 一键拥有你自己的跨平台 ChatGPT/Gemini 应用
-    shortDescEn: A cross-platform ChatGPT/Gemini UI
-    type: tool
-    crossVersionUpdate: true
-    limit: 0
-    recommend: 0
-    website: https://github.com/Yidadaa/ChatGPT-Next-Web
-    github: https://github.com/Yidadaa/ChatGPT-Next-Web
-    document: https://github.com/Yidadaa/ChatGPT-Next-Web
+  key: chatgpt-next-web
+  name: ChatGPT-Next-Web
+  tags:
+  - AI
+  shortDescZh: 一键拥有你自己的跨平台 ChatGPT/Gemini 应用
+  shortDescEn: A cross-platform ChatGPT/Gemini UI
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://github.com/Yidadaa/ChatGPT-Next-Web
+  github: https://github.com/Yidadaa/ChatGPT-Next-Web
+  document: https://github.com/Yidadaa/ChatGPT-Next-Web
+  architectures:
+  - amd64
+  - arm64

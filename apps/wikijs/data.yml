@@ -26,3 +26,7 @@ additionalProperties:
         pt-br: Um aplicativo wiki moderno e poderoso construído no Node.js
         ru: Современное и мощное приложение Wiki, построенное на Node.js
         ko: Node.js 기반의 현대적이고 강력한 위키 앱
+    architectures:
+      - amd64
+      - arm64
+      - arm/v7

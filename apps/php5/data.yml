@@ -25,3 +25,5 @@ additionalProperties:
     website: https://www.php.net/
     github: https://github.com/php/php-src
     document: https://www.php.net/docs.php
+    architectures:
+        - amd64

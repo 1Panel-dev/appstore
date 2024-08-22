@@ -25,3 +25,6 @@ additionalProperties:
         pt-br: Plataforma de streaming de eventos distribuída de código aberto
         ru: Открытая распределённая платформа потоковой передачи событий
         ko: 오픈 소스 분산 이벤트 스트리밍 플랫폼
+    architectures:
+      - amd64
+      - arm64
