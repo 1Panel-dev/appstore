@@ -1,6 +1,6 @@
 name: AdGuardHome
 tags:
-    - 安全
+- 安全
 title: 网络范围内的广告和跟踪器阻止 DNS 服务器
 description: 网络范围内的广告和跟踪器阻止 DNS 服务器
 additionalProperties:
