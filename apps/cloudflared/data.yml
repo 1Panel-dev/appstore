@@ -1,18 +1,22 @@
 name: cloudflared
 tags:
-    - 实用工具
+- 实用工具
 title: Cloudflare Tunnel 客户端
 description: Cloudflare Tunnel 客户端
 additionalProperties:
   key: cloudflared
   name: cloudflared
   tags:
-    - Tool
+  - Tool
   shortDescZh: Cloudflare Tunnel 客户端
   shortDescEn: Cloudflare Tunnel client
   type: tool
   crossVersionUpdate: true
   limit: 0
+  recommend: 0
   website: https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/
   github: https://github.com/cloudflare/cloudflared
   document: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/
+  architectures:
+  - amd64
+  - arm64/v8

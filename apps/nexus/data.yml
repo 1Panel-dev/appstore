@@ -1,19 +1,21 @@
 name: Nexus Repository
 tags:
-    - DevOps
+  - DevOps
 title: 开源的软件制品库
 description: 开源的软件制品库
 additionalProperties:
-    key: nexus
-    name: Nexus Repository
-    tags:
-        - DevOps
-    shortDescZh: 开源的软件制品库
-    shortDescEn: An open source repository for build artifacts
-    type: tool
-    crossVersionUpdate: false
-    limit: 1
-    recommend: 0
-    website: https://www.sonatype.com/products/nexus-repository
-    github: https://github.com/sonatype/docker-nexus3
-    document: https://help.sonatype.com/repomanager3
+  key: nexus
+  name: Nexus Repository
+  tags:
+    - DevOps
+  shortDescZh: 开源的软件制品库
+  shortDescEn: An open source repository for build artifacts
+  type: tool
+  crossVersionUpdate: false
+  limit: 1
+  recommend: 0
+  website: https://www.sonatype.com/products/nexus-repository
+  github: https://github.com/sonatype/docker-nexus3
+  document: https://help.sonatype.com/repomanager3
+  architectures:
+    - amd64

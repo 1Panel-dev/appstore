@@ -1,13 +1,13 @@
 name: Neo4j
 tags:
-  - 数据库
+- 数据库
 title: 世界领先的图数据库
 description: 世界领先的图数据库
 additionalProperties:
   key: neo4j
   name: Neo4j
   tags:
-    - Database
+  - Database
   shortDescZh: 世界领先的图数据库
   shortDescEn: The world’s leading Graph Database
   type: runtime
@@ -17,3 +17,6 @@ additionalProperties:
   website: https://neo4j.com/
   github: https://github.com/neo4j/neo4j
   document: https://neo4j.com/docs/
+  architectures:
+  - amd64
+  - arm64/v8

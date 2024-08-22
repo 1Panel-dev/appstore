@@ -1,19 +1,24 @@
 name: MariaDB
 tags:
-    - 数据库
+- 数据库
 title: 著名的 MySQL 分支版本
 description: 著名的 MySQL 分支版本
 additionalProperties:
-    key: mariadb
-    name: MariaDB
-    tags:
-        - Database
-    shortDescZh: 著名的 MySQL 分支版本
-    shortDescEn: The open source relational database
-    type: runtime
-    crossVersionUpdate: false
-    limit: 0
-    recommend: 0
-    website: https://mariadb.org/
-    github: https://github.com/MariaDB/server/
-    document: https://mariadb.org/documentation/
+  key: mariadb
+  name: MariaDB
+  tags:
+  - Database
+  shortDescZh: 著名的 MySQL 分支版本
+  shortDescEn: The open source relational database
+  type: runtime
+  crossVersionUpdate: false
+  limit: 0
+  recommend: 0
+  website: https://mariadb.org/
+  github: https://github.com/MariaDB/server/
+  document: https://mariadb.org/documentation/
+  architectures:
+  - amd64
+  - arm64/v8
+  - ppc64le
+  - s390x

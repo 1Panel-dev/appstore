@@ -17,3 +17,5 @@ additionalProperties:
     website: http://joeferner.github.io/redis-commander/
     github: https://github.com/joeferner/redis-commander
     document: https://github.com/joeferner/redis-commander/blob/master/docs/configuration.md
+    architectures:
+        - amd64

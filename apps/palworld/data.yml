@@ -1,19 +1,22 @@
 name: Palworld Server
 tags:
-    - 休闲游戏
+  - 休闲游戏
 title: 幻兽帕鲁服务端
 description: 幻兽帕鲁服务端
 additionalProperties:
-    key: palworld
-    name: Palworld Server
-    tags:
-        - Game
-    shortDescZh: 幻兽帕鲁服务端
-    shortDescEn: Palworld Dedicated Server
-    type: tool
-    crossVersionUpdate: true
-    limit: 0
-    recommend: 0
-    website: https://hub.docker.com/r/kagurazakanyaa/palworld
-    github: https://github.com/KagurazakaNyaa/palworld-docker
-    document: https://github.com/KagurazakaNyaa/palworld-docker
+  key: palworld
+  name: Palworld Server
+  tags:
+    - Game
+  shortDescZh: 幻兽帕鲁服务端
+  shortDescEn: Palworld Dedicated Server
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://hub.docker.com/r/kagurazakanyaa/palworld
+  github: https://github.com/KagurazakaNyaa/palworld-docker
+  document: https://github.com/KagurazakaNyaa/palworld-docker
+  architectures:
+    - amd64
+    - arm64

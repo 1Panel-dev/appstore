@@ -1,13 +1,13 @@
 name: Bytebase
 tags:
-  - DevOps
+- DevOps
 title: 开源数据库 DevOps 解决方案
 description: 开源数据库 DevOps 解决方案
 additionalProperties:
   key: bytebase
   name: Bytebase
   tags:
-    - DevOps
+  - DevOps
   shortDescZh: 开源数据库 DevOps 解决方案
   shortDescEn: Open-Source Database DevOps Solution
   type: tool
@@ -17,3 +17,6 @@ additionalProperties:
   website: https://www.bytebase.com
   github: https://github.com/bytebase/bytebase
   document: https://www.bytebase.com/docs
+  architectures:
+  - amd64
+  - arm64
