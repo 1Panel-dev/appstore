@@ -26,3 +26,6 @@ additionalProperties:
         pt-br: Redpanda Console – Uma interface para streaming de dados
         ru: Redpanda Console – Интерфейс для потоковой передачи данных
         ko: Redpanda Console – 데이터 스트리밍을 위한 UI
+    architectures:
+      - amd64
+      - arm64

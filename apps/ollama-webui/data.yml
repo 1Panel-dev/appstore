@@ -26,3 +26,6 @@ additionalProperties:
     website: https://openwebui.com/
     github: https://github.com/open-webui/open-webui
     document: https://docs.openwebui.com/
+    architectures:
+      - amd64
+      - arm64

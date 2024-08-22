@@ -26,3 +26,9 @@ additionalProperties:
         pt-br: Sistema de monitoramento e banco de dados de séries temporais
         ru: Система мониторинга и база данных временных рядов
         ko: 모니터링 시스템 및 시계열 데이터베이스
+    architectures:
+      - amd64
+      - arm64/v8
+      - arm/v7
+      - ppc64le
+      - s390x

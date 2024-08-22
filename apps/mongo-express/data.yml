@@ -26,3 +26,6 @@ additionalProperties:
     website: https://github.com/mongo-express/mongo-express
     github: https://github.com/mongo-express/mongo-express
     document: https://github.com/mongo-express/mongo-express
+    architectures:
+      - amd64
+      - arm64/v8

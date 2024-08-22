@@ -26,3 +26,6 @@ additionalProperties:
         pt-br: Um painel de controle e inicializador de aplicativos
         ru: Панель управления и запуск приложений
         ko: 애플리케이션 대시보드 및 실행기
+    architectures:
+      - amd64
+      - arm64

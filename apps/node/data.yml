@@ -25,3 +25,10 @@ additionalProperties:
   recommend: 110
   website: https://nodejs.org/en
   github: https://github.com/nodejs
+  document: ""
+  architectures:
+    - amd64
+    - arm/v7
+    - arm64
+    - ppc64le
+    - s390x

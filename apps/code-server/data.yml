@@ -19,10 +19,13 @@ additionalProperties:
         ko: 브라우저에서 VS Code
         zh-Hant: 瀏覽器中的 VS Code
         zh: 浏览器中的 VS Code
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0
     website: https://coder.com/
     github: https://github.com/coder/code-server
     document: https://coder.com/docs/code-server/latest
+    architectures:
+      - amd64
+      - arm64

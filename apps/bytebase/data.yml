@@ -26,3 +26,6 @@ additionalProperties:
     pt-br: Solução DevOps de Banco de Dados de Código Aberto
     ru: Решение DevOps для баз данных с открытым исходным кодом
     ko: 오픈 소스 데이터베이스 DevOps 솔루션
+  architectures:
+    - amd64
+    - arm64

@@ -7,7 +7,7 @@ additionalProperties:
     key: sftpgo
     name: SFTPGo
     tags:
-        - Tool
+      - Tool
     shortDescZh: 功能齐全且高度可配置的 SFTP 服务器
     shortDescEn: Fully featured and highly configurable SFTP server
     description:
@@ -20,9 +20,14 @@ additionalProperties:
         zh-hant: 功能齊全且高度可配置的 SFTP 伺服器
         zh: 功能齐全且高度可配置的 SFTP 服务器
     type: tool
-    crossVersionUpdate: false  
+    crossVersionUpdate: false
     limit: 1
     recommend: 80
     website: https://sftpgo.com/
     github: https://github.com/drakkan/sftpgo/
     document: https://sftpgo.github.io/latest/
+    architectures:
+    - amd64
+    - arm64
+    - ppc64le
+    - arm/v7

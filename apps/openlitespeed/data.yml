@@ -26,3 +26,5 @@ additionalProperties:
         pt-br: Um servidor HTTP de alto desempenho, leve e de código aberto
         ru: Высокопроизводительный, легковесный, открытый HTTP-сервер
         ko: 고성능, 경량, 오픈 소스 HTTP 서버
+    architectures:
+      - amd64

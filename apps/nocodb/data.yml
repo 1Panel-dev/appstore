@@ -26,3 +26,7 @@ additionalProperties:
     pt-br: Plataforma de banco de dados sem código
     ru: Платформа базы данных без кода
     ko: 코드 없는 데이터베이스 플랫폼
+  architectures:
+    - amd64
+    - arm64
+    - arm/v7

@@ -26,3 +26,6 @@ additionalProperties:
     website: https://gitea.com/gitea/act_runner
     github: https://gitea.com/gitea/act_runner
     document: https://docs.gitea.com/next/usage/actions/act-runner
+    architectures:
+      - amd64
+      - arm64

@@ -26,3 +26,8 @@ additionalProperties:
         pt-br: Um painel de controle de aplicativos moderno, totalmente estático, rápido, seguro, totalmente proxy e altamente personalizável
         ru: Современная, полностью статическая, быстрая, безопасная, полностью проксированная, высоконастраиваемая панель управления приложениями
         ko: 현대적이고 완전히 정적이며 빠르고 안전하며 완전히 프록시화되고 고도로 사용자 정의 가능한 애플리케이션 대시보드
+    architectures:
+      - amd64
+      - arm64
+      - arm/v7
+      - arm/v6
