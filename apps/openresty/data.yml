@@ -4,16 +4,19 @@ tags:
 title: 基于 NGINX 和 LuaJIT 的 Web 平台
 description: 基于 NGINX 和 LuaJIT 的 Web 平台
 additionalProperties:
-    key: openresty
-    name: OpenResty
-    tags:
-        - Server
-    shortDescZh: 基于 NGINX 和 LuaJIT 的 Web 平台
-    shortDescEn: High performance web platform based on Nginx and LuaJIT
-    type: runtime
-    crossVersionUpdate: true
-    limit: 1
-    recommend: 1
-    website: https://openresty.org
-    github: https://github.com/openresty/openresty
-    document: http://openresty.org/cn/getting-started.html
+  key: openresty
+  name: OpenResty
+  tags:
+      - Server
+  shortDescZh: 基于 NGINX 和 LuaJIT 的 Web 平台
+  shortDescEn: High performance web platform based on Nginx and LuaJIT
+  type: runtime
+  crossVersionUpdate: true
+  limit: 1
+  recommend: 1
+  website: https://openresty.org
+  github: https://github.com/openresty/openresty
+  document: http://openresty.org/cn/getting-started.html
+  architectures:
+      - amd64
+      - arm64
