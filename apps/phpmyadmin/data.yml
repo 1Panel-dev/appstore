@@ -26,3 +26,9 @@ additionalProperties:
     website: https://www.phpmyadmin.net/
     github: https://github.com/phpmyadmin/phpmyadmin
     document: https://www.phpmyadmin.net/docs/
+    architectures:
+        - amd64
+        - arm/v7
+        - arm64/v8
+        - ppc64le
+        - s390x
