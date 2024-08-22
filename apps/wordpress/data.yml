@@ -7,7 +7,7 @@ additionalProperties:
     key: wordpress
     name: WordPress
     tags:
-        - WebSite
+      - WebSite
     shortDescZh: 著名的开源博客软件和 CMS 系统
     shortDescEn: Open source blogging software and content management system
     type: website
@@ -17,3 +17,10 @@ additionalProperties:
     website: https://wordpress.org/
     github: https://github.com/WordPress/WordPress
     document: https://cn.wordpress.org/support/
+    architectures:
+      - amd64
+      - arm/v5
+      - arm/v7
+      - arm64/v8
+      - ppc64le
+      - s390x

@@ -1,18 +1,21 @@
 name: mBlog
 tags:
-  - 建站
+- 建站
 title: 开源自部署的个人微博
 description: 开源自部署的个人微博
 additionalProperties:
   key: mblog
   name: MBlog
   tags:
-    - WebSite
+  - WebSite
   shortDescZh: 开源自部署的个人微博
   shortDescEn: Open source self hosted personal micro blog platform
   type: website
   crossVersionUpdate: true
   limit: 0
+  recommend: 0
   website: https://mblog.club/
   github: https://github.com/kingwrcy/mblog-backend
   document: https://github.com/kingwrcy/mblog-backend
+  architectures:
+  - amd64

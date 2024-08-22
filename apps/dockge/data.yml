@@ -1,13 +1,13 @@
 name: Dockge
 tags:
-    - 实用工具
+- 实用工具
 title: 自托管 - Docker compose.yaml - 面向堆栈的管理器
 description: 自托管 - Docker compose.yaml - 面向堆栈的管理器
 additionalProperties:
   key: dockge
   name: Dockge
   tags:
-    - Tool
+  - Tool
   shortDescZh: 自托管 - Docker compose.yaml - 面向堆栈的管理器
   shortDescEn: Self-hosted - Docker compose.yaml - Stack-oriented Manager
   type: tool
@@ -17,3 +17,7 @@ additionalProperties:
   website: https://dockge.kuma.pet
   github: https://github.com/louislam/dockge
   document: https://github.com/louislam/dockge/blob/master/README.md
+  architectures:
+  - amd64
+  - arm64
+  - arm/v7

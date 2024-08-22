@@ -1,19 +1,22 @@
 name: Elasticsearch
 tags:
-    - 数据库
+- 数据库
 title: Elasticsearch
 description: 免费开放、分布式、RESTful 搜索引擎
 additionalProperties:
-    key: elasticsearch
-    name: Elasticsearch
-    tags:
-        - Database
-    shortDescZh: 免费开放、分布式、RESTful 搜索引擎
-    shortDescEn: Free and Open, Distributed, RESTful Search Engine
-    type: tool
-    crossVersionUpdate: false
-    limit: 0
-    recommend: 0
-    website: https://www.elastic.co
-    github: https://github.com/elastic/elasticsearch
-    document: https://www.elastic.co/guide/en/elasticsearch/reference/8.11/elasticsearch-intro.html
+  key: elasticsearch
+  name: Elasticsearch
+  tags:
+  - Database
+  shortDescZh: 免费开放、分布式、RESTful 搜索引擎
+  shortDescEn: Free and Open, Distributed, RESTful Search Engine
+  type: tool
+  crossVersionUpdate: false
+  limit: 0
+  recommend: 0
+  website: https://www.elastic.co
+  github: https://github.com/elastic/elasticsearch
+  document: https://www.elastic.co/guide/en/elasticsearch/reference/8.11/elasticsearch-intro.html
+  architectures:
+  - amd64
+  - arm64/v8
