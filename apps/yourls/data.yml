@@ -26,3 +26,9 @@ additionalProperties:
         pt-br: O encurtador de URL auto-hospedado padrão de fato em PHP
         ru: Фактический стандартный самохостинг для сокращения URL на PHP
         ko: PHP에서 구동되는 사실상의 표준 자체 호스팅 URL 단축기
+    architectures:
+        - amd64
+        - arm64
+        - arm/v7
+        - s390x
+        - ppc64le

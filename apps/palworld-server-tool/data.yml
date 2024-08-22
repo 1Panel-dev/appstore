@@ -26,3 +26,6 @@ additionalProperties:
     website: https://github.com/zaigie/palworld-server-tool
     github: https://github.com/zaigie/palworld-server-tool
     document: https://github.com/zaigie/palworld-server-tool
+    architectures:
+      - amd64
+      - arm64

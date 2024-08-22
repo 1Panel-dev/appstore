@@ -10,7 +10,7 @@ additionalProperties:
         - Security
     shortDescZh: 管理双因素身份验证（2FA）帐户并生成安全代码的 Web 应用程序
     shortDescEn: A Web app to manage your Two-Factor Authentication (2FA) accounts and generate their security codes
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0
@@ -26,3 +26,8 @@ additionalProperties:
         pt-br: Um aplicativo Web para gerenciar suas contas de autenticação de dois fatores (2FA) e gerar seus códigos de segurança
         ru: Веб-приложение для управления учетными записями двухфакторной аутентификации (2FA) и генерации их кодов безопасности
         ko: 이중 인증(2FA) 계정을 관리하고 보안 코드를 생성하는 웹 애플리케이션
+    architectures:
+      - amd64
+      - arm64
+      - arm/v6
+      - arm/v7

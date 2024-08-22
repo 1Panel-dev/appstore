@@ -10,7 +10,7 @@ additionalProperties:
     - Tool
   shortDescZh: 自托管 - Docker compose.yaml - 面向堆栈的管理器
   shortDescEn: Self-hosted - Docker compose.yaml - Stack-oriented Manager
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 0
@@ -26,3 +26,7 @@ additionalProperties:
     pt-br: Auto-hospedado - Docker compose.yaml - Gerenciador orientado a pilhas
     ru: Самостоятельно размещаемый - Docker compose.yaml - Менеджер, ориентированный на стеки
     ko: 셀프 호스팅 - Docker compose.yaml - 스택 지향 관리자
+  architectures:
+    - amd64
+    - arm64
+    - arm/v7

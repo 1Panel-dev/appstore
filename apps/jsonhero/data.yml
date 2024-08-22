@@ -26,3 +26,5 @@ additionalProperties:
         pt-br: Um explorador JSON bonito e de código aberto
         ru: Открытый, красивый JSON-обозреватель
         ko: 오픈 소스이자 아름다운 JSON 탐색기
+    architectures:
+      - amd64

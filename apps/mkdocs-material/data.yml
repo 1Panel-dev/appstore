@@ -26,3 +26,7 @@ additionalProperties:
     pt-br: Um poderoso framework de documentação baseado no MkDocs
     ru: Мощный фреймворк для документации на основе MkDocs
     ko: MkDocs 위에 구축된 강력한 문서화 프레임워크
+  architectures:
+    - amd64
+    - arm64
+    - arm/v7

@@ -24,3 +24,6 @@ additionalProperties:
   limit: 0
   recommend: 120
   website: https://www.java.com/
+  architectures:
+    - amd64
+    - arm64
