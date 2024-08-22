@@ -17,3 +17,7 @@ additionalProperties:
     website: https://js.wiki/
     github: https://github.com/requarks/wiki
     document: https://docs.requarks.io/
+    architectures:
+      - amd64
+      - arm64
+      - arm/v7

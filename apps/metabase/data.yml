@@ -26,3 +26,5 @@ additionalProperties:
     website: https://www.metabase.com
     github: https://github.com/metabase/metabase
     document: https://www.metabase.com/docs
+    architectures:
+        - amd64
