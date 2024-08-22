@@ -25,3 +25,9 @@ additionalProperties:
   recommend: 125
   website: https://go.dev/
   github: https://github.com/golang/go
+  architectures:
+    - amd64
+    - arm64
+    - arm/v7
+    - s390x
+    - ppc64le
