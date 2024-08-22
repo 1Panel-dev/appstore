@@ -16,3 +16,5 @@ additionalProperties:
   website: https://umami.is/
   github: https://github.com/umami-software/umami
   document: https://umami.is/docs
+  architectures:
+    - amd64
