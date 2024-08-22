@@ -4,16 +4,19 @@ tags:
 title: 开源的 Web 服务器和 Servlet 容器
 description: 开源的 Web 服务器和 Servlet 容器
 additionalProperties:
-    key: tomcat
-    name: Apache Tomcat
-    tags:
-        - Middleware
-    shortDescZh: 开源的 Web 服务器和 Servlet 容器
-    shortDescEn: An open-source web server and servlet container
-    type: tool
-    crossVersionUpdate: false
-    limit: 0
-    recommend: 95
-    website: https://tomcat.apache.org/
-    github: https://github.com/apache/tomcat
-    document: https://tomcat.apache.org/
+  key: tomcat
+  name: Apache Tomcat
+  tags:
+    - Middleware
+  shortDescZh: 开源的 Web 服务器和 Servlet 容器
+  shortDescEn: An open-source web server and servlet container
+  type: tool
+  crossVersionUpdate: false
+  limit: 0
+  recommend: 95
+  website: https://tomcat.apache.org/
+  github: https://github.com/apache/tomcat
+  document: https://tomcat.apache.org/
+  architectures:
+    - amd64
+    - arm64

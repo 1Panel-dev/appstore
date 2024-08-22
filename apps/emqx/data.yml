@@ -1,19 +1,23 @@
 name: EMQX
 tags:
-    - 中间件
+- 中间件
 title: 适用于 IoT、IIoT 和联网车辆的最具可扩展性的开源 MQTT 代理
 description: 适用于 IoT、IIoT 和联网车辆的最具可扩展性的开源 MQTT 代理
 additionalProperties:
-    key: emqx
-    name: EMQX
-    tags:
-        - Middleware
-    shortDescZh: 适用于 IoT、IIoT 和联网车辆的最具可扩展性的开源 MQTT 代理
-    shortDescEn: The most scalable open-source MQTT broker for IoT, IIoT, and connected vehicles
-    type: tool
-    crossVersionUpdate: false
-    limit: 0
-    recommend: 0
-    website: https://www.emqx.io/
-    github: https://github.com/emqx/emqx
-    document: https://www.emqx.io/docs/en/v5.0/
+  key: emqx
+  name: EMQX
+  tags:
+  - Middleware
+  shortDescZh: 适用于 IoT、IIoT 和联网车辆的最具可扩展性的开源 MQTT 代理
+  shortDescEn: The most scalable open-source MQTT broker for IoT, IIoT, and connected
+    vehicles
+  type: tool
+  crossVersionUpdate: false
+  limit: 0
+  recommend: 0
+  website: https://www.emqx.io/
+  github: https://github.com/emqx/emqx
+  document: https://www.emqx.io/docs/en/v5.0/
+  architectures:
+  - amd64
+  - arm64

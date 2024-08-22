@@ -26,3 +26,9 @@ additionalProperties:
     website: https://www.postgresql.org/
     github: https://github.com/postgres/postgres
     document: https://www.postgresql.org/docs/
+    architectures:
+      - amd64
+      - arm/v7
+      - arm64
+      - ppc64le
+      - s390x

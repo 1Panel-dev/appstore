@@ -16,3 +16,5 @@ additionalProperties:
   website: https://mblog.club/
   github: https://github.com/kingwrcy/mblog-backend
   document: https://github.com/kingwrcy/mblog-backend
+  architectures:
+    - amd64

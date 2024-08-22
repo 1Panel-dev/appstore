@@ -19,3 +19,6 @@ additionalProperties:
   website: https://share.lanol.cn
   github: https://github.com/vastsa/FileCodeBox
   document: https://fcb-docs.aiuo.net
+  architectures:
+  - amd64
+  - arm64
