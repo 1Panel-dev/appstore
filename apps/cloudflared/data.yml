@@ -13,6 +13,7 @@ additionalProperties:
   type: tool
   crossVersionUpdate: true
   limit: 0
+  recommend: 0
   website: https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/
   github: https://github.com/cloudflare/cloudflared
   document: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/
@@ -25,3 +26,6 @@ additionalProperties:
     pt-br: Cliente do Cloudflare Tunnel
     ru: Клиент Cloudflare Tunnel
     ko: Cloudflare 터널 클라이언트
+  architectures:
+    - amd64
+    - arm64/v8

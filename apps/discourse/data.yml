@@ -26,3 +26,6 @@ additionalProperties:
         pt-br: Uma plataforma para discussão comunitária. Gratuito, aberto, simples.
         ru: Платформа для обсуждения в сообществе. Бесплатно, открыто, просто.
         ko: 커뮤니티 토론을 위한 플랫폼. 무료, 오픈, 간단.
+    architectures:
+      - amd64
+      - arm64

@@ -25,3 +25,8 @@ additionalProperties:
         pt-br: Um sistema de cache distribuído
         ru: Распределённая система кэширования
         ko: 분산 캐싱 시스템
+    architectures:
+      - amd64
+      - arm64/v8
+      - ppc64le
+      - s390x

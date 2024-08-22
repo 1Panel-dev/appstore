@@ -26,3 +26,5 @@ additionalProperties:
         pt-br: Um servidor simples para enviar e receber mensagens
         ru: Простой сервер для отправки и получения сообщений
         ko: 메시지를 보내고 받는 간단한 서버
+    architectures:
+        - amd64

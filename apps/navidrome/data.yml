@@ -26,3 +26,8 @@ additionalProperties:
         pt-br: Um servidor de coleção de músicas baseado na web e de código aberto
         ru: Открытый веб-сервер для коллекции музыки и потоковой передачи
         ko: 웹 기반 오픈 소스 음악 컬렉션 서버 및 스트리머
+    architectures:
+      - amd64
+      - arm/v6
+      - arm/v7
+      - arm64

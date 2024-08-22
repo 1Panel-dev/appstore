@@ -26,3 +26,6 @@ additionalProperties:
         pt-br: Servidor doméstico Matrix de código aberto, construa seu próprio servidor de chat
         ru: Открытый сервер Matrix, создайте свой собственный сервер чата
         ko: 오픈 소스 Matrix 홈 서버, 자체 채팅 서버 구축
+    architectures:
+      - amd64
+      - arm64

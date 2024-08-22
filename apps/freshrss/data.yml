@@ -26,3 +26,6 @@ additionalProperties:
         pt-br: Um agregador de feeds RSS e Atom auto-hospedado
         ru: Самостоятельно размещаемый агрегатор RSS и Atom-каналов
         ko: 자체 호스팅 RSS 및 Atom 피드 집계기
+    architectures:
+      - amd64
+      - arm64

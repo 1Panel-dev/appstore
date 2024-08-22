@@ -26,3 +26,6 @@ additionalProperties:
         pt-br: Cliente BitTorrent de código aberto multiplataforma
         ru: Кроссплатформенный клиент BitTorrent с открытым исходным кодом
         ko: 크로스 플랫폼 오픈 소스 BitTorrent 클라이언트
+    architectures:
+      - amd64
+      - arm64

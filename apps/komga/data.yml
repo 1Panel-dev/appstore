@@ -26,3 +26,7 @@ additionalProperties:
     pt-br: Komga é um servidor de mídia para seus quadrinhos, mangás, BDs e revistas.
     ru: Komga — это медиа-сервер для ваших комиксов, манги, BD и журналов.
     ko: Komga는 만화, 잡지 등을 위한 미디어 서버입니다.
+  architectures:
+    - amd64
+    - arm/v7
+    - arm64

@@ -25,3 +25,9 @@ additionalProperties:
     website: https://adguard.com/adguard-home.html
     github: https://github.com/AdguardTeam/AdGuardHome
     document: https://github.com/AdguardTeam/AdGuardHome/wiki
+    architectures:
+      - amd64
+      - arm/v6
+      - arm/v7
+      - arm64
+      - ppc64le

@@ -26,3 +26,6 @@ additionalProperties:
     website: https://n8n.io/
     github: https://github.com/n8n-io/n8n
     document: https://docs.n8n.io/
+    architectures:
+      - amd64
+      - arm64
