@@ -1,18 +1,23 @@
 name: MeiliSearch
 tags:
-    - 实用工具
+- 实用工具
 title: 开源、快如闪电且高度相关的搜索引擎
 description: 开源、快如闪电且高度相关的搜索引擎
 additionalProperties:
   key: meilisearch
   name: MeiliSearch
   tags:
-    - Tool
+  - Tool
   shortDescZh: 开源、快如闪电且高度相关的搜索引擎
-  shortDescEn: An open-source, lightning-fast, and hyper-relevant search engine that fits effortlessly into your workflow
+  shortDescEn: An open-source, lightning-fast, and hyper-relevant search engine that
+    fits effortlessly into your workflow
   type: tool
   crossVersionUpdate: false
   limit: 0
+  recommend: 0
   website: https://www.meilisearch.com
   github: https://github.com/meilisearch/meilisearch
   document: https://www.meilisearch.com/docs
+  architectures:
+  - amd64
+  - arm64

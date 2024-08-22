@@ -1,19 +1,26 @@
 name: Changedetection.io
 tags:
-    - 实用工具
+- 实用工具
 title: 免费开源网站变更检测、网站观察、补货监控和通知服务
 description: 免费开源网站变更检测、网站观察、补货监控和通知服务
 additionalProperties:
-    key: changedetectionio
-    name: Changedetection.io
-    tags:
-        - Tool
-    shortDescZh: 免费开源网站变更检测、网站观察、补货监控和通知服务
-    shortDescEn: free open source website change detection, website watcher, restock monitor and notification service
-    type: tool
-    crossVersionUpdate: true
-    limit: 0
-    recommend: 0
-    website: https://changedetection.io/
-    github: https://github.com/dgtlmoon/changedetection.io
-    document: https://github.com/dgtlmoon/changedetection.io/wiki
+  key: changedetectionio
+  name: Changedetection.io
+  tags:
+  - Tool
+  shortDescZh: 免费开源网站变更检测、网站观察、补货监控和通知服务
+  shortDescEn: free open source website change detection, website watcher, restock
+    monitor and notification service
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://changedetection.io/
+  github: https://github.com/dgtlmoon/changedetection.io
+  document: https://github.com/dgtlmoon/changedetection.io/wiki
+  architectures:
+  - amd64
+  - arm64
+  - arm/v6
+  - arm/v7
+  - arm/v8

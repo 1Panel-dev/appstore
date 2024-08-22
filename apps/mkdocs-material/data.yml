@@ -1,13 +1,13 @@
 name: Material for MkDocs
 tags:
-    - 实用工具
+- 实用工具
 title: Markdown 文件托管平台
 description: Markdown 文件托管平台
 additionalProperties:
   key: mkdocs-material
   name: Material for MkDocs
   tags:
-    - Tool
+  - Tool
   shortDescZh: Markdown 文件托管平台
   shortDescEn: A powerful documentation framework on top of MkDocs
   type: tool
@@ -17,3 +17,7 @@ additionalProperties:
   website: https://squidfunk.github.io/mkdocs-material/
   github: https://github.com/squidfunk/mkdocs-material
   document: https://squidfunk.github.io/mkdocs-material/getting-started/
+  architectures:
+  - amd64
+  - arm64
+  - arm/v7

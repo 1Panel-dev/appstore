@@ -17,3 +17,5 @@ additionalProperties:
   website: https://docs.keydb.dev
   github: https://github.com/Snapchat/KeyDB
   document: https://docs.keydb.dev/docs
+  architectures:
+      - amd64

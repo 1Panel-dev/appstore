@@ -1,18 +1,22 @@
 name: Draw.io
 tags:
-    - 实用工具
+- 实用工具
 title: 用于一般图表绘制的 JavaScript 客户端编辑器
 description: 用于一般图表绘制的 JavaScript 客户端编辑器
 additionalProperties:
-    key: drawio
-    name: Draw.io
-    tags:
-        - Tool
-    shortDescZh: 用于一般图表绘制的 JavaScript 客户端编辑器
-    shortDescEn: JavaScript, client-side editor for general diagramming
-    type: tool
-    crossVersionUpdate: true
-    limit: 0
-    website: https://www.drawio.com/
-    github: https://github.com/jgraph/drawio
-    document: https://github.com/jgraph/drawio/wiki
+  key: drawio
+  name: Draw.io
+  tags:
+  - Tool
+  shortDescZh: 用于一般图表绘制的 JavaScript 客户端编辑器
+  shortDescEn: JavaScript, client-side editor for general diagramming
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://www.drawio.com/
+  github: https://github.com/jgraph/drawio
+  document: https://github.com/jgraph/drawio/wiki
+  architectures:
+  - amd64
+  - arm64
