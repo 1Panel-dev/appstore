@@ -1,6 +1,6 @@
 name: ClickHouse
 tags:
-  - 数据库
+    - 数据库
 title: 一款免费的大数据分析 DBMS
 description: 一款免费的大数据分析 DBMS
 additionalProperties:
@@ -13,10 +13,9 @@ additionalProperties:
   type: tool
   crossVersionUpdate: false
   limit: 0
-  recommend: 0
   website: https://clickhouse.com/
   github: https://github.com/ClickHouse/ClickHouse
   document: https://clickhouse.com/docs/zh
   architectures:
-  - amd64
-  - arm64
+    - amd64
+    - arm64

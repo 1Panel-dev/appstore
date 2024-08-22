@@ -1,7 +1,7 @@
 name: AList
 tags:
-  - 实用工具
-  - 云存储
+    - 实用工具
+    - 云存储
 title: 支持多存储的文件列表程序和私人网盘
 description: 支持多存储的文件列表程序和私人网盘
 additionalProperties:
