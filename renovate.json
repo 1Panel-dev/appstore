@@ -99,6 +99,26 @@
       "allowedVersions": "/^2022-*/"
     },
     {
+      "matchFileNames": ["apps/postgresql/12.*/*.yml"],
+      "allowedVersions": "/^12.*/"
+    },
+    {
+      "matchFileNames": ["apps/postgresql/13.*/*.yml"],
+      "allowedVersions": "/^13.*/"
+    },
+    {
+      "matchFileNames": ["apps/postgresql/14.*/*.yml"],
+      "allowedVersions": "/^14.*/"
+    },
+    {
+      "matchFileNames": ["apps/postgresql/15.*/*.yml"],
+      "allowedVersions": "/^15.*/"
+    },
+    {
+      "matchFileNames": ["apps/postgresql/16.*/*.yml"],
+      "allowedVersions": "/^16.*/"
+    },
+    {
       "matchDatasources": ["docker"],
       "matchPackageNames": ["ghcr.io/umami-software/umami"],
       "versionCompatibility": "^(?<compatibility>.*)-(?<version>.*)$",
