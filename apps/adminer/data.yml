@@ -1,6 +1,6 @@
 name: Adminer
 tags:
-    - 开发工具
+  - 开发工具
 title: PHP 轻量级数据库管理工具
 description: PHP 轻量级数据库管理工具
 additionalProperties:
