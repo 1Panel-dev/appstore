@@ -1,18 +1,23 @@
 name: Sentinel Dashboard
 tags:
-  - 中间件
+- 中间件
 title: 流量控制、熔断降级规则统一配置和管理的入口
 description: 流量控制、熔断降级规则统一配置和管理的入口
 additionalProperties:
   key: sentinel-dashboard
   name: Sentinel Dashboard
   tags:
-    - Middleware
+  - Middleware
   shortDescZh: 流量控制、熔断降级规则统一配置和管理的入口
-  shortDescEn: Unified configuration and management of flow control and circuit breaker degradation rules
+  shortDescEn: Unified configuration and management of flow control and circuit breaker
+    degradation rules
   type: tool
   crossVersionUpdate: false
   limit: 0
+  recommend: 0
   website: https://sentinelguard.io/
   github: https://github.com/alibaba/Sentinel
   document: https://sentinelguard.io/zh-cn/docs/dashboard.html
+  architectures:
+  - arm64
+  - amd64

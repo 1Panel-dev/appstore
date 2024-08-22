@@ -25,3 +25,6 @@ additionalProperties:
     website: https://ollama.com/
     github: https://github.com/ollama/ollama
     document: https://github.com/ollama/ollama/blob/main/docs/README.md
+    architectures:
+      - amd64
+      - arm64
