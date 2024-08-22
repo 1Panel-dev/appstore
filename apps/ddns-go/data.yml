@@ -1,6 +1,6 @@
 name: ddns-go
 tags:
-  - 实用工具
+    - 实用工具
 title: 简单易用的 DDNS
 description: 简单易用的 DDNS
 additionalProperties:
