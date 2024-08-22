@@ -26,3 +26,6 @@ additionalProperties:
         pt-br: Armazenamento de dados escalável para métricas, eventos e análises em tempo real
         ru: Масштабируемое хранилище данных для метрик, событий и аналитики в реальном времени
         ko: 메트릭, 이벤트 및 실시간 분석을 위한 확장 가능한 데이터 저장소
+    architectures:
+      - amd64
+      - arm64/v8

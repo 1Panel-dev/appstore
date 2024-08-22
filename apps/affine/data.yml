@@ -17,6 +17,10 @@ additionalProperties:
   website: https://affine.pro
   github: https://github.com/toeverything/AFFiNE
   document: https://docs.affine.pro/docs/self-host-affine
+  architectures:
+    - amd64
+    - arm64
+    - arm/v7
   description:
     en: A workspace with fully merged docs, whiteboards and databases
     zh: 将文档、白板和数据库完全整合的工作空间

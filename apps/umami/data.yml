@@ -25,3 +25,5 @@ additionalProperties:
     pt-br: Uma alternativa simples, rápida e focada na privacidade ao Google Analytics
     ru: Простая, быстрая и ориентированная на конфиденциальность альтернатива Google Analytics
     ko: Google Analytics에 대한 간단하고 빠르며 개인 정보 보호 중심의 대안
+  architectures:
+    - amd64

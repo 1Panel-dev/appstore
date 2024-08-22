@@ -26,3 +26,6 @@ additionalProperties:
     website: https://hub.docker.com/r/thijsvanloef/palworld-server-docker
     github: https://github.com/thijsvanloef/palworld-server-docker
     document: https://palworld-server-docker.loef.dev/
+    architectures:
+      - amd64
+      - arm64

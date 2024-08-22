@@ -28,3 +28,10 @@ additionalProperties:
     website: https://alist.nn.ci/
     github: https://github.com/alist-org/alist
     document: https://alist.nn.ci/zh/guide/
+    architectures:
+      - amd64
+      - arm64
+      - arm/v7
+      - arm/v6
+      - s390x
+

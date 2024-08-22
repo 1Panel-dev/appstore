@@ -26,3 +26,8 @@ additionalProperties:
     website: https://mariadb.org/
     github: https://github.com/MariaDB/server/
     document: https://mariadb.org/documentation/
+    architectures:
+      - amd64
+      - arm64/v8
+      - ppc64le
+      - s390x

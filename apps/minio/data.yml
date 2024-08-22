@@ -26,3 +26,8 @@ additionalProperties:
     website: https://min.io/download
     github: https://github.com/minio/minio
     document: https://min.io/docs/minio/kubernetes/upstream
+    architectures:
+      - arm64
+      - amd64
+      - ppc64le
+      - s390x

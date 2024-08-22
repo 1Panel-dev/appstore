@@ -26,3 +26,8 @@ additionalProperties:
         pt-br: Gerenciador de finanças pessoais gratuito e de código aberto
         ru: Бесплатный и открытый менеджер личных финансов
         ko: 무료 오픈 소스 개인 금융 관리자
+    architectures:
+      - amd64
+      - arm64
+      - arm/v7
+      - arm/v8

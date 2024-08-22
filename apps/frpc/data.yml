@@ -7,7 +7,7 @@ additionalProperties:
     key: frpc
     name: frp 客户端
     tags:
-        - Tool
+      - Tool
     shortDescZh: 专注于内网穿透的高性能反向代理应用
     shortDescEn: High-performance reverse proxy application focused on intranet penetration
     type: tool
@@ -17,3 +17,10 @@ additionalProperties:
     website: https://github.com/fatedier/frp
     github: https://github.com/fatedier/frp
     document: https://github.com/fatedier/frp/blob/dev/README_zh.md
+    architectures:
+      - amd64
+      - arm/v6
+      - arm/v7
+      - arm64
+      - ppc64le
+      - s390x

@@ -26,3 +26,6 @@ additionalProperties:
         pt-br: Registro NPM privado local
         ru: Локальный частный реестр NPM
         ko: 로컬 개인 NPM 레지스트리
+    architectures:
+      - amd64
+      - arm64

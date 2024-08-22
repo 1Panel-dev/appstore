@@ -10,7 +10,7 @@ additionalProperties:
         - Database
     shortDescZh: 开源的 LDAP(Lightweight Directory Access Protocol) 服务软件
     shortDescEn: An open source implementation of the Lightweight Directory Access Protocol
-    type: database
+    type: tool
     crossVersionUpdate: true
     limit: 0
     recommend: 0
@@ -26,3 +26,6 @@ additionalProperties:
         pt-br: Uma implementação de código aberto do Protocolo de Acesso a Diretórios Leves
         ru: Открытая реализация протокола легкого доступа к каталогам
         ko: 경량 디렉토리 액세스 프로토콜의 오픈 소스 구현
+    architectures:
+      - amd64
+      - arm64

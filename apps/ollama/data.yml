@@ -27,3 +27,6 @@ additionalProperties:
     github: https://github.com/ollama/ollama
     document: https://github.com/ollama/ollama/blob/main/docs/README.md
     gpuSupport: true
+    architectures:
+      - amd64
+      - arm64

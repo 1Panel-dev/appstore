@@ -26,3 +26,6 @@ additionalProperties:
     website: https://www.stirlingpdf.com/
     github: https://github.com/Stirling-Tools/Stirling-PDF
     document: https://docs.stirlingpdf.com/
+    architectures:
+      - amd64
+      - arm64

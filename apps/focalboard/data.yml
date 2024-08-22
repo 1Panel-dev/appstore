@@ -26,3 +26,5 @@ additionalProperties:
         pt-br: Uma alternativa de código aberto e auto-hospedada ao Trello, Notion e Asana
         ru: Открытая альтернатива с самостоятельным хостингом для Trello, Notion и Asana
         ko: Trello, Notion 및 Asana에 대한 오픈 소스 자체 호스팅 대안
+    architectures:
+      - amd64

@@ -27,3 +27,7 @@ additionalProperties:
     github: https://github.com/jellyfin/jellyfin
     document: https://jellyfin.org/docs/
     gpuSupport: true
+    architectures:
+      - amd64
+      - arm64/v8
+      - arm/v7

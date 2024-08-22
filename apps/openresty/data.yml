@@ -26,3 +26,6 @@ additionalProperties:
     website: https://openresty.org
     github: https://github.com/openresty/openresty
     document: http://openresty.org/cn/getting-started.html
+    architectures:
+      - amd64
+      - arm64
