@@ -13,7 +13,6 @@ additionalProperties:
   type: website
   crossVersionUpdate: true
   limit: 0
-  recommend: 0
   website: https://answer.dev/
   github: https://github.com/answerdev/answer
   document: https://answer.dev/zh-CN/docs

@@ -13,7 +13,6 @@ additionalProperties:
   type: website
   crossVersionUpdate: true
   limit: 0
-  recommend: 0
   website: https://www.audiobookshelf.org/
   github: https://github.com/advplyr/audiobookshelf
   document: https://www.audiobookshelf.org/docs
