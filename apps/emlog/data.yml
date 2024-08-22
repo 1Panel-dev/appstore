@@ -16,3 +16,7 @@ additionalProperties:
     website: https://www.emlog.net/
     github: https://github.com/emlog/emlog
     document: https://www.emlog.net/docs/#/install_1panel
+    architectures:
+      - amd64
+      - arm64
+      - arm/v7

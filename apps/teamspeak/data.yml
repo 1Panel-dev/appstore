@@ -25,3 +25,5 @@ additionalProperties:
         pt-br: Uma solução VoIP fora deste mundo
         ru: Уникальное решение VoIP
         ko: 뛰어난 네트워크 음성 (VoIP) 솔루션
+    architectures:
+      - amd64

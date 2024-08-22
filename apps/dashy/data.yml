@@ -26,3 +26,7 @@ additionalProperties:
         pt-br: Um painel pessoal auto-hospedável feito para você
         ru: Самостоятельно размещаемая персональная панель управления, созданная для вас
         ko: 당신을 위해 만들어진 셀프 호스팅 개인 대시보드
+    architectures:
+      - amd64
+      - arm64
+      - arm/v7

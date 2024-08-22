@@ -26,3 +26,6 @@ additionalProperties:
         pt-br: Um pacote de escritório online colaborativo gratuito
         ru: Бесплатный совместный онлайн-офисный пакет
         ko: 무료 협업 온라인 오피스 스위트
+    architectures:
+      - amd64
+      - arm64

@@ -26,3 +26,7 @@ additionalProperties:
         pt-br: A plataforma de código aberto para monitoramento e observabilidade
         ru: Открытая платформа для мониторинга и наблюдаемости
         ko: 모니터링 및 관찰 가능성을 위한 오픈 소스 플랫폼
+    architectures:
+      - amd64
+      - arm64
+      - arm/v7

@@ -26,3 +26,8 @@ additionalProperties:
         pt-br: Software de fórum simples para construir grandes comunidades
         ru: Простое программное обеспечение для форумов для создания отличных сообществ
         ko: 훌륭한 커뮤니티를 구축하기 위한 간단한 포럼 소프트웨어
+    architectures:
+      - amd64
+      - arm/v6
+      - arm/v7
+      - arm64
