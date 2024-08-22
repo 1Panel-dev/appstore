@@ -1,18 +1,22 @@
 name: Kafka
 tags:
-    - 中间件
+  - 中间件
 title: 开源分布式事件流平台
 description: 开源分布式事件流平台
 additionalProperties:
-    key: kafka
-    name: Kafka
-    tags:
-        - Middleware
-    shortDescZh: 开源分布式事件流平台
-    shortDescEn: open-source distributed event streaming platform
-    type: tool
-    crossVersionUpdate: false
-    limit: 0
-    website: https://kafka.apache.org/
-    github: https://github.com/apache/kafka
-    document: https://kafka.apache.org/documentation/
+  key: kafka
+  name: Kafka
+  tags:
+    - Middleware
+  shortDescZh: 开源分布式事件流平台
+  shortDescEn: open-source distributed event streaming platform
+  type: tool
+  crossVersionUpdate: false
+  limit: 0
+  recommend: 0
+  website: https://kafka.apache.org/
+  github: https://github.com/apache/kafka
+  document: https://kafka.apache.org/documentation/
+  architectures:
+    - amd64
+    - arm64

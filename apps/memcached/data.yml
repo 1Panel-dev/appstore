@@ -1,18 +1,24 @@
 name: Memcached
 tags:
-    - 实用工具
+- 实用工具
 title: 分布式的高速缓存系统
 description: 分布式的高速缓存系统
 additionalProperties:
-    key: memcached
-    name: Memcached
-    tags:
-        - Database
-    shortDescZh: 分布式的高速缓存系统
-    shortDescEn: A distributed caching system
-    type: tool
-    crossVersionUpdate: true
-    limit: 0
-    website: https://memcached.org/
-    github: https://github.com/memcached/memcached
-    document: https://github.com/memcached/memcached/wiki
+  key: memcached
+  name: Memcached
+  tags:
+  - Database
+  shortDescZh: 分布式的高速缓存系统
+  shortDescEn: A distributed caching system
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://memcached.org/
+  github: https://github.com/memcached/memcached
+  document: https://github.com/memcached/memcached/wiki
+  architectures:
+  - amd64
+  - arm64/v8
+  - ppc64le
+  - s390x

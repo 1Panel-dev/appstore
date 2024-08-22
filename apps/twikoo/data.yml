@@ -1,19 +1,22 @@
 name: Twikoo
 tags:
-    - 实用工具
+- 实用工具
 title: 简洁、安全、免费的静态网站评论系统
 description: 简洁、安全、免费的静态网站评论系统
 additionalProperties:
-    key: twikoo
-    name: Twikoo
-    tags:
-        - Tool
-    shortDescZh: 简洁、安全、免费的静态网站评论系统
-    shortDescEn: A simple, safe, free comment system
-    type: tool
-    crossVersionUpdate: true
-    limit: 0
-    recommend: 0
-    website: https://twikoo.js.org
-    github: https://github.com/imaegoo/twikoo
-    document: https://twikoo.js.org
+  key: twikoo
+  name: Twikoo
+  tags:
+  - Tool
+  shortDescZh: 简洁、安全、免费的静态网站评论系统
+  shortDescEn: A simple, safe, free comment system
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://twikoo.js.org
+  github: https://github.com/imaegoo/twikoo
+  document: https://twikoo.js.org
+  architectures:
+  - amd64
+  - arm64

@@ -1,19 +1,21 @@
 name: OpenLiteSpeed
 tags:
-    - Web 服务器
+  - Web 服务器
 title: 高性能、轻量级、开源的 HTTP 服务器
 description: 高性能、轻量级、开源的 HTTP 服务器
 additionalProperties:
-    key: openlitespeed
-    name: OpenLiteSpeed
-    tags:
-        - Server
-    shortDescZh: 高性能、轻量级、开源的 HTTP 服务器
-    shortDescEn: A high-performance, lightweight, open source HTTP server
-    type: tool
-    crossVersionUpdate: true
-    limit: 1
-    recommend: 0
-    website: https://openlitespeed.org
-    github: https://github.com/litespeedtech/openlitespeed
-    document: https://openlitespeed.org/#install
+  key: openlitespeed
+  name: OpenLiteSpeed
+  tags:
+    - Server
+  shortDescZh: 高性能、轻量级、开源的 HTTP 服务器
+  shortDescEn: A high-performance, lightweight, open source HTTP server
+  type: tool
+  crossVersionUpdate: true
+  limit: 1
+  recommend: 0
+  website: https://openlitespeed.org
+  github: https://github.com/litespeedtech/openlitespeed
+  document: https://openlitespeed.org/#install
+  architectures:
+    - amd64

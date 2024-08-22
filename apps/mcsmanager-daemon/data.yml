@@ -1,19 +1,22 @@
 name: MCSManager
 tags:
-    - 休闲游戏
+- 休闲游戏
 title: Minecraft 服务器控制面板（后端）
 description: Minecraft 服务器控制面板（后端）
 additionalProperties:
-    key: mcsmanager-daemon
-    name: MCSManager
-    tags:
-        - Game
-    shortDescZh: Minecraft 服务器控制面板（后端）
-    shortDescEn: Minecraft server control panel(Daemon)
-    type: tool
-    crossVersionUpdate: true
-    limit: 0
-    recommend: 0
-    website: https://hub.docker.com/r/alisaqaq/mcsmanager-web
-    github: https://github.com/MCSManager/MCSManager
-    document: https://docs.mcsmanager.com/
+  key: mcsmanager-daemon
+  name: MCSManager
+  tags:
+  - Game
+  shortDescZh: Minecraft 服务器控制面板（后端）
+  shortDescEn: Minecraft server control panel(Daemon)
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://hub.docker.com/r/alisaqaq/mcsmanager-web
+  github: https://github.com/MCSManager/MCSManager
+  document: https://docs.mcsmanager.com/
+  architectures:
+  - amd64
+  - arm64

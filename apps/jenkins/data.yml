@@ -1,19 +1,24 @@
 name: Jenkins
 tags:
-    - DevOps
+- DevOps
 title: 开源的持续集成工具
 description: 开源的持续集成工具
 additionalProperties:
-    key: jenkins
-    name: Jenkins
-    tags:
-        - DevOps
-    shortDescZh: 开源的持续集成工具
-    shortDescEn: Build great things at any scale
-    type: tool
-    crossVersionUpdate: false
-    limit: 1
-    recommend: 0
-    website: https://www.jenkins.io/
-    github: https://github.com/jenkinsci/jenkins
-    document: https://www.jenkins.io/doc/book/
+  key: jenkins
+  name: Jenkins
+  tags:
+  - DevOps
+  shortDescZh: 开源的持续集成工具
+  shortDescEn: Build great things at any scale
+  type: tool
+  crossVersionUpdate: false
+  limit: 1
+  recommend: 0
+  website: https://www.jenkins.io/
+  github: https://github.com/jenkinsci/jenkins
+  document: https://www.jenkins.io/doc/book/
+  architectures:
+  - amd64
+  - arm64
+  - s390x
+  - ppc64le

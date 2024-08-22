@@ -1,6 +1,6 @@
 name: Palworld Server Tool
 tags:
-    - 休闲游戏
+  - 休闲游戏
 title: 幻兽帕鲁服务可视化管理工具
 description: 幻兽帕鲁服务可视化管理工具
 additionalProperties:
@@ -17,3 +17,6 @@ additionalProperties:
   website: https://github.com/zaigie/palworld-server-tool
   github: https://github.com/zaigie/palworld-server-tool
   document: https://github.com/zaigie/palworld-server-tool
+  architectures:
+    - amd64
+    - arm64
