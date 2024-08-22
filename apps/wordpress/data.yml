@@ -26,3 +26,10 @@ additionalProperties:
     website: https://wordpress.org/
     github: https://github.com/WordPress/WordPress
     document: https://cn.wordpress.org/support/
+    architectures:
+      - amd64
+      - arm/v5
+      - arm/v7
+      - arm64/v8
+      - ppc64le
+      - s390x

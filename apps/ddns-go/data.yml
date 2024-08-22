@@ -1,19 +1,23 @@
 name: ddns-go
 tags:
-    - 实用工具
+- 实用工具
 title: 简单易用的 DDNS
 description: 简单易用的 DDNS
 additionalProperties:
-    key: ddns-go
-    name: ddns-go
-    tags:
-        - Tool
-    shortDescZh: 简单易用的 DDNS
-    shortDescEn: Simple and easy to use DDNS
-    type: tool
-    crossVersionUpdate: true
-    limit: 0
-    recommend: 0
-    website: https://github.com/jeessy2/ddns-go
-    github: https://github.com/jeessy2/ddns-go
-    document: https://github.com/jeessy2/ddns-go
+  key: ddns-go
+  name: ddns-go
+  tags:
+  - Tool
+  shortDescZh: 简单易用的 DDNS
+  shortDescEn: Simple and easy to use DDNS
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://github.com/jeessy2/ddns-go
+  github: https://github.com/jeessy2/ddns-go
+  document: https://github.com/jeessy2/ddns-go
+  architectures:
+  - amd64
+  - arm/v7
+  - arm64

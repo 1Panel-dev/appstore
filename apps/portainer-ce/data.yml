@@ -26,3 +26,7 @@ additionalProperties:
     website: https://www.portainer.io/
     github: https://github.com/portainer/portainer
     document: https://docs.portainer.io/
+    architectures:
+      - amd64
+      - arm/v7
+      - arm64

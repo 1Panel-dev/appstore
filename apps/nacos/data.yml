@@ -1,13 +1,13 @@
 name: Nacos
 tags:
-  - 中间件
+- 中间件
 title: 动态服务发现、配置管理和服务管理平台
 description: 动态服务发现、配置管理和服务管理平台
 additionalProperties:
   key: nacos
   name: Nacos
   tags:
-    - Middleware
+  - Middleware
   shortDescZh: 动态服务发现、配置管理和服务管理平台
   shortDescEn: Dynamic service discovery, configuration and service management platform
   type: tool
@@ -17,3 +17,6 @@ additionalProperties:
   website: https://nacos.io/
   github: https://github.com/alibaba/nacos
   document: https://nacos.io/docs/latest/what-is-nacos/
+  architectures:
+  - amd64
+  - arm64

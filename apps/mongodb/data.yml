@@ -26,3 +26,8 @@ additionalProperties:
     website: https://www.mongodb.com/
     github: https://github.com/mongodb/mongo
     document: https://www.mongodb.com/docs/
+    architectures:
+      - amd64
+      - arm64/v8
+      - amd64
+      - amd64
