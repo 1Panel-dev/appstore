@@ -1,19 +1,22 @@
 name: code-server
 tags:
-    - 开发工具
+- 开发工具
 title: 浏览器中的VS Code
 description: 浏览器中的VS Code
 additionalProperties:
-    key: code-server
-    name: code-server
-    tags:
-        - DevTool
-    shortDescZh: 浏览器中的VS Code
-    shortDescEn: VS Code in the browser
-    type: tool
-    crossVersionUpdate: true
-    limit: 0
-    recommend: 0
-    website: https://coder.com/
-    github: https://github.com//code-server
-    document: https://coder.com/docs/code-server/latest
+  key: code-server
+  name: code-server
+  tags:
+  - DevTool
+  shortDescZh: 浏览器中的VS Code
+  shortDescEn: VS Code in the browser
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://coder.com/
+  github: https://github.com//code-server
+  document: https://coder.com/docs/code-server/latest
+  architectures:
+  - amd64
+  - arm64

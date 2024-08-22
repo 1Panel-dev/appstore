@@ -4,16 +4,19 @@ tags:
 title: 新一代的代码托管平台
 description: 新一代的代码托管平台
 additionalProperties:
-    key: gitea
-    name: Gitea
-    tags:
-        - DevOps
-    shortDescZh: 新一代的代码托管平台
-    shortDescEn: The next generation of code hosting platform
-    type: tool
-    crossVersionUpdate: true
-    limit: 0
-    recommend: 55
-    website: https://gitea.io/
-    github: https://github.com/go-gitea/gitea
-    document: https://docs.gitea.io/
+  key: gitea
+  name: Gitea
+  tags:
+    - DevOps
+  shortDescZh: 新一代的代码托管平台
+  shortDescEn: The next generation of code hosting platform
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 35
+  website: https://gitea.io/
+  github: https://github.com/go-gitea/gitea
+  document: https://docs.gitea.io/
+  architectures:
+    - amd64
+    - arm64

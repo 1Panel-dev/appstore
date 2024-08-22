@@ -1,19 +1,25 @@
 name: Prometheus
 tags:
-    - 数据库
+- 数据库
 title: 监控系统和时间序列数据库
 description: 监控系统和时间序列数据库
 additionalProperties:
-    key: prometheus
-    name: Prometheus
-    tags:
-        - Database
-    shortDescZh: 监控系统和时间序列数据库
-    shortDescEn: Monitoring system and time series database
-    type: tool
-    crossVersionUpdate: false
-    limit: 0
-    recommend: 0
-    website: https://prometheus.io
-    github: https://github.com/prometheus/prometheus
-    document: https://prometheus.io/docs/introduction/overview/
+  key: prometheus
+  name: Prometheus
+  tags:
+  - Database
+  shortDescZh: 监控系统和时间序列数据库
+  shortDescEn: Monitoring system and time series database
+  type: tool
+  crossVersionUpdate: false
+  limit: 0
+  recommend: 0
+  website: https://prometheus.io
+  github: https://github.com/prometheus/prometheus
+  document: https://prometheus.io/docs/introduction/overview/
+  architectures:
+  - amd64
+  - arm64/v8
+  - arm/v7
+  - ppc64le
+  - s390x

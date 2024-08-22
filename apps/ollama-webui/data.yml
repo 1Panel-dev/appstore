@@ -1,19 +1,22 @@
 name: Ollama WebUI
 tags:
-    - AI / 大模型
+- AI / 大模型
 title: 面向 LLM 的用户友好型 WebUI
 description: 面向 LLM 的用户友好型 WebUI
 additionalProperties:
-    key: ollama-webui
-    name: Ollama WebUI
-    tags:
-        - AI
-    shortDescZh: 面向 LLM 的用户友好型 WebUI
-    shortDescEn: User-friendly WebUI for LLMs
-    type: tool
-    crossVersionUpdate: true
-    limit: 0
-    recommend: 0
-    website: https://openwebui.com/
-    github: https://github.com/open-webui/open-webui
-    document: https://docs.openwebui.com/
+  key: ollama-webui
+  name: Ollama WebUI
+  tags:
+  - AI
+  shortDescZh: 面向 LLM 的用户友好型 WebUI
+  shortDescEn: User-friendly WebUI for LLMs
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://openwebui.com/
+  github: https://github.com/open-webui/open-webui
+  document: https://docs.openwebui.com/
+  architectures:
+  - amd64
+  - arm64
