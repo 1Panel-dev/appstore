@@ -10,7 +10,7 @@ additionalProperties:
         - DevTool
     shortDescZh: 简单的服务器来发送和接收消息
     shortDescEn: A simple server for sending and receiving messages
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0

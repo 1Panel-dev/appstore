@@ -10,7 +10,7 @@ additionalProperties:
         - Server
     shortDescZh: 高性能、轻量级、开源的 HTTP 服务器
     shortDescEn: A high-performance, lightweight, open source HTTP server
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 1
     recommend: 0

@@ -10,7 +10,7 @@ additionalProperties:
         - DevOps
     shortDescZh: Trello、Notion 和 Asana 的开源自托管替代方案
     shortDescEn: An open source, self-hosted alternative to Trello, Notion, and Asana
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0

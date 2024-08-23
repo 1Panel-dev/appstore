@@ -1,13 +1,13 @@
 name: JumpServer
 tags:
-- 安全
+  - 安全
 title: JumpServer 开源堡垒机
 description: JumpServer 开源堡垒机
 additionalProperties:
   key: jumpserver
   name: JumpServer
   tags:
-  - Security
+    - Security
   shortDescZh: 广受欢迎的开源堡垒机
   shortDescEn: The world's first open-source Bastion Host
   description:
@@ -27,5 +27,5 @@ additionalProperties:
   github: https://github.com/jumpserver/jumpserver
   document: https://docs.jumpserver.org
   architectures:
-  - amd64
-  - arm64
+    - amd64
+    - arm64

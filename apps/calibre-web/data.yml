@@ -10,7 +10,7 @@ additionalProperties:
         - Media
     shortDescZh: 用于浏览、阅读和下载 Calibre 数据库中存储的电子书的 Web 应用程序
     shortDescEn: Web app for browsing, reading and downloading eBooks stored in a Calibre database
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0

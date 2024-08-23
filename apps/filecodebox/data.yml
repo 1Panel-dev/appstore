@@ -1,18 +1,19 @@
 name: FileCodeBox
 tags:
-  - 实用工具
-  - 云存储
+- 实用工具
+- 云存储
 title: 文件快递柜-匿名口令分享文本，文件，像拿快递一样取文件
 description: 文件快递柜-匿名口令分享文本，文件，像拿快递一样取文件
 additionalProperties:
   key: filecodebox
   name: FileCodeBox
   tags:
-    - Storage
-    - Tool
+  - Storage
+  - Tool
   shortDescZh: 文件快递柜-匿名口令分享文本，文件，像拿快递一样取文件
-  shortDescEn: FileCodeBox - Anonymous Passcode Sharing Text, Files, Like Taking Express Delivery for Files
-  type: tool
+  shortDescEn: File Express Cabinet - Anonymous Passcode Sharing Text, Files, Like
+    Taking Express Delivery for Files
+  type: website
   crossVersionUpdate: true
   limit: 1
   recommend: 0
@@ -20,5 +21,5 @@ additionalProperties:
   github: https://github.com/vastsa/FileCodeBox
   document: https://fcb-docs.aiuo.net
   architectures:
-  - amd64
-  - arm64
+    - amd64
+    - arm64

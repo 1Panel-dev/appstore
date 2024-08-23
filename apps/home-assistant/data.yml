@@ -19,7 +19,7 @@ additionalProperties:
         ko: 로컬 제어와 개인 정보 보호를 우선시하는 오픈 소스 홈 오토메이션
         zh-Hant: 以本機控制和隱私為先的開源家居自動化
         zh: 以本地控制和隐私为先的开源家居自动化
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0

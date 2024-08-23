@@ -1,16 +1,16 @@
 name: MCSManager
 tags:
-- 休闲游戏
+  - 休闲游戏
 title: Minecraft 服务器控制面板（前端）
 description: Minecraft 服务器控制面板（前端）
 additionalProperties:
   key: mcsmanager-web
   name: MCSManager
   tags:
-  - Game
+    - Game
   shortDescZh: Minecraft 服务器控制面板（前端）
   shortDescEn: Minecraft server control panel(Web)
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 0
@@ -18,5 +18,5 @@ additionalProperties:
   github: https://github.com/MCSManager/MCSManager
   document: https://docs.mcsmanager.com/
   architectures:
-  - amd64
-  - arm64
+    - amd64
+    - arm64

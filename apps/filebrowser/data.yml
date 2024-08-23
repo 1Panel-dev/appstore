@@ -10,7 +10,7 @@ additionalProperties:
         - Tool
     shortDescZh: 网页文件浏览器
     shortDescEn: Web File Browser
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0

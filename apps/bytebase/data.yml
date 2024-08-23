@@ -10,7 +10,7 @@ additionalProperties:
     - DevOps
   shortDescZh: 开源数据库 DevOps 解决方案
   shortDescEn: Open-Source Database DevOps Solution
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 0

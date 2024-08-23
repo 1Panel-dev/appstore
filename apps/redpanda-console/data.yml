@@ -10,7 +10,7 @@ additionalProperties:
         - DevTool
     shortDescZh: Kafka Web 管理工具
     shortDescEn: Redpanda Console – A UI for Data Streaming
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 1
     recommend: 0

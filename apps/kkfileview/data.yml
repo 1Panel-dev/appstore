@@ -10,7 +10,7 @@ additionalProperties:
         - Tool
     shortDescZh: 基于 Spring-Boot 的通用文件在线预览项目
     shortDescEn: Universal File Online Preview Project based on Spring-Boot
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0

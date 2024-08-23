@@ -1,16 +1,16 @@
 name: 青龙
-tags: 
+tags:
   - 实用工具
 title: 定时任务管理平台
 description: 定时任务管理平台
 additionalProperties:
   key: qinglong
   name: 青龙
-  tags:  
+  tags:
     - Tool
   shortDescZh: 定时任务管理平台
   shortDescEn: Scheduled Task Management Platform
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 85
