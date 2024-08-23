@@ -10,7 +10,7 @@ additionalProperties:
         - Tool
     shortDescZh: 开源的 Matrix 家庭服务器，自建聊天服务端
     shortDescEn: Open-source Matrix homeserver,build your own chat server
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 1
     recommend: 0

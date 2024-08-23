@@ -19,7 +19,7 @@ additionalProperties:
         ko: MySQL 및 MariaDB를 위한 웹 인터페이스
         zh-hant: MySQL 和 MariaDB 的網頁介面
         zh: MySQL 和 MariaDB 的 Web 界面
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 1
     recommend: 30

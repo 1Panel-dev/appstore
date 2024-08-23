@@ -19,7 +19,7 @@ additionalProperties:
         ko: 오픈 소스 원격 데스크톱 소프트웨어
         zh-hant: 開源遠程桌面軟體
         zh: 开源的远程桌面软件
-    type: tool
+    type: website
     crossVersionUpdate: false
     limit: 0
     recommend: 0
