@@ -18,7 +18,7 @@ additionalProperties:
         ru: JavaScript, клиентский редактор для общих диаграмм
         zh-Hant: 用於一般圖表繪製的 JavaScript 客戶端編輯器
         zh: 用于一般图表绘制的 JavaScript 客户端编辑器
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     website: https://www.drawio.com/

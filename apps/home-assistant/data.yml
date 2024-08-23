@@ -18,7 +18,7 @@ additionalProperties:
         ru: Открытая домашняя автоматизация, которая ставит на первое место локальный контроль и конфиденциальность
         zh-Hant: 以本地控制和隱私為先的開源家居自動化
         zh: 以本地控制和隐私为先的开源家居自动化
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0

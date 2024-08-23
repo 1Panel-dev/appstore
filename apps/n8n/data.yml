@@ -1,6 +1,6 @@
 name: n8n
 tags:
-    - 实用工具
+  - 实用工具
 title: 免费且源代码可用的公平代码许可工作流自动化工具
 description: 免费且源代码可用的公平代码许可工作流自动化工具
 additionalProperties:
@@ -18,7 +18,7 @@ additionalProperties:
         ru: Бесплатный и доступный с открытым исходным кодом инструмент автоматизации рабочих процессов с лицензией fair-code
         zh-Hant: 免費且具來源可用性的公平代碼許可工作流程自動化工具
         zh: 免费且源代码可用的公平代码许可工作流自动化工具
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0

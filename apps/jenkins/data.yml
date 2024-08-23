@@ -18,7 +18,7 @@ additionalProperties:
         ru: Стройте великие вещи в любом масштабе
         zh-Hant: 在任何規模上建造偉大的事物
         zh: 在任何规模上建造伟大的事物
-    type: tool
+    type: website
     crossVersionUpdate: false
     limit: 1
     recommend: 0

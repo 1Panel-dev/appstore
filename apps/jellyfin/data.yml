@@ -18,7 +18,7 @@ additionalProperties:
         ru: Пакет программного обеспечения для мультимедиа приложений
         zh-Hant: 多媒體應用軟件套件
         zh: 多媒体应用软件套件
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0

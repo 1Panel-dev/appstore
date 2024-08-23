@@ -18,7 +18,7 @@ additionalProperties:
         ru: Сервер Nextcloud, безопасное место для всех ваших данных
         zh-Hant: Nextcloud 伺服器，所有資料的安全之家
         zh: Nextcloud 服务器，所有数据的安全之家
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0

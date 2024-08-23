@@ -18,7 +18,7 @@ additionalProperties:
         ru: Открытое программное обеспечение для управления паролями
         zh-Hant: 開源密碼管理服務
         zh: 开源密码管理服务
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     website: https://bitwarden.com/

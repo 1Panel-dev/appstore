@@ -18,7 +18,7 @@ additionalProperties:
         ru: Легкий инструмент управления базой данных на PHP
         zh-Hant: PHP 輕量級資料庫管理工具
         zh: PHP 轻量级数据库管理工具
-    type: tool
+    type: website
     crossVersionUpdate: false
     limit: 1
     recommend: 0

@@ -20,7 +20,7 @@ additionalProperties:
       ru: Поддержка программы отображения файлов в нескольких хранилищах и частного облачного хранилища
       zh-Hant: 支援多存儲檔案列出程序和私人雲端存儲
       zh: 支持多存储文件列出程序和私有云存储
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 65
@@ -33,4 +33,3 @@ additionalProperties:
       - arm/v7
       - arm/v6
       - s390x
-

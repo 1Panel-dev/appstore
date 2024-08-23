@@ -18,7 +18,7 @@ additionalProperties:
         ru: Удобный WebUI для LLM
         zh-hant: 用於 LLM 的友好型 WebUI
         zh: 面向 LLM 的用户友好型 WebUI
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0

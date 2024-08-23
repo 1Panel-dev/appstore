@@ -18,7 +18,7 @@ additionalProperties:
         ru: VS Code в браузере
         zh-Hant: 瀏覽器中的 VS Code
         zh: 浏览器中的 VS Code
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0

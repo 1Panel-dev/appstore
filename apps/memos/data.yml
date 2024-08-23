@@ -18,7 +18,7 @@ additionalProperties:
         ru: Легкий, самостоятельно размещаемый хаб для заметок
         zh-Hant: 輕量級自託管備忘錄中心
         zh: 轻量级自托管备忘录中心
-    type: tool
+    type: website
     crossVersionUpdate: false
     limit: 0
     recommend: 0

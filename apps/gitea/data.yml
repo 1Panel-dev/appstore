@@ -18,8 +18,8 @@ additionalProperties:
         ru: Платформа хостинга кода следующего поколения
         zh-Hant: 下一代代碼託管平台
         zh: 下一代代码托管平台
-    type: tool
-    crossVersionUpdate: true
+    type: website
+    crossVersionUpdate: false
     limit: 0
     recommend: 55
     website: https://gitea.io/

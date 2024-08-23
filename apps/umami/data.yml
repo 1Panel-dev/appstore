@@ -10,7 +10,7 @@ additionalProperties:
     - Tool
   shortDescZh: Google Analytics 的简单、快速、注重隐私的替代方案
   shortDescEn: A simple, fast, privacy-focused alternative to Google Analytics
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 0
   website: https://umami.is/
