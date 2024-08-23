@@ -1,16 +1,16 @@
 name: Jellyfin
 tags:
-- 多媒体
+  - 多媒体
 title: 多媒体应用程序软件套装
 description: 多媒体应用程序软件套装
 additionalProperties:
   key: jellyfin
   name: Jellyfin
   tags:
-  - Media
+    - Media
   shortDescZh: 多媒体应用程序软件套装
   shortDescEn: A multimedia application software suite
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 0
@@ -18,6 +18,6 @@ additionalProperties:
   github: https://github.com/jellyfin/jellyfin
   document: https://jellyfin.org/docs/
   architectures:
-  - amd64
-  - arm64/v8
-  - arm/v7
+    - amd64
+    - arm64/v8
+    - arm/v7
