@@ -17,6 +17,7 @@ additionalProperties:
   website: https://www.metersphere.io
   github: https://github.com/metersphere/metersphere
   document: https://metersphere.io/docs
+  memoryRequired: 4096
   architectures:
     - amd64
     - arm64
