@@ -1,16 +1,16 @@
 name: Linux Command
 tags:
-- 开发工具
+  - 开发工具
 title: Linux 命令大全搜索工具
 description: Linux 命令大全搜索工具
 additionalProperties:
   key: linux-command
   name: Linux Command
   tags:
-  - DevTool
+    - DevTool
   shortDescZh: Linux 命令大全搜索工具
   shortDescEn: Comprehensive Linux command search tool
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 0
@@ -18,5 +18,5 @@ additionalProperties:
   github: https://github.com/jaywcjlove/linux-command
   document: https://github.com/jaywcjlove/linux-command
   architectures:
-  - amd64
-  - arm64
+    - amd64
+    - arm64
