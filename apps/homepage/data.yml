@@ -1,17 +1,17 @@
 name: Homepage
 tags:
-- 实用工具
+  - 实用工具
 title: 现代的、完全静态的、快速的、安全的、完全代理的、高度可定制的应用程序仪表板
 description: 现代的、完全静态的、快速的、安全的、完全代理的、高度可定制的应用程序仪表板
 additionalProperties:
   key: homepage
   name: Homepage
   tags:
-  - Tool
+    - Tool
   shortDescZh: 现代的、完全静态的、快速的、安全的、完全代理的、高度可定制的应用程序仪表板
   shortDescEn: A modern, fully static, fast, secure fully proxied, highly customizable
     application dashboard
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 0
@@ -19,7 +19,7 @@ additionalProperties:
   github: https://github.com/gethomepage/homepage
   document: https://gethomepage.dev/latest/configs/
   architectures:
-  - amd64
-  - arm64
-  - arm/v7
-  - arm/v6
+    - amd64
+    - arm64
+    - arm/v7
+    - arm/v6
