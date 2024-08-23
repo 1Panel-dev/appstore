@@ -10,7 +10,7 @@ additionalProperties:
         - Tool
     shortDescZh: 应用程序仪表板和启动器
     shortDescEn: An Application dashboard and launcher
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0

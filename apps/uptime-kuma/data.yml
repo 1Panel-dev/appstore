@@ -19,7 +19,7 @@ additionalProperties:
         ko: 멋진 자체 호스팅 모니터링 도구
         zh-hant: 一款精美的自託管監控工具
         zh: 一款精美的自托管监控工具
-    type: tool
+    type: website
     crossVersionUpdate: false
     limit: 0
     recommend: 0

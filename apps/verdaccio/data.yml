@@ -10,7 +10,7 @@ additionalProperties:
         - DevOps
     shortDescZh: 本地私有 NPM 注册中心
     shortDescEn: local private NPM registry
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0

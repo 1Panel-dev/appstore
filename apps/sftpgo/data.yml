@@ -19,7 +19,7 @@ additionalProperties:
         ko: 완전히 기능이 갖추어지고 매우 구성 가능한 SFTP 서버
         zh-hant: 功能齊全且高度可配置的 SFTP 伺服器
         zh: 功能齐全且高度可配置的 SFTP 服务器
-    type: tool
+    type: website
     crossVersionUpdate: false
     limit: 1
     recommend: 80

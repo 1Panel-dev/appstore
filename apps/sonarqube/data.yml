@@ -10,7 +10,7 @@ additionalProperties:
         - DevOps
     shortDescZh: 开源的代码质量管理平台
     shortDescEn: An open-source code quality management platform
-    type: tool
+    type: website
     crossVersionUpdate: false
     limit: 0
     recommend: 0

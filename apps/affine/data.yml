@@ -10,7 +10,7 @@ additionalProperties:
     - Tool
   shortDescZh: 将文档、白板和数据库完全整合的工作空间
   shortDescEn: A workspace with fully merged docs, whiteboards and databases
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 0

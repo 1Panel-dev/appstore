@@ -19,7 +19,7 @@ additionalProperties:
         ko: 네트워크 전체에서 광고 및 추적기를 차단하는 DNS 서버
         zh-Hant: 網路範圍內阻止廣告和跟踪器的 DNS 伺服器
         zh: 网络范围内的广告和跟踪器阻止 DNS 服务器
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     website: https://adguard.com/adguard-home.html

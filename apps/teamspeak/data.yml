@@ -10,7 +10,7 @@ additionalProperties:
         - Tool
     shortDescZh: 一款出色的网络语音 (VoIP) 解决方案
     shortDescEn: An out-of-this-world VoIP solution
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0

@@ -10,7 +10,7 @@ additionalProperties:
     - AI
   shortDescZh: 通过标准的 OpenAI API 格式访问所有的大模型，开箱即用
   shortDescEn: Access all LLM through the standard OpenAI API format, easy to deploy & use
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 0
