@@ -19,7 +19,7 @@ additionalProperties:
         ko: 멀티미디어 응용 소프트웨어 패키지
         zh-Hant: 多媒體應用程式軟體套裝
         zh: 多媒体应用软件套件
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0

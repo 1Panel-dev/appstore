@@ -4,20 +4,20 @@ tags:
 title: 专为您打造的可自行托管的个人仪表板
 description: 专为您打造的可自行托管的个人仪表板
 additionalProperties:
-    key: dashy
-    name: Dashy
-    tags:
-        - Website
-    shortDescZh: 专为您打造的可自行托管的个人仪表板
-    shortDescEn: A self-hostable personal dashboard built for you
-    type: website
-    crossVersionUpdate: true
-    limit: 0
-    recommend: 0
-    website: https://dashy.to
-    github: https://github.com/Lissy93/dashy
-    document: https://dashy.to/docs
-    architectures:
-      - amd64
-      - arm64
-      - arm/v7
+  key: dashy
+  name: Dashy
+  tags:
+    - Website
+  shortDescZh: 专为您打造的可自行托管的个人仪表板
+  shortDescEn: A self-hostable personal dashboard built for you
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://dashy.to
+  github: https://github.com/Lissy93/dashy
+  document: https://dashy.to/docs
+  architectures:
+    - amd64
+    - arm64
+    - arm/v7

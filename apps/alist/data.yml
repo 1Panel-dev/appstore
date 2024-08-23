@@ -21,7 +21,7 @@ additionalProperties:
         ko: 다중 저장소 파일 목록 프로그램 및 개인 클라우드 저장소 지원
         zh-Hant: 支援多存儲檔案列出程序和私人雲端空間
         zh: 支持多存储文件列出程序和私有云存储
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 65

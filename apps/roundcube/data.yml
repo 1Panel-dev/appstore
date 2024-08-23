@@ -1,6 +1,6 @@
 name: Roundcube
 tags:
-  - 邮件服务
+- 邮件服务
 title: 基于 Web 的多语言 IMAP 邮件客户端
 description: 基于 Web 的多语言 IMAP 邮件客户端
 additionalProperties:
@@ -19,7 +19,7 @@ additionalProperties:
         ko: 웹 기반 다국어 IMAP 메일 클라이언트
         zh-hant: 基於網頁的多語言 IMAP 郵件客戶端
         zh: 基于 Web 的多语言 IMAP 邮件客户端
-    type: tool
+    type: website
     crossVersionUpdate: false
     limit: 0
     recommend: 0

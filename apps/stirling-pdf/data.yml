@@ -19,7 +19,7 @@ additionalProperties:
         ko: 강력한 로컬 호스팅 웹 기반 PDF 조작 도구
         zh-hant: 強大的本地託管基於網頁的 PDF 操作工具
         zh: 强大的本地托管基于 Web 的 PDF 操作工具
-    type: tool
+    type: website
     crossVersionUpdate: false
     limit: 0
     recommend: 0
