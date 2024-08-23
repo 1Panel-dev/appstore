@@ -10,7 +10,7 @@ additionalProperties:
         - Database
     shortDescZh: 监控系统和时间序列数据库
     shortDescEn: Monitoring system and time series database
-    type: tool
+    type: website
     crossVersionUpdate: false
     limit: 0
     recommend: 0

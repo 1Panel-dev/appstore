@@ -1,6 +1,6 @@
 name: JSON Hero
 tags:
-    - 实用工具
+  - 实用工具
 title: 开源、美观的 Web JSON 浏览器
 description: 开源、美观的 Web JSON 浏览器
 additionalProperties:
@@ -10,7 +10,7 @@ additionalProperties:
         - Tool
     shortDescZh: 开源、美观的 Web JSON 浏览器
     shortDescEn: An open-source, beautiful JSON explorer
-    type: tool
+    type: website 
     crossVersionUpdate: true
     limit: 0
     recommend: 0

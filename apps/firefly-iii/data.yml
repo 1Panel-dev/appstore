@@ -10,7 +10,7 @@ additionalProperties:
         - Tool
     shortDescZh: 开源的个人财务管理工具
     shortDescEn: A free and open source personal finance manager
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0

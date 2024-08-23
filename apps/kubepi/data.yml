@@ -1,6 +1,6 @@
 name: KubePi
 tags:
-    - 开发工具
+  - 开发工具
 title: 现代化的 K8s 面板
 description: 现代化的 K8s 面板
 additionalProperties:
@@ -10,7 +10,7 @@ additionalProperties:
     - DevTool
   shortDescZh: 现代化的 K8s 面板
   shortDescEn: A modernized K8s dashboard
-  type: tool
+  type: website
   crossVersionUpdate: false
   limit: 0
   recommend: 100
