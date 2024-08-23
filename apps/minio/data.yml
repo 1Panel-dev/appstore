@@ -19,7 +19,7 @@ additionalProperties:
         ko: 오픈 소스 객체 저장 서버
         zh-Hant: 開源物件儲存伺服器
         zh: 开源对象存储服务器
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 1
     recommend: 0

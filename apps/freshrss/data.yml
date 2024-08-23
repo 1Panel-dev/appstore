@@ -1,16 +1,16 @@
 name: FreshRSS
 tags:
-- 实用工具
+  - 实用工具
 title: 自托管的 RSS 和 Atom 源聚合器
 description: 自托管的 RSS 和 Atom 源聚合器
 additionalProperties:
   key: freshrss
   name: FreshRSS
   tags:
-  - Tool
+    - Tool
   shortDescZh: 自托管的 RSS 和 Atom 源聚合器
   shortDescEn: A self-hosted RSS and Atom feed aggregator
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 0
@@ -18,5 +18,5 @@ additionalProperties:
   github: https://github.com/FreshRSS/FreshRSS
   document: https://freshrss.github.io/FreshRSS/
   architectures:
-  - amd64
-  - arm64
+    - amd64
+    - arm64
