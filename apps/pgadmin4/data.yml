@@ -19,7 +19,7 @@ additionalProperties:
         ko: PostgreSQL 오픈 소스 관리 및 개발 플랫폼
         zh-hant: PostgreSQL 開源管理與開發平台
         zh: PostgreSQL 开源管理工具
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 1
     website: https://www.pgadmin.org

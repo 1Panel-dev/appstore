@@ -1,4 +1,4 @@
-additionalProperties:  #固定参数
+additionalProperties:
     formFields:
         - child:
             default: ""
