@@ -1,17 +1,16 @@
 name: MaxKB
 tags:
-- AI / 大模型
+  - AI / 大模型
 title: 基于 LLM 大语言模型的知识库问答系统
 description: 基于 LLM 大语言模型的知识库问答系统
 additionalProperties:
   key: maxkb
   name: MaxKB
   tags:
-  - AI
+    - AI
   shortDescZh: 基于 LLM 大语言模型的知识库问答系统
-  shortDescEn: Knowledge Base Question Answering System based on LLM large language
-    model
-  type: tool
+  shortDescEn: Knowledge Base Question Answering System based on LLM large language model
+  type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 13
@@ -19,5 +18,5 @@ additionalProperties:
   github: https://github.com/1Panel-dev/MaxKB
   document: https://github.com/1Panel-dev/MaxKB/wiki
   architectures:
-  - amd64
-  - arm64
+    - amd64
+    - arm64

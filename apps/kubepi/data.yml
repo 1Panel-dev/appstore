@@ -1,16 +1,16 @@
 name: KubePi
 tags:
-- 开发工具
+  - 开发工具
 title: 现代化的 K8s 面板
 description: 现代化的 K8s 面板
 additionalProperties:
   key: kubepi
   name: KubePi
   tags:
-  - DevTool
+    - DevTool
   shortDescZh: 现代化的 K8s 面板
   shortDescEn: A modernized K8s dashboard
-  type: tool
+  type: website
   crossVersionUpdate: false
   limit: 0
   recommend: 80
@@ -18,5 +18,5 @@ additionalProperties:
   github: https://github.com/1Panel-dev/KubePi
   document: https://github.com/1Panel-dev/KubePi/blob/master/README.md
   architectures:
-  - amd64
-  - arm64
+    - amd64
+    - arm64

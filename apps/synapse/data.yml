@@ -1,16 +1,16 @@
 name: Synapse
 tags:
-- 实用工具
+  - 实用工具
 title: 开源的 Matrix 家庭服务器，自建聊天服务端
 description: 开源的 Matrix 家庭服务器，自建聊天服务端
 additionalProperties:
   key: synapse
   name: Synapse
   tags:
-  - Tool
+    - Tool
   shortDescZh: 开源的 Matrix 家庭服务器，自建聊天服务端
   shortDescEn: Open-source Matrix homeserver,build your own chat server
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 1
   recommend: 0
@@ -18,5 +18,5 @@ additionalProperties:
   github: https://github.com/matrix-org/synapse
   document: https://matrix-org.github.io/synapse
   architectures:
-  - amd64
-  - arm64
+    - amd64
+    - arm64

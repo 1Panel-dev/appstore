@@ -9,9 +9,8 @@ additionalProperties:
   tags:
   - Middleware
   shortDescZh: 流量控制、熔断降级规则统一配置和管理的入口
-  shortDescEn: Unified configuration and management of flow control and circuit breaker
-    degradation rules
-  type: tool
+  shortDescEn: Unified configuration and management of flow control and circuit breaker degradation rules
+  type: website
   crossVersionUpdate: false
   limit: 0
   recommend: 0

@@ -10,7 +10,7 @@ additionalProperties:
   - Security
   shortDescZh: 网络范围内的广告和跟踪器阻止 DNS 服务器
   shortDescEn: Network-wide ads & trackers blocking DNS server
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 0

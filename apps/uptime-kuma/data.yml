@@ -1,16 +1,16 @@
 name: Uptime Kuma
 tags:
-- 实用工具
+  - 实用工具
 title: 精美的自托管监控工具
 description: 精美的自托管监控工具
 additionalProperties:
   key: uptime-kuma
   name: Uptime Kuma
   tags:
-  - Tool
+    - Tool
   shortDescZh: 精美的自托管监控工具
   shortDescEn: A fancy self-hosted monitoring tool
-  type: tool
+  type: website
   crossVersionUpdate: false
   limit: 0
   recommend: 0
@@ -18,6 +18,6 @@ additionalProperties:
   github: https://github.com/louislam/uptime-kuma
   document: https://github.com/louislam/uptime-kuma/wiki
   architectures:
-  - amd64
-  - arm/v7
-  - arm64
+    - amd64
+    - arm/v7
+    - arm64

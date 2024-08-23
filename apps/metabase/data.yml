@@ -10,7 +10,7 @@ additionalProperties:
         - BI
     shortDescZh: 开源的数据分析和可视化工具
     shortDescEn: Open source data analysis and visualization tool
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0

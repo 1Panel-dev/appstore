@@ -1,16 +1,16 @@
 name: File Browser
 tags:
-- 实用工具
+  - 实用工具
 title: 网页文件浏览器
 description: 网页文件浏览器
 additionalProperties:
   key: filebrowser
   name: File Browser
   tags:
-  - Tool
+    - Tool
   shortDescZh: 网页文件浏览器
   shortDescEn: Web File Browser
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 0
@@ -18,6 +18,6 @@ additionalProperties:
   github: https://github.com/filebrowser/filebrowser
   document: https://filebrowser.org/
   architectures:
-  - amd64
-  - arm64
-  - arm/v7
+    - amd64
+    - arm64
+    - arm/v7
