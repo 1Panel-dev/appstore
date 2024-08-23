@@ -10,7 +10,7 @@ additionalProperties:
     - Tool
   shortDescZh: Obsidian 在线同步插件
   shortDescEn: Obsidian Self-hosted LiveSync
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 0

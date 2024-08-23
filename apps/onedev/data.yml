@@ -10,7 +10,7 @@ additionalProperties:
         - DevOps
     shortDescZh: 带有 CI/CD、Kanban 和 Packages 的 Git 服务器
     shortDescEn: Git Server with CI/CD, Kanban, and Packages
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0

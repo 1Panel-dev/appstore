@@ -10,7 +10,7 @@ additionalProperties:
         - Tool
     shortDescZh: PHP 驱动的标准自托管 URL 缩短器
     shortDescEn: The de facto standard self hosted URL shortener in PHP
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0

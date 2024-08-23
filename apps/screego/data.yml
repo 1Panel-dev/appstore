@@ -10,7 +10,7 @@ additionalProperties:
     - Tool
   shortDescZh: 开源屏幕共享工具
   shortDescEn: Open source screen sharing tools
-  type: tool
+  type: website
   crossVersionUpdate: false
   limit: 0
   recommend: 0
