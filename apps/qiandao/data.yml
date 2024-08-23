@@ -1,16 +1,16 @@
 name: QD
 tags:
-- 实用工具
+  - 实用工具
 title: HTTP 请求定时任务自动执行框架
 description: HTTP 请求定时任务自动执行框架
 additionalProperties:
   key: qiandao
   name: QD
   tags:
-  - Tool
+    - Tool
   shortDescZh: HTTP 请求定时任务自动执行框架
   shortDescEn: An HTTP request timed task automation framework
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 0
@@ -18,7 +18,7 @@ additionalProperties:
   github: https://github.com/qd-today/qd
   document: https://qd-today.github.io/qd/zh_CN/
   architectures:
-  - arm64
-  - amd64
-  - arm/v6
-  - arm/v7
+    - arm64
+    - amd64
+    - arm/v6
+    - arm/v7

@@ -1,16 +1,16 @@
 name: Navidrome
 tags:
-- 多媒体
+  - 多媒体
 title: 基于 Web 的开源音乐收藏服务器和流媒体
 description: 基于 Web 的开源音乐收藏服务器和流媒体
 additionalProperties:
   key: navidrome
   name: Navidrome
   tags:
-  - Media
+    - Media
   shortDescZh: 基于 Web 的开源音乐收藏服务器和流媒体
   shortDescEn: An open source web-based music collection server and streamer
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 0
@@ -18,7 +18,7 @@ additionalProperties:
   github: https://github.com/navidrome/navidrome
   document: https://www.navidrome.org/docs
   architectures:
-  - amd64
-  - arm/v6
-  - arm/v7
-  - arm64
+    - amd64
+    - arm/v6
+    - arm/v7
+    - arm64

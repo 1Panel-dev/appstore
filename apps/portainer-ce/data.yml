@@ -19,7 +19,7 @@ additionalProperties:
         ko: GUI 컨테이너 관리 도구
         zh-hant: GUI 容器管理工具
         zh: 图形界面容器管理工具
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 1
     recommend: 0
