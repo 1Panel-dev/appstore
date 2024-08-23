@@ -17,6 +17,7 @@ additionalProperties:
   website: https://halo.run/
   github: https://github.com/halo-dev/halo
   document: https://docs.halo.run/
+  memoryRequired: 1024
   architectures:
     - amd64
     - arm64
