@@ -1,16 +1,16 @@
 name: Verdaccio
 tags:
-- DevOps
+  - DevOps
 title: 本地私有 NPM 注册中心
 description: 本地私有 NPM 注册中心
 additionalProperties:
   key: verdaccio
   name: Verdaccio
   tags:
-  - DevOps
+    - DevOps
   shortDescZh: 本地私有 NPM 注册中心
   shortDescEn: local private NPM registry
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 0
@@ -18,5 +18,5 @@ additionalProperties:
   github: https://github.com/verdaccio/verdaccio
   document: https://verdaccio.org/docs/what-is-verdaccio
   architectures:
-  - amd64
-  - arm64
+    - amd64
+    - arm64

@@ -1,16 +1,16 @@
 name: Lsky-pro
 tags:
-- 云存储
+  - 云存储
 title: 用于在线上传、管理图片的图床程序
 description: 用于在线上传、管理图片的图床程序
 additionalProperties:
   key: lsky-pro
   name: Lsky-pro
   tags:
-  - Storage
+    - Storage
   shortDescZh: 用于在线上传、管理图片的图床程序
   shortDescEn: An image bed program for uploading and managing images online
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 0
@@ -18,5 +18,5 @@ additionalProperties:
   github: https://github.com/lsky-org/lsky-pro
   document: https://docs.lsky.pro/
   architectures:
-  - amd64
-  - arm64
+    - amd64
+    - arm64

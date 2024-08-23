@@ -1,13 +1,13 @@
 name: Docker Registry
 tags:
-- DevOps
+  - DevOps
 title: Docker 镜像存储库
 description: Docker 镜像存储库
 additionalProperties:
   key: docker-registry
   name: Docker Registry
   tags:
-  - DevOps
+    - DevOps
   shortDescZh: Docker 镜像存储库
   shortDescEn: A storage and distribution system for named Docker images
   type: tool
@@ -18,9 +18,9 @@ additionalProperties:
   github: https://github.com/distribution/distribution
   document: https://docs.docker.com/registry/
   architectures:
-  - amd64
-  - arm/v6
-  - arm/v7
-  - arm64/v8
-  - ppc64le
-  - s390x
+    - amd64
+    - arm/v6
+    - arm/v7
+    - arm64/v8
+    - ppc64le
+    - s390x

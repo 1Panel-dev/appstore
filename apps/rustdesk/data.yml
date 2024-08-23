@@ -1,16 +1,16 @@
 name: RustDesk
 tags:
-- 实用工具
+  - 实用工具
 title: 开源的远程桌面软件
 description: 开源的远程桌面软件
 additionalProperties:
   key: rustdesk
   name: RustDesk
   tags:
-  - Tool
+    - Tool
   shortDescZh: 开源的远程桌面软件
   shortDescEn: Open source remote desktop software
-  type: tool
+  type: website
   crossVersionUpdate: false
   limit: 0
   recommend: 0
@@ -18,6 +18,6 @@ additionalProperties:
   github: https://github.com/rustdesk/rustdesk
   document: https://rustdesk.com/docs/zh-cn/
   architectures:
-  - amd64
-  - arm64
-  - arm/v7
+    - amd64
+    - arm64
+    - arm/v7

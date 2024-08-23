@@ -1,16 +1,16 @@
 name: Gitea
 tags:
-- DevOps
+  - DevOps
 title: 新一代的代码托管平台
 description: 新一代的代码托管平台
 additionalProperties:
   key: gitea
   name: Gitea
   tags:
-  - DevOps
+    - DevOps
   shortDescZh: 新一代的代码托管平台
   shortDescEn: The next generation of code hosting platform
-  type: tool
+  type: website
   crossVersionUpdate: false
   limit: 0
   recommend: 11
@@ -18,5 +18,5 @@ additionalProperties:
   github: https://github.com/go-gitea/gitea
   document: https://docs.gitea.io/
   architectures:
-  - amd64
-  - arm64
+    - amd64
+    - arm64

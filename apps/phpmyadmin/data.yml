@@ -10,7 +10,7 @@ additionalProperties:
       - DevTool
   shortDescZh: MySQL 和 MariaDB 的 Web 界面
   shortDescEn: A web interface for MySQL and MariaDB
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 1
   recommend: 6

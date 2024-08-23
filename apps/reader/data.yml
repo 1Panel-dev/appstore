@@ -1,16 +1,16 @@
 name: reader
 tags:
-- 实用工具
+  - 实用工具
 title: 阅读3服务器版
 description: 阅读3服务器版
 additionalProperties:
   key: reader
   name: reader
   tags:
-  - Tool
+    - Tool
   shortDescZh: 阅读3服务器版
   shortDescEn: Read 3 Server Edition
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 0
@@ -18,9 +18,9 @@ additionalProperties:
   github: https://github.com/hectorqin/reader
   document: https://github.com/hectorqin/reader/blob/master/doc.md
   architectures:
-  - amd64
-  - arm64
-  - arm/v6
-  - arm/v7
-  - ppc64le
-  - s390x
+    - amd64
+    - arm64
+    - arm/v6
+    - arm/v7
+    - ppc64le
+    - s390x

@@ -1,16 +1,16 @@
 name: Heimdall
 tags:
-- 实用工具
+  - 实用工具
 title: 应用程序仪表板和启动器
 description: 应用程序仪表板和启动器
 additionalProperties:
   key: heimdall
   name: Heimdall
   tags:
-  - Tool
+    - Tool
   shortDescZh: 应用程序仪表板和启动器
   shortDescEn: An Application dashboard and launcher
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 0
@@ -18,5 +18,5 @@ additionalProperties:
   github: https://github.com/linuxserver/Heimdall
   document: https://github.com/linuxserver/Heimdall
   architectures:
-  - amd64
-  - arm64
+    - amd64
+    - arm64

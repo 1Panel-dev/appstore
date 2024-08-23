@@ -1,16 +1,16 @@
 name: Audiobookshelf
 tags:
-- 多媒体
+  - 多媒体
 title: 自托管有声读物和播客服务器
 description: 自托管有声读物和播客服务器
 additionalProperties:
   key: audiobookshelf
   name: Audiobookshelf
   tags:
-  - Media
+    - Media
   shortDescZh: 自托管有声读物和播客服务器
   shortDescEn: Self-hosted audiobook and podcast server
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 0
@@ -18,5 +18,5 @@ additionalProperties:
   github: https://github.com/advplyr/audiobookshelf
   document: https://www.audiobookshelf.org/docs
   architectures:
-  - amd64
-  - arm64
+    - amd64
+    - arm64

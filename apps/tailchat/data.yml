@@ -1,16 +1,16 @@
 name: Tailchat
 tags:
-- 实用工具
+  - 实用工具
 title: 您自己的工作空间中的下一代 noIM 应用程序
 description: 您自己的工作空间中的下一代 noIM 应用程序
 additionalProperties:
   key: tailchat
   name: Tailchat
   tags:
-  - Tool
+    - Tool
   shortDescZh: 您自己的工作空间中的下一代 noIM 应用程序
   shortDescEn: Next generation noIM application in your own workspace
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 1
   recommend: 0
@@ -18,5 +18,5 @@ additionalProperties:
   github: https://github.com/msgbyte/tailchat
   document: https://tailchat.msgbyte.com/docs/intro
   architectures:
-  - amd64
-  - arm64
+    - amd64
+    - arm64
