@@ -1,16 +1,16 @@
 name: Nextcloud
 tags:
-- 云存储
+  - 云存储
 title: Nextcloud 服务器，所有数据的安全家园
 description: Nextcloud 服务器，所有数据的安全家园
 additionalProperties:
   key: nextcloud
   name: Nextcloud
   tags:
-  - Storage
+    - Storage
   shortDescZh: Nextcloud 服务器，所有数据的安全家园
   shortDescEn: Nextcloud server, a safe home for all your data
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 0
@@ -18,5 +18,5 @@ additionalProperties:
   github: https://github.com/nextcloud/server
   document: https://docs.nextcloud.com/
   architectures:
-  - amd64
-  - arm64
+    - amd64
+    - arm64

@@ -1,16 +1,16 @@
 name: Stirling-PDF
 tags:
-- 实用工具
+  - 实用工具
 title: 强大的本地托管基于 Web 的 PDF 操作工具
 description: 强大的本地托管基于 Web 的 PDF 操作工具
 additionalProperties:
   key: stirling-pdf
   name: Stirling-PDF
   tags:
-  - Tool
+    - Tool
   shortDescZh: 强大的本地托管基于 Web 的 PDF 操作工具
   shortDescEn: powerful locally hosted web based PDF manipulation tool
-  type: tool
+  type: website
   crossVersionUpdate: false
   limit: 0
   recommend: 0
@@ -18,5 +18,5 @@ additionalProperties:
   github: https://github.com/Stirling-Tools/Stirling-PDF
   document: https://stirlingtools.com/docs/Overview/What%20is%20Stirling-PDF
   architectures:
-  - amd64
-  - arm64
+    - amd64
+    - arm64

@@ -1,13 +1,13 @@
 name: Discourse
 tags:
-- 建站
+  - 建站
 title: 社区讨论的平台。免费、开放、简单。
 description: 社区讨论的平台。免费、开放、简单。
 additionalProperties:
   key: discourse
   name: Discourse
   tags:
-  - WebSite
+    - WebSite
   shortDescZh: 社区讨论的平台。免费、开放、简单。
   shortDescEn: A platform for community discussion. Free, open, simple.
   type: website
@@ -18,5 +18,5 @@ additionalProperties:
   github: https://github.com/discourse/discourse
   document: https://hub.docker.com/r/bitnami/discourse
   architectures:
-  - amd64
-  - arm64
+    - amd64
+    - arm64
