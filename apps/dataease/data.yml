@@ -17,6 +17,7 @@ additionalProperties:
   website: https://dataease.io/
   github: https://github.com/dataease/dataease
   document: https://dataease.io/docs/
+  memoryRequired: 8192
   architectures:
     - amd64
     - arm64
