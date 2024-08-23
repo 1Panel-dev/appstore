@@ -1,16 +1,16 @@
 name: Consul
 tags:
-- 中间件
+  - 中间件
 title: 分布式、高可用且具有数据中心感知能力的解决方案
 description: 分布式、高可用且具有数据中心感知能力的解决方案
 additionalProperties:
   key: consul
   name: Consul
   tags:
-  - Middleware
+    - Middleware
   shortDescZh: 分布式、高可用且具有数据中心感知能力的解决方案
   shortDescEn: Distributed, highly available, and data center aware solution
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 0
@@ -18,6 +18,6 @@ additionalProperties:
   github: https://github.com/hashicorp/consul
   document: https://learn.hashicorp.com/consul
   architectures:
-  - amd64
-  - arm64
-  - arm/v6
+    - amd64
+    - arm64
+    - arm/v6

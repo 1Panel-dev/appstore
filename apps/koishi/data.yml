@@ -1,16 +1,16 @@
 name: Koishi
 tags:
-- 实用工具
+  - 实用工具
 title: 跨平台、可扩展、高性能的聊天机器人框架
 description: 跨平台、可扩展、高性能的聊天机器人框架
 additionalProperties:
   key: koishi
   name: Koishi
   tags:
-  - Tool
+    - Tool
   shortDescZh: 跨平台、可扩展、高性能的聊天机器人框架
   shortDescEn: Cross-platform, extensive, high-performance chatbot framework
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 0
@@ -18,5 +18,5 @@ additionalProperties:
   github: https://github.com/koishijs/koishi
   document: https://koishi.chat/zh-CN/manual/introduction.html
   architectures:
-  - amd64
-  - arm64
+    - amd64
+    - arm64

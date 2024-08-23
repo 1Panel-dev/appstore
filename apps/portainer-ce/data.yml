@@ -10,7 +10,7 @@ additionalProperties:
   - Tool
   shortDescZh: 图形界面容器管理工具
   shortDescEn: GUI container management tools
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 1
   recommend: 0

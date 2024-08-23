@@ -4,22 +4,22 @@ tags:
 title: MySQL 和 MariaDB 的 Web 界面
 description: MySQL 和 MariaDB 的 Web 界面
 additionalProperties:
-    key: phpmyadmin
-    name: phpMyAdmin
-    tags:
-        - DevTool
-    shortDescZh: MySQL 和 MariaDB 的 Web 界面
-    shortDescEn: A web interface for MySQL and MariaDB
-    type: tool
-    crossVersionUpdate: true
-    limit: 1
-    recommend: 30
-    website: https://www.phpmyadmin.net/
-    github: https://github.com/phpmyadmin/phpmyadmin
-    document: https://www.phpmyadmin.net/docs/
-    architectures:
-        - amd64
-        - arm/v7
-        - arm64/v8
-        - ppc64le
-        - s390x
+  key: phpmyadmin
+  name: phpMyAdmin
+  tags:
+      - DevTool
+  shortDescZh: MySQL 和 MariaDB 的 Web 界面
+  shortDescEn: A web interface for MySQL and MariaDB
+  type: website
+  crossVersionUpdate: true
+  limit: 1
+  recommend: 30
+  website: https://www.phpmyadmin.net/
+  github: https://github.com/phpmyadmin/phpmyadmin
+  document: https://www.phpmyadmin.net/docs/
+  architectures:
+      - amd64
+      - arm/v7
+      - arm64/v8
+      - ppc64le
+      - s390x
