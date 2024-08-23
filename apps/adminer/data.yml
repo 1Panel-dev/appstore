@@ -19,7 +19,7 @@ additionalProperties:
         ko: 경량 PHP 데이터베이스 관리 도구
         zh-Hant: PHP 輕量級資料庫管理工具
         zh: PHP 轻量级数据库管理工具
-    type: tool
+    type: website
     crossVersionUpdate: false
     limit: 1
     recommend: 0

@@ -10,7 +10,7 @@ additionalProperties:
         - Middleware
     shortDescZh: 分布式、高可用且具有数据中心感知能力的解决方案
     shortDescEn: Distributed, highly available, and data center aware solution
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0

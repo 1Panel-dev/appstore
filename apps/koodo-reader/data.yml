@@ -1,16 +1,16 @@
 name: Koodo Reader
 tags:
-- 多媒体
+  - 多媒体
 title: 一个跨平台的电子书阅读器
 description: 一个跨平台的电子书阅读器
 additionalProperties:
   key: koodo-reader
   name: Koodo Reader
   tags:
-  - Media
+    - Media
   shortDescZh: 一个跨平台的电子书阅读器
   shortDescEn: A cross-platform ebook reader
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 0
@@ -18,6 +18,6 @@ additionalProperties:
   github: https://github.com/koodo-reader/koodo-reader
   document: https://www.koodoreader.com/en/document
   architectures:
-  - amd64
-  - arm64
-  - arm/v7
+    - amd64
+    - arm64
+    - arm/v7

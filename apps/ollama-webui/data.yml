@@ -19,7 +19,7 @@ additionalProperties:
         ko: LLM을 위한 사용자 친화적인 WebUI
         zh-hant: 用於 LLM 的友好型 WebUI
         zh: 面向 LLM 的用户友好型 WebUI
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 1
     recommend: 0

@@ -19,7 +19,7 @@ additionalProperties:
         ko: 가벼운 자체 호스팅 메모 허브
         zh-Hant: 輕量級自託管備忘錄中心
         zh: 轻量级自托管备忘录中心
-    type: tool
+    type: website
     crossVersionUpdate: false
     limit: 0
     recommend: 0

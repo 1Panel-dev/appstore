@@ -10,7 +10,7 @@ additionalProperties:
     - Tool
   shortDescZh: Markdown 文件托管平台
   shortDescEn: A powerful documentation framework on top of MkDocs
-  type: tool
+  type: website
   crossVersionUpdate: false
   limit: 0
   recommend: 0

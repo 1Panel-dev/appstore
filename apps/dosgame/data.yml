@@ -1,16 +1,16 @@
 name: 中文 DOS 游戏
 tags:
-- 休闲游戏
+  - 休闲游戏
 title: 中文 DOS 游戏合集
 description: 中文 DOS 游戏合集
 additionalProperties:
   key: dosgame
   name: 中文 DOS 游戏
   tags:
-  - Game
+    - Game
   shortDescZh: 中文 DOS 游戏合集
   shortDescEn: Chinese DOS games collections
-  type: tool
+  type: website
   crossVersionUpdate: false
   limit: 0
   recommend: 0
@@ -18,6 +18,6 @@ additionalProperties:
   github: https://github.com/rwv/chinese-dos-games
   document: https://github.com/rwv/chinese-dos-games
   architectures:
-  - amd64
-  - arm64
-  - arm/v7
+    - amd64
+    - arm64
+    - arm/v7
