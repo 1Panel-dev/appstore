@@ -10,7 +10,7 @@ additionalProperties:
         - DevTool
     shortDescZh: Redis Web 管理工具
     shortDescEn: Redis web management tool
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 1
     recommend: 0

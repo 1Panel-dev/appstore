@@ -28,3 +28,4 @@ additionalProperties:
     document: https://dev.mysql.com/doc/
     architectures:
       - amd64
+      - arm64

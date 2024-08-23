@@ -10,7 +10,7 @@ additionalProperties:
         - Storage
     shortDescZh: 基于 Java 的在线网盘程序
     shortDescEn: Java-based online disk program
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0
