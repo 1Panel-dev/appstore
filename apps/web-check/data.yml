@@ -1,16 +1,16 @@
 name: Web-Check
 tags:
-- 实用工具
+  - 实用工具
 title: 用于分析任何网站的多合一 OSINT 工具
 description: 用于分析任何网站的多合一 OSINT 工具
 additionalProperties:
   key: web-check
   name: Web-Check
   tags:
-  - Tool
+    - Tool
   shortDescZh: 用于分析任何网站的多合一 OSINT 工具
   shortDescEn: All-in-one OSINT tool for analysing any website
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 0
@@ -18,5 +18,5 @@ additionalProperties:
   github: https://github.com/lissy93/web-check
   document: https://github.com/lissy93/web-check
   architectures:
-  - amd64
-  - arm64
+    - amd64
+    - arm64

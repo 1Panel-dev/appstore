@@ -1,16 +1,16 @@
 name: Komga
 tags:
-- 多媒体
+  - 多媒体
 title: 免费开源的漫画、杂志媒体服务
 description: 免费开源的漫画、杂志媒体服务
 additionalProperties:
   key: komga
   name: Komga
   tags:
-  - Media
+    - Media
   shortDescZh: 免费开源的漫画、杂志媒体服务
   shortDescEn: Komga is a media server for your comics, mangas, BDs and magazines.
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 1
   recommend: 0
@@ -18,6 +18,6 @@ additionalProperties:
   github: https://github.com/gotson/komga
   document: https://komga.org/docs/introduction
   architectures:
-  - amd64
-  - arm/v7
-  - arm64
+    - amd64
+    - arm/v7
+    - arm64

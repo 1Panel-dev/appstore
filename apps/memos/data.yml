@@ -10,7 +10,7 @@ additionalProperties:
     - Tool
   shortDescZh: 轻量级、自托管的备忘录中心
   shortDescEn: A lightweight, self-hosted memo hub
-  type: tool
+  type: website
   crossVersionUpdate: false
   limit: 0
   recommend: 0
