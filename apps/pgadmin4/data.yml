@@ -10,7 +10,7 @@ additionalProperties:
     - DevTool
   shortDescZh: PostgreSQL 开源管理工具
   shortDescEn: PostgreSQL open source management and development platform
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 1
   recommend: 0
