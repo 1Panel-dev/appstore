@@ -26,6 +26,7 @@ additionalProperties:
   website: https://www.jumpserver.org
   github: https://github.com/jumpserver/jumpserver
   document: https://docs.jumpserver.org
+  memoryRequired: 8192
   architectures:
     - amd64
     - arm64
