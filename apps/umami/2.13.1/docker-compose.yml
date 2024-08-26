@@ -1,6 +1,6 @@
 services:
   umami:
-    image: ghcr.io/umami-software/umami:${PANEL_DB_TYPE}-v2.12.1
+    image: ghcr.io/umami-software/umami:${PANEL_DB_TYPE}-v2.13.1
     container_name: ${CONTAINER_NAME}
     restart: always
     labels:
