@@ -29,3 +29,4 @@ additionalProperties:
     architectures:
       - amd64
       - arm64
+    gpuSupport: true
