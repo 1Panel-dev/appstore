@@ -12,3 +12,9 @@ additionalProperties:
           labelZh: HTTPS 端口
           required: true
           type: number
+        - default: www
+          envKey: WEBSITE_DIR
+          labelEn: Website Dir
+          labelZh: 网站目录(网站目录会放置在 1Panel 安装目录下)
+          required: true
+          type: string  
