@@ -1,0 +1,26 @@
+name: PHP
+tags:
+  - 运行环境
+title: PHP 运行环境
+description: PHP 运行环境
+additionalProperties:
+  key: php
+  name: PHP
+  tags:
+    - Runtime
+  shortDescZh: PHP 运行环境
+  shortDescEn: PHP Runtime
+  type: php
+  crossVersionUpdate: false
+  limit: 0
+  recommend: 100
+  website: https://www.php.net/
+  github: https://github.com/php/php-src
+  document: https://www.php.net/docs.php
+  version: 2.0
+  architectures:
+    - amd64
+    - arm64
+    - arm/v7
+    - s390x
+    - ppc64le
