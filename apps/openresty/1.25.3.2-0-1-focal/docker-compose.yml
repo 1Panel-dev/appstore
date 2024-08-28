@@ -10,10 +10,11 @@ services:
       - ./conf/fastcgi-php.conf:/usr/local/openresty/nginx/conf/fastcgi-php.conf
       - ./conf/mime.types:/usr/local/openresty/nginx/conf/mime.types
       - ./log:/var/log/nginx
-      - ./conf/conf.d:/usr/local/openresty/nginx/conf/conf.d/
       - ${WEBSITE_DIR}:/www
+      - ${WEBSITE_DIR}/conf.d:/usr/local/openresty/nginx/conf/conf.d/
       - ./root:/usr/share/nginx/html
       - /etc/localtime:/etc/localtime
       - ./1pwaf/data:/usr/local/openresty/1pwaf/data
+      - ./conf/conf.d:/usr/local/openresty/nginx/conf/default/
     labels:
       createdBy: "Apps"
