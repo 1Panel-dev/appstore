@@ -15,6 +15,6 @@ additionalProperties:
         - default: www
           envKey: WEBSITE_DIR
           labelEn: Website Dir
-          labelZh: 网站目录(网站目录会放置在 1Panel 安装目录下)
+          labelZh: 网站目录(默认网站目录会放置在 1Panel 安装目录下，如需修改请以绝对路径填写)
           required: true
-          type: text  
+          type: text
