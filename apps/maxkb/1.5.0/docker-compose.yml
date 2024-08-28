@@ -9,6 +9,7 @@ services:
       - 1panel-network
     volumes:
       - ./data:/var/lib/postgresql/data
+      - ./python-packages:/opt/maxkb/app/sandbox/python-packages
     labels:
       createdBy: "Apps"
 networks:
