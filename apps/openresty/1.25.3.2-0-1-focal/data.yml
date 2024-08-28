@@ -31,9 +31,9 @@ additionalProperties:
         - default: www
           envKey: WEBSITE_DIR
           labelEn: Website Dir
-          labelZh: 网站目录(网站目录会放置在 1Panel 安装目录下)
+          labelZh: 网站目录(默认网站目录会放置在 1Panel 安装目录下，如需修改请以绝对路径填写)
           required: true
-          type: string
+          type: text
           label:
             en: Website directory (The website directory will be placed under the 1Panel installation directory)
             ja: ウェブサイトディレクトリ（ウェブサイトディレクトリは 1Panel インストールディレクトリに配置されます）
@@ -41,5 +41,5 @@ additionalProperties:
             pt-br: Diretório do site (O diretório do site será colocado sob o diretório de instalação do 1Panel)
             ru: Директория сайта (Директория сайта будет размещена в каталоге установки 1Panel)
             zh-Hant: 網站目錄（網站目錄將放置在 1Panel 安裝目錄下）
-            zh: 网站目录（网站目录会放置在 1Panel 安装目录下）
+            zh: 网站目录(默认网站目录会放置在 1Panel 安装目录下，如需修改请以绝对路径填写)
 
