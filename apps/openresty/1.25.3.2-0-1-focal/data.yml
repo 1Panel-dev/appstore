@@ -17,4 +17,4 @@ additionalProperties:
           labelEn: Website Dir
           labelZh: 网站目录(网站目录会放置在 1Panel 安装目录下)
           required: true
-          type: string  
+          type: text  
