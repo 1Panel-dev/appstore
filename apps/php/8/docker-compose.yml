@@ -1,5 +1,12 @@
 services:
   php:
+    build:
+      context: ./build
+      args:
+        PHP_IMAGE: 1panel/php:${PHP_VERSION}-fpm
+        CONTAINER_PACKAGE_URL: ${CONTAINER_PACKAGE_URL}
+        PHP_EXTENSIONS: ${PHP_EXTENSIONS}
+        TZ: ${TZ}
     image: ${IMAGE_NAME}
     container_name: ${CONTAINER_NAME}
     restart: always
