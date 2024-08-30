@@ -11,10 +11,16 @@ services:
       - ./conf/php-fpm.conf:/usr/local/etc/php-fpm.d/www.conf
       - ./log:/var/log/php
       - ./extensions:/php/extensions
+      - ./supervisor/supervisord.conf:/etc/supervisord.conf
+      - ./supervisor/supervisor.d/php-fpm.ini:/etc/supervisor.d/php-fpm.ini
+      - ./supervisor/supervisor.d:/etc/supervisor.d
+      - ./supervisor/log:/var/log/supervisor
     ports:
       - 127.0.0.1:${PANEL_APP_PORT_HTTP}:9000
     labels:
       createdBy: "Apps"
+    cap_add:
+      - SYS_PTRACE
 networks:
   1panel-network:
     external: true
