@@ -1,5 +1,20 @@
 additionalProperties:
     formFields:
+        - default: 8.3.8
+          envKey: PHP_VERSION
+          labelEn: PHP Version
+          labelZh: PHP 版本
+          required: true
+          type: select
+          values:
+            - label: "8.3.8"
+              value: "8.3.8"
+            - label: "8.2.20"
+              value: "8.2.20"
+            - label: "8.1.29"
+              value: "8.1.29"
+            - label: "8.0.30"
+              value: "8.0.30"
         - default: 9000
           envKey: PANEL_APP_PORT_HTTP
           labelEn: PHP-FPM Port
@@ -7,3 +22,4 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+        
