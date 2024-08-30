@@ -1,29 +1,5 @@
 additionalProperties:
     formFields:
-        - default: 8.3.8
-          envKey: PHP_VERSION
-          labelEn: PHP Version
-          labelZh: PHP 版本
-          required: true
-          type: select
-          values:
-            - label: "8.3.8"
-              value: "8.3.8"
-            - label: "8.2.20"
-              value: "8.2.20"
-            - label: "8.1.29"
-              value: "8.1.29"
-            - label: "8.0.30"
-              value: "8.0.30"
-        - default: https://mirrors.tuna.tsinghua.edu.cn
-          envKey: CONTAINER_PACKAGE_URL
-          labelEn: Package Source
-          labelZh: 扩展源
-          required: true
-          type: select
-          values:
-            - label: "https://mirrors.tuna.tsinghua.edu.cn"
-              value: "https://mirrors.tuna.tsinghua.edu.cn"
         - type: select
           multiple: true
           labelZh: 默认扩展
@@ -95,6 +71,30 @@ additionalProperties:
             - label: imagick
               value: imagick
           envKey: PHP_EXTENSIONS
+        - default: 8.3.8
+          envKey: PHP_VERSION
+          labelEn: PHP Version
+          labelZh: PHP 版本
+          required: true
+          type: select
+          values:
+            - label: "8.3.8"
+              value: "8.3.8"
+            - label: "8.2.20"
+              value: "8.2.20"
+            - label: "8.1.29"
+              value: "8.1.29"
+            - label: "8.0.30"
+              value: "8.0.30"
+        - default: https://mirrors.tuna.tsinghua.edu.cn
+          envKey: CONTAINER_PACKAGE_URL
+          labelEn: Package Source
+          labelZh: 扩展源
+          required: true
+          type: select
+          values:
+            - label: "https://mirrors.tuna.tsinghua.edu.cn"
+              value: "https://mirrors.tuna.tsinghua.edu.cn"
         - default: 9000
           envKey: PANEL_APP_PORT_HTTP
           labelEn: PHP-FPM Port
