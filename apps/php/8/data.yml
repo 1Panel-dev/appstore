@@ -28,6 +28,7 @@ additionalProperties:
           multiple: true
           labelZh: 默认扩展
           labelEn: Extensions
+          allowCreate: true
           default:
             - mysqli
           values:
@@ -88,6 +89,8 @@ additionalProperties:
             - label: curl
               value: curl
             - label: sg15
+              value: sourceguardian
+            - label: sg11
               value: sourceguardian
             - label: imagick
               value: imagick
