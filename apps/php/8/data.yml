@@ -15,6 +15,15 @@ additionalProperties:
               value: "8.1.29"
             - label: "8.0.30"
               value: "8.0.30"
+        - default: https://mirrors.tuna.tsinghua.edu.cn
+          envKey: CONTAINER_PACKAGE_URL
+          labelEn: Package Source
+          labelZh: 扩展源
+          required: true
+          type: select
+          values:
+            - label: "https://mirrors.tuna.tsinghua.edu.cn"
+              value: "https://mirrors.tuna.tsinghua.edu.cn"
         - default: 9000
           envKey: PANEL_APP_PORT_HTTP
           labelEn: PHP-FPM Port
