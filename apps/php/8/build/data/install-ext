@@ -152,7 +152,6 @@ install_yaf() {
     install_msg yaf
     docker-php-ext-enable yaf
 }
-apt-get update
 
 install_extension() {
     local extension=$1
@@ -272,6 +271,7 @@ install_extension() {
 }
 
 echo "${PHP_EXTENSIONS}" | tr ',' '\n' | while read -r extension; do
+   apt-get update
    install_extension $extension
 done
 
