@@ -4,12 +4,10 @@ export MC="-j$(nproc)"
 
 echo
 echo "============================================"
-echo "Install extensions from   : install.sh"
+echo "Install extensions from   : install-ext"
 echo "PHP version               : ${PHP_VERSION}"
 echo "Extra Extensions          : ${PHP_EXTENSIONS}"
-echo "Multicore Compilation     : ${MC}"
 echo "Container package url     : ${CONTAINER_PACKAGE_URL}"
-echo "Work directory            : ${PWD}"
 echo "============================================"
 echo
 
@@ -270,9 +268,15 @@ install_extension() {
     fi 
 }
 
-echo "${PHP_EXTENSIONS}" | tr ',' '\n' | while read -r extension; do
-   apt-get update
-   install_extension $extension
-done
+if [ $# -eq 1 ]; then
+    extension=$1
+    apt-get update
+    install_extension $extension
+else
+    echo "${PHP_EXTENSIONS}" | tr ',' '\n' | while read -r extension; do
+        apt-get update
+        install_extension $extension
+    done
+fi
 
 docker-php-source delete 
