@@ -14,10 +14,11 @@ services:
       - 1panel-network
     volumes:
       - ${PANEL_WEBSITE_DIR}:/www/
-      - ./conf/php.ini:/usr/local/etc/php/php.ini
+      - ./conf:/usr/local/etc/php
+      - ./conf/conf.d:/usr/local/etc/php/conf.d
       - ./conf/php-fpm.conf:/usr/local/etc/php-fpm.d/www.conf
       - ./log:/var/log/php
-      - ./extensions:/php/extensions
+      - ./extensions:${EXTENSION_DIR}
       - ./supervisor/supervisord.conf:/etc/supervisord.conf
       - ./supervisor/supervisor.d/php-fpm.ini:/etc/supervisor.d/php-fpm.ini
       - ./supervisor/supervisor.d:/etc/supervisor.d
