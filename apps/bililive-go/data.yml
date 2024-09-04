@@ -1,0 +1,19 @@
+name: Bililive-go
+tags:
+    - 实用工具
+title: 支持多种直播平台的直播录制工具
+description: 支持多种直播平台的直播录制工具
+additionalProperties:
+    key: bililive-go
+    name: Bililive-go
+    tags:
+        - Tool
+    shortDescZh: 支持多种直播平台的直播录制工具
+    shortDescEn: A live recording tool that supports multiple live streaming platforms
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://github.com/hr3lxphr6j/bililive-go
+    github: https://github.com/hr3lxphr6j/bililive-go
+    document: https://github.com/hr3lxphr6j/bililive-go/wiki
