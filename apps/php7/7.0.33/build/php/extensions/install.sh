@@ -114,6 +114,11 @@ if [[ -z "${EXTENSIONS##*,ftp,*}" ]]; then
     echo "---------- Install ftp ----------"
 	  install-php-extensions ftp
 fi
+
+if [[ -z "${EXTENSIONS##*,snuffleupagus,*}" ]]; then
+    echo "---------- Install snuffleupagus ----------"
+	  install-php-extensions snuffleupagus
+fi
 # end
 
 
