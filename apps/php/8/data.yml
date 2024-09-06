@@ -76,16 +76,14 @@ additionalProperties:
           required: true
           type: select
           values:
-            - label: "7.4.33"
-              value: "7.4.33"
-            - label: "7.3.33"
-              value: "7.3.33"
-            - label: "7.2.34"
-              value: "7.2.34"
-            - label: "7.1.33"
-              value: "7.1.33"
-            - label: "7.0.33"
-              value: "7.0.33"
+            - label: "8.3.8"
+              value: "8.3.8"
+            - label: "8.2.20"
+              value: "8.2.20"
+            - label: "8.1.29"
+              value: "8.1.29"
+            - label: "8.0.30"
+              value: "8.0.30"
         - default: https://mirrors.tuna.tsinghua.edu.cn
           envKey: CONTAINER_PACKAGE_URL
           labelEn: Package Source
