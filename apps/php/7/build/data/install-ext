@@ -148,7 +148,7 @@ install_extension() {
     if is_extension_installed "$extension"; then
         return
     fi
-  
+    
     echo "------ install extension: $extension ------"
     
     if [ "$extension" = "gd" ]; then
@@ -225,7 +225,7 @@ install_extension() {
         install_php_extensions pgsql
     elif [ "$extension" = "curl" ]; then
         install_php_extensions curl
-    elif [ "$extension" = "sourceguardian" ]; then
+    elif [ "$extension" = "sg11" ]; then
         install_php_extensions sourceguardian
     elif [ "$extension" = "snmp" ]; then
         install_php_extensions snmp
@@ -265,7 +265,7 @@ install_extension() {
         install_php_extensions amqp
     elif [ "$extension" = "zookeeper" ]; then
         install_php_extensions zookeeper
-    elif [ "$extension" = "ioncube_loader" ]; then
+    elif [ "$extension" = "ionCube" ]; then
         install_php_extensions ioncube_loader
     elif [ "$extension" = "pdo_sqlsrv" ]; then  
         install_php_extensions pdo_sqlsrv
@@ -292,11 +292,9 @@ extension=$1
 
 if [[ $extension == *,* ]]; then
     echo "${extension}" | tr ',' '\n' | while read -r extension; do
-        apt-get update
         install_extension $extension
     done
 else
-    apt-get update
     install_extension $extension
 fi
 
