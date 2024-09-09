@@ -4,9 +4,14 @@ FROM ${PHP_IMAGE}
 ARG PHP_EXTENSIONS
 ARG CONTAINER_PACKAGE_URL
 
-RUN sed -i "s|URIs: http://deb.debian.org/debian|URIs: ${CONTAINER_PACKAGE_URL}/debian|g" /etc/apt/sources.list.d/debian.sources && \
-    cat /etc/apt/sources.list.d/debian.sources && \
-    apt-get update
+RUN sed -i \
+    -e "s|http://snapshot.debian.org/archive/debian|${CONTAINER_PACKAGE_URL}|g" \
+    -e "s|http://deb.debian.org/debian|${CONTAINER_PACKAGE_URL}/debian|g" \
+    -e "s|http://snapshot.debian.org/archive/debian-security|${CONTAINER_PACKAGE_URL}|g" \
+    -e "s|http://deb.debian.org/debian-security|${CONTAINER_PACKAGE_URL}/debian-security|g" \
+    /etc/apt/sources.list && \
+    apt-get update 
+
 
 COPY data/install-ext /usr/local/bin/
 RUN chmod uga+x /usr/local/bin/install-ext
