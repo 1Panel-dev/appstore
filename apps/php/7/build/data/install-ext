@@ -200,9 +200,7 @@ install_extension() {
     elif [ "$extension" = "sysvshm" ]; then
         docker_php_ext_install sysvshm
     elif [ "$extension" = "calendar" ]; then
-        docker_php_ext_install calendar
-    elif [ "$extension" = "zmq" ]; then
-        docker_php_ext_install zmq                                     
+        docker_php_ext_install calendar                                   
     elif [ "$extension" = "sodium" ]; then
         apt-get install -y  libsodium-dev
         docker_php_ext_install sodium
@@ -277,12 +275,12 @@ install_extension() {
         install_php_extensions pspell    
     elif [ "$extension" = "bz2" ]; then  
         install_php_extensions bz2
-    elif [ "$extension" = "zmq" ]; then  
-        install_php_extensions zmq
     elif [ "$extension" = "smbclient" ]; then  
         install_php_extensions smbclient
     elif [ "$extension" = "event" ]; then  
-        install_php_extensions event           
+        install_php_extensions event
+    elif [ "$extension" = "zmq" ]; then
+        install_php_extensions zmq             
     else 
         install_extension_default $extension
     fi 
