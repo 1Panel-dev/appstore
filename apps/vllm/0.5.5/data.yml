@@ -1,0 +1,24 @@
+additionalProperties:
+    formFields:
+        - default: 8000
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: Port
+          labelZh: 端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: ""
+          edit: true
+          envKey: HUGGING_FACE_HUB_TOKEN
+          labelEn: Hugging Face Token
+          labelZh: Hugging Face Token
+          required: true
+          type: text
+        - default: facebook/opt-125m
+          edit: true
+          envKey: MODEL
+          labelEn: 模型
+          labelZh: Model
+          required: true
+          type: text
