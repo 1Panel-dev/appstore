@@ -1,0 +1,19 @@
+name: vLLM
+tags:
+    - AI / 大模型
+title: 用于大语言模型的高吞吐量和内存高效的推理和服务引擎
+description: 用于大语言模型的高吞吐量和内存高效的推理和服务引擎
+additionalProperties:
+    key: vllm
+    name: vLLM
+    tags:
+        - AI
+    shortDescZh: 用于大语言模型的高吞吐量和内存高效的推理和服务引擎
+    shortDescEn: A high-throughput and memory-efficient inference and serving engine for LLMs
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 13
+    website: https://github.com/vllm-project/vllm
+    github: https://github.com/vllm-project/vllm
+    document: https://docs.vllm.ai/en/latest/
