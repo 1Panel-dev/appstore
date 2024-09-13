@@ -39,14 +39,14 @@ additionalProperties:
       rule: paramComplexity
       type: password
     - default: 3001
-      envKey: PANEL_APP_PORT_LOGTO
+      envKey: PANEL_APP_PORT_HTTP_LOGTO
       labelEn: Logto Port
       labelZh: Logto 监听的端口
       required: true
       rule: paramPort
       type: number
     - default: 3002
-      envKey: PANEL_APP_PORT_LOGTO_ADMIN
+      envKey: PANEL_APP_PORT_HTTP
       labelEn: Logto Admin Port
       labelZh: Logto 管理控制台端口
       required: true

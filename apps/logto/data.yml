@@ -9,6 +9,6 @@ additionalProperties:
     and SaaS products.
   shortDescZh: 专为现代应用和 SaaS 产品设计的开源 Auth0 替代品
   tags:
-  - Tool
+    - Security
   type: tool
   website: https://logto.io/zh-CN/

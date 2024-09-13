@@ -9,10 +9,12 @@ services:
         networks:
             - 1panel-network
         ports:
-            - ${HOST_IP}:${PANEL_APP_PORT_LOGTO}:3001
-            - ${HOST_IP}:${PANEL_APP_PORT_LOGTO_ADMIN}:3002
+            - ${HOST_IP}:${PANEL_APP_PORT_HTTP_LOGTO}:3001
+            - ${HOST_IP}:${PANEL_APP_PORT_HTTP}:3002
         environment:
             - TRUST_PROXY_HEADER=1
             - DB_URL=postgres://${PANEL_DB_USER}:${PANEL_DB_USER_PASSWORD}@${PANEL_DB_HOST}:${PANEL_DB_PORT}/${PANEL_DB_NAME}
             - ENDPOINT=${LOGTO_ENDPOINT_URL}
             - ADMIN_ENDPOINT=${LOGTO_ADMIN_ENDPOINT_URL}
+        labels:  
+            createdBy: "Apps"
