@@ -52,19 +52,19 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-    - default: http://localhost:3001
+    - default: https://logto.domain.com
       edit: true
       envKey: LOGTO_ENDPOINT_URL
       labelEn: Logto Endpoint
-      labelZh: Logto 服务地址
+      labelZh: Logto 服务地址（进入网站页面添加反向代理网站，并启用 HTTPS）
       required: true
       rule: paramHttp
       type: text
-    - default: http://localhost:3002
+    - default: https://admin.domain.com
       edit: true
       envKey: LOGTO_ADMIN_ENDPOINT_URL
       labelEn: Logto Admin Endpoint
-      labelZh: Logto 管理控制台地址
+      labelZh: Logto 管理控制台地址（进入网站页面添加反向代理网站，并启用 HTTPS）
       required: true
       rule: paramHttp
       type: text
