@@ -1,0 +1,70 @@
+additionalProperties:
+  formFields:
+    - child:
+        default: ""
+        envKey: PANEL_DB_HOST
+        required: true
+        type: service
+      default: postgresql
+      envKey: PANEL_DB_TYPE
+      labelEn: Database Service
+      labelZh: 数据库服务
+      required: true
+      type: apps
+      values:
+        - label: PostgreSQL
+          value: postgresql
+    - default: logto
+      envKey: PANEL_DB_NAME
+      labelEn: Database
+      labelZh: 数据库名
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: logto
+      envKey: PANEL_DB_USER
+      labelEn: User
+      labelZh: 数据库用户
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: logto
+      envKey: PANEL_DB_USER_PASSWORD
+      labelEn: Password
+      labelZh: 数据库用户密码
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+    - default: 3001
+      envKey: PANEL_APP_PORT_HTTP_LOGTO
+      labelEn: Logto Port
+      labelZh: Logto 监听的端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 3002
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Logto Admin Port
+      labelZh: Logto 管理控制台端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: http://localhost:3001
+      edit: true
+      envKey: LOGTO_ENDPOINT_URL
+      labelEn: Logto Endpoint
+      labelZh: Logto 服务地址
+      required: true
+      rule: paramHttp
+      type: text
+    - default: http://localhost:3002
+      edit: true
+      envKey: LOGTO_ADMIN_ENDPOINT_URL
+      labelEn: Logto Admin Endpoint
+      labelZh: Logto 管理控制台地址
+      required: true
+      rule: paramHttp
+      type: text

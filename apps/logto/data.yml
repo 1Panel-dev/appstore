@@ -1,0 +1,14 @@
+additionalProperties:
+  crossVersionUpdate: true
+  document: https://docs.logto.io/
+  github: https://github.com/logto-io/logto
+  key: logto
+  limit: 0
+  name: Logto
+  shortDescEn: Logto is an open-source Auth0 alternative designed for modern apps
+    and SaaS products.
+  shortDescZh: 专为现代应用和 SaaS 产品设计的开源 Auth0 替代品
+  tags:
+    - Security
+  type: tool
+  website: https://logto.io/zh-CN/
