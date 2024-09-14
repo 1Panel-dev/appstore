@@ -11,7 +11,7 @@ additionalProperties:
     shortDescZh: 新一代的代码托管平台
     shortDescEn: The next generation of code hosting platform
     type: tool
-    crossVersionUpdate: false
+    crossVersionUpdate: true
     limit: 0
     recommend: 11
     website: https://gitea.io/
