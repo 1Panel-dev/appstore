@@ -1,0 +1,24 @@
+services:
+  flarum:
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:2368"
+    volumes:
+      - ./data:/var/lib/ghost/content
+    environment:
+      - database__client=mysql
+      - database__connection__host=${PANEL_DB_HOST}
+      - database__connection__user=${PANEL_DB_USER}
+      - database__connection__password=${PANEL_DB_USER_PASSWORD}
+      - database__connection__database=${PANEL_DB_NAME}
+      - database__connection__port=${PANEL_DB_PORT}
+      - url=${GHOST_EXTERNAL_URL}
+    image: ghost:5.94
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true

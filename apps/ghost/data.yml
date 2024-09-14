@@ -1,0 +1,19 @@
+name: Ghost
+tags:
+    - 建站
+title: 专注内容输出的开源博客系统
+description: 专注内容输出的开源博客系统
+additionalProperties:
+    key: ghost
+    name: Ghost
+    tags:
+        - WebSite
+    shortDescZh: 专注内容输出的开源博客系统
+    shortDescEn: Open source blogging system focusing on content output
+    type: website
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://ghost.org/
+    github: https://github.com/TryGhost/Ghost
+    document: https://ghost.org/docs/
