@@ -1,6 +1,6 @@
 services:
   photoprism:
-    image: photoprism/photoprism:240711-ce
+    image: photoprism/photoprism:240915-ce
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
