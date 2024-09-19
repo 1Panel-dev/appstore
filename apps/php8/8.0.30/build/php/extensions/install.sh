@@ -124,6 +124,11 @@ if [[ -z "${EXTENSIONS##*,snuffleupagus,*}" ]]; then
 	  install-php-extensions snuffleupagus
 fi
 
+if [[ -z "${EXTENSIONS##*,pdo_oci,*}" ]]; then
+    echo "---------- Install pdo_oci ----------"
+	 install-php-extensions  pdo_oci
+fi
+
 # end
 
 
@@ -211,11 +216,6 @@ fi
 if [[ -z "${EXTENSIONS##*,pdo_dblib,*}" ]]; then
     echo "---------- Install pdo_dblib ----------"
 	docker-php-ext-install ${MC} pdo_dblib
-fi
-
-if [[ -z "${EXTENSIONS##*,pdo_oci,*}" ]]; then
-    echo "---------- Install pdo_oci ----------"
-	docker-php-ext-install ${MC} pdo_oci
 fi
 
 if [[ -z "${EXTENSIONS##*,pdo_odbc,*}" ]]; then
