@@ -1,5 +1,6 @@
 services:
   calibre-web:
+    image: linuxserver/calibre-web:0.6.23
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
@@ -15,10 +16,8 @@ services:
       - TZ=${TIME_ZONE}
       - DOCKER_MODS=linuxserver/mods:universal-calibre
       - OAUTHLIB_RELAX_TOKEN_SCOPE=1
-    image: linuxserver/calibre-web:0.6.21-ls241
     labels:
       createdBy: "Apps"
-
 networks:
   1panel-network:
     external: true
