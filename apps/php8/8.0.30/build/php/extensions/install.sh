@@ -129,6 +129,11 @@ if [[ -z "${EXTENSIONS##*,pdo_oci,*}" ]]; then
 	 install-php-extensions  pdo_oci
 fi
 
+if [[ -z "${EXTENSIONS##*,oci8,*}" ]]; then
+   echo "---------- Install oci8 ----------"
+	 install-php-extensions oci8
+fi
+
 # end
 
 
@@ -233,11 +238,6 @@ if [[ -z "${EXTENSIONS##*,pgsql,*}" ]]; then
     echo "---------- Install pgsql ----------"
     apk --no-cache add postgresql-dev \
     && docker-php-ext-install ${MC} pgsql
-fi
-
-if [[ -z "${EXTENSIONS##*,oci8,*}" ]]; then
-    echo "---------- Install oci8 ----------"
-	docker-php-ext-install ${MC} oci8
 fi
 
 if [[ -z "${EXTENSIONS##*,odbc,*}" ]]; then
