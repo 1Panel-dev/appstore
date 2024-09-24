@@ -1,6 +1,6 @@
 services:
   code:
-    image: linuxserver/code-server:4.92.2
+    image: linuxserver/code-server:4.93.1
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
