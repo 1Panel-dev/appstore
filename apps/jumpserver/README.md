@@ -1,9 +1,7 @@
 # 默认账户密码
 
-```
-username：admin
-password：admin
-```
+用户名：`admin`
+密码：v3 版本默认密码为 `admin`，v4 版本默认密码为 `ChangeMe`
 
 # JumpServer
 

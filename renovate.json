@@ -119,6 +119,14 @@
       "allowedVersions": "/^16.*/"
     },
     {
+      "matchFileNames": ["apps/jumpserver/3.*/*.yml"],
+      "allowedVersions": "/^3.*/"
+    },
+    {
+      "matchFileNames": ["apps/jumpserver/4.*/*.yml"],
+      "allowedVersions": "/^4.*/"
+    },
+    {
       "matchDatasources": ["docker"],
       "matchPackageNames": ["ghcr.io/umami-software/umami"],
       "versionCompatibility": "^(?<compatibility>.*)-(?<version>.*)$",

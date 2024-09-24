@@ -4,8 +4,13 @@ services:
     container_name: ${CONTAINER_NAME}
     privileged: true
     restart: always
-    labels:
-      createdBy: "Apps"
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:80
+      - ${SSH_PORT}:2222
+    volumes:
+      - ./data/:/opt/data
+    networks:
+      - 1panel-network
     environment:
       SECRET_KEY: ${SECRET_KEY}
       BOOTSTRAP_TOKEN: ${BOOTSTRAP_TOKEN}
@@ -21,13 +26,8 @@ services:
       REDIS_PORT: 6379
       REDIS_PASSWORD: ${PANEL_REDIS_ROOT_PASSWORD}
       DOMAINS: ${DOMAINS:-}
-    ports:
-      - ${PANEL_APP_PORT_HTTP}:80
-      - ${SSH_PORT}:2222
-    volumes:
-      - ./data/:/opt/data
-    networks:
-      - 1panel-network
+    labels:
+      createdBy: "Apps"
 networks:
   1panel-network:
     external: true

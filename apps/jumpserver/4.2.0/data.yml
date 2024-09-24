@@ -42,17 +42,6 @@ additionalProperties:
           value: "ERROR"
         - label: CRITICAL
           value: "CRITICAL"
-    - default: postgresql
-      envKey: DB_ENGINE
-      labelEn: Database Engine
-      labelZh: 数据库引擎
-      required: true
-      type: select
-      values:
-        - label: PostgreSQL
-          value: postgresql
-        - label: MySQL
-          value: mysql
     - child:
         default: ""
         envKey: PANEL_DB_HOST
@@ -65,6 +54,8 @@ additionalProperties:
       required: true
       type: apps
       values:
+        - label: PostgreSQL
+          value: postgresql
         - label: MySQL
           value: mysql
         - label: MariaDB

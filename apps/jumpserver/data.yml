@@ -11,7 +11,7 @@ additionalProperties:
   shortDescZh: 广受欢迎的开源堡垒机
   shortDescEn: The world's first open-source Bastion Host
   type: tool
-  crossVersionUpdate: true
+  crossVersionUpdate: false
   limit: 1
   recommend: 10
   website: https://www.jumpserver.org
