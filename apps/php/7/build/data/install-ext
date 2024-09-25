@@ -87,31 +87,6 @@ install_extension_default() {
 }
 
 
-
-install_gd() {
-    isPhpVersionGreaterOrEqual 8 0
-    if [ "$?" = "1" ]; then
-        # "--with-xxx-dir" was removed from php 7.4,
-        # issue: https://github.com/docker-library/php/issues/912
-        options="--with-freetype --with-jpeg --with-webp"
-    else
-        options="--with-gd --with-freetype-dir=/usr/include/ --with-png-dir=/usr/include/ --with-jpeg-dir=/usr/include/ --with-webp-dir=/usr/include/"
-    fi
-    apt-get install -y  \
-        libfreetype6 \
-        libfreetype6-dev \
-        libpng-dev \
-        libwebp-dev \
-        libjpeg-dev \
-    && docker-php-ext-configure gd ${options} \
-    && docker-php-ext-install ${MC} gd \
-    && apt-get purge -y \
-        libfreetype6-dev \
-        libpng-dev \
-    && apt-get autoremove -y
-}
-
-
 install_msg() {
     if [ $? -eq 0 ]; then
         echo "------ install $1 succeeded ------"
@@ -152,7 +127,7 @@ install_extension() {
     echo "------ install extension: $extension ------"
     
     if [ "$extension" = "gd" ]; then
-        install_gd
+        install_php_extensions gd
     elif [ "$extension" = "memcache" ]; then
         install_memcache   
     elif [ "$extension" = "yaf" ]; then

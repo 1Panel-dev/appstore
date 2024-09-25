@@ -23,6 +23,7 @@ services:
       - ./supervisor/supervisor.d/php-fpm.ini:/etc/supervisor.d/php-fpm.ini
       - ./supervisor/supervisor.d:/etc/supervisor.d
       - ./supervisor/log:/var/log/supervisor
+      - ./composer:/tmp/composer
     ports:
       - 127.0.0.1:${PANEL_APP_PORT_HTTP}:9000
     labels:
