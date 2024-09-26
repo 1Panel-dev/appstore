@@ -1,0 +1,19 @@
+name: Node Exporter
+tags:
+    - 实用工具
+title: 服务器指标导出器
+description: 服务器指标导出器
+additionalProperties:
+    key: node-exporter
+    name: Node Exporter
+    tags:
+        - Tool
+    shortDescZh: 服务器指标导出器
+    shortDescEn: Exporter for machine metrics
+    type: tool
+    crossVersionUpdate: false
+    limit: 1
+    recommend: 0
+    website: https://prometheus.io/
+    github: https://github.com/prometheus/node_exporter/
+    document: https://prometheus.io/docs/introduction/overview/

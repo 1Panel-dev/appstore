@@ -1,0 +1,19 @@
+services:
+  node_exporter:
+    image: prom/node-exporter:v1.8.2
+    container_name: ${CONTAINER_NAME}
+    restart: unless-stopped
+    command:
+      - '--path.rootfs=/host'
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:9100
+    pid: host
+    volumes:
+      - '/:/host:ro,rslave'
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true
