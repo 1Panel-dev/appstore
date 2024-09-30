@@ -119,6 +119,10 @@
       "allowedVersions": "/^16.*/"
     },
     {
+      "matchFileNames": ["apps/postgresql/17.*/*.yml"],
+      "allowedVersions": "/^17.*/"
+    },
+    {
       "matchFileNames": ["apps/jumpserver/3.*/*.yml"],
       "allowedVersions": "/^3.*/"
     },
