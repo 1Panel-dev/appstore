@@ -3,7 +3,6 @@ services:
     image: b3log/siyuan:v3.1.8
     container_name: ${CONTAINER_NAME}
     restart: unless-stopped
-    user: '1000:1000'
     ports:
       - ${PANEL_APP_PORT_HTTP}:6806
     networks:
@@ -13,6 +12,8 @@ services:
       - ./data:/siyuan/workspace
     environment:
       - TZ=${TIME_ZONE}
+      - PUID=1000
+      - PGID=1000
     labels:
       createdBy: "Apps"
 networks:  
