@@ -13,7 +13,7 @@ additionalProperties:
     type: tool
     crossVersionUpdate: true
     limit: 0
-    recommend: 17
+    recommend: 90
     website: https://nginxproxymanager.com/
     github: https://github.com/NginxProxyManager/nginx-proxy-manager
     document: https://nginxproxymanager.com/guide/

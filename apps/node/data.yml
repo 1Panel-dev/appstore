@@ -13,6 +13,6 @@ additionalProperties:
   type: node
   crossVersionUpdate: false
   limit: 0
-  recommend: 101
+  recommend: 110
   website: https://nodejs.org/en
   github: https://github.com/nodejs

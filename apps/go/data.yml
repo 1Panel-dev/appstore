@@ -13,6 +13,6 @@ additionalProperties:
   type: go
   crossVersionUpdate: false
   limit: 0
-  recommend: 102
+  recommend: 125
   website: https://go.dev/
   github: https://github.com/golang/go

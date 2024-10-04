@@ -13,7 +13,7 @@ additionalProperties:
   type: tool
   crossVersionUpdate: false
   limit: 1
-  recommend: 11
+  recommend: 60
   website: https://www.metersphere.io
   github: https://github.com/metersphere/metersphere
   document: https://metersphere.io/docs

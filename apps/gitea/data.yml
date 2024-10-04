@@ -13,7 +13,7 @@ additionalProperties:
     type: tool
     crossVersionUpdate: true
     limit: 0
-    recommend: 11
+    recommend: 55
     website: https://gitea.io/
     github: https://github.com/go-gitea/gitea
     document: https://docs.gitea.io/

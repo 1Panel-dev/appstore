@@ -13,7 +13,7 @@ additionalProperties:
   type: tool
   crossVersionUpdate: true
   limit: 0
-  recommend: 16
+  recommend: 85
   website: https://github.com/whyour/qinglong/tree/master
   github: https://github.com/whyour/qinglong/tree/master
   document: https://github.com/whyour/qinglong/tree/master

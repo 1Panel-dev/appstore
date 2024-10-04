@@ -13,7 +13,7 @@ additionalProperties:
     type: tool
     crossVersionUpdate: false
     limit: 0
-    recommend: 9
+    recommend: 45
     website: https://dataease.io/
     github: https://github.com/dataease/dataease
     document: https://dataease.io/docs/

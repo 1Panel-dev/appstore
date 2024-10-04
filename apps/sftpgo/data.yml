@@ -13,7 +13,7 @@ additionalProperties:
     type: tool
     crossVersionUpdate: false  
     limit: 1
-    recommend: 15
+    recommend: 80
     website: https://sftpgo.com/
     github: https://github.com/drakkan/sftpgo/
     document: https://sftpgo.github.io/latest/

@@ -13,7 +13,7 @@ additionalProperties:
   type: tool
   crossVersionUpdate: false
   limit: 1
-  recommend: 10
+  recommend: 50
   website: https://www.jumpserver.org
   github: https://github.com/jumpserver/jumpserver
   document: https://docs.jumpserver.org

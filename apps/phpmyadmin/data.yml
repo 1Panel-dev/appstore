@@ -13,7 +13,7 @@ additionalProperties:
     type: tool
     crossVersionUpdate: true
     limit: 1
-    recommend: 6
+    recommend: 30
     website: https://www.phpmyadmin.net/
     github: https://github.com/phpmyadmin/phpmyadmin
     document: https://www.phpmyadmin.net/docs/

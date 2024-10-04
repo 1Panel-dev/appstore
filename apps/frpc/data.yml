@@ -13,7 +13,7 @@ additionalProperties:
     type: tool
     crossVersionUpdate: true
     limit: 0
-    recommend: 8
+    recommend: 40
     website: https://github.com/fatedier/frp
     github: https://github.com/fatedier/frp
     document: https://github.com/fatedier/frp/blob/dev/README_zh.md
