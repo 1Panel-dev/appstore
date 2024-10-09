@@ -25,7 +25,6 @@ services:
       - --logging.charset.file=UTF-8
       - --logging.level.run.ikaros.server=${SERVER_LOG_LEVEL}
       - --logging.level.run.ikaros.plugin=${PLUGIN_LOG_LEVEL}
-      - --logging.level.run.ikaros.jellyfin=INFO
       - --sun.jnu.encoding=UTF-8
       - --spring.r2dbc.url=r2dbc:pool:${PANEL_DB_TYPE}://${PANEL_DB_HOST}/${PANEL_DB_NAME}
       - --spring.r2dbc.username=${PANEL_DB_USER}
