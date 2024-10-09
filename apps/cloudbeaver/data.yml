@@ -1,14 +1,14 @@
 name: CloudBeaver
 tags:
-    - 工具
+    - 开发工具
 title: 云数据库管理器
-type: 工具
+type: 开发工具
 description: 云数据库管理器
 additionalProperties:
     key: cloudbeaver
     name: CloudBeaver
     tags:
-        - Tool
+        - DevTool
     shortDescZh: 云数据库管理器
     shortDescEn: Cloud Database Manager
     type: tool
