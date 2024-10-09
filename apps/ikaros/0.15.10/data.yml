@@ -1,0 +1,101 @@
+additionalProperties:
+  formFields:
+    - child:
+        default: ""
+        envKey: PANEL_DB_HOST
+        required: true
+        type: service
+      default: postgresql
+      envKey: PANEL_DB_TYPE
+      labelEn: Database Service
+      labelZh: 数据库服务
+      required: true
+      type: apps
+      values:
+        - label: PostgreSQL
+          value: postgresql
+    - default: ikaros
+      envKey: PANEL_DB_NAME
+      labelEn: Database
+      labelZh: 数据库名
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: ikaros
+      envKey: PANEL_DB_USER
+      labelEn: User
+      labelZh: 数据库用户
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: ikaros
+      envKey: PANEL_DB_USER_PASSWORD
+      labelEn: Password
+      labelZh: 数据库用户密码
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+    - default: 9999
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: http://localhost:9999
+      edit: true
+      envKey: IKAROS_EXTERNAL_URL
+      labelEn: External URL
+      labelZh: 外部访问地址
+      required: true
+      rule: paramHttp
+      type: text
+    # - default: "false"
+    #   envKey: ENABLE_API_DOC
+    #   labelEn: Enable Web API Doc
+    #   labelZh: 【高级】启用接口文档
+    #   required: true
+    #   type: select
+    #   values:
+    #     - label: TURE
+    #       value: "true"
+    #     - label: FALSE
+    #       value: "false"
+    - default: "INFO"
+      envKey: SERVER_LOG_LEVEL
+      labelEn: Core Server Package Log level
+      labelZh: 【高级】核心Server包日志级别
+      required: true
+      type: select
+      values:
+        - label: DEBUG
+          value: "DEBUG"
+        - label: INFO
+          value: "INFO"
+        - label: WARNING
+          value: "WARNING"
+        - label: ERROR
+          value: "ERROR"
+        - label: CRITICAL
+          value: "CRITICAL"
+    - default: "INFO"
+      envKey: PLUGIN_LOG_LEVEL
+      labelEn: Plugin Package Log level
+      labelZh: 【高级】插件包日志级别
+      required: true
+      type: select
+      values:
+        - label: DEBUG
+          value: "DEBUG"
+        - label: INFO
+          value: "INFO"
+        - label: WARNING
+          value: "WARNING"
+        - label: ERROR
+          value: "ERROR"
+        - label: CRITICAL
+          value: "CRITICAL"

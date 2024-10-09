@@ -1,0 +1,20 @@
+name: Ikaros
+tags:
+    - CMS
+    - ACG
+    - ACGMN
+title: 强大易用的开源建站工具
+description: 强大易用的开源建站工具
+additionalProperties:
+    key: ikaros
+    name: Ikaros
+    tags:
+        - WebSite
+    shortDescZh: 专注于ACGMN的内容管理系统(CMS)
+    shortDescEn: Dedicated to ACGMN's Content Management System (CMS)
+    type: website
+    crossVersionUpdate: true
+    limit: 0
+    website: https://ikaros.run
+    github: https://github.com/ikaros-dev/ikaros
+    document: https://docs.ikaros.run
