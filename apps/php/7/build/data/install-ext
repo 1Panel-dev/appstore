@@ -171,7 +171,7 @@ install_extension() {
     elif [ "$extension" = "opcache" ]; then
         docker_php_ext_install opcache
     elif [ "$extension" = "mysqli" ]; then
-        docker_php_ext_install mysqli
+        install_php_extensions mysqli
     elif [ "$extension" = "sysvshm" ]; then
         docker_php_ext_install sysvshm
     elif [ "$extension" = "calendar" ]; then
