@@ -26,3 +26,9 @@ additionalProperties:
   website: https://www.python.org/
   github: ""
   document: ""
+  architectures:
+    - amd64
+    - arm/v7
+    - arm64
+    - ppc64le
+    - s390x
