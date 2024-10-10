@@ -2,9 +2,4 @@
 
 source /.env
 
-eval $EXEC_SCRIPT
-
-
-
-
-
+$EXEC_SCRIPT
