@@ -1,0 +1,19 @@
+name: NocoBase
+tags:
+    - 开发工具
+title: 可扩展性优先的开源无代码开发平台
+description: 可扩展性优先的开源无代码开发平台
+additionalProperties:
+    key: nocobase
+    name: NocoBase
+    tags:
+        - DevTool
+    shortDescZh: 可扩展性优先的开源无代码开发平台
+    shortDescEn: A scalability-first, open-source no-code development platform
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://www.nocobase.com/
+    github: https://github.com/nocobase/nocobase/
+    document: https://docs.nocobase.com/
