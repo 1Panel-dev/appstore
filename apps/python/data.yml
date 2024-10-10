@@ -1,0 +1,26 @@
+name: Python
+tags:
+  - 运行环境
+title: Python 运行环境
+description: Python 运行环境
+additionalProperties:
+  key: python
+  name: Python
+  tags:
+    - Runtime
+  shortDescZh: Python 运行环境
+  shortDescEn: Python Runtime
+  type: python
+  crossVersionUpdate: false
+  limit: 0
+  recommend: 101
+  website: https://www.python.org/
+  github: ""
+  document: ""
+  version: 2.0
+  architectures:
+    - amd64
+    - arm/v7
+    - arm64
+    - ppc64le
+    - s390x
