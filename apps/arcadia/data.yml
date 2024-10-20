@@ -1,0 +1,19 @@
+name: Arcadia
+tags: 
+  - 实用工具
+title: 一站式代码运维平台
+description: 一站式代码运维平台
+additionalProperties:
+  key: arcadia
+  name: Arcadia
+  tags:  
+    - Tool
+  shortDescZh: 一站式代码运维平台
+  shortDescEn: One-stop code operation and maintenance platform
+  type: tool
+  crossVersionUpdate: false
+  limit: 0
+  recommend: 100
+  website: https://arcadia.cool
+  github: https://github.com/SuperManito/Arcadia
+  document: https://arcadia.cool/docs

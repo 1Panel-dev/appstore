@@ -1,0 +1,21 @@
+services:
+  arcadia:
+    image: supermanito/arcadia:beta
+    container_name: ${CONTAINER_NAME}
+    hostname: arcadia
+    networks:
+      - 1panel-network
+    volumes:
+      - ./data/config:/arcadia/config
+      - ./data/log:/arcadia/log
+      - ./data/scripts:/arcadia/scripts
+      - ./data/repo:/arcadia/repo
+      - ./data/raw:/arcadia/raw
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:5678"
+    restart: always
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true
