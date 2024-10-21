@@ -1,0 +1,19 @@
+name: Python
+tags:
+  - 运行环境
+title: Python 运行环境
+description: Python 运行环境
+additionalProperties:
+  key: python
+  name: Python
+  tags:
+    - Runtime
+  shortDescZh: Python 运行环境
+  shortDescEn: Python Runtime
+  type: python
+  crossVersionUpdate: false
+  limit: 0
+  recommend: 101
+  website: https://www.python.org/
+  github: ""
+  document: ""
