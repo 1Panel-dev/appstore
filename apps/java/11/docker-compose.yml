@@ -13,6 +13,8 @@ services:
     ports:
       - ${HOST_IP}:${PANEL_APP_PORT_HTTP}:${JAVA_APP_PORT}
     restart: on-failure:5
+    labels:
+      createdBy: "Apps"
 networks:
   1panel-network:
     external: true
