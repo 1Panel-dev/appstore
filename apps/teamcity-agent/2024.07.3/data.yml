@@ -1,0 +1,24 @@
+additionalProperties:
+  formFields:
+    - default: http://1.2.3.4:8111
+      edit: true
+      envKey: PANEL_APP_SERVER_URL
+      labelEn: Teamcity Instance
+      labelZh: Teamcity 实例
+      required: true
+      rule: paramExtUrl
+      type: text
+    - default: ''
+      edit: true
+      envKey: PANEL_APP_AGENT_TOKEN
+      labelEn: Agent Token
+      labelZh: Agent Token
+      required: true
+      type: text
+    - default: ''
+      edit: true
+      envKey: PANEL_APP_AGENT_NAME
+      labelEn: Agent Name
+      labelZh: Agent Name
+      required: true
+      type: text

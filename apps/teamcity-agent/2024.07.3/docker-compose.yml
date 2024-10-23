@@ -1,0 +1,19 @@
+services:
+  teamcity-agent:
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    image: jetbrains/teamcity-agent:2024.07.3-linux-sudo
+    user: 0:0
+    environment:
+      - DOCKER_IN_DOCKER=start
+      - SERVER_URL=${PANEL_APP_SERVER_URL}
+      - AGENT_NAME=${PANEL_APP_AGENT_NAME}
+      - AGENT_TOKEN=${PANEL_APP_AGENT_TOKEN}
+    networks:
+      - 1panel-network
+    labels:
+      createdBy: "Apps"
+
+networks:
+  1panel-network:
+    external: true
