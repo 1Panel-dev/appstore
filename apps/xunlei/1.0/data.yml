@@ -1,0 +1,24 @@
+additionalProperties:
+    formFields:
+        - default: ""  
+          envKey: PANEL_DOWNLOADS_PATH  
+          labelEn: Host download path  
+          labelZh: 主机下载路径  
+          random: false
+          required: true  
+          type: text
+        - default: "xunlei"  
+          envKey: PANEL_HOSTNAME  
+          labelEn: Hostname  
+          labelZh: 主机名字  
+          random: true
+          required: true  
+          type: text
+        - default: 2345  
+          envKey: PANEL_APP_PORT_HTTP  
+          labelEn: port
+          labelZh: 端口
+          random: false
+          required: true  
+          rule: paramPort
+          type: number

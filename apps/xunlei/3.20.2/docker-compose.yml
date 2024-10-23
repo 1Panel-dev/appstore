@@ -1,0 +1,19 @@
+services:
+  xunlei:
+    image: cnk3x/xunlei:V3.20.2
+    privileged: true
+    container_name: ${CONTAINER_NAME}
+    hostname: ${PANEL_HOSTNAME}
+    networks: 
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:2345
+    volumes:
+      - ./data/:/xunlei/data
+      - ${PANEL_DOWNLOADS_PATH}:/xunlei/downloads
+    restart: always
+networks:
+  1panel-network:
+    external: true
+
+
