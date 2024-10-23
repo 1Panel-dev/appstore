@@ -1,0 +1,17 @@
+additionalProperties:
+  formFields:
+    - default: 8111
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: ''
+      edit: true
+      envKey: PANEL_APP_TEAMCITY_CONTEXT
+      labelEn: Teamcity Context
+      labelZh: Teamcity Context
+      required: true
+      type: text

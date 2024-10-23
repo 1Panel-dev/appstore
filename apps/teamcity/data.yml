@@ -1,0 +1,13 @@
+additionalProperties:
+  key: teamcity
+  name: TeamCity
+  tags:
+    - CI/CD
+  shortDescZh: 面向现代 DevOps 团队的强大 CI/CD 解决方案
+  shortDescEn: Powerful CI/CD solution for modern DevOps teams
+  type: tool
+  crossVersionUpdate: false
+  limit: 0
+  website: https://www.jetbrains.com/teamcity/
+  github: https://github.com/orgs/JetBrains/repositories?q=teamcity
+  document: https://www.jetbrains.com/help/teamcity

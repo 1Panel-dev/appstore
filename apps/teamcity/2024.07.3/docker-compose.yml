@@ -1,0 +1,20 @@
+services:
+  teamcity:
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    image: jetbrains/teamcity-server:2024.07.3
+    environment:
+      - TEAMCITY_CONTEXT=${PANEL_APP_TEAMCITY_CONTEXT}
+    user: 0:0
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:8111"
+    volumes:
+      - ./data:/data/teamcity_server/datadir
+    networks:
+      - 1panel-network
+    labels:
+      createdBy: "Apps"
+
+networks:
+  1panel-network:
+    external: true
