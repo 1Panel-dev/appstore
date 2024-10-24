@@ -12,7 +12,7 @@ services:
       - "PROXY_URL=${PROXY}"
       - "BASE_URL=${API_BASE_URL}"
       - "WHITE_WEBDAV_ENDPOINTS=${WHITE_WEBDAV_ENDPOINTS}"
-    image: yidadaa/chatgpt-next-web:2.15.5
+    image: yidadaa/chatgpt-next-web:v2.15.6
     labels:
       createdBy: "Apps"
 
