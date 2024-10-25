@@ -2,4 +2,5 @@
 
 source /.env
 
-$EXEC_SCRIPT
+
+eval $EXEC_SCRIPT
