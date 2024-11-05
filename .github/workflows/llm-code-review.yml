@@ -25,4 +25,4 @@ jobs:
           # max_tokens: 10000
           MAX_PATCH_LENGTH: 10000
           IGNORE_PATTERNS: "/node_modules,*.md,/dist,/.github"
-          FILE_PATTERNS: "*.java,*.go,*.py,*.vue,*.ts,*.js,*.css,*.scss,*.html,*.yml.*.yaml"
+          FILE_PATTERNS: "*.java,*.go,*.py,*.vue,*.ts,*.js,*.css,*.scss,*.html,*.yml,*.yaml"
