@@ -1,0 +1,19 @@
+name: Huginn
+tags:
+    - 实用工具
+title: 一个用于构建代理系统的工具，可以为你在线执行自动化任务
+description: 一个用于构建代理系统的工具，可以为你在线执行自动化任务
+additionalProperties:
+    key: huginn
+    name: Huginn
+    tags:
+        - Tool
+    shortDescZh: 一个用于构建代理系统的工具，可以为你在线执行自动化任务
+    shortDescEn: A system for building agents that perform automated tasks for you online
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://github.com/huginn/huginn
+    github: https://github.com/huginn/huginn
+    document: https://github.com/huginn/huginn/wiki
