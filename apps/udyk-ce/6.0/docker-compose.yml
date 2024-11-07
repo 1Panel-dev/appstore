@@ -1,0 +1,63 @@
+services:
+  panel:
+    container_name: udyk-ce-panel
+    image: registry.cn-shanghai.aliyuncs.com/youdeyunke/ce:panel
+    restart: on-failure:3
+    expose:
+      - 80
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:80
+    environment:
+      TZ: "Asia/Shanghai"
+      LANG: "C.UTF-8"
+    depends_on:
+      - server
+    volumes:
+      - "./data/tmp:/tmp"
+      - "./data/upload:/app/filestore"
+
+  server:
+    container_name: udyk-ce-server
+    image: registry.cn-shanghai.aliyuncs.com/youdeyunke/ce:server
+    platform: "linux/x86_64"        # 如果是m芯片必须加这个
+    privileged: true
+    restart: always
+    expose:
+      - 8080
+    environment:
+      TZ: "Asia/Shanghai"
+      LANG: "C.UTF-8"
+    depends_on:
+      - redis
+      - db
+    volumes:
+      - "./data/tmp:/tmp"
+      - "./data/upload:/app/upload/"
+
+
+  redis:
+    container_name: udyk-ce-redis
+    restart: "always"
+    image: registry.cn-shanghai.aliyuncs.com/youdeyunke/common:redis-4.0
+    command: redis-server --bind 0.0.0.0 --appendonly yes
+    environment:
+      TZ: "Asia/Shanghai"
+      LANG: "C.UTF-8"
+    volumes:
+      - ./data/redis:/data
+    expose:
+      - 6379
+
+  db:
+    container_name: udyk-ce-db
+    restart: "always"
+    image: registry.cn-shanghai.aliyuncs.com/youdeyunke/common:mysql-8.0.3
+    expose:
+      - 3306
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: udyk_community
+      LANG: "C.UTF-8"
+      TZ: "Asia/Shanghai"
+      MYSQL_ROOT_PASSWORD: "udyk@2023"
