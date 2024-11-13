@@ -10,6 +10,8 @@ services:
     environment:
       - OLLAMA_BASE_URL=${OLLAMA_BASE_URL}
       - WEBUI_SECRET_KEY=${WEBUI_SECRET_KEY}
+    volumes:
+      - ./data:/app/backend/data
     labels:
       createdBy: "Apps"
 networks:
