@@ -39,7 +39,7 @@ additionalProperties:
           type: password
         - default: "low"
           envKey: DVWA_SECURITY_LEVEL
-          labelEn: security level
+          labelEn: Security level
           labelZh: 安全级别
           required: true
           type: select
@@ -52,7 +52,34 @@ additionalProperties:
               value: "high"
             - label: 极高
               value: "impossible"
-        - default: 4280
+        - default: "zh"
+          envKey: DVWA_DEFAULT_LOCALE
+          labelEn: Locale
+          labelZh: 语言环境
+          required: true
+          type: select
+          values:
+            - label: 中文
+              value: "zh"
+            - label: 英文
+              value: "en"
+        - default: ""
+          edit: true
+          envKey: DVWA_RECAPTCHA_PUBLIC_KEY
+          labelEn: Recaptcha Public Key
+          labelZh: 验证码公钥
+          required: false
+          rule: paramCommon
+          type: text
+        - default: ""
+          edit: true
+          envKey: DVWA_RECAPTCHA_PRIVATE_KEY
+          labelEn: Recaptcha Private Key
+          labelZh: 验证码私钥
+          required: false
+          rule: paramCommon
+          type: text
+        - default: "4280"
           edit: true
           envKey: PANEL_APP_PORT_HTTP
           labelEn: Port

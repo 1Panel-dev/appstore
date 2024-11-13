@@ -1,6 +1,6 @@
 services:
   dvwa:
-    image: ghcr.io/digininja/dvwa:0a509bd
+    image: ghcr.io/digininja/dvwa:latest
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
@@ -14,10 +14,9 @@ services:
       - DB_USER=${PANEL_DB_USER}
       - DB_PASSWORD=${PANEL_DB_USER_PASSWORD}
       - DEFAULT_SECURITY_LEVEL=${DVWA_SECURITY_LEVEL}
-      - DISABLE_AUTHENTICATION=false
-      - DEFAULT_LOCALE=zh
-      - RECAPTCHA_PUBLIC_KEY=6LdJJlUUAAAAAH1Q6cTpZRQ2Ah8VpyzhnffD0mBb
-      - RECAPTCHA_PRIVATE_KEY=6LdJJlUUAAAAAM2a3HrgzLczqdYp4g05EqDs-W4K
+      - RECAPTCHA_PUBLIC_KEY=${DVWA_RECAPTCHA_PUBLIC_KEY}
+      - RECAPTCHA_PRIVATE_KEY=${DVWA_RECAPTCHA_PRIVATE_KEY}
+      - DEFAULT_LOCALE=${DVWA_DEFAULT_LOCALE}
     labels:
       createdBy: "Apps"
 networks:
