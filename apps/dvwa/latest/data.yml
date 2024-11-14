@@ -1,89 +1,92 @@
 additionalProperties:
-    formFields:
-        - child:
-            default: ""
-            envKey: PANEL_DB_HOST
-            required: true
-            type: service
-          default: mariadb
-          envKey: PANEL_DB_TYPE
-          labelEn: Database Service
-          labelZh: 数据库服务
-          required: true
-          type: apps
-          values:
-            - label: MariaDB
-              value: mariadb
-            - label: MySQL
-              value: mysql
-        - default: dvwa
-          envKey: PANEL_DB_NAME
-          labelEn: Database
-          labelZh: 数据库名
-          required: true
-          rule: paramCommon
-          type: text
-        - default: dvwa
-          envKey: PANEL_DB_USER
-          labelEn: User
-          labelZh: 数据库用户
-          required: true
-          rule: paramCommon
-          type: text
-        - default: p@ssw0rd
-          envKey: PANEL_DB_USER_PASSWORD
-          labelEn: Password
-          labelZh: 数据库用户密码
-          required: true
-          rule: paramComplexity
-          type: password
-        - default: "low"
-          envKey: DVWA_SECURITY_LEVEL
-          labelEn: Security level
-          labelZh: 安全级别
-          required: true
-          type: select
-          values:
-            - label: 低
-              value: "low"
-            - label: 中
-              value: "medium"
-            - label: 高
-              value: "high"
-            - label: 极高
-              value: "impossible"
-        - default: "zh"
-          envKey: DVWA_DEFAULT_LOCALE
-          labelEn: Locale
-          labelZh: 语言环境
-          required: true
-          type: select
-          values:
-            - label: 中文
-              value: "zh"
-            - label: 英文
-              value: "en"
-        - default: ""
-          edit: true
-          envKey: DVWA_RECAPTCHA_PUBLIC_KEY
-          labelEn: Recaptcha Public Key
-          labelZh: 验证码公钥
-          required: false
-          rule: paramCommon
-          type: text
-        - default: ""
-          edit: true
-          envKey: DVWA_RECAPTCHA_PRIVATE_KEY
-          labelEn: Recaptcha Private Key
-          labelZh: 验证码私钥
-          required: false
-          rule: paramCommon
-          type: text
-        - default: "4280"
-          edit: true
-          envKey: PANEL_APP_PORT_HTTP
-          labelEn: Port
-          labelZh: 端口
-          required: true
-          rule: paramPort
-          type: number
+  formFields:
+    - child:
+        default: ""
+        envKey: PANEL_DB_HOST
+        required: true
+        type: service
+      default: mysql
+      envKey: PANEL_DB_TYPE
+      labelEn: Database Service
+      labelZh: 数据库服务
+      required: true
+      type: apps
+      values:
+        - label: MySQL
+          value: mysql
+        - label: MariaDB
+          value: mariadb
+    - default: dvwa
+      envKey: PANEL_DB_NAME
+      labelEn: Database
+      labelZh: 数据库名
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: dvwa
+      envKey: PANEL_DB_USER
+      labelEn: User
+      labelZh: 数据库用户
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: dvwa
+      envKey: PANEL_DB_USER_PASSWORD
+      labelEn: Password
+      labelZh: 数据库用户密码
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+    - default: "low"
+      envKey: DVWA_SECURITY_LEVEL
+      labelEn: Security level
+      labelZh: 安全级别
+      required: true
+      type: select
+      values:
+        - label: 低
+          value: "low"
+        - label: 中
+          value: "medium"
+        - label: 高
+          value: "high"
+        - label: 极高
+          value: "impossible"
+    - default: "zh"
+      envKey: DVWA_DEFAULT_LOCALE
+      labelEn: Locale
+      labelZh: 语言环境
+      required: true
+      type: select
+      values:
+        - label: 中文
+          value: "zh"
+        - label: 英文
+          value: "en"
+    - default: ""
+      edit: true
+      envKey: DVWA_RECAPTCHA_PUBLIC_KEY
+      labelEn: Recaptcha Public Key
+      labelZh: 验证码公钥
+      required: false
+      rule: paramCommon
+      type: text
+    - default: ""
+      edit: true
+      envKey: DVWA_RECAPTCHA_PRIVATE_KEY
+      labelEn: Recaptcha Private Key
+      labelZh: 验证码私钥
+      required: false
+      rule: paramCommon
+      type: text
+    - default: "4280"
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number

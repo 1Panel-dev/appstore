@@ -2,18 +2,18 @@ name: DVWA
 tags:
     - 安全
 title: DVWA
-description: 一个用来进行安全脆弱性鉴定的PHP/MySQL Web 应用平台。
+description: 一个用来进行安全脆弱性鉴定的 PHP/MySQL Web 应用平台。
 additionalProperties:
     key: dvwa
     name: DVWA
     tags:
         - Security
-    shortDescZh: 一个用来进行安全脆弱性鉴定的PHP/MySQL Web 应用平台。
+    shortDescZh: 一个用来进行安全脆弱性鉴定的 PHP/MySQL Web 应用平台。
     shortDescEn: DVWA (Damn Vulnerable Web Application)
-    type: security
+    type: tool
     crossVersionUpdate: true
     limit: 0
-    recommend: 10
+    recommend: 0
     website: https://github.com/digininja/DVWA
     github: https://github.com/digininja/DVWA
     document: https://github.com/digininja/DVWA
