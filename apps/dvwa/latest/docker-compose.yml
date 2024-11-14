@@ -1,0 +1,24 @@
+services:
+  dvwa:
+    image: ghcr.io/digininja/dvwa:latest
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:80
+    environment:
+      - DB_SERVER=${PANEL_DB_HOST}
+      - DB_PORT=${PANEL_DB_PORT}
+      - DB_DATABASE=${PANEL_DB_NAME}
+      - DB_USER=${PANEL_DB_USER}
+      - DB_PASSWORD=${PANEL_DB_USER_PASSWORD}
+      - DEFAULT_SECURITY_LEVEL=${DVWA_SECURITY_LEVEL}
+      - RECAPTCHA_PUBLIC_KEY=${DVWA_RECAPTCHA_PUBLIC_KEY}
+      - RECAPTCHA_PRIVATE_KEY=${DVWA_RECAPTCHA_PRIVATE_KEY}
+      - DEFAULT_LOCALE=${DVWA_DEFAULT_LOCALE}
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true
