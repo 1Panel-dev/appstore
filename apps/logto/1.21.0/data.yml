@@ -58,7 +58,7 @@ additionalProperties:
       labelEn: Logto Endpoint
       labelZh: Logto 服务地址（进入网站页面添加反向代理网站，并启用 HTTPS）
       required: true
-      rule: paramHttp
+      rule: paramExtUrl
       type: text
     - default: https://admin.domain.com
       edit: true
@@ -66,5 +66,5 @@ additionalProperties:
       labelEn: Logto Admin Endpoint
       labelZh: Logto 管理控制台地址（进入网站页面添加反向代理网站，并启用 HTTPS）
       required: true
-      rule: paramHttp
+      rule: paramExtUrl
       type: text
