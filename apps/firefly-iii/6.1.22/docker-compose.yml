@@ -1,6 +1,6 @@
 services:
     firefly-iii:
-        image: fireflyiii/core:version-6.1.21
+        image: fireflyiii/core:version-6.1.22
         container_name: ${CONTAINER_NAME}
         environment:
             - APP_KEY=${APP_KEY}
