@@ -1,0 +1,21 @@
+services:
+  artalk:
+    image: artalk/artalk-go:2.9
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    volumes:
+      - ./data:/data
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:23366
+    environment:
+      - ATK_SITE_DEFAULT=${ATK_SITE_DEFAULT}
+      - ATK_SITE_URL=${ATK_SITE_URL}
+      - ATK_LOCALE=${ATK_LOCALE}
+      - TZ=${TZ}
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true
