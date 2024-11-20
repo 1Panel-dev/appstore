@@ -1,0 +1,60 @@
+additionalProperties:
+  formFields:
+    - default: "8360"
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: "Asia/Shanghai"
+      envKey: TZ
+      labelEn: Time Zone
+      labelZh: 时区
+      required: true
+      type: text
+    - default: "Ep1sH0AEw128"
+      envKey: JWT_TOKEN
+      labelEn: JWT Token
+      labelZh: 用户登录密钥
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+    - default: "false"
+      envKey: COMMENT_AUDIT
+      labelEn: Comment Audit
+      labelZh: 开启评论审核
+      required: true
+      type: select
+      values:
+        - label: 是
+          value: "true"
+        - label: 否
+          value: "false"
+    - default: ""
+      envKey: AUTHOR_EMAIL
+      labelEn: Author Email
+      labelZh: 作者邮箱
+      required: false
+      type: text
+    - default: ""
+      envKey: SITE_NAME
+      labelEn: Site Name
+      labelZh: 博客名称
+      required: false
+      type: text
+    - default: ""
+      envKey: SITE_URL
+      labelEn: Site Url
+      labelZh: 博客地址
+      required: false
+      rule: paramHttp
+      type: text
+    - default: ""
+      envKey: SECURE_DOMAINS
+      labelEn: Secure Domains
+      labelZh: 安全域名
+      required: false
+      type: text
