@@ -18,6 +18,7 @@ services:
     command: ["/run.sh"]
     environment:
       - TZ=Asia/Shanghai
+      - UUWAF_MYSQL_PASSWORD=Safe3.WAF
     links:
       - wafdb
     depends_on:
