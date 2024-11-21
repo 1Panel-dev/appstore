@@ -14,6 +14,6 @@ additionalProperties:
     crossVersionUpdate: false
     limit: 0
     recommend: 0
-    website: https://stirlingtools.com/
+    website: https://www.stirlingpdf.com/
     github: https://github.com/Stirling-Tools/Stirling-PDF
-    document: https://stirlingtools.com/docs/Overview/What%20is%20Stirling-PDF
+    document: https://docs.stirlingpdf.com/
