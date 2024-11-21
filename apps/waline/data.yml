@@ -1,0 +1,19 @@
+name: Waline
+tags:
+    - 实用工具
+title: 一款简洁、安全的评论系统
+description: 一款简洁、安全的评论系统
+additionalProperties:
+    key: waline
+    name: waline
+    tags:
+        - Tool
+    shortDescZh: 一款简洁、安全的评论系统
+    shortDescEn: A Simple, Safe Comment System
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://waline.js.org/
+    github: https://github.com/walinejs/waline
+    document: https://waline.js.org/guide/get-started/
