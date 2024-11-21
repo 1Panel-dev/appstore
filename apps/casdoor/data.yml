@@ -1,0 +1,15 @@
+additionalProperties:
+  key: casdoor
+  name: Casdoor
+  tags:
+    - Security
+    - Database
+    - Tool
+  shortDescZh: 一个支持OAuth 2.0、OIDC、SAML和CAS的Web UI优先的身份和访问管理（IAM）/单点登录（SSO）平台
+  shortDescEn: An Identity and Access Management (IAM) / Single-Sign-On (SSO) platform with web UI supporting OAuth 2.0, OIDC, SAML and CAS
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  website: https://casdoor.org/zh/
+  github: https://github.com/casdoor/casdoor
+  document: https://casdoor.org/zh/docs/overview
