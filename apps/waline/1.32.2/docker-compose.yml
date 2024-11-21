@@ -10,7 +10,7 @@ services:
     ports:
       - ${PANEL_APP_PORT_HTTP}:8360
     environment:
-      - SQLITE_PATH=/app/data  # 默认值，不建议修改(如果修改，则需要手动将waline.sqlite挂载到这个目录下)
+      - SQLITE_PATH=/app/data
       - TZ=${TZ}
       - JWT_TOKEN=${JWT_TOKEN}
       - COMMENT_AUDIT=${COMMENT_AUDIT}

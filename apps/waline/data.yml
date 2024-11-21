@@ -5,7 +5,7 @@ title: 一款简洁、安全的评论系统
 description: 一款简洁、安全的评论系统
 additionalProperties:
     key: waline
-    name: waline
+    name: Waline
     tags:
         - Tool
     shortDescZh: 一款简洁、安全的评论系统
