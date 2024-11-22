@@ -1,0 +1,19 @@
+name: RachelWAF
+tags:
+  - 安全
+title: RachelWAF应用防火墙
+description: RachelWAF应用防火墙
+additionalProperties:
+  key: RachelWAF
+  name: RachelWAF
+  tags:
+    - Security
+  shortDescZh: RachelWAF应用防火墙
+  shortDescEn: RachelWAF Application Firewall
+  type: tool
+  crossVersionUpdate: true
+  limit: 1
+  recommend: 0
+  website: https://waf.csol.store/#/
+  github: https://gitee.com/rachelos/waf
+  document: https://waf.csol.store/#document

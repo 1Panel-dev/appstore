@@ -1,0 +1,19 @@
+services:
+  RachelWAF-instance:
+    image: registry.cn-hangzhou.aliyuncs.com/rachel_saas/rachelwaf:latest
+    container_name: RachelWAF
+    ports:
+      - "12306:12306"
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./conf:/app/conf
+      - ./data:/app/data
+      - ./logs:/app/logs
+    networks:
+      - RachelWAFnet
+    restart: always
+    
+networks:
+  RachelWAFnet:
+    external: false
