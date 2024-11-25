@@ -1,6 +1,6 @@
 services:
   java:
-    image: mcr.microsoft.com/dotnet/aspnet:${DONET_VERSION}
+    image: mcr.microsoft.com/dotnet/aspnet:${DOTNET_VERSION}
     container_name: ${CONTAINER_NAME}
     working_dir: /app
     volumes:
