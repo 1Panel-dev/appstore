@@ -1,0 +1,19 @@
+name: Biliup
+tags:
+    - 实用工具
+title: 全自动录播、直播录制、分p投稿工具，支持twitch、ytb频道搬运
+description: 全自动录播、直播录制、分p投稿工具，支持twitch、ytb频道搬运
+additionalProperties:
+    key: biliup
+    name: Biliup
+    tags:
+        - Tool
+    shortDescZh: 全自动录播、直播录制、分p投稿工具，支持twitch、ytb频道搬运
+    shortDescEn: Fully automated recording, live recording, sub-p casting tools, support twitch, ytb channel handling
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 65
+    website: https://biliup.github.io/biliup/
+    github: https://github.com/biliup/biliup
+    document: https://biliup.github.io/biliup/docs/getting-started/introduction/
