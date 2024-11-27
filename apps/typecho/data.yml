@@ -7,7 +7,7 @@ additionalProperties:
     key: typecho
     name: Typecho
     tags:
-        - WebSite
+        - Website
     shortDescZh: 基于 PHP 的博客软件
     shortDescEn: A PHP Blogging Platform. Simple and Powerful
     type: website

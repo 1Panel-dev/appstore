@@ -7,7 +7,7 @@ additionalProperties:
     key: wordpress
     name: WordPress
     tags:
-        - WebSite
+        - Website
     shortDescZh: 著名的开源博客软件和 CMS 系统
     shortDescEn: Open source blogging software and content management system
     type: website
