@@ -7,7 +7,7 @@ additionalProperties:
     key: dashy
     name: Dashy
     tags:
-        - WebSite
+        - Website
     shortDescZh: 专为您打造的可自行托管的个人仪表板
     shortDescEn: A self-hostable personal dashboard built for you
     type: website

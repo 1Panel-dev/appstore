@@ -7,7 +7,7 @@ additionalProperties:
     key: discourse
     name: Discourse
     tags:
-        - WebSite
+        - Website
     shortDescZh: 社区讨论的平台。免费、开放、简单。
     shortDescEn: A platform for community discussion. Free, open, simple.
     type: website

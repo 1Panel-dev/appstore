@@ -7,7 +7,7 @@ additionalProperties:
     key: flarum
     name: Flarum
     tags:
-        - WebSite
+        - Website
     shortDescZh: 用于构建优秀社区的简单论坛软件
     shortDescEn: Simple forum software for building great communities
     type: website

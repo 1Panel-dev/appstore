@@ -7,7 +7,7 @@ additionalProperties:
     key: discuz
     name: Discuz!
     tags:
-        - WebSite
+        - Website
     shortDescZh: 开源社交建站系统
     shortDescEn: Open Source Social Building System
     type: website

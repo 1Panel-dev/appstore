@@ -7,7 +7,7 @@ additionalProperties:
   key: mblog
   name: MBlog
   tags:
-    - WebSite
+    - Website
   shortDescZh: 开源自部署的个人微博
   shortDescEn: Open source self hosted personal micro blog platform
   type: website

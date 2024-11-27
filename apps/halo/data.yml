@@ -7,7 +7,7 @@ additionalProperties:
     key: halo
     name: Halo
     tags:
-        - WebSite
+        - Website
     shortDescZh: 强大易用的开源建站工具
     shortDescEn: Powerful and easy-to-use open source website builder
     type: website
