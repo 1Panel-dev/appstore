@@ -1,0 +1,19 @@
+additionalProperties:
+  formFields:
+    - default: "23000"
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: "Rjqqdro2F8V8EwXCPX4ZY"
+      edit: true
+      envKey: WAKAPI_PASSWORD_SALT
+      labelEn: Password Salt
+      labelZh: 密码盐
+      required: true
+      rule: paramCommon
+      random: true
+      type: text

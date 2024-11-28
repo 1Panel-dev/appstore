@@ -1,0 +1,21 @@
+networks:
+  1panel-network:
+    external: true
+services:
+  wakapi:
+    image: ghcr.io/muety/wakapi:2.12.2
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    user: root
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:3000
+    environment:
+      - WAKAPI_PASSWORD_SALT=${WAKAPI_PASSWORD_SALT}
+      - WAKAPI_DB_NAME=/data/wakapi.db
+      - TZ=Asia/Shanghai
+    volumes:
+      - ./data:/data
+    labels:
+      createdBy: "Apps"

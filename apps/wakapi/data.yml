@@ -1,0 +1,19 @@
+name: Wakapi
+tags:
+  - 实用工具
+title: 编码统计工具
+description: 一个极简主义的、自托管的、与 WakaTime 兼容的编码统计后端
+additionalProperties:
+  key: wakapi
+  name: Wakapi
+  tags:
+    - Tool
+  shortDescZh: 一个极简主义的、自托管的、与 WakaTime 兼容的编码统计后端
+  shortDescEn: A minimalist, self-hosted WakaTime-compatible backend for coding statistics
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://wakapi.dev/
+  github: https://github.com/muety/wakapi
+  document: https://github.com/muety/wakapi
