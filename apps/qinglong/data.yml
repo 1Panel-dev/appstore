@@ -14,6 +14,6 @@ additionalProperties:
   crossVersionUpdate: true
   limit: 0
   recommend: 85
-  website: https://github.com/whyour/qinglong/tree/master
-  github: https://github.com/whyour/qinglong/tree/master
-  document: https://github.com/whyour/qinglong/tree/master
+  website: https://qinglong.online
+  github: https://github.com/whyour/qinglong
+  document: https://qinglong.online/guide/introduction
