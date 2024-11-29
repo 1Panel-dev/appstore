@@ -1,6 +1,6 @@
 additionalProperties:
   formFields:
-    - default: 80
+    - default: 8080
       edit: true
       envKey: PANEL_APP_PORT_HTTP
       labelEn: Web Port
