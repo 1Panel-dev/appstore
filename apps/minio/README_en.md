@@ -20,9 +20,9 @@ MinIO ensures data security through encryption and access control. It supports S
 
 MinIO is compatible with Amazon S3, allowing integration with existing S3 tools and applications. This compatibility simplifies migration and scaling of existing S3 workloads.
 
-### Multi-Tenant Support
+### Multi-Tenancy Support
 
-MinIO supports multi-tenant environments, enabling independent storage spaces and access controls for different organizations or users within a single MinIO instance.
+MinIO supports multi-tenancy environments, enabling independent storage spaces and access controls for different organizations or users within a single MinIO instance.
 
 ### Version Control
 
