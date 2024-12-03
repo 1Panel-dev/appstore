@@ -7,7 +7,7 @@ additionalProperties:
             type: service
           default: mysql
           envKey: PANEL_DB_TYPE
-          labelEn: Database Service
+          labelEn: Database
           labelZh: 数据库服务
           required: true
           type: apps
@@ -20,7 +20,7 @@ additionalProperties:
               value: postgresql
         - default: halo
           envKey: PANEL_DB_NAME
-          labelEn: Database
+          labelEn: Database name
           labelZh: 数据库名
           random: true
           required: true
@@ -28,7 +28,7 @@ additionalProperties:
           type: text
         - default: halo
           envKey: PANEL_DB_USER
-          labelEn: User
+          labelEn: Database username
           labelZh: 数据库用户
           random: true
           required: true
@@ -36,7 +36,7 @@ additionalProperties:
           type: text
         - default: halo
           envKey: PANEL_DB_USER_PASSWORD
-          labelEn: Password
+          labelEn: Database password
           labelZh: 数据库用户密码
           random: true
           required: true
