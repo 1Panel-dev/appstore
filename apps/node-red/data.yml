@@ -1,0 +1,19 @@
+name: Node-RED
+tags:
+  - 实用工具
+title: Node-RED 编程工具
+description: Node-RED 是一个基于流的编程工具
+additionalProperties:
+  key: node-red
+  name: Node-RED
+  tags:
+    - Tool
+  shortDescZh: Node-RED 是一个基于流的编程工具
+  shortDescEn: Node-RED is a flow-based programming tool
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://nodered.org/
+  github: https://github.com/node-red/node-red
+  document: https://nodered.org/docs/
