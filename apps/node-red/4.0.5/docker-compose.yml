@@ -1,9 +1,6 @@
-networks:
-  1panel-network:
-    external: true
 services:
   node-red:
-    image: nodered/node-red:latest
+    image: nodered/node-red:4.0.5
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
@@ -17,3 +14,6 @@ services:
       - ./data:/data
     labels:
       createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true

@@ -1,15 +1,15 @@
 name: Node-RED
 tags:
   - 实用工具
-title: Node-RED 编程工具
-description: Node-RED 是一个基于流的编程工具
+title: 用于事件驱动应用的低代码编程
+description: 用于事件驱动应用的低代码编程
 additionalProperties:
   key: node-red
   name: Node-RED
   tags:
     - Tool
-  shortDescZh: Node-RED 是一个基于流的编程工具
-  shortDescEn: Node-RED is a flow-based programming tool
+  shortDescZh: 用于事件驱动应用的低代码编程
+  shortDescEn: Low-code programming for event-driven applications
   type: tool
   crossVersionUpdate: true
   limit: 0
