@@ -9,7 +9,7 @@ services:
             driverName: ${PANEL_DB_TYPE}
             dataSourceName: ${PANEL_DB_USER}:${PANEL_DB_USER_PASSWORD}@tcp(${PANEL_DB_HOST}:${PANEL_DB_PORT})/
             dbName: ${PANEL_DB_NAME}
-        image: casbin/casdoor:v1.755.0
+        image: casbin/casdoor:v1.768.0
         labels:
             createdBy: Apps
         networks:
