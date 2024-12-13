@@ -1,0 +1,20 @@
+services:
+  PerfreeBlog:
+    image: registry.cn-hangzhou.aliyuncs.com/perfree/perfree_blog:v4.0.11
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8080
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://${PANEL_DB_HOST}:${PANEL_DB_PORT}/${PANEL_DB_NAME}?useSSL=false&allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=UTF-8&nullCatalogMeansCurrent=true
+      SPRING_DATASOURCE_USERNAME: ${PANEL_DB_USER}
+      SPRING_DATASOURCE_PASSWORD: ${PANEL_DB_USER_PASSWORD}
+    labels:
+      createdBy: "Apps"
+    volumes:
+      - ./data:/perfree-server/resources
+networks:
+  1panel-network:
+    external: true
