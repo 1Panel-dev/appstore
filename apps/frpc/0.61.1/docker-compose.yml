@@ -1,6 +1,6 @@
 services:
   frpc:
-    image: snowdreamtech/frpc:0.61.0
+    image: snowdreamtech/frpc:0.61.1
     container_name: ${CONTAINER_NAME}
     restart: always
     network_mode: host
