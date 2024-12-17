@@ -1,6 +1,6 @@
 services:
   node-red:
-    image: nodered/node-red:4.0.5
+    image: nodered/node-red:4.0.6
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
