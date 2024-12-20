@@ -1,0 +1,17 @@
+{
+  "id":"10005",
+  "state": "on",
+  "name": "SaltStack",
+  "cve": "CVE-2020-16846",
+  "type": "rce",
+  "remark": "",
+  "rule": {
+    "method":"GET",
+    "type": "request_uri",
+    "uri": "/run",
+    "pattern": "eq",
+    "params": {
+      "ssh_priv": ""
+    }
+  }
+}

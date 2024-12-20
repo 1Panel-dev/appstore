@@ -1,0 +1,14 @@
+{
+  "id":"10016",
+  "state": "on",
+  "name": "Apache Flink",
+  "cve": "CVE-2020-17519",
+  "type": "dr",
+  "remark": "",
+  "rule": {
+    "method":"GET",
+    "type": "request_uri",
+    "uri": "/jobmanager/logs/",
+    "pattern": "contain"
+  }
+}
