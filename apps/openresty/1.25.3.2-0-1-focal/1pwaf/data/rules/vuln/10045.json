@@ -1,0 +1,17 @@
+{
+  "id":"10045",
+  "state": "on",
+  "name": "F5 BIG-IP",
+  "cve": "CVE-2020-5902",
+  "type": "rce",
+  "remark": "",
+  "rule": {
+    "method":"GET",
+    "type": "uri",
+    "uri": "/tmui/login.jsp/..;/tmui/locallb/workspace/fileRead.jsp",
+    "pattern": "eq",
+    "args": {
+      "fileName": ""
+    }
+  }
+}
