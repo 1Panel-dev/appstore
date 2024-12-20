@@ -1,0 +1,14 @@
+{
+  "id":"10030",
+  "state": "on",
+  "name": "Spring Security",
+  "cve": "CVE-2022-22978",
+  "type": "aa",
+  "remark": "",
+  "rule": {
+    "method":"GET",
+    "type": "request_uri",
+    "uri": "/admin/%0d",
+    "pattern": "contain"
+  }
+}

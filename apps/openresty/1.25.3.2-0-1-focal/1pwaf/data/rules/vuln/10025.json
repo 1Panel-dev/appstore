@@ -1,0 +1,18 @@
+{
+  "id":"10025",
+  "state": "on",
+  "name": "Jenkins",
+  "cve": "CVE-2018-1000861",
+  "type": "rce",
+  "remark": "",
+  "rule": {
+    "method":"GET",
+    "type": "request_uri",
+    "uri": "/securityRealm/user/admin/descriptorByName/org.jenkinsci.plugins.scriptsecurity.sandbox.groovy.SecureGroovyScript/checkScript",
+    "pattern": "eq",
+    "args": {
+      "sandbox": "true",
+      "value": ""
+    }
+  }
+}
