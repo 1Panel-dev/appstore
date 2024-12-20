@@ -1,0 +1,18 @@
+{
+  "id":"10017",
+  "state": "on",
+  "name": "Nette",
+  "cve": "CVE-2020-15227",
+  "type": "rce",
+  "remark": "",
+  "rule": {
+    "method":"GET",
+    "type": "request_uri",
+    "uri": "/nette.micro",
+    "pattern": "contain",
+    "args": {
+      "callback": "shell_exec",
+      "cmd": ""
+    }
+  }
+}

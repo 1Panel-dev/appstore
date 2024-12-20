@@ -4,14 +4,6 @@
     "mode": "protection",
     "secret": ""
   },
-  "redis": {
-    "state": "off",
-    "host": "",
-    "port": 6379,
-    "password": "",
-    "ssl": false,
-    "poolSize": 10
-  },
   "ipWhite": {
     "state": "on",
     "type": "ipWhite",
@@ -113,14 +105,16 @@
     "action": "deny",
     "ipBlock": "on",
     "ipBlockTime": 600,
-    "mode": "uri"
+    "mode": "uri",
+    "code": 403
   },
-  "ccurl": {
+  "urlcc": {
     "state": "off",
     "type": "urlcc",
     "action": "deny",
     "ipBlock": "on",
-    "ipBlockTime": 600
+    "ipBlockTime": 600,
+    "code": 403
   },
   "attackCount": {
     "state": "on",

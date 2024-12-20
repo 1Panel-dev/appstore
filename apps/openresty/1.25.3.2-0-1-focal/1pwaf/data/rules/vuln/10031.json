@@ -1,0 +1,14 @@
+{
+  "id":"10031",
+  "state": "on",
+  "name": "Spring Cloud",
+  "cve": "CVE-2022-22963",
+  "type": "rce",
+  "remark": "",
+  "rule": {
+    "method":"POST",
+    "type": "uri",
+    "uri": "/functionRouter",
+    "pattern": "eq"
+  }
+}
