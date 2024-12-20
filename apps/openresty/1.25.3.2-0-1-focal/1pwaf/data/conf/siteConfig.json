@@ -21,14 +21,6 @@
     "code": 403,
     "action": "deny"
   },
-  "bot": {
-    "type": "bot",
-    "state": "on",
-    "uri": "/1pwaf/bot/trap",
-    "action": "deny",
-    "ipBlock": "off",
-    "ipBlockTime": 600
-  },
   "geoRestrict": {
     "state": "off",
     "rules": [],
@@ -61,13 +53,6 @@
     "ipBlockTime": 600,
     "mode": "uri"
   },
-  "ccurl": {
-    "state": "on",
-    "type": "ccurl",
-    "action": "deny",
-    "ipBlock": "off",
-    "ipBlockTime": 600
-  },
   "fileExt": {
     "state": "off",
     "action": "deny",
@@ -94,5 +79,11 @@
   },
   "cdn": {
     "state": "off"
+  },
+  "strict": {
+    "state": "on",
+    "type": "strict",
+    "code": 403,
+    "action": "deny"
   }
 }
