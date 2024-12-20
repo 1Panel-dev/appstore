@@ -1,16 +1,8 @@
 {
   "waf": {
-    "state": "off",
+    "state": "on",
     "mode": "protection",
     "secret": ""
-  },
-  "redis": {
-    "state": "off",
-    "host": "",
-    "port": 6379,
-    "password": "",
-    "ssl": false,
-    "poolSize": 10
   },
   "ipWhite": {
     "state": "on",
@@ -47,7 +39,7 @@
     "action": "deny"
   },
   "notFoundCount": {
-    "state": "on",
+    "state": "off",
     "type": "notFoundCount",
     "threshold": 30,
     "duration": 10,
@@ -61,14 +53,6 @@
     "state": "on",
     "code": 444,
     "action": "deny"
-  },
-  "bot": {
-    "state": "on",
-    "type": "bot",
-    "uri": "/1pwaf/bot/trap",
-    "action": "REDIRECT_JS",
-    "ipBlock": "on",
-    "ipBlockTime": 600
   },
   "unknownWebsite": {
     "state": "on",
@@ -104,7 +88,7 @@
     "action": "deny"
   },
   "cc": {
-    "state": "on",
+    "state": "off",
     "type": "cc",
     "rule": "cc",
     "tokenTimeOut": 1800,
@@ -115,7 +99,7 @@
     "ipBlockTime": 600,
     "mode": "uri"
   },
-  "ccurl": {
+  "urlcc": {
     "state": "off",
     "type": "urlcc",
     "action": "deny",
@@ -123,7 +107,7 @@
     "ipBlockTime": 600
   },
   "attackCount": {
-    "state": "on",
+    "state": "off",
     "type": "attackCount",
     "threshold": 10,
     "duration": 60,
@@ -132,7 +116,7 @@
     "ipBlockTime": 3000
   },
   "fileExt": {
-    "state": "off",
+    "state": "on",
     "action": "deny",
     "code": 403,
     "type": "fileExtCheck"
@@ -169,5 +153,22 @@
   },
   "cdn": {
     "state": "off"
+  },
+  "vuln": {
+    "state": "on",
+    "type": "vulnCheck",
+    "code": 403,
+    "action": "deny"
+  },
+  "log": {
+    "maxDay": 180,
+    "maxSize": 1,
+    "external": ["acl","ipWhite","ipBlack","geoRestrict","urlWhite","urlBlack","uaWhite","uaBlack"]
+  },
+  "strict": {
+    "state": "on",
+    "type": "strict",
+    "code": 403,
+    "action": "deny"
   }
 }

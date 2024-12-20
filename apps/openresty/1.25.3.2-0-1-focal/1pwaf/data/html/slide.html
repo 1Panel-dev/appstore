@@ -9,8 +9,7 @@
 #dragHandler {position:absolute;width:40px;height:100%%;cursor:pointer;box-sizing:border-box;overflow:hidden;}
 #dragHandler.dragHandlerBg {background-color:#c0c0c0;}
 #dragHandler.dragHandlerBg::before {content:'»';font-size:24px;position:absolute;top:50%%;left:50%%;transform:translate(-50%%, -50%%);color:#7ac23c;}
-.dragHandlerOkBg {position:absolute;border-radius:50%%;background-color:#7ac23c;display:flex;justify-content:center;align-items:center;}
-.dragHandlerOkBg::before {content:'\2713';font-size:16px;color:white;}
+@media screen and (max-width: 768px) {  #dragContainer {height: 40px;width: 90%%;}  #dragText {line-height: 40px;font-size: 18px;}  #dragHandler {width: 50px;}  #dragHandler.dragHandlerBg::before {font-size: 28px;}  }
 </style>
 </head>
 <body>

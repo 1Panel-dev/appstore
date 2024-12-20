@@ -14,12 +14,6 @@
     },
     {
       "state": "on",
-      "name": "appFilter3",
-      "rule": "(?:etc\\/\\W*passwd)",
-      "type": "appFilter"
-    },
-    {
-      "state": "on",
       "name": "scannerFilter1",
       "rule": "(/acunetix-wvs-test-for-some-inexistent-file|netsparker|acunetix_wvs_security_test|AppScan|XSS@HERE)",
       "type": "scannerFilter"
