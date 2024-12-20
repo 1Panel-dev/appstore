@@ -25,6 +25,7 @@
     "ip": []
   },
   "log": {
-    "maxDay": 180
+    "maxDay": 180,
+    "maxSize": 5
   }
 }

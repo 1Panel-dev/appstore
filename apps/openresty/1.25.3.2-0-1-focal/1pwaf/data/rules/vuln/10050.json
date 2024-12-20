@@ -1,0 +1,17 @@
+{
+  "id":"10050",
+  "state": "on",
+  "name": "GeoServer",
+  "cve": "CVE-2023-25157",
+  "type": "sqlInjection",
+  "remark": "",
+  "rule": {
+    "method":"GET",
+    "type": "uri",
+    "uri": "/geoserver/ows",
+    "pattern": "eq",
+    "args": {
+      "service": ""
+    }
+  }
+}
