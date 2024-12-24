@@ -11,7 +11,7 @@ services:
     networks:
       - 1panel-network
     ports:
-      - ${HOST_IP}:${PANEL_APP_PORT_HTTP}:${NODE_APP_PORT}
+      - ${HOST_IP}:${PANEL_APP_PORT_HTTP}:${APP_PORT}
     restart: on-failure:5
     labels:
       createdBy: "Apps"
