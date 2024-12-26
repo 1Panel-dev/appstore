@@ -5,12 +5,7 @@
 
 证书对应域名为邮箱`MX`主机名如`mail.example.com `。
 
-## 2. 创建Docker存储卷
-```
-docker volume create maddydata 
-```
-
-## 3. 安装应用
+## 2. 安装应用
 
 应用商店安装应用，
 
@@ -19,7 +14,12 @@ docker volume create maddydata
 忽略错误，进行下一步操作。
 
 
-## 4. 域名证书存放到存储卷
+## 3. 域名证书存放到存储卷
+
+如果 容器-存储卷 目录没有  maddydata ，那么需要手动执行 
+```
+docker volume create maddydata 
+```
 
 存储卷默认路径如下
 `/var/lib/docker/volumes/maddydata/_data/`
@@ -37,8 +37,8 @@ mkdir -p tls
 
 按要求上传完成证书文件后，容器会自动正常运行。
 
-## 5. 设置DKIM DNS解析
-### 5.1 获取DKIM值
+## 4. 设置DKIM DNS解析
+### 4.1 获取DKIM值
 
 当容器正常运行后
 
@@ -60,14 +60,14 @@ cat /var/lib/docker/volumes/maddydata/_data/dkim_keys/example.com_default.dns
 default._domainkey.example.org.    TXT   "v=DKIM1; k=ed25519; p=nAcUUozPlhc4VPhp7hZl+owES7j7OlEv0laaDEDBAqg="
 ```
 
-### 5.2 设置DNS TXT记录
+### 4.2 设置DNS TXT记录
 
 根据获取的信息设置`DNS解析`
 
 例子如下：
 为 `default._domainkey.example.com` 添加`TXT`记录，值设置为`v=DKIM1; k=ed25519; p=nAcUUozPlhc4VPhp7hZl+owES7j7OlEv0laaDEDBAqg=`。
 
-## 6. 设置DNS解析
+## 5. 设置DNS解析
 
 - 注意按需修改
 
@@ -84,7 +84,7 @@ default._domainkey.example.org.    TXT   "v=DKIM1; k=ed25519; p=nAcUUozPlhc4VPhp
 | TXT | `_mta-sts.example.com` | `v=STSv1; id=1` |
 | TXT | `_smtp._tls.example.com` | `v=TLSRPTv1;rua=mailto:postmaster@example.com` |
 
-## 7. 创建发送账户
+## 6. 创建发送账户
 
 面板`容器`界面，连接容器终端，执行以下命令
 
