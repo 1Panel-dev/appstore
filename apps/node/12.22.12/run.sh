@@ -21,7 +21,7 @@ fi
 
 
 if [[ "$CUSTOM_SCRIPT" -eq "1" ]]; then
-  $EXEC_SCRIPT
+  eval $EXEC_SCRIPT
 else
   if [[ "$PACKAGE_MANAGER" == "npm" ]]; then
       npm run $EXEC_SCRIPT
