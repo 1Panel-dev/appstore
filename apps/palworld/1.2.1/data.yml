@@ -1,5 +1,17 @@
 additionalProperties:
     formFields:
+        - default: 'false'
+          edit: true
+          envKey: DISABLE_GENERATE_SETTINGS
+          labelEn: Disable generate settings
+          labelZh: 禁用自动生成配置文件
+          required: true
+          type: select
+          values:
+            - label: 是
+              value: "true"
+            - label: 否
+              value: "false"
         - default: 8211
           edit: true
           envKey: PANEL_APP_PORT_HTTP

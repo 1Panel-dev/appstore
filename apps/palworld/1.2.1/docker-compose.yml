@@ -5,14 +5,16 @@ services:
     networks:
       - 1panel-network
     ports:
-      - ${PANEL_APP_PORT_HTTP}:${PANEL_APP_PORT_HTTP}/udp
-      - ${PANEL_APP_PORT_RCON}:${PANEL_APP_PORT_RCON}/tcp
-      - ${PANEL_APP_PORT_QUERY}:${PANEL_APP_PORT_QUERY}/udp
+      - ${PANEL_APP_PORT_HTTP}:8211/udp
+      - ${PANEL_APP_PORT_RCON}:25575/tcp
+      - 8212:8212/tcp
+      - ${PANEL_APP_PORT_QUERY}:27015/udp
     volumes:
       - ./data:/palworld/
     environment:
       - PUID=1000
       - PGID=1000
+      - DISABLE_GENERATE_SETTINGS=${DISABLE_GENERATE_SETTINGS}
       - PORT=${PANEL_APP_PORT_HTTP}
       - PLAYERS=${MAX_PLAYERS}
       - MULTITHREADING=${MULTITHREAD_SWITCH}
