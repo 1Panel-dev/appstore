@@ -1,0 +1,13 @@
+additionalProperties:
+  key:    sun-panel
+  name:   Sun-Panel
+  tags:
+    - Tool 
+  shortDescZh:  一个自托管服务器、NAS导航面板、浏览器首页。
+  shortDescEn:  A self-hosted server, NAS navigation panel, and browser homepage.
+  type: tool
+  crossVersionUpdate: false
+  limit: 0
+  website: https://doc.sun-panel.top
+  github:  https://github.com/hslr-s/sun-panel
+  document:  https://doc.sun-panel.top/zh_cn/usage/quick_deploy.html

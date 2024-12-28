@@ -1,0 +1,21 @@
+version: "3.2"
+
+services:
+  sun-panel:
+    image: "hslr/sun-panel:1.6.1"
+    container_name: ${CONTAINER_NAME}
+    volumes:
+      - ./data/conf:/app/conf
+      - /var/run/docker.sock:/var/run/docker.sock
+      # - /mnt/sata1-1:/os # 硬盘挂载点（根据自己需求修改/增加）
+      # - ./runtime:/app/runtime # 挂载日志目录
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:3002
+    restart: always
+    networks:
+      - 1panel-network
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true
