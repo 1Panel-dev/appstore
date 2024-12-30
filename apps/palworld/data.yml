@@ -14,6 +14,6 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 0
     recommend: 0
-    website: https://hub.docker.com/r/kagurazakanyaa/palworld
-    github: https://github.com/KagurazakaNyaa/palworld-docker
-    document: https://github.com/KagurazakaNyaa/palworld-docker
+    website: https://hub.docker.com/r/thijsvanloef/palworld-server-docker
+    github: https://github.com/thijsvanloef/palworld-server-docker
+    document: https://palworld-server-docker.loef.dev/
