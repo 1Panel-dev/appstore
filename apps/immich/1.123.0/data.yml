@@ -32,40 +32,6 @@ additionalProperties:
       required: true
       type: text
 
-
-    # - default: ""
-    #   edit: true
-    #   envKey: PANEL_DB_HOST
-    #   key: postgresql
-    #   labelEn: PostgreSQL Database Service
-    #   labelZh: PostgreSQL 数据库服务
-    #   required: true
-    #   type: service
-    # - default: immich
-    #   envKey: PANEL_DB_NAME
-    #   labelEn: Database
-    #   labelZh: 数据库名
-    #   random: true
-    #   required: true
-    #   rule: paramCommon
-    #   type: text
-    # - default: immich
-    #   envKey: PANEL_DB_USER
-    #   labelEn: User
-    #   labelZh: 数据库用户
-    #   random: true
-    #   required: true
-    #   rule: paramCommon
-    #   type: text
-    # - default: immich
-    #   envKey: PANEL_DB_USER_PASSWORD
-    #   labelEn: Password
-    #   labelZh: 数据库用户密码
-    #   random: true
-    #   required: true
-    #   rule: paramComplexity
-    #   type: password
-
     - default: ""
       envKey: PANEL_REDIS_HOST
       key: redis
