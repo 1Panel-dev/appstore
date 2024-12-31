@@ -32,21 +32,21 @@ additionalProperties:
       values:
         - label: "true"
           value: "true"
-        - label: "false
+        - label: "false"
           value: "false"
     - default: '玩家 {username} 加入服务器!\n当前在线人数: {online_num}'
       edit: true
       envKey: TASK_PLAYER_LOGIN_MESSAGE
       labelEn: Login message
       labelZh: 玩家进入服务器消息
-      required: true
+      required: false
       type: text
     - default: '玩家 {username} 离开服务器!\n当前在线人数: {online_num}'
       edit: true
       envKey: TASK_PLAYER_LOGOUT_MESSAGE
       labelEn: Logout message
       labelZh: 玩家离开服务器消息
-      required: true
+      required: false
       type: text
     - default: '<palworld容器名或ip>:25575'
       edit: true
@@ -77,10 +77,17 @@ additionalProperties:
       required: true
       type: select
       values:
-        - label: true
+        - label: "true"
           value: "true"
-        - label: false
+        - label: "false"
           value: "false"
+    - default: '/opt/1panel/apps/palworld/palworld/data/Pal/Saved'
+      edit: true
+      envKey: PALWORLD_SAVE_PATH
+      labelEn: Palworld External Save Path
+      labelZh: 帕鲁服务器外部存档路径
+      required: true
+      type: text
     - default: '600'
       edit: true
       envKey: SAVE_SYNC_INTERVAL
@@ -103,7 +110,7 @@ additionalProperties:
       required: true
       type: select
       values:
-        - label: true
+        - label: "true"
           value: "true"
-        - label: false
+        - label: "false"
           value: "false"

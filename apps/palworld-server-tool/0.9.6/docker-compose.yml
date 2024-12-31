@@ -8,7 +8,7 @@ services:
     ports:
       - ${PANEL_APP_PORT_HTTP}:8080
     volumes:
-      - /opt/1panel/apps/palworld/palworld/data/Pal/Saved:/game
+      - ${PALWORLD_SAVE_PATH}:/app/save
     environment:
       - WEB__PASSWORD=${WEB_PASSWORD}
       - TASK__SYNC_INTERVAL=${TASK_SYNC_INTERVAL}
@@ -24,7 +24,7 @@ services:
       - SAVE__BACKUP_INTERVAL=${SAVE_BACKUP_INTERVAL}
       - MANAGE__KICK_NON_WHITELIST=${MANAGE_KICK_NON_WHITELIST}
       - SAVE__DECODE_PATH=/app/sav_cli
-      - SAVE__PATH=/game
+      - SAVE__PATH=/app/save
     labels:
       createdBy: "Apps"
 networks:

@@ -67,15 +67,15 @@ additionalProperties:
         - default: ''
           edit: true
           envKey: PUBLIC_IP
-          labelEn: PUBLIC IP (If not specified, it will be detected automatically)
-          labelZh: 服务器 IP (留空自动检测)
+          labelEn: Community server IP (If not specified, it will be detected automatically)
+          labelZh: 社区服务器 IP (留空自动检测)
           required: false
           type: text
         - default: ''
           edit: true
           envKey: PUBLIC_PORT
-          labelEn: PUBLIC PORT (If not specified, it will be detected automatically)
-          labelZh: 服务器端口 (留空自动检测)
+          labelEn: Community server PORT (If not specified, it will be detected automatically)
+          labelZh: 社区服务器端口 (留空自动检测)
           required: false
           rule: paramPort
           type: text
@@ -135,17 +135,15 @@ additionalProperties:
           labelEn: Admin password
           labelZh: 管理员密码
           random: true
-          required: false
-          rule: paramComplexity
-          type: password
-        - default: ''
+          required: true
+          type: text
+        - default: palworld
           edit: true
           envKey: SERVER_PASSWORD
           labelEn: Server password
           labelZh: 服务器密码
-          required: false
-          rule: paramComplexity
-          type: password
+          required: true
+          type: text
         - default: 'true'
           edit: true
           envKey: RCON_SWITCH
