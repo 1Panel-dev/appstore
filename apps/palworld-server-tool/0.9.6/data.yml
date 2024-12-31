@@ -8,25 +8,84 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-    - default: '127.0.0.1:25575'
+    - default: 'WEB_PASSWORD'
+      edit: true
+      envKey: WEB_PASSWORD
+      labelEn: WEB Password
+      labelZh: Web 界面的管理员模式密码
+      required: true
+      type: text
+    - default: '60'
+      edit: true
+      envKey: TASK_SYNC_INTERVAL
+      labelEn: Sync interval
+      labelZh: 请求服务器同步玩家在线数据的间隔
+      required: true
+      type: number
+    - default: 'false'
+      edit: true
+      envKey: TASK_PLAYER_LOGGING
+      labelEn: Enable players login/logout message
+      labelZh: 玩家进入/离开服务器是否通知
+      required: true
+      type: select
+      values:
+        - label: "true"
+          value: "true"
+        - label: "false"
+          value: "false"
+    - default: '玩家 {username} 加入服务器!\n当前在线人数: {online_num}'
+      edit: true
+      envKey: TASK_PLAYER_LOGIN_MESSAGE
+      labelEn: Login message
+      labelZh: 玩家进入服务器消息
+      required: false
+      type: text
+    - default: '玩家 {username} 离开服务器!\n当前在线人数: {online_num}'
+      edit: true
+      envKey: TASK_PLAYER_LOGOUT_MESSAGE
+      labelEn: Logout message
+      labelZh: 玩家离开服务器消息
+      required: false
+      type: text
+    - default: '<palworld容器名或ip>:25575'
       edit: true
       envKey: RCON_ADDRESS
       labelEn: RCON Address
       labelZh: RCON地址
       required: true
       type: text
-    - default: 'RCON_PASSWORD'
+    - default: 'http://<palworld容器名或ip>:8212'
       edit: true
-      envKey: RCON_PASSWORD
-      labelEn: RCON Password
-      labelZh: RCON密码
+      envKey: REST_ADDRESS
+      labelEn: REST API Address
+      labelZh: REST API地址
       required: true
       type: text
-    - default: 'WEB_PASSWORD'
+    - default: 'ADMIN_PASSWORD'
       edit: true
-      envKey: WEB_PASSWORD
-      labelEn: WEB Password
-      labelZh: WEB密码
+      envKey: ADMIN_PASSWORD
+      labelEn: ADMIN Password
+      labelZh: 服务器配置文件中的 AdminPassword
+      required: true
+      type: text
+    - default: 'false'
+      edit: true
+      envKey: RCON_USE_BASE64
+      labelEn: Enable PalGuard Base64 RCON
+      labelZh: 是否开启PalGuard的Base64 RCON
+      required: true
+      type: select
+      values:
+        - label: "true"
+          value: "true"
+        - label: "false"
+          value: "false"
+    - default: '/opt/1panel/apps/palworld/palworld/data/Pal/Saved'
+      edit: true
+      envKey: PALWORLD_SAVE_PATH
+      labelEn: Palworld External Save Path
+      labelZh: 帕鲁服务器外部存档路径
       required: true
       type: text
     - default: '600'
@@ -36,10 +95,22 @@ additionalProperties:
       labelZh: 存档同步间隔
       required: true
       type: number
-    - default: '示例：./data/Pal/Saved/SaveGames/0/5633F58B91BB4CFDAE555321CA7E6C8E'
+    - default: '0'
       edit: true
-      envKey: PANEL_APP_PATH
-      labelEn: Save Path (starts with ./data)
-      labelZh: 存档路径 (以 ./data 开头)
+      envKey: SAVE_BACKUP_INTERVAL
+      labelEn: Save Backup Interval
+      labelZh: 存档备份间隔
       required: true
-      type: text
+      type: number
+    - default: 'false'
+      edit: true
+      envKey: MANAGE_KICK_NON_WHITELIST
+      labelEn: Automatically kick non-whitelisted players
+      labelZh: 非白名单玩家自动踢出
+      required: true
+      type: select
+      values:
+        - label: "true"
+          value: "true"
+        - label: "false"
+          value: "false"

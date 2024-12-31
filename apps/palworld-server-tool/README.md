@@ -18,6 +18,8 @@
 
 本工具使用 bbolt 单文件存储，将 RCON 和 Level.sav 文件的数据通过定时任务获取并保存，提供简单的可视化界面和 REST 接口和便于管理与开发。
 
+Docker部署需要配置帕鲁服务器外部存档路径，安装时的需要填写对应的帕鲁服务器的外部存档路径。
+
 请确保前提 [开启私服 RCON](https://github.com/zaigie/palworld-server-tool?tab=readme-ov-file#%E5%A6%82%E4%BD%95%E5%BC%80%E5%90%AF%E7%A7%81%E6%9C%8D-rcon)
 
 > 解析 `Level.sav` 存档的任务需要在短时间（<20s）耗费一定的系统内存（1GB~3GB），这部分内存会在执行完解析任务后释放，因此你至少需要确保你的服务器有充足的内存。若不满足可使用如下等方式

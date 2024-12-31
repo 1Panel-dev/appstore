@@ -20,6 +20,8 @@ This tool uses **bbolt** single-file storage to periodically fetch and store dat
 
 It provides a simple visual interface and REST API, making management and development easier.
 
+When deploying with Docker, you need to configure the external save path for the Palworld server. During installation, you must provide the corresponding external save path for the Palworld server.
+
 Ensure that private server RCON is enabled by following the instructions in the [official guide](https://github.com/zaigie/palworld-server-tool?tab=readme-ov-file#%E5%A6%82%E4%BD%95%E5%BC%80%E5%90%AF%E7%A7%81%E6%9C%8D-rcon).
 
 ---

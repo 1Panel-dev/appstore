@@ -16,6 +16,14 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+        - default: 8212
+          edit: true
+          envKey: PANEL_APP_PORT_REST
+          labelEn: REST API Port
+          labelZh: REST API 端口
+          required: true
+          rule: paramPort
+          type: number
         - default: 27015
           edit: true
           envKey: PANEL_APP_PORT_QUERY
@@ -38,36 +46,75 @@ additionalProperties:
           labelEn: Improves performance in multi-threaded CPU environments (true / false)
           labelZh: 是否启用 CPU 多线程优化 (true / false)
           required: true
-          type: text
+          type: select
+          values:
+            - label: "true"
+              value: "true"
+            - label: "false"
+              value: "false"
         - default: 'false'
           edit: true
           envKey: PUBLIC_SWITCH
           labelEn: Setup server as a community server (true / false)
           labelZh: 是否将服务器设置为社区服务器 (true / false)
           required: true
-          type: text
+          type: select
+          values:
+            - label: "true"
+              value: "true"
+            - label: "false"
+              value: "false"
         - default: ''
           edit: true
           envKey: PUBLIC_IP
-          labelEn: PUBLIC IP (If not specified, it will be detected automatically)
-          labelZh: 服务器 IP (留空自动检测)
+          labelEn: Community server IP (If not specified, it will be detected automatically)
+          labelZh: 社区服务器 IP (留空自动检测)
           required: false
           type: text
         - default: ''
           edit: true
           envKey: PUBLIC_PORT
-          labelEn: PUBLIC PORT (If not specified, it will be detected automatically)
-          labelZh: 服务器端口 (留空自动检测)
+          labelEn: Community server PORT (If not specified, it will be detected automatically)
+          labelZh: 社区服务器端口 (留空自动检测)
           required: false
           rule: paramPort
           type: text
         - default: 'true'
-          disabled: true
+          edit: true
           envKey: UPDATE_SWITCH
           labelEn: Whether the server should be update each time start (true / false)
           labelZh: 是否每次启动都更新服务器 (true / false)
           required: true
-          type: text
+          type: select
+          values:
+            - label: "true"
+              value: "true"
+            - label: "false"
+              value: "false"
+        - default: 'false'
+          edit: true
+          envKey: ENABLE_PLAYER_LOGGING
+          labelEn: Enable players login/logout message (true / false)
+          labelZh: 玩家进入/离开服务器是否通知 (true / false)
+          required: true
+          type: select
+          values:
+            - label: "true"
+              value: "true"
+            - label: "false"
+              value: "false"
+        - default: 'false'
+          edit: true
+          envKey: DISABLE_GENERATE_SETTINGS
+          labelEn: Disable auto-generated configuration files (affects the settings below)
+          labelZh: 禁用自动生成配置文件(会影响下方配置项生效)
+          required: true
+          type: select
+          values:
+            - label: "true"
+              value: "true"
+            - label: "false"
+              value: "false"
         - default: 'Default Palworld Server'
           edit: true
           envKey: SERVER_NAME
@@ -75,27 +122,49 @@ additionalProperties:
           labelZh: 服务器名
           required: true
           type: text
+        - default: ''
+          edit: true
+          envKey: SERVER_DESCRIPTION
+          labelEn: Server description
+          labelZh: 服务器描述
+          required: false
+          type: text
         - default: palworld
           edit: true
           envKey: ADMIN_PASSWORD
           labelEn: Admin password
           labelZh: 管理员密码
           random: true
-          required: false
-          rule: paramComplexity
-          type: password
-        - default: ''
+          required: true
+          type: text
+        - default: palworld
           edit: true
           envKey: SERVER_PASSWORD
           labelEn: Server password
           labelZh: 服务器密码
-          required: false
-          rule: paramComplexity
-          type: password
-        - default: 'false'
+          required: true
+          type: text
+        - default: 'true'
           edit: true
           envKey: RCON_SWITCH
           labelEn: Enable RCON (true / false)
           labelZh: 是否启用 RCON (true / false)
           required: true
-          type: text
+          type: select
+          values:
+            - label: "true"
+              value: "true"
+            - label: "false"
+              value: "false"
+        - default: 'true'
+          edit: true
+          envKey: REST_SWITCH
+          labelEn: Enable REST API (true / false)
+          labelZh: 是否启用 REST API (true / false)
+          required: true
+          type: select
+          values:
+            - label: "true"
+              value: "true"
+            - label: "false"
+              value: "false"
