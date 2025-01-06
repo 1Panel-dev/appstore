@@ -1,0 +1,13 @@
+additionalProperties:
+  crossVersionUpdate: true
+  document: https://github.com/glanceapp/glance
+  github: https://github.com/glanceapp/glance
+  key: glance
+  limit: 0
+  name: Glance
+  shortDescEn: A self-hosted dashboard that puts all your feeds in one place
+  shortDescZh: 一个将所有您的源订阅集中在一个地方的托管仪表板
+  tags:
+  - Tool
+  type: tool
+  website: https://github.com/glanceapp/glance
