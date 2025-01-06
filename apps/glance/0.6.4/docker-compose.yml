@@ -1,5 +1,6 @@
 services:
   glance:
+    image: glanceapp/glance:v0.6.4
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
@@ -10,7 +11,6 @@ services:
       - ./data/glance.yml:/app/glance.yml
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
-    image: glanceapp/glance:v0.6.4
     labels:  
       createdBy: "Apps"
 networks:  
