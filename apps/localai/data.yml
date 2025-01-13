@@ -1,0 +1,19 @@
+name: LocalAI
+tags:
+    - AI / 大模型
+title: 免费的开源 OpenAI 替代品
+description: 免费的开源 OpenAI 替代品
+additionalProperties:
+    key: localai
+    name: LocalAI
+    tags:
+        - AI
+    shortDescZh: 免费的开源 OpenAI 替代品
+    shortDescEn: The free, Open Source OpenAI alternative
+    type: tool
+    crossVersionUpdate: false
+    limit: 0
+    recommend: 0
+    website: https://localai.io/
+    github: https://github.com/mudler/LocalAI/
+    document: https://localai.io/
