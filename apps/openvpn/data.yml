@@ -1,0 +1,21 @@
+name: OpenVPN
+tags:
+  - 实用工具
+  - 安全
+title: 开源 VPN 守护进程
+description: 开源 VPN 守护进程
+additionalProperties:
+  key: openvpn
+  name: OpenVPN
+  tags:
+    - Tool
+    - Security
+  shortDescZh: 开源 VPN 守护进程
+  shortDescEn: Open source VPN daemon
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://openvpn.net/
+  github: https://github.com/OpenVPN/openvpn
+  document: https://openvpn.net/access-server-manual/introduction/
