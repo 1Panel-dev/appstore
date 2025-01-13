@@ -1,0 +1,26 @@
+additionalProperties:
+  formFields:
+    - default: 943
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Console Port
+      labelZh: 控制台端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 443
+      edit: true
+      envKey: PANEL_APP_PORT_HTTPS
+      labelEn: HTTPS Port
+      labelZh: HTTPS 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 1194
+      edit: true
+      envKey: PANEL_APP_PORT_UDP
+      labelEn: UDP Port
+      labelZh: UDP 端口
+      required: true
+      rule: paramPort
+      type: number
