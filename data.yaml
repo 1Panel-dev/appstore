@@ -1,6 +1,167 @@
 name: 1Panel
 title: 新一代的 Linux 服务器运维管理面板
 additionalProperties:
+  groups:
+    - key: Website
+      sort: 10
+      translations:
+        en: "Website"
+        ja: "ウェブサイト"
+        ms: "Laman Web"
+        pt-br: "Website"
+        ru: "Веб-сайт"
+        tw: "網站"
+        zh: "建站"
+    - key: Database
+      sort: 20
+      translations:
+        en: "Database"
+        ja: "データベース"
+        ms: "Pangkalan Data"
+        pt-br: "Banco de Dados"
+        ru: "База данных"
+        tw: "資料庫"
+        zh: "数据库"
+    - key: Server
+      sort: 30
+      translations:
+        en: "Web Server"
+        ja: "ウェブサーバー"
+        ms: "Pelayan Web"
+        pt-br: "Servidor Web"
+        ru: "Веб-сервер"
+        tw: "網頁伺服器"
+        zh: "Web 服务器"
+    - key: Runtime
+      sort: 40
+      translations:
+        en: "Runtime"
+        ja: "ランタイム"
+        ms: "Masa Jalan"
+        pt-br: "Tempo de Execução"
+        ru: "Среда выполнения"
+        tw: "運行環境"
+        zh: "运行环境"
+    - key: Tool
+      sort: 50
+      translations:
+        en: "Tool"
+        ja: "ツール"
+        ms: "Alat"
+        pt-br: "Ferramenta"
+        ru: "Инструмент"
+        tw: "實用工具"
+        zh: "实用工具"
+    - key: Storage
+      sort: 60
+      translations:
+        en: "Cloud Storage"
+        ja: "クラウドストレージ"
+        ms: "Penyimpanan Awan"
+        pt-br: "Armazenamento em Nuvem"
+        ru: "Облачное хранилище"
+        tw: "雲存儲"
+        zh: "云存储"
+    - key: AI
+      sort: 70
+      translations:
+        en: "AI / Large Models"
+        ja: "AI / 大規模モデル"
+        ms: "AI / Model Besar"
+        pt-br: "IA / Grandes Modelos"
+        ru: "ИИ / Большие модели"
+        tw: "AI / 大模型"
+        zh: "AI / 大模型"
+    - key: BI
+      sort: 80
+      translations:
+        en: "BI"
+        ja: "BI"
+        ms: "BI"
+        pt-br: "BI"
+        ru: "BI"
+        tw: "BI"
+        zh: "BI"
+    - key: Security
+      sort: 90
+      translations:
+        en: "Security"
+        ja: "セキュリティ"
+        ms: "Keselamatan"
+        pt-br: "Segurança"
+        ru: "Безопасность"
+        tw: "安全"
+        zh: "安全"
+    - key: DevTool
+      sort: 100
+      translations:
+        en: "Development Tool"
+        ja: "開発ツール"
+        ms: "Alat Pembangunan"
+        pt-br: "Ferramenta de Desenvolvimento"
+        ru: "Инструмент разработки"
+        tw: "開發工具"
+        zh: "开发工具"
+    - key: DevOps
+      sort: 110
+      translations:
+        en: "DevOps"
+        ja: "DevOps"
+        ms: "DevOps"
+        pt-br: "DevOps"
+        ru: "DevOps"
+        tw: "DevOps"
+        zh: "DevOps"
+    - key: Middleware
+      sort: 120
+      translations:
+        en: "Middleware"
+        ja: "ミドルウェア"
+        ms: "Middleware"
+        pt-br: "Middleware"
+        ru: "Промежуточное ПО"
+        tw: "中間件"
+        zh: "中间件"
+    - key: Media
+      sort: 130
+      translations:
+        en: "Media"
+        ja: "メディア"
+        ms: "Media"
+        pt-br: "Mídia"
+        ru: "Медиа"
+        tw: "多媒體"
+        zh: "多媒体"
+    - key: Email
+      sort: 140
+      translations:
+        en: "Email Service"
+        ja: "メールサービス"
+        ms: "Perkhidmatan E-mel"
+        pt-br: "Serviço de Email"
+        ru: "Почтовый сервис"
+        tw: "郵件服務"
+        zh: "邮件服务"
+    - key: Game
+      sort: 150
+      translations:
+        en: "Casual Games"
+        ja: "カジュアルゲーム"
+        ms: "Permainan Santai"
+        pt-br: "Jogos Casuais"
+        ru: "Казуальные игры"
+        tw: "休閒遊戲"
+        zh: "休闲游戏"
+    - key: Local
+      sort: 9999
+      translations:
+        en: "Local"
+        ja: "ローカル"
+        ms: "Tempatan"
+        pt-br: "Local"
+        ru: "Локальный"
+        tw: "本地"
+        zh: "本地"
   tags:
     - key: Website
       name: 建站
