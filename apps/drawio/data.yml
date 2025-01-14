@@ -10,6 +10,14 @@ additionalProperties:
         - Tool
     shortDescZh: 用于一般图表绘制的 JavaScript 客户端编辑器
     shortDescEn: JavaScript, client-side editor for general diagramming
+    description:
+        en: JavaScript, client-side editor for general diagramming
+        ja: JavaScript、一般的なダイアグラム作成のためのクライアントサイドエディタ
+        ms: JavaScript, penyunting sisi-klien untuk diagram am
+        pt-br: JavaScript, editor do lado do cliente para diagramas gerais
+        ru: JavaScript, клиентский редактор для общих диаграмм
+        zh-Hant: 用於一般圖表繪製的 JavaScript 客戶端編輯器
+        zh: 用于一般图表绘制的 JavaScript 客户端编辑器
     type: tool
     crossVersionUpdate: true
     limit: 0
