@@ -5,13 +5,29 @@ additionalProperties:
       envKey: PANEL_APP_PORT_HTTP
       labelEn: Port
       labelZh: 端口
+      label:
+        en: Port
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        zh-Hant: 埠
+        zh: 端口
       required: true
       rule: paramPort
       type: number
     - default: 8000
       envKey: PORT_API
-      labelEn: Port
+      labelEn: API Port
       labelZh: API 端口
+      label:
+        en: API Port
+        ja: API ポート
+        ms: Port API
+        pt-br: Porta API
+        ru: Порт API
+        zh-hant: API 埠
+        zh: API 端口
       required: true
       rule: paramPort
       type: number

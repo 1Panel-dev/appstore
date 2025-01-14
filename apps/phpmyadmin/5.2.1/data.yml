@@ -1,10 +1,18 @@
 additionalProperties:
-    formFields:
-        - default: 8089
-          edit: true
-          envKey: PANEL_APP_PORT_HTTP
-          labelEn: Port
-          labelZh: 端口
-          required: true
-          rule: paramPort
-          type: number
+  formFields:
+    - default: 8089
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      label:
+        en: Port
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        zh-Hant: 埠
+        zh: 端口
+      required: true
+      rule: paramPort
+      type: number

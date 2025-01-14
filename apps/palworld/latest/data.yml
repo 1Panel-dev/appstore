@@ -1,100 +1,204 @@
 additionalProperties:
-    formFields:
-        - default: 8211
-          edit: true
-          envKey: PANEL_APP_PORT_HTTP
-          labelEn: Port
-          labelZh: 端口
-          required: true
-          rule: paramPort
-          type: number
-        - default: 25575
-          edit: true
-          envKey: PANEL_APP_PORT_RCON
-          labelEn: RCON Port
-          labelZh: RCON 端口
-          required: true
-          rule: paramPort
-          type: number
-        - default: 32
-          edit: true
-          envKey: MAX_PLAYERS
-          labelEn: Maximum number of participants on the server
-          labelZh: 玩家数量限制
-          required: true
-          rule: paramPort
-          type: number
-        - default: 'true'
-          edit: true
-          envKey: MULTITHREAD_SWITCH
-          labelEn: Improves performance in multi-threaded CPU environments (true / false)
-          labelZh: 是否启用 CPU 多线程优化 (true / false)
-          required: true
-          type: text
-        - default: 'true'
-          edit: true
-          envKey: PUBLIC_SWITCH
-          labelEn: Setup server as a community server (true / false)
-          labelZh: 是否将服务器设置为社区服务器 (true / false)
-          required: true
-          type: text
-        - default: ''
-          edit: true
-          envKey: PUBLIC_IP
-          labelEn: PUBLIC IP (If not specified, it will be detected automatically)
-          labelZh: 服务器 IP (留空自动检测)
-          required: false
-          type: text
-        - default: ''
-          edit: true
-          envKey: PANEL_APP_PORT_PUBLIC
-          labelEn: PUBLIC PORT (If not specified, it will be detected automatically)
-          labelZh: 服务器端口 (留空自动检测)
-          required: false
-          rule: paramPort
-          type: text
-        - default: 'false'
-          edit: true
-          envKey: UPDATE_SWITCH
-          labelEn: Whether the server should be update each time start (true / false)
-          labelZh: 是否每次启动都更新服务器 (true / false)
-          required: true
-          type: text
-        - default: '1Panel Palworld Server'
-          edit: true
-          envKey: SERVER_NAME
-          labelEn: Server name
-          labelZh: 服务器名
-          required: true
-          type: text
-        - default: '1Panel Palworld Server'
-          edit: true
-          envKey: SERVER_DESC
-          labelEn: Server description
-          labelZh: 服务器说明
-          required: true
-          type: text
-        - default: palworld
-          edit: true
-          envKey: ADMIN_PASSWORD
-          labelEn: Admin password
-          labelZh: 管理员密码
-          random: true
-          required: false
-          rule: paramComplexity
-          type: password
-        - default: ''
-          edit: true
-          envKey: SERVER_PASSWORD
-          labelEn: Server password
-          labelZh: 服务器密码
-          required: false
-          rule: paramComplexity
-          type: password
-        - default: 'false'
-          edit: true
-          envKey: RCON_SWITCH
-          labelEn: Enable RCON (true / false)
-          labelZh: 是否启用 RCON (true / false)
-          required: true
-          type: text
+  formFields:
+    - default: 8211
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      label:
+        en: Port
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        zh-Hant: 埠
+        zh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 25575
+      edit: true
+      envKey: PANEL_APP_PORT_RCON
+      labelEn: RCON Port
+      labelZh: RCON 端口
+      label:
+        en: RCON Port
+        ja: RCON ポート
+        ms: Port RCON
+        pt-br: Porta RCON
+        ru: Порт RCON
+        zh-hant: RCON 埠
+        zh: RCON 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 32
+      edit: true
+      envKey: MAX_PLAYERS
+      labelEn: Maximum number of participants on the server
+      labelZh: 玩家数量限制
+      label:
+        en: Maximum number of participants on the server
+        ja: サーバーの最大参加者数
+        ms: Bilangan maksimum peserta di pelayan
+        pt-br: Número máximo de participantes no servidor
+        ru: Максимальное количество участников на сервере
+        zh-hant: 伺服器上的最大參與者數
+        zh: 玩家数量限制
+      required: true
+      rule: paramPort
+      type: number
+    - default: 'true'
+      edit: true
+      envKey: MULTITHREAD_SWITCH
+      labelEn: Improves performance in multi-threaded CPU environments (true / false)
+      labelZh: 是否启用 CPU 多线程优化 (true / false)
+      label:
+        en: Improves performance in multi-threaded CPU environments (true / false)
+        ja: マルチスレッドCPU環境でのパフォーマンスを向上させます（true / false）
+        ms: Meningkatkan prestasi dalam persekitaran CPU berbilang benang (benar / palsu)
+        pt-br: Melhora o desempenho em ambientes de CPU multithread (verdadeiro / falso)
+        ru: Улучшает производительность в многозадачных CPU (истина / ложь)
+        zh-hant: 提升多線程CPU環境中的效能（true / false）
+        zh: 是否启用 CPU 多线程优化 (true / false)
+      required: true
+      type: text
+    - default: 'true'
+      edit: true
+      envKey: PUBLIC_SWITCH
+      labelEn: Setup server as a community server (true / false)
+      labelZh: 是否将服务器设置为社区服务器 (true / false)
+      label:
+        en: Setup server as a community server (true / false)
+        ja: サーバーをコミュニティサーバーとして設定（true / false）
+        ms: Sediakan pelayan sebagai pelayan komuniti (benar / salah)
+        pt-br: Configurar o servidor como um servidor comunitário (verdadeiro / falso)
+        ru: Настроить сервер как сервер сообщества (true / false)
+        zh-hant: 將伺服器設置為社區伺服器（true / false）
+        zh: 是否将服务器设置为社区服务器 (true / false)
+      required: true
+      type: text
+    - default: ''
+      edit: true
+      envKey: PUBLIC_IP
+      labelEn: PUBLIC IP (If not specified, it will be detected automatically)
+      labelZh: 服务器 IP (留空自动检测)
+      label:
+        en: PUBLIC IP (If not specified, it will be detected automatically)
+        ja: 公開IP（指定しない場合は自動的に検出されます）
+        ms: IP AWAM (Jika tidak dinyatakan, ia akan dikesan secara automatik)
+        pt-br: IP PÚBLICO (Se não especificado, será detectado automaticamente)
+        ru: ПУБЛИЧНЫЙ IP (Если не указан, он будет обнаружен автоматически)
+        zh-hant: 公開IP（如果未指定，將自動檢測）
+        zh: 服务器 IP (留空自动检测)
+      required: false
+      type: text
+    - default: ''
+      edit: true
+      envKey: PANEL_APP_PORT_PUBLIC
+      labelEn: PUBLIC PORT (If not specified, it will be detected automatically)
+      labelZh: 服务器端口 (留空自动检测)
+      label:
+        en: PUBLIC PORT (If not specified, it will be detected automatically)
+        ja: 公開ポート（指定しない場合は自動的に検出されます）
+        ms: PORT AWAM (Jika tidak ditentukan, ia akan dikesan secara automatik)
+        pt-br: PORTA PÚBLICA (Se não especificado, será detectado automaticamente)
+        ru: ПУБЛИЧНЫЙ ПОРТ (Если не указан, будет определен автоматически)
+        zh-hant: 公開端口（如果未指定，將自動檢測）
+        zh: 服务器端口 (留空自动检测)
+      required: false
+      rule: paramPort
+      type: text
+    - default: 'false'
+      edit: true
+      envKey: UPDATE_SWITCH
+      labelEn: Whether the server should be update each time start (true / false)
+      labelZh: 是否每次启动都更新服务器 (true / false)
+      label:
+        en: Whether the server should be update each time start (true / false)
+        ja: サーバーが毎回起動時に更新されるべきかどうか（true / false）
+        ms: Sama ada pelayan perlu dikemas kini setiap kali dimulakan (benar / salah)
+        pt-br: Se o servidor deve ser atualizado a cada inicialização (verdadeiro / falso)
+        ru: Нужно ли обновлять сервер при каждом запуске (истинно / ложно)
+        zh-hant: 伺服器是否應每次啟動時更新（true / false）
+        zh: 是否每次启动都更新服务器 (true / false)
+      required: true
+      type: text
+    - default: '1Panel Palworld Server'
+      edit: true
+      envKey: SERVER_NAME
+      labelEn: Server Name
+      labelZh: 服务器名
+      label:
+        en: Server Name
+        ja: サーバー名
+        ms: Nama Pelayan
+        pt-br: Nome do Servidor
+        ru: Имя сервера
+        zh-hant: 伺服器名稱
+        zh: 服务器名
+      required: true
+      type: text
+    - default: '1Panel Palworld Server'
+      edit: true
+      envKey: SERVER_DESC
+      labelEn: Server Description
+      labelZh: 服务器说明
+      label:
+        en: Server Description
+        ja: サーバーの説明
+        ms: Penerangan Pelayan
+        pt-br: Descrição do Servidor
+        ru: Описание сервера
+        zh-hant: 伺服器描述
+        zh: 服务器说明
+      required: true
+      type: text
+    - default: palworld
+      edit: true
+      envKey: ADMIN_PASSWORD
+      labelEn: Admin Password
+      labelZh: 管理员密码
+      label:
+        en: Admin Password
+        ja: 管理者パスワード
+        ms: Kata Laluan Admin
+        pt-br: Senha de Admin
+        ru: Пароль администратора
+        zh-hant: 管理員密碼
+        zh: 管理员密码
+      random: true
+      required: false
+      rule: paramComplexity
+      type: password
+    - default: ''
+      edit: true
+      envKey: SERVER_PASSWORD
+      labelEn: Server Password
+      labelZh: 服务器密码
+      label:
+        en: Server Password
+        ja: サーバーパスワード
+        ms: Kata laluan pelayan
+        pt-br: Senha do servidor
+        ru: Пароль сервера
+        zh-hant: 伺服器密碼
+        zh: 服务器密码
+      required: false
+      rule: paramComplexity
+      type: password
+    - default: 'false'
+      edit: true
+      envKey: RCON_SWITCH
+      labelEn: Enable RCON (true / false)
+      labelZh: 是否启用 RCON (true / false)
+      label:
+        en: Enable RCON (true / false)
+        ja: RCONを有効にする（true / false）
+        ms: Dayakan RCON (true / false)
+        pt-br: Habilitar RCON (true / false)
+        ru: Включить RCON (true / false)
+        zh-hant: 啟用 RCON（true / false）
+        zh: 是否启用 RCON (true / false)
+      required: true
+      type: text

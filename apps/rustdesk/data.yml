@@ -10,6 +10,14 @@ additionalProperties:
         - Tool
     shortDescZh: 开源的远程桌面软件
     shortDescEn: Open source remote desktop software
+    description:
+        en: Open source remote desktop software
+        ja: オープンソースのリモートデスクトップソフトウェア
+        ms: Perisian desktop jauh sumber terbuka
+        pt-br: Software de área de trabalho remoto de código aberto
+        ru: Открытое программное обеспечение для удаленного рабочего стола
+        zh-hant: 開源遠程桌面軟件
+        zh: 开源的远程桌面软件
     type: tool
     crossVersionUpdate: false
     limit: 0

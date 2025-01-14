@@ -10,6 +10,14 @@ additionalProperties:
         - AI
     shortDescZh: 面向 LLM 的用户友好型 WebUI
     shortDescEn: User-friendly WebUI for LLMs
+    description:
+        en: User-friendly WebUI for LLMs
+        ja: LLM向けの使いやすいWebUI
+        ms: WebUI mesra pengguna untuk LLM
+        pt-br: WebUI amigável para LLMs
+        ru: Удобный WebUI для LLM
+        zh-hant: 用於 LLM 的友好型 WebUI
+        zh: 面向 LLM 的用户友好型 WebUI
     type: tool
     crossVersionUpdate: true
     limit: 0

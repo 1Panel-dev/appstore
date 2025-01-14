@@ -5,28 +5,60 @@ additionalProperties:
       key: mysql
       labelEn: Database Service
       labelZh: 数据库服务
+      label:
+        en: Database Service
+        ja: データベースサービス
+        ms: Perkhidmatan Pangkalan Data
+        pt-br: Serviço de Banco de Dados
+        ru: Сервис баз данных
+        zh-hant: 資料庫服務
+        zh: 数据库服务
       required: true
       type: service
     - default: de
       envKey: PANEL_DB_NAME
       labelEn: Database
-      labelZh: 数据库名
+      labelZh: 数据库
+      label:
+        en: Database
+        ja: データベース
+        ms: Pangkalan Data
+        pt-br: Banco de Dados
+        ru: База данных
+        zh-hant: 資料庫
+        zh: 数据库
       random: true
       required: true
       rule: paramCommon
       type: text
     - default: de
       envKey: PANEL_DB_USER
-      labelEn: User
+      labelEn: Database User
       labelZh: 数据库用户
+      label:
+        en: Database User
+        ja: データベースユーザー
+        ms: Pengguna Pangkalan Data
+        pt-br: Usuário do Banco de Dados
+        ru: Пользователь базы данных
+        zh-hant: 資料庫用戶
+        zh: 数据库用户
       random: true
       required: true
       rule: paramCommon
       type: text
     - default: de
       envKey: PANEL_DB_USER_PASSWORD
-      labelEn: Password
-      labelZh: 数据库用户密码
+      labelEn: Database Password
+      labelZh: 数据库密码
+      label:
+        en: Database Password
+        ja: データベースのパスワード
+        ms: Kata Laluan Pangkalan Data
+        pt-br: Senha do Banco de Dados
+        ru: Пароль базы данных
+        zh-hant: 資料庫密碼
+        zh: 数据库密码
       random: true
       required: true
       rule: paramComplexity
@@ -36,6 +68,14 @@ additionalProperties:
       envKey: IMAP_SERVER
       labelEn: IMAP Server
       labelZh: IMAP 服务器
+      label:
+        en: IMAP Server
+        ja: IMAP サーバー
+        ms: Pelayan IMAP
+        pt-br: Servidor IMAP
+        ru: IMAP сервер
+        zh-hant: IMAP 伺服器
+        zh: IMAP 服务器
       required: true
       type: text
     - default: 143
@@ -43,6 +83,14 @@ additionalProperties:
       envKey: IMAP_SERVER_PORT
       labelEn: IMAP Port
       labelZh: IMAP 端口
+      label:
+        en: IMAP Port
+        ja: IMAP ポート
+        ms: Port IMAP
+        pt-br: Porta IMAP
+        ru: Порт IMAP
+        zh-hant: IMAP 埠
+        zh: IMAP 端口
       required: true
       rule: paramPort
       type: number
@@ -51,6 +99,14 @@ additionalProperties:
       envKey: SMTP_SERVER
       labelEn: SMTP Server
       labelZh: SMTP 服务器
+      label:
+        en: SMTP Server
+        ja: SMTP サーバー
+        ms: Pelayan SMTP
+        pt-br: Servidor SMTP
+        ru: SMTP сервер
+        zh-hant: SMTP 伺服器
+        zh: SMTP 服务器
       required: true
       type: text
     - default: 587
@@ -58,6 +114,14 @@ additionalProperties:
       envKey: SMTP_SERVER_PORT
       labelEn: SMTP Port
       labelZh: SMTP 端口
+      label:
+        en: SMTP Port
+        ja: SMTP ポート
+        ms: Port SMTP
+        pt-br: Porta SMTP
+        ru: Порт SMTP
+        zh-hant: SMTP 埠
+        zh: SMTP 端口
       required: true
       rule: paramPort
       type: number
@@ -66,6 +130,14 @@ additionalProperties:
       edit: true
       labelEn: Port
       labelZh: 端口
+      label:
+        en: Port
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        zh-Hant: 埠
+        zh: 端口
       required: true
       rule: paramPort
       type: number
