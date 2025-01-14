@@ -10,6 +10,14 @@ additionalProperties:
     - Runtime
   shortDescZh: Node.js 运行环境
   shortDescEn: Node.js Runtime
+  description:
+    en: Node Runtime Environment
+    ja: Node 実行環境
+    ms: Persekitaran Larian Node
+    pt-br: Ambiente de Execução Node
+    ru: Среда выполнения Node
+    zh-Hant: Node 執行環境
+    zh: Node 运行环境
   type: node
   crossVersionUpdate: false
   limit: 0
