@@ -10,6 +10,14 @@ additionalProperties:
     - Security
   shortDescZh: 广受欢迎的开源堡垒机
   shortDescEn: The world's first open-source Bastion Host
+  description:
+    en: The world's first open-source Bastion Host
+    ja: 世界初のオープンソースのバスティオンホスト
+    ms: Bastion Host sumber terbuka pertama di dunia
+    pt-br: O primeiro Bastion Host de código aberto do mundo
+    ru: Первый в мире открытый Bastion Host
+    zh-Hant: 全球首個開源堡壘主機
+    zh: 广受欢迎的开源堡垒机
   type: tool
   crossVersionUpdate: false
   limit: 1

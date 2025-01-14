@@ -7,6 +7,14 @@ additionalProperties:
       labelZh: 加密签名
       required: true
       type: password
+      label:
+        en: Cryptographic signing
+        ja: 暗号署名
+        ms: Tandatangan kriptografi
+        pt-br: Assinatura criptográfica
+        ru: Криптографическая подпись
+        zh-Hant: 加密簽名
+        zh: 加密签名
     - default: K1ffDfLSIK8SV2PZj6VaxOiv8KuawlJK
       edit: true
       envKey: BOOTSTRAP_TOKEN
@@ -14,6 +22,14 @@ additionalProperties:
       labelZh: 认证令牌
       required: true
       type: password
+      label:
+        en: Bootstrap token
+        ja: ブートストラップトークン
+        ms: Token Bootstrap
+        pt-br: Token de inicialização
+        ru: Токен для начальной настройки
+        zh-Hant: 引導令牌
+        zh: 认证令牌
     - default: "false"
       envKey: DEBUG
       labelEn: Debug mode
@@ -25,6 +41,14 @@ additionalProperties:
           value: "true"
         - label: 关闭
           value: "false"
+      label:
+        en: Debug mode
+        ja: デバッグモード
+        ms: Modus Debug
+        pt-br: Modo de depuração
+        ru: Режим отладки
+        zh-Hant: 調試模式
+        zh: 调试模式
     - default: "ERROR"
       envKey: LOG_LEVEL
       labelEn: Log level
@@ -42,6 +66,14 @@ additionalProperties:
           value: "ERROR"
         - label: CRITICAL
           value: "CRITICAL"
+      label:
+        en: Log level
+        ja: ログレベル
+        ms: Tahap log
+        pt-br: Nível de log
+        ru: Уровень журнала
+        zh-Hant: 日誌級別
+        zh: 日志级别
     - child:
         default: ""
         envKey: PANEL_DB_HOST
@@ -60,6 +92,14 @@ additionalProperties:
           value: mysql
         - label: MariaDB
           value: mariadb
+      label:
+        en: Database Service
+        ja: データベースサービス
+        ms: Perkhidmatan Pangkalan Data
+        pt-br: Serviço de Banco de Dados
+        ru: Сервис баз данных
+        zh-hant: 資料庫服務
+        zh: 数据库服务
     - default: jumpserver
       envKey: PANEL_DB_NAME
       labelEn: Database
@@ -68,14 +108,30 @@ additionalProperties:
       required: true
       rule: paramCommon
       type: text
+      label:
+        en: Database
+        ja: データベース
+        ms: Pangkalan Data
+        pt-br: Banco de Dados
+        ru: База данных
+        zh-hant: 資料庫
+        zh: 数据库
     - default: jumpserver
       envKey: PANEL_DB_USER
-      labelEn: Database User
-      labelZh: 数据库用户
       random: true
       required: true
       rule: paramCommon
       type: text
+      labelEn: Database User
+      labelZh: 数据库用户
+      label:
+        en: Database User
+        ja: データベースユーザー
+        ms: Pengguna Pangkalan Data
+        pt-br: Usuário do Banco de Dados
+        ru: Пользователь базы данных
+        zh-hant: 資料庫用戶
+        zh: 数据库用户
     - default: jumpserver
       envKey: PANEL_DB_USER_PASSWORD
       labelEn: Database User Password
@@ -84,6 +140,14 @@ additionalProperties:
       required: true
       rule: paramComplexity
       type: password
+      label:
+        en: Database Password
+        ja: データベースのパスワード
+        ms: Kata Laluan Pangkalan Data
+        pt-br: Senha do Banco de Dados
+        ru: Пароль базы данных
+        zh-hant: 資料庫密碼
+        zh: 数据库密码
     - default: ""
       edit: true
       envKey: REDIS_HOST
@@ -92,6 +156,14 @@ additionalProperties:
       labelZh: 缓存服务服务
       required: true
       type: service
+      label:
+        en: Redis Service
+        ja: Redis サービス
+        ms: Perkhidmatan Redis
+        pt-br: Serviço Redis
+        ru: Сервис Redis
+        zh-Hant: Redis 服務
+        zh: Redis 服务
     - default: ""
       edit: true
       envKey: PANEL_REDIS_ROOT_PASSWORD
@@ -100,6 +172,14 @@ additionalProperties:
       required: true
       rule: paramCommon
       type: password
+      label:
+        en: Redis service password
+        ja: Redis サービスのパスワード
+        ms: Kata laluan perkhidmatan Redis
+        pt-br: Senha do serviço Redis
+        ru: Пароль службы Redis
+        zh-Hant: Redis 服務密碼
+        zh: Redis 服务密码
     - default: 8080
       edit: true
       envKey: PANEL_APP_PORT_HTTP
@@ -108,6 +188,14 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
+      label:
+        en: HTTP Port
+        ja: HTTP ポート
+        ms: HTTP Port
+        pt-br: HTTP Porta
+        ru: HTTP Порт
+        zh-Hant: HTTP 埠
+        zh: HTTP 端口
     - default: 2222
       edit: true
       envKey: SSH_PORT
@@ -116,9 +204,25 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
+      label:
+        en: SSH Port
+        ja: SSH ポート
+        ms: SSH Port
+        pt-br: SSH Porta
+        ru: SSH Порт
+        zh-Hant: SSH 埠
+        zh: SSH 端口
     - default: ""
       edit: true
       envKey: DOMAINS
       labelEn: DOMAINS
       labelZh: DOMAINS
       type: text
+      label:
+        en: DOMAINS
+        ja: ドメイン
+        ms: DOMAIN
+        pt-br: DOMÍNIOS
+        ru: ДОМИНЫ
+        zh-Hant: 領域
+        zh: 域名
