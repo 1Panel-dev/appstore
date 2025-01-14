@@ -8,3 +8,11 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+          label:
+            en: Port
+            ja: ポート
+            ms: Port
+            pt-br: Porta
+            ru: Порт
+            zh-Hant: 埠
+            zh: 端口

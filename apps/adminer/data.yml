@@ -10,6 +10,14 @@ additionalProperties:
         - DevTool
     shortDescZh: PHP 轻量级数据库管理工具
     shortDescEn: Database management in a single PHP file
+    description:
+        en: Lightweight PHP Database Management Tool
+        ja: 軽量 PHP データベース管理ツール
+        ms: Alat Pengurusan Pangkalan Data PHP Ringan
+        pt-br: Ferramenta de Gerenciamento de Banco de Dados PHP Leve
+        ru: Легкий инструмент управления базой данных на PHP
+        zh-Hant: PHP 輕量級資料庫管理工具
+        zh: PHP 轻量级数据库管理工具
     type: tool
     crossVersionUpdate: false
     limit: 1
