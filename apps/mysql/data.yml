@@ -8,8 +8,16 @@ additionalProperties:
     name: MySQL
     tags:
         - Database
-    shortDescZh: MySQL 开源关系型数据库
+    shortDescZh: 开源关系型数据库
     shortDescEn: Open source relational database management system
+    description:
+        en: Open Source Relational Database
+        ja: オープンソースのリレーショナルデータベース
+        ms: Pangkalan Data Relasi Sumber Terbuka
+        pt-br: Banco de Dados Relacional de Código Aberto
+        ru: Открытая Реляционная База Данных
+        zh-hant: 開源關係型資料庫
+        zh: 开源关系型数据库
     type: runtime
     crossVersionUpdate: false
     limit: 0
