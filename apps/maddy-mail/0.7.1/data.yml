@@ -8,6 +8,14 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+          label:
+            en: SMTP inbound port
+            ja: SMTP 受信ポート
+            ms: Port masuk SMTP
+            pt-br: Porta de entrada SMTP
+            ru: Входной порт SMTP
+            zh-Hant: SMTP 進口埠
+            zh: SMTP 入站端口
         - default: 143
           disabled: true
           envKey: IMAP4_PORT
@@ -16,6 +24,14 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+          label:
+            en: IMAP4 port
+            ja: IMAP4 ポート
+            ms: Port IMAP4
+            pt-br: Porta IMAP4
+            ru: Порт IMAP4
+            zh-Hant: IMAP4 埠
+            zh: IMAP4 端口
         - default: 993
           disabled: true
           envKey: IMAP4_PORT2
@@ -24,6 +40,14 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+          label:
+            en: IMAP4 port
+            ja: IMAP4 ポート
+            ms: Port IMAP4
+            pt-br: Porta IMAP4
+            ru: Порт IMAP4
+            zh-Hant: IMAP4 埠
+            zh: IMAP4 端口
         - default: 465
           disabled: true
           envKey: SMTP_S_PORT
@@ -32,6 +56,14 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+          label:
+            en: SMTP Submission ports
+            ja: SMTP 提出ポート
+            ms: Port Penghantaran SMTP
+            pt-br: Portas de envio SMTP
+            ru: Порты отправки SMTP
+            zh-Hant: SMTP 提交埠
+            zh: SMTP 提交端口
         - default: 587
           disabled: true
           envKey: SMTP_S_PORT2
@@ -40,6 +72,14 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+          label:
+            en: SMTP Submission ports
+            ja: SMTP 提出ポート
+            ms: Port Penghantaran SMTP
+            pt-br: Portas de envio SMTP
+            ru: Порты отправки SMTP
+            zh-Hant: SMTP 提交埠
+            zh: SMTP 提交端口
         - default: mail.example.com
           edit: true
           envKey: MAIL_HOSTNAME
@@ -47,6 +87,14 @@ additionalProperties:
           labelZh: 邮箱 MX 主机名
           required: true
           type: text
+          label:
+            en: Mail MX hostname
+            ja: メール MX ホスト名
+            ms: Nama hos MX mel
+            pt-br: Nome do host MX de e-mail
+            ru: Имя хоста MX для почты
+            zh-Hant: 郵件 MX 主機名稱
+            zh: 邮件 MX 主机名
         - default: example.com
           edit: true
           envKey: MAIL_DOMAIN
@@ -54,3 +102,11 @@ additionalProperties:
           labelZh: 邮箱域名
           required: true
           type: text
+          label:
+            en: Mail domain
+            ja: メールドメイン
+            ms: Domain mel
+            pt-br: Domínio de e-mail
+            ru: Почтовый домен
+            zh-Hant: 郵件域名
+            zh: 邮件域名
