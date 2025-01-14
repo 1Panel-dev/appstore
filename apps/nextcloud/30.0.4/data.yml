@@ -8,6 +8,14 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+          label:
+            en: Port
+            ja: ポート
+            ms: Port
+            pt-br: Porta
+            ru: Порт
+            zh-Hant: 埠
+            zh: 端口
         - default: Asia/Shanghai
           edit: true
           envKey: TIME_ZONE
@@ -15,5 +23,11 @@ additionalProperties:
           labelZh: 时区
           required: true
           type: text
-
-
+          label:
+            en: Time Zone
+            ja: タイムゾーン
+            ms: Zon Waktu
+            pt-br: Fuso Horário
+            ru: Часовой пояс
+            zh-Hant: 時區
+            zh: 时区

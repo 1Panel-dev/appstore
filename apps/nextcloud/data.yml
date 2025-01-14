@@ -10,6 +10,14 @@ additionalProperties:
         - Storage
     shortDescZh: Nextcloud 服务器，所有数据的安全家园
     shortDescEn: Nextcloud server, a safe home for all your data
+    description:
+        en: Nextcloud server, a safe home for all your data
+        ja: Nextcloud サーバー、あなたのすべてのデータの安全な保管場所
+        ms: Pelayan Nextcloud, rumah yang selamat untuk semua data anda
+        pt-br: Servidor Nextcloud, um lar seguro para todos os seus dados
+        ru: Сервер Nextcloud, безопасное место для всех ваших данных
+        zh-Hant: Nextcloud 伺服器，所有資料的安全之家
+        zh: Nextcloud 服务器，所有数据的安全之家
     type: tool
     crossVersionUpdate: true
     limit: 0
