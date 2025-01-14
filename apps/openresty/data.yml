@@ -10,6 +10,14 @@ additionalProperties:
         - Server
     shortDescZh: 基于 NGINX 和 LuaJIT 的 Web 平台
     shortDescEn: High performance web platform based on Nginx and LuaJIT
+    description:
+        en: Web Platform Based on NGINX and LuaJIT
+        ja: NGINX と LuaJIT に基づく Web プラットフォーム
+        ms: Platform Web Berdasarkan NGINX dan LuaJIT
+        pt-br: Plataforma Web Baseada em NGINX e LuaJIT
+        ru: Веб-платформа на основе NGINX и LuaJIT
+        zh-Hant: 基於 NGINX 和 LuaJIT 的 Web 平台
+        zh: 基于 NGINX 和 LuaJIT 的 Web 平台
     type: runtime
     crossVersionUpdate: true
     limit: 1
