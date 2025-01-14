@@ -10,6 +10,14 @@ additionalProperties:
         - Database
     shortDescZh: 著名的 MySQL 分支版本
     shortDescEn: The open source relational database
+    description:
+        en: The open source relational database
+        ja: オープンソースのリレーショナルデータベース
+        ms: Pangkalan data relasional sumber terbuka
+        pt-br: O banco de dados relacional de código aberto
+        ru: Открытая реляционная база данных
+        zh-Hant: 開源關聯式資料庫
+        zh: 著名的 MySQL 分支版本
     type: runtime
     crossVersionUpdate: false
     limit: 0
