@@ -10,6 +10,14 @@ additionalProperties:
         - DevOps
     shortDescZh: Gitea Actions 的 Runner
     shortDescEn: A runner for Gitea based on Gitea fork of act
+    description:
+        en: A runner for Gitea based on Gitea fork of act
+        ja: act の Gitea フォークに基づいた Gitea 用ランナー
+        ms: Penjalank untuk Gitea berdasarkan fork Gitea dari act
+        pt-br: Um runner para Gitea baseado no fork do Gitea do act
+        ru: Раннер для Gitea на основе форка Gitea от act
+        zh-Hant: 基於 Gitea fork 的 act 的 Gitea 執行器
+        zh: 基于 Gitea fork 的 act 的 Gitea 运行器
     type: tool
     crossVersionUpdate: true
     limit: 0
