@@ -8,6 +8,14 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+          label:
+            en: HTTP port
+            ja: HTTP ポート
+            ms: Port HTTP
+            pt-br: Porta HTTP
+            ru: Порт HTTP
+            zh-Hant: HTTP 埠
+            zh: HTTP 端口
         - default: 30081
           edit: true
           envKey: PANEL_APP_PORT_HTTP
@@ -16,6 +24,14 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+          label:
+            en: Console port
+            ja: コンソールポート
+            ms: Port konsol
+            pt-br: Porta do console
+            ru: Порт консоли
+            zh-Hant: 控制台埠
+            zh: 控制台端口
         - default: 30443
           edit: true
           envKey: PANEL_APP_PORT_HTTP2
@@ -24,3 +40,11 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+          label:
+            en: HTTPS port
+            ja: HTTPS ポート
+            ms: Port HTTPS
+            pt-br: Porta HTTPS
+            ru: Порт HTTPS
+            zh-Hant: HTTPS 埠
+            zh: HTTPS 端口
