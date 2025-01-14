@@ -10,6 +10,14 @@ additionalProperties:
         - Tool
     shortDescZh: 开源的密码管理服务
     shortDescEn: Open source password management service
+    description:
+        en: Open source password management service
+        ja: オープンソースのパスワード管理サービス
+        ms: Perkhidmatan pengurusan kata laluan sumber terbuka
+        pt-br: Serviço de gerenciamento de senhas de código aberto
+        ru: Открытое программное обеспечение для управления паролями
+        zh-Hant: 開源密碼管理服務
+        zh: 开源密码管理服务
     type: tool
     crossVersionUpdate: true
     limit: 0
