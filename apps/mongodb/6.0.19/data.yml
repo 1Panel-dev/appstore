@@ -8,6 +8,14 @@ additionalProperties:
           required: true
           rule: paramCommon
           type: text
+          label:
+            en: Username
+            ja: ユーザー名
+            ms: Nama pengguna
+            pt-br: Nome de usuário
+            ru: Имя пользователя
+            zh-Hant: 用戶名
+            zh: 用户名
         - default: mongo
           envKey: PANEL_DB_ROOT_PASSWORD
           labelEn: Password
@@ -16,6 +24,14 @@ additionalProperties:
           required: true
           rule: paramComplexity
           type: password
+          label:
+            en: Password
+            ja: パスワード
+            ms: Kata laluan
+            pt-br: Senha
+            ru: Пароль
+            zh-Hant: 密碼
+            zh: 密码
         - default: 27017
           envKey: PANEL_APP_PORT_HTTP
           labelEn: Port
@@ -23,3 +39,11 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+          label:
+            en: Port
+            ja: ポート
+            ms: Port
+            pt-br: Porta
+            ru: Порт
+            zh-Hant: 埠
+            zh: 端口
