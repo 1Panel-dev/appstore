@@ -10,6 +10,14 @@ additionalProperties:
         - Email
     shortDescZh: 全栈但简单的容器化邮件服务器
     shortDescEn: Fullstack but simple containerized mail server
+    description:
+        en: Fullstack but simple containerized mail server
+        ja: フルスタックでありながらシンプルなコンテナ化されたメールサーバー
+        ms: Pelayan mel yang terkontainerisasi tetapi mudah
+        pt-br: Servidor de e-mail completo e simples, contêinerizado
+        ru: Полный, но простой контейнеризованный почтовый сервер
+        zh-Hant: 全堆疊但簡單的容器化郵件伺服器
+        zh: 全栈但简单的容器化邮件服务器
     type: tool
     crossVersionUpdate: false
     limit: 0
