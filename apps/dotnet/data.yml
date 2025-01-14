@@ -10,6 +10,14 @@ additionalProperties:
     - Runtime
   shortDescZh: .NET 运行环境
   shortDescEn: .NET Runtime
+  description:
+    en: .NET Runtime Environment
+    ja: .NET 実行環境
+    ms: Persekitaran Larian .NET
+    pt-br: Ambiente de Execução .NET
+    ru: Среда выполнения .NET
+    zh-Hant: .NET 執行環境
+    zh: .NET 运行环境
   type: dotnet
   crossVersionUpdate: false
   limit: 0

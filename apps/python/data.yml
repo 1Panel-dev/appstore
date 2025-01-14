@@ -10,6 +10,14 @@ additionalProperties:
     - Runtime
   shortDescZh: Python 运行环境
   shortDescEn: Python Runtime
+  description:
+    en: Python Runtime Environment
+    ja: Python 実行環境
+    ms: Persekitaran Larian Python
+    pt-br: Ambiente de Execução Python
+    ru: Среда выполнения Python
+    zh-Hant: Python 執行環境
+    zh: Python 运行环境
   type: python
   crossVersionUpdate: false
   limit: 0
