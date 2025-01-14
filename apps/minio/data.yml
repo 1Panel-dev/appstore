@@ -10,6 +10,14 @@ additionalProperties:
         - Middleware
     shortDescZh: 开源的对象存储服务器
     shortDescEn: Open source object storage server
+    description:
+        en: Open source object storage server
+        ja: オープンソースのオブジェクトストレージサーバー
+        ms: Pelayan storan objek sumber terbuka
+        pt-br: Servidor de armazenamento de objetos de código aberto
+        ru: Открытый сервер объектного хранения
+        zh-Hant: 開源物件儲存伺服器
+        zh: 开源对象存储服务器
     type: tool
     crossVersionUpdate: true
     limit: 1
