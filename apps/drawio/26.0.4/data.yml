@@ -8,6 +8,14 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+          label:
+            en: HTTP Port
+            ja: HTTP ポート
+            ms: HTTP Port
+            pt-br: HTTP Porta
+            ru: HTTP Порт
+            zh-Hant: HTTP 埠
+            zh: HTTP 端口
         - default: 6443
           edit: true
           envKey: PANEL_APP_PORT_HTTPS
@@ -16,3 +24,11 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+          label:
+            en: HTTPS Port
+            ja: HTTPS ポート
+            ms: HTTPS Port
+            pt-br: HTTPS Porta
+            ru: HTTPS Порт
+            zh-Hant: HTTPS 埠
+            zh: HTTPS 端口
