@@ -8,6 +8,14 @@ additionalProperties:
           required: true
           rule: paramExtUrl
           type: text
+          label:
+            en: Domain
+            ja: ドメイン
+            ms: Domain
+            pt-br: Domínio
+            ru: Домен
+            zh-Hant: 域名
+            zh: 域名
         - default: 25
           edit: true
           envKey: PANEL_APP_PORT_SMTP
@@ -16,6 +24,14 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+          label:
+            en: SMTP port
+            ja: SMTP ポート
+            ms: Port SMTP
+            pt-br: Porta SMTP
+            ru: Порт SMTP
+            zh-Hant: SMTP 埠
+            zh: SMTP 端口
         - default: 143
           edit: true
           envKey: PANEL_APP_PORT_IMAP4_143
@@ -24,6 +40,14 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+          label:
+            en: IMAP4 port
+            ja: IMAP4 ポート
+            ms: Port IMAP4
+            pt-br: Porta IMAP4
+            ru: Порт IMAP4
+            zh-Hant: IMAP4 埠
+            zh: IMAP4 端口
         - default: 465
           edit: true
           envKey: PANEL_APP_PORT_ESMTP_465
@@ -32,6 +56,14 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+          label:
+            en: ESMTP port
+            ja: ESMTP ポート
+            ms: Port ESMTP
+            pt-br: Porta ESMTP
+            ru: Порт ESMTP
+            zh-Hant: ESMTP 埠
+            zh: ESMTP 端口
         - default: 587
           edit: true
           envKey: PANEL_APP_PORT_ESMTP_587
@@ -40,6 +72,14 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+          label:
+            en: ESMTP port
+            ja: ESMTP ポート
+            ms: Port ESMTP
+            pt-br: Porta ESMTP
+            ru: Порт ESMTP
+            zh-Hant: ESMTP 埠
+            zh: ESMTP 端口
         - default: 993
           edit: true
           envKey: PANEL_APP_PORT_IMAP4_993
@@ -48,3 +88,13 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+          label:
+            en: IMAP4 port
+            ja: IMAP4 ポート
+            ms: Port IMAP4
+            pt-br: Porta IMAP4
+            ru: Порт IMAP4
+            zh-Hant: IMAP4 埠
+            zh: IMAP4 端口
+ 
+
