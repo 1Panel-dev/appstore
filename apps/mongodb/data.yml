@@ -10,6 +10,14 @@ additionalProperties:
         - Database
     shortDescZh: MongoDB 开源文档数据库
     shortDescEn: Fractional file storage database
+    description:
+        en: Fractional file storage database
+        ja: 分数ファイルストレージデータベース
+        ms: Pangkalan data penyimpanan fail pecahan
+        pt-br: Banco de dados de armazenamento de arquivos fracionados
+        ru: Фракционная файловая база данных
+        zh-Hant: 分段文件儲存資料庫
+        zh: 分段文件存储数据库
     type: runtime
     crossVersionUpdate: false
     limit: 1
