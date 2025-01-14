@@ -10,6 +10,14 @@ additionalProperties:
         - AI
     shortDescZh: 本地运行 Llama 2、Mistral、Gemma 和其他大型语言模型
     shortDescEn: Locally run Llama 2, Mistral, Gemma, and other large language models
+    description:
+        en: Locally run Llama 2, Mistral, Gemma, and other large language models
+        ja: Llama 2、Mistral、Gemma、その他の大規模言語モデルをローカルで実行
+        ms: Jalankan Llama 2, Mistral, Gemma, dan model bahasa besar lain secara tempatan
+        pt-br: Execute localmente o Llama 2, Mistral, Gemma e outros modelos de linguagem de grande porte
+        ru: Локально запускайте Llama 2, Mistral, Gemma и другие крупные языковые модели
+        zh-hant: 本地運行 Llama 2、Mistral、Gemma 和其他大型語言模型
+        zh: 本地运行 Llama 2、Mistral、Gemma 和其他大型语言模型
     type: tool
     crossVersionUpdate: true
     limit: 0

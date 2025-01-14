@@ -9,7 +9,15 @@ additionalProperties:
     tags:
         - Tool
     shortDescZh: 强大的本地托管基于 Web 的 PDF 操作工具
-    shortDescEn: powerful locally hosted web based PDF manipulation tool
+    shortDescEn: Powerful locally hosted web based PDF manipulation tool
+    description:
+        en: Powerful locally hosted web based PDF manipulation tool
+        ja: 強力なローカルホスト型ウェブベースのPDF操作ツール
+        ms: Alat manipulasi PDF berasaskan web yang dihoskan secara tempatan yang hebat
+        pt-br: Ferramenta poderosa de manipulação de PDF baseada na web e hospedada localmente
+        ru: Мощный инструмент для работы с PDF, размещенный локально и основанный на веб-технологиях
+        zh-hant: 強大的本地託管基於網頁的 PDF 操作工具
+        zh: 强大的本地托管基于 Web 的 PDF 操作工具
     type: tool
     crossVersionUpdate: false
     limit: 0

@@ -1,18 +1,26 @@
 name: PGAdmin4
 tags:
-  - 开发工具
+    - 开发工具
 title: PostgreSQL 开源管理和开发平台
 description: PostgreSQL 开源管理工具
 additionalProperties:
-  key: pgadmin4
-  name: PGAdmin4
-  tags:
-    - DevTool
-  shortDescZh: PostgreSQL 开源管理工具
-  shortDescEn: PostgreSQL open source management and development platform
-  type: tool
-  crossVersionUpdate: true
-  limit: 1
-  website: https://www.pgadmin.org
-  github: https://github.com/pgadmin-org/pgadmin4
-  document: https://www.pgadmin.org/docs
+    key: pgadmin4
+    name: PGAdmin4
+    tags:
+        - DevTool
+    shortDescZh: PostgreSQL 开源管理工具
+    shortDescEn: PostgreSQL open source management and development platform
+    description:
+        en: PostgreSQL open source management and development platform
+        ja: PostgreSQL オープンソース管理および開発プラットフォーム
+        ms: Platform pengurusan dan pembangunan sumber terbuka PostgreSQL
+        pt-br: Plataforma de gerenciamento e desenvolvimento de código aberto do PostgreSQL
+        ru: Платформа управления и разработки с открытым исходным кодом PostgreSQL
+        zh-hant: PostgreSQL 開源管理與開發平台
+        zh: PostgreSQL 开源管理工具
+    type: tool
+    crossVersionUpdate: true
+    limit: 1
+    website: https://www.pgadmin.org
+    github: https://github.com/pgadmin-org/pgadmin4
+    document: https://www.pgadmin.org/docs

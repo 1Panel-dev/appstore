@@ -1,50 +1,98 @@
 additionalProperties:
-    formFields:
-        - default: 21115
-          edit: true
-          envKey: PANEL_APP_PORT_NAT
-          labelEn: NAT type test port
-          labelZh: NAT类型测试端口
-          required: true
-          rule: paramPort
-          type: number
-        - default: 21116
-          edit: true
-          envKey: PANEL_APP_PORT_HBBS
-          labelEn: hbbs port (used with IP/domain)
-          labelZh: hbbs端口(配合IP/域名使用)
-          required: true
-          rule: paramPort
-          type: number
-        - default: 21117
-          edit: true
-          envKey: PANEL_APP_PORT_HBBR
-          labelEn: hbbr port (client relay server port)
-          labelZh: hbbr端口(客户端中继服务器端口)
-          required: true
-          rule: paramPort
-          type: number
-        - default: 21118
-          edit: true
-          envKey: PANEL_APP_PORT_WEB_CLIENT_1
-          labelEn: Web Client Support Port 1
-          labelZh: 网页客户端支持端口1
-          required: true
-          rule: paramPort
-          type: number
-        - default: 21119
-          edit: true
-          envKey: PANEL_APP_PORT_WEB_CLIENT_2
-          labelEn: Web Client Support Port 2
-          labelZh: 网页客户端支持端口2
-          required: true
-          rule: paramPort
-          type: number
-        - default: 172.17.0.1
-          edit: true
-          envKey: HOST_ADDRESS
-          labelEn: IP address or domain name (must change item)
-          labelZh: IP地址或域名(必改项)
-          required: true
-          rule: paramCommon
-          type: text
+  formFields:
+    - default: 21115
+      edit: true
+      envKey: PANEL_APP_PORT_NAT
+      labelEn: NAT type test port
+      labelZh: NAT 类型测试端口
+      label:
+        en: NAT type test port
+        ja: NATタイプテストポート
+        ms: Port ujian jenis NAT
+        t-br: Porta de teste de tipo NAT
+        ru: Порт теста типа NAT
+        zh-hant: NAT 類型測試埠
+        zh: NAT 类型测试端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 21116
+      edit: true
+      envKey: PANEL_APP_PORT_HBBS
+      labelEn: hbbs port (used with IP/domain)
+      labelZh: hbbs 端口(配合IP/域名使用)
+      label:
+        en: hbbs port (used with IP/domain)
+        ja: hbbs ポート（IP/ドメインと一緒に使用）
+        ms: Port hbbs (digunakan dengan IP/domain)
+        pt-br: Porta hbbs (usado com IP/domínio)
+        ru: Порт hbbs (используется с IP/доменом)
+        zh-hant: hbbs 埠（與 IP/域名一起使用）
+        zh: hbbs 端口(配合IP/域名使用)
+      required: true
+      rule: paramPort
+      type: number
+    - default: 21117
+      edit: true
+      envKey: PANEL_APP_PORT_HBBR
+      labelEn: hbbr port (client relay server port)
+      labelZh: hbbr 端口(客户端中继服务器端口)
+      label:
+        en: hbbr port (client relay server port)
+        ja: hbbr ポート（クライアントリレイサーバーポート）
+        ms: Port hbbr (port relai pelayan klien)
+        pt-br: Porta hbbr (porta do servidor de retransmissão do cliente)
+        ru: Порт hbbr (порт релейного сервера клиента)
+        zh-hant: hbbr 埠（客戶端中繼服務器埠）
+        zh: hbbr 端口(客户端中继服务器端口)
+      required: true
+      rule: paramPort
+      type: number
+    - default: 21118
+      edit: true
+      envKey: PANEL_APP_PORT_WEB_CLIENT_1
+      labelEn: Web Client Support Port 1
+      labelZh: 网页客户端支持端口 1
+      label:
+        en: Web Client Support Port 1
+        ja: Webクライアントサポートポート1
+        ms: Port Sokongan Pelanggan Web 1
+        pt-br: Porta de Suporte ao Cliente Web 1
+        ru: Порт поддержки веб-клиента 1
+        zh-hant: Web 客戶端支持端口 1
+        zh: 网页客户端支持端口 1
+      required: true
+      rule: paramPort
+      type: number
+    - default: 21119
+      edit: true
+      envKey: PANEL_APP_PORT_WEB_CLIENT_2
+      labelEn: Web Client Support Port 2
+      labelZh: 网页客户端支持端口 2
+      label:
+        en: Web Client Support Port 2
+        ja: Webクライアントサポートポート2
+        ms: Port Sokongan Pelanggan Web 2
+        pt-br: Porta de Suporte ao Cliente Web 2
+        ru: Порт поддержки веб-клиента 2
+        zh-hant: Web 客戶端支持端口 2
+        zh: 网页客户端支持端口 2
+      required: true
+      rule: paramPort
+      type: number
+    - default: 172.17.0.1
+      edit: true
+      envKey: HOST_ADDRESS
+      labelEn: IP address or domain name (must change item)
+      labelZh: IP 地址或域名(必改项)
+      label:
+        en: IP address or domain name (must change item)
+        ja: IPアドレスまたはドメイン名（変更必須項目）
+        ms: Alamat IP atau nama domain (item wajib diubah)
+        pt-br: Endereço IP ou nome de domínio (item obrigatório a ser alterado)
+        ru: IP-адрес или доменное имя (обязательный элемент для изменения)
+        zh-hant: IP 地址或域名（必須更改項目）
+        zh: IP 地址或域名(必改项)
+      required: true
+      rule: paramCommon
+      type: text

@@ -5,6 +5,14 @@ additionalProperties:
       envKey: PANEL_APP_PORT_HTTP
       labelEn: Port
       labelZh: 端口
+      label:
+        en: Port
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        zh-Hant: 埠
+        zh: 端口
       required: true
       rule: paramPort
       type: number
@@ -13,6 +21,14 @@ additionalProperties:
       envKey: OLLAMA_BASE_URL
       labelEn: Ollama Base Url
       labelZh: Ollama 服务地址
+      label:
+        en: Ollama Base Url
+        ja: OllamaベースURL
+        ms: URL Asas Ollama
+        pt-br: URL Base Ollama
+        ru: Базовый URL Ollama
+        zh-hant: Ollama 服務地址
+        zh: Ollama 服务地址
       required: true
       rule: paramExtUrl
       type: text
@@ -21,6 +37,14 @@ additionalProperties:
       envKey: WEBUI_SECRET_KEY
       labelEn: Secret Key
       labelZh: Secret Key
+      label:
+        en: Secret Key
+        ja: シークレットキー
+        ms: Kunci Rahsia
+        pt-br: Chave Secreta
+        ru: Секретный ключ
+        zh-hant: 密鑰
+        zh: Secret Key
       random: true
       required: false
       rule: paramComplexity
