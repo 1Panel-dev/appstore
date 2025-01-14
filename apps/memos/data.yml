@@ -10,6 +10,14 @@ additionalProperties:
         - Tool
     shortDescZh: 轻量级、自托管的备忘录中心
     shortDescEn: A lightweight, self-hosted memo hub
+    description:
+        en: A lightweight, self-hosted memo hub
+        ja: 軽量な自己ホスト型メモハブ
+        ms: Pusat memo ringan yang dihoskan sendiri
+        pt-br: Um hub de anotações leve e auto-hospedado
+        ru: Легкий, самостоятельно размещаемый хаб для заметок
+        zh-Hant: 輕量級自託管備忘錄中心
+        zh: 轻量级自托管备忘录中心
     type: tool
     crossVersionUpdate: false
     limit: 0
