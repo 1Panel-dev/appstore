@@ -8,6 +8,14 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
+      label:
+        en: Port
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        zh-Hant: 埠
+        zh: 端口
     - default: code
       envKey: WEB_PASSWORD
       labelEn: Web access password
@@ -16,6 +24,14 @@ additionalProperties:
       required: true
       rule: paramComplexity
       type: password
+      label:
+        en: Web access password
+        ja: ウェブアクセスパスワード
+        ms: Kata laluan akses web
+        pt-br: Senha de acesso à web
+        ru: Пароль для доступа в веб
+        zh-Hant: 網頁訪問密碼
+        zh: 网页访问密码
     - default: code
       envKey: SUDO_PASSWORD
       labelEn: sudo password
@@ -24,3 +40,11 @@ additionalProperties:
       required: true
       rule: paramComplexity
       type: password
+      label:
+        en: Sudo password
+        ja: Sudo パスワード
+        ms: Kata laluan Sudo
+        pt-br: Senha do Sudo
+        ru: Пароль Sudo
+        zh-Hant: Sudo 密碼
+        zh: Sudo 密码
