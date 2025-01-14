@@ -8,6 +8,14 @@ additionalProperties:
           required: true
           rule: paramComplexity
           type: password
+          label:
+            en: Root Password
+            ja: ルートパスワード
+            ms: Kata Laluan Root
+            pt-br: Senha Root
+            ru: Пароль Root
+            zh-Hant: Root 密碼
+            zh: Root 密码
         - default: 3306
           envKey: PANEL_APP_PORT_HTTP
           labelEn: Port
@@ -15,3 +23,11 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+          label:
+            en: Port
+            ja: ポート
+            ms: Port
+            pt-br: Porta
+            ru: Порт
+            zh-Hant: 端口
+            zh: 端口
