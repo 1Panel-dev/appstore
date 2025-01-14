@@ -8,6 +8,14 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+          label:
+            en: HTTP Web Port
+            ja: HTTP ウェブポート
+            ms: Port Web HTTP
+            pt-br: Porta Web HTTP
+            ru: HTTP Веб Порт
+            zh-Hant: HTTP 網頁端口
+            zh: HTTP 网页端口
         - default: 23001
           edit: true
           envKey: PANEL_APP_PORT_HTTP
@@ -16,6 +24,14 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+          label:
+            en: Initial Setup Web Port
+            ja: 初期設定ウェブポート
+            ms: Port Web Persediaan Awal
+            pt-br: Porta Web de Configuração Inicial
+            ru: Порт веб-страницы для начальной настройки
+            zh-Hant: 初始設置網頁端口
+            zh: 初始设置网页端口
         - default: 20053
           edit: true
           envKey: PANEL_APP_PORT_DNS
@@ -24,6 +40,14 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+          label:
+            en: Standard DNS Port
+            ja: 標準DNSポート
+            ms: Port DNS Standard
+            pt-br: Porta DNS Padrão
+            ru: Стандартный порт DNS
+            zh-Hant: 普通 DNS 端口
+            zh: 普通 DNS 端口
         - default: 20067
           edit: true
           envKey: PANEL_APP_PORT_DHCP_1
@@ -32,6 +56,14 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+          label:
+            en: DHCP Service Port 1
+            ja: DHCP サービスポート 1
+            ms: Port Perkhidmatan DHCP 1
+            pt-br: Port de Serviço DHCP 1
+            ru: Порт службы DHCP 1
+            zh-Hant: DHCP 服務端口 1
+            zh: DHCP 服务端口 1
         - default: 20068
           edit: true
           envKey: PANEL_APP_PORT_DHCP_2
@@ -40,6 +72,14 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+          label:
+            en: DHCP Service Port 2
+            ja: DHCP サービスポート 2
+            ms: Port Perkhidmatan DHCP 2
+            pt-br: Port de Serviço DHCP 2
+            ru: Порт службы DHCP 2
+            zh-Hant: DHCP 服務端口 2
+            zh: DHCP 服务端口 2
         - default: 20443
           edit: true
           envKey: PANEL_APP_PORT_DOH
@@ -48,6 +88,14 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+          label:
+            en: DOH Service Port
+            ja: DOH サービスポート
+            ms: Port Perkhidmatan DOH
+            pt-br: Porta de Serviço DOH
+            ru: Порт службы DOH
+            zh-Hant: DOH 服務端口
+            zh: DOH 服务端口
         - default: 853
           edit: true
           envKey: PANEL_APP_PORT_DOT
@@ -56,6 +104,14 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+          label:
+            en: DOT Service Port
+            ja: DOT サービスポート
+            ms: Port Perkhidmatan DOT
+            pt-br: Porta de Serviço DOT
+            ru: Порт службы DOT
+            zh-Hant: DOT 服務端口
+            zh: DOT 服务端口
         - default: 20784
           edit: true
           envKey: PANEL_APP_PORT_QUIC_1
@@ -64,6 +120,14 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+          label:
+            en: QUIC Service Port 1
+            ja: QUIC サービスポート 1
+            ms: Port Perkhidmatan QUIC 1
+            pt-br: Porta de Serviço QUIC 1
+            ru: Порт службы QUIC 1
+            zh-Hant: QUIC 服務端口 1
+            zh: QUIC 服务端口 1
         - default: 8853
           edit: true
           envKey: PANEL_APP_PORT_QUIC_2
@@ -72,6 +136,14 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+          label:
+            en: QUIC Service Port 2
+            ja: QUIC サービスポート 2
+            ms: Port Perkhidmatan QUIC 2
+            pt-br: Porta de Serviço QUIC 2
+            ru: Порт службы QUIC 2
+            zh-Hant: QUIC 服務端口 2
+            zh: QUIC 服务端口 2
         - default: 5443
           edit: true
           envKey: PANEL_APP_PORT_DNS_CRYPT
@@ -80,3 +152,11 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+          label:
+            en: DNS Crypt Service Port
+            ja: DNS Crypt サービスポート
+            ms: Port Perkhidmatan DNS Crypt
+            pt-br: Porta de Serviço DNS Crypt
+            ru: Порт службы DNS Crypt
+            zh-Hant: DNS Crypt 服務端口
+            zh: DNS Crypt 服务端口
