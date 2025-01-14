@@ -10,6 +10,14 @@ additionalProperties:
         - Media
     shortDescZh: 多媒体应用程序软件套装
     shortDescEn: A multimedia application software suite
+    description:
+        en: A multimedia application software suite
+        ja: マルチメディアアプリケーションソフトウェアスイート
+        ms: Suite perisian aplikasi multimedia
+        pt-br: Um conjunto de software de aplicação multimídia
+        ru: Пакет программного обеспечения для мультимедиа приложений
+        zh-Hant: 多媒體應用軟件套件
+        zh: 多媒体应用软件套件
     type: tool
     crossVersionUpdate: true
     limit: 0
