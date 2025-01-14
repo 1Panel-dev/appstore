@@ -10,6 +10,14 @@ additionalProperties:
         - DevTool
     shortDescZh: 浏览器中的VS Code
     shortDescEn: VS Code in the browser
+    description:
+        en: VS Code in the browser
+        ja: ブラウザでのVS Code
+        ms: VS Code di pelayar
+        pt-br: VS Code no navegador
+        ru: VS Code в браузере
+        zh-Hant: 瀏覽器中的 VS Code
+        zh: 浏览器中的 VS Code
     type: tool
     crossVersionUpdate: true
     limit: 0
