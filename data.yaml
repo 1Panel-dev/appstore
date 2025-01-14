@@ -1,214 +1,181 @@
 name: 1Panel
 title: 新一代的 Linux 服务器运维管理面板
 additionalProperties:
-  groups:
+  tags:
     - key: Website
+      name: 建站
       sort: 10
-      translations:
+      locales:
         en: "Website"
         ja: "ウェブサイト"
         ms: "Laman Web"
         pt-br: "Website"
         ru: "Веб-сайт"
-        tw: "網站"
+        zh-hant: "網站"
         zh: "建站"
     - key: Database
+      name: 数据库
       sort: 20
-      translations:
+      locales:
         en: "Database"
         ja: "データベース"
         ms: "Pangkalan Data"
         pt-br: "Banco de Dados"
         ru: "База данных"
-        tw: "資料庫"
+        zh-hant: "資料庫"
         zh: "数据库"
     - key: Server
+      name: Web 服务器
       sort: 30
-      translations:
+      locales:
         en: "Web Server"
         ja: "ウェブサーバー"
         ms: "Pelayan Web"
         pt-br: "Servidor Web"
         ru: "Веб-сервер"
-        tw: "網頁伺服器"
+        zh-hant: "網頁伺服器"
         zh: "Web 服务器"
     - key: Runtime
+      name: 运行环境
       sort: 40
-      translations:
+      locales:
         en: "Runtime"
         ja: "ランタイム"
         ms: "Masa Jalan"
         pt-br: "Tempo de Execução"
         ru: "Среда выполнения"
-        tw: "運行環境"
+        zh-hant: "運行環境"
         zh: "运行环境"
     - key: Tool
+      name: 实用工具
       sort: 50
-      translations:
+      locales:
         en: "Tool"
         ja: "ツール"
         ms: "Alat"
         pt-br: "Ferramenta"
         ru: "Инструмент"
-        tw: "實用工具"
+        zh-hant: "實用工具"
         zh: "实用工具"
     - key: Storage
+      name: 云存储
       sort: 60
-      translations:
+      locales:
         en: "Cloud Storage"
         ja: "クラウドストレージ"
         ms: "Penyimpanan Awan"
         pt-br: "Armazenamento em Nuvem"
         ru: "Облачное хранилище"
-        tw: "雲存儲"
+        zh-hant: "雲存儲"
         zh: "云存储"
     - key: AI
+      name: AI / 大模型
       sort: 70
-      translations:
+      locales:
         en: "AI / Large Models"
         ja: "AI / 大規模モデル"
         ms: "AI / Model Besar"
         pt-br: "IA / Grandes Modelos"
         ru: "ИИ / Большие модели"
-        tw: "AI / 大模型"
+        zh-hant: "AI / 大模型"
         zh: "AI / 大模型"
     - key: BI
+      name: BI
       sort: 80
-      translations:
+      locales:
         en: "BI"
         ja: "BI"
         ms: "BI"
         pt-br: "BI"
         ru: "BI"
-        tw: "BI"
+        zh-hant: "BI"
         zh: "BI"
     - key: Security
+      name: 安全
       sort: 90
-      translations:
+      locales:
         en: "Security"
         ja: "セキュリティ"
         ms: "Keselamatan"
         pt-br: "Segurança"
         ru: "Безопасность"
-        tw: "安全"
+        zh-hant: "安全"
         zh: "安全"
     - key: DevTool
+      name: 开发工具
       sort: 100
-      translations:
+      locales:
         en: "Development Tool"
         ja: "開発ツール"
         ms: "Alat Pembangunan"
         pt-br: "Ferramenta de Desenvolvimento"
         ru: "Инструмент разработки"
-        tw: "開發工具"
+        zh-hant: "開發工具"
         zh: "开发工具"
     - key: DevOps
+      name: DevOps
       sort: 110
-      translations:
+      locales:
         en: "DevOps"
         ja: "DevOps"
         ms: "DevOps"
         pt-br: "DevOps"
         ru: "DevOps"
-        tw: "DevOps"
+        zh-hant: "DevOps"
         zh: "DevOps"
     - key: Middleware
+      name: 中间件
       sort: 120
-      translations:
+      locales:
         en: "Middleware"
         ja: "ミドルウェア"
         ms: "Middleware"
         pt-br: "Middleware"
         ru: "Промежуточное ПО"
-        tw: "中間件"
+        zh-hant: "中間件"
         zh: "中间件"
     - key: Media
+      name: 多媒体
       sort: 130
-      translations:
+      locales:
         en: "Media"
         ja: "メディア"
         ms: "Media"
         pt-br: "Mídia"
         ru: "Медиа"
-        tw: "多媒體"
+        zh-hant: "多媒體"
         zh: "多媒体"
     - key: Email
+      name: 邮件服务
       sort: 140
-      translations:
+      locales:
         en: "Email Service"
         ja: "メールサービス"
         ms: "Perkhidmatan E-mel"
         pt-br: "Serviço de Email"
         ru: "Почтовый сервис"
-        tw: "郵件服務"
+        zh-hant: "郵件服務"
         zh: "邮件服务"
     - key: Game
+      name: 休闲游戏
       sort: 150
-      translations:
+      locales:
         en: "Casual Games"
         ja: "カジュアルゲーム"
         ms: "Permainan Santai"
         pt-br: "Jogos Casuais"
         ru: "Казуальные игры"
-        tw: "休閒遊戲"
+        zh-hant: "休閒遊戲"
         zh: "休闲游戏"
     - key: Local
+      name: 本地
       sort: 9999
-      translations:
+      locales:
         en: "Local"
         ja: "ローカル"
         ms: "Tempatan"
         pt-br: "Local"
         ru: "Локальный"
-        tw: "本地"
+        zh-hant: "本地"
         zh: "本地"
-  tags:
-    - key: Website
-      name: 建站
-      sort: 1
-    - key: Database
-      name: 数据库
-      sort: 2
-    - key: Server
-      name: Web 服务器
-      sort: 3
-    - key: Runtime
-      name: 运行环境
-      sort: 4
-    - key: Tool
-      name: 实用工具
-      sort: 5
-    - key: Storage
-      name: 云存储
-      sort: 6
-    - key: AI
-      name: AI / 大模型
-      sort: 7  
-    - key: BI
-      name: BI
-      sort: 8
-    - key: Security
-      name: 安全
-      sort: 9
-    - key: DevTool
-      name: 开发工具
-      sort: 10
-    - key: DevOps
-      name: DevOps
-      sort: 11
-    - key: Middleware
-      name: 中间件
-      sort: 12
-    - key: Media
-      name: 多媒体
-      sort: 13
-    - key: Email
-      name: 邮件服务
-      sort: 14
-    - key: Game
-      name: 休闲游戏
-      sort: 15
-    - key: Local
-      name: 本地
-      sort: 99
   version: v1.6.0
