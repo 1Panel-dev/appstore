@@ -10,6 +10,14 @@ additionalProperties:
         - Tool
     shortDescZh: Nginx 可视化管理工具
     shortDescEn: Nginx visual management tool
+    description:
+        en: Nginx visual management tool
+        ja: Nginx の視覚的管理ツール
+        ms: Alat pengurusan visual Nginx
+        pt-br: Ferramenta de gerenciamento visual do Nginx
+        ru: Визуальный инструмент управления Nginx
+        zh-Hant: Nginx 視覺化管理工具
+        zh: Nginx 可视化管理工具
     type: tool
     crossVersionUpdate: true
     limit: 0
