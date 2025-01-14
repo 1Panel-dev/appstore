@@ -10,6 +10,14 @@ additionalProperties:
         - BI
     shortDescZh: 开源的数据分析和可视化工具
     shortDescEn: Open source data analysis and visualization tool
+    description:
+        en: Open source data analysis and visualization tool
+        ja: オープンソースのデータ分析と可視化ツール
+        ms: Alat analisis data dan visualisasi sumber terbuka
+        pt-br: Ferramenta de análise e visualização de dados de código aberto
+        ru: Открытый инструмент для анализа данных и визуализации
+        zh-Hant: 開源數據分析和可視化工具
+        zh: 开源数据分析和可视化工具
     type: tool
     crossVersionUpdate: true
     limit: 0

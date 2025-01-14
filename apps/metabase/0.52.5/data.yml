@@ -7,6 +7,14 @@ additionalProperties:
           labelZh: 数据库服务
           required: true
           type: service
+          label:
+            en: Database Service
+            ja: データベースサービス
+            ms: Perkhidmatan Pangkalan Data
+            pt-br: Serviço de Banco de Dados
+            ru: Сервис баз данных
+            zh-hant: 資料庫服務
+            zh: 数据库服务
         - default: metabase
           envKey: PANEL_DB_NAME
           labelEn: Database
@@ -15,6 +23,14 @@ additionalProperties:
           required: true
           rule: paramCommon
           type: text
+          label:
+            en: Database
+            ja: データベース
+            ms: Pangkalan Data
+            pt-br: Banco de Dados
+            ru: База данных
+            zh-hant: 資料庫
+            zh: 数据库
         - default: metabase
           envKey: PANEL_DB_USER
           labelEn: User
@@ -23,6 +39,14 @@ additionalProperties:
           required: true
           rule: paramCommon
           type: text
+          label:
+            en: Database User
+            ja: データベースユーザー
+            ms: Pengguna Pangkalan Data
+            pt-br: Usuário do Banco de Dados
+            ru: Пользователь базы данных
+            zh-hant: 資料庫用戶
+            zh: 数据库用户
         - default: metabase
           envKey: PANEL_DB_USER_PASSWORD
           labelEn: Password
@@ -31,10 +55,26 @@ additionalProperties:
           required: true
           rule: paramComplexity
           type: password
+          label:
+            en: Database Password
+            ja: データベースのパスワード
+            ms: Kata Laluan Pangkalan Data
+            pt-br: Senha do Banco de Dados
+            ru: Пароль базы данных
+            zh-hant: 資料庫密碼
+            zh: 数据库密码
         - default: 3000
           envKey: PANEL_APP_PORT_HTTP
           labelEn: Port
-          labelZh: 应用端口
+          labelZh: 端口
           required: true
           rule: paramPort
           type: number
+          label:
+            en: Port
+            ja: ポート
+            ms: Port
+            pt-br: Porta
+            ru: Порт
+            zh-Hant: 埠
+            zh: 端口
