@@ -7,6 +7,14 @@ additionalProperties:
           labelZh: Docker二进制文件
           required: true
           type: text
+          label:
+            en: Docker Binary
+            ja: Docker バイナリ
+            ms: Binari Docker
+            pt-br: Binário Docker
+            ru: Исполняемый файл Docker
+            zh-Hant: Docker 二進制文件
+            zh: Docker 二进制文件
         - default: 8080
           edit: true
           envKey: PANEL_APP_PORT_HTTP
@@ -15,3 +23,11 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+          label:
+            en: Port
+            ja: ポート
+            ms: Port
+            pt-br: Porta
+            ru: Порт
+            zh-Hant: 埠
+            zh: 端口
