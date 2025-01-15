@@ -1,6 +1,6 @@
 services:
   navidrome:
-    image: deluan/navidrome:0.54.3
+    image: deluan/navidrome:0.54.4
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
