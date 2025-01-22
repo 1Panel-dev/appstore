@@ -17,3 +17,5 @@ additionalProperties:
     website: https://github.com/digininja/DVWA
     github: https://github.com/digininja/DVWA
     document: https://github.com/digininja/DVWA
+    architectures:
+        - amd64

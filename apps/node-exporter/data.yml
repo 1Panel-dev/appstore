@@ -17,3 +17,9 @@ additionalProperties:
     website: https://prometheus.io/
     github: https://github.com/prometheus/node_exporter/
     document: https://prometheus.io/docs/introduction/overview/
+    architectures:
+        - amd64
+        - arm/v7
+        - arm64
+        - ppc64le
+        - s390x

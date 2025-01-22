@@ -17,3 +17,6 @@ additionalProperties:
     website: https://logto.io/zh-CN/
     github: https://github.com/logto-io/logto
     document: https://docs.logto.io/
+    architectures:
+        - amd64
+        - arm64
