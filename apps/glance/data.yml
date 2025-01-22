@@ -25,3 +25,7 @@ additionalProperties:
     pt-br: Um painel auto-hospedado que coloca todos os seus feeds em um só lugar
     ru: Самостоятельно размещаемая панель управления, которая собирает все ваши каналы в одном месте
     ko: 모든 피드를 한 곳에 모아주는 자체 호스팅 대시보드
+  architectures:
+    - amd64
+    - arm64
+    - arm/v7

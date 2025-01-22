@@ -26,3 +26,5 @@ additionalProperties:
         pt-br: A alternativa gratuita e de código aberto ao OpenAI
         ru: Бесплатная альтернатива OpenAI с открытым исходным кодом
         ko: 무료 오픈 소스 OpenAI 대안
+    architectures:
+      - amd64

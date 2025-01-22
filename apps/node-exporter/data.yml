@@ -26,3 +26,9 @@ additionalProperties:
         pt-br: Exportador de métricas de máquina
         ru: Экспортер метрик машины
         ko: 머신 메트릭 내보내기 도구
+    architectures:
+        - amd64
+        - arm/v7
+        - arm64
+        - ppc64le
+        - s390x

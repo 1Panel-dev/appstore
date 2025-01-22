@@ -25,3 +25,5 @@ additionalProperties:
         pt-br: Quadro branco virtual para esboçar diagramas com aparência de desenho à mão
         ru: Виртуальная доска для рисования диаграмм в стиле ручной работы
         ko: 손으로 그린 것 같은 다이어그램을 스케치하기 위한 가상 화이트보드
+    architectures:
+        - amd64

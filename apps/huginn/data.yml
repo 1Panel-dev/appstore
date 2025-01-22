@@ -26,3 +26,5 @@ additionalProperties:
         pt-br: Um sistema para construir agentes que executam tarefas automatizadas para você online
         ru: Система для создания агентов, выполняющих автоматизированные задачи для вас в Интернете
         ko: 온라인에서 자동화된 작업을 수행하는 에이전트를 구축하기 위한 시스템
+    architectures:
+        - amd64
