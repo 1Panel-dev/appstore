@@ -26,3 +26,5 @@ additionalProperties:
         pt-br: Uma plataforma de aplicação web PHP/MySQL para avaliação de vulnerabilidades de segurança.
         ru: Платформа веб-приложений PHP/MySQL для оценки уязвимостей безопасности.
         ko: 보안 취약성 평가를 위한 PHP/MySQL 웹 애플리케이션 플랫폼.
+    architectures:
+        - amd64
