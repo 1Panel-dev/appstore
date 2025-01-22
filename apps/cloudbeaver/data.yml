@@ -27,3 +27,6 @@ additionalProperties:
         pt-br: Gerenciador de Banco de Dados em Nuvem
         ru: Облачный менеджер баз данных
         ko: 클라우드 데이터베이스 관리자
+    architectures:
+        - amd64
+        - arm64
