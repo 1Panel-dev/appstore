@@ -1,0 +1,19 @@
+services:
+  openresty:
+    image: 1panel/openresty:1.21.4.3-3-3-focal
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    network_mode: host
+    volumes:
+      - ./conf/nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf
+      - ./conf/fastcgi_params:/usr/local/openresty/nginx/conf/fastcgi_params
+      - ./conf/fastcgi-php.conf:/usr/local/openresty/nginx/conf/fastcgi-php.conf
+      - ./conf/mime.types:/usr/local/openresty/nginx/conf/mime.types
+      - ./log:/var/log/nginx
+      - ./conf/conf.d:/usr/local/openresty/nginx/conf/conf.d/
+      - ./www:/www
+      - ./root:/usr/share/nginx/html
+      - /etc/localtime:/etc/localtime
+      - ./1pwaf/data:/usr/local/openresty/1pwaf/data
+    labels:
+      createdBy: "Apps"
