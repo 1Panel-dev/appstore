@@ -17,3 +17,8 @@ additionalProperties:
     website: https://github.com/hr3lxphr6j/bililive-go
     github: https://github.com/hr3lxphr6j/bililive-go
     document: https://github.com/hr3lxphr6j/bililive-go/wiki
+    architectures:
+        - amd64
+        - arm64
+        - arm/v7
+        - arm/v6

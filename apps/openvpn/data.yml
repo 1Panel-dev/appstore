@@ -28,3 +28,6 @@ additionalProperties:
     pt-br: Daemon VPN de código aberto
     ru: Открытый демон VPN
     ko: 오픈 소스 VPN 데몬
+  architectures:
+    - amd64
+    - arm64
