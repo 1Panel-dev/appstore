@@ -16,3 +16,6 @@ additionalProperties:
   website: https://casdoor.org/
   github: https://github.com/casdoor/casdoor
   document: https://casdoor.org/docs/overview
+  architectures:
+    - amd64
+    - arm64
