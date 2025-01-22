@@ -1,0 +1,10 @@
+{
+  "rules": [
+    {
+      "state": "on",
+      "name": "uaBlock1",
+      "rule": "HTTrack|Apache-HttpClient|harvest|audit|dirbuster|pangolin|nmap|sqln|hydra|Parser|libwww|BBBike|sqlmap|w3af|owasp|Nikto|fimap|havij|zmeu|BabyKrokodil|netsparker|httperf| SF/",
+      "type": "scannerFilter"
+    }
+  ]
+}
