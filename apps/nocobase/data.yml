@@ -17,3 +17,6 @@ additionalProperties:
     website: https://www.nocobase.com/
     github: https://github.com/nocobase/nocobase/
     document: https://docs.nocobase.com/
+    architectures:
+        - amd64
+        - arm64
