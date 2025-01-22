@@ -16,3 +16,5 @@ additionalProperties:
     website: https://excalidraw.com/
     github: https://github.com/excalidraw/excalidraw
     document: https://docs.excalidraw.com/docs
+    architectures:
+        - amd64
