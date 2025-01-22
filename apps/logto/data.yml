@@ -26,3 +26,6 @@ additionalProperties:
         pt-br: Uma alternativa ao Auth0 projetada para aplicativos modernos e produtos SaaS
         ru: Альтернатива Auth0, разработанная для современных приложений и продуктов SaaS
         ko: 현대적인 앱과 SaaS 제품을 위해 설계된 Auth0 대안
+    architectures:
+        - amd64
+        - arm64

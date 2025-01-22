@@ -26,3 +26,7 @@ additionalProperties:
     pt-br: Programação de baixo código para aplicativos orientados a eventos
     ru: Программирование с низким уровнем кода для приложений, управляемых событиями
     ko: 이벤트 기반 애플리케이션을 위한 로우코드 프로그래밍
+  architectures:
+    - amd64
+    - arm/v7
+    - arm64

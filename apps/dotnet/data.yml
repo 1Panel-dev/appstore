@@ -23,3 +23,6 @@ additionalProperties:
   limit: 0
   recommend: 119
   website: https://learn.microsoft.com/zh-cn/dotnet/
+  architectures:
+    - amd64
+    - arm64

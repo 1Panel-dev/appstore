@@ -26,3 +26,6 @@ additionalProperties:
         pt-br: Uma plataforma de desenvolvimento sem código de código aberto com prioridade na escalabilidade
         ru: Открытая платформа для разработки без кода с приоритетом масштабируемости
         ko: 확장성을 우선으로 하는 오픈 소스 노코드 개발 플랫폼
+    architectures:
+        - amd64
+        - arm64
