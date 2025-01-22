@@ -1,0 +1,48 @@
+{
+  "rules": [
+    {
+      "rule": "x-forwarded-for"
+    },
+    {
+      "rule": "x-real-ip"
+    },
+    {
+      "rule": "x-forwarded"
+    },
+    {
+      "rule": "forwarded-for"
+    },
+    {
+      "rule": "forwarded"
+    },
+    {
+      "rule": "true-client-ip"
+    },
+    {
+      "rule": "client-ip"
+    },
+    {
+      "rule": "ali-cdn-real-ip"
+    },
+    {
+      "rule": "cdn-src-ip"
+    },
+    {
+      "rule": "cdn-real-ip"
+    },
+    {
+      "rule": "cf-connecting-ip"
+    },
+    {
+      "rule": "x-cluster-client-ip"
+    },
+    {
+      "rule": "wl-proxy-client-ip"
+    },
+    {
+      "rule": "proxy-client-ip"
+    }
+  ],
+  "type": "headers",
+  "header": "x-real-ip"
+}

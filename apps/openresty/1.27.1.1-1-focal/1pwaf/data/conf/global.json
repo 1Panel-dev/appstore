@@ -1,0 +1,174 @@
+{
+  "waf": {
+    "state": "on",
+    "mode": "protection",
+    "secret": ""
+  },
+  "ipWhite": {
+    "state": "on",
+    "type": "ipWhite",
+    "action": "allow"
+  },
+  "ipBlack": {
+    "state": "on",
+    "code": 403,
+    "action": "deny",
+    "type": "ipBlack",
+    "res": "ip"
+  },
+  "urlWhite": {
+    "type": "urlWhite",
+    "state": "on",
+    "action": "allow"
+  },
+  "urlBlack": {
+    "type": "urlBlack",
+    "state": "on",
+    "code": 403,
+    "action": "deny"
+  },
+  "uaWhite": {
+    "type": "uaWhite",
+    "state": "off",
+    "action": "allow"
+  },
+  "uaBlack": {
+    "type": "uaBlack",
+    "state": "on",
+    "code": 403,
+    "action": "deny"
+  },
+  "notFoundCount": {
+    "state": "off",
+    "type": "notFoundCount",
+    "threshold": 30,
+    "duration": 10,
+    "action": "deny",
+    "ipBlock": "on",
+    "code": 403,
+    "ipBlockTime": 600
+  },
+  "methodWhite": {
+    "type": "methodWhite",
+    "state": "on",
+    "code": 444,
+    "action": "deny"
+  },
+  "unknownWebsite": {
+    "state": "on",
+    "type": "unknownWebsite",
+    "action": "deny",
+    "code": 403,
+    "res": "unknown"
+  },
+  "geoRestrict": {
+    "state": "off",
+    "rules": [],
+    "code": 403,
+    "action": "deny",
+    "type": "geoRestrict",
+    "res": "geo"
+  },
+  "defaultIpBlack": {
+    "state": "on",
+    "type": "defaultIpBlack",
+    "code": 403,
+    "action": "deny"
+  },
+  "xss": {
+    "state": "on",
+    "type": "xss",
+    "code": 403,
+    "action": "deny"
+  },
+  "sql": {
+    "state": "on",
+    "type": "sql",
+    "code": 403,
+    "action": "deny"
+  },
+  "cc": {
+    "state": "off",
+    "type": "cc",
+    "rule": "cc",
+    "tokenTimeOut": 1800,
+    "threshold": 100,
+    "duration": 10,
+    "action": "deny",
+    "ipBlock": "on",
+    "ipBlockTime": 600,
+    "mode": "uri"
+  },
+  "urlcc": {
+    "state": "off",
+    "type": "urlcc",
+    "action": "deny",
+    "ipBlock": "on",
+    "ipBlockTime": 600
+  },
+  "attackCount": {
+    "state": "off",
+    "type": "attackCount",
+    "threshold": 10,
+    "duration": 60,
+    "action": "deny",
+    "ipBlock": "on",
+    "ipBlockTime": 3000
+  },
+  "fileExt": {
+    "state": "on",
+    "action": "deny",
+    "code": 403,
+    "type": "fileExtCheck"
+  },
+  "cookie": {
+    "type": "cookie",
+    "state": "on",
+    "code": 403,
+    "action": "deny"
+  },
+  "header": {
+    "state": "on",
+    "type": "header",
+    "code": 403,
+    "action": "deny"
+  },
+  "defaultUaBlack": {
+    "type": "defaultUaBlack",
+    "state": "on",
+    "code": 403,
+    "action": "deny"
+  },
+  "defaultUrlBlack": {
+    "type": "defaultUrlBlack",
+    "state": "on",
+    "code": 403,
+    "action": "deny"
+  },
+  "args": {
+    "type": "args",
+    "state": "on",
+    "code": 403,
+    "action": "deny"
+  },
+  "cdn": {
+    "state": "off"
+  },
+  "vuln": {
+    "state": "on",
+    "type": "vulnCheck",
+    "code": 403,
+    "action": "deny"
+  },
+  "log": {
+    "maxDay": 180,
+    "maxSize": 1,
+    "external": ["acl","ipWhite","ipBlack","geoRestrict","urlWhite","urlBlack","uaWhite","uaBlack"]
+  },
+  "strict": {
+    "state": "on",
+    "type": "strict",
+    "code": 403,
+    "action": "deny"
+  }
+}

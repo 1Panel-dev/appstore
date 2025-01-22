@@ -1,0 +1,14 @@
+{
+  "id":"10000",
+  "state": "on",
+  "name": "Webmin",
+  "cve": "CVE-2019-15107",
+  "type": "rce",
+  "remark": "",
+  "rule": {
+    "method":"POST",
+    "type": "uri",
+    "uri": "/password_change.cgi",
+    "pattern": "eq"
+  }
+}
