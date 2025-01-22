@@ -1,6 +1,6 @@
 services:
   phpmyadmin:
-    image: phpmyadmin:5.2.1
+    image: phpmyadmin:5.2.2
     container_name: ${CONTAINER_NAME}
     restart: always
     ports:
