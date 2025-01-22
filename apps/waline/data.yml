@@ -17,3 +17,6 @@ additionalProperties:
     website: https://waline.js.org/
     github: https://github.com/walinejs/waline
     document: https://waline.js.org/guide/get-started/
+    architectures:
+        - amd64
+        - arm64
