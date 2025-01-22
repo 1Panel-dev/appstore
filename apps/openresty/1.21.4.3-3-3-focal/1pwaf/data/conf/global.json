@@ -1,0 +1,173 @@
+{
+  "waf": {
+    "state": "off",
+    "mode": "protection",
+    "secret": ""
+  },
+  "redis": {
+    "state": "off",
+    "host": "",
+    "port": 6379,
+    "password": "",
+    "ssl": false,
+    "poolSize": 10
+  },
+  "ipWhite": {
+    "state": "on",
+    "type": "ipWhite",
+    "action": "allow"
+  },
+  "ipBlack": {
+    "state": "on",
+    "code": 403,
+    "action": "deny",
+    "type": "ipBlack",
+    "res": "ip"
+  },
+  "urlWhite": {
+    "type": "urlWhite",
+    "state": "on",
+    "action": "allow"
+  },
+  "urlBlack": {
+    "type": "urlBlack",
+    "state": "on",
+    "code": 403,
+    "action": "deny"
+  },
+  "uaWhite": {
+    "type": "uaWhite",
+    "state": "off",
+    "action": "allow"
+  },
+  "uaBlack": {
+    "type": "uaBlack",
+    "state": "on",
+    "code": 403,
+    "action": "deny"
+  },
+  "notFoundCount": {
+    "state": "on",
+    "type": "notFoundCount",
+    "threshold": 30,
+    "duration": 10,
+    "action": "deny",
+    "ipBlock": "on",
+    "code": 403,
+    "ipBlockTime": 600
+  },
+  "methodWhite": {
+    "type": "methodWhite",
+    "state": "on",
+    "code": 444,
+    "action": "deny"
+  },
+  "bot": {
+    "state": "on",
+    "type": "bot",
+    "uri": "/1pwaf/bot/trap",
+    "action": "REDIRECT_JS",
+    "ipBlock": "on",
+    "ipBlockTime": 600
+  },
+  "unknownWebsite": {
+    "state": "on",
+    "type": "unknownWebsite",
+    "action": "deny",
+    "code": 403,
+    "res": "unknown"
+  },
+  "geoRestrict": {
+    "state": "off",
+    "rules": [],
+    "code": 403,
+    "action": "deny",
+    "type": "geoRestrict",
+    "res": "geo"
+  },
+  "defaultIpBlack": {
+    "state": "on",
+    "type": "defaultIpBlack",
+    "code": 403,
+    "action": "deny"
+  },
+  "xss": {
+    "state": "on",
+    "type": "xss",
+    "code": 403,
+    "action": "deny"
+  },
+  "sql": {
+    "state": "on",
+    "type": "sql",
+    "code": 403,
+    "action": "deny"
+  },
+  "cc": {
+    "state": "on",
+    "type": "cc",
+    "rule": "cc",
+    "tokenTimeOut": 1800,
+    "threshold": 100,
+    "duration": 10,
+    "action": "deny",
+    "ipBlock": "on",
+    "ipBlockTime": 600,
+    "mode": "uri"
+  },
+  "ccurl": {
+    "state": "off",
+    "type": "urlcc",
+    "action": "deny",
+    "ipBlock": "on",
+    "ipBlockTime": 600
+  },
+  "attackCount": {
+    "state": "on",
+    "type": "attackCount",
+    "threshold": 10,
+    "duration": 60,
+    "action": "deny",
+    "ipBlock": "on",
+    "ipBlockTime": 3000
+  },
+  "fileExt": {
+    "state": "off",
+    "action": "deny",
+    "code": 403,
+    "type": "fileExtCheck"
+  },
+  "cookie": {
+    "type": "cookie",
+    "state": "on",
+    "code": 403,
+    "action": "deny"
+  },
+  "header": {
+    "state": "on",
+    "type": "header",
+    "code": 403,
+    "action": "deny"
+  },
+  "defaultUaBlack": {
+    "type": "defaultUaBlack",
+    "state": "on",
+    "code": 403,
+    "action": "deny"
+  },
+  "defaultUrlBlack": {
+    "type": "defaultUrlBlack",
+    "state": "on",
+    "code": 403,
+    "action": "deny"
+  },
+  "args": {
+    "type": "args",
+    "state": "on",
+    "code": 403,
+    "action": "deny"
+  },
+  "cdn": {
+    "state": "off"
+  }
+}

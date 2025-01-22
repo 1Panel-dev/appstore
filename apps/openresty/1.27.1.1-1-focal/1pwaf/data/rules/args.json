@@ -1,0 +1,52 @@
+{
+  "rules": [
+    {
+      "state": "on",
+      "name": "000001",
+      "rule": "sleep\\((\\s*)(\\d*)(\\s*)\\)",
+      "type": "sqlInject"
+    },
+    {
+      "state": "on",
+      "name": "000002",
+      "rule": "(exists\\(|select\\#|\\(select|select\\()",
+      "type": "sqlInject"
+    },
+    {
+      "state": "on",
+      "name": "000003",
+      "rule": "(?:define|eval|file_get_contents|include|require|require_once|shell_exec|phpinfo|system|passthru|preg_\\w+|execute|echo|print|print_r|var_dump|(fp)open|alert|showmodaldialog)\\(",
+      "type": "oneWordTrojan"
+    },
+    {
+      "state": "on",
+      "name": "000004",
+      "rule": "(?:etc\\/\\W*passwd)",
+      "type": "dirFilter"
+    },
+    {
+      "state": "on",
+      "name": "000004",
+      "rule": "java\\.lang",
+      "type": "dirFilter"
+    },
+    {
+      "state": "on",
+      "name": "000005",
+      "rule": "(window\\['|globalThis\\[|self\\[|top\\[|this\\[|parent\\[)",
+      "type": "xss"
+    },
+    {
+      "state": "on",
+      "name": "000006",
+      "rule": "(invokefunction|call_user_func_array|\\\\think\\\\)",
+      "type": "args"
+    },
+    {
+      "state": "on",
+      "name": "000007",
+      "rule": "\\${jndi:",
+      "type": "args"
+    }
+  ]
+}
