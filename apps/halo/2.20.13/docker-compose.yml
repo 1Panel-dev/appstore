@@ -21,6 +21,8 @@ services:
       - --spring.r2dbc.password=${PANEL_DB_USER_PASSWORD}
       - --spring.sql.init.platform=${PANEL_DB_TYPE}
       - --halo.external-url=${HALO_EXTERNAL_URL}
+    environment:
+      - JVM_OPTS=
     labels:
       createdBy: "Apps"
 networks:
