@@ -6,7 +6,6 @@ additionalProperties:
           labelEn: Extensions
           allowCreate: true
           default:
-            - mysqli
           values:
             - label: opcache
               value: opcache
