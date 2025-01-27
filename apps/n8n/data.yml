@@ -10,6 +10,14 @@ additionalProperties:
         - Tool
     shortDescZh: 免费且源代码可用的公平代码许可工作流自动化工具
     shortDescEn: Free and source-available fair-code licensed workflow automation tool
+    description:
+        en: Free and source-available fair-code licensed workflow automation tool
+        ja: 無料でソースが利用可能な、公正なコードライセンスのワークフロー自動化ツール
+        ms: Alat automasi aliran kerja yang percuma dan tersedia sumber dengan lesen kod adil
+        pt-br: Ferramenta de automação de fluxo de trabalho gratuita e com código disponível sob licença de código justo
+        ru: Бесплатный и доступный с открытым исходным кодом инструмент автоматизации рабочих процессов с лицензией fair-code
+        zh-Hant: 免費且具來源可用性的公平代碼許可工作流程自動化工具
+        zh: 免费且源代码可用的公平代码许可工作流自动化工具
     type: tool
     crossVersionUpdate: true
     limit: 0
