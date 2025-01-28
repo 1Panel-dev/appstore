@@ -1,6 +1,6 @@
 services:
   mcsm-web:
-    image: alisaqaq/mcsmanager-web:10.1.0
+    image:  githubyumao/mcsmanager-web:latest
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
@@ -8,7 +8,9 @@ services:
     ports:
       - "${PANEL_APP_PORT_HTTP}:23333"
     volumes:
-      - ./data:/opt/mcsmanager/web/data
+      - /etc/localtime:/etc/localtime:ro
+      - ./data/web/data:/opt/mcsmanager/web/data
+      - ./data/web/logs:/opt/mcsmanager/web/logs
     labels:  
       createdBy: "Apps"
 networks:  
