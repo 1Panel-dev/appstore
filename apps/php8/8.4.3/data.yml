@@ -1,0 +1,9 @@
+additionalProperties:
+    formFields:
+        - default: 9000
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: PHP-FPM Port
+          labelZh: PHP-FPM 端口
+          required: true
+          rule: paramPort
+          type: number
