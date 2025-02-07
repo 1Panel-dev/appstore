@@ -16,6 +16,7 @@ additionalProperties:
     ms: Bastion Host sumber terbuka pertama di dunia
     pt-br: O primeiro Bastion Host de código aberto do mundo
     ru: Первый в мире открытый Bastion Host
+    ko: 세계 최초의 오픈 소스 Bastion Host
     zh-Hant: 全球首個開源堡壘主機
     zh: 广受欢迎的开源堡垒机
   type: tool

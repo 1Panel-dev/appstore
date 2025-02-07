@@ -14,6 +14,7 @@ additionalProperties:
             ms: Nama pengguna
             pt-br: Nome de usuário
             ru: Имя пользователя
+            ko: 사용자 이름
             zh-Hant: 用戶名
             zh: 用户名
         - default: mongo
@@ -30,6 +31,7 @@ additionalProperties:
             ms: Kata laluan
             pt-br: Senha
             ru: Пароль
+            ko: 비밀번호
             zh-Hant: 密碼
             zh: 密码
         - default: 27017
@@ -45,5 +47,6 @@ additionalProperties:
             ms: Port
             pt-br: Porta
             ru: Порт
+            ko: 포트
             zh-Hant: 埠
             zh: 端口

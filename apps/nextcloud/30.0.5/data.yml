@@ -14,6 +14,7 @@ additionalProperties:
             ms: Port
             pt-br: Porta
             ru: Порт
+            ko: 포트
             zh-Hant: 埠
             zh: 端口
         - default: Asia/Shanghai
@@ -29,5 +30,6 @@ additionalProperties:
             ms: Zon Waktu
             pt-br: Fuso Horário
             ru: Часовой пояс
+            ko: 시간대
             zh-Hant: 時區
             zh: 时区

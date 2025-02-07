@@ -13,6 +13,7 @@ additionalProperties:
         ms: Tandatangan kriptografi
         pt-br: Assinatura criptográfica
         ru: Криптографическая подпись
+        ko: 암호 서명
         zh-Hant: 加密簽名
         zh: 加密签名
     - default: K1ffDfLSIK8SV2PZj6VaxOiv8KuawlJK
@@ -28,6 +29,7 @@ additionalProperties:
         ms: Token Bootstrap
         pt-br: Token de inicialização
         ru: Токен для начальной настройки
+        ko: 부트 스트랩 토큰
         zh-Hant: 引導令牌
         zh: 认证令牌
     - default: "false"
@@ -47,6 +49,7 @@ additionalProperties:
         ms: Modus Debug
         pt-br: Modo de depuração
         ru: Режим отладки
+        ko: 디버그 모드
         zh-Hant: 調試模式
         zh: 调试模式
     - default: "ERROR"
@@ -72,6 +75,7 @@ additionalProperties:
         ms: Tahap log
         pt-br: Nível de log
         ru: Уровень журнала
+        ko: 로그 레벨
         zh-Hant: 日誌級別
         zh: 日志级别
     - child:
@@ -98,12 +102,13 @@ additionalProperties:
         ms: Perkhidmatan Pangkalan Data
         pt-br: Serviço de Banco de Dados
         ru: Сервис баз данных
+        ko: 데이터베이스 서비스
         zh-hant: 資料庫服務
         zh: 数据库服务
     - default: jumpserver
       envKey: PANEL_DB_NAME
       labelEn: Database
-      labelZh: 数据库名
+      labelZh: 数据库
       random: true
       required: true
       rule: paramCommon
@@ -114,6 +119,7 @@ additionalProperties:
         ms: Pangkalan Data
         pt-br: Banco de Dados
         ru: База данных
+        ko: 데이터베이스
         zh-hant: 資料庫
         zh: 数据库
     - default: jumpserver
@@ -130,6 +136,7 @@ additionalProperties:
         ms: Pengguna Pangkalan Data
         pt-br: Usuário do Banco de Dados
         ru: Пользователь базы данных
+        ko: 데이터베이스 사용자
         zh-hant: 資料庫用戶
         zh: 数据库用户
     - default: jumpserver
@@ -146,6 +153,7 @@ additionalProperties:
         ms: Kata Laluan Pangkalan Data
         pt-br: Senha do Banco de Dados
         ru: Пароль базы данных
+        ko: 데이터베이스 비밀번호
         zh-hant: 資料庫密碼
         zh: 数据库密码
     - default: ""
@@ -162,13 +170,14 @@ additionalProperties:
         ms: Perkhidmatan Redis
         pt-br: Serviço Redis
         ru: Сервис Redis
+        ko: Redis 서비스
         zh-Hant: Redis 服務
         zh: Redis 服务
     - default: ""
       edit: true
       envKey: PANEL_REDIS_ROOT_PASSWORD
-      labelEn: Redis Service Password
-      labelZh: 缓存服务服务密码
+      labelEn: Redis service password
+      labelZh: Redis 服务密码
       required: true
       rule: paramCommon
       type: password
@@ -178,13 +187,14 @@ additionalProperties:
         ms: Kata laluan perkhidmatan Redis
         pt-br: Senha do serviço Redis
         ru: Пароль службы Redis
+        ko: Redis 서비스 비밀번호
         zh-Hant: Redis 服務密碼
         zh: Redis 服务密码
     - default: 8080
       edit: true
       envKey: PANEL_APP_PORT_HTTP
-      labelEn: Web Port
-      labelZh: Web 端口
+      labelEn: HTTP Port
+      labelZh: HTTP 端口
       required: true
       rule: paramPort
       type: number
@@ -194,6 +204,7 @@ additionalProperties:
         ms: HTTP Port
         pt-br: HTTP Porta
         ru: HTTP Порт
+        ko: HTTP 포트
         zh-Hant: HTTP 埠
         zh: HTTP 端口
     - default: 2222
@@ -210,13 +221,14 @@ additionalProperties:
         ms: SSH Port
         pt-br: SSH Porta
         ru: SSH Порт
+        ko: SSH 포트
         zh-Hant: SSH 埠
         zh: SSH 端口
     - default: ""
       edit: true
       envKey: DOMAINS
       labelEn: DOMAINS
-      labelZh: DOMAINS
+      labelZh: 域名
       type: text
       label:
         en: DOMAINS
@@ -224,5 +236,6 @@ additionalProperties:
         ms: DOMAIN
         pt-br: DOMÍNIOS
         ru: ДОМИНЫ
+        ko: 도메인
         zh-Hant: 領域
         zh: 域名

@@ -11,6 +11,7 @@ additionalProperties:
         ms: "Laman Web"
         pt-br: "Website"
         ru: "Веб-сайт"
+        ko: "웹사이트"
         zh-hant: "網站"
         zh: "建站"
     - key: Database
@@ -22,6 +23,7 @@ additionalProperties:
         ms: "Pangkalan Data"
         pt-br: "Banco de Dados"
         ru: "База данных"
+        ko: "데이터베이스"
         zh-hant: "資料庫"
         zh: "数据库"
     - key: Server
@@ -33,6 +35,7 @@ additionalProperties:
         ms: "Pelayan Web"
         pt-br: "Servidor Web"
         ru: "Веб-сервер"
+        ko: "서버"
         zh-hant: "網頁伺服器"
         zh: "Web 服务器"
     - key: Runtime
@@ -44,6 +47,7 @@ additionalProperties:
         ms: "Masa Jalan"
         pt-br: "Tempo de Execução"
         ru: "Среда выполнения"
+        ko: "런타임"
         zh-hant: "運行環境"
         zh: "运行环境"
     - key: Tool
@@ -55,6 +59,7 @@ additionalProperties:
         ms: "Alat"
         pt-br: "Ferramenta"
         ru: "Инструмент"
+        ko: "도구"
         zh-hant: "實用工具"
         zh: "实用工具"
     - key: Storage
@@ -66,6 +71,7 @@ additionalProperties:
         ms: "Penyimpanan Awan"
         pt-br: "Armazenamento em Nuvem"
         ru: "Облачное хранилище"
+        ko: "저장소"
         zh-hant: "雲存儲"
         zh: "云存储"
     - key: AI
@@ -77,6 +83,7 @@ additionalProperties:
         ms: "AI / Model Besar"
         pt-br: "IA / Grandes Modelos"
         ru: "ИИ / Большие модели"
+        ko: "인공지능"
         zh-hant: "AI / 大模型"
         zh: "AI / 大模型"
     - key: BI
@@ -88,6 +95,7 @@ additionalProperties:
         ms: "BI"
         pt-br: "BI"
         ru: "BI"
+        ko: "비즈니스 인텔리전스"
         zh-hant: "BI"
         zh: "BI"
     - key: Security
@@ -99,6 +107,7 @@ additionalProperties:
         ms: "Keselamatan"
         pt-br: "Segurança"
         ru: "Безопасность"
+        ko: "보안"
         zh-hant: "安全"
         zh: "安全"
     - key: DevTool
@@ -110,6 +119,7 @@ additionalProperties:
         ms: "Alat Pembangunan"
         pt-br: "Ferramenta de Desenvolvimento"
         ru: "Инструмент разработки"
+        ko: "개발 도구"
         zh-hant: "開發工具"
         zh: "开发工具"
     - key: DevOps
@@ -121,6 +131,7 @@ additionalProperties:
         ms: "DevOps"
         pt-br: "DevOps"
         ru: "DevOps"
+        ko: "데브옵스"
         zh-hant: "DevOps"
         zh: "DevOps"
     - key: Middleware
@@ -132,6 +143,7 @@ additionalProperties:
         ms: "Middleware"
         pt-br: "Middleware"
         ru: "Промежуточное ПО"
+        ko: "미들웨어"
         zh-hant: "中間件"
         zh: "中间件"
     - key: Media
@@ -143,6 +155,7 @@ additionalProperties:
         ms: "Media"
         pt-br: "Mídia"
         ru: "Медиа"
+        ko: "미디어"
         zh-hant: "多媒體"
         zh: "多媒体"
     - key: Email
@@ -154,6 +167,7 @@ additionalProperties:
         ms: "Perkhidmatan E-mel"
         pt-br: "Serviço de Email"
         ru: "Почтовый сервис"
+        ko: "이메일"
         zh-hant: "郵件服務"
         zh: "邮件服务"
     - key: Game
@@ -165,6 +179,7 @@ additionalProperties:
         ms: "Permainan Santai"
         pt-br: "Jogos Casuais"
         ru: "Казуальные игры"
+        ko: "게임"
         zh-hant: "休閒遊戲"
         zh: "休闲游戏"
     - key: Local
@@ -176,6 +191,7 @@ additionalProperties:
         ms: "Tempatan"
         pt-br: "Local"
         ru: "Локальный"
+        ko: "로컬"
         zh-hant: "本地"
         zh: "本地"
   version: v1.6.0

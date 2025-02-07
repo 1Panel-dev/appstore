@@ -16,6 +16,7 @@ additionalProperties:
         ms: Pelayan Nextcloud, rumah yang selamat untuk semua data anda
         pt-br: Servidor Nextcloud, um lar seguro para todos os seus dados
         ru: Сервер Nextcloud, безопасное место для всех ваших данных
+        ko: Nextcloud 서버, 모든 데이터의 안전한 집
         zh-Hant: Nextcloud 伺服器，所有資料的安全之家
         zh: Nextcloud 服务器，所有数据的安全之家
     type: tool

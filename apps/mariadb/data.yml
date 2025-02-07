@@ -16,6 +16,7 @@ additionalProperties:
         ms: Pangkalan data relasional sumber terbuka
         pt-br: O banco de dados relacional de código aberto
         ru: Открытая реляционная база данных
+        ko: 오픈 소스 관계형 데이터베이스
         zh-Hant: 開源關聯式資料庫
         zh: 著名的 MySQL 分支版本
     type: runtime

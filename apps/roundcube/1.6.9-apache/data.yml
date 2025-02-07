@@ -11,6 +11,7 @@ additionalProperties:
         ms: Perkhidmatan Pangkalan Data
         pt-br: Serviço de Banco de Dados
         ru: Сервис баз данных
+        ko: 데이터베이스 서비스
         zh-hant: 資料庫服務
         zh: 数据库服务
       required: true
@@ -25,6 +26,7 @@ additionalProperties:
         ms: Pangkalan Data
         pt-br: Banco de Dados
         ru: База данных
+        ko: 데이터베이스
         zh-hant: 資料庫
         zh: 数据库
       random: true
@@ -41,6 +43,7 @@ additionalProperties:
         ms: Pengguna Pangkalan Data
         pt-br: Usuário do Banco de Dados
         ru: Пользователь базы данных
+        ko: 데이터베이스 사용자
         zh-hant: 資料庫用戶
         zh: 数据库用户
       random: true
@@ -57,6 +60,7 @@ additionalProperties:
         ms: Kata Laluan Pangkalan Data
         pt-br: Senha do Banco de Dados
         ru: Пароль базы данных
+        ko: 데이터베이스 비밀번호
         zh-hant: 資料庫密碼
         zh: 数据库密码
       random: true
@@ -74,6 +78,7 @@ additionalProperties:
         ms: Pelayan IMAP
         pt-br: Servidor IMAP
         ru: IMAP сервер
+        ko: IMAP 서버
         zh-hant: IMAP 伺服器
         zh: IMAP 服务器
       required: true
@@ -89,6 +94,7 @@ additionalProperties:
         ms: Port IMAP
         pt-br: Porta IMAP
         ru: Порт IMAP
+        ko: IMAP 포트
         zh-hant: IMAP 埠
         zh: IMAP 端口
       required: true
@@ -105,6 +111,7 @@ additionalProperties:
         ms: Pelayan SMTP
         pt-br: Servidor SMTP
         ru: SMTP сервер
+        ko: SMTP 서버
         zh-hant: SMTP 伺服器
         zh: SMTP 服务器
       required: true
@@ -120,6 +127,7 @@ additionalProperties:
         ms: Port SMTP
         pt-br: Porta SMTP
         ru: Порт SMTP
+        ko: SMTP 포트
         zh-hant: SMTP 埠
         zh: SMTP 端口
       required: true
@@ -136,6 +144,7 @@ additionalProperties:
         ms: Port
         pt-br: Porta
         ru: Порт
+        ko: 포트
         zh-Hant: 埠
         zh: 端口
       required: true

@@ -16,6 +16,7 @@ additionalProperties:
         ms: Alat automasi aliran kerja yang percuma dan tersedia sumber dengan lesen kod adil
         pt-br: Ferramenta de automação de fluxo de trabalho gratuita e com código disponível sob licença de código justo
         ru: Бесплатный и доступный с открытым исходным кодом инструмент автоматизации рабочих процессов с лицензией fair-code
+        ko: 무료이며 소스 코드를 사용할 수 있는 공정 코드 라이선스된 워크플로우 자동화 도구
         zh-Hant: 免費且具來源可用性的公平代碼許可工作流程自動化工具
         zh: 免费且源代码可用的公平代码许可工作流自动化工具
     type: tool

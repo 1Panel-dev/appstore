@@ -16,6 +16,7 @@ additionalProperties:
         ms: Penjalank untuk Gitea berdasarkan fork Gitea dari act
         pt-br: Um runner para Gitea baseado no fork do Gitea do act
         ru: Раннер для Gitea на основе форка Gitea от act
+        ko: act의 Gitea 포크를 기반으로 한 Gitea용 러너
         zh-Hant: 基於 Gitea fork 的 act 的 Gitea 執行器
         zh: 基于 Gitea fork 的 act 的 Gitea 运行器
     type: tool

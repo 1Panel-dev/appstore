@@ -10,6 +10,7 @@ additionalProperties:
         ms: Nama pengguna
         pt-br: Nome de usuário
         ru: Имя пользователя
+        ko: 사용자 이름
         zh-hant: 用戶名
         zh: 用户名
       random: true
@@ -26,6 +27,7 @@ additionalProperties:
         ms: Kata laluan
         pt-br: Senha
         ru: Пароль
+        ko: 비밀번호
         zh-hant: 密碼
         zh: 密码
       random: true
@@ -42,6 +44,7 @@ additionalProperties:
         ms: Port
         pt-br: Porta
         ru: Порт
+        ko: 포트
         zh-Hant: 埠
         zh: 端口
       required: true

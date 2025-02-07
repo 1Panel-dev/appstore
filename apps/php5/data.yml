@@ -10,6 +10,15 @@ additionalProperties:
         - Runtime
     shortDescZh: PHP5 运行环境
     shortDescEn: PHP5 Runtime
+    description:
+        en: PHP5 Runtime
+        ja: PHP5 ランタイム
+        ms: Persekitaran masa laku PHP5
+        pt-br: Ambiente de execução PHP5
+        ru: Среда выполнения PHP5
+        ko: PHP5 런타임
+        zh-hant: PHP5 運行環境
+        zh: PHP5 运行环境
     type: php
     crossVersionUpdate: false
     limit: 0

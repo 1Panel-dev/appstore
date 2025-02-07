@@ -18,6 +18,7 @@ additionalProperties:
         ms: Menyokong program senarai fail multi-penyimpanan dan penyimpanan awan peribadi
         pt-br: Suporte para programa de listagem de arquivos em múltiplos armazenamentos e armazenamento em nuvem privado
         ru: Поддержка программы отображения файлов в нескольких хранилищах и частного облачного хранилища
+        ko: 다중 저장소 파일 목록 프로그램 및 개인 클라우드 저장소 지원
         zh-Hant: 支援多存儲檔案列出程序和私人雲端存儲
         zh: 支持多存储文件列出程序和私有云存储
     type: tool

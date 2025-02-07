@@ -16,6 +16,7 @@ additionalProperties:
         ms: Pusat memo ringan yang dihoskan sendiri
         pt-br: Um hub de anotações leve e auto-hospedado
         ru: Легкий, самостоятельно размещаемый хаб для заметок
+        ko: 가벼운 자체 호스팅 메모 허브
         zh-Hant: 輕量級自託管備忘錄中心
         zh: 轻量级自托管备忘录中心
     type: tool

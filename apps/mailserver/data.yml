@@ -16,6 +16,7 @@ additionalProperties:
         ms: Pelayan mel yang terkontainerisasi tetapi mudah
         pt-br: Servidor de e-mail completo e simples, contêinerizado
         ru: Полный, но простой контейнеризованный почтовый сервер
+        ko: 풀스택이지만 간단한 컨테이너화된 메일 서버
         zh-Hant: 全堆疊但簡單的容器化郵件伺服器
         zh: 全栈但简单的容器化邮件服务器
     type: tool

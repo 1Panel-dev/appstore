@@ -16,6 +16,7 @@ additionalProperties:
         ms: Antaramuka web untuk MySQL dan MariaDB
         pt-br: Uma interface web para MySQL e MariaDB
         ru: Веб-интерфейс для MySQL и MariaDB
+        ko: MySQL 및 MariaDB를 위한 웹 인터페이스
         zh-hant: MySQL 和 MariaDB 的網頁介面
         zh: MySQL 和 MariaDB 的 Web 界面
     type: tool

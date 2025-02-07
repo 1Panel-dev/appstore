@@ -14,6 +14,7 @@ additionalProperties:
         ms: Kata laluan root
         pt-br: Senha do root
         ru: Пароль root
+        ko: 루트 비밀번호
         zh-Hant: Root 密碼
         zh: Root 用户密码
     - default: 3306
@@ -30,5 +31,6 @@ additionalProperties:
         ms: Port
         pt-br: Porta
         ru: Порт
+        ko: 포트
         zh-Hant: 埠
         zh: 端口

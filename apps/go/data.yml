@@ -16,6 +16,7 @@ additionalProperties:
     ms: Persekitaran Larian Go
     pt-br: Ambiente de Execução Go
     ru: Среда выполнения Go
+    ko: Go 실행 환경
     zh-Hant: Go 執行環境
     zh: Go 运行环境
   type: go

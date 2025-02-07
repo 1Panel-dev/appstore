@@ -11,6 +11,7 @@ additionalProperties:
         ms: Port ujian jenis NAT
         t-br: Porta de teste de tipo NAT
         ru: Порт теста типа NAT
+        ko: NAT 유형 테스트 포트
         zh-hant: NAT 類型測試埠
         zh: NAT 类型测试端口
       required: true
@@ -27,6 +28,7 @@ additionalProperties:
         ms: Port hbbs (digunakan dengan IP/domain)
         pt-br: Porta hbbs (usado com IP/domínio)
         ru: Порт hbbs (используется с IP/доменом)
+        ko: hbbs 포트 (IP/도메인과 함께 사용)
         zh-hant: hbbs 埠（與 IP/域名一起使用）
         zh: hbbs 端口(配合IP/域名使用)
       required: true
@@ -43,6 +45,7 @@ additionalProperties:
         ms: Port hbbr (port relai pelayan klien)
         pt-br: Porta hbbr (porta do servidor de retransmissão do cliente)
         ru: Порт hbbr (порт релейного сервера клиента)
+        ko: hbbr 포트 (클라이언트 릴레이 서버 포트)
         zh-hant: hbbr 埠（客戶端中繼服務器埠）
         zh: hbbr 端口(客户端中继服务器端口)
       required: true
@@ -59,6 +62,7 @@ additionalProperties:
         ms: Port Sokongan Pelanggan Web 1
         pt-br: Porta de Suporte ao Cliente Web 1
         ru: Порт поддержки веб-клиента 1
+        ko: 웹 클라이언트 지원 포트 1
         zh-hant: Web 客戶端支持端口 1
         zh: 网页客户端支持端口 1
       required: true
@@ -75,6 +79,7 @@ additionalProperties:
         ms: Port Sokongan Pelanggan Web 2
         pt-br: Porta de Suporte ao Cliente Web 2
         ru: Порт поддержки веб-клиента 2
+        ko: 웹 클라이언트 지원 포트 2
         zh-hant: Web 客戶端支持端口 2
         zh: 网页客户端支持端口 2
       required: true
@@ -91,6 +96,7 @@ additionalProperties:
         ms: Alamat IP atau nama domain (item wajib diubah)
         pt-br: Endereço IP ou nome de domínio (item obrigatório a ser alterado)
         ru: IP-адрес или доменное имя (обязательный элемент для изменения)
+        ko: IP 주소 또는 도메인 이름(항목 변경 필요)
         zh-hant: IP 地址或域名（必須更改項目）
         zh: IP 地址或域名(必改项)
       required: true

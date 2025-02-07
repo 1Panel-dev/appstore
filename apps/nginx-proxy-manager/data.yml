@@ -16,6 +16,7 @@ additionalProperties:
         ms: Alat pengurusan visual Nginx
         pt-br: Ferramenta de gerenciamento visual do Nginx
         ru: Визуальный инструмент управления Nginx
+        ko: Nginx 시각적 관리 도구
         zh-Hant: Nginx 視覺化管理工具
         zh: Nginx 可视化管理工具
     type: tool

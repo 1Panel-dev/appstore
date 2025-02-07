@@ -11,6 +11,7 @@ additionalProperties:
         ms: Port
         pt-br: Porta
         ru: Порт
+        ko: 포트
         zh-Hant: 埠
         zh: 端口
       required: true
@@ -27,6 +28,7 @@ additionalProperties:
         ms: Kata Laluan Admin WEB
         pt-br: Senha de Administrador WEB
         ru: Пароль администратора WEB
+        ko: 웹 관리자 비밀번호
         zh-hant: WEB 管理員密碼
         zh: Web 界面的管理员模式密码
       required: true
@@ -42,6 +44,7 @@ additionalProperties:
         ms: Selang masa penyegerakan
         pt-br: Interval de sincronização
         ru: Интервал синхронизации
+        ko: 동기화 간격
         zh-hant: 同步間隔
         zh: 请求服务器同步玩家在线数据的间隔
       required: true
@@ -57,6 +60,7 @@ additionalProperties:
         ms: Mengaktifkan mesej log masuk/keluar pemain
         pt-br: Habilitar mensagem de login/logout dos jogadores
         ru: Включить сообщение о входе/выходе игроков
+        ko: 플레이어 로그인/로그아웃 메시지 활성화
         zh-hant: 啟用玩家登錄/登出消息
         zh: 玩家进入/离开服务器是否通知
       required: true
@@ -77,6 +81,7 @@ additionalProperties:
         ms: Mesej log masuk
         pt-br: Mensagem de login
         ru: Сообщение о входе
+        ko: 로그인 메시지
         zh-hant: 登入訊息
         zh: 玩家进入服务器消息
       required: false
@@ -92,6 +97,7 @@ additionalProperties:
         ms: Mesej log keluar
         pt-br: Mensagem de logout
         ru: Сообщение о выходе
+        ko: 로그아웃 메시지
         zh-hant: 登出訊息
         zh: 玩家离开服务器消息
       required: false
@@ -107,6 +113,7 @@ additionalProperties:
         ms: Alamat RCON
         pt-br: Endereço RCON
         ru: Адрес RCON
+        ko: RCON 주소
         zh-hant: RCON 地址
         zh: RCON 地址
       required: true
@@ -122,6 +129,7 @@ additionalProperties:
         ms: Alamat API REST
         pt-br: Endereço da API REST
         ru: Адрес REST API
+        ko: REST API 주소
         zh-hant: REST API 地址
         zh: REST API 地址
       required: true
@@ -137,6 +145,7 @@ additionalProperties:
         ms: Kata Laluan Pentadbir
         pt-br: Senha de Administrador
         ru: Пароль администратора
+        ko: 관리자 비밀번호
         zh-hant: 管理員密碼
         zh: 服务器配置文件中的 Admin Password
       required: true
@@ -152,6 +161,7 @@ additionalProperties:
         ms: Aktifkan PalGuard Base64 RCON
         pt-br: Habilitar PalGuard Base64 RCON
         ru: Включить PalGuard Base64 RCON
+        ko: PalGuard Base64 RCON 활성화
         zh-hant: 啟用 PalGuard Base64 RCON
         zh: 是否开启 PalGuard 的 Base64 RCON
       required: true
@@ -172,6 +182,7 @@ additionalProperties:
         ms: Laluan Simpan Luaran Palworld
         pt-br: Caminho de salvamento externo do Palworld
         ru: Внешний путь сохранения Palworld
+        ko: Palworld 외부 저장 경로
         zh-hant: Palworld 外部儲存路徑
         zh: 帕鲁服务器外部存档路径
       required: true
@@ -187,6 +198,7 @@ additionalProperties:
         ms: Simpan Selang Penyegerakan
         pt-br: Salvar Interval de Sincronização
         ru: Сохранить интервал синхронизации
+        ko: 저장 동기화 간격
         zh-hant: 儲存同步間隔
         zh: 存档同步间隔
       required: true
@@ -202,6 +214,7 @@ additionalProperties:
         ms: Selang Simpan Salinan Sandar
         pt-br: Interval de Salvamento de Backup
         ru: Интервал сохранения резервной копии
+        ko: 백업 저장 간격
         zh-hant: 保存備份間隔
         zh: 存档备份间隔
       required: true
@@ -217,6 +230,7 @@ additionalProperties:
         ms: Secara automatik tendang pemain yang tidak tersenarai dalam senarai putih
         pt-br: Expulsar automaticamente jogadores não incluídos na lista branca
         ru: Автоматически выкидывать игроков, не в белом списке
+        ko: 화이트리스트에 없는 플레이어 자동 킥
         zh-hant: 自動踢出非白名單玩家
         zh: 非白名单玩家自动踢出
       required: true

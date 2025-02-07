@@ -11,6 +11,7 @@ additionalProperties:
         ms: Port Web
         pt-br: Porta da Web
         ru: Веб-порт
+        ko: 웹 포트
         zh-hant: 網頁埠
         zh: Web 端口
       required: true
@@ -27,6 +28,7 @@ additionalProperties:
         ms: Port SFTP
         pt-br: Porta SFTP
         ru: Порт SFTP
+        ko: SFTP 포트
         zh-hant: SFTP 埠
         zh: SFTP 端口
       required: true
@@ -43,6 +45,7 @@ additionalProperties:
         ms: Port FTP
         pt-br: Porta FTP
         ru: Порт FTP
+        ko: FTP 포트
         zh-hant: FTP 埠
         zh: FTP 端口
       required: true
@@ -59,6 +62,7 @@ additionalProperties:
         ms: Port Mula Mod Pasif FTP
         pt-br: Porta de Início do Modo Passivo FTP
         ru: Порт начала пассивного режима FTP
+        ko: FTP 패시브 모드 시작 포트
         zh-hant: FTP 被動模式啟動埠
         zh: FTP 被动模式起始端口
       required: true
@@ -75,6 +79,7 @@ additionalProperties:
         ms: Port Tamat Mod Pasif FTP (Lebih besar daripada port permulaan)
         pt-br: Porta Final do Modo Passivo FTP (Maior que a porta inicial)
         ru: Конечный порт пассивного режима FTP (Больше начального порта)
+        ko: FTP 패시브 모드 종료 포트 (시작 포트보다 큼)
         zh-hant: FTP 被動模式結束埠（大於起始埠）
         zh: FTP 被动模式结束端口 (大于起始端口)
       required: true
@@ -91,6 +96,7 @@ additionalProperties:
         ms: FTP IP Luaran (item mesti diubah)
         pt-br: IP Externo do FTP (item obrigatório a ser alterado)
         ru: Внешний IP FTP (необходимо изменить элемент)
+        ko: FTP 외부 IP(항목 변경 필요)
         zh-hant: FTP 外部 IP（必須更改項目）
         zh: FTP 外部地址 (必改项)
       required: true
@@ -107,6 +113,7 @@ additionalProperties:
         ms: Port WebDAV
         pt-br: Porta WebDAV
         ru: Порт WebDAV
+        ko: WebDAV 포트
         zh-hant: WebDAV 埠
         zh: WebDAV 端口
       required: true

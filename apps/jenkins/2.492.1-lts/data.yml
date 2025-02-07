@@ -13,6 +13,7 @@ additionalProperties:
             ms: Binari Docker
             pt-br: Binário Docker
             ru: Исполняемый файл Docker
+            ko: 도커 바이너리
             zh-Hant: Docker 二進制文件
             zh: Docker 二进制文件
         - default: 8080
@@ -29,5 +30,6 @@ additionalProperties:
             ms: Port
             pt-br: Porta
             ru: Порт
+            ko: 포트
             zh-Hant: 埠
             zh: 端口

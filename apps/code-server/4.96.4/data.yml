@@ -14,6 +14,7 @@ additionalProperties:
         ms: Port
         pt-br: Porta
         ru: Порт
+        ko: 포트
         zh-Hant: 埠
         zh: 端口
     - default: code
@@ -30,6 +31,7 @@ additionalProperties:
         ms: Kata laluan akses web
         pt-br: Senha de acesso à web
         ru: Пароль для доступа в веб
+        ko: 웹 액세스 비밀번호
         zh-Hant: 網頁訪問密碼
         zh: 网页访问密码
     - default: code
@@ -46,5 +48,6 @@ additionalProperties:
         ms: Kata laluan Sudo
         pt-br: Senha do Sudo
         ru: Пароль Sudo
+        ko: Sudo 비밀번호
         zh-Hant: Sudo 密碼
         zh: Sudo 密码

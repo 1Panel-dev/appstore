@@ -14,6 +14,7 @@ additionalProperties:
             ms: Port masuk SMTP
             pt-br: Porta de entrada SMTP
             ru: Входной порт SMTP
+            ko: SMTP 수신 포트
             zh-Hant: SMTP 進口埠
             zh: SMTP 入站端口
         - default: 143
@@ -30,6 +31,7 @@ additionalProperties:
             ms: Port IMAP4
             pt-br: Porta IMAP4
             ru: Порт IMAP4
+            ko: IMAP4 포트
             zh-Hant: IMAP4 埠
             zh: IMAP4 端口
         - default: 993
@@ -46,6 +48,7 @@ additionalProperties:
             ms: Port IMAP4
             pt-br: Porta IMAP4
             ru: Порт IMAP4
+            ko: IMAP4 포트
             zh-Hant: IMAP4 埠
             zh: IMAP4 端口
         - default: 465
@@ -62,6 +65,7 @@ additionalProperties:
             ms: Port Penghantaran SMTP
             pt-br: Portas de envio SMTP
             ru: Порты отправки SMTP
+            ko: SMTP 제출 포트
             zh-Hant: SMTP 提交埠
             zh: SMTP 提交端口
         - default: 587
@@ -78,6 +82,7 @@ additionalProperties:
             ms: Port Penghantaran SMTP
             pt-br: Portas de envio SMTP
             ru: Порты отправки SMTP
+            ko: SMTP 제출 포트
             zh-Hant: SMTP 提交埠
             zh: SMTP 提交端口
         - default: mail.example.com
@@ -93,6 +98,7 @@ additionalProperties:
             ms: Nama hos MX mel
             pt-br: Nome do host MX de e-mail
             ru: Имя хоста MX для почты
+            ko: 메일 MX 호스트 이름
             zh-Hant: 郵件 MX 主機名稱
             zh: 邮件 MX 主机名
         - default: example.com
@@ -108,5 +114,6 @@ additionalProperties:
             ms: Domain mel
             pt-br: Domínio de e-mail
             ru: Почтовый домен
+            ko: 메일 도메인
             zh-Hant: 郵件域名
             zh: 邮件域名

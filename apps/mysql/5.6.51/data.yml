@@ -14,6 +14,7 @@ additionalProperties:
             ms: Kata Laluan Root
             pt-br: Senha Root
             ru: Пароль Root
+            ko: 루트 비밀번호
             zh-Hant: Root 密碼
             zh: Root 密码
         - default: 3306
@@ -29,5 +30,6 @@ additionalProperties:
             ms: Port
             pt-br: Porta
             ru: Порт
+            ko: 포트
             zh-Hant: 端口
             zh: 端口

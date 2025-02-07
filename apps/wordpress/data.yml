@@ -16,6 +16,7 @@ additionalProperties:
         ms: Perisian blog dan sistem pengurusan kandungan sumber terbuka
         pt-br: Software de blog de código aberto e sistema de gerenciamento de conteúdo
         ru: Программное обеспечение для блогов с открытым исходным кодом и система управления контентом
+        ko: 오픈 소스 블로깅 소프트웨어 및 콘텐츠 관리 시스템
         zh-hant: 開源的博客軟體與內容管理系統
         zh: 著名的开源博客软件和 CMS 系统
     type: website

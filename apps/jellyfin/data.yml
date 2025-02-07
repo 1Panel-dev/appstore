@@ -16,6 +16,7 @@ additionalProperties:
         ms: Suite perisian aplikasi multimedia
         pt-br: Um conjunto de software de aplicação multimídia
         ru: Пакет программного обеспечения для мультимедиа приложений
+        ko: 멀티미디어 응용 소프트웨어 패키지
         zh-Hant: 多媒體應用軟件套件
         zh: 多媒体应用软件套件
     type: tool

@@ -14,6 +14,7 @@ additionalProperties:
             ms: Port
             pt-br: Porta
             ru: Порт
+            ko: 포트
             zh-Hant: 埠
             zh: 端口
         - default: ./data/media
@@ -29,6 +30,7 @@ additionalProperties:
             ms: Laluan folder media
             pt-br: Caminho da pasta de mídia
             ru: Путь к папке с медиафайлами
+            ko: 미디어 폴더 경로
             zh-Hant: 媒體文件夾路徑
             zh: 媒体文件夹路径
         - default: ./data/cache
@@ -44,5 +46,6 @@ additionalProperties:
             ms: Laluan folder cache
             pt-br: Caminho da pasta de cache
             ru: Путь к папке кеша
+            ko: 캐시 폴더 경로
             zh-Hant: 快取文件夾路徑
             zh: 缓存文件夹路径

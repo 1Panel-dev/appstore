@@ -16,6 +16,7 @@ additionalProperties:
         ms: VS Code di pelayar
         pt-br: VS Code no navegador
         ru: VS Code в браузере
+        ko: 브라우저에서 VS Code
         zh-Hant: 瀏覽器中的 VS Code
         zh: 浏览器中的 VS Code
     type: tool

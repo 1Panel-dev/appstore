@@ -22,6 +22,7 @@ additionalProperties:
             ms: Perkhidmatan Pangkalan Data
             pt-br: Serviço de Banco de Dados
             ru: Сервис баз данных
+            ko: 데이터베이스 서비스
             zh-hant: 資料庫服務
             zh: 数据库服务
         - default: gitea
@@ -38,6 +39,7 @@ additionalProperties:
             ms: Pangkalan Data
             pt-br: Banco de Dados
             ru: База данных
+            ko: 데이터베이스
             zh-hant: 資料庫
             zh: 数据库
         - default: gitea
@@ -54,6 +56,7 @@ additionalProperties:
             ms: Pengguna Pangkalan Data
             pt-br: Usuário do Banco de Dados
             ru: Пользователь базы данных
+            ko: 데이터베이스 사용자
             zh-hant: 資料庫用戶
             zh: 数据库用户
         - default: gitea
@@ -70,6 +73,7 @@ additionalProperties:
             ms: Kata Laluan Pangkalan Data
             pt-br: Senha do Banco de Dados
             ru: Пароль базы данных
+            ko: 데이터베이스 비밀번호
             zh-hant: 資料庫密碼
             zh: 数据库密码
         - default: 3000
@@ -85,6 +89,7 @@ additionalProperties:
             ms: HTTP Port
             pt-br: HTTP Porta
             ru: HTTP Порт
+            ko: HTTP 포트
             zh-Hant: HTTP 埠
             zh: HTTP 端口
         - default: 222
@@ -100,5 +105,6 @@ additionalProperties:
             ms: SSH Port
             pt-br: SSH Porta
             ru: SSH Порт
+            ko: SSH 포트
             zh-Hant: SSH 埠
             zh: SSH 端口

@@ -16,6 +16,7 @@ additionalProperties:
     ms: Persekitaran Larian Java
     pt-br: Ambiente de Execução Java
     ru: Среда выполнения Java
+    ko: Java 런타임 환경
     zh-Hant: Java 執行環境
     zh: Java 运行环境
   type: java

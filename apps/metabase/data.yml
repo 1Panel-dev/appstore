@@ -16,6 +16,7 @@ additionalProperties:
         ms: Alat analisis data dan visualisasi sumber terbuka
         pt-br: Ferramenta de análise e visualização de dados de código aberto
         ru: Открытый инструмент для анализа данных и визуализации
+        ko: 오픈 소스 데이터 분석 및 시각화 도구
         zh-Hant: 開源數據分析和可視化工具
         zh: 开源数据分析和可视化工具
     type: tool

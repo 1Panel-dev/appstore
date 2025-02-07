@@ -10,6 +10,15 @@ additionalProperties:
         - Runtime
     shortDescZh: PHP8 运行环境
     shortDescEn: PHP8 Runtime
+    description:
+        en: PHP8 Runtime
+        ja: PHP8 ランタイム
+        ms: Persekitaran masa laku PHP8
+        pt-br: Ambiente de execução PHP8
+        ru: Среда выполнения PHP8
+        ko: PHP8 런타임
+        zh-hant: PHP8 運行環境
+        zh: PHP8 运行环境
     type: php
     crossVersionUpdate: false
     limit: 0

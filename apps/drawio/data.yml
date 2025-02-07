@@ -16,6 +16,7 @@ additionalProperties:
         ms: JavaScript, penyunting sisi-klien untuk diagram am
         pt-br: JavaScript, editor do lado do cliente para diagramas gerais
         ru: JavaScript, клиентский редактор для общих диаграмм
+        ko: 일반 다이어그램을 위한 JavaScript 클라이언트 측 편집기
         zh-Hant: 用於一般圖表繪製的 JavaScript 客戶端編輯器
         zh: 用于一般图表绘制的 JavaScript 客户端编辑器
     type: tool

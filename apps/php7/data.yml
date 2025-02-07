@@ -10,6 +10,15 @@ additionalProperties:
         - Runtime
     shortDescZh: PHP7 运行环境
     shortDescEn: PHP7 Runtime
+    description:
+        en: PHP7 Runtime
+        ja: PHP7 ランタイム
+        ms: Persekitaran masa laku PHP7
+        pt-br: Ambiente de execução PHP7
+        ru: Среда выполнения PHP7
+        ko: PHP7 런타임
+        zh-hant: PHP7 運行環境
+        zh: PHP7 运行环境
     type: php
     crossVersionUpdate: false
     limit: 0

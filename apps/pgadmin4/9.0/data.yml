@@ -11,6 +11,7 @@ additionalProperties:
         ms: Port
         pt-br: Porta
         ru: Порт
+        ko: 포트
         zh-Hant: 埠
         zh: 端口
       required: true
@@ -27,6 +28,7 @@ additionalProperties:
         ms: Emel Pentadbir
         pt-br: E-mail do Administrador
         ru: Адрес электронной почты администратора
+        ko: 관리자 이메일
         zh-hant: 管理員郵箱
         zh: 管理员邮箱
       required: true
@@ -42,6 +44,7 @@ additionalProperties:
         ms: Kata Laluan Admin
         pt-br: Senha de Administrador
         ru: Пароль администратора
+        ko: 관리자 비밀번호
         zh-hant: 管理員密碼
         zh: 管理员密码
       required: true

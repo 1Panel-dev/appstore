@@ -16,6 +16,7 @@ additionalProperties:
         ms: Pelayan Dedikasi Palworld
         pt-br: Servidor dedicado Palworld
         ru: Выделенный сервер Palworld
+        ko: Palworld 전용 서버
         zh-hant: Palworld 專用伺服器
         zh: 幻兽帕鲁服务端
     type: tool

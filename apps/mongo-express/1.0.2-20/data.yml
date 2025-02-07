@@ -11,6 +11,7 @@ additionalProperties:
         ms: Port
         pt-br: Porta
         ru: Порт
+        ko: 포트
         zh-Hant: 埠
         zh: 端口
       required: true
@@ -28,6 +29,7 @@ additionalProperties:
         ms: Perkhidmatan Pangkalan Data
         pt-br: Serviço de Banco de Dados
         ru: Сервис баз данных
+        ko: 데이터베이스 서비스
         zh-hant: 資料庫服務
         zh: 数据库服务
       required: true
@@ -43,6 +45,7 @@ additionalProperties:
         ms: Pengguna Pangkalan Data
         pt-br: Usuário do Banco de Dados
         ru: Пользователь базы данных
+        ko: 데이터베이스 사용자
         zh-hant: 資料庫用戶
         zh: 数据库用户
       required: true
@@ -59,6 +62,7 @@ additionalProperties:
         ms: Kata Laluan Pangkalan Data
         pt-br: Senha do Banco de Dados
         ru: Пароль базы данных
+        ko: 데이터베이스 비밀번호
         zh-hant: 資料庫密碼
         zh: 数据库密码
       required: true
@@ -75,6 +79,7 @@ additionalProperties:
         ms: Nama Pengguna Pengurusan
         pt-br: Nome de Usuário de Gerenciamento
         ru: Имя пользователя для управления
+        ko: 관리자 사용자 이름
         zh-hant: 管理使用者名稱
         zh: 管理平台用户名
       required: true
@@ -91,6 +96,7 @@ additionalProperties:
         ms: Kata Laluan Pengurusan
         pt-br: Senha de Gerenciamento
         ru: Пароль для управления
+        ko: 관리자 비밀번호
         zh-hant: 管理平台密碼
         zh: 管理平台密码
       random: true

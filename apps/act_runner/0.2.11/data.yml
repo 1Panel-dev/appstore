@@ -14,6 +14,7 @@ additionalProperties:
         ms: Instans Gitea
         pt-br: Instância Gitea
         ru: Экземпляр Gitea
+        ko: Gitea 인스턴스
         zh-Hant: Gitea 實例
         zh: Gitea 实例
     - default: '<registration_token>'
@@ -29,6 +30,7 @@ additionalProperties:
         ms: Token Pendaftaran
         pt-br: Token de Registro
         ru: Токен регистрации
+        ko: 등록 토큰
         zh-Hant: 註冊令牌
         zh: 注册令牌
     - default: '<runner_name>'
@@ -44,6 +46,7 @@ additionalProperties:
         ms: Nama Pelari
         pt-br: Nome do Runner
         ru: Имя бегуна
+        ko: 러너 이름
         zh-Hant: 執行器名稱
         zh: 运行器名称
     - default: '<runner_labels>'
@@ -59,5 +62,6 @@ additionalProperties:
         ms: Label Pelari
         pt-br: Rótulos do Runner
         ru: Метки бегуна
+        ko: 러너 레이블
         zh-Hant: 執行器標籤
         zh: 运行器标签

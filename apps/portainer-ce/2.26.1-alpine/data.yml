@@ -11,6 +11,7 @@ additionalProperties:
         ms: Port
         pt-br: Porta
         ru: Порт
+        ko: 포트
         zh-Hant: 埠
         zh: 端口
       required: true
@@ -26,6 +27,7 @@ additionalProperties:
         ms: Port API
         pt-br: Porta API
         ru: Порт API
+        ko: API 포트
         zh-hant: API 埠
         zh: API 端口
       required: true

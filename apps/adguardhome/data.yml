@@ -16,6 +16,7 @@ additionalProperties:
         ms: Pelayan DNS yang menyekat iklan dan penjejak di seluruh rangkaian
         pt-br: Servidor DNS bloqueando anúncios e rastreadores em toda a rede
         ru: DNS сервер, блокирующий рекламу и трекеры по всей сети
+        ko: 네트워크 전체에서 광고 및 추적기를 차단하는 DNS 서버
         zh-Hant: 網絡範圍內的廣告和跟踪器阻止 DNS 伺服器
         zh: 网络范围内的广告和跟踪器阻止 DNS 服务器
     type: tool

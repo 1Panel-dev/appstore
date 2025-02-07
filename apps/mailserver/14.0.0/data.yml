@@ -14,6 +14,7 @@ additionalProperties:
             ms: Domain
             pt-br: Domínio
             ru: Домен
+            ko: 도메인
             zh-Hant: 域名
             zh: 域名
         - default: 25
@@ -30,6 +31,7 @@ additionalProperties:
             ms: Port SMTP
             pt-br: Porta SMTP
             ru: Порт SMTP
+            ko: SMTP 포트
             zh-Hant: SMTP 埠
             zh: SMTP 端口
         - default: 143
@@ -46,6 +48,7 @@ additionalProperties:
             ms: Port IMAP4
             pt-br: Porta IMAP4
             ru: Порт IMAP4
+            ko: IMAP4 포트
             zh-Hant: IMAP4 埠
             zh: IMAP4 端口
         - default: 465
@@ -62,6 +65,7 @@ additionalProperties:
             ms: Port ESMTP
             pt-br: Porta ESMTP
             ru: Порт ESMTP
+            ko: ESMTP 포트
             zh-Hant: ESMTP 埠
             zh: ESMTP 端口
         - default: 587
@@ -78,6 +82,7 @@ additionalProperties:
             ms: Port ESMTP
             pt-br: Porta ESMTP
             ru: Порт ESMTP
+            ko: ESMTP 포트
             zh-Hant: ESMTP 埠
             zh: ESMTP 端口
         - default: 993
@@ -94,6 +99,7 @@ additionalProperties:
             ms: Port IMAP4
             pt-br: Porta IMAP4
             ru: Порт IMAP4
+            ko: IMAP4 포트
             zh-Hant: IMAP4 埠
             zh: IMAP4 端口
  

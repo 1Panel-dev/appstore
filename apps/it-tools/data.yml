@@ -16,6 +16,7 @@ additionalProperties:
         ms: Koleksi alat dalam talian yang berguna untuk pembangun, dengan UX yang hebat
         pt-br: Coleção de ferramentas online úteis para desenvolvedores, com ótima UX
         ru: Набор удобных онлайн-инструментов для разработчиков с отличным UX
+        ko: 개발자를 위한 편리한 온라인 도구 모음, 훌륭한 UX 제공
         zh-Hant: 開發者使用的便捷在線工具集合，具有出色的用戶體驗
         zh: 开发者使用的便捷在线工具集合，具有出色的用户体验
     type: tool
