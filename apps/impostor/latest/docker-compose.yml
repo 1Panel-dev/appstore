@@ -1,0 +1,22 @@
+services:
+  impostor:
+    image: aeonlucid/impostor:latest
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - ${Impostor_UDP_PORT}:22023/udp
+      - ${Impostor_HTTP_PORT}:22023/tcp
+    volumes:
+      - /Impostor/config.json:/app/config.json
+      - /Impostor/plugins:/app/plugins
+      - /Impostor/libs:/app/libraries
+    environment:
+      - IMPOSTOR_Server__PublicIp=${Impostor_IP}
+      - IMPOSTOR_AntiCheat__Enabled=${Impostor_AntiCheat}
+    labels:  
+      createdBy: "Apps"
+networks:  
+  1panel-network:  
+    external: true

@@ -1,0 +1,19 @@
+name: Impostor
+tags:
+    - 休闲游戏
+title: Among Us服务器
+description: Among Us服务器
+additionalProperties:
+    key: impostor
+    name: Impostor
+    tags:  
+        - Game
+    shortDescZh: Among Us服务器
+    shortDescEn: Among Us Server 
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://github.com/Impostor
+    github: https://github.com/Impostor/Impostor
+    document: https://github.com/Impostor/Impostor/tree/master/docs

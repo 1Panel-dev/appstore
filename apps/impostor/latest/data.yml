@@ -1,0 +1,38 @@
+additionalProperties:
+  formFields:
+    - default: 22023
+      edit: true
+      envKey: Impostor_UDP_PORT
+      labelEn: UDP Port
+      labelZh: UDP 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 22023
+      edit: true
+      envKey: Impostor_HTTP_PORT
+      labelEn: Http Port
+      labelZh: Http 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 127.0.0.1
+      edit: true
+      envKey: Impostor_IP
+      labelEn: Server IP
+      labelZh: 服务器 IP
+      required: true
+      type: text
+    - default: true
+      envKey: Impostor_AntiCheat
+      labelEn: AntiCheat
+      labelZh: 反作弊
+      required: true
+      type: select
+      values:
+        - labelZh: 开启
+          labelEn: Enable
+          value: true
+        - labelZh: 关闭
+          labelEn: Disable
+          value: false
