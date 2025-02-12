@@ -1,0 +1,19 @@
+name: EasyBot
+tags:
+    - 休闲游戏
+title: Minecraft 群组机器人
+description: Minecraft 群组机器人
+additionalProperties:
+    key: easybot
+    name: EasyBot
+    tags:
+        - Game
+    shortDescZh: Minecraft 群组机器人
+    shortDescEn: Minecraft Group Robots 
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://docs.hualib.com
+    github: https://github.com/zkhssb
+    document: https://docs.hualib.com/home.html
