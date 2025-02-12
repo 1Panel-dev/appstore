@@ -9,7 +9,8 @@
         "/apis/api.console.halo.run/v1alpha1/posts",
         "/api/v1alpha1/configmaps/system",
         "/apis/api.console.halo.run/v1alpha1/singlepage",
-        "/apis/api.console.halo.run/v1alpha1/attachments/upload"
+        "/apis/api.console.halo.run/v1alpha1/attachments/upload",
+        "/apis/api.console.halo.run/v1alpha1/attachments"
       ],
       "check": {
         "type": "cookie",
