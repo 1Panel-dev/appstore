@@ -81,9 +81,15 @@
     "state": "off"
   },
   "strict": {
-    "state": "on",
+    "state": "off",
     "type": "strict",
     "code": 403,
     "action": "deny"
+  },
+  "app": {
+    "state": "off",
+    "type": "app",
+    "action": "allow",
+    "rule": ""
   }
 }
