@@ -1,0 +1,17 @@
+additionalProperties:
+    formFields:
+        - default: wscc
+          edit: true
+          envKey: EASYBOT_PASSWORD
+          labelEn: password
+          labelZh: 登录TOKEN
+          required: true
+          type: password 
+        - default: 6099
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: Port
+          labelZh: 端口
+          required: true
+          rule: paramPort
+          type: number

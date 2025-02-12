@@ -1,0 +1,20 @@
+services:
+  easybot:
+    image: xrcuor/easybot:latest
+    container_name: easybot
+    environment:
+      - ACCOUNT=123456 # 机器人qq
+      - WS_ENABLE=true # 正向 WS
+      - TOKEN=1234 # access_token，可以为空
+      - WEBUI_TOKEN=${EASYBOT_PASSWORD}   # 登录密钥
+      - SERVER_HOST=0.0.0.0 # WebSocket服务器地址
+      - SERVER_PORT=${PANEL_APP_PORT_HTTP} # WebSocket服务器端口
+    restart: always
+    volumes:
+      - ./napcat/config:/app/napcat/config
+      - ./napcat/qq:/root/.config/QQ
+      - ./EasyBot:/data
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:6099"
+      - "5000:5000"
+      - "26990:26990"
