@@ -161,6 +161,7 @@
     "action": "deny"
   },
   "log": {
+    "state": "on",
     "maxDay": 180,
     "maxSize": 1,
     "external": ["acl","ipWhite","ipBlack","geoRestrict","urlWhite","urlBlack","uaWhite","uaBlack"]
