@@ -1,6 +1,6 @@
 services:
   maxkb:
-    image: 1panel/maxkb:v1.10.0-lts
+    image: 1panel/maxkb:v1.10.1-lts
     container_name: ${CONTAINER_NAME}
     restart: unless-stopped
     ports:
