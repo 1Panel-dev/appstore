@@ -75,10 +75,6 @@
       "allowedVersions": "/^10.*/"
     },
     {
-      "matchFileNames": ["apps/mariadb/11.*/*.yml"],
-      "allowedVersions": "/^11.*/"
-    },
-    {
       "matchFileNames": ["apps/sonarqube/9.*/*.yml"],
       "allowedVersions": "/^9.*/"
     },
@@ -129,6 +125,14 @@
     {
       "matchFileNames": ["apps/jumpserver/4.*/*.yml"],
       "allowedVersions": "/^4.*/"
+    },
+    {
+      "matchFileNames": ["apps/mariadb/11.4.*/*.yml"],
+      "allowedVersions": "/^11.4.*/"
+    },
+    {
+      "matchFileNames": ["apps/mariadb/11.6.*/*.yml"],
+      "allowedVersions": "/^11.6.*/"
     },
     {
       "matchDatasources": ["docker"],
