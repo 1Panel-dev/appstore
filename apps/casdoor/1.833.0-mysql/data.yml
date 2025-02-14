@@ -7,50 +7,41 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-    - default: mysql
+    - child:
+        default: ""
+        envKey: PANEL_DB_HOST
+        required: true
+        type: service
+      default: mysql
       envKey: PANEL_DB_TYPE
-      labelEn: DBType
-      labelZh: 数据库类型
+      labelEn: Database
+      labelZh: 数据库服务
       required: true
-      type: select
+      type: apps
       values:
         - label: MySQL
           value: mysql
         - label: MariaDB
           value: mariadb
-    - default: mysql
-      envKey: PANEL_DB_HOST
-      labelEn: DBHost
-      labelZh: 数据库地址
-      required: true
-      rule: paramCommon
-      type: text
-    - default: 3306
-      envKey: PANEL_DB_PORT
-      labelEn: DBPort
-      labelZh: 数据库端口
-      required: true
-      rule: paramPort
-      type: number
     - default: casdoor
       envKey: PANEL_DB_NAME
-      labelEn: DBName
+      labelEn: Database name
       labelZh: 数据库名
       random: true
       required: true
       rule: paramCommon
       type: text
-    - default: root
+    - default: casdoor
       envKey: PANEL_DB_USER
-      labelEn: DBUser
+      labelEn: Database username
       labelZh: 数据库用户
       random: true
       required: true
       rule: paramCommon
       type: text
-    - default: 123456
+    - default: casdoor
       envKey: PANEL_DB_USER_PASSWORD
-      labelEn: DBPassword
+      labelEn: Database password
       labelZh: 数据库用户密码
       random: true
       required: true
