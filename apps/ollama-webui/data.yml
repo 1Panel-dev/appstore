@@ -21,7 +21,7 @@ additionalProperties:
         zh: 面向 LLM 的用户友好型 WebUI
     type: tool
     crossVersionUpdate: true
-    limit: 0
+    limit: 1
     recommend: 0
     website: https://openwebui.com/
     github: https://github.com/open-webui/open-webui

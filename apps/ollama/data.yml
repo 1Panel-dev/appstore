@@ -21,7 +21,7 @@ additionalProperties:
         zh: 本地运行 Llama 2、Mistral、Gemma 和其他大型语言模型
     type: tool
     crossVersionUpdate: true
-    limit: 0
+    limit: 1
     recommend: 70
     website: https://ollama.com/
     github: https://github.com/ollama/ollama
