@@ -26,3 +26,4 @@ additionalProperties:
     website: https://jellyfin.org/
     github: https://github.com/jellyfin/jellyfin
     document: https://jellyfin.org/docs/
+    gpuSupport: true
