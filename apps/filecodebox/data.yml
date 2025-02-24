@@ -11,11 +11,11 @@ additionalProperties:
     - Storage
     - Tool
   shortDescZh: 文件快递柜-匿名口令分享文本，文件，像拿快递一样取文件
-  shortDescEn: File Express Cabinet - Anonymous Passcode Sharing Text, Files, Like Taking Express Delivery for Files
+  shortDescEn: FileCodeBox - Anonymous Passcode Sharing Text, Files, Like Taking Express Delivery for Files
   type: tool
   crossVersionUpdate: true
   limit: 1
   recommend: 0
   website: https://share.lanol.cn
   github: https://github.com/vastsa/FileCodeBox
-  document: https://github.com/vastsa/FileCodeBox
+  document: https://fcb-docs.aiuo.net
