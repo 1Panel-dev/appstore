@@ -19,7 +19,7 @@ additionalProperties:
         ko: Llama 2, Mistral, Gemma 및 기타 대형 언어 모델을 로컬에서 실행
         zh-hant: 本地運行 Llama 2、Mistral、Gemma 和其他大型語言模型
         zh: 本地运行 Llama 2、Mistral、Gemma 和其他大型语言模型
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 1
     recommend: 70
@@ -30,4 +30,3 @@ additionalProperties:
     architectures:
       - amd64
       - arm64
-    gpuSupport: true
