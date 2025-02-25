@@ -1,5 +1,5 @@
 services:
-  node:
+  python:
     image: python:${PYTHON_VERSION}
     container_name: ${CONTAINER_NAME}
     working_dir: /app
