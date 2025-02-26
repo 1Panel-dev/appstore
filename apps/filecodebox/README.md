@@ -7,7 +7,7 @@
 
 # FileCodeBox
 
-文件快递柜-匿名口令分享文本，文件，像拿快递一样取文件
+文件快递柜-匿名口令分享文本，文件，像拿快递一样取文件（FileCodeBox - File Express Cabinet - Anonymous Passcode Sharing Text, Files, Like Taking Express Delivery for Files）
 
 ## 主要特色
 
@@ -21,5 +21,5 @@
 - [x] 匿名分享：无需注册，无需登录
 - [x] 管理面板：查看所有文件，删除文件
 - [x] 一键部署：docker一键部署
-- [x] 自由拓展：S3协议、本地文件流，可根据需求在storage文件中新增存储引擎
+- [x] 自由拓展：S3协议、本地文件流、webdav，可根据需求在storage文件中新增存储引擎
 - [x] 简单明了：适合新手练手项目
