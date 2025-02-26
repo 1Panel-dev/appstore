@@ -116,12 +116,6 @@
     },
     {
       "state": "on",
-      "rule": "PROPFIND",
-      "name": "PROPFIND",
-      "type": "httpMethod"
-    },
-    {
-      "state": "on",
       "rule": "SRARCH",
       "name": "SRARCH",
       "type": "httpMethod"
