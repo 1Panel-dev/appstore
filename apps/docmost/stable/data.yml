@@ -1,0 +1,65 @@
+additionalProperties:
+  formFields:
+    - default: 3000
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Web Port
+      labelZh: HTTP 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: ""
+      envKey: PANEL_DB_HOST
+      key: postgresql
+      labelEn: PostgreSQL Database Service
+      labelZh: PostgreSQL 数据库服务
+      required: true
+      type: service
+    - default: docmost
+      envKey: PANEL_DB_NAME
+      labelEn: Database
+      labelZh: 数据库名
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: docmost
+      envKey: PANEL_DB_USER
+      labelEn: User
+      labelZh: 数据库用户
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: docmost
+      envKey: PANEL_DB_USER_PASSWORD
+      labelEn: Password
+      labelZh: 数据库用户密码
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+    - default: ""
+      envKey: PANEL_REDIS_HOST
+      key: redis
+      labelEn: Redis Service
+      labelZh: redis 服务
+      required: true
+      type: service
+    - default: ""
+      disabled: true
+      envKey: PANEL_REDIS_ROOT_PASSWORD
+      labelEn: Password
+      labelZh: redis 密码
+      type: text
+    - default: "localhost:3000"
+      disabled: true
+      envKey: APP_URL
+      labelEn: APP URL
+      labelZh: APP URL
+      type: text
+    - default: "REPLACE_WITH_LONG_SECRET"
+      disabled: true
+      envKey: APP_SECRET
+      labelEn: APP Secret
+      labelZh: APP Secret
+      type: text

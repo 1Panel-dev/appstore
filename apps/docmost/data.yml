@@ -1,0 +1,19 @@
+name: Docmost
+tags:
+  - 实用工具
+title: Docmost is an open-source alternative to the likes of Notion and Confluence.
+description: An open-source collaborative wiki and documentation software.
+additionalProperties:
+  key: docmost
+  name: Docmost
+  tags:
+    - Tool
+  shortDescZh: Docmost 是一个开源的协作式维基和文档软件。
+  shortDescEn: An open-source collaborative wiki and documentation software.
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://docmost.com/
+  github: https://github.com/docmost/docmost
+  document: https://docmost.com/docs/installation/
