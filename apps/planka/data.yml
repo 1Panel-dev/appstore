@@ -1,0 +1,13 @@
+additionalProperties:
+  key:    planka
+  name:   Planka
+  tags:
+    - DevOps
+  shortDescZh:  优雅的开源项目追踪
+  shortDescEn:  Elegant open source project tracking
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  website: https://planka.app/
+  github: https://github.com/plankanban/planka
+  document: https://docs.planka.cloud/docs/intro
