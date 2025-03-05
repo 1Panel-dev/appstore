@@ -4,13 +4,15 @@ FROM ${PHP_IMAGE}
 ARG PHP_EXTENSIONS
 ARG CONTAINER_PACKAGE_URL
 
-RUN sed -i \
-    -e "s|http://snapshot.debian.org/archive/debian|${CONTAINER_PACKAGE_URL}|g" \
-    -e "s|http://deb.debian.org/debian|${CONTAINER_PACKAGE_URL}/debian|g" \
-    -e "s|http://snapshot.debian.org/archive/debian-security|${CONTAINER_PACKAGE_URL}|g" \
-    -e "s|http://deb.debian.org/debian-security|${CONTAINER_PACKAGE_URL}/debian-security|g" \
-    /etc/apt/sources.list && \
-    apt-get update 
+RUN if [ "${CONTAINER_PACKAGE_URL}" != "https://deb.debian.org" ]; then \
+        sed -i \
+            -e "s|http://snapshot.debian.org/archive/debian|${CONTAINER_PACKAGE_URL}|g" \
+            -e "s|http://deb.debian.org/debian|${CONTAINER_PACKAGE_URL}/debian|g" \
+            -e "s|http://snapshot.debian.org/archive/debian-security|${CONTAINER_PACKAGE_URL}|g" \
+            -e "s|http://deb.debian.org/debian-security|${CONTAINER_PACKAGE_URL}/debian-security|g" \
+            /etc/apt/sources.list && \
+        apt-get update; \
+    fi
 
 
 COPY data/install-ext /usr/local/bin/
