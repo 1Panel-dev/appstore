@@ -63,10 +63,8 @@ additionalProperties:
               value: ioncube_loader
             - label: curl
               value: curl
-            - label: sg15
-              value: sourceguardian
             - label: sg11
-              value: sourceguardian
+              value: sg11
             - label: imagick
               value: imagick
           envKey: PHP_EXTENSIONS
