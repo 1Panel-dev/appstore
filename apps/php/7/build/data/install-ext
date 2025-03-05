@@ -55,8 +55,12 @@ pecl_install() {
 
 docker_php_ext_install() {
    local extension=$1
+   local check_name=$2
+   if [ -z "$check_name" ]; then
+       check_name=$extension
+   fi
    docker-php-ext-install  $extension
-   if is_extension_installed "$extension"; then
+   if is_extension_installed "$check_name"; then
       echo "------ docker-php-ext-install install $extension succeeded ------"
       return
    fi
@@ -169,7 +173,7 @@ install_extension() {
     elif [ "$extension" = "sysvmsg" ]; then
         docker_php_ext_install sysvmsg
     elif [ "$extension" = "opcache" ]; then
-        docker_php_ext_install opcache
+        docker_php_ext_install opcache "Zend OPcache"
     elif [ "$extension" = "mysqli" ]; then
         install_php_extensions mysqli
     elif [ "$extension" = "sysvshm" ]; then
@@ -199,7 +203,7 @@ install_extension() {
     elif [ "$extension" = "curl" ]; then
         install_php_extensions curl
     elif [ "$extension" = "sg11" ]; then
-        install_php_extensions sourceguardian
+        install_php_extensions sourceguardian "SourceGuardian"
     elif [ "$extension" = "snmp" ]; then
         install_php_extensions snmp
     elif [ "$extension" = "mbstring" ]; then
@@ -239,7 +243,7 @@ install_extension() {
     elif [ "$extension" = "zookeeper" ]; then
         install_php_extensions zookeeper
     elif [ "$extension" = "ionCube" ]; then
-        install_php_extensions ioncube_loader
+        install_php_extensions ioncube_loader "ionCube Loader"
     elif [ "$extension" = "pdo_sqlsrv" ]; then  
         install_php_extensions pdo_sqlsrv
     elif [ "$extension" = "sqlsrv" ]; then  
