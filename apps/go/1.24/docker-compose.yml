@@ -1,0 +1,21 @@
+services:
+  golang:
+    image: golang:${GO_VERSION}
+    container_name: ${CONTAINER_NAME}
+    working_dir: /app
+    volumes:
+      - ${CODE_DIR}:/app
+      - ./run.sh:/run.sh
+      - ./.env:/.env
+      - ./mod:/go/pkg/mod
+    command: bash /run.sh
+    networks:
+      - 1panel-network
+    ports:
+      - ${HOST_IP}:${PANEL_APP_PORT_HTTP}:${GO_APP_PORT}
+    restart: on-failure:5
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true
