@@ -17,7 +17,7 @@ additionalProperties:
         pt-br: Ambiente de execução PHP7
         ru: Среда выполнения PHP7
         ko: PHP7 런타임
-        zh-hant: PHP7 運行環境
+        zh-hant: PHP7 執行環境
         zh: PHP7 运行环境
     type: php
     crossVersionUpdate: false

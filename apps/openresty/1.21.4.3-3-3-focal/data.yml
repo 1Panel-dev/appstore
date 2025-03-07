@@ -13,7 +13,7 @@ additionalProperties:
             pt-br: Porta HTTP
             ru: HTTP Порт
             ko: HTTP 포트
-            zh-Hant: HTTP 端口
+            zh-Hant: HTTP 埠
             zh: HTTP 端口
         - default: 443
           envKey: PANEL_APP_PORT_HTTPS
@@ -28,5 +28,5 @@ additionalProperties:
             pt-br: Porta HTTPS
             ru: HTTPS Порт
             ko: HTTPS 포트
-            zh-Hant: HTTPS 端口
+            zh-Hant: HTTPS 埠
             zh: HTTPS 端口

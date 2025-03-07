@@ -17,7 +17,7 @@ additionalProperties:
         pt-br: Inicie e execute DeepSeek-R1, Llama 3.3, qwen2.5 e outros modelos de linguagem grandes
         ru: Запустите и выполните DeepSeek-R1, Llama 3.3, qwen2.5 и другие крупные языковые модели
         ko: DeepSeek-R1, Llama 3.3, qwen2.5 및 기타 대형 언어 모델을 시작하고 실행
-        zh-hant: 啟動並運行 DeepSeek-R1、Llama 3.3、qwen2.5 及其他大型語言模型
+        zh-hant: 啟動並執行 DeepSeek-R1、Llama 3.3、qwen2.5 及其他大型語言模型
         zh: 启动并运行 DeepSeek-R1、Llama 3.3、qwen2.5 及其他大型语言模型
     type: tool
     crossVersionUpdate: true
