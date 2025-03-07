@@ -79,7 +79,7 @@ additionalProperties:
         pt-br: Configurar o servidor como um servidor comunitário (verdadeiro / falso)
         ru: Настроить сервер как сервер сообщества (true / false)
         ko: 서버를 커뮤니티 서버로 설정 (true / false)
-        zh-hant: 將伺服器設置為社區伺服器（true / false）
+        zh-hant: 將伺服器設定為社區伺服器（true / false）
         zh: 是否将服务器设置为社区服务器 (true / false)
       required: true
       type: text
@@ -111,7 +111,7 @@ additionalProperties:
         pt-br: PORTA PÚBLICA (Se não especificado, será detectado automaticamente)
         ru: ПУБЛИЧНЫЙ ПОРТ (Если не указан, будет определен автоматически)
         ko: 공용 포트 (지정하지 않으면 자동으로 감지됩니다)
-        zh-hant: 公開端口（如果未指定，將自動檢測）
+        zh-hant: 公開埠（如果未指定，將自動檢測）
         zh: 服务器端口 (留空自动检测)
       required: false
       rule: paramPort

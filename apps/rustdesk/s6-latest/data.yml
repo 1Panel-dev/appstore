@@ -63,7 +63,7 @@ additionalProperties:
         pt-br: Porta de Suporte ao Cliente Web 1
         ru: Порт поддержки веб-клиента 1
         ko: 웹 클라이언트 지원 포트 1
-        zh-hant: Web 客戶端支持端口 1
+        zh-hant: Web 客戶端支持埠 1
         zh: 网页客户端支持端口 1
       required: true
       rule: paramPort
@@ -80,7 +80,7 @@ additionalProperties:
         pt-br: Porta de Suporte ao Cliente Web 2
         ru: Порт поддержки веб-клиента 2
         ko: 웹 클라이언트 지원 포트 2
-        zh-hant: Web 客戶端支持端口 2
+        zh-hant: Web 客戶端支持埠 2
         zh: 网页客户端支持端口 2
       required: true
       rule: paramPort

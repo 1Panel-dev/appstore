@@ -14,7 +14,7 @@ additionalProperties:
         ms: Port
         pt-br: Porta
         ru: Порт
-        zh-Hant: 端口
+        zh-Hant: 埠
         zh: 端口
         ko: 포트
     - default: ""

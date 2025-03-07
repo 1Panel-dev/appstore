@@ -61,7 +61,7 @@ additionalProperties:
         pt-br: Habilitar mensagem de login/logout dos jogadores
         ru: Включить сообщение о входе/выходе игроков
         ko: 플레이어 로그인/로그아웃 메시지 활성화
-        zh-hant: 啟用玩家登錄/登出消息
+        zh-hant: 啟用玩家登入/登出消息
         zh: 玩家进入/离开服务器是否通知
       required: true
       type: select

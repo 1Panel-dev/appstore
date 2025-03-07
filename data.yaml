@@ -48,7 +48,7 @@ additionalProperties:
         pt-br: "Tempo de Execução"
         ru: "Среда выполнения"
         ko: "런타임"
-        zh-hant: "運行環境"
+        zh-hant: "執行環境"
         zh: "运行环境"
     - key: Tool
       name: 实用工具
@@ -192,6 +192,6 @@ additionalProperties:
         pt-br: "Local"
         ru: "Локальный"
         ko: "로컬"
-        zh-hant: "本地"
+        zh-hant: "本機"
         zh: "本地"
   version: v1.6.0
