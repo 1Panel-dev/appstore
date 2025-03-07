@@ -1,12 +1,5 @@
 additionalProperties:
   formFields:
-    - default: 1234567890
-      edit: true
-      envKey: QQ_ACCOUNT
-      labelEn: QQ_ACCOUNT
-      labelZh: 机器人账号
-      required: true
-      type: text
     - default: 0.0.0.0
       edit: false
       envKey: WEBUI_HOST
@@ -106,15 +99,3 @@ additionalProperties:
       labelZh: 需要添加的额外路径
       required: false
       type: text
-    - default: /dev/null:/app/staticzero
-      edit: true
-      envKey: ENABLE_STATIC
-      labelEn: ENABLE_STATIC
-      labelZh: 映射webui静态文件目录(需要自己添加)
-      required: true
-      type: select
-      values:
-        - label: "True"
-          value: "${CONFIG_PATH}/static:/app/napcat/static"
-        - label: "False"
-          value: "/dev/null:/app/staticzero"
