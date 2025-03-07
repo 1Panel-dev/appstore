@@ -1,4 +1,3 @@
-version: "3"
 services:
     napcat:
         image: hub.161122.xyz/mlikiowa/napcat-docker:latest
@@ -11,7 +10,6 @@ services:
             - "TZ=Asia/Shanghai"
             - "NAPCAT_UID=${NAPCAT_UID}"
             - "NAPCAT_GID=${NAPCAT_GID}"
-            - "ACCOUNT=${QQ_ACCOUNT}"
         volumes:
             - "${QQ_PATH}:/app/.config/QQ"
             - "${CONFIG_PATH}:/app/napcat/config"
