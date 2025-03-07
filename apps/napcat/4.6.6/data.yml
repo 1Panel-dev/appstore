@@ -1,0 +1,120 @@
+additionalProperties:
+  formFields:
+    - default: 1234567890
+      edit: true
+      envKey: QQ_ACCOUNT
+      labelEn: QQ_ACCOUNT
+      labelZh: 机器人账号
+      required: true
+      type: text
+    - default: 0.0.0.0
+      edit: false
+      envKey: WEBUI_HOST
+      labelEn: WEBUI_HOST
+      labelZh: WebUI监听地址
+      required: true
+      type: text
+    - default: 6099
+      edit: false
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: NAPCAT_PORT
+      labelZh: WebUI端口
+      required: true
+      type: number
+      rule: paramPort
+    - default: ''
+      edit: false
+      envKey: WEBUI_PREFIX
+      labelEn: WEBUI_PREFIX
+      labelZh: WebUI工作前缀
+      required: false
+      type: text
+    - default: napcat
+      edit: false
+      envKey: WEBUI_TOKEN
+      labelEn: WEBUI_TOKEN
+      labelZh: 登录密钥(留空随机生成)
+      required: true
+      type: text
+    - default: 3
+      edit: false
+      envKey: WEBUI_LOGIN_RATE
+      labelEn: WEBUI_LOGIN_RATE
+      labelZh: 每分钟登录次数限制
+      required: true
+      type: number
+    - default: 00:e0:70:9a:5d:2b
+      edit: true
+      envKey: MAC_ADDRESS
+      labelEn: mac_address
+      labelZh: mac地址(请修改成你自己的)
+      required: false
+      type: text
+    - default: 0
+      edit: true
+      envKey: NAPCAT_UID
+      labelEn: NAPCAT_UID
+      labelZh: NAPCAT用户ID
+      required: true
+      type: number
+    - default: 0
+      edit: true
+      envKey: NAPCAT_GID
+      labelEn: NAPCAT_GID
+      labelZh: NAPCAT组ID
+      required: true
+      type: number
+    - default: ./data
+      edit: true
+      envKey: CONFIG_PATH
+      labelEn: NapCat_config_path
+      labelZh: NapCat配置路径
+      required: true
+      type: text
+    - default: ./data/QQ
+      edit: true
+      envKey: QQ_PATH
+      labelEn: QQ_setting_path
+      labelZh: QQ配置路径
+      required: false
+      type: text
+    - default: ./data/log
+      edit: true
+      envKey: LOG_PATH
+      labelEn: NapCat_log_path
+      labelZh: NapCat日志路径
+      required: true
+      type: text
+    - default: ''
+      edit: true
+      envKey: ADDITIONAL_PATH1
+      labelEn: ADDITIONAL_PATH
+      labelZh: 需要添加的额外路径
+      required: false
+      type: text
+    - default: ''
+      edit: true
+      envKey: ADDITIONAL_PATH2
+      labelEn: ADDITIONAL_PATH
+      labelZh: 需要添加的额外路径
+      required: false
+      type: text
+    - default: ''
+      edit: true
+      envKey: ADDITIONAL_PATH3
+      labelEn: ADDITIONAL_PATH
+      labelZh: 需要添加的额外路径
+      required: false
+      type: text
+    - default: /dev/null:/app/staticzero
+      edit: true
+      envKey: ENABLE_STATIC
+      labelEn: ENABLE_STATIC
+      labelZh: 映射webui静态文件目录(需要自己添加)
+      required: true
+      type: select
+      values:
+        - label: "True"
+          value: "${CONFIG_PATH}/static:/app/napcat/static"
+        - label: "False"
+          value: "/dev/null:/app/staticzero"

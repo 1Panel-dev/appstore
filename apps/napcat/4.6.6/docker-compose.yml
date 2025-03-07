@@ -1,0 +1,23 @@
+version: "3"
+services:
+    napcat:
+        image: hub.161122.xyz/mlikiowa/napcat-docker:latest
+        container_name: ${CONTAINER_NAME}
+        restart: always
+        network_mode: "host"
+        mac_address: "${MAC_ADDRESS}"
+        privileged: true
+        environment:
+            - "TZ=Asia/Shanghai"
+            - "NAPCAT_UID=${NAPCAT_UID}"
+            - "NAPCAT_GID=${NAPCAT_GID}"
+            - "ACCOUNT=${QQ_ACCOUNT}"
+        volumes:
+            - "${QQ_PATH}:/app/.config/QQ"
+            - "${CONFIG_PATH}:/app/napcat/config"
+            - "${LOG_PATH}:/app/napcat/logs"
+            - "${ADDITIONAL_PATH1:-/dev/null}:${ADDITIONAL_PATH1:-/app/zero}"
+            - "${ADDITIONAL_PATH2:-/dev/null}:${ADDITIONAL_PATH2:-/app/one}"
+            - "${ADDITIONAL_PATH3:-/dev/null}:${ADDITIONAL_PATH3:-/app/two}"
+        labels:
+            createdBy: "Apps"
