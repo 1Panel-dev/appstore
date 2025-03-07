@@ -33,7 +33,7 @@ additionalProperties:
       edit: false
       envKey: WEBUI_TOKEN
       labelEn: WEBUI_TOKEN
-      labelZh: 登录密钥(留空随机生成)
+      labelZh: 登录密钥(默认napcat)
       required: true
       type: text
     - default: 3
