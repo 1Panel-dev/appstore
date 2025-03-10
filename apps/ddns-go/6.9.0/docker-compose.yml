@@ -1,11 +1,12 @@
 services:
-  frps:
-    image: snowdreamtech/frps:0.61.1
+  ddns-go:
     container_name: ${CONTAINER_NAME}
     restart: always
     network_mode: host
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:9876"
     volumes:
-      - ./data/frps.toml:/etc/frp/frps.toml
-      - ./data/ssl:/etc/frp/ssl
+      - ./data:/root
+    image: jeessy/ddns-go:v6.9.0
     labels:
       createdBy: "Apps"
