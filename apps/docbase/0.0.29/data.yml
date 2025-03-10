@@ -1,0 +1,78 @@
+additionalProperties:
+  formFields:
+    - default: Pro/BAAI/bge-m3
+      envKey: PANEL_EMBEDDING_MODEL
+      labelEn: Embedding Model
+      labelZh: 嵌入服务模型
+      label:
+        en: Embedding Model
+        zh: 嵌入服务模型
+      required: true
+      rule: paramCommon
+      type: text
+
+    - default: https://api.siliconflow.cn/v1/embeddings
+      envKey: PANEL_EMBEDDING_URL
+      labelEn: Embedding URL
+      labelZh: 嵌入服务 URL
+      label:
+        en: Embedding URL
+        zh: 嵌入服务 URL
+      required: true
+      rule: paramCommon
+      type: text
+
+    - default: 1024
+      envKey: PANEL_EMBEDDING_DIMENSIONS
+      labelEn: Embedding Dimensions
+      labelZh: 嵌入维度
+      label:
+        en: Embedding Dimensions
+        zh: 嵌入维度
+      required: true
+      rule: paramCommon
+      type: number
+
+    - default: password
+      envKey: PANEL_EMBEDDING_APIKEY
+      labelEn: Embedding API Key
+      labelZh: 嵌入服务 API 密钥
+      label:
+        en: Embedding API Key
+        zh: 嵌入服务 API 密钥
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+
+    - default: http://meilisearch:7700
+      envKey: PANEL_MEILISEARCH_URL
+      labelEn: Meilisearch URL
+      labelZh: Meilisearch 地址
+      label:
+        en: Meilisearch URL
+        zh: Meilisearch 地址
+      required: true
+      rule: paramCommon
+      type: text
+
+    - default: password
+      envKey: PANEL_MEILISEARCH_TOKEN
+      labelEn: Meilisearch token
+      labelZh: Meilisearch 令牌
+      label:
+        en: Meilisearch token
+        zh: Meilisearch 令牌
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+
+    - default: 9898
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: HTTP Port
+      labelZh: HTTP 端口
+      required: true
+      rule: paramPort
+      type: number

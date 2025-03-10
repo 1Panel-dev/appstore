@@ -1,0 +1,19 @@
+name: docbase
+tags:
+  - 建站
+title: 为AI构建的私有实时知识库
+description: 为AI构建的私有实时知识库
+additionalProperties: 
+  key: docbase
+  name: docbase
+  tags:
+    - AI
+  shortDescZh: 为AI构建的私有实时知识库
+  shortDescEn: File-based Real-time Local Knowledge Base For AI
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://docbase.cc/
+  github: https://github.com/docbase-cc/docbase
+  document: https://docbase.cc/
