@@ -8,7 +8,6 @@ additionalProperties:
         en: Embedding Model
         zh: 嵌入服务模型
       required: true
-      rule: paramCommon
       type: text
 
     - default: https://api.siliconflow.cn/v1/embeddings
