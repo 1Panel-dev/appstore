@@ -1,0 +1,14 @@
+additionalProperties:
+  crossVersionUpdate: true
+  document: https://opengist.io/docs/
+  github: https://github.com/thomiceli/opengist
+  key: opengist
+  limit: 0
+  name: opengist
+  shortDescEn: Opengist is a self-hosted Pastebin powered by Git.
+  shortDescZh: 一个由 Git 驱动的自托管 Pastebin
+  tags:
+  - Tool
+  - CI/CD
+  type: tool
+  website: https://opengist.io/
