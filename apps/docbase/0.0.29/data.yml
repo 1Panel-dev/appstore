@@ -19,7 +19,7 @@ additionalProperties:
         en: Embedding URL
         zh: 嵌入服务 URL
       required: true
-      rule: paramCommon
+      rule: paramExtUrl
       type: text
 
     - default: 1024
@@ -30,7 +30,7 @@ additionalProperties:
         en: Embedding Dimensions
         zh: 嵌入维度
       required: true
-      rule: paramCommon
+      rule: paramPort
       type: number
 
     - default: password
@@ -53,7 +53,7 @@ additionalProperties:
         en: Meilisearch URL
         zh: Meilisearch 地址
       required: true
-      rule: paramCommon
+      rule: paramExtUrl
       type: text
 
     - default: password
