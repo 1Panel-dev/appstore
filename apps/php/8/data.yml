@@ -68,7 +68,7 @@ additionalProperties:
             - label: imagick
               value: imagick
           envKey: PHP_EXTENSIONS
-        - default: 8.3.8
+        - default: 8.4.3
           envKey: PHP_VERSION
           labelEn: PHP Version
           labelZh: PHP 版本
