@@ -1,14 +1,14 @@
 services:
   nexus:
-    image: bitnami/tomcat:10.1.36
+    image: sonatype/nexus3:3.78.1
     restart: always
     container_name: ${CONTAINER_NAME}
     environment:
-      - TOMCAT_PASSWORD=${TOMCAT_PASSWORD}
+      - TZ=Asia/Shanghai
     ports:
-      - ${PANEL_APP_PORT_HTTP}:8080
+      - ${PANEL_APP_PORT_HTTP}:8081
     volumes:
-      - ./data:/bitnami/tomcat
+      - ./data:/nexus-data
     networks:
       - 1panel-network
     labels:
