@@ -1,11 +1,11 @@
-name: docbase
+name: DocBase
 tags:
   - 建站
 title: 为AI构建的私有实时知识库
 description: 为AI构建的私有实时知识库
 additionalProperties: 
   key: docbase
-  name: docbase
+  name: DocBase
   tags:
     - AI
   shortDescZh: 为AI构建的私有实时知识库
