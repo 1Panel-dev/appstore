@@ -6,9 +6,9 @@ services:
     networks:  
       - 1panel-network
     ports:
-      - "${PANEL_APP_PORT_HTTP}:6157"
+      - ${PANEL_APP_PORT_HTTP}:6157
     volumes:
-      - .opengist:/opengist
+      - ./data:/opengist
     labels:  
       createdBy: "Apps"
 networks:
