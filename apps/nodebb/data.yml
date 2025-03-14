@@ -1,0 +1,19 @@
+name: NodeBB
+tags:
+  - 建站
+title: 基于 Node.js 的现代化论坛程序
+description: 基于 Node.js 的现代化论坛程序
+additionalProperties:
+  key: nodebb
+  name: NodeBB
+  tags:
+    - Website
+  shortDescZh: 基于 Node.js 的现代化论坛程序
+  shortDescEn: Node.js based forum software built for the modern web
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 10
+  website: https://nodebb.org
+  github: https://github.com/NodeBB/NodeBB
+  document: https://docs.nodebb.org

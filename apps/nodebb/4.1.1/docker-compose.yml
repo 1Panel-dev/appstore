@@ -12,9 +12,8 @@ services:
       - ./data/node_modules:/usr/src/app/node_modules
       - ./data/uploads:/usr/src/app/public/uploads
       - ./data/config:/opt/config
-    labels:  
+    labels:
       createdBy: "Apps"
-    
-networks:  
-  1panel-network:  
+networks:
+  1panel-network:
     external: true

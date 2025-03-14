@@ -1,14 +1,10 @@
-# 介绍
+# NodeBB
 
-注：原 Docker 版本已经不再更新，此为 [ghcr](https://github.com/NodeBB/NodeBB/pkgs/container/nodebb) 版（Github Container Registry）。
-
-NodeBB 论坛软件由 Node.js 提供支持，支持 Redis、MongoDB 或 PostgreSQL 数据库。它利用 WebSocket 实现即时互动和实时通知。NodeBB 吸收了现代网络的精华：实时流式讨论、移动响应能力、丰富的 RESTful 读/写 API，同时忠实于原始的公告栏/论坛格式 → 分类分层、本地用户账户和异步消息传递。
+**NodeBB** 论坛软件由 Node.js 提供支持，支持 Redis、MongoDB 或 PostgreSQL 数据库。它利用 WebSocket 实现即时互动和实时通知。NodeBB 吸收了现代网络的精华：实时流式讨论、移动响应能力、丰富的 RESTful 读/写 API，同时忠实于原始的公告栏/论坛格式 → 分类分层、本地用户账户和异步消息传递。
 
 NodeBB 本身包含一个基本功能的 “通用核心”，而其他功能和集成则通过使用第三方插件来实现。
 
-# 配置
-
-容器首次启动后请等待npm模块安装，当日志显示出 `Web installer listening on http://0.0.0.0:<您选择的端口>` 时，即可通过网页安装程序进行配置。
+> 容器首次启动后请等待 npm 模块安装，当日志显示出 `Web installer listening on http://0.0.0.0:4567` 时，即可通过网页安装程序进行配置。
 
 ## 数据库
 
