@@ -5,6 +5,15 @@ additionalProperties:
           envKey: PANEL_APP_PORT_HTTP_80
           labelEn: HTTP Port
           labelZh: HTTP端口
+          label:
+            en: HTTP Port
+            ja: HTTPポート
+            ms: Port HTTP
+            pt-br: Porta HTTP
+            ru: HTTP-порт
+            ko: HTTP 포트
+            zh: HTTP端口
+            zh-Hant: HTTP連接埠
           required: true
           rule: paramPort
           type: number
@@ -13,6 +22,15 @@ additionalProperties:
           envKey: PANEL_APP_PORT_HTTPS
           labelEn: HTTPS Port
           labelZh: HTTPS端口
+          label:
+            en: HTTPS Port
+            ja: HTTPSポート
+            ms: Port HTTPS
+            pt-br: Porta HTTPS
+            ru: HTTPS-порт
+            ko: HTTPS 포트
+            zh: HTTPS端口
+            zh-Hant: HTTPS連接埠
           required: true
           rule: paramPort
           type: number
@@ -21,6 +39,15 @@ additionalProperties:
           envKey: PANEL_APP_PORT_HTTP
           labelEn: Console Port
           labelZh: 控制台端口
+          label:
+            en: Console Port
+            ja: コンソールポート
+            ms: Port Konsol
+            pt-br: Porta do Console
+            ru: Порт консоли
+            ko: 콘솔 포트
+            zh: 控制台端口
+            zh-Hant: 控制台埠
           required: true
           rule: paramPort
           type: number
@@ -29,5 +56,14 @@ additionalProperties:
           envKey: TIME_ZONE
           labelEn: Time zone
           labelZh: 时区
+          label:
+            en: Time zone
+            ja: タイムゾーン
+            ms: Zon masa
+            pt-br: Fuso horário
+            ru: Часовой пояс
+            ko: 시간대
+            zh: 时区
+            zh-Hant: 時區
           required: true
           type: text

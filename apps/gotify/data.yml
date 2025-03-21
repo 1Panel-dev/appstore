@@ -17,3 +17,12 @@ additionalProperties:
     website: https://gotify.net
     github: https://github.com/gotify/server
     document: https://gotify.net/docs/
+    description:
+        en: A simple server for sending and receiving messages
+        zh: 简单的服务器，用于发送和接收消息
+        zh-Hant: 簡單的伺服器，用於發送和接收消息
+        ja: メッセージの送受信に使用するシンプルなサーバー
+        ms: Pelayan ringkas untuk menghantar dan menerima mesej
+        pt-br: Um servidor simples para enviar e receber mensagens
+        ru: Простой сервер для отправки и получения сообщений
+        ko: 메시지를 보내고 받는 간단한 서버

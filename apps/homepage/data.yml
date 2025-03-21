@@ -17,3 +17,12 @@ additionalProperties:
     website: https://gethomepage.dev/
     github: https://github.com/gethomepage/homepage
     document: https://gethomepage.dev/latest/configs/
+    description:
+        en: A modern, fully static, fast, secure fully proxied, highly customizable application dashboard
+        zh: 现代的、完全静态的、快速的、安全的、完全代理的、高度可定制的应用程序仪表板
+        zh-Hant: 現代的、完全靜態的、快速的、安全的、完全代理的、高度可定制的應用程式儀表板
+        ja: モダンで完全に静的、高速、安全、完全プロキシ化された高度にカスタマイズ可能なアプリケーションダッシュボード
+        ms: Papan pemuka aplikasi moden, sepenuhnya statik, pantas, selamat, sepenuhnya diproksi, sangat boleh disesuaikan
+        pt-br: Um painel de controle de aplicativos moderno, totalmente estático, rápido, seguro, totalmente proxy e altamente personalizável
+        ru: Современная, полностью статическая, быстрая, безопасная, полностью проксированная, высоконастраиваемая панель управления приложениями
+        ko: 현대적이고 완전히 정적이며 빠르고 안전하며 완전히 프록시화되고 고도로 사용자 정의 가능한 애플리케이션 대시보드

@@ -17,3 +17,12 @@ additionalProperties:
     website: https://www.photoprism.app
     github: https://github.com/photoprism/photoprism
     document: https://docs.photoprism.app
+    description:
+        en: AI-Powered Photos App for the Decentralized Web
+        zh: 去中心化网络的人工智能照片应用程序
+        zh-Hant: 去中心化網絡的人工智能照片應用程序
+        ja: 分散型 Web 用の AI 搭載写真アプリ
+        ms: Aplikasi Foto Berkuasa AI untuk Web Terdesentralisasi
+        pt-br: Aplicativo de Fotos com IA para a Web Descentralizada
+        ru: Приложение для фотографий с ИИ для децентрализованного Интернета
+        ko: 분산형 웹을 위한 AI 기반 사진 앱

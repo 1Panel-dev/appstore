@@ -8,6 +8,15 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+          label:
+            en: HTTP Port
+            ja: HTTPポート
+            ms: Port HTTP
+            pt-br: Porta HTTP
+            ru: HTTP порт
+            ko: HTTP 포트
+            zh: HTTP端口
+            zh-Hant: HTTP連接埠
         - default: 8600
           edit: true
           envKey: PANEL_APP_PORT_DNS
@@ -16,3 +25,12 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+          label:
+            en: DNS Port
+            ja: DNSポート
+            ms: Port DNS
+            pt-br: Porta DNS
+            ru: DNS порт
+            ko: DNS 포트
+            zh: DNS端口
+            zh-Hant: DNS連接埠

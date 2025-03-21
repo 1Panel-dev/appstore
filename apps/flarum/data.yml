@@ -17,3 +17,12 @@ additionalProperties:
     website: https://flarum.org/
     github: https://github.com/flarum/flarum
     document: https://docs.flarum.org/
+    description:
+        en: Simple forum software for building great communities
+        zh: 用于构建优秀社区的简单论坛软件
+        zh-Hant: 用於構建優秀社區的簡單論壇軟件
+        ja: 素晴らしいコミュニティを構築するためのシンプルなフォーラムソフトウェア
+        ms: Perisian forum ringkas untuk membina komuniti hebat
+        pt-br: Software de fórum simples para construir grandes comunidades
+        ru: Простое программное обеспечение для форумов для создания отличных сообществ
+        ko: 훌륭한 커뮤니티를 구축하기 위한 간단한 포럼 소프트웨어

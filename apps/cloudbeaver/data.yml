@@ -18,3 +18,12 @@ additionalProperties:
     website: https://dbeaver.com/
     github: https://github.com/dbeaver/cloudbeaver
     document: https://dbeaver.com/docs/cloudbeaver/
+    description:
+        en: Cloud Database Manager
+        zh: 云数据库管理器
+        zh-Hant: 雲數據庫管理器
+        ja: クラウドデータベースマネージャー
+        ms: Pengurus Pangkalan Data Awan
+        pt-br: Gerenciador de Banco de Dados em Nuvem
+        ru: Облачный менеджер баз данных
+        ko: 클라우드 데이터베이스 관리자

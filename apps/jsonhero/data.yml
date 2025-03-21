@@ -17,3 +17,12 @@ additionalProperties:
     website: https://jsonhero.io
     github: https://github.com/triggerdotdev/jsonhero-web
     document: https://github.com/triggerdotdev/jsonhero-web
+    description:
+        en: An open-source, beautiful JSON explorer
+        zh: 开源、美观的 Web JSON 浏览器
+        zh-Hant: 開源、美觀的 Web JSON 瀏覽器
+        ja: オープンソースで美しい JSON エクスプローラー
+        ms: Penjelajah JSON yang cantik dan sumber terbuka
+        pt-br: Um explorador JSON bonito e de código aberto
+        ru: Открытый, красивый JSON-обозреватель
+        ko: 오픈 소스이자 아름다운 JSON 탐색기

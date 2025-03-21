@@ -16,3 +16,12 @@ additionalProperties:
   website: https://umami.is/
   github: https://github.com/umami-software/umami
   document: https://umami.is/docs
+  description:
+    en: A simple, fast, privacy-focused alternative to Google Analytics
+    zh: Google Analytics 的简单、快速、注重隐私的替代方案
+    zh-Hant: Google Analytics 的簡單、快速、注重隱私的替代方案
+    ja: Google Analytics のシンプルで高速、プライバシー重視の代替手段
+    ms: Alternatif yang ringkas, pantas, dan memfokuskan privasi kepada Google Analytics
+    pt-br: Uma alternativa simples, rápida e focada na privacidade ao Google Analytics
+    ru: Простая, быстрая и ориентированная на конфиденциальность альтернатива Google Analytics
+    ko: Google Analytics에 대한 간단하고 빠르며 개인 정보 보호 중심의 대안

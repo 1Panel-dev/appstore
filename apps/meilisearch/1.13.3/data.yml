@@ -4,6 +4,15 @@ additionalProperties:
       default: 7700
       labelEn: Port
       labelZh: 端口
+      label:
+        en: Port
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh: 端口
+        zh-Hant: 埠
       edit: true
       required: true
       rule: paramPort
@@ -12,6 +21,15 @@ additionalProperties:
       default: HmPEKZhcoANzRt3DTPhRQVRxPEVZw7m2TymKwKhs
       labelEn: MasterKey
       labelZh: 主密钥
+      label:
+        en: MasterKey
+        ja: マスターキー
+        ms: Kunci Utama
+        pt-br: Chave Mestra
+        ru: Главный ключ
+        ko: 마스터 키
+        zh: 主密钥
+        zh-Hant: 主密鑰
       edit: true
       required: true
       random: true
@@ -21,6 +39,15 @@ additionalProperties:
       envKey: MEILI_NO_ANALYTICS
       labelEn: Meilisearch's built-in telemetry
       labelZh: Meilisearch 的内置遥测
+      label:
+        en: Meilisearch's built-in telemetry
+        ja: Meilisearch の組み込みテレメトリ
+        ms: Telemetri Bawaan Meilisearch
+        pt-br: Telemetria Interna do Meilisearch
+        ru: Встроенная телеметрия Meilisearch
+        ko: Meilisearch의 내장 원격 측정
+        zh: Meilisearch 的内置遥测
+        zh-Hant: Meilisearch 的內置遙測
       edit: true
       type: select
       values:

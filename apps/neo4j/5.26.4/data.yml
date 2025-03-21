@@ -4,6 +4,15 @@ additionalProperties:
       envKey: PANEL_APP_PORT_HTTP
       labelEn: Http Port
       labelZh: http 端口
+      label:
+        en: Http Port
+        ja: Http ポート
+        ms: Port Http
+        pt-br: Porta Http
+        ru: Http-порт
+        ko: Http 포트
+        zh: http 端口
+        zh-Hant: http 連接埠
       required: true
       rule: paramPort
       type: number
@@ -11,6 +20,15 @@ additionalProperties:
       envKey: PANEL_APP_PORT_BOLT
       labelEn: Bolt Port
       labelZh: bolt 端口
+      label:
+        en: Bolt Port
+        ja: Bolt ポート
+        ms: Port Bolt
+        pt-br: Porta Bolt
+        ru: Bolt-порт
+        ko: Bolt 포트
+        zh: bolt 端口
+        zh-Hant: bolt 連接埠
       required: true
       rule: paramPort
       type: number

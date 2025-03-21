@@ -17,3 +17,12 @@ additionalProperties:
     website: https://logto.io/zh-CN/
     github: https://github.com/logto-io/logto
     document: https://docs.logto.io/
+    description:
+        en: An Auth0 alternative designed for modern apps and SaaS products
+        zh: 专为现代应用和 SaaS 产品设计的 Auth0 替代品
+        zh-Hant: 專為現代應用和 SaaS 產品設計的 Auth0 替代品
+        ja: モダンなアプリと SaaS 製品向けに設計された Auth0 の代替品
+        ms: Alternatif Auth0 yang direka untuk aplikasi moden dan produk SaaS
+        pt-br: Uma alternativa ao Auth0 projetada para aplicativos modernos e produtos SaaS
+        ru: Альтернатива Auth0, разработанная для современных приложений и продуктов SaaS
+        ko: 현대적인 앱과 SaaS 제품을 위해 설계된 Auth0 대안

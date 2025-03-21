@@ -16,3 +16,12 @@ additionalProperties:
   website: https://casdoor.org/
   github: https://github.com/casdoor/casdoor
   document: https://casdoor.org/docs/overview
+  description:
+    en: An Identity and Access Management (IAM) / Single-Sign-On (SSO) platform with web UI supporting OAuth 2.0, OIDC, SAML and CAS
+    zh: 支持 OAuth 2.0、OIDC、SAML 和 CAS 的 Web UI 优先的 IAM/SSO 平台
+    zh-Hant: 支援 OAuth 2.0、OIDC、SAML 和 CAS 的 Web UI 優先的 IAM/SSO 平台
+    ja: OAuth 2.0、OIDC、SAML、および CAS をサポートする Web UI 優先の IAM/SSO プラットフォーム
+    ms: Platform IAM/SSO dengan UI web yang menyokong OAuth 2.0, OIDC, SAML dan CAS
+    pt-br: Uma plataforma IAM/SSO com interface web que suporta OAuth 2.0, OIDC, SAML e CAS
+    ru: Платформа управления идентификацией и доступом (IAM) / единого входа (SSO) с веб-интерфейсом, поддерживающая OAuth 2.0, OIDC, SAML и CAS
+    ko: OAuth 2.0, OIDC, SAML 및 CAS를 지원하는 웹 UI 중심의 IAM/SSO 플랫폼
