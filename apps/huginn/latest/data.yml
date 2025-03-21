@@ -4,6 +4,15 @@ additionalProperties:
       envKey: PANEL_APP_PORT_HTTP
       labelEn: Port
       labelZh: HTTP 端口
+      label:
+        en: Port
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh: HTTP 端口
+        zh-Hant: HTTP 埠
       required: true
       rule: paramPort
       type: number

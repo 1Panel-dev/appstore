@@ -17,3 +17,12 @@ additionalProperties:
     website: https://heimdall.site/
     github: https://github.com/linuxserver/Heimdall
     document: https://github.com/linuxserver/Heimdall
+    description:
+        en: An Application dashboard and launcher
+        zh: 应用程序仪表板和启动器
+        zh-Hant: 應用程式儀表板和啟動器
+        ja: アプリケーションダッシュボードとランチャー
+        ms: Papan pemuka dan pelancar aplikasi
+        pt-br: Um painel de controle e inicializador de aplicativos
+        ru: Панель управления и запуск приложений
+        ko: 애플리케이션 대시보드 및 실행기

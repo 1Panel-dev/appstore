@@ -17,3 +17,12 @@ additionalProperties:
     website: https://planka.app/
     github: https://github.com/plankanban/planka
     document: https://docs.planka.cloud/docs/intro
+    description:
+        en: Elegant open source project tracking
+        zh: 优雅的开源项目跟踪
+        zh-Hant: 優雅的開源項目跟蹤
+        ja: エレガントなオープンソースプロジェクト追跡
+        ms: Penjejakan projek sumber terbuka yang elegan
+        pt-br: Rastreamento de projetos de código aberto elegante
+        ru: Элегантное отслеживание проектов с открытым исходным кодом
+        ko: 우아한 오픈 소스 프로젝트 추적

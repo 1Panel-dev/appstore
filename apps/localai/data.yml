@@ -17,3 +17,12 @@ additionalProperties:
     website: https://localai.io/
     github: https://github.com/mudler/LocalAI/
     document: https://localai.io/
+    description:
+        en: The free, Open Source OpenAI alternative
+        zh: 免费的开源 OpenAI 替代品
+        zh-Hant: 免費的開源 OpenAI 替代品
+        ja: 無料のオープンソース OpenAI 代替品
+        ms: Alternatif OpenAI sumber terbuka percuma
+        pt-br: A alternativa gratuita e de código aberto ao OpenAI
+        ru: Бесплатная альтернатива OpenAI с открытым исходным кодом
+        ko: 무료 오픈 소스 OpenAI 대안

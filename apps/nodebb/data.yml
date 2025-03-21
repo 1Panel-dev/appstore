@@ -17,3 +17,12 @@ additionalProperties:
   website: https://nodebb.org
   github: https://github.com/NodeBB/NodeBB
   document: https://docs.nodebb.org
+  description:
+    en: Node.js based forum software built for the modern web
+    zh: 基于 Node.js 的现代化论坛软件
+    zh-Hant: 基於 Node.js 的現代化論壇軟件
+    ja: モダンな Web のために構築された Node.js ベースのフォーラムソフトウェア
+    ms: Perisian forum berasaskan Node.js yang dibina untuk web moden
+    pt-br: Software de fórum baseado em Node.js construído para a web moderna
+    ru: Программное обеспечение для форумов на основе Node.js, созданное для современной сети
+    ko: 현대 웹을 위해 구축된 Node.js 기반 포럼 소프트웨어

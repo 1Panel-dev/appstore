@@ -5,6 +5,15 @@ additionalProperties:
       envKey: PANEL_APP_PORT_HTTP
       labelEn: Port
       labelZh: 端口
+      label:
+        en: Port
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh: 端口
+        zh-Hant: 埠
       required: true
       rule: paramPort
       type: number
@@ -13,6 +22,15 @@ additionalProperties:
       envKey: TIME_ZONE
       labelEn: Time Zone
       labelZh: 时区
+      label:
+        en: Time Zone
+        ja: タイムゾーン
+        ms: Zon Masa
+        pt-br: Fuso Horário
+        ru: Часовой пояс
+        ko: 시간대
+        zh: 时区
+        zh-Hant: 時區
       required: true
       type: text
     - default: admin
@@ -20,6 +38,15 @@ additionalProperties:
       envKey: GOTIFY_DEFAULTUSER_NAME
       labelEn: Default User Name
       labelZh: 默认用户名
+      label:
+        en: Default User Name
+        ja: デフォルトユーザー名
+        ms: Nama Pengguna Lalai
+        pt-br: Nome de Usuário Padrão
+        ru: Имя пользователя по умолчанию
+        ko: 기본 사용자 이름
+        zh: 默认用户名
+        zh-Hant: 默認用戶名
       required: true
       type: text
     - default: "password"
@@ -27,6 +54,15 @@ additionalProperties:
       envKey: GOTIFY_DEFAULTUSER_PASS
       labelEn: Default User Password
       labelZh: 默认用户密码
+      label:
+        en: Default User Password
+        ja: デフォルトユーザーパスワード
+        ms: Kata Laluan Pengguna Lalai
+        pt-br: Senha do Usuário Padrão
+        ru: Пароль пользователя по умолчанию
+        ko: 기본 사용자 비밀번호
+        zh: 默认用户密码
+        zh-Hant: 默認用戶密碼
       required: false
       random: true
       rule: paramComplexity
@@ -36,6 +72,15 @@ additionalProperties:
       envKey: GOTIFY_REGISTRATION
       labelEn: Enable Registration
       labelZh: 允许注册
+      label:
+        en: Enable Registration
+        ja: 登録を有効にする
+        ms: Aktifkan Pendaftaran
+        pt-br: Ativar Registro
+        ru: Включить регистрацию
+        ko: 등록 활성화
+        zh: 允许注册
+        zh-Hant: 允許註冊
       required: true
       type: select
       values:
@@ -48,6 +93,15 @@ additionalProperties:
       envKey: GOTIFY_PASSSTRENGTH
       labelEn: Minimum Password Strength
       labelZh: 最低密码强度
+      label:
+        en: Minimum Password Strength
+        ja: 最低パスワード強度
+        ms: Kekuatan Kata Laluan Minimum
+        pt-br: Força Mínima da Senha
+        ru: Минимальная сложность пароля
+        ko: 최소 비밀번호 강도
+        zh: 最低密码强度
+        zh-Hant: 最低密碼強度
       required: true
       type: number
     - default: "80"
@@ -55,6 +109,15 @@ additionalProperties:
       envKey: GOTIFY_SERVER_PORT
       labelEn: Internal Container Ports
       labelZh: 容器内部端口
+      label:
+        en: Internal Container Ports
+        ja: 内部コンテナポート
+        ms: Port Dalaman Kontena
+        pt-br: Portas Internas do Contêiner
+        ru: Внутренние порты контейнера
+        ko: 내부 컨테이너 포트
+        zh: 容器内部端口
+        zh-Hant: 容器內部埠
       required: true
       rule: paramPort
       type: number

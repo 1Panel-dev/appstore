@@ -17,3 +17,12 @@ additionalProperties:
   website: https://www.bytebase.com
   github: https://github.com/bytebase/bytebase
   document: https://www.bytebase.com/docs
+  description:
+    en: Open-Source Database DevOps Solution
+    zh: 开源数据库 DevOps 解决方案
+    zh-Hant: 開源數據庫 DevOps 解決方案
+    ja: オープンソースのデータベース DevOps ソリューション
+    ms: Penyelesaian DevOps Pangkalan Data Sumber Terbuka
+    pt-br: Solução DevOps de Banco de Dados de Código Aberto
+    ru: Решение DevOps для баз данных с открытым исходным кодом
+    ko: 오픈 소스 데이터베이스 DevOps 솔루션

@@ -17,3 +17,12 @@ additionalProperties:
     website: https://hub.docker.com/_/registry
     github: https://github.com/distribution/distribution
     document: https://docs.docker.com/registry/
+    description:
+        en: A storage and distribution system for named Docker images
+        zh: Docker 镜像存储库
+        zh-Hant: Docker 映像存儲庫
+        ja: 名前付き Docker イメージのためのストレージおよび配布システム
+        ms: Sistem penyimpanan dan pengedaran untuk imej Docker bernama
+        pt-br: Um sistema de armazenamento e distribuição para imagens Docker nomeadas
+        ru: Система хранения и распространения именованных образов Docker
+        ko: 명명된 Docker 이미지를 위한 저장 및 배포 시스템

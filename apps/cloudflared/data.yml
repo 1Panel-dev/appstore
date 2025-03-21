@@ -16,3 +16,12 @@ additionalProperties:
   website: https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/
   github: https://github.com/cloudflare/cloudflared
   document: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/
+  description:
+    en: Cloudflare Tunnel client
+    zh: Cloudflare Tunnel 客户端
+    zh-Hant: Cloudflare Tunnel 客戶端
+    ja: Cloudflare トンネルクライアント
+    ms: Klien Cloudflare Tunnel
+    pt-br: Cliente do Cloudflare Tunnel
+    ru: Клиент Cloudflare Tunnel
+    ko: Cloudflare 터널 클라이언트

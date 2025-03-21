@@ -9,6 +9,15 @@ additionalProperties:
           envKey: PANEL_DB_TYPE
           labelEn: Database Service
           labelZh: 数据库服务
+          label:
+            en: Database Service
+            ja: データベースサービス
+            ms: Perkhidmatan Pangkalan Data
+            pt-br: Serviço de Banco de Dados
+            ru: Сервис базы данных
+            ko: 데이터베이스 서비스
+            zh: 数据库服务
+            zh-Hant: 數據庫服務
           required: true
           type: apps
           values:
@@ -18,6 +27,15 @@ additionalProperties:
           envKey: PANEL_DB_NAME
           labelEn: Database
           labelZh: 数据库名
+          label:
+            en: Database
+            ja: データベース
+            ms: Pangkalan Data
+            pt-br: Banco de Dados
+            ru: База данных
+            ko: 데이터베이스
+            zh: 数据库名
+            zh-Hant: 數據庫名
           random: true
           required: true
           rule: paramCommon
@@ -26,6 +44,15 @@ additionalProperties:
           envKey: PANEL_DB_USER
           labelEn: User
           labelZh: 数据库用户
+          label:
+            en: User
+            ja: ユーザー
+            ms: Pengguna
+            pt-br: Usuário
+            ru: Пользователь
+            ko: 사용자
+            zh: 数据库用户
+            zh-Hant: 數據庫用戶
           random: true
           required: true
           rule: paramCommon
@@ -34,6 +61,15 @@ additionalProperties:
           envKey: PANEL_DB_USER_PASSWORD
           labelEn: Password
           labelZh: 数据库用户密码
+          label:
+            en: Password
+            ja: パスワード
+            ms: Kata Laluan
+            pt-br: Senha
+            ru: Пароль
+            ko: 비밀번호
+            zh: 数据库用户密码
+            zh-Hant: 數據庫用戶密碼
           random: true
           required: true
           rule: paramComplexity
@@ -42,6 +78,15 @@ additionalProperties:
           envKey: PANEL_DB_PREFIX
           labelEn: Database prefix
           labelZh: 数据库前缀
+          label:
+            en: Database prefix
+            ja: データベースプレフィックス
+            ms: Pangkalan Data awalan
+            pt-br: Prefixo do Banco de Dados
+            ru: Префикс базы данных
+            ko: 데이터베이스 접두사
+            zh: 数据库前缀
+            zh-Hant: 數據庫前綴
           required: true
           type: text
         - default: 40037
@@ -49,6 +94,15 @@ additionalProperties:
           envKey: PANEL_APP_PORT_HTTP
           labelEn: Port
           labelZh: 端口
+          label:
+            en: Port
+            ja: ポート
+            ms: Port
+            pt-br: Porta
+            ru: Порт
+            ko: 포트
+            zh: 端口
+            zh-Hant: 埠
           required: true
           rule: paramPort
           type: number
@@ -56,6 +110,15 @@ additionalProperties:
           envKey: USERNAME
           labelEn: User
           labelZh: 用户
+          label:
+            en: User
+            ja: ユーザー
+            ms: Pengguna
+            pt-br: Usuário
+            ru: Пользователь
+            ko: 사용자
+            zh: 用户
+            zh-Hant: 用戶
           random: true
           required: true
           rule: paramCommon
@@ -64,6 +127,15 @@ additionalProperties:
           envKey: PASSWORD
           labelEn: Password
           labelZh: 用户密码
+          label:
+            en: Password
+            ja: パスワード
+            ms: Kata Laluan
+            pt-br: Senha
+            ru: Пароль
+            ko: 비밀번호
+            zh: 用户密码
+            zh-Hant: 用戶密碼
           random: true
           required: true
           rule: paramComplexity
@@ -73,5 +145,14 @@ additionalProperties:
           envKey: YOURLS_EXTERNAL_URL
           labelEn: External URL
           labelZh: 外部访问地址
+          label:
+            en: External URL
+            ja: 外部URL
+            ms: URL Luaran
+            pt-br: URL externo
+            ru: Внешний URL
+            ko: 외부 URL
+            zh: 外部访问地址
+            zh-Hant: 外部訪問地址
           required: true
           type: text

@@ -4,6 +4,15 @@ additionalProperties:
       envKey: PANEL_APP_PORT_HTTP
       labelEn: Port
       labelZh: 端口
+      label:
+        en: Port
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh: 端口
+        zh-Hant: 埠
       required: true
       rule: paramPort
       type: number
@@ -12,6 +21,15 @@ additionalProperties:
       envKey: DOCKER_INFLUXDB_INIT_USERNAME
       labelEn: User
       labelZh: 用户
+      label:
+        en: User
+        ja: ユーザー
+        ms: Pengguna
+        pt-br: Usuário
+        ru: Пользователь
+        ko: 사용자
+        zh: 用户
+        zh-Hant: 用戶
       random: true
       required: true
       rule: paramCommon
@@ -21,6 +39,15 @@ additionalProperties:
       envKey: DOCKER_INFLUXDB_INIT_PASSWORD
       labelEn: Password
       labelZh: 密码
+      label:
+        en: Password
+        ja: パスワード
+        ms: Kata laluan
+        pt-br: Senha
+        ru: Пароль
+        ko: 비밀번호
+        zh: 密码
+        zh-Hant: 密碼
       random: true
       required: true
       rule: paramComplexity
@@ -30,6 +57,15 @@ additionalProperties:
       envKey: DOCKER_INFLUXDB_INIT_ORG
       labelEn: Init Organization
       labelZh: 初始化组织
+      label:
+        en: Init Organization
+        ja: 初期化組織
+        ms: Organisasi Awal
+        pt-br: Organização Inicial
+        ru: Инициализация организации
+        ko: 초기화 조직
+        zh: 初始化组织
+        zh-Hant: 初始化組織
       random: true
       required: true
       rule: paramCommon
@@ -39,6 +75,15 @@ additionalProperties:
       envKey: DOCKER_INFLUXDB_INIT_BUCKET
       labelEn: Init Bucket
       labelZh: 初始化存储桶
+      label:
+        en: Init Bucket
+        ja: 初期化バケット
+        ms: Bucket Awal
+        pt-br: Bucket Inicial
+        ru: Инициализация бакета
+        ko: 초기화 버킷
+        zh: 初始化存储桶
+        zh-Hant: 初始化存儲桶
       random: true
       required: true
       rule: paramCommon

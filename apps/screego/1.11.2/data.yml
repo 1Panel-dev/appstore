@@ -5,6 +5,15 @@ additionalProperties:
       envKey: PANEL_APP_PORT_HTTP
       labelEn: External access port
       labelZh: 外部访问端口
+      label:
+        en: External access port
+        ja: 外部アクセスポート
+        ms: Port Akses Luar
+        pt-br: Porta de Acesso Externo
+        ru: Порт внешнего доступа
+        ko: 외부 액세스 포트
+        zh: 外部访问端口
+        zh-Hant: 外部訪問埠
       required: true
       rule: paramPort
       type: number
@@ -13,6 +22,15 @@ additionalProperties:
       envKey: PANEL_APP_PORT_TURN
       labelEn: TURN Port
       labelZh: TURN 端口
+      label:
+        en: TURN Port
+        ja: TURN ポート
+        ms: Port TURN
+        pt-br: Porta TURN
+        ru: Порт TURN
+        ko: TURN 포트
+        zh: TURN 端口
+        zh-Hant: TURN 埠
       required: true
       rule: paramPort
       type: number
@@ -21,6 +39,15 @@ additionalProperties:
       envKey: SCREEGO_EXTERNAL_IP
       labelEn: EXTERNAL IP
       labelZh: 外部 IP 
+      label:
+        en: EXTERNAL IP
+        ja: 外部 IP
+        ms: IP Luaran
+        pt-br: IP Externo
+        ru: Внешний IP
+        ko: 외부 IP
+        zh: 外部 IP
+        zh-Hant: 外部 IP
       required: true
       rule: paramCommon
       type: text
@@ -29,6 +56,15 @@ additionalProperties:
       envKey: SCREEGO_TURN_PORT_RANGE
       labelEn: Turn Port Range
       labelZh: TURN 端口范围
+      label:
+        en: Turn Port Range
+        ja: TURN ポート範囲
+        ms: Julat Port TURN
+        pt-br: Intervalo de Portas TURN
+        ru: Диапазон портов TURN
+        ko: TURN 포트 범위
+        zh: TURN 端口范围
+        zh-Hant: TURN 埠範圍
       required: true
       rule: paramCommon
       type: text

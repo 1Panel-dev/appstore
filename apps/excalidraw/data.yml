@@ -16,3 +16,12 @@ additionalProperties:
     website: https://excalidraw.com/
     github: https://github.com/excalidraw/excalidraw
     document: https://docs.excalidraw.com/docs
+    description:
+        en: Virtual whiteboard for sketching hand-drawn like diagrams
+        zh: 用于绘制手绘风格图表的虚拟白板
+        zh-Hant: 用於繪製手繪風格圖表的虛擬白板
+        ja: 手描き風の図をスケッチするための仮想ホワイトボード
+        ms: Papan putih maya untuk melakar diagram seperti lukisan tangan
+        pt-br: Quadro branco virtual para esboçar diagramas com aparência de desenho à mão
+        ru: Виртуальная доска для рисования диаграмм в стиле ручной работы
+        ko: 손으로 그린 것 같은 다이어그램을 스케치하기 위한 가상 화이트보드

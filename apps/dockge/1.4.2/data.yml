@@ -5,6 +5,15 @@ additionalProperties:
       envKey: PANEL_APP_PORT_HTTP
       labelEn: Port
       labelZh: 端口
+      label:
+        en: Port
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh: 端口
+        zh-Hant: 埠
       required: true
       rule: paramPort
       type: number
@@ -13,5 +22,14 @@ additionalProperties:
       envKey: DOCKGE_STACKS_DIR
       labelEn: Stacks Directory
       labelZh: 栈目录
+      label:
+        en: Stacks Directory
+        ja: スタックディレクトリ
+        ms: Direktori Stacks
+        pt-br: Diretório de Pilhas
+        ru: Каталог стеков
+        ko: 스택 디렉토리
+        zh: 栈目录
+        zh-Hant: 棧目錄
       required: true
       type: text

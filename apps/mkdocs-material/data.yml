@@ -17,3 +17,12 @@ additionalProperties:
   website: https://squidfunk.github.io/mkdocs-material/
   github: https://github.com/squidfunk/mkdocs-material
   document: https://squidfunk.github.io/mkdocs-material/getting-started/
+  description:
+    en: A powerful documentation framework on top of MkDocs
+    zh: 基于 MkDocs 的强大文档框架
+    zh-Hant: 基於 MkDocs 的強大文檔框架
+    ja: MkDocs 上に構築された強力なドキュメントフレームワーク
+    ms: Rangka kerja dokumentasi yang kuat di atas MkDocs
+    pt-br: Um poderoso framework de documentação baseado no MkDocs
+    ru: Мощный фреймворк для документации на основе MkDocs
+    ko: MkDocs 위에 구축된 강력한 문서화 프레임워크

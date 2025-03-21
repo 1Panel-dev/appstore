@@ -16,3 +16,12 @@ additionalProperties:
   document: https://github.com/glanceapp/glance
   github: https://github.com/glanceapp/glance
   website: https://github.com/glanceapp/glance
+  description:
+    en: A self-hosted dashboard that puts all your feeds in one place
+    zh: 一个将所有源集中在一个地方的自托管仪表板
+    zh-Hant: 一個將所有源集中在一個地方的自託管儀表板
+    ja: すべてのフィードを一箇所にまとめる自己ホスト型ダッシュボード
+    ms: Papan pemuka yang dihoskan sendiri yang meletakkan semua suapan anda di satu tempat
+    pt-br: Um painel auto-hospedado que coloca todos os seus feeds em um só lugar
+    ru: Самостоятельно размещаемая панель управления, которая собирает все ваши каналы в одном месте
+    ko: 모든 피드를 한 곳에 모아주는 자체 호스팅 대시보드

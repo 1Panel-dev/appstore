@@ -17,3 +17,12 @@ additionalProperties:
     website: https://onedev.io
     github: https://github.com/theonedev/onedev
     document: https://docs.onedev.io
+    description:
+        en: Git Server with CI/CD, Kanban, and Packages
+        zh: 带有 CI/CD、Kanban 和 Packages 的 Git 服务器
+        zh-Hant: 帶有 CI/CD、Kanban 和 Packages 的 Git 伺服器
+        ja: CI/CD、カンバン、およびパッケージを備えた Git サーバー
+        ms: Pelayan Git dengan CI/CD, Kanban, dan Pakej
+        pt-br: Servidor Git com CI/CD, Kanban e Pacotes
+        ru: Сервер Git с CI/CD, Kanban и пакетами
+        ko: CI/CD, Kanban 및 패키지가 포함된 Git 서버

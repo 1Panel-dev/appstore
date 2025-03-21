@@ -17,3 +17,12 @@ additionalProperties:
   website: https://screego.net/
   github: https://github.com/screego/server
   document: https://screego.net/
+  description:
+    en: Open source screen sharing tools
+    zh: 开源屏幕共享工具
+    zh-Hant: 開源屏幕共享工具
+    ja: オープンソースの画面共有ツール
+    ms: Alat perkongsian skrin sumber terbuka
+    pt-br: Ferramentas de compartilhamento de tela de código aberto
+    ru: Инструменты для совместного использования экрана с открытым исходным кодом
+    ko: 오픈 소스 화면 공유 도구
