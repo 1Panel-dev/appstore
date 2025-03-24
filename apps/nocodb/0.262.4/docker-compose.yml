@@ -1,6 +1,6 @@
 services:
   nocodb:
-    image: nocodb/nocodb:0.262.3
+    image: nocodb/nocodb:0.262.4
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
