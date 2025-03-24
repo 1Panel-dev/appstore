@@ -1,6 +1,6 @@
 services:
   gitea:
-    image: commitgo/gitea-ee:23.5.0
+    image: commitgo/gitea-ee:23.5.1
     container_name: ${CONTAINER_NAME}
     environment:
       - USER_UID=1000
