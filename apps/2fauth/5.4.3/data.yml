@@ -28,7 +28,7 @@ additionalProperties:
         ru: Порт
         ko: 포트
         zh: 端口
-        zh-Hant: 端口
+        zh-Hant: 埠
       required: true
       rule: paramPort
       type: number

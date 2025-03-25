@@ -15,7 +15,7 @@ additionalProperties:
         ru: Порт
         ko: 포트
         zh: 端口
-        zh-Hant: 端口
+        zh-Hant: 埠
     - default: mysql
       envKey: PANEL_DB_TYPE
       labelEn: DBType

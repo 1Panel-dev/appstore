@@ -31,7 +31,7 @@ additionalProperties:
         ru: Порт
         ko: 포트
         zh: 端口
-        zh-Hant: 端口
+        zh-Hant: 埠
     - default: ""
       edit: true
       envKey: AFFINE_ADMIN_EMAIL
@@ -96,7 +96,7 @@ additionalProperties:
         ru: База данных
         ko: 데이터베이스
         zh: 数据库名
-        zh-Hant: 数据库名
+        zh-Hant: 資料庫名稱
     - default: affine
       envKey: PANEL_DB_USER
       labelEn: User
@@ -113,7 +113,7 @@ additionalProperties:
         ru: Пользователь
         ko: 사용자
         zh: 数据库用户
-        zh-Hant: 数据库用户
+        zh-Hant: 資料庫使用者
     - default: affine
       envKey: PANEL_DB_USER_PASSWORD
       labelEn: Password
@@ -130,7 +130,7 @@ additionalProperties:
         ru: Пароль
         ko: 비밀번호
         zh: 数据库用户密码
-        zh-Hant: 数据库用户密码
+        zh-Hant: 資料庫使用者密碼
     - default: ""
       envKey: PANEL_REDIS_HOST
       key: redis
