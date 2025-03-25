@@ -4,6 +4,15 @@ additionalProperties:
           envKey: PANEL_APP_PORT_TCP
           labelEn: Port
           labelZh: TCP 端口
+          label:
+            en: Port
+            ja: ポート
+            ms: Port
+            pt-br: Porta
+            ru: Порт
+            ko: 포트
+            zh: TCP 端口
+            zh-Hant: TCP 連接埠
           required: true
           rule: paramPort
           type: number
@@ -12,6 +21,15 @@ additionalProperties:
           envKey: PANEL_APP_PORT_HTTP
           labelEn: Port
           labelZh: API 端口
+          label:
+            en: Port
+            ja: ポート
+            ms: Port
+            pt-br: Porta
+            ru: Порт
+            ko: 포트
+            zh: API 端口
+            zh-Hant: API 連接埠
           required: true
           rule: paramPort
           type: number

@@ -17,3 +17,12 @@ additionalProperties:
   website: https://nodered.org/
   github: https://github.com/node-red/node-red
   document: https://nodered.org/docs/
+  description:
+    en: Low-code programming for event-driven applications
+    zh: 用于事件驱动应用的低代码编程
+    zh-Hant: 用於事件驅動應用的低代碼編程
+    ja: イベント駆動型アプリケーションのためのローコードプログラミング
+    ms: Pengaturcaraan kod rendah untuk aplikasi yang didorong oleh acara
+    pt-br: Programação de baixo código para aplicativos orientados a eventos
+    ru: Программирование с низким уровнем кода для приложений, управляемых событиями
+    ko: 이벤트 기반 애플리케이션을 위한 로우코드 프로그래밍

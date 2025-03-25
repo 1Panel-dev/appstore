@@ -17,3 +17,12 @@ additionalProperties:
     website: https://www.discourse.org
     github: https://github.com/discourse/discourse
     document: https://hub.docker.com/r/bitnami/discourse
+    description:
+        en: A platform for community discussion. Free, open, simple.
+        zh: 社区讨论的平台。免费、开放、简单。
+        zh-Hant: 社區討論的平台。免費、開放、簡單。
+        ja: コミュニティディスカッションのためのプラットフォーム。無料、オープン、シンプル。
+        ms: Platform untuk perbincangan komuniti. Percuma, terbuka, mudah.
+        pt-br: Uma plataforma para discussão comunitária. Gratuito, aberto, simples.
+        ru: Платформа для обсуждения в сообществе. Бесплатно, открыто, просто.
+        ko: 커뮤니티 토론을 위한 플랫폼. 무료, 오픈, 간단.

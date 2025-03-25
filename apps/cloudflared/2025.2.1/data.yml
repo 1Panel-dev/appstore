@@ -2,8 +2,17 @@ additionalProperties:
   formFields:
     - default: ""
       envKey: token
-      labelEn: token  
-      labelZh: 令牌  
-      random: false  
+      labelEn: token
+      labelZh: 令牌
+      label:
+        en: token
+        ja: トークン
+        ms: token
+        pt-br: token
+        ru: токен
+        ko: 토큰
+        zh: 令牌
+        zh-Hant: 權杖
+      random: false
       required: true
       type: password

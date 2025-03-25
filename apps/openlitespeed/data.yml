@@ -17,3 +17,12 @@ additionalProperties:
     website: https://openlitespeed.org
     github: https://github.com/litespeedtech/openlitespeed
     document: https://openlitespeed.org/#install
+    description:
+        en: A high-performance, lightweight, open source HTTP server
+        zh: 高性能、轻量级、开源的 HTTP 服务器
+        zh-Hant: 高性能、輕量級、開源的 HTTP 伺服器
+        ja: 高性能で軽量、オープンソースの HTTP サーバー
+        ms: Pelayan HTTP sumber terbuka yang berprestasi tinggi dan ringan
+        pt-br: Um servidor HTTP de alto desempenho, leve e de código aberto
+        ru: Высокопроизводительный, легковесный, открытый HTTP-сервер
+        ko: 고성능, 경량, 오픈 소스 HTTP 서버

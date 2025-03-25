@@ -17,3 +17,12 @@ additionalProperties:
     website: https://www.rabbitmq.com/
     github: https://github.com/rabbitmq/rabbitmq-server
     document: https://www.rabbitmq.com/documentation.html
+    description:
+        en: A feature rich, multi-protocol messaging and streaming broker
+        zh: 功能丰富的多协议消息传递和流媒体代理
+        zh-Hant: 功能豐富的多協議消息傳遞和流媒體代理
+        ja: 機能豊富なマルチプロトコルメッセージングおよびストリーミングブローカー
+        ms: Broker pemesejan dan penstriman berbilang protokol yang kaya dengan ciri
+        pt-br: Um broker de mensagens e streaming com vários protocolos e rico em recursos
+        ru: Многофункциональный брокер сообщений и потоков с поддержкой нескольких протоколов
+        ko: 기능이 풍부한 다중 프로토콜 메시징 및 스트리밍 브로커

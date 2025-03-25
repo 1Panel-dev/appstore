@@ -17,3 +17,12 @@ additionalProperties:
     website: https://filebrowser.org/
     github: https://github.com/filebrowser/filebrowser
     document: https://filebrowser.org/
+    description:
+        en: Web File Browser
+        zh: 网页文件浏览器
+        zh-Hant: 網頁文件瀏覽器
+        ja: ウェブファイルブラウザ
+        ms: Penyemak Imbas Fail Web
+        pt-br: Navegador de Arquivos Web
+        ru: Веб-браузер файлов
+        ko: 웹 파일 브라우저

@@ -5,6 +5,15 @@ additionalProperties:
           envKey: PANEL_APP_PORT_HTTP
           labelEn: Port
           labelZh: 端口
+          label:
+            en: Port
+            ja: ポート
+            ms: Port
+            pt-br: Porta
+            ru: Порт
+            ko: 포트
+            zh: 端口
+            zh-Hant: 埠
           required: true
           rule: paramPort
           type: number
@@ -13,6 +22,15 @@ additionalProperties:
           envKey: PANEL_APP_PORT_SSH
           labelEn: SSH Port
           labelZh: SSH 端口
+          label:
+            en: SSH Port
+            ja: SSH ポート
+            ms: Port SSH
+            pt-br: Porta SSH
+            ru: Порт SSH
+            ko: SSH 포트
+            zh: SSH 端口
+            zh-Hant: SSH 埠
           required: true
           rule: paramPort
           type: number

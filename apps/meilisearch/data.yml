@@ -16,3 +16,12 @@ additionalProperties:
   website: https://www.meilisearch.com
   github: https://github.com/meilisearch/meilisearch
   document: https://www.meilisearch.com/docs
+  description:
+    en: An open-source, lightning-fast, and hyper-relevant search engine that fits effortlessly into your workflow
+    zh: 开源、快如闪电且高度相关的搜索引擎，轻松融入您的工作流程
+    zh-Hant: 開源、快如閃電且高度相關的搜索引擎，輕鬆融入您的工作流程
+    ja: オープンソースで、稲妻のように速く、高度に関連性のある検索エンジンで、ワークフローに簡単に適合します
+    ms: Enjin carian sumber terbuka, sepantas kilat, dan sangat relevan yang sesuai dengan aliran kerja anda
+    pt-br: Um mecanismo de busca de código aberto, incrivelmente rápido e altamente relevante que se encaixa perfeitamente no seu fluxo de trabalho
+    ru: Открытая, молниеносная и высокорелевантная поисковая система, которая легко вписывается в ваш рабочий процесс
+    ko: 오픈 소스, 번개처럼 빠르고 매우 관련성 높은 검색 엔진으로 워크플로우에 쉽게 통합됩니다.

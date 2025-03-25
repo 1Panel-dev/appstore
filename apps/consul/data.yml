@@ -17,3 +17,12 @@ additionalProperties:
     website: https://www.consul.io
     github: https://github.com/hashicorp/consul
     document: https://learn.hashicorp.com/consul
+    description:
+        en: Distributed, highly available, and data center aware solution
+        zh: 分布式、高可用且具有数据中心感知能力的解决方案
+        zh-Hant: 分佈式、高可用且具有數據中心感知能力的解決方案
+        ja: 分散型で高可用性、データセンター対応のソリューション
+        ms: Penyelesaian terdistribusi, sangat tersedia, dan menyedari pusat data
+        pt-br: Solução distribuída, altamente disponível e ciente de data centers
+        ru: Распределенное, высокодоступное решение с учетом центров обработки данных
+        ko: 분산형, 고가용성 및 데이터 센터 인식 솔루션

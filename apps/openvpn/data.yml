@@ -19,3 +19,12 @@ additionalProperties:
   website: https://openvpn.net/
   github: https://github.com/OpenVPN/openvpn
   document: https://openvpn.net/access-server-manual/introduction/
+  description:
+    en: Open source VPN daemon
+    zh: 开源 VPN 守护进程
+    zh-Hant: 開源 VPN 守護進程
+    ja: オープンソースの VPN デーモン
+    ms: Daemon VPN sumber terbuka
+    pt-br: Daemon VPN de código aberto
+    ru: Открытый демон VPN
+    ko: 오픈 소스 VPN 데몬

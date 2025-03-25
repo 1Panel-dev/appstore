@@ -9,6 +9,15 @@ additionalProperties:
       envKey: PANEL_DB_TYPE
       labelEn: Database Service
       labelZh: 数据库服务
+      label:
+        en: Database Service
+        ja: データベースサービス
+        ms: Perkhidmatan Pangkalan Data
+        pt-br: Serviço de Banco de Dados
+        ru: Сервис базы данных
+        ko: 데이터베이스 서비스
+        zh: 数据库服务
+        zh-Hant: 數據庫 服務
       required: true
       type: apps
       values:
@@ -20,6 +29,15 @@ additionalProperties:
       envKey: PANEL_DB_NAME
       labelEn: Database
       labelZh: 数据库名
+      label:
+        en: Database
+        ja: データベース
+        ms: Pangkalan Data
+        pt-br: Banco de Dados
+        ru: База данных
+        ko: 데이터베이스
+        zh: 数据库名
+        zh-Hant: 數據庫名
       random: true
       required: true
       rule: paramCommon
@@ -28,6 +46,15 @@ additionalProperties:
       envKey: PANEL_DB_USER
       labelEn: User
       labelZh: 数据库用户
+      label:
+        en: User
+        ja: ユーザー
+        ms: Pengguna
+        pt-br: Usuário
+        ru: Пользователь
+        ko: 사용자
+        zh: 数据库用户
+        zh-Hant: 數據庫用戶
       random: true
       required: true
       rule: paramCommon
@@ -36,6 +63,15 @@ additionalProperties:
       envKey: PANEL_DB_USER_PASSWORD
       labelEn: Password
       labelZh: 数据库用户密码
+      label:
+        en: Password
+        ja: パスワード
+        ms: Kata Laluan
+        pt-br: Senha
+        ru: Пароль
+        ko: 비밀번호
+        zh: 数据库用户密码
+        zh-Hant: 數據庫用戶密碼
       random: true
       required: true
       rule: paramComplexity
@@ -44,6 +80,15 @@ additionalProperties:
       envKey: PANEL_APP_PORT_HTTP
       labelEn: Port
       labelZh: HTTP 端口
+      label:
+        en: Port
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh: HTTP 端口
+        zh-Hant: HTTP連接埠
       required: true
       rule: paramPort
       type: number
@@ -52,6 +97,15 @@ additionalProperties:
       envKey: HASH_SALT
       labelEn: Hash Salt
       labelZh: 哈希盐 (随机字符串)
+      label:
+        en: Hash Salt
+        ja: ハッシュソルト（ランダム文字列）
+        ms: Garam Hash (Rentetan Rawak)
+        pt-br: Sal de Hash (String Aleatória)
+        ru: Хэш-соль (случайная строка)
+        ko: 해시 솔트(무작위 문자열)
+        zh: 哈希盐 (随机字符串)
+        zh-Hant: 哈希鹽（隨機字符串）
       random: true
       required: true
       type: text

@@ -4,6 +4,15 @@ additionalProperties:
       envKey: APP_NAME
       labelEn: APP NAME
       labelZh: 应用名称
+      label:
+        en: APP NAME
+        ja: アプリ名
+        ms: NAMA APLIKASI
+        pt-br: NOME DO APLICATIVO
+        ru: НАЗВАНИЕ ПРИЛОЖЕНИЯ
+        ko: 앱 이름
+        zh: 应用名称
+        zh-Hant: 應用名稱
       required: true
       type: text
     - default: 8000
@@ -11,6 +20,15 @@ additionalProperties:
       envKey: PANEL_APP_PORT_HTTP
       labelEn: Port
       labelZh: 端口
+      label:
+        en: Port
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh: 端口
+        zh-Hant: 埠
       required: true
       rule: paramPort
       type: number
@@ -19,6 +37,15 @@ additionalProperties:
       envKey: APP_URL
       labelEn: APP URL
       labelZh: 外部地址（可以添加为反向代理网站，并启用 HTTPS）
+      label:
+        en: APP URL
+        ja: アプリURL
+        ms: URL APLIKASI
+        pt-br: URL DO APLICATIVO
+        ru: URL ПРИЛОЖЕНИЯ
+        ko: 앱 URL
+        zh: 外部地址（可以添加为反向代理网站，并启用 HTTPS）
+        zh-Hant: 外部地址（可以添加為反向代理網站，並啟用 HTTPS）
       required: true
       rule: paramExtUrl
       type: text
@@ -26,5 +53,14 @@ additionalProperties:
       envKey: APP_KEY
       labelEn: APP KEY
       labelZh: 加密键
+      label:
+        en: APP KEY
+        ja: アプリキー
+        ms: KUNCI APLIKASI
+        pt-br: CHAVE DO APLICATIVO
+        ru: КЛЮЧ ПРИЛОЖЕНИЯ
+        ko: 앱 키
+        zh: 加密键
+        zh-Hant: 加密鍵
       required: true
       type: text

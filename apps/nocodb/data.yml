@@ -17,3 +17,12 @@ additionalProperties:
   website: https://nocodb.com/
   github: https://github.com/nocodb/nocodb/
   document: https://docs.nocodb.com/
+  description:
+    en: Code-free database platform
+    zh: 无代码数据库平台
+    zh-Hant: 無代碼數據庫平台
+    ja: コード不要のデータベースプラットフォーム
+    ms: Platform pangkalan data tanpa kod
+    pt-br: Plataforma de banco de dados sem código
+    ru: Платформа базы данных без кода
+    ko: 코드 없는 데이터베이스 플랫폼

@@ -5,6 +5,15 @@ additionalProperties:
           envKey: ENV1
           labelEn: Environmental parameters (split by ;)
           labelZh: 环境参数(以;分割)
+          label:
+            en: Environmental parameters (split by ;)
+            ja: 環境パラメータ(分割)
+            ms: Parameter persekitaran (pisahkan dengan ;)
+            pt-br: Parâmetros ambientais (divididos por ;)
+            ru: Параметры среды (разделенные ;)
+            ko: 환경 매개변수(구분 기호로 나누기)
+            zh: 环境参数(以;分割)
+            zh-Hant: 環境參數(以;分割)
           required: true
           type: text
         - default: --interval 3600 --cleanup
@@ -12,5 +21,14 @@ additionalProperties:
           envKey: COMMAND1
           labelEn: Command parameters (separated by spaces)
           labelZh: 命令参数(以空格分割)
+          label:
+            en: Command parameters (separated by spaces)
+            ja: コマンドパラメータ(分割)
+            ms: Parameter perintah (pisahkan dengan ruang)
+            pt-br: Parâmetros de comando (separados por espaços)
+            ru: Параметры команды (разделенные пробелами)
+            ko: 명령 매개변수(공백으로 구분)
+            zh: 命令参数(以空格分割)
+            zh-Hant: 命令參數(以空格分割)
           required: true
           type: text

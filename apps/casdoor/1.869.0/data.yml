@@ -7,6 +7,15 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
+      label:
+        en: Port
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh: 端口
+        zh-Hant: 埠
     - default: mysql
       envKey: PANEL_DB_TYPE
       labelEn: DBType
@@ -18,6 +27,15 @@ additionalProperties:
           value: mysql
         - label: MariaDB
           value: mariadb
+      label:
+        en: DBType
+        ja: データベースの種類
+        ms: Jenis DB
+        pt-br: Tipo de BD
+        ru: Тип БД
+        ko: DB 유형
+        zh: 数据库类型
+        zh-Hant: 資料庫類型
     - default: mysql
       envKey: PANEL_DB_HOST
       labelEn: DBHost
@@ -25,6 +43,15 @@ additionalProperties:
       required: true
       rule: paramCommon
       type: text
+      label:
+        en: DBHost
+        ja: データベースのホスト
+        ms: Hos DB
+        pt-br: Host de BD
+        ru: Хост БД
+        ko: DB 호스트
+        zh: 数据库地址
+        zh-Hant: 資料庫地址
     - default: 3306
       envKey: PANEL_DB_PORT
       labelEn: DBPort
@@ -32,6 +59,15 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
+      label:
+        en: DBPort
+        ja: データベースのポート
+        ms: Port DB
+        pt-br: Porta de BD
+        ru: Порт БД
+        ko: DB 포트
+        zh: 数据库端口
+        zh-Hant: 資料庫端口
     - default: casdoor
       envKey: PANEL_DB_NAME
       labelEn: DBName
@@ -40,6 +76,15 @@ additionalProperties:
       required: true
       rule: paramCommon
       type: text
+      label:
+        en: DBName
+        ja: データベース名
+        ms: Nama DB
+        pt-br: Nome de BD
+        ru: Имя БД
+        ko: DB 이름
+        zh: 数据库名
+        zh-Hant: 資料庫名
     - default: root
       envKey: PANEL_DB_USER
       labelEn: DBUser
@@ -48,6 +93,15 @@ additionalProperties:
       required: true
       rule: paramCommon
       type: text
+      label:
+        en: DBUser
+        ja: データベースユーザー
+        ms: Pengguna DB
+        pt-br: Usuário de BD
+        ru: Пользователь БД
+        ko: DB 사용자
+        zh: 数据库用户
+        zh-Hant: 資料庫使用者
     - default: 123456
       envKey: PANEL_DB_USER_PASSWORD
       labelEn: DBPassword
@@ -56,3 +110,12 @@ additionalProperties:
       required: true
       rule: paramComplexity
       type: password
+      label:
+        en: DBPassword
+        ja: データベースのパスワード
+        ms: Kata Laluan DB
+        pt-br: Senha de BD
+        ru: Пароль БД
+        ko: DB 비밀번호
+        zh: 数据库用户密码
+        zh-Hant: 資料庫使用者密碼

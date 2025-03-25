@@ -18,3 +18,12 @@ additionalProperties:
     website: https://web-check.xyz/
     github: https://github.com/lissy93/web-check
     document: https://github.com/lissy93/web-check
+    description:
+        en: All-in-one OSINT tool for analysing any website
+        zh: 用于分析任何网站的多合一 OSINT 工具
+        zh-Hant: 用於分析任何網站的多合一 OSINT 工具
+        ja: 任意のウェブサイトを分析するためのオールインワン OSINT ツール
+        ms: Alat OSINT serba guna untuk menganalisis mana-mana laman web
+        pt-br: Ferramenta OSINT tudo-em-um para analisar qualquer site
+        ru: Универсальный инструмент OSINT для анализа любого веб-сайта
+        ko: 모든 웹사이트를 분석하기 위한 올인원 OSINT 도구

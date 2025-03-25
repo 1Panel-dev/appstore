@@ -17,3 +17,12 @@ additionalProperties:
     website: https://www.elastic.co
     github: https://github.com/elastic/elasticsearch
     document: https://www.elastic.co/guide/en/elasticsearch/reference/8.11/elasticsearch-intro.html
+    description:
+        en: Free and Open, Distributed, RESTful Search Engine
+        zh: 免费开放、分布式、RESTful 搜索引擎
+        zh-Hant: 免費開放、分佈式、RESTful 搜索引擎
+        ja: 無料でオープン、分散型、RESTful 検索エンジン
+        ms: Enjin Carian RESTful, Terbuka dan Percuma, Teragih
+        pt-br: Motor de busca RESTful, distribuído, gratuito e aberto
+        ru: Бесплатный и открытый, распределенный, RESTful поисковый движок
+        ko: 무료 오픈, 분산형, RESTful 검색 엔진

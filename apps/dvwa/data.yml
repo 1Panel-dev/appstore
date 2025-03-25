@@ -17,3 +17,12 @@ additionalProperties:
     website: https://github.com/digininja/DVWA
     github: https://github.com/digininja/DVWA
     document: https://github.com/digininja/DVWA
+    description:
+        en: DVWA (Damn Vulnerable Web Application)
+        zh: 一个用来进行安全脆弱性鉴定的 PHP/MySQL Web 应用平台。
+        zh-Hant: 一個用來進行安全脆弱性鑑定的 PHP/MySQL Web 應用平台。
+        ja: セキュリティ脆弱性評価のための PHP/MySQL Web アプリケーションプラットフォーム。
+        ms: Platform aplikasi web PHP/MySQL untuk penilaian kerentanan keselamatan.
+        pt-br: Uma plataforma de aplicação web PHP/MySQL para avaliação de vulnerabilidades de segurança.
+        ru: Платформа веб-приложений PHP/MySQL для оценки уязвимостей безопасности.
+        ko: 보안 취약성 평가를 위한 PHP/MySQL 웹 애플리케이션 플랫폼.

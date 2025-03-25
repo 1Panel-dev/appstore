@@ -17,3 +17,12 @@ additionalProperties:
     website: http://joeferner.github.io/redis-commander/
     github: https://github.com/joeferner/redis-commander
     document: https://github.com/joeferner/redis-commander/blob/master/docs/configuration.md
+    description:
+        en: Redis web management tool
+        zh: Redis Web 管理工具
+        zh-Hant: Redis Web 管理工具
+        ja: Redis Web 管理ツール
+        ms: Alat pengurusan web Redis
+        pt-br: Ferramenta de gerenciamento web do Redis
+        ru: Веб-инструмент управления Redis
+        ko: Redis 웹 관리 도구

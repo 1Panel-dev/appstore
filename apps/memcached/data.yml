@@ -16,3 +16,12 @@ additionalProperties:
     website: https://memcached.org/
     github: https://github.com/memcached/memcached
     document: https://github.com/memcached/memcached/wiki
+    description:
+        en: A distributed caching system
+        zh: 分布式高速缓存系统
+        zh-Hant: 分佈式高速緩存系統
+        ja: 分散型キャッシングシステム
+        ms: Sistem caching teragih
+        pt-br: Um sistema de cache distribuído
+        ru: Распределённая система кэширования
+        ko: 분산 캐싱 시스템

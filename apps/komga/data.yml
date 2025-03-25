@@ -17,3 +17,12 @@ additionalProperties:
   website: https://komga.org/
   github: https://github.com/gotson/komga
   document: https://komga.org/docs/introduction
+  description:
+    en: Komga is a media server for your comics, mangas, BDs and magazines.
+    zh: Komga 是一个用于漫画、杂志等的媒体服务器。
+    zh-Hant: Komga 是一個用於漫畫、雜誌等的媒體伺服器。
+    ja: Komga は、コミック、マンガ、BD、雑誌のためのメディアサーバーです。
+    ms: Komga ialah pelayan media untuk komik, manga, BD dan majalah anda.
+    pt-br: Komga é um servidor de mídia para seus quadrinhos, mangás, BDs e revistas.
+    ru: Komga — это медиа-сервер для ваших комиксов, манги, BD и журналов.
+    ko: Komga는 만화, 잡지 등을 위한 미디어 서버입니다.
