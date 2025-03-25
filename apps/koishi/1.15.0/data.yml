@@ -39,7 +39,6 @@ additionalProperties:  #固定参数
           labelZh: 数据库用户密码
           random: true
           required: true
-          rule: paramComplexity
           type: password
         - default: 5140
           edit: true

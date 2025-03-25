@@ -143,7 +143,6 @@ additionalProperties:
       labelZh: 数据库密码
       random: true
       required: true
-      rule: paramComplexity
       type: password
       label:
         en: Database Password
@@ -177,7 +176,6 @@ additionalProperties:
       labelEn: Redis service Password
       labelZh: Redis 服务密码
       required: true
-      rule: paramCommon
       type: password
       label:
         en: Redis service password

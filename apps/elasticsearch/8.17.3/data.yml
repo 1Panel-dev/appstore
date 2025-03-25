@@ -54,7 +54,6 @@ additionalProperties:
             zh-Hant: 密碼
           random: true
           required: true
-          rule: paramComplexity
           type: password
         - default: "ES_JAVA_OPTS=-Xlog:disable -Xlog:gc=debug:stderr -Xms512m -Xmx512m"
           edit: true

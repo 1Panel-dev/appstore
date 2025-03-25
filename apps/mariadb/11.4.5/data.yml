@@ -6,7 +6,6 @@ additionalProperties:
       labelZh: root用户密码
       random: true
       required: true
-      rule: paramComplexity
       type: password
       label:
         en: Root Password

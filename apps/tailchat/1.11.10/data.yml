@@ -52,7 +52,6 @@ additionalProperties:
           labelEn: Database User Password
           labelZh: 数据库密码
           required: true
-          rule: paramCommon
           type: password
         - default: ""
           edit: true

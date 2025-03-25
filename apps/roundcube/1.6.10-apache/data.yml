@@ -65,7 +65,6 @@ additionalProperties:
         zh: 数据库密码
       random: true
       required: true
-      rule: paramComplexity
       type: password
     - default: imap.sina.com
       edit: true

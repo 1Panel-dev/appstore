@@ -114,7 +114,6 @@ additionalProperties:
             zh-Hant: 登錄密碼
           random: true
           required: true
-          rule: paramComplexity
           type: text
         - default: 8089
           edit: true

@@ -72,7 +72,6 @@ additionalProperties:
             zh-Hant: 數據庫用戶密碼
           random: true
           required: true
-          rule: paramComplexity
           type: password
         - default: 9000
           edit: true

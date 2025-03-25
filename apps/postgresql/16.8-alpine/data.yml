@@ -32,7 +32,6 @@ additionalProperties:
         zh: 密码
       random: true
       required: true
-      rule: paramComplexity
       type: password
     - default: 5432
       envKey: PANEL_APP_PORT_HTTP

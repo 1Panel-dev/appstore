@@ -15,7 +15,6 @@ additionalProperties:
         zh: 数据库密码
       random: true
       required: false
-      rule: paramComplexity
       type: password
     - default: 6379
       envKey: PANEL_APP_PORT_HTTP

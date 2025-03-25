@@ -146,7 +146,6 @@ additionalProperties:
         zh-Hant: 數據庫用戶密碼
       random: true
       required: true
-      rule: paramComplexity
       type: password
     - default: ""
       envKey: PANEL_REDIS_HOST
