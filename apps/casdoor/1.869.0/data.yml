@@ -67,7 +67,7 @@ additionalProperties:
         ru: Порт БД
         ko: DB 포트
         zh: 数据库端口
-        zh-Hant: 資料庫端口
+        zh-Hant: 資料庫埠
     - default: casdoor
       envKey: PANEL_DB_NAME
       labelEn: DBName

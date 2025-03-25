@@ -15,7 +15,7 @@ additionalProperties:
         ru: Веб-порт
         ko: 웹 포트
         zh: HTTP 端口
-        zh-Hant: HTTP 端口
+        zh-Hant: HTTP 埠
     - default: 5555
       envKey: PANEL_APP_PORT_HTTP_5555
       labelEn: Port
