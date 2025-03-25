@@ -22,7 +22,7 @@ services:
       - 1panel-network
     ports:
       - "${PANEL_APP_PORT_HTTP}:9092"
-    image: bitnami/kafka:3.9.0
+    image: bitnami/kafka:4.0.0
     labels:
       createdBy: "Apps"
 networks:  
