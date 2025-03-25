@@ -1,17 +1,16 @@
 services:
-  changedetection:
+  bililive-go:
+    image: chigusa/bililive-go:v0.7.34
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
       - 1panel-network
     ports:
-      - "${PANEL_APP_PORT_HTTP}:5000"
+      - ${PANEL_APP_PORT_HTTP}:8080
     volumes:
-      - "./data:/datastore"
-    image: dgtlmoon/changedetection.io:0.49.4
+      - ./data:/srv/bililive
     labels:  
       createdBy: "Apps"
-
 networks:  
   1panel-network:  
     external: true
