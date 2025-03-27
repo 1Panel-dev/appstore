@@ -1,7 +1,7 @@
 services:
   easyimage:
     container_name: ${CONTAINER_NAME}
-    image: ddsderek/easyimage:v2.8.5
+    image: ddsderek/easyimage:v2.8.6
     restart: always
     networks:
       - 1panel-network
