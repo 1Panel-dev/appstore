@@ -1,0 +1,33 @@
+additionalProperties:
+    formFields:
+        - default: 8090
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: WebUI Port
+          labelZh: 网页端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: http://<URL_ADDRESS>:<Port>
+          edit: true
+          envKey: PANEL_HTTP_PROXY
+          labelEn: HTTP_PROXY
+          labelZh: HTTP_PROXY
+          required: false
+          rule: paramExtUrl
+          type: text
+        - default: http://<URL_ADDRESS>:<Port>
+          edit: true
+          envKey: PANEL_HTTPS_PROXY
+          labelEn: HTTPS_PROXY
+          labelZh: HTTPS_PROXY
+          required: false
+          rule: paramExtUrl
+          type: text
+        - default: 172.18.0.0/16,127.0.0.1,localhost
+          edit: true
+          envKey: PANEL_NO_PROXY
+          labelEn: NO_PROXY
+          labelZh: NO_PROXY
+          required: false
+          type: text
