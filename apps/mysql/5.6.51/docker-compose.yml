@@ -14,10 +14,10 @@ services:
       - ./conf/my.cnf:/etc/mysql/my.cnf
       - ./log:/var/log/mysql
     command:
-      --character-set-server=utf8mb4
-      --collation-server=utf8mb4_general_ci
-      --explicit_defaults_for_timestamp=true
-      --lower_case_table_names=1
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_general_ci
+      - --explicit_defaults_for_timestamp=true
+      - --lower_case_table_names=1
     labels:
       createdBy: "Apps"
 networks:
