@@ -1,6 +1,6 @@
 services:
   mailserver:
-    image: ghcr.io/docker-mailserver/docker-mailserver:15.0.1
+    image: ghcr.io/docker-mailserver/docker-mailserver:15.0.2
     container_name: ${CONTAINER_NAME}
     hostname: ${MS_HOSTNAME}
     env_file: ./conf/mailserver.env
