@@ -1,3 +1,9 @@
+name: Certimate
+tags:
+    - Tool
+    - CI/CD
+title: Certimate
+description: 一个安全、简便的 SSL 证书管理解决方案
 additionalProperties:
   crossVersionUpdate: true
   document: https://docs.certimate.me
