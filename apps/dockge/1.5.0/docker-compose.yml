@@ -1,6 +1,6 @@
 services:
   dockge:
-    image: louislam/dockge:1.4.2
+    image: louislam/dockge:1.5.0
     container_name: ${CONTAINER_NAME}
     restart: unless-stopped
     ports:
