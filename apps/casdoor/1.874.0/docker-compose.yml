@@ -9,7 +9,7 @@ services:
       - ${PANEL_APP_PORT_HTTP}:8000
     environment:
       RUNNING_IN_DOCKER: "true"
-      driverName: ${PANEL_DB_TYPE}
+      driverName: "mysql"
       dataSourceName: ${PANEL_DB_USER}:${PANEL_DB_USER_PASSWORD}@tcp(${PANEL_DB_HOST}:${PANEL_DB_PORT})/
       dbName: ${PANEL_DB_NAME}
     volumes:
