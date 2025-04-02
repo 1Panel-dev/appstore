@@ -1,7 +1,7 @@
 services:
   twikoo:
     container_name: ${CONTAINER_NAME}
-    image: imaegoo/twikoo:1.6.41
+    image: imaegoo/twikoo:1.6.42
     restart: always
     ports:
       - ${PANEL_APP_PORT_HTTP}:8080
