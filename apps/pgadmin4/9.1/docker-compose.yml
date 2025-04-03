@@ -1,6 +1,6 @@
 services:
   pgadmin4:
-    image: dpage/pgadmin4:9.1
+    image: dpage/pgadmin4:9.2
     container_name: ${CONTAINER_NAME}
     restart: always
     labels:
