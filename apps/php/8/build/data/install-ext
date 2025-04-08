@@ -1,6 +1,7 @@
 #!/bin/bash
 
 export MC="-j$(nproc)"
+ERROR_CODE=0
 
 echo
 echo "============================================"
@@ -40,6 +41,8 @@ install_php_extensions() {
      fi
     
      echo "------ install-php-extensions $extension failed ------"
+     ERROR_CODE=1
+     return 1
 }
 
 pecl_install() {
@@ -48,9 +51,11 @@ pecl_install() {
     docker-php-ext-enable $extension
     if is_extension_installed "$extension"; then
        echo "------ pecl install $extension succeeded ------"
-       return
+       return 0
     fi
     echo "------ pecl install $extension failed ------"
+    ERROR_CODE=1
+    return 1
 }
 
 docker_php_ext_install() {
@@ -62,9 +67,11 @@ docker_php_ext_install() {
    docker-php-ext-install  $extension
    if is_extension_installed "$check_name"; then
       echo "------ docker-php-ext-install install $extension succeeded ------"
-      return
+      return 0
    fi
    echo "------ docker-php-ext-install install $extension failed------"
+    ERROR_CODE=1
+    return 1
 }
 
 install_extension_default() {
@@ -85,35 +92,11 @@ install_extension_default() {
            echo "------ install-php-extensions $extension succeeded ------"
          else
            echo "------ install-php-extensions $extension failed ------"
+           ERROR_CODE=1
          fi
        fi
     fi
 }
-
-
-
-#install_gd() {
-#    isPhpVersionGreaterOrEqual 8 0
-#    if [ "$?" = "1" ]; then
-#        # "--with-xxx-dir" was removed from php 7.4,
-#        # issue: https://github.com/docker-library/php/issues/912
-#        options="--with-freetype --with-jpeg --with-webp"
-#    else
-#        options="--with-gd --with-freetype-dir=/usr/include/ --with-png-dir=/usr/include/ --with-jpeg-dir=/usr/include/ --with-webp-dir=/usr/include/"
-#    fi
-#    apt-get install -y  \
-#        libfreetype6 \
-#        libfreetype6-dev \
-#        libpng-dev \
-#        libwebp-dev \
-#        libjpeg-dev \
-#    && docker-php-ext-configure gd ${options} \
-#    && docker-php-ext-install ${MC} gd \
-#    && apt-get purge -y \
-#        libfreetype6-dev \
-#        libpng-dev \
-#    && apt-get autoremove -y
-#}
 
 
 install_msg() {
@@ -121,6 +104,7 @@ install_msg() {
         echo "------ install $1 succeeded ------"
     else
         echo "------ install $1 failed ------"
+        ERROR_CODE=1
     fi
 }
 
@@ -301,6 +285,11 @@ if [[ $extension == *,* ]]; then
     done
 else
     install_extension $extension
+    if [ $ERROR_CODE -ne 0 ]; then
+        exit $ERROR_CODE
+    fi
 fi
 
-docker-php-source delete 
+docker-php-source delete
+
+exit 0
