@@ -1,0 +1,28 @@
+name: Ghost
+tags:
+  - 建站
+title: 最佳开源博客和电子报平台
+description: 最佳开源博客和电子报平台。
+additionalProperties:
+  key: ghost
+  name: Ghost
+  tags:
+    - Website
+  shortDescZh: 最佳开源博客和电子报平台。
+  shortDescEn: The best open source blog & newsletter platform.
+  description:
+    en: The best open source blog & newsletter platform.
+    ja: 最高のオープンソースブログ＆ニュースレタープラットフォーム。
+    ms: Platform blog & surat berita sumber terbuka terbaik.
+    pt-br: A melhor plataforma de blog e boletins informativos de código aberto.
+    ru: Лучшая платформа для блогов и рассылок с открытым исходным кодом.
+    ko: 최고의 오픈 소스 블로그 및 뉴스레터 플랫폼입니다.
+    zh-hant: 最佳開源博客與電子報平台。
+    zh: 最佳开源博客和电子报平台。
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 25
+  website: https://ghost.org/
+  github: https://github.com/TryGhost/Ghost
+  document: https://ghost.org/docs/

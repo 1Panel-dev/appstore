@@ -1,0 +1,92 @@
+additionalProperties:
+  formFields:
+    - child:
+        default: ""
+        envKey: PANEL_DB_HOST
+        required: true
+        type: service
+      default: mysql
+      envKey: PANEL_DB_TYPE
+      label:
+        en: Database Service
+        ja: データベースサービス
+        ms: Perkhidmatan Pangkalan Data
+        pt-br: Serviço de Banco de Dados
+        ru: Сервис баз данных
+        ko: 데이터베이스 서비스
+        zh-hant: 資料庫服務
+        zh: 数据库服务
+      required: true
+      type: apps
+      values:
+        - label: MySQL
+          value: mysql
+    - default: ghost
+      envKey: PANEL_DB_NAME
+      label:
+        en: Database
+        ja: データベース
+        ms: Pangkalan Data
+        pt-br: Banco de Dados
+        ru: База данных
+        ko: 데이터베이스
+        zh-hant: 資料庫
+        zh: 数据库
+      required: true
+      random: true
+      type: text
+    - default: ghost
+      envKey: PANEL_DB_USER
+      label:
+        en: Database User
+        ja: データベースユーザー
+        ms: Pengguna Pangkalan Data
+        pt-br: Usuário do Banco de Dados
+        ru: Пользователь базы данных
+        ko: 데이터베이스 사용자
+        zh-hant: 資料庫用戶
+        zh: 数据库用户
+      required: true
+      random: true
+      type: text
+    - default: ghost
+      envKey: PANEL_DB_USER_PASSWORD
+      label:
+        en: Database Password
+        ja: データベースのパスワード
+        ms: Kata Laluan Pangkalan Data
+        pt-br: Senha do Banco de Dados
+        ru: Пароль базы данных
+        ko: 데이터베이스 비밀번호
+        zh-hant: 資料庫密碼
+        zh: 数据库密码
+      required: true
+      type: password
+      random: true
+    - default: 2368
+      envKey: PANEL_APP_PORT_HTTP
+      label:
+        en: Port
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh-hant: 埠
+        zh: 端口
+      required: true
+      type: number
+      rule: paramPort
+    - default: https://blog.domain.com
+      envKey: GHOST_URL
+      label:
+        en: Site URL
+        ja: サイトURL
+        ms: URL Laman
+        pt-br: URL do Site
+        ru: URL сайта
+        ko: 사이트 URL
+        zh-hant: 網站網址
+        zh: 网站地址
+      required: true
+      type: text
