@@ -1,17 +1,11 @@
 # Ghost
 
-**Ghost** is the best open source platform for creating professional blogs and managing email newsletters. Perfect for independent writers, publishers, and businesses who want to build a strong digital presence with a modern writing experience and high performance.
+**Ghost** 是一个用于创建专业博客和管理电子邮件新闻通讯的最佳开源平台。非常适合希望通过现代写作体验和高性能建立强大数字存在感的独立写作者、出版商和企业。
 
-## 🌟 Key Features
+## 🌟 主要特性
 
-- ✍️ Clean and intuitive content editor (Markdown + Rich Text)
-- 📬 Built-in email newsletter support
-- 🧩 Integrations with various third-party services
-- ⚡ High performance and SEO-friendly
-- 🔐 Built-in membership and monetization system
-
-## 🌐 Official Website
-
-- Official Site: [https://ghost.org](https://ghost.org)
-- Documentation: [https://ghost.org/docs](https://ghost.org/docs)
-- GitHub Repository: [https://github.com/TryGhost/Ghost](https://github.com/TryGhost/Ghost)
+- ✍️ 简洁直观的内容编辑器（支持 Markdown 和富文本）
+- 📬 内置电子邮件新闻通讯支持
+- 🧩 可与多种第三方服务集成
+- ⚡ 高性能且对 SEO 友好
+- 🔐 内置会员系统与变现功能
