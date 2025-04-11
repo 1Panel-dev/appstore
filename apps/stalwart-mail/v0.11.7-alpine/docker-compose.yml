@@ -1,0 +1,30 @@
+services:
+  stalwart-mail:
+    image: stalwartlabs/mail-server:v0.11.7-alpine
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - "${PORT_HTTPS}:443"
+      - "${PORT_ADMIN}:8080"
+      - "${PORT_SMTP}:25"
+      - "${PORT_SMTP_SUBMISSION}:587"
+      - "${PORT_SMTP_SSL}:465"
+      - "${PORT_IMAP}:143"
+      - "${PORT_IMAP_SSL}:993"
+      - "${PORT_POP3}:110"
+      - "${PORT_POP3_SSL}:995"
+      - "${PORT_MANAGESIEVE}:4190"
+    volumes:
+      - stalwart_data:/opt/stalwart-mail
+    labels:
+      createdBy: "Apps"
+
+networks:
+  1panel-network:
+    external: true
+
+volumes:
+  stalwart_data:
+    external: true
