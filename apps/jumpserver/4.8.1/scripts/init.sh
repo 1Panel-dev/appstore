@@ -19,6 +19,10 @@ if [ -f "$ENV_FILE" ]; then
   else
     echo DB_ENGINE="$ENGINE" >> "$ENV_FILE"
   fi
+
+  if [ "$(grep '^WITH_NGINX=' "$ENV_FILE" | cut -d '=' -f 2 | tr -d '"')" == "false" ]; then
+    sed -i.bak 's/${HOST_IP}:${PANEL_APP_PORT_HTTP}:80/127.0.0.1:${PANEL_APP_PORT_HTTP}:51980/g' "docker-compose.yml"
+  fi
 else
     echo ".env file not found!"
     exit 1
