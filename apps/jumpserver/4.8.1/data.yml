@@ -188,6 +188,27 @@ additionalProperties:
         ko: Redis 서비스 비밀번호
         zh-Hant: Redis 服務密碼
         zh: Redis 服务密码
+    - default: 'true'
+      edit: true
+      envKey: WITH_NGINX
+      labelEn: Use the built-in nginx service
+      labelZh: 使用内置的 Nginx 服务
+      label:
+        en: Use the built-in nginx service
+        ja: 組み込みの Nginx サービスを使用してください
+        ms: Gunakan perkhidmatan Nginx terbina dalam
+        pt-br: Use o serviço Nginx incorporado
+        ru: Используйте встроенный сервис Nginx
+        ko: 내장된 Nginx 서비스를 사용하세요
+        zh-hant: 使用內建的 Nginx 服務
+        zh: 使用内置的 Nginx 服务
+      required: true
+      type: select
+      values:
+        - label: "Yes, I want to use the built-in Nginx service."
+          value: "true"
+        - label: "No, I will set up the Nginx reverse proxy myself."
+          value: "false"
     - default: 8080
       edit: true
       envKey: PANEL_APP_PORT_HTTP
