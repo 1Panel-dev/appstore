@@ -1,6 +1,6 @@
 services:
   screego:
-    image: ghcr.io/screego/server:1.11.2
+    image: ghcr.io/screego/server:1.11.3
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
