@@ -17,14 +17,10 @@ services:
       - "${PORT_POP3_SSL}:995"
       - "${PORT_MANAGESIEVE}:4190"
     volumes:
-      - stalwart_data:/opt/stalwart-mail
+      - ./data:/opt/stalwart-mail
     labels:
       createdBy: "Apps"
 
 networks:
   1panel-network:
-    external: true
-
-volumes:
-  stalwart_data:
     external: true
