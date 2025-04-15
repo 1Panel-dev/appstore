@@ -1,6 +1,6 @@
 services:
   rabbitmq:
-    image: rabbitmq:4.0.8-management-alpine
+    image: rabbitmq:4.0.9-management-alpine
     hostname: rabbitmq
     container_name: ${CONTAINER_NAME}
     restart: always
