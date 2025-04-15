@@ -1,7 +1,7 @@
 additionalProperties:
   formFields:
     - default: 443
-      envKey: PORT_HTTPS
+      envKey: PANEL_APP_PORT_HTTPS
       label:
         en: HTTPS Port
         ja: HTTPSポート
@@ -14,16 +14,16 @@ additionalProperties:
       required: true
       type: number
     - default: 8080
-      envKey: PORT_ADMIN
+      envKey: PANEL_APP_PORT_HTTP
       label:
-        en: Admin Web Interface Port
-        ja: 管理者用ウェブインターフェースのポート
-        ms: Port Antaramuka Web Pentadbir
-        pt-br: Porta da Interface Web de Administração
-        ru: Порт веб-интерфейса администратора
-        ko: 관리자 웹 인터페이스 포트
-        zh-hant: 管理介面連接埠
-        zh: 管理界面端口
+        en: HTTP Port
+        ja: HTTPポート
+        ms: Port HTTP
+        pt-br: Porta HTTP
+        ru: Порт HTTP
+        ko: HTTP 포트
+        zh-hant: HTTP 連接埠
+        zh: HTTP端口
       required: true
       type: number
     - default: 25
