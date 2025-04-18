@@ -27,3 +27,4 @@ additionalProperties:
     github: https://github.com/vllm-project/vllm
     document: https://docs.vllm.ai/en/latest/
     gpuSupport: true
+    memoryRequired: 4096

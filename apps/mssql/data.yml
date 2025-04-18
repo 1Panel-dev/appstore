@@ -26,5 +26,6 @@ additionalProperties:
         pt-br: Repositório oficial da Microsoft para SQL Server em recursos Docker
         ru: Официальный репозиторий Microsoft для SQL Server в ресурсах Docker
         ko: Docker 리소스에서 SQL Server를 위한 Microsoft 공식 저장소
+    memoryRequired: 1024
     architectures:
       - amd64

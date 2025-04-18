@@ -26,6 +26,7 @@ additionalProperties:
     pt-br: O principal banco de dados de grafos do mundo
     ru: Ведущая в мире графовая база данных
     ko: 세계 최고의 그래프 데이터베이스
+  memoryRequired: 2048 
   architectures:
     - amd64
     - arm64/v8

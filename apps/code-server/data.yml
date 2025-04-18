@@ -26,6 +26,7 @@ additionalProperties:
     website: https://coder.com/
     github: https://github.com/coder/code-server
     document: https://coder.com/docs/code-server/latest
+    memoryRequired: 1024
     architectures:
       - amd64
       - arm64
