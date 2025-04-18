@@ -26,6 +26,7 @@ additionalProperties:
         pt-br: Motor de busca RESTful, distribuído, gratuito e aberto
         ru: Бесплатный и открытый, распределенный, RESTful поисковый движок
         ko: 무료 오픈, 분산형, RESTful 검색 엔진
+    memoryRequired: 1024    
     architectures:
       - amd64
       - arm64/v8

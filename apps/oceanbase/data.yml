@@ -17,6 +17,7 @@ additionalProperties:
   website: https://open.oceanbase.com/
   github: https://github.com/oceanbase/oceanbase
   document: https://www.oceanbase.com/docs
+  memoryRequired: 4096
   architectures:
     - amd64
     - arm64

@@ -26,6 +26,7 @@ additionalProperties:
     website: https://www.home-assistant.io/
     github: https://github.com/home-assistant/core
     document: https://www.home-assistant.io/docs/
+    memoryRequired: 1024
     architectures:
       - arm64/v8
       - amd64

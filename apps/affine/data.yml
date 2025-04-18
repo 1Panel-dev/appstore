@@ -30,3 +30,4 @@ additionalProperties:
     pt-br: Um espaço de trabalho com documentos, quadros brancos e bancos de dados totalmente integrados
     ru: Рабочее пространство с полностью объединенными документами, досками и базами данных
     ko: 문서, 화이트보드 및 데이터베이스가 완전히 통합된 작업 공간
+  memoryRequired: 1024

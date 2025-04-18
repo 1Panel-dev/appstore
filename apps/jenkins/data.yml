@@ -26,6 +26,7 @@ additionalProperties:
     website: https://www.jenkins.io/
     github: https://github.com/jenkinsci/jenkins
     document: https://www.jenkins.io/doc/book/
+    memoryRequired: 1024
     architectures:
       - amd64
       - arm64

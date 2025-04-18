@@ -17,6 +17,7 @@ additionalProperties:
   website: https://github.com/Yidadaa/ChatGPT-Next-Web
   github: https://github.com/Yidadaa/ChatGPT-Next-Web
   document: https://github.com/Yidadaa/ChatGPT-Next-Web
+  memoryRequired: 1024
   architectures:
     - amd64
     - arm64

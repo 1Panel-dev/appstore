@@ -26,5 +26,6 @@ additionalProperties:
         pt-br: Um repositório de código aberto para artefatos de build
         ru: Открытый репозиторий для артефактов сборки
         ko: 빌드 아티팩트를 위한 오픈 소스 저장소
+    memoryRequired: 1024
     architectures:
       - amd64

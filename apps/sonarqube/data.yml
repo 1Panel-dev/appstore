@@ -26,6 +26,7 @@ additionalProperties:
         pt-br: Uma plataforma de gerenciamento de qualidade de código de código aberto
         ru: Открытая платформа управления качеством кода
         ko: 오픈 소스 코드 품질 관리 플랫폼
+    memoryRequired: 1024
     architectures:
       - amd64
       - arm64/v8
