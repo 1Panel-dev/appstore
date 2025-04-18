@@ -26,5 +26,6 @@ additionalProperties:
         pt-br: Plataforma de mensagens e streaming nativa da nuvem
         ru: Облачная платформа для обмена сообщениями и потоковой передачи
         ko: 클라우드 네이티브 메시징 및 스트리밍 플랫폼
+    memoryRequired: 2048
     architectures:
       - amd64

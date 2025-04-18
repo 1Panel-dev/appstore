@@ -26,6 +26,7 @@ additionalProperties:
     website: https://nextcloud.com/
     github: https://github.com/nextcloud/server
     document: https://docs.nextcloud.com/
+    memoryRequired: 1024
     architectures:
       - amd64
       - arm64
