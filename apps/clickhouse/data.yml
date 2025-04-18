@@ -25,6 +25,7 @@ additionalProperties:
         pt-br: um DBMS de análise gratuito para big data
         ru: бесплатная аналитическая СУБД для больших данных
         ko: 빅데이터를 위한 무료 분석 DBMS
+    memoryRequired: 2048
     architectures:
       - amd64
       - arm64

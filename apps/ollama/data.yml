@@ -27,6 +27,7 @@ additionalProperties:
     github: https://github.com/ollama/ollama
     document: https://github.com/ollama/ollama/blob/main/docs/README.md
     gpuSupport: true
+    memoryRequired: 2048
     architectures:
       - amd64
       - arm64

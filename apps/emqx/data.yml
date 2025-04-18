@@ -26,6 +26,7 @@ additionalProperties:
         pt-br: O broker MQTT de código aberto mais escalável para IoT, IIoT e veículos conectados
         ru: Самый масштабируемый брокер MQTT с открытым исходным кодом для IoT, IIoT и подключенных транспортных средств
         ko: IoT, IIoT 및 연결된 차량을 위한 가장 확장 가능한 오픈 소스 MQTT 브로커
+    memoryRequired: 1024
     architectures:
       - amd64
       - arm64

@@ -26,6 +26,7 @@ additionalProperties:
     website: https://mariadb.org/
     github: https://github.com/MariaDB/server/
     document: https://mariadb.org/documentation/
+    memoryRequired: 1024
     architectures:
       - amd64
       - arm64/v8
