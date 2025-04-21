@@ -117,8 +117,17 @@ additionalProperties:
         pt-br: Endpoint Logto
         ru: Конечная точка Logto
         ko: Logto 엔드포인트
-        zh: Logto 服务地址（进入网站页面添加反向代理网站，并启用 HTTPS）
-        zh-Hant: Logto 服務地址（進入網站頁面添加反向代理網站，並啟用 HTTPS）
+        zh: Logto 服务地址
+        zh-Hant: Logto 服務地址
+      description:
+        zh: 可以添加为反向代理网站，并启用 HTTPS
+        en: You can add it as a reverse proxy site and enable HTTPS
+        ja: リバースプロキシサイトとして追加し、HTTPSを有効にできます
+        ms: Anda boleh menambahnya sebagai laman proksi songsang dan mengaktifkan HTTPS
+        pt-br: Você pode adicioná-lo como um site de proxy reverso e habilitar o HTTPS
+        ru: Вы можете добавить его в качестве сайта обратного прокси и включить HTTPS
+        ko: 리버스 프록시 사이트로 추가하고 HTTPS를 활성화할 수 있습니다
+        zh-Hant: 可以添加為反向代理網站，並啟用 HTTPS
       required: true
       rule: paramExtUrl
       type: text
@@ -126,7 +135,7 @@ additionalProperties:
       edit: true
       envKey: LOGTO_ADMIN_ENDPOINT_URL
       labelEn: Logto Admin Endpoint
-      labelZh: Logto 管理控制台地址（进入网站页面添加反向代理网站，并启用 HTTPS）
+      labelZh: Logto 管理控制台地址
       label:
         en: Logto Admin Endpoint
         ja: Logto 管理者エンドポイント
@@ -134,8 +143,8 @@ additionalProperties:
         pt-br: Endpoint Admin Logto
         ru: Админ-конечная точка Logto
         ko: Logto 관리자 엔드포인트
-        zh: Logto 管理控制台地址（进入网站页面添加反向代理网站，并启用 HTTPS）
-        zh-Hant: Logto 管理控制台地址（進入網站頁面添加反向代理網站，並啟用 HTTPS）
+        zh: Logto 管理控制台地址
+        zh-Hant: Logto 管理控制台地址
       required: true
       rule: paramExtUrl
       type: text
