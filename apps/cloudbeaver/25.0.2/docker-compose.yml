@@ -1,6 +1,6 @@
 services:
   cloudbeaver:
-    image: dbeaver/cloudbeaver:25.0.2
+    image: dbeaver/cloudbeaver:25.0.3
     container_name: ${CONTAINER_NAME}
     restart: unless-stopped
     networks:
