@@ -36,7 +36,7 @@ additionalProperties:
       edit: true
       envKey: APP_URL
       labelEn: APP URL
-      labelZh: 外部地址（可以添加为反向代理网站，并启用 HTTPS）
+      labelZh: 外部地址
       label:
         en: APP URL
         ja: アプリURL
@@ -44,8 +44,17 @@ additionalProperties:
         pt-br: URL DO APLICATIVO
         ru: URL ПРИЛОЖЕНИЯ
         ko: 앱 URL
-        zh: 外部地址（可以添加为反向代理网站，并启用 HTTPS）
-        zh-Hant: 外部地址（可以添加為反向代理網站，並啟用 HTTPS）
+        zh: 外部地址
+        zh-Hant: 外部地址
+      description:
+        zh: 可以添加为反向代理网站，并启用 HTTPS
+        en: You can add it as a reverse proxy site and enable HTTPS
+        ja: リバースプロキシサイトとして追加し、HTTPSを有効にできます
+        ms: Anda boleh menambahnya sebagai laman proksi songsang dan mengaktifkan HTTPS
+        pt-br: Você pode adicioná-lo como um site de proxy reverso e habilitar o HTTPS
+        ru: Вы можете добавить его в качестве сайта обратного прокси и включить HTTPS
+        ko: 리버스 프록시 사이트로 추가하고 HTTPS를 활성화할 수 있습니다
+        zh-Hant: 可以添加為反向代理網站，並啟用 HTTPS
       required: true
       rule: paramExtUrl
       type: text
