@@ -23,13 +23,22 @@ additionalProperties:
       labelZh: SA 用户密码（至少包含8个字符，且需包含大写字母、小写字母、数字和特殊字符中的三种）
       label:
         en: SA PASSWORD
-        ja: SA パスワード（8文字以上、大文字、小文字、数字、特殊文字のうち3種類を含む必要があります）
-        ms: Kata Laluan SA (Mesti mengandungi sekurang-kurangnya 8 aksara, termasuk huruf besar, huruf kecil, nombor, dan salah satu aksara khas)
-        pt-br: SENHA SA (Deve conter pelo menos 8 caracteres, incluindo letras maiúsculas, minúsculas, números e um caractere especial)
-        ru: Пароль SA (должен содержать не менее 8 символов, включая заглавные и строчные буквы, цифры и один из специальных символов)
-        ko: SA 비밀번호 (8자 이상, 대문자, 소문자, 숫자 및 특수 문자 중 3가지를 포함해야 함)
-        zh: SA 用户密码（至少包含8个字符，且需包含大写字母、小写字母、数字和特殊字符中的三种）
-        zh-Hant: SA 用戶密碼（至少包含8個字符，且需包含大寫字母、小寫字母、數字和特殊字符中的三種）
+        ja: SA パスワード
+        ms: Kata Laluan SA
+        pt-br: SENHA SA
+        ru: Пароль SA
+        ko: SA 비밀번호
+        zh: SA 用户密码
+        zh-Hant: SA 用戶密碼
+      description:
+        zh: 至少包含8个字符，且需包含大写字母、小写字母、数字和特殊字符中的三种
+        en: Must contain at least 8 characters, including three of the following uppercase letters, lowercase letters, numbers, and special characters
+        ja: 8文字以上、大文字、小文字、数字、特殊文字のうち3種類を含む必要があります
+        ms: Mesti mengandungi sekurang-kurangnya 8 aksara, termasuk huruf besar, huruf kecil, nombor, dan salah satu aksara khas
+        pt-br: Deve conter pelo menos 8 caracteres, incluindo letras maiúsculas, minúsculas, números e um caractere especial
+        ru: Должен содержать не менее 8 символов, включая заглавные и строчные буквы, цифры и один из специальных символов
+        ko: 8자 이상, 대문자, 소문자, 숫자 및 특수 문자 중 3가지를 포함해야 함
+        zh-Hant: 至少包含8個字符，且需包含大寫字母、小寫字母、數字和特殊字符中的三種
       random: true
       required: true
       rule: paramCommon
