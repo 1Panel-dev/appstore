@@ -21,7 +21,7 @@ if ! which docker-php-ext-configure >/dev/null || ! which docker-php-ext-enable 
 	exit 1
 fi
 
-IPE_VERSION=2.7.27
+IPE_VERSION=2.7.31
 
 StandWithUkraine() {
 	if test -t 1 && ! grep -Eq '^VERSION=.*jessie' /etc/os-release; then
@@ -273,15 +273,6 @@ EOT
 #   Nothing
 processPHPModuleArgument() {
 	processPHPModuleArgument_arg="$1"
-	case "$processPHPModuleArgument_arg" in
-		imagick)
-			if test $PHP_MAJMIN_VERSION -ge 804; then
-				processPHPModuleArgument_arg=imagick/imagick@65e27f2bc02e7e8f1bf64e26e359e42a1331fca1
-			elif test $PHP_MAJMIN_VERSION -ge 803; then
-				processPHPModuleArgument_arg=imagick/imagick@28f27044e435a2b203e32675e942eb8de620ee58
-			fi
-			;;
-	esac
 	# Convert GitHub short form to long url,
 	# for example: from
 	# php-memcached-dev/php-memcached@8f106564e6bb005ca6100b12ccc89000daafa9d8
@@ -2546,10 +2537,12 @@ actuallyInstallComposer() {
 # Install ionCube Loader
 installIonCubeLoader() {
 	installIonCubeLoader_version=''
-	if test $PHP_MAJMIN_VERSION -lt 804; then
-		# For 14.4.0 we have a Segmentation Fault
-		installIonCubeLoader_version=14.0.0
-	fi
+	case "$DISTRO" in
+		alpine)
+			# For 14.4.0 we have a Segmentation Fault
+			installIonCubeLoader_version=14.0.0
+			;;
+	esac
 	installIonCubeLoader_versionForUrl=''
 	installIonCubeLoader_versionForMessage=latest
 	if test -n "$installIonCubeLoader_version"; then
@@ -3252,9 +3245,9 @@ installRemoteModule() {
 		geos)
 			if test -z "$installRemoteModule_path"; then
 				if test -z "$installRemoteModule_version"; then
-					installRemoteModule_version=0def35611f773c951432f1f06a155471a5cb7611
+					installRemoteModule_version=dfe1ab17b0f155cc315bc13c75689371676e02e1
 				fi
-				installRemoteModule_src="$(getPackageSource https://git.osgeo.org/gitea/geos/php-geos/archive/$installRemoteModule_version.tar.gz)"
+				installRemoteModule_src="$(getPackageSource https://github.com/libgeos/php-geos/archive/$installRemoteModule_version.tar.gz)"
 				cd "$installRemoteModule_src"
 				./autogen.sh
 				./configure
@@ -3336,6 +3329,13 @@ installRemoteModule() {
 			addConfigureOption with-kerberos yes
 			# Include SSL Support
 			addConfigureOption with-imap-ssl yes
+			;;
+		imagick)
+			if test -z "$installRemoteModule_version"; then
+				if test $PHP_MAJMIN_VERSION -lt 506; then
+					installRemoteModule_version=3.7.0
+				fi
+			fi
 			;;
 		inotify)
 			if test -z "$installRemoteModule_version"; then
@@ -4409,6 +4409,8 @@ installRemoteModule() {
 			if test -z "$installRemoteModule_version"; then
 				if test $PHP_MAJMIN_VERSION -le 703; then
 					installRemoteModule_version=2.2.3
+				elif test $PHP_MAJMIN_VERSION -le 704; then
+					installRemoteModule_version=3.0.5
 				fi
 			fi
 			case "$DISTRO" in

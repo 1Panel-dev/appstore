@@ -134,10 +134,6 @@ if [[ -z "${EXTENSIONS##*,oci8,*}" ]]; then
 	 install-php-extensions oci8
 fi
 
-if [[ -z "${EXTENSIONS##*,redis,*}" ]]; then
-   echo "---------- Install redis ----------"
-	 install-php-extensions redis
-fi
 # end
 
 
@@ -400,7 +396,7 @@ fi
 if [[ -z "${EXTENSIONS##*,imagick,*}" ]]; then
     echo "---------- Install imagick ----------"
     apk add --no-cache file-dev
-    apk add --no-cache imagemagick imagemagick-dev
+    apk add --no-cache imagemagick imagemagick-dev imagemagick-pdf
 #    cd imagick-3.7.0 && phpize && ./configure
 #    make 
 #    make install 
@@ -566,6 +562,11 @@ if [[ -z "${EXTENSIONS##*,amqp,*}" ]]; then
     && docker-php-ext-enable amqp \
     && apk del .phpize-deps-configure
 
+fi
+
+if [[ -z "${EXTENSIONS##*,redis,*}" ]]; then
+    echo "---------- Install redis ----------"
+    installExtensionFromTgz redis-6.0.2
 fi
 
 if [[ -z "${EXTENSIONS##*,apcu,*}" ]]; then

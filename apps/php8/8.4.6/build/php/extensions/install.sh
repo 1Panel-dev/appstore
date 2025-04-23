@@ -134,6 +134,15 @@ if [[ -z "${EXTENSIONS##*,oci8,*}" ]]; then
 	 install-php-extensions oci8
 fi
 
+if [[ -z "${EXTENSIONS##*,redis,*}" ]]; then
+   echo "---------- Install redis ----------"
+	 install-php-extensions redis
+fi
+
+if [[ -z "${EXTENSIONS##*,imagick,*}" ]]; then
+    echo "---------- Install imagick ----------"
+    install-php-extensions imagick
+fi
 # end
 
 
@@ -393,16 +402,6 @@ if [[ -z "${EXTENSIONS##*,psr,*}" ]]; then
     docker-php-ext-enable psr
 fi
 
-if [[ -z "${EXTENSIONS##*,imagick,*}" ]]; then
-    echo "---------- Install imagick ----------"
-    apk add --no-cache file-dev
-    apk add --no-cache imagemagick imagemagick-dev
-#    cd imagick-3.7.0 && phpize && ./configure
-#    make 
-#    make install 
-    installExtensionFromTgz imagick-3.7.0
-fi
-
 if [[ -z "${EXTENSIONS##*,rar,*}" ]]; then
     echo "---------- Install rar ----------"
     printf "\n" | pecl install rar
@@ -562,11 +561,6 @@ if [[ -z "${EXTENSIONS##*,amqp,*}" ]]; then
     && docker-php-ext-enable amqp \
     && apk del .phpize-deps-configure
 
-fi
-
-if [[ -z "${EXTENSIONS##*,redis,*}" ]]; then
-    echo "---------- Install redis ----------"
-    installExtensionFromTgz redis-6.0.2
 fi
 
 if [[ -z "${EXTENSIONS##*,apcu,*}" ]]; then

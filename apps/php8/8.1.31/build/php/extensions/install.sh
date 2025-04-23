@@ -396,7 +396,7 @@ fi
 if [[ -z "${EXTENSIONS##*,imagick,*}" ]]; then
     echo "---------- Install imagick ----------"
     apk add --no-cache file-dev
-    apk add --no-cache imagemagick imagemagick-dev
+    apk add --no-cache imagemagick imagemagick-dev imagemagick-pdf
 #    cd imagick-3.7.0 && phpize && ./configure
 #    make 
 #    make install 
