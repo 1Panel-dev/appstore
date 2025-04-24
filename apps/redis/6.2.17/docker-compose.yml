@@ -1,6 +1,6 @@
 services:
   redis:
-    image: redis:6.2.17
+    image: redis:6.2.18
     restart: always
     container_name: ${CONTAINER_NAME}
     networks:
