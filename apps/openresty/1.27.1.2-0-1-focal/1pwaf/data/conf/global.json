@@ -1,6 +1,6 @@
 {
   "waf": {
-    "state": "on",
+    "state": "off",
     "mode": "protection",
     "secret": ""
   },
@@ -116,7 +116,7 @@
     "ipBlockTime": 3000
   },
   "fileExt": {
-    "state": "on",
+    "state": "off",
     "action": "deny",
     "code": 403,
     "type": "fileExtCheck"
@@ -155,7 +155,7 @@
     "state": "off"
   },
   "vuln": {
-    "state": "on",
+    "state": "off",
     "type": "vulnCheck",
     "code": 403,
     "action": "deny"
@@ -167,7 +167,7 @@
     "external": ["acl","ipWhite","ipBlack","geoRestrict","urlWhite","urlBlack","uaWhite","uaBlack"]
   },
   "strict": {
-    "state": "on",
+    "state": "off",
     "type": "strict",
     "code": 403,
     "action": "deny"
