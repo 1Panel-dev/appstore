@@ -1,0 +1,12 @@
+services:
+  ddns-go:
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    network_mode: host
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:34323"
+    volumes:
+      - ./data:/root
+    image: openiothub/gateway-go:v0.3.20
+    labels:
+      createdBy: "Apps"
