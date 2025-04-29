@@ -1,12 +1,5 @@
 [
   {
-    "name":"brotli",
-    "script":"unzip -o /tmp/ngx_brotli.zip -d /tmp",
-    "packages":[],
-    "params": "--add-module=/tmp/ngx_brotli",
-    "enable":false
-  },
-  {
     "name":"rtmp",
     "script":"unzip -o /tmp/nginx-rtmp-module.zip -d /tmp",
     "packages":[],
