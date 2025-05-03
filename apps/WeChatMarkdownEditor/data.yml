@@ -1,0 +1,18 @@
+name: WeChat Markdown Editor
+tags:
+    - Tool
+title: 微信 Markdown 编辑器
+description: 一款高度简洁的微信 Markdown 编辑器
+additionalProperties:
+  crossVersionUpdate: true
+  document: https://github.com/doocs/md
+  github: https://github.com/doocs/md
+  key: WeChatMarkdownEditor
+  limit: 0
+  name: WeChat Markdown Editor
+  shortDescEn: A highly concise WeChat Markdown editor
+  shortDescZh: 一款高度简洁的微信 Markdown 编辑器
+  tags:
+  - Tool
+  type: tool
+  website: https://md.doocs.org/
