@@ -10,7 +10,7 @@ services:
     volumes:
       - ./clickhouse:/var/lib/clickhouse/
       - ./clickhouse-server:/var/log/clickhouse-server/
-    image: clickhouse/clickhouse-server:25.4.1-alpine
+    image: clickhouse/clickhouse-server:25.4.2-alpine
     ulimits:
       nofile:
         soft: 262144
