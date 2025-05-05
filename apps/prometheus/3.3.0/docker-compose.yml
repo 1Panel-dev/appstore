@@ -9,7 +9,7 @@ services:
     volumes:
       - ./conf:/etc/prometheus/
       - ./prometheus:/prometheus
-    image: prom/prometheus:v3.3.0
+    image: prom/prometheus:v3.3.1
     command: 
       - '--config.file=/etc/prometheus/prometheus.yml'
       - '--storage.tsdb.path=/prometheus'
