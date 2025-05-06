@@ -1,0 +1,24 @@
+services:
+    firefly-iii:
+        image: fireflyiii/core:version-6.2.12
+        container_name: ${CONTAINER_NAME}
+        environment:
+            - APP_KEY=${APP_KEY}
+            - DB_CONNECTION=${PANEL_DB_TYPE}
+            - DB_HOST=${PANEL_DB_HOST}
+            - DB_PORT=${PANEL_DB_PORT}
+            - DB_DATABASE=${PANEL_DB_NAME}
+            - DB_USERNAME=${PANEL_DB_USER}
+            - DB_PASSWORD=${PANEL_DB_USER_PASSWORD}
+        restart: always
+        networks:
+            - 1panel-network
+        ports:
+            - ${PANEL_APP_PORT_HTTP}:8080
+        volumes:
+            - ./firefly-iii/upload:/var/www/html/storage/upload
+        labels:
+            createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true

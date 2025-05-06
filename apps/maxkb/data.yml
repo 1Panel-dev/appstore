@@ -1,24 +1,24 @@
 name: MaxKB
 tags:
     - AI / 大模型
-title: 基于大语言模型和 RAG 的开源知识库问答系统
-description: 基于大语言模型和 RAG 的开源知识库问答系统
+title: 强大易用的企业级 AI 助手
+description: 强大易用的企业级 AI 助手
 additionalProperties:
     key: maxkb
     name: MaxKB
     tags:
         - AI
-    shortDescZh: 基于大语言模型和 RAG 的开源知识库问答系统
-    shortDescEn: Ready-to-use, flexible RAG Chatbot
+    shortDescZh: 强大易用的企业级 AI 助手
+    shortDescEn: Powerful and Easy-to-use AI Assistant
     description:
-        en: Ready-to-use, flexible RAG Chatbot
-        ja: 使用準備ができて柔軟な RAG チャットボット
-        ms: Chatbot RAG yang fleksibel dan mudah digunakan
-        pt-br: Chatbot RAG flexível e pronto para uso
-        ru: Готовый к использованию, гибкий чат-бот RAG
-        ko: 사용 준비 완료, 유연한 RAG 챗봇
-        zh-Hant: 基於大語言模型和 RAG 的開源知識庫問答系統
-        zh: 基于大语言模型和 RAG 的开源知识库问答系统
+        en: Powerful and Easy-to-use AI Assistant
+        ja: 強力で使いやすいAIアシスタント
+        ms: Pembantu AI yang Berkuasa dan Mudah Digunakan
+        pt-br: Assistente de IA poderoso e fácil de usar
+        ru: Мощный и простой в использовании ИИ-ассистент
+        ko: 강력하고 사용하기 쉬운 AI 도우미
+        zh-Hant: 強大易用的企業級 AI 助手
+        zh: 强大易用的企业级 AI 助手
     type: tool
     crossVersionUpdate: true
     limit: 0

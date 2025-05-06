@@ -1,0 +1,24 @@
+services:
+  ghost:
+    image: ghost:5.118.1
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:2368
+    environment:
+      url: ${GHOST_URL}
+      database__client: mysql
+      database__connection__host: ${PANEL_DB_HOST}
+      database__connection__user: ${PANEL_DB_USER}
+      database__connection__password: ${PANEL_DB_USER_PASSWORD}
+      database__connection__database: ${PANEL_DB_NAME}
+    volumes:
+      - ./data:/var/lib/ghost/content
+    labels:
+      createdBy: "Apps"
+
+networks:
+  1panel-network:
+    external: true

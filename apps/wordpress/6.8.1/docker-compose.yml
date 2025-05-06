@@ -1,0 +1,23 @@
+services:
+  wordpress:
+    image: wordpress:6.8.1
+    container_name: ${CONTAINER_NAME}
+    ports:
+      -  ${PANEL_APP_PORT_HTTP}:80
+    restart: always
+    networks:
+      - 1panel-network
+    volumes:
+      - ./data:/var/www/html
+      - ./conf/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+    environment:
+      WORDPRESS_DB_HOST: ${PANEL_DB_HOST}:${PANEL_DB_PORT}
+      WORDPRESS_DB_NAME: ${PANEL_DB_NAME}
+      WORDPRESS_DB_USER: ${PANEL_DB_USER}
+      WORDPRESS_DB_PASSWORD: ${PANEL_DB_USER_PASSWORD}
+      WORDPRESS_DEBUG: 0
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true

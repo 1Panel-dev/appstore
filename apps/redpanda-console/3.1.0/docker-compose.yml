@@ -1,0 +1,16 @@
+services:
+  redpanda-console:
+    image: redpandadata/console:v3.1.0
+    restart: always
+    container_name: ${CONTAINER_NAME}
+    networks:
+      - 1panel-network
+    environment:
+      KAFKA_BROKERS: ${KAFKA_HOST}:9092
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8080
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true

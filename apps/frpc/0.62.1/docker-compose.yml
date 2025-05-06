@@ -1,0 +1,11 @@
+services:
+  frpc:
+    image: snowdreamtech/frpc:0.62.1
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    network_mode: host
+    volumes:
+      - ./data/frpc.toml:/etc/frp/frpc.toml
+      - ./data/ssl:/etc/frp/ssl
+    labels:
+      createdBy: "Apps"

@@ -1,0 +1,13 @@
+services:
+  homeassistant:
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    network_mode: "host"
+    volumes:
+      - "./data:/config"
+      - "/run/dbus:/run/dbus:ro"
+    environment:
+      - TZ=${TIME_ZONE}
+    image: homeassistant/home-assistant:2025.4.4
+    labels:  
+      createdBy: "Apps"

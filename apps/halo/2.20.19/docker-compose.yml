@@ -1,0 +1,30 @@
+services:
+  halo:
+    image: halohub/halo-pro:2.20.19
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    volumes:
+      - ./data:/root/.halo2
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8090
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8090/actuator/health/readiness" ]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    command:
+      - --spring.r2dbc.url=r2dbc:pool:${PANEL_DB_TYPE}://${PANEL_DB_HOST}:${PANEL_DB_PORT}/${PANEL_DB_NAME}
+      - --spring.r2dbc.username=${PANEL_DB_USER}
+      - --spring.r2dbc.password=${PANEL_DB_USER_PASSWORD}
+      - --spring.sql.init.platform=${PANEL_DB_TYPE}
+      - --halo.external-url=${HALO_EXTERNAL_URL}
+    environment:
+      - JVM_OPTS=
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true

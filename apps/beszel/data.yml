@@ -1,0 +1,28 @@
+name: Beszel
+tags:
+    - 实用工具
+title: 轻量易用的服务器监控
+description: 轻量易用的服务器监控
+additionalProperties:
+    key: beszel
+    name: Beszel
+    tags:
+        - Tool
+    shortDescZh: 轻量易用的服务器监控
+    shortDescEn: Simple, lightweight server monitoring
+    description:
+        en: Simple, lightweight server monitoring
+        ja: シンプルで軽量なサーバー監視
+        ms: Pemantauan pelayan yang ringkas dan ringan
+        pt-br: Monitoramento de servidor simples e leve
+        ru: Простое и легкое мониторинг сервера
+        ko: 간단하고 가벼운 서버 모니터링
+        zh-Hant: 簡單輕量的伺服器監控
+        zh: 轻量易用的服务器监控
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://beszel.dev/
+    github: https://github.com/henrygd/beszel
+    document: https://beszel.dev/guide/what-is-beszel

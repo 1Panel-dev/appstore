@@ -1,0 +1,30 @@
+services:
+  elasticsearch:
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:9200"
+    volumes:
+      - "./data/data:/usr/share/elasticsearch/data"
+      - "./data/backup:/usr/share/elasticsearch/backup"
+      - "./data/conf/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml"
+    image: elasticsearch:8.18.0
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: 65536
+        hard: 65536
+    environment:
+      - discovery.type=single-node
+      - ELASTIC_PASSWORD=${ELASTIC_PASSWORD}
+      - xpack.security.enabled=${ELASTIC_SECURITY}
+      - ${P_ES_JAVA_OPTS}
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true

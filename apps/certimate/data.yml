@@ -1,0 +1,21 @@
+name: Certimate
+tags:
+    - 实用工具
+    - DevOps
+title: 一个安全、简便的 SSL 证书管理解决方案
+description: 一个安全、简便的 SSL 证书管理解决方案
+additionalProperties:
+    key: certimate
+    name: Certimate
+    tags:
+        - Tool
+        - DevOps
+    shortDescZh: 一个安全、简便的 SSL 证书管理解决方案
+    shortDescEn: Certimate aims to provide users with a secure and user-friendly SSL certificate management solution.
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://docs.certimate.me
+    github: https://github.com/usual2970/certimate
+    document: https://docs.certimate.me

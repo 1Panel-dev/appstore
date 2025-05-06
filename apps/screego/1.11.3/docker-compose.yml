@@ -1,0 +1,19 @@
+services:
+  screego:
+    image: ghcr.io/screego/server:1.11.3
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:5050
+      - ${PANEL_APP_PORT_TURN}:3478
+      - ${SCREEGO_TURN_PORT_RANGE}:50000-50200/udp
+    environment:
+      SCREEGO_EXTERNAL_IP: ${SCREEGO_EXTERNAL_IP}
+      SCREEGO_TURN_PORT_RANGE: "50000:50200"
+    labels:  
+      createdBy: "Apps"
+networks:  
+  1panel-network:  
+    external: true

@@ -1,0 +1,27 @@
+services:
+  2fauth:
+    image: 2fauth/2fauth:5.5.2
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8000/tcp
+    networks:
+      - 1panel-network
+    volumes:
+      - ./data:/2fauth
+    environment:
+      - APP_NAME=${APP_NAME}
+      - APP_KEY=${APP_KEY}
+      - APP_URL=${APP_URL}
+      - IS_DEMO_APP=false
+      - LOG_CHANNEL=daily
+      - LOG_LEVEL=notice
+      - DB_DATABASE="/srv/database/database.sqlite"
+      - CACHE_DRIVER=file
+      - SESSION_DRIVER=file
+      - AUTHENTICATION_GUARD=web-guard
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true
