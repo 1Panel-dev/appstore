@@ -4,6 +4,7 @@
 ARG RESTY_IMAGE_BASE="ubuntu"
 ARG RESTY_IMAGE_TAG="focal"
 
+ARG CONTAINER_PACKAGE_URL
 ARG PANEL_OPENRESTY_VERSION
 FROM 1panel/openresty:${PANEL_OPENRESTY_VERSION} as panel-openresty
 
@@ -114,8 +115,8 @@ LABEL resty_luajit_options="${RESTY_LUAJIT_OPTIONS}"
 LABEL resty_pcre_options="${RESTY_PCRE_OPTIONS}"
 
 COPY tmp /tmp
-#RUN sed -i "s|http://archive.ubuntu.com/ubuntu/|${CONTAINER_PACKAGE_URL}|g" /etc/apt/sources.list \
-#    && sed -i "s|http://security.ubuntu.com/ubuntu/|${CONTAINER_PACKAGE_URL}|g" /etc/apt/sources.list 
+RUN sed -i "s|http://archive.ubuntu.com/ubuntu/|${CONTAINER_PACKAGE_URL}|g" /etc/apt/sources.list \
+    && sed -i "s|http://security.ubuntu.com/ubuntu/|${CONTAINER_PACKAGE_URL}|g" /etc/apt/sources.list 
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
@@ -134,9 +135,11 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update \
         unzip \
         wget \
         zlib1g-dev \
+        git \
         ${RESTY_ADD_PACKAGE_BUILDDEPS} \
         ${RESTY_ADD_PACKAGE_RUNDEPS} \
     && cd /tmp \
+    && bash /tmp/pre.sh \
     && if [ -n "${RESTY_EVAL_PRE_CONFIGURE}" ]; then eval $(echo ${RESTY_EVAL_PRE_CONFIGURE}); fi \
 #    && curl -fSL "${RESTY_OPENSSL_URL_BASE}/openssl-${RESTY_OPENSSL_VERSION}.tar.gz" -o openssl-${RESTY_OPENSSL_VERSION}.tar.gz \
     && tar xzf openssl-${RESTY_OPENSSL_VERSION}.tar.gz \
@@ -209,6 +212,7 @@ COPY nginx.conf /usr/local/openresty/nginx/conf/nginx.conf
 COPY nginx.vh.default.conf /etc/nginx/conf.d/default.conf
 
 RUN bash /tmp/default.sh
+
 COPY --from=panel-openresty /usr/local/openresty/1pwaf /usr/local/openresty/1pwaf
 COPY --from=panel-openresty /usr/local/openresty/1pwaf/libraries/libmaxminddb.so /usr/local/openresty/1pwaf/libraries/libmaxminddb.so
 COPY --from=panel-openresty /usr/local/openresty/1pwaf/libraries/libinjection.so /usr/local/openresty/1pwaf/libraries/libinjection.so
