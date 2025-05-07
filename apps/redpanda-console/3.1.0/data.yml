@@ -16,7 +16,7 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
-        - default:
+        - default: ""
           envKey: KAFKA_HOST
           labelEn: Kafka Service
           labelZh: Kafka 服务
