@@ -28,4 +28,4 @@ additionalProperties:
     document: https://github.com/mongo-express/mongo-express
     architectures:
       - amd64
-      - arm64/v8
+      - arm64

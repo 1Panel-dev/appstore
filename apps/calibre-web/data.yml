@@ -28,4 +28,4 @@ additionalProperties:
         ko: Calibre 데이터베이스에 저장된 전자책을 탐색, 읽기 및 다운로드하기 위한 웹 애플리케이션
     architectures:
       - amd64
-      - arm64/v8
+      - arm64

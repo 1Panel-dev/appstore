@@ -30,5 +30,5 @@ additionalProperties:
     memoryRequired: 1024
     architectures:
       - amd64
-      - arm64/v8
+      - arm64
       - arm/v7

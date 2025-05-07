@@ -28,4 +28,4 @@ additionalProperties:
     ko: Cloudflare 터널 클라이언트
   architectures:
     - amd64
-    - arm64/v8
+    - arm64
