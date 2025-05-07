@@ -31,4 +31,3 @@ additionalProperties:
       - arm64
       - arm/v6
       - arm/v7
-      - arm/v8

@@ -28,5 +28,5 @@ additionalProperties:
         ko: Docker 컨테이너 기본 이미지를 자동으로 업데이트하는 도구
     architectures:
       - amd64
-      - arm64/v8
+      - arm64
       - arm/v6

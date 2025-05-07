@@ -26,3 +26,8 @@ additionalProperties:
   website: https://stalw.art/
   github: https://github.com/stalwartlabs/mail-server
   document: https://stalw.art/docs/
+  architectures:
+    - amd64
+    - arm/v6
+    - arm/v7
+    - arm64

@@ -26,3 +26,6 @@ additionalProperties:
         pt-br: Opengist é um Pastebin auto-hospedado alimentado por Git.
         ru: Opengist — это Pastebin с самостоятельным хостингом на основе Git.
         ko: Opengist는 Git으로 구동되는 자체 호스팅 Pastebin입니다.
+    architectures:
+      - amd64
+      - arm64

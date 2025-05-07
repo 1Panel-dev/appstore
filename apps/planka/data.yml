@@ -26,3 +26,7 @@ additionalProperties:
         pt-br: Rastreamento de projetos de código aberto elegante
         ru: Элегантное отслеживание проектов с открытым исходным кодом
         ko: 우아한 오픈 소스 프로젝트 추적
+    architectures:
+      - amd64
+      - arm/v7
+      - arm64

@@ -26,3 +26,6 @@ additionalProperties:
     website: https://github.com/bytebase/dbhub
     github: https://github.com/bytebase/dbhub
     document: https://github.com/bytebase/dbhub
+    architectures:
+      - amd64
+      - arm64

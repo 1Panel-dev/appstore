@@ -21,4 +21,3 @@ additionalProperties:
     - amd64
     - arm64
     - arm/v7
-    - arm/v8

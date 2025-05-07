@@ -27,6 +27,6 @@ additionalProperties:
         ko: 분산 캐싱 시스템
     architectures:
       - amd64
-      - arm64/v8
+      - arm64
       - ppc64le
       - s390x
