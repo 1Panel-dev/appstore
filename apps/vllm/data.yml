@@ -28,3 +28,5 @@ additionalProperties:
     document: https://docs.vllm.ai/en/latest/
     gpuSupport: true
     memoryRequired: 4096
+    architectures:
+      - amd64

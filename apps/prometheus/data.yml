@@ -28,7 +28,7 @@ additionalProperties:
         ko: 모니터링 시스템 및 시계열 데이터베이스
     architectures:
       - amd64
-      - arm64/v8
+      - arm64
       - arm/v7
       - ppc64le
       - s390x

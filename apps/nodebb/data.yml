@@ -27,3 +27,7 @@ additionalProperties:
     ru: Программное обеспечение для форумов на основе Node.js, созданное для современной сети
     ko: 현대 웹을 위해 구축된 Node.js 기반 포럼 소프트웨어
   memoryRequired: 2048
+  architectures:
+    - amd64
+    - arm/v7
+    - arm64

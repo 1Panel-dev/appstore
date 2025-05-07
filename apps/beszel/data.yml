@@ -26,3 +26,7 @@ additionalProperties:
     website: https://beszel.dev/
     github: https://github.com/henrygd/beszel
     document: https://beszel.dev/guide/what-is-beszel
+    architectures:
+      - amd64
+      - arm64
+      - arm/v7

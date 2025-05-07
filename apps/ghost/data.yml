@@ -26,3 +26,9 @@ additionalProperties:
   website: https://ghost.org/
   github: https://github.com/TryGhost/Ghost
   document: https://ghost.org/docs/
+  architectures:
+    - amd64
+    - arm/v7
+    - arm64
+    - ppc64le
+    - s390x

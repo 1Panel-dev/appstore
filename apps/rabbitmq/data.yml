@@ -31,6 +31,6 @@ additionalProperties:
       - amd64
       - arm/v6
       - arm/v7
-      - arm64/v8
+      - arm64
       - ppc64le
       - s390x
