@@ -1,6 +1,6 @@
 services:
   couchdb:
-    image: couchdb:3.4.3
+    image: couchdb:3.5.0
     container_name: ${CONTAINER_NAME}
     environment:
       - COUCHDB_USER=${OBSIDIAN_LIVESYNC_USER} 
