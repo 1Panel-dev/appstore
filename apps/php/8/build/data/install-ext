@@ -200,6 +200,10 @@ install_extension() {
         docker_php_ext_install zip    
     elif [ "$extension" = "memcached" ]; then
         install_php_extensions memcached 
+    elif [ "$extension" = "igbinary" ]; then
+        install_php_extensions igbinary
+    elif [ "$extension" = "apcu" ]; then
+        install_php_extensions apcu        
     elif [ "$extension" = "redis" ]; then
         install_php_extensions redis
     elif [ "$extension" = "xdebug" ]; then
