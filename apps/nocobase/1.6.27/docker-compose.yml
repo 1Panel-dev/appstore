@@ -1,6 +1,6 @@
 services:
   nocobase:
-    image: nocobase/nocobase:1.6.25
+    image: nocobase/nocobase:1.6.27
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
