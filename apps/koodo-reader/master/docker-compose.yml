@@ -1,6 +1,6 @@
 services:
   koodo-reader:
-    image: liwangsheng/koodo-reader:1.6.6
+    image: ghcr.io/koodo-reader/koodo-reader:master
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
