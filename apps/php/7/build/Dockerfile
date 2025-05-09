@@ -14,6 +14,7 @@ RUN if [ "${CONTAINER_PACKAGE_URL}" != "https://deb.debian.org" ]; then \
         apt-get update; \
     fi
 
+COPY ./data /tmp/data
 
 COPY data/install-ext /usr/local/bin/
 RUN chmod uga+x /usr/local/bin/install-ext

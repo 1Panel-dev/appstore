@@ -7,6 +7,8 @@ ARG CONTAINER_PACKAGE_URL
 RUN sed -i "s|URIs: http://deb.debian.org/debian|URIs: ${CONTAINER_PACKAGE_URL}/debian|g" /etc/apt/sources.list.d/debian.sources && \
     apt-get update
 
+COPY ./data /tmp/data
+
 COPY data/install-ext /usr/local/bin/
 RUN chmod uga+x /usr/local/bin/install-ext
 
