@@ -10,15 +10,17 @@ echo "Install extensions        : $1"
 echo "============================================"
 echo
 
-isPhpVersionGreaterOrEqual() {
-    local PHP_MAJOR_VERSION=$(php -r "echo PHP_MAJOR_VERSION;")
-    local PHP_MINOR_VERSION=$(php -r "echo PHP_MINOR_VERSION;")
+installExtensionFromTgz(){
+    tgzName=$1
+    result=""
+    extensionName="${tgzName%%-*}"
+    shift 1
+    result=$@
+    mkdir ${extensionName}
+    tar -zxvf /tmp/data/${tgzName}.tgz -C ${extensionName} --strip-components=1
+    ( cd ${extensionName} && phpize && ./configure ${result} && make ${MC} && make install )
 
-    if [ "$PHP_MAJOR_VERSION" -gt "$1" ] || [ "$PHP_MAJOR_VERSION" -eq "$1" ] && [ "$PHP_MINOR_VERSION" -ge "$2" ]; then
-        return 1
-    else
-        return 0
-    fi
+    docker-php-ext-enable ${extensionName}
 }
 
 is_extension_installed() {
@@ -131,6 +133,12 @@ install_yaf() {
     docker-php-ext-enable yaf
 }
 
+install_imagick() {
+    apt-get update && apt-get install -y libmagickwand-dev
+    installExtensionFromTgz imagick-3.8.0
+    install_msg imagick
+}
+
 install_extension() {
     local extension=$1
     if [ -z "$extension" ]; then
@@ -199,13 +207,14 @@ install_extension() {
         apt-get update && apt-get install -y  libzip-dev
         docker_php_ext_install zip    
     elif [ "$extension" = "memcached" ]; then
-        install_php_extensions memcached 
+        apt-get update && apt-get install -y libmemcached-dev
+        pecl_install memcached 
     elif [ "$extension" = "igbinary" ]; then
-        install_php_extensions igbinary
+        pecl_install igbinary
     elif [ "$extension" = "apcu" ]; then
-        install_php_extensions apcu  
+        pecl_install  apcu  
     elif [ "$extension" = "redis" ]; then
-        install_php_extensions redis
+        pecl_install redis
     elif [ "$extension" = "xdebug" ]; then
         install_php_extensions xdebug
     elif [ "$extension" = "imap" ]; then
@@ -253,7 +262,7 @@ install_extension() {
     elif [ "$extension" = "ldap" ]; then
         install_php_extensions ldap
     elif [ "$extension" = "imagick" ]; then
-        install_php_extensions imagick
+        install_imagick
     elif [ "$extension" = "amqp" ]; then
         install_php_extensions amqp
     elif [ "$extension" = "zookeeper" ]; then
