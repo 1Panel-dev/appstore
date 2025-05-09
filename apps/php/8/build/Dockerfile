@@ -14,8 +14,6 @@ RUN chmod uga+x /usr/local/bin/install-ext
 
 ENV PHP_INI_SCAN_DIR=/usr/local/etc/php/conf.d
 
-RUN install-ext ${PHP_EXTENSIONS}
-
 RUN pear config-set php_ini /usr/local/etc/php/php.ini
 
 RUN usermod -u 1000 www-data && groupmod -g 1000 www-data

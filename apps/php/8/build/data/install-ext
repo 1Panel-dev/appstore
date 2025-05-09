@@ -205,11 +205,9 @@ install_extension() {
         apt-get install -y  libsodium-dev
         docker_php_ext_install sodium
     elif [ "$extension" = "zip" ]; then
-        apt-get update && apt-get install -y  libzip-dev
         docker_php_ext_install zip    
     elif [ "$extension" = "memcached" ]; then
-        apt-get update && apt-get install -y libmemcached-dev
-        pecl_install memcached 
+        install_php_extensions memcached 
     elif [ "$extension" = "igbinary" ]; then
         pecl_install igbinary
     elif [ "$extension" = "apcu" ]; then
