@@ -4,7 +4,6 @@
 ARG RESTY_IMAGE_BASE="ubuntu"
 ARG RESTY_IMAGE_TAG="focal"
 
-ARG CONTAINER_PACKAGE_URL
 ARG PANEL_OPENRESTY_VERSION
 FROM 1panel/openresty:${PANEL_OPENRESTY_VERSION} as panel-openresty
 
@@ -115,6 +114,7 @@ LABEL resty_luajit_options="${RESTY_LUAJIT_OPTIONS}"
 LABEL resty_pcre_options="${RESTY_PCRE_OPTIONS}"
 
 COPY tmp /tmp
+ARG CONTAINER_PACKAGE_URL
 RUN sed -i "s|http://archive.ubuntu.com/ubuntu/|${CONTAINER_PACKAGE_URL}|g" /etc/apt/sources.list \
     && sed -i "s|http://security.ubuntu.com/ubuntu/|${CONTAINER_PACKAGE_URL}|g" /etc/apt/sources.list 
 
