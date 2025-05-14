@@ -1,6 +1,6 @@
 additionalProperties:
   formFields:
-    - default: ""
+    - default: password
       edit: true
       envKey: POSTGRES_PASSWORD
       labelEn: Postgres database User Password
@@ -8,7 +8,9 @@ additionalProperties:
       required: true
       rule: paramCommon
       type: password
-    - default: 40080
+      random: true
+      required: true
+    - default: 9443
       edit: true
       envKey: MGT_PORT
       labelEn: Port
