@@ -2,7 +2,7 @@
 # https://github.com/openresty/docker-openresty
 
 ARG RESTY_IMAGE_BASE="ubuntu"
-ARG RESTY_IMAGE_TAG="focal"
+ARG RESTY_IMAGE_TAG="noble"
 
 ARG PANEL_OPENRESTY_VERSION
 FROM 1panel/openresty:${PANEL_OPENRESTY_VERSION} as panel-openresty
