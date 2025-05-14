@@ -38,7 +38,7 @@ additionalProperties:
       labelZh: RELEASE
       required: true
       type: text
-    - default: latest
+    - default: 8.0.0-lts
       edit: true
       envKey: IMAGE_TAG
       labelEn: IMAGE_TAG
