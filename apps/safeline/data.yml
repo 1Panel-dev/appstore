@@ -2,7 +2,7 @@ name: 长亭雷池防火墙(Safeline WAF)
 tags:
   - Web 服务器
 title: 一款足够简单、足够好用、足够强的免费 WAF
-description: 一款足够简单、足够好用、足够强的免费 WAF
+description: 一款足够简单、足够好用、足够强的免费 WAF，安装后请手动在 mgt 容器运行 resetadmin 重置密码。
 additionalProperties:
   key: safeline
   name: 长亭雷池防火墙(Safeline WAF)
