@@ -9,7 +9,6 @@ additionalProperties:
       rule: paramCommon
       type: password
       random: true
-      required: true
     - default: 9443
       edit: true
       envKey: MGT_PORT
