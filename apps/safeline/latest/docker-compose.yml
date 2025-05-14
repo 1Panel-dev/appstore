@@ -58,7 +58,6 @@ services:
     image: ${IMAGE_PREFIX}/safeline-tengine${REGION}${ARCH_SUFFIX}:${IMAGE_TAG}
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - /etc/resolv.conf:/etc/resolv.conf:ro
       - ${SAFELINE_DIR}/resources/nginx:/etc/nginx
       - ${SAFELINE_DIR}/resources/detector:/resources/detector
       - ${SAFELINE_DIR}/resources/chaos:/resources/chaos
