@@ -1,5 +1,12 @@
 [
   {
+    "name":"ngx_brotli",
+    "script":"",
+    "packages":[],
+    "params": "--add-module=/usr/local/openresty/modules/ngx_brotli",
+    "enable":false
+  },
+  {
     "name":"rtmp",
     "script":"unzip -o /tmp/nginx-rtmp-module.zip -d /tmp",
     "packages":[],
