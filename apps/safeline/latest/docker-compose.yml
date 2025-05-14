@@ -73,7 +73,8 @@ services:
       - CHAOS_ADDR=safeline-chaos
     ulimits:
       nofile: 131072
-    network_mode: host
+    networks: 
+      - 1panel-network
   luigi:
     container_name: safeline-luigi
     restart: always
