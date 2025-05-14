@@ -1,0 +1,46 @@
+additionalProperties:
+  formFields:
+    - default: ""
+      edit: true
+      envKey: POSTGRES_PASSWORD
+      labelEn: Postgres database User Password
+      labelZh: Postgres数据库密码
+      required: true
+      rule: paramCommon
+      type: password
+    - default: 40080
+      edit: true
+      envKey: MGT_PORT
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: ./data
+      edit: true
+      envKey: SAFELINE_DIR
+      labelEn: Data storage folder
+      labelZh: 数据存放文件夹
+      required: true
+      type: text
+    - default: 172.18.0
+      edit: true
+      envKey: SUBNET_PREFIX
+      labelEn: 1panel-network subnet prefix (Check the docker network to get it)
+      labelZh: 1panel-network 子网前缀 (查看docker网络获取)
+      required: true
+      type: text
+    - default: latest
+      edit: true
+      envKey: IMAGE_TAG
+      labelEn: IMAGE_TAG
+      labelZh: IMAGE_TAG
+      required: true
+      type: text
+    - default: swr.cn-east-3.myhuaweicloud.com/chaitin-safeline
+      edit: true
+      envKey: IMAGE_PREFIX
+      labelEn: IMAGE_PREFIX
+      labelZh: IMAGE_PREFIX
+      required: true
+      type: text

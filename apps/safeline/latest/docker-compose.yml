@@ -1,0 +1,129 @@
+services:
+  postgres:
+    container_name: safeline-pg
+    restart: always
+    image: ${IMAGE_PREFIX}/safeline-postgres${ARCH_SUFFIX}:15.2
+    volumes:
+      - ${SAFELINE_DIR}/resources/postgres/data:/var/lib/postgresql/data
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      - POSTGRES_USER=safeline-ce
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:?postgres password required}
+    networks: 
+      - 1panel-network
+    command: [postgres, -c, max_connections=600]
+    healthcheck:
+      test: pg_isready -U safeline-ce -d safeline-ce
+  mgt:
+    container_name: safeline-mgt
+    restart: always
+    image: ${IMAGE_PREFIX}/safeline-mgt${REGION}${ARCH_SUFFIX}:${IMAGE_TAG:?image tag required}
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ${SAFELINE_DIR}/resources/mgt:/app/data
+      - ${SAFELINE_DIR}/logs/nginx:/app/log/nginx:z
+      - ${SAFELINE_DIR}/resources/sock:/app/sock
+      - /var/run:/app/run
+    ports:
+      - ${MGT_PORT:-9443}:1443
+    healthcheck:
+      test: curl -k -f https://localhost:1443/api/open/health
+    environment:
+      - MGT_PG=postgres://safeline-ce:${POSTGRES_PASSWORD}@safeline-pg/safeline-ce?sslmode=disable
+    depends_on:
+      - postgres
+      - fvm
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
+        max-file: "5"
+    networks: 
+      - 1panel-network
+  detect:
+    container_name: safeline-detector
+    restart: always
+    image: ${IMAGE_PREFIX}/safeline-detector${REGION}${ARCH_SUFFIX}:${IMAGE_TAG}
+    volumes:
+      - ${SAFELINE_DIR}/resources/detector:/resources/detector
+      - ${SAFELINE_DIR}/logs/detector:/logs/detector
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      - LOG_DIR=/logs/detector
+    networks: 
+      - 1panel-network
+  tengine:
+    container_name: safeline-tengine
+    restart: always
+    image: ${IMAGE_PREFIX}/safeline-tengine${REGION}${ARCH_SUFFIX}:${IMAGE_TAG}
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/resolv.conf:/etc/resolv.conf:ro
+      - ${SAFELINE_DIR}/resources/nginx:/etc/nginx
+      - ${SAFELINE_DIR}/resources/detector:/resources/detector
+      - ${SAFELINE_DIR}/resources/chaos:/resources/chaos
+      - ${SAFELINE_DIR}/logs/nginx:/var/log/nginx:z
+      - ${SAFELINE_DIR}/resources/cache:/usr/local/nginx/cache
+      - ${SAFELINE_DIR}/resources/sock:/app/sock
+    environment:
+      - TCD_MGT_API=https://safeline-mgt:1443/api/open/publish/server
+      - TCD_SNSERVER=safeline-detect:8000
+      # deprecated
+      - SNSERVER_ADDR=safeline-detect:8000
+      - CHAOS_ADDR=safeline-chaos
+    ulimits:
+      nofile: 131072
+    network_mode: host
+  luigi:
+    container_name: safeline-luigi
+    restart: always
+    image: ${IMAGE_PREFIX}/safeline-luigi${REGION}${ARCH_SUFFIX}:${IMAGE_TAG}
+    environment:
+      - MGT_IP=safeline-mgt
+      - LUIGI_PG=postgres://safeline-ce:${POSTGRES_PASSWORD}@safeline-pg/safeline-ce?sslmode=disable
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ${SAFELINE_DIR}/resources/luigi:/app/data
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
+        max-file: "5"
+    depends_on:
+      - detect
+      - mgt
+    networks: 
+      - 1panel-network
+  fvm:
+    container_name: safeline-fvm
+    restart: always
+    image: ${IMAGE_PREFIX}/safeline-fvm${REGION}${ARCH_SUFFIX}:${IMAGE_TAG}
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
+        max-file: "5"
+    networks: 
+      - 1panel-network
+  chaos:
+    container_name: safeline-chaos
+    restart: always
+    image: ${IMAGE_PREFIX}/safeline-chaos${REGION}${ARCH_SUFFIX}:${IMAGE_TAG}
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
+        max-file: "10"
+    environment:
+      - DB_ADDR=postgres://safeline-ce:${POSTGRES_PASSWORD}@safeline-pg/safeline-ce?sslmode=disable
+    volumes:
+      - ${SAFELINE_DIR}/resources/sock:/app/sock
+      - ${SAFELINE_DIR}/resources/chaos:/app/chaos
+    networks: 
+      - 1panel-network
+
+networks:  
+  1panel-network:  
+    external: true

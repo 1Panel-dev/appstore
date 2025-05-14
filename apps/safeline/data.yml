@@ -1,0 +1,19 @@
+name: 长亭雷池防火墙(Safeline WAF)
+tags:
+  - Web 服务器
+title: 一款足够简单、足够好用、足够强的免费 WAF
+description: 一款足够简单、足够好用、足够强的免费 WAF
+additionalProperties:
+  key: safeline
+  name: 长亭雷池防火墙(Safeline WAF)
+  tags:
+    - Server
+  shortDescZh: 一款足够简单、足够好用、足够强的免费 WAF
+  shortDescEn: A simple and easy to use WAF tool
+  type: runtime
+  crossVersionUpdate: true
+  limit: 1
+  recommend: 0
+  website: https://waf-ce.chaitin.cn/
+  github: https://github.com/chaitin/safeline
+  document: https://waf-ce.chaitin.cn/posts/guide_introduction
