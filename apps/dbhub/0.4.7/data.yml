@@ -33,6 +33,8 @@ additionalProperties:
           value: "postgres"
         - label: SQL Server
           value: "sqlserver"
+        - label: Oracle
+          value: "oracle"
       label:
         en: DataBase Type
         ja: データベースの種類

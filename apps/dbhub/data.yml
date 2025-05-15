@@ -1,24 +1,24 @@
 name: DBHub
 tags:
     - AI / 大模型
-title: 通用数据库 MCP 服务器连接到 MySQL、PostgreSQL、SQL Server、MariaDB
-description: 通用数据库 MCP 服务器连接到 MySQL、PostgreSQL、SQL Server、MariaDB
+title: 通用数据库 MCP 服务器连接到 MySQL、PostgreSQL、SQL Server、MariaDB、Oracle
+description: 通用数据库 MCP 服务器连接到 MySQL、PostgreSQL、SQL Server、MariaDB、Oracle
 additionalProperties:
     key: dbhub
     name: DBHub
     tags:
         - AI
-    shortDescZh: 通用数据库 MCP 服务器连接到 MySQL、PostgreSQL、SQL Server、MariaDB
-    shortDescEn: Universal database MCP server connecting to MySQL, PostgreSQL, SQL Server, MariaDB
+    shortDescZh: 通用数据库 MCP 服务器连接到 MySQL、PostgreSQL、SQL Server、MariaDB、Oracle
+    shortDescEn: Universal database MCP server connecting to MySQL, PostgreSQL, SQL Server, MariaDB, Oracle
     description:
-        en: Universal database MCP server connecting to MySQL, PostgreSQL, SQL Server, MariaDB
-        ja: 通用データベース MCP サーバーは、MySQL、PostgreSQL、SQL Server、MariaDB に接続します
-        ms: MCP pelayan pangkalan data sejagat menyambung ke MySQL, PostgreSQL, SQL Server, MariaDB
-        pt-br: Servidor MCP de banco de dados universal conectado ao MySQL, PostgreSQL, SQL Server, MariaDB
-        ru: Универсальный сервер базы данных MCP, подключающийся к MySQL, PostgreSQL, SQL Server, MariaDB
-        ko: 범용 데이터베이스 MCP 서버는 MySQL, PostgreSQL, SQL Server, MariaDB에 연결됩니다
-        zh-Hant: 通用資料庫 MCP 伺服器連接到 MySQL、PostgreSQL、SQL Server、MariaDB
-        zh: 通用数据库 MCP 服务器连接到 MySQL、PostgreSQL、SQL Server、MariaDB
+        en: Universal database MCP server connecting to MySQL, PostgreSQL, SQL Server, MariaDB, Oracle
+        ja: 通用データベース MCP サーバーは、MySQL、PostgreSQL、SQL Server、MariaDB、Oracle に接続します
+        ms: MCP pelayan pangkalan data sejagat menyambung ke MySQL, PostgreSQL, SQL Server, MariaDB, Oracle
+        pt-br: Servidor MCP de banco de dados universal conectado ao MySQL, PostgreSQL, SQL Server, MariaDB, Oracle
+        ru: Универсальный сервер базы данных MCP, подключающийся к MySQL, PostgreSQL, SQL Server, MariaDB, Oracle
+        ko: 범용 데이터베이스 MCP 서버는 MySQL, PostgreSQL, SQL Server, MariaDB, Oracle 에 연결됩니다
+        zh-Hant: 通用資料庫 MCP 伺服器連接到 MySQL、PostgreSQL、SQL Server、MariaDB、Oracle
+        zh: 通用数据库 MCP 服务器连接到 MySQL、PostgreSQL、SQL Server、MariaDB、Oracle
     type: tool
     crossVersionUpdate: true
     limit: 0
