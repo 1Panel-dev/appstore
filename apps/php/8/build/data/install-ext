@@ -17,9 +17,9 @@ installExtensionFromTgz()
     extensionName="${tgzName%%-*}"
     shift 1
     result=$@
-    mkdir ${extensionName}
-    tar -zxvf /tmp/data/${tgzName}.tgz -C ${extensionName} --strip-components=1
-    ( cd ${extensionName} && phpize && ./configure ${result} && make ${MC} && make install )
+    mkdir /tmp/data/${tgzName}
+    tar -zxvf /tmp/data/${tgzName}.tar.gz -C /tmp/data/${tgzName} --strip-components=1
+    ( cd /tmp/data/${tgzName} && phpize && ./configure ${result} && make ${MC} && make install )
 
     docker-php-ext-enable ${extensionName}
 }
