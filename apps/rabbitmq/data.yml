@@ -10,7 +10,7 @@ additionalProperties:
         - Middleware
     shortDescZh: 功能丰富的多协议消息传递和流媒体代理
     shortDescEn: A feature rich, multi-protocol messaging and streaming broker
-    type: tool
+    type: website
     crossVersionUpdate: false
     limit: 0
     recommend: 0

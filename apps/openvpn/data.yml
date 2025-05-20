@@ -12,7 +12,7 @@ additionalProperties:
     - Security
   shortDescZh: 开源 VPN 守护进程
   shortDescEn: Open source VPN daemon
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 0

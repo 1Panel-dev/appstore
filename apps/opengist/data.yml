@@ -10,7 +10,7 @@ additionalProperties:
         - DevOps
     shortDescZh: 一个由 Git 驱动的自托管 Pastebin
     shortDescEn: Opengist is a self-hosted Pastebin powered by Git.
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0

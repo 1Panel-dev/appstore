@@ -10,7 +10,7 @@ additionalProperties:
         - Middleware
     shortDescZh: 云原生消息传递和流媒体平台
     shortDescEn: Cloud native messaging and streaming platform
-    type: tool
+    type: website
     crossVersionUpdate: false
     limit: 0
     recommend: 0
