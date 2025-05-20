@@ -1,0 +1,14 @@
+networks:
+  1panel-network:
+    external: true
+services:
+  md:
+    container_name: ${CONTAINER_NAME}
+    image: doocs/md:2.0.2
+    networks:
+      - 1panel-network
+    restart: always
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:80
+    labels:
+      createdBy: "Apps"
