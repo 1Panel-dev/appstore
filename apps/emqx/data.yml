@@ -10,7 +10,7 @@ additionalProperties:
         - Middleware
     shortDescZh: 适用于 IoT、IIoT 和联网车辆的最具可扩展性的开源 MQTT 代理
     shortDescEn: The most scalable open-source MQTT broker for IoT, IIoT, and connected vehicles
-    type: tool
+    type: website
     crossVersionUpdate: false
     limit: 0
     recommend: 0

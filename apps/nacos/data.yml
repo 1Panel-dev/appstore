@@ -10,7 +10,7 @@ additionalProperties:
   - Middleware
   shortDescZh: 动态服务发现、配置管理和服务管理平台
   shortDescEn: Dynamic service discovery, configuration and service management platform
-  type: tool
+  type: website
   crossVersionUpdate: false
   limit: 1
   recommend: 0

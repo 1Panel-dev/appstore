@@ -19,7 +19,7 @@ additionalProperties:
         ko: 강력하고 사용하기 쉬운 AI 도우미
         zh-Hant: 強大易用的企業級 AI 助手
         zh: 强大易用的企业级 AI 助手
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 20

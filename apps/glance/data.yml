@@ -10,7 +10,7 @@ additionalProperties:
     - Tool
   shortDescEn: A self-hosted dashboard that puts all your feeds in one place
   shortDescZh: 一个将所有您的源订阅集中在一个地方的托管仪表板
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 0
   document: https://github.com/glanceapp/glance

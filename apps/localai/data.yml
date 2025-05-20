@@ -10,7 +10,7 @@ additionalProperties:
         - AI
     shortDescZh: 免费的开源 OpenAI 替代品
     shortDescEn: The free, Open Source OpenAI alternative
-    type: tool
+    type: website
     crossVersionUpdate: false
     limit: 0
     recommend: 0

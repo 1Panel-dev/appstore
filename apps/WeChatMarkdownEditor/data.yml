@@ -1,26 +1,31 @@
 name: WeChat Markdown Editor
 tags:
   - 实用工具
-title: 微信 Markdown 编辑器
-description:
-  en: A highly concise WeChat Markdown editor
-  zh: 一款高度简洁的微信 Markdown 编辑器
-  zh-Hant: 一款高度簡潔的微信 Markdown 編輯器
-  ja: 非常にシンプルな微信Markdownエディター
-  ms: Editor Markdown WeChat yang sangat ringkas
-  pt-br: Um editor de Markdown altamente conciso para o WeChat
-  ru: Очень простой редактор Markdown для WeChat
-  ko: 매우 간결한 위챗 마크다운 편집기
+title: 一款高度简洁的微信 Markdown 编辑器
+description: 一款高度简洁的微信 Markdown 编辑器
 additionalProperties:
-  crossVersionUpdate: true
-  document: https://github.com/doocs/md
-  github: https://github.com/doocs/md
   key: WeChatMarkdownEditor
-  limit: 0
   name: WeChat Markdown Editor
-  shortDescEn: A highly concise WeChat Markdown editor
-  shortDescZh: 一款高度简洁的微信 Markdown 编辑器
   tags:
     - Tool
-  type: tool
+  shortDescEn: WeChat Markdown Editor
+  shortDescZh: 一款高度简洁的微信 Markdown 编辑器
+  description:
+    en: WeChat Markdown Editor
+    ja: 非常シンプルなWeChat Markdownエディタ
+    ms: Sunting Markdown WeChat yang sangat ringkas
+    pt-br: Um editor Markdown do WeChat altamente simplificado
+    ru: Высокосжатый редактор Markdown WeChat
+    ko: 간결한 WeChat Markdown 편집기
+    zh-Hant: 一款高度簡潔的微信 Markdown 編輯器
+    zh: 一款高度简洁的微信 Markdown 编辑器
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
   website: https://md.doocs.org/
+  github: https://github.com/doocs/md
+  document: https://github.com/doocs/md
+  architectures:
+    - amd64
+    - arm64

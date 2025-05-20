@@ -10,7 +10,7 @@ additionalProperties:
     - Database
   shortDescZh: 无代码数据库平台
   shortDescEn: Code-free database platform
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 0

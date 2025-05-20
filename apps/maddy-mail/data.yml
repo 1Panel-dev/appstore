@@ -19,7 +19,7 @@ additionalProperties:
         ko: 구성 가능한 올인원 메일 서버
         zh-Hant: 可組合的一體化郵件伺服器
         zh: 可组合的全能邮件服务器
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 1
     recommend: 0

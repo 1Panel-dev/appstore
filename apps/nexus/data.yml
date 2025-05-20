@@ -10,7 +10,7 @@ additionalProperties:
         - DevOps
     shortDescZh: 开源的软件制品库
     shortDescEn: An open source repository for build artifacts
-    type: tool
+    type: website
     crossVersionUpdate: false
     limit: 1
     recommend: 0

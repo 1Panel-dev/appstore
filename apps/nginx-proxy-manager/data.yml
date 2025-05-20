@@ -19,7 +19,7 @@ additionalProperties:
         ko: Nginx 시각적 관리 도구
         zh-Hant: Nginx 視覺化管理工具
         zh: Nginx 可视化管理工具
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 90

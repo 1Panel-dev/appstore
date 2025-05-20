@@ -10,7 +10,7 @@ additionalProperties:
         - DevTool
     shortDescZh: 基于 HTTP 的简单 pub-sub 通知服务
     shortDescEn: A simple HTTP-based pub-sub notification service
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0

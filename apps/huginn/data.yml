@@ -10,7 +10,7 @@ additionalProperties:
         - Tool
     shortDescZh: 一个用于构建代理系统的工具，可以为你在线执行自动化任务
     shortDescEn: A system for building agents that perform automated tasks for you online
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0

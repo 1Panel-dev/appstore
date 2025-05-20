@@ -19,7 +19,7 @@ additionalProperties:
     ko: 안전하고 현대적인 올인원 메일 서버
     zh-hant: 安全且現代化的一體化郵件伺服器
     zh: 安全且现代的一体化邮件服务器
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 1
   recommend: 0

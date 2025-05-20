@@ -10,7 +10,7 @@ additionalProperties:
         - DevOps
     shortDescZh: 优雅的开源项目追踪
     shortDescEn: Elegant open source project tracking
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0

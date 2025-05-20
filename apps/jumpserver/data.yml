@@ -19,7 +19,7 @@ additionalProperties:
     ko: 세계 최초의 오픈 소스 Bastion Host
     zh-Hant: 全球首個開源堡壘主機
     zh: 广受欢迎的开源堡垒机
-  type: tool
+  type: website
   crossVersionUpdate: false
   limit: 1
   recommend: 50

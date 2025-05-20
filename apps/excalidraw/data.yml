@@ -10,7 +10,7 @@ additionalProperties:
         - Tool
     shortDescZh: 用于绘制手绘风格图表的虚拟白板
     shortDescEn: Virtual whiteboard for sketching hand-drawn like diagrams
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     website: https://excalidraw.com/

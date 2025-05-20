@@ -10,7 +10,7 @@ additionalProperties:
         - Security
     shortDescZh: 一个用来进行安全脆弱性鉴定的 PHP/MySQL Web 应用平台。
     shortDescEn: DVWA (Damn Vulnerable Web Application)
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0

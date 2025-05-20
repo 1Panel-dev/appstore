@@ -10,7 +10,7 @@ additionalProperties:
         - Middleware
     shortDescZh: 开源的 Web 服务器和 Servlet 容器
     shortDescEn: An open-source web server and servlet container
-    type: tool
+    type: website
     crossVersionUpdate: false
     limit: 0
     recommend: 95

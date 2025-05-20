@@ -10,7 +10,7 @@ additionalProperties:
     - Tool
   shortDescZh: 用于事件驱动应用的低代码编程
   shortDescEn: Low-code programming for event-driven applications
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 0

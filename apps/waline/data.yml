@@ -10,7 +10,7 @@ additionalProperties:
         - Tool
     shortDescZh: 一款简洁、安全的评论系统
     shortDescEn: A Simple, Safe Comment System
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0

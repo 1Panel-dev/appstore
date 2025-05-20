@@ -19,7 +19,7 @@ additionalProperties:
         ko: 팔월드 서비스 시각적 관리 도구
         zh-hant: Palworld 服務視覺管理工具
         zh: 幻兽帕鲁服务可视化管理工具
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0

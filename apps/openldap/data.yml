@@ -10,7 +10,7 @@ additionalProperties:
         - Database
     shortDescZh: 开源的 LDAP(Lightweight Directory Access Protocol) 服务软件
     shortDescEn: An open source implementation of the Lightweight Directory Access Protocol
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0

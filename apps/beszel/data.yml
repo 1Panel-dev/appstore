@@ -19,7 +19,7 @@ additionalProperties:
         ko: 간단하고 가벼운 서버 모니터링
         zh-Hant: 簡單輕量的伺服器監控
         zh: 轻量易用的服务器监控
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0

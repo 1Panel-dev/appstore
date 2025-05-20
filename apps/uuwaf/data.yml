@@ -10,7 +10,7 @@ additionalProperties:
     - Security
   shortDescZh: 南墙 WEB 应用防火墙
   shortDescEn: NanQiang Web Application Firewall
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 1
   recommend: 0

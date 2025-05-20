@@ -10,7 +10,7 @@ additionalProperties:
         - Security
     shortDescZh: 专为现代应用和 SaaS 产品设计的开源 Auth0 替代品
     shortDescEn: An Auth0 alternative designed for modern apps and SaaS products
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0

@@ -11,7 +11,7 @@ additionalProperties:
         - DevTool
     shortDescZh: 云数据库管理器
     shortDescEn: Cloud Database Manager
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0

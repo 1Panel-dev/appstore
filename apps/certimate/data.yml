@@ -12,7 +12,7 @@ additionalProperties:
         - DevOps
     shortDescZh: 一个安全、简便的 SSL 证书管理解决方案
     shortDescEn: Certimate aims to provide users with a secure and user-friendly SSL certificate management solution.
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0

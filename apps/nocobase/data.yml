@@ -10,7 +10,7 @@ additionalProperties:
         - DevTool
     shortDescZh: 可扩展性优先的开源无代码开发平台
     shortDescEn: A scalability-first, open-source no-code development platform
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0
