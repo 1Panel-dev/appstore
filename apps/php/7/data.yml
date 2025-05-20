@@ -63,8 +63,8 @@ additionalProperties:
               value: ionCube
             - label: curl
               value: curl
-            - label: sg11
-              value: sg11
+            - label: sg16
+              value: sg16
             - label: imagick
               value: imagick
           envKey: PHP_EXTENSIONS
