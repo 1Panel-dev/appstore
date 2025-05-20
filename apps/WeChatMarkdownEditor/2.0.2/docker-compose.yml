@@ -4,7 +4,7 @@ networks:
 services:
   md:
     container_name: ${CONTAINER_NAME}
-    image: doocs/md:latest
+    image: doocs/md:2.0.2
     networks:
       - 1panel-network
     restart: always
