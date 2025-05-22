@@ -1,0 +1,24 @@
+name: windows
+tags:
+    - Runtime
+    - OS
+title: Docker 容器内的 Windows
+description: Docker 容器内的 Windows。
+additionalProperties:
+    key: windows
+    name: Windows
+    tags:
+        - Runtime
+        - OS
+    shortDescZh: Docker 容器内的 Windows。
+    shortDescEn: Windows inside a Docker container.
+    description:
+        zh: Docker 容器内的 Windows。
+        en: Windows inside a Docker container.
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://github.com/dockur/windows
+    github: https://github.com/dockur/windows
+    document: https://github.com/dockur/windows
