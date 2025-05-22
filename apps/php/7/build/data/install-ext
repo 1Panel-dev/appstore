@@ -216,7 +216,7 @@ install_extension() {
     elif [ "$extension" = "apcu" ]; then
         pecl_install  apcu  
     elif [ "$extension" = "redis" ]; then
-        pecl_install redis
+        install_php_extensions redis
     elif [ "$extension" = "xdebug" ]; then
         install_php_extensions xdebug
     elif [ "$extension" = "imap" ]; then
