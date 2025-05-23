@@ -1,6 +1,6 @@
 services:
   redpanda-console:
-    image: redpandadata/console:v3.1.0
+    image: redpandadata/console:v3.1.1
     restart: always
     container_name: ${CONTAINER_NAME}
     networks:
