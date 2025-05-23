@@ -4,8 +4,14 @@ FROM ${PHP_IMAGE}
 ARG PHP_EXTENSIONS
 ARG CONTAINER_PACKAGE_URL
 
-RUN sed -i "s|URIs: http://deb.debian.org/debian|URIs: ${CONTAINER_PACKAGE_URL}/debian|g" /etc/apt/sources.list.d/debian.sources && \
-    apt-get update
+
+RUN if [ -f /etc/apt/sources.list.d/debian.sources ]; then \
+        sed -i "s|URIs: http://deb.debian.org/debian|URIs: ${CONTAINER_PACKAGE_URL}/debian|g" /etc/apt/sources.list.d/debian.sources; \
+    elif [ -f /etc/apt/sources.list ]; then \
+        sed -i "s|http://deb.debian.org/debian|${CONTAINER_PACKAGE_URL}/debian|g" /etc/apt/sources.list; \
+    fi && \
+    apt-get update 
+
 
 COPY ./data /tmp/data
 
