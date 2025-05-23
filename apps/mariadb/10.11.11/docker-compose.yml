@@ -4,7 +4,7 @@ services:
     restart: always
     networks:
       - 1panel-network
-    image: "mariadb:10.11.11"
+    image: "mariadb:10.11.13"
     ports:
       - ${PANEL_APP_PORT_HTTP}:3306
     volumes:
