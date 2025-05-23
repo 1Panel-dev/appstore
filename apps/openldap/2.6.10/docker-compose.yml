@@ -1,7 +1,7 @@
 version: '3'
 services:
   openldap:
-    image: bitnami/openldap:2.6.9
+    image: bitnami/openldap:2.6.10
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
