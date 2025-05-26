@@ -83,7 +83,7 @@ additionalProperties:
         envKey: PANEL_DB_HOST
         required: true
         type: service
-      default: mysql
+      default: postgresql
       envKey: PANEL_DB_TYPE
       labelEn: Database Service
       labelZh: 数据库服务
