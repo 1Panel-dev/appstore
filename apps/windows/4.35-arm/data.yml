@@ -1,0 +1,168 @@
+additionalProperties:
+  formFields: 
+    - default: "11"
+      envKey: VERSION
+      labelZh: Windows 版本123（支持网络地址）
+      labelEn: Windows Version (Supports network address)
+      required: false
+      type: text
+      label:
+        en: Windows Version (Supports network address)
+        ja: Windowsバージョン（ネットワークアドレスをサポート）
+        ms: Versi Windows (Menyokong alamat rangkaian)
+        pt-br: Versão do Windows (Suporta endereço de rede)
+        ru: Версия Windows (поддерживает сетевой адрес)
+        ko: Windows 버전(네트워크 주소 지원)
+        zh-hant: Windows 版本（支援網路位址）
+        zh: Windows 版本123（支持网络地址）
+    # - default: ""
+    #   envKey: BOOT_ISO
+    #   labelZh: 启动ISO文件（将覆盖Windows版本配置）
+    #   labelEn: Boot ISO File (Will override version option)
+    #   required: false
+    #   type: text
+    #   label:
+    #     en: Boot ISO File (Will override version option)
+    #     ja: ブートISOファイル（バージョンオプションを上書きします）
+    #     ms: Fail ISO Boot (Akan menimpa pilihan versi)
+    #     pt-br: Arquivo ISO de inicialização (substituirá a opção de versão)
+    #     ru: Файл загрузочного ISO (перезапишет опцию версии)
+    #     ko: 부팅 ISO 파일(버전 옵션을 덮어씁니다)
+    #     zh-hant: 啟動ISO檔案（將覆蓋版本選項）
+    #     zh: 启动ISO文件（将覆盖Windows版本配置）
+
+    - default: 8006
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      label:
+        en: Port
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh: 端口
+        zh-Hant: 埠
+      required: true
+      rule: paramPort
+      type: number
+
+    - default: "8"
+      edit: true
+      envKey: RAM_SIZE
+      labelEn: RAM Size(GB)
+      labelZh: 内存大小(GB)
+      required: true
+      type: text
+      label:
+        en: RAM Size(GB)
+        ja: RAMサイズ(GB)
+        ms: Saiz RAM(Gb)
+        pt-br: Tamanho da RAM(GB)
+        ru: Размер ОЗУ(ГБ)
+        ko: RAM 크기(GB)
+        zh-hant: 隨機存取記憶體大小(GB)
+        zh: 内存大小(GB)
+
+    - default: "4"
+      edit: true
+      envKey: CPU_CORES
+      labelEn: CPU Cores
+      labelZh: CPU 核心数
+      required: true
+      type: text
+      label:
+        en: CPU Cores
+        ja: CPUコア
+        ms: Teras CPU
+        pt-br: Núcleos de CPU
+        ru: Ядра ЦП
+        ko: CPU 코어
+        zh-hant: 中央處理器核心數量
+        zh: CPU 核心数
+
+    - default: 64
+      edit: true
+      envKey: DISK_SIZE
+      labelEn: Disk Size(GB)
+      labelZh: 磁盘大小(GB)
+      label:
+        en: Disk Size(GB)
+        ja: ディスクサイズ(GB)
+        ms: Saiz Cakera(Gb)
+        pt-br: Tamanho do Disco(GB)
+        ru: Размер диска(ГБ)
+        ko: 디스크 크기(GB)
+        zh-hant: 磁碟大小(GB)
+        zh: 磁盘大小(GB)
+      required: true
+      type: number
+
+    - default: "Docker"
+      edit: true
+      envKey: USERNAME
+      labelEn: Username
+      labelZh: 系统用户名
+      required: true
+      type: text
+      label:
+        en: Username
+        ja: ユーザー名
+        ms: Nama Pengguna
+        pt-br: Nome de usuário
+        ru: Имя пользователя
+        ko: 사용자 이름
+        zh-hant: 使用者名稱
+        zh: 系统用户名
+    - default: "admin"
+      edit: true
+      envKey: PASSWORD
+      labelEn: Password
+      labelZh: 系统密码
+      required: true
+      type: password
+      label:
+        en: Password
+        ja: パスワード
+        ms: Kata Laluan
+        pt-br: Senha
+        ru: Пароль
+        ko: 비밀번호
+        zh-hant: 密碼
+        zh: 系统密码
+
+    - default: "Chinese"
+      edit: true
+      envKey: LANGUAGE
+      labelEn: Language
+      labelZh: 语言
+      required: true
+      type: text
+      label:
+        en: Language
+        ja: 言語
+        ms: Bahasa
+        pt-br: Idioma
+        ru: Язык
+        ko: 언어
+        zh-hant: 語言
+        zh: 语言
+
+    - default: "en-US"
+      edit: true
+      envKey: KEYBOARD_LAYOUT
+      labelEn: Keyboard Layout
+      labelZh: 键盘布局
+      required: true
+      type: text
+      label:
+        en: Keyboard Layout
+        ja: キーボードレイアウト
+        ms: Susun Atur Papan Kekunci
+        pt-br: Layout do Teclado
+        ru: Раскладка клавиатуры
+        ko: 키보드 레이아웃
+        zh-hant: 鍵盤佈局
+        zh: 键盘布局
