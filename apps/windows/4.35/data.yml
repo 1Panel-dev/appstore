@@ -2,19 +2,34 @@ additionalProperties:
   formFields: 
     - default: "11"
       envKey: VERSION
-      labelEn: version
-      labelZh: 版本
-      required: true
+      labelZh: Windows 版本123（支持网络地址）
+      labelEn: Windows Version (Supports network address)
+      required: false
       type: text
       label:
-        en: version
-        ja: バージョン
-        ms: Versi
-        pt-br: Versão
-        ru: Версия
-        ko: 버전
-        zh-hant: 版本
-        zh: 版本
+        en: Windows Version (Supports network address)
+        ja: Windowsバージョン（ネットワークアドレスをサポート）
+        ms: Versi Windows (Menyokong alamat rangkaian)
+        pt-br: Versão do Windows (Suporta endereço de rede)
+        ru: Версия Windows (поддерживает сетевой адрес)
+        ko: Windows 버전(네트워크 주소 지원)
+        zh-hant: Windows 版本（支援網路位址）
+        zh: Windows 版本123（支持网络地址）
+    # - default: ""
+    #   envKey: BOOT_ISO
+    #   labelZh: 启动ISO文件（将覆盖Windows版本配置）
+    #   labelEn: Boot ISO File (Will override version option)
+    #   required: false
+    #   type: text
+    #   label:
+    #     en: Boot ISO File (Will override version option)
+    #     ja: ブートISOファイル（バージョンオプションを上書きします）
+    #     ms: Fail ISO Boot (Akan menimpa pilihan versi)
+    #     pt-br: Arquivo ISO de inicialização (substituirá a opção de versão)
+    #     ru: Файл загрузочного ISO (перезапишет опцию версии)
+    #     ko: 부팅 ISO 파일(버전 옵션을 덮어씁니다)
+    #     zh-hant: 啟動ISO檔案（將覆蓋版本選項）
+    #     zh: 启动ISO文件（将覆盖Windows版本配置）
 
     - default: 8006
       edit: true
@@ -88,35 +103,35 @@ additionalProperties:
     - default: "Docker"
       edit: true
       envKey: USERNAME
-      labelEn: username
-      labelZh: 用户名
+      labelEn: Username
+      labelZh: 系统用户名
       required: true
       type: text
       label:
-        en: username
+        en: Username
         ja: ユーザー名
         ms: Nama Pengguna
         pt-br: Nome de usuário
         ru: Имя пользователя
         ko: 사용자 이름
-        zh: 用户名
-        zh-Hant: 用戶名
+        zh-hant: 使用者名稱
+        zh: 系统用户名
     - default: "admin"
       edit: true
       envKey: PASSWORD
-      labelEn: password
-      labelZh: 密码
+      labelEn: Password
+      labelZh: 系统密码
       required: true
       type: password
       label:
-        en: password
+        en: Password
         ja: パスワード
         ms: Kata Laluan
         pt-br: Senha
         ru: Пароль
         ko: 비밀번호
-        zh: 密码
-        zh-Hant: 密碼
+        zh-hant: 密碼
+        zh: 系统密码
 
     - default: "Chinese"
       edit: true

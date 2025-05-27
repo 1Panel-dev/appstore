@@ -20,7 +20,7 @@ services:
     cap_add:
       - NET_ADMIN
     volumes:
-      - ./data/windows:/storage
+      - ./data:/storage
     restart: always
     networks:
       - 1panel-network
