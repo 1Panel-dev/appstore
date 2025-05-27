@@ -1,7 +1,7 @@
 services:
   logto:
     container_name: ${CONTAINER_NAME}
-    image: svhd/logto:1.27.0
+    image: svhd/logto:1.28.0
     networks:
       - 1panel-network
     ports:
