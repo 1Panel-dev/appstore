@@ -15,6 +15,12 @@ additionalProperties:
     description:
         zh: Docker 容器内的 Windows。
         en: Windows inside a Docker container.
+        ja: Docker コンテナ内の Windows。
+        ms: Docker 容器內的 Windows。 
+        pt-br: Windows dentro de um contêiner Docker.
+        ru: Windows в контейнере Docker.
+        ko: Docker 컨테이너 내의 Windows.
+        zh-Hant: Docker 容器內的 Windows。
     type: tool
     crossVersionUpdate: true
     limit: 0
