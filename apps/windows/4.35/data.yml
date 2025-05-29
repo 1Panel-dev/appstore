@@ -2,7 +2,7 @@ additionalProperties:
   formFields: 
     - default: "11"
       envKey: VERSION
-      labelZh: Windows 版本123（支持网络地址）
+      labelZh: Windows 版本（支持网络地址）
       labelEn: Windows Version (Supports network address)
       required: false
       type: text
@@ -15,22 +15,6 @@ additionalProperties:
         ko: Windows 버전(네트워크 주소 지원)
         zh-hant: Windows 版本（支援網路位址）
         zh: Windows 版本123（支持网络地址）
-    # - default: ""
-    #   envKey: BOOT_ISO
-    #   labelZh: 启动ISO文件（将覆盖Windows版本配置）
-    #   labelEn: Boot ISO File (Will override version option)
-    #   required: false
-    #   type: text
-    #   label:
-    #     en: Boot ISO File (Will override version option)
-    #     ja: ブートISOファイル（バージョンオプションを上書きします）
-    #     ms: Fail ISO Boot (Akan menimpa pilihan versi)
-    #     pt-br: Arquivo ISO de inicialização (substituirá a opção de versão)
-    #     ru: Файл загрузочного ISO (перезапишет опцию версии)
-    #     ko: 부팅 ISO 파일(버전 옵션을 덮어씁니다)
-    #     zh-hant: 啟動ISO檔案（將覆蓋版本選項）
-    #     zh: 启动ISO文件（将覆盖Windows版本配置）
-
     - default: 8006
       edit: true
       envKey: PANEL_APP_PORT_HTTP
@@ -48,7 +32,6 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-
     - default: "8"
       edit: true
       envKey: RAM_SIZE
@@ -65,7 +48,6 @@ additionalProperties:
         ko: RAM 크기(GB)
         zh-hant: 隨機存取記憶體大小(GB)
         zh: 内存大小(GB)
-
     - default: "4"
       edit: true
       envKey: CPU_CORES
@@ -82,7 +64,6 @@ additionalProperties:
         ko: CPU 코어
         zh-hant: 中央處理器核心數量
         zh: CPU 核心数
-
     - default: 64
       edit: true
       envKey: DISK_SIZE
@@ -99,7 +80,6 @@ additionalProperties:
         zh: 磁盘大小(GB)
       required: true
       type: number
-
     - default: "Docker"
       edit: true
       envKey: USERNAME
@@ -132,7 +112,6 @@ additionalProperties:
         ko: 비밀번호
         zh-hant: 密碼
         zh: 系统密码
-
     - default: "Chinese"
       edit: true
       envKey: LANGUAGE
@@ -149,7 +128,6 @@ additionalProperties:
         ko: 언어
         zh-hant: 語言
         zh: 语言
-
     - default: "en-US"
       edit: true
       envKey: KEYBOARD_LAYOUT
