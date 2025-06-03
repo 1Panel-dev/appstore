@@ -2,6 +2,8 @@ additionalProperties:
   formFields:
     - default: 443
       envKey: PANEL_APP_PORT_HTTPS
+      labelEn: HTTPS Port
+      labelZh: HTTPS 端口
       label:
         en: HTTPS Port
         ja: HTTPSポート
@@ -10,11 +12,13 @@ additionalProperties:
         ru: Порт HTTPS
         ko: HTTPS 포트
         zh-hant: HTTPS 連接埠
-        zh: HTTPS端口
+        zh: HTTPS 端口
       required: true
       type: number
     - default: 8080
       envKey: PANEL_APP_PORT_HTTP
+      labelEn: HTTP Port
+      labelZh: HTTP 端口
       label:
         en: HTTP Port
         ja: HTTPポート
@@ -23,11 +27,13 @@ additionalProperties:
         ru: Порт HTTP
         ko: HTTP 포트
         zh-hant: HTTP 連接埠
-        zh: HTTP端口
+        zh: HTTP 端口
       required: true
       type: number
     - default: 25
       envKey: PORT_SMTP
+      labelEn: SMTP Port
+      labelZh: SMTP 端口
       label:
         en: SMTP Port
         ja: SMTPポート
@@ -36,11 +42,13 @@ additionalProperties:
         ru: Порт SMTP
         ko: SMTP 포트
         zh-hant: SMTP 連接埠
-        zh: SMTP端口
+        zh: SMTP 端口
       required: true
       type: number
     - default: 587
       envKey: PORT_SMTP_SUBMISSION
+      labelEn: SMTP Submission Port
+      labelZh: SMTP 提交端口
       label:
         en: SMTP Submission Port
         ja: SMTP送信ポート
@@ -49,11 +57,13 @@ additionalProperties:
         ru: Порт отправки SMTP
         ko: SMTP 제출 포트
         zh-hant: SMTP 提交連接埠
-        zh: SMTP提交端口
+        zh: SMTP 提交端口
       required: true
       type: number
     - default: 465
       envKey: PORT_SMTP_SSL
+      labelEn: SMTP SSL Port
+      labelZh: SMTP SSL 端口
       label:
         en: SMTP SSL Port
         ja: SMTP SSLポート
@@ -62,11 +72,13 @@ additionalProperties:
         ru: Порт SMTP SSL
         ko: SMTP SSL 포트
         zh-hant: SMTP SSL 連接埠
-        zh: SMTP SSL端口
+        zh: SMTP SSL 端口
       required: true
       type: number
     - default: 143
       envKey: PORT_IMAP
+      labelEn: IMAP Port
+      labelZh: IMAP 端口
       label:
         en: IMAP Port
         ja: IMAPポート
@@ -75,11 +87,13 @@ additionalProperties:
         ru: Порт IMAP
         ko: IMAP 포트
         zh-hant: IMAP 連接埠
-        zh: IMAP端口
+        zh: IMAP 端口
       required: true
       type: number
     - default: 993
       envKey: PORT_IMAP_SSL
+      labelEn: IMAP SSL Port
+      labelZh: IMAP SSL 端口
       label:
         en: IMAP SSL Port
         ja: IMAP SSLポート
@@ -88,11 +102,13 @@ additionalProperties:
         ru: Порт IMAP SSL
         ko: IMAP SSL 포트
         zh-hant: IMAP SSL 連接埠
-        zh: IMAP SSL端口
+        zh: IMAP SSL 端口
       required: true
       type: number
     - default: 110
       envKey: PORT_POP3
+      labelEn: POP3 Port
+      labelZh: POP3 端口
       label:
         en: POP3 Port
         ja: POP3ポート
@@ -101,11 +117,13 @@ additionalProperties:
         ru: Порт POP3
         ko: POP3 포트
         zh-hant: POP3 連接埠
-        zh: POP3端口
+        zh: POP3 端口
       required: true
       type: number
     - default: 995
       envKey: PORT_POP3_SSL
+      labelEn: POP3 SSL Port
+      labelZh: POP3 SSL 端口
       label:
         en: POP3 SSL Port
         ja: POP3 SSLポート
@@ -114,11 +132,13 @@ additionalProperties:
         ru: Порт POP3 SSL
         ko: POP3 SSL 포트
         zh-hant: POP3 SSL 連接埠
-        zh: POP3 SSL端口
+        zh: POP3 SSL 端口
       required: true
       type: number
     - default: 4190
       envKey: PORT_MANAGESIEVE
+      labelEn: ManageSieve Port
+      labelZh: ManageSieve 端口
       label:
         en: ManageSieve Port
         ja: ManageSieveポート
@@ -127,6 +147,6 @@ additionalProperties:
         ru: Порт ManageSieve
         ko: ManageSieve 포트
         zh-hant: ManageSieve 連接埠
-        zh: ManageSieve端口
+        zh: ManageSieve 端口
       required: true
       type: number
