@@ -1,6 +1,6 @@
 services:
   roundcube:
-    image: roundcube/roundcubemail:1.6.10-apache
+    image: roundcube/roundcubemail:1.6.11-apache
     container_name: ${CONTAINER_NAME}
     restart: always
     environment:
