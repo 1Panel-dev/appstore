@@ -1,0 +1,39 @@
+services:
+    homeassistant:
+        container_name: ${CONTAINER_NAME}-ha
+        environment:
+            - TZ=${TIME_ZONE}
+        healthcheck:
+            disable: true
+        image: homeassistant/home-assistant:2025.4.4
+        labels:
+            createdBy: Apps
+        network_mode: "host"
+#        networks:
+#            - 1panel-network
+        ports:
+            - ${PANEL_APP_PORT_HTTP}:8123
+        restart: unless-stopped
+        volumes:
+            - ./data:/config
+            - /run/dbus:/run/dbus:ro
+    mqtt5:
+        container_name: ${CONTAINER_NAME}-mqtt
+        image: eclipse-mosquitto
+        network_mode: "host"
+#        networks:
+#            - 1panel-network
+        ports:
+            - ${PANEL_APP_PORT_MQTT}:1883
+            - ${PANEL_APP_PORT_MQTT_WS}:9001
+        restart: unless-stopped
+        volumes:
+            - ./mosquitto/config:/mosquitto/config:rw
+            - ./mosquitto/data:/mosquitto/data:rw
+            - ./mosquitto/log:/mosquitto/log:rw
+        labels:
+            createdBy: Apps
+
+#networks:
+#    1panel-network:
+#        external: true
