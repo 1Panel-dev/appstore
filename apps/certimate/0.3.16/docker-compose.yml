@@ -3,7 +3,7 @@ networks:
     external: true
 services:
   certimate:
-    image: usual2970/certimate:v0.3.15
+    image: usual2970/certimate:v0.3.16
     container_name: ${CONTAINER_NAME}
     networks:
       - 1panel-network
