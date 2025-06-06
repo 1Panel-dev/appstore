@@ -9,8 +9,8 @@ services:
       - ${PANEL_APP_PORT_HTTP}:8000
     environment:
       RUNNING_IN_DOCKER: "true"
-      driverName: "mysql"
-      dataSourceName: ${PANEL_DB_USER}:${PANEL_DB_USER_PASSWORD}@tcp(${PANEL_DB_HOST}:${PANEL_DB_PORT})/
+      driverName: ${CASDOOR_DRIVER_NAME}
+      dataSourceName: ${CASDOOR_DATASOURCE_NAME}
       dbName: ${PANEL_DB_NAME}
     volumes:
       - ./conf:/conf
