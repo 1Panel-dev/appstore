@@ -42,7 +42,7 @@ additionalProperties:
         - label: MariaDB
           value: mariadb
         - label: PostgreSQL
-          value: postgresql
+          value: postgres
     - default: casdoor
       envKey: PANEL_DB_NAME
       labelEn: Database
