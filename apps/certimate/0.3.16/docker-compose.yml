@@ -1,0 +1,22 @@
+networks:
+  1panel-network:
+    external: true
+services:
+  certimate:
+    image: usual2970/certimate:v0.3.16
+    container_name: ${CONTAINER_NAME}
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8090
+    environment:
+      - http_proxy=${PANEL_HTTP_PROXY}
+      - https_proxy=${PANEL_HTTPS_PROXY}
+      - NO_PROXY=${PANEL_NO_PROXY}
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - ./data:/app/pb_data
+    restart: unless-stopped
+    labels:  
+      createdBy: "Apps" 
