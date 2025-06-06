@@ -2,7 +2,7 @@ additionalProperties:
   formFields:
     - default: 2881
       edit: true
-      envKey: PANEL_APP_PORT_HTTP
+      envKey: PANEL_APP_PORT_MYSQL
       labelEn: Port
       labelZh: 端口
       required: true
@@ -18,7 +18,7 @@ additionalProperties:
       type: text
     - default: ''
       edit: true
-      envKey: OB_ROOT_PASSWORD	
+      envKey: OB_SYS_PASSWORD	
       labelEn: Password of sys@root
       labelZh: SYS 租户密码
       required: false
@@ -26,15 +26,22 @@ additionalProperties:
     - default: 6
       edit: true
       envKey: OB_MEMORY_LIMIT
-      labelEn: MEMORY LIMIT
+      labelEn: MEMORY LIMIT(Unit GB)
       labelZh: 内存 (单位：GB)
       required: true
       rule: paramPort
       type: number
+    - default: ./data
+      edit: true
+      envKey: OB_MOUNT_PATH
+      labelEn: Mount path of OceanBase files
+      labelZh: OceanBase 文件挂载路径
+      required: true
+      type: text
     - default: 5
       edit: true
       envKey: OB_DATAFILE_SIZE
-      labelEn: DATAFILE SIZE
+      labelEn: DATAFILE SIZE(Unit GB)
       labelZh: 数据文件大小 (单位：GB)
       required: true
       rule: paramPort
@@ -42,7 +49,7 @@ additionalProperties:
     - default: 5
       edit: true
       envKey: OB_LOG_DISK_SIZE	
-      labelEn: LOG DISK SIZE
+      labelEn: LOG DISK SIZE(Unit GB)
       labelZh: 日志文件大小 (单位：GB)
       required: true
       rule: paramPort
