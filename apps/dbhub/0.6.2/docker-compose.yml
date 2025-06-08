@@ -1,6 +1,6 @@
 services:
   dbhub:
-    image: bytebase/dbhub:0.6.2
+    image: bytebase/dbhub:0.7.0
     container_name: ${CONTAINER_NAME}
     ports:
       - ${PANEL_APP_PORT_HTTP}:8080
