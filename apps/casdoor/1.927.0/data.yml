@@ -41,6 +41,8 @@ additionalProperties:
           value: mysql
         - label: MariaDB
           value: mariadb
+        - label: PostgreSQL
+          value: postgres
     - default: casdoor
       envKey: PANEL_DB_NAME
       labelEn: Database
