@@ -1,6 +1,6 @@
 services:
   casdoor:
-    image: casbin/casdoor:v1.931.0
+    image: casbin/casdoor:v1.932.0
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
