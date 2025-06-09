@@ -117,6 +117,8 @@ COPY tmp /tmp
 ARG CONTAINER_PACKAGE_URL
 RUN sed -i "s|http://archive.ubuntu.com/ubuntu/|${CONTAINER_PACKAGE_URL}|g" /etc/apt/sources.list \
     && sed -i "s|http://security.ubuntu.com/ubuntu/|${CONTAINER_PACKAGE_URL}|g" /etc/apt/sources.list 
+    
+COPY --from=panel-openresty /usr/local/openresty/modules/ngx_brotli /usr/local/openresty/modules/ngx_brotli
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
@@ -216,7 +218,8 @@ RUN bash /tmp/default.sh
 COPY --from=panel-openresty /usr/local/openresty/1pwaf /usr/local/openresty/1pwaf
 COPY --from=panel-openresty /usr/local/openresty/1pwaf/libraries/libmaxminddb.so /usr/local/openresty/1pwaf/libraries/libmaxminddb.so
 COPY --from=panel-openresty /usr/local/openresty/1pwaf/libraries/libinjection.so /usr/local/openresty/1pwaf/libraries/libinjection.so
-COPY --from=panel-openresty /usr/local/openresty/luajit/lib/lua/5.1/lsqlite3.so /usr/local/openresty/luajit/lib/lua/5.1/lsqlite3.so 
+COPY --from=panel-openresty /usr/local/openresty/luajit/lib/lua/5.1/lsqlite3.so /usr/local/openresty/luajit/lib/lua/5.1/lsqlite3.so
+COPY --from=panel-openresty /usr/local/openresty/luajit/lib/lua/5.1/lfs.so  /usr/local/openresty/luajit/lib/lua/5.1/lfs.so
 
 CMD ["/usr/local/openresty/bin/openresty", "-g", "daemon off;"]
 
