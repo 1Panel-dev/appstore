@@ -9,7 +9,7 @@ services:
     init: true
     command: 
       - "--transport"
-      - "sse"
+      - "http"
       - "--port"
       - "8080"
       - "--dsn"
