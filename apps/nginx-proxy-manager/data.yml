@@ -1,13 +1,13 @@
 name: Nginx Proxy Manager
 tags:
-    - 实用工具
+    - Web 服务器
 title: Nginx 可视化管理工具
 description: Nginx 可视化管理工具
 additionalProperties:
     key: nginx-proxy-manager
     name: Nginx Proxy Manager
     tags:
-        - Tool
+        - Server
     shortDescZh: Nginx 可视化管理工具
     shortDescEn: Nginx visual management tool
     description:
