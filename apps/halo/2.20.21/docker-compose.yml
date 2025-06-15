@@ -1,6 +1,6 @@
 services:
   halo:
-    image: halohub/halo-pro:2.20.21
+    image: halohub/halo-pro:2.21.0
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
