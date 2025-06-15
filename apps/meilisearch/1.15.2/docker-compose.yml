@@ -1,7 +1,7 @@
 services:
   meilisearch:
     container_name: ${CONTAINER_NAME}
-    image: getmeili/meilisearch:v1.15.0
+    image: getmeili/meilisearch:v1.15.2
     restart: always
     networks:
       - 1panel-network
