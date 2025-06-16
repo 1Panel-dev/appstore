@@ -11,11 +11,19 @@ additionalProperties:
           value: "true"
         - label: 关闭
           value: "false"
-    - default: 8848
+    - default: 8080
       edit: true
       envKey: PANEL_APP_PORT_HTTP
-      labelEn: Nacos run port
-      labelZh: Nacos 运行端口
+      labelEn: Nacos GUI port
+      labelZh: Nacos 界面 访问端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 8848
+      edit: true
+      envKey: PANEL_APP_PORT_API_HTTP
+      labelEn: Nacos api port
+      labelZh: Nacos API端口
       required: true
       rule: paramPort
       type: number

@@ -6,6 +6,13 @@
 - 用户名：`nacos`
 - 密码：`nacos`
 
+
+### 如果是nacos3.0+版本
+
+- 访问地址：`http://IP:8080/index.html`
+- 用户名：`nacos`
+- 密码：首次打开会要求初始化管理员用户nacos的密码
+
 ## 参数调优
 
 ```shell
