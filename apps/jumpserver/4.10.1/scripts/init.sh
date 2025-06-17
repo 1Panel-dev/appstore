@@ -3,8 +3,7 @@
 ENV_FILE=".env"
 
 if [ -f "$ENV_FILE" ]; then
-  PANEL_DB_TYPE=$(grep '^PANEL_DB_TYPE=' "$ENV_FILE" | cut -d '=' -f 2 | tr -d '"')
-  
+  source "$ENV_FILE"
   if [ "$PANEL_DB_TYPE" == "postgresql" ]; then
     ENGINE="postgresql"
   elif [ "$PANEL_DB_TYPE" == "mysql" ] || [ "$PANEL_DB_TYPE" == "mariadb" ]; then
