@@ -20,7 +20,8 @@ services:
       - ./data/logs:/home/nacos/logs
       - ./data/data:/home/nacos/data
     ports:
-      - "${PANEL_APP_PORT_HTTP}:8848"
+      - "${PANEL_APP_PORT_HTTP}:8080"
+      - "${PANEL_APP_PORT_API_HTTP}:8848"
       - "${PANEL_APP_PORT_COMMUNICATION}:9848"
     labels:  
       createdBy: "Apps"
