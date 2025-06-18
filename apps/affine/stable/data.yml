@@ -16,54 +16,6 @@ additionalProperties:
         ko: 웹 포트
         zh: HTTP 端口
         zh-Hant: HTTP 埠
-    - default: 5555
-      envKey: PANEL_APP_PORT_HTTP_5555
-      labelEn: Port
-      labelZh: 端口
-      required: true
-      rule: paramPort
-      type: number
-      label:
-        en: Port
-        ja: ポート
-        ms: Port
-        pt-br: Porta
-        ru: Порт
-        ko: 포트
-        zh: 端口
-        zh-Hant: 埠
-    - default: ""
-      edit: true
-      envKey: AFFINE_ADMIN_EMAIL
-      labelEn: email
-      labelZh: 管理员邮箱
-      required: true
-      type: text
-      label:
-        en: email
-        ja: メール
-        ms: E-mel
-        pt-br: E-mail
-        ru: Электронная почта
-        ko: 이메일
-        zh: 管理员邮箱
-        zh-Hant: 管理员邮箱
-    - default: ""
-      edit: true
-      envKey: AFFINE_ADMIN_PASSWORD
-      labelEn: password
-      labelZh: 管理员密码
-      required: true
-      type: password
-      label:
-        en: password
-        ja: パスワード
-        ms: Kata laluan
-        pt-br: Senha
-        ru: Пароль
-        ko: 비밀번호
-        zh: 管理员密码
-        zh-Hant: 管理员密码
     - default: ""
       envKey: PANEL_DB_HOST
       key: postgresql
