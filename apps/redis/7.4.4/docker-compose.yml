@@ -7,13 +7,7 @@ services:
       - 1panel-network
     ports:
       - ${PANEL_APP_PORT_HTTP}:6379
-    command: >
-      sh -c '
-      if [ -z "${PANEL_REDIS_ROOT_PASSWORD}" ]; then
-        redis-server /etc/redis/redis.conf
-      else
-        redis-server /etc/redis/redis.conf --requirepass ${PANEL_REDIS_ROOT_PASSWORD}
-      fi'
+    command: redis-server /etc/redis/redis.conf ${PANEL_REDIS_ROOT_PASSWORD:+--requirepass "${PANEL_REDIS_ROOT_PASSWORD}"}
     volumes:
       - ./data:/data
       - ./conf/redis.conf:/etc/redis/redis.conf
