@@ -1,5 +1,6 @@
 services:
   clickhouse:
+    image: clickhouse/clickhouse-server:25.5.3-alpine
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
@@ -10,7 +11,9 @@ services:
     volumes:
       - ./clickhouse:/var/lib/clickhouse/
       - ./clickhouse-server:/var/log/clickhouse-server/
-    image: clickhouse/clickhouse-server:25.5.3-alpine
+    environment:
+      - CLICKHOUSE_USER=${CLICKHOUSE_USER}
+      - CLICKHOUSE_PASSWORD=${CLICKHOUSE_PASSWORD}
     ulimits:
       nofile:
         soft: 262144

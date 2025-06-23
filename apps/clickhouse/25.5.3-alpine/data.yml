@@ -1,35 +1,66 @@
 additionalProperties:
-    formFields:
-        - default: 19000
-          envKey: PANEL_APP_PORT_TCP
-          labelEn: Port
-          labelZh: TCP 端口
-          label:
-            en: Port
-            ja: ポート
-            ms: Port
-            pt-br: Porta
-            ru: Порт
-            ko: 포트
-            zh: TCP 端口
-            zh-Hant: TCP 連接埠
-          required: true
-          rule: paramPort
-          type: number
-        - default: 18123
-          edit: true
-          envKey: PANEL_APP_PORT_HTTP
-          labelEn: Port
-          labelZh: API 端口
-          label:
-            en: Port
-            ja: ポート
-            ms: Port
-            pt-br: Porta
-            ru: Порт
-            ko: 포트
-            zh: API 端口
-            zh-Hant: API 連接埠
-          required: true
-          rule: paramPort
-          type: number
+  formFields:
+    - default: 19000
+      envKey: PANEL_APP_PORT_TCP
+      labelEn: Port
+      labelZh: TCP 端口
+      label:
+        en: Port
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh: TCP 端口
+        zh-Hant: TCP 連接埠
+      required: true
+      rule: paramPort
+      type: number
+    - default: 18123
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: API 端口
+      label:
+        en: Port
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh: API 端口
+        zh-Hant: API 連接埠
+      required: true
+      rule: paramPort
+      type: number
+    - default: admin
+      envKey: CLICKHOUSE_USER
+      labelEn: Admin User
+      labelZh: 管理员
+      label:
+        en: Admin User
+        ja: 管理者ユーザー
+        ms: Pengguna Pentadbir
+        pt-br: Usuário do Administrador
+        ru: Администратор
+        ko: 관리자
+        zh-Hant: 管理員
+        zh: 管理员
+      required: true
+      type: text
+    - default: clickhouse
+      envKey: CLICKHOUSE_PASSWORD
+      labelEn: Admin Password
+      labelZh: 管理员密码
+      label:
+        en: Admin Password
+        ja: 管理者パスワード
+        ms: Kata Laluan Pentadbir
+        pt-br: Senha do Administrador
+        ru: Пароль администратора
+        ko: 관리자 비밀번호
+        zh-Hant: 管理員密碼
+        zh: 管理员密码
+      random: true
+      required: true
+      type: password
