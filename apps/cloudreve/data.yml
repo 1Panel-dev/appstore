@@ -11,7 +11,7 @@ additionalProperties:
   shortDescZh: 支持多家云存储的云盘系统
   shortDescEn: Self-hosted file management system with muilt-cloud support
   type: website
-  crossVersionUpdate: true
+  crossVersionUpdate: false
   limit: 0
   recommend: 0
   website: https://cloudreve.org/
