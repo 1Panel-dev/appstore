@@ -1,20 +1,25 @@
 services:
   cloudreve:
+    image: cloudreve/cloudreve:4.0.0
     container_name: ${CONTAINER_NAME}
     restart: always
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:5212
+    environment:
+      - CR_CONF_Database.Type=${PANEL_DB_TYPE}
+      - CR_CONF_Database.Host=${PANEL_DB_HOST}
+      - CR_CONF_Database.Name=${PANEL_DB_NAME}
+      - CR_CONF_Database.User=${PANEL_DB_USER}
+      - CR_CONF_Database.Password=${PANEL_DB_USER_PASSWORD}
+      - CR_CONF_Database.Port=5432
+      - CR_CONF_Redis.Server=${PANEL_REDIS_HOST}:6379
+      - CR_CONF_Redis.Password=${PANEL_REDIS_ROOT_PASSWORD}
+    volumes:
+      - ./data:/cloudreve/data
+    labels:
+        createdBy: "Apps"
     networks:
       - 1panel-network
-    ports:
-      - "${PANEL_APP_PORT_HTTP}:5212"
-    volumes:
-      - "./data/uploads:/cloudreve/uploads"
-      - "./data/data:/data"
-      - "./data/conf.ini:/cloudreve/conf.ini"
-      - "./data/cloudreve.db:/cloudreve/cloudreve.db"
-      - "./data/avatar:/cloudreve/avatar"
-    image: cloudreve/cloudreve:4.0.0
-    labels:  
-      createdBy: "Apps"
-networks:  
-  1panel-network:  
+networks:
+  1panel-network:
     external: true
