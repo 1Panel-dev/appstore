@@ -1,0 +1,29 @@
+name: Sync commits to CNB
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout GitHub repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "${{ secrets.CNB_USERNAME }}"
+          git config --global user.email "${{ secrets.CNB_USERNAME }}@users.noreply.github.com"
+
+      - name: Add CNB remote and push history
+        env:
+          CNB_USERNAME: ${{ secrets.CNB_USERNAME }}
+          CNB_TOKEN: ${{ secrets.CNB_TOKEN }}
+        run: |
+          git remote add cnb "https://${CNB_USERNAME}:${CNB_TOKEN}@cnb.cool/${CNB_USERNAME}/appstore.git"
+          git push cnb main
