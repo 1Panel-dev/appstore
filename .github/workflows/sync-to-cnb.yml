@@ -25,5 +25,5 @@ jobs:
           CNB_USERNAME: ${{ secrets.CNB_USERNAME }}
           CNB_TOKEN: ${{ secrets.CNB_TOKEN }}
         run: |
-          git remote add cnb "https://${CNB_USERNAME}:${CNB_TOKEN}@cnb.cool/${CNB_USERNAME}/appstore.git"
-          git push cnb main
+          git remote add origin "https://${{ secrets.CNB_USERNAME }}:${{ secrets.CNB_TOKEN }}@cnb.cool/Liiiu/Blog.git"
+          git push
