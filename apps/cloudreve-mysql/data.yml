@@ -1,4 +1,4 @@
-name: Cloudreve
+name: Cloudreve-mysql
 tags:
   - 云存储
 title: 支持多家云存储的云盘系统
@@ -8,7 +8,7 @@ additionalProperties:
   name: Cloudreve
   tags:
     - Storage
-  shortDescZh: 支持多家云存储的云盘系统
+  shortDescZh: 支持多家云存储的云盘系统，此应用为兼容mariadb和mysql专用
   shortDescEn: Self-hosted file management system with muilt-cloud support
   type: website
   crossVersionUpdate: false

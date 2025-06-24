@@ -6,12 +6,12 @@ services:
     ports:
       - ${PANEL_APP_PORT_HTTP}:5212
     environment:
-      - CR_CONF_Database.Type=${PANEL_DB_TYPE}
+      - CR_CONF_Database.Type=mysql
       - CR_CONF_Database.Host=${PANEL_DB_HOST}
       - CR_CONF_Database.Name=${PANEL_DB_NAME}
       - CR_CONF_Database.User=${PANEL_DB_USER}
       - CR_CONF_Database.Password=${PANEL_DB_USER_PASSWORD}
-      - CR_CONF_Database.Port=${PANEL_DB_PORT}
+      - CR_CONF_Database.Port=3306
       - CR_CONF_Redis.Server=${PANEL_REDIS_HOST}:6379
       - CR_CONF_Redis.Password=${PANEL_REDIS_ROOT_PASSWORD}
     volumes:

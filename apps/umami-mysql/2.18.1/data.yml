@@ -1,6 +1,11 @@
 additionalProperties:
   formFields:
-    - default: postgres
+    - child:
+        default: ""
+        envKey: PANEL_DB_HOST
+        required: true
+        type: service
+      default: mysql
       envKey: PANEL_DB_TYPE
       labelEn: Database Service
       labelZh: 数据库服务
@@ -15,35 +20,12 @@ additionalProperties:
         zh-Hant: 數據庫 服務
       required: true
       type: apps
-      child:
-        default: ""
-        envKey: PANEL_DB_HOST
-        required: true
-        type: service
       values:
-        - label: PostgreSQL
-          value: postgres
         - label: MySQL
           value: mysql
         - label: MariaDB
-          value: mysql
-    - default: 3306
-      envKey: PANEL_DB_PORT
-      labelEn: Database Port
-      labelZh: 数据库端口
-      label:
-        en: Database port
-        ja: データベース
-        ms: Pangkalan Data
-        pt-br: Banco de Dados
-        ru: База данных
-        ko: 데이터베이스
-        zh: 数据库端口
-        zh-Hant: 數據庫端口
-      random: false
-      required: true
-      type: number
-    - default: cloudreve
+          value: mariadb
+    - default: umami
       envKey: PANEL_DB_NAME
       labelEn: Database
       labelZh: 数据库名
@@ -60,7 +42,7 @@ additionalProperties:
       required: true
       rule: paramCommon
       type: text
-    - default: cloudreve
+    - default: umami
       envKey: PANEL_DB_USER
       labelEn: User
       labelZh: 数据库用户
@@ -77,7 +59,7 @@ additionalProperties:
       required: true
       rule: paramCommon
       type: text
-    - default: cloudreve
+    - default: umami
       envKey: PANEL_DB_USER_PASSWORD
       labelEn: Password
       labelZh: 数据库用户密码
@@ -115,11 +97,10 @@ additionalProperties:
       labelZh: 缓存服务服务密码
       required: false
       type: password
-    - default: 40033
-      edit: true
+    - default: 3000
       envKey: PANEL_APP_PORT_HTTP
       labelEn: Port
-      labelZh: 端口
+      labelZh: HTTP 端口
       label:
         en: Port
         ja: ポート
@@ -127,8 +108,25 @@ additionalProperties:
         pt-br: Porta
         ru: Порт
         ko: 포트
-        zh: 端口
-        zh-Hant: 埠
+        zh: HTTP 端口
+        zh-Hant: HTTP連接埠
       required: true
       rule: paramPort
       type: number
+    - default: umami
+      edit: true
+      envKey: HASH_SALT
+      labelEn: Hash Salt
+      labelZh: 哈希盐 (随机字符串)
+      label:
+        en: Hash Salt
+        ja: ハッシュソルト（ランダム文字列）
+        ms: Garam Hash (Rentetan Rawak)
+        pt-br: Sal de Hash (String Aleatória)
+        ru: Хэш-соль (случайная строка)
+        ko: 해시 솔트(무작위 문자열)
+        zh: 哈希盐 (随机字符串)
+        zh-Hant: 哈希鹽（隨機字符串）
+      random: true
+      required: true
+      type: text
