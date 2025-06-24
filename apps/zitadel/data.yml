@@ -1,0 +1,21 @@
+name: ZITADEL
+tags:
+  - Security
+title: 身份基础设施，为您简化。
+description: 身份基础设施，为您简化。
+additionalProperties:
+  key: zitadel
+  name: ZITADEL
+  tags:
+    - Security
+  shortDescZh: 身份基础设施，为您简化。
+  shortDescEn: Identity infrastructure, simplified for you.
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  website: https://zitadel.com/
+  github: https://github.com/zitadel/zitadel
+  document: https://zitadel.com/docs
+  architectures:
+    - amd64
+    - arm64

@@ -1,0 +1,77 @@
+additionalProperties:
+  formFields:
+    - default: postgresql
+      envKey: PANEL_DB_TYPE
+      required: true  
+      type: service  
+      label:  
+        en: Database Service  
+        ja: データベースサービス  
+        ms: Perkhidmatan Pangkalan Data  
+        pt-br: Serviço de Banco de Dados  
+        ru: Сервис баз данных  
+        ko: 데이터베이스 서비스  
+        zh-hant: 資料庫服務  
+        zh: 数据库服务  
+      values:
+        - label: PostgreSQL  
+          value: postgresql
+      child:
+        default: ""
+        envKey: PANEL_DB_HOST
+        required: true
+        type: service
+    - default: zitadel
+      envKey: PANEL_DB_NAME
+      labelEn: Database name
+      labelZh: 数据库名
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: zitadel
+      envKey: PANEL_DB_USER
+      labelEn: Database username
+      labelZh: 数据库用户
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: zitadel
+      envKey: PANEL_DB_USER_PASSWORD
+      labelEn: Database password
+      labelZh: 数据库用户密码
+      random: true
+      required: true
+      type: password
+    - default: masterkey
+      envKey: ZITADEL_MASTER_KEY
+      labelEn: ZITADEL master key
+      labelZh: ZITADEL 管理密钥
+      random: true
+      required: true
+      type: password
+    - default: sso.example.com
+      envKey: ZITADEL_EXTERNALDOMAIN
+      labelEn: external domain
+      labelZh: 外部域名
+      random: false
+      required: true
+      rule: paramCommon
+      type: text
+    - default: admin@sso.example.com
+      envKey: ZITADEL_FIRSTINSTANCE_ORG_HUMAN_USERNAME
+      labelEn: firstinstance org human username
+      labelZh: ZITADEL组织管理员用户名
+      random: false
+      required: true
+      rule: paramComplexity
+      type: text
+    - default: RootPassword1!
+      envKey: ZITADEL_FIRSTINSTANCE_ORG_HUMAN_PASSWORD
+      labelEn: firstinstance org human password
+      labelZh: ZITADEL组织管理员用户密码
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
