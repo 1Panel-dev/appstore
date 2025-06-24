@@ -6,138 +6,138 @@
   ],
   "rebaseWhen": "never",
   "packageRules": [
-    {
-      "packageNames": ["docker-compose"],
-      "automerge": true
-    },
-    {
-      "matchFileNames": ["apps/redis/8.*/*.yml"],
-      "allowedVersions": "/^8.*/"
-    },
-    {
-      "matchFileNames": ["apps/redis/7.*/*.yml"],
-      "allowedVersions": "/^7.*/"
-    },
-    {
-      "matchFileNames": ["apps/redis/6.*/*.yml"],
-      "allowedVersions": "/^6.*/"
-    },
-    {
-      "matchFileNames": ["apps/mysql/5.6.*/*.yml"],
-      "allowedVersions": "/^5.6.*/"
-    },
-    {
-      "matchFileNames": ["apps/mysql/5.7.*/*.yml"],
-      "allowedVersions": "/^5.7.*/"
-    },
-    {
-      "matchFileNames": ["apps/mysql/8.0.*/*.yml"],
-      "allowedVersions": "/^8.0.*/"
-    },
-    {
-      "matchFileNames": ["apps/mysql/8.4.*/*.yml"],
-      "allowedVersions": "/^8.4.*/"
-    },
-    {
-      "matchFileNames": ["apps/elasticsearch/7.*/*.yml"],
-      "allowedVersions": "/^7.*/"
-    },
-    {
-      "matchFileNames": ["apps/elasticsearch/8.*/*.yml"],
-      "allowedVersions": "/^8.*/"
-    },
-    {
-      "matchFileNames": ["apps/dataease/1.*/*.yml"],
-      "allowedVersions": "<=1.20"
-    },
-    {
-      "matchFileNames": ["apps/dataease/2.*/*.yml"],
-      "allowedVersions": ">=2.0"
-    },
-    {
-      "matchFileNames": ["apps/tomcat/8.*/*.yml"],
-      "allowedVersions": "/^8.*/"
-    },
-    {
-      "matchFileNames": ["apps/tomcat/9.*/*.yml"],
-      "allowedVersions": "/^9.*/"
-    },
-    {
-      "matchFileNames": ["apps/tomcat/10.*/*.yml"],
-      "allowedVersions": "/^10.*/"
-    },
-    {
-      "matchFileNames": ["apps/mongodb/6.*/*.yml"],
-      "allowedVersions": "/^6.*/"
-    },
-    {
-      "matchFileNames": ["apps/mongodb/7.*/*.yml"],
-      "allowedVersions": "/^7.*/"
-    },
-    {
-      "matchFileNames": ["apps/mariadb/10.*/*.yml"],
-      "allowedVersions": "/^10.*/"
-    },
-    {
-      "matchFileNames": ["apps/sonarqube/9.*/*.yml"],
-      "allowedVersions": "/^9.*/"
-    },
-    {
-      "matchFileNames": ["apps/sonarqube/10.*/*.yml"],
-      "allowedVersions": "/^10.*/"
-    },
-    {
-      "matchFileNames": ["apps/mssql/2017-*/*.yml"],
-      "allowedVersions": "/^2017-*/"
-    },
-    {
-      "matchFileNames": ["apps/mssql/2019-*/*.yml"],
-      "allowedVersions": "/^2019-*/"
-    },
-    {
-      "matchFileNames": ["apps/mssql/2022-*/*.yml"],
-      "allowedVersions": "/^2022-*/"
-    },
-    {
-      "matchFileNames": ["apps/postgresql/12.*/*.yml"],
-      "allowedVersions": "/^12.*/"
-    },
-    {
-      "matchFileNames": ["apps/postgresql/13.*/*.yml"],
-      "allowedVersions": "/^13.*/"
-    },
-    {
-      "matchFileNames": ["apps/postgresql/14.*/*.yml"],
-      "allowedVersions": "/^14.*/"
-    },
-    {
-      "matchFileNames": ["apps/postgresql/15.*/*.yml"],
-      "allowedVersions": "/^15.*/"
-    },
-    {
-      "matchFileNames": ["apps/postgresql/16.*/*.yml"],
-      "allowedVersions": "/^16.*/"
-    },
-    {
-      "matchFileNames": ["apps/postgresql/17.*/*.yml"],
-      "allowedVersions": "/^17.*/"
-    },
-    {
-      "matchFileNames": ["apps/jumpserver/3.*/*.yml"],
-      "allowedVersions": "/^3.*/"
-    },
-    {
-      "matchFileNames": ["apps/jumpserver/4.*/*.yml"],
-      "allowedVersions": "/^4.*/"
-    },
-    {
-      "matchFileNames": ["apps/mariadb/11.4.*/*.yml"],
-      "allowedVersions": "/^11.4.*/"
-    },
-    {
-      "matchFileNames": ["apps/mariadb/11.6.*/*.yml"],
-      "allowedVersions": "/^11.6.*/"
-    },
+    //{
+    //  "packageNames": ["docker-compose"],
+    //  "automerge": true
+    //},
+    //{
+    //  "matchFileNames": ["apps/redis/8.*/*.yml"],
+    //  "allowedVersions": "/^8.*/"
+    //},
+    //{
+    //  "matchFileNames": ["apps/redis/7.*/*.yml"],
+    //  "allowedVersions": "/^7.*/"
+    //},
+    //{
+    //  "matchFileNames": ["apps/redis/6.*/*.yml"],
+    //  "allowedVersions": "/^6.*/"
+    //},
+    //{
+    //  "matchFileNames": ["apps/mysql/5.6.*/*.yml"],
+    //  "allowedVersions": "/^5.6.*/"
+    //},
+    //{
+    //  "matchFileNames": ["apps/mysql/5.7.*/*.yml"],
+    //  "allowedVersions": "/^5.7.*/"
+    //},
+    //{
+    //  "matchFileNames": ["apps/mysql/8.0.*/*.yml"],
+    //  "allowedVersions": "/^8.0.*/"
+    //},
+    //{
+    //  "matchFileNames": ["apps/mysql/8.4.*/*.yml"],
+    //  "allowedVersions": "/^8.4.*/"
+    //},
+    //{
+    //  "matchFileNames": ["apps/elasticsearch/7.*/*.yml"],
+    //  "allowedVersions": "/^7.*/"
+    //},
+    //{
+    //  "matchFileNames": ["apps/elasticsearch/8.*/*.yml"],
+    //  "allowedVersions": "/^8.*/"
+    //},
+    //{
+    //  "matchFileNames": ["apps/dataease/1.*/*.yml"],
+    //  "allowedVersions": "<=1.20"
+    //},
+    //{
+    //  "matchFileNames": ["apps/dataease/2.*/*.yml"],
+    //  "allowedVersions": ">=2.0"
+    //},
+    //{
+    //  "matchFileNames": ["apps/tomcat/8.*/*.yml"],
+    //  "allowedVersions": "/^8.*/"
+    //},
+    //{
+    //  "matchFileNames": ["apps/tomcat/9.*/*.yml"],
+    //  "allowedVersions": "/^9.*/"
+    //},
+    //{
+    //  "matchFileNames": ["apps/tomcat/10.*/*.yml"],
+    //  "allowedVersions": "/^10.*/"
+    //},
+    //{
+    //  "matchFileNames": ["apps/mongodb/6.*/*.yml"],
+    //  "allowedVersions": "/^6.*/"
+    //},
+    //{
+    //  "matchFileNames": ["apps/mongodb/7.*/*.yml"],
+    //  "allowedVersions": "/^7.*/"
+    //},
+    //{
+    //  "matchFileNames": ["apps/mariadb/10.*/*.yml"],
+    //  "allowedVersions": "/^10.*/"
+    //},
+    //{
+    //  "matchFileNames": ["apps/sonarqube/9.*/*.yml"],
+    //  "allowedVersions": "/^9.*/"
+    //},
+    //{
+    //  "matchFileNames": ["apps/sonarqube/10.*/*.yml"],
+    //  "allowedVersions": "/^10.*/"
+    //},
+    //{
+    //  "matchFileNames": ["apps/mssql/2017-*/*.yml"],
+    //  "allowedVersions": "/^2017-*/"
+    //},
+    //{
+    //  "matchFileNames": ["apps/mssql/2019-*/*.yml"],
+    //  "allowedVersions": "/^2019-*/"
+    //},
+    //{
+    //  "matchFileNames": ["apps/mssql/2022-*/*.yml"],
+    //  "allowedVersions": "/^2022-*/"
+    //},
+    //{
+    //  "matchFileNames": ["apps/postgresql/12.*/*.yml"],
+    //  "allowedVersions": "/^12.*/"
+    //},
+    //{
+    //  "matchFileNames": ["apps/postgresql/13.*/*.yml"],
+    //  "allowedVersions": "/^13.*/"
+    //},
+    //{
+    //  "matchFileNames": ["apps/postgresql/14.*/*.yml"],
+    //  "allowedVersions": "/^14.*/"
+    //},
+    //{
+    //  "matchFileNames": ["apps/postgresql/15.*/*.yml"],
+    //  "allowedVersions": "/^15.*/"
+    //},
+    //{
+    //  "matchFileNames": ["apps/postgresql/16.*/*.yml"],
+    //  "allowedVersions": "/^16.*/"
+    //},
+    //{
+    //  "matchFileNames": ["apps/postgresql/17.*/*.yml"],
+    //  "allowedVersions": "/^17.*/"
+    //},
+    //{
+    //  "matchFileNames": ["apps/jumpserver/3.*/*.yml"],
+    //  "allowedVersions": "/^3.*/"
+    //},
+    //{
+    //  "matchFileNames": ["apps/jumpserver/4.*/*.yml"],
+    //  "allowedVersions": "/^4.*/"
+    //},
+    //{
+    //  "matchFileNames": ["apps/mariadb/11.4.*/*.yml"],
+    //  "allowedVersions": "/^11.4.*/"
+    //},
+    //{
+    //  "matchFileNames": ["apps/mariadb/11.6.*/*.yml"],
+    //  "allowedVersions": "/^11.6.*/"
+    //},
     {
       "matchDatasources": ["docker"],
       "matchPackageNames": ["ghcr.io/umami-software/umami"],

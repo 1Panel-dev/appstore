@@ -25,6 +25,8 @@ additionalProperties:
           value: mysql
         - label: PostgreSQL
           value: postgresql
+        - label: MariaDB
+          value: mysql
     - default: umami
       envKey: PANEL_DB_NAME
       labelEn: Database
@@ -72,6 +74,22 @@ additionalProperties:
         ko: 비밀번호
         zh: 数据库用户密码
         zh-Hant: 數據庫用戶密碼
+      random: true
+      required: true
+      type: password
+    - default: redis
+      envKey: PANEL_REDIS_PASSWORD
+      labelEn: Redis Password
+      labelZh: Redis密码
+      label:
+        en: Redis Password
+        ja: パスワード
+        ms: Kata Laluan
+        pt-br: Senha
+        ru: Пароль
+        ko: 비밀번호
+        zh: Redis数据库用户密码
+        zh-Hant: Redis數據庫用戶密碼
       random: true
       required: true
       type: password

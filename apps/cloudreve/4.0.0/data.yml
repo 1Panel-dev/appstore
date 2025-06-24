@@ -25,6 +25,24 @@ additionalProperties:
           value: postgres
         - label: MySQL
           value: mysql
+        - label: MariaDB
+          value: mysql
+    - default: 3306
+      envKey: PANEL_DB_PORT
+      labelEn: Database Port
+      labelZh: 数据库端口
+      label:
+        en: Database port
+        ja: データベース
+        ms: Pangkalan Data
+        pt-br: Banco de Dados
+        ru: База данных
+        ko: 데이터베이스
+        zh: 数据库端口
+        zh-Hant: 數據庫端口
+      random: false
+      required: true
+      type: number
     - default: cloudreve
       envKey: PANEL_DB_NAME
       labelEn: Database

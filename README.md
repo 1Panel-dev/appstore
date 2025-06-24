@@ -1,18 +1,38 @@
-# 1Panel App Store
+# 轻羽飞扬 · 1Panel 第三方 App Store
 
-The official repository for the [1Panel](https://github.com/1Panel-dev/1Panel) App Store, containing all applications available for installation via the [1Panel](https://github.com/1Panel-dev/1Panel) App Store.
+这是一个由 **轻羽飞扬** 自建维护的 **1Panel 第三方应用商店仓库**，用于收纳个人常用的容器化应用与预设配置，基于 [1Panel](https://github.com/1Panel-dev/1Panel) 的 App Store 架构。
 
-### 1Panel App Store Listing Criteria:
+> 本项目旨在补充官方 App Store，适用于特定需求场景或实验性环境。
 
- - Well-known and active open-source projects
- - Significant installation base
- - Official Docker images provided
- - Other approved projects
+------
 
-## Issue Reporting
+## ✅ 应用收录标准
 
-If you encounter any problems during use or have additional feedback, please submit a GitHub Issue to the [main 1Panel repository](https://github.com/1Panel-dev/1Panel/issues).
+本仓库优先收录以下类型的容器应用：
 
-## Creating Local Applications
+- **常用工具或服务**：覆盖个人或开发者日常使用频繁的项目
+- **官方 Docker 镜像**：尽量基于可信赖的官方发布版本
+- **活跃社区项目**：具有稳定维护或活跃社区支持
+- **简洁配置模板**：附带易于理解的配置，便于快速部署
 
-[How to submit an application you want](https://github.com/1Panel-dev/appstore/wiki/%E5%A6%82%E4%BD%95%E6%8F%90%E4%BA%A4%E8%87%AA%E5%B7%B1%E6%83%B3%E8%A6%81%E7%9A%84%E5%BA%94%E7%94%A8)
+------
+
+## 🛠 使用说明
+
+将本仓库作为第三方 App Store 添加到你的 1Panel，即可在 Web 面板中浏览和安装其中的应用。
+
+如何添加第三方应用仓库请参考：[1Panel 插件文档](https://github.com/1Panel-dev/1Panel/wiki)
+
+------
+
+## 📮 问题反馈
+
+本项目为个人用途维护，如发现配置错误或有改进建议，欢迎在 Issues 区提交反馈。
+
+> 仅针对本仓库中的 App 内容提供支持，1Panel 主程序相关问题请前往 [1Panel 主项目仓库](https://github.com/1Panel-dev/1Panel/issues) 提交。
+
+------
+
+## 🧩 想添加自己的应用？
+
+你可以参考官方文档：[如何提交自己想要的应用](https://github.com/1Panel-dev/appstore/wiki/如何提交自己想要的应用)，来创建并托管属于你自己的 App。
