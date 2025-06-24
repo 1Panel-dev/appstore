@@ -3,7 +3,7 @@ additionalProperties:
     - default: postgresql
       envKey: PANEL_DB_TYPE
       required: true  
-      type: service  
+      type: apps  
       label:  
         en: Database Service  
         ja: データベースサービス  
