@@ -1,6 +1,6 @@
 services:
   nacos:
-    image: nacos/nacos-server:v3.0.1
+    image: nacos/nacos-server:v3.0.2
     container_name: ${CONTAINER_NAME}-standalone
     restart: always
     environment:
