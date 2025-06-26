@@ -1,6 +1,6 @@
 services:
   onlyoffice:
-    image: onlyoffice/documentserver:9.0.0.1
+    image: onlyoffice/documentserver:9.0.2.1
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
