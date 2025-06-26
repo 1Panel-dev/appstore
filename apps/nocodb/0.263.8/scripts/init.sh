@@ -3,7 +3,7 @@
 ENV_FILE=".env"
 
 if [ -f "$ENV_FILE" ]; then
-    PANEL_DB_TYPE=$(grep '^PANEL_DB_TYPE=' "$ENV_FILE" | cut -d '=' -f 2 | tr -d '"')
+    source "$ENV_FILE"
     
     if [ "$PANEL_DB_TYPE" == "postgresql" ]; then
         NEW_DB_TYPE="pg"
