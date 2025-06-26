@@ -1,6 +1,6 @@
 services:
   act_runner:
-    image: gitea/act_runner:0.2.11
+    image: gitea/act_runner:0.2.12
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
