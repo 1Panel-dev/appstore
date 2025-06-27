@@ -1,6 +1,6 @@
 services:
   clickhouse:
-    image: clickhouse/clickhouse-server:25.5.4-alpine
+    image: clickhouse/clickhouse-server:25.6.1-alpine
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
