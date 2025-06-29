@@ -1,0 +1,50 @@
+additionalProperties:
+  formFields:
+    - default: greatsql
+      envKey: PANEL_DB_ROOT_PASSWORD
+      labelEn: Root Password
+      labelZh: root 用户密码
+      label:
+        en: Root Password
+        ja: ルートパスワード
+        ms: Kata Laluan Root
+        pt-br: Senha Root
+        ru: Пароль Root
+        ko: 루트 비밀번호
+        zh-Hant: Root 密碼
+        zh: Root 密码
+      random: true
+      required: true
+      type: password
+    - default: 3306
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      label:
+        en: Port
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh-Hant: 埠
+        zh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: Asia/Shanghai
+      edit: true
+      envKey: TIME_ZONE
+      labelEn: Time zone
+      labelZh: 时区
+      label:
+        en: Time zone
+        ja: タイムゾーン
+        ms: Zon masa
+        pt-br: Fuso horário
+        ru: Часовой пояс
+        ko: 시간대
+        zh: 时区
+        zh-Hant: 時區
+      required: true
+      type: text

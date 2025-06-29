@@ -1,0 +1,31 @@
+name: GreatSQL
+tags:
+    - 数据库
+title: 可作为 MySQL 或 Percona Server for MySQL 的理想可选替换
+description: 可作为 MySQL 或 Percona Server for MySQL 的理想可选替换
+additionalProperties:
+    key: greatsql
+    name: GreatSQL
+    tags:
+        - Database
+    shortDescZh: 可作为 MySQL 或 Percona Server for MySQL 的理想可选替换
+    shortDescEn: GreatSQL is a MySQL branch originated from GreatDB
+    description:
+        en: GreatSQL is a MySQL branch originated from GreatDB
+        ja: GreatSQLは、GreatDBから派生したMySQLブランチです
+        ms: GreatSQL adalah cabang MySQL yang berasal dari GreatDB
+        pt-br: GreatSQL é um ramo do MySQL originado do GreatDB
+        ru: GreatSQL - это ветвь MySQL, произошедшая от GreatDB
+        ko: GreatSQL은 GreatDB에서 파생된 MySQL 분기입니다
+        zh-Hant: GreatSQL 是源自 GreatDB 的 MySQL 分支
+        zh: 可作为 MySQL 或 Percona Server for MySQL 的理想可选替换
+    type: runtime
+    crossVersionUpdate: false
+    limit: 0
+    recommend: 0
+    website: https://greatsql.cn/
+    github: https://github.com/GreatSQL/GreatSQL
+    document: https://greatsql.cn/docs/
+    architectures:
+      - amd64
+      - arm64
