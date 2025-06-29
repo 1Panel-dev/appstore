@@ -1,6 +1,6 @@
 services:
   qinglong:
-    image: whyour/qinglong:2.19.1
+    image: whyour/qinglong:2.19.2
     container_name: ${CONTAINER_NAME}
     networks:
       - 1panel-network
