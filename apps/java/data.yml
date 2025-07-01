@@ -24,6 +24,8 @@ additionalProperties:
   limit: 0
   recommend: 120
   website: https://www.java.com/
+  github: https://github.com/bitnami/containers
+  document: https://dev.java/learn/
   architectures:
     - amd64
     - arm64

@@ -22,7 +22,9 @@ additionalProperties:
   crossVersionUpdate: false
   limit: 0
   recommend: 119
-  website: https://learn.microsoft.com/zh-cn/dotnet/
+  website: https://dotnet.microsoft.com/
+  github: https://github.com/dotnet
+  document: https://learn.microsoft.com/
   architectures:
     - amd64
     - arm64

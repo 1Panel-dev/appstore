@@ -24,8 +24,8 @@ additionalProperties:
   limit: 0
   recommend: 101
   website: https://www.python.org/
-  github: ""
-  document: ""
+  github: https://github.com/python
+  document: https://www.python.org/doc/
   architectures:
     - amd64
     - arm/v7

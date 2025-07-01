@@ -25,6 +25,7 @@ additionalProperties:
   recommend: 125
   website: https://go.dev/
   github: https://github.com/golang/go
+  document: https://go.dev/learn/
   architectures:
     - amd64
     - arm64
