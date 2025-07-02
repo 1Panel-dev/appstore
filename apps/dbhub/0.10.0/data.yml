@@ -3,20 +3,20 @@ additionalProperties:
     - default: 8080
       edit: true
       envKey: PANEL_APP_PORT_HTTP
-      labelEn: SSE Port
-      labelZh: SSE 端口
+      labelEn: Port
+      labelZh: 端口
       required: true
       rule: paramPort
       type: number
       label:
-        en: SSE Port
-        ja: SSE ポート
-        ms: Port SSE
-        pt-br: Porta SSE
-        ru: Порт SSE
-        ko: SSE 포트
-        zh-Hant: SSE 埠
-        zh: SSE 端口
+        en: Port
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh-Hant: 埠
+        zh: 端口
     - default: "mysql"
       edit: true
       envKey: DBHUB_DB_TYPE
