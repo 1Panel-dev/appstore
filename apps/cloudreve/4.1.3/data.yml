@@ -25,6 +25,8 @@ additionalProperties:
           value: postgres
         - label: MySQL
           value: mysql
+        - label: MariaDB
+          value: mariadb
     - default: cloudreve
       envKey: PANEL_DB_NAME
       labelEn: Database
