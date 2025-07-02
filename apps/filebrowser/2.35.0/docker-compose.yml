@@ -5,11 +5,11 @@ services:
     networks:
       - 1panel-network
     ports:
-      - "${PANEL_APP_PORT_HTTP}:80"
+      - ${PANEL_APP_PORT_HTTP}:80
     volumes:
-      - "${MOUNT_PATH}:/srv"
-      - "./data/database.db:/database.db"
-      - "./data/.filebrowser.json:/.filebrowser.json"
+      - ${MOUNT_PATH}:/srv
+      - ./config:/config
+      - ./database:/database
     image: filebrowser/filebrowser:v2.35.0
     labels:
       createdBy: "Apps"
