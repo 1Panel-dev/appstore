@@ -1,13 +1,13 @@
 name: ZITADEL
 tags:
-  - Security
+  - 安全
 title: 身份基础设施，为您简化。
 description: 身份基础设施，为您简化。
 additionalProperties:
   key: zitadel
   name: ZITADEL
   tags:
-    - Security
+    - 安全
   shortDescZh: 身份基础设施，为您简化。
   shortDescEn: Identity infrastructure, simplified for you.
   description:
