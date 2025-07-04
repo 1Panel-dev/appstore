@@ -264,7 +264,7 @@ install_extension() {
     elif [ "$extension" = "ldap" ]; then
         install_php_extensions ldap
     elif [ "$extension" = "imagick" ]; then
-        install_imagick
+        install_php_extensions imagick
     elif [ "$extension" = "amqp" ]; then
         install_php_extensions amqp
     elif [ "$extension" = "zookeeper" ]; then
