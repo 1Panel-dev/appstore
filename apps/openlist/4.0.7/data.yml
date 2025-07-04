@@ -1,0 +1,39 @@
+additionalProperties:
+  formFields:
+    - default: 5244
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: WebUI Port
+      labelZh: 网页端口
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        en: WebUI Port
+        ja: WebUI ポート
+        ms: Port WebUI
+        pt-br: Porta WebUI
+        ru: Порт WebUI
+        ko: WebUI 포트
+        zh-Hant: WebUI 埠
+        zh: WebUI 端口
+    - default: ""
+      envKey: PRE_INSTALLED
+      required: false
+      type: select
+      label:
+        en: Preinstalled Environment
+        ja: プリインストール環境
+        ms: Persekitaran Terpasang Awal
+        pt-br: Ambiente Pré-instalado
+        ru: Предустановленная среда
+        ko: 사전 설치된 환경
+        zh-hant: 預裝環境
+        zh: 预装环境
+      values:
+        - label: 缩略图
+          value: "ffmpeg"
+        - label: 离线下载
+          value: "aria2"
+        - label: 以上所有
+          value: "aio"
