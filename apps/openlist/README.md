@@ -2,8 +2,8 @@
 
 容器列表点击 `终端` 按钮，进入容器内执行命令设置密码。
 
-- **生成随机密码**：`./openlist ./openlist admin random`
-- **手动设置密码**：`./openlist ./openlist admin set NEW_PASSWORD`
+- **生成随机密码**：`./openlist admin random`
+- **手动设置密码**：`./openlist admin set NEW_PASSWORD`
 
 # OpenList
 

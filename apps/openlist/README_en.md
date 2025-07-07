@@ -2,8 +2,8 @@
 
 Click the `Terminal` button in the container list to execute commands inside the container to set the password.
 
-- **Generate random password**: `./openlist ./openlist admin random`
-- **Set password manually**: `./openlist ./openlist admin set NEW_PASSWORD`
+- **Generate random password**: `./openlist admin random`
+- **Set password manually**: `./openlist admin set NEW_PASSWORD`
 
 # OpenList
 
