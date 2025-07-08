@@ -46,11 +46,11 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-    - default: 5
+    - default: 8
       edit: true
       envKey: OB_LOG_DISK_SIZE	
-      labelEn: LOG DISK SIZE(Unit GB)
-      labelZh: 日志文件大小 (单位：GB)
+      labelEn: COMMIT LOG DISK SIZE(Unit GB)
+      labelZh: 事务日志磁盘大小 (单位：GB)
       required: true
       rule: paramPort
       type: number
