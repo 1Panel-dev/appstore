@@ -154,6 +154,7 @@ install_extension() {
     echo "------ install extension: $extension ------"
     
     if [ "$extension" = "gd" ]; then
+        echo -e '#!/bin/sh\nexec pkg-config "$@" freetype2' > /usr/local/bin/freetype-config && chmod +x /usr/local/bin/freetype-config
         install_php_extensions gd
     elif [ "$extension" = "memcache" ]; then
         install_memcache   
