@@ -10,7 +10,7 @@ services:
     volumes:
       - ./data:/opt/openlist/data
     environment:
-      - TZ=Asia/Shanghai
+      - TZ=${TIME_ZONE}
       - PUID=0
       - PGID=0
       - UMASK=022
