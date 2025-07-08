@@ -2,32 +2,32 @@ name: OpenList
 tags:
     - 实用工具
     - 云存储
-title: 🗂️ 一个支持多种存储的文件列表程序，使用 Gin 和 Solidjs。
-description: 🗂️ 一个支持多种存储的文件列表程序，使用 Gin 和 Solidjs。
+title: 一个支持多种存储的文件列表程序
+description: 一个支持多种存储的文件列表程序
 additionalProperties:
     key: openlist
     name: OpenList
     tags:
         - Storage
         - Tool
-    shortDescZh: 🗂️ 一个支持多种存储的文件列表程序，使用 Gin 和 Solidjs。
-    shortDescEn: 🗂️ A file list program that supports multiple storage, powered by Gin and Solidjs.
+    shortDescZh: 一个支持多种存储的文件列表程序
+    shortDescEn: A file list program that supports multiple storage
     description:
-        en: 🗂️ A file list program that supports multiple storage, powered by Gin and Solidjs.
-        ja: 🗂️ GinとSolidjsを使用して、複数のストレージをサポートするファイルリストプログラム。
-        ms: 🗂️ Program senarai fail yang menyokong pelbagai penyimpanan yang menggunakan Gin dan Solidjs.
-        pt-br: 🗂 Um programa de listagem de ficheiros que suporta múltiplas opções de armazenamento, usando Gin e Solidjs.
-        ru: 🗂️ Программа списка файлов, которая поддерживает несколько хранилищ, использует Gin и Solidjs.
-        ko: 🗂️ Gin 및 Solidjs를 사용하는 다양한 저장소를 지원하는 파일 목록 프로그램
-        zh-Hant: 🗂️ 一個支持多種存儲的文件列表程序，使用 Gin 和 Solidjs。
-        zh: 🗂️ 一个支持多种存储的文件列表程序，使用 Gin 和 Solidjs。
+        en: A file list program that supports multiple storage
+        ja: 複数のストレージをサポートするファイルリストプログラム
+        ms: Satu program senarai fail yang menyokong pelbagai storan
+        pt-br: Um programa de lista de arquivos que suporta vários armazenamentos
+        ru: Программа списка файлов, поддерживающая несколько хранилищ
+        ko: 여러 저장소를 지원하는 파일 목록 프로그램
+        zh-Hant: 一個支持多種存儲的文件列表程序
+        zh: 一个支持多种存储的文件列表程序
     type: website
     crossVersionUpdate: true
     limit: 0
-    recommend: 65
+    recommend: 0
     website: https://docs.oplist.org/
     github: https://github.com/OpenListTeam/OpenList
-    document: https://docs.oplist.org/zh/guide/
+    document: https://docs.oplist.org/
     architectures:
       - amd64
       - arm64

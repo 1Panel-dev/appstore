@@ -10,6 +10,7 @@
 一个支持多种存储，支持网页浏览和 WebDAV 的文件列表程序，由 gin 和 Solidjs 驱动。
 
 ## 支持的存储：
+
 - [x] [本机存储](https://docs.oplist.org/zh/guide/drivers/local.html)
 - [x] [Crypt](https://docs.oplist.org/zh/guide/drivers/Crypt.html)
 - [x] [阿里云盘Open](https://docs.oplist.org/zh/guide/drivers/aliyundrive_open.html)
