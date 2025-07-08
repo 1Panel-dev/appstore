@@ -31,11 +31,11 @@ additionalProperties:
         zh-hant: 預裝環境
         zh: 预装环境
       values:
-        - label: 缩略图
+        - label: 缩略图 (预装：ffmpeg)
           value: "ffmpeg"
-        - label: 离线下载
+        - label: 离线下载 (预装：aria2)
           value: "aria2"
-        - label: 以上所有
+        - label: 以上所有 (预装：ffmpeg & aria2)
           value: "aio"
     - default: Asia/Shanghai
       edit: true
