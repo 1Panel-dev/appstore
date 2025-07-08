@@ -17,6 +17,22 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
+    - default: ""
+      edit: true
+      envKey: HOMEPAGE_ALLOWED_HOSTS
+      labelEn: Allowed Hosts
+      labelZh: 允许的主机地址
+      label:
+        en: Allowed Hosts
+        ja: 許可されたホスト
+        ms: Hos yang Dibenarkan
+        pt-br: Hosts permitidos
+        ru: Разрешенные хосты
+        ko: 허용된 호스트
+        zh: 允许的主机地址
+        zh-Hant: 允許的主機位址
+      required: true
+      type: text
     - default: Asia/Shanghai
       edit: true
       envKey: TIME_ZONE
