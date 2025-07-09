@@ -9,7 +9,7 @@ additionalProperties:
   tags:
     - Security
   shortDescZh: 南墙 WEB 应用防火墙
-  shortDescEn: NanQiang Web Application Firewall
+  shortDescEn: UUSEC Web Application Firewall
   type: website
   crossVersionUpdate: true
   limit: 1
