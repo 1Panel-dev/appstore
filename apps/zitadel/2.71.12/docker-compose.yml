@@ -1,5 +1,6 @@
 services:
   zitadel:
+    container_name: ${CONTAINER_NAME}
     restart: 'always'
     networks: 
       - 1panel-network

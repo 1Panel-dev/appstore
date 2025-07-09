@@ -97,14 +97,14 @@ additionalProperties:
     - default: admin@sso.example.com
       envKey: ZITADEL_FIRSTINSTANCE_ORG_HUMAN_USERNAME
       label:  
-        en: ZITADEL Organization Administrator Username  
-        ja: ZITADEL オーガナイズ管理者ユーザー名  
-        ms: Nama Pengguna Pentadbir Organisasi ZITADEL  
-        pt-br: Nome de Usuário do Administrador da Organização ZITADEL  
-        ru: Имя пользователя администратора организации ZITADEL  
-        ko: ZITADEL 조직 관리자 계정 이름  
-        zh-hant: ZITADEL 組織管理員使用者名稱  
-        zh: ZITADEL 组织管理员用户名 
+        en: ZITADEL Organization Administrator Password (minimum 32 characters)  
+        ja: ZITADEL オーガナイズ管理者パスワード（最小32文字）
+        ms: Kata Laluan Pengguna Pentadbir Organisasi ZITADEL (minimum 32 aksara)
+        pt-br: Senha do Usuário do Administrador da Organização ZITADEL (mínimo 32 caracteres)
+        ru: Пароль пользователя администратора организации ZITADEL (минимум 32 символа)
+        ko: ZITADEL 조직 관리자 비밀번호 (최소 32자)
+        zh-hant: ZITADEL 組織管理員使用者密碼（最少32位）
+        zh: ZITADEL 组织管理员用户密码 (长度最少32位)
       random: false
       required: true
       rule: paramComplexity
