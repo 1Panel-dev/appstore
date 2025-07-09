@@ -17,6 +17,23 @@ additionalProperties:
         ko: WebUI 포트
         zh-Hant: WebUI 埠
         zh: WebUI 端口
+    - default: 5246
+      edit: true
+      envKey: PANEL_APP_PORT_S3
+      labelEn: S3 Port
+      labelZh: S3 端口
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        en: S3 Port
+        ja: S3 ポート
+        ms: Port S3
+        pt-br: Porta S3
+        ru: Порт S3
+        ko: S3 포트
+        zh-Hant: S3 埠
+        zh: S3 端口
     - default: ""
       envKey: PRE_INSTALLED
       required: false
