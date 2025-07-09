@@ -11,7 +11,7 @@ additionalProperties:
   shortDescZh: 南墙 WEB 应用防火墙
   shortDescEn: UUSEC Web Application Firewall
   type: website
-  crossVersionUpdate: true
+  crossVersionUpdate: false
   limit: 1
   recommend: 0
   website: https://waf.uusec.com/#/
