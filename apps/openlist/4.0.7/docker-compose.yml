@@ -7,6 +7,7 @@ services:
       - 1panel-network
     ports:
       - "${PANEL_APP_PORT_HTTP}:5244"
+      - "${PANEL_APP_PORT_S3}:5246"
     volumes:
       - ./data:/opt/openlist/data
     environment:
