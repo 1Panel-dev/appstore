@@ -19,7 +19,6 @@ services:
       - ./waf_acme:/uuwaf/acme
       - ./waf_logs:/uuwaf/logs
     environment:
-      - TZ=Asia/Shanghai
       - UUWAF_MYSQL_PASSWORD=Safe3.WAF
       - UUWAF_RESOLVER=resolver 127.0.0.11 valid=30s ipv6=off;
     depends_on:
@@ -31,9 +30,10 @@ services:
     networks:
       - 1panel-network
     volumes:
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
       - ./waf_data:/var/lib/mysql
     environment:
-      - TZ=Asia/Shanghai
       - MYSQL_ROOT_PASSWORD=Safe3.WAF
     command: ["--max_connections=512"]
     healthcheck:
