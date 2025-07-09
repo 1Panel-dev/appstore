@@ -1,6 +1,6 @@
 services:
   uuwaf:
-    image: uusec/nanqiang:v6.8.0
+    image: uusec/waf:v7.0.1
     ulimits:
       nproc: 65535
       nofile:
@@ -14,30 +14,35 @@ services:
       - ${PANEL_APP_PORT_HTTPS2}:443
       - ${PANEL_APP_PORT_HTTPS}:4443
     volumes:
-      - wafshared:/uuwaf
-    command: ["/run.sh"]
+      - /etc/localtime:/etc/localtime:ro
+      - ./waf_config:/uuwaf/web/conf
+      - ./waf_acme:/uuwaf/acme
+      - ./waf_logs:/uuwaf/logs
     environment:
       - TZ=Asia/Shanghai
       - UUWAF_MYSQL_PASSWORD=Safe3.WAF
-    links:
-      - wafdb
+      - UUWAF_RESOLVER=resolver 127.0.0.11 valid=30s ipv6=off;
     depends_on:
-      - wafdb
+      wafdb:
+        condition: service_healthy
   wafdb:
-    image: percona:8
+    image: mysql:5.7.44
     container_name:  ${CONTAINER_NAME}-db
     networks:
       - 1panel-network
     volumes:
-      - wafshared:/docker-entrypoint-initdb.d
-      - wafdata:/var/lib/mysql
+      - ./waf_data:/var/lib/mysql
     environment:
       - TZ=Asia/Shanghai
-      - INIT_ROCKSDB
       - MYSQL_ROOT_PASSWORD=Safe3.WAF
-volumes:
-  wafshared:
-  wafdata:
+    command: ["--max_connections=512"]
+    healthcheck:
+      test: ["CMD", "mysqladmin", "-uroot", "-pSafe3.WAF", "ping", "-h", "127.0.0.1", "--silent"]
+      start_period: 3s
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
 networks:
   1panel-network:
     external: true
