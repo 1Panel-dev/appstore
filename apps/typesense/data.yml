@@ -1,0 +1,31 @@
+name: Typesense
+tags:
+  - 数据库
+title: 速度极快的开源搜索引擎
+description: 速度极快的开源搜索引擎
+additionalProperties:
+    key: typesense
+    name: Typesense
+    tags:
+        - Database
+    shortDescZh: 速度极快的开源搜索引擎
+    shortDescEn: Lightning-fast, open-source search engine
+    description:
+        en: Lightning-fast, open-source search engine
+        ja: 高速でオープンソースの検索エンジン
+        ms: Enjin carian sumber terbuka yang sangat pantas
+        pt-br: Motor de busca de código aberto extremamente rápido
+        ru: Быстрый, открытый поисковый движок
+        ko: 빠르고 오픈 소스 검색 엔진
+        zh-Hant: 速度極快的開源搜索引擎
+        zh: 速度极快的开源搜索引擎
+    type: tool
+    crossVersionUpdate: false
+    limit: 0
+    recommend: 0
+    website: https://typesense.org/
+    github: https://github.com/typesense/typesense
+    document: https://typesense.org/docs/
+    architectures:
+      - amd64
+      - arm64
