@@ -17,7 +17,7 @@ additionalProperties:
             ko: WebUI 포트
             zh-Hant: WebUI 埠
             zh: WebUI 端口
-        - default: 5426
+        - default: 5246
           edit: true
           envKey: PANEL_APP_PORT_S3
           labelEn: S3 Port
