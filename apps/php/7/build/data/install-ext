@@ -207,8 +207,7 @@ install_extension() {
     elif [ "$extension" = "calendar" ]; then
         docker_php_ext_install calendar                                   
     elif [ "$extension" = "sodium" ]; then
-        apt-get install -y  libsodium-dev
-        docker_php_ext_install sodium
+        install_php_extensions sodium
     elif [ "$extension" = "zip" ]; then
         apt-get update && apt-get install -y  libzip-dev
         docker_php_ext_install zip    
