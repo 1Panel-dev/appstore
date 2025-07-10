@@ -143,6 +143,14 @@ install_imagick() {
     install_msg imagick
 }
 
+install_protobuf() {
+  if [[ $(echo -e "$PHP_VERSION\n8.1.0" | sort -V | tail -n1) == "$PHP_VERSION" ]]; then
+      pecl install protobuf
+  else
+      pecl install protobuf-3.24.4
+  fi
+}
+
 install_extension() {
     local extension=$1
     if [ -z "$extension" ]; then
@@ -182,6 +190,8 @@ install_extension() {
     elif [ "$extension" = "varnish" ]; then
         apt-get install -y  libvarnishapi-dev
         pecl_install varnish
+    elif [ "$extension" = "protobuf" ]; then
+        install_protobuf
     elif [ "$extension" = "bcmath" ]; then
         docker_php_ext_install bcmath
     elif [ "$extension" = "pcntl" ]; then
