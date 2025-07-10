@@ -182,6 +182,8 @@ install_extension() {
     elif [ "$extension" = "varnish" ]; then
         apt-get install -y  libvarnishapi-dev
         pecl_install varnish
+    elif [ "$extension" = "protobuf" ]; then
+        pecl_install protobuf-3.12.4
     elif [ "$extension" = "bcmath" ]; then
         docker_php_ext_install bcmath
     elif [ "$extension" = "pcntl" ]; then
