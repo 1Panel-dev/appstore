@@ -7,7 +7,7 @@ services:
     ports:
       - ${PANEL_APP_PORT_HTTP}:3002
       - ${PANEL_APP_PORT_HTTP_LOGTO}:3001
-    entrypoint: ["sh", "-c", "npm run cli db seed -- --swe && npm start"]
+    entrypoint: ["sh", "-c", "npm run cli db seed -- --swe && npm run alteration deploy latest && npm start"]
     environment:
       - TRUST_PROXY_HEADER=1
       - DB_URL=postgres://${PANEL_DB_USER}:${PANEL_DB_USER_PASSWORD}@${PANEL_DB_HOST}:${PANEL_DB_PORT}/${PANEL_DB_NAME}
