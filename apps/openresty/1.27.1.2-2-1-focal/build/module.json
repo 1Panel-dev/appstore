@@ -22,7 +22,7 @@
   },
   {
     "name":"geoip2",
-    "script":"unzip -o /tmp/ngx_http_geoip2_module.zip -d /tmp && unzip -o  /tmp/libmaxminddb.zip -d /tmp && cd /tmp/libmaxminddb && ./configure && make  && make install",
+    "script":"unzip -o /tmp/ngx_http_geoip2_module.zip -d /tmp && tar -zxvf /tmp/libmaxminddb.tar.gz -C /tmp && cd /tmp/libmaxminddb && ./configure && make && make install",
     "packages":[],
     "params": "--add-module=/tmp/ngx_http_geoip2_module",
     "enable":false
