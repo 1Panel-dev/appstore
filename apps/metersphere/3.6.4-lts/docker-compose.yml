@@ -1,6 +1,6 @@
 services:
   metersphere:
-    image: metersphere/metersphere-ce-allinone:v3.6.4-lts
+    image: metersphere/metersphere-ce-allinone:v3.6.5-lts
     container_name: ${CONTAINER_NAME}
     restart: always
     ports:
