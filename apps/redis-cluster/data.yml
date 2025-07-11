@@ -1,0 +1,29 @@
+name: Redis-Cluster
+tags:
+    - 数据库
+title: Redis 集群
+description: Redis 集群
+additionalProperties:
+    key: redis-cluster
+    name: Redis-Cluster
+    tags:
+      - Database
+    description:
+        en: Redis Cluster
+        ja: Redis クラスター
+        ms: Redis Kumpulan
+        pt-br: Redis Cluster
+        ru: Redis Cluster
+        ko: 레디스 클러스터
+        zh-hant: Redis 集群
+        zh: Redis 集群
+    type: runtime
+    crossVersionUpdate: false
+    limit: 0
+    recommend: 75
+    website: https://redis.io/
+    github: https://github.com/redis/redis
+    document: https://redis.io/docs/
+    architectures:
+      - amd64
+      - arm64
