@@ -1,6 +1,6 @@
 services:
   neo4j:
-    image: neo4j:5.26.8
+    image: neo4j:5.26.9
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
