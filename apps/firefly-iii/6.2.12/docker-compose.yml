@@ -10,6 +10,8 @@ services:
             - DB_DATABASE=${PANEL_DB_NAME}
             - DB_USERNAME=${PANEL_DB_USER}
             - DB_PASSWORD=${PANEL_DB_USER_PASSWORD}
+            - APP_URL=${PANEL_APP_URL}
+            - TRUSTED_PROXIES=**
         restart: always
         networks:
             - 1panel-network

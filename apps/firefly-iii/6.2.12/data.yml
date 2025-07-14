@@ -1,108 +1,125 @@
 additionalProperties:
-    formFields:
-        - default: ""
-          envKey: APP_KEY
-          labelEn: Application Key (Must be exactly 32 characters)
-          labelZh: 应用密钥 (必须为 32 位字符)
-          label:
-            en: Application Key (Must be exactly 32 characters)
-            ja: アプリケーションキー (正確に32文字である必要があります)
-            ms: Kunci Aplikasi (Mesti tepat 32 aksara)
-            pt-br: Chave de Aplicação (Deve ter exatamente 32 caracteres)
-            ru: Ключ приложения (должен быть ровно 32 символа)
-            ko: 애플리케이션 키 (정확히 32자여야 함)
-            zh: 应用密钥 (必须为 32 位字符)
-            zh-Hant: 應用密鑰 (必須為 32 位字符)
-          required: true
-          type: text
-        - default: mysql
-          envKey: PANEL_DB_TYPE
-          labelEn: Database Service
-          labelZh: 数据库服务
-          label:
-            en: Database Service
-            ja: データベースサービス
-            ms: Perkhidmatan Pangkalan Data
-            pt-br: Serviço de Banco de Dados
-            ru: Сервис базы данных
-            ko: 데이터베이스 서비스
-            zh: 数据库服务
-            zh-Hant: 數據庫服務
-          required: true
-          type: apps
-          child:
-            default: ""
-            envKey: PANEL_DB_HOST
-            required: true
-            type: service
-          values:
-            - label: MySQL
-              value: mysql
-            - label: PostgreSQL
-              value: postgres
-        - default: firefly
-          envKey: PANEL_DB_NAME
-          labelEn: Database
-          labelZh: 数据库名称
-          label:
-            en: Database
-            ja: データベース
-            ms: Pangkalan Data
-            pt-br: Banco de Dados
-            ru: База данных
-            ko: 데이터베이스
-            zh: 数据库名称
-            zh-Hant: 數據庫名稱
-          random: true
-          required: true
-          rule: paramCommon
-          type: text
-        - default: firefly
-          envKey: PANEL_DB_USER
-          labelEn: User
-          labelZh: 数据库用户
-          label:
-            en: User
-            ja: ユーザー
-            ms: Pengguna
-            pt-br: Usuário
-            ru: Пользователь
-            ko: 사용자
-            zh: 数据库用户
-            zh-Hant: 數據庫用戶
-          random: true
-          required: true
-          rule: paramCommon
-          type: text
-        - default: firefly
-          envKey: PANEL_DB_USER_PASSWORD
-          labelEn: Password
-          labelZh: 数据库用户密码
-          label:
-            en: Password
-            ja: パスワード
-            ms: Kata laluan
-            pt-br: Senha
-            ru: Пароль
-            ko: 비밀번호
-            zh: 数据库用户密码
-            zh-Hant: 數據庫用戶密碼
-          random: true
-          required: true
-          type: password
-        - default: 8080
-          envKey: PANEL_APP_PORT_HTTP
-          labelEn: Port
-          labelZh: HTTP 端口
-          label:
-            en: Port
-            ja: ポート
-            ms: Port
-            pt-br: Porta
-            ru: Порт
-            ko: 포트
-            zh: HTTP 端口
-            zh-Hant: HTTP 埠
-          required: true
-          rule: paramPort
-          type: number
+  formFields:
+    - default: ""
+      envKey: APP_KEY
+      labelEn: Application Key (Must be exactly 32 characters)
+      labelZh: 应用密钥 (必须为 32 位字符)
+      label:
+        en: Application Key (Must be exactly 32 characters)
+        ja: アプリケーションキー (正確に32文字である必要があります)
+        ms: Kunci Aplikasi (Mesti tepat 32 aksara)
+        pt-br: Chave de Aplicação (Deve ter exatamente 32 caracteres)
+        ru: Ключ приложения (должен быть ровно 32 символа)
+        ko: 애플리케이션 키 (정확히 32자여야 함)
+        zh: 应用密钥 (必须为 32 位字符)
+        zh-Hant: 應用密鑰 (必須為 32 位字符)
+      required: true
+      type: text
+    - default: mysql
+      envKey: PANEL_DB_TYPE
+      labelEn: Database Service
+      labelZh: 数据库服务
+      label:
+        en: Database Service
+        ja: データベースサービス
+        ms: Perkhidmatan Pangkalan Data
+        pt-br: Serviço de Banco de Dados
+        ru: Сервис базы данных
+        ko: 데이터베이스 서비스
+        zh: 数据库服务
+        zh-Hant: 數據庫服務
+      required: true
+      type: apps
+      child:
+        default: ""
+        envKey: PANEL_DB_HOST
+        required: true
+        type: service
+      values:
+        - label: MySQL
+          value: mysql
+        - label: PostgreSQL
+          value: postgres
+    - default: firefly
+      envKey: PANEL_DB_NAME
+      labelEn: Database
+      labelZh: 数据库名称
+      label:
+        en: Database
+        ja: データベース
+        ms: Pangkalan Data
+        pt-br: Banco de Dados
+        ru: База данных
+        ko: 데이터베이스
+        zh: 数据库名称
+        zh-Hant: 數據庫名稱
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: firefly
+      envKey: PANEL_DB_USER
+      labelEn: User
+      labelZh: 数据库用户
+      label:
+        en: User
+        ja: ユーザー
+        ms: Pengguna
+        pt-br: Usuário
+        ru: Пользователь
+        ko: 사용자
+        zh: 数据库用户
+        zh-Hant: 數據庫用戶
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: firefly
+      envKey: PANEL_DB_USER_PASSWORD
+      labelEn: Password
+      labelZh: 数据库用户密码
+      label:
+        en: Password
+        ja: パスワード
+        ms: Kata laluan
+        pt-br: Senha
+        ru: Пароль
+        ko: 비밀번호
+        zh: 数据库用户密码
+        zh-Hant: 數據庫用戶密碼
+      random: true
+      required: true
+      type: password
+    - default: 8080
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: HTTP 端口
+      label:
+        en: Port
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh: HTTP 端口
+        zh-Hant: HTTP 埠
+      required: true
+      rule: paramPort
+      type: number
+    - default: ""
+      edit: true
+      envKey: PANEL_APP_URL
+      labelEn: Reverse Proxy Domain (Optional)
+      labelZh: 反向代理域名（可选）
+      label:
+        en: Reverse Proxy Domain (Optional)
+        ja: リバースプロキシドメイン（オプション）
+        ms: Domain Proksi Terbalik (Pilihan)
+        pt-br: Domínio de Proxy Reverso (Opcional)
+        ru: Домен обратного прокси (необязательно)
+        ko: 리버스 프록시 도메인 (선택 사항)
+        zh: 反向代理域名（可选）
+        zh-Hant: 反向代理域名（可選）
+      required: false
+      rule: paramHttp
+      type: text
