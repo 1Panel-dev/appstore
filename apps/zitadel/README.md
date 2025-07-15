@@ -23,3 +23,6 @@ ZITADEL 是开源的身份管理基础设施，提供安全的认证、授权和
 ## 社区与支持  
 - [Discord 聊天](https://zitadel.com/chat)  
 - [贡献指南](./CONTRIBUTING.md)  
+
+## 注意事项
+- 使用端口访问会导致控制台无法显示，请修改为使用域名访问。

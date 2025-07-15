@@ -25,3 +25,6 @@ ZITADEL is an open-source Identity Management Infrastructure, providing secure a
 ## Community & Support
 - [Discord Chat](https://zitadel.com/chat)
 - [Contribution Guide](./CONTRIBUTING.md)
+
+## Notes
+- Accessing via port will cause the console to not display. Please modify it to use domain access.
