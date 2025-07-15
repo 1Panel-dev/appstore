@@ -1,24 +1,24 @@
 name: MaxKB
 tags:
     - AI / 大模型
-title: 强大易用的企业级 AI 助手
-description: 强大易用的企业级 AI 助手
+title: 强大易用的企业级智能体平台
+description: 强大易用的企业级智能体平台
 additionalProperties:
     key: maxkb
     name: MaxKB
     tags:
         - AI
-    shortDescZh: 强大易用的企业级 AI 助手
-    shortDescEn: Powerful and Easy-to-use AI Assistant
+    shortDescZh: 强大易用的企业级智能体平台
+    shortDescEn: An open-source platform for building enterprise-grade agents
     description:
-        en: Powerful and Easy-to-use AI Assistant
-        ja: 強力で使いやすいAIアシスタント
-        ms: Pembantu AI yang Berkuasa dan Mudah Digunakan
-        pt-br: Assistente de IA poderoso e fácil de usar
-        ru: Мощный и простой в использовании ИИ-ассистент
-        ko: 강력하고 사용하기 쉬운 AI 도우미
-        zh-Hant: 強大易用的企業級 AI 助手
-        zh: 强大易用的企业级 AI 助手
+        en: An open-source platform for building enterprise-grade agents
+        ja: エンタープライズグレードのエージェントを構築するためのオープンソースプラットフォーム
+        ms: Platform sumber terbuka untuk membina ejen peringkat perusahaan
+        pt-br: Plataforma de código aberto para construção de agentes de nível empresarial
+        ru: Платформа с открытым исходным кодом для создания агентов корпоративного уровня
+        ko: 엔터프라이즈급 에이전트를 구축하기 위한 오픈 소스 플랫폼
+        zh-Hant: 強大易用的企業級智能體平台
+        zh: 强大易用的企业级智能体平台
     type: website
     crossVersionUpdate: true
     limit: 0
