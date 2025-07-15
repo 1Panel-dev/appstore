@@ -20,7 +20,7 @@ additionalProperties:
         zh-Hant: 強大易用的企業級智能體平台
         zh: 强大易用的企业级智能体平台
     type: website
-    crossVersionUpdate: true
+    crossVersionUpdate: false
     limit: 0
     recommend: 20
     website: https://github.com/1Panel-dev/MaxKB
