@@ -1,27 +1,28 @@
 name: ZITADEL
 tags:
   - 安全
-title: 身份基础设施，为您简化。
-description: 身份基础设施，为您简化。
+title: 开源的身份与访问管理（IAM）平台
+description: 开源的身份与访问管理（IAM）平台
 additionalProperties:
   key: zitadel
   name: ZITADEL
   tags:
-    - 安全
-  shortDescZh: 身份基础设施，为您简化。
-  shortDescEn: Identity infrastructure, simplified for you.
+    - Security
+  shortDescZh: 开源的身份与访问管理（IAM）平台
+  shortDescEn: An open-source Identity and Access Management (IAM) platform
   description:
-    en: ZITADEL is an open-source identity management infrastructure that provides secure authentication, authorization, and multi-tenancy support for B2B/B2C scenarios.
-    ja: ZITADELは、B2B/B2Cシナリオ向けにセキュアな認証・承認およびマルチテナント対応を提供するオープンソースのID管理インフラストラクチャです。
-    ms: ZITADEL ialah infrastruktur pengurusan identiti yang terbuka sumber, menyediakan pengesahan, hak akses dan sokongan multi-tenant yang selamat untuk skenario B2B/B2C.
-    pt-br: ZITADEL é uma infraestrutura de gestão de identidade open-source que fornece autenticação, autorização e suporte multitenancy seguros para cenários B2B/B2C.
-    ru: ZITADEL — это инфраструктура управления идентификацией с открытым исходным кодом, которая обеспечивает безопасную аутентификацию, авторизацию и поддержку многопользовательской среды для сценариев B2B/B2C.
-    ko: ZITADEL은 보안된 인증, 권한 부여 및 멀티테넌트 지원을 제공하는 오픈소스 ID 관리 인프라입니다. B2B/B2C 시나리오에 적합합니다.
-    zh-Hant: ZITADEL 是一個開源的身分管理基礎設施，提供安全的認證、授權和多租戶支援，適用於 B2B/B2C 场景。
-    zh: ZITADEL 是一个开源的身份管理基础设施，提供安全的认证、授权和多租户支持，适用于 B2B/B2C 场景。
+    en: An open-source Identity and Access Management (IAM) platform
+    ja: オープンソースのIDおよびアクセス管理（IAM）プラットフォーム
+    ms: Sebuah platform Pengurusan Identiti dan Akses (IAM) sumber terbuka
+    pt-br: Uma plataforma de Gerenciamento de Identidade e Acesso (IAM) de código aberto
+    ru: Открытая платформа управления идентификацией и доступом (IAM)
+    ko: 오픈 소스 ID 및 액세스 관리(IAM) 플랫폼
+    zh-Hant: 開源的身份與訪問管理（IAM）平台
+    zh: 开源的身份与访问管理（IAM）平台
   type: website
   crossVersionUpdate: false
   limit: 0
+  recommend: 0
   website: https://zitadel.com/
   github: https://github.com/zitadel/zitadel
   document: https://zitadel.com/docs

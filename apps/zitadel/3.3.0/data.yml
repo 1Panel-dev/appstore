@@ -1,20 +1,38 @@
 additionalProperties:
   formFields:
+    - default: 8080
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      label:
+        en: Port
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh-Hant: 埠
+        zh: 端口
+      required: true
+      rule: paramPort
+      type: number
     - default: postgresql
       envKey: PANEL_DB_TYPE
-      required: true  
-      type: apps  
-      label:  
-        en: Database Service  
-        ja: データベースサービス  
-        ms: Perkhidmatan Pangkalan Data  
-        pt-br: Serviço de Banco de Dados  
-        ru: Сервис баз данных  
-        ko: 데이터베이스 서비스  
-        zh-hant: 資料庫服務  
-        zh: 数据库服务  
+      labelEn: Database Service
+      labelZh: 数据库服务
+      required: true
+      type: apps
+      label:
+        en: Database Service
+        ja: データベースサービス
+        ms: Perkhidmatan Pangkalan Data
+        pt-br: Serviço de Banco de Dados
+        ru: Сервис баз данных
+        ko: 데이터베이스 서비스
+        zh-hant: 資料庫服務
+        zh: 数据库服务
       values:
-        - label: PostgreSQL  
+        - label: PostgreSQL
           value: postgresql
       child:
         default: ""
@@ -23,14 +41,16 @@ additionalProperties:
         type: service
     - default: zitadel
       envKey: PANEL_DB_NAME
-      label:  
-        en: Database Name  
-        ja: データベース名  
-        ms: Nama Pangkalan Data  
-        pt-br: Nome do Banco de Dados  
-        ru: Имя базы данных  
-        ko: 데이터베이스 이름  
-        zh-hant: 數據庫名稱  
+      labelEn: Database Name
+      labelZh: 数据库名称
+      label:
+        en: Database Name
+        ja: データベース名
+        ms: Nama Pangkalan Database
+        pt-br: Nome do Banco de Dados
+        ru: Имя базы данных
+        ko: 데이터베이스 이름
+        zh-hant: 數據庫名稱
         zh: 数据库名称
       random: true
       required: true
@@ -38,89 +58,99 @@ additionalProperties:
       type: text
     - default: zitadel
       envKey: PANEL_DB_USER
-      label:  
-        en: Database User  
-        ja: データベースユーザー  
-        ms: Pengguna Pangkalan Data  
-        pt-br: Usuário do Banco de Dados  
-        ru: Пользователь базы данных  
-        ko: 데이터베이스 사용자  
-        zh-hant: 數據庫用戶  
-        zh: 数据库用户 
+      labelEn: Database User
+      labelZh: 数据库用户
+      label:
+        en: Database User
+        ja: データベースユーザー
+        ms: Pengguna Pangkalan Data
+        pt-br: Usuário do Banco de Dados
+        ru: Пользователь базы данных
+        ko: 데이터베이스 사용자
+        zh-hant: 數據庫用戶
+        zh: 数据库用户
       random: true
       required: true
       rule: paramCommon
       type: text
     - default: zitadel
       envKey: PANEL_DB_USER_PASSWORD
-      label:  
-        en: Database Password  
-        ja: データベースパスワード  
-        ms: Kata Laluan Pangkalan Data  
-        pt-br: Senha do Banco de Dados  
-        ru: Пароль базы данных  
-        ko: 데이터베이스 비밀번호  
-        zh-hant: 數據庫密碼  
+      labelEn: Database Password
+      labelZh: 数据库密码
+      label:
+        en: Database Password
+        ja: データベースパスワード
+        ms: Kata Laluan Pangkalan Data
+        pt-br: Senha do Banco de Dados
+        ru: Пароль базы данных
+        ko: 데이터베이스 비밀번호
+        zh-hant: 數據庫密碼
         zh: 数据库密码 
       random: true
       required: true
       type: password
-    - default: masterkey
+    - default: ""
       envKey: ZITADEL_MASTER_KEY
-      label:  
-        en: ZITADEL Management Key  
-        ja: ZITADEL 管理キー  
-        ms: Kunci Pengurusan ZITADEL  
-        pt-br: Chave de Gerenciamento ZITADEL  
-        ru: Управление ключом ZITADEL  
-        ko: ZITADEL 관리 키  
-        zh-hant: ZITADEL 管理金鑰  
-        zh: ZITADEL 管理密钥 
-      random: true
+      labelEn: Management Key (32 characters)
+      labelZh: 管理密钥（32位长度）
+      label:
+        en: Management Key (32 characters)
+        ja: 管理キー（32文字）
+        ms: Kunci Pengurusan (32 aksara)
+        pt-br: Chave de Gerenciamento (32 caracteres)
+        ru: Ключ управления (32 символа)
+        ko: 관리 키 (32자)
+        zh-Hant: 管理密鑰（32位長度）
+        zh: 管理密钥（32位长度）
       required: true
       type: password
     - default: sso.example.com
       envKey: ZITADEL_EXTERNALDOMAIN
-      label:  
-        en: ZITADEL External Domain  
-        ja: ZITADEL 外部ドメイン  
-        ms: Domain Luar ZITADEL  
-        pt-br: Domínio Externo ZITADEL  
-        ru: Внешний домен ZITADEL  
-        ko: ZITADEL 외부 도메인  
-        zh-hant: ZITADEL 外部域名  
-        zh: ZITADEL 外部域名 
+      labelEn: External Domain
+      labelZh: 外部域名
+      label:
+        en: External Domain
+        ja: 外部ドメイン
+        ms: Domain Luar
+        pt-br: Domínio Externo
+        ru: Внешний домен
+        ko: 외부 도메인
+        zh-hant: 外部域名
+        zh: 外部域名
       random: false
       required: true
       rule: paramCommon
       type: text
     - default: admin@sso.example.com
       envKey: ZITADEL_FIRSTINSTANCE_ORG_HUMAN_USERNAME
-      label:  
-        en: ZITADEL Organization Administrator Password (minimum 32 characters)  
-        ja: ZITADEL オーガナイズ管理者パスワード（最小32文字）
-        ms: Kata Laluan Pengguna Pentadbir Organisasi ZITADEL (minimum 32 aksara)
-        pt-br: Senha do Usuário do Administrador da Organização ZITADEL (mínimo 32 caracteres)
-        ru: Пароль пользователя администратора организации ZITADEL (минимум 32 символа)
-        ko: ZITADEL 조직 관리자 비밀번호 (최소 32자)
-        zh-hant: ZITADEL 組織管理員使用者密碼（最少32位）
-        zh: ZITADEL 组织管理员用户密码 (长度最少32位)
+      labelEn: Organization Admin
+      labelZh: 组织管理员
+      label:
+        en: Organization Admin
+        ja: 組織管理者
+        ms: Pentadbir Organisasi
+        pt-br: Administrador da Organização
+        ru: Администратор организации
+        ko: 조직 관리자
+        zh-Hant: 組織管理員
+        zh: 组织管理员
       random: false
       required: true
       rule: paramComplexity
       type: text
-    - default: RootPassword1!
+    - default: root2Password
       envKey: ZITADEL_FIRSTINSTANCE_ORG_HUMAN_PASSWORD
-      label:  
-        en: ZITADEL Organization Administrator Password  
-        ja: ZITADEL オーガナイズ管理者パスワード  
-        ms: Kata Laluan Pengguna Pentadbir Organisasi ZITADEL  
-        pt-br: Senha do Usuário do Administrador da Organização ZITADEL  
-        ru: Пароль пользователя администратора организации ZITADEL  
-        ko: ZITADEL 조직 관리자 비밀번호  
-        zh-hant: ZITADEL 組織管理員使用者密碼  
-        zh: ZITADEL 组织管理员用户密码 
+      labelEn: Organization admin password
+      labelZh: 组织管理员密码
+      label:
+        en: Organization admin password
+        ja: 組織管理者パスワード
+        ms: Kata Laluan Pentadbir Organisasi
+        pt-br: Senha do Administrador da Organização
+        ru: Пароль администратора организации
+        ko: 조직 관리자 비밀번호
+        zh-hant: 組織管理員密碼
+        zh: 组织管理员密码
       random: true
       required: true
-      rule: paramCommon
-      type: text
+      type: password

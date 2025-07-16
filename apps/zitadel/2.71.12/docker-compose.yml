@@ -1,12 +1,12 @@
 services:
   zitadel:
+    image: ghcr.io/zitadel/zitadel:v2.71.12
     container_name: ${CONTAINER_NAME}
-    restart: 'always'
+    restart: always
     networks: 
       - 1panel-network
     ports:
       - "${PANEL_APP_PORT_HTTP}:8080"
-    image: 'ghcr.io/zitadel/zitadel:v2.71.12'
     command: 'start-from-init --masterkey "${ZITADEL_MASTER_KEY}" --tlsMode external'
     environment:
       ZITADEL_DATABASE_POSTGRES_HOST: ${PANEL_DB_HOST}
@@ -28,7 +28,6 @@ services:
       - /etc/timezone:/etc/timezone:ro
     labels:  
       createdBy: "Apps"
-
 networks:
   1panel-network:
     external: true
