@@ -139,6 +139,22 @@
       "allowedVersions": "/^11.6.*/"
     },
     {
+      "matchFileNames": ["apps/maxkb/1.*/*.yml"],
+      "allowedVersions": "/^1.*/"
+    },
+    {
+      "matchFileNames": ["apps/maxkb/2.*/*.yml"],
+      "allowedVersions": "/^2.*/"
+    },
+    {
+      "matchFileNames": ["apps/zitadel/2.*/*.yml"],
+      "allowedVersions": "/^2.*/"
+    },
+    {
+      "matchFileNames": ["apps/zitadel/3.*/*.yml"],
+      "allowedVersions": "/^3.*/"
+    },
+    {
       "matchDatasources": ["docker"],
       "matchPackageNames": ["ghcr.io/umami-software/umami"],
       "versionCompatibility": "^(?<compatibility>.*)-(?<version>.*)$",
