@@ -1,6 +1,6 @@
 services:
   bytebase:
-    image: bytebase/bytebase:3.8.0
+    image: bytebase/bytebase:3.8.1
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
