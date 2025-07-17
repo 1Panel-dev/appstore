@@ -11,18 +11,6 @@
       "automerge": true
     },
     {
-      "matchFileNames": ["apps/redis/8.*/*.yml"],
-      "allowedVersions": "/^8.*/"
-    },
-    {
-      "matchFileNames": ["apps/redis/7.*/*.yml"],
-      "allowedVersions": "/^7.*/"
-    },
-    {
-      "matchFileNames": ["apps/redis/6.*/*.yml"],
-      "allowedVersions": "/^6.*/"
-    },
-    {
       "matchFileNames": ["apps/mysql/5.6.*/*.yml"],
       "allowedVersions": "/^5.6.*/"
     },
@@ -39,64 +27,28 @@
       "allowedVersions": "/^8.4.*/"
     },
     {
-      "matchFileNames": ["apps/elasticsearch/7.*/*.yml"],
-      "allowedVersions": "/^7.*/"
-    },
-    {
-      "matchFileNames": ["apps/elasticsearch/8.*/*.yml"],
-      "allowedVersions": "/^8.*/"
-    },
-    {
-      "matchFileNames": ["apps/dataease/1.*/*.yml"],
-      "allowedVersions": "<=1.20"
-    },
-    {
-      "matchFileNames": ["apps/dataease/2.*/*.yml"],
-      "allowedVersions": ">=2.0"
-    },
-    {
-      "matchFileNames": ["apps/tomcat/8.*/*.yml"],
-      "allowedVersions": "/^8.*/"
-    },
-    {
-      "matchFileNames": ["apps/tomcat/9.*/*.yml"],
-      "allowedVersions": "/^9.*/"
-    },
-    {
-      "matchFileNames": ["apps/tomcat/10.*/*.yml"],
-      "allowedVersions": "/^10.*/"
-    },
-    {
-      "matchFileNames": ["apps/mongodb/6.*/*.yml"],
+      "matchFileNames": ["apps/redis/6.*/*.yml"],
       "allowedVersions": "/^6.*/"
     },
     {
-      "matchFileNames": ["apps/mongodb/7.*/*.yml"],
+      "matchFileNames": ["apps/redis/7.*/*.yml"],
       "allowedVersions": "/^7.*/"
+    },
+    {
+      "matchFileNames": ["apps/redis/8.*/*.yml"],
+      "allowedVersions": "/^8.*/"
     },
     {
       "matchFileNames": ["apps/mariadb/10.*/*.yml"],
       "allowedVersions": "/^10.*/"
     },
     {
-      "matchFileNames": ["apps/sonarqube/9.*/*.yml"],
-      "allowedVersions": "/^9.*/"
+      "matchFileNames": ["apps/mariadb/11.4.*/*.yml"],
+      "allowedVersions": "/^11.4.*/"
     },
     {
-      "matchFileNames": ["apps/sonarqube/10.*/*.yml"],
-      "allowedVersions": "/^10.*/"
-    },
-    {
-      "matchFileNames": ["apps/mssql/2017-*/*.yml"],
-      "allowedVersions": "/^2017-*/"
-    },
-    {
-      "matchFileNames": ["apps/mssql/2019-*/*.yml"],
-      "allowedVersions": "/^2019-*/"
-    },
-    {
-      "matchFileNames": ["apps/mssql/2022-*/*.yml"],
-      "allowedVersions": "/^2022-*/"
+      "matchFileNames": ["apps/mariadb/11.6.*/*.yml"],
+      "allowedVersions": "/^11.6.*/"
     },
     {
       "matchFileNames": ["apps/postgresql/12.*/*.yml"],
@@ -131,20 +83,68 @@
       "allowedVersions": "/^4.*/"
     },
     {
-      "matchFileNames": ["apps/mariadb/11.4.*/*.yml"],
-      "allowedVersions": "/^11.4.*/"
-    },
-    {
-      "matchFileNames": ["apps/mariadb/11.6.*/*.yml"],
-      "allowedVersions": "/^11.6.*/"
-    },
-    {
       "matchFileNames": ["apps/maxkb/1.*/*.yml"],
       "allowedVersions": "/^1.*/"
     },
     {
       "matchFileNames": ["apps/maxkb/2.*/*.yml"],
       "allowedVersions": "/^2.*/"
+    },
+    {
+      "matchFileNames": ["apps/elasticsearch/7.*/*.yml"],
+      "allowedVersions": "/^7.*/"
+    },
+    {
+      "matchFileNames": ["apps/elasticsearch/8.*/*.yml"],
+      "allowedVersions": "/^8.*/"
+    },
+    {
+      "matchFileNames": ["apps/tomcat/8.*/*.yml"],
+      "allowedVersions": "/^8.*/"
+    },
+    {
+      "matchFileNames": ["apps/tomcat/9.*/*.yml"],
+      "allowedVersions": "/^9.*/"
+    },
+    {
+      "matchFileNames": ["apps/tomcat/10.*/*.yml"],
+      "allowedVersions": "/^10.*/"
+    },
+    {
+      "matchFileNames": ["apps/mongodb/6.*/*.yml"],
+      "allowedVersions": "/^6.*/"
+    },
+    {
+      "matchFileNames": ["apps/mongodb/7.*/*.yml"],
+      "allowedVersions": "/^7.*/"
+    },
+    {
+      "matchFileNames": ["apps/sonarqube/9.*/*.yml"],
+      "allowedVersions": "/^9.*/"
+    },
+    {
+      "matchFileNames": ["apps/sonarqube/10.*/*.yml"],
+      "allowedVersions": "/^10.*/"
+    },
+    {
+      "matchFileNames": ["apps/mssql/2017-*/*.yml"],
+      "allowedVersions": "/^2017-*/"
+    },
+    {
+      "matchFileNames": ["apps/mssql/2019-*/*.yml"],
+      "allowedVersions": "/^2019-*/"
+    },
+    {
+      "matchFileNames": ["apps/mssql/2022-*/*.yml"],
+      "allowedVersions": "/^2022-*/"
+    },
+    {
+      "matchFileNames": ["apps/dataease/1.*/*.yml"],
+      "allowedVersions": "<=1.20"
+    },
+    {
+      "matchFileNames": ["apps/dataease/2.*/*.yml"],
+      "allowedVersions": ">=2.0"
     },
     {
       "matchFileNames": ["apps/zitadel/2.*/*.yml"],
