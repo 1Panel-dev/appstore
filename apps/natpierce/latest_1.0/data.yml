@@ -1,0 +1,27 @@
+additionalProperties:
+  formFields:
+    - default: "33272"
+      envKey: PANEL_APP_PORT_HTTP
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        zh: WebUI 端口
+    - default: "true"
+      envKey: UPDATA
+      required: true
+      type: select
+      label:
+        zh: 自动更新皎月连版本
+      values:
+        - label: 启用
+          value: "true"
+        - label: 禁用(选择该项必须填写手动版本号)
+          value: "false"
+    - default: "null"
+      envKey: CUSTOMVERSION
+      required: true
+      rule: paramCommon
+      type: text
+      label:
+        zh: 手动皎月连版本号(举例：1.06),不需要则不用管

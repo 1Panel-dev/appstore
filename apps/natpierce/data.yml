@@ -1,0 +1,18 @@
+additionalProperties:
+  key: natpierce
+  name: 皎月连
+  type: tool
+  tags:
+      - Tool
+  shortDescZh: 一款p2p内网穿透工具,支持组网和映射
+  description:
+      zh: 一款p2p内网穿透工具,支持组网和映射
+  crossVersionUpdate: true
+  limit: 1
+  website: https://www.natpierce.cn
+  github: https://github.com/Lyiyeyulongwu/natpierce-extend
+  document: https://www.natpierce.cn/pc/infolist/index.html
+  architectures:
+    - amd64
+    - arm64
+    - arm/v7

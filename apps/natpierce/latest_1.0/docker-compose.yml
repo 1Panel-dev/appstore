@@ -1,0 +1,14 @@
+version: "3"
+services:
+  natpierce:
+    image: xiyu505/natpierce:latest
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    privileged: true
+    network_mode: host
+    environment:
+      webdkh: ${PANEL_APP_PORT_HTTP}
+      update: ${UPDATA}
+      customversion: ${CUSTOMVERSION}
+    volumes:
+      - ./data:/natpierce
