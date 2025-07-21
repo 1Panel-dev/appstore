@@ -1,0 +1,21 @@
+name: AstrBot
+tags:
+  - AI / 大模型
+title: AstrBot 是一个易于上手的多平台聊天机器人及开发框架。
+description: AstrBot 是一个易于上手的多平台聊天机器人及开发框架。
+additionalProperties:
+  key: astrbot
+  name: AstrBot
+  tags:
+    - AI
+  shortDescZh: AstrBot 是一个易于上手的多平台聊天机器人及开发框架。
+  shortDescEn: AstrBot is an easy-to-use multi-platform chatbot and development framework.
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://astrbot.app/
+  github: https://github.com/AstrBotDevs/AstrBot
+  document: https://docs.astrbot.app/
+  architectures:
+    - amd64
