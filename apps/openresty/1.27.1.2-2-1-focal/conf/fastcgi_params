@@ -23,7 +23,7 @@ fastcgi_param  SERVER_NAME        $server_name;
 # PHP only, required if PHP was built with --enable-force-cgi-redirect
 fastcgi_param  REDIRECT_STATUS    200;
 
-fastcgi_param  HTTP_HOST          $host;
+fastcgi_param  HTTP_HOST          $http_host;
 fastcgi_param  HTTP_USER_AGENT    $http_user_agent;
 fastcgi_param  HTTP_REFERER       $http_referer;
 fastcgi_param  HTTP_COOKIE        $http_cookie;
