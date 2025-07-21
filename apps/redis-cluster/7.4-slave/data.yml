@@ -1,0 +1,75 @@
+additionalProperties:
+  formFields:
+    - default: redis
+      envKey: PANEL_REDIS_ROOT_PASSWORD
+      labelEn: Database Password
+      labelZh: 数据库密码
+      label:
+        en: Database Password
+        ja: データベースのパスワード
+        ms: Kata Laluan Pangkalan Data
+        pt-br: Senha do Banco de Dados
+        ru: Пароль базы данных
+        ko: 데이터베이스 비밀번호
+        zh-hant: 資料庫密碼
+        zh: 数据库密码
+      random: true
+      required: false
+      type: password
+    - default: 6379
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      label:
+        en: Port
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh-Hant: 埠
+        zh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: ''
+      envKey: MASTER_HOST
+      required: true
+      type: text
+      label:
+        en: Master Host
+        ja: マスターホスト
+        ms: Host Utama
+        pt-br: Host Mestre
+        ru: Хост мастера
+        ko: 마스터 호스트
+        zh-Hant: 主节点 IP
+        zh: 主节点 IP
+    - default: 6379
+      envKey: MASTER_PORT
+      disabled: true
+      required: true
+      type: text
+      label:
+        en: Master Port
+        ja: マスターポート
+        ms: Port Utama
+        pt-br: Porta Mestre
+        ru: Порт мастера
+        ko: 마스터 포트
+        zh-Hant: 主节点端口
+        zh: 主节点端口
+    - default: ''
+      envKey: MASTER_ROOT_PASSWORD
+      disabled: true
+      required: true
+      type: text
+      label:
+        en: Master Root Password
+        ja: マスタールートパスワード
+        ms: Kata Laluan Root Utama
+        pt-br: Senha Root Mestre
+        ru: Пароль Root мастера
+        ko: 마스터 루트 비밀번호
+        zh-Hant: 主节点 Root 密码
+        zh: 主节点 Root 密码

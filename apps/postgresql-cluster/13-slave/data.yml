@@ -1,0 +1,99 @@
+additionalProperties:
+  formFields:
+    - default: postgres
+      envKey: PANEL_DB_ROOT_USER
+      label:
+        en: Username
+        ja: ユーザー名
+        ms: Nama pengguna
+        pt-br: Nome de usuário
+        ru: Имя пользователя
+        ko: 사용자 이름
+        zh-hant: 用戶名
+        zh: 用户名
+      required: true
+      type: text
+      disabled: true
+    - default: password
+      envKey: PANEL_DB_ROOT_PASSWORD
+      label:
+        en: Password
+        ja: パスワード
+        ms: Kata laluan
+        pt-br: Senha
+        ru: Пароль
+        ko: 비밀번호
+        zh-hant: 密碼
+        zh: 密码
+      required: true
+      type: text
+      disabled: true
+    - default: 5432
+      envKey: PANEL_APP_PORT_HTTP
+      label:
+        en: Port
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh-Hant: 埠
+        zh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: replica_user
+      envKey: REPLICATION_USER
+      disabled: true
+      required: true
+      type: text
+      label:
+        en: Replication User
+        ja: レプリケーションユーザー
+        ms: Pengguna Replikasi
+        pt-br: Usuário de Replicação
+        ru: Пользователь репликации
+        ko: 복제 사용자
+        zh-Hant: 複製使用者
+        zh: 复制用户
+    - default: replica_passwd
+      envKey: REPLICATION_PASSWORD
+      required: true
+      type: text
+      disabled: true
+      label:
+        en: Replication Password
+        ja: レプリケーションパスワード
+        ms: Kata Laluan Replikasi
+        pt-br: Senha de Replicação
+        ru: Пароль репликации
+        ko: 복제 비밀번호
+        zh-Hant: 複製密碼
+        zh: 复制密码
+    - default: ''
+      envKey: MASTER_HOST
+      required: true
+      type: text
+      label:
+        en: Master Host
+        ja: マスターホスト
+        ms: Host Utama
+        pt-br: Host Mestre
+        ru: Хост мастера
+        ko: 마스터 호스트
+        zh-Hant: 主节点 IP
+        zh: 主节点 IP
+    - default: 3306
+      envKey: MASTER_PORT
+      disabled: true
+      required: true
+      type: text
+      label:
+        en: Master Port
+        ja: マスターポート
+        ms: Port Utama
+        pt-br: Porta Mestre
+        ru: Порт мастера
+        ko: 마스터 포트
+        zh-Hant: 主节点端口
+        zh: 主节点端口

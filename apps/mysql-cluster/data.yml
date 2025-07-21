@@ -1,0 +1,30 @@
+name: MySQL-Cluster
+tags:
+    - 数据库
+title: MySQL 一主多从
+description: MySQL 一主多从
+additionalProperties:
+    key: mysql-cluster
+    name: MySQL-Cluster
+    tags:
+        - Database
+    description:
+        en: MySQL Master-Multiple-Slave Deployment
+        ja: MySQL マスター複数スレーブデプロイ
+        ms: Penyebaran MySQL Master-Berbilang-Slave
+        pt-br: Implantação MySQL Mestre-Multiplos-Escravos
+        ru: Развертывание MySQL Мастер-Несколько-Слейвов
+        ko: MySQL 마스터 다중 슬레이브 배포
+        zh-hant: MySQL 一主多從
+        zh: MySQL 一主多从
+    type: runtime
+    crossVersionUpdate: false
+    limit: 0
+    recommend: 72
+    website: https://www.mysql.com
+    github: https://github.com/mysql/mysql-server
+    document: https://dev.mysql.com/doc/
+    version: 2.0
+    architectures:
+      - amd64
+      - arm64
