@@ -9,7 +9,7 @@ RUN if [ "${CONTAINER_PACKAGE_URL}" != "https://deb.debian.org" ]; then \
             -e "s|http://snapshot.debian.org/archive/debian|${CONTAINER_PACKAGE_URL}|g" \
             -e "s|http://deb.debian.org/debian|${CONTAINER_PACKAGE_URL}/debian|g" \
             -e "s|http://snapshot.debian.org/archive/debian-security|${CONTAINER_PACKAGE_URL}|g" \
-            -e "s|http://deb.debian.org/debian-security|${CONTAINER_PACKAGE_URL}/debian-security|g" \
+            -e "s|http://security.debian.org/debian-security|${CONTAINER_PACKAGE_URL}/debian-security|g" \
             /etc/apt/sources.list && \
         apt-get update; \
     fi
