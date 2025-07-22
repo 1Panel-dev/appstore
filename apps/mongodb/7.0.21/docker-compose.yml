@@ -1,7 +1,7 @@
 services:
   mongodb:
     container_name: ${CONTAINER_NAME}
-    image: mongo:7.0.21
+    image: mongo:7.0.22
     restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: ${PANEL_DB_ROOT_USER}
