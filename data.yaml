@@ -14,6 +14,7 @@ additionalProperties:
         ko: "웹사이트"
         zh-hant: "網站"
         zh: "建站"
+        tr: "Web Sitesi"
     - key: Database
       name: 数据库
       sort: 20
@@ -26,6 +27,7 @@ additionalProperties:
         ko: "데이터베이스"
         zh-hant: "資料庫"
         zh: "数据库"
+        tr: "Veritabanı"
     - key: Server
       name: Web 服务器
       sort: 30
@@ -38,6 +40,7 @@ additionalProperties:
         ko: "서버"
         zh-hant: "網頁伺服器"
         zh: "Web 服务器"
+        tr: "Web Sunucusu"
     - key: Runtime
       name: 运行环境
       sort: 40
@@ -50,6 +53,7 @@ additionalProperties:
         ko: "런타임"
         zh-hant: "執行環境"
         zh: "运行环境"
+        tr: "Çalışma Zamanı"
     - key: Tool
       name: 实用工具
       sort: 50
@@ -62,6 +66,7 @@ additionalProperties:
         ko: "도구"
         zh-hant: "實用工具"
         zh: "实用工具"
+        tr: "Araç"
     - key: Storage
       name: 云存储
       sort: 60
@@ -74,6 +79,7 @@ additionalProperties:
         ko: "저장소"
         zh-hant: "雲存儲"
         zh: "云存储"
+        tr: "Bulut Depolama"
     - key: AI
       name: AI / 大模型
       sort: 70
@@ -86,6 +92,7 @@ additionalProperties:
         ko: "인공지능"
         zh-hant: "AI / 大模型"
         zh: "AI / 大模型"
+        tr: "Yapay Zeka / Büyük Modeller"
     - key: BI
       name: BI
       sort: 80
@@ -98,6 +105,7 @@ additionalProperties:
         ko: "비즈니스 인텔리전스"
         zh-hant: "BI"
         zh: "BI"
+        tr: "BI"
     - key: Security
       name: 安全
       sort: 90
@@ -110,6 +118,7 @@ additionalProperties:
         ko: "보안"
         zh-hant: "安全"
         zh: "安全"
+        tr: "Güvenlik"
     - key: DevTool
       name: 开发工具
       sort: 100
@@ -122,6 +131,7 @@ additionalProperties:
         ko: "개발 도구"
         zh-hant: "開發工具"
         zh: "开发工具"
+        tr: "Geliştirme Aracı"
     - key: DevOps
       name: DevOps
       sort: 110
@@ -134,6 +144,7 @@ additionalProperties:
         ko: "데브옵스"
         zh-hant: "DevOps"
         zh: "DevOps"
+        tr: "DevOps"
     - key: Middleware
       name: 中间件
       sort: 120
@@ -146,6 +157,7 @@ additionalProperties:
         ko: "미들웨어"
         zh-hant: "中間件"
         zh: "中间件"
+        tr: "Ara Yazılım"
     - key: Media
       name: 多媒体
       sort: 130
@@ -158,6 +170,7 @@ additionalProperties:
         ko: "미디어"
         zh-hant: "多媒體"
         zh: "多媒体"
+        tr: "Medya"
     - key: Email
       name: 邮件服务
       sort: 140
@@ -170,6 +183,7 @@ additionalProperties:
         ko: "이메일"
         zh-hant: "郵件服務"
         zh: "邮件服务"
+        tr: "E-posta Hizmeti"
     - key: Game
       name: 休闲游戏
       sort: 150
@@ -182,6 +196,7 @@ additionalProperties:
         ko: "게임"
         zh-hant: "休閒遊戲"
         zh: "休闲游戏"
+        tr: "Gündelik Oyunlar"
     - key: Local
       name: 本地
       sort: 9999
@@ -194,4 +209,5 @@ additionalProperties:
         ko: "로컬"
         zh-hant: "本機"
         zh: "本地"
+        tr: "Yerel"
   version: v1.6.0
