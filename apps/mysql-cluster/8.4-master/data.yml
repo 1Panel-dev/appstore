@@ -1,0 +1,57 @@
+additionalProperties:
+  formFields:
+    - default: mysql
+      envKey: PANEL_DB_ROOT_PASSWORD
+      required: true
+      type: password
+      random: true
+      label:
+        en: Root Password
+        ja: ルートパスワード
+        ms: Kata Laluan Root
+        pt-br: Senha Root
+        ru: Пароль Root
+        ko: 루트 비밀번호
+        zh-Hant: Root 密碼
+        zh: Root 密码
+    - default: replica_user
+      envKey: REPLICATION_USER
+      required: true
+      type: text
+      label:
+        en: Replication User
+        ja: レプリケーションユーザー
+        ms: Pengguna Replikasi
+        pt-br: Usuário de Replicação
+        ru: Пользователь репликации
+        ko: 복제 사용자
+        zh-Hant: 複製使用者
+        zh: 复制用户
+    - default: replica_passwd
+      envKey: REPLICATION_PASSWORD
+      random: true
+      required: true
+      type: password
+      label:
+        en: Replication Password
+        ja: レプリケーションパスワード
+        ms: Kata Laluan Replikasi
+        pt-br: Senha de Replicação
+        ru: Пароль репликации
+        ko: 복제 비밀번호
+        zh-Hant: 複製密碼
+        zh: 复制密码
+    - default: 3306
+      envKey: PANEL_APP_PORT_HTTP
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        en: Port
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh-Hant: 埠
+        zh: 端口

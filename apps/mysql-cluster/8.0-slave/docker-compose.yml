@@ -1,0 +1,33 @@
+services:
+  mysql-slave:
+    image: bitnami/mysql:8.0
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    environment:
+      MYSQL_REPLICATION_MODE: slave
+      MYSQL_REPLICATION_USER: ${REPLICATION_USER}
+      MYSQL_REPLICATION_PASSWORD: ${REPLICATION_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${PANEL_DB_ROOT_PASSWORD}
+      MYSQL_MASTER_HOST: ${MASTER_HOST}
+      MYSQL_MASTER_PORT_NUMBER: ${MASTER_PORT}
+      MYSQL_MASTER_ROOT_PASSWORD: ${MASTER_ROOT_PASSWORD}
+      MYSQL_REPLICATION_SLAVE_DUMP: true
+      MYSQL_EXTRA_FLAGS: --default-authentication-plugin=mysql_native_password
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:3306
+    volumes:
+      - ./data/:/bitnami/mysql/data
+      - ./conf/my.cnf:/opt/bitnami/mysql/conf/my.cnf:ro
+      - /etc/localtime:/etc/localtime:ro
+    labels:
+      createdBy: "Apps"
+    healthcheck:
+      test: [ 'CMD', '/opt/bitnami/scripts/mysql/healthcheck.sh' ]
+      interval: 15s
+      timeout: 5s
+      retries: 6
+networks:
+  1panel-network:
+    external: true

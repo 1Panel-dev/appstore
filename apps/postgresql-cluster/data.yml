@@ -1,0 +1,31 @@
+name: PostgreSQL-Cluster
+tags:
+    - 数据库
+title: PostgreSQL 一主多从
+description: PostgreSQL 一主多从
+additionalProperties:
+    key: postgresql-cluster
+    name: PostgreSQL-Cluster
+    tags:
+        - Database
+    description:
+        en: PostgreSQL Master-Slave Cluster
+        ja: オープンソースリレーショナルデータベース
+        ms: Pangkalan Data Relasional Sumber Terbuka
+        pt-br: Banco de Dados Relacional de Código Aberto
+        ru: Открытая реляционная база данных
+        ko: 오픈 소스 관계형 데이터베이스
+        zh-hant: PostgreSQL 一主多從
+        zh: PostgreSQL 一主多从
+    type: runtime
+    crossVersionUpdate: false
+    limit: 0
+    recommend: 73
+    website: https://www.postgresql.org/
+    github: https://github.com/postgres/postgres
+    document: https://www.postgresql.org/docs/
+    memoryRequired: 1024
+    version: 2.0
+    architectures:
+      - amd64
+      - arm64

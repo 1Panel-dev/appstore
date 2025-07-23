@@ -1,0 +1,28 @@
+services:
+  postgres-master:
+    container_name: ${CONTAINER_NAME}
+    image: bitnami/postgresql:14
+    restart: always
+    environment:
+      - POSTGRESQL_REPLICATION_MODE=master
+      - POSTGRESQL_REPLICATION_USER=${REPLICATION_USER}
+      - POSTGRESQL_REPLICATION_PASSWORD=${REPLICATION_PASSWORD}
+      - POSTGRESQL_PASSWORD=${PANEL_DB_ROOT_PASSWORD}
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:5432
+    volumes:
+      - ./postgresql:/bitnami/postgresql
+      - ./data:/bitnami/postgresql/conf
+    healthcheck:
+      test: ["CMD", "pg_isready", "-h", "127.0.0.1", "-p", "5432", "-q", "-U", "postgres"]
+      start_period: 20s
+      interval: 30s
+      retries: 5
+      timeout: 5s
+    networks:
+      - 1panel-network
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true
