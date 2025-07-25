@@ -28,3 +28,4 @@ additionalProperties:
   document: https://docs.astrbot.app/
   architectures:
     - amd64
+    - arm64
