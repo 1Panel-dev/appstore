@@ -10,7 +10,7 @@ services:
       - "./data/data:/usr/share/elasticsearch/data"
       - "./data/backup:/usr/share/elasticsearch/backup"
       - "./data/conf/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml"
-    image: elasticsearch:8.18.3
+    image: elasticsearch:8.18.4
     ulimits:
       memlock:
         soft: -1
