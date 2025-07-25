@@ -1,6 +1,6 @@
 services:
   redis-master:
-    image: bitnami/redis:7.4
+    image: bitnami/redis:8.0
     restart: always
     container_name: ${CONTAINER_NAME}
     networks:
