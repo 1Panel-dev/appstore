@@ -1,0 +1,23 @@
+services:
+  astrbot:
+    image: soulter/astrbot:v3.5.22
+    container_name: astrbot
+    restart: always
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:6185"
+      - "${ASTRBOT_WEIXIN_OFFICIAL_PORT}:6194"
+      - "${ASTRBOT_WECOM_PORT}:6195"
+      - "${ASTRBOT_QQ_OFFICIAL_PORT}:6196"
+      - "${ASTRBOT_QQ_PERSONAL_PORT}:6199"
+      - "${ASTRBOT_WECHAT_PERSONAL_PORT}:11451"
+    environment:
+      - TZ=${TIME_ZONE}
+    volumes:
+      - ./data:/AstrBot/data
+    networks:
+      - 1panel-network
+    labels:
+      createdBy: "Apps"
+networks:  
+  1panel-network:  
+    external: true
