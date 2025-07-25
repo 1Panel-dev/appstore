@@ -4,7 +4,7 @@ additionalProperties:
       edit: true
       envKey: PANEL_APP_PORT_HTTP
       labelEn: WebUI Port
-      labelZh: 网页端口
+      labelZh: WebUI 端口
       required: true
       rule: paramPort
       type: number
@@ -55,7 +55,7 @@ additionalProperties:
       edit: true
       envKey: ASTRBOT_QQ_OFFICIAL_PORT
       labelEn: QQ Official Bot Webhook Port
-      labelZh: QQ官方机器人端口 (Webhook)
+      labelZh: QQ 官方机器人端口 (Webhook)
       required: true
       rule: paramPort
       type: number
@@ -66,8 +66,8 @@ additionalProperties:
         pt-br: Porta do Bot Oficial QQ (Webhook)
         ru: Порт Официального Бота QQ (Webhook)
         ko: QQ 공식 봇 포트 (Webhook)
-        zh-Hant: QQ官方機器人端口 (Webhook)
-        zh: QQ官方机器人端口 (Webhook)
+        zh-Hant: QQ 官方機器人端口 (Webhook)
+        zh: QQ 官方机器人端口 (Webhook)
     - default: 6199
       edit: true
       envKey: ASTRBOT_QQ_PERSONAL_PORT
