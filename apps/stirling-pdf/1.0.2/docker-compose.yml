@@ -1,6 +1,6 @@
 services:
   stirling-pdf:
-    image: frooodle/s-pdf:1.0.2
+    image: frooodle/s-pdf:1.1.0
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
