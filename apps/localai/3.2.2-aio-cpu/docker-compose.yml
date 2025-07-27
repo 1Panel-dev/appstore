@@ -1,6 +1,6 @@
 services:
   localai:
-    image: localai/localai:v3.2.2-aio-cpu
+    image: localai/localai:v3.2.3-aio-cpu
     container_name: ${CONTAINER_NAME}
     # For Nvidia GPUs decomment one of the following (cuda11 or cuda12):
     # image: localai/localai:v2.25.0-aio-gpu-nvidia-cuda-11
