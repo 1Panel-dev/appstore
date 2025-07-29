@@ -1,6 +1,6 @@
 additionalProperties:
     formFields:
-        - default: 40056
+        - default: 3001
           edit: true
           envKey: PANEL_APP_PORT_HTTP
           labelEn: Port
@@ -8,3 +8,9 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+        - default: Asia/Shanghai
+          envKey: TZ
+          labelEn: Time Zone
+          labelZh: 时区
+          required: true
+          type: text

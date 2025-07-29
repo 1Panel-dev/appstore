@@ -1,6 +1,4 @@
 volumes:
-  gsm3_data:
-    driver: local
   game_data:
     driver: local
   game_file:
@@ -18,19 +16,18 @@ services:
       # 游戏端口，按需映射
       - "27015:27015"
     volumes:
-    #steam用户数据目录 不建议修改
+    #steam用户数据目录 不建议修改，如果采用宿主映射需要把宿主路径的此文件夹改为777权限
       - game_data:/home/.config 
       - game_data:/home/.local
       - game_file:/home/steam/games
-    #root用户数据目录 不建议修改
+    #root用户数据目录 不建议修改，如果采用宿主映射需要把宿主路径的此文件夹改为777权限
       - game_data:/root/.config 
       - game_data:/root/.local   
       - game_file:/root/steam/games 
-    #面板数据，请勿改动
-      - gsm3_data:/root/server/data 
+    #面板数据
+      - ./gsm3_data:/root/server/data 
     environment:
-      - TZ=Asia/Shanghai              # 设置时区
-      - SERVER_PORT=3001              # GSM3服务端口
+      - TZ=${TZ}
     stdin_open: true                  # 保持STDIN打开
     tty: true                         # 分配TTY
     restart: unless-stopped           # 自动重启策略
