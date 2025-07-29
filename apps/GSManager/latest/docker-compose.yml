@@ -1,9 +1,3 @@
-volumes:
-  game_data:
-    driver: local
-  game_file:
-    driver: local
-
 services:
   management_panel:
     build: .
@@ -17,13 +11,13 @@ services:
       - "27015:27015"
     volumes:
     #steam用户数据目录 不建议修改，如果采用宿主映射需要把宿主路径的此文件夹改为777权限
-      - game_data:/home/.config 
-      - game_data:/home/.local
-      - game_file:/home/steam/games
+      - ./game_data:/home/.config 
+      - ./game_data:/home/.local
+      - ./game_file:/home/steam/games
     #root用户数据目录 不建议修改，如果采用宿主映射需要把宿主路径的此文件夹改为777权限
-      - game_data:/root/.config 
-      - game_data:/root/.local   
-      - game_file:/root/steam/games 
+      - ./game_data:/root/.config 
+      - ./game_data:/root/.local   
+      - ./game_file:/root/steam/games 
     #面板数据
       - ./gsm3_data:/root/server/data 
     environment:
