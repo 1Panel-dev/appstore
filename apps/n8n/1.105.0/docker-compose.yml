@@ -1,6 +1,6 @@
 services:
   homeassistant:
-    image: n8nio/n8n:1.104.1
+    image: n8nio/n8n:1.105.0
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
