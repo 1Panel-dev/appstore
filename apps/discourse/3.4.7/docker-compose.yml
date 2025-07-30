@@ -1,6 +1,6 @@
   services:
     discourse:
-      image: bitnami/discourse:3.4.6
+      image: bitnami/discourse:3.4.7
       container_name: ${CONTAINER_NAME}
       restart: always
       networks:
@@ -33,7 +33,7 @@
       labels:
         createdBy: "Apps"
     sidekiq:
-      image: bitnami/discourse:3.4.6
+      image: bitnami/discourse:3.4.7
       container_name: ${CONTAINER_NAME}-sidekiq
       restart: always
       networks:
