@@ -101,8 +101,8 @@ additionalProperties:
     - default: 8000
       edit: true
       envKey: PANEL_APP_PORT_HTTP
-      labelEn: Port
-      labelZh: 端口
+      labelEn: HTTP Port
+      labelZh: HTTP 端口
       label:
         en: HTTP Port
         ja: HTTP ポート
@@ -112,6 +112,23 @@ additionalProperties:
         ko: HTTP 포트
         zh-Hant: HTTP 埠
         zh: HTTP 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 8001
+      edit: true
+      envKey: PANEL_APP_PORT_MCP
+      labelEn: MCP Port
+      labelZh: MCP 端口
+      label:
+        en: MCP Port
+        ja: MCP ポート
+        ms: MCP Port
+        pt-br: MCP Porta
+        ru: MCP Порт
+        ko: MCP 포트
+        zh-Hant: MCP 埠
+        zh: MCP 端口
       required: true
       rule: paramPort
       type: number

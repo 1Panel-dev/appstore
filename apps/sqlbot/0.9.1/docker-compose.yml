@@ -1,10 +1,11 @@
 services:
   sqlbot:
-    image: dataease/sqlbot:v0.9.0
+    image: dataease/sqlbot:v0.9.1
     container_name: ${CONTAINER_NAME}
     restart: always
     ports:
       - ${PANEL_APP_PORT_HTTP}:8000
+      - ${PANEL_APP_PORT_MCP}:8001
     env_file: ./conf/sqlbot.env
     environment:
       - POSTGRES_SERVER=${PANEL_DB_HOST}
