@@ -1,0 +1,27 @@
+services:
+  sqlbot:
+    image: dataease/sqlbot:v0.9.1
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8000
+      - ${PANEL_APP_PORT_MCP}:8001
+    env_file: ./conf/sqlbot.env
+    environment:
+      - POSTGRES_SERVER=${PANEL_DB_HOST}
+      - POSTGRES_PORT=${PANEL_DB_PORT}
+      - POSTGRES_DB=${PANEL_DB_NAME}
+      - POSTGRES_USER=${PANEL_DB_USER}
+      - POSTGRES_PASSWORD=${PANEL_DB_USER_PASSWORD}
+      - SERVER_IMAGE_HOST=${SERVER_IMAGE_HOST}
+    volumes:
+      - ./data/excel:/opt/sqlbot/data/excel
+      - ./data/images:/opt/sqlbot/images
+      - ./data/logs:/opt/sqlbot/logs      
+    networks:
+      - 1panel-network
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true
