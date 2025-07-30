@@ -15,7 +15,7 @@ additionalProperties:
     limit: 0
     website: https://www.emlog.net/
     github: https://github.com/emlog/emlog
-    document: https://www.emlog.net/docs/#/install_1panel
+    document: https://www.emlog.net/docs/
     architectures:
       - amd64
       - arm64
