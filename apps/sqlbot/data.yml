@@ -1,0 +1,31 @@
+name: SQLBot
+tags:
+  - AI / 大模型
+title: 基于大模型和 RAG 的智能问数系统
+description: 基于大模型和 RAG 的智能问数系统
+additionalProperties:
+  key: sqlbot
+  name: SQLBot
+  tags:
+    - AI
+  shortDescZh: 基于大模型和 RAG 的智能问数系统
+  shortDescEn: Intelligent Data Query System Based on LLM and RAG
+  description:
+    en: Intelligent Data Query System Based on LLM and RAG
+    ja: LLMとRAGに基づくインテリジェントデータクエリシステム
+    ms: Sistem Pertanyaan Data Pintar Berdasarkan LLM dan RAG
+    pt-br: Sistema de Consulta de Dados Inteligente Baseado em LLM e RAG
+    ru: Интеллектуальная система запроса данных на основе LLM и RAG
+    ko: LLM 및 RAG 기반 지능형 데이터 쿼리 시스템
+    zh-hant: 基於大模型和 RAG 的智能問數系統
+    zh: 基于大模型和 RAG 的智能问数系统
+  type: website
+  crossVersionUpdate: false
+  limit: 0
+  recommend: 0
+  website: https://dataease.cn/sqlbot/
+  github: https://github.com/dataease/SQLBot
+  document: https://dataease.cn/sqlbot/
+  architectures:
+    - amd64
+    - arm64
