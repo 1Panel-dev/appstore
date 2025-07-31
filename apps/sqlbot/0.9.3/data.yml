@@ -135,17 +135,17 @@ additionalProperties:
     - default: http://<YOUR IP>:8000/images/
       edit: true
       envKey: SERVER_IMAGE_HOST
-      labelEn: IMAGE SERVER HOST
-      labelZh: 图片服务器地址
+      labelEn: IMAGE SERVER HOST (Default server IP)
+      labelZh: 图片服务器地址（默认服务器 IP）
       label:
-        en: Image Server Host
-        ja: 画像サーバーホスト
-        ms: Pelayan Imej Host
-        pt-br: Servidor de Imagens Host
-        ru: Хост сервера изображений
-        ko: 이미지 서버 호스트
-        zh-hant: 圖片伺服器地址
-        zh: 图片服务器地址
+        en: Image Server Host (Default server IP)
+        ja: 画像サーバーホスト（デフォルトのサーバーIP）
+        ms: Pelayan Gambar Host (IP Pelayan Lalai)
+        pt-br: Servidor de Imagens Host (IP do servidor padrão)
+        ru: Хост сервера изображений (IP-адрес сервера по умолчанию)
+        ko: 이미지 서버 호스트 (기본 서버 IP)
+        zh-hant: 圖片伺服器地址（預設伺服器 IP）
+        zh: 图片服务器地址（默认服务器 IP）
       required: true
       rule: paramExtUrl
       type: text
