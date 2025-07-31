@@ -1,15 +1,15 @@
 name: GSManager
 tags:
   - 休闲游戏
-title: 一站式开服平台，注重Steam Minecraft等游戏的一键部署
-description: 一站式开服平台，注重Steam Minecraft等游戏的一键部署
+title: 新一代游戏服务器管理平台
+description: 新一代游戏服务器管理平台
 additionalProperties:
   key: gsmanager
   name: GSManager
   tags:
     - Game
-  shortDescZh: 一站式开服平台，注重Steam Minecraft等游戏的一键部署
-  shortDescEn: One stop server opening platform, focusing on one click deployment of games such as Steam Minecraft
+  shortDescZh: 新一代游戏服务器管理平台
+  shortDescEn: A next-generation game server management platform
   type: website
   crossVersionUpdate: true
   limit: 0

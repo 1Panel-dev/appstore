@@ -1,0 +1,29 @@
+services:
+  management_panel:
+    image: xiaozhu674/gameservermanager:3.5.0
+    container_name: GSManager3
+    restart: unless-stopped
+    networks:
+      - 1panel-network
+    user: root
+    stdin_open: true
+    tty: true                   
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:3001"
+      - "${PANEL_APP_PORT_GAME}:27015"
+    volumes:
+      - ./data/data:/home/.config
+      - ./data/data:/home/.local
+      - ./data/file:/home/steam/games
+      - ./data/data:/root/.config
+      - ./data/data:/root/.local
+      - ./data/file:/root/steam/games
+      - ./data/gsm3:/root/server/data
+    environment:
+      - SERVER_PORT=3001
+      - TZ=${TZ}
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true
