@@ -1,6 +1,6 @@
 services:
   affine:
-    image: ghcr.io/toeverything/affine-graphql:stable
+    image: ghcr.io/toeverything/affine:stable
     container_name: ${CONTAINER_NAME}
     restart: unless-stopped
     ports:
@@ -23,7 +23,7 @@ services:
       createdBy: "Apps"
       
   affine_migration:
-    image: ghcr.io/toeverything/affine-graphql:stable
+    image: ghcr.io/toeverything/affine:stable
     container_name: ${CONTAINER_NAME}_migration_job
     volumes:
       - ./data/storage:/root/.affine/storage
