@@ -4,7 +4,7 @@ services:
     container_name: ${CONTAINER_NAME}
     restart: always
     ports:
-        - ${PANEL_APP_PORT_HTTP}:16686
+      - ${PANEL_APP_PORT_HTTP}:16686
     networks:
       - 1panel-network
     labels:
