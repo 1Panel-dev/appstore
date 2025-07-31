@@ -1,0 +1,31 @@
+name: Jaeger
+tags:
+  - 中间件
+title: 分布式追踪系统
+description: 分布式追踪系统
+additionalProperties:
+  key: jaeger
+  name: Jaeger
+  tags:
+    - Middleware
+  shortDescZh: 分布式追踪系统
+  shortDescEn: A Distributed Tracing System
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://www.jaegertracing.io
+  github: https://github.com/jaegertracing/jaeger
+  document: https://www.jaegertracing.io/docs
+  description:
+    en: A Distributed Tracing System
+    zh: 分布式追踪系统
+    zh-Hant: 分散式追蹤系統
+    ja: 分散型トレーシングシステム
+    ms: Sistem Pengesanan Teragih
+    pt-br: Um Sistema de Rastreamento Distribuído
+    ru: Распределённая система трассировки
+    ko: 분산 추적 시스템
+  architectures:
+    - amd64
+    - arm64
