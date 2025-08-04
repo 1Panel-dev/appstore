@@ -141,7 +141,7 @@ services:
       # - NEW_TASK_DELAY=1
       # - MAIL_SSL=True
       # - MAILGUN_KEY=
-    image: a76yyyy/qiandao:20250129
+    image: a76yyyy/qiandao:20250803
     labels:  
       createdBy: "Apps" 
 networks:  
