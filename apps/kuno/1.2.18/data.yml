@@ -1,0 +1,104 @@
+additionalProperties:
+  formFields:
+    - default: kuno
+      envKey: CONTAINER_NAME
+      labelEn: Container Name
+      labelZh: 容器名称
+      label:
+        en: Container Name
+        ja: コンテナ名
+        ms: Nama Kontena
+        pt-br: Nome do Contêiner
+        ru: Имя контейнера
+        ko: 컨테이너 이름
+        zh: 容器名称
+        zh-Hant: 容器名稱
+      required: true
+      type: text
+    - default: 8080
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      label:
+        en: Port
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh: 端口
+        zh-Hant: 埠
+      required: true
+      rule: paramPort
+      type: number
+    - default: "$PANEL_APP_HOST_IP:$PANEL_APP_PORT_HTTP"
+      edit: true
+      envKey: NEXT_PUBLIC_API_URL
+      labelEn: API URL
+      labelZh: API地址
+      label:
+        en: API URL
+        zh: API地址
+        zh-Hant: API地址
+      description:
+        zh: 应用的访问地址，通常无需修改
+        en: Application access URL, usually no need to modify
+        zh-Hant: 應用的訪問地址，通常無需修改
+      required: true
+      type: text
+    - default: "$RANDOM_PASSWORD"
+      envKey: JWT_SECRET
+      labelEn: JWT Secret
+      labelZh: JWT密钥
+      label:
+        en: JWT Secret
+        zh: JWT密钥
+        zh-Hant: JWT密鑰
+      description:
+        zh: JWT认证密钥，系统会自动生成
+        en: JWT authentication key, automatically generated
+        zh-Hant: JWT認證密鑰，系統會自動生成
+      required: true
+      type: password
+    - default: false
+      envKey: RECOVERY_MODE
+      labelEn: Recovery Mode
+      labelZh: 恢复模式
+      label:
+        en: Recovery Mode
+        zh: 恢复模式
+        zh-Hant: 恢復模式
+      description:
+        zh: 启用后可使用默认密码登录重置密码
+        en: Enable to use default password for password reset
+        zh-Hant: 啟用後可使用默認密碼登錄重置密碼
+      required: false
+      type: select
+      options:
+        - value: false
+          label:
+            en: Disabled
+            zh: 禁用
+            zh-Hant: 禁用
+        - value: true
+          label:
+            en: Enabled
+            zh: 启用
+            zh-Hant: 啟用
+    - default: ./kuno/data
+      edit: true
+      envKey: DATA_PATH
+      labelEn: Data Path
+      labelZh: 数据路径
+      label:
+        en: Data Path
+        ja: データパス
+        ms: Laluan Data
+        pt-br: Caminho dos Dados
+        ru: Путь к данным
+        ko: 데이터 경로
+        zh: 数据路径
+        zh-Hant: 數據路徑
+      required: true
+      type: text

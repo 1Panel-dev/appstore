@@ -1,0 +1,33 @@
+name: Kuno
+tags:
+    - CMS
+    - 博客
+title: 轻量多语言内容管理系统 - 支持70+语言的现代化CMS
+description: 轻量多语言内容管理系统，采用Go后端和Next.js前端，支持70+语言，提供现代响应式设计
+additionalProperties:
+    key: kuno
+    name: Kuno
+    tags:
+        - CMS
+        - Blog
+        - Content Management
+    shortDescZh: 轻量多语言内容管理系统，采用Go后端和Next.js前端，支持70+语言
+    shortDescEn: Lightweight multilingual CMS with Go backend and Next.js frontend, supporting 70+ languages
+    type: website
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://github.com/xuemian168/kuno
+    github: https://github.com/xuemian168/kuno  
+    document: https://github.com/xuemian168/kuno/blob/main/README.md
+    description:
+        en: A lightweight, multilingual CMS with a Go backend and Next.js frontend, designed for creating rich content ecosystems. Supports 70+ languages and offers a modern, responsive design.
+        zh: 轻量多语言内容管理系统，采用Go后端和Next.js前端，专为创建丰富的内容生态系统而设计。支持70+语言，提供现代响应式设计。
+        zh-Hant: 輕量多語言內容管理系統，採用Go後端和Next.js前端，專為創建豐富的內容生態系統而設計。支持70+語言，提供現代響應式設計。
+        ja: Go バックエンドと Next.js フロントエンドを使用した軽量多言語 CMS。豊富なコンテンツエコシステムの構築に最適。70以上の言語をサポートし、モダンなレスポンシブデザインを提供。
+        ms: Sistem pengurusan kandungan pelbagai bahasa yang ringan dengan backend Go dan frontend Next.js, direka untuk mencipta ekosistem kandungan yang kaya. Menyokong 70+ bahasa dan menawarkan reka bentuk responsif moden.
+        pt-br: Sistema de gerenciamento de conteúdo multilíngue leve com backend Go e frontend Next.js, projetado para criar ecossistemas de conteúdo ricos. Suporta mais de 70 idiomas e oferece design responsivo moderno.
+        ru: Легкая многоязычная CMS с бэкендом на Go и фронтендом на Next.js, предназначенная для создания богатых контентных экосистем. Поддерживает более 70 языков и предлагает современный адаптивный дизайн.
+        ko: Go 백엔드와 Next.js 프론트엔드를 사용한 경량 다국어 CMS로, 풍부한 콘텐츠 생태계 구축을 위해 설계되었습니다. 70개 이상의 언어를 지원하며 현대적인 반응형 디자인을 제공합니다.
+    architectures:
+      - amd64
