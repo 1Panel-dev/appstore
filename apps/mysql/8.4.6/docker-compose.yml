@@ -19,7 +19,7 @@ services:
       createdBy: "Apps"
     command:
       - --mysql-native-password=on
-      - --lower_case_table_names=0
+      - --lower_case_table_names=${PANEL_DB_CASE_SENSITIVITY}
 networks:
   1panel-network:
     external: true
