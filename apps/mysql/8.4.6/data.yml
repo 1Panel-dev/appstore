@@ -32,3 +32,34 @@ additionalProperties:
         ko: 포트
         zh-Hant: 埠
         zh: 端口
+    - default: 0
+      envKey: PANEL_DB_CASE_SENSITIVITY
+      labelEn: Table Name Case Sensitivity
+      labelZh: 数据表名大小写敏感
+      required: true
+      type: number
+      description:
+        en: "0: Case sensitive, 1: Convert names to lowercase on storage and comparison, 2: Case-insensitive using lowercase"
+        zh: "0: 大小写敏感, 1: 存储和比较时转为小写, 2: 使用小写不区分大小写"
+      options:
+        - value: 0
+          label:
+            en: "0: Case sensitive (default)"
+            zh: "0: 大小写敏感 (默认)"
+        - value: 1
+          label:
+            en: "1: Lowercase on storage"
+            zh: "1: 存储时转为小写"
+        - value: 2
+          label:
+            en: "2: Case-insensitive"
+            zh: "2: 不区分大小写"
+      label:
+        en: Table Name Case Sensitivity
+        ja: テーブル名の大文字小文字の区別
+        ms: Kepekaan Huruf Nama Jadual
+        pt-br: Sensibilidade a Maiúsculas/Minúsculas de Nomes de Tabelas
+        ru: Чувствительность к регистру имен таблиц
+        ko: 테이블 이름 대소문자 구분
+        zh-Hant: 資料表名稱大小寫敏感度
+        zh: 数据表名大小写敏感
