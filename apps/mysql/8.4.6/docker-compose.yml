@@ -19,6 +19,7 @@ services:
       createdBy: "Apps"
     command:
       - --mysql-native-password=on
+      - --lower_case_table_names=0
 networks:
   1panel-network:
     external: true
