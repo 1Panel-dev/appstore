@@ -41,19 +41,13 @@ additionalProperties:
       description:
         en: "0: Case sensitive, 1: Convert names to lowercase on storage and comparison, 2: Case-insensitive using lowercase"
         zh: "0: 大小写敏感, 1: 存储和比较时转为小写, 2: 使用小写不区分大小写"
-      options:
-        - value: 0
-          label:
-            en: "0: Case sensitive (default)"
-            zh: "0: 大小写敏感 (默认)"
-        - value: 1
-          label:
-            en: "1: Lowercase on storage"
-            zh: "1: 存储时转为小写"
-        - value: 2
-          label:
-            en: "2: Case-insensitive"
-            zh: "2: 不区分大小写"
+      values:
+        - label: "0"
+          value: "0"
+        - label: "1"
+          value: "1"
+        - label: "2"
+          value: "2"
       label:
         en: Table Name Case Sensitivity
         ja: テーブル名の大文字小文字の区別
