@@ -14,6 +14,7 @@ services:
     environment: 
       REDIS_REPLICATION_MODE: master
       REDIS_PASSWORD: ${PANEL_REDIS_ROOT_PASSWORD}
+      REDIS_EXTRA_FLAGS: --requirepass ${PANEL_REDIS_ROOT_PASSWORD}
     labels:
       createdBy: "Apps"
 networks:

@@ -17,6 +17,7 @@ services:
       REDIS_MASTER_PORT_NUMBER: ${MASTER_PORT}
       REDIS_MASTER_PASSWORD: ${MASTER_ROOT_PASSWORD}
       REDIS_PASSWORD: ${PANEL_REDIS_ROOT_PASSWORD}
+      REDIS_EXTRA_FLAGS: --requirepass ${PANEL_REDIS_ROOT_PASSWORD}
     labels:
       createdBy: "Apps"
 networks:
