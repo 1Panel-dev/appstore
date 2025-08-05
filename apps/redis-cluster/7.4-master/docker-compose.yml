@@ -9,7 +9,7 @@ services:
       - ${PANEL_APP_PORT_HTTP}:6379
     volumes:
       - ./data:/bitnami/redis/data
-      - ./conf:/opt/bitnami/redis/etc.default
+      - ./conf/redis.conf:/opt/bitnami/redis/mounted-etc/redis.conf
       - ./logs:/opt/bitnami/redis/logs
     environment: 
       REDIS_REPLICATION_MODE: master
