@@ -1,6 +1,6 @@
 services:
   sqlbot:
-    image: dataease/sqlbot:v0.9.5
+    image: dataease/sqlbot:v1.0.0
     container_name: ${CONTAINER_NAME}
     restart: always
     ports:
