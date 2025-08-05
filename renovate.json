@@ -119,6 +119,10 @@
       "allowedVersions": "/^7.*/"
     },
     {
+      "matchFileNames": ["apps/mongodb/8.*/*.yml"],
+      "allowedVersions": "/^8.*/"
+    },
+    {
       "matchFileNames": ["apps/sonarqube/9.*/*.yml"],
       "allowedVersions": "/^9.*/"
     },
