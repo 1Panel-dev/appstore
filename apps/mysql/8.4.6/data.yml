@@ -37,7 +37,7 @@ additionalProperties:
       labelEn: Table Name Case Sensitivity
       labelZh: 数据表名大小写敏感
       required: true
-      type: number
+      type: select
       description:
         en: "0: Case sensitive, 1: Convert names to lowercase on storage and comparison, 2: Case-insensitive using lowercase"
         zh: "0: 大小写敏感, 1: 存储和比较时转为小写, 2: 使用小写不区分大小写"
