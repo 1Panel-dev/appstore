@@ -26,6 +26,6 @@
   },
   "log": {
     "maxDay": 180,
-    "maxSize": 5
+    "maxSize": 1
   }
 }

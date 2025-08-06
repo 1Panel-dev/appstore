@@ -171,5 +171,11 @@
     "type": "strict",
     "code": 403,
     "action": "deny"
+  },
+  "allowSpider":{
+    "state": "on",
+    "type": "spider",
+    "code": 403,
+    "action": "deny"
   }
 }
