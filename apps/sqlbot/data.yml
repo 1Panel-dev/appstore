@@ -20,7 +20,7 @@ additionalProperties:
     zh-hant: 基於大模型和 RAG 的智能問數系統
     zh: 基于大模型和 RAG 的智能问数系统
   type: website
-  crossVersionUpdate: false
+  crossVersionUpdate: true
   limit: 0
   recommend: 22
   website: https://dataease.cn/sqlbot/
