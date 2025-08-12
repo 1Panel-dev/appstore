@@ -39,16 +39,20 @@
       "allowedVersions": "/^8.*/"
     },
     {
-      "matchFileNames": ["apps/mariadb/10.*/*.yml"],
-      "allowedVersions": "/^10.*/"
+      "matchFileNames": ["apps/mariadb/10.6.*/*.yml"],
+      "allowedVersions": "/^10.6.*/"
+    },
+    {
+      "matchFileNames": ["apps/mariadb/10.11.*/*.yml"],
+      "allowedVersions": "/^10.11.*/"
     },
     {
       "matchFileNames": ["apps/mariadb/11.4.*/*.yml"],
       "allowedVersions": "/^11.4.*/"
     },
     {
-      "matchFileNames": ["apps/mariadb/11.6.*/*.yml"],
-      "allowedVersions": "/^11.6.*/"
+      "matchFileNames": ["apps/mariadb/11.8.*/*.yml"],
+      "allowedVersions": "/^11.8.*/"
     },
     {
       "matchFileNames": ["apps/postgresql/12.*/*.yml"],
