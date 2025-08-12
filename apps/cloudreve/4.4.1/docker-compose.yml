@@ -1,6 +1,6 @@
 services:
   cloudreve:
-    image: cloudreve/cloudreve:4.4.1
+    image: cloudreve/cloudreve:4.5.0
     container_name: ${CONTAINER_NAME}
     restart: always
     ports:
