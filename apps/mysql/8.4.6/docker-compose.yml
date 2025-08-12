@@ -17,8 +17,6 @@ services:
       - /etc/localtime:/etc/localtime:ro
     labels:
       createdBy: "Apps"
-    command:
-      - --mysql-native-password=on
 networks:
   1panel-network:
     external: true
