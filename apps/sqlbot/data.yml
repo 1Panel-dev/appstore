@@ -28,4 +28,3 @@ additionalProperties:
   document: https://dataease.cn/sqlbot/
   architectures:
     - amd64
-    - arm64
