@@ -1,5 +1,6 @@
 services:
   trilium:
+    container_name: ${CONTAINER_NAME}
     image: triliumnext/trilium:0.9.7
     restart: unless-stopped
     environment:
