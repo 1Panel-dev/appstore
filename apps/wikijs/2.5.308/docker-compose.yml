@@ -1,6 +1,6 @@
 services:
   wiki:
-    image: requarks/wiki:2.5.307
+    image: requarks/wiki:2.5.308
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
