@@ -32,7 +32,7 @@ services:
       - REST_API_ENABLED=${REST_SWITCH}
       - REST_API_PORT=8212
       - QUERY_PORT=${PANEL_APP_PORT_QUERY}
-    image: thijsvanloef/palworld-server-docker:v1.4.4
+    image: thijsvanloef/palworld-server-docker:v1.4.5
     labels:
       createdBy: "Apps"
 
