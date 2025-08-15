@@ -1,0 +1,28 @@
+name: Jupyter Notebook
+tags:
+    - 开发工具
+title: 支持多语言的交互式编程环境和数据科学笔记本
+description: 支持多语言的交互式编程环境和数据科学笔记本
+additionalProperties:
+    key: jupyter-notebook
+    name: Jupyter Notebook
+    tags:
+        - Tool
+    shortDescZh: 支持多语言的交互式编程环境和数据科学笔记本
+    shortDescEn: Multi language interactive programming environment and data science notebook support
+    description:
+        en: Multi language interactive programming environment and data science notebook support
+        ja: 多言語対応インタラクティブプログラミング環境とデータサイエンスノート
+        ms: Menyokong persekitaran pengaturcaraan interaktif pelbagai bahasa dan buku nota sains data
+        pt-br: Ambiente de programação interativa multilingual e suporte de notebook científico de dados
+        ru: Поддержка многоязычной интерактивной среды программирования и ноутбуков для науки о данных
+        ko: 다국어 대화형 프로그래밍 환경 및 데이터 과학 노트북 지원
+        zh-Hant: 支持多語言的互動式程式設計環境和數據科學筆記本
+        zh: 支持多语言的交互式编程环境和数据科学笔记本
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    website: https://jupyter.org/
+    github: https://github.com/jupyter/notebook
+    document: https://docs.jupyter.org/en/latest/
+    
