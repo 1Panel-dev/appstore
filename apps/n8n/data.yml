@@ -1,6 +1,6 @@
 name: n8n
 tags:
-  - AI / 大模型
+  - AI
 title: 具有原生 AI 能力的 Fair-code 工作流自动化平台
 description: 具有原生 AI 能力的 Fair-code 工作流自动化平台
 additionalProperties:

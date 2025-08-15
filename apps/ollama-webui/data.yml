@@ -1,6 +1,6 @@
 name: OpenWebUI
 tags:
-    - AI / 大模型
+    - AI
 title: 面向 LLM 的用户友好型 WebUI
 description: 面向 LLM 的用户友好型 WebUI
 additionalProperties:

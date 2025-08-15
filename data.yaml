@@ -81,18 +81,18 @@ additionalProperties:
         zh: "云存储"
         tr: "Bulut Depolama"
     - key: AI
-      name: AI / 大模型
+      name: AI
       sort: 70
       locales:
-        en: "AI / Large Models"
-        ja: "AI / 大規模モデル"
-        ms: "AI / Model Besar"
-        pt-br: "IA / Grandes Modelos"
-        ru: "ИИ / Большие модели"
-        ko: "인공지능"
-        zh-hant: "AI / 大模型"
-        zh: "AI / 大模型"
-        tr: "Yapay Zeka / Büyük Modeller"
+        en: "AI"
+        ja: "AI"
+        ms: "AI"
+        pt-br: "AI"
+        ru: "AI"
+        ko: "AI"
+        zh-hant: "AI"
+        zh: "AI"
+        tr: "AI"
     - key: BI
       name: BI
       sort: 80
@@ -102,7 +102,7 @@ additionalProperties:
         ms: "BI"
         pt-br: "BI"
         ru: "BI"
-        ko: "비즈니스 인텔리전스"
+        ko: "BI"
         zh-hant: "BI"
         zh: "BI"
         tr: "BI"

@@ -1,6 +1,6 @@
 name: Ollama
 tags:
-    - AI / 大模型
+    - AI
 title: 启动并运行 DeepSeek-R1、Llama 3.3、qwen2.5 及其他大型语言模型
 description: 启动并运行 DeepSeek-R1、Llama 3.3、qwen2.5 及其他大型语言模型
 additionalProperties:

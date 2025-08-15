@@ -1,6 +1,6 @@
 name: DBHub
 tags:
-    - AI / 大模型
+    - AI
 title: 通用数据库 MCP 服务器连接到 MySQL、PostgreSQL、SQL Server、MariaDB、Oracle
 description: 通用数据库 MCP 服务器连接到 MySQL、PostgreSQL、SQL Server、MariaDB、Oracle
 additionalProperties:

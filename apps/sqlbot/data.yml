@@ -1,6 +1,6 @@
 name: SQLBot
 tags:
-  - AI / 大模型
+  - AI
 title: 基于大模型和 RAG 的智能问数系统
 description: 基于大模型和 RAG 的智能问数系统
 additionalProperties:

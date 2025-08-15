@@ -1,6 +1,6 @@
 name: vLLM
 tags:
-    - AI / 大模型
+    - AI
 title: 用于大语言模型的高吞吐量和内存高效的推理和服务引擎
 description: 用于大语言模型的高吞吐量和内存高效的推理和服务引擎
 additionalProperties:
