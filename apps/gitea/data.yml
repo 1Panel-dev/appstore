@@ -20,7 +20,7 @@ additionalProperties:
         zh-Hant: 下一代代碼託管平台
         zh: 下一代代码托管平台
     type: website
-    crossVersionUpdate: false
+    crossVersionUpdate: true
     limit: 0
     recommend: 55
     website: https://gitea.io/
