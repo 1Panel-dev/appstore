@@ -1,7 +1,7 @@
 services:
   postgres:
     container_name: ${CONTAINER_NAME}
-    image: postgres:13.21-alpine
+    image: postgres:13.22-alpine
     restart: always
     environment:
       - POSTGRES_USER=${PANEL_DB_ROOT_USER}
