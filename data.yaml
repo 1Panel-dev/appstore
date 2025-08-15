@@ -106,6 +106,19 @@ additionalProperties:
         zh-hant: "BI"
         zh: "BI"
         tr: "BI"
+    - key: CRM
+      name: CRM
+      sort: 85
+      locales:
+        en: "CRM"
+        ja: "CRM"
+        ms: "CRM"
+        pt-br: "CRM"
+        ru: "CRM"
+        ko: "CRM"
+        zh-hant: "CRM"
+        zh: "CRM"
+        tr: "CRM"
     - key: Security
       name: 安全
       sort: 90

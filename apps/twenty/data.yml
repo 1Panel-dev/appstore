@@ -1,0 +1,31 @@
+name: Twenty
+tags:
+    - CRM
+title: 由社区驱动的现代化 Salesforce 替代方案
+description: 由社区驱动的现代化 Salesforce 替代方案
+additionalProperties:
+  key: twenty
+  name: Twenty
+  tags:
+    - CRM
+  shortDescZh: 由社区驱动的现代化 Salesforce 替代方案
+  shortDescEn: Building a modern alternative to Salesforce, powered by the community
+  description:
+    en: Building a modern alternative to Salesforce, powered by the community
+    ja: Salesforceのモダンな代替品をコミュニティ主導で構築
+    ms: Membangun alternatif moden untuk Salesforce, didorong oleh komuniti
+    pt-br: Construindo uma alternativa moderna ao Salesforce, impulsionada pela comunidade
+    ru: Создание современного аналога Salesforce, поддерживаемого сообществом
+    ko: Salesforce의 현대적인 대안을 커뮤니티 주도로 구축
+    zh-Hant: 由社區驅動的現代化 Salesforce 替代方案
+    zh: 由社区驱动的现代化 Salesforce 替代方案
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://twenty.com/
+  github: https://github.com/twentyhq/twenty
+  document: https://twenty.com/user-guide
+  architectures:
+    - amd64
+    - arm64

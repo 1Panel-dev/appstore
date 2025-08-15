@@ -1,0 +1,149 @@
+additionalProperties:
+  formFields:
+    - default: 3000
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Web Port
+      labelZh: HTTP 端口
+      label:
+        en: Web Port
+        ja: ウェブポート
+        ms: Port Web
+        pt-br: Porta Web
+        ru: Веб-порт
+        ko: 웹 포트
+        zh-Hant: Web 埠
+        zh: Web 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: ""
+      envKey: PANEL_DB_HOST
+      key: postgresql
+      labelEn: Database Service
+      labelZh: 数据库服务
+      label:
+        en: Database Service
+        ja: データベースサービス
+        ms: Perkhidmatan Pangkalan Data
+        pt-br: Serviço de Banco de Dados
+        ru: Сервис базы данных
+        ko: 데이터베이스 서비스
+        zh-Hant: 資料庫服務
+        zh: 数据库服务
+      required: true
+      type: service
+    - default: twenty
+      envKey: PANEL_DB_NAME
+      labelEn: Database
+      labelZh: 数据库名
+      label:
+        en: Database
+        ja: データベース
+        ms: Pangkalan Data
+        pt-br: Banco de Dados
+        ru: База данных
+        ko: 데이터베이스
+        zh-Hant: 資料庫名稱
+        zh: 数据库名
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: twenty
+      envKey: PANEL_DB_USER
+      labelEn: User
+      labelZh: 数据库用户
+      label:
+        en: User
+        ja: ユーザー
+        ms: Pengguna
+        pt-br: Usuário
+        ru: Пользователь
+        ko: 사용자
+        zh-Hant: 資料庫使用者
+        zh: 数据库用户
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: twenty
+      envKey: PANEL_DB_USER_PASSWORD
+      labelEn: Password
+      labelZh: 数据库用户密码
+      label:
+        en: Password
+        ja: パスワード
+        ms: Kata laluan
+        pt-br: Senha
+        ru: Пароль
+        ko: 비밀번호
+        zh-Hant: 資料庫使用者密碼
+        zh: 数据库用户密码
+      random: true
+      required: true
+      type: password
+    - default: ""
+      envKey: PANEL_REDIS_HOST
+      key: redis
+      labelEn: Redis Service
+      labelZh: Redis 服务
+      label:
+        en: Redis Service
+        ja: Redisサービス
+        ms: Perkhidmatan Redis
+        pt-br: Serviço Redis
+        ru: Сервис Redis
+        ko: Redis 서비스
+        zh-Hant: Redis 服務
+        zh: Redis 服务
+      required: true
+      type: service
+    - default: ""
+      disabled: true
+      envKey: PANEL_REDIS_ROOT_PASSWORD
+      labelEn: Password
+      labelZh: 密码
+      label:
+        en: Password
+        ja: パスワード
+        ms: Kata laluan
+        pt-br: Senha
+        ru: Пароль
+        ko: 비밀번호
+        zh-Hant: 密碼
+        zh: 密码
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: TWENTY_APP_SECRET
+      labelEn: App Secret
+      labelZh: 应用密钥
+      label:
+        en: App Secret
+        ja: アプリの秘密
+        ms: Rahsia Aplikasi
+        pt-br: Chave do Aplicativo
+        ru: Секрет приложения
+        ko: 앱 비밀
+        zh-hant: 應用密鑰
+        zh: 应用密钥
+      required: true
+      type: password
+    - default: http://<YOUR IP>:3000
+      edit: true
+      envKey: TWENTY_SERVER_URL
+      labelEn: Service Address (Default Server IP)
+      labelZh: 服务地址（默认服务器 IP）
+      label:
+        en: Service Address (Default Server IP)
+        ja: サービスアドレス（デフォルトサーバーIP）
+        ms: Alamat Perkhidmatan (IP Pelayan Lalai)
+        pt-br: Serviço de Endereço (IP do Servidor Padrão)
+        ru: Адрес службы (IP-адрес сервера по умолчанию)
+        ko: 서비스 주소 (기본 서버 IP)
+        zh-hant: 服務地址（默認伺服器 IP）
+        zh: 服务地址（默认服务器 IP）
+      required: true
+      rule: paramExtUrl
+      type: text
