@@ -1,0 +1,31 @@
+name: Teable
+tags:
+    - 实用工具
+title: 下一代 Airtable 替代方案
+description: 下一代 Airtable 替代方案
+additionalProperties:
+    key: teable
+    name: Teable
+    tags:
+        - Tool
+    shortDescZh: 下一代 Airtable 替代方案
+    shortDescEn: The Next Gen Airtable Alternative
+    description:
+        en: The Next Gen Airtable Alternative
+        ja: 次世代の Airtable 代替
+        ms: The Next Gen Airtable Alternative
+        pt-br: A Alternativa ao Airtable da Próxima Geração
+        ru: Следующее Поколение Альтернативы Airtable
+        ko: 다음 세대 Airtable 대안
+        zh-Hant: 下一代 Airtable 替代方案
+        zh: 下一代 Airtable 替代方案
+    type: website
+    crossVersionUpdate: false
+    limit: 0
+    recommend: 0
+    website: https://teable.io/
+    github: https://github.com/teableio/teable
+    document: https://help.teable.io/
+    architectures:
+      - amd64
+      - arm64
