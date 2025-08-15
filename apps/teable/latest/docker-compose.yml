@@ -1,0 +1,23 @@
+services:
+  teable:
+    image: ghcr.io/teableio/teable:latest
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:3000
+    volumes:
+      - ./data:/app/.assets:rw
+    environment:
+      - PUBLIC_ORIGIN=${PUBLIC_ORIGIN}
+      - TZ=${TIME_ZONE}
+      - NEXT_ENV_IMAGES_ALL_REMOTE=true
+      - PRISMA_DATABASE_URL=postgresql://${PANEL_DB_USER}:${PANEL_DB_USER_PASSWORD}@${PANEL_DB_HOST}:5432/${PANEL_DB_NAME}
+      - BACKEND_CACHE_PROVIDER=redis
+      - BACKEND_CACHE_REDIS_URI=redis://default:${PANEL_REDIS_ROOT_PASSWORD}@${REDIS_HOST}:6379/0
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true
