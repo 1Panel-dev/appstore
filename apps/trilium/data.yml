@@ -1,0 +1,22 @@
+name: Trilium
+tags:  
+    - 实用工具
+description: Trilium Notes 是一个层次化的笔记应用程序，专注于建立大型个人知识库。
+additionalProperties:
+  key: trilium
+  name: Trilium
+  tags:
+      - Tool
+  shortDescZh: Trilium Notes 是一个层次化的笔记应用程序，专注于建立大型个人知识库。
+  shortDescEn: Trilium Notes is a free and open-source, cross-platform hierarchical note taking application with focus on building large personal knowledge bases.
+  type: website
+  crossVersionUpdate: true
+  limit: 1
+  recommend: 0
+  website: https://trilium.rocks/
+  github: https://github.com/TriliumNext/Trilium
+  document: https://trilium.rocks/
+  memoryRequired: 2048
+  architectures:
+    - amd64
+    - arm64
