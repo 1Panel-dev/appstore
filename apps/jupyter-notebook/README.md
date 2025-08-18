@@ -1,10 +1,10 @@
-
 # Jupyter Notebook
 
-Jupyter Notebook是一个交互式笔记本，支持运行40多种编程语言。可以使用它来创建和共享程序文档，支持实时代码，数学方程，可视化和 markdown。具有数据清理和转换，数值模拟，统计建模，机器学习等等用途。
+**Jupyter Notebook** 是一个交互式笔记本，支持运行40多种编程语言。可以使用它来创建和共享程序文档，支持实时代码，数学方程，可视化和 markdown。具有数据清理和转换，数值模拟，统计建模，机器学习等等用途。
 
 # TOKEN
-TOKEN在安装Jupyter Notebook会要求填写，默认为："123456"。
+
+TOKEN在安装 Jupyter Notebook 会要求填写，默认为："123456"。
 
 # 常见问题
 

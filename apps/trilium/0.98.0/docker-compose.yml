@@ -1,14 +1,14 @@
 services:
   trilium:
+    image: triliumnext/trilium:v0.98.0
     container_name: ${CONTAINER_NAME}
-    image: triliumnext/trilium:0.9.7
     restart: unless-stopped
-    environment:
-      - TRILIUM_DATA_DIR=/home/node/trilium-data
     ports:
       - ${PANEL_APP_PORT_HTTP}:8080
     networks:
       - 1panel-network
+    environment:
+      - TRILIUM_DATA_DIR=/home/node/trilium-data
     volumes:
       - ./data:/home/node/trilium-data
       - /etc/timezone:/etc/timezone:ro

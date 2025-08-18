@@ -25,4 +25,6 @@ additionalProperties:
     website: https://jupyter.org/
     github: https://github.com/jupyter/notebook
     document: https://docs.jupyter.org/en/latest/
-    
+    architectures:
+        - amd64
+        - arm64

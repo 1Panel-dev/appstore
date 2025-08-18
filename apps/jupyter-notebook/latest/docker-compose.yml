@@ -2,10 +2,14 @@ version: '3'
 services:
   jupyter:
     image: jupyter/scipy-notebook:latest
+    container_name: ${CONTAINER_NAME}
+    restart: always
     ports:
       - "${PANEL_APP_PORT_HTTP}:8888"
+    networks:
+      - 1panel-network
     volumes:
-      - ./notebooks:/home/jovyan/work
+      - ./data:/home/jovyan/work
     environment:
       - NB_UID=1000
       - NB_GID=100
@@ -14,10 +18,8 @@ services:
       - JUPYTER_ENABLE_LAB=yes
       - JUPYTER_TOKEN=${JUPYTER_TOKEN}
     command: start-notebook.sh --NotebookApp.custom_display_url=http://localhost:8888
-    container_name: jupyter
-    restart: always
-    network_mode: "bridge"
-
-
-
-
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true

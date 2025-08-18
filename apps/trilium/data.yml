@@ -1,14 +1,24 @@
 name: Trilium
 tags:  
-    - 实用工具
-description: Trilium Notes 是一个层次化的笔记应用程序，专注于建立大型个人知识库。
+  - 实用工具
+title: 使用 Trilium Notes 建立个人知识库
+description: 使用 Trilium Notes 建立个人知识库
 additionalProperties:
   key: trilium
   name: Trilium
   tags:
-      - Tool
-  shortDescZh: Trilium Notes 是一个层次化的笔记应用程序，专注于建立大型个人知识库。
-  shortDescEn: Trilium Notes is a free and open-source, cross-platform hierarchical note taking application with focus on building large personal knowledge bases.
+    - Tool
+  shortDescZh: 使用 Trilium Notes 建立个人知识库
+  shortDescEn: Build your personal knowledge base with Trilium Notes
+  description:
+    en: Build your personal knowledge base with Trilium Notes
+    ja: Trilium Notesで個人の知識ベースを構築する
+    ms: Bangunkan pangkalan pengetahuan peribadi anda dengan Trilium Notes
+    pt-br: Construa sua base de conhecimento pessoal com o Trilium Notes
+    ru: Создайте свою личную базу знаний с помощью Trilium Notes
+    ko: Trilium Notes로 개인 지식 기반을 구축하세요
+    zh-Hant: 使用 Trilium Notes 建立個人知識庫
+    zh: 使用 Trilium Notes 建立个人知识库
   type: website
   crossVersionUpdate: true
   limit: 1
