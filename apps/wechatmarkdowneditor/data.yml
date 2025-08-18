@@ -4,7 +4,7 @@ tags:
 title: 一款高度简洁的微信 Markdown 编辑器
 description: 一款高度简洁的微信 Markdown 编辑器
 additionalProperties:
-  key: WeChatMarkdownEditor
+  key: wechatmarkdowneditor
   name: WeChat Markdown Editor
   tags:
     - Tool
