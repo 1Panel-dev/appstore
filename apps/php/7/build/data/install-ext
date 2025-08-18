@@ -209,7 +209,7 @@ install_extension() {
     elif [ "$extension" = "sodium" ]; then
         install_php_extensions sodium
     elif [ "$extension" = "zip" ]; then
-        apt-get update && apt-get install -y  libzip-dev
+        apt-get update && apt-get install -y  libzip-dev zip
         docker_php_ext_install zip    
     elif [ "$extension" = "memcached" ]; then
         install_php_extensions memcached 
