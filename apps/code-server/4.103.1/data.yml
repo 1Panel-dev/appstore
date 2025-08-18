@@ -18,6 +18,7 @@ additionalProperties:
         zh-Hant: 埠
         zh: 端口
     - default: code
+      edit: true
       envKey: WEB_PASSWORD
       labelEn: Web access password
       labelZh: 网页访问密码
@@ -35,6 +36,7 @@ additionalProperties:
         zh-Hant: 網頁存取密碼
         zh: 网页访问密码
     - default: code
+      edit: true
       envKey: SUDO_PASSWORD
       labelEn: sudo password
       labelZh: sudo密码
@@ -51,3 +53,4 @@ additionalProperties:
         ko: Sudo 비밀번호
         zh-Hant: Sudo 密碼
         zh: Sudo 密码
+
