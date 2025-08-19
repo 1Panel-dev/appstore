@@ -1,0 +1,23 @@
+additionalProperties:
+    key: langbot
+    name: LangBot
+    tags:
+        - AI
+    shortDescZh: 开源的 LLM 原生 IM 机器人开发平台
+    shortDescEn: Open-source LLM-native IM bot development platform
+    shortDescTw: 開源的大語言模型原生即時通訊機器人開發平台
+    shortDescJa: オープンソースの大規模言語モデルネイティブIMボット開発プラットフォーム
+    description:
+        en: LangBot is an open-source large language model native instant messaging robot development platform.
+        zh: LangBot 是一个开源的大语言模型原生即时通信机器人开发平台。
+        zh-Hant: LangBot 是一個開源的大語言模型原生即時通訊機器人開發平台。
+        ja: LangBotは、オープンソースの大規模言語モデルネイティブのインスタントメッセージングボット開発プラットフォームです。
+    type: ai
+    crossVersionUpdate: true
+    limit: 0
+    website: https://langbot.app
+    github: https://github.com/langbot-app/LangBot
+    document: https://docs.langbot.app/zh/insight/guide.html
+    architectures:
+        - amd64
+        - arm64
