@@ -1,0 +1,30 @@
+name: moments
+tags:
+    - 建站
+title: 极简朋友圈
+description: 极简朋友圈
+additionalProperties:
+    key: moments
+    name: moments
+    tags:
+        - WebSite
+    shortDescZh: 极简朋友圈
+    shortDescEn: Minimalist Moments
+    description:
+        en: Minimalist Moments
+        ja: シンプルな友人コミュニティです
+        ms: Laman Sosial Minimal
+        pt-br: Círculo de amigos minimalista
+        ru: Круг друзей минимаркета
+        ko: 미니멀 모멘트
+        zh-hant: 極簡朋友圈
+        zh: 极简朋友圈
+    type: website
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://github.com/kingwrcy/moments
+    github: https://github.com/kingwrcy/moments
+    architectures:
+      - amd64
+      - arm64

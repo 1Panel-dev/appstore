@@ -1,0 +1,17 @@
+services:
+  moments:
+    image: kingwrcy/moments:0.2.11
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    environment:
+      PORT: 3000
+      JWT_KEY: ${JWT_KEY}
+      CORS_ORIGIN: ${CORS_ORIGIN}
+      DB: ${DB}
+      UPLOAD_DIR: ${UPLOAD_DIR}
+      LOG_LEVEL: ${LOG_LEVEL}
+      ENABLE_SWAGGER: ${ENABLE_SWAGGER}
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:3000
+    volumes:
+      - ./data:/app/data

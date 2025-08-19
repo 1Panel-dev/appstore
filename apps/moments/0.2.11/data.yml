@@ -1,0 +1,53 @@
+additionalProperties:
+    formFields:
+      - default: ""
+        envKey: CORS_ORIGIN
+        labelEn: CORS_ORIGIN
+        labelZh: 跨域域名
+        required: false
+        type: text
+        rule: paramExtUrl
+        random: false
+      - default: "/app/data/db.sqlite"
+        envKey: DB
+        labelEn: Database location
+        labelZh: 数据库位置
+        type: text
+        required: true
+        random: false
+      - default: "/app/data/upload"
+        envKey: UPLOAD_DIR
+        labelEn: Upload dir
+        labelZh: 上传目录
+        type: text
+        required: true
+        random: false
+      - default: ""
+        envKey: JWT_KEY
+        labelEn: JWT KEY
+        labelZh: JWT密钥
+        type: password
+        required: false
+        rule: paramComplexity
+        random: true
+      - default: "info"
+        envKey: LOG_LEVEL
+        labelEn: LOG LEVEL
+        labelZh: 日志类别
+        type: select
+        values:
+          - label: info
+            value: "info"
+          - label: debug
+            value: "debug"
+        required: true
+      - default: "false"
+        envKey: ENABLE_SWAGGER
+        labelEn: Enable Swagger
+        labelZh: 启用 Swagger 文档
+        type: select
+        values:
+          - label: "false"
+            value: "false"
+          - label: "true"
+            value: "true"
