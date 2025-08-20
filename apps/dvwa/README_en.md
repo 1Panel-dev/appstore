@@ -7,7 +7,7 @@ password: `password`
 
 **DVWA** is a poorly coded, vulnerable PHP/MySQL web application.
 
-### Purpose
+## Purpose
 
 - To help information security professionals practice skills and test tools in a legal environment.
 - To assist web developers in better understanding how to secure web applications.

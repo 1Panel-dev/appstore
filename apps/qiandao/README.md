@@ -3,7 +3,7 @@
 1. 注册账户
 2. 进入容器执行以下命令
 
-```shell
+```bash
 python ./chrole.py your@email.address admin
 ```
 

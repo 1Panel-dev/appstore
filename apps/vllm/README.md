@@ -1,9 +1,10 @@
 ## 使用说明
 
-1. 在 https://huggingface.co/ 注册账号并获取模型权限创建 token 
+1. 在 `https://huggingface.co/` 注册账号并获取模型权限创建 token 
 2. 机器上有 Nvidia GPU
-3. 修改 /etc/docker/daemon.json 并增加
-```
+3. 修改 `/etc/docker/daemon.json` 并增加
+
+```json
    "runtimes": {
       "nvidia": {
       "path": "nvidia-container-runtime",
@@ -11,8 +12,8 @@
       }
    }
 ```
-4. 安装 nvidia-container-runtime 和 nvidia-docker2 组件
 
+4. 安装 nvidia-container-runtime 和 nvidia-docker2 组件
 
 ## 产品介绍
 
@@ -43,6 +44,7 @@ vLLM is flexible and easy to use with:
 - Multi-lora support
 
 vLLM seamlessly supports most popular open-source models on HuggingFace, including:
+
 - Transformer-like LLMs (e.g., Llama)
 - Mixture-of-Expert LLMs (e.g., Mixtral)
 - Embedding Models (e.g. E5-Mistral)

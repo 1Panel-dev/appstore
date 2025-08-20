@@ -17,29 +17,30 @@
 
 1. 安装 Stalwart 时，请确保没有其他应用程序占用相同的端口。如果发生端口冲突（例如与 OpenResty 等 Web 服务器），您可以将 Stalwart 的默认端口更改为其他可用端口。
 
-   ![](https://i.imgur.com/v8IiDmI.png)
+![](https://i.imgur.com/v8IiDmI.png)
 
 2. 在初始设置过程中，请向下滚动并**启用以下选项**：
-   - **高级设置**
-   - **外部访问**
 
-   ![](https://i.imgur.com/2wVMb3G.png)
+- **高级设置**
+- **外部访问**
+
+![](https://i.imgur.com/2wVMb3G.png)
 
 3. 安装完成并启动 Stalwart 后，请**查看应用日志**。如果日志内容类似下图，说明安装成功，Stalwart 正在运行。
 
-   ![](https://i.imgur.com/QM1Euld.png)
+![](https://i.imgur.com/QM1Euld.png)
 
-   > *请保存日志中显示的账户信息，稍后登录时需要使用。*
+> *请保存日志中显示的账户信息，稍后登录时需要使用。*
 
 4. 如果您的系统启用了**防火墙**，请确保使用 **TCP 协议** 打开 Stalwart 所需的端口，以确保邮件服务器正常运行。
 
-   ![](https://i.imgur.com/4aYSKN2.png)
+![](https://i.imgur.com/4aYSKN2.png)
 
-   > *在此示例中，端口 `443` 已被 OpenResty 占用，因此我将 Stalwart 的端口更改为 `8443`。*
+> *在此示例中，端口 `443` 已被 OpenResty 占用，因此我将 Stalwart 的端口更改为 `8443`。*
 
 5. 设置完成后，在浏览器中打开您之前设置的地址和端口。登录时，请使用**第 3 步日志中显示的用户名和密码**。
 
-   ![](https://i.imgur.com/0jrSZLt.png)
+![](https://i.imgur.com/0jrSZLt.png)
 
 ## 高级设置与配置
 

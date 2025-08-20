@@ -1,8 +1,8 @@
 ## 产品介绍
 
-**GameServerManager** 3.0（简称GSM3）是一个基于现代化技术栈的游戏服务器管理平台，采用 React + TypeScript + Node.js 架构，专为简化游戏服务器的部署、管理和维护而设计。
+**GameServerManager 3.0（简称GSM3）** 是一个基于现代化技术栈的游戏服务器管理平台，采用 React + TypeScript + Node.js 架构，专为简化游戏服务器的部署、管理和维护而设计。
 
-### 特性
+## 特性
 
 - **现代化架构** - 基于 React 18 + TypeScript + Node.js 的全栈解决方案
 - **一键部署** - 支持 Steam 平台多款热门游戏的快速部署

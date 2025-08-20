@@ -6,7 +6,7 @@
 
 - 创建前需要使用终端运行以下命令创建依赖配置文件，需要按需修改参数 `my.matrix.host`
 
-```shell
+```bash
 docker run -it --rm \
   -v synapse-data:/data \  # 挂载一个卷，将容器内的 /data 目录映射到 synapse-data 卷
   -e SYNAPSE_SERVER_NAME=my.matrix.host \  # 设置 Synapse 服务器的公共主机名
@@ -28,19 +28,19 @@ docker run -it --rm \
 
 - 创建管理员账户
 
-```shell
+```bash
 register_new_matrix_user  http://localhost:8008 -c /data/homeserver.yaml  -a -u 管理员用户名 -p 密码
 ```
 
 - 创建普通用户账户
 
-```shell
+```bash
 register_new_matrix_user  http://localhost:8008 -c /data/homeserver.yaml   --no-admin -u 普通用户名 -p 密码
 ```
 
 - 查看更多命令与帮助
 
-```shell
+```bash
 register_new_matrix_user http://localhost:8008 -c /data/homeserver.yaml --help
 ```
 

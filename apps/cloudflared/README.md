@@ -12,11 +12,11 @@
 
 - 使用 Docker 运行 Cloudflared 容器的示例命令如下：
 
-   ```shell
-   docker run cloudflare/cloudflared:latest tunnel --no-autoupdate --hello-world
-   ```
+```bash
+docker run cloudflare/cloudflared:latest tunnel --no-autoupdate --hello-world
+```
 
-   > 此示例使用`--hello-world`参数，依赖于trycloudflare.com，不需要Cloudflare帐户。这是为了快速入门而设计的单一命令。
+> 此示例使用`--hello-world`参数，依赖于trycloudflare.com，不需要Cloudflare帐户。这是为了快速入门而设计的单一命令。
 
 ### 3. **实际用途：**
 

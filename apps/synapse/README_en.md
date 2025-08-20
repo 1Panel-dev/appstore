@@ -1,9 +1,12 @@
-# Synapse
-Synapse is an open-source Matrix home server written and maintained by the Matrix.org Foundation.
+## Introduction
 
-## Generate Configuration File
+**Synapse** is an open-source Matrix home server written and maintained by the Matrix.org Foundation.
+
+## Instructions
+
 - Before creating, use the following terminal command to generate the required configuration file. Modify the parameter `my.matrix.host` as needed:
-```shell
+
+```bash
 docker run -it --rm \
   -v synapse-data:/data \  # Mount a volume to map the /data directory inside the container to the synapse-data volume
   -e SYNAPSE_SERVER_NAME=my.matrix.host \  # Set the public hostname of the Synapse server
@@ -16,23 +19,31 @@ docker run -it --rm \
   -e GID=1000 \  # Set the group ID running Synapse
   matrixdotorg/synapse:latest generate  # Run the latest version of the matrixdotorg/synapse image and execute the generate command to create configuration files
 ```
+
 > The default storage path for configuration files is in the `synapse-data` volume at `/var/lib/docker/volumes/synapse-data/_data`.
 
-## Create Application
+### Create Application
 
-## Create Users
+### Create Users
+
 - Create an admin account:
-```shell
+
+```bash
 register_new_matrix_user  http://localhost:8008 -c /data/homeserver.yaml  -a -u <admin-username> -p <password>
 ```
+
 - Create a regular user account:
-```shell
+
+```bash
 register_new_matrix_user  http://localhost:8008 -c /data/homeserver.yaml   --no-admin -u <username> -p <password>
 ```
+
 - View more commands and help:
-```shell
+
+```bash
 register_new_matrix_user http://localhost:8008 -c /data/homeserver.yaml --help
 ```
 
-## Notes
+### Notes
+
 All data is stored in the `synapse-data` volume. When deleting the application, if you need to completely clear the data, you must also delete the `synapse-data` volume.

@@ -2,7 +2,7 @@
 
 **Twenty** is a community-driven, modern CRM platform — an open-source alternative to Salesforce. It empowers teams to efficiently manage customer relationships, sales pipelines, and business data.
 
-## Key Features
+## Features
 
 - **Open Source & Community-Driven**: Fully open source with an active developer and user community.
 - **Modern Experience**: Clean, intuitive interface with efficient workflows.

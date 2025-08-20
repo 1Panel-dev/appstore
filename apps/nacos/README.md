@@ -6,7 +6,6 @@
 - 用户名: `nacos`
 - 密码: `nacos`
 
-
 #### 如果是 nacos3.0+ 版本
 
 - 访问地址: `http://IP:8080/index.html`
@@ -15,7 +14,7 @@
 
 ### 参数调优
 
-```shell
+```bash
 - JVM_XMS=64m   # -Xms default :2g
 - JVM_XMX=64m   # -Xmx default :2g
 - JVM_XMN=16m   # -Xmn default :1g
