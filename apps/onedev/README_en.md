@@ -1,7 +1,9 @@
-# OneDev
+## Introduction
+
 **OneDev** is a Git server with CI/CD, Kanban, and Packages, offering seamless integration and an unparalleled experience.
 
-## Features:
+## Features
+
 - **Project Management**: Comprehensive project management features, including creating, editing, and deleting projects, as well as managing project members and permissions.
 - **Code Hosting**: Supports code hosting, allowing users to manage their repositories and version control within OneDev.
 - **CI/CD**: Built-in CI/CD capabilities for automating build, test, and deployment workflows.

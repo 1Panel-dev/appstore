@@ -1,13 +1,14 @@
-# Default Account and Password
-```
-username: admin
-password: 123
-```
+## Default Credentials
 
-# Casdoor
+username: `admin`
+password: `123`
+
+## Introduction
+
 A UI-first Identity Access Management (IAM) / Single-Sign-On (SSO) platform with a web UI supporting OAuth 2.0, OIDC, SAML, CAS, LDAP, SCIM, WebAuthn, TOTP, MFA, RADIUS, Google Workspace, Active Directory, and Kerberos.
 
-## Features of Casdoor
+## Features
+
 - Follows a front-end and back-end separation architecture, developed using Golang. It supports high concurrency, provides a web-based user interface for management, and supports localization in over 10 languages.
 - Supports third-party application logins, such as GitHub, Google, QQ, WeChat, and more, with plugin extensions for additional third-party logins.
 - Offers authorization management based on Casbin. It supports ACL, RBAC, ABAC, and RESTful authorization management models.

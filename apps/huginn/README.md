@@ -1,11 +1,9 @@
-# 默认账户密码
+## 默认账户密码
 
-```
-username：admin
-password：password
-```
+用户名: `admin`
+密码: `password`
 
-# Huginn
+## 产品介绍
 
 **Huginn** 是一个用于构建代理的系统，这些代理可为您在线执行自动化任务。它们可以读取网络、监视事件并代表您采取行动。Huginn 的代理会创建和使用事件，并沿着有向图传播它们。您可以将其视为您自己的服务器上可破解的 IFTTT 或 Zapier 版本。您始终知道谁拥有您的数据。您知道。
 
@@ -16,7 +14,7 @@ password：password
 - 关注航空旅行或购物优惠
 - 在 Twitter 上关注您的项目名称，当人们提及它们时获取更新
 - 抓取网站并在网站发生变化时接收电子邮件
-- 连接到 Adioso、HipChat、FTP、IMAP、Jabber、JIRA、MQTT、nextbus、Pushbullet、Pushover、RSS、Bash、Slack、StubHub、翻译 API、Twilio、Twitter 和微博等等。
+- 连接到 Adioso、HipChat、FTP、IMAP、Jabber、JIRA、MQTT、nextbus、Pushbullet、Pushover、RSS、Bash、Slack、StubHub、翻译 API、Twilio、Twitter 和微博等等
 - 在一天中的特定时间发送包含你关心的事情的摘要电子邮件
 - 跟踪高频事件的数量，并在事件激增时立即发送短信，例如“旧金山紧急事件”
 - 发送和接收 WebHook

@@ -1,7 +1,9 @@
-# Excalidraw
-Excalidraw is an online hand-drawn style drawing tool suitable for creating various diagrams and sketches, including flowcharts, mind maps, user interface designs, and more.
+## Introduction
 
-## Key Features:
+**Excalidraw** is an online hand-drawn style drawing tool suitable for creating various diagrams and sketches, including flowcharts, mind maps, user interface designs, and more.
+
+## Features
+
 - **Hand-Drawn Style**: Excalidraw offers a unique hand-drawn effect, making graphics look more creative and personalized.
 - **Real-Time Collaboration**: Supports real-time collaboration, allowing multiple users to edit on the same canvas simultaneously, ideal for team discussions.
 - **Custom Graphics**: Users can freely draw and edit graphics, customizing the shapes and styles of elements.

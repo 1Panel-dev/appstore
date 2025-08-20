@@ -1,8 +1,8 @@
-# YesPlayMusic
+## 产品介绍
 
 **YesPlayMusic** 是一款高颜值的第三方网易云播放器，支持 Windows / macOS / Linux。
 
-## 特性：
+## 特性
 
 - 使用 Vue.js 全家桶开发
 - 网易云账号登录（扫码/手机/邮箱登录）

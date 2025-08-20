@@ -1,5 +1,8 @@
-# JSON Hero
-JSON Hero provides you with a clean, beautiful, and feature-rich user interface to easily read and understand JSON files.
+## Introduction
+
+**JSON Hero** provides you with a clean, beautiful, and feature-rich user interface to easily read and understand JSON files.
+
+## Features
 
 - View JSON in any way you like: column view, tree view, editor view, and more.
 - Automatically infer the content of strings and provide useful previews.

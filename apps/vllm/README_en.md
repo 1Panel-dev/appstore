@@ -1,8 +1,10 @@
-## 使用说明
-1. Register an account at https://huggingface.co/ and get model access to create a token.
+## Instructions
+
+1. Register an account at `https://huggingface.co/` and get model access to create a token.
 2. Ensure the machine has an Nvidia GPU.
-3. Modify the /etc/docker/daemon.json file and add:
-```
+3. Modify the `/etc/docker/daemon.json` file and add:
+
+```json
    "runtimes": {
       "nvidia": {
       "path": "nvidia-container-runtime",
@@ -10,11 +12,12 @@
       }
    }
 ```
+
 4. Install the nvidia-container-runtime and nvidia-docker2 components.
 
+## Introduction
 
-## About
-vLLM is a fast and easy-to-use library for LLM inference and serving.
+**vLLM** is a fast and easy-to-use library for LLM inference and serving.
 
 vLLM is fast with:
 
@@ -41,6 +44,7 @@ vLLM is flexible and easy to use with:
 - Multi-lora support
 
 vLLM seamlessly supports most popular open-source models on HuggingFace, including:
+
 - Transformer-like LLMs (e.g., Llama)
 - Mixture-of-Expert LLMs (e.g., Mixtral)
 - Embedding Models (e.g. E5-Mistral)

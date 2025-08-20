@@ -1,8 +1,8 @@
-# LocalAI
+## 产品介绍
 
 **LocalAI** 是免费的开源 OpenAI 替代品。LocalAI 可作为替代 REST API，与 OpenAI（Elevenlabs、Anthropic……）API 规范兼容，用于本地 AI 推理。它允许您在本地或使用消费级硬件运行 LLM、生成图像、音频（不止于此），支持多种模型系列。不需要 GPU。
 
-## 主要功能：
+## 主要功能
 
 - 使用 GPT 生成文本（llama.cpp、transformers、vllm 等等）
 - 文本转音频

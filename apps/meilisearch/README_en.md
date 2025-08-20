@@ -1,8 +1,8 @@
-# Meilisearch
+## Introduction
 
-Meilisearch is an open-source full-text search engine known for its high customizability, speed, and ease of use.
+**Meilisearch** is an open-source full-text search engine known for its high customizability, speed, and ease of use.
 
-## Key Features:
+## Features
 
 - **Fast Full-Text Search**: Meilisearch offers excellent search performance, capable of quickly retrieving large amounts of text data. It uses highly optimized algorithms, enabling users to get search results in milliseconds.
 - **Open Source and Free**: Meilisearch is an open-source project and is free to use, making it easy for developers and organizations to integrate and deploy.
@@ -14,4 +14,3 @@ Meilisearch is an open-source full-text search engine known for its high customi
 - **Advanced Ranking Algorithm**: Meilisearch uses advanced ranking algorithms to sort search results by relevance, providing more accurate results.
 - **Distributed Deployment**: Meilisearch can be deployed on multiple servers for load balancing and high availability, ensuring system stability and reliability.
 - **Developer-Friendly**: Meilisearch provides extensive documentation and sample code to help developers get started quickly and solve problems.
-

@@ -1,21 +1,20 @@
-# 使用说明
+## 使用说明
 
-## 服务地址
+### 服务地址
 
-- 访问地址：`http://IP:8848/nacos`
-- 用户名：`nacos`
-- 密码：`nacos`
+- 访问地址: `http://IP:8848/nacos`
+- 用户名: `nacos`
+- 密码: `nacos`
 
+#### 如果是 nacos3.0+ 版本
 
-### 如果是nacos3.0+版本
+- 访问地址: `http://IP:8080/index.html`
+- 用户名: `nacos`
+- 密码: 首次打开会要求初始化管理员用户 nacos 的密码
 
-- 访问地址：`http://IP:8080/index.html`
-- 用户名：`nacos`
-- 密码：首次打开会要求初始化管理员用户nacos的密码
+### 参数调优
 
-## 参数调优
-
-```shell
+```bash
 - JVM_XMS=64m   # -Xms default :2g
 - JVM_XMX=64m   # -Xmx default :2g
 - JVM_XMN=16m   # -Xmn default :1g
@@ -23,13 +22,11 @@
 - JVM_MMS=8m    # -XX:MaxMetaspaceSize default :320m
 ```
 
-# Nacos
+## 产品介绍
 
 **Nacos** 是一个更易于构建云原生应用的动态服务发现、配置管理和服务管理平台。
 
-## Nacos 的关键特性
-
-## 特色：
+## 特色
 
 - **易用**：动态服务发现的一站式解决方案。配置管理和动态 DNS服务。提供 20 多项开箱即用的特性，适用于面向服务的架构。轻量级的生产就绪控制台。
 - **可靠**：无缝支持 Kubernetes 和 Spring Cloud，更容易在流行的公共云（例如阿里云和 AWS）上部署和运行，支持多租户和多环境。

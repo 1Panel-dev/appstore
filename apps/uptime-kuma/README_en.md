@@ -1,8 +1,8 @@
-# Uptime Kuma
+## Introduction
 
-Uptime Kuma is an open-source server monitoring and status checking tool that helps you track the availability, performance, and health status of your servers.
+**Uptime Kuma** is an open-source server monitoring and status checking tool that helps you track the availability, performance, and health status of your servers.
 
-## Main Features:
+## Features
 
 ### Server Monitoring
 

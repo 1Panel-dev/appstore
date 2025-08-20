@@ -1,8 +1,8 @@
-# RocketMQ
+## Introduction
 
 **Apache RocketMQ** is a distributed messaging and streaming platform with low latency, high performance and reliability, trillion-level capacity, and flexible scalability.
 
-## Main Features:
+## Features
 
 - Messaging patterns include publish/subscribe, request/reply, and streaming.
 - Financial-grade transactional messages.
@@ -22,4 +22,3 @@
 - Authentication and authorization.
 - Free and open-source connectors for sources and sinks.
 - Lightweight real-time computing.
-

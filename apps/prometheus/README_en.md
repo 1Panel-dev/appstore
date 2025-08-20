@@ -1,8 +1,8 @@
-# Prometheus
+## Introduction
 
 **Prometheus** is a monitoring system and time-series database.
 
-## Key Features:
+## Features
 
 - Multidimensional data model, where time series data is identified by metric names and key/value pairs.
 - PromQL, a flexible query language that leverages this dimensionality.
@@ -11,4 +11,3 @@
 - Supports pushing time series via an intermediary gateway.
 - Targets are discovered via service discovery or static configuration.
 - Multiple modes of graphing and dashboard support.
-

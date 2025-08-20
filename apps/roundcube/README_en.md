@@ -1,8 +1,8 @@
-# Roundcube
+## Introduction
 
-Roundcube is a web-based, multi-language IMAP email client that provides a modern, feature-rich solution for managing email via a browser. Written in PHP, it offers all the essential functionalities of a desktop email client in a lightweight and easily deployable package.
+**Roundcube** is a web-based, multi-language IMAP email client that provides a modern, feature-rich solution for managing email via a browser. Written in PHP, it offers all the essential functionalities of a desktop email client in a lightweight and easily deployable package.
 
-## Main Features
+## Features
 
 - **Modern Interface**: Roundcube features a clean, user-friendly interface designed for efficiency and ease of use.
 - **Full MIME and HTML Support**: Seamlessly send and receive emails with complex formatting and attachments.
@@ -18,5 +18,3 @@ Roundcube is a web-based, multi-language IMAP email client that provides a moder
 
 - **Personal Hosting**: Ideal for individuals or businesses hosting their own mail servers.
 - **Web Hosting Services**: Widely used by hosting providers to offer webmail access as part of their service packages.
-
-Roundcube is a popular choice for anyone seeking a reliable, open-source webmail solution that balances simplicity with advanced features.

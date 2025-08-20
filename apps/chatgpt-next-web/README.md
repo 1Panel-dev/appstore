@@ -1,8 +1,8 @@
-# ChatGPT-Next-Web
+## 产品介绍
 
 **ChatGPT-Next-Web** 一键免费部署你的跨平台私人 ChatGPT 应用, 支持 GPT3, GPT4 & Gemini Pro 模型。
 
-## 特征：
+## 特征
 
 - 与自行部署的 LLM 完全兼容；
 - 隐私第一，所有数据都存储在浏览器本地；

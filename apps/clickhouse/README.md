@@ -1,9 +1,8 @@
-# ClickHouse
+## 产品介绍
 
-ClickHouse 一个用于联机分析(OLAP)的列式数据库管理系统(DBMS)
+**ClickHouse** 是一个用于联机分析(OLAP)的列式数据库管理系统(DBMS)
 
-## 主要功能：
-
+## 主要功能
 
 - 真正的列式数据库管理系统
 - 数据压缩

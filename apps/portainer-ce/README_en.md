@@ -1,8 +1,8 @@
-# Portainer CE
+## Introduction
 
-Portainer CE (Community Edition) is an open-source container management tool that provides a user-friendly web interface for managing and monitoring containerized applications.
+**Portainer CE (Community Edition)** is an open-source container management tool that provides a user-friendly web interface for managing and monitoring containerized applications.
 
-## Main Features:
+## Features
 
 ### Container Management
 

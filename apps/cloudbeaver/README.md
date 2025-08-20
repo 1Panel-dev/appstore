@@ -1,8 +1,8 @@
-# CloudBeaver Community
+## 产品介绍
 
-CloudBeaver Community 是一款开源的数据库管理工具，旨在提供用户友好的界面以管理多种数据库，包括 MySQL、PostgreSQL、SQLite 等。
+**CloudBeaver Community** 是一款开源的数据库管理工具，旨在提供用户友好的界面以管理多种数据库，包括 MySQL、PostgreSQL、SQLite 等。
 
-## 主要功能：
+## 主要功能
 
 - **多数据库支持**：CloudBeaver Community 支持多种数据库类型，方便用户集中管理不同的数据库系统。
 - **在线访问**：用户可以通过浏览器访问 CloudBeaver，无需安装任何客户端软件，便于随时随地管理数据库。

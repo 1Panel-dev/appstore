@@ -1,15 +1,13 @@
-# 默认账户密码
+## 默认账户密码
 
-```
-username：admin
-password：a123456
-```
+用户名: `admin`
+密码: `a123456`
 
-# mBlog
+## 产品介绍
 
 **mBlog (mtons blog)** 是一款开源免费的 Java 博客系统，是一个简单、大气、美观、响应式设计的多人博客系统，基于 MySQL 数据库；具有性能优异、简单实用、安全稳定、支持全文检索的特点。
 
-## 项目特色：
+## 项目特色
 
 - JDK8
 - SSH (Spring、SpringMVC、Hibernate）

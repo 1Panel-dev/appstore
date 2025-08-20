@@ -1,8 +1,8 @@
-# Komga
+## Introduction
 
 **Komga** is a free and open-source media server for comics and magazines.
 
-## Features:
+## Features
 
 - Browse your library, series, and books through a responsive Web UI suitable for desktops, tablets, and phones.
 - Organize your library with collections and reading lists.

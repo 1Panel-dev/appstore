@@ -1,15 +1,13 @@
-# 默认账户密码
+## 默认账户密码
 
-```
-username：admin
-password：123
-```
+用户名: `admin`
+密码: `123`
 
-# Casdoor
+## 产品介绍
 
 A UI-first Identity Access Management (IAM) / Single-Sign-On (SSO) platform with web UI supporting OAuth 2.0, OIDC, SAML, CAS, LDAP, SCIM, WebAuthn, TOTP, MFA, RADIUS, Google Workspace, Active Directory and Kerberos
 
-## Casdoor 的特性
+## 特性
 
 - 遵循前后端分离架构，采用 Golang 进行开发。它支持高同步，提供基于网页的用户界面管理，并支持10多种语言的本地化。
 - 支持第三方应用登录，如 GitHub、谷歌、QQ、微信等，并支持通过插件扩展第三方登录。

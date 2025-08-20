@@ -1,10 +1,13 @@
-# Instructions
+## Instructions
+
 After deployment, follow the prompts on the page and execute the command in the terminal to start the service.
 
-# ONLYOFFICE
+## Introduction
+
 **ONLYOFFICE** is a comprehensive collaborative office software suite that integrates document processing, spreadsheets, and presentations, providing a seamless collaborative work environment for teams. Its powerful features and ease of use make it the preferred tool for teams of all sizes and types.
 
-## Features Overview:
+## Features
+
 - **Real-Time Collaboration**: ONLYOFFICE offers real-time collaboration features, allowing team members to edit documents, spreadsheets, and presentations simultaneously without worrying about version conflicts or data loss.
 - **Cloud Storage**: Users can store files in ONLYOFFICE's cloud service for anytime, anywhere access and editing, or choose to deploy on their private servers to ensure data security.
 - **Format Compatibility**: ONLYOFFICE supports various file formats, including Microsoft Office formats (.docx, .xlsx, .pptx), OpenDocument formats, and PDFs, ensuring users can easily share and edit files with others.

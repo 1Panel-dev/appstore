@@ -1,15 +1,13 @@
-# 默认账户密码
+## 默认账户密码
 
-```
-username：admin
-password：kubepi
-```
+用户名: `admin`
+密码: `kubepi`
 
-# KubePi 功能简介
+## 产品介绍
 
 **KubePi** 是一款功能强大的 Kubernetes 管理工具，旨在简化和增强 Kubernetes 集群的管理和监控。
 
-## 主要功能：
+## 主要功能
 
 - **集群管理**：允许您轻松管理 Kubernetes 集群，包括创建、扩展、缩减和删除集群。您可以通过简单的界面完成这些操作，无需深入了解 Kubernetes 的复杂性。
 - **应用部署**：您可以快速部署应用程序到 Kubernetes 集群中。它支持 Helm Charts 和自定义 YAML 文件，使应用程序的部署变得简单而可控。

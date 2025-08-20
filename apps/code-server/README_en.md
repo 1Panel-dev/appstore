@@ -1,8 +1,8 @@
-# code-server
+## Introduction
 
 **code-server** is a powerful open-source tool that brings [Visual Studio Code (VS Code)](https://code.visualstudio.com/) into a web-based environment. It allows you to securely connect to that remote machine from anywhere through a local VS Code client, without the requirement of SSH.
 
-## Main Features:
+## Features
 
 - **Remote Development**: Allows you to access your development environment from anywhere using a web browser. This means you can write, edit, and run code consistently across different devices and operating systems.
 - **Lightweight**: A lightweight application with low resource consumption, making it efficient to run on servers with limited resources. This makes it an ideal tool for providing a unified development environment for teams or for cloud-based development.

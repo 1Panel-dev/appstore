@@ -1,8 +1,8 @@
-# Navidrome
+## Introduction
 
 **Navidrome** is a web-based open-source music collection server and streamer. It allows you to freely listen to your music collection from any browser or mobile device. It's like your personal Spotify!
 
-## Features:
+## Features
 
 - Handles **very large music collections**
 - Can stream almost any **audio format** available
@@ -17,4 +17,3 @@
 - **Compatible** with all Subsonic/Madsonic/Airsonic [clients](https://www.navidrome.org/docs/overview/#apps)
 - Instant **transcoding**. Can be set per user/player. **Supports Opus encoding**
 - Translated into **multiple languages**
-

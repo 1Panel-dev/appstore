@@ -1,7 +1,9 @@
-# ntfy
+## Introduction
+
 **ntfy** is a simple HTTP-based publish-subscribe notification service. With ntfy, you can send notifications from any computer script to your phone or desktop without registration or fees.
 
-## Key Features:
+## Features
+
 - **Cross-Platform Support**: Available on Android, iOS, Windows, Linux, and macOS.
 - **Multiple Transmission Methods**: Notifications can be sent and received via HTTP API, command-line tools, email, WebSocket, and more.
 - **Self-Hosting**: Users can deploy ntfy on their own servers for complete control and privacy.

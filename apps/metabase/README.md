@@ -1,8 +1,8 @@
-# Metabase
+## 产品介绍
 
-Metabase 是一款开源的数据分析和可视化工具，它提供了丰富的功能来帮助用户探索、分析和可视化数据。以下是 Metabase 的一些主要功能简介，使用 Markdown 语法进行描述：
+**Metabase** 是一款开源的数据分析和可视化工具，它提供了丰富的功能来帮助用户探索、分析和可视化数据。以下是 Metabase 的一些主要功能简介，使用 Markdown 语法进行描述：
 
-## 主要功能：
+## 主要功能
 
 - **数据连接**：Metabase 可以连接多种数据源，包括关系型数据库（如MySQL、PostgreSQL、Oracle）、NoSQL数据库（如MongoDB）、云服务（如Amazon Redshift、Google BigQuery）以及各种数据文件格式。
 - **数据查询**：用户可以通过直观的图形界面或SQL查询语言来执行数据查询，从而轻松地提取所需的数据。

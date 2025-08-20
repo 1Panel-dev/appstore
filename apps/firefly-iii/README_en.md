@@ -1,7 +1,9 @@
-# Firefly III
+## Introduction
+
 **Firefly III** is an open-source personal finance management tool. It helps you track expenses and income, reducing spending and increasing savings.
 
-## Key Features:
+## Features
+
 - **Create Recurring Transactions**: Set up recurring transactions to better manage budgets and liquidity.
 - **Rule-Based Transaction Processing**: Automatically process transactions based on custom rules, improving financial management efficiency.
 - **Double-Entry Accounting System**: Uses standard double-entry bookkeeping to ensure the accuracy of financial records.

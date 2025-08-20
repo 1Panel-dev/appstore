@@ -1,8 +1,8 @@
-# LobeChat
+## 产品介绍
 
 **LobeChat** 是一个现代化设计的开源 ChatGPT/LLMs 聊天应用与开发框架，支持语音合成、多模态、可扩展的（function call）插件系统，一键免费拥有你自己的 ChatGPT/Gemini/Claude/Ollama 应用。
 
-## 特性：
+## 特性
 
 - 多模型服务商支持；
 - 支持本地大语言模型 (LLM)；

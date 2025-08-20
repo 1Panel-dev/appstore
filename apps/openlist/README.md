@@ -1,15 +1,15 @@
-# 账号密码
+## 默认账户密码
 
 容器列表点击 `终端` 按钮，进入容器内执行命令设置密码。
 
-- **生成随机密码**：`./openlist admin random`
-- **手动设置密码**：`./openlist admin set NEW_PASSWORD`
+- **生成随机密码**: `./openlist admin random`
+- **手动设置密码**: `./openlist admin set NEW_PASSWORD`
 
-# OpenList
+## 产品介绍
 
 一个支持多种存储，支持网页浏览和 WebDAV 的文件列表程序，由 gin 和 Solidjs 驱动。
 
-## 支持的存储：
+## 支持的存储
 
 - [x] [本机存储](https://docs.oplist.org/zh/guide/drivers/local.html)
 - [x] [Crypt](https://docs.oplist.org/zh/guide/drivers/Crypt.html)

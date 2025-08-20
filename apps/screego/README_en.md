@@ -1,8 +1,8 @@
-# Screego
+## Introduction
 
 **Screego** is an open-source screen sharing and collaboration tool designed to facilitate seamless remote communication and team collaboration.
 
-## Main Features:
+## Features
 
 - **Screen Sharing**: Screego allows users to share their screens in real-time, making it ideal for presentations, remote training, or team collaboration.
 - **Remote Assistance**: Users can view and control other computers' desktops over the internet, providing remote support and assistance.
@@ -11,4 +11,3 @@
 - **Security**: Secure remote access is ensured through encrypted connections, protecting user data and privacy, using secure protocols to prevent unauthorized access.
 - **Simple and User-friendly Interface**: Screego aims to provide an intuitive interface and simple setup, allowing users to get started quickly and easily launch screen sharing or remote sessions.
 - **Customizable and Open Source**: As an open-source project, Screego offers customization and extension options, allowing users to tailor it to their needs and participate in the project’s ongoing development.
-

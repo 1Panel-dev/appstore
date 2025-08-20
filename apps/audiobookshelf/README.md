@@ -1,8 +1,8 @@
-# Audiobookshelf
+## 产品介绍
 
 **Audiobookshelf** 是一个自托管的有声读物和播客服务器。
 
-## 特征：
+## 主要功能
 
 - 完全开源，包括Android 和 iOS 应用程序 （测试版）
 - 即时传输所有音频格式

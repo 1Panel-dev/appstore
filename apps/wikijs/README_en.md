@@ -1,7 +1,9 @@
-# Wiki.js
-Wiki.js is open-source software for creating and managing documentation, knowledge bases, and wiki sites. It allows users to write and organize content using Markdown syntax.
+## Introduction
 
-## Key Features:
+**Wiki.js** is open-source software for creating and managing documentation, knowledge bases, and wiki sites. It allows users to write and organize content using Markdown syntax.
+
+## Features
+
 - **Markdown Editor**: Wiki.js provides a built-in Markdown editor, enabling users to write and format documents in a simple and intuitive way. Markdown syntax supports basic elements like headings, lists, links, images, and blockquotes.
 - **Version Control**: Wiki.js offers version control, allowing multiple authors to collaborate on documents and track changes. Users can roll back to previous versions or view the history of changes.
 - **User and Permission Management**: Create multiple user accounts and assign different permission levels to control access and editing rights for documents.

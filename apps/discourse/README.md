@@ -16,7 +16,7 @@
 
 **进入 `容器` 页面，找到 Discourse 应用，点击右侧操作列中的 `终端` 按钮，在容器终端中执行以下命令：**
 
-```shell
+```bash
 cd /opt/bitnami/discourse
 
 # 安装插件 PLUGIN_REPO_URL 替换为插件地址
@@ -30,7 +30,7 @@ sudo RAILS_ENV=production bundle exec rake assets:precompile
 
 **进入 `容器` 页面，找到 Discourse 应用，点击右侧操作列中的 `终端` 按钮，在容器终端中执行以下命令：**
 
-```shell
+```bash
 cd /opt/bitnami/discourse/plugins
 
 # 删除插件目录 PLUGIN-DIR 替换为插件目录

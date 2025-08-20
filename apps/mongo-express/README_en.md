@@ -1,8 +1,8 @@
-# mongo-express
+## Introduction
 
 **mongo-express** is a web-based MongoDB management interface built using Node.js, Express, and Bootstrap 5.
 
-## Key Features:
+## Features
 
 - Connect to multiple databases
 - View/Add/Delete databases

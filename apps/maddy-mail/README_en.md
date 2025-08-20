@@ -1,13 +1,13 @@
-# User Guide
+## Instructions
 
-## 1. Prepare Domain Certificates
+### 1. Prepare Domain Certificates
 
 Prepare a domain certificate using tools like `acme.sh`, `certbot`, or manual upload. Modify the configurations as needed.  
 
 The certificate domain should correspond to the mail server's `MX` hostname, such as `mail.example.com`.
 
 
-## 2. Install the Application
+### 2. Install the Application
 
 Install the application from the app store.
 
@@ -16,30 +16,34 @@ The first installation may show an error and the container may not run properly 
 Ignore the error and proceed to the next step.
 
 
-## 3. Place the Domain Certificate into the Volume
+### 3. Place the Domain Certificate into the Volume
 
 If the maddydata directory is not present in the container storage volume, you need to manually execute:
-```
+
+```bash
 docker volume create maddydata 
 ```
 
 The default path for the volume is:`/var/lib/docker/volumes/maddydata/_data/`
 
-```
+```bash
 # Enter the volume path
 cd $(docker volume inspect maddydata --format '{{.Mountpoint}}')
 
 # Create certificate folder
 mkdir -p tls
 ```
+
 Upload the certificate and private key to the tls folder, and rename them as:
+
 - fullchain.pem
 - privkey.pem
 
 Once the certificates are correctly uploaded, the container will automatically start running.
 
-## 4. Configure DKIM DNS Records
-### 4.1 Retrieve DKIM Values
+### 4. Configure DKIM DNS Records
+
+#### 4.1 Retrieve DKIM Values
 
 After the container starts running, check the path:`/var/lib/docker/volumes/maddydata/_data/dkim_keys`
 
@@ -50,23 +54,26 @@ This file contains the required DKIM information.
 - Make sure to modify the domain as needed.
 
 To view the contents in the terminal:
-```
+
+```bash
 cat /var/lib/docker/volumes/maddydata/_data/dkim_keys/example.com_default.dns 
 ```
 
 Example output:
-```
+
+```bash
 default._domainkey.example.org.    TXT   "v=DKIM1; k=ed25519; p=nAcUUozPlhc4VPhp7hZl+owES7j7OlEv0laaDEDBAqg="
 ```
 
-### 4.2  Set DNS TXT Record
+#### 4.2  Set DNS TXT Record
 
 Set the `DNS records` based on the retrieved information.
 
 For example:
+
 Add a `TXT` record for `default._domainkey.example.com` with the value `v=DKIM1; k=ed25519; p=nAcUUozPlhc4VPhp7hZl+owES7j7OlEv0laaDEDBAqg=`.
 
-## 5. Set DNS Records
+### 5. Set DNS Records
 
 - Ensure modifications as needed.
 
@@ -83,15 +90,16 @@ Add a `TXT` record for `default._domainkey.example.com` with the value `v=DKIM1;
 | TXT         | `_mta-sts.example.com` | `v=STSv1; id=1`                                             |
 | TXT         | `_smtp._tls.example.com` | `v=TLSRPTv1;rua=mailto:postmaster@example.com`              |
 
-## 6. Create Sending Accounts
+### 6. Create Sending Accounts
 
 Access the container terminal via the `Containers` panel and execute the following commands:
 
 - Ensure modifications as needed.
 
-```
+```bash
 maddy creds create postmaster@example.com
 
 maddy imap-acct create postmaster@example.com 
 ```
+
 END

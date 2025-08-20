@@ -1,4 +1,4 @@
-# 创建数据库
+## 使用说明
 
 CouchDB 部署成功后, 需要手动创建一个数据库, 方便插件连接并同步.
 
@@ -6,15 +6,13 @@ CouchDB 部署成功后, 需要手动创建一个数据库, 方便插件连接�
 
 > 如果你想要从移动设备访问 Self-hosted LiveSync，你需要一个合法的 SSL 证书。
 
-# Self-hosted LiveSync
+## 产品介绍
 
-**Self-hosted LiveSync** (自搭建在线同步) 是一个社区实现的在线同步插件。  
-使用一个自搭建的或者购买的 CouchDB 作为中转服务器。
-兼容所有支持 Obsidian 的平台。
+**Self-hosted LiveSync** (自搭建在线同步) 是一个社区实现的在线同步插件。使用一个自搭建的或者购买的 CouchDB 作为中转服务器，兼容所有支持 Obsidian 的平台。
 
 > 本插件与官方的 `Obsidian Sync` 服务不兼容。
 
-## 功能：
+## 主要功能
 
 -   可视化的冲突解决器
 -   接近实时的多设备双向同步

@@ -1,15 +1,13 @@
-# 默认账户密码
+## 默认账户密码
 
-```
-username：admin
-password：admin123
-```
+用户名: `admin`
+密码: `admin123`
 
-# Calibre-Web
+## 产品介绍
 
 **Calibre-Web** 是一款网络应用程序，提供干净直观的界面，用于使用有效的Calibre数据库浏览、阅读和下载电子书。
 
-## 特性：
+## 特性
 
 - 现代且响应迅速的 Bootstrap 3 HTML5 界面
 - 完整的图形设置

@@ -1,8 +1,8 @@
-# Gotify
+## 产品介绍
 
 **Gotify** 是一个简单的服务器来发送和接收消息（通过 WebSocket 实时发送和接收）
 
-## 特征：
+## 特征
 
 - 通过 REST-API 发送消息
 - 通过 WebSocket 接收消息

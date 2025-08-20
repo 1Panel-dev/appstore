@@ -1,8 +1,8 @@
-# MariaDB
+## Introduction
 
-MariaDB is a popular open-source relational database management system (RDBMS), a fork of MySQL, offering robust features and performance suitable for a wide range of applications.
+**MariaDB** is a popular open-source relational database management system (RDBMS), a fork of MySQL, offering robust features and performance suitable for a wide range of applications.
 
-## Core Features
+## Features
 
 - **SQL Support**: Fully supports SQL (Structured Query Language), enabling users to perform various database operations, including queries, inserts, updates, and deletes.
 - **High Performance**: Delivers excellent performance through optimized query execution plans, indexing, caching, and multi-threaded processing.

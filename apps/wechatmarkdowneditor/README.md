@@ -1,8 +1,8 @@
-## 项目介绍
+## 产品介绍
 
 Markdown 文档自动即时渲染为微信图文，让你不再为微信内容排版而发愁！只要你会基本的 Markdown 语法，就能做出一篇样式简洁而又美观大方的微信图文。
 
-## 功能特性
+## 主要功能
 
 - [x] 支持 Markdown 所有基础语法、数学公式
 - [x] 提供对 Mermaid 图表的渲染和 [GFM 警告块](https://github.com/orgs/community/discussions/16925)的支持
