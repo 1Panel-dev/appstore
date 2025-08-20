@@ -1,7 +1,9 @@
-# Dashy
+## Introduction
+
 **Dashy** is a powerful open-source dashboard application for organizing and managing your bookmarks, links, and frequently used applications. It allows users to create a customized dashboard interface for easy access to daily tools and services.
 
 ## Features
+
 - **Highly Customizable**: Users can customize the layout and appearance of the dashboard through configuration files to suit their needs and preferences.
 - **Multiple Integrations**: Supports integration with various services and applications, such as Docker, Kubernetes, GitHub, and more, providing real-time monitoring and quick actions.
 - **Easy to Set Up and Use**: Offers simple configuration files (YAML/JSON) for users to easily add, edit, and delete items.

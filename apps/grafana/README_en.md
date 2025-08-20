@@ -1,13 +1,14 @@
-# Default Username and Password
-```
-username: admin
-password: admin
-```
+## Default Credentials
 
-# Grafana
+username: `admin`
+password: `admin`
+
+## Introduction
+
 **Grafana** allows you to query, visualize, alert, and understand your metrics no matter where they are stored. Create, explore, and share dashboards with your team and foster a data-driven culture.
 
-## Key Features:
+## Features
+
 - **Visualization**: Fast and flexible client-side graphs with many options. Panel plugins provide many different ways to visualize metrics and logs.
 - **Dynamic Dashboards**: Create dynamic and reusable dashboards using template variables displayed as drop-down menus at the top of the dashboard.
 - **Explore Metrics**: Explore your data with ad-hoc queries and dynamic drill-down. Split views and compare different time ranges, queries, and data sources side by side.

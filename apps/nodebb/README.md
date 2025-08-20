@@ -1,4 +1,4 @@
-# NodeBB
+## 产品介绍
 
 **NodeBB** 论坛软件由 Node.js 提供支持，支持 Redis、MongoDB 或 PostgreSQL 数据库。它利用 WebSocket 实现即时互动和实时通知。NodeBB 吸收了现代网络的精华：实时流式讨论、移动响应能力、丰富的 RESTful 读/写 API，同时忠实于原始的公告栏/论坛格式 → 分类分层、本地用户账户和异步消息传递。
 

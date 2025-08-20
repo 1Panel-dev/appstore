@@ -1,7 +1,9 @@
-# Audiobookshelf
+## Introduction
+
 **Audiobookshelf** is a self-hosted audiobook and podcast server.
 
-## Features:
+## Features
+
 - Fully open-source, including Android and iOS applications (beta)
 - Stream all audio formats instantly
 - Search and add podcasts to download episodes with auto-download
@@ -20,4 +22,3 @@
   - Epub, pdf, cbr, cbz
   - Send eBooks to devices (e.g., Kindle)
 - Open RSS feeds for podcasts and audiobooks
-

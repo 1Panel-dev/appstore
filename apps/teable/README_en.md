@@ -1,12 +1,12 @@
-# Teable
+## Introduction
 
 **Teable** uses a simple, spreadsheet-like interface to create powerful database applications. Collaborate with your team in real-time, and scale to millions of rows
 
-## Features:
+## Features
 
 ### Feature Packed
 
-Everything you need, right out of the box:
+Everything you need, right out of the box
 
 - [x] Aggregation
 - [x] Attachments Preview
@@ -32,7 +32,7 @@ Everything you need, right out of the box:
 
 ### Multiple Views
 
-Visualize and interact with data in various ways best suited for their specific tasks.
+Visualize and interact with data in various ways best suited for their specific tasks
 
 - [x] Grid View
 - [x] Form View

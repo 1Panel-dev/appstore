@@ -1,8 +1,8 @@
-# PhotoPrism
+## Introduction
 
 **PhotoPrism** is an AI-powered photo application for the decentralized web. It uses the latest technology to automatically tag and find pictures without getting in your way. You can run it at home, on a private server, or in the cloud.
 
-## Key Features:
+## Features
 
 - Browse all photos and videos without worrying about RAW conversion, duplicates, or video formats.
 - Easily find specific photos using powerful search filters.
@@ -15,4 +15,3 @@
 - Search for more image attributes such as color, chroma, and quality.
 - Securely back up iOS and Android phones in the background using PhotoSync.
 - WebDAV clients (e.g., Microsoft’s Windows Explorer and Apple’s Finder) can directly connect to PhotoPrism, allowing you to open, edit, and delete files on your computer as if they were local files.
-

@@ -1,13 +1,14 @@
-# Default Account and Password
-```
-username: admin
-password: admin123
-```
+## Default Credentials
 
-# Calibre-Web
+username: `admin`
+password: `admin123`
+
+## Introduction
+
 **Calibre-Web** is a web application that provides a clean and intuitive interface for browsing, reading, and downloading eBooks using an existing Calibre database.
 
-## Features:
+## Features
+
 - Modern and responsive Bootstrap 3 HTML5 interface
 - Full graphical setup
 - Comprehensive user management with fine-grained per-user permissions
@@ -30,4 +31,3 @@ password: admin123
 - Self-update capability
 - "Magic Link" login for easy eReader access
 - LDAP, Google/GitHub OAuth, and proxy authentication support
-

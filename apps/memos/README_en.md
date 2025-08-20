@@ -1,8 +1,8 @@
-# Memos
+## Introduction
 
-Memos is a lightweight, privacy-first note-taking service designed to effortlessly capture and share your brilliant ideas.
+**Memos** is a lightweight, privacy-first note-taking service designed to effortlessly capture and share your brilliant ideas.
 
-## Features:
+## Features
 
 - **Open Source and Free Forever**: Embrace a borderless creative future with our open-source solution—free today, tomorrow, and always.
 - **Self-Host in Seconds with Docker**: Enjoy the flexibility, scalability, and ease of setup provided by Docker, giving you full control over your data and privacy.

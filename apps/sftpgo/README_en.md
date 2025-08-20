@@ -1,10 +1,10 @@
-# SFTPGo
+## Introduction
 
 **SFTPGo** is a fully-featured and highly configurable SFTP server that also supports custom HTTP/S, FTP/S, and WebDAV services.
 
 > Supported backend storage: Local filesystem, encrypted local filesystem, S3-compatible object storage, Google Cloud Storage, Azure Blob Storage, and SFTP.
 
-## Main Features:
+## Features
 
 - **Multi-User Support**: Create and manage multiple user accounts, each with independent access permissions and directories.
 - **Highly Configurable**: Customize extensively to meet your needs, including user access control, upload/download limits, and authentication methods.

@@ -1,8 +1,8 @@
-# phpMyAdmin
+## 产品介绍
 
-phpMyAdmin 是一个开源的基于Web的MySQL数据库管理工具，它允许用户通过Web浏览器管理MySQL数据库。
+**phpMyAdmin** 是一个开源的基于Web的MySQL数据库管理工具，它允许用户通过Web浏览器管理MySQL数据库。
 
-## 主要功能：
+## 主要功能
 
 ### 数据库管理
 

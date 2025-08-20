@@ -1,13 +1,14 @@
-# Default Username and Password
-```
-username: admin
-password: password
-```
+## Default Credentials
 
-# Huginn
+username: `admin`
+password: `password`
+
+## Introduction
+
 **Huginn** is a system for building agents that perform automated tasks for you online. They can read the web, watch for events, and take actions on your behalf. Huginn's agents create and consume events, propagating them along a directed graph. Think of it as a hackable version of IFTTT or Zapier on your own server. You always know who owns your data. You do.
 
 ## Here are some things you can use Huginn to do:
+
 - Track the weather and get an email when it will rain (or snow) tomorrow ("Don't forget your umbrella!").
 - List terms you care about and get an email when their occurrence on Twitter changes. (For example, want to know when something interesting happens in machine learning? Huginn will watch the term "machine learning" on Twitter and notify you when there's a spike in discussion.)
 - Monitor airline travel or shopping deals.

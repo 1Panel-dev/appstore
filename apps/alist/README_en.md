@@ -1,6 +1,13 @@
-# AList
+## Default Credentials
 
-A file list program that supports multiple storage, and supports web browsing and webdav, powered by gin and Solidjs.
+Click the `Terminal` button in the container list to enter the container and execute commands to set the password.
+
+- **Use a random password**: `./alist admin random`
+- **Or set password manually**: `./alist admin set NEW_PASSWORD`
+
+## Introduction
+
+**AList** is a file list program that supports multiple storage options and web browsing, powered by gin and Solidjs.
 
 ## Supported Storage
 
@@ -54,11 +61,3 @@ A file list program that supports multiple storage, and supports web browsing an
 - [163 Music Drive](../guide/drivers/163music.md)
 - [halalcloud](../guide/drivers/halalcloud.md)
 - [LenovoNasShare](https://pc.lenovo.com.cn)
-
-## Account Password
-
-Click the `Terminal` button in the container list to enter the container and execute commands to set the password.
-
-- **Use a random password**: `./alist admin random`
-- **Or set password manually**: `./alist admin set NEW_PASSWORD`
-

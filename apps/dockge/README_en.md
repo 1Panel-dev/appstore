@@ -1,6 +1,9 @@
-# Dockge
+## Introduction
+
 **Dockge** is a beautiful, easy-to-use, reactive self-hosted docker compose.yaml stack-oriented manager.
-## Main Features:
+
+## Features
+
 - Manage ```compose.yaml``` files through a web interface.
   - Create/edit/start/stop/restart/delete containers.
   - Update Docker images.

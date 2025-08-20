@@ -1,4 +1,4 @@
-# Planka
+## 产品介绍
 
 **Planka** 是一款开源、自托管的项目管理工具，类似 Trello，基于 **Node.js、React 和 PostgreSQL** 构建。  
 

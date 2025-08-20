@@ -1,11 +1,14 @@
-# Default Username and Password
-- Initial Username: flarum
-- Initial Password: flarum
+## Default Credentials
 
-# flarum
+username: `flarum`
+password: `flarum`
+
+## Introduction
+
 **flarum** is a modern, lightweight, open-source community forum software. It offers a clean and beautiful user interface with rich features for building and managing online communities.
 
-## Key Features:
+## Features
+
 - **Clean and Beautiful**: flarum's interface is simple, modern, and provides a great user experience, making it easy for users to browse and participate in community discussions.
 - **Extensibility**: flarum supports a plugin system, allowing you to extend functionality and customize various aspects of the community forum as needed.
 - **Powerful Permission Management**: flarum offers flexible permission management, enabling administrators to set fine-grained permissions for users, user groups, and sections.

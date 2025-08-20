@@ -1,10 +1,10 @@
-# Bitwarden
+## Introduction
 
-Bitwarden is an open-source password manager that offers robust security and convenient password management features. This repository implements an alternative server for the Bitwarden client API, written in Rust, and is fully compatible with the official Bitwarden client. It is particularly well-suited for self-hosted deployments, especially when running the resource-intensive official server is not ideal.
+**Bitwarden** is an open-source password manager that offers robust security and convenient password management features. This repository implements an alternative server for the Bitwarden client API, written in Rust, and is fully compatible with the official Bitwarden client. It is particularly well-suited for self-hosted deployments, especially when running the resource-intensive official server is not ideal.
 
 After deploying the server, users can continue to use Bitwarden's official APP and browser extensions with the compatible API service.
 
-## Main Features
+## Features
 
 - **Password Storage and Autofill**: Bitwarden securely stores your usernames and passwords, so you don't need to remember them. It also provides autofill capabilities to automatically input credentials when logging into websites.
 - **Secure Password Generator**: Bitwarden includes a built-in password generator to create complex, random passwords, enhancing the security of your online accounts.

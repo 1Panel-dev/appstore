@@ -1,8 +1,8 @@
-# PGAdmin 4
+## Introduction
 
-PGAdmin 4 is a powerful tool for managing and maintaining PostgreSQL databases. It provides a rich set of features to help database administrators and developers efficiently manage their databases.
+**PGAdmin 4** is a powerful tool for managing and maintaining PostgreSQL databases. It provides a rich set of features to help database administrators and developers efficiently manage their databases.
 
-## Main Features:
+## Features
 
 ### Database Connection Management
 

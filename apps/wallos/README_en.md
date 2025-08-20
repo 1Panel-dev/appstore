@@ -1,6 +1,6 @@
-# Wallos
+## Introduction
 
-**Wallos**: Open-Source Personal Subscription Tracker
+**Wallos** is an Open-Source Personal Subscription Tracker
 
 ## Features
 

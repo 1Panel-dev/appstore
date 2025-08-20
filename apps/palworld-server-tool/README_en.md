@@ -1,4 +1,4 @@
-# Palworld Server Management Tool
+## Introduction
 
 **Manage dedicated Palworld servers with a visual interface and REST API.**
 

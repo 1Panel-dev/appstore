@@ -1,8 +1,8 @@
-# Portainer CE
+## 产品介绍
 
-Portainer CE（Community Edition）是一款用于容器管理的开源工具，它提供了用户友好的Web界面，用于管理和监控容器化应用程序。
+**Portainer CE（Community Edition）** 是一款用于容器管理的开源工具，它提供了用户友好的Web界面，用于管理和监控容器化应用程序。
 
-## 主要功能：
+## 主要功能
 
 ### 容器管理
 

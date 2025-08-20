@@ -1,7 +1,9 @@
-# Changedetection.io
+## Introduction
+
 **Changedetection.io** is the best and simplest free open-source website change detection, website monitoring, restock monitoring, and notification service.
 
-## Key Features:
+## Features
+
 - Numerous trigger filters, such as "trigger on text," "remove text by selector," "ignore text," "extract text," and more, using regular expressions!
 - Locate elements using xPath (1.0) and CSS selectors; easily monitor complex JSON using JSONPath or jq
 - Switch between fast non-JS and Chrome JS-based "fetchers"

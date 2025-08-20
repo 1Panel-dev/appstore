@@ -1,4 +1,4 @@
-# Act Runner
+## Introduction
 
 **Act Runner** is a runner based on the [Gitea fork](https://gitea.com/gitea/act) of [Gitea](https://github.com/nektos/act).
 
@@ -9,4 +9,4 @@
 3. Click on the **"Settings"** tab at the top of the page.
 4. In the left-hand menu, select **"Actions"**.
 5. On the page, locate the **"Runners"** section. Here, you should find a **"New Runner"** button.
-6. Click on the **"New Runner"** button. You will receive a `RUNNER_REGISTRATION_TOKEN`. Copy and store it securely.  
+6. Click on the **"New Runner"** button. You will receive a `RUNNER_REGISTRATION_TOKEN`. Copy and store it securely.

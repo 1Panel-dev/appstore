@@ -1,8 +1,8 @@
-# NocoDB
+## Introduction
 
 **NocoDB** is an open source no-code database platform that allows users to create, manage, and operate databases through a graphical interface without writing code. NocoDB aims to simplify data management processes by providing a visual user interface to handle data in databases, supporting integration with various database systems.
 
-## Core Features:
+## Features
 
 - **No-code Database Management**: Offers an intuitive graphical interface where users can manage database tables and fields through drag-and-drop operations, without needing to write SQL statements or perform complex configurations.
 - **Multiple Database Support**: Supports major database systems including MySQL, PostgreSQL, SQL Server, and SQLite, enabling users to easily connect and manage various data sources.
@@ -13,4 +13,3 @@
 - **User Permission Management**: Provides flexible permission management features, allowing administrators to set access and operation permissions for different users or user groups, ensuring data security.
 - **Automation and Integration**: Supports integration with third-party services and applications, offering automation and workflow functionalities to help users automate data processing and management.
 - **Audit and Logging**: Logs data operations and provides auditing capabilities, helping users track and review data change histories and operation records.
-

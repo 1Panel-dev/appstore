@@ -1,8 +1,8 @@
-# Bytebase
+## 产品介绍
 
 **Bytebase** 是面向开发人员和 DBA 的数据库 CI/CD 解决方案。它是CNCF Landscape和Platform Engineering包含的唯一数据库 CI/CD 项目。
 
-## Bytebase 系列由以下工具组成：
+## Bytebase 系列由以下工具组成
 
 - **Bytebase 控制台**：供开发人员和 DBA 管理数据库开发生命周期的基于 Web 的 GUI。
 - **Bytebase API**：提供 gRPC 和 RESTful API 来操作 Bytebase 的各个方面。

@@ -1,11 +1,9 @@
 ## 默认账户信息
 
-```
-后端地址：`/#/admin`
-后台密码：`FileCodeBox2023`
-```
+后端地址: `/#/admin`
+默认密码: `FileCodeBox2023`
 
-# FileCodeBox
+## 产品介绍
 
 文件快递柜-匿名口令分享文本，文件，像拿快递一样取文件（FileCodeBox - File Express Cabinet - Anonymous Passcode Sharing Text, Files, Like Taking Express Delivery for Files）
 

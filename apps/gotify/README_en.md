@@ -1,7 +1,9 @@
-# Gotify
+## Introduction
+
 **Gotify** is a simple server for sending and receiving messages (real-time via WebSocket).
 
-## Features:
+## Features
+
 - Send messages via REST-API
 - Receive messages via WebSocket
 - Manage users, clients, and applications

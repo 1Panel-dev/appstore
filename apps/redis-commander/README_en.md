@@ -1,7 +1,8 @@
-# Redis Commander
+## Introduction
+
 Redis Commander is a graphical user interface tool for managing and monitoring Redis databases. It provides numerous features to simplify the operation and maintenance of Redis databases.
 
-## Key Features:
+## Features
 - **Multi-Database Support**: Manage multiple Redis database instances, easily switch between them, and perform operations.
 - **Data Browsing and Editing**: Browse key-value pairs in Redis databases and directly edit data in the interface, including strings, hash tables, lists, sets, and sorted sets.
 - **Key Search**: Quickly search for Redis keys to locate specific data items.

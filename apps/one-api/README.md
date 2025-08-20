@@ -1,17 +1,13 @@
-# 使用说明
+## 默认账户密码
 
-- 默认账户密码
+用户名: `root`
+密码: `123456`
 
-```
-username：root
-password：123456
-```
-
-# One API
+## 产品介绍
 
 **One API** 是一个通过标准的 OpenAI API 格式访问所有的大模型，开箱即用。
 
-## 主要功能:
+## 主要功能
 
 - 支持多种大模型：
     + [x] [OpenAI ChatGPT 系列模型](https://platform.openai.com/docs/guides/gpt/chat-completions-api)（支持 [Azure OpenAI API](https://learn.microsoft.com/en-us/azure/ai-services/openai/reference)）

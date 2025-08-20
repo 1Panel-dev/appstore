@@ -1,8 +1,8 @@
-# Adminer
+## Introduction
 
-Adminer is a lightweight database management tool that allows users to manage various types of databases through a simple web interface, including MySQL, PostgreSQL, SQLite, and more.
+**Adminer** is a lightweight database management tool that allows users to manage various types of databases through a simple web interface, including MySQL, PostgreSQL, SQLite, and more.
 
-## Main Features:
+## Features
 
 - **Cross-Database Support**: Adminer supports multiple database systems, enabling you to manage different types of databases under a unified interface.
 - **Simple and Easy to Use**: Adminer features an intuitive user interface, requiring no complex installation or configuration process, allowing for quick startup.

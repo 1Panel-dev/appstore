@@ -1,8 +1,8 @@
-# phpMyAdmin
+## Introduction
 
-phpMyAdmin is an open-source, web-based MySQL database management tool that allows users to manage MySQL databases through a web browser.
+**phpMyAdmin** is an open-source, web-based MySQL database management tool that allows users to manage MySQL databases through a web browser.
 
-## Main Features:
+## Features
 
 ### Database Management
 

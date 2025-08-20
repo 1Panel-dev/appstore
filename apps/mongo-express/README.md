@@ -1,8 +1,8 @@
-# mongo-express
+## 产品介绍
 
 **mongo-express** 是一款使用 Node.js、Express 和 Bootstrap 5 编写的基于 Web 的 MongoDB 管理界面。
 
-## 主要功能：
+## 主要功能
 
 - 连接到多个数据库
 - 查看/添加/删除数据库

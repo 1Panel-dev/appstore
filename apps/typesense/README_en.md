@@ -1,8 +1,8 @@
-# Typesense
+## Introduction
 
 **Typesense** is a fast, typo-tolerant search engine for building delightful search experiences.
 
-## Features:
+## Features
 
 - **Typo Tolerance:** Handles typographical errors elegantly, out-of-the-box.
 - **Simple and Delightful:** Simple to set-up, integrate with, operate and scale.

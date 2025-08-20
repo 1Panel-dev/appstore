@@ -1,4 +1,5 @@
 ## 使用说明
+
 1. 在 https://huggingface.co/ 注册账号并获取模型权限创建 token 
 2. 机器上有 Nvidia GPU
 3. 修改 /etc/docker/daemon.json 并增加
@@ -13,8 +14,9 @@
 4. 安装 nvidia-container-runtime 和 nvidia-docker2 组件
 
 
-## About
-vLLM is a fast and easy-to-use library for LLM inference and serving.
+## 产品介绍
+
+**vLLM** is a fast and easy-to-use library for LLM inference and serving.
 
 vLLM is fast with:
 

@@ -1,8 +1,8 @@
-# Synapse
+## 产品介绍
 
-Synapse 是由 Matrix.org 基金会编写和维护的开源Matrix家庭服务器。
+**Synapse** 是由 Matrix.org 基金会编写和维护的开源Matrix家庭服务器。
 
-## 生成配置文件
+## 使用说明
 
 - 创建前需要使用终端运行以下命令创建依赖配置文件，需要按需修改参数 `my.matrix.host`
 
@@ -22,9 +22,9 @@ docker run -it --rm \
 
 > 配置文件默认存放路径是在 `synapse-data` 存储卷里，`/var/lib/docker/volumes/synapse-data/_data`
 
-## 创建应用
+### 创建应用
 
-## 创建用户
+### 创建用户
 
 - 创建管理员账户
 
@@ -44,6 +44,6 @@ register_new_matrix_user  http://localhost:8008 -c /data/homeserver.yaml   --no-
 register_new_matrix_user http://localhost:8008 -c /data/homeserver.yaml --help
 ```
 
-## 提示
+### 提示
 
 所有数据存放在 `synapse-data` 存储卷里，删除应用时，假如需要完全清除数据，还需要将 `synapse-data` 存储卷删除。

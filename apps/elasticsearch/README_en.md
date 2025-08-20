@@ -1,32 +1,42 @@
-# Default Account
-- Default Account: elastic
+## Default Account
 
-# Elasticsearch
+Account: `elastic`
+
+## Introduction
+
 **Elasticsearch** is a distributed RESTful search engine optimized for speed and relevance at production scale workloads. You can use Elasticsearch to perform real-time search applications on massive datasets.
 
-# Key Features:
+## Features
 
-## Full-Text Search
-   - Supports full-text search and queries, enabling quick discovery of relevant documents in large datasets.
-   - Utilizes techniques like tokenization and stemming for efficient text search.
+### Full-Text Search
 
-## Distributed Performance
-   - Horizontally scalable, easily distributing data across multiple nodes for high-performance data storage and retrieval.
+- Supports full-text search and queries, enabling quick discovery of relevant documents in large datasets.
+- Utilizes techniques like tokenization and stemming for efficient text search.
 
-## Real-Time Data
-   - Supports real-time indexing and searching, quickly responding to additions, updates, and deletions of data.
+### Distributed Performance
 
-## Support for Multiple Data Types
-   - Handles structured, semi-structured, and unstructured data, such as text and geospatial data.
+- Horizontally scalable, easily distributing data across multiple nodes for high-performance data storage and retrieval.
 
-## Powerful Aggregation Analysis
-   - Offers rich aggregation capabilities for summarizing, statistics, and analyzing data.
+### Real-Time Data
 
-## RESTful API
-   - Interact with Elasticsearch using simple HTTP requests to perform indexing, searching, and management operations.
+- Supports real-time indexing and searching, quickly responding to additions, updates, and deletions of data.
 
-## Flexible Plugins and Ecosystem
-   - Features a rich plugin ecosystem to extend its functionality and meet diverse requirements.
+### Support for Multiple Data Types
 
-## Visualization Tools
-   - Includes various visualization tools and dashboards, such as Kibana, for displaying and analyzing data in Elasticsearch.
+- Handles structured, semi-structured, and unstructured data, such as text and geospatial data.
+
+### Powerful Aggregation Analysis
+
+- Offers rich aggregation capabilities for summarizing, statistics, and analyzing data.
+
+### RESTful API
+
+- Interact with Elasticsearch using simple HTTP requests to perform indexing, searching, and management operations.
+
+### Flexible Plugins and Ecosystem
+
+- Features a rich plugin ecosystem to extend its functionality and meet diverse requirements.
+
+### Visualization Tools
+
+- Includes various visualization tools and dashboards, such as Kibana, for displaying and analyzing data in Elasticsearch.

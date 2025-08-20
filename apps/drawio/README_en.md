@@ -1,8 +1,8 @@
-# Draw.io
+## Introduction
 
 **Draw.io** is a popular online diagramming tool for creating various charts and diagrams, including flowcharts, organizational charts, network diagrams, mind maps, and more.
 
-## Main Features:
+## Features
 
 - **Variety of Diagram Types**: Provides a wide range of pre-defined diagram types, making it easy to create different types of visuals.
 - **Online Editing**: Edit diagrams directly in your browser without the need to install additional software.

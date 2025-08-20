@@ -1,8 +1,8 @@
-# Gitea
+## Introduction
 
 **Gitea** is a next-generation code hosting platform that combines Git-based core code hosting capabilities with DevSecOps features, providing software developers with a GitHub-like user experience while supporting private deployment.
 
-## Advantages:
+## Advantages
 
 - **Ease of Use**: Low barrier to entry with quick online setup and installation, offering an excellent user experience.
 - **Outstanding Performance**: Built with Go, ensuring minimal resource usage and fast execution.

@@ -1,7 +1,7 @@
-## 设置管理员
+## 使用说明
 
-- 1. 注册账户
-- 2. 进入容器执行以下命令
+1. 注册账户
+2. 进入容器执行以下命令
 
 ```shell
 python ./chrole.py your@email.address admin
@@ -9,9 +9,9 @@ python ./chrole.py your@email.address admin
 
 > 获得完整管理员权限，需要先退出再登录系统。
 
-## QianDao
+## 产品介绍
 
-QD 是 一个 基于 HAR 编辑器和 Tornado 服务端的 HTTP 定时任务自动执行 Web 框架。
+**QD** 是 一个 基于 HAR 编辑器和 Tornado 服务端的 HTTP 定时任务自动执行 Web 框架。
 
 ## 特性
 

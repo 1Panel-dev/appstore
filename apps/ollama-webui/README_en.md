@@ -1,8 +1,8 @@
-# Open WebUI
+## Introduction
 
 **Open WebUI** is a user-friendly WebUI for LLM users, supporting LLM runtime programs such as Ollama and OpenAI compatible APIs.
 
-## Main Features:
+## Features
 
 - **Intuitive Interface**: Our chat interface is inspired by ChatGPT, ensuring a user-friendly experience.
 - **Responsive Design**: Enjoy a seamless experience on both desktop and mobile devices.

@@ -1,11 +1,14 @@
-# Glance
-**Glance** is a self-hosted dashboard that consolidates all your feeds into one interface, allowing you to view everything at a glance.
+## Instructions
 
-## Description
 After installation, a default sample configuration file is included, containing examples of various widgets. You can modify the configuration file to add or remove widgets based on your needs.
 For detailed configuration instructions, refer to the [Configuration Guide](https://github.com/glanceapp/glance/blob/main/docs/configuration.md) and [Preconfigured Pages](https://github.com/glanceapp/glance/blob/main/docs/preconfigured-pages.md).
 
-## Key Features:
+## Introduction
+
+**Glance** is a self-hosted dashboard that consolidates all your feeds into one interface, allowing you to view everything at a glance.
+
+## Features
+
 - **Diverse Widgets**: Glance offers a variety of widgets, including RSS feeds, Subreddit posts, weather, bookmarks, Hacker News, Lobsters, the latest YouTube videos from specific channels, clocks, calendars, stocks, iframes, Twitch channels and top games, GitHub releases, repository overviews, website monitoring, search boxes, and more.
 - **Theming**: Glance supports theming, allowing users to customize the dashboard's appearance according to personal preferences.
 - **Mobile Optimization**: Glance is optimized for mobile devices, providing a great user experience on both phones and tablets.
