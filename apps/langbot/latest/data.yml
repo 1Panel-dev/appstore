@@ -1,0 +1,13 @@
+additionalProperties:
+    formFields:
+        - default: 5300
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP
+          label:
+            en: WebUI Port
+            zh: WebUI 端口
+            zh-Hant: WebUI 端口
+            ja: WebUI ポート
+          required: true
+          rule: paramPort
+          type: number
