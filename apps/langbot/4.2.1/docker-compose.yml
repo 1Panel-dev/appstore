@@ -1,22 +1,20 @@
-version: "3"
 services:
   langbot:
-    image: rockchin/langbot:latest
+    image: rockchin/langbot:v4.2.1
     container_name: ${CONTAINER_NAME}
-    volumes:
-      - ./data:/app/data
-      - ./plugins:/app/plugins
     restart: on-failure
     networks:
       - 1panel-network
     ports:
       - ${PANEL_APP_PORT_HTTP}:5300
-      - "2280-2290:2280-2290"
+      - ${PANEL_APP_PORT_ONEBOT}:2280-2290
     environment:
-      - TZ=Asia/Shanghai
+      - TZ=${TIME_ZONE}
+    volumes:
+      - ./data/data:/app/data
+      - ./data/plugins:/app/plugins
     labels:
       createdBy: "Apps"
-
 networks:
   1panel-network:
     external: true

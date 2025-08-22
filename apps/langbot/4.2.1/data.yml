@@ -1,0 +1,51 @@
+additionalProperties:
+  formFields:
+    - default: 5300
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        en: Port
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh-Hant: 埠
+        zh: 端口
+    - default: 2280-2290
+      edit: true
+      envKey: PANEL_APP_PORT_ONEBOT
+      labelEn: OneBot protocol port range (10 consecutive ports)
+      labelZh: OneBot 协议端口范围（需连续开放 10 个端口）
+      required: true
+      type: text
+      label:
+        en: OneBot protocol port range (10 consecutive ports)
+        ja: OneBotプロトコルポート範囲（10の連続ポート）
+        ms: Julat port protokol OneBot（10 port berturut-turut）
+        pt-br: Faixa de porta do protocolo OneBot（10 portas consecutivas）
+        ru: Диапазон портов протокола OneBot（10 последовательных портов）
+        ko: OneBot 프로토콜 포트 범위（10개의 연속 포트）
+        zh-Hant: OneBot 協議埠範圍（連續 10 個埠）
+        zh: OneBot 协议端口范围（需连续开放 10 个端口）
+    - default: Asia/Shanghai
+      edit: true
+      envKey: TIME_ZONE
+      labelEn: Time zone
+      labelZh: 时区
+      label:
+        en: Time zone
+        ja: タイムゾーン
+        ms: Zon masa
+        pt-br: Fuso horário
+        ru: Часовой пояс
+        ko: 시간대
+        zh: 时区
+        zh-Hant: 時區
+      required: true
+      type: text
