@@ -1,6 +1,6 @@
 services:
   zfile:
-    image: zhaojun1998/zfile:4.3.3
+    image: zhaojun1998/zfile:4.4.0
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
