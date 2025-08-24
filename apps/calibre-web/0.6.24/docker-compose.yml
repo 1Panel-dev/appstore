@@ -1,6 +1,6 @@
 services:
   calibre-web:
-    image: linuxserver/calibre-web:0.6.24
+    image: linuxserver/calibre-web:0.6.25
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
