@@ -1,7 +1,7 @@
 ## Default Credentials
 
 username: `admin`
-password: `admin`
+password: Get from application logs after installation
 
 ## Introduction
 
