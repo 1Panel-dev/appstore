@@ -1,0 +1,32 @@
+name: MongoNuxt
+tags:
+    - 开发工具
+title: 一个基于 Nuxt 3 和 Nuxt UI 构建的现代化 MongoDB 数据库管理工具。
+description: 一个基于 Nuxt 3 和 Nuxt UI 构建的现代化 MongoDB 数据库管理工具。
+additionalProperties:
+    key: MongoNuxt
+    name: MongoNuxt
+    tags:
+        - DevTool
+        - Tool
+    shortDescZh: 一个基于 Nuxt 3 和 Nuxt UI 构建的现代化 MongoDB 数据库管理工具。
+    shortDescEn: Web-based MongoDB admin interface
+    description:
+        en: A modern MongoDB database management tool built on Nuxt 3 and Nuxt UI.
+        ja: Nuxt 3 と Nuxt UI 上に構築された最新の MongoDB データベース管理ツール。
+        ms: Alat pengurusan pangkalan data MongoDB moden yang dibina pada Nuxt 3 dan Nuxt UI.
+        pt-br: Uma ferramenta moderna de gerenciamento de banco de dados MongoDB construída no Nuxt 3 e no Nuxt UI.
+        ru: Современный инструмент управления базами данных MongoDB, созданный на основе Nuxt 3 и Nuxt UI.
+        ko: Nuxt 3와 Nuxt UI를 기반으로 구축된 최신 MongoDB 데이터베이스 관리 도구입니다.
+        zh-hant: 一個基於 Nuxt 3 和 Nuxt UI 建構的現代化 MongoDB 資料庫管理工具。
+        zh: 一个基于 Nuxt 3 和 Nuxt UI 构建的现代化 MongoDB 数据库管理工具。
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://github.com/3DMXM/MongoNuxt
+    github: https://github.com/3DMXM/MongoNuxt
+    document: https://github.com/3DMXM/MongoNuxt
+    architectures:
+      - amd64
+      - arm64

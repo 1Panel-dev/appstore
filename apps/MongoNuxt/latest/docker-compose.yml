@@ -1,0 +1,25 @@
+services:
+  # Nuxt.js 应用
+  mongonuxt:
+    image: terry13143/mongo-nuxt:latest
+    restart: unless-stopped
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:4659
+    environment:
+      - NODE_ENV=production
+      - NUXT_HOST=0.0.0.0
+      - NUXT_PORT=4659
+    networks:
+      - nuxt-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:4659/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    # command: yarn run server
+
+# 网络
+networks:
+  1panel-network:
+    external: true
