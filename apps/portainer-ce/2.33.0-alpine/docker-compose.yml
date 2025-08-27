@@ -10,7 +10,7 @@ services:
     volumes:
       - ./data:/data
       - /var/run/docker.sock:/var/run/docker.sock
-    image: portainer/portainer-ce:2.33.0-alpine
+    image: portainer/portainer-ce:2.33.1-alpine
     labels:
       createdBy: "Apps"
 networks:
