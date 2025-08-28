@@ -22,7 +22,7 @@ additionalProperties:
   type: website
   crossVersionUpdate: true
   limit: 0
-  recommend: 22
+  recommend: 53
   website: https://dataease.cn/sqlbot/
   github: https://github.com/dataease/SQLBot
   document: https://dataease.cn/sqlbot/

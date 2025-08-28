@@ -22,7 +22,7 @@ additionalProperties:
   type: website
   crossVersionUpdate: false
   limit: 1
-  recommend: 50
+  recommend: 45
   website: https://www.jumpserver.org
   github: https://github.com/jumpserver/jumpserver
   document: https://docs.jumpserver.org
