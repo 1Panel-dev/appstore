@@ -1,6 +1,6 @@
 services:
   showdoc:
-    image: star7th/showdoc:v3.5.0
+    image: star7th/showdoc:v3.5.1
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
