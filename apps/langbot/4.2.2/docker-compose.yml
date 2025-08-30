@@ -1,6 +1,6 @@
 services:
   langbot:
-    image: rockchin/langbot:v4.2.1
+    image: rockchin/langbot:v4.2.2
     container_name: ${CONTAINER_NAME}
     restart: on-failure
     networks:
