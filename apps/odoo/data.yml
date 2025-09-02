@@ -1,0 +1,32 @@
+name: Odoo
+tags:
+  - CRM
+title: 企业一站式管理专家
+description: 企业一站式管理专家
+additionalProperties:
+  key: odoo
+  name: Odoo
+  tags:
+    - CRM
+  shortDescZh: 企业一站式管理专家
+  shortDescEn: Open Source Apps To Grow Your Business
+  description:
+    en: Open Source Apps To Grow Your Business
+    ja: オープンソースアプリでビジネスを成長させる
+    ms: Aplikasi Sumber Terbuka untuk Mengembangkan Perniagaan Anda
+    pt-br: Aplicativos de Código Aberto para Fazer Seu Negócio Crescer
+    ru: Открытые приложения для развития вашего бизнеса
+    ko: 비즈니스를 성장시키는 오픈 소스 앱
+    zh-hant: 企業一站式管理專家
+    zh: 企业一站式管理专家
+  type: website
+  crossVersionUpdate: false
+  limit: 0
+  recommend: 0
+  website: https://www.odoo.com/
+  github: https://github.com/odoo/odoo
+  document: https://www.odoo.com/documentation/
+  architectures:
+    - amd64
+    - arm64
+    - ppc64le
