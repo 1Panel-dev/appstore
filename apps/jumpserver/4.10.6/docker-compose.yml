@@ -1,6 +1,6 @@
 services:
   jumpserver:
-    image: jumpserver/jms_all:v4.10.5
+    image: jumpserver/jms_all:v4.10.6
     container_name: ${CONTAINER_NAME}
     privileged: true
     restart: always
