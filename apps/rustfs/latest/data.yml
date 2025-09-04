@@ -1,0 +1,80 @@
+additionalProperties:
+  formFields:
+    - default: 9000
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        en: Port
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh-Hant: 埠
+        zh: 端口
+    - default: rustfsadmin
+      envKey: RUSTFS_ACCESS_KEY
+      labelEn: User
+      labelZh: 用户
+      required: true
+      rule: paramCommon
+      type: text
+      label:
+        en: User
+        ja: ユーザー
+        ms: Pengguna
+        pt-br: Usuário
+        ru: Пользователь
+        ko: 사용자
+        zh-Hant: 用戶
+        zh: 用户
+    - default: rustfsadmin
+      envKey: RUSTFS_SECRET_KEY
+      labelEn: Password
+      labelZh: 密码
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+      label:
+        en: Password
+        ja: パスワード
+        ms: Kata laluan
+        pt-br: Senha
+        ru: Пароль
+        ko: 비밀번호
+        zh-Hant: 密碼
+        zh: 密码
+    - default: "true"
+      envKey: RUSTFS_CONSOLE_ENABLE
+      labelEn: Enable Console
+      labelZh: 启用控制台
+      required: true
+      type: select
+      values:
+        - label: "开启 (ON)"
+          value: "true"
+        - label: "关闭 (OFF)"
+          value: "false"
+      label:
+        en: Enable Console
+        ja: Console を有効にする
+        ms: Aktifkan Console
+        pt-br: Habilitar Console
+        ru: Включить Console
+        ko: Console 활성화
+        zh-Hant: 啟用 Console
+        zh: 启用管控台
+      description:
+        en: "When enabled, operations can be performed via Web UI"
+        ja: "有効にすると、Web UI を通じて操作できます"
+        ms: "Apabila dihidupkan, operasi boleh dilakukan melalui Web UI"
+        pt-br: "Quando ativado, as operações podem ser realizadas via Web UI"
+        ru: "При включении операции можно выполнять через веб-интерфейс"
+        ko: "활성화하면 Web UI를 통해 작업을 수행할 수 있습니다"
+        zh: "开启后可以通过 Web UI 操作"
+        zh-Hant: "開啟後可以透過 Web UI 操作"
