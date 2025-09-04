@@ -1,40 +1,35 @@
 services:
   sqlbot:
-    image: dataease/sqlbot:v1.0.1
+    image: dataease/sqlbot:v1.1.0
     container_name: ${CONTAINER_NAME}
     restart: always
     ports:
       - ${PANEL_APP_PORT_HTTP}:8000
       - ${PANEL_APP_PORT_MCP}:8001
     environment:
-      # Database configuration
-      POSTGRES_SERVER: ${PANEL_DB_HOST}
-      POSTGRES_PORT: ${PANEL_DB_PORT}
-      POSTGRES_DB: ${PANEL_DB_NAME}
-      POSTGRES_USER: ${PANEL_DB_USER}
-      POSTGRES_PASSWORD: ${PANEL_DB_USER_PASSWORD}
+      # Database configuration - by default uses an all-in-one containerized database
+      POSTGRES_SERVER: localhost
+      POSTGRES_PORT: 5432
+      POSTGRES_DB: sqlbot
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: Password123@pg
       # Project basic settings
       PROJECT_NAME: "SQLBot"
-      DEFAULT_PWD: "SQLBot@123456"
+      DEFAULT_PWD: ${SQLB_DEFAULT_PWD}
       # MCP settings
-      MCP_IMAGE_PATH: /opt/sqlbot/images
-      MCP_IMAGE_HOST: http://localhost:3000
       SERVER_IMAGE_HOST: ${SERVER_IMAGE_HOST}
       # Auth & Security
-      TOKEN_KEY: "X-SQLBOT-TOKEN"
-      ASSISTANT_TOKEN_KEY: "X-SQLBOT-ASSISTANT-TOKEN"
       SECRET_KEY: y5txe1mRmS_JpOrUzFzHEu-kIQn3lf7ll0AOv9DQh0s
       # CORS settings
       BACKEND_CORS_ORIGINS: "http://localhost,http://localhost:5173,https://localhost,https://localhost:5173"
       # Logging
       LOG_LEVEL: "INFO"
-      LOG_DIR: "/opt/sqlbot/logs"
-      LOG_FORMAT: "%(asctime)s - %(name)s - %(levelname)s:%(lineno)d - %(message)s"
       SQL_DEBUG: False
     volumes:
-      - ./data/excel:/opt/sqlbot/data/excel
-      - ./data/images:/opt/sqlbot/images
-      - ./data/logs:/opt/sqlbot/logs
+      - ./data/sqlbot/excel:/opt/sqlbot/data/excel
+      - ./data/sqlbot/images:/opt/sqlbot/images
+      - ./data/sqlbot/logs:/opt/sqlbot/logs
+      - ./data/postgresql:/var/lib/postgresql/data
     networks:
       - 1panel-network
     labels:
