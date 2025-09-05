@@ -1,0 +1,30 @@
+name: RustFS
+tags:
+    - 中间件
+title: 分布式存储系统
+description: 分布式存储系统
+additionalProperties:
+    key: rustfs
+    name: RustFS
+    tags:
+      - Middleware
+    shortDescZh: 分布式存储系统
+    shortDescEn: Distributed Storage System
+    description:
+      en: Distributed Storage System
+      ja: 分散型ストレージシステム
+      ms: Sistem Storan Teragih
+      pt-br: Sistema de Armazenamento Distribuído
+      ru: Распределенная система хранения данных
+      ko: 분산 스토리지 시스템
+      zh-Hant: 分散式儲存系統
+      zh: 分布式存储系统
+    type: website
+    crossVersionUpdate: true
+    website: https://rustfs.com
+    github: https://github.com/rustfs/rustfs
+    document: https://docs.rustfs.com/zh/
+    memoryRequired: 1024
+    architectures:
+      - arm64
+      - amd64
