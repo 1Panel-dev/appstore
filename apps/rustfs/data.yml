@@ -21,9 +21,11 @@ additionalProperties:
       zh: 分布式存储系统
     type: website
     crossVersionUpdate: true
+    limit: 0
+    recommend: 0
     website: https://rustfs.com
     github: https://github.com/rustfs/rustfs
-    document: https://docs.rustfs.com/zh/
+    document: https://docs.rustfs.com
     memoryRequired: 1024
     architectures:
       - arm64
