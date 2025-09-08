@@ -1,6 +1,6 @@
 services:  
   adminer:  
-    image: adminer:5.3.0-standalone 
+    image: adminer:5.4.0-standalone 
     container_name: ${CONTAINER_NAME}
     restart: always  
     networks:  
