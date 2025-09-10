@@ -1,6 +1,6 @@
 services:
   management_panel:
-    image: xiaozhu674/gameservermanager:3.7.9
+    image: xiaozhu674/gameservermanager:3.8.0
     container_name: GSManager3
     restart: unless-stopped
     networks:
