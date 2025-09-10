@@ -1,0 +1,50 @@
+services:
+  nekro_qdrant:
+    image: qdrant/qdrant
+    container_name: ${CONTAINER_NAME}-qdrant
+    environment:
+      - QDRANT__SERVICE__API_KEY=nekro-agent
+    volumes:
+      - ./data/qdrant:/qdrant/storage:z
+    networks:
+      - nekro-agent-network
+    restart: unless-stopped
+    labels:
+      createdBy: Apps
+
+  nekro_agent:
+    image: kromiose/nekro-agent:2.0.2
+    container_name: ${CONTAINER_NAME}
+    environment:
+      - NEKRO_DATA_DIR=/mnt/nekro-agent
+      - NEKRO_EXPOSE_PORT=${PANEL_APP_PORT_HTTP}
+      - NEKRO_POSTGRES_HOST=${PANEL_DB_HOST}
+      - NEKRO_POSTGRES_PORT=${PANEL_DB_PORT}
+      - NEKRO_POSTGRES_USER=${PANEL_DB_USER}
+      - NEKRO_POSTGRES_PASSWORD=${PANEL_DB_USER_PASSWORD}
+      - NEKRO_POSTGRES_DATABASE=${PANEL_DB_NAME}
+      - NEKRO_RUN_IN_DOCKER=true
+      - NEKRO_ADMIN_PASSWORD=${NEKRO_ADMIN_PASSWORD}
+      - ONEBOT_ACCESS_TOKEN=${ONEBOT_ACCESS_TOKEN}
+      - NEKRO_QDRANT_URL=http://${CONTAINER_NAME}-qdrant:6333
+      - NEKRO_QDRANT_API_KEY=nekro-agent
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./data:/mnt/nekro-agent:rw
+    depends_on:
+      - nekro_qdrant
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8021
+    networks:
+      - nekro-agent-network
+      - 1panel-network
+    restart: unless-stopped
+    labels:
+      createdBy: Apps
+
+networks:
+  nekro-agent-network:
+    name: ${CONTAINER_NAME}-network
+    driver: bridge
+  1panel-network:
+    external: true

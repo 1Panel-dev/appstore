@@ -1,0 +1,22 @@
+name: Nekro Agent
+tags:
+  - AI
+title: 新一代智能中枢框架，提供安全、高效、优雅的智能交互体验
+description: 新一代智能中枢框架，提供安全、高效、优雅的智能交互体验
+additionalProperties:
+  key: nekro-agent
+  name: Nekro Agent
+  tags:
+    - AI
+  shortDescZh: 新一代智能中枢框架，提供安全、高效、优雅的智能交互体验
+  shortDescEn: The next-generation intelligent central framework provides a safe, efficient, and elegant intelligent interactive experience
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://nekro.ai/products/nekro-agent
+  github: https://github.com/KroMiose/nekro-agent
+  document: https://doc.nekro.ai/
+  architectures:
+    - amd64
+    - arm64

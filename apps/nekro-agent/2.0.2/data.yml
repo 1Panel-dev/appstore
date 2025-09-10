@@ -1,0 +1,60 @@
+additionalProperties:
+  formFields:
+    - envKey: PANEL_APP_PORT_HTTP
+      labelZh: WebUI 端口
+      labelEn: Application Port
+      type: number
+      rule: paramPort
+      required: true
+      default: 8021
+
+    - envKey: NEKRO_ADMIN_PASSWORD
+      labelZh: WebUI 管理员密码
+      labelEn: WebUI Admin Password
+      type: password
+      rule: paramComplexity
+      required: true
+      default: nekro_agent
+      random: true
+
+    - envKey: ONEBOT_ACCESS_TOKEN
+      labelZh: OneBot V11 适配器 AccessToken
+      labelEn: OneBot V11 Adapter AccessToken
+      required: true
+      default: nekro_agent
+      random: true
+      rule: paramComplexity
+      type: password
+
+    - envKey: PANEL_DB_HOST
+      labelZh: PostgreSQL 服务
+      labelEn: PostgreSQL Database Service
+      type: service
+      key: postgresql
+      required: true
+
+    - envKey: PANEL_DB_NAME
+      labelZh: PostgreSQL 数据库名
+      labelEn: PostgreSQL Database Name
+      type: text
+      rule: paramCommon
+      required: true
+      default: nekro_agent
+      random: true
+
+    - envKey: PANEL_DB_USER
+      labelZh: PostgreSQL 用户
+      labelEn: PostgreSQL User
+      type: text
+      rule: paramCommon
+      required: true
+      default: nekro_agent
+      random: true
+
+    - envKey: PANEL_DB_USER_PASSWORD
+      labelZh: PostgreSQL 用户密码
+      labelEn: PostgreSQL User Password
+      type: password
+      required: true
+      default: nekro_agent
+      random: true
