@@ -1,24 +1,24 @@
 name: Cordys CRM
 tags:
   - CRM
-title: 开源 AI CRM 系统，集信息化、数字化、智能化于一体，是 Salesforce CRM 的开源替代
-description: 开源 AI CRM 系统，集信息化、数字化、智能化于一体，是 Salesforce CRM 的开源替代
+title: 开源 AI CRM 系统，是 Salesforce CRM 的开源替代
+description: 开源 AI CRM 系统，是 Salesforce CRM 的开源替代
 additionalProperties:
     key: cordys-crm
     name: Cordys CRM
     tags:
         - CRM
-    shortDescZh: 开源 AI CRM 系统，集信息化、数字化、智能化于一体，是 Salesforce CRM 的开源替代
-    shortDescEn: Open-source AI CRM integrating digital and intelligent features, a Salesforce CRM alternative
+    shortDescZh: 开源 AI CRM 系统，是 Salesforce CRM 的开源替代
+    shortDescEn: An open-source AI-powered CRM system that serves as an alternative to Salesforce CRM
     description:
-        en: Open-source AI CRM integrating digital and intelligent features, a Salesforce CRM alternative
-        ja: オープンソースのAI CRMは、デジタルおよびインテリジェントな機能を統合し、Salesforce CRMの代替品です
-        ms: CRM AI sumber terbuka yang mengintegrasikan ciri digital dan pintar, alternatif Salesforce CRM
-        pt-br: CRM AI de código aberto que integra recursos digitais e inteligentes, uma alternativa ao Salesforce CRM
-        ru: Открытый AI CRM, интегрирующий цифровые и интеллектуальные функции, альтернатива Salesforce CRM
-        ko: 디지털 및 지능형 기능을 통합한 오픈 소스 AI CRM, Salesforce CRM 대안
-        zh-Hant: 開源 AI CRM 系統，集信息化、數字化、智能化於一體，是 Salesforce CRM 的開源替代
-        zh: 开源 AI CRM 系统，集信息化、数字化、智能化于一体，是 Salesforce CRM 的开源替代
+        en: An open-source AI-powered CRM system that serves as an alternative to Salesforce CRM
+        ja: Salesforce CRMの代替となるオープンソースのAI CRMシステム
+        ms: Sistem CRM berkuasa AI sumber terbuka yang berfungsi sebagai alternatif kepada Salesforce CRM
+        pt-br: Um sistema CRM alimentado por IA de código aberto que serve como uma alternativa ao Salesforce CRM
+        ru: Открытая CRM-система на базе ИИ, которая является альтернативой Salesforce CRM
+        ko: Salesforce CRM의 대안으로 제공되는 오픈 소스 AI 기반 CRM 시스템
+        zh-Hant: 開源 AI CRM 系統，是 Salesforce CRM 的開源替代
+        zh: 开源 AI CRM 系统，是 Salesforce CRM 的开源替代
     type: website
     crossVersionUpdate: false
     limit: 0
