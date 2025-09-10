@@ -1,6 +1,6 @@
 services:
   stalwart-mail:
-    image: stalwartlabs/stalwart:v0.13.2-alpine
+    image: stalwartlabs/stalwart:v0.13.3-alpine
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
