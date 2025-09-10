@@ -1,6 +1,6 @@
 services:
   uuwaf:
-    image: uusec/waf:7.0.3
+    image: uusec/waf:7.0.5
     ulimits:
       nproc: 65535
       nofile:
