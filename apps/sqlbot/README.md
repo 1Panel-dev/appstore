@@ -1,3 +1,12 @@
+## 默认账户密码
+
+用户名: `admin`
+密码: `SQLBot@123456`
+
+**扫码加入交流群**
+
+<img alt="扫码加入交流群" src="https://resource-fit2cloud-com.oss-cn-hangzhou.aliyuncs.com/sqlbot/contact_me_qr.png" width="150" height="150">
+
 ## 产品介绍
 
 **SQLBot** 是一款基于大模型和 RAG 的智能问数系统。
