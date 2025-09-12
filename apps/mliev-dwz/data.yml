@@ -1,8 +1,8 @@
 name: 木雷短网址
 tags:
-  - 工具
+  - 实用工具
 title: 高性能的企业级短链接服务平台
-description: 木雷坞开源的一个功能完善、高性能的企业级短链接服务平台，支持多域名、AB测试、用户管理、实时统计等功能。
+description: 高性能的企业级短链接服务平台
 additionalProperties:
   key: mliev-dwz
   name: 木雷短网址
@@ -18,12 +18,12 @@ additionalProperties:
     ru: Высокопроизводительная корпоративная платформа коротких ссылок
     ko: 고성능 엔터프라이즈 단축 링크 서비스 플랫폼
     zh-hant: 高效能企業級短網址服務平台
-    zh: 高性能企业级短链接服务平台
+    zh: 高性能的企业级短链接服务平台
   type: tool
   crossVersionUpdate: true
   limit: 1
   recommend: 0
-  website: https://www.mliev.com/docs/dwz
+  website: https://www.mliev.com/
   github: https://github.com/muleiwu/dwz-server
   document: https://www.mliev.com/docs/dwz
   memoryRequired: 1024

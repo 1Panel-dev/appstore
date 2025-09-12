@@ -1,7 +1,3 @@
-networks:
-  1panel-network:
-    external: true
-
 services:
   dwz-admin:
     container_name: ${CONTAINER_NAME}-admin
@@ -15,7 +11,7 @@ services:
       dwz-server:
         condition: service_healthy
     environment:
-      - TZ=Asia/Shanghai
+      - TZ=${TIME_ZONE}
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:80/"]
       interval: 30s
@@ -36,7 +32,7 @@ services:
     volumes:
       - "./config/:/app/config/"
     environment:
-      - TZ=Asia/Shanghai
+      - TZ=${TIME_ZONE}
       - DATABASE_DRIVER=${PANEL_DB_TYPE}
       - DATABASE_HOST=${PANEL_DB_HOST}
       - DATABASE_PORT=${PANEL_DB_PORT}
@@ -51,3 +47,7 @@ services:
       - GIN_MODE=release
     labels:
       createdBy: "Apps"
+
+networks:
+  1panel-network:
+    external: true
