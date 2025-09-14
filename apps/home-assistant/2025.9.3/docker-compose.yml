@@ -8,6 +8,6 @@ services:
       - "/run/dbus:/run/dbus:ro"
     environment:
       - TZ=${TIME_ZONE}
-    image: homeassistant/home-assistant:2025.9.2
+    image: homeassistant/home-assistant:2025.9.3
     labels:  
       createdBy: "Apps"
