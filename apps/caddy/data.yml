@@ -1,0 +1,36 @@
+name: Caddy
+tags: Web 服务器
+title: 现代化的Web服务器
+description: 现代化的Web服务器，支持自动HTTPS、HTTP/2、HTTP/3等特性
+
+additionalProperties:
+  key: caddy
+  name: Caddy
+  type: tool
+  tags:
+    - Server
+  shortDescZh: 现代化的Web服务器，支持自动HTTPS
+  shortDescEn: Modern web server with automatic HTTPS
+  description:
+    zh: 现代化的Web服务器，支持自动HTTPS、HTTP/2、HTTP/3等特性
+    zh-hant: 現代化的Web伺服器，支援自動HTTPS、HTTP/2、HTTP/3等特性
+    en: Modern web server with automatic HTTPS, HTTP/2, HTTP/3 support
+    ja: 自動HTTPS、HTTP/2、HTTP/3をサポートするモダンなWebサーバー
+    ms: Pelayan web moden dengan sokongan HTTPS automatik, HTTP/2, HTTP/3
+    pt-br: Servidor web moderno com HTTPS automático, HTTP/2, HTTP/3
+    ru: Современный веб-сервер с автоматическим HTTPS, HTTP/2, HTTP/3
+    ko: 자동 HTTPS, HTTP/2, HTTP/3를 지원하는 현대적인 웹 서버
+    tr: Otomatik HTTPS, HTTP/2, HTTP/3 desteği olan modern web sunucusu
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 10
+  website: https://caddyserver.com/
+  github: https://github.com/caddyserver/caddy
+  document: https://caddyserver.com/docs/
+  architectures:
+    - amd64
+    - arm64
+    - armv7
+    - ppc64le
+    - s390x
+  gpuSupport: false
