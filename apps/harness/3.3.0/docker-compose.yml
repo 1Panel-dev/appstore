@@ -1,0 +1,18 @@
+networks:
+  1panel-network:
+    external: true
+services:
+  harness:
+    container_name: ${CONTAINER_NAME}
+    image: harness/harness:3.3.0
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:3000"
+      - "${PANEL_APP_PORT_SSH}:3022"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./data:/data
+    labels:
+      createdBy: "Apps"
