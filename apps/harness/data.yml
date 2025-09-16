@@ -1,0 +1,28 @@
+name: Harness
+tags: DevOps
+title: Harness Open Source
+description: Harness Open Source 是一个端到端的开发者平台，提供源代码管理、CI/CD 流水线、托管开发环境和工件注册表。
+additionalProperties:
+  key: harness
+  name: Harness Open Source
+  type: tool
+  tags:
+    - DevOps
+  shortDescZh: Harness Open Source 是一个端到端的开发者平台，提供源代码管理、CI/CD 流水线、托管开发环境和工件注册表。
+  shortDescEn: Harness Open Source is an end-to-end developer platform with Source Control Management, CI/CD Pipelines, Hosted Developer Environments, and Artifact Registries.
+  description:
+    zh: Harness Open Source 是一个开源的端到端开发平台，提供源代码管理、CI/CD 流水线、托管开发环境和工件注册表等功能，旨在帮助开发团队提高效率和协作。
+    zh-hant: Harness Open Source 是一個開源的端到端開發平台，提供源代碼管理、CI/CD 流水線、托管開發環境和工件註冊表等功能，旨在幫助開發團隊提高效率和協作。
+    en: Harness Open Source is an open-source end-to-end developer platform that provides features such as Source Control Management, CI/CD Pipelines, Hosted Developer Environments, and Artifact Registries, aimed at helping development teams improve efficiency and collaboration.
+    ja: Harness Open Source は、ソースコード管理、CI/CD パイプライン、ホステッド開発環境、アーティファクト レジストリなどの機能を提供するオープンソースのエンドツーエンドの開発者プラットフォームであり、開発チームの効率とコラボレーションを向上させることを目的としています。
+    ms: Harness Open Source adalah platform pengembang sumber terbuka end-to-end yang menyediakan fitur seperti Manajemen Kontrol Sumber, Pipeline CI/CD, Lingkungan Pengembang yang Dihosting, dan Registri Artefak, yang bertujuan untuk membantu tim pengembang meningkatkan efisiensi dan kolaborasi.
+    pt-br: Harness Open Source é uma plataforma de desenvolvedor de código aberto de ponta a ponta que fornece recursos como Gerenciamento de Controle de Versão, Pipelines de CI/CD, Ambientes de Desenvolvimento Hospedados e Registros de Artefatos, com o objetivo de ajudar as equipes de desenvolvimento a melhorar a eficiência e a colaboração.
+    ru: Harness Open Source - это платформа для разработчиков с открытым исходным кодом, обеспечивающая такие функции, как управление версиями исходного кода, конвейеры CI/CD, размещенные среды разработки и реестры артефактов, направленная на помощь командам разработчиков в повышении эффективности и сотрудничества.
+    ko: Harness Open Source는 소스 코드 관리, CI/CD 파이프라인, 호스팅 개발 환경 및 아티팩트 레지스트리와 같은 기능을 제공하는 오픈 소스 엔드 투 엔드 개발 플랫폼으로, 개발 팀이 효율성과 협업을 개선하는 데 도움을 주는 것을 목표로 합니다.
+    tr: Harness Open Source, kaynak kontrol yönetimi, CI/CD boru hatları, barındırılan geliştirme ortamları ve nesne kayıt defterleri gibi özellikler sunan bir açık kaynaklı uçtan uca geliştirici platformudur ve geliştirme ekiplerinin verimliliği ve işbirliğini artırmalarına yardımcı olmayı amaçlamaktadır.
+  architectures:
+    - amd64
+    - arm64
+  website: https://www.harness.io/open-source
+  github: https://github.com/harness/harness
+  document: https://developer.harness.io/docs/
