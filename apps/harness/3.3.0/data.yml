@@ -1,6 +1,7 @@
 additionalProperties:
   formFields:
-    - type: "number"
+    - default: 3000
+      type: "number"
       labelZh: "HTTP 端口"
       labelEn: "HTTP Port"
       label:
@@ -25,10 +26,10 @@ additionalProperties:
         tr: "Uygulama için HTTP erişim bağlantı noktasını ayarlayın, geçerli aralık: 1-65535"
       required: true
       envKey: "PANEL_APP_PORT_HTTP"
-      default: 3000
       edit: true
       rule: "paramPort"
-    - type: "number"
+    - default: 3022
+      type: "number"
       labelZh: "SSH 端口"
       labelEn: "SSH Port"
       label:
@@ -53,6 +54,5 @@ additionalProperties:
         tr: "Uygulama için SSH erişim bağlantı noktasını ayarlayın, geçerli aralık: 1-65535"
       required: true
       envKey: "PANEL_APP_PORT_SSH"
-      default: 3022
       edit: true
       rule: "paramPort"
