@@ -1,25 +1,28 @@
 name: Langflow
 tags: AI
-title: Langflow - LangChain 的开源 UI
-description: Langflow是一个强大的工具，用于构建和部署ai驱动的代理和工作流。
+title: 用于构建和部署 AI 驱动的智能体与工作流的强大工具
+description: 用于构建和部署 AI 驱动的智能体与工作流的强大工具
 additionalProperties:
   key: langflow
   name: Langflow
   type: tool
   tags:
     - AI
-  shortDescZh: Langflow是一个强大的工具，用于构建和部署ai驱动的代理和工作流。
-  shortDescEn: Langflow is a powerful tool for building and deploying AI-powered agents and workflows.
+  shortDescZh: 用于构建和部署 AI 驱动的智能体与工作流的强大工具
+  shortDescEn: A powerful tool for building and deploying AI-powered agents and workflows
   description:
-    zh: Langflow是一个强大的工具，用于构建和部署ai驱动的代理和工作流。
-    zh-Hant: Langflow是一個強大的工具，用於構建和部署ai驅動的代理和工作流。
-    en: Langflow is a powerful tool for building and deploying AI-powered agents and workflows.
-    ja: Langflowは、AI駆動のエージェントとワークフローを構築および展開するための強力なツールです。
-    ms: Langflow adalah alat yang kuat untuk membina dan menyebarkan ejen dan aliran kerja yang dikuasakan oleh AI.
-    pt-br: Langflow é uma ferramenta poderosa para construir e implantar agentes e fluxos de trabalho baseados em IA.
-    ru: Langflow - это мощный инструмент для создания и развертывания агентов и рабочих процессов с поддержкой ИИ.
-    ko: Langflow는 AI 기반 에이전트 및 워크플로를 구축하고 배포하기 위한 강력한 도구입니다.
-    tr: Langflow, yapay zeka destekli ajanlar ve iş akışları oluşturmak ve dağıtmak için güçlü bir araçtır.
+    en: A powerful tool for building and deploying AI-powered agents and workflows
+    ja: AI駆動のエージェントとワークフローを構築および展開するための強力なツール
+    ms: AI-berkuasa ejen dan aliran kerja yang kuat untuk membina dan menyebarkan
+    pt-br: Uma ferramenta poderosa para construir e implantar agentes e fluxos de trabalho baseados em IA
+    ru: Мощный инструмент для создания и развертывания агентов и рабочих процессов с поддержкой ИИ
+    ko: AI 기반 에이전트 및 워크플로를 구축하고 배포하기 위한 강력한 도구
+    tr: Yapay zeka destekli ajanlar ve iş akışları oluşturmak ve dağıtmak için güçlü bir araç
+    zh-Hant: 用於構建和部署 AI 驅動的智能體與工作流的強大工具
+    zh: 用于构建和部署 AI 驱动的智能体与工作流的强大工具
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
   website: https://langflow.org/
   github: https://github.com/langflow-ai/langflow
   document: https://docs.langflow.org/

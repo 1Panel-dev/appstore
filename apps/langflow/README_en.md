@@ -1,24 +1,13 @@
-## Product Introduction
+## Introduction
 
-Langflow is a visual UI tool based on LangChain, designed with react-flow to provide users with an intuitive and convenient way to experiment and build AI workflow prototypes. Through a drag-and-drop interface, users can easily create complex language model workflows without writing complex code.
+**Langflow** is a visual UI tool based on LangChain, designed with react-flow to provide users with an intuitive and convenient way to experiment and build AI workflow prototypes. Through a drag-and-drop interface, users can easily create complex language model workflows without writing complex code.
 
-## Default Account Information
+## Features
 
-Langflow does not require login credentials by default and will automatically enter the main interface on first access.
-
-## Key Features
-
-### Visual Workflow Building
-Langflow provides an intuitive drag-and-drop interface that allows users to build complex AI workflows through simple drag-and-drop operations. The system includes a rich component library with various LangChain components, data processing nodes, and output nodes that users can freely combine according to their needs.
-
-### Real-time Preview and Debugging
-During the workflow building process, users can preview the output results of each node in real-time, facilitating debugging and optimization of workflows. The system provides detailed log information to help users quickly locate and resolve issues.
-
-### Multiple Data Source Support
-Langflow supports connections to various data sources, including text files, databases, API interfaces, and more. Users can easily integrate external data into their AI workflows.
-
-### Templates and Sharing
-The system provides rich preset templates that users can use to quickly start their projects. Users can also save their created workflows as templates to share with team members.
+- **Visual Workflow Building**: Langflow provides an intuitive drag-and-drop interface that allows users to build complex AI workflows through simple drag-and-drop operations. The system includes a rich component library with various LangChain components, data processing nodes, and output nodes that users can freely combine according to their needs.
+- **Real-time Preview and Debugging**: During the workflow building process, users can preview the output results of each node in real-time, facilitating debugging and optimization of workflows. The system provides detailed log information to help users quickly locate and resolve issues.
+- **Multiple Data Source Support**: Langflow supports connections to various data sources, including text files, databases, API interfaces, and more. Users can easily integrate external data into their AI workflows.
+- **Templates and Sharing**: The system provides rich preset templates that users can use to quickly start their projects. Users can also save their created workflows as templates to share with team members.
 
 ## Configuration and Usage Instructions
 
