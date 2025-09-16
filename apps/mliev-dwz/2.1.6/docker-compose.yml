@@ -1,7 +1,7 @@
 services:
   dwz-admin:
     container_name: ${CONTAINER_NAME}-admin
-    image: docker.cnb.cool/mliev/open/dwz-admin-webui:v1.3.0
+    image: docker.cnb.cool/mliev/open/dwz-admin-webui:v1.3.1
     restart: always
     networks:
       - 1panel-network
@@ -23,7 +23,7 @@ services:
 
   dwz-server:
     container_name: dwz-server
-    image: docker.cnb.cool/mliev/open/dwz-server:v2.1.5
+    image: docker.cnb.cool/mliev/open/dwz-server:v2.1.6
     restart: always
     networks:
       - 1panel-network
