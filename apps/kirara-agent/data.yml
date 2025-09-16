@@ -1,0 +1,25 @@
+name: Kirara AI
+tags: AI
+title: 大模型 Agent 引擎
+description: 打造专属于你的 AI 聊天助手
+additionalProperties:
+  key: kirara-agent
+  name: Kirara AI
+  type: tool
+  tags:
+    - AI
+  shortDescZh: 一个大模型 Agent 引擎
+  shortDescEn: A large model agent engine
+  description:
+    zh: 一个大模型 Agent 引擎
+    zh-hant: 一個大模型 Agent 引擎
+    en: A Large Model Agent Engine
+    ja: 大規模モデルのAgentエンジン
+    ms: Enjin Agen Model Besar
+    pt-br: Um motor de agente de modelo grande
+    ru: Движок агентa для большой модели
+    ko: 대규모 모델 에이전트 엔진
+    tr: Büyük Model Ajan Motoru
+  architectures:
+    - amd64
+    - arm64
