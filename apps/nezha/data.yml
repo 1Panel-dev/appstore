@@ -1,0 +1,32 @@
+﻿name: 哪吒监控
+tags: 实用工具
+title: 开源、轻量、易用的服务器监控与运维工具
+description: 开源、轻量、易用的服务器监控与运维工具
+additionalProperties:
+  key: nezha
+  name: 哪吒监控
+  tags:
+    - Tool
+  shortDescZh: 开源、轻量、易用的服务器监控与运维工具
+  shortDescEn: Open-source, lightweight, and easy-to-use server monitoring and operation tool
+  description:
+    en: Open-source, lightweight, and easy-to-use server monitoring and operation tool
+    ja: オープンソースで軽量、使いやすいサーバーモニタリングおよび運用ツール
+    ms: Alat pemantauan dan operasi pelayan sumber terbuka, ringan, dan mudah digunakan
+    pt-br: Ferramenta de monitoramento e operação de servidor de código aberto, leve e fácil de usar
+    ru: Открытый, легкий и удобный инструмент для мониторинга и управления сервером
+    ko: 오픈 소스, 가볍고 사용하기 쉬운 서버 모니터링 및 운영 도구
+    tr: Açık kaynaklı, hafif ve kullanımı kolay sunucu izleme ve işletim aracı
+    zh-Hant: 開源、輕量、易用的伺服器監控與運維工具
+    zh: 开源、轻量、易用的服务器监控与运维工具
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://nezha.wiki/
+  github: https://github.com/naiba/nezha/
+  document: https://nezha.wiki/guide/dashboard.html
+  architectures:
+    - amd64
+    - arm64
+    - s390x
