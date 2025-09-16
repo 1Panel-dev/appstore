@@ -1,0 +1,52 @@
+services:
+  dwz-admin:
+    container_name: ${CONTAINER_NAME}-admin
+    image: docker.cnb.cool/mliev/open/dwz-admin-webui:latest
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:80
+    depends_on:
+      dwz-server:
+        condition: service_healthy
+    environment:
+      - TZ=${TIME_ZONE}
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:80/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    labels:
+      createdBy: "Apps"
+
+  dwz-server:
+    container_name: dwz-server
+    image: docker.cnb.cool/mliev/open/dwz-server:latest
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - "8080"
+    volumes:
+      - "./config/:/app/config/"
+    environment:
+      - TZ=${TIME_ZONE}
+      - DATABASE_DRIVER=${PANEL_DB_TYPE}
+      - DATABASE_HOST=${PANEL_DB_HOST}
+      - DATABASE_PORT=${PANEL_DB_PORT}
+      - DATABASE_DBNAME=${PANEL_DB_NAME}
+      - DATABASE_USERNAME=${PANEL_DB_USER}
+      - DATABASE_PASSWORD=${PANEL_DB_USER_PASSWORD}
+      - REDIS_HOST=${REDIS_HOST}
+      - REDIS_PORT=6379
+      - REDIS_PASSWORD=${PANEL_REDIS_ROOT_PASSWORD}
+      - REDIS_DB=0
+      - GIN_MODE=release
+    labels:
+      createdBy: "Apps"
+
+networks:
+  1panel-network:
+    external: true
