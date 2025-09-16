@@ -1,35 +1,22 @@
-# Caddy Web Server
-
-## Product Introduction
-
-Caddy is a modern web server with automatic HTTPS, HTTP/2, and HTTP/3 support. It is known for its simplicity, ease of use, and flexible configuration, making it particularly suitable for static website hosting, reverse proxy, and API gateway scenarios.
-
-## Default Account Information
+## Default Information
 
 Caddy does not require login credentials by default and is managed through the admin API.
 
 - **HTTP Port**: 80
 - **HTTPS Port**: 443
 
-## Key Features
+## Introduction
 
-### Automatic HTTPS
-Caddy can automatically obtain and renew SSL/TLS certificates without manual configuration. It supports certificate authorities like Let's Encrypt and ZeroSSL, providing secure HTTPS connections for your websites.
+**Caddy** is a modern web server with automatic HTTPS, HTTP/2, and HTTP/3 support. It is known for its simplicity, ease of use, and flexible configuration, making it particularly suitable for static website hosting, reverse proxy, and API gateway scenarios.
 
-### HTTP/2 and HTTP/3 Support
-Native support for HTTP/2 and HTTP/3 protocols, providing faster web page loading speeds and better user experience. HTTP/3 is based on the QUIC protocol and can provide better performance in unstable network environments.
+## Features
 
-### Flexible Configuration Options
-Supports multiple configuration methods, including Caddyfile (simplified configuration syntax) and JSON configuration. Caddyfile syntax is concise and intuitive, easy to understand and maintain.
-
-### Reverse Proxy and Load Balancing
-Powerful reverse proxy functionality with support for various load balancing algorithms, including round-robin, least connections, IP hash, etc. Easy implementation of traffic distribution for microservice architectures.
-
-### Static File Serving
-Efficient static file server with support for file compression, cache control, directory browsing, and other features. Built-in file server with excellent performance, suitable for hosting static websites.
-
-### Plugin System
-Rich plugin ecosystem supporting authentication, logging, monitoring, caching, and various other functional extensions. You can select and configure appropriate plugins as needed.
+- **Automatic HTTPS**: Caddy can automatically obtain and renew SSL/TLS certificates without manual configuration. It supports certificate authorities like Let's Encrypt and ZeroSSL, providing secure HTTPS connections for your websites.
+- **HTTP/2 and HTTP/3 Support**: Native support for HTTP/2 and HTTP/3 protocols, providing faster web page loading speeds and better user experience. HTTP/3 is based on the QUIC protocol and can provide better performance in unstable network environments.
+- **Flexible Configuration Options**: Supports multiple configuration methods, including Caddyfile (simplified configuration syntax) and JSON configuration. Caddyfile syntax is concise and intuitive, easy to understand and maintain.
+- **Reverse Proxy and Load Balancing**: reverse proxy functionality with support for various load balancing algorithms, including round-robin, least connections, IP hash, etc. Easy implementation of traffic distribution for microservice architectures.
+- **Static File Serving**: Efficient static file server with support for file compression, cache control, directory browsing, and other features. Built-in file server with excellent performance, suitable for hosting static websites.
+- **Plugin System**: Rich plugin ecosystem supporting authentication, logging, monitoring, caching, and various other functional extensions. You can select and configure appropriate plugins as needed.
 
 ## Configuration and Usage Instructions
 
@@ -143,4 +130,3 @@ example.com {
 4. **Permission Issues**: Ensure Caddy has sufficient permissions to access configuration files and website directories.
 
 Through the above configuration and instructions, you can fully utilize Caddy's powerful features to build high-performance, secure web services.
-

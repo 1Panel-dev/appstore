@@ -1,29 +1,28 @@
 name: Caddy
 tags: Web 服务器
-title: 现代化的Web服务器
-description: 现代化的Web服务器，支持自动HTTPS、HTTP/2、HTTP/3等特性
-
+title: 快速且可扩展的多平台 HTTP/1-2-3 Web 服务器，支持自动启用 HTTPS
+description: 快速且可扩展的多平台 HTTP/1-2-3 Web 服务器，支持自动启用 HTTPS
 additionalProperties:
   key: caddy
   name: Caddy
   type: tool
   tags:
     - Server
-  shortDescZh: 现代化的Web服务器，支持自动HTTPS
-  shortDescEn: Modern web server with automatic HTTPS
+  shortDescZh: 快速且可扩展的多平台 HTTP/1-2-3 Web 服务器，支持自动启用 HTTPS
+  shortDescEn: Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS
   description:
-    zh: 现代化的Web服务器，支持自动HTTPS、HTTP/2、HTTP/3等特性
-    zh-hant: 現代化的Web伺服器，支援自動HTTPS、HTTP/2、HTTP/3等特性
-    en: Modern web server with automatic HTTPS, HTTP/2, HTTP/3 support
-    ja: 自動HTTPS、HTTP/2、HTTP/3をサポートするモダンなWebサーバー
-    ms: Pelayan web moden dengan sokongan HTTPS automatik, HTTP/2, HTTP/3
-    pt-br: Servidor web moderno com HTTPS automático, HTTP/2, HTTP/3
-    ru: Современный веб-сервер с автоматическим HTTPS, HTTP/2, HTTP/3
-    ko: 자동 HTTPS, HTTP/2, HTTP/3를 지원하는 현대적인 웹 서버
-    tr: Otomatik HTTPS, HTTP/2, HTTP/3 desteği olan modern web sunucusu
+    en: Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS
+    ja: 高速で拡張性のあるマルチプラットフォームHTTP/1-2-3ウェブサーバーで、自動HTTPSをサポート
+    ms: Pelayan web HTTP/1-2-3 pelbagai platform yang pantas dan boleh diperluas dengan sokongan HTTPS automatik
+    pt-br: Servidor web HTTP/1-2-3 multi-plataforma rápido e extensível com suporte a HTTPS automático
+    ru: Быстрый и расширяемый многоплатформенный веб-сервер HTTP/1-2-3 с поддержкой автоматического HTTPS
+    ko: 자동 HTTPS를 지원하는 빠르고 확장 가능한 다중 플랫폼 HTTP/1-2-3 웹 서버
+    tr: Hızlı ve genişletilebilir çoklu platform HTTP/1-2-3 web sunucusu, otomatik HTTPS desteği ile
+    zh-hant: 快速且可擴展的多平台 HTTP/1-2-3 Web 伺服器，支持自動啟用 HTTPS
+    zh: 快速且可扩展的多平台 HTTP/1-2-3 Web 服务器，支持自动启用 HTTPS
   crossVersionUpdate: true
   limit: 0
-  recommend: 10
+  recommend: 0
   website: https://caddyserver.com/
   github: https://github.com/caddyserver/caddy
   document: https://caddyserver.com/docs/
@@ -33,4 +32,3 @@ additionalProperties:
     - armv7
     - ppc64le
     - s390x
-  gpuSupport: false

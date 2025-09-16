@@ -28,7 +28,6 @@ additionalProperties:
       default: 80
       edit: true
       rule: "paramPort"
-
     - type: "number"
       labelZh: "HTTPS 端口"
       labelEn: "HTTPS Port"
