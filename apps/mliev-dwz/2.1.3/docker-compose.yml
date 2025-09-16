@@ -23,7 +23,7 @@ services:
 
   dwz-server:
     container_name: dwz-server
-    image: docker.cnb.cool/mliev/open/dwz-server:v2.1.3
+    image: docker.cnb.cool/mliev/open/dwz-server:v2.1.4
     restart: always
     networks:
       - 1panel-network
