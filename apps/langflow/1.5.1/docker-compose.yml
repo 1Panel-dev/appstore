@@ -1,0 +1,20 @@
+services:
+  langflow:
+    image: langflowai/langflow:1.5.1
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:7860"
+    environment:
+      - LANGFLOW_DATABASE_URL=postgresql://${PANEL_DB_USER}:${PANEL_DB_USER_PASSWORD}@${PANEL_DB_HOST}:${PANEL_DB_PORT}/${PANEL_DB_NAME}
+      - LANGFLOW_CONFIG_DIR=app/langflow
+    volumes:
+      - ./data:/app/langflow
+    networks:
+      - 1panel-network
+    labels:
+      createdBy: "Apps"
+
+networks:
+  1panel-network:
+    external: true
