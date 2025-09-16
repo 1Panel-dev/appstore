@@ -2,6 +2,7 @@ services:
   emqx:
     image: emqx/emqx:5.10.0
     container_name: ${CONTAINER_NAME}
+    hostname: 1panel.dev
     restart: always
     networks:
       - 1panel-network
@@ -13,10 +14,24 @@ services:
       - ${EMQX_PORT_8084}:8084
       - ${EMQX_PORT_8883}:8883
     volumes:
-      - ./data:/opt/emqx/data
-      - ./log:/opt/emqx/log
+      - ./data:/opt/emqx/data:rw
+      - ./log:/opt/emqx/log:rw
+      - ./plugins:/opt/emqx/plugins:rw
     environment:
-      - EMQX_NODE_NAME=emqx@${CONTAINER_NAME}
+      - EMQX_HOST=1panel.dev
+      - EMQX_NAME=${CONTAINER_NAME}
+      - EMQX_NODE__DATA_DIR=data
+      - EMQX_LOG__TO=${EMQX_LOG_TO}
+      - EMQX_NODE_COOKIE=1panel_${EMQX_Cookie}
+      - EMQX_CLUSTER__NAME=${CONTAINER_NAME} 
+      - EMQX_DASHBOARD__DEFAULT_PASSWORD=${EMQX_Dashboard_Password}
+      - TZ=${TIME_ZONE}
+    healthcheck:
+      test: ["CMD", "/opt/emqx/bin/emqx_ctl", "status"]
+      interval: 60s
+      timeout: 15s
+      retries: 3
+      start_period: 90s  
     labels:
       createdBy: "Apps"
 networks:

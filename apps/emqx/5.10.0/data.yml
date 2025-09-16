@@ -85,3 +85,75 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+        - default: emqx
+          envKey: EMQX_Dashboard_Password
+          labelEn: Dashboard Password
+          labelZh: Dashboard 密码
+          label:
+            en: Dashboard Password
+            ja: ダッシュボードのパスワード
+            ms: Kata Laluan Papan Pemuka
+            pt-br: Senha do Painel
+            ru: Пароль панели управления
+            ko: 대시보드 비밀번호
+            zh-Hant: Dashboard 密碼
+            zh: Dashboard 密码
+          random: true
+          required: true
+          rule: paramComplexity
+          type: password
+        - default: EMQX_Cookie
+          envKey: EMQX_Cookie
+          labelEn: EMQX Cookie
+          labelZh: EMQX Cookie
+          label:
+            en: EMQX Cookie
+            ja: EMQX Cookie
+            ms: EMQX Cookie
+            pt-br: EMQX Cookie
+            ru: EMQX Cookie
+            ko: EMQX Cookie
+            zh-Hant: EMQX Cookie
+            zh: EMQX Cookie
+          random: true
+          required: true
+          rule: paramCommon
+          type: password
+        - default: "both"
+          envKey: EMQX_LOG_TO
+          labelEn: Log To
+          labelZh: 日志输出目标
+          label:
+            en: Log To
+            ja: ログ出力先
+            ms: Log Kepada
+            pt-br: Enviar Log Para
+            ru: Вывод журнала
+            ko: 로그 출력 대상
+            zh-Hant: 日誌輸出目標
+            zh: 日志输出目标
+          required: true
+          type: select
+          values:
+            - label: Console
+              value: console
+            - label: File
+              value: file
+            - label: Both
+              value: both
+        - default: Asia/Shanghai
+          edit: true
+          envKey: TIME_ZONE
+          labelEn: Time zone
+          labelZh: 时区
+          label:
+            en: Time zone
+            ja: タイムゾーン
+            ms: Zon masa
+            pt-br: Fuso horário
+            ru: Часовой пояс
+            ko: 시간대
+            zh: 时区
+            zh-Hant: 時區
+          required: true
+          type: text
