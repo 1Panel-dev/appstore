@@ -1,6 +1,6 @@
 services:
   wallos:
-    image: bellamy/wallos:4.2.0
+    image: bellamy/wallos:4.3.0
     container_name: ${CONTAINER_NAME}
     restart: unless-stopped
     networks:
