@@ -1,0 +1,58 @@
+additionalProperties:
+  formFields:
+    - type: "number"
+      labelZh: "HTTP 端口"
+      labelEn: "HTTP Port"
+      label:
+        zh: "HTTP 端口"
+        zh-hant: "HTTP 連接埠"
+        en: "HTTP Port"
+        ja: "HTTPポート"
+        ms: "Port HTTP"
+        pt-br: "Porta HTTP"
+        ru: "HTTP Порт"
+        ko: "HTTP 포트"
+        tr: "HTTP Portu"
+      description:
+        zh: "设置应用的 HTTP 访问端口，有效范围: 1-65535"
+        zh-hant: "設定應用程式的 HTTP 存取連接埠，有效範圍: 1-65535"
+        en: "Set the HTTP access port for the application, valid range: 1-65535"
+        ja: "アプリケーションのHTTPアクセスポートを設定します。有効範囲: 1-65535"
+        ms: "Tetapkan port akses HTTP untuk aplikasi, julat sah: 1-65535"
+        pt-br: "Defina a porta de acesso HTTP para o aplicativo, intervalo válido: 1-65535"
+        ru: "Установите порт доступа HTTP для приложения, допустимый диапазон: 1-65535"
+        ko: "애플리케이션의 HTTP 접근 포트를 설정합니다. 유효 범위: 1-65535"
+        tr: "Uygulama için HTTP erişim portunu ayarlayın, geçerli aralık: 1-65535"
+      required: true
+      envKey: "PANEL_APP_PORT_HTTP"
+      default: 80
+      edit: true
+      rule: "paramPort"
+    - type: "number"
+      labelZh: "SSH 端口"
+      labelEn: "SSH Port"
+      label:
+        zh: "SSH 端口"
+        zh-hant: "SSH 連接埠"
+        en: "SSH Port"
+        ja: "SSHポート"
+        ms: "Port SSH"
+        pt-br: "Porta SSH"
+        ru: "SSH Порт"
+        ko: "SSH 포트"
+        tr: "SSH Portu"
+      description:
+        zh: "设置应用的 SSH 访问端口，有效范围: 1-65535"
+        zh-hant: "設定應用程式的 SSH 存取連接埠，有效範圍: 1-65535"
+        en: "Set the SSH access port for the application, valid range: 1-65535"
+        ja: "アプリケーションのSSHアクセスポートを設定します。有効範囲: 1-65535"
+        ms: "Tetapkan port akses SSH untuk aplikasi, julat sah: 1-65535"
+        pt-br: "Defina a porta de acesso SSH para o aplicativo, intervalo válido: 1-65535"
+        ru: "Установите порт доступа SSH для приложения, допустимый диапазон: 1-65535"
+        ko: "애플리케이션의 SSH 접근 포트를 설정합니다. 유효 범위: 1-65535"
+        tr: "Uygulama için SSH erişim portunu ayarlayın, geçerli aralık: 1-65535"
+      required: true
+      envKey: "PANEL_APP_PORT_SSH"
+      default: 22
+      edit: true
+      rule: "paramPort"

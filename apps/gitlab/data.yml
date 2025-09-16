@@ -1,0 +1,32 @@
+name: GitLab
+tags: 
+  - DevOps
+title: GitLab 是一个开源的端到端软件开发平台
+description: GitLab 是一个开源的端到端软件开发平台，内置版本控制、问题跟踪、代码审查、CI/CD 等功能。可以在自己的服务器、容器或云提供商上自托管 GitLab。
+additionalProperties:
+  key: gitlab
+  name: GitLab
+  type: website
+  tags:
+    - DevOps
+  shortDescZh: GitLab 是一个开源的端到端软件开发平台，内置版本控制、问题跟踪、代码审查、CI/CD 等功能。可以在自己的服务器、容器或云提供商上自托管 GitLab。
+  shortDescEn: GitLab is an open source end-to-end software development platform with built-in version control, issue tracking, code review, CI/CD, and more. Self-host GitLab on your own servers, in a container, or on a cloud provider.
+  description:
+    en: GitLab is a complete DevOps platform, delivered as a single application. It provides a comprehensive set of tools for the entire software development lifecycle, from planning to monitoring.
+    ja: GitLabは、単一のアプリケーションとして提供される完全なDevOpsプラットフォームです。計画から監視まで、ソフトウェア開発ライフサイクル全体にわたる包括的なツールセットを提供します。
+    ms: GitLab adalah platform DevOps lengkap yang disampaikan sebagai satu aplikasi. Ia menyediakan set alat yang komprehensif untuk keseluruhan kitaran hayat pembangunan perisian, dari perancangan hingga pemantauan.
+    pt-br: GitLab é uma plataforma DevOps completa, entregue como um único aplicativo. Ele fornece um conjunto abrangente de ferramentas para todo o ciclo de vida do desenvolvimento de software, desde o planejamento até a monitoração.
+    ru: GitLab - это полная платформа DevOps, поставляемая в виде единого приложения. Он предоставляет комплексный набор инструментов для всего жизненного цикла разработки программного обеспечения, от планирования до мониторинга.
+    ko: GitLab은 단일 애플리케이션으로 제공되는 완벽한 DevOps 플랫폼입니다. 계획에서 모니터링에 이르기까지 소프트웨어 개발 수명 주기 전체에 대한 포괄적인 도구 세트를 제공합니다.
+    zh-Hant: GitLab 是一個完整的 DevOps 平台，作為單一應用程式交付。它為整個軟體開發生命週期提供了全面的工具集，從規劃到監控。
+    zh: GitLab 是一个完整的 DevOps 平台，作为单一应用程序交付。它为整个软件开发生命周期提供了全面的工具集，从规划到监控。
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://about.gitlab.com
+  github: https://gitlab.com/gitlab-org/gitlab
+  document: https://docs.gitlab.com
+  architectures:
+    - amd64
+    - arm64
+  memoryRequired: 2560
