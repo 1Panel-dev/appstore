@@ -1,25 +1,31 @@
 name: Kirara AI
 tags: AI
-title: 大模型 Agent 引擎
-description: 打造专属于你的 AI 聊天助手
+title: 一款支持主流大语言模型、主流聊天平台的聊天的机器人
+description: 一款支持主流大语言模型、主流聊天平台的聊天的机器人
 additionalProperties:
   key: kirara-agent
   name: Kirara AI
   type: tool
   tags:
     - AI
-  shortDescZh: 一个大模型 Agent 引擎
-  shortDescEn: A large model agent engine
+  shortDescZh: 一款支持主流大语言模型、主流聊天平台的聊天的机器人
+  shortDescEn: A chatbot that supports mainstream large language models and major chat platforms
   description:
-    zh: 一个大模型 Agent 引擎
-    zh-hant: 一個大模型 Agent 引擎
-    en: A Large Model Agent Engine
-    ja: 大規模モデルのAgentエンジン
-    ms: Enjin Agen Model Besar
-    pt-br: Um motor de agente de modelo grande
-    ru: Движок агентa для большой модели
-    ko: 대규모 모델 에이전트 엔진
-    tr: Büyük Model Ajan Motoru
+    en: A chatbot that supports mainstream large language models and major chat platforms
+    ja: 主流の大規模言語モデルと主要なチャットプラットフォームをサポートするチャットボット
+    ms: Chatbot yang menyokong model bahasa besar arus perdana dan platform sembang utama
+    pt-br: Um chatbot que suporta grandes modelos de linguagem e principais plataformas de chat
+    ru: Чат-бот, который поддерживает основные крупные языковые модели и основные платформы чата
+    ko: 주류 대형 언어 모델과 주요 채팅 플랫폼을 지원하는 챗봇
+    tr: Ana akım büyük dil modellerini ve ana sohbet platformlarını destekleyen bir sohbet robotu
+    zh-hant: 一款支持主流大語言模型、主流聊天平台的聊天的機器人
+    zh: 一款支持主流大语言模型、主流聊天平台的聊天的机器人
+  crossVersionUpdate: false
+  limit: 0
+  recommend: 0
+  website: https://kirara-docs.app.lss233.com/
+  github: https://github.com/lss233/kirara-ai/
+  document: https://kirara-docs.app.lss233.com/guide/getting-started.html/
   architectures:
     - amd64
     - arm64
