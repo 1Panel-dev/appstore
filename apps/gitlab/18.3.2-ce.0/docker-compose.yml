@@ -10,13 +10,16 @@ services:
     ports:
       - "${PANEL_APP_PORT_HTTP}:80"
       - "${PANEL_APP_PORT_SSH}:22"
+    environment:
+      TZ: ${TIME_ZONE}
     volumes:
-      - "./config:/etc/gitlab"
-      - "./logs:/var/log/gitlab"
-      - "./data:/var/opt/gitlab"
-    shm_size: "256m"
+      - "./data/config:/etc/gitlab"
+      - "./data/logs:/var/log/gitlab"
+      - "./data/data:/var/opt/gitlab"
+    shm_size: "${SHM_SIZE}"
     labels:
       createdBy: "Apps"
+
 networks:
   1panel-network:
     external: true

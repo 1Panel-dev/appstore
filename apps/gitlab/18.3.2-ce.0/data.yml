@@ -1,6 +1,7 @@
 additionalProperties:
   formFields:
-    - type: "number"
+    - default: 80
+      type: "number"
       labelZh: "HTTP 端口"
       labelEn: "HTTP Port"
       label:
@@ -25,10 +26,10 @@ additionalProperties:
         tr: "Uygulama için HTTP erişim portunu ayarlayın, geçerli aralık: 1-65535"
       required: true
       envKey: "PANEL_APP_PORT_HTTP"
-      default: 80
       edit: true
       rule: "paramPort"
-    - type: "number"
+    - default: 22
+      type: "number"
       labelZh: "SSH 端口"
       labelEn: "SSH Port"
       label:
@@ -53,6 +54,37 @@ additionalProperties:
         tr: "Uygulama için SSH erişim portunu ayarlayın, geçerli aralık: 1-65535"
       required: true
       envKey: "PANEL_APP_PORT_SSH"
-      default: 22
       edit: true
       rule: "paramPort"
+    - default: "256m"
+      edit: true
+      envKey: SHM_SIZE
+      labelEn: Shared Memory
+      labelZh: 共享内存
+      label:
+        en: Shared Memory
+        ja: 共有メモリ
+        ms: Memori Bersama
+        pt-br: Memória Compartilhada
+        ru: Общая память
+        ko: 공유 메모리
+        zh: 共享内存
+        zh-Hant: 共享記憶體
+      required: true
+      type: text
+    - default: "Asia/Shanghai"
+      edit: true
+      envKey: TIME_ZONE
+      labelEn: Time Zone
+      labelZh: 时区
+      label:
+        en: Time Zone
+        ja: タイムゾーン
+        ms: Zon Masa
+        pt-br: Fuso Horário
+        ru: Часовой пояс
+        ko: 시간대
+        zh: 时区
+        zh-Hant: 時區
+      required: true
+      type: text

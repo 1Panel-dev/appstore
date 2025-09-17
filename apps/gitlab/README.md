@@ -1,13 +1,13 @@
+## 默认账户密码
+
+- 默认用户名：`root`
+- 默认密码：安装后在 GitLab 目录下的 `./data/config/initial_root_password` 文件中查看。
+
+> **注意**：首次安装启动时时间较长，请耐心等待。
+
 ## 产品介绍
 
 **GitLab** 是一个完整的 DevOps 平台，提供从代码托管到 CI/CD 自动化的一站式解决方案。它允许团队高效协作、持续集成与持续部署，并支持敏捷开发流程。
-
-## 默认账户
-
-- 默认用户名：`root`
-- 默认密码：安装后在 GitLab 目录下的 `config/initial_root_password` 文件中查看。
-
-> **注意**：首次安装启动时时间较长，请耐心等待。
 
 ## 主要功能
 
@@ -19,15 +19,3 @@
 - **多媒体与文档支持**：支持 Markdown 文档、Wiki、文件附件，使项目文档和知识库管理更加便捷。
 - **自托管与云服务**：GitLab 提供云托管版本，同时支持在私有服务器上自托管，实现完全掌控数据。
 - **企业版功能（付费）**：如高级审计日志、性能分析、群组级别安全策略等。
-
-## 注意事项
-
-- GitLab 社区版（CE）是开源版本，可以免费使用大部分核心功能。
-- 如果需要企业版（EE）的高级功能，请访问 [GitLab 官网](https://about.gitlab.com) 获取详细信息和许可证。
-
-## 相关链接
-
-- 官网：<https://about.gitlab.com>
-- 文档中心：<https://docs.gitlab.com>
-- 用户社区：<https://forum.gitlab.com>
-- GitHub 开源仓库：<https://gitlab.com/gitlab-org/gitlab>
