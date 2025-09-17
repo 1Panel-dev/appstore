@@ -1,5 +1,6 @@
 name: Caddy
-tags: Web 服务器
+tags:
+  - Web 服务器
 title: 快速且可扩展的多平台 HTTP/1-2-3 Web 服务器，支持自动启用 HTTPS
 description: 快速且可扩展的多平台 HTTP/1-2-3 Web 服务器，支持自动启用 HTTPS
 additionalProperties:

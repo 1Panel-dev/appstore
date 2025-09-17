@@ -1,5 +1,6 @@
 name: Harness
-tags: DevOps
+tags:
+  - DevOps
 title: 一个集成源代码管理的端到端开发者平台
 description: 一个集成源代码管理的端到端开发者平台
 additionalProperties:

@@ -1,5 +1,6 @@
 name: Langflow
-tags: AI
+tags:
+  - AI
 title: 用于构建和部署 AI 驱动的智能体与工作流的强大工具
 description: 用于构建和部署 AI 驱动的智能体与工作流的强大工具
 additionalProperties:

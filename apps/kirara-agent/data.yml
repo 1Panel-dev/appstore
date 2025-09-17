@@ -1,5 +1,6 @@
 name: Kirara AI
-tags: AI
+tags:
+  - AI
 title: 一款支持主流大语言模型、主流聊天平台的聊天的机器人
 description: 一款支持主流大语言模型、主流聊天平台的聊天的机器人
 additionalProperties:
