@@ -1,6 +1,6 @@
 services:
   metabase:
-    image: metabase/metabase:v0.56.5
+    image: metabase/metabase:v0.56.6
     container_name: ${CONTAINER_NAME}
     ports:
       - ${PANEL_APP_PORT_HTTP}:3000
