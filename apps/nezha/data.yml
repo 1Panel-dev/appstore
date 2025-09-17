@@ -1,5 +1,6 @@
 ﻿name: 哪吒监控
-tags: 实用工具
+tags:
+  - 实用工具
 title: 开源、轻量、易用的服务器监控与运维工具
 description: 开源、轻量、易用的服务器监控与运维工具
 additionalProperties:
