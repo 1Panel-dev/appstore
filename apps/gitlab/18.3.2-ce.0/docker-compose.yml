@@ -1,0 +1,22 @@
+services:
+  gitlab:
+    image: gitlab/gitlab-ce:18.3.2-ce.0
+    container_name: ${CONTAINER_NAME}
+    networks:
+      - 1panel-network
+    cap_add:
+      - NET_ADMIN
+    restart: unless-stopped
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:80"
+      - "${PANEL_APP_PORT_SSH}:22"
+    volumes:
+      - "./config:/etc/gitlab"
+      - "./logs:/var/log/gitlab"
+      - "./data:/var/opt/gitlab"
+    shm_size: "256m"
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true
