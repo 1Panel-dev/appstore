@@ -1,6 +1,6 @@
 services:
   mysql-slave:
-    image: bitnami/mysql:8.0
+    image: bitnamilegacy/mysql:8.0
     container_name: ${CONTAINER_NAME}
     restart: always
     environment:

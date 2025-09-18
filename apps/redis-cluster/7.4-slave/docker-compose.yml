@@ -1,6 +1,6 @@
 services:
   redis-slave:
-    image: bitnami/redis:7.4
+    image: bitnamilegacy/redis:7.4
     restart: always
     container_name: ${CONTAINER_NAME}
     networks:

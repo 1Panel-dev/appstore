@@ -1,7 +1,7 @@
 services:
   postgres-slave:
     container_name: ${CONTAINER_NAME}
-    image: bitnami/postgresql:16
+    image: bitnamilegacy/postgresql:16
     restart: always
     environment:
       - POSTGRESQL_REPLICATION_MODE=slave

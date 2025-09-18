@@ -1,7 +1,7 @@
 services:
   postgres-master:
     container_name: ${CONTAINER_NAME}
-    image: bitnami/postgresql:13
+    image: bitnamilegacy/postgresql:13
     restart: always
     environment:
       - POSTGRESQL_REPLICATION_MODE=master
