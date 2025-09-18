@@ -1,6 +1,6 @@
 services:
   java:
-    image: bitnami/java:${JAVA_VERSION}
+    image: bitnamilegacy/java:${JAVA_VERSION}
     container_name: ${CONTAINER_NAME}
     working_dir: /app
     volumes:
