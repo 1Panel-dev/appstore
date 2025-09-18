@@ -163,6 +163,10 @@
       "allowedVersions": "/^3.*/"
     },
     {
+      "matchFileNames": ["apps/mliev-dwz/2.*/*.yml"],
+      "allowedVersions": "/^2.*/"
+    },
+    {
       "matchDatasources": ["docker"],
       "matchPackageNames": ["ghcr.io/umami-software/umami"],
       "versionCompatibility": "^(?<compatibility>.*)-(?<version>.*)$",
