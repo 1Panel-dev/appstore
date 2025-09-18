@@ -1,6 +1,6 @@
 services:
   mysql-master:
-    image: bitnami/mysql:5.7
+    image: bitnamilegacy/mysql:5.7
     container_name: ${CONTAINER_NAME}
     restart: always
     environment:
