@@ -7,6 +7,7 @@ services:
       - 1panel-network
     ports:
       - ${PANEL_APP_PORT_HTTP}:8081
+      - ${PANEL_APP_PORT_MCP}:8082
     volumes:
       - ./data:/opt/cordys
     environment:
