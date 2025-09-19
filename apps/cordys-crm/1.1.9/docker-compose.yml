@@ -1,6 +1,6 @@
 services:
   cordys-crm:
-    image: 1panel/cordys-crm:v1.1.9
+    image: 1panel/cordys-crm:v1.2.0
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
