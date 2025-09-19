@@ -172,6 +172,14 @@
       "allowedVersions": "/^2.*/"
     },
     {
+      "matchFileNames": ["apps/odoo/18.*/*.yml"],
+      "allowedVersions": "/^18.*/"
+    },
+    {
+      "matchFileNames": ["apps/odoo/19.*/*.yml"],
+      "allowedVersions": "/^19.*/"
+    },
+    {
       "matchDatasources": ["docker"],
       "matchPackageNames": ["ghcr.io/umami-software/umami"],
       "versionCompatibility": "^(?<compatibility>.*)-(?<version>.*)$",
