@@ -1,6 +1,6 @@
 services:
   odoo:
-    image: odoo:18.0
+    image: odoo:19.0
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
