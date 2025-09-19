@@ -180,6 +180,14 @@
       "allowedVersions": "/^19.*/"
     },
     {
+      "matchFileNames": ["apps/onedev/12.*/*.yml"],
+      "allowedVersions": "/^12.*/"
+    },
+    {
+      "matchFileNames": ["apps/onedev/13.*/*.yml"],
+      "allowedVersions": "/^13.*/"
+    },
+    {
       "matchDatasources": ["docker"],
       "matchPackageNames": ["ghcr.io/umami-software/umami"],
       "versionCompatibility": "^(?<compatibility>.*)-(?<version>.*)$",
