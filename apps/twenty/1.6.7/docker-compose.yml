@@ -1,6 +1,6 @@
 services:
   server:
-    image: twentycrm/twenty:v1.6.6
+    image: twentycrm/twenty:v1.6.7
     container_name: ${CONTAINER_NAME}-server
     restart: always
     networks:
@@ -57,7 +57,7 @@ services:
       createdBy: "Apps"
 
   worker:
-    image: twentycrm/twenty:v1.6.6
+    image: twentycrm/twenty:v1.6.7
     container_name: ${CONTAINER_NAME}-worker
     restart: always
     networks:
