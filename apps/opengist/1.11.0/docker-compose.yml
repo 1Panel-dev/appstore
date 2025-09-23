@@ -1,6 +1,6 @@
 services:
   opengist:
-    image: ghcr.io/thomiceli/opengist:1.10.0
+    image: ghcr.io/thomiceli/opengist:1.11.0
     container_name: ${CONTAINER_NAME}
     restart: unless-stopped
     networks:  
