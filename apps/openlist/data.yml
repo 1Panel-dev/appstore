@@ -24,7 +24,7 @@ additionalProperties:
     type: website
     crossVersionUpdate: true
     limit: 0
-    recommend: 0
+    recommend: 65
     website: https://docs.oplist.org/
     github: https://github.com/OpenListTeam/OpenList
     document: https://docs.oplist.org/
