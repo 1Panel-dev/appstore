@@ -1,10 +1,3 @@
-## Default Information
-
-Caddy does not require login credentials by default and is managed through the admin API.
-
-- **HTTP Port**: 80
-- **HTTPS Port**: 443
-
 ## Introduction
 
 **Caddy** is a modern web server with automatic HTTPS, HTTP/2, and HTTP/3 support. It is known for its simplicity, ease of use, and flexible configuration, making it particularly suitable for static website hosting, reverse proxy, and API gateway scenarios.

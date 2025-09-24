@@ -3,14 +3,9 @@ services:
     image: caddy:2.10.2
     restart: unless-stopped
     container_name: ${CONTAINER_NAME}
-    networks:
-      - 1panel-network
+    network_mode: host
     cap_add:
       - NET_ADMIN
-    ports:
-      - "${PANEL_APP_PORT_HTTP}:80"
-      - "${PANEL_APP_PORT_HTTPS}:443"
-      - "${PANEL_APP_PORT_HTTPS}:443/udp"
     volumes:
       - ./data/conf:/etc/caddy
       - ./data/srv:/srv
@@ -18,7 +13,3 @@ services:
       - ./data/config:/config
     labels:
       createdBy: "Apps"
-
-networks:
-  1panel-network:
-    external: true
