@@ -27,8 +27,9 @@ services:
       SQL_DEBUG: False
     volumes:
       - ./data/sqlbot/excel:/opt/sqlbot/data/excel
+      - ./data/sqlbot/file:/opt/sqlbot/data/file
       - ./data/sqlbot/images:/opt/sqlbot/images
-      - ./data/sqlbot/logs:/opt/sqlbot/logs
+      - ./data/sqlbot/logs:/opt/sqlbot/app/logs
       - ./data/postgresql:/var/lib/postgresql/data
     networks:
       - 1panel-network
