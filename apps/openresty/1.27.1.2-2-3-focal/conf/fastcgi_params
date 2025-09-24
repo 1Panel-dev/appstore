@@ -28,5 +28,4 @@ fastcgi_param  HTTP_USER_AGENT    $http_user_agent;
 fastcgi_param  HTTP_REFERER       $http_referer;
 fastcgi_param  HTTP_COOKIE        $http_cookie;
 fastcgi_param  HTTP_X_FORWARDED_FOR $proxy_add_x_forwarded_for;
-fastcgi_param  PATH_INFO          $fastcgi_path_info;
 fastcgi_param  REQUEST_TIME       $msec;
