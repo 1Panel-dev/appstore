@@ -1,6 +1,6 @@
 services:
   gitlab:
-    image: gitlab/gitlab-ce:18.4.0-ce.0
+    image: gitlab/gitlab-ce:18.4.1-ce.0
     container_name: ${CONTAINER_NAME}
     networks:
       - 1panel-network
