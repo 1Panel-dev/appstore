@@ -16,3 +16,4 @@ additionalProperties:
       random: false
       required: true
       type: password
+      edit: true
