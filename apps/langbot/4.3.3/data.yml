@@ -17,6 +17,23 @@ additionalProperties:
         ko: 웹 UI 포트
         zh-Hant: Web UI 埠
         zh: Web UI 端口
+    - default: 2280-2290
+      envKey: LANGBOT_PORT_RANGE
+      edit: true
+      labelEn: LangBot Port Range
+      labelZh: LangBot 端口范围
+      required: true
+      rule: paramPortRange
+      type: text
+      label:
+        en: LangBot Port Range
+        ja: LangBotポート範囲
+        ms: Julat Port LangBot
+        pt-br: Intervalo de portas do LangBot
+        ru: Диапазон портов LangBot
+        ko: LangBot 포트 범위
+        zh: LangBot 端口范围
+        zh-Hant: LangBot 埠範圍
     - default: Asia/Shanghai
       edit: true
       envKey: TIME_ZONE

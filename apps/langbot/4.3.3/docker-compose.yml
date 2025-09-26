@@ -2,7 +2,7 @@ services:
   langbot_plugin_runtime:
     container_name: ${CONTAINER_NAME}-plugin-runtime
     restart: unless-stopped
-    image: rockchin/langbot:latest
+    image: rockchin/langbot:v4.3.3
     networks:
       - 1panel-network
     volumes:
@@ -16,7 +16,7 @@ services:
   langbot:
     container_name: ${CONTAINER_NAME}
     restart: unless-stopped
-    image: rockchin/langbot:latest
+    image: rockchin/langbot:v4.3.3
     networks:
       - 1panel-network
     volumes:
@@ -26,7 +26,7 @@ services:
       - TZ=${TIME_ZONE}
     ports:
       - ${PANEL_APP_PORT_HTTP}:5300
-      - 127.0.0.1:2280-2290:2280-2290
+      - ${LANGBOT_PORT_RANGE}:2280-2290
     labels:
       createdBy: "Apps"
 
