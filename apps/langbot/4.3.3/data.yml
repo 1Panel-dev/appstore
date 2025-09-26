@@ -1,0 +1,52 @@
+additionalProperties:
+  formFields:
+    - default: 5300
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Web UI Port
+      labelZh: Web UI 端口
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        en: Web UI Port
+        ja: Web UIポート
+        ms: Port Web UI
+        pt-br: Porta da Web UI
+        ru: Порт веб-интерфейса
+        ko: 웹 UI 포트
+        zh-Hant: Web UI 埠
+        zh: Web UI 端口
+    - default: 2280-2290
+      envKey: LANGBOT_PORT_RANGE
+      edit: true
+      labelEn: LangBot Port Range
+      labelZh: LangBot 端口范围
+      required: true
+      rule: paramPortRange
+      type: text
+      label:
+        en: LangBot Port Range
+        ja: LangBotポート範囲
+        ms: Julat Port LangBot
+        pt-br: Intervalo de portas do LangBot
+        ru: Диапазон портов LangBot
+        ko: LangBot 포트 범위
+        zh: LangBot 端口范围
+        zh-Hant: LangBot 埠範圍
+    - default: Asia/Shanghai
+      edit: true
+      envKey: TIME_ZONE
+      labelEn: Time Zone
+      labelZh: 时区
+      label:
+        en: Time Zone
+        ja: タイムゾーン
+        ms: Zon masa
+        pt-br: Fuso horário
+        ru: Часовой пояс
+        ko: 시간대
+        zh: 时区
+        zh-Hant: 時區
+      required: true
+      type: text
