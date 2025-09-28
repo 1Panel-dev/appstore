@@ -1,0 +1,24 @@
+name: DzzOffice
+tags:
+    - 云存储
+title: 开源的企业协同办公套件
+description: 一套开源办公套件，适用于企业、团队搭建自己的 类似“Google企业应用套件”、“微软Office365”的企业协同办公平台
+additionalProperties:
+    key: dzzoffice
+    name: DzzOffice
+    tags:
+        - Storage
+    shortDescZh: 开源的企业协同办公套件
+    shortDescEn: An open-source enterprise collaborative office suite
+    type: website
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://dzzoffice.com
+    github: https://github.com/zyx0814/dzzoffice
+    document: https://dzzoffice.com
+    architectures:
+        - amd64
+        - arm/v6
+        - arm/v7
+        - arm64
