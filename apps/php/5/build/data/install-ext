@@ -10,6 +10,21 @@ echo "Install extensions        : $1"
 echo "============================================"
 echo
 
+
+installExtensionFromTgz()
+{
+    tgzName=$1
+    result=""
+    extensionName="${tgzName%%-*}"
+    shift 1
+    result=$@
+    mkdir /tmp/data/${tgzName}
+    tar -zxvf /tmp/data/${tgzName}.tgz -C /tmp/data/${tgzName} --strip-components=1
+    ( cd /tmp/data/${tgzName} && phpize && ./configure ${result} && make ${MC} && make install )
+
+    docker-php-ext-enable ${extensionName}
+}
+
 isPhpVersionGreaterOrEqual() {
     local PHP_MAJOR_VERSION=$(php -r "echo PHP_MAJOR_VERSION;")
     local PHP_MINOR_VERSION=$(php -r "echo PHP_MINOR_VERSION;")
@@ -131,6 +146,28 @@ install_yaf() {
     docker-php-ext-enable yaf
 }
 
+install_gd() {
+    apt-get update && apt-get install -y \
+        libfreetype6-dev \
+        libjpeg62-turbo-dev \
+        libpng-dev \
+        pkg-config \
+    && rm -rf /var/lib/apt/lists/*
+
+    cat > /usr/bin/freetype-config <<'EOF'
+#!/bin/sh
+pkg-config "$@" freetype2
+EOF
+    chmod +x /usr/bin/freetype-config
+
+    docker-php-ext-configure gd \
+        --with-freetype-dir=/usr/include/ \
+        --with-jpeg-dir=/usr/include/ \
+        --with-png-dir=/usr/include/
+    docker-php-ext-install gd
+}
+
+
 install_extension() {
     local extension=$1
     if [ -z "$extension" ]; then
@@ -143,7 +180,7 @@ install_extension() {
     echo "------ install extension: $extension ------"
     
     if [ "$extension" = "gd" ]; then
-        install_php_extensions gd
+        install_gd
     elif [ "$extension" = "memcache" ]; then
         install_memcache   
     elif [ "$extension" = "yaf" ]; then
@@ -159,8 +196,7 @@ install_extension() {
         apt-get install -y  libssl-dev
         pecl_install mongodb
     elif [ "$extension" = "mcrypt" ]; then
-        apt-get install -y libmcrypt-dev
-        pecl_install mcrypt
+        install_php_extensions mcrypt
     elif [ "$extension" = "ssh2" ]; then
         apt-get install -y libssh2-1-dev libssh2-1
         pecl_install ssh2
@@ -201,7 +237,7 @@ install_extension() {
     elif [ "$extension" = "memcached" ]; then
         install_php_extensions memcached 
     elif [ "$extension" = "redis" ]; then
-        install_php_extensions redis
+        installExtensionFromTgz redis-2.2.8
     elif [ "$extension" = "xdebug" ]; then
         install_php_extensions xdebug
     elif [ "$extension" = "imap" ]; then
