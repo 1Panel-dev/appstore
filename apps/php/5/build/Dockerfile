@@ -6,6 +6,7 @@ ARG CONTAINER_PACKAGE_URL
 
 
 COPY data/install-ext /usr/local/bin/
+COPY ./data /tmp/data
 RUN chmod uga+x /usr/local/bin/install-ext
 
 ENV PHP_INI_SCAN_DIR=/usr/local/etc/php/conf.d
