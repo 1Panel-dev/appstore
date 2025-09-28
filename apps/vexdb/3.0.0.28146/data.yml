@@ -1,0 +1,60 @@
+additionalProperties:
+  formFields:
+    - default: vexdb
+      envKey: PANEL_DB_ROOT_USER
+      labelEn: Username
+      labelZh: 用户名
+      label:
+        en: Username
+        ja: ユーザー名
+        ms: Nama pengguna
+        pt-br: Nome de usuário
+        ru: Имя пользователя
+        ko: 사용자 이름
+        zh-hant: 用戶名
+        zh: 用户名
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: p@ssw0rd
+      envKey: PANEL_DB_ROOT_PASSWORD
+      labelEn: Password
+      labelZh: 密码
+      label:
+        en: Password
+        ja: パスワード
+        ms: Kata laluan
+        pt-br: Senha
+        ru: Пароль
+        ko: 비밀번호
+        zh-hant: 密碼
+        zh: 密码
+      description:
+        en: At least 8 characters, including uppercase, lowercase, numbers, and symbols.
+        ja: 8文字以上、大文字、小文字、数字、記号を含む必要があります。
+        ms: Sekurang-kurangnya 8 aksara, termasuk huruf besar, huruf kecil, nombor dan simbol.
+        pt-br: Pelo menos 8 caracteres, incluindo maiúsculas, minúsculas, números e símbolos.
+        ru: Не менее 8 символов, включая заглавные и строчные буквы, цифры и символы.
+        ko: 8자 이상, 대문자, 소문자, 숫자 및 기호를 포함해야 합니다.
+        zh-hant: 至少 8 位，含大寫、小寫、數字和符號。
+        zh: 至少 8 位，含大写、小写、数字和符号。
+      random: true
+      required: true
+      type: password
+    - default: 5432
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      label:
+        en: Port
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh-Hant: 埠
+        zh: 端口
+      required: true
+      rule: paramPort
+      type: number
