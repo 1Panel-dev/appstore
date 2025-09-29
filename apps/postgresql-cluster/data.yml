@@ -20,7 +20,7 @@ additionalProperties:
     type: runtime
     crossVersionUpdate: false
     limit: 0
-    recommend: 73
+    recommend: 810
     website: https://www.postgresql.org/
     github: https://github.com/postgres/postgres
     document: https://www.postgresql.org/docs/

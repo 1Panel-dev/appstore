@@ -1,0 +1,33 @@
+name: UPage
+tags:
+  - AI
+title: 基于大模型的可视化网页构建平台
+description: 基于大模型的可视化网页构建平台
+additionalProperties:
+  key: upage
+  name: UPage
+  tags:
+    - AI
+  shortDescZh: 基于大模型的可视化网页构建平台
+  shortDescEn: A visual web development platform powered by large models
+  description:
+    en: A visual web development platform powered by large models
+    ja: 大規模モデルに基づくビジュアルWeb構築プラットフォーム
+    ms: Büyük modeller tarafından desteklenen görsel bir web geliştirme platformu
+    pt-br: Uma plataforma de desenvolvimento web visual alimentada por grandes modelos
+    ru: Визуальная платформа веб-разработки на основе больших моделей
+    ko: 대규모 모델에 기반한 시각적 웹 개발 플랫폼
+    tr: Büyük modeller tarafından desteklenen görsel bir web geliştirme platformu
+    zh-hant: 基於大模型的可視化網頁構建平台
+    zh: 基于大模型的可视化网页构建平台
+  type: website
+  crossVersionUpdate: false
+  limit: 0
+  recommend: 17
+  website: https://upage.ai/
+  github: https://github.com/halo-dev/upage/
+  document: https://docs.upage.ai/
+  memoryRequired: 2048
+  architectures:
+    - amd64
+    - arm64

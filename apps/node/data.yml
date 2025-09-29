@@ -22,7 +22,7 @@ additionalProperties:
   type: node
   crossVersionUpdate: false
   limit: 0
-  recommend: 110
+  recommend: 1030
   website: https://nodejs.org/en
   github: https://github.com/nodejs
   document: https://nodejs.org/docs/latest/api/

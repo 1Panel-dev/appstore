@@ -21,7 +21,7 @@ additionalProperties:
   type: dotnet
   crossVersionUpdate: false
   limit: 0
-  recommend: 119
+  recommend: 1060
   website: https://dotnet.microsoft.com/
   github: https://github.com/dotnet
   document: https://learn.microsoft.com/

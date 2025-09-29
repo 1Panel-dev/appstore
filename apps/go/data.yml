@@ -22,7 +22,7 @@ additionalProperties:
   type: go
   crossVersionUpdate: false
   limit: 0
-  recommend: 125
+  recommend: 1040
   website: https://go.dev/
   github: https://github.com/golang/go
   document: https://go.dev/learn/

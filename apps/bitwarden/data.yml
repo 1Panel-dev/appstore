@@ -22,6 +22,7 @@ additionalProperties:
     type: website
     crossVersionUpdate: true
     limit: 0
+    recommend: 310
     website: https://bitwarden.com/
     github: https://github.com/dani-garcia/vaultwarden
     document: https://github.com/dani-garcia/vaultwarden/wiki

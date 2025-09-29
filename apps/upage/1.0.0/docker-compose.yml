@@ -1,0 +1,24 @@
+services:
+  upage:
+    image: halohub/upage:1.0.0
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:3000
+    environment:
+      LLM_PROVIDER: ${LLM_PROVIDER}
+      PROVIDER_API_KEY: ${PROVIDER_API_KEY}
+      PROVIDER_BASE_URL: ${PROVIDER_BASE_URL}
+      LLM_DEFAULT_MODEL: ${LLM_DEFAULT_MODEL}
+      LLM_MINOR_MODEL: ${LLM_MINOR_MODEL}
+    volumes:
+      - ./data/data:/app/data
+      - ./data/logs:/app/logs
+      - ./data/storage:/app/storage
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true

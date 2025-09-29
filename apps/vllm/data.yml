@@ -22,7 +22,7 @@ additionalProperties:
     type: tool
     crossVersionUpdate: true
     limit: 0
-    recommend: 71
+    recommend: 0
     website: https://github.com/vllm-project/vllm
     github: https://github.com/vllm-project/vllm
     document: https://docs.vllm.ai/en/latest/

@@ -22,7 +22,7 @@ additionalProperties:
     type: website
     crossVersionUpdate: true
     limit: 0
-    recommend: 0
+    recommend: 330
     website: https://n8n.io/
     github: https://github.com/n8n-io/n8n
     document: https://docs.n8n.io/

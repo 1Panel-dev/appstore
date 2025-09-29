@@ -13,7 +13,7 @@ additionalProperties:
   type: website
   crossVersionUpdate: true
   limit: 0
-  recommend: 0
+  recommend: 340
   website: https://lobehub.com
   github: https://github.com/lobehub/lobe-chat
   document: https://lobehub.com/docs
