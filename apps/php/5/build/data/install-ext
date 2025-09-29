@@ -245,7 +245,7 @@ install_extension() {
     elif [ "$extension" = "intl" ]; then
         install_php_extensions intl
     elif [ "$extension" = "swoole" ]; then
-        install_php_extensions swoole
+        installExtensionFromTgz swoole-2.0.11
     elif [ "$extension" = "pgsql" ]; then
         install_php_extensions pgsql
     elif [ "$extension" = "curl" ]; then
