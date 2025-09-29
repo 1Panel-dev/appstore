@@ -13,6 +13,7 @@ additionalProperties:
   type: website
   crossVersionUpdate: true
   limit: 0
+  recommend: 350
   website: https://umami.is/
   github: https://github.com/umami-software/umami
   document: https://umami.is/docs

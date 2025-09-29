@@ -22,7 +22,7 @@ additionalProperties:
   type: python
   crossVersionUpdate: false
   limit: 0
-  recommend: 101
+  recommend: 1050
   website: https://www.python.org/
   github: https://github.com/python
   document: https://www.python.org/doc/

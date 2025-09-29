@@ -1,0 +1,162 @@
+additionalProperties:
+  formFields:
+    - default: 3000
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: HTTP 端口
+      label:
+        en: Port
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        tr: liman
+        zh-Hant: HTTP連接埠
+        zh: HTTP 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: OpenAI
+      envKey: LLM_PROVIDER
+      labelEn: LLM provider
+      labelZh: LLM 提供商
+      label:
+        en: LLM provider
+        ja: LLMプロバイダー
+        ms: Penyedia LLM
+        pt-br: Fornecedor LLM
+        ru: Поставщик LLM
+        ko: LLM 공급자
+        tr: LLM sağlayıcısı
+        zh-hant: LLM 提供商
+        zh: LLM 提供商
+      required: true
+      type: select
+      values:
+        - label: OpenAI
+          value: OpenAI
+        - label: DeepSeek
+          value: DeepSeek
+        - label: 豆包
+          value: DouBao
+        - label: 文心一言
+          value: Ernie
+        - label: 月之暗面
+          value: Kimi
+        - label: 通义千问
+          value: Qwen
+        - label: 智谱 AI
+          value: ZhiPu
+        - label: Amazon Bedrock
+          value: AmazonBedrock
+        - label: Anthropic Claude
+          value: Anthropic
+        - label: Cohere
+          value: Cohere
+        - label: Github
+          value: Github
+        - label: Google
+          value: Google
+        - label: Groq
+          value: Groq
+        - label: HuggingFace
+          value: HuggingFace
+        - label: Hyperbolic
+          value: Hyperbolic
+        - label: LMStudio
+          value: LMStudio
+        - label: Mistral
+          value: Mistral
+        - label: Ollama
+          value: Ollama
+        - label: OpenRouter
+          value: OpenRouter
+        - label: Perplexity
+          value: Perplexity
+        - label: Together
+          value: Together
+        - label: xAI
+          value: xAI
+    - default: ""
+      edit: true
+      envKey: PROVIDER_API_KEY
+      labelEn: API Key
+      labelZh: API 密钥
+      label:
+        en: API Key
+        ja: APIキー
+        ms: Kunci API
+        pt-br: Chave de API
+        ru: API-ключ
+        ko: API 키
+        tr: API Anahtarı
+        zh-hant: API 密鑰
+        zh: API 密钥
+      required: true
+      rule: paramCommon
+      type: text
+    - default: ""
+      edit: true
+      envKey: PROVIDER_BASE_URL
+      labelEn: API URL
+      labelZh: API 地址
+      label:
+        en: API URL
+        ja: API URL
+        ms: API URL
+        pt-br: API URL
+        ru: API URL
+        ko: API URL
+        tr: API URL
+        zh-hant: API URL
+        zh: API 地址
+      description:
+        en: "Note: Fill in only when using the OpenAI LLM provider."
+        ja: "注：OpenAI LLMプロバイダーを使用する場合のみ記入してください。"
+        ms: "Catatan: Isi hanya apabila menggunakan penyedia LLM OpenAI."
+        pt-br: "Nota: Preencha apenas ao usar o provedor LLM OpenAI."
+        ru: "Примечание: Заполняйте только при использовании поставщика LLM OpenAI."
+        ko: "참고: OpenAI LLM 공급자를 사용하는 경우에만 작성하십시오."
+        tr: "Not: Yalnızca OpenAI LLM sağlayıcısını kullanırken doldurun."
+        zh-hant: "注意：僅在使用 OpenAI LLM 提供商時填寫。"
+        zh: "注意：仅在使用 OpenAI LLM 提供商时填写。"
+      required: false
+      rule: paramHttp
+      type: text
+    - default: ""
+      edit: true
+      envKey: LLM_DEFAULT_MODEL
+      labelEn: Default page model
+      labelZh: 页面默认模型
+      label:
+        en: Default page model
+        ja: デフォルトのページモデル
+        ms: Model halaman lalai
+        pt-br: Modelo de página padrão
+        ru: Модель страницы по умолчанию
+        ko: 기본 페이지 모델
+        tr: Varsayılan sayfa modeli
+        zh-hant: 页面默认模型
+        zh: 页面默认模型
+      required: true
+      rule: paramCommon
+      type: text
+    - default: ""
+      envKey: LLM_MINOR_MODEL
+      labelEn: Auxiliary task model
+      labelZh: 辅助任务模型
+      label:
+        en: Auxiliary task model
+        ja: 補助タスクモデル
+        ms: Model tugas tambahan
+        pt-br: Modelo de tarefa auxiliar
+        ru: Вспомогательная модель задачи
+        ko: 보조 작업 모델
+        tr: Yardımcı görev modeli
+        zh-hant: 辅助任务模型
+        zh: 辅助任务模型
+      required: true
+      rule: paramCommon
+      type: text

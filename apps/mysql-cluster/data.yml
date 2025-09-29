@@ -20,7 +20,7 @@ additionalProperties:
     type: runtime
     crossVersionUpdate: false
     limit: 0
-    recommend: 72
+    recommend: 800
     website: https://www.mysql.com
     github: https://github.com/mysql/mysql-server
     document: https://dev.mysql.com/doc/

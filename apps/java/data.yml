@@ -22,7 +22,7 @@ additionalProperties:
   type: java
   crossVersionUpdate: false
   limit: 0
-  recommend: 120
+  recommend: 1020
   website: https://www.java.com/
   github: https://github.com/bitnami/containers
   document: https://dev.java/learn/

@@ -13,7 +13,7 @@ additionalProperties:
   type: website
   crossVersionUpdate: true
   limit: 0
-  recommend: 0
+  recommend: 300
   website: https://github.com/jeessy2/ddns-go
   github: https://github.com/jeessy2/ddns-go
   document: https://github.com/jeessy2/ddns-go

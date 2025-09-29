@@ -13,7 +13,7 @@ additionalProperties:
   type: php
   crossVersionUpdate: false
   limit: 0
-  recommend: 100
+  recommend: 1000
   website: https://www.php.net/
   github: https://github.com/php/php-src
   document: https://www.php.net/docs.php
