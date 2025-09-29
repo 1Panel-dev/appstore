@@ -8,18 +8,18 @@ additionalProperties:
   name: UPage
   tags:
     - AI
-  shortDescZh: 基于大模型的可视化网页构建平台
-  shortDescEn: A visual web development platform powered by large models
+  shortDescZh: 基于大模型的可视化网页构建平台，Lovable 开源替代
+  shortDescEn: An LLM-driven visual web builder — the open-source alternative to Lovable
   description:
-    en: A visual web development platform powered by large models
-    ja: 大規模モデルに基づくビジュアルWeb構築プラットフォーム
-    ms: Büyük modeller tarafından desteklenen görsel bir web geliştirme platformu
-    pt-br: Uma plataforma de desenvolvimento web visual alimentada por grandes modelos
-    ru: Визуальная платформа веб-разработки на основе больших моделей
-    ko: 대규모 모델에 기반한 시각적 웹 개발 플랫폼
-    tr: Büyük modeller tarafından desteklenen görsel bir web geliştirme platformu
-    zh-hant: 基於大模型的可視化網頁構建平台
-    zh: 基于大模型的可视化网页构建平台
+    en: An LLM-driven visual web builder — the open-source alternative to Lovable
+    ja: LLM駆動のビジュアルWebビルダー - Lovableのオープンソース代替
+    ms: Pembina web visual yang digerakkan oleh LLM — alternatif sumber terbuka untuk Lovable
+    pt-br: Um construtor de sites visual movido por LLM — a alternativa de código aberto ao Lovable
+    ru: Визуальный конструктор веб-сайтов на основе LLM — открытая альтернатива Lovable
+    ko: LLM 기반 비주얼 웹 빌더 — Lovable의 오픈 소스 대안
+    tr: LLM destekli görsel bir web oluşturucu — Lovable için açık kaynaklı alternatif
+    zh-hant: 基於大模型的可視化網頁構建平台，Lovable 開源替代
+    zh: 基于大模型的可视化网页构建平台，Lovable 开源替代
   type: website
   crossVersionUpdate: false
   limit: 0
