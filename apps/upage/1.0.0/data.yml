@@ -144,6 +144,7 @@ additionalProperties:
       rule: paramCommon
       type: text
     - default: ""
+      edit: true
       envKey: LLM_MINOR_MODEL
       labelEn: Auxiliary task model
       labelZh: 辅助任务模型
