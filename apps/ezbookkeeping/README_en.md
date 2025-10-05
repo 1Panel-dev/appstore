@@ -4,6 +4,12 @@ ezBookkeeping is a lightweight, self-hosted personal finance app with a user-fri
 
 ezBookkeeping offers tailored interfaces for both mobile and desktop devices. With support for PWA (Progressive Web Apps), you can even [add it to your mobile home screen](https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/mobile/add_to_home_screen.gif) and use it like a native app.
 
+## Configuration
+
+The configuration file is located at `conf/ezbookkeeping.ini`. You can view the default configuration in the [GitHub repository](https://github.com/mayswind/ezbookkeeping/blob/main/conf/ezbookkeeping.ini).
+
+For custom configurations, please refer to the official [configuration documentation](https://ezbookkeeping.mayswind.net/en/configuration) for detailed explanations and best practices.
+
 ## Related Links
 
 Project url: [https://github.com/mayswind/ezbookkeeping](https://github.com/mayswind/ezbookkeeping)  

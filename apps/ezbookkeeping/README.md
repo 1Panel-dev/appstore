@@ -4,6 +4,12 @@ ezBookkeeping 是一款轻量、自托管 (self-hosted) 的个人记账应用，
 
 ezBookkeeping 为移动端和桌面端提供了各自原生的界面设计。借助 PWA (渐进式网页应用) 技术，您还可以将它 [添加到手机主屏幕](https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/mobile/add_to_home_screen.gif)，像原生 App 一样使用。
 
+## 配置文件
+
+配置文件位于 `conf/ezbookkeeping.ini`，默认配置可在 [GitHub 仓库](https://github.com/mayswind/ezbookkeeping/blob/main/conf/ezbookkeeping.ini) 中查看。
+
+如需自定义配置，请参考官方 [配置文档](https://ezbookkeeping.mayswind.net/zh_Hans/configuration) 获取详细说明和最佳实践。
+
 ## 相关链接
 
 项目地址：[https://github.com/mayswind/ezbookkeeping](https://github.com/mayswind/ezbookkeeping)  
