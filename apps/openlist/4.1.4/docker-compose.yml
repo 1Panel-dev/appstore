@@ -19,4 +19,3 @@ services:
 networks:  
   1panel-network:  
     external: true
-
