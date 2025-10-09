@@ -95,7 +95,6 @@ additionalProperties:
         zh-hant: API 密鑰
         zh: API 密钥
       required: true
-      rule: paramCommon
       type: text
     - default: ""
       edit: true
