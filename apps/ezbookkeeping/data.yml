@@ -8,7 +8,7 @@ additionalProperties:
   name: ezBookkeeping
   tags:
     - Tool
-  type: tool
+  type: website
   shortDescZh: 轻量级、自托管的个人财务应用
   shortDescEn: A lightweight, self-hosted personal finance app
   description:
