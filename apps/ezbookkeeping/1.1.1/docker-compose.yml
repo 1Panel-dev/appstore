@@ -10,12 +10,11 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - ./conf:/ezbookkeeping/conf
-      - ./data:/ezbookkeeping/data
-      - ./storage:/ezbookkeeping/storage
-      - ./log:/ezbookkeeping/log
+      - ./data/data:/ezbookkeeping/data
+      - ./data/storage:/ezbookkeeping/storage
+      - ./data/log:/ezbookkeeping/log
     labels:
       createdBy: "Apps"
-
 networks:
   1panel-network:
     external: true

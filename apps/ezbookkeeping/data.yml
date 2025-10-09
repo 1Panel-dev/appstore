@@ -1,26 +1,26 @@
-name: ezbookkeeping
+name: ezBookkeeping
 tags:
   - 实用工具
-title: 轻量级个人记账应用
-description: 轻量、自托管的个人记账应用，拥有用户友好的界面和强大的记账功能
+title: 轻量级、自托管的个人财务应用
+description: 轻量级、自托管的个人财务应用
 additionalProperties:
   key: ezbookkeeping
   name: ezBookkeeping
   tags:
     - Tool
   type: tool
-  shortDescZh: 轻量、自托管的个人记账应用，拥有用户友好的界面和强大的记账功能
-  shortDescEn: A lightweight, self-hosted personal finance app with a user-friendly interface and powerful bookkeeping features
+  shortDescZh: 轻量级、自托管的个人财务应用
+  shortDescEn: A lightweight, self-hosted personal finance app
   description:
-    zh: 轻量、自托管的个人记账应用，拥有用户友好的界面和强大的记账功能
-    zh-hant: 輕量、自托管的個人記帳應用，擁有用戶友好的界面和強大的記帳功能
-    en: A lightweight, self-hosted personal finance app with a user-friendly interface and powerful bookkeeping features
-    ja: 軽量でセルフホスト型の個人向け家計簿アプリで、ユーザーフレンドリーなインターフェースと強力な記帳機能を備えています
-    ms: Aplikasi kewangan peribadi yang ringan dan dihoskan sendiri dengan antara muka mesra pengguna dan ciri pembukuan yang kuat
-    pt-br: Um aplicativo de finanças pessoais leve e auto-hospedado com uma interface amigável e recursos poderosos de contabilidade
-    ru: Легковесное, самостоятельное приложение для личных финансов с удобным интерфейсом и мощными функциями бухгалтерского учета
-    ko: 사용자 친화적인 인터페이스와 강력한 부기 기능을 갖춘 가볍고 자체 호스팅되는 개인 금융 앱
-    tr: Kullanıcı dostu arayüzü ve güçlü muhasebe özelliklerine sahip hafif, kendi kendine barındırılan kişisel finans uygulaması
+    en: A lightweight, self-hosted personal finance app
+    ja: 軽量でセルフホスト型の個人向け家計簿アプリ
+    ms: Aplikasi kewangan peribadi yang ringan dan dihoskan sendiri
+    pt-br: Um aplicativo de finanças pessoais leve e auto-hospedado
+    ru: Легкое приложение для личных финансов с самостоятельным размещением
+    ko: 가볍고 자체 호스팅되는 개인 금융 앱
+    tr: Hafif, kendi kendine barındırılan kişisel finans uygulaması
+    zh-hant: 輕量級、自托管的個人財務應用
+    zh: 轻量级、自托管的个人财务应用
   crossVersionUpdate: true
   limit: 0
   website: https://ezbookkeeping.mayswind.net/
@@ -30,4 +30,4 @@ additionalProperties:
     - amd64
     - arm64
     - armv7
-  gpuSupport: false
+  

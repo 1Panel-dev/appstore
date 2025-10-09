@@ -1,19 +1,6 @@
-## 介绍
+## 产品介绍
 
-ezBookkeeping 是一款轻量、自托管 (self-hosted) 的个人记账应用，拥有用户友好的界面和强大的记账功能。它部署简单，借助 Docker 只需一行命令即可启动。同时对系统资源占用低、可扩展性高，既可运行在树莓派等轻量设备上，也能扩展到 NAS、MicroServer 甚至集群环境。
-
-ezBookkeeping 为移动端和桌面端提供了各自原生的界面设计。借助 PWA (渐进式网页应用) 技术，您还可以将它 [添加到手机主屏幕](https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/mobile/add_to_home_screen.gif)，像原生 App 一样使用。
-
-## 配置文件
-
-配置文件位于 `conf/ezbookkeeping.ini`，默认配置可在 [GitHub 仓库](https://github.com/mayswind/ezbookkeeping/blob/main/conf/ezbookkeeping.ini) 中查看。
-
-如需自定义配置，请参考官方 [配置文档](https://ezbookkeeping.mayswind.net/zh_Hans/configuration) 获取详细说明和最佳实践。
-
-## 相关链接
-
-项目地址：[https://github.com/mayswind/ezbookkeeping](https://github.com/mayswind/ezbookkeeping)  
-在线演示：[https://ezbookkeeping-demo.mayswind.net](https://ezbookkeeping-demo.mayswind.net)
+**ezBookkeeping** 是一款轻量级、自托管的个人财务应用，拥有用户友好的界面和强大的记账功能。它易于部署，只需一个 Docker 命令即可启动。它旨在节省资源并具有高度可扩展性，可以在像 Raspberry Pi 这样的小型设备上流畅运行，也可以扩展到 NAS、MicroServer 甚至大型集群环境。
 
 ## 特性
 
@@ -50,7 +37,3 @@ ezBookkeeping 为移动端和桌面端提供了各自原生的界面设计。借
   - 应用锁 (PIN 码 / WebAuthn)
 - **数据导入/导出**
   - 支持 CSV、OFX、QFX、QIF、IIF、Camt.053、MT940、GnuCash、FireFly III、Beancount、随手记，以及支付宝、微信支付及京东金融的对账单 等多种格式
-
-## 协议
-
-[MIT](https://github.com/mayswind/ezbookkeeping/blob/master/LICENSE)
