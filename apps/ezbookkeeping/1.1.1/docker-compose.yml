@@ -1,0 +1,21 @@
+services:
+  ezbookkeeping:
+    image: mayswind/ezbookkeeping:1.1.1
+    container_name: ${CONTAINER_NAME}
+    restart: unless-stopped
+    networks:
+      - 1panel-network
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:8080"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./conf:/ezbookkeeping/conf
+      - ./data:/ezbookkeeping/data
+      - ./storage:/ezbookkeeping/storage
+      - ./log:/ezbookkeeping/log
+    labels:
+      createdBy: "Apps"
+
+networks:
+  1panel-network:
+    external: true
