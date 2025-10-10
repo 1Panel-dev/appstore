@@ -1,6 +1,6 @@
 services:
   windows:
-    image: dockurr/windows:5.06
+    image: dockurr/windows:5.07
     container_name: ${CONTAINER_NAME}
     environment:
       VERSION: ${VERSION}
