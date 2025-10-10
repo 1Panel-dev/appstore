@@ -47,7 +47,6 @@ additionalProperties:
         zh: 主节点 IP
     - default: 6379
       envKey: MASTER_PORT
-      disabled: true
       required: true
       type: text
       label:
