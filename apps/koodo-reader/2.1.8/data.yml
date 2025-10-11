@@ -28,7 +28,7 @@ additionalProperties:
       random: false
 #      rule: paramCommon
     - default:  "/opt/koodo/"
-      envKey: PATH
+      envKey: KOODO_PATH
       labelEn: Path
       labelZh: 路径
       type: text
