@@ -2,65 +2,37 @@ additionalProperties:
   formFields:
     - default: 6005
       envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
       type: number
       required: true
       edit: true
+      random: false
       rule: paramPort
-      label:
-        en: Port
-        zh: 端口
-        zh-hant: 端口
-        ja:
-        ms:
-        pt-br:
-        ru:
-        ko:
-
     - default:  "admin"
       envKey: SERVER_USERNAME
+      labelEn: Admin User Name
+      labelZh: 管理员用户名
       type: text
       required: true
       edit: true
       random: false
       rule: paramCommon
-      label:
-        en: Admin User Name
-        zh: 管理员用户名
-        zh-Hant: 管理員用戶名
-        ja:
-        ms:
-        pt-br:
-        ru:
-        ko:
-
-    - default:
+    - default: ""
       envKey: SERVER_PASSWORD
-      label:
-        en: Admin Password
-        zh: 管理员密码
-        zh-hant: 管理員密碼
-        ja:
-        ms:
-        pt-br:
-        ru:
-        ko:
-      random: false
-      required: true
+      labelEn: Admin Password
+      labelZh: 管理员密码
       type: password
-
+      required: true
+      edit: true
+      random: false
+#      rule: paramCommon
     - default:  "/opt/koodo/"
       envKey: PATH
+      labelEn: Path
+      labelZh: 路径
       type: text
       required: true
       edit: true
       random: false
-      rule: paramCommon
-      label:
-        en: Path
-        zh: 路径
-        zh-Hant: 路徑
-        ja:
-        ms:
-        pt-br:
-        ru:
-        ko:
+#      rule: paramCommon
