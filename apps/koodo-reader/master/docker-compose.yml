@@ -7,7 +7,13 @@ services:
       - 1panel-network
     ports:
       - ${PANEL_APP_PORT_HTTP}:80
-    labels:  
+    volumes:
+      - ${KOODO_PATH}:/app/uploads
+    environment:
+      - SERVER_USERNAME=${SERVER_USERNAME}
+      - SERVER_PASSWORD=${SERVER_PASSWORD}
+      - ENABLE_HTTP_SERVER=true
+    labels:
       createdBy: "Apps"
 networks:  
   1panel-network:  
