@@ -140,7 +140,6 @@ additionalProperties:
         zh-hant: 页面默认模型
         zh: 页面默认模型
       required: true
-      rule: paramCommon
       type: text
     - default: ""
       edit: true
@@ -158,5 +157,4 @@ additionalProperties:
         zh-hant: 辅助任务模型
         zh: 辅助任务模型
       required: true
-      rule: paramCommon
       type: text
