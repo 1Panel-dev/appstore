@@ -1,0 +1,12 @@
+services:  
+  easytier:  
+    image: easytier/easytier:v2.4.5
+    container_name: ${CONTAINER_NAME}
+    restart: always  
+    network_mode: host
+    privileged: true
+    command:
+    - -w
+    - ${EASYTIER_WEB_PATH}
+    labels:  
+      createdBy: "Apps"  

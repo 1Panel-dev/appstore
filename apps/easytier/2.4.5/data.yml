@@ -1,0 +1,14 @@
+additionalProperties:
+  formFields:
+  - default: "https://easytier.cn/web 的用户名"
+    envKey: EASYTIER_WEB_PATH
+    required: true
+    type: text
+    label:  
+      en: Web Management Account or Url
+      ja: Web管理アカウントまたはURL
+      ms: Akaun atau URL Pengurusan Web
+      pt-br: Conta ou URL de Gerenciamento Web
+      ru: Учетная запись или URL веб-управления
+      ko: 웹 관리 계정 또는 URL
+      zh: 网页管理账号或自部署地址

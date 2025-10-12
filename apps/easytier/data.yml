@@ -1,0 +1,20 @@
+additionalProperties:
+    key: easytier
+    name: Easytier
+    tags:
+    - Tool
+    description:
+      en: A simple, decentralized mesh VPN with WireGuard support.
+      zh: 一个简单的去中心化Mesh VPN，支持WireGuard。
+      zh-Hant: 一個簡單的去中心化Mesh VPN，支持WireGuard。
+      ja: 簡単な去中心化Mesh VPN、WireGuardをサポートします。
+      ms: VPN Mesh terdesentralisasi yang mudah dengan sokongan WireGuard.
+      pt-br: Uma VPN Mesh descentralizada simples com suporte ao WireGuard.
+      ru: Простой децентрализованный VPN Mesh с поддержкой WireGuard.
+      ko: 간단한 탈중앙화 Mesh VPN, WireGuard 지원.
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    website: https://easytier.cn
+    github: https://github.com/EasyTier/Easytier
+    document: https://easytier.cn/guide/introduction.html
