@@ -30,3 +30,4 @@ additionalProperties:
     memoryRequired: 4096
     architectures:
       - amd64
+      - arm64
