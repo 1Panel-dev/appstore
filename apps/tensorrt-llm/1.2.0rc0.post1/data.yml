@@ -1,0 +1,39 @@
+additionalProperties:
+  formFields:
+    - default: 8800
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        en: Port
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        zh-Hant: 埠
+        zh: 端口
+        ko: 포트
+    - default: /opt/
+      edit: true
+      envKey: MODEL_PATH
+      labelEn: 模型路径
+      labelZh: Model Path
+      required: true
+      type: text
+      label:
+        en: Model Path
+        zh: 模型路径
+    - default: Qwen3-32B-FP4
+      edit: true
+      envKey: MODEL_NAME
+      labelEn: 模型名称
+      labelZh: Model NAME
+      required: true
+      type: text
+      label:
+        en: Model NAME
+        zh: 模型名称

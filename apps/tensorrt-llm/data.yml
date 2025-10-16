@@ -1,0 +1,27 @@
+name: TensorRT-LLM
+tags:
+    - AI
+title: TensorRT-LLM provides users with an easy-to-use Python API to define Large Language Models (LLMs) and support state-of-the-art optimizations to perform inference efficiently on NVIDIA GPUs.
+description: TensorRT-LLM provides users with an easy-to-use Python API to define Large Language Models (LLMs) and support state-of-the-art optimizations to perform inference efficiently on NVIDIA GPUs.
+additionalProperties:
+    key: tensorrt-llm
+    name: TensorRT-LLM
+    tags:
+        - AI
+    shortDescZh: TensorRT-LLM provides users with an easy-to-use Python API to define Large Language Models (LLMs) and support state-of-the-art optimizations to perform inference efficiently on NVIDIA GPUs.
+    shortDescEn: TensorRT-LLM provides users with an easy-to-use Python API to define Large Language Models (LLMs) and support state-of-the-art optimizations to perform inference efficiently on NVIDIA GPUs.
+    description:
+        en: TensorRT-LLM provides users with an easy-to-use Python API to define Large Language Models (LLMs) and support state-of-the-art optimizations to perform inference efficiently on NVIDIA GPUs.
+        zh: TensorRT-LLM provides users with an easy-to-use Python API to define Large Language Models (LLMs) and support state-of-the-art optimizations to perform inference efficiently on NVIDIA GPUs.
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://github.com/NVIDIA/TensorRT-LLM
+    github: https://github.com/NVIDIA/TensorRT-LLM
+    document: https://nvidia.github.io/TensorRT-LLM/
+    gpuSupport: true
+    memoryRequired: 4096
+    architectures:
+      - amd64
+      - arm64
