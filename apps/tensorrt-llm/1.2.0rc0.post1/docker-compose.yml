@@ -1,5 +1,5 @@
 services:
-  vllm:
+  tensorrt-llm:
     image: nvcr.io/nvidia/tensorrt-llm/release:1.2.0rc0.post1
     container_name: ${CONTAINER_NAME}
     restart: always
