@@ -8,7 +8,7 @@ services:
     ports:
       - ${PANEL_APP_PORT_HTTP}:80
     volumes:
-      - ${KOODO_PATH}:/app/uploads
+      - ./data:/app/uploads
     environment:
       - SERVER_USERNAME=${SERVER_USERNAME}
       - SERVER_PASSWORD=${SERVER_PASSWORD}
