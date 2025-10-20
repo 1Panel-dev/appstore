@@ -1,6 +1,6 @@
 additionalProperties:
   formFields:
-    - default: 6005
+    - default: 8860
       envKey: PANEL_APP_PORT_HTTP
       labelEn: Port
       labelZh: 端口
@@ -26,13 +26,3 @@ additionalProperties:
       required: true
       edit: true
       random: false
-#      rule: paramCommon
-#    - default:  "/opt/koodo/"
-#      envKey: KOODO_PATH
-#      labelEn: Path
-#      labelZh: 路径
-#      type: text
-#      required: true
-#      edit: true
-#      random: false
-#      rule: paramCommon
