@@ -84,14 +84,6 @@
       "allowedVersions": "/^17.*/"
     },
     {
-      "matchFileNames": ["apps/jumpserver/3.*/*.yml"],
-      "allowedVersions": "/^3.*/"
-    },
-    {
-      "matchFileNames": ["apps/jumpserver/4.*/*.yml"],
-      "allowedVersions": "/^4.*/"
-    },
-    {
       "matchFileNames": ["apps/maxkb/1.*/*.yml"],
       "allowedVersions": "/^1.*/"
     },
