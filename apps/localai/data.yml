@@ -28,3 +28,4 @@ additionalProperties:
         ko: 무료 오픈 소스 OpenAI 대안
     architectures:
       - amd64
+      - arm64
