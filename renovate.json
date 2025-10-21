@@ -144,14 +144,6 @@
       "allowedVersions": "/^2022-*/"
     },
     {
-      "matchFileNames": ["apps/dataease/1.*/*.yml"],
-      "allowedVersions": "<=1.20"
-    },
-    {
-      "matchFileNames": ["apps/dataease/2.*/*.yml"],
-      "allowedVersions": ">=2.0"
-    },
-    {
       "matchFileNames": ["apps/zitadel/2.*/*.yml"],
       "allowedVersions": "/^2.*/"
     },
