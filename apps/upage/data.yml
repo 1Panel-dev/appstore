@@ -23,7 +23,7 @@ additionalProperties:
   type: website
   crossVersionUpdate: false
   limit: 0
-  recommend: 17
+  recommend: 52
   website: https://upage.ai/
   github: https://github.com/halo-dev/upage/
   document: https://docs.upage.ai/
