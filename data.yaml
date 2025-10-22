@@ -2,6 +2,19 @@ name: 1Panel
 title: 新一代的 Linux 服务器运维管理面板
 additionalProperties:
   tags:
+    - key: AI
+      name: AI
+      sort: 5
+      locales:
+        en: "AI"
+        ja: "AI"
+        ms: "AI"
+        pt-br: "AI"
+        ru: "AI"
+        ko: "AI"
+        zh-hant: "AI"
+        zh: "AI"
+        tr: "AI"
     - key: Website
       name: 建站
       sort: 10
@@ -80,19 +93,6 @@ additionalProperties:
         zh-hant: "雲存儲"
         zh: "云存储"
         tr: "Bulut Depolama"
-    - key: AI
-      name: AI
-      sort: 70
-      locales:
-        en: "AI"
-        ja: "AI"
-        ms: "AI"
-        pt-br: "AI"
-        ru: "AI"
-        ko: "AI"
-        zh-hant: "AI"
-        zh: "AI"
-        tr: "AI"
     - key: BI
       name: BI
       sort: 80
