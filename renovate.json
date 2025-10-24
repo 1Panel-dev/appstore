@@ -172,6 +172,14 @@
       "allowedVersions": "/^13.*/"
     },
     {
+      "matchFileNames": ["apps/uptime-kuma/1.*/*.yml"],
+      "allowedVersions": "/^1.*/"
+    },
+    {
+      "matchFileNames": ["apps/uptime-kuma/2.*/*.yml"],
+      "allowedVersions": "/^2.*/"
+    },
+    {
       "matchDatasources": ["docker"],
       "matchPackageNames": ["ghcr.io/umami-software/umami"],
       "versionCompatibility": "^(?<compatibility>.*)-(?<version>.*)$",
