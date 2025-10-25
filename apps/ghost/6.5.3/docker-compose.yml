@@ -1,6 +1,6 @@
 services:
   ghost:
-    image: ghost:6.5.1
+    image: ghost:6.5.3
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
