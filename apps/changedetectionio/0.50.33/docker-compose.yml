@@ -8,7 +8,7 @@ services:
       - "${PANEL_APP_PORT_HTTP}:5000"
     volumes:
       - "./data:/datastore"
-    image: dgtlmoon/changedetection.io:0.50.32
+    image: dgtlmoon/changedetection.io:0.50.33
     labels:  
       createdBy: "Apps"
 
