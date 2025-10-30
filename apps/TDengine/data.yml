@@ -1,0 +1,25 @@
+name: TDengine
+tags:
+  - 数据库
+title: 专为工业物联网（IIoT）场景设计的高性能、可扩展时间序列数据库
+description:
+  en: High-performance, scalable time-series database designed for Industrial IoT
+    (IIoT) scenarios
+  zh: 专为工业物联网（IIoT）场景设计的高性能、可扩展时间序列数据库
+additionalProperties:
+  key: TDengine
+  name: TDengine
+  tags:
+    - Database
+  shortDescZh: 专为工业物联网（IIoT）场景设计的高性能、可扩展时间序列数据库
+  shortDescEn: High-performance, scalable time-series database designed for
+    Industrial IoT (IIoT) scenarios
+  type: runtime
+  crossVersionUpdate: true
+  limit: 0
+  website: https://www.taosdata.com/
+  github: https://github.com/taosdata/TDengine
+  document: https://docs.taosdata.com
+  architectures:
+    - amd64
+    - arm64
