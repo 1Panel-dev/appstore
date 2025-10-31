@@ -17,7 +17,7 @@ services:
       - "${PORT_POP3_SSL}:995"
       - "${PORT_MANAGESIEVE}:4190"
     volumes:
-      - ./data:/opt/stalwart-mail
+      - ./data:/opt/stalwart
     labels:
       createdBy: "Apps"
 
