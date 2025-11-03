@@ -19,7 +19,7 @@ additionalProperties:
     ko: 고성능, 확장 가능한 시계열 데이터베이스로 Industrial IoT(IIoT) 환경에 맞춰 설계되었습니다
     zh-Hant: 高效能、可擴充的時序資料庫，專為工業物聯網（IIoT）情境設計
     zh: 专为工业物联网（IIoT）场景设计的高性能、可扩展时间序列数据库
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 0
   website: https://www.taosdata.com/
