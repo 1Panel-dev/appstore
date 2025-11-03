@@ -1,5 +1,23 @@
 additionalProperties:
   formFields:
+    - default: "6060"
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: taosExplorer service port
+      labelZh: taosExplorer 服务端口
+      label:
+        en: taosExplorer service port
+        zh: taosExplorer 服务端口
+        zh-hant: taosExplorer 服務通訊埠
+        ja: taosExplorer サービスポート
+        ms: Port Perkhidmatan taosExplorer
+        pt-br: Porta do Serviço taosExplorer
+        ru: Порт службы taosExplorer
+        ko: taosExplorer 서비스 포트
+        tr: taosExplorer Hizmet Bağlantı Noktası
+      required: true
+      type: number
+      edit: true
+      rule: paramPort
     - default: "6030"
       envKey: Taosc_PORT
       labelEn: Native interface (taosc) Port
@@ -103,24 +121,6 @@ additionalProperties:
         ru: Порт прослушивания службы taosX gRPC
         ko: taosX gRPC 서비스 수신 포트
         tr: taosX gRPC Hizmeti Dinleme Bağlantı Noktası
-      required: true
-      type: number
-      edit: true
-      rule: paramPort
-    - default: "6060"
-      envKey: PANEL_APP_PORT_HTTP
-      labelEn: taosExplorer service port
-      labelZh: taosExplorer 服务端口
-      label:
-        en: taosExplorer service port
-        zh: taosExplorer 服务端口
-        zh-hant: taosExplorer 服務通訊埠
-        ja: taosExplorer サービスポート
-        ms: Port Perkhidmatan taosExplorer
-        pt-br: Porta do Serviço taosExplorer
-        ru: Порт службы taosExplorer
-        ko: taosExplorer 서비스 포트
-        tr: taosExplorer Hizmet Bağlantı Noktası
       required: true
       type: number
       edit: true
