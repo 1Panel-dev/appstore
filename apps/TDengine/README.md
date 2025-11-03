@@ -1,29 +1,18 @@
-![](https://fastly.jsdelivr.net/gh/taosdata/TDengine@main/docs/assets/TDengine-logo-trans.png)
+## 默认账户密码
 
-# TDengine
+用户名: `root`
+密码: `taosdata`
 
-TDengine 是一款开源、高性能、云原生、AI 驱动的时序数据库 (Time-Series Database, TSDB)。
+## 产品介绍
 
-了解TDengine高级功能的完整列表，请 [点击](https://tdengine.com/tdengine/)。体验 TDengine 最简单的方式是通过 [TDengine云平台](https://cloud.tdengine.com/)。对最新发布的 TDengine 组件 TDgpt，请访问 [TDgpt README](https://github.com/taosdata/TDengine/blob/main/tools/tdgpt/README.md) 了解细节。
+**TDengine** 是一款开源、高性能、云原生、AI 驱动的时序数据库 (Time-Series Database, TSDB)。TDengine 能被广泛运用于物联网、工业互联网、车联网、IT 运维、金融等领域。除核心的时序数据库功能外，TDengine 还提供缓存、数据订阅、流式计算、AI 智能体等功能，是一极简的时序数据处理平台，最大程度的减小系统设计的复杂度，降低研发和运营成本。
 
-关于完整的使用手册，系统架构和更多细节，请参考 [TDengine](https://www.taosdata.com/) 或者 [TDengine 官方文档](https://docs.taosdata.com/)。
+## 主要优势
 
-打开浏览器，访问 taosExplorer 的地址，默认端口为 `6060`，如果您在本地运行 TDengine, 可以直接访问 http://localhost:6060 用户名和密码默认为：`root/taosdata` 。
-
-## 网络端口
-
-|                        接口或组件名称                        |  容器端口  |  协议   |
-| :----------------------------------------------------------: | :--------: | :-----: |
-| [原生接口（taosc）](https://docs.taosdata.com/operation/intro/#taosc) |    6030    |   TCP   |
-|      [TDgpt](https://docs.taosdata.com/advanced/TDgpt/)      |    6035    |   TCP   |
-| [RESTful 接口](https://docs.taosdata.com/reference/connector/rest-api/) |    6041    |   TCP   |
-| [WebSocket 接口](https://docs.taosdata.com/develop/connect/#websocket-%E8%BF%9E%E6%8E%A5) |    6041    |   TCP   |
-| [taosKeeper](https://docs.taosdata.com/reference/components/taoskeeper/) |    6043    |   TCP   |
-| [statsd 格式写入接口](https://docs.taosdata.com/reference/components/taosadapter/#statsd-%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5) |    6044    | TCP/UDP |
-| [collectd 格式写入接口](https://docs.taosdata.com/reference/components/taosadapter/#collectd-%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5) |    6045    | TCP/UDP |
-| [openTSDB](https://docs.taosdata.com/reference/components/taosadapter/#opentsdb-json-%E5%92%8C-telnet-%E6%A0%BC%E5%BC%8F%E5%86%99%E5%85%A5) TELNET 格式写入接口 |    6046    |   TCP   |
-|          collectd 使用 openTSDB TELNET 格式写入接口          |    6047    |   TCP   |
-|          icinga2 使用 openTSDB TELNET 格式写入接口           |    6048    |   TCP   |
-|         tcollector 使用 openTSDB TELNET 格式写入接口         |    6049    |   TCP   |
-| [taosX](https://docs.taosdata.com/reference/components/taosx/) | 6050, 6055 |   TCP   |
-| [taosExplorer](https://docs.taosdata.com/reference/components/explorer/) |    6060    |   TCP   |
+- **高性能**：通过创新的存储引擎设计，无论是数据写入还是查询，TDengine 的性能比通用数据库快 10 倍以上，也远超其他时序数据库，存储空间不及通用数据库的 1/10。
+- **云原生**：通过原生分布式的设计，充分利用云平台的优势，TDengine 提供了水平扩展能力，具备弹性、韧性和可观测性，支持 k8s 部署，可运行在公有云、私有云和混合云上。
+- **极简时序数据平台**：TDengine 内建消息队列、缓存、流式计算、AI 智能体等功能，应用无需再集成 Kafka/Redis/HBase/Spark 等软件，大幅降低系统的复杂度，降低应用开发和运营成本。
+- **分析能力**：支持 SQL，同时为时序数据特有的分析提供 SQL 扩展。通过超级表、存储计算分离、分区分片、预计算、自定义函数以及 AI Agent 等技术，TDengine 具备强大的分析能力。
+- **AI智能体**：内置时序数据智能体 TDgpt, 无缝连接时序数据基础模型、大语言模型、机器学习、传统统计算法等，提供时序数据预测、异常检测、数据补全和数据分类的功能。
+- **简单易用**：无任何依赖，安装、集群几秒搞定；提供 REST 以及各种语言连接器，与众多第三方工具无缝集成；提供命令行程序，便于管理和即席查询；提供各种运维工具。
+- **核心开源**：TDengine 的核心代码包括集群功能全部开源，截止到 2022 年 8 月 1 日，全球超过 135.9k 个运行实例，GitHub Star 18.7k，Fork 4.4k，社区活跃。

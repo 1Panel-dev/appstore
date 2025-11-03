@@ -14,7 +14,7 @@ services:
       - ${MAPPING_PORT}:6043-6049/udp
       - ${taosX_REST_API_PORT}:6050
       - ${taosX_gRPC_PORT}:6055
-      - ${Taos_Explorer_PORT}:6060
+      - ${PANEL_APP_PORT_HTTP}:6060
     networks:
       - 1panel-network
     labels:

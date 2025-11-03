@@ -108,7 +108,7 @@ additionalProperties:
       edit: true
       rule: paramPort
     - default: "6060"
-      envKey: Taos_Explorer_PORT
+      envKey: PANEL_APP_PORT_HTTP
       labelEn: taosExplorer service port
       labelZh: taosExplorer 服务端口
       label:
