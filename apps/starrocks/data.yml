@@ -1,0 +1,30 @@
+name: StarRocks
+tags:
+    - 数据库
+title: 新一代极速全场景 MPP 数据库
+description: 新一代极速全场景 MPP 数据库
+additionalProperties:
+    key: starrocks
+    name: StarRocks
+    tags:
+        - Database
+    shortDescZh: 新一代极速全场景 MPP 数据库
+    shortDescEn: Next-generation ultra-fast all-scenario MPP database
+    type: tool
+    crossVersionUpdate: false
+    limit: 0
+    website: https://www.starrocks.io
+    github: https://github.com/StarRocks/starrocks
+    document: https://docs.starrocks.io
+    description:
+        en: Next-generation ultra-fast all-scenario MPP database
+        zh: 新一代极速全场景 MPP 数据库
+        zh-Hant: 新一代極速全場景 MPP 資料庫
+        ja: 次世代の超高速オールシナリオ MPP データベース
+        ms: Pangkalan data MPP serba guna generasi baharu yang amat pantas
+        pt-br: Banco de dados MPP ultrarrápido de nova geração para todos os cenários
+        ru: MPP база данных нового поколения для всех сценариев с ультрабыстрой аналитикой
+    ko: 차세대 초고속 올 시나리오 MPP 데이터베이스
+    memoryRequired: 4096
+    architectures:
+        - amd64

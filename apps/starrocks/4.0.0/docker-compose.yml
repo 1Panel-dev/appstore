@@ -1,0 +1,26 @@
+services:
+  starrocks:
+    image: starrocks/allin1-ubuntu:4.0.0
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - "${PANEL_APP_PORT_TCP}:9030"
+      - "${PANEL_APP_PORT_HTTP}:8030"
+      - "${PANEL_APP_PORT_STREAM}:8040"
+    volumes:
+      - ./fe-meta:/opt/starrocks/fe/meta
+      - ./be-storage:/opt/starrocks/be/storage
+      - ./log:/opt/starrocks/log
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    ulimits:
+      nofile:
+        soft: 60000
+        hard: 60000
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true
