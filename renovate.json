@@ -84,6 +84,10 @@
       "allowedVersions": "/^17.*/"
     },
     {
+      "matchFileNames": ["apps/postgresql/18.*/*.yml"],
+      "allowedVersions": "/^18.*/"
+    },
+    {
       "matchFileNames": ["apps/maxkb/1.*/*.yml"],
       "allowedVersions": "/^1.*/"
     },
