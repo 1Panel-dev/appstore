@@ -6,13 +6,13 @@ services:
     networks:
       - 1panel-network
     ports:
-      - "${PANEL_APP_PORT_TCP}:9030"
       - "${PANEL_APP_PORT_HTTP}:8030"
+      - "${PANEL_APP_PORT_TCP}:9030"
       - "${PANEL_APP_PORT_STREAM}:8040"
     volumes:
-      - ./fe-meta:/opt/starrocks/fe/meta
-      - ./be-storage:/opt/starrocks/be/storage
-      - ./log:/opt/starrocks/log
+      - ./data/fe-meta:/opt/starrocks/fe/meta
+      - ./data/be-storage:/opt/starrocks/be/storage
+      - ./data/log:/opt/starrocks/log
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     ulimits:

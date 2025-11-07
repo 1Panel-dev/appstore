@@ -1,21 +1,5 @@
 additionalProperties:
   formFields:
-    - default: 9030
-      envKey: PANEL_APP_PORT_TCP
-      labelEn: MySQL Port
-      labelZh: MySQL 端口
-      label:
-        en: MySQL Port
-        ja: MySQL ポート
-        ms: Port MySQL
-        pt-br: Porta MySQL
-        ru: Порт MySQL
-        ko: MySQL 포트
-        zh: MySQL 端口
-        zh-Hant: MySQL 連接埠
-      required: true
-      rule: paramPort
-      type: number
     - default: 8030
       envKey: PANEL_APP_PORT_HTTP
       labelEn: Web Port
@@ -29,6 +13,22 @@ additionalProperties:
         ko: 웹 포트
         zh: Web 控制台端口
         zh-Hant: Web 控制台連接埠
+      required: true
+      rule: paramPort
+      type: number
+    - default: 9030
+      envKey: PANEL_APP_PORT_TCP
+      labelEn: MySQL Port
+      labelZh: MySQL 端口
+      label:
+        en: MySQL Port
+        ja: MySQL ポート
+        ms: Port MySQL
+        pt-br: Porta MySQL
+        ru: Порт MySQL
+        ko: MySQL 포트
+        zh: MySQL 端口
+        zh-Hant: MySQL 連接埠
       required: true
       rule: paramPort
       type: number

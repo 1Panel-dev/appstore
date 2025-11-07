@@ -1,16 +1,12 @@
-# 什么是 StarRocks
+## 使用说明
 
-StarRocks 是**新一代极速全场景 MPP (Massively Parallel Processing) 数据库**。StarRocks 的愿景是能够让用户的**数据分析变得更加简单和敏捷**。用户无需经过复杂的预处理，就可以用 StarRocks 来支持多种数据分析场景的极速分析。
+- 默认用户名为 `root`，密码留空即可登录。
 
-StarRocks **架构简洁**，采用了全面向量化引擎，并配备全新设计的 CBO (Cost Based Optimizer) 优化器，**查询速度（尤其是多表关联查询）远超同类产品**。
+## 产品介绍
 
-StarRocks 能很好地支持实时数据分析，并能实现对实时更新数据的高效查询。StarRocks 还支持现代化物化视图，进一步加速查询。
+**StarRocks** 是一款新一代高性能分析型数据仓库，支持实时、多维和高并发数据分析。StarRocks 采用 MPP 架构，配备完全向量化的执行引擎、支持实时更新的列式存储引擎，并拥有丰富的功能，包括完全定制的基于成本的优化器 (CBO)、智能物化视图等等。StarRocks 支持从各种数据源实时和批量摄取数据，并且无需数据迁移即可直接分析存储在数据湖中的数据。
 
-使用 StarRocks，用户可以灵活构建包括大宽表、星型模型、雪花模型在内的各类模型。
-
-StarRocks 兼容 MySQL 协议，支持标准 SQL 语法，易于对接使用，全系统无外部依赖，高可用，易于运维管理。StarRocks 还兼容多种主流 BI 产品，包括 Tableau、Power BI、QuickBI、FineBI 和 Smartbi。
-
-[StarRocks](https://github.com/StarRocks/starrocks/tree/main) 是 Linux 基金会项目，采用 Apache 2.0 许可证，可在 StarRocks GitHub 存储库中找到（请参阅 [StarRocks 许可证](https://github.com/StarRocks/starrocks/blob/main/LICENSE.txt)）。StarRocks（i）链接或调用第三方软件库中的函数，其许可证可在 [licenses-binary](https://github.com/StarRocks/starrocks/tree/main/licenses-binary) 文件夹中找到；和（ii）包含第三方软件代码，其许可证可在 [licenses](https://github.com/StarRocks/starrocks/tree/main/licenses) 文件夹中找到。
+**StarRocks** 还兼容 MySQL 协议，并且可以使用 MySQL 客户端和常用的 BI 工具轻松连接。StarRocks 具有高度可扩展性、高可用性和易于维护的特点。它在业界得到广泛应用，为各种 OLAP 应用场景提供支持，例如实时分析、即席查询、数据湖分析等等。
 
 ## 适用场景
 
