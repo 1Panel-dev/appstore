@@ -1,7 +1,10 @@
 ## Instructions
 
-- Supported database versions: MySQL >= 5.7, PostgreSQL >= 12.14
-- Default username on first login: `admin`, password: `umami`
+- Supported database versions:
+    - V2: MySQL ≥ 5.7, PostgreSQL ≥ 12.14
+    - V3 and later: MySQL is no longer supported, only PostgreSQL is supported
+- Default username for first login: `admin`
+- Default password: `umami`
 
 ## Introduction
 
