@@ -11,7 +11,7 @@ additionalProperties:
   shortDescZh: Google Analytics 的简单、快速、注重隐私的替代方案
   shortDescEn: A simple, fast, privacy-focused alternative to Google Analytics
   type: website
-  crossVersionUpdate: true
+  crossVersionUpdate: false
   limit: 0
   recommend: 350
   website: https://umami.is/
@@ -28,3 +28,4 @@ additionalProperties:
     ko: Google Analytics에 대한 간단하고 빠르며 개인 정보 보호 중심의 대안
   architectures:
     - amd64
+    - arm64

@@ -180,10 +180,12 @@
       "allowedVersions": "/^2.*/"
     },
     {
-      "matchDatasources": ["docker"],
-      "matchPackageNames": ["ghcr.io/umami-software/umami"],
-      "versionCompatibility": "^(?<compatibility>.*)-(?<version>.*)$",
-      "versioning": "semver"
+      "matchFileNames": ["apps/umami/2.*/*.yml"],
+      "allowedVersions": "/^2.*/"
+    },
+    {
+      "matchFileNames": ["apps/umami/3.*/*.yml"],
+      "allowedVersions": "/^3.*/"
     }
   ],
   "prCreation": "immediate"

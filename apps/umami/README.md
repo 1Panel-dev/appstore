@@ -1,7 +1,10 @@
 ## 使用说明
 
-- 支持的数据库版本: MySQL >= 5.7，PostgreSQL >= 12.14
-- 首次登录默认用户名为: `admin`，密码为: `umami`
+- 支持的数据库版本: 
+    - V2 版本：MySQL ≥ 5.7，PostgreSQL ≥ 12.14
+    - V3 版本及以上：不再支持 MySQL，仅支持 PostgreSQL
+- 首次登录默认用户名: `admin`
+- 默认密码: `umami`
 
 ## 产品介绍
 
