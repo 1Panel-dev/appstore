@@ -17,6 +17,7 @@ services:
 #      - REDIS_CONN_STRING=redis://redis
       - TZ=${TZ}
       - ERROR_LOG_ENABLED=true # 是否启用错误日志记录 (Whether to enable error log recording)
+      - MEMORY_CACHE_ENABLED=true
 #      - BATCH_UPDATE_ENABLED=true  # 是否启用批量更新 (Whether to enable batch update)
 #      - STREAMING_TIMEOUT=300  # 流模式无响应超时时间，单位秒，默认120秒，如果出现空补全可以尝试改为更大值 （Streaming timeout in seconds, default is 120s. Increase if experiencing empty completions）
 #      - SESSION_SECRET=random_string  # 多机部署时设置，必须修改这个随机字符串！！ （multi-node deployment, set this to a random string!!!!!!!）
