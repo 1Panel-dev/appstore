@@ -1,0 +1,718 @@
+additionalProperties:
+  formFields:
+    - default: "5000"
+      envKey: PANEL_APP_PORT_HTTP
+      labelZh: HTTP 端口
+      labelEn: HTTP Port
+      label:
+        zh: HTTP 端口
+        zh-Hant: HTTP 連接埠
+        en: HTTP Port
+        ja: HTTP ポート
+        ko: HTTP 포트
+        ms: Port HTTP
+        pt-br: Porta HTTP
+        ru: HTTP Порт
+        tr: HTTP Portu
+      description:
+        zh: "设置应用的 HTTP 访问端口，有效范围: 1-65535"
+        zh-Hant: "設定應用程式的 HTTP 存取連接埠，有效範圍: 1-65535"
+        en: "Set the HTTP access port for the application, valid range: 1-65535"
+        ja: "アプリケーションのHTTPアクセスポートを設定します。有効範囲: 1-65535"
+        ko: "애플리케이션의 HTTP 접근 포트를 설정합니다. 유효 범위: 1-65535"
+        ms: "Tetapkan port akses HTTP untuk aplikasi, julat sah: 1-65535"
+        pt-br: "Defina a porta de acesso HTTP para o aplicativo, intervalo válido: 1-65535"
+        ru: "Установите порт доступа HTTP для приложения, допустимый диапазон: 1-65535"
+        tr: "Uygulama için HTTP erişim portunu ayarlayın, geçerli aralık: 1-65535"
+      required: true
+      type: number
+      edit: true
+      rule: paramPort
+    - default: "8503"
+      envKey: QUERY_ENGINE_PORT_HTTP
+      labelZh: Query Engine 访问端口
+      labelEn: Query Engine Access Port
+      label:
+        zh: Query Engine 访问端口
+        zh-Hant: Query Engine 存取埠
+        en: Query Engine Access Port
+        ja: Query Engine アクセスポート
+        ko: Query Engine 액세스 포트
+        ms: Port Akses Query Engine
+        pt-br: Porta de Acesso do Query Engine
+        ru: Порт доступа Query Engine
+        tr: Query Engine Erişim Bağlantı Noktası
+      required: false
+      type: number
+      edit: true
+      rule: paramPort
+    - default: "8502"
+      envKey: MEDIA_ENGINE_PORT_HTTP
+      labelZh: Media Engine 访问端口
+      labelEn: Media Engine Access Port
+      label:
+        zh: Media Engine 访问端口
+        zh-Hant: Media Engine 存取埠
+        en: Media Engine Access Port
+        ja: Media Engine アクセスポート
+        ko: Media Engine 액세스 포트
+        ms: Port Akses Media Engine
+        pt-br: Porta de Acesso do Media Engine
+        ru: Порт доступа Media Engine
+        tr: Media Engine Erişim Bağlantı Noktası
+      required: false
+      type: number
+      edit: true
+      rule: paramPort
+    - default: "8501"
+      envKey: INSIGHT_ENGINE_PORT_HTTP
+      labelZh: Insight Engine 访问端口
+      labelEn: Insight Engine Access Port
+      label:
+        zh: Insight Engine 访问端口
+        zh-Hant: Insight Engine 存取埠
+        en: Insight Engine Access Port
+        ja: Insight Engine アクセスポート
+        ko: Insight Engine 액세스 포트
+        ms: Port Akses Insight Engine
+        pt-br: Porta de Acesso do Insight Engine
+        ru: Порт доступа Insight Engine
+        tr: Insight Engine Erişim Bağlantı Noktası
+      required: false
+      type: number
+      edit: true
+      rule: paramPort
+    - default: postgresql
+      envKey: DB_DIALECT
+      labelZh: 数据库
+      labelEn: Database
+      label:
+        zh: 数据库
+        zh-Hant: 資料庫
+        en: Database
+        ja: データベース
+        ko: 데이터베이스
+        ms: Pangkalan Data
+        pt-br: Banco de Dados
+        ru: База данных
+        tr: Veritabanı
+      description:
+        zh: 首选 PostgreSQL，兼容 MySQL
+        zh-Hant: 首選 PostgreSQL，相容 MySQL
+        en: Prefers PostgreSQL, compatible with MySQL
+        ja: PostgreSQLを推奨、MySQL互換
+        ko: PostgreSQL 우선, MySQL 호환
+        ms: Mengutamakan PostgreSQL, serasi dengan MySQL
+        pt-br: Prefere PostgreSQL, compatível com MySQL
+        ru: Предпочтительно PostgreSQL, совместимо с MySQL
+        tr: PostgreSQL tercih edilir, MySQL ile uyumlu
+      required: true
+      type: apps
+      edit: true
+      values:
+        - label: PostgreSQL
+          value: postgresql
+        - label: MySQL
+          value: mysql
+      child:
+        default: ""
+        envKey: DB_HOST
+        required: false
+        type: service
+    - default: "5432"
+      envKey: DB_PORT
+      labelZh: 数据库端口号
+      labelEn: Database Port Number
+      label:
+        zh: 数据库端口号
+        zh-Hant: 資料庫埠號
+        en: Database Port Number
+        ja: データベースポート番号
+        ko: 데이터베이스 포트 번호
+        ms: Nombor Port Pangkalan Data
+        pt-br: Número da Porta do Banco de Dados
+        ru: Номер порта базы данных
+        tr: Veritabanı Bağlantı Noktası Numarası
+      required: true
+      type: number
+      edit: true
+      rule: paramPort
+    - default: ""
+      envKey: DB_USER
+      labelZh: 数据库用户名
+      labelEn: Database Username
+      label:
+        zh: 数据库用户名
+        zh-Hant: 資料庫使用者名稱
+        en: Database Username
+        ja: データベースユーザー名
+        ko: 데이터베이스 사용자 이름
+        ms: Nama Pengguna Pangkalan Data
+        pt-br: Nome de Usuário do Banco de Dados
+        ru: Имя пользователя базы данных
+        tr: Veritabanı Kullanıcı Adı
+      required: true
+      type: text
+      edit: true
+      rule: paramCommon
+    - default: ""
+      envKey: DB_PASSWORD
+      labelZh: 数据库密码
+      labelEn: Database Password
+      label:
+        zh: 数据库密码
+        zh-Hant: 資料庫密碼
+        en: Database Password
+        ja: データベースパスワード
+        ko: 데이터베이스 비밀번호
+        ms: Kata Laluan Pangkalan Data
+        pt-br: Senha do Banco de Dados
+        ru: Пароль базы данных
+        tr: Veritabanı Parolası
+      required: true
+      type: text
+      edit: true
+      rule: paramComplexity
+    - default: ""
+      envKey: DB_NAME
+      labelZh: 数据库名称
+      labelEn: Database Name
+      label:
+        zh: 数据库名称
+        zh-Hant: 資料庫名稱
+        en: Database Name
+        ja: データベース名
+        ko: 데이터베이스 이름
+        ms: Nama Pangkalan Data
+        pt-br: Nome do Banco de Dados
+        ru: Имя базы данных
+        tr: Veritabanı Adı
+      required: true
+      type: text
+      edit: true
+      rule: paramCommon
+    - default: utf8mb4
+      envKey: DB_CHARSET
+      labelZh: 数据库字符集
+      labelEn: Database Character Set
+      label:
+        zh: 数据库字符集
+        zh-Hant: 資料庫字元集
+        en: Database Character Set
+        ja: データベース文字セット
+        ko: 데이터베이스 문자 집합
+        ms: Set Aksara Pangkalan Data
+        pt-br: Conjunto de Caracteres do Banco de Dados
+        ru: Кодировка базы данных
+        tr: Veritabanı Karakter Seti
+      description:
+        zh: 推荐 utf8mb4，兼容 emoji
+        zh-Hant: 推薦 utf8mb4，相容 emoji
+        en: Recommends utf8mb4, compatible with emoji
+        ja: utf8mb4 を推奨、絵文字に対応
+        ko: utf8mb4 권장, 이모지 호환
+        ms: Mengesyorkan utf8mb4, serasi dengan emoji
+        pt-br: Recomenda-se utf8mb4, compatível com emoji
+        ru: Рекомендуется utf8mb4, совместимо с эмодзи
+        tr: utf8mb4 önerilir, emoji ile uyumlu
+      required: false
+      type: text
+      edit: true
+    - default: ""
+      envKey: INSIGHT_ENGINE_API_KEY
+      labelZh: Insight 代理 API 密钥
+      labelEn: Insight Agent API Key
+      label:
+        zh: Insight 代理 API 密钥
+        zh-Hant: Insight 代理 API 金鑰
+        en: Insight Agent API Key
+        ja: Insight 代理 API キー
+        ko: Insight 에이전트 API 키
+        ms: Kunci API Agen Insight
+        pt-br: Chave de API do Agente Insight
+        ru: Ключ API агента Insight
+        tr: Insight Aracı API Anahtarı
+      description:
+        zh: 负责洞察分析的模型配置，推荐使用 Kimi
+        zh-Hant: 負責洞察分析的模型配置，推薦使用 Kimi
+        en: Model configuration for insight analysis, recommends using Kimi
+        ja: インサイト分析を担当するモデル設定、Kimi の使用を推奨
+        ko: 통찰 분석을 담당하는 모델 구성, Kimi 사용 권장
+        ms: Konfigurasi model untuk analisis insight, mengesyorkan penggunaan Kimi
+        pt-br: Configuração do modelo para análise de insight, recomenda o uso do Kimi
+        ru: Конфигурация модели для анализа инсайтов, рекомендуется использование Kimi
+        tr: Öngörü analizi için model yapılandırması, Kimi kullanımını önerir
+      required: false
+      type: text
+      edit: true
+    - default: ""
+      envKey: INSIGHT_ENGINE_BASE_URL
+      labelZh: Insight 代理 LLM 接口基础 URL
+      labelEn: Insight Agent LLM Interface BaseUrl
+      label:
+        zh: Insight 代理 LLM 接口基础 URL
+        zh-Hant: Insight 代理 LLM 介面基礎 URL
+        en: Insight Agent LLM Interface BaseUrl
+        ja: Insight Agent LLM インターフェース ベースURL
+        ko: Insight Agent LLM 인터페이스 기본 URL
+        ms: BaseUrl Antara Muka LLM Agen Insight
+        pt-br: URL Base da Interface LLM do Agente Insight
+        ru: Базовый URL интерфейса LLM агента Insight
+        tr: Insight Agent LLM Arayüz Temel URL
+      required: false
+      type: text
+      edit: true
+    - default: ""
+      envKey: INSIGHT_ENGINE_MODEL_NAME
+      labelZh: Insight 代理 LLM 模型名称
+      labelEn: Insight Agent LLM Model Name
+      label:
+        zh: Insight 代理 LLM 模型名称
+        zh-Hant: Insight 代理 LLM 模型名稱
+        en: Insight Agent LLM Model Name
+        ja: Insight 代理 LLM モデル名
+        ko: Insight 에이전트 LLM 모델 이름
+        ms: Nama Model LLM Agen Insight
+        pt-br: Nome do Modelo LLM do Agente Insight
+        ru: Название модели LLM агента Insight
+        tr: Insight Agent LLM Model Adı
+      required: false
+      type: text
+      edit: true
+    - default: ""
+      envKey: MEDIA_ENGINE_API_KEY
+      labelZh: Media 代理 API 密钥
+      labelEn: Media Agent API Key
+      label:
+        zh: Media 代理 API 密钥
+        zh-Hant: Media 代理 API 金鑰
+        en: Media Agent API Key
+        ja: Media 代理 API キー
+        ko: Media 에이전트 API 키
+        ms: Kunci API Agen Media
+        pt-br: Chave de API do Agente de Mídia
+        ru: Ключ API медиа-агента
+        tr: Media Aracı API Anahtarı
+      description:
+        zh: 媒体内容理解与生成模型，推荐使用 Gemini
+        zh-Hant: 媒體內容理解與生成模型，推薦使用 Gemini
+        en: Model for media content understanding and generation, recommends using Gemini
+        ja: メディアコンテンツの理解と生成モデル、Gemini の使用を推奨
+        ko: 미디어 콘텐츠 이해 및 생성을 위한 모델, Gemini 사용 권장
+        ms: Model untuk pemahaman dan penjanaan kandungan media, mengesyorkan penggunaan Gemini
+        pt-br: Modelo para compreensão e geração de conteúdo de mídia, recomenda o uso do Gemini
+        ru: Модель для понимания и генерации медиаконтента, рекомендуется использование Gemini
+        tr: Medya içeriği anlama ve oluşturma modeli, Gemini kullanımını önerir
+      required: false
+      type: text
+      edit: true
+    - default: ""
+      envKey: MEDIA_ENGINE_BASE_URL
+      labelZh: Media 代理 LLM 接口基础 URL
+      labelEn: Media Agent LLM Interface Base URL
+      label:
+        zh: Media 代理 LLM 接口基础 URL
+        zh-Hant: Media 代理 LLM 介面基礎 URL
+        en: Media Agent LLM Interface Base URL
+        ja: Media 代理 LLM インターフェース ベースURL
+        ko: Media 에이전트 LLM 인터페이스 기본 URL
+        ms: URL Asas Antara Muka LLM Agen Media
+        pt-br: URL Base da Interface LLM do Agente de Mídia
+        ru: Базовый URL интерфейса LLM медиа-агента
+        tr: Media Aracı LLM Arayüz Temel URL
+      required: false
+      type: text
+      edit: true
+    - default: ""
+      envKey: MEDIA_ENGINE_MODEL_NAME
+      labelZh: Media 代理 LLM 模型名称
+      labelEn: Media Agent LLM Model Name
+      label:
+        zh: Media 代理 LLM 模型名称
+        zh-Hant: Media 代理 LLM 模型名稱
+        en: Media Agent LLM Model Name
+        ja: Media 代理 LLM モデル名
+        ko: Media 에이전트 LLM 모델 이름
+        ms: Nama Model LLM Agen Media
+        pt-br: Nome do Modelo LLM do Agente de Mídia
+        ru: Название модели LLM медиа-агента
+        tr: Media Aracı LLM Model Adı
+      required: false
+      type: text
+      edit: true
+    - default: ""
+      envKey: MINDSPIDER_API_KEY
+      labelZh: MindSpider 代理 API 密钥
+      labelEn: MindSpider Agent API Key
+      label:
+        zh: MindSpider 代理 API 密钥
+        zh-Hant: MindSpider 代理 API 金鑰
+        en: MindSpider Agent API Key
+        ja: MindSpider 代理 API キー
+        ko: MindSpider 에이전트 API 키
+        ms: Kunci API Agen MindSpider
+        pt-br: Chave de API do Agente MindSpider
+        ru: Ключ API агента MindSpider
+        tr: MindSpider Aracı API Anahtarı
+      description:
+        zh: 推荐使用 Deepseek
+        zh-Hant: 推薦使用 Deepseek
+        en: Recommends using Deepseek
+        ja: Deepseek の使用を推奨
+        ko: Deepseek 사용 권장
+        ms: Mengesyorkan penggunaan Deepseek
+        pt-br: Recomenda-se o uso do Deepseek
+        ru: Рекомендуется использование Deepseek
+        tr: Deepseek kullanımı önerilir
+      required: false
+      type: text
+      edit: true
+    - default: ""
+      envKey: MINDSPIDER_BASE_URL
+      labelZh: MindSpider 代理 LLM 接口基础 URL
+      labelEn: MindSpider Agent LLM Interface Base URL
+      label:
+        zh: MindSpider 代理 LLM 接口基础 URL
+        zh-Hant: MindSpider 代理 LLM 介面基礎 URL
+        en: MindSpider Agent LLM Interface Base URL
+        ja: MindSpider 代理 LLM インターフェース ベースURL
+        ko: MindSpider 에이전트 LLM 인터페이스 기본 URL
+        ms: URL Asas Antara Muka LLM Agen MindSpider
+        pt-br: URL Base da Interface LLM do Agente MindSpider
+        ru: Базовый URL интерфейса LLM агента MindSpider
+        tr: MindSpider Aracı LLM Arayüz Temel URL
+      required: false
+      type: text
+      edit: true
+    - default: ""
+      envKey: MINDSPIDER_MODEL_NAME
+      labelZh: MindSpider 代理 LLM 模型名称
+      labelEn: MindSpider Agent LLM Model Name
+      label:
+        zh: MindSpider 代理 LLM 模型名称
+        zh-Hant: MindSpider 代理 LLM 模型名稱
+        en: MindSpider Agent LLM Model Name
+        ja: MindSpider 代理 LLM モデル名
+        ko: MindSpider 에이전트 LLM 모델 이름
+        ms: Nama Model LLM Agen MindSpider
+        pt-br: Nome do Modelo LLM do Agente MindSpider
+        ru: Название модели LLM агента MindSpider
+        tr: MindSpider Aracı LLM Model Adı
+      required: false
+      type: text
+      edit: true
+    - default: ""
+      envKey: QUERY_ENGINE_API_KEY
+      labelZh: Query 代理 API 密钥
+      labelEn: Query Agent API Key
+      label:
+        zh: Query 代理 API 密钥
+        zh-Hant: Query 代理 API 金鑰
+        en: Query Agent API Key
+        ja: Query 代理 API キー
+        ko: Query 에이전트 API 키
+        ms: Kunci API Agen Query
+        pt-br: Chave de API do Agente de Consulta
+        ru: Ключ API агента запросов
+        tr: Query Aracı API Anahtarı
+      description:
+        zh: 负责搜索与信息汇总的模型配置，推荐使用 Deepseek
+        zh-Hant: 負責搜尋與資訊彙總的模型配置，推薦使用 Deepseek
+        en: Model configuration for search and information summarization, recommends using Deepseek
+        ja: 検索と情報要約を担当するモデル設定、Deepseek の使用を推奨
+        ko: 검색 및 정보 요약을 담당하는 모델 구성, Deepseek 사용 권장
+        ms: Konfigurasi model untuk carian dan ringkasan maklumat, mengesyorkan penggunaan Deepseek
+        pt-br: Configuração do modelo para busca e resumo de informações, recomenda o uso do Deepseek
+        ru: Конфигурация модели для поиска и суммирования информации, рекомендуется использование Deepseek
+        tr: Arama ve bilgi özetleme için model yapılandırması, Deepseek kullanımını önerir
+      required: false
+      type: text
+      edit: true
+    - default: ""
+      envKey: QUERY_ENGINE_BASE_URL
+      labelZh: Query 代理 LLM 接口基础 URL
+      labelEn: Query Agent LLM Interface Base URL
+      label:
+        zh: Query 代理 LLM 接口基础 URL
+        zh-Hant: Query 代理 LLM 介面基礎 URL
+        en: Query Agent LLM Interface Base URL
+        ja: Query 代理 LLM インターフェース ベースURL
+        ko: Query 에이전트 LLM 인터페이스 기본 URL
+        ms: URL Asas Antara Muka LLM Agen Query
+        pt-br: URL Base da Interface LLM do Agente de Consulta
+        ru: Базовый URL интерфейса LLM агента запросов
+        tr: Query Aracı LLM Arayüz Temel URL
+      required: false
+      type: text
+      edit: true
+    - default: ""
+      envKey: QUERY_ENGINE_MODEL_NAME
+      labelZh: Query 代理 LLM 模型名称
+      labelEn: Query Agent LLM Model Name
+      label:
+        zh: Query 代理 LLM 模型名称
+        zh-Hant: Query 代理 LLM 模型名稱
+        en: Query Agent LLM Model Name
+        ja: Query 代理 LLM モデル名
+        ko: Query 에이전트 LLM 모델 이름
+        ms: Nama Model LLM Agen Query
+        pt-br: Nome do Modelo LLM do Agente de Consulta
+        ru: Название модели LLM агента запросов
+        tr: Query Aracı LLM Model Adı
+      required: false
+      type: text
+      edit: true
+    - default: ""
+      envKey: REPORT_ENGINE_API_KEY
+      labelZh: Report 代理 API 密钥
+      labelEn: Report Agent API Key
+      label:
+        zh: Report 代理 API 密钥
+        zh-Hant: Report 代理 API 金鑰
+        en: Report Agent API Key
+        ja: Report 代理 API キー
+        ko: Report 에이전트 API 키
+        ms: Kunci API Agen Report
+        pt-br: Chave de API do Agente de Relatório
+        ru: Ключ API агента отчетов
+        tr: Report Aracı API Anahtarı
+      description:
+        zh: 生成报告使用的模型配置，推荐使用 Gemini
+        zh-Hant: 生成報告使用的模型配置，推薦使用 Gemini
+        en: Model configuration for report generation, recommends using Gemini
+        ja: レポート生成に使用するモデル設定、Gemini の使用を推奨
+        ko: 보고서 생성에 사용되는 모델 구성, Gemini 사용 권장
+        ms: Konfigurasi model untuk penjanaan laporan, mengesyorkan penggunaan Gemini
+        pt-br: Configuração do modelo para geração de relatórios, recomenda o uso do Gemini
+        ru: Конфигурация модели для генерации отчетов, рекомендуется использование Gemini
+        tr: Rapor oluşturma için model yapılandırması, Gemini kullanımını önerir
+      required: false
+      type: text
+      edit: true
+    - default: ""
+      envKey: REPORT_ENGINE_BASE_URL
+      labelZh: Report 代理 LLM 接口基础 URL
+      labelEn: Report Agent LLM Interface Base URL
+      label:
+        zh: Report 代理 LLM 接口基础 URL
+        zh-Hant: Report 代理 LLM 介面基礎 URL
+        en: Report Agent LLM Interface Base URL
+        ja: Report 代理 LLM インターフェース ベースURL
+        ko: Report 에이전트 LLM 인터페이스 기본 URL
+        ms: URL Asas Antara Muka LLM Agen Report
+        pt-br: URL Base da Interface LLM do Agente de Relatório
+        ru: Базовый URL интерфейса LLM агента отчетов
+        tr: Report Aracı LLM Arayüz Temel URL
+      required: false
+      type: text
+      edit: true
+    - default: ""
+      envKey: REPORT_ENGINE_MODEL_NAME
+      labelZh: Report 代理 LLM 模型名称
+      labelEn: Report Agent LLM Model Name
+      label:
+        zh: Report 代理 LLM 模型名称
+        zh-Hant: Report 代理 LLM 模型名稱
+        en: Report Agent LLM Model Name
+        ja: Report 代理 LLM モデル名
+        ko: Report 에이전트 LLM 모델 이름
+        ms: Nama Model LLM Agen Report
+        pt-br: Nome do Modelo LLM do Agente de Relatório
+        ru: Название модели LLM агента отчетов
+        tr: Report Aracı LLM Model Adı
+      required: false
+      type: text
+      edit: true
+    - default: ""
+      envKey: FORUM_HOST_API_KEY
+      labelZh: Forum 代理 API 密钥
+      labelEn: Forum Agent API Key
+      label:
+        zh: Forum 代理 API 密钥
+        zh-Hant: Forum 代理 API 金鑰
+        en: Forum Agent API Key
+        ja: Forum 代理 API キー
+        ko: Forum 에이전트 API 키
+        ms: Kunci API Agen Forum
+        pt-br: Chave de API do Agente de Fórum
+        ru: Ключ API агента форума
+        tr: Forum Aracı API Anahtarı
+      description:
+        zh: 多智能体协同使用的模型配置
+        zh-Hant: 多智能體協同使用的模型配置
+        en: Model Configuration for Multi-Agent Collaboration
+        ja: マルチエージェント協調で使用するモデル設定
+        ko: 다중 에이전트 협업에 사용되는 모델 구성
+        ms: Konfigurasi Model untuk Kolaborasi Multi-Agen
+        pt-br: Configuração de Modelo para Colaboração Multiagente
+        ru: Конфигурация модели для совместной работы множества агентов
+        tr: Çoklu Aracı İşbirliği için Model Yapılandırması
+      required: false
+      type: text
+      edit: true
+    - default: ""
+      envKey: FORUM_HOST_BASE_URL
+      labelZh: Forum 代理 LLM 接口基础 URL
+      labelEn: Forum Agent LLM Interface Base URL
+      label:
+        zh: Forum 代理 LLM 接口基础 URL
+        zh-Hant: Forum 代理 LLM 介面基礎 URL
+        en: Forum Agent LLM Interface Base URL
+        ja: Forum 代理 LLM インターフェース ベースURL
+        ko: Forum 에이전트 LLM 인터페이스 기본 URL
+        ms: URL Asas Antara Muka LLM Agen Forum
+        pt-br: URL Base da Interface LLM do Agente de Fórum
+        ru: Базовый URL интерфейса LLM агента форума
+        tr: Forum Aracı LLM Arayüz Temel URL
+      required: false
+      type: text
+      edit: true
+    - default: ""
+      envKey: FORUM_HOST_MODEL_NAME
+      labelZh: Forum 代理 LLM 模型名称
+      labelEn: Forum Agent LLM Model Name
+      label:
+        zh: Forum 代理 LLM 模型名称
+        zh-Hant: Forum 代理 LLM 模型名稱
+        en: Forum Agent LLM Model Name
+        ja: Forum 代理 LLM モデル名
+        ko: Forum 에이전트 LLM 모델 이름
+        ms: Nama Model LLM Agen Forum
+        pt-br: Nome do Modelo LLM do Agente de Fórum
+        ru: Название модели LLM агента форума
+        tr: Forum Aracı LLM Model Adı
+      required: false
+      type: text
+      edit: true
+    - default: ""
+      envKey: KEYWORD_OPTIMIZER_API_KEY
+      labelZh: 关键词优化器 LLM API 密钥
+      labelEn: Keyword Optimizer LLM API Key
+      label:
+        zh: 关键词优化器 LLM API 密钥
+        zh-Hant: 關鍵詞優化器 LLM API 金鑰
+        en: Keyword Optimizer LLM API Key
+        ja: キーワードオプティマイザ LLM API キー
+        ko: 키워드 최적화 도구 LLM API 키
+        ms: Kunci API LLM Pengoptimum Kata Kunci
+        pt-br: Chave de API LLM do Otimizador de Palavras-chave
+        ru: Ключ API LLM оптимизатора ключевых слов
+        tr: Anahtar Kelime Optimize Edici LLM API Anahtarı
+      description:
+        zh: SQL / 关键词优化模型配置
+        zh-Hant: SQL / 關鍵詞優化模型配置
+        en: SQL / Keyword Optimization Model Configuration
+        ja: SQL / キーワード最適化モデル設定
+        ko: SQL / 키워드 최적화 모델 구성
+        ms: Konfigurasi Model Pengoptimuman Kata Kunci SQL
+        pt-br: Configuração do Modelo de Otimização de Palavras-chave SQL
+        ru: Конфигурация модели оптимизации ключевых слов SQL
+        tr: SQL / Anahtar Kelime Optimizasyon Modeli Yapılandırması
+      required: false
+      type: text
+      edit: true
+    - default: ""
+      envKey: KEYWORD_OPTIMIZER_BASE_URL
+      labelZh: 关键词优化器 LLM 接口基础 URL
+      labelEn: Keyword Optimizer LLM Interface Base URL
+      label:
+        zh: 关键词优化器 LLM 接口基础 URL
+        zh-Hant: 關鍵詞優化器 LLM 介面基礎 URL
+        en: Keyword Optimizer LLM Interface Base URL
+        ja: キーワードオプティマイザ LLM インターフェース ベースURL
+        ko: 키워드 최적화 도구 LLM 인터페이스 기본 URL
+        ms: URL Asas Antara Muka LLM Pengoptimum Kata Kunci
+        pt-br: URL Base da Interface LLM do Otimizador de Palavras-chave
+        ru: Базовый URL интерфейса LLM оптимизатора ключевых слов
+        tr: Anahtar Kelime Optimize Edici LLM Arayüz Temel URL
+      required: false
+      type: text
+      edit: true
+    - default: ""
+      envKey: KEYWORD_OPTIMIZER_MODEL_NAME
+      labelZh: 关键词优化器 LLM 模型名称
+      labelEn: Keyword Optimizer LLM Model Name
+      label:
+        zh: 关键词优化器 LLM 模型名称
+        zh-Hant: 關鍵詞優化器 LLM 模型名稱
+        en: Keyword Optimizer LLM Model Name
+        ja: キーワードオプティマイザ LLM モデル名
+        ko: 키워드 최적화 도구 LLM 모델 이름
+        ms: Nama Model LLM Pengoptimum Kata Kunci
+        pt-br: Nome do Modelo LLM do Otimizador de Palavras-chave
+        ru: Название модели LLM оптимизатора ключевых слов
+        tr: Anahtar Kelime Optimize Edici LLM Model Adı
+      required: false
+      type: text
+      edit: true
+    - default: ""
+      envKey: TAVILY_API_KEY
+      labelZh: Tavily API 密钥
+      labelEn: Tavily API Key
+      label:
+        zh: Tavily API 密钥
+        zh-Hant: Tavily API 金鑰
+        en: Tavily API Key
+        ja: Tavily API キー
+        ko: Tavily API 키
+        ms: Kunci API Tavily
+        pt-br: Chave da API Tavily
+        ru: Ключ API Tavily
+        tr: Tavily API Anahtarı
+      description:
+        zh: 用于Tavily网络搜索。注册地址：https://www.tavily.com
+        zh-Hant: 用於 Tavily 網路搜尋。註冊地址：https://www.tavily.com
+        en: "For Tavily web search. Registration URL: https://www.tavily.com"
+        ja: Tavily Web検索に使用。登録先：https://www.tavily.com
+        ko: "Tavily 웹 검색용. 등록 주소: https://www.tavily.com"
+        ms: "Untuk carian web Tavily. URL pendaftaran: https://www.tavily.com"
+        pt-br: "Para pesquisa web da Tavily. URL de registro: https://www.tavily.com"
+        ru: "Для веб-поиска Tavily. URL для регистрации: https://www.tavily.com"
+        tr: "Tavily web araması için. Kayıt adresi: https://www.tavily.com"
+      required: false
+      type: text
+      edit: true
+    - default: ""
+      envKey: BOCHA_WEB_SEARCH_API_KEY
+      labelZh: Bocha 网络搜索 API 密钥
+      labelEn: Bocha Web Search API Key
+      label:
+        zh: Bocha 网络搜索 API 密钥
+        zh-Hant: Bocha 網路搜尋 API 金鑰
+        en: Bocha Web Search API Key
+        ja: Bocha Web検索 API キー
+        ko: Bocha 웹 검색 API 키
+        ms: Kunci API Carian Web Bocha
+        pt-br: Chave de API da Busca Web Bocha
+        ru: Ключ API веб-поиска Bocha
+        tr: Bocha Web Arama API Anahtarı
+      description:
+        zh: 用于 Bocha 搜索。注册地址：https://open.bochaai.com
+        zh-Hant: 用於 Bocha 搜尋。註冊地址：https://open.bochaai.com
+        en: "For Bocha search. Registration URL: https://open.bochaai.com"
+        ja: Bocha検索に使用。登録先：https://open.bochaai.com
+        ko: "Bocha 검색용. 등록 주소: https://open.bochaai.com"
+        ms: "Untuk carian Bocha. URL pendaftaran: https://open.bochaai.com"
+        pt-br: "Para pesquisa Bocha. URL de registro: https://open.bochaai.com"
+        ru: "Для поиска Bocha. URL для регистрации: https://open.bochaai.com"
+        tr: "Bocha araması için. Kayıt adresi: https://open.bochaai.com"
+      required: false
+      type: text
+      edit: true
+    - default: ""
+      envKey: BOCHA_BASE_URL
+      labelZh: Bocha Web/AI 搜索基础 URL
+      labelEn: Bocha Web/AI Search BaseURL
+      label:
+        zh: Bocha Web/AI 搜索基础 URL
+        zh-Hant: Bocha Web/AI 搜尋基礎 URL
+        en: Bocha Web/AI Search BaseURL
+        ja: Bocha Web/AI 検索ベースURL
+        ko: Bocha Web/AI 검색 기준 URL
+        ms: URL Asas Carian Web/AI Bocha
+        pt-br: URL Base da Busca Web/IA Bocha
+        ru: Базовый URL Bocha Web/AI поиска
+        tr: Bocha Web/AI Arama TEMEL URL
+      required: false
+      type: text
+      edit: true
