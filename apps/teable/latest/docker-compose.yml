@@ -15,7 +15,7 @@ services:
       - NEXT_ENV_IMAGES_ALL_REMOTE=true
       - PRISMA_DATABASE_URL=postgresql://${PANEL_DB_USER}:${PANEL_DB_USER_PASSWORD}@${PANEL_DB_HOST}:5432/${PANEL_DB_NAME}
       - BACKEND_CACHE_PROVIDER=redis
-      - BACKEND_CACHE_REDIS_URI=redis://default:${PANEL_REDIS_ROOT_PASSWORD}@${REDIS_HOST}:6379/0
+      - BACKEND_CACHE_REDIS_URI=redis://default:${PANEL_REDIS_ROOT_PASSWORD}@${PANEL_REDIS_HOST}:6379/0
     labels:
       createdBy: "Apps"
 networks:

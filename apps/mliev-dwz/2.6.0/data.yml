@@ -79,7 +79,7 @@ additionalProperties:
         zh: 数据库密码
     - default: ""
       edit: true
-      envKey: REDIS_HOST
+      envKey: PANEL_REDIS_HOST
       key: redis
       labelEn: Redis Service
       labelZh: 缓存服务服务
