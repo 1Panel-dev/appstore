@@ -1,13 +1,13 @@
 name: BettaFish
 tags:
-  - 实用工具
+    - AI
 title: 不依赖任何框架、人人可用的创新型多智能体舆情分析系统
 description: 不依赖任何框架、人人可用的创新型多智能体舆情分析系统
 additionalProperties:
   key: bettafish
   name: BettaFish
   tags:
-    - Tool
+    - AI
   shortDescZh: 不依赖任何框架、人人可用的创新型多智能体舆情分析系统
   shortDescEn: A framework-independent, user-friendly, and innovative multi-agent public opinion analysis system
   description:
