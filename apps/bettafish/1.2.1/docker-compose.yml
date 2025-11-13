@@ -4,6 +4,10 @@ services:
     container_name: ${CONTAINER_NAME}
     restart: always
     environment:
+      - DB_DIALECT=${PANEL_DB_TYPE}
+      - DB_HOST=${PANEL_DB_HOST}
+      - DB_PORT=${PANEL_DB_PORT}
+      - DB_NAME=${PANEL_DB_NAME}
       - PYTHONUNBUFFERED=1
       - STREAMLIT_SERVER_ENABLE_FILE_WATCHER=false
     ports:
