@@ -120,7 +120,7 @@ additionalProperties:
         required: false
         type: service
     - default: ""
-      envKey: DB_USER
+      envKey: PANEL_DB_USER
       labelZh: 数据库用户名
       labelEn: Database Username
       label:
@@ -138,7 +138,7 @@ additionalProperties:
       edit: true
       rule: paramCommon
     - default: ""
-      envKey: DB_PASSWORD
+      envKey: PANEL_DB_USER_PASSWORD
       labelZh: 数据库密码
       labelEn: Database Password
       label:
