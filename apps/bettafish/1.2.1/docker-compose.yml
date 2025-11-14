@@ -1,0 +1,33 @@
+services:
+  bettafish:
+    image: ghcr.io/666ghj/bettafish:v1.2.1
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    environment:
+      - DB_DIALECT=${PANEL_DB_TYPE}
+      - DB_HOST=${PANEL_DB_HOST}
+      - DB_PORT=${PANEL_DB_PORT}
+      - DB_USER=${PANEL_DB_USER}
+      - DB_PASSWORD=${PANEL_DB_USER_PASSWORD}
+      - DB_NAME=${PANEL_DB_NAME}
+      - PYTHONUNBUFFERED=1
+      - STREAMLIT_SERVER_ENABLE_FILE_WATCHER=false
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:5000
+      - ${QUERY_ENGINE_PORT_HTTP}:8501
+      - ${MEDIA_ENGINE_PORT_HTTP}:8502
+      - ${INSIGHT_ENGINE_PORT_HTTP}:8503
+    volumes:
+      - .env:/app/.env
+      - ./data/logs:/app/logs
+      - ./data/final_reports:/app/final_reports
+      - ./data/insight_engine_streamlit_reports:/app/insight_engine_streamlit_reports
+      - ./data/media_engine_streamlit_reports:/app/media_engine_streamlit_reports
+      - ./data/query_engine_streamlit_reports:/app/query_engine_streamlit_reports
+    networks:
+      - 1panel-network
+    labels:
+      createdBy: Apps
+networks:
+  1panel-network:
+    external: true

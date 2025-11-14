@@ -1,0 +1,30 @@
+name: BettaFish
+tags:
+    - AI
+title: 不依赖任何框架、人人可用的创新型多智能体舆情分析系统
+description: 不依赖任何框架、人人可用的创新型多智能体舆情分析系统
+additionalProperties:
+  key: bettafish
+  name: BettaFish
+  tags:
+    - AI
+  shortDescZh: 不依赖任何框架、人人可用的创新型多智能体舆情分析系统
+  shortDescEn: A framework-independent, user-friendly, and innovative multi-agent public opinion analysis system
+  description:
+    en: A framework-independent, user-friendly, and innovative multi-agent public opinion analysis system
+    zh: 不依赖任何框架、人人可用的创新型多智能体舆情分析系统
+    zh-Hant: 不依賴任何框架、人人可用的創新型多智能體輿情分析系統
+    ja: いかなるフレームワークにも依存せず、誰もが使える革新的なマルチエージェント世論分析システム
+    ms: Sistem analisis pendapat umum multi-ejen inovatif yang tidak bergantung pada rangka kerja dan boleh digunakan oleh semua orang
+    pt-br: Um sistema inovador de análise de opinião pública multiagente, que não depende de nenhum framework e é acessível a todos
+    ru: Инновационная многоагентная система анализа общественного мнения, не зависящая от каких-либо фреймворков и доступная для всех
+    ko: 프레임워크에 의존하지 않으며 누구나 사용할 수 있는 혁신적인 멀티 에이전트 여론 분석 시스템
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  website: https://github.com/666ghj/BettaFish
+  github: https://github.com/666ghj/BettaFish
+  document: https://github.com/666ghj/BettaFish
+  architectures:
+    - amd64
+    - arm64
