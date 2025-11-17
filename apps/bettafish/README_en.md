@@ -10,3 +10,14 @@ A framework-independent, user-friendly, and innovative multi-agent public opinio
 - **Agent "Forum" Collaboration Mechanism**: Endowing different Agents with unique toolsets and thinking patterns, introducing a debate moderator model, and facilitating chain thinking collisions and debates through the "forum" mechanism. This not only avoids the cognitive limitations and homogenization caused by single-model thinking and communication but also fosters higher-quality collective intelligence and decision support.
 - **Seamless Integration of Public and Private Domain Data**: Not only analyzing public opinion but also providing high-security interfaces to support the seamless integration of your internal business databases with public opinion data. Breaking down data barriers to provide powerful analytical capabilities for vertical businesses with "external trends + internal insights."
 - **Lightweight and Highly Scalable Framework**: Based on a pure Python modular design, achieving lightweight and one-click deployment. The code structure is clear, allowing developers to easily integrate custom models and business logic for rapid platform extension and deep customization.
+
+## Configuration and Usage Instructions
+
+After launching the application, please configure all large language model-related parameters properly to ensure the system can connect to the large model service you have chosen.
+
+In addition to LLM, you also need:
+
+- **Tavily**: API key, used for Tavily web search, application address: https://www.tavily.com/
+- **Bocha**: API key, used for Bocha multimodal search, application address: https://open.bochaai.com/
+
+To experience the full functionality, none of the above parameters can be missing.
