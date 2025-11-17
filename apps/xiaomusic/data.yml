@@ -1,7 +1,8 @@
 name: XiaoMusic
-tags: Tool
+tags:
+  - 实用工具
 title: 无限听歌，解放小爱音箱
-description: 使用小爱音箱播放音乐，音乐使用 yt-dlp 下载
+description: 无限听歌，解放小爱音箱
 additionalProperties:
   key: xiaomusic
   name: XiaoMusic
@@ -11,17 +12,18 @@ additionalProperties:
   shortDescZh: 无限听歌，解放小爱音箱
   shortDescEn: Unlimited music, liberate Xiaomi speaker
   description:
-    zh: 使用小爱音箱播放音乐，音乐使用 yt-dlp 下载
-    zh-hant: 使用小愛音箱播放音樂，音樂使用 yt-dlp 下載
-    en: Use Xiaomi speaker to play music, music is downloaded using yt-dlp
-    ja: Xiaomiスピーカーで音楽を再生し、yt-dlpで音楽をダウンロード
-    ms: Gunakan pembesar suara Xiaomi untuk memainkan muzik, muzik dimuat turun menggunakan yt-dlp
-    pt-br: Use o alto-falante Xiaomi para reproduzir músicas, músicas são baixadas usando yt-dlp
-    ru: Используйте колонку Xiaomi для воспроизведения музыки, музыка загружается с помощью yt-dlp
-    ko: Xiaomi 스피커로 음악 재생, 음악은 yt-dlp로 다운로드
-    tr: Xiaomi hoparlörü ile müzik çalın, müzik yt-dlp kullanılarak indirilir
+    en: Unlimited music, liberate Xiaomi speaker
+    ja: Xiaomiスピーカーを解放する無制限の音楽
+    ms: Muzik tanpa had, membebaskan pembesar suara Xiaomi
+    pt-br: Música ilimitada, liberte o alto-falante Xiaomi
+    ru: Неограниченная музыка, освободите колонку Xiaomi
+    ko: 무제한 음악, Xiaomi 스피커 해방
+    tr: Sınırsız müzik, Xiaomi hoparlörünü özgürleştir
+    zh-hant: 無限聽歌，解放小愛音箱
+    zh: 无限听歌，解放小爱音箱
   crossVersionUpdate: true
   limit: 0
+  recommend: 0
   website: https://xdocs.hanxi.cc/
   github: https://github.com/hanxi/xiaomusic
   document: https://xdocs.hanxi.cc/

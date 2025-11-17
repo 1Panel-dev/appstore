@@ -1,6 +1,8 @@
 additionalProperties:
   formFields:
-    - type: "number"
+    - default: 58090
+      type: "number"
+      envKey: "PANEL_APP_PORT_HTTP"
       labelZh: "HTTP 端口"
       labelEn: "HTTP Port"
       label:
@@ -24,7 +26,5 @@ additionalProperties:
         ko: "애플리케이션의 HTTP 접근 포트를 설정합니다. 유효 범위: 1-65535"
         tr: "Uygulama için HTTP erişim bağlantı noktasını ayarlayın, geçerli aralık: 1-65535"
       required: true
-      envKey: "PANEL_APP_PORT_HTTP"
-      default: 58090
       edit: true
       rule: "paramPort"

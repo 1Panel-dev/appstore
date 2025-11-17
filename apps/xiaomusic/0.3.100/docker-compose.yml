@@ -1,6 +1,3 @@
-networks:
-  1panel-network:
-    external: true
 services:
   xiaomusic:
     image: hanxi/xiaomusic:v0.3.100
@@ -11,5 +8,10 @@ services:
     ports:
       - ${HOST_IP}:${PANEL_APP_PORT_HTTP}:8090
     volumes:
-      - ./music:/app/music
-      - ./conf:/app/conf
+      - ./data/music:/app/music
+      - ./data/conf:/app/conf
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true
