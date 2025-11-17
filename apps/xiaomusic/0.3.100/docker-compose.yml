@@ -1,0 +1,15 @@
+networks:
+  1panel-network:
+    external: true
+services:
+  xiaomusic:
+    image: hanxi/xiaomusic:v0.3.100
+    container_name: ${CONTAINER_NAME}
+    restart: unless-stopped
+    networks:
+      - 1panel-network
+    ports:
+      - ${HOST_IP}:${PANEL_APP_PORT_HTTP}:8090
+    volumes:
+      - ./music:/app/music
+      - ./conf:/app/conf
