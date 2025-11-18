@@ -1,21 +1,37 @@
 additionalProperties:
   formFields:
     - default: 9000
-      envKey: PANEL_APP_PORT_HTTP
-      labelEn: Port
-      labelZh: 端口
+      envKey: PANEL_API_PORT_HTTP
+      labelEn: API Port
+      labelZh: API 端口
       required: true
       rule: paramPort
       type: number
       label:
-        en: Port
-        ja: ポート
-        ms: Port
-        pt-br: Porta
-        ru: Порт
-        ko: 포트
-        zh-Hant: 埠
-        zh: 端口
+        en: API Port
+        ja: API ポート
+        ms: Port API
+        pt-br: Porta API
+        ru: Порт API
+        ko: API 포트
+        zh-Hant: API 埠
+        zh: API 端口
+    - default: 9001
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Web Port
+      labelZh: Web 端口
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        en: Web Port
+        ja: Web ポート
+        ms: Port Web
+        pt-br: Porta Web
+        ru: Веб-порт
+        ko: 웹 포트
+        zh-Hant: Web 埠
+        zh: Web 端口
     - default: rustfsadmin
       envKey: RUSTFS_ACCESS_KEY
       labelEn: User
