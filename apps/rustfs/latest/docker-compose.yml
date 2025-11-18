@@ -4,7 +4,7 @@ services:
     container_name: ${CONTAINER_NAME}
     ports:
       - ${PANEL_API_PORT_HTTP}:9000
-      - ${PANEL_WEB_PORT_HTTP}:9001
+      - ${PANEL_APP_PORT_HTTP}:9001
     restart: always
     environment:
       RUSTFS_ACCESS_KEY: ${RUSTFS_ACCESS_KEY}
