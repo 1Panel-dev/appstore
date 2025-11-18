@@ -1,0 +1,175 @@
+additionalProperties:
+  formFields:
+    - default: "5000"
+      envKey: PANEL_APP_PORT_HTTP
+      labelZh: HTTP 端口
+      labelEn: HTTP Port
+      label:
+        zh: HTTP 端口
+        zh-Hant: HTTP 連接埠
+        en: HTTP Port
+        ja: HTTP ポート
+        ko: HTTP 포트
+        ms: Port HTTP
+        pt-br: Porta HTTP
+        ru: HTTP Порт
+        tr: HTTP Portu
+      description:
+        zh: "设置应用的 HTTP 访问端口，有效范围: 1-65535"
+        zh-Hant: "設定應用程式的 HTTP 存取連接埠，有效範圍: 1-65535"
+        en: "Set the HTTP access port for the application, valid range: 1-65535"
+        ja: "アプリケーションのHTTPアクセスポートを設定します。有効範囲: 1-65535"
+        ko: "애플리케이션의 HTTP 접근 포트를 설정합니다. 유효 범위: 1-65535"
+        ms: "Tetapkan port akses HTTP untuk aplikasi, julat sah: 1-65535"
+        pt-br: "Defina a porta de acesso HTTP para o aplicativo, intervalo válido: 1-65535"
+        ru: "Установите порт доступа HTTP для приложения, допустимый диапазон: 1-65535"
+        tr: "Uygulama için HTTP erişim portunu ayarlayın, geçerli aralık: 1-65535"
+      required: true
+      type: number
+      edit: true
+      rule: paramPort
+    - default: "8503"
+      envKey: QUERY_ENGINE_PORT_HTTP
+      labelZh: Query Engine 访问端口
+      labelEn: Query Engine Access Port
+      label:
+        zh: Query Engine 访问端口
+        zh-Hant: Query Engine 存取埠
+        en: Query Engine Access Port
+        ja: Query Engine アクセスポート
+        ko: Query Engine 액세스 포트
+        ms: Port Akses Query Engine
+        pt-br: Porta de Acesso do Query Engine
+        ru: Порт доступа Query Engine
+        tr: Query Engine Erişim Bağlantı Noktası
+      required: false
+      type: number
+      edit: true
+      rule: paramPort
+    - default: "8502"
+      envKey: MEDIA_ENGINE_PORT_HTTP
+      labelZh: Media Engine 访问端口
+      labelEn: Media Engine Access Port
+      label:
+        zh: Media Engine 访问端口
+        zh-Hant: Media Engine 存取埠
+        en: Media Engine Access Port
+        ja: Media Engine アクセスポート
+        ko: Media Engine 액세스 포트
+        ms: Port Akses Media Engine
+        pt-br: Porta de Acesso do Media Engine
+        ru: Порт доступа Media Engine
+        tr: Media Engine Erişim Bağlantı Noktası
+      required: false
+      type: number
+      edit: true
+      rule: paramPort
+    - default: "8501"
+      envKey: INSIGHT_ENGINE_PORT_HTTP
+      labelZh: Insight Engine 访问端口
+      labelEn: Insight Engine Access Port
+      label:
+        zh: Insight Engine 访问端口
+        zh-Hant: Insight Engine 存取埠
+        en: Insight Engine Access Port
+        ja: Insight Engine アクセスポート
+        ko: Insight Engine 액세스 포트
+        ms: Port Akses Insight Engine
+        pt-br: Porta de Acesso do Insight Engine
+        ru: Порт доступа Insight Engine
+        tr: Insight Engine Erişim Bağlantı Noktası
+      required: false
+      type: number
+      edit: true
+      rule: paramPort
+    - default: postgresql
+      envKey: PANEL_DB_TYPE
+      labelZh: 数据库
+      labelEn: Database
+      label:
+        zh: 数据库
+        zh-Hant: 資料庫
+        en: Database
+        ja: データベース
+        ko: 데이터베이스
+        ms: Pangkalan Data
+        pt-br: Banco de Dados
+        ru: База данных
+        tr: Veritabanı
+      description:
+        zh: 首选 PostgreSQL，兼容 MySQL
+        zh-Hant: 首選 PostgreSQL，相容 MySQL
+        en: Prefers PostgreSQL, compatible with MySQL
+        ja: PostgreSQLを推奨、MySQL互換
+        ko: PostgreSQL 우선, MySQL 호환
+        ms: Mengutamakan PostgreSQL, serasi dengan MySQL
+        pt-br: Prefere PostgreSQL, compatível com MySQL
+        ru: Предпочтительно PostgreSQL, совместимо с MySQL
+        tr: PostgreSQL tercih edilir, MySQL ile uyumlu
+      required: true
+      type: apps
+      edit: true
+      values:
+        - label: PostgreSQL
+          value: postgresql
+        - label: MySQL
+          value: mysql
+      child:
+        default: ""
+        envKey: PANEL_DB_HOST
+        required: false
+        type: service
+    - default: ""
+      envKey: PANEL_DB_USER
+      labelZh: 数据库用户名
+      labelEn: Database Username
+      label:
+        zh: 数据库用户名
+        zh-Hant: 資料庫使用者名稱
+        en: Database Username
+        ja: データベースユーザー名
+        ko: 데이터베이스 사용자 이름
+        ms: Nama Pengguna Pangkalan Data
+        pt-br: Nome de Usuário do Banco de Dados
+        ru: Имя пользователя базы данных
+        tr: Veritabanı Kullanıcı Adı
+      required: true
+      type: text
+      edit: true
+      rule: paramCommon
+    - default: ""
+      envKey: PANEL_DB_USER_PASSWORD
+      labelZh: 数据库密码
+      labelEn: Database Password
+      label:
+        zh: 数据库密码
+        zh-Hant: 資料庫密碼
+        en: Database Password
+        ja: データベースパスワード
+        ko: 데이터베이스 비밀번호
+        ms: Kata Laluan Pangkalan Data
+        pt-br: Senha do Banco de Dados
+        ru: Пароль базы данных
+        tr: Veritabanı Parolası
+      required: true
+      type: text
+      edit: true
+      rule: paramComplexity
+    - default: ""
+      envKey: PANEL_DB_NAME
+      labelZh: 数据库名称
+      labelEn: Database Name
+      label:
+        zh: 数据库名称
+        zh-Hant: 資料庫名稱
+        en: Database Name
+        ja: データベース名
+        ko: 데이터베이스 이름
+        ms: Nama Pangkalan Data
+        pt-br: Nome do Banco de Dados
+        ru: Имя базы данных
+        tr: Veritabanı Adı
+      required: true
+      type: text
+      edit: true
+      rule: paramCommon
