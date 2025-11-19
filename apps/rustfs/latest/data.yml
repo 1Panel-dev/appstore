@@ -1,7 +1,7 @@
 additionalProperties:
   formFields:
     - default: 9000
-      envKey: PANEL_API_PORT_HTTP
+      envKey: PANEL_APP_PORT_API
       labelEn: API Port
       labelZh: API 端口
       required: true
