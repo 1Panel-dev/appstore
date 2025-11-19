@@ -3,7 +3,7 @@ services:
     image: rustfs/rustfs:latest
     container_name: ${CONTAINER_NAME}
     ports:
-      - ${PANEL_API_PORT_HTTP}:9000
+      - ${PANEL_APP_PORT_API}:9000
       - ${PANEL_APP_PORT_HTTP}:9001
     restart: always
     environment:
