@@ -1,6 +1,6 @@
 services:
   n8n:
-    image: n8nio/n8n:1.120.3
+    image: n8nio/n8n:1.121.0
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
