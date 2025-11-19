@@ -1,6 +1,6 @@
 services:
   umami:
-    image: ghcr.io/umami-software/umami:3.0.0
+    image: ghcr.io/umami-software/umami:3.0.1
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
