@@ -1,0 +1,30 @@
+name: TrendRadar
+tags:
+  - 实用工具
+title: 多平台热点推送
+description: 多平台热点推送
+additionalProperties:
+  key: trendradar
+  name: TrendRadar
+  tags:
+    - Tool
+  shortDescZh: 多平台热点推送
+  shortDescEn: Multi-platform Hot Content Push
+  description:
+    en: Multi-platform Hot Content Push
+    zh: 多平台热点推送
+    zh-Hant: 多平台熱點推送
+    ja: マルチプラットフォームホットコンテンツプッシュ
+    ms: Tolakan Kandungan Panas Pelbagai Platform
+    pt-br: Push de Conteúdo Quente Multiplataforma
+    ru: Мультиплатформенная пуш-рассылка горячего контента
+    ko: 멀티 플랫폼 핫 콘텐츠 푸시
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  website: https://github.com/sansan0/TrendRadar
+  github: https://github.com/sansan0/TrendRadar
+  document: https://github.com/sansan0/TrendRadar
+  architectures:
+    - amd64
+    - arm64
