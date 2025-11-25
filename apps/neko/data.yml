@@ -1,0 +1,31 @@
+name: Neko
+tags:
+  - 实用工具
+title: 自托管虚拟浏览器
+description: 基于 Docker 和 WebRTC 的自托管虚拟浏览器
+additionalProperties:
+  key: neko
+  name: Neko
+  tags:
+    - Tool
+  shortDescZh: 基于 Docker 和 WebRTC 的自托管虚拟浏览器
+  shortDescEn: Self hosted virtual browser that runs in docker and uses WebRTC
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  website: https://github.com/m1k1o/neko
+  github: https://github.com/m1k1o/neko
+  document: https://github.com/m1k1o/neko
+  memoryRequired: 1024
+  architectures:
+    - amd64
+    - arm64
+  description:
+    en: Self hosted virtual browser that runs in docker and uses WebRTC
+    ja: Docker で実行され、WebRTC を使用するセルフホスト型仮想ブラウザ
+    ms: Pelayar maya hos sendiri yang berjalan dalam docker dan menggunakan WebRTC
+    pt-br: Navegador virtual auto-hospedado que é executado no docker e usa WebRTC
+    ru: Самостоятельно размещенный виртуальный браузер, работающий в docker и использующий WebRTC
+    ko: Docker에서 실행되고 WebRTC를 사용하는 자체 호스팅 가상 브라우저
+    zh-Hant: 基於 Docker 和 WebRTC 的自託管虛擬瀏覽器
+    zh: 基于 Docker 和 WebRTC 的自托管虚拟浏览器
