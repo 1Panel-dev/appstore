@@ -75,6 +75,8 @@ additionalProperties:
           required: true
           type: select
           values:
+            - label: "8.5.0"
+              value: "8.5.0"
             - label: "8.4.13"
               value: "8.4.13"
             - label: "8.3.26"
