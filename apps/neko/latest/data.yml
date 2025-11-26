@@ -1,0 +1,607 @@
+additionalProperties:
+  formFields:
+    - default: "m1k1o/neko:firefox"
+      edit: true
+      envKey: IMAGE_NAME
+      labelEn: Image Name
+      labelZh: 镜像名称
+      required: true
+      type: select
+      label:
+        en: Image Name
+        ja: イメージ名
+        ms: Nama Imej
+        pt-br: Nome da imagem
+        ru: Имя образа
+        ko: 이미지 이름
+        zh: 镜像名称
+        zh-Hant: 鏡像名稱
+      values:
+        - label: "m1k1o/neko:kde"
+          value: "m1k1o/neko:kde"
+        - label: "m1k1o/neko:chromium"
+          value: "m1k1o/neko:chromium"
+        - label: "m1k1o/neko:vivaldi"
+          value: "m1k1o/neko:vivaldi"
+        - label: "m1k1o/neko:microsoft-edge"
+          value: "m1k1o/neko:microsoft-edge"
+        - label: "m1k1o/neko:brave"
+          value: "m1k1o/neko:brave"
+        - label: "m1k1o/neko:tor-browser"
+          value: "m1k1o/neko:tor-browser"
+        - label: "m1k1o/neko:ungoogled-chromium"
+          value: "m1k1o/neko:ungoogled-chromium"
+        - label: "m1k1o/neko:google-chrome"
+          value: "m1k1o/neko:google-chrome"
+        - label: "m1k1o/neko:firefox"
+          value: "m1k1o/neko:firefox"
+        - label: "m1k1o/neko:vlc"
+          value: "m1k1o/neko:vlc"
+        - label: "m1k1o/neko:xfce"
+          value: "m1k1o/neko:xfce"
+        - label: "m1k1o/neko:base"
+          value: "m1k1o/neko:base"
+        - label: "m1k1o/neko:opera"
+          value: "m1k1o/neko:opera"
+        - label: "m1k1o/neko:vncviewer"
+          value: "m1k1o/neko:vncviewer"
+        - label: "m1k1o/neko:arm-firefox"
+          value: "m1k1o/neko:arm-firefox"
+        - label: "m1k1o/neko:arm-chromium"
+          value: "m1k1o/neko:arm-chromium"
+        - label: "m1k1o/neko:arm-base"
+          value: "m1k1o/neko:arm-base"
+    - default: "40277"
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        en: Port
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh: 端口
+        zh-Hant: 端口
+    - default: "1920x1080@30"
+      edit: true
+      envKey: NEKO_SCREEN
+      labelEn: Screen Resolution
+      labelZh: 屏幕分辨率
+      required: true
+      type: text
+      label:
+        en: Screen Resolution
+        ja: 画面解像度
+        ms: Resolusi Skrin
+        pt-br: Resolução de tela
+        ru: Разрешение экрана
+        ko: 화면 해상도
+        zh: 屏幕分辨率
+        zh-Hant: 螢幕解析度
+    - default: "neko"
+      edit: true
+      envKey: NEKO_PASSWORD
+      labelEn: User Password
+      labelZh: 用户密码
+      required: true
+      type: password
+      label:
+        en: User Password
+        ja: ユーザーパスワード
+        ms: Kata Laluan Pengguna
+        pt-br: Senha do usuário
+        ru: Пароль пользователя
+        ko: 사용자 비밀번호
+        zh: 用户密码
+        zh-Hant: 使用者密碼
+    - default: "admin"
+      edit: true
+      envKey: NEKO_PASSWORD_ADMIN
+      labelEn: Admin Password
+      labelZh: 管理员密码
+      required: true
+      type: password
+      label:
+        en: Admin Password
+        ja: 管理者パスワード
+        ms: Kata Laluan Pentadbir
+        pt-br: Senha do administrador
+        ru: Пароль администратора
+        ko: 관리자 비밀번호
+        zh: 管理员密码
+        zh-Hant: 管理員密碼
+    - default: "127.0.0.1"
+      edit: true
+      envKey: NEKO_WEBRTC_NAT1TO1
+      labelEn: Bind Address
+      labelZh: 绑定地址
+      required: true
+      type: text
+      label:
+        en: Bind Address
+        ja: バインドアドレス
+        ms: Alamat Ikat
+        pt-br: Endereço de ligação
+        ru: Привязываемый адрес
+        ko: 바인드 주소
+        zh: 绑定地址
+        zh-Hant: 綁定地址
+    - default: "52000-52100"
+      edit: true
+      envKey: NEKO_EPR
+      labelEn: WebRTC UDP Port Range
+      labelZh: WebRTC UDP 端口范围
+      required: true
+      type: text
+      label:
+        en: WebRTC UDP Port Range
+        ja: WebRTC UDP ポート範囲
+        ms: Julat Port UDP WebRTC
+        pt-br: Faixa de portas UDP WebRTC
+        ru: Диапазон UDP портов WebRTC
+        ko: WebRTC UDP 포트 범위
+        zh: WebRTC UDP 端口范围
+        zh-Hant: WebRTC UDP 連接埠範圍
+    - default: "1"
+      edit: true
+      envKey: NEKO_ICELITE
+      labelEn: ICELite Mode
+      labelZh: ICELite 模式
+      required: true
+      type: number
+      label:
+        en: ICELite Mode
+        ja: ICELite モード
+        ms: Mod ICELite
+        pt-br: Modo ICELite
+        ru: Режим ICELite
+        ko: ICELite 모드
+        zh: ICELite 模式
+        zh-Hant: ICELite 模式
+    - default: "1024m"
+      edit: true
+      envKey: MEM_USE
+      labelEn: Shared memory footprint (1gb)
+      labelZh: 共享内存占用 (1gb)
+      required: true
+      type: text
+      label:
+        en: Shared Memory Footprint (1GB)
+        ja: 共有メモリ使用量 (1GB)
+        ms: Jejak Ingatan Dikongsi (1GB)
+        pt-br: Uso de memória compartilhada (1GB)
+        ru: Использование общей памяти (1GB)
+        ko: 공유 메모리 사용량 (1GB)
+        zh: 共享内存占用 (1gb)
+        zh-Hant: 共用記憶體占用 (1GB)
+    - default: "false"
+      edit: true
+      envKey: NEKO_CONTROL_PROTECTION
+      labelEn: Control Protection
+      labelZh: 控制保护
+      required: true
+      type: select
+      values:
+        - label: "False"
+          value: "false"
+        - label: "True"
+          value: "true"
+      label:
+        en: Control Protection
+        ja: コントロール保護
+        ms: Perlindungan Kawalan
+        pt-br: Proteção de controle
+        ru: Защита управления
+        ko: 제어 보호
+        zh: 控制保护
+        zh-Hant: 控制保護
+    - default: "false"
+      edit: true
+      envKey: NEKO_IMPLICIT_CONTROL
+      labelEn: Implicit Control
+      labelZh: 隐式控制
+      required: true
+      type: select
+      values:
+        - label: "False"
+          value: "false"
+        - label: "True"
+          value: "true"
+      label:
+        en: Implicit Control
+        ja: 暗黙の制御
+        ms: Kawalan Tersirat
+        pt-br: Controle Implícito
+        ru: Неявное управление
+        ko: 암묵적 제어
+        zh: 隐式控制
+        zh-Hant: 隱式控制
+    - default: ""
+      edit: true
+      envKey: NEKO_LOCKS
+      labelEn: Locks
+      labelZh: 锁定
+      required: false
+      type: text
+      label:
+        en: Locks
+        ja: ロック
+        ms: Kunci
+        pt-br: Bloqueios
+        ru: Блокировки
+        ko: 잠금
+        zh: 锁定
+        zh-Hant: 鎖定
+    - default: ""
+      edit: true
+      envKey: NEKO_NAT1TO1
+      labelEn: NAT1to1 IP
+      labelZh: NAT1to1 IP
+      required: false
+      type: text
+      label:
+        en: NAT1to1 IP
+        ja: NAT1to1 IP
+        ms: NAT1to1 IP
+        pt-br: IP NAT1to1
+        ru: NAT1to1 IP
+        ko: NAT1to1 IP
+        zh: NAT1to1 IP
+        zh-Hant: NAT1to1 IP
+    - default: ""
+      edit: true
+      envKey: NEKO_IPFETCH
+      labelEn: IP Fetch URL
+      labelZh: IP 获取URL
+      required: false
+      type: text
+      label:
+        en: IP Fetch URL
+        ja: IP 取得URL
+        ms: URL Dapatkan IP
+        pt-br: URL de obtenção de IP
+        ru: URL получения IP
+        ko: IP 가져오기 URL
+        zh: IP 获取URL
+        zh-Hant: IP 取得UR
+    - default: ""
+      edit: true
+      envKey: NEKO_ICESERVER
+      labelEn: ICE Server
+      labelZh: ICE 服务器
+      required: false
+      type: text
+      label:
+        en: ICE Server
+        ja: ICE サーバー
+        ms: Pelayan ICE
+        pt-br: Servidor ICE
+        ru: ICE сервер
+        ko: ICE 서버
+        zh: ICE 服务器
+        zh-Hant: ICE 伺服器
+    - default: ""
+      edit: true
+      envKey: NEKO_ICESERVERS
+      labelEn: ICE Servers
+      labelZh: ICE 服务器组
+      required: false
+      type: text
+      label:
+        en: ICE Servers
+        ja: ICE サーバー群
+        ms: Pelayan-pelayan ICE
+        pt-br: Servidores ICE
+        ru: ICE сервера
+        ko: ICE 서버 그룹
+        zh: ICE 服务器组
+        zh-Hant: ICE 伺服器群
+    - default: "vp8"
+      edit: true
+      envKey: NEKO_VIDEO_CODEC
+      labelEn: Video Codec
+      labelZh: 视频编解码器
+      required: false
+      type: text
+      label:
+        en: Video Codec
+        ja: ビデオコーデック
+        ms: Codec Video
+        pt-br: Codec de Vídeo
+        ru: Видеокодек
+        ko: 비디오 코덱
+        zh: 视频编解码器
+        zh-Hant: 視頻編解碼器
+    - default: "3500"
+      edit: true
+      envKey: NEKO_VIDEO_BITRATE
+      labelEn: Video Bitrate
+      labelZh: 视频比特率
+      required: false
+      type: number
+      label:
+        en: Video Bitrate
+        ja: ビデオビットレート
+        ms: Bitrate Video
+        pt-br: Taxa de bits do vídeo
+        ru: Битрейт видео
+        ko: 비디오 비트레이트
+        zh: 视频比特率
+        zh-Hant: 視頻比特率
+    - default: "0"
+      edit: true
+      envKey: NEKO_MAX_FPS
+      labelEn: Max FPS
+      labelZh: 最大FPS
+      required: false
+      type: number
+      label:
+        en: Max FPS
+        ja: 最大FPS
+        ms: FPS Maksimum
+        pt-br: FPS Máximo
+        ru: Макс FPS
+        ko: 최대 FPS
+        zh: 最大FPS
+        zh-Hant: 最大FPS
+    - default: "none"
+      edit: true
+      envKey: NEKO_HWENC
+      labelEn: Hardware Encoder
+      labelZh: 硬件编码器
+      required: false
+      type: text
+      label:
+        en: Hardware Encoder
+        ja: ハードウェアエンコーダ
+        ms: Pengekod Perkakasan
+        pt-br: Codificador de Hardware
+        ru: Аппаратный кодировщик
+        ko: 하드웨어 인코더
+        zh: 硬件编码器
+        zh-Hant: 硬體編碼器
+    - default: "opus"
+      edit: true
+      envKey: NEKO_AUDIO_CODEC
+      labelEn: Audio Codec
+      labelZh: 音频编解码器
+      required: false
+      type: text
+      label:
+        en: Audio Codec
+        ja: オーディオコーデック
+        ms: Codec Audio
+        pt-br: Codec de Áudio
+        ru: Аудиокодек
+        ko: 오디오 코덱
+        zh: 音频编解码器
+        zh-Hant: 音訊編解碼器
+    - default: 196
+      edit: true
+      envKey: NEKO_AUDIO_BITRATE
+      labelEn: Audio Bitrate
+      labelZh: 音频比特率
+      required: false
+      type: number
+      label:
+        en: Audio Bitrate
+        ja: オーディオビットレート
+        ms: Bitrate Audio
+        pt-br: Taxa de bits do áudio
+        ru: Битрейт аудио
+        ko: 오디오 비트레이트
+        zh: 音频比特率
+        zh-Hant: 音訊比特率
+    - default: ""
+      edit: true
+      envKey: NEKO_BROADCAST_PIPELINE
+      labelEn: Broadcast Pipeline
+      labelZh: 广播管道
+      required: false
+      type: text
+      label:
+        en: Broadcast Pipeline
+        ja: ブロードキャストパイプライン
+        ms: Saluran Penyiaran
+        pt-br: Pipeline de transmissão
+        ru: Поток вещания
+        ko: 방송 파이프라인
+        zh: 广播管道
+        zh-Hant: 廣播管道
+    - default: ""
+      edit: true
+      envKey: NEKO_BROADCAST_URL
+      labelEn: Broadcast URL
+      labelZh: 广播URL
+      required: false
+      type: text
+      label:
+        en: Broadcast URL
+        ja: ブロードキャストURL
+        ms: URL Penyiaran
+        pt-br: URL de transmissão
+        ru: URL вещания
+        ko: 방송 URL
+        zh: 广播URL
+        zh-Hant: 廣播URL
+    - default: "false"
+      edit: true
+      envKey: NEKO_BROADCAST_AUTOSTART
+      labelEn: Broadcast Autostart
+      labelZh: 广播自动启动
+      required: true
+      type: select
+      values:
+        - label: "False"
+          value: "false"
+        - label: "True"
+          value: "true"
+      label:
+        en: Broadcast Autostart
+        ja: ブロードキャスト自動起動
+        ms: Mula Siaran Automatik
+        pt-br: Inicialização automática de transmissão
+        ru: Автозапуск вещания
+        ko: 방송 자동 시작
+        zh: 广播自动启动
+        zh-Hant: 廣播自動啟動
+    - default: ""
+      edit: true
+      envKey: NEKO_CERT
+      labelEn: SSL Certificate Path
+      labelZh: SSL证书路径
+      required: false
+      type: text
+      label:
+        en: SSL Certificate Path
+        ja: SSL証明書パス
+        ms: Laluan Sijil SSL
+        pt-br: Caminho do certificado SSL
+        ru: Путь к SSL сертификату
+        ko: SSL 인증서 경로
+        zh: SSL证书路径
+        zh-Hant: SSL憑證路徑
+    - default: ""
+      edit: true
+      envKey: NEKO_KEY
+      labelEn: SSL Key Path
+      labelZh: SSL 密钥路径
+      required: false
+      type: text
+      label:
+        en: SSL Key Path
+        ja: SSLキーのパス
+        ms: Laluan Kunci SSL
+        pt-br: Caminho da chave SSL
+        ru: Путь к SSL ключу
+        ko: SSL 키 경로
+        zh: SSL 密钥路径
+        zh-Hant: SSL 金鑰路徑
+    - default: "false"
+      edit: true
+      envKey: NEKO_PROXY
+      labelEn: Proxy Mode
+      labelZh: 代理模式
+      required: true
+      type: select
+      values:
+        - label: "False"
+          value: "false"
+        - label: "True"
+          value: "true"
+      label:
+        en: Proxy Mode
+        ja: プロキシモード
+        ms: Mod Proksi
+        pt-br: Modo Proxy
+        ru: Режим прокси
+        ko: 프록시 모드
+        zh: 代理模式
+        zh-Hant: 代理模式
+    - default: ""
+      edit: true
+      envKey: NEKO_PATH_PREFIX
+      labelEn: Path Prefix
+      labelZh: 路径前缀
+      required: false
+      type: text
+      label:
+        en: Path Prefix
+        ja: パスプレフィックス
+        ms: Awalan Laluan
+        pt-br: Prefixo de Caminho
+        ru: Префикс пути
+        ko: 경로 접두사
+        zh: 路径前缀
+        zh-Hant: 路徑前綴
+    - default: ""
+      edit: true
+      envKey: NEKO_CORS
+      labelEn: CORS
+      labelZh: 跨域资源共享
+      required: false
+      type: text
+      label:
+        en: CORS
+        ja: CORS
+        ms: CORS
+        pt-br: CORS
+        ru: CORS
+        ko: CORS
+        zh: 跨域资源共享
+        zh-Hant: 跨域資源共享
+    - default: "true"
+      edit: true
+      envKey: NEKO_FILE_TRANSFER_ENABLED
+      labelEn: File Transfer Enabled
+      labelZh: 文件传输已启用
+      required: true
+      type: select
+      values:
+        - label: "True"
+          value: "true"
+        - label: "False"
+          value: "false"
+      label:
+        en: File Transfer Enabled
+        ja: ファイル転送有効
+        ms: Pemindahan Fail Diaktifkan
+        pt-br: Transferência de Arquivos Habilitada
+        ru: Передача файлов включена
+        ko: 파일 전송 활성화
+        zh: 文件传输已启用
+        zh-Hant: 檔案傳輸已啟用
+    - default: ""
+      edit: true
+      envKey: NEKO_DISPLAY
+      labelEn: Display
+      labelZh: 显示
+      required: false
+      type: text
+      label:
+        en: Display
+        ja: ディスプレイ
+        ms: Paparan
+        pt-br: Tela
+        ru: Дисплей
+        ko: 디스플레이
+        zh: 显示
+        zh-Hant: 顯示
+    - default: ""
+      edit: true
+      envKey: NEKO_DEVICE
+      labelEn: Device
+      labelZh: 设备
+      required: false
+      type: text
+      label:
+        en: Device
+        ja: デバイス
+        ms: Peranti
+        pt-br: Dispositivo
+        ru: Устройство
+        ko: 장치
+        zh: 设备
+        zh-Hant: 裝置
+    - default: ""
+      edit: true
+      envKey: NEKO_STATIC
+      labelEn: Static Files Path
+      labelZh: 静态文件路径
+      required: false
+      type: text
+      label:
+        en: Static Files Path
+        ja: 静的ファイルパス
+        ms: Laluan Fail Statik
+        pt-br: Caminho de arquivos estáticos
+        ru: Путь к статическим файлам
+        ko: 정적 파일 경로
+        zh: 静态文件路径
+        zh-Hant: 靜態檔案路徑
