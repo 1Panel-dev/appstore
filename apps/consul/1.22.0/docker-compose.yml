@@ -1,6 +1,6 @@
 services:
   consul:
-    image: hashicorp/consul:1.22.0
+    image: hashicorp/consul:1.22.1
     container_name: ${CONTAINER_NAME}
     restart: always
     ports:
