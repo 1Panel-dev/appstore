@@ -1,0 +1,34 @@
+name: Zabbix Agent
+tags:
+  - 实用工具
+title: 面向 IT 和 OT 的通用开源可观测性解决方案
+description: 面向 IT 和 OT 的通用开源可观测性解决方案
+additionalProperties:
+  key: zabbix-agent
+  name: Zabbix Agent
+  tags:
+    - Tool
+  shortDescZh: 面向 IT 和 OT 的通用开源可观测性解决方案
+  shortDescEn: The universal, open-source observability solution for IT & OT
+  description:
+    en: The universal, open-source observability solution for IT & OT
+    ja: ITおよびOT向けのユニバーサルでオープンソースの可観測性ソリューション
+    ms: IT dan OT untuk penyelesaian observabiliti sumber terbuka yang universal
+    pt-br: A solução universal e de código aberto para observabilidade para TI e OT
+    ru: Универсальное решение с открытым исходным кодом для наблюдаемости в ИТ и ОТ
+    ko: IT 및 OT를 위한 범용 오픈 소스 관측 가능성 솔루션
+    zh-Hant: 面向 IT 和 OT 的通用開源可觀測性解決方案
+    zh: 面向 IT 和 OT 的通用开源可观测性解决方案
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://www.zabbix.com/
+  github: https://github.com/zabbix/zabbix
+  document: https://www.zabbix.com/manuals
+  architectures:
+    - amd64
+    - arm64
+    - ppc64le
+    - s390x
+    - riscv64
