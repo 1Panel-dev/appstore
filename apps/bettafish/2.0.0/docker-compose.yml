@@ -1,6 +1,6 @@
 services:
   bettafish:
-    image: ghcr.io/666ghj/bettafish:v1.2.1
+    image: ghcr.io/666ghj/bettafish:v2.0.0
     container_name: ${CONTAINER_NAME}
     restart: always
     environment:
