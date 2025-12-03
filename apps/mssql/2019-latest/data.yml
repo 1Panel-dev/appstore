@@ -16,7 +16,7 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-    - default: "mssql"
+    - default: "MSSQLP0ss"
       edit: true
       envKey: MSSQL_SA_PASSWORD
       labelEn: SA PASSWORD
@@ -41,5 +41,4 @@ additionalProperties:
         zh-Hant: 至少包含8個字符，且需包含大寫字母、小寫字母、數字和特殊字符中的三種
       random: true
       required: true
-      rule: paramCommon
       type: text
