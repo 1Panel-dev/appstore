@@ -148,6 +148,10 @@
       "allowedVersions": "/^2022-*/"
     },
     {
+      "matchFileNames": ["apps/mssql/2025-*/*.yml"],
+      "allowedVersions": "/^2025-*/"
+    },
+    {
       "matchFileNames": ["apps/zitadel/2.*/*.yml"],
       "allowedVersions": "/^2.*/"
     },
