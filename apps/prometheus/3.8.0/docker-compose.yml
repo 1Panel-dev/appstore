@@ -1,5 +1,5 @@
 services:
-  clickhouse:
+  prometheus:
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
