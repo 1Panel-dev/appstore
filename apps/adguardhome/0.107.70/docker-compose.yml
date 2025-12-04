@@ -22,7 +22,7 @@ services:
     volumes:
       - ./data/work:/opt/adguardhome/work
       - ./data/conf:/opt/adguardhome/conf
-    image: adguard/adguardhome:v0.107.69
+    image: adguard/adguardhome:v0.107.70
     labels:
       createdBy: "Apps"
 networks:
