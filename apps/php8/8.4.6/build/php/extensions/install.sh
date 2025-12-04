@@ -384,9 +384,7 @@ fi
 
 if [[ -z "${EXTENSIONS##*,imap,*}" ]]; then
     echo "---------- Install imap ----------"
-	apk add --no-cache imap-dev
-    docker-php-ext-configure imap --with-imap --with-imap-ssl
-	docker-php-ext-install ${MC} imap
+    install-php-extensions imap
 fi
 
 if [[ -z "${EXTENSIONS##*,ldap,*}" ]]; then
