@@ -1,0 +1,26 @@
+name: Certd
+tags:
+    - 实用工具
+title: Certd开源免费的证书管理工具
+description: 全自动申请和部署证书，让你的网站证书永不过期，首创流水线申请部署证书模式，已被多个项目“借鉴”，被抄也是一种成功。
+additionalProperties:
+    key: certd
+    name: Certd
+    tags:
+        - Tool
+    shortDescZh: Certd开源免费的证书管理工具
+    shortDescEn: Certd open source full automated certificate management tool
+    description:
+        en: Certd is an open source free certificate management tool, which can help you to apply and deploy certificates for your websites.
+        zh: Certd是一个开源免费的证书管理工具，全自动申请和部署证书，让你的网站证书永不过期。
+    type: website
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://certd.docmirror.cn/
+    github: https://github.com/certd/certd
+    document: https://certd.docmirror.cn/
+    architectures:
+      - amd64
+      - arm/v7
+      - arm64
