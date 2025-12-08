@@ -59,7 +59,6 @@ additionalProperties:
         - label: MySQL
           value: mysql
     - default: ""
-      disabled: true
       envKey: PANEL_DB_ROOT_PASSWORD
       labelEn: Root Password
       labelZh: Root 密码

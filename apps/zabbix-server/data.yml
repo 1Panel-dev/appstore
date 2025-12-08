@@ -19,7 +19,7 @@ additionalProperties:
     ko: IT 및 OT를 위한 범용 오픈 소스 관측 가능성 솔루션
     zh-Hant: 面向 IT 和 OT 的通用開源可觀測性解決方案
     zh: 面向 IT 和 OT 的通用开源可观测性解决方案
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 1
   recommend: 62
