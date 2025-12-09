@@ -18,11 +18,12 @@ installExtensionFromTgz()
     shift 1
     result=$@
     mkdir /tmp/data/${tgzName}
-    tar -zxvf /tmp/data/${tgzName}.tar.gz -C /tmp/data/${tgzName} --strip-components=1
+    tar -zxvf /tmp/data/${tgzName}.tgz -C /tmp/data/${tgzName} --strip-components=1
     ( cd /tmp/data/${tgzName} && phpize && ./configure ${result} && make ${MC} && make install )
 
     docker-php-ext-enable ${extensionName}
 }
+
 is_extension_installed() {
     local extension=$1
     if php -m | grep -q "^$extension$"; then
@@ -142,6 +143,11 @@ install_imagick() {
     install_msg imagick
 }
 
+install_lz4() {
+    installExtensionFromTgz lz4-0.6.0
+    install_msg lz4
+}
+
 install_extension() {
     local extension=$1
     if [ -z "$extension" ]; then
@@ -162,6 +168,8 @@ install_extension() {
         install_yaf   
     elif [ "$extension" = "pdo_pgsql" ]; then
         install_pdo_pgsql  
+    elif [ "$extension" = "lz4" ]; then
+        install_lz4
     elif [ "$extension" = "pdo_mysql" ]; then
         install_pdo_mysql
     elif [ "$extension" = "yaml" ]; then
