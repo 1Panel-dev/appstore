@@ -8,6 +8,12 @@ additionalProperties:
       label:
         en: HTTP Port
         zh: HTTP 端口
+        ja: HTTP ポート
+        ms: HTTP Port
+        pt-br: HTTP Porta
+        ru: HTTP Порт
+        ko: HTTP 포트
+        zh-Hant: HTTP 埠
       required: true
       rule: paramPort
       type: number
@@ -19,6 +25,12 @@ additionalProperties:
       label:
         en: HTTPS Port
         zh: HTTPS 端口
+        ja: HTTPS ポート
+        ms: HTTPS Port
+        pt-br: HTTPS Porta
+        ru: HTTPS Порт
+        ko: HTTPS 포트
+        zh-Hant: HTTPS 埠
       required: true
       rule: paramPort
       type: number

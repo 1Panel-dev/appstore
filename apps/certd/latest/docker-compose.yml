@@ -1,6 +1,6 @@
 services:
-  uptime-kuma:
-    image: greper/certd:latest
+  certd:
+    image: greper/certd:1.37.15
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
