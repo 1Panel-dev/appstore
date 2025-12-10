@@ -1,0 +1,19 @@
+services:
+  certd:
+    image: greper/certd:1.37.15
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    volumes:
+      - ./data/certd:/app/data
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:7001
+      - ${PANEL_APP_PORT_HTTPS}:7002
+    labels:
+      createdBy: "Apps"
+    
+networks:
+  1panel-network:
+    external: true
+

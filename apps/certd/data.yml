@@ -1,0 +1,32 @@
+name: Certd
+tags:
+    - 实用工具
+title: Certd开源免费的证书管理工具
+description: 全自动申请和部署证书，让你的网站证书永不过期，首创流水线申请部署证书模式，已被多个项目“借鉴”，被抄也是一种成功。
+additionalProperties:
+    key: certd
+    name: Certd
+    tags:
+        - Tool
+    shortDescZh: Certd开源免费的证书管理工具
+    shortDescEn: Certd open source full automated certificate management tool
+    description:
+        en: Certd is an open source free certificate management tool, which can help you to apply and deploy certificates for your websites.
+        zh: Certd是一个开源免费的证书管理工具，全自动申请和部署证书，让你的网站证书永不过期。
+        zh-Hant: Certd 是一個開源免費的證書管理工具，自動申請和部署證書，讓你的網站證書永遠不會過期。
+        ja: Certd はオープンソースの無料の証明書管理ツールで、ウェブサイトの証明書を自動で申請してデプロイします。
+        ms: Platform aplikasi web PHP/MySQL untuk penilaian kerentanan keselamatan.
+        pt-br: Uma plataforma de aplicação web PHP/MySQL para avaliação de vulnerabilidades de segurança.
+        ru: Платформа веб-приложений PHP/MySQL для оценки уязвимостей безопасности.
+        ko: 보안 취약성 평가를 위한 PHP/MySQL 웹 애플리케이션 플랫폼.
+    type: website
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://certd.docmirror.cn/
+    github: https://github.com/certd/certd
+    document: https://certd.docmirror.cn/
+    architectures:
+      - amd64
+      - arm/v7
+      - arm64
