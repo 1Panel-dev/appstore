@@ -12,7 +12,6 @@ services:
       - ${PANEL_APP_PORT_HTTPS}:7002
     labels:
       createdBy: "Apps"
-    
 networks:
   1panel-network:
     external: true
