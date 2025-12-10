@@ -9,7 +9,6 @@ services:
       - "${PANEL_APP_PORT_HTTP}:8080"
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - ./conf:/ezbookkeeping/conf
       - ./data/data:/ezbookkeeping/data
       - ./data/storage:/ezbookkeeping/storage
       - ./data/log:/ezbookkeeping/log
