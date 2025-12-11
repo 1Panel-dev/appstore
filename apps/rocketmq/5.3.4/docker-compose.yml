@@ -61,7 +61,7 @@ services:
     depends_on:
       - namesrv
     ports:
-      - ${PANEL_APP_PORT_HTTP}:8080
+      - ${PANEL_APP_PORT_HTTP}:8082
     networks:
       - 1panel-network
     restart: on-failure
