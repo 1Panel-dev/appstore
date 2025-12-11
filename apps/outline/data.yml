@@ -1,0 +1,23 @@
+name: Outline
+tags:
+  - 实用工具
+title: 适合成长型团队的最快知识库。美观、实时协作、功能丰富且支持 Markdown 格式。
+description: 适合成长型团队的最快知识库。美观、实时协作、功能丰富且支持 Markdown 格式。
+additionalProperties:
+  key: outline
+  name: Outline
+  tags:
+    - Tool
+  shortDescZh: 适合成长型团队的最快知识库。美观、实时协作、功能丰富且支持 Markdown 格式。
+  shortDescEn: The fastest knowledge base for growing teams. Beautiful, realtime collaborative, feature packed, and markdown compatible.
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://www.getoutline.com/
+  github: https://github.com/outline/outline
+  document: https://docs.getoutline.com/s/hosting
+  architectures:
+    - amd64
+
+

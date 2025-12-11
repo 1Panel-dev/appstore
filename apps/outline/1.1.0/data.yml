@@ -1,0 +1,118 @@
+additionalProperties:
+  formFields:
+    - default: 12115
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Access Port
+      labelZh: 访问端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: ""
+      envKey: PANEL_DB_HOST
+      key: postgresql
+      labelEn: PostgreSQL Database Service
+      labelZh: PostgreSQL 数据库服务
+      required: true
+      type: service
+    - default: outline_db
+      envKey: PANEL_DB_NAME
+      labelEn: Database
+      labelZh: 数据库名
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: user_outline
+      envKey: PANEL_DB_USER
+      labelEn: Database User
+      labelZh: 数据库用户
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: passwd_rDV5Yv7Js
+      envKey: PANEL_DB_USER_PASSWORD
+      labelEn: Database Password
+      labelZh: 数据库用户密码
+      random: true
+      required: true
+      type: password
+    - default: ""
+      envKey: PANEL_REDIS_HOST
+      key: redis
+      labelEn: Redis Service
+      labelZh: redis 服务
+      required: true
+      type: service
+    - default: ""
+      disabled: true
+      envKey: PANEL_REDIS_ROOT_PASSWORD
+      labelEn: Redis Password
+      labelZh: redis 密码
+      type: text
+    - default: ""
+      edit: true
+      envKey: GITHUB_OAUTH_CLIENT_ID
+      labelEn: GitHub OAuth Client ID
+      labelZh: GitHub OAuth 客户端 ID
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: GITHUB_OAUTH_SECRET
+      labelEn: GitHub OAuth SECRET
+      labelZh: GitHub OAuth 密钥
+      required: true
+      type: text
+    - default: smtp.mailgun.org
+      edit: true
+      envKey: PANEL_SMTP_HOST
+      labelEn: SMTP Server (Optional)
+      labelZh: SMTP 服务器（可选）
+      required: false
+      type: text
+    - default: 465
+      edit: true
+      envKey: PANEL_SMTP_PORT
+      labelEn: SMTP Server Port (Optional)
+      labelZh: SMTP 服务器端口（可选）
+      required: false
+      rule: paramPort
+      type: number
+    - default: example@mail.com
+      edit: true
+      envKey: PANEL_SMTP_USERNAME
+      labelEn: SMTP mail Username (Optional)
+      labelZh: SMTP 邮箱用户名（可选）
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: PANEL_SMTP_PASSWORD
+      labelEn: SMTP mail password (Optional)
+      labelZh: SMTP 邮箱密码（可选）
+      required: false
+      type: text
+    - default: example@mail.com
+      edit: true
+      envKey: PANEL_SMTP_FROM_EMAIL
+      labelEn: SMTP mail Receiver Email (Optional)
+      labelZh: SMTP 信息接收邮箱（用户邮件接收邮箱）（可选）
+      required: false
+      type: text
+    - default: zh_CN
+      edit: true
+      envKey: PANEL_LANGUAGE
+      labelEn: Language (中文:zh_CN)(English:en_US)
+      labelZh: 语言（中文:zh_CN）（English:en_US）
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: PANEL_APP_URL
+      labelEn: Reverse Proxy Domain (If no domain, you can fill in http://<ip_address>:12115)
+      labelZh: 反向代理域名（如果没有域名则可以填写 http://<ip地址>:12115）
+      required: true
+      rule: paramHttp
+      type: text
