@@ -1,0 +1,54 @@
+version: "3"
+services:
+  outline:
+    image: outlinewiki/outline:1.1.0
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    env_file: ./env/docker.env
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:3000
+    volumes:
+      - ./data:/var/lib/outline/data
+      - ./env/docker.env:/opt/outline/.env
+    networks:
+      - 1panel-network
+    labels:
+      createdBy: "Apps"
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URL=postgresql://${PANEL_DB_USER}:${PANEL_DB_USER_PASSWORD}@${PANEL_DB_HOST}:5432/${PANEL_DB_NAME}?schema=public
+      - REDIS_URL=redis://:${PANEL_REDIS_ROOT_PASSWORD}@${PANEL_REDIS_HOST}:6379
+      - SECRET_KEY=23a8db156434376a46f95636eff5b4e1a44f511a396a2f0e92e5cb53d2841e94
+      - UTILS_SECRET=1bb17f561e1a46527c8a7e8bc267d6175db353a16c59bcd2b41512b024da67de
+      - DEFAULT_LANGUAGE=${PANEL_LANGUAGE}
+      - URL=${PANEL_APP_URL}
+      - PORT=3000
+      - PGSSLMODE=disable
+      - FILE_STORAGE=local
+      - FILE_STORAGE_LOCAL_ROOT_DIR=/var/lib/outline/data
+      - FILE_STORAGE_UPLOAD_MAX_SIZE=262144000
+      - FILE_STORAGE_IMPORT_MAX_SIZE=262144000
+      - FILE_STORAGE_WORKSPACE_IMPORT_MAX_SIZE=262144000
+      - FORCE_HTTPS=false
+      - RATE_LIMITER_ENABLED=false
+      - SLACK_MESSAGE_ACTIONS=false
+      - ENABLE_UPDATES=true
+      - DEBUG=http
+      - LOG_LEVEL=info
+      - SMTP_HOST=${PANEL_SMTP_HOST}
+      - SMTP_PORT=${PANEL_SMTP_PORT}
+      - SMTP_USERNAME=${PANEL_SMTP_USERNAME}
+      - SMTP_PASSWORD=${PANEL_SMTP_PASSWORD}
+      - SMTP_FROM_EMAIL=${PANEL_SMTP_FROM_EMAIL}
+      - OIDC_AUTH_URI=https://github.com/login/oauth/authorize
+      - OIDC_TOKEN_URI=https://github.com/login/oauth/access_token
+      - OIDC_SCOPES=read:user user:email
+      - OIDC_USERINFO_URI=https://api.github.com/user
+      - OIDC_USERNAME_CLAIM=name
+      - OIDC_DISPLAY_NAME=GitHub
+      - OIDC_CLIENT_ID=${GITHUB_OAUTH_CLIENT_ID}
+      - OIDC_CLIENT_SECRET=${GITHUB_OAUTH_SECRET}
+
+networks:
+  1panel-network:
+    external: true
