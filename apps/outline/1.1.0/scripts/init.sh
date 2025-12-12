@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIR="/opt/1panel/apps/outline"
+DIR="./data/"
 
 if [ -d "$DIR" ]; then
   echo "目录 $DIR 已存在"
@@ -15,4 +15,3 @@ else
 fi
 
 chown -R 1001:1001 $DIR
-

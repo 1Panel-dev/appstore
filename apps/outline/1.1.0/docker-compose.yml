@@ -8,7 +8,7 @@ services:
     ports:
       - ${PANEL_APP_PORT_HTTP}:3000
     volumes:
-      - /opt/1panel/apps/outline:/var/lib/outline/data
+      - ./data:/var/lib/outline/data
       - ./env/docker.env:/opt/outline/.env
     networks:
       - 1panel-network
