@@ -1,11 +1,8 @@
-
 ## Usage Instructions
 
-The fastest knowledge base for growing teams. Beautiful, real-time collaboration, feature-rich, and supports Markdown format.
+A fast knowledge base suitable for growing teams, featuring a beautiful interface, real-time collaboration, rich functionality, and support for Markdown.
 
-You can also use it as a self-hosted alternative to Feishu Docs. It is the open-source knowledge base system most similar to the Feishu Docs experience that I have seen so far.
-
-The most troublesome part of this knowledge base is the login, which requires a dedicated OAuth application for authentication. There is no built-in login portal, so I have set Outline to use GitHub OAuth login by default. Please read the GitHub OAuth application section below before installation.
+This knowledge base does not have its own login portal and requires a dedicated OAuth application for login. Please read the GitHub OAuth application instructions below before installation (using GitHub OAuth as an example).
 
 ### 1. GitHub OAuth Application
 
@@ -19,6 +16,7 @@ The most troublesome part of this knowledge base is the login, which requires a 
 5. Click the `Register application` button.
 
 Next, obtain the `Client ID` and `Client secrets`:
+
 1. Go to the `OAuth Apps` page (or click: top right avatar - `Settings` - `Developer Settings` - `OAuth Apps`).
 2. Select the application you just created.
 3. Click the `Generate a new client secret` button.
@@ -45,7 +43,6 @@ Please fill in the correct SMTP email service information during installation. I
 After installation, visit `http://<your-server-ip>:<port>` to log in to Outline. Normally, you will be redirected to the GitHub authorization page. After successful authorization, you will be redirected back to the Outline knowledge base homepage.
 
 > If not redirected, you can click the `Continue with GitHub` button.
-
 
 ## Suggestion
 

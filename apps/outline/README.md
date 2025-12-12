@@ -1,12 +1,10 @@
 ## 使用说明
 
-适合成长型团队的最快知识库。美观、实时协作、功能丰富且支持 Markdown 格式。
+适合成长型团队的最快知识库，美观、实时协作、功能丰富且支持 Markdown 格式。
 
-当然你也可以将他作为一个飞书文档的本地化部署版本来使用，它是我目前见过最接近飞书文档体验的开源知识库系统。
+此知识库没有自己的登录门户，需要专门的 OAuth 应用支持登录，安装前请先阅读下面的 GitHub OAuth 申请说明（以 GitHub OAuth 为例）。
 
-此知识库最麻烦的一点就在于登录，需要专门的 OAuth 应用支持登录，没有自己的登录门户，所以outline 被我默认设定为使用 GitHub OAuth 登录，安装之前请阅读下面的 GitHub OAuth 申请部分。
-
-### 一、GitHub OAuth申请
+### 一、GitHub OAuth 申请
 
 1. 访问 [GitHub](https://github.com/) 并登录
 2. 进入 [OAuth Apps](https://github.com/settings/developers) 页面（也可以依次点击：右上角头像 - `Settings` - `Developer Settings` - `OAuth Apps`）
@@ -18,6 +16,7 @@
 5. 点击 `Register application` 按钮。
 
 接下来获取 `Client ID` 和 `Client secrets`：
+
 1. 进入 `OAuth Apps` 页面（也可以依次点击：右上角头像 - `Settings` - `Developer Settings` - `OAuth Apps`）
 2. 选择上面创建的应用
 3. 点击 `Generate a new client secret` 按钮
@@ -44,7 +43,6 @@
 安装完成之后，请访问 `http://<你的服务器IP>:<访问端口>` 来登录 Outline，正常的话会自动跳转到 GitHub 的授权页面，授权成功后会跳转回 Outline 知识库首页。
 
 > 如果没有跳转可以点击 `使用 GitHub 继续` 按钮。
-
 
 ## 建议
 

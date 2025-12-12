@@ -1,24 +1,24 @@
 name: Outline
 tags:
   - 实用工具
-title: 适合成长型团队的最快知识库。美观、实时协作、功能丰富且支持 Markdown 格式。
-description: 适合成长型团队的最快知识库。美观、实时协作、功能丰富且支持 Markdown 格式。
+title: 适合成长型团队的最快知识库，美观、实时协作、功能丰富，并支持 Markdown 格式
+description: 适合成长型团队的最快知识库，美观、实时协作、功能丰富，并支持 Markdown 格式
 additionalProperties:
   key: outline
   name: Outline
   tags:
     - Tool
-  shortDescZh: 适合成长型团队的最快知识库。美观、实时协作、功能丰富且支持 Markdown 格式。
-  shortDescEn: The fastest knowledge base for growing teams. Beautiful, realtime collaborative, feature packed, and markdown compatible.
+  shortDescZh: 适合成长型团队的最快知识库，美观、实时协作、功能丰富，并支持 Markdown 格式
+  shortDescEn: The fastest knowledge base for growing teams. Beautiful, realtime collaborative, feature packed, and markdown compatible
   description:
-    en: The fastest knowledge base for growing teams. Beautiful, realtime collaborative, feature packed, and markdown compatible.
-    ja: 成長中のチームに最適な最速のナレッジベース。美しく、リアルタイム共同作業、機能満載、Markdown対応。
-    ms: Pangkalan pengetahuan terpantas untuk pasukan yang sedang berkembang. Cantik, kolaboratif masa nyata, penuh ciri, dan serasi dengan Markdown.
-    pt-br: A base de conhecimento mais rápida para equipes em crescimento. Bonita, colaborativa em tempo real, repleta de recursos e compatível com Markdown.
-    ru: Самая быстрая база знаний для растущих команд. Красиво, совместная работа в реальном времени, множество функций и поддержка Markdown.
-    ko: 성장하는 팀을 위한 가장 빠른 지식베이스. 아름답고, 실시간 협업, 다양한 기능, Markdown 호환.
-    zh-Hant: 適合成長型團隊的最快知識庫。美觀、即時協作、功能豐富且支援 Markdown 格式。
-    zh: 适合成长型团队的最快知识库。美观、实时协作、功能丰富且支持 Markdown 格式。
+    en: The fastest knowledge base for growing teams. Beautiful, realtime collaborative, feature packed, and markdown compatible
+    ja: 成長中のチームに最適な最速のナレッジベース。美しく、リアルタイム共同作業、機能満載、Markdown対応
+    ms: Pangkalan pengetahuan terpantas untuk pasukan yang sedang berkembang. Cantik, kolaboratif masa nyata, penuh ciri, dan serasi dengan Markdown
+    pt-br: A base de conhecimento mais rápida para equipes em crescimento. Bonita, colaborativa em tempo real, repleta de recursos e compatível com Markdown
+    ru: Самая быстрая база знаний для растущих команд. Красиво, совместная работа в реальном времени, множество функций и поддержка Markdown
+    ko: 성장하는 팀을 위한 가장 빠른 지식베이스. 아름답고, 실시간 협업, 다양한 기능, Markdown 호환
+    zh-Hant: 適合成長型團隊的最快知識庫，美觀、即時協作、功能豐富且支援 Markdown 格式
+    zh: 适合成长型团队的最快知识库，美观、实时协作、功能丰富，并支持 Markdown 格式
   type: website
   crossVersionUpdate: true
   limit: 0
