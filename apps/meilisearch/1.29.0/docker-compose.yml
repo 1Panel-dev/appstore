@@ -8,6 +8,7 @@ services:
     ports:
       - ${PANEL_APP_PORT_HTTP}:7700
     environment:
+      MEILI_EXPERIMENTAL_DUMPLESS_UPGRADE: true
       MEILI_CONFIG_FILE_PATH: /config/config.toml
       MEILI_MASTER_KEY: ${MEILI_MASTER_KEY}
     volumes:
