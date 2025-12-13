@@ -3,6 +3,8 @@ services:
     image: wantcat/trendradar:4.0.0
     container_name: ${CONTAINER_NAME}
     restart: always
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8080
     volumes:
       - ./config:/app/config:ro
       - ${DATA_PATH}:/app/output
