@@ -1,5 +1,34 @@
 additionalProperties:
+  formFields:additionalProperties:
   formFields:
+    - default: 8080
+      envKey: PANEL_APP_PORT_HTTP
+      labelZh: HTTP 端口
+      labelEn: HTTP Port
+      label:
+        zh: HTTP 端口
+        zh-Hant: HTTP 連接埠
+        en: HTTP Port
+        ja: HTTP ポート
+        ko: HTTP 포트
+        ms: Port HTTP
+        pt-br: Porta HTTP
+        ru: HTTP Порт
+        tr: HTTP Portu
+      description:
+        zh: "有效范围: 1-65535。进入容器后，需要执行 `python manage.py start_webserver` 启动 Web 服务"
+        zh-Hant: "有效範圍: 1-65535。進入容器後，需要執行 `python manage.py start_webserver` 啟動 Web 服務"
+        en: "Valid range: 1-65535. After entering the container, you need to execute `python manage.py start_webserver` to start the web service."
+        ja: "有効範囲: 1-65535。コンテナに入った後、`python manage.py start_webserver` を実行してWebサービスを起動する必要があります。"
+        ko: "유효 범위: 1-65535. 컨테이너에 들어간 후, `python manage.py start_webserver` 를 실행하여 웹 서비스를 시작해야 합니다."
+        ms: "Julat yang sah: 1-65535. Selepas memasuki kontena, anda perlu melaksanakan `python manage.py start_webserver` untuk memulakan perkhidmatan web."
+        pt-br: "Intervalo válido: 1-65535. Após entrar no contêiner, você precisa executar `python manage.py start_webserver` para iniciar o serviço web."
+        ru: "Допустимый диапазон: 1-65535. После входа в контейнер необходимо выполнить команду `python manage.py start_webserver` для запуска веб-службы."
+        tr: "Geçerli aralık: 1-65535. Konteynere girdikten sonra, web servisini başlatmak için `python manage.py start_webserver` komutunu çalıştırmanız gerekir."
+      required: true
+      type: number
+      edit: true
+      rule: paramPort
     - default: ./data
       envKey: DATA_PATH
       labelZh: 输出路径
