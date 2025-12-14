@@ -7,6 +7,8 @@
 
 > [关键词配置](https://github.com/sansan0/TrendRadar#2-%E5%85%B3%E9%94%AE%E8%AF%8D%E9%85%8D%E7%BD%AE)
 
+Web 服务: 进入容器后，执行 `python manage.py start_webserver` 启动服务。
+
 ## 产品介绍
 
 简单的舆情监控分析 - 多平台热点聚合+基于 MCP 的AI分析工具。
