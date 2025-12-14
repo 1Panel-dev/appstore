@@ -6,6 +6,8 @@ After installing the application, please navigate to `application installation d
 
 > [Keyword Configuration](https://github.com/sansan0/TrendRadar/blob/master/README-EN.md#2-keyword-configuration)
 
+Web Service: After entering the container, execute `python manage.py start_webserver` to start the service.
+
 ## Introduction
 
 Simple public opinion monitoring and analysis - multi-platform hotspots aggregation + AI analysis tool based on MCP.
