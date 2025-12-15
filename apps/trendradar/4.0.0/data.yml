@@ -1,5 +1,4 @@
 additionalProperties:
-  formFields:additionalProperties:
   formFields:
     - default: 8080
       envKey: PANEL_APP_PORT_HTTP
