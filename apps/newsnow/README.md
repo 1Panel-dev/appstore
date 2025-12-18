@@ -1,4 +1,4 @@
-# NewsNow
+## 产品介绍
 
 优雅地阅读实时热门新闻
 
@@ -25,26 +25,3 @@
 ```
 
 你可以将 `BASE_URL` 修改为你的域名。
-
-### 环境变量配置
-
-```env
-# Github Clien ID
-G_CLIENT_ID=
-# Github Clien Secret
-G_CLIENT_SECRET=
-# JWT Secret, 通常就用 Clien Secret
-JWT_SECRET=
-# 初始化数据库, 首次运行必须设置为 true，之后可以将其关闭
-INIT_TABLE=true
-# 是否启用缓存
-ENABLE_CACHE=true
-```
-
-## 赞赏
-
-如果本项目对你有所帮助，可以给小猫买点零食。如果需要定制或者其他帮助，请通过下列方式联系备注。
-
-![](https://github.com/ourongxing/newsnow/raw/main/screenshots/reward.gif)
-
-<a href="https://hellogithub.com/repository/c2978695e74a423189e9ca2543ab3b36" target="_blank"><img src="https://api.hellogithub.com/v1/widgets/recommend.svg?rid=c2978695e74a423189e9ca2543ab3b36&claim_uid=SMJiFwlsKCkWf89&theme=small" alt="Featured｜HelloGitHub" /></a>
