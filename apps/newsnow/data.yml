@@ -1,0 +1,30 @@
+name: Newsnow
+tags: 实用工具
+title: 优雅地阅读实时热门新闻
+description: 聚合新闻阅读器，支持 RSS、即刻、少数派、Product Hunt 等。
+additionalProperties:
+  key: newsnow
+  name: Newsnow
+  type: tool
+  tags:
+    - Tool
+  shortDescZh: 聚合新闻阅读器，支持 RSS、即刻、少数派、Product Hunt 等。
+  shortDescEn: Aggregated news reader, supports RSS, Instapaper, Product Hunt, etc.
+  description:
+    zh: 聚合新闻阅读器，支持 RSS、即刻、少数派、Product Hunt 等。
+    zh-hant: 聚合新闻閱讀器，支援 RSS、即刻、少数派、Product Hunt 等。
+    en: Aggregated news reader, supports RSS, Instapaper, Product Hunt, etc.
+    ja: 集約ニュースリーダー、RSS、Instapaper、Product Hunt などをサポートします。
+    ms: pembinaan laman web sumber terbuka yang kuat dan mudah digunakan
+    pt-br: Uma ferramenta de construção de sites de código aberto poderosa e fácil de usar
+    ru: Мощный и удобный инструмент с открытым исходным кодом для создания веб-сайтов
+    ko: 강력하고 사용하기 쉬운 오픈소스 웹사이트 구축 도구
+    tr: Güçlü ve kullanımı kolay açık kaynaklı web sitesi oluşturma aracı
+  crossVersionUpdate: true
+  limit: 0
+  website: https://newsnow.busiyi.world/
+  github: https://github.com/ourongxing/newsnow
+  document: https://github.com/ourongxing/newsnow
+  architectures:
+    - amd64
+    - arm64
