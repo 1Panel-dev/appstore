@@ -2,8 +2,8 @@ services:
   newsnow:
     image: ghcr.io/ourongxing/newsnow:v0.0.38
     container_name: ${CONTAINER_NAME}
-    labels:
-      createdBy: "Apps"
+    networks:
+      - 1panel-network
     ports:
       - '${PANEL_APP_PORT_HTTP}:4444'
     volumes:
@@ -17,9 +17,8 @@ services:
       - JWT_SECRET=${JWT_SECRET}
       - INIT_TABLE=${INIT_TABLE}
       - ENABLE_CACHE=${ENABLE_CACHE}
-    networks:
-      - 1panel-network
-
+    labels:
+      createdBy: "Apps"
 networks:
   1panel-network:
     external: true
