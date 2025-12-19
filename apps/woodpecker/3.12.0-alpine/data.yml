@@ -1,0 +1,69 @@
+additionalProperties:
+  formFields:
+    - default: 8000
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: e79b61d00b212f1d8464913f5eebb88b3a3f5f3f774c1db705a1355012c53ca5
+      envKey: WOODPECKER_AGENT_SECRET
+      labelEn: MasterKey
+      labelZh: 主密钥
+      edit: true
+      required: true
+      random: true
+      rule: paramComplexity
+      type: password
+    - default: http://localhost:8000
+      edit: true
+      envKey: WOODPECKER_HOST
+      labelEn: External URL
+      labelZh: 外部访问地址
+      required: true
+      rule: paramHttp
+      type: text
+    - default: "GITHUB"
+      envKey: FORGE_TYPE
+      labelEn: Hosting platform
+      labelZh: 托管平台
+      edit: true
+      required: true
+      type: select
+      values:
+        - label: GitHub
+          value: "GITHUB"
+        - label: Gitea
+          value: "GITEA"
+        - label: Gitlab
+          value: "GITLAB"
+        - label: Forgejo
+          value: "FORGEJO"
+        - label: Bitbucket
+          value: "BITBUCKET"
+    - default: ""
+      envKey: FORGE_URL
+      labelEn: Hosting server address
+      labelZh: 托管服务器地址
+      edit: true
+      required: true
+      rule: paramExtUrl
+      type: text
+    - default: ""
+      envKey: FORGE_CLIENT
+      labelEn: Client ID
+      labelZh: 客户端 ID
+      edit: true
+      required: true
+      rule: paramComplexity
+      type: text
+    - default: ""
+      envKey: FORGE_SECRET
+      labelEn: Client secret
+      labelZh: 客户端密钥
+      edit: true
+      required: true
+      rule: paramComplexity
+      type: password
