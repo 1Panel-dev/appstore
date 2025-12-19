@@ -13,6 +13,7 @@ additionalProperties:
             pt-br: Porta HTTP
             ru: HTTP Порт
             ko: HTTP 포트
+            tr: HTTP Portu
             zh-Hant: HTTP 埠
             zh: HTTP 端口
         - default: 443
@@ -28,5 +29,6 @@ additionalProperties:
             pt-br: Porta HTTPS
             ru: HTTPS Порт
             ko: HTTPS 포트
+            tr: HTTPS Portu
             zh-Hant: HTTPS 埠
             zh: HTTPS 端口
