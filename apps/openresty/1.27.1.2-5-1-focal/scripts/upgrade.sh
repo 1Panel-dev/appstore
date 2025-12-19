@@ -20,4 +20,6 @@ if grep -q "stream[[:space:]]*{" "$NGINX_CONF"; then
     exit 0
 fi
 
+echo >> "$NGINX_CONF"
+echo >> "$NGINX_CONF"
 echo "$STREAM_BLOCK" >> "$NGINX_CONF"
