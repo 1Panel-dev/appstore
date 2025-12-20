@@ -1,0 +1,19 @@
+name: Sing-Box
+tags:
+  - 工具
+title: 通用代理平台
+description: 通用代理平台
+additionalProperties:
+  key: sing-box
+  name: Sing-Box
+  tags:
+    - Tool
+  shortDescZh: 通用代理平台
+  shortDescEn: The universal proxy platform.
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://ghcr.io/sagernet/sing-box
+  github: https://github.com/SagerNet/sing-box
+  Documentation: https://sing-box.sagernet.org
