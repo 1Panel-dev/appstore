@@ -1,6 +1,6 @@
 services:
   newsnow:
-    image: ghcr.io/ourongxing/newsnow:v0.0.38
+    image: ghcr.io/ourongxing/newsnow:v0.0.39
     container_name: ${CONTAINER_NAME}
     networks:
       - 1panel-network
