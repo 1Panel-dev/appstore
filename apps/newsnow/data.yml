@@ -1,0 +1,32 @@
+name: NewsNow
+tags:
+  - 实用工具
+title: 优雅地阅读实时热门新闻
+description: 优雅地阅读实时热门新闻
+additionalProperties:
+  key: newsnow
+  name: NewsNow
+  tags:
+    - Tool
+  shortDescZh: 优雅地阅读实时热门新闻
+  shortDescEn: Elegant reading of real-time and hottest news
+  description:
+    en: Elegant reading of real-time and hottest news
+    ja: リアルタイムでホットなニュースをエレガントに読む
+    ms: Membaca berita terkini dan paling hangat dengan elegan
+    pt-br: Leitura elegante de notícias em tempo real e mais quentes
+    ru: Элегантное чтение актуальных и самых популярных новостей
+    ko: 실시간 인기 뉴스를 우아하게 읽기
+    tr: Gerçek zamanlı ve en sıcak haberlerin zarif bir şekilde okunması
+    zh-hant: 優雅地閱讀實時熱門新聞
+    zh: 优雅地阅读实时热门新闻
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://newsnow.busiyi.world/
+  github: https://github.com/ourongxing/newsnow
+  document: https://github.com/ourongxing/newsnow
+  architectures:
+    - amd64
+    - arm64
