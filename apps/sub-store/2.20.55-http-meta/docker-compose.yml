@@ -1,6 +1,6 @@
 services:
   sub-store:
-    image: xream/sub-store:2.20.54-http-meta
+    image: xream/sub-store:2.20.55-http-meta
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
