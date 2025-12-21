@@ -1,44 +1,71 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:base"],
+
   "gitIgnoredAuthors": [
     "githubaction@githubaction.com"
   ],
+
   "rebaseWhen": "never",
-  "ignorePaths": [
-    "apps/mysql-cluster/**",
-    "apps/redis-cluster/**",
-    "apps/postgresql-cluster/**"
-  ],
+  "prCreation": "immediate",
+
+  /*
+   * =========================
+   * Docker 全局能力
+   * =========================
+   */
+  "docker": {
+    "enabled": true,
+    "registryUrls": [
+      "https://docker.io",
+      "https://ghcr.io"
+    ]
+  },
+
   "packageRules": [
+    /*
+     * =========================
+     * 非 Docker 规则（保持原样）
+     * =========================
+     */
     {
       "packageNames": ["docker-compose"],
       "automerge": true
     },
+
+    /*
+     * =========================
+     * Registry 维度控制（来源）
+     * =========================
+     */
+
     {
-      "matchFileNames": ["apps/mysql/5.6.*/*.yml"],
-      "allowedVersions": "/^5.6.*/"
+      "matchDatasources": ["docker"],
+      "matchPackagePatterns": ["^ghcr\\.io/"],
+      "enabled": false
     },
     {
-      "matchFileNames": ["apps/mysql/5.7.*/*.yml"],
-      "allowedVersions": "/^5.7.*/"
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["ghcr.io/sagernet/sing-box"],
+      "enabled": true
+    },
+
+    /*
+     * =========================
+     * sing-box 版本策略（完全独立）
+     * =========================
+     */
+
+    {
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["ghcr.io/sagernet/sing-box"],
+      "allowedVersions": "/^v?\\d+\\.\\d+\\.\\d+$/"
     },
     {
-      "matchFileNames": ["apps/mysql/8.0.*/*.yml"],
-      "allowedVersions": "/^8.0.*/"
-    },
-    {
-      "matchFileNames": ["apps/mysql/8.4.*/*.yml"],
-      "allowedVersions": "/^8.4.*/"
-    },
-    {
-      "matchFileNames": ["apps/sing-box/1.12.*/*.yml"],
-      "allowedVersions": "/^1.12.*/"
-    },
-    {
-      "matchFileNames": ["apps/sing-box/1.13.*/*.yml"],
-      "allowedVersions": "/^1.13.*/"
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["ghcr.io/sagernet/sing-box"],
+      "allowedVersions": "/^v?\\d+\\.\\d+\\.\\d+-(alpha|beta|rc)\\.\\d+$/",
+      "prerelease": true
     }
-  ],
-  "prCreation": "immediate"
+  ]
 }
