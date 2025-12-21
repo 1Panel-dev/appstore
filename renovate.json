@@ -1,4 +1,23 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base"]
+  "extends": ["config:base"],
+  "gitIgnoredAuthors": [
+    "githubaction@githubaction.com"
+  ],
+  "rebaseWhen": "never",
+  "packageRules": [
+    {
+      "packageNames": ["docker-compose"],
+      "automerge": true
+    },
+    {
+      "matchFileNames": ["apps/sing-box/1.12.*/*.yml"],
+      "allowedVersions": "/^1.12.*/"
+    },
+    {
+      "matchFileNames": ["apps/sing-box/1.13.*/*.yml"],
+      "allowedVersions": "/^1.13.*/"
+    }
+  ],
+  "prCreation": "immediate"
 }
