@@ -7,55 +7,130 @@
 </div>
 
 <p align="center" color="#6a737d">
-Advanced Subscription Manager for QX, Loon, Surge, Stash and Shadowrocket.
+Advanced Subscription Manager for QX, Loon, Surge, Stash, Egern and Shadowrocket.
 </p>
 
-[![Build](https://github.com/sub-store-org/Sub-Store/actions/workflows/main.yml/badge.svg)](https://github.com/sub-store-org/Sub-Store/actions/workflows/main.yml) ![GitHub](https://img.shields.io/github/license/sub-store-org/Sub-Store) ![GitHub issues](https://img.shields.io/github/issues/sub-store-org/Sub-Store) ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed-raw/Peng-Ym/Sub-Store) ![Lines of code](https://img.shields.io/tokei/lines/github/sub-store-org/Sub-Store) ![Size](https://img.shields.io/github/languages/code-size/sub-store-org/Sub-Store) 
+[![Build](https://github.com/sub-store-org/Sub-Store/actions/workflows/main.yml/badge.svg)](https://github.com/sub-store-org/Sub-Store/actions/workflows/main.yml) ![GitHub](https://img.shields.io/github/license/sub-store-org/Sub-Store) ![GitHub issues](https://img.shields.io/github/issues/sub-store-org/Sub-Store) ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed-raw/Peng-Ym/Sub-Store) ![Lines of code](https://img.shields.io/tokei/lines/github/sub-store-org/Sub-Store) ![Size](https://img.shields.io/github/languages/code-size/sub-store-org/Sub-Store)
 <a href="https://trendshift.io/repositories/4572" target="_blank"><img src="https://trendshift.io/api/badge/repositories/4572" alt="sub-store-org%2FSub-Store | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/PengYM)
-   
+
+[📚 文档/DOC](https://github.com/sub-store-org/Sub-Store/wiki)
+
 Core functionalities:
 
 1. Conversion among various formats.
 2. Subscription formatting.
 3. Collect multiple subscriptions in one URL.
 
+> The following descriptions of features may not be updated in real-time. Please refer to the actual available features for accurate information.
 
-***
-## 镜像地址
+## 1. Subscription Conversion
 
-- https://hub.docker.com/r/xream/sub-store
+### Supported Input Formats
 
-## 使用示例
+[本地节点怎么写/How To Write A Local Node](https://t.me/zhetengsha/824)
 
-### 一键配置打开 本地前端+本地后端
+> ⚠️ Do not use `Shadowrocket` or `NekoBox` to export URI and then import it as input. The URIs exported in this way may not be standard URIs. However, we have already supported some very common non-standard URIs (such as VMess, VLESS).
 
-[`http://127.0.0.1:3001?api=http://127.0.0.1:3001/2cXaAxRGfddmGz2yx1wA`](http://127.0.0.1:3001/?api=http://127.0.0.1:3001/2cXaAxRGfddmGz2yx1wA)
+- [x] Proxy URI Scheme(`socks5`, `socks5+tls`, `http`, `https`(it's ok))
 
-意思是 后端地址为 `http://127.0.0.1:3001/2cXaAxRGfddmGz2yx1wA`
+  example: `socks5+tls://user:pass@ip:port#name`
 
-简单验证一下 `http://127.0.0.1:3001/2cXaAxRGfddmGz2yx1wA/api/utils/env` 可以看到版本信息
+- [x] URI(AnyTLS, SOCKS, SS, SSR, VMess, VLESS, Trojan, Hysteria, Hysteria 2, TUIC v5, WireGuard)
+  > Please note, HTTP(s) does not have a standard URI format, so it is not supported. Please use other formats.
+- [x] Clash Proxies YAML
+- [x] Clash Proxy JSON/JSON5/YAML(single line)
+  > [NaiveProxy](https://t.me/zhetengsha/4308)
+- [x] QX (SS, SSR, VMess, Trojan, HTTP, SOCKS5, VLESS)
+- [x] Loon (SS, SSR, VMess, Trojan, HTTP, SOCKS5, SOCKS5-TLS, WireGuard, VLESS, Hysteria 2)
+- [x] Surge (Direct, SS, VMess, Trojan, HTTP, SOCKS5, SOCKS5-TLS, TUIC, Snell, Hysteria 2, SSH(Password authentication only), External Proxy Program(only for macOS), WireGuard(Surge to Surge))
+- [x] Surfboard (SS, VMess, Trojan, HTTP, SOCKS5, SOCKS5-TLS, WireGuard(Surfboard to Surfboard))
+- [x] Clash.Meta (Direct, SS, SSR, VMess, Trojan, HTTP, SOCKS5, Snell, VLESS, WireGuard, Hysteria, Hysteria 2, TUIC, SSH, mieru, sudoku, AnyTLS)
+- [x] Stash (SS, SSR, VMess, Trojan, HTTP, SOCKS5, Snell, VLESS, WireGuard, Hysteria, TUIC, Juicity, SSH)
 
-同样此 URL 也可以作为健康检查的 URL
+Deprecated(The frontend doesn't show it, but the backend still supports it, with the query parameter `target=Clash`):
 
-## 启动
+- [x] Clash (SS, SSR, VMess, Trojan, HTTP, SOCKS5, Snell, VLESS, WireGuard)
 
-数据文件夹: `/root/sub-store-data`
+### Supported Target Platforms
 
-端口: `3001`
+- [x] Plain JSON
+- [x] Stash
+- [x] Clash.Meta(mihomo)
+- [x] Surfboard
+- [x] Surge
+- [x] SurgeMac(Use mihomo to support protocols that are not supported by Surge itself)
+- [x] Loon
+- [x] Egern
+- [x] Shadowrocket
+- [x] QX
+- [x] sing-box
+- [x] V2Ray
+- [x] V2Ray URI
 
-监听: `127.0.0.1` // 本示例中演示的是本地版, 局域网直接访问等场景请自己设置
+Deprecated:
 
-后端前缀: `/2cXaAxRGfddmGz2yx1wA`
+- [x] Clash
 
-定时任务: `55 23 * * *` 每天 23 点 55 分(避开部分机场后端每天0点定时重启)
+## 2. Subscription Formatting
 
-> 本示例中演示的定时任务环境变量为 `SUB_STORE_CRON`, 此时使用的是系统的 `crond`; 如果有问题, 可以使用 `SUB_STORE_BACKEND_CRON`, 此时将使用 Node 版 `node-cron`
+### Filtering
 
-推送服务: `https://api.day.app/XXXXXXXXXXXX/[推送标题]/[推送内容]?group=SubStore&autoCopy=1&isArchive=1&sound=shake&level=timeSensitive&icon=https%3A%2F%2Fraw.githubusercontent.com%2F58xinian%2Ficon%2Fmaster%2FSub-Store1.png`
+- [x] **Regex filter**
+- [x] **Discard regex filter**
+- [x] **Region filter**
+- [x] **Type filter**
+- [x] **Useless proxies filter**
+- [x] **Script filter**
 
-> 支持 Bark/PushPlus 等服务. 形如: `https://api.day.app/XXXXXXXXX/[推送标题]/[推送内容]?group=SubStore&autoCopy=1&isArchive=1&sound=shake&level=timeSensitive` 或 `http://www.pushplus.plus/send?token=XXXXXXXXX&title=[推送标题]&content=[推送内容]&channel=wechat` 的 URL, `[推送标题]` 和 `[推送内容]` 会被自动替换.
+### Proxy Operations
+
+- [x] **Set property operator**: set some proxy properties such as `udp`,`tfo`, `skip-cert-verify` etc.
+- [x] **Flag operator**: add flags or remove flags for proxies.
+- [x] **Sort operator**: sort proxies by name.
+- [x] **Regex sort operator**: sort proxies by keywords (fallback to normal sort).
+- [x] **Regex rename operator**: replace by regex in proxy names.
+- [x] **Regex delete operator**: delete by regex in proxy names.
+- [x] **Script operator**: modify proxy by script.
+- [x] **Resolve Domain Operator**: resolve the domain of nodes to an IP address.
+
+### Development
+
+Install `pnpm`
+
+Go to `backend` directories, install node dependencies:
 
 ```
-docker run -it -d --restart=always -e "SUB_STORE_PUSH_SERVICE=https://api.day.app/XXXXXXXXXXXX/[推送标题]/[推送内容]?group=SubStore&autoCopy=1&isArchive=1&sound=shake&level=timeSensitive&icon=https%3A%2F%2Fraw.githubusercontent.com%2F58xinian%2Ficon%2Fmaster%2FSub-Store1.png"  -e "SUB_STORE_CRON=55 23 * * *" -e SUB_STORE_FRONTEND_BACKEND_PATH=/2cXaAxRGfddmGz2yx1wA -p 127.0.0.1:3001:3001 -v /root/sub-store-data:/opt/app/data --name sub-store xream/sub-store
+pnpm i
 ```
+
+```
+SUB_STORE_BACKEND_API_PORT=3000 pnpm run --parallel "/^dev:.*/"
+```
+
+### Build
+
+```
+pnpm bundle:esbuild
+```
+
+## LICENSE
+
+This project is under the GPL V3 LICENSE.
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FPeng-YM%2FSub-Store.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FPeng-YM%2FSub-Store?ref=badge_large)
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=sub-store-org/sub-store&type=Date)](https://star-history.com/#sub-store-org/sub-store&Date)
+
+## Acknowledgements
+
+- Special thanks to @KOP-XIAO for his awesome resource-parser. Please give a [star](https://github.com/KOP-XIAO/QuantumultX) for his great work!
+- Special thanks to @Orz-3 and @58xinian for their awesome icons.
+
+## Sponsors
+
+[![image](./support.nodeseek.com_page_promotion_id=8.png)](https://yxvm.com)
+
+[NodeSupport](https://github.com/NodeSeekDev/NodeSupport) sponsored this project.

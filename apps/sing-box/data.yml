@@ -17,3 +17,12 @@ additionalProperties:
   website: https://ghcr.io/sagernet/sing-box
   github: https://github.com/SagerNet/sing-box
   Documentation: https://sing-box.sagernet.org
+  architectures:
+    - 386
+    - amd64
+    - arm/v6
+    - arm/v7
+    - arm64
+    - ppc64le
+    - riscv64
+    - s390x

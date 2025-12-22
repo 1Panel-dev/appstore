@@ -16,7 +16,8 @@
     },
     {
       "matchFileNames": ["apps/sing-box/1.13.*/*.yml"],
-      "allowedVersions": "/^1.13.*/"
+      "allowedVersions": "/^1.13.*/",
+      "ignoreUnstable": false
     }
   ],
   "prCreation": "immediate"
