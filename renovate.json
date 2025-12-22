@@ -11,9 +11,14 @@
       "automerge": true
     },
     {
+      "matchFileNames": ["apps/sing-box/1.12.*/*.yml"],
+      "allowedVersions": "/^v?1\\.12\\./"
+    },
+    {
       "matchFileNames": ["apps/sing-box/1.13.*/*.yml"],
-      "allowedVersions": "/^1.13.*/",
-      "ignoreUnstable": false
+      "allowedVersions": "/^v?1\\.13\\./",
+      "ignoreUnstable": false,
+      "versioning": "semver"
     }
   ],
   "prCreation": "immediate"

@@ -1,0 +1,12 @@
+services:
+  sing-box:
+    image: ghcr.io/sagernet/sing-box:v1.12.13
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:7890"
+    volumes:
+      - /etc/sing-box:/etc/sing-box/
+    command: -D /var/lib/sing-box -C /etc/sing-box/ run
