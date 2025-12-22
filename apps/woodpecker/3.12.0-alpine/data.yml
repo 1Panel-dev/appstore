@@ -5,13 +5,31 @@ additionalProperties:
       envKey: PANEL_APP_PORT_HTTP
       labelEn: Port
       labelZh: 端口
+      label:
+        en: Port
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh-Hant: 埠
+        zh: 端口
       required: true
       rule: paramPort
       type: number
     - default: e79b61d00b212f1d8464913f5eebb88b3a3f5f3f774c1db705a1355012c53ca5
       envKey: WOODPECKER_AGENT_SECRET
-      labelEn: MasterKey
+      labelEn: Master Key
       labelZh: 主密钥
+      label:
+        en: Master Key
+        ja: マスターキー
+        ms: Kunci induk
+        pt-br: Chave mestra
+        ru: Мастер-ключ
+        ko: 주 키
+        zh-Hant: 主密鑰
+        zh: 主密钥
       edit: true
       required: true
       random: true
@@ -22,6 +40,15 @@ additionalProperties:
       envKey: WOODPECKER_HOST
       labelEn: External URL
       labelZh: 外部访问地址
+      label:
+        en: External URL
+        ja: 外部アクセスアドレス
+        ms: Alamat akses luaran
+        pt-br: Endereço de acesso externo
+        ru: Адрес внешнего доступа
+        ko: 외부 접속 주소
+        zh-Hant: 外部訪問地址
+        zh: 外部访问地址
       required: true
       rule: paramHttp
       type: text
@@ -29,6 +56,15 @@ additionalProperties:
       envKey: FORGE_TYPE
       labelEn: Hosting platform
       labelZh: 托管平台
+      label:
+        en: Hosting platform
+        ja: ホスティングプラットフォーム
+        ms: Platform hosting
+        pt-br: Plataforma de hospedagem
+        ru: Хостинг-платформа
+        ko: 호스팅 플랫폼
+        zh-Hant: 託管平台
+        zh: 托管平台
       edit: true
       required: true
       type: select
@@ -47,6 +83,15 @@ additionalProperties:
       envKey: FORGE_URL
       labelEn: Hosting server address
       labelZh: 托管服务器地址
+      label:
+        en: Hosting server address
+        ja: ホストサーバーのアドレス
+        ms: Alamat pelayan yang dihoskan
+        pt-br: Endereço do servidor hospedado
+        ru: Адрес хост-сервера
+        ko: 서버 호스팅 주소
+        zh-Hant: 託管服務器地址
+        zh: 托管服务器地址
       edit: true
       required: true
       rule: paramExtUrl
@@ -55,6 +100,15 @@ additionalProperties:
       envKey: FORGE_CLIENT
       labelEn: Client ID
       labelZh: 客户端 ID
+      label:
+        en: Client ID
+        ja: クライアントID
+        ms: ID Klien
+        pt-br: ID do cliente
+        ru: Идентификатор клиента
+        ko: 클라이언트 ID
+        zh-Hant: 客戶端 ID
+        zh: 客户端 ID
       edit: true
       required: true
       rule: paramComplexity
@@ -63,6 +117,15 @@ additionalProperties:
       envKey: FORGE_SECRET
       labelEn: Client secret
       labelZh: 客户端密钥
+      label:
+        en: Client secret
+        ja: クライアントキー
+        ms: Klien Utama
+        pt-br: Chave do cliente
+        ru: Ключ клиента
+        ko: 클라이언트 키
+        zh-Hant: 客戶端密鑰
+        zh: 客户端密钥
       edit: true
       required: true
       rule: paramComplexity
