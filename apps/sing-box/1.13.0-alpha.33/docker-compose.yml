@@ -1,6 +1,6 @@
 services:
   sing-box:
-    image: ghcr.io/sagernet/sing-box:v1.13.0-alpha.32
+    image: ghcr.io/sagernet/sing-box:v1.13.0-alpha.33
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
