@@ -79,7 +79,7 @@ additionalProperties:
           value: "FORGEJO"
         - label: Bitbucket
           value: "BITBUCKET"
-    - default: ""
+    - default: https://github.com
       envKey: FORGE_URL
       labelEn: Hosting server address
       labelZh: 托管服务器地址
