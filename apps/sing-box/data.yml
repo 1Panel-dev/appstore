@@ -14,7 +14,7 @@ additionalProperties:
   crossVersionUpdate: true
   limit: 0
   recommend: 0
-  website: https://ghcr.io/sagernet/sing-box
+  website: https://sing-box.sagernet.org/zh
   github: https://github.com/SagerNet/sing-box
   Documentation: https://sing-box.sagernet.org
   architectures:

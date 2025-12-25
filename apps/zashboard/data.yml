@@ -1,0 +1,21 @@
+name: Zashboard
+tags:
+  - 工具
+title: 一个使用 Clash API 的仪表盘
+description: 一个使用 Clash API 的仪表盘
+additionalProperties:
+  key: zashboard
+  name: Zashboard
+  tags:
+    - Tool
+  shortDescZh: 一个使用 Clash API 的仪表盘
+  shortDescEn: A Dashboard Using Clash API
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://github.com/Zephyruso/zashboard/pkgs/container/zashboard
+  github: https://github.com/Zephyruso/zashboard
+  document: https://github.com/Zephyruso/zashboard/blob/main/README.md
+  architectures:
+    - amd64

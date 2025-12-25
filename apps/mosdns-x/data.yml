@@ -1,0 +1,24 @@
+name: Mosdns-x
+tags:
+  - 实用工具
+  - 安全
+title: Mosdns-x 是一个插件化的 DNS 转发器。用户可以按需拼接插件，定制自己的 DNS 处理逻辑。
+description: Mosdns-x 是一个插件化的 DNS 转发器。用户可以按需拼接插件，定制自己的 DNS 处理逻辑。
+additionalProperties:
+  key: mosdns-x
+  name: Mosdns-x
+  tags:
+    - Tool
+    - Security
+  shortDescZh: Mosdns-x 是一个插件化的 DNS 转发器。用户可以按需拼接插件，定制自己的 DNS 处理逻辑。
+  shortDescEn: Mosdns-x is a plugin-based DNS forwarder. Users can assemble plugins as needed to customize their own DNS processing logic.
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://github.com/787a68/mosdns-x/pkgs/container/mosdns-x
+  github: https://github.com/787a68/mosdns-x
+  document: https://github.com/787a68/mosdns-x/blob/main/README.md
+  architectures:
+    - amd64
+    - arm64

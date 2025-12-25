@@ -8,5 +8,11 @@ services:
     ports:
       - "${PANEL_APP_PORT_HTTP}:7890"
     volumes:
-      - /etc/sing-box:/etc/sing-box/
-    command: -D /var/lib/sing-box -C /etc/sing-box/ run
+      - ./data:/etc/sing-box/
+    command:
+      - -D /var/lib/sing-box -C /etc/sing-box/ run
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true

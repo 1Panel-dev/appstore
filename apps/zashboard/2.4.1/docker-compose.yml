@@ -1,16 +1,12 @@
 services:
   sing-box:
-    image: ghcr.io/sagernet/sing-box:v1.12.13
+    image: ghcr.io/zephyruso/zashboard:v2.4.1
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
       - 1panel-network
     ports:
-      - "${PANEL_APP_PORT_HTTP}:7890"
-    volumes:
-      - ./data:/etc/sing-box/
-    command:
-      - -D /var/lib/sing-box -C /etc/sing-box/ run
+      - "${PANEL_APP_PORT_HTTP}:80"
     labels:
       createdBy: "Apps"
 networks:

@@ -1,0 +1,18 @@
+additionalProperties:
+  formFields:
+    - default: 5533
+      edit: true
+      envKey: PANEL_APP_PORT_DNS
+      labelEn: Plain DNS port
+      labelZh: 普通 DNS 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 9053
+      edit: true
+      envKey: PANEL_APP_PORT_DOH
+      labelEn: DoH service Port
+      labelZh: DoH 服务端口
+      required: true
+      rule: paramPort
+      type: number
