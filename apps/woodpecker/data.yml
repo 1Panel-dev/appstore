@@ -1,0 +1,34 @@
+name: Woodpecker CI
+tags:
+  - DevOps
+title: 一款简单而强大的 CI/CD 引擎，具备出色的扩展性。
+description: 一款简单而强大的 CI/CD 引擎，具备出色的扩展性。
+additionalProperties:
+  key: woodpecker
+  name: Woodpecker CI
+  tags:
+    - DevOps
+  shortDescZh: 一款简单而强大的 CI/CD 引擎，具备出色的扩展性。
+  shortDescEn: A simple, yet powerful CI/CD engine with great extensibility.
+  type: website
+  crossVersionUpdate: true
+  limit: 1
+  recommend: 0
+  website: https://woodpecker-ci.org/
+  github: https://github.com/woodpecker-ci/woodpecker
+  document: https://woodpecker-ci.org/docs/intro
+  description:
+    en: A simple, yet powerful CI/CD engine with great extensibility.
+    ja: シンプルでありながら強力なCI/CDエンジンで、優れた拡張性を備えています。
+    ms: Enjin CI/CD yang ringkas tetapi berkuasa dengan kebolehluasan yang hebat.
+    pt-br: Um mecanismo CI/CD simples, mas poderoso, com grande extensibilidade.
+    ru: Простой, но мощный движок CI/CD с отличной расширяемостью.
+    ko: 간결하면서도 강력한 CI/CD 엔진으로 뛰어난 확장성을 자랑합니다.
+    zh-hant: 一個簡單卻強大的 CI/CD 引擎，具備卓越的擴展性。
+    zh: 一款简单而强大的 CI/CD 引擎，具备出色的扩展性。
+  architectures:
+    - amd64
+    - arm/v6
+    - arm/v7
+    - arm64
+    - ppc64le

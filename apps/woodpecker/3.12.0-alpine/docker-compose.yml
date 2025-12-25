@@ -1,0 +1,40 @@
+services:
+  woodpecker-server:
+    container_name: ${CONTAINER_NAME}
+    image: woodpeckerci/woodpecker-server:v3.12.0-alpine
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8000
+    volumes:
+      - ./data/server:/var/lib/woodpecker/
+    networks:
+      - 1panel-network
+    environment:
+      - WOODPECKER_OPEN=true
+      - WOODPECKER_HOST=${WOODPECKER_HOST}
+      - WOODPECKER_${FORGE_TYPE}=true
+      - WOODPECKER_${FORGE_TYPE}_URL=${FORGE_URL}
+      - WOODPECKER_${FORGE_TYPE}_CLIENT=${FORGE_CLIENT}
+      - WOODPECKER_${FORGE_TYPE}_SECRET=${FORGE_SECRET}
+      - WOODPECKER_AGENT_SECRET=${WOODPECKER_AGENT_SECRET}
+    labels:
+      createdBy: "Apps"
+  woodpecker-agent:
+    container_name: ${CONTAINER_NAME}-agent
+    image: woodpeckerci/woodpecker-agent:v3.12.0-alpine
+    command: agent
+    restart: always
+    depends_on:
+      - woodpecker-server
+    volumes:
+      - ./data/agent:/etc/woodpecker
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - 1panel-network
+    environment:
+      - WOODPECKER_SERVER=${CONTAINER_NAME}:9000
+      - WOODPECKER_AGENT_SECRET=${WOODPECKER_AGENT_SECRET}
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true
