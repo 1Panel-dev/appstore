@@ -1,0 +1,19 @@
+name: PromptX
+tags:
+  - AI
+  - MCP
+title: 领先的AI智能体上下文平台
+description: 领先的AI智能体上下文平台，基于MCP协议注入专业能力
+additionalProperties:
+  key: promptx
+  name: PromptX
+  tags:
+    - AI
+    - MCP
+  shortDescZh: 领先的AI智能体上下文平台
+  shortDescEn: Leading AI Agent Context Platform
+  type: ai
+  memoryRequired: 512
+  architectures:
+    - amd64
+    - arm64

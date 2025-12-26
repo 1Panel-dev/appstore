@@ -1,0 +1,17 @@
+services:
+  promptx:
+    image: deepracticexs/promptx:1.27.7
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    volumes:
+      - ./data:/root/.promptx
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:5203
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5203/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
