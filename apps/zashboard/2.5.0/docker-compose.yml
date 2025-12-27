@@ -1,6 +1,6 @@
 services:
   sing-box:
-    image: ghcr.io/zephyruso/zashboard:v2.4.1
+    image: ghcr.io/zephyruso/zashboard:v2.5.0
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
