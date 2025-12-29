@@ -10,7 +10,7 @@ services:
       - ${MOUNT_PATH}:/srv
       - ./config:/config
       - ./database:/database
-    image: filebrowser/filebrowser:v2.52.0
+    image: filebrowser/filebrowser:v2.53.0
     labels:
       createdBy: "Apps"
 networks:
