@@ -114,12 +114,6 @@ install_msg() {
     fi
 }
 
-install_memcache() {
-   printf "\n"  | pecl install memcache
-   install_msg memcache
-   docker-php-ext-enable memcache
-}
-
 install_pdo_pgsql() {
     apt-get update && apt-get install -y libpq-dev 
     install_msg pdo_pgsql
@@ -163,7 +157,7 @@ install_extension() {
         echo -e '#!/bin/sh\nexec pkg-config "$@" freetype2' > /usr/local/bin/freetype-config && chmod +x /usr/local/bin/freetype-config
         install_php_extensions gd
     elif [ "$extension" = "memcache" ]; then
-        install_memcache   
+        install-php-extensions memcache   
     elif [ "$extension" = "yaf" ]; then
         install_yaf   
     elif [ "$extension" = "pdo_pgsql" ]; then
