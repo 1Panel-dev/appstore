@@ -1,7 +1,7 @@
 services:
   wavelog-main:
     container_name: ${CONTAINER_NAME}
-    image: nearlyheadlessjack/wavelog-1panel:2.2.1-rc1
+    image: nearlyheadlessjack/wavelog-1panel:2.2.1
     environment:
       CI_ENV: docker
       DB_HOST: ${PANEL_DB_HOST}:${PANEL_DB_PORT}

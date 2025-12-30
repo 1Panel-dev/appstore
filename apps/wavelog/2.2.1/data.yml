@@ -29,10 +29,10 @@ additionalProperties:
         required: true
         type: service
       values:
-        - label: MySQL
-          value: mysql
         - label: MariaDB
           value: mariadb
+        - label: MySQL
+          value: mysql
     - default: wavelog-test
       envKey: PANEL_DB_NAME
       labelEn: Database
