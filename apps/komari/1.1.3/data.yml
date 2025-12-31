@@ -1,0 +1,35 @@
+additionalProperties:
+  formFields:
+    - default: 25774
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: WebUI Port
+      labelZh: 网页端口
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        en: WebUI Port
+        ja: WebUI ポート
+        zh-Hant: WebUI 埠
+        zh: WebUI 端口
+    - default: komari
+      envKey: ADMIN_USERNAME
+      label:
+        en: Admin Username
+        ja: 管理者ユーザー名
+        zh-Hant: 管理員用戶名
+        zh: 管理员用户名
+      required: true
+      rule: paramCommon
+      type: text
+    - default: komari
+      envKey: ADMIN_PASSWORD
+      label:
+        en: Admin Password
+        ja: 管理者パスワード
+        zh-Hant: 管理員密碼
+        zh: 管理员密码
+      required: true
+      rule: paramComplexity
+      type: password

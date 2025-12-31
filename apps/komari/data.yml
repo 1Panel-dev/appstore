@@ -1,0 +1,27 @@
+name: Komari Monitor
+tags:
+  - 实用工具
+title: 一款轻量级服务器探针，简单高效地监控服务器状态
+description: 一款轻量级服务器探针，简单高效地监控服务器状态
+additionalProperties:
+  key: komari
+  name: Komari Monitor
+  tags:
+    - Tool
+  shortDescZh: 一款轻量级服务器探针，简单高效地监控服务器状态
+  shortDescEn: A lightweight server probe for simple, efficient monitoring
+  description:
+    en: A lightweight server probe for simple, efficient monitoring
+    ja: シンプルかつ効率的なサーバー監視のための軽量プローブ
+    zh-Hant: 一款輕量級伺服器探針，簡單高效地監控伺服器狀態
+    zh: 一款轻量级服务器探针，简单高效地监控服务器状态
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://www.komari.wiki
+  github: https://github.com/komari-monitor/komari
+  document: https://www.komari.wiki/install/quick-start.html
+  architectures:
+    - amd64
+    - arm64
