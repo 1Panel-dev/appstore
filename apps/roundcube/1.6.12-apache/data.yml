@@ -149,3 +149,19 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
+    - default: "5M"
+      edit: true
+      envKey: UPLOAD_MAX_FILESIZE
+      labelEn: File Upload Size Limit
+      labelZh: 文件上传大小限制
+      label:
+        en: File Upload Size Limit
+        ja: ファイルアップロードサイズ制限
+        ms: Had Saiz Muat Naik Fail
+        pt-br: Limite de Tamanho de Upload de Arquivo
+        ru: Лимит размера загружаемого файла
+        ko: 파일 업로드 크기 제한
+        zh-hant: 文件上傳大小限制
+        zh: 文件上传大小限制
+      required: true
+      type: text
