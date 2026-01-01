@@ -1,6 +1,6 @@
 services:
   dashboard:
-    image: ghcr.io/nezhahq/nezha:v1.14.10
+    image: ghcr.io/nezhahq/nezha:v1.14.12
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
