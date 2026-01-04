@@ -14,6 +14,7 @@ additionalProperties:
     crossVersionUpdate: false
     limit: 1
     recommend: 0
+    batchInstallSupport: true
     website: https://www.sonatype.com/products/nexus-repository
     github: https://github.com/sonatype/docker-nexus3
     document: https://help.sonatype.com/repomanager3

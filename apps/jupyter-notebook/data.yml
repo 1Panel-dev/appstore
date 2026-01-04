@@ -22,6 +22,7 @@ additionalProperties:
     type: tool
     crossVersionUpdate: true
     limit: 0
+    batchInstallSupport: true
     website: https://jupyter.org/
     github: https://github.com/jupyter/notebook
     document: https://docs.jupyter.org/en/latest/

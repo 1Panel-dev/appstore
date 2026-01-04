@@ -14,6 +14,7 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://kkview.cn/zh-cn/index.html
     github: https://github.com/kekingcn/kkFileView
     document: https://kkfileview.keking.cn/zh-cn/docs/home.html

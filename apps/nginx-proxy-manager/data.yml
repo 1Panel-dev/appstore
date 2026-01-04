@@ -23,6 +23,7 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 0
     recommend: 90
+    batchInstallSupport: true
     website: https://nginxproxymanager.com/
     github: https://github.com/NginxProxyManager/nginx-proxy-manager
     document: https://nginxproxymanager.com/guide/

@@ -23,6 +23,7 @@ additionalProperties:
     zh: 轻量级、自托管的个人财务应用
   crossVersionUpdate: true
   limit: 0
+  batchInstallSupport: true
   website: https://ezbookkeeping.mayswind.net/
   github: https://github.com/mayswind/ezbookkeeping
   document: https://ezbookkeeping.mayswind.net/

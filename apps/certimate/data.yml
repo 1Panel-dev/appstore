@@ -16,6 +16,7 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://docs.certimate.me
     github: https://github.com/usual2970/certimate
     document: https://docs.certimate.me

@@ -23,6 +23,7 @@ additionalProperties:
     crossVersionUpdate: false
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://rustdesk.com/zh/
     github: https://github.com/rustdesk/rustdesk
     document: https://rustdesk.com/docs/zh-cn/

@@ -14,6 +14,7 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://github.com/huginn/huginn
     github: https://github.com/huginn/huginn
     document: https://github.com/huginn/huginn/wiki

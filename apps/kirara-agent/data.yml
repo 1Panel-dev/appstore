@@ -24,6 +24,7 @@ additionalProperties:
   crossVersionUpdate: false
   limit: 0
   recommend: 0
+  batchInstallSupport: true
   website: https://kirara-docs.app.lss233.com/
   github: https://github.com/lss233/kirara-ai/
   document: https://kirara-docs.app.lss233.com/guide/getting-started.html/

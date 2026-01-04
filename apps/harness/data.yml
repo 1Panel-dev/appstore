@@ -23,6 +23,7 @@ additionalProperties:
   architectures:
     - amd64
     - arm64
+  batchInstallSupport: true
   website: https://www.harness.io/open-source
   github: https://github.com/harness/harness
   document: https://developer.harness.io/docs/

@@ -22,6 +22,7 @@ additionalProperties:
   type: tool
   crossVersionUpdate: true
   limit: 0
+  batchInstallSupport: true
   website: https://github.com/sansan0/TrendRadar
   github: https://github.com/sansan0/TrendRadar
   document: https://github.com/sansan0/TrendRadar

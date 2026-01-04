@@ -14,6 +14,7 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://jsonhero.io
     github: https://github.com/triggerdotdev/jsonhero-web
     document: https://github.com/triggerdotdev/jsonhero-web

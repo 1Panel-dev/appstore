@@ -14,6 +14,7 @@ additionalProperties:
   crossVersionUpdate: false
   limit: 0
   recommend: 0
+  batchInstallSupport: true
   website: https://screego.net/
   github: https://github.com/screego/server
   document: https://screego.net/

@@ -14,6 +14,7 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://web-check.xyz/
     github: https://github.com/lissy93/web-check
     document: https://github.com/lissy93/web-check

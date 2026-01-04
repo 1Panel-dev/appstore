@@ -14,6 +14,7 @@ additionalProperties:
     crossVersionUpdate: false
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://rocketmq.apache.org/
     github: https://github.com/apache/rocketmq/
     document: https://rocketmq.apache.org/docs/

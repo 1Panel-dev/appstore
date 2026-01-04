@@ -14,6 +14,7 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://ntfy.sh/
     github: https://github.com/binwiederhier/ntfy
     document: https://ntfy.sh/docs

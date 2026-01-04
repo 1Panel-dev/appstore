@@ -14,6 +14,7 @@ additionalProperties:
     crossVersionUpdate: false
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://localai.io/
     github: https://github.com/mudler/LocalAI/
     document: https://localai.io/

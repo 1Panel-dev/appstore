@@ -14,6 +14,7 @@ additionalProperties:
   crossVersionUpdate: true
   limit: 0
   recommend: 0
+  batchInstallSupport: true
   website: https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/
   github: https://github.com/cloudflare/cloudflared
   document: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/

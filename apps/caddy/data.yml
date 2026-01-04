@@ -24,6 +24,7 @@ additionalProperties:
   crossVersionUpdate: true
   limit: 0
   recommend: 0
+  batchInstallSupport: true
   website: https://caddyserver.com/
   github: https://github.com/caddyserver/caddy
   document: https://caddyserver.com/docs/

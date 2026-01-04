@@ -23,6 +23,7 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://github.com/bytebase/dbhub
     github: https://github.com/bytebase/dbhub
     document: https://github.com/bytebase/dbhub

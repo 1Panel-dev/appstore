@@ -23,6 +23,7 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 0
     recommend: 330
+    batchInstallSupport: true
     website: https://n8n.io/
     github: https://github.com/n8n-io/n8n
     document: https://docs.n8n.io/

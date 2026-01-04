@@ -22,6 +22,7 @@ additionalProperties:
     type: tool
     crossVersionUpdate: false
     limit: 0
+    batchInstallSupport: true
     website: https://www.starrocks.io
     github: https://github.com/StarRocks/starrocks
     document: https://docs.starrocks.io

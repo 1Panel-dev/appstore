@@ -14,6 +14,7 @@ additionalProperties:
     crossVersionUpdate: false
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://www.rabbitmq.com/
     github: https://github.com/rabbitmq/rabbitmq-server
     document: https://www.rabbitmq.com/documentation.html

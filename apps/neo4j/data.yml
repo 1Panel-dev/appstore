@@ -14,6 +14,7 @@ additionalProperties:
   crossVersionUpdate: true
   limit: 0
   recommend: 0
+  batchInstallSupport: true
   website: https://neo4j.com/
   github: https://github.com/neo4j/neo4j
   document: https://neo4j.com/docs/

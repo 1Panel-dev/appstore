@@ -14,6 +14,7 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 1
     recommend: 0
+    batchInstallSupport: true
     website: https://redpanda.com/
     github: https://github.com/redpanda-data/console
     document: https://docs.redpanda.com/current/manage/console/

@@ -23,6 +23,7 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 1
     recommend: 70
+    batchInstallSupport: true
     website: https://ollama.com/
     github: https://github.com/ollama/ollama
     document: https://github.com/ollama/ollama/blob/main/docs/README.md

@@ -23,6 +23,7 @@ additionalProperties:
   crossVersionUpdate: true
   limit: 1
   recommend: 0
+  batchInstallSupport: true
   website: https://trilium.rocks/
   github: https://github.com/TriliumNext/Trilium
   document: https://trilium.rocks/

@@ -13,6 +13,7 @@ additionalProperties:
     type: tool
     crossVersionUpdate: false
     limit: 0
+    batchInstallSupport: true
     website: https://kafka.apache.org/
     github: https://github.com/apache/kafka
     document: https://kafka.apache.org/documentation/

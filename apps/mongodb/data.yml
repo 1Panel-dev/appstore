@@ -23,6 +23,7 @@ additionalProperties:
     crossVersionUpdate: false
     limit: 1
     recommend: 0
+    batchInstallSupport: true
     website: https://www.mongodb.com/
     github: https://github.com/mongodb/mongo
     document: https://www.mongodb.com/docs/

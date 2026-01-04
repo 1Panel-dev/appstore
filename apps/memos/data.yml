@@ -23,6 +23,7 @@ additionalProperties:
     crossVersionUpdate: false
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://usememos.com/
     github: https://github.com/usememos/memos
     document: https://usememos.com/docs

@@ -23,6 +23,7 @@ additionalProperties:
     crossVersionUpdate: false
     limit: 0
     recommend: 210
+    batchInstallSupport: true
     website: https://mariadb.org/
     github: https://github.com/MariaDB/server/
     document: https://mariadb.org/documentation/

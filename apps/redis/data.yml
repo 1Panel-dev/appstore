@@ -23,6 +23,7 @@ additionalProperties:
     crossVersionUpdate: false
     limit: 0
     recommend: 10
+    batchInstallSupport: true
     website: https://redis.io/
     github: https://github.com/redis/redis
     document: https://redis.io/docs/

@@ -15,6 +15,7 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://dbeaver.com/
     github: https://github.com/dbeaver/cloudbeaver
     document: https://dbeaver.com/docs/cloudbeaver/

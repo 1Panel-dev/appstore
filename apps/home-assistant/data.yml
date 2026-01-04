@@ -23,6 +23,7 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 0
     recommend: 320
+    batchInstallSupport: true
     website: https://www.home-assistant.io/
     github: https://github.com/home-assistant/core
     document: https://www.home-assistant.io/docs/

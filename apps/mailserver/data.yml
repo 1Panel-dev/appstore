@@ -23,6 +23,7 @@ additionalProperties:
     crossVersionUpdate: false
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://docker-mailserver.github.io/docker-mailserver/latest/
     github: https://github.com/docker-mailserver/docker-mailserver
     document: https://docker-mailserver.github.io/docker-mailserver/latest/

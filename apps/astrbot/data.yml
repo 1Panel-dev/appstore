@@ -23,6 +23,7 @@ additionalProperties:
   crossVersionUpdate: true
   limit: 0
   recommend: 0
+  batchInstallSupport: true
   website: https://astrbot.app/
   github: https://github.com/AstrBotDevs/AstrBot
   document: https://docs.astrbot.app/

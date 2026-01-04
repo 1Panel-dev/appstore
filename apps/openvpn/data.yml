@@ -16,6 +16,7 @@ additionalProperties:
   crossVersionUpdate: true
   limit: 0
   recommend: 0
+  batchInstallSupport: true
   website: https://openvpn.net/
   github: https://github.com/OpenVPN/openvpn
   document: https://openvpn.net/access-server-manual/introduction/

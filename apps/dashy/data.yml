@@ -14,6 +14,7 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://dashy.to
     github: https://github.com/Lissy93/dashy
     document: https://dashy.to/docs

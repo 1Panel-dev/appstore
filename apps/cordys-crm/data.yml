@@ -23,6 +23,7 @@ additionalProperties:
     crossVersionUpdate: false
     limit: 0
     recommend: 15
+    batchInstallSupport: true
     website: https://github.com/1Panel-dev/CordysCRM
     github: https://github.com/1Panel-dev/CordysCRM
     document: https://jlx18gc3up.feishu.cn/docx/VMJzdCipnoj5fYxcbakcWQSAnCh

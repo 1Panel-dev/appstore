@@ -24,6 +24,7 @@ additionalProperties:
   crossVersionUpdate: true
   limit: 0
   recommend: 0
+  batchInstallSupport: true
   website: https://newsnow.busiyi.world/
   github: https://github.com/ourongxing/newsnow
   document: https://github.com/ourongxing/newsnow

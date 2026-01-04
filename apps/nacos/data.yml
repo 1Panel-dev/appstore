@@ -14,6 +14,7 @@ additionalProperties:
   crossVersionUpdate: false
   limit: 1
   recommend: 0
+  batchInstallSupport: true
   website: https://nacos.io/
   github: https://github.com/alibaba/nacos
   document: https://nacos.io/docs/latest/what-is-nacos/

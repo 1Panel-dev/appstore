@@ -13,6 +13,7 @@ additionalProperties:
     type: tool
     crossVersionUpdate: true
     limit: 0
+    batchInstallSupport: true
     website: https://memcached.org/
     github: https://github.com/memcached/memcached
     document: https://github.com/memcached/memcached/wiki

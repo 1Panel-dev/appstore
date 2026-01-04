@@ -15,6 +15,7 @@ additionalProperties:
   limit: 0
   document: https://github.com/glanceapp/glance
   github: https://github.com/glanceapp/glance
+  batchInstallSupport: true
   website: https://github.com/glanceapp/glance
   description:
     en: A self-hosted dashboard that puts all your feeds in one place

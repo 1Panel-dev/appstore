@@ -23,6 +23,7 @@ additionalProperties:
     crossVersionUpdate: false
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://www.vexdb.com/
     document: https://vexdb.com/docs/about/introduction/
     architectures:

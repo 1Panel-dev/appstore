@@ -24,6 +24,7 @@ additionalProperties:
   crossVersionUpdate: false
   limit: 0
   recommend: 55
+  batchInstallSupport: true
   website: https://upage.ai/
   github: https://github.com/halo-dev/upage/
   document: https://docs.upage.ai/

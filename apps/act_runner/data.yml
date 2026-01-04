@@ -23,6 +23,7 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://gitea.com/gitea/act_runner
     github: https://gitea.com/gitea/act_runner
     document: https://docs.gitea.com/next/usage/actions/act-runner

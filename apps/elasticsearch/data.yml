@@ -14,6 +14,7 @@ additionalProperties:
     crossVersionUpdate: false
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://www.elastic.co
     github: https://github.com/elastic/elasticsearch
     document: https://www.elastic.co/guide/en/elasticsearch/reference/8.11/elasticsearch-intro.html

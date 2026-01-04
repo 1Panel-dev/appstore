@@ -14,6 +14,7 @@ additionalProperties:
     crossVersionUpdate: false
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://github.com/microsoft/mssql-docker
     github: https://github.com/microsoft/mssql-docker
     document: https://github.com/microsoft/mssql-docker

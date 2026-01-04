@@ -23,6 +23,7 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://rustfs.com
     github: https://github.com/rustfs/rustfs
     document: https://docs.rustfs.com

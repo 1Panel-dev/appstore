@@ -23,6 +23,7 @@ additionalProperties:
     crossVersionUpdate: false
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://typesense.org/
     github: https://github.com/typesense/typesense
     document: https://typesense.org/docs/
