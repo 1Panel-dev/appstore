@@ -23,6 +23,7 @@ additionalProperties:
     crossVersionUpdate: false
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://onedev.io
     github: https://github.com/theonedev/onedev
     document: https://docs.onedev.io

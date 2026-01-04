@@ -14,6 +14,7 @@ additionalProperties:
   crossVersionUpdate: false
   limit: 0
   recommend: 0
+  batchInstallSupport: true
   website: https://open.oceanbase.com/
   github: https://github.com/oceanbase/oceanbase
   document: https://www.oceanbase.com/docs

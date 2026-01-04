@@ -23,6 +23,7 @@ additionalProperties:
   crossVersionUpdate: true
   limit: 0
   recommend: 17
+  batchInstallSupport: true
   website: https://dataease.cn/sqlbot/
   github: https://github.com/dataease/SQLBot
   document: https://dataease.cn/sqlbot/

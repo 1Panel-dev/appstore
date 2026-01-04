@@ -23,6 +23,7 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://github.com/dockur/windows
     github: https://github.com/dockur/windows
     document: https://github.com/dockur/windows

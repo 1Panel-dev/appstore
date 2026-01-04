@@ -23,6 +23,7 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://github.com/mongo-express/mongo-express
     github: https://github.com/mongo-express/mongo-express
     document: https://github.com/mongo-express/mongo-express

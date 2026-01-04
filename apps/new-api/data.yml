@@ -23,6 +23,7 @@ additionalProperties:
   crossVersionUpdate: false
   limit: 0
   recommend: 360
+  batchInstallSupport: true
   website: https://www.newapi.ai/
   github: https://github.com/QuantumNous/new-api
   document: https://www.newapi.ai/guide/

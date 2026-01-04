@@ -14,6 +14,7 @@ additionalProperties:
   crossVersionUpdate: false
   limit: 0
   recommend: 0
+  batchInstallSupport: true
   website: https://squidfunk.github.io/mkdocs-material/
   github: https://github.com/squidfunk/mkdocs-material
   document: https://squidfunk.github.io/mkdocs-material/getting-started/

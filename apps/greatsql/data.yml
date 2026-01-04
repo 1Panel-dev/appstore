@@ -23,6 +23,7 @@ additionalProperties:
     crossVersionUpdate: false
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://greatsql.cn/
     github: https://github.com/GreatSQL/GreatSQL
     document: https://greatsql.cn/docs/

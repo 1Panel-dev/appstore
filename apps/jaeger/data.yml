@@ -23,6 +23,7 @@ additionalProperties:
   crossVersionUpdate: true
   limit: 0
   recommend: 0
+  batchInstallSupport: true
   website: https://www.jaegertracing.io
   github: https://github.com/jaegertracing/jaeger
   document: https://www.jaegertracing.io/docs

@@ -23,6 +23,7 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://github.com/zaigie/palworld-server-tool
     github: https://github.com/zaigie/palworld-server-tool
     document: https://github.com/zaigie/palworld-server-tool

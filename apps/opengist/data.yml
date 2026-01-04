@@ -14,6 +14,7 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://opengist.io/
     github: https://github.com/thomiceli/opengist
     document: https://opengist.io/docs/

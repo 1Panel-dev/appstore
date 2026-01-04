@@ -14,6 +14,7 @@ additionalProperties:
   crossVersionUpdate: false
   limit: 0
   recommend: 0
+  batchInstallSupport: true
   website: https://sentinelguard.io/
   github: https://github.com/alibaba/Sentinel
   document: https://sentinelguard.io/zh-cn/docs/dashboard.html

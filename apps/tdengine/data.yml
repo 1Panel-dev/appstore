@@ -22,6 +22,7 @@ additionalProperties:
   type: website
   crossVersionUpdate: true
   limit: 0
+  batchInstallSupport: true
   website: https://www.taosdata.com/
   github: https://github.com/taosdata/TDengine
   document: https://docs.taosdata.com

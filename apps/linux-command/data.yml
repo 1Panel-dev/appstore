@@ -14,6 +14,7 @@ additionalProperties:
   crossVersionUpdate: true
   limit: 0
   recommend: 0
+  batchInstallSupport: true
   website: https://git.io/linux
   github: https://github.com/jaywcjlove/linux-command
   document: https://github.com/jaywcjlove/linux-command

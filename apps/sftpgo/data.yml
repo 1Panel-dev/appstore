@@ -23,6 +23,7 @@ additionalProperties:
     crossVersionUpdate: false
     limit: 1
     recommend: 80
+    batchInstallSupport: true
     website: https://sftpgo.com/
     github: https://github.com/drakkan/sftpgo/
     document: https://sftpgo.github.io/latest/

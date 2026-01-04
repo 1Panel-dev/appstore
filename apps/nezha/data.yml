@@ -24,6 +24,7 @@ additionalProperties:
   crossVersionUpdate: true
   limit: 0
   recommend: 0
+  batchInstallSupport: true
   website: https://nezha.wiki/
   github: https://github.com/naiba/nezha/
   document: https://nezha.wiki/guide/dashboard.html

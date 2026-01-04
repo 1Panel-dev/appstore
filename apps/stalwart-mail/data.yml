@@ -23,6 +23,7 @@ additionalProperties:
   crossVersionUpdate: true
   limit: 1
   recommend: 0
+  batchInstallSupport: true
   website: https://stalw.art/
   github: https://github.com/stalwartlabs/mail-server
   document: https://stalw.art/docs/

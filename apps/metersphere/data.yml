@@ -14,6 +14,7 @@ additionalProperties:
   crossVersionUpdate: false
   limit: 1
   recommend: 60
+  batchInstallSupport: true
   website: https://www.metersphere.io
   github: https://github.com/metersphere/metersphere
   document: https://metersphere.io/docs
