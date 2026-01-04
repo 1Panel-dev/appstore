@@ -20,8 +20,8 @@
 
 ## 相关链接
 
-- 官网：<https://www.halo.run>
-- 专业版官网：<https://www.lxware.cn/halo>
-- 应用市场：<https://www.halo.run/store/apps>
-- 用户社区：<https://bbs.halo.run>
-- GitHub 开源仓库：<https://github.com/halo-dev/halo>
+- 官网：https://www.halo.run
+- 专业版官网：https://www.lxware.cn/halo
+- 应用市场：https://www.halo.run/store/apps
+- 用户社区：https://bbs.halo.run
+- GitHub 开源仓库：https://github.com/halo-dev/halo
