@@ -2,14 +2,23 @@ name: Manticore Search
 tags:
   - 数据库
 title: Manticore Search
-description: 一个高性能、多存储的数据库，专为搜索和分析而设计。
+description: 一个高性能、多存储的数据库，专为搜索和分析而设计
 additionalProperties:
   key: manticoresearch
   name: Manticore Search
   tags:
     - Database
-  shortDescZh: 一个高性能、多存储的数据库，专为搜索和分析而设计。
-  shortDescEn: Manticore Search is a high-performance, multi-storage database purpose-built for search and analytics.
+  shortDescZh: 一个高性能、多存储的数据库，专为搜索和分析而设计
+  shortDescEn: A high-performance, multi-storage database purpose-built for search and analytics
+  description:
+    en: A high-performance, multi-storage database purpose-built for search and analytics
+    ja: 検索と分析のために設計された高性能でマルチストレージのデータベース
+    ms: Pangkalan data berprestasi tinggi dan pelbagai storan yang direka khusus untuk carian dan analitik
+    pt-br: Um banco de dados de alto desempenho e multiarmazenamento projetado para busca e análise
+    ru: Высокопроизводительная многосховищная база данных, созданная для поиска и аналитики
+    ko: 검색 및 분석을 위해 설계된 고성능 다중 스토리지 데이터베이스
+    zh-hant: 一個高性能、多存儲的數據庫，專為搜索和分析而設計
+    zh: 一个高性能、多存储的数据库，专为搜索和分析而设计
   type: tool
   crossVersionUpdate: true
   limit: 0
@@ -17,15 +26,6 @@ additionalProperties:
   website: https://manticoresearch.com/
   github: https://github.com/manticoresoftware/manticoresearch
   document: https://manual.manticoresearch.com/
-  description:
-    en: Manticore Search is a high-performance, multi-storage database purpose-built for search and analytics.
-    ja: 高性能でマルチストレージ対応のデータベース。検索と分析のために設計されています。
-    ms: Pangkalan data pelbagai storan berprestasi tinggi yang direka khas untuk carian dan analitik.
-    pt-br: Um banco de dados de alto desempenho e armazenamento múltiplo projetado especificamente para pesquisa e análise.
-    ru: Высокопроизводительная база данных с несколькими хранилищами, разработанная специально для поиска и анализа.
-    ko: 고성능, 다중 저장소 데이터베이스로 검색 및 분석을 위해 특별히 설계되었습니다.
-    zh-hant: 一個高性能、多存儲的數據庫，專為搜索和分析而設計。
-    zh: 一个高性能、多存储的数据库，专为搜索和分析而设计。
   memoryRequired: 256  
   architectures:
     - amd64
