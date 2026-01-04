@@ -1,0 +1,36 @@
+additionalProperties:
+  formFields:
+    - default: 9308
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: HTTP Port
+      labelZh: HTTP 端口
+      label:
+        en: HTTP Port
+        ja: HTTP ポート
+        ms: Port HTTP
+        pt-br: Porta HTTP
+        ru: HTTP-порт
+        ko: HTTP 포트
+        zh-Hant: HTTP 埠
+        zh: HTTP 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 9306
+      edit: true
+      envKey: PANEL_APP_PORT_SQL
+      labelEn: SQL Port
+      labelZh: SQL 端口
+      label:
+        en: SQL Port
+        ja: SQL ポート
+        ms: Port SQL
+        pt-br: Porta SQL
+        ru: SQL-порт
+        ko: SQL 포트
+        zh-Hant: SQL 埠
+        zh: SQL 端口
+      required: true
+      rule: paramPort
+      type: number

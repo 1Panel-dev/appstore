@@ -1,0 +1,26 @@
+services:
+  manticore:
+    container_name: ${CONTAINER_NAME}
+    image: manticoresearch/manticore:15.1.0
+    restart: always
+    ports:
+      - ${PANEL_APP_PORT_SQL}:9306
+      - ${PANEL_APP_PORT_HTTP}:9308
+    ulimits:
+      nproc: 65535
+      nofile:
+         soft: 65535
+         hard: 65535
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - ./data/data:/var/lib/manticore
+      - ./data/manticore.conf:/etc/manticoresearch/manticore.conf
+    networks:
+      - 1panel-network
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true
