@@ -14,6 +14,7 @@ additionalProperties:
   crossVersionUpdate: true
   limit: 0
   recommend: 0
+  batchInstallSupport: true
   website: http://gsm.xiaozhuhouses.asia/
   github: https://github.com/GSManagerXZ/GameServerManager
   document: https://docs.gsm.xiaozhuhouses.asia/

@@ -23,6 +23,7 @@ additionalProperties:
   crossVersionUpdate: true
   limit: 0
   recommend: 0
+  batchInstallSupport: true
   website: https://about.gitlab.com
   github: https://gitlab.com/gitlab-org/gitlab
   document: https://docs.gitlab.com

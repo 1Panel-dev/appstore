@@ -23,6 +23,7 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://langbot.app
     github: https://github.com/langbot-app/LangBot
     document: https://docs.langbot.app/zh/insight/guide.html

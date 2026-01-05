@@ -14,6 +14,7 @@ additionalProperties:
   crossVersionUpdate: false
   limit: 0
   recommend: 0
+  batchInstallSupport: true
   website: https://www.showdoc.com.cn/
   github: https://github.com/star7th/showdoc
   document: https://www.showdoc.com.cn/help

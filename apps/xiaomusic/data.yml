@@ -24,6 +24,7 @@ additionalProperties:
   crossVersionUpdate: true
   limit: 0
   recommend: 0
+  batchInstallSupport: true
   website: https://xdocs.hanxi.cc/
   github: https://github.com/hanxi/xiaomusic
   document: https://xdocs.hanxi.cc/

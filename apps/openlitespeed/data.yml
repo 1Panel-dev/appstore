@@ -14,6 +14,7 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 1
     recommend: 0
+    batchInstallSupport: true
     website: https://openlitespeed.org
     github: https://github.com/litespeedtech/openlitespeed
     document: https://openlitespeed.org/#install

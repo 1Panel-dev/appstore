@@ -17,6 +17,7 @@ additionalProperties:
   crossVersionUpdate: true
   limit: 1
   recommend: 0
+  batchInstallSupport: true
   website: https://share.lanol.cn
   github: https://github.com/vastsa/FileCodeBox
   document: https://fcb-docs.aiuo.net

@@ -13,6 +13,7 @@ additionalProperties:
     type: tool
     crossVersionUpdate: false
     limit: 0
+    batchInstallSupport: true
     website: https://clickhouse.com/
     github: https://github.com/ClickHouse/ClickHouse
     document: https://clickhouse.com/docs/zh

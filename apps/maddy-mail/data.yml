@@ -23,6 +23,7 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 1
     recommend: 0
+    batchInstallSupport: true
     website: https://maddy.email
     github: https://github.com/foxcpp/maddy
     document: https://maddy.email

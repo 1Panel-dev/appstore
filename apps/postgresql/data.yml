@@ -23,6 +23,7 @@ additionalProperties:
     crossVersionUpdate: false
     limit: 0
     recommend: 200
+    batchInstallSupport: true
     website: https://www.postgresql.org/
     github: https://github.com/postgres/postgres
     document: https://www.postgresql.org/docs/

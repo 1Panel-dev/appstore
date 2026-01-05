@@ -13,6 +13,7 @@ additionalProperties:
   type: website
   crossVersionUpdate: true
   limit: 0
+  batchInstallSupport: true
   website: https://mblog.club/
   github: https://github.com/kingwrcy/mblog-backend
   document: https://github.com/kingwrcy/mblog-backend

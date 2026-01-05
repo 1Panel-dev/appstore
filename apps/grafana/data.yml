@@ -14,6 +14,7 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://grafana.com/
     github: https://github.com/grafana/grafana
     document: https://grafana.com/docs/grafana

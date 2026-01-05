@@ -14,6 +14,7 @@ additionalProperties:
   crossVersionUpdate: true
   limit: 0
   recommend: 0
+  batchInstallSupport: true
   website: https://b3log.org/siyuan/
   github: https://github.com/siyuan-note/siyuan
   document: https://b3log.org/siyuan/community.html

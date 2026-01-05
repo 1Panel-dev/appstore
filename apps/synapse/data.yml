@@ -14,6 +14,7 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 1
     recommend: 0
+    batchInstallSupport: true
     website: https://matrix-org.github.io/synapse
     github: https://github.com/matrix-org/synapse
     document: https://matrix-org.github.io/synapse

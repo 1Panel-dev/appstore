@@ -23,6 +23,7 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://certd.docmirror.cn/
     github: https://github.com/certd/certd/
     document: https://certd.docmirror.cn/guide/

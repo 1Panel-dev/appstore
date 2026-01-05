@@ -14,6 +14,7 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://heimdall.site/
     github: https://github.com/linuxserver/Heimdall
     document: https://github.com/linuxserver/Heimdall

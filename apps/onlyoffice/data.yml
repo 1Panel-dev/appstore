@@ -14,6 +14,7 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://www.onlyoffice.com
     github: https://github.com/ONLYOFFICE
     document: https://helpcenter.onlyoffice.com

@@ -23,6 +23,7 @@ additionalProperties:
   crossVersionUpdate: true
   limit: 0
   recommend: 0
+  batchInstallSupport: true
   website: https://md.doocs.org/
   github: https://github.com/doocs/md
   document: https://github.com/doocs/md

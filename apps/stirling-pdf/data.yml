@@ -23,6 +23,7 @@ additionalProperties:
     crossVersionUpdate: false
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://www.stirlingpdf.com/
     github: https://github.com/Stirling-Tools/Stirling-PDF
     document: https://docs.stirlingpdf.com/

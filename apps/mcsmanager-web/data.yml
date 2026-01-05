@@ -14,6 +14,7 @@ additionalProperties:
   crossVersionUpdate: true
   limit: 0
   recommend: 0
+  batchInstallSupport: true
   website: https://hub.docker.com/r/alisaqaq/mcsmanager-web
   github: https://github.com/MCSManager/MCSManager
   document: https://docs.mcsmanager.com/

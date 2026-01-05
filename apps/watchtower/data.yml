@@ -14,6 +14,7 @@ additionalProperties:
     crossVersionUpdate: false
     limit: 1
     recommend: 0
+    batchInstallSupport: true
     website: https://github.com/containrrr/watchtower
     github: https://github.com/containrrr/watchtower
     document: https://containrrr.dev/watchtower/
