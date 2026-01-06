@@ -21,7 +21,7 @@ additionalProperties:
     zh: 高性能的企业级短链接服务平台
   type: tool
   crossVersionUpdate: true
-  limit: 1
+  limit: 0
   recommend: 0
   website: https://www.mliev.com/
   github: https://github.com/muleiwu/dwz-server
