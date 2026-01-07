@@ -19,7 +19,7 @@ additionalProperties:
     ko: 고성능 엔터프라이즈 단축 링크 서비스 플랫폼
     zh-hant: 高效能企業級短網址服務平台
     zh: 高性能的企业级短链接服务平台
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 0
