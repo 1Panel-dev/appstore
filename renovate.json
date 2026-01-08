@@ -190,6 +190,14 @@
     {
       "matchFileNames": ["apps/umami/3.*/*.yml"],
       "allowedVersions": "/^3.*/"
+    },
+    {
+      "matchFileNames": ["apps/n8n/2.*/*.yml"],
+      "allowedVersions": "/^2.*/"
+    },
+    {
+      "matchFileNames": ["apps/n8n/3.*/*.yml"],
+      "allowedVersions": "/^3.*/"
     }
   ],
   "prCreation": "immediate"
