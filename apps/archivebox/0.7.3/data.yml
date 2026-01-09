@@ -3,8 +3,6 @@ additionalProperties:
         - default: 8000
           edit: true
           envKey: PANEL_APP_PORT_HTTP
-          labelEn: WebUI Port
-          labelZh: 网页端口
           required: true
           rule: paramPort
           type: number
@@ -26,6 +24,7 @@ additionalProperties:
           required: true
           rule: paramCommon
           type: password
+          random: true
           label:
             en: admin password
             zh: 管理员密码
