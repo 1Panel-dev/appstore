@@ -1,0 +1,30 @@
+name: ArchiveBox
+tags:
+    - 实用工具
+title: 开源自托管网页存档工具
+description: 开源自托管网页存档工具
+additionalProperties:
+    key: archivebox
+    name: ArchiveBox
+    tags:
+        - Tool
+    shortDescZh: 开源自托管网页存档工具
+    shortDescEn: Open source self-hosted web archiving
+    description:
+        en: 🗃 Open source self-hosted web archiving. Takes URLs/browser history/bookmarks/Pocket/Pinboard/etc., saves HTML, JS, PDFs, media, and more...
+        ja: 🗃 オープンソースの自己ホスト型ウェブアーカイブ。URL/ブラウザ履歴/ブックマーク/Pocket/PinboardなどからHTML、JS、PDF、メディアなどを保存します...
+        zh-Hant: 🗃 開源自託管網頁歸檔工具。支援擷取網址／瀏覽器歷史紀錄／書籤／Pocket／Pinboard等內容，完整保存HTML、JS、PDF、多媒體檔案等...
+        zh: 🗃 开源自托管网页存档工具。支持URL/浏览器历史记录/书签/Pocket/Pinboard等，保存HTML、JS、PDF、媒体文件等内容...
+    type: website
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    batchInstallSupport: true
+    website: https://archivebox.io/
+    github: https://github.com/ArchiveBox/ArchiveBox
+    document: https://github.com/ArchiveBox/ArchiveBox/wiki
+    architectures:
+      - amd64
+      - arm64
+
+
