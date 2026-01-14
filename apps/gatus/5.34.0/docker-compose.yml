@@ -1,0 +1,16 @@
+services:
+  gatus:
+    image: twinproduction/gatus:v5.34.0
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8080
+    volumes:
+      - ./config:/config
+      - ./data:/data/
+    container_name: ${CONTAINER_NAME}
+    networks:
+      - 1panel-network
+    labels:
+      createdBy: Apps
+networks:
+  1panel-network:
+    external: true
