@@ -1,6 +1,6 @@
 services:
   certd:
-    image: greper/certd:1.37.17
+    image: greper/certd:1.38.0
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
