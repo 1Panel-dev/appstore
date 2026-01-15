@@ -20,7 +20,7 @@ services:
       createdBy: "Apps"
   woodpecker-agent:
     container_name: ${CONTAINER_NAME}-agent
-    image: woodpeckerci/woodpecker-agent:v3.12.0-alpine
+    image: woodpeckerci/woodpecker-agent:v3.13.0-alpine
     command: agent
     restart: always
     depends_on:
