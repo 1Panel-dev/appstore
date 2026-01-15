@@ -1,5 +1,6 @@
 services:
   alist:
+    image: archivebox/archivebox:0.7.3
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
@@ -8,7 +9,6 @@ services:
       - "${PANEL_APP_PORT_HTTP}:8000"
     volumes:
       - ./data:/data
-    image: archivebox/archivebox:0.7.3
     environment:
       - ADMIN_USERNAME=${ADMIN_USERNAME}
       - ADMIN_PASSWORD=${ADMIN_PASSWORD}
@@ -17,4 +17,3 @@ services:
 networks:  
   1panel-network:  
     external: true
-
