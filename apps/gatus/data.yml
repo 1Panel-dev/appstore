@@ -1,0 +1,31 @@
+name: Gatus
+tags:
+  - 实用工具
+title: 面向开发者的健康监控面板
+description: 面向开发者的健康监控面板
+additionalProperties:
+  key: gatus
+  name: Gatus
+  tags:
+    - Tool
+  shortDescZh: 面向开发者的健康监控面板
+  shortDescEn: Developer-oriented health dashboard
+  description:
+    en: Developer-oriented health dashboard
+    zh: 面向开发者的健康监控面板
+    zh-Hant: 面向開發者的健康監控面板
+    ja: 開発者向けヘルスダッシュボード
+    ms: Papan pemuka kesihatan berorientasikan pembangun
+    pt-br: Painel de saúde orientado a desenvolvedores
+    ru: Информационная панель состояния для разработчиков
+    ko: 개발자 지향 헬스 대시보드
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  website: https://gatus.io
+  github: https://github.com/TwiN/gatus
+  document: https://gatus.io/docs
+  architectures:
+    - amd64
+    - arm64
+    - arm/v7
