@@ -1,7 +1,7 @@
 services:
   woodpecker-server:
     container_name: ${CONTAINER_NAME}
-    image: woodpeckerci/woodpecker-server:v3.12.0-alpine
+    image: woodpeckerci/woodpecker-server:v3.13.0-alpine
     ports:
       - ${PANEL_APP_PORT_HTTP}:8000
     volumes:
