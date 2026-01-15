@@ -15,7 +15,6 @@ additionalProperties:
         ru: Порт WebUI
         ko: WebUI 포트
         zh-Hant: WebUI 連接埠
-
     - default: admin
       edit: true
       envKey: ADMIN_USERNAME
@@ -31,7 +30,6 @@ additionalProperties:
         ru: Имя пользователя администратора
         ko: 관리자 사용자 이름
         zh-Hant: 管理員使用者名稱
-
     - default: admin
       edit: true
       envKey: ADMIN_PASSWORD

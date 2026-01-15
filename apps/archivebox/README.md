@@ -1,8 +1,8 @@
-如需使用cli，请使用`docker exec`来执行
+> 如需使用 CLI 命令，请进入面板的 `容器` 界面，连接容器终端后执行命令。
 
 ## 产品介绍
 
-ArchiveBox 是一款自托管应用程序，可让您以多种格式保存网站内容。
+**ArchiveBox** 是一款自托管应用程序，可让您以多种格式保存网站内容。
 
 我们致力于让您的数据即刻可用，并以其他程序可直接读取的格式存储。输出格式包括标准HTML、PNG、PDF、TXT、JSON、WARC、SQLite，所有格式均保证未来数十年可读性。ArchiveBox还提供命令行界面、REST API及网络钩子，便于您与其他服务集成。
 
@@ -12,10 +12,13 @@ ArchiveBox 是一款开源工具，让组织与个人能够存档公共及私人
 
 ## 核心特性
 
-- [**免费开源**](https://github.com/ArchiveBox/ArchiveBox/blob/dev/LICENSE)，通过自主托管掌控数据并维护隐私
-- [**强大的命令行界面**](https://github.com/ArchiveBox/ArchiveBox/wiki/Usage#CLI-Usage)，支持[模块化依赖项](#dependencies)及[Google Drive/NFS/SMB/S3/B2等存储协议](https://github.com/ArchiveBox/ArchiveBox/wiki/Setting-Up-Storage)
-- [**详尽文档**](https://github.com/ArchiveBox/ArchiveBox/wiki)、[持续开发](https://github.com/ArchiveBox/ArchiveBox/wiki/Roadmap)及[活跃社区](https://github.com/ArchiveBox/ArchiveBox/wiki/Web-Archiving-Community)
-- [**开箱即用提取多种内容**](https://github.com/ArchiveBox/ArchiveBox/issues/51)：[媒体文件 (yt-dlp)、文章 (readability)、代码 (git) 等](#输出格式)
-- [**支持定时/实时导入**](https://github.com/ArchiveBox/ArchiveBox/wiki/Scheduled-Archiving)来自[多种来源](#input-formats)
-- **采用标准、持久、长效的输出格式**，如HTML、JSON、PDF、PNG、MP4、TXT及WARC
-- [**强大的命令行界面**](https://github.com/ArchiveBox/ArchiveBox/wiki/Usage#CLI-Usage)、[**自托管网页界面**](https://github.com/ArchiveBox/ArchiveBox/wiki/Usage#UI-Usage)、 [Python API](https://docs.archivebox.io/en/dev/apidocs/archivebox/archivebox.html) (BETA)、[REST API](https://github.com/ArchiveBox/ArchiveBox/issues/496) (ALPHA) 或 [桌面应用](https://github.com/ArchiveBox/)
+- 免费开源，拥有自己的数据并通过自托管维护您的隐私
+- 功能强大的 CLI，具有模块化依赖项，并支持 Google Drive/NFS/SMB/S3/B2 等
+- 完善的文档、积极的开发和活跃的社区
+- 开箱即用，可提取各种内容：媒体（yt-dlp）、文章（readability）、代码（git）等
+- 支持从多种类型的数据源进行定时/实时导入
+- 使用标准、持久、长期保存的格式，例如 HTML、JSON、PDF、PNG、MP4、TXT 和 WARC
+- 强大的命令行界面 (CLI)、自托管 Web 用户界面、 Python API（测试版）、 REST API（高级版）或桌面应用程序
+- 默认情况下，所有页面都会保存到 archive.org 以作冗余备份（可在仅本地模式下禁用）
+- 高级用户：支持存档需要登录/付费墙/cookie的内容
+- 计划：支持在归档期间运行 JS以阻止广告拦截、自动滚动、模态框隐藏和线程展开
