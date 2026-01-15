@@ -1,0 +1,34 @@
+name: ArchiveBox
+tags:
+    - 实用工具
+title: 开源自托管网页存档工具
+description: 开源自托管网页存档工具
+additionalProperties:
+    key: archivebox
+    name: ArchiveBox
+    tags:
+        - Tool
+    shortDescZh: 开源自托管网页存档工具
+    shortDescEn: Open source self-hosted web archiving
+    description:
+      en: 🗃 Open source self-hosted web archiving. Takes URLs/browser history/bookmarks/Pocket/Pinboard/etc., saves HTML, JS, PDFs, media, and more...
+      ja: 🗃 オープンソースの自己ホスト型ウェブアーカイブ。URL/ブラウザ履歴/ブックマーク/Pocket/PinboardなどからHTML、JS、PDF、メディアなどを保存します...
+      ms: 🗃 Arkib web sumber terbuka yang dihoskan sendiri. Menyimpan URL / sejarah pelayar / penanda buku / Pocket / Pinboard dan lain-lain sebagai HTML, JS, PDF, fail media dan banyak lagi...
+      pt-br: 🗃 Arquivamento web open source auto-hospedado. Salva URLs, histórico do navegador, favoritos, Pocket, Pinboard etc. como HTML, JS, PDFs, mídia e muito mais...
+      ru: 🗃 Самостоятельно размещаемый веб-архив с открытым исходным кодом. Сохраняет URL, историю браузера, закладки, Pocket, Pinboard и другое в виде HTML, JS, PDF, медиафайлов и т. д....
+      ko: 🗃 오픈 소스 셀프 호스팅 웹 아카이빙 도구. URL, 브라우저 기록, 북마크, Pocket, Pinboard 등의 콘텐츠를 HTML, JS, PDF, 미디어 파일 등으로 저장합니다...
+      zh-Hant: 🗃 開源自託管網頁歸檔工具。支援擷取網址／瀏覽器歷史紀錄／書籤／Pocket／Pinboard等內容，完整保存HTML、JS、PDF、多媒體檔案等...
+      zh: 🗃 开源自托管网页存档工具。支持URL/浏览器历史记录/书签/Pocket/Pinboard等，保存HTML、JS、PDF、媒体文件等内容...
+    type: website
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    batchInstallSupport: true
+    website: https://archivebox.io/
+    github: https://github.com/ArchiveBox/ArchiveBox
+    document: https://github.com/ArchiveBox/ArchiveBox/wiki
+    architectures:
+      - amd64
+      - arm64
+
+
