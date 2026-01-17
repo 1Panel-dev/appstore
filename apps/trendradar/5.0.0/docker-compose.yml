@@ -1,6 +1,6 @@
 services:
   trend-radar:
-    image: wantcat/trendradar:5.0.0
+    image: wantcat/trendradar:5.2.0
     container_name: ${CONTAINER_NAME}
     restart: always
     ports:
