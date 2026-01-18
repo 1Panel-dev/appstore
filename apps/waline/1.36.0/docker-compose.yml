@@ -1,6 +1,6 @@
 services:
   waline:
-    image: lizheming/waline:1.35.0
+    image: lizheming/waline:1.36.0
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
