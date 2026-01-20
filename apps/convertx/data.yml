@@ -1,0 +1,32 @@
+name: ConvertX
+tags:
+  - 实用工具
+title: 自托管在线文件转换器
+description: 自托管在线文件转换器
+additionalProperties:
+    key: convertx
+    name: ConvertX
+    tags:
+        - Tool
+    shortDescZh: 自托管在线文件转换器
+    shortDescEn: Self-hosted online file converter
+    description:
+        en: Self-hosted online file converter
+        ja: 自己ホスト型オンラインファイルコンバーター
+        ms: Penukar fail dalam talian yang dihoskan sendiri
+        pt-br: Conversor de arquivos online auto-hospedado
+        ru: Самостоятельный онлайн-конвертер файлов
+        ko: 셀프 호스팅 온라인 파일 변환기
+        zh-Hant: 自托管在線文件轉換器
+        zh: 自托管在线文件转换器
+    type: website
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    batchInstallSupport: true
+    website: https://github.com/C4illin/ConvertX
+    github: https://github.com/C4illin/ConvertX
+    document: https://github.com/C4illin/ConvertX
+    architectures:
+      - amd64
+      - arm64
