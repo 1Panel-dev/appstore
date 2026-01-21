@@ -1,0 +1,21 @@
+services:
+  docmost:
+    image: docmost/docmost:0.24.1
+    environment:
+      APP_SECRET: ${APP_SECRET}
+      DATABASE_URL: postgres://${PANEL_DB_USER}:${PANEL_DB_USER_PASSWORD}@${PANEL_DB_HOST}:${PANEL_DB_PORT}/${PANEL_DB_NAME}?schema=public
+      REDIS_URL: redis://default:${PANEL_REDIS_ROOT_PASSWORD}@${PANEL_REDIS_HOST}:6379
+    env_file:
+      - config.env
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:3000
+    volumes:
+      - ./data:/app/data/storage
+    container_name: ${CONTAINER_NAME}
+    networks:
+      - 1panel-network
+    labels:
+      createdBy: Apps
+networks:
+  1panel-network:
+    external: true

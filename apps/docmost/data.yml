@@ -1,0 +1,30 @@
+name: Docmost
+tags:
+  - 建站
+title: 开源协作 wiki 与文档软件
+description: 开源协作 wiki 与文档软件
+additionalProperties:
+  key: docmost
+  name: Docmost
+  tags:
+    - Website
+  shortDescZh: 开源协作 wiki 与文档软件
+  shortDescEn: Open-source collaborative wiki and documentation software
+  description:
+    en: Open-source collaborative wiki and documentation software
+    zh: 开源协作 wiki 与文档软件
+    zh-Hant: 開源協作 wiki 與文件軟體
+    ja: オープンソースの共同編集可能なウィキおよびドキュメントソフトウェア
+    ms: Perisian wiki dan dokumentasi kolaboratif sumber terbuka
+    pt-br: Software de wiki e documentação colaborativo de código aberto
+    ru: Программное обеспечение для вики и документации с открытым исходным кодом
+    ko: 오픈 소스 협업 위키 및 문서화 소프트웨어
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  website: https://docmost.com
+  github: https://github.com/docmost/docmost
+  document: https://docmost.com/docs
+  architectures:
+    - amd64
+    - arm64

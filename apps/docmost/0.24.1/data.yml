@@ -1,0 +1,135 @@
+additionalProperties:
+  formFields:
+    - default: 8080
+      envKey: PANEL_APP_PORT_HTTP
+      labelZh: HTTP 端口
+      labelEn: HTTP Port
+      label:
+        zh: HTTP 端口
+        zh-Hant: HTTP 連接埠
+        en: HTTP Port
+        ja: HTTP ポート
+        ko: HTTP 포트
+        ms: Port HTTP
+        pt-br: Porta HTTP
+        ru: HTTP Порт
+        tr: HTTP Portu
+      description:
+        zh: "设置应用的 HTTP 访问端口，有效范围: 1-65535"
+        zh-Hant: "設定應用程式的 HTTP 存取連接埠，有效範圍: 1-65535"
+        en: "Set the HTTP access port for the application, valid range: 1-65535"
+        ja: "アプリケーションのHTTPアクセスポートを設定します。有効範囲: 1-65535"
+        ko: "애플리케이션의 HTTP 접근 포트를 설정합니다. 유효 범위: 1-65535"
+        ms: "Tetapkan port akses HTTP untuk aplikasi, julat sah: 1-65535"
+        pt-br: "Defina a porta de acesso HTTP para o aplicativo, intervalo válido: 1-65535"
+        ru: "Установите порт доступа HTTP для приложения, допустимый диапазон: 1-65535"
+        tr: "Uygulama için HTTP erişim portunu ayarlayın, geçerli aralık: 1-65535"
+      required: true
+      type: number
+      edit: true
+      rule: paramPort
+    - default: ""
+      envKey: PANEL_DB_HOST
+      labelZh: 数据库
+      labelEn: Database
+      label:
+        en: Database
+        ja: データベース
+        ko: 데이터베이스
+        ms: Pangkalan Data
+        pt-br: Banco de Dados
+        ru: База данных
+        tr: Veritabanı
+        zh: 数据库
+        zh-Hant: 資料庫
+      required: true
+      type: service
+      key: postgresql
+    - default: docmost_db_user
+      envKey: PANEL_DB_USER
+      labelZh: 数据库用户名
+      labelEn: Database Username
+      label:
+        en: Database Username
+        ja: データベースユーザー名
+        ko: 데이터베이스 사용자 이름
+        ms: Nama Pengguna Pangkalan Data
+        pt-br: Nome de Usuário do Banco de Dados
+        ru: Имя пользователя базы данных
+        tr: Veritabanı Kullanıcı Adı
+        zh: 数据库用户名
+        zh-Hant: 資料庫使用者名稱
+      required: true
+      type: text
+      rule: paramCommon
+      random: true
+    - default: docmost_db_pass
+      envKey: PANEL_DB_USER_PASSWORD
+      labelZh: 数据库密码
+      labelEn: Database Password
+      label:
+        en: Database Password
+        ja: データベースパスワード
+        ko: 데이터베이스 비밀번호
+        ms: Kata Laluan Pangkalan Data
+        pt-br: Senha do Banco de Dados
+        ru: Пароль базы данных
+        tr: Veritabanı Parolası
+        zh: 数据库密码
+        zh-Hant: 資料庫密碼
+      required: true
+      type: password
+      rule: paramComplexity
+      random: true
+    - default: docmost_db_name
+      envKey: PANEL_DB_NAME
+      labelZh: 数据库名
+      labelEn: Database Name
+      label:
+        en: Database Name
+        ja: データベース名
+        ko: 데이터베이스 이름
+        ms: Nama Pangkalan Data
+        pt-br: Nome do Banco de Dados
+        ru: Имя базы данных
+        tr: Veritabanı Adı
+        zh: 数据库名
+        zh-Hant: 資料庫名稱
+      required: true
+      type: text
+      rule: paramCommon
+      random: true
+    - default: ""
+      envKey: PANEL_REDIS_HOST
+      labelZh: Redis 服务
+      labelEn: Redis Service
+      label:
+        en: Redis Service
+        ja: Redisサービス
+        ko: Redis 서비스
+        ms: Perkhidmatan Redis
+        pt-br: Serviço Redis
+        ru: Сервис Redis
+        tr: Redis Hizmeti
+        zh: Redis 服务
+        zh-Hant: Redis 服務
+      required: true
+      type: service
+      key: redis
+    - default: ""
+      envKey: PANEL_REDIS_ROOT_PASSWORD
+      labelZh: Redis 服务密码
+      labelEn: Redis Service Password
+      label:
+        en: Redis Service Password
+        ja: Redis サービスパスワード
+        ko: Redis 서비스 비밀번호
+        ms: Kata Laluan Perkhidmatan Redis
+        pt-br: Senha do Serviço Redis
+        ru: Пароль службы Redis
+        tr: Redis Hizmet Parolası
+        zh: Redis 服务密码
+        zh-Hant: Redis 服務密碼
+      required: true
+      type: password
+      rule: paramComplexity
