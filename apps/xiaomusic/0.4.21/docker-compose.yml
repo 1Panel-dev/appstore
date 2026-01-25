@@ -1,6 +1,6 @@
 services:
   xiaomusic:
-    image: hanxi/xiaomusic:v0.4.20
+    image: hanxi/xiaomusic:v0.4.21
     container_name: ${CONTAINER_NAME}
     restart: unless-stopped
     networks:
