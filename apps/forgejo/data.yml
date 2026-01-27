@@ -1,0 +1,31 @@
+name: Forgejo
+tags:
+  - DevOps
+title: 下一代代码托管平台
+description: 下一代代码托管平台
+additionalProperties:
+  key: forgejo
+  name: Forgejo
+  tags:
+    - DevOps
+  shortDescZh: 下一代代码托管平台
+  shortDescEn: The next generation of code hosting platform
+  description:
+    en: The next generation of code hosting platform
+    zh: 下一代代码托管平台
+    zh-Hant: 下一代代碼託管平台
+    ja: 次世代のコードホスティングプラットフォーム
+    ms: Platform hosting kod generasi seterusnya
+    pt-br: A próxima geração de plataforma de hospedagem de código
+    ru: Платформа хостинга кода следующего поколения
+    ko: 다음 세대 코드 호스팅 플랫폼
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  website: https://forgejo.org
+  github: https://codeberg.org/forgejo/forgejo
+  document: https://forgejo.org/docs
+  architectures:
+    - amd64
+    - arm64
+    - arm/v6
