@@ -1,5 +1,6 @@
 # ═══════════════════════════════════════════════════════════════
 #                    TrendRadar 配置文件
+#                      Version: 1.0.0
 # ═══════════════════════════════════════════════════════════════
 
 
@@ -175,7 +176,7 @@ display:
     new_items: true                   # 新增热点区域（含热榜新增 + RSS 新增）
                                       # 注：热点词汇统计中的新增标记🆕不受此配置影响
 
-    rss: true                         # RSS 订阅区域
+    rss: false                         # RSS 订阅区域
                                       # 开启后将对 RSS 进行关键词分析并在通知中展示
                                       # 关闭后跳过分析，但独立展示区不受影响
 
@@ -340,7 +341,7 @@ ai:
   api_base: ""                      # 自定义 API 端点（可选，大多数情况留空）
                                     # 示例: https://api.openai.com/v1（自建代理或兼容接口）
                                     #
-                                    # 💡 高级用法：连接任意兼容 OpenAI 协议的模型商
+                                    # 💡 超级重要：连接任意兼容 OpenAI 协议的模型商
                                     # 如果你使用的模型商不在上述支持列表中，但提供了兼容 OpenAI 的接口：
                                     #
                                     # 1. api_base 填写: 服务商提供的接口地址
@@ -353,13 +354,11 @@ ai:
 
   timeout: 120                      # 请求超时（秒）
 
-  # AI 参数配置
   temperature: 1.0                  # 采样温度 (0.0-2.0)
                                     # 注意：部分模型(如 gpt-5)可能要求必须为 1.0，否则会报错
-
+  
   max_tokens: 5000                  # 最大生成 token 数
                                     # 注意：如果 API 不支持此参数(报 HTTP 400)，请设为 0 以禁用发送
-
   # 高级选项
   num_retries: 1                    # 失败重试次数
   fallback_models: []               # 备用模型列表（可选）
@@ -390,6 +389,20 @@ ai:
 ai_analysis:
   enabled: true                     # 是否启用 AI 分析
 
+  # 🕐 AI 分析时间窗口控制（可选功能）
+  # 用途：限制 AI 分析的时间范围，避免非必要时段消耗 API 额度
+  # 适用场景：
+  #   • 只在工作时间进行 AI 分析（如 09:00-18:00）
+  #   • 在特定时段进行深度分析（如 20:00-22:00）
+  # ⚠️ GitHub Actions 用户注意：
+  #   执行时间不稳定，时间范围建议至少留足 2 小时
+  # 💡 想要精准定时？建议使用 Docker 部署在个人服务器上
+  analysis_window:
+    enabled: false                  # 是否启用 AI 分析时间窗口控制
+    start: "12:00"                  # 开始时间（使用 app.timezone 配置的时区）
+    end: "21:00"                    # 结束时间（使用 app.timezone 配置的时区）
+    once_per_day: false             # true=窗口内只分析一次，false=窗口内每次执行都分析
+
   # 分析报告输出语言
   # 格式：自然语言描述
   # 示例: "English", "Korean", "法语"
@@ -398,16 +411,27 @@ ai_analysis:
   # 提示词配置文件路径（相对于 config 目录）
   prompt_file: "ai_analysis_prompt.txt"
 
+  # AI 分析模式（独立于推送报告模式）
+  # 可选值:
+  #   - "follow_report": 跟随 report.mode 的设置（默认）
+  #   - "daily": 强制使用当日汇总模式（分析当天所有新闻）
+  #   - "current": 强制使用当前榜单模式（只分析当前在榜新闻）
+  #   - "incremental": 强制使用增量模式（只分析新增新闻）
+  #
+  # 使用场景：
+  #   - 推送 incremental（避免重复），AI 分析 current（看当前榜单变化）
+  #   - 推送 current（实时热点），AI 分析 daily（全天总结）
+  #
+  mode: "follow_report"
+
   # 分析内容配置
-  max_news_for_analysis: 50         # 参与分析的新闻数量上限（控制成本关键项）
-                                    # 当前默认的【报告模式】是【当前榜单模式】（current），也就是只分析当前在热榜的新闻
-                                    # 如果需要让报告呈现出更有参考价值的完整一天的趋势，且你的 token 充裕
-                                      # 可开启 daily（当日汇总模式）
-                                      # 同时调整 max_news_for_analysis 为 150(你自己视情况调整，推送消息顶部有 ai 分析数目供参考)
+  max_news_for_analysis: 60         # 参与分析的新闻数量上限（控制成本关键项）
+                                    # 推送消息顶部会显示实际的 AI 分析数供参考
 
                                     # api 成本估算 (仅供参考)
-                                      # 按默认推送频率和模型(deepseek)
-                                      # 且 include_rank_timeline 为 false
+                                      # 按默认模型(deepseek)
+                                      # max_news_for_analysis 为 50 条
+                                      # include_rank_timeline 为 false
                                     # 则
                                       # GitHub Action 部署默认推送约 20 次（每小时推送一次）， 约 0.1 元/天
                                       # Docker 部署默认推送 48 次(每半小时推送一次)， 约 0.2 元/天
@@ -448,6 +472,7 @@ advanced:
   # 版本检查
   version_check_url: "https://raw.githubusercontent.com/sansan0/TrendRadar/refs/heads/master/version"
   mcp_version_check_url: "https://raw.githubusercontent.com/sansan0/TrendRadar/refs/heads/master/version_mcp"
+  configs_version_check_url: "https://raw.githubusercontent.com/sansan0/TrendRadar/refs/heads/master/version_configs"
 
   # 热榜爬虫技术参数
   crawler:
