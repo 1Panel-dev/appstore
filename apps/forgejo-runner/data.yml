@@ -1,0 +1,30 @@
+name: Forgejo Actions Runner
+tags:
+  - DevOps
+title: Forgejo Runner 是连接 Forgejo 实例并运行持续集成作业的守护进程
+description: Forgejo Runner 是连接 Forgejo 实例并运行持续集成作业的守护进程
+additionalProperties:
+  key: forgejo-runner
+  name: Forgejo Actions Runner
+  tags:
+    - DevOps
+  shortDescZh: Forgejo Runner 是连接 Forgejo 实例并运行持续集成作业的守护进程
+  shortDescEn: Forgejo Runner is a daemon process that connects to a Forgejo instance and runs continuous integration jobs
+  description:
+    en: Forgejo Runner is a daemon process that connects to a Forgejo instance and runs continuous integration jobs
+    zh: Forgejo Runner 是连接 Forgejo 实例并运行持续集成作业的守护进程
+    zh-Hant: Forgejo Runner 是連接 Forgejo 實例並執行持續整合作業的守護行程
+    ja: Forgejo Runner は、Forgejo インスタンスに接続し、継続的インテグレーションジョブを実行するデーモンプロセスです
+    ms: Forgejo Runner ialah proses daemon yang menyambung ke contoh Forgejo dan menjalankan kerja integrasi berterusan
+    pt-br: Forgejo Runner é um processo daemon que se conecta a uma instância do Forgejo e executa trabalhos de integração contínua
+    ru: Forgejo Runner — это процесс-демон, который подключается к экземпляру Forgejo и запускает задания непрерывной интеграции
+    ko: Forgejo Runner는 Forgejo 인스턴스에 연결하여 지속적 통합 작업을 실행하는 데몬 프로세스입니다
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  website: https://forgejo.org
+  github: https://code.forgejo.org/forgejo/runner
+  document: https://forgejo.org/docs/latest/admin/actions
+  architectures:
+    - amd64
+    - arm64
