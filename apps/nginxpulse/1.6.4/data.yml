@@ -1,0 +1,53 @@
+additionalProperties:
+  formFields:
+    - envKey: PANEL_APP_PORT_HTTP
+      labelZh: Web 端口
+      labelEn: Web Port
+      required: true
+      default: 8088
+      type: number
+      rule: paramPort
+    - envKey: CONTAINER_NAME
+      labelZh: 容器名称
+      labelEn: Container Name
+      required: true
+      default: nginxpulse
+      type: text
+      rule: paramCommon
+    - envKey: LOG_PATH
+      labelZh: 日志目录
+      labelEn: Logs Path
+      required: true
+      default: /var/log/nginx
+      type: text
+      descriptionZh: 宿主机 Nginx 日志目录（只读挂载）
+      descriptionEn: Host Nginx logs directory (read-only)
+    - envKey: PUID
+      labelZh: PUID
+      labelEn: PUID
+      required: false
+      default: 1000
+      type: number
+      descriptionZh: 容器内应用用户 UID（可选）
+      descriptionEn: App user UID inside the container (optional)
+    - envKey: PGID
+      labelZh: PGID
+      labelEn: PGID
+      required: false
+      default: 1000
+      type: number
+      descriptionZh: 容器内应用用户 GID（可选）
+      descriptionEn: App user GID inside the container (optional)
+    - envKey: TZ
+      labelZh: 时区
+      labelEn: Time Zone
+      required: false
+      default: Asia/Shanghai
+      type: text
+    - envKey: DB_DSN
+      labelZh: 外置数据库连接串
+      labelEn: External DB DSN
+      required: false
+      type: text
+      descriptionZh: 如果填写了外置 PG 数据库，内置的将停用
+      descriptionEn: When set, embedded PostgreSQL is disabled

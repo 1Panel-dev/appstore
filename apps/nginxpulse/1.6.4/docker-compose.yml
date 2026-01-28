@@ -1,0 +1,27 @@
+services:
+  nginxpulse:
+    image: magiccoders/nginxpulse:1.6.4
+    container_name: ${CONTAINER_NAME}
+    restart: unless-stopped
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8088
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+      - DB_DSN=${DB_DSN}
+    volumes:
+      - ${LOG_PATH}:/share/logs:ro
+      - ./data/nginxpulse_data:/app/var/nginxpulse_data
+      - ./data/pgdata:/app/var/pgdata
+      - ./data/configs:/app/configs
+      - /etc/localtime:/etc/localtime:ro
+    networks:
+      - 1panel-network
+    labels:
+      createdBy: "Apps"
+
+networks:
+  # 网络配置：复用 1Panel 平台统一网络，实现容器间互联互通
+  1panel-network:
+    external: true # 声明使用已存在的外部网络（由 1Panel 自动创建）
