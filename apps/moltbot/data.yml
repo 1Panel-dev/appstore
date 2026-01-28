@@ -1,0 +1,32 @@
+name: Moltbot
+tags:
+  - AI
+title: 可自托管的多模型聊天机器人网关
+description: 可自托管的多模型聊天机器人网关
+additionalProperties:
+  key: moltbot
+  name: Moltbot
+  tags:
+    - AI
+  shortDescZh: 可自托管的多模型聊天机器人网关
+  shortDescEn: Self-hosted multi-model chatbot gateway
+  description:
+    en: Self-hosted multi-model chatbot gateway
+    ja: セルフホスト可能なマルチモデルのチャットボット・ゲートウェイ
+    ms: Gerbang chatbot pelbagai model yang dihoskan sendiri
+    pt-br: Gateway de chatbot multimodelo auto-hospedado
+    ru: Самостоятельно размещаемый шлюз чат-ботов с несколькими моделями
+    ko: 자체 호스팅 가능한 멀티모델 챗봇 게이트웨이
+    zh-Hant: 可自託管的多模型聊天機器人閘道
+    zh: 可自托管的多模型聊天机器人网关
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 14
+  batchInstallSupport: true
+  website: https://docs.molt.bot
+  github: https://github.com/moltbot/moltbot
+  document: https://docs.molt.bot/install/docker
+  architectures:
+    - amd64
+    - arm64

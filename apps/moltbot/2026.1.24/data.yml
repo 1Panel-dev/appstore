@@ -1,0 +1,36 @@
+additionalProperties:
+  formFields:
+    - default: 18789
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Web UI Port
+      labelZh: Web UI 端口
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        en: Web UI Port
+        ja: Web UIポート
+        ms: Port Web UI
+        pt-br: Porta da Web UI
+        ru: Порт веб-интерфейса
+        ko: 웹 UI 포트
+        zh-Hant: Web UI 埠
+        zh: Web UI 端口
+    - default: 18790
+      edit: true
+      envKey: PANEL_APP_PORT_BRIDGE
+      labelEn: Bridge Port
+      labelZh: Bridge 端口
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        en: Bridge Port
+        ja: ブリッジポート
+        ms: Port Bridge
+        pt-br: Porta Bridge
+        ru: Порт моста
+        ko: 브리지 포트
+        zh-Hant: Bridge 埠
+        zh: Bridge 端口
