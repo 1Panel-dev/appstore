@@ -19,7 +19,7 @@ docker compose -f docker-compose-cli.yml run --rm moltbot-cli onboard
 1. 初始化完成后，进入 `data/conf` 目录，编辑 **clawdbot.json** 文件。
 2. 新增 `gateway.controlUi.allowInsecureAuth` 配置：
 
-```yaml
+```json
   "gateway": {
     ***
     },
@@ -33,7 +33,7 @@ docker compose -f docker-compose-cli.yml run --rm moltbot-cli onboard
 
 点击 **clawdbot.json** 文件，复制其中 "gateway.auth.token" 的值，用作访问 Moltbot 应用时的 Token。
 
-```yaml
+```json
   "gateway": {
     "mode": "local",
     "auth": {
@@ -49,5 +49,5 @@ docker compose -f docker-compose-cli.yml run --rm moltbot-cli onboard
 2. 等待安装完成后，点击跳转按钮，在新打开的浏览器地址栏中，在 URL 后添加 `?token=你的Moltbot Token`，例如：
 
 ```
-http://your-domain-or-ip:端口/?token=c9917c5a066beeb26266d09baed99495e7563b33c771e89a
+http://your-domain-or-ip:端口?token=c9917c5a066beeb26266d09baed99495e7563b33c771e89a
 ```
