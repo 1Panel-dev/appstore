@@ -1,0 +1,107 @@
+additionalProperties:
+  formFields:
+    - envKey: PROVIDER
+      default: deepseek
+      edit: true
+      labelEn: Provider
+      labelZh: 模型提供商
+      required: true
+      type: select
+      values:
+        - label: DeepSeek
+          value: deepseek
+        - label: MiniMax
+          value: minimax
+        - label: Moonshot (Kimi)
+          value: moonshot
+        - label: Qwen
+          value: qwen
+        - label: OpenAI
+          value: openai
+        - label: Anthropic
+          value: anthropic
+        - label: Gemini
+          value: gemini
+        - label: Groq
+          value: groq
+        - label: Mistral
+          value: mistral
+        - label: Cohere
+          value: cohere
+        - label: ZAI (GLM)
+          value: zai
+      label:
+        en: Provider
+        ja: プロバイダー
+        ms: Penyedia
+        pt-br: Provedor
+        ru: Провайдер
+        ko: 공급자
+        zh-Hant: 供應商
+        zh: 模型提供商
+    - envKey: API_KEY
+      default: ""
+      edit: true
+      labelEn: API Key
+      labelZh: API Key
+      required: true
+      type: text
+      label:
+        en: API Key
+        ja: APIキー
+        ms: Kunci API
+        pt-br: Chave da API
+        ru: API ключ
+        ko: API 키
+        zh-Hant: API Key
+        zh: API Key
+    - envKey: MODEL
+      default: openai/gpt-4o-mini
+      edit: true
+      labelEn: Model
+      labelZh: 模型
+      required: true
+      type: text
+      label:
+        en: Model
+        ja: モデル
+        ms: Model
+        pt-br: Modelo
+        ru: Модель
+        ko: 모델
+        zh-Hant: 模型
+        zh: 模型
+    - default: 18789
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Web UI Port
+      labelZh: Web UI 端口
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        en: Web UI Port
+        ja: Web UIポート
+        ms: Port Web UI
+        pt-br: Porta da Web UI
+        ru: Порт веб-интерфейса
+        ko: 웹 UI 포트
+        zh-Hant: Web UI 埠
+        zh: Web UI 端口
+    - default: 18790
+      edit: true
+      envKey: PANEL_APP_PORT_BRIDGE
+      labelEn: Bridge Port
+      labelZh: Bridge 端口
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        en: Bridge Port
+        ja: ブリッジポート
+        ms: Port Bridge
+        pt-br: Porta Bridge
+        ru: Порт моста
+        ko: 브리지 포트
+        zh-Hant: Bridge 埠
+        zh: Bridge 端口
