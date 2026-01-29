@@ -1,7 +1,7 @@
 services:
   moltbot-cli:
     container_name: ${CONTAINER_NAME}
-    image: 1panel/moltbot:2026.1.24
+    image: 1panel/moltbot:2026.1.25
     networks:
       - 1panel-network
     environment:
