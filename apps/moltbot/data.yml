@@ -29,4 +29,3 @@ additionalProperties:
   document: https://docs.molt.bot/install/docker
   architectures:
     - amd64
-    - arm64
