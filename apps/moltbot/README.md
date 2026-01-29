@@ -1,38 +1,35 @@
-## 使用说明
+## 产品介绍
 
-### 1. 进入安装目录
+**Moltbot** 是一个开源、自托管的个人 AI 助手与多模型网关，支持在本地或私有环境中集中管理模型、会话与工具调用，适合团队或个人进行可控的 AI 自动化部署。
 
-进入已安装应用页面，找到 **Moltbot 应用**，点击顶部的 **进入安装目录** 按钮。
+## 产品特色
 
-### 2. 初始化 Moltbot
+- **自托管**：本地或私有环境部署，数据可控；
+- **多模型**：统一入口管理多家模型与配置；
+- **可扩展**：支持工具调用与多渠道接入；
+- **轻量部署**：Docker 即可运行，适配 1Panel 管理流程。
 
-点击文件列表顶部的 **终端** 按钮，执行初始化命令：
+## 常见模型提供商与示例模型
 
-```bash
-docker compose -f docker-compose-cli.yml run --rm moltbot-cli onboard
-```
+- OpenAI: `openai/gpt-4o-mini`
+- Anthropic: `anthropic/claude-3-7-sonnet`
+- Gemini: `gemini/gemini-1.5-pro`
+- Groq: `groq/llama-3.1-70b-versatile`
+- Mistral: `mistral/large-latest`
+- Cohere: `cohere/command-r-plus`
+- MiniMax: `minimax/MiniMax-M2.1`
+- Moonshot (Kimi): `moonshot/kimi-k2.5`
+- Qwen: `qwen/qwen2.5-coder-32b-instruct`
+- ZAI (GLM): `zai/glm-4.7`
+- DeepSeek: `deepseek/deepseek-chat`
 
-按提示完成 Moltbot 的初始化配置。
 
-### 3. 修改配置文件
+## 获取 Moltbot Token
 
-1. 初始化完成后，进入 `data/conf` 目录，编辑 **clawdbot.json** 文件。
-2. 新增 `gateway.controlUi.allowInsecureAuth` 配置：
+进入安装目录的 `data/conf` 文件夹，
+点击 **moltbot.json** 文件，复制其中 "gateway.auth.token" 的值，用作访问 Moltbot 应用时的 Token。
 
-```json
-  "gateway": {
-    ***
-    },
-    "controlUi": {
-      "allowInsecureAuth": true
-    }
-  },
-```
-
-### 4. 获取 Moltbot Token
-
-点击 **clawdbot.json** 文件，复制其中 "gateway.auth.token" 的值，用作访问 Moltbot 应用时的 Token。
-
+```yaml
 ```json
   "gateway": {
     "mode": "local",
@@ -41,13 +38,4 @@ docker compose -f docker-compose-cli.yml run --rm moltbot-cli onboard
       "token": "c9917c5a066beeb26266d09baed99495e7563b33c771e89a"
     },
     ***
-```
-
-### 5. 重建应用并访问
-
-1. 返回 **已安装应用页面**，找到 Moltbot 应用，点击 **重建** 按钮。  
-2. 等待安装完成后，点击跳转按钮，在新打开的浏览器地址栏中，在 URL 后添加 `?token=你的Moltbot Token`，例如：
-
-```
-http://your-domain-or-ip:端口?token=c9917c5a066beeb26266d09baed99495e7563b33c771e89a
 ```
