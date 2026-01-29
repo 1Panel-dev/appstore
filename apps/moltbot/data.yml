@@ -1,24 +1,24 @@
 name: Moltbot
 tags:
   - AI
-title: 可自托管的多模型聊天机器人网关
-description: 可自托管的多模型聊天机器人网关
+title: 开源、自托管的个人 AI 助手
+description: 开源、自托管的个人 AI 助手
 additionalProperties:
   key: moltbot
   name: Moltbot
   tags:
     - AI
-  shortDescZh: 可自托管的多模型聊天机器人网关
-  shortDescEn: Self-hosted multi-model chatbot gateway
+  shortDescZh: 开源、自托管的个人 AI 助手
+  shortDescEn: Your own personal AI assistant
   description:
-    en: Self-hosted multi-model chatbot gateway
-    ja: セルフホスト可能なマルチモデルのチャットボット・ゲートウェイ
-    ms: Gerbang chatbot pelbagai model yang dihoskan sendiri
-    pt-br: Gateway de chatbot multimodelo auto-hospedado
-    ru: Самостоятельно размещаемый шлюз чат-ботов с несколькими моделями
-    ko: 자체 호스팅 가능한 멀티모델 챗봇 게이트웨이
-    zh-Hant: 可自託管的多模型聊天機器人閘道
-    zh: 可自托管的多模型聊天机器人网关
+    en: Your own personal AI assistant
+    ja: あなた専用のパーソナルAIアシスタント
+    ms: Pembantu AI peribadi anda sendiri
+    pt-br: Seu assistente pessoal de IA
+    ru: Ваш личный помощник на базе ИИ
+    ko: 나만의 개인 AI 비서
+    zh-Hant: 開源、自托管的個人 AI 助手
+    zh: 开源、自托管的个人 AI 助手
   type: website
   crossVersionUpdate: true
   limit: 0
