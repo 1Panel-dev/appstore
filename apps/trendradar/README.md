@@ -5,7 +5,9 @@
 
 安装应用后请前往 `应用安装目录/config/frequency_words.txt` 配置你关心的热点词汇。
 
-> [关键词配置](https://github.com/sansan0/TrendRadar#2-%E5%85%B3%E9%94%AE%E8%AF%8D%E9%85%8D%E7%BD%AE)
+> 升级应用后, `config.yaml` 需要一同更新
+> [配置详解](https://github.com/sansan0/TrendRadar#%EF%B8%8F-%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3)
+> [可视化配置编辑器](https://sansan0.github.io/TrendRadar)
 
 Web 服务: 进入容器后，执行 `python manage.py start_webserver` 启动服务。
 
