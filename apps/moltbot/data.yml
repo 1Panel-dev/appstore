@@ -1,11 +1,11 @@
-name: Moltbot
+name: OpenClaw
 tags:
   - AI
 title: 开源、自托管的个人 AI 助手
 description: 开源、自托管的个人 AI 助手
 additionalProperties:
   key: moltbot
-  name: Moltbot
+  name: OpenClaw
   tags:
     - AI
   shortDescZh: 开源、自托管的个人 AI 助手
@@ -24,8 +24,8 @@ additionalProperties:
   limit: 0
   recommend: 14
   batchInstallSupport: true
-  website: https://docs.molt.bot
-  github: https://github.com/moltbot/moltbot
-  document: https://docs.molt.bot/install/docker
+  website: https://openclaw.ai/
+  github: https://github.com/openclaw/openclaw
+  document: https://docs.openclaw.ai/install/docker
   architectures:
     - amd64
