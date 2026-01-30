@@ -95,7 +95,7 @@ additionalProperties:
       labelEn: API Key
       labelZh: API Key
       required: true
-      type: password
+      type: text
       label:
         en: API Key
         ja: APIキー
@@ -129,5 +129,5 @@ additionalProperties:
         tr: "Yüklemeden sonra, yükleme dizinine girin ve ./data/conf/openclaw.json dosyasından Token'ı alın. Daha sonra Parametreler düğmesine tıklayarak uygulamayı düzenleyebilir ve Token'ı giriş alanına girerek kolay kullanım sağlayabilirsiniz.\nTarayıcınızda sayfayı açtıktan sonra URL'ye ?token=xxx ekleyin, örneğin: http://your_address:port?token=xxx, erişmek için."
         zh-hant: "安裝成功後，進入安裝目錄，從 ./data/conf/openclaw.json 文件中獲取 Token，後續可以點擊參數按鈕編輯應用，將該 Token 填入輸入框，方便使用。\n瀏覽器打開後，在地址欄 URL 後追加 ?token=xxx，如：http://your_address:port?token=xxx 即可訪問。"
         zh: "安装成功后，进入安装目录，从 ./data/conf/openclaw.json 文件中获取 Token，后续可以点击参数按钮编辑应用，将该 Token 填入输入框，方便使用。\n浏览器打开后，在地址栏 URL 后追加 ?token=xxx，如：http://your_address:port?token=xxx 即可访问。"
-      type: password
+      type: text
       edit: true
