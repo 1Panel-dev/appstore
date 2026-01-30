@@ -107,7 +107,7 @@ additionalProperties:
         zh: API Key
     - default: ""
       disabled: true
-      envKey: GATEWAY_TOKEN
+      envKey: MOLTBOT_GATEWAY_TOKEN
       labelEn: Token
       labelZh: 令牌
       label:
@@ -119,5 +119,15 @@ additionalProperties:
         ko: 토큰
         zh-Hant: 權杖
         zh: 令牌
+      description:
+        en: "After installation, enter the installation directory and obtain the Token from the ./data/conf/moltbot.json file. You can later click the Parameters button to edit the application and enter the Token into the input field for convenient use.\nAfter opening the page in your browser, append ?token=xxx to the URL, for example: http://your_address:port?token=xxx, to access it."
+        ja: "インストール後、インストールディレクトリに入り、./data/conf/moltbot.json ファイルからトークンを取得します。後でパラメータボタンをクリックしてアプリケーションを編集し、そのトークンを入力フィールドに入力して便利に使用できます。\nブラウザでページを開いた後、URL に ?token=xxx を追加します。例：http://your_address:port?token=xxx でアクセスできます。"
+        ms: "Selepas pemasangan, masuk ke direktori pemasangan dan dapatkan Token dari fail ./data/conf/moltbot.json. Anda boleh klik butang Parameter kemudian untuk mengedit aplikasi dan masukkan Token ke dalam medan input untuk kemudahan penggunaan.\nSelepas membuka halaman di pelayar anda, tambahkan ?token=xxx pada URL, contohnya: http://your_address:port?token=xxx, untuk mengaksesnya."
+        pt-br: "Após a instalação, entre no diretório de instalação e obtenha o Token do arquivo ./data/conf/moltbot.json. Você pode clicar no botão Parâmetros posteriormente para editar o aplicativo e inserir o Token no campo de entrada para uso conveniente.\nApós abrir a página no seu navegador, adicione ?token=xxx ao URL, por exemplo: http://your_address:port?token=xxx, para acessá-lo."
+        ru: "После установки войдите в каталог установки и получите токен из файла ./data/conf/moltbot.json. Позже вы можете нажать кнопку Параметры, чтобы отредактировать приложение и ввести токен в поле ввода для удобного использования.\nПосле открытия страницы в вашем браузере добавьте ?token=xxx к URL, например: http://your_address:port?token=xxx, чтобы получить к нему доступ."
+        ko: "설치 후 설치 디렉토리로 이동하여 ./data/conf/moltbot.json 파일에서 토큰을 가져옵니다. 나중에 매개변수 버튼을 클릭하여 애플리케이션을 편집하고 입력 필드에 토큰을 입력하여 편리하게 사용할 수 있습니다.\n브라우저에서 페이지를 연 후 URL에 ?token=xxx를 추가합니다. 예: http://your_address:port?token=xxx에 액세스할 수 있습니다."
+        tr: "Yüklemeden sonra, yükleme dizinine girin ve ./data/conf/moltbot.json dosyasından Token'ı alın. Daha sonra Parametreler düğmesine tıklayarak uygulamayı düzenleyebilir ve Token'ı giriş alanına girerek kolay kullanım sağlayabilirsiniz.\nTarayıcınızda sayfayı açtıktan sonra URL'ye ?token=xxx ekleyin, örneğin: http://your_address:port?token=xxx, erişmek için."
+        zh-hant: "安裝成功後，進入安裝目錄，從 ./data/conf/moltbot.json 文件中獲取 Token，後續可以點擊參數按鈕編輯應用，將該 Token 填入輸入框，方便使用。\n瀏覽器打開後，在地址欄 URL 後追加 ?token=xxx，如：http://your_address:port?token=xxx 即可訪問。"
+        zh: "安装成功后，进入安装目录，从 ./data/conf/moltbot.json 文件中获取 Token，后续可以点击参数按钮编辑应用，将该 Token 填入输入框，方便使用。\n浏览器打开后，在地址栏 URL 后追加 ?token=xxx，如：http://your_address:port?token=xxx 即可访问。"
       type: text
       edit: true

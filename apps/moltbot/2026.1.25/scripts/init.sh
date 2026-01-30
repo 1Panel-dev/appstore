@@ -1,5 +1,22 @@
 #!/bin/bash
+set -e
 
-chmod +x scripts/moltbot-setup
-./scripts/moltbot-setup init
+ARCH=$(uname -m)
+
+case "$ARCH" in
+  x86_64|amd64)
+    BIN="moltbot-setup-linux-amd64"
+    ;;
+  aarch64|arm64)
+    BIN="moltbot-setup-linux-arm64"
+    ;;
+  *)
+    echo "Unsupported architecture: $ARCH"
+    exit 1
+    ;;
+esac
+
+chmod +x "scripts/${BIN}"
+./scripts/${BIN} init
+
 chown -R 1000:1000 data
