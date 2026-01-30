@@ -22,7 +22,7 @@ additionalProperties:
   type: website
   crossVersionUpdate: true
   limit: 0
-  recommend: 0
+  recommend: 14
   batchInstallSupport: true
   website: https://openclaw.ai/
   github: https://github.com/openclaw/openclaw
