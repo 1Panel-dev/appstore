@@ -40,6 +40,7 @@
       "mode": "token",
       "token": "c9917c5a066beeb26266d09baed99495e7563b33c771e89a"
     },
+  }
 ```
 
 ## 访问 OpenClaw 
