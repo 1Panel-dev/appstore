@@ -1,0 +1,133 @@
+additionalProperties:
+  formFields:
+    - default: 18789
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Web UI Port
+      labelZh: Web UI 端口
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        en: Web UI Port
+        ja: Web UIポート
+        ms: Port Web UI
+        pt-br: Porta da Web UI
+        ru: Порт веб-интерфейса
+        ko: 웹 UI 포트
+        zh-Hant: Web UI 埠
+        zh: Web UI 端口
+    - default: 18790
+      edit: true
+      envKey: PANEL_APP_PORT_BRIDGE
+      labelEn: Bridge Port
+      labelZh: Bridge 端口
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        en: Bridge Port
+        ja: ブリッジポート
+        ms: Port Bridge
+        pt-br: Porta Bridge
+        ru: Порт моста
+        ko: 브리지 포트
+        zh-Hant: Bridge 埠
+        zh: Bridge 端口
+    - envKey: PROVIDER
+      default: minimax
+      edit: true
+      labelEn: Provider
+      labelZh: 模型提供商
+      required: true
+      type: select
+      values:
+        - label: MiniMax
+          value: minimax
+        - label: DeepSeek
+          value: deepseek
+        - label: Qwen
+          value: qwen
+        - label: Moonshot (Kimi)
+          value: moonshot
+        - label: ZAI (GLM)
+          value: zai
+        - label: OpenAI
+          value: openai
+        - label: Anthropic
+          value: anthropic
+        - label: Gemini
+          value: gemini
+        - label: Groq
+          value: groq
+        - label: Mistral
+          value: mistral
+        - label: Cohere
+          value: cohere
+      label:
+        en: Provider
+        ja: プロバイダー
+        ms: Penyedia
+        pt-br: Provedor
+        ru: Провайдер
+        ko: 공급자
+        zh-Hant: 供應商
+        zh: 模型提供商
+    - envKey: MODEL
+      default: minimax/MiniMax-M2.1
+      edit: true
+      labelEn: Model
+      labelZh: 模型
+      required: true
+      type: text
+      label:
+        en: Model
+        ja: モデル
+        ms: Model
+        pt-br: Modelo
+        ru: Модель
+        ko: 모델
+        zh-Hant: 模型
+        zh: 模型
+    - envKey: API_KEY
+      default: ""
+      edit: true
+      labelEn: API Key
+      labelZh: API Key
+      required: true
+      type: text
+      label:
+        en: API Key
+        ja: APIキー
+        ms: Kunci API
+        pt-br: Chave da API
+        ru: API ключ
+        ko: API 키
+        zh-Hant: API Key
+        zh: API Key
+    - default: ""
+      disabled: true
+      envKey: OPENCLAW_GATEWAY_TOKEN
+      labelEn: Token
+      labelZh: 令牌
+      label:
+        en: Token
+        ja: トークン
+        ms: Token
+        pt-br: Token
+        ru: Токен
+        ko: 토큰
+        zh-Hant: 權杖
+        zh: 令牌
+      description:
+        en: "After installation, enter the installation directory and obtain the Token from the ./data/conf/openclaw.json file. You can later click the Parameters button to edit the application and enter the Token into the input field for convenient use.\nAfter opening the page in your browser, append ?token=xxx to the URL, for example: http://your_address:port?token=xxx, to access it."
+        ja: "インストール後、インストールディレクトリに入り、./data/conf/openclaw.json ファイルからトークンを取得します。後でパラメータボタンをクリックしてアプリケーションを編集し、そのトークンを入力フィールドに入力して便利に使用できます。\nブラウザでページを開いた後、URL に ?token=xxx を追加します。例：http://your_address:port?token=xxx でアクセスできます。"
+        ms: "Selepas pemasangan, masuk ke direktori pemasangan dan dapatkan Token dari fail ./data/conf/openclaw.json. Anda boleh klik butang Parameter kemudian untuk mengedit aplikasi dan masukkan Token ke dalam medan input untuk kemudahan penggunaan.\nSelepas membuka halaman di pelayar anda, tambahkan ?token=xxx pada URL, contohnya: http://your_address:port?token=xxx, untuk mengaksesnya."
+        pt-br: "Após a instalação, entre no diretório de instalação e obtenha o Token do arquivo ./data/conf/openclaw.json. Você pode clicar no botão Parâmetros posteriormente para editar o aplicativo e inserir o Token no campo de entrada para uso conveniente.\nApós abrir a página no seu navegador, adicione ?token=xxx ao URL, por exemplo: http://your_address:port?token=xxx, para acessá-lo."
+        ru: "После установки войдите в каталог установки и получите токен из файла ./data/conf/openclaw.json. Позже вы можете нажать кнопку Параметры, чтобы отредактировать приложение и ввести токен в поле ввода для удобного использования.\nПосле открытия страницы в вашем браузере добавьте ?token=xxx к URL, например: http://your_address:port?token=xxx, чтобы получить к нему доступ."
+        ko: "설치 후 설치 디렉토리로 이동하여 ./data/conf/openclaw.json 파일에서 토큰을 가져옵니다. 나중에 매개변수 버튼을 클릭하여 애플리케이션을 편집하고 입력 필드에 토큰을 입력하여 편리하게 사용할 수 있습니다.\n브라우저에서 페이지를 연 후 URL에 ?token=xxx를 추가합니다. 예: http://your_address:port?token=xxx에 액세스할 수 있습니다."
+        tr: "Yüklemeden sonra, yükleme dizinine girin ve ./data/conf/openclaw.json dosyasından Token'ı alın. Daha sonra Parametreler düğmesine tıklayarak uygulamayı düzenleyebilir ve Token'ı giriş alanına girerek kolay kullanım sağlayabilirsiniz.\nTarayıcınızda sayfayı açtıktan sonra URL'ye ?token=xxx ekleyin, örneğin: http://your_address:port?token=xxx, erişmek için."
+        zh-hant: "安裝成功後，進入安裝目錄，從 ./data/conf/openclaw.json 文件中獲取 Token，後續可以點擊參數按鈕編輯應用，將該 Token 填入輸入框，方便使用。\n瀏覽器打開後，在地址欄 URL 後追加 ?token=xxx，如：http://your_address:port?token=xxx 即可訪問。"
+        zh: "安装成功后，进入安装目录，从 ./data/conf/openclaw.json 文件中获取 Token，后续可以点击参数按钮编辑应用，将该 Token 填入输入框，方便使用。\n浏览器打开后，在地址栏 URL 后追加 ?token=xxx，如：http://your_address:port?token=xxx 即可访问。"
+      type: text
+      edit: true
