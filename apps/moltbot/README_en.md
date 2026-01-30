@@ -30,12 +30,12 @@
 Open the **moltbot.json** file and copy the value of `"gateway.auth.token"`.  
 This token will be used to access the Moltbot application.
 
-```yaml
+```json
   "gateway": {
     "mode": "local",
     "auth": {
       "mode": "token",
       "token": "c9917c5a066beeb26266d09baed99495e7563b33c771e89a"
     },
-    ***
+  }
 ```

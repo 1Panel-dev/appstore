@@ -26,7 +26,6 @@
 进入安装目录的 `data/conf` 文件夹，
 点击 **moltbot.json** 文件，复制其中 "gateway.auth.token" 的值，用作访问 Moltbot 应用时的 Token。
 
-```yaml
 ```json
   "gateway": {
     "mode": "local",
@@ -34,6 +33,7 @@
       "mode": "token",
       "token": "c9917c5a066beeb26266d09baed99495e7563b33c771e89a"
     },
+  }
 ```
 
 ## 访问 Moltbot 
