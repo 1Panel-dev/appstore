@@ -1,7 +1,7 @@
 services:
   tdengine:
     container_name: ${CONTAINER_NAME}
-    image: tdengine/tsdb:3.4.0.0
+    image: tdengine/tsdb:3.4.0.2
     hostname: tdengine-server
     volumes:
       - ./data:/var/lib/taos
