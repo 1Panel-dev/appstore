@@ -34,6 +34,27 @@ additionalProperties:
       type: number
       edit: true
       rule: paramPort
+    - default: "false"
+      envKey: ROOTLESS
+      labelZh: 无根模式
+      labelEn: Rootless Mode
+      label:
+        zh: 无根模式
+        zh-Hant: 無根模式
+        en: Rootless Mode
+        ja: Rootlessモード
+        ko: 루트리스 모ード
+        ms: Mod Tanpa Keistimewaan
+        pt-br: Modo Sem Privilégios
+        ru: Беспривилегированный режим
+        tr: Ayrıcalıksız Mod
+      required: false
+      type: select
+      values:
+        - label: "True"
+          value: "true"
+        - label: "False"
+          value: "false"
     - default: mysql
       envKey: PANEL_DB_TYPE
       labelZh: 数据库
