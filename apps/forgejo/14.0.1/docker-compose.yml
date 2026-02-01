@@ -1,0 +1,28 @@
+services:
+  forgejo:
+    image: ${IMAGE}
+    container_name: ${CONTAINER_NAME}
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+      - FORGEJO__database__DB_TYPE=${PANEL_DB_TYPE}
+      - FORGEJO__database__HOST=${PANEL_DB_HOST}:${PANEL_DB_PORT}
+      - FORGEJO__database__NAME=${PANEL_DB_NAME}
+      - FORGEJO__database__USER=${PANEL_DB_USER}
+      - FORGEJO__database__PASSWD=${PANEL_DB_USER_PASSWORD}
+    restart: always
+    networks:
+      - 1panel-network
+    volumes:
+      - ./data:/data
+      - ./data-rootless/forgejo:/var/lib/gitea
+      - ./data-rootless/conf:/etc/gitea
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:3000
+      - ${PANEL_APP_PORT_SSH}:22
+    labels:
+      createdBy: Apps
+networks:
+  1panel-network:
+    external: true
