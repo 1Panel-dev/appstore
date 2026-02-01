@@ -2,7 +2,7 @@ services:
   langbot_plugin_runtime:
     container_name: ${CONTAINER_NAME}-plugin-runtime
     restart: unless-stopped
-    image: rockchin/langbot:v4.8.2
+    image: rockchin/langbot:v4.8.3
     networks:
       - 1panel-network
     volumes:
@@ -16,7 +16,7 @@ services:
   langbot:
     container_name: ${CONTAINER_NAME}
     restart: unless-stopped
-    image: rockchin/langbot:v4.8.2
+    image: rockchin/langbot:v4.8.3
     networks:
       - 1panel-network
     volumes:
