@@ -64,6 +64,8 @@ additionalProperties:
           value: mistral
         - label: Cohere
           value: cohere
+        - label: Ollama
+          value: ollama
       label:
         en: Provider
         ja: プロバイダー
@@ -105,6 +107,32 @@ additionalProperties:
         ko: API 키
         zh-Hant: API Key
         zh: API Key
+    - envKey: BASE_URL
+      default: ""
+      edit: true
+      labelEn: Base URL
+      labelZh: Base URL
+      required: false
+      type: text
+      label:
+        en: Base URL
+        ja: Base URL
+        ms: Base URL
+        pt-br: Base URL
+        ru: Base URL
+        ko: Base URL
+        zh-Hant: Base URL
+        zh: Base URL
+      description:
+        en: "When using Ollama, you need to fill in this field, for example: http://192.168.1.2:11434/v1"
+        ja: "Ollama を使用する場合は、このフィールドに記入する必要があります。例：http://192.168.1.2:11434/v1"
+        ms: "Apabila menggunakan Ollama, anda perlu mengisi medan ini, contohnya: http://192.168.1.2:11434/v1"
+        pt-br: "Ao usar o Ollama, você precisa preencher este campo, por exemplo: http://192.168.1.2:11434/v1"
+        ru: "При использовании Ollama необходимо заполнить это поле, например: http://192.168.1.2:11434/v1"
+        ko: "Ollama를 사용할 때 이 필드를 작성해야 합니다. 예: http://192.168.1.2:11434/v1"
+        tr: "Ollama'yı kullanırken, bu alanı doldurmanız gerekir, örneğin: http://192.168.1.2:11434/v1"
+        zh-hant: "使用 Ollama 時，需要填寫此欄位，例如：http://192.168.1.2:11434/v1"
+        zh: "当使用 Ollama 的时候，需要填写此项，例如：http://192.168.1.2:11434/v1"
     - default: ""
       disabled: true
       envKey: OPENCLAW_GATEWAY_TOKEN
