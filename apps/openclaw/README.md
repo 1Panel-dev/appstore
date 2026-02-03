@@ -15,7 +15,7 @@
 - **配套客户端应用** — 提供 macOS 菜单栏应用，以及 iOS / Android 节点应用。
 - **引导式上手与技能系统** — 通过向导完成初始化，内置并支持托管 / 工作区级技能（Skills）管理。
 
-## 常用的模型提供商和模型
+## 公共模型提供商和模型
 
 - MiniMax: `minimax/MiniMax-M2.1`
 - DeepSeek: `deepseek/deepseek-chat`
@@ -28,6 +28,17 @@
 - Groq: `groq/llama-3.1-70b-versatile`
 - Mistral: `mistral/large-latest`
 - Cohere: `cohere/command-r-plus`
+
+## 本地 Ollama 模型配置
+1. 安装 Ollama
+应用商店安装 Ollama ，打开 1Panel AI-模型 菜单，添加模型
+尽量使用较新的模型，例如 qwen3:14b, qwen3-coder:30b 等
+旧模型大概率不适配，会导致 OpenClaw 无法正常工作
+
+2. 安装 OpenClaw 
+API Key 填写任意英文字符即可 
+Base URL 使用 `http://<ollama容器名称或者 IP 地址>:11434/v1`
+模型 `ollama/<模型名称>` 例如 `ollama/qwen3:14b`
 
 ## 获取 OpenClaw Token
 

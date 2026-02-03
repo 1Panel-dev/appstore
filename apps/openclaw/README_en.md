@@ -30,6 +30,20 @@ If you want a personal, single-user assistant that feels local, fast, and always
 - Mistral: `mistral/large-latest`
 - Cohere: `cohere/command-r-plus`
 
+##  Local Ollama Model Configuration
+
+1. Install Ollama
+Install Ollama from the app store.
+After launching it, go to 1Panel → AI Models and add a model.
+
+It is recommended to use newer models, such as qwen3:14b, qwen3-coder:30b, etc.
+Older models are very likely incompatible and may cause OpenClaw to not function properly.
+
+2. Install OpenClaw
+API Key: You can enter any arbitrary English string.
+Base URL: `http://<ollama-container-name-or-ip>:11434/v1`
+Model: Use the format ollama/<model-name>, for example: `ollama/qwen3:14b`
+
 ## Obtain the OpenClaw Token
 
 Open the **openclaw.json** file and copy the value of `"gateway.auth.token"`.  
