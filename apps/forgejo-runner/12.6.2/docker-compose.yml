@@ -2,20 +2,37 @@ services:
   forgejo-runner:
     image: code.forgejo.org/forgejo/runner:12.6.2
     container_name: ${CONTAINER_NAME}
-    privileged: ${PRIVILEGED}
-    restart: always
     user: root
+    depends_on:
+      dind:
+        condition: service_started
     command: /data/scripts/register.sh
     volumes:
       - ./data:/data
       - ./scripts/register.sh:/data/scripts/register.sh:ro
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
-      - DOCKER_HOST=unix:///var/run/docker.sock
+      - DOCKER_MODE=${DOCKER_MODE}
+      - DOCKER_HOST=${DOCKER_HOST}
       - FORGEJO_INSTANCE_URL=${FORGEJO_INSTANCE_URL}
       - RUNNER_REGISTRATION_TOKEN=${RUNNER_REGISTRATION_TOKEN}
       - RUNNER_NAME=${RUNNER_NAME}
       - RUNNER_LABELS=${RUNNER_LABELS}
+    networks:
+      - 1panel-network
+    labels:
+      createdBy: Apps
+  dind:
+    image: docker:dind
+    container_name: ${CONTAINER_NAME}-dind
+    privileged: true
+    pull_policy: always
+    restart: unless-stopped
+    command: ['dockerd', '-H', 'tcp://0.0.0.0:2375', '--tls=false']
+    environment:
+      DOCKER_TLS_CERTDIR: ""
+    volumes:
+      - ./dind-data:/var/lib/docker
     networks:
       - 1panel-network
     labels:
