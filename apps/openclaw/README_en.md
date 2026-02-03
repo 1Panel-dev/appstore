@@ -36,7 +36,7 @@ If you want a personal, single-user assistant that feels local, fast, and always
 Install Ollama from the app store.
 After launching it, go to 1Panel → AI Models and add a model.
 
-It is recommended to use newer models, such as qwen3:14b, qwen3-coder:30b, etc.
+It is recommended to use newer models, such as qwen3-coder:30b,glm-4.7,gpt-oss:20b,gpt-oss:120b, etc.
 Older models are very likely incompatible and may cause OpenClaw to not function properly.
 
 2. Install OpenClaw
