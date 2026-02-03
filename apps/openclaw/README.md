@@ -32,7 +32,7 @@
 ## 本地 Ollama 模型配置
 1. 安装 Ollama
 应用商店安装 Ollama ，打开 1Panel AI-模型 菜单，添加模型
-尽量使用较新的模型，例如 qwen3:14b, qwen3-coder:30b 等
+尽量使用较新的模型，推荐模型如 qwen3-coder:30b,glm-4.7,gpt-oss:20b,gpt-oss:120b
 旧模型大概率不适配，会导致 OpenClaw 无法正常工作
 
 2. 安装 OpenClaw 
