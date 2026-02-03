@@ -23,10 +23,9 @@ services:
     labels:
       createdBy: Apps
   dind:
-    image: docker:dind
+    image: docker:29.2.0
     container_name: ${CONTAINER_NAME}-dind
     privileged: true
-    pull_policy: always
     restart: unless-stopped
     command: ['dockerd', '-H', 'tcp://0.0.0.0:2375', '--tls=false']
     environment:
