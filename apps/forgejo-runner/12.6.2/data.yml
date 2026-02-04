@@ -1,0 +1,87 @@
+additionalProperties:
+  formFields:
+    - default: dood
+      edit: true
+      envKey: DOCKER_MODE
+      labelZh: Docker 守护进程运行模式
+      labelEn: Docker daemon run mode
+      label:
+        zh: Docker 守护进程运行模式
+        zh-Hant: Docker 背景服務執行模式
+        en: Docker daemon run mode
+        ja: Docker デーモン実行モード
+        ko: Docker 데몬 실행 모드
+        ms: Mod operasi daemon Docker
+        pt-br: Modo de execução do daemon do Docker
+        ru: Режим работы демона Docker
+        tr: Docker arka plan hizmeti çalıştırma modu
+      required: false
+      type: select
+      values:
+        - label: Docker outside of Docker
+          value: dood
+        - label: Docker in Docker
+          value: dind
+    - default: http://1.2.3.4:3000
+      edit: true
+      envKey: FORGEJO_INSTANCE_URL
+      labelEn: Forgejo Instance
+      labelZh: Forgejo 实例
+      required: true
+      rule: paramExtUrl
+      type: text
+      label:
+        en: Forgejo Instance
+        ja: Forgejo インスタンス
+        ms: Instans Forgejo
+        pt-br: Instância Forgejo
+        ru: Экземпляр Forgejo
+        ko: Forgejo 인스턴스
+        zh-Hant: Forgejo 實例
+        zh: Forgejo 实例
+    - default: ''
+      edit: true
+      envKey: RUNNER_REGISTRATION_TOKEN
+      labelEn: Registration Token
+      labelZh: 注册令牌
+      required: true
+      type: text
+      label:
+        en: Registration Token
+        ja: 登録トークン
+        ms: Token Pendaftaran
+        pt-br: Token de Registro
+        ru: Токен регистрации
+        ko: 등록 토큰
+        zh-Hant: 註冊令牌
+        zh: 注册令牌
+    - default: ''
+      edit: true
+      envKey: RUNNER_NAME
+      labelEn: Runner Name
+      labelZh: 运行器名称
+      type: text
+      label:
+        en: Runner Name
+        ja: ランナー名
+        ms: Nama Pelari
+        pt-br: Nome do Runner
+        ru: Имя бегуна
+        ko: 러너 이름
+        zh-Hant: 執行器名稱
+        zh: 运行器名称
+    - default: ''
+      edit: true
+      envKey: RUNNER_LABELS
+      labelEn: Runner Labels
+      labelZh: 运行器标签
+      type: text
+      label:
+        en: Runner Labels
+        ja: ランナータグ
+        ms: Label Pelari
+        pt-br: Rótulos do Runner
+        ru: Метки бегуна
+        ko: 러너 레이블
+        zh-Hant: 執行器標籤
+        zh: 运行器标签
