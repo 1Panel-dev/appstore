@@ -1,0 +1,137 @@
+additionalProperties:
+  formFields:
+    - default: 3000
+      envKey: PANEL_APP_PORT_HTTP
+      labelZh: HTTP 端口
+      labelEn: HTTP Port
+      label:
+        zh: HTTP 端口
+        zh-Hant: HTTP 埠
+        en: HTTP Port
+        ja: HTTP ポート
+        ko: HTTP 포트
+        ms: HTTP Port
+        pt-br: HTTP Porta
+        ru: HTTP Порт
+      required: true
+      type: number
+      edit: true
+      rule: paramPort
+    - default: 222
+      envKey: PANEL_APP_PORT_SSH
+      labelZh: SSH 端口
+      labelEn: SSH Port
+      label:
+        zh: SSH 端口
+        zh-Hant: SSH 埠
+        en: SSH Port
+        ja: SSH ポート
+        ko: SSH 포트
+        ms: SSH Port
+        pt-br: SSH Porta
+        ru: SSH Порт
+      required: true
+      type: number
+      edit: true
+      rule: paramPort
+    - default: "false"
+      envKey: ROOTLESS
+      labelZh: 无根模式
+      labelEn: Rootless Mode
+      label:
+        zh: 无根模式
+        zh-Hant: 無根模式
+        en: Rootless Mode
+        ja: Rootlessモード
+        ko: 루트리스 모ード
+        ms: Mod Tanpa Keistimewaan
+        pt-br: Modo Sem Privilégios
+        ru: Беспривилегированный режим
+        tr: Ayrıcalıksız Mod
+      required: false
+      type: select
+      values:
+        - label: "True"
+          value: "true"
+        - label: "False"
+          value: "false"
+    - default: mysql
+      envKey: PANEL_DB_TYPE
+      labelZh: 数据库
+      labelEn: Database
+      label:
+        en: Database
+        ja: データベース
+        ko: 데이터베이스
+        ms: Pangkalan Data
+        pt-br: Banco de Dados
+        ru: База данных
+        tr: Veritabanı
+        zh: 数据库
+        zh-Hant: 資料庫
+      required: true
+      type: apps
+      values:
+        - label: MySQL
+          value: mysql
+        - label: PostgreSQL
+          value: postgres
+      child:
+        default: ""
+        envKey: PANEL_DB_HOST
+        required: true
+        type: service
+    - default: forgejo
+      envKey: PANEL_DB_NAME
+      labelZh: 数据库名
+      labelEn: Database Name
+      label:
+        en: Database Name
+        ja: データベース名
+        ko: 데이터베이스 이름
+        ms: Nama Pangkalan Data
+        pt-br: Nome do Banco de Dados
+        ru: Имя базы данных
+        tr: Veritabanı Adı
+        zh: 数据库名
+        zh-Hant: 資料庫名稱
+      required: true
+      type: text
+      rule: paramCommon
+      random: true
+    - default: forgejo_user
+      envKey: PANEL_DB_USER
+      labelZh: 数据库用户名
+      labelEn: Database Username
+      label:
+        en: Database Username
+        ja: データベースユーザー名
+        ko: 데이터베이스 사용자 이름
+        ms: Nama Pengguna Pangkalan Data
+        pt-br: Nome de Usuário do Banco de Dados
+        ru: Имя пользователя базы данных
+        tr: Veritabanı Kullanıcı Adı
+        zh: 数据库用户名
+        zh-Hant: 資料庫使用者名稱
+      required: true
+      type: text
+      rule: paramCommon
+      random: true
+    - default: forgejo_pass
+      envKey: PANEL_DB_USER_PASSWORD
+      labelZh: 数据库密码
+      labelEn: Database Password
+      label:
+        en: Database Password
+        ja: データベースパスワード
+        ko: 데이터베이스 비밀번호
+        ms: Kata Laluan Pangkalan Data
+        pt-br: Senha do Banco de Dados
+        ru: Пароль базы данных
+        tr: Veritabanı Parolası
+        zh: 数据库密码
+        zh-Hant: 資料庫密碼
+      required: true
+      type: password
+      rule: paramComplexity
+      random: true
