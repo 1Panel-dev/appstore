@@ -1,8 +1,8 @@
 ## 产品介绍
 
-**OpenClaw** 是一个运行在你自己设备上的 *个人 AI 助手*。它可以在你已经使用的各种沟通渠道中与你对话，包括：WhatsApp、Telegram、Slack、Discord、Google Chat、Signal、iMessage、Microsoft Teams、WebChat，同时还支持扩展渠道，如 BlueBubbles、Matrix、Zalo、Zalo Personal。
+**OpenClaw** 是一个运行在你自己设备上的 *个人 AI 助理*。它可以在你已经使用的各种沟通渠道中与你对话，包括：飞书、钉钉、企业微信、QQ、WhatsApp、Telegram、Slack、Discord、Google Chat、Signal、iMessage、Microsoft Teams、WebChat等。
 
-如果你想要一个感觉像本地助手、速度快、始终在线的单人个人助理，那就是它了。
+如果你想要一个可以在本地 7x24 运行的个人 AI 助理，那就是它了。
 
 ## 核心特性
 
@@ -30,9 +30,10 @@
 - Cohere: `cohere/command-r-plus`
 
 ## 本地 Ollama 模型配置
+
 1. 安装 Ollama
 应用商店安装 Ollama ，打开 1Panel AI-模型 菜单，添加模型
-尽量使用较新的模型，推荐模型如 qwen3-coder:30b,glm-4.7,gpt-oss:20b,gpt-oss:120b
+尽量使用较新的模型，推荐模型如 qwen3-coder:30b、glm-4.7、gpt-oss:20b、gpt-oss:120b 等；
 旧模型大概率不适配，会导致 OpenClaw 无法正常工作
 
 2. 安装 OpenClaw 
