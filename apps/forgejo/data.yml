@@ -21,6 +21,7 @@ additionalProperties:
     ko: 다음 세대 코드 호스팅 플랫폼
   type: website
   crossVersionUpdate: true
+  recommend: 0
   limit: 0
   website: https://forgejo.org
   github: https://codeberg.org/forgejo/forgejo

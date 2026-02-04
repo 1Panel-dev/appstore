@@ -21,6 +21,7 @@ additionalProperties:
     ko: Forgejo Runner는 Forgejo 인스턴스에 연결하여 지속적 통합 작업을 실행하는 데몬 프로세스입니다
   type: tool
   crossVersionUpdate: true
+  recommend: 0
   limit: 0
   website: https://forgejo.org
   github: https://code.forgejo.org/forgejo/runner
