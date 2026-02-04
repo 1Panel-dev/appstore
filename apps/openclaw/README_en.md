@@ -1,6 +1,6 @@
 ## Introduction
 
-**OpenClaw** is a *personal AI assistant* you run on your own devices.
+**OpenClaw** is a **personal AI assistant** you run on your own devices.
 It answers you on the channels you already use (WhatsApp, Telegram, Slack, Discord, Google Chat, Signal, iMessage, Microsoft Teams, WebChat), plus extension channels like BlueBubbles, Matrix, Zalo, and Zalo Personal. It can speak and listen on macOS/iOS/Android, and can render a live Canvas you control. The Gateway is just the control plane — the product is the assistant.
 
 If you want a personal, single-user assistant that feels local, fast, and always-on, this is it.
@@ -32,17 +32,20 @@ If you want a personal, single-user assistant that feels local, fast, and always
 
 ##  Local Ollama Model Configuration
 
-1. Install Ollama
-Install Ollama from the app store.
-After launching it, go to 1Panel → AI Models and add a model.
+1. Install Ollama from the 1Panel App Store, then open the **AI - Models** menu to add a model.
+2. It is recommended to use newer models, such as:
+    - `qwen3-coder:30b`
+    - `glm-4.7`
+    - `gpt-oss:20b`
+    - `gpt-oss:120b`
 
-It is recommended to use newer models, such as qwen3-coder:30b,glm-4.7,gpt-oss:20b,gpt-oss:120b, etc.
-Older models are very likely incompatible and may cause OpenClaw to not function properly.
+> Older models are likely incompatible and may cause OpenClaw to not work properly.
 
-2. Install OpenClaw
-API Key: You can enter any arbitrary English string.
-Base URL: `http://<ollama-container-name-or-ip>:11434/v1`
-Model: Use the format ollama/<model-name>, for example: `ollama/qwen3:14b`
+### 2. Install OpenClaw
+
+1. **API Key**: Enter any English characters.
+2. **Base URL**: Use the container name or IP address, for example: `http://<ollama-container-name-or-ip>:11434/v1`
+3. **Model configuration**: Format as `ollama/<model-name>`, for example: `ollama/qwen3:14b`
 
 ## Obtain the OpenClaw Token
 

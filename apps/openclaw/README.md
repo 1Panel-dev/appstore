@@ -1,6 +1,6 @@
 ## 产品介绍
 
-**OpenClaw** 是一个运行在你自己设备上的 *个人 AI 助理*。它可以在你已经使用的各种沟通渠道中与你对话，包括：飞书、钉钉、企业微信、QQ、WhatsApp、Telegram、Slack、Discord、Google Chat、Signal、iMessage、Microsoft Teams、WebChat等。
+**OpenClaw** 是一个运行在你自己设备上的 **个人 AI 助理**。它可以在你已经使用的各种沟通渠道中与你对话，包括：飞书、钉钉、企业微信、QQ、WhatsApp、Telegram、Slack、Discord、Google Chat、Signal、iMessage、Microsoft Teams、WebChat等。
 
 如果你想要一个可以在本地 7x24 运行的个人 AI 助理，那就是它了。
 
@@ -31,15 +31,22 @@
 
 ## 本地 Ollama 模型配置
 
-1. 安装 Ollama
-应用商店安装 Ollama ，打开 1Panel AI-模型 菜单，添加模型
-尽量使用较新的模型，推荐模型如 qwen3-coder:30b、glm-4.7、gpt-oss:20b、gpt-oss:120b 等；
-旧模型大概率不适配，会导致 OpenClaw 无法正常工作
+### 1. 安装 Ollama
 
-2. 安装 OpenClaw 
-API Key 填写任意英文字符即可 
-Base URL 使用 `http://<ollama容器名称或者 IP 地址>:11434/v1`
-模型 `ollama/<模型名称>` 例如 `ollama/qwen3:14b`
+1. 在 1Panel 应用商店安装 Ollama ，打开 **AI - 模型** 菜单，添加模型。
+2. 尽量使用较新的模型，推荐如下：
+    - qwen3-coder:30b
+    - glm-4.7
+    - gpt-oss:20b
+    - gpt-oss:120b
+
+> 旧模型大概率不适配，会导致 OpenClaw 无法正常工作。
+
+### 2. 安装 OpenClaw
+
+1. **API Key**：填入任意英文字符即可。
+2. **Base URL**：使用容器名称或 IP 地址，例如：`http://<ollama容器名称或者 IP 地址>:11434/v1`
+3. **模型配置**：格式为 `ollama/<模型名称>`，例如：`ollama/qwen3:14b`
 
 ## 获取 OpenClaw Token
 
