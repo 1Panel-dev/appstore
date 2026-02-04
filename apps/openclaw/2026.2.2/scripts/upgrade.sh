@@ -1,3 +1,4 @@
+
 #!/bin/bash
 set -e
 
@@ -10,6 +11,6 @@ echo "Current CLI image: $CLI_IMAGE"
 if [ "$OPENCLAW_IMAGE" = "$CLI_IMAGE" ]; then
     echo "CLI image is already up-to-date. No changes made."
 else
-    sed -i -E "s|^\s*image:.*|  image: $OPENCLAW_IMAGE|" "./docker-compose-cli.yml"
+    sed -i -E "s|^(\s*)image:.*|\1image: $OPENCLAW_IMAGE|" "./docker-compose-cli.yml"
     echo "CLI image has been updated to: $OPENCLAW_IMAGE"
 fi
