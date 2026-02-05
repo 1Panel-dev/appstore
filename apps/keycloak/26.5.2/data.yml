@@ -1,0 +1,172 @@
+additionalProperties:
+  formFields:
+    - default: 8080
+      envKey: PANEL_APP_PORT_HTTP
+      labelZh: HTTP 端口
+      labelEn: HTTP Port
+      label:
+        zh: HTTP 端口
+        zh-Hant: HTTP 連接埠
+        en: HTTP Port
+        ja: HTTP ポート
+        ko: HTTP 포트
+        ms: Port HTTP
+        pt-br: Porta HTTP
+        ru: HTTP Порт
+        tr: HTTP Portu
+      description:
+        zh: "设置应用的 HTTP 访问端口，有效范围: 1-65535"
+        zh-Hant: "設定應用程式的 HTTP 存取連接埠，有效範圍: 1-65535"
+        en: "Set the HTTP access port for the application, valid range: 1-65535"
+        ja: "アプリケーションのHTTPアクセスポートを設定します。有効範囲: 1-65535"
+        ko: "애플리케이션의 HTTP 접근 포트를 설정합니다. 유효 범위: 1-65535"
+        ms: "Tetapkan port akses HTTP untuk aplikasi, julat sah: 1-65535"
+        pt-br: "Defina a porta de acesso HTTP para o aplicativo, intervalo válido: 1-65535"
+        ru: "Установите порт доступа HTTP для приложения, допустимый диапазон: 1-65535"
+        tr: "Uygulama için HTTP erişim portunu ayarlayın, geçerli aralık: 1-65535"
+      required: true
+      type: number
+      edit: true
+      rule: paramPort
+    - default: ""
+      envKey: KC_HOSTNAME
+      labelZh: 计划为 Keycloak 分配的域名
+      labelEn: Domain name planned for Keycloak
+      label:
+        zh: 计划为 Keycloak 分配的域名
+        zh-Hant: 計劃為 Keycloak 分配的網域名稱
+        en: Domain name planned for Keycloak
+        ja: Keycloak に計画されているドメイン名
+        ko: Keycloak에 계획된 도메인 이름
+        ms: Nama domain yang dirancang untuk Keycloak
+        pt-br: Nome de domínio planejado para o Keycloak
+        ru: Запланированное доменное имя для Keycloak
+        tr: Keycloak için planlanan alan adı
+      description:
+        zh: "keycloak 的生产环境不支持通过 http 访问。\n本应用安装向导仅支持通过反向代理配置SSL来访问 keycloak，因此你必须填写你计划为 keycloak 分配的域名。"
+        zh-Hant: "keycloak 的生產環境不支援透過 http 存取。\n本應用安裝精靈僅支援透過反向代理設定SSL來存取 keycloak，因此你必須填寫你計劃為 keycloak 分配的網域名稱。"
+        en: "The production environment of keycloak does not support access via HTTP.\nThis application installation wizard only supports accessing keycloak by configuring SSL through a reverse proxy. Therefore, you must fill in the domain name you plan to assign to keycloak."
+        ja: "keycloakの本番環境は、httpを介したアクセスをサポートしていません。\nこのアプリケーションインストールウィザードは、リバースプロキシを介したSSL設定によるkeycloakへのアクセスのみをサポートしています。そのため、keycloakに割り当てる予定のドメイン名を入力する必要があります。"
+        ko: "keycloak의 프로덕션 환경은 http를 통한 접근을 지원하지 않습니다.\n이 애플리케이션 설치 마법사는 리버스 프록시를 통한 SSL 구성으로 keycloak에 접근하는 것만 지원합니다. 따라서 keycloak에 할당할 도메인 이름을 입력해야 합니다."
+        ms: "Persekitaran pengeluaran keycloak tidak menyokong akses melalui HTTP.\nPembina pemasangan aplikasi ini hanya menyokong akses ke keycloak dengan mengkonfigurasi SSL melalui proksi terbalik. Oleh itu, anda mesti mengisi nama domain yang anda rancang untuk tugaskan kepada keycloak."
+        pt-br: "O ambiente de produção do keycloak não suporta acesso via HTTP.\nEste assistente de instalação do aplicativo suporta apenas o acesso ao keycloak configurando SSL por meio de um proxy reverso. Portanto, você deve preencher o nome de domínio que planeja atribuir ao keycloak."
+        ru: "Рабочая среда keycloak не поддерживает доступ по HTTP.\nМастер установки этого приложения поддерживает доступ к keycloak только путем настройки SSL через обратный прокси. Следовательно, вы должны указать доменное имя, которое планируете назначить для keycloak."
+        tr: "keycloak'ın üretim ortamı HTTP üzerinden erişimi desteklemez.\nBu uygulama kurulum sihirbazı, yalnızca bir ters proxy aracılığıyla SSL yapılandırarak keycloak'a erişimi destekler. Bu nedenle, keycloak'a atamayı planladığınız alan adını doldurmalısınız."
+      required: true
+      type: text
+      edit: true
+    - default: mariadb
+      envKey: PANEL_DB_TYPE
+      labelZh: 数据库
+      labelEn: Database
+      label:
+        zh: 数据库
+        zh-Hant: 資料庫
+        en: Database
+        ja: データベース
+        ko: 데이터베이스
+        ms: Pangkalan Data
+        pt-br: Banco de Dados
+        ru: База данных
+        tr: Veritabanı
+      required: true
+      type: apps
+      edit: true
+      values:
+        - label: MariaDB
+          value: mariadb
+        - label: MySQL
+          value: mysql
+        - label: PostgreSQL
+          value: postgres
+      child:
+        default: ""
+        envKey: PANEL_DB_HOST
+        required: true
+        type: service
+    - default: keycloak_user
+      envKey: PANEL_DB_USER
+      labelZh: 数据库用户名
+      labelEn: Database Username
+      label:
+        zh: 数据库用户名
+        zh-Hant: 資料庫使用者名稱
+        en: Database Username
+        ja: データベースユーザー名
+        ko: 데이터베이스 사용자 이름
+        ms: Nama Pengguna Pangkalan Data
+        pt-br: Nome de Usuário do Banco de Dados
+        ru: Имя пользователя базы данных
+        tr: Veritabanı Kullanıcı Adı
+      required: true
+      type: text
+      edit: true
+      rule: paramCommon
+      random: true
+    - default: keycloak_pass
+      envKey: PANEL_DB_USER_PASSWORD
+      labelZh: 数据库密码
+      labelEn: Database Password
+      label:
+        zh: 数据库密码
+        zh-Hant: 資料庫密碼
+        en: Database Password
+        ja: データベースパスワード
+        ko: 데이터베이스 비밀번호
+        ms: Kata Laluan Pangkalan Data
+        pt-br: Senha do Banco de Dados
+        ru: Пароль базы данных
+        tr: Veritabanı Parolası
+      required: true
+      type: password
+      edit: true
+      rule: paramComplexity
+      random: true
+    - default: keycloak
+      envKey: PANEL_DB_NAME
+      labelZh: 数据库名
+      labelEn: Database Name
+      label:
+        zh: 数据库名
+        zh-Hant: 資料庫名稱
+        en: Database Name
+        ja: データベース名
+        ko: 데이터베이스 이름
+        ms: Nama Pangkalan Data
+        pt-br: Nome do Banco de Dados
+        ru: Имя базы данных
+        tr: Veritabanı Adı
+      required: true
+      type: text
+      edit: true
+      rule: paramCommon
+      random: true
+    - default: Keycloak_admin_default
+      envKey: ADMIN_PASSWORD
+      labelZh: 默认管理员账户密码
+      labelEn: Default Administrator Account Password
+      label:
+        zh: 默认管理员账户密码
+        zh-Hant: 預設管理員帳戶密碼
+        en: Default Administrator Account Password
+        ja: デフォルト管理者アカウントパスワード
+        ko: 기본 관리자 계정 비밀번호
+        ms: Kata Laluan Akaun Pentadbir Lalai
+        pt-br: Senha Padrão da Conta de Administrador
+        ru: Пароль учётной записи администратора по умолчанию
+        tr: Varsayılan Yönetici Hesap Parolası
+      description:
+        zh: 此用户为临时管理员用户。为加强安全性，请创建一个永久管理员账户并删除此临时账户。
+        zh-Hant: 此使用者為臨時管理員使用者。為加強安全性，請建立一個永久管理員帳戶並刪除此臨時帳戶。
+        en: This user is a temporary administrator user. To harden security, create a permanent admin account and delete the temporary one.
+        ja: このユーザーは一時的な管理者ユーザーです。セキュリティを強化するには、恒久的管理者アカウントを作成し、一時的なアカウントを削除してください。
+        ko: 이 사용자는 임시 관리자 사용자입니다. 보안을 강화하려면 영구 관리자 계정을 생성하고 임시 계정을 삭제하십시오.
+        ms: Pengguna ini adalah pengguna pentadbir sementara. Untuk mengukuhkan keselamatan, buat akaun admin kekal dan padamkan akaun sementara tersebut.
+        pt-br: Este usuário é um usuário administrador temporário. Para reforçar a segurança, crie uma conta administrativa permanente e exclua a conta temporária.
+        ru: Этот пользователь является временным администратором. Для усиления безопасности создайте постоянную учётную запись администратора и удалите временную.
+        tr: Bu kullanıcı geçici bir yönetici kullanıcıdır. Güvenliği artırmak için kalıcı bir yönetici hesabı oluşturun ve geçici olanı silin.
+      required: false
+      type: text
+      disabled: true
+      rule: paramComplexity
+      random: true
