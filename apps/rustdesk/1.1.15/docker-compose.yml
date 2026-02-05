@@ -1,5 +1,6 @@
 services:
   rustdesk-server:
+    image: rustdesk/rustdesk-server-s6:1.1.15
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
@@ -16,7 +17,6 @@ services:
     environment:
       - "RELAY=${HOST_ADDRESS}:${PANEL_APP_PORT_HBBR}"
       - "ENCRYPTED_ONLY=1"
-    image: rustdesk/rustdesk-server-s6:latest
     labels:  
       createdBy: "Apps"
 networks:  
