@@ -1,0 +1,32 @@
+name: Keycloak
+tags:
+  - 实用工具
+title: 面向现代应用与服务的开源身份和访问管理器
+description: 面向现代应用与服务的开源身份和访问管理器
+additionalProperties:
+  key: keycloak
+  name: Keycloak
+  tags:
+    - Tool
+  shortDescZh: 面向现代应用与服务的开源身份和访问管理器
+  shortDescEn: Open Source Identity and Access Management For Modern Applications and Services
+  description:
+    en: Open Source Identity and Access Management For Modern Applications and Services
+    zh: 面向现代应用与服务的开源身份和访问管理器
+    zh-Hant: 面向現代應用與服務的開源身份和存取管理器
+    ja: モダンなアプリケーションとサービスのためのオープンソースのアイデンティティおよびアクセス管理
+    ms: Pengurusan Identiti dan Akses Sumber Terbuka Untuk Aplikasi dan Perkhidmatan Moden
+    pt-br: Gerenciamento de Identidade e Acesso de Código Aberto Para Aplicações e Serviços Modernos
+    ru: Управление идентификацией и доступом с открытым исходным кодом для современных приложений и сервисов
+    ko: 현대 애플리케이션 및 서비스를 위한 오픈 소스 신원 및 액세스 관리
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  website: https://www.keycloak.org
+  github: https://github.com/keycloak/keycloak
+  document: https://www.keycloak.org/getting-started/getting-started-docker
+  memoryRequired: 1536
+  architectures:
+    - amd64
+    - arm64
+    - ppc64le

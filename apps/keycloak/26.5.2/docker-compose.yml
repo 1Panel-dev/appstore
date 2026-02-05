@@ -1,0 +1,26 @@
+services:
+  keycloak:
+    image: keycloak/keycloak:26.5.2
+    environment:
+      - KC_BOOTSTRAP_ADMIN_PASSWORD=${ADMIN_PASSWORD}
+      - KC_BOOTSTRAP_ADMIN_USERNAME=admin
+      - KC_DB=${PANEL_DB_TYPE}
+      - KC_DB_USERNAME=${PANEL_DB_USER}
+      - KC_DB_PASSWORD=${PANEL_DB_USER_PASSWORD}
+      - KC_DB_URL_HOST=${PANEL_DB_HOST}
+      - KC_DB_URL_PORT=${PANEL_DB_PORT}
+      - KC_DB_URL_DATABASE=${PANEL_DB_NAME}
+      - KC_HOSTNAME=${KC_HOSTNAME}
+      - KC_HTTP_ENABLED=true
+      - KC_PROXY_HEADERS=xforwarded
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8080
+    command: start
+    networks:
+      - 1panel-network
+    labels:
+      createdBy: Apps
+    container_name: ${CONTAINER_NAME}
+networks:
+  1panel-network:
+    external: true
