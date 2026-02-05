@@ -206,6 +206,10 @@
     {
       "matchFileNames": ["apps/n8n/2.5.*/*.yml"],
       "allowedVersions": "/^2.5.*/"
+    },
+    {
+      "matchFileNames": ["apps/n8n/2.6.*/*.yml"],
+      "allowedVersions": "/^2.6.*/"
     }
   ],
   "prCreation": "immediate"
