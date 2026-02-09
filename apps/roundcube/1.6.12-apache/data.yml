@@ -1,8 +1,7 @@
 additionalProperties:
   formFields:
-    - default: ""
-      envKey: PANEL_DB_HOST
-      key: mysql
+    - default: mysql
+      envKey: PANEL_DB_TYPE
       labelEn: Database Service
       labelZh: 数据库服务
       label:
@@ -15,7 +14,17 @@ additionalProperties:
         zh-hant: 資料庫服務
         zh: 数据库服务
       required: true
-      type: service
+      type: apps
+      child:
+        default: ""
+        envKey: PANEL_DB_HOST
+        required: true
+        type: service
+      values:
+        - label: MySQL
+          value: mysql
+        - label: PostgreSQL
+          value: postgresql
     - default: de
       envKey: PANEL_DB_NAME
       labelEn: Database
