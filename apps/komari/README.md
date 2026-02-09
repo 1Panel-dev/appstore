@@ -4,6 +4,7 @@
 > 如果填写的时候未记住或忘记那么可以通过容器日志查看
 > 例如 **1Panel-localkomari-pThk  | 2026/02/09 08:08:13 [INFO] Default admin account created. Username: admin , Password: password_jWZ62s (github.com/komari-monitor/komari/cmd/server.go:391)**
 > 其中 **Username: admin , Password: password_jWZ62s** 就是你的用户名和密码
+
 ## 产品介绍
 
 **Komari** 是一款轻量级的自托管服务器监控工具，旨在提供简单、高效的服务器性能监控解决方案。它支持通过 Web 界面查看服务器状态，并通过轻量级 Agent 收集数据。
