@@ -1,0 +1,32 @@
+name: Komari
+tags:
+    - 实用工具
+title: Komari 是一款轻量级的自托管服务器监控工具
+description: Komari 是一款轻量级的自托管服务器监控工具
+additionalProperties:
+    key: komari
+    name: Komari
+    tags:
+        - Tool
+    shortDescZh: Komari 是一款轻量级的自托管服务器监控工具
+    shortDescEn: Komari is a lightweight self-hosted server monitoring tool
+    description:
+        en: Komari is a lightweight self-hosted server monitoring tool
+        ja: Komari は軽量のセルフホスト型サーバー監視ツールです。
+        ms: Komari ialah alat pemantauan pelayan kendiri yang ringan.
+        pt-br: Komari é uma ferramenta leve de monitoramento de servidores auto-hospedada.
+        ru: Komari — это легковесный инструмент для самостоятельного мониторинга серверов.
+        ko: Komari는 가볍고 자체 호스팅이 가능한 서버 모니터링 도구입니다.
+        zh-Hant: Komari 是一款輕量級的自架伺服器監控工具
+        zh: Komari 是一款轻量级的自托管服务器监控工具
+    type: website
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 65
+    batchInstallSupport: true
+    website: https://komari-document.pages.dev/
+    github: https://github.com/komari-monitor/komari
+    document: https://www.komari.wiki
+    architectures:
+      - amd64
+      - arm64
