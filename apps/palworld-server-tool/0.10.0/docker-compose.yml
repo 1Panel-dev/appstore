@@ -1,6 +1,6 @@
 services:
   pst:
-    image: jokerwho/palworld-server-tool:0.9.13
+    image: jokerwho/palworld-server-tool:0.10.0
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
