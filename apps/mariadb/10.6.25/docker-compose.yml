@@ -1,6 +1,6 @@
 services:
   mariadb:
-    image: mariadb:10.6.24
+    image: mariadb:10.6.25
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
