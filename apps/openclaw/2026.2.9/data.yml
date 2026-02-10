@@ -48,8 +48,6 @@ additionalProperties:
           value: deepseek
         - label: Ollama
           value: ollama
-        - label: Qwen
-          value: qwen
         - label: Moonshot (Kimi)
           value: moonshot
         - label: ZAI (GLM)
@@ -60,12 +58,6 @@ additionalProperties:
           value: anthropic
         - label: Gemini
           value: gemini
-        - label: Groq
-          value: groq
-        - label: Mistral
-          value: mistral
-        - label: Cohere
-          value: cohere
       label:
         en: Provider
         ja: プロバイダー
