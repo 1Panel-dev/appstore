@@ -4,6 +4,10 @@
 
 如果你想要一个可以在本地 7x24 运行的个人 AI 助理，那就是它了。
 
+**扫码加入交流群**
+
+<img alt="扫码加入交流群" src="https://resource.fit2cloud.com/1panel/openclaw/img/wechat.png" width="150" height="150">
+
 ## 核心特性
 
 - **Local-first Gateway** — 本地优先的网关架构，统一管理会话、渠道、工具和事件的单一控制平面。
