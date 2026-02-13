@@ -11,6 +11,6 @@ services:
       - "/run/dbus:/run/dbus:ro"
     environment:
       - TZ=${TIME_ZONE}
-    image: homeassistant/home-assistant:2026.2.1
+    image: homeassistant/home-assistant:2026.2.2
     labels:  
       createdBy: "Apps"
