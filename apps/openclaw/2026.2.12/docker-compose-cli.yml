@@ -1,7 +1,7 @@
 services:
   openclaw-cli:
     container_name: ${CONTAINER_NAME}
-    image: 1panel/openclaw:2026.2.9
+    image: 1panel/openclaw:2026.2.12
     networks:
       - 1panel-network
     environment:
