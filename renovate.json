@@ -210,6 +210,10 @@
     {
       "matchFileNames": ["apps/n8n/2.6.*/*.yml"],
       "allowedVersions": "/^2.6.*/"
+    },
+    {
+      "matchFileNames": ["apps/n8n/2.7.*/*.yml"],
+      "allowedVersions": "/^2.7.*/"
     }
   ],
   "prCreation": "immediate"
