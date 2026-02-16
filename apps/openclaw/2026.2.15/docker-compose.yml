@@ -1,7 +1,7 @@
 services:
   openclaw:
     container_name: ${CONTAINER_NAME}
-    image: 1panel/openclaw:2026.2.14
+    image: 1panel/openclaw:2026.2.15
     restart: unless-stopped
     networks:
       - 1panel-network
