@@ -20,6 +20,8 @@ additionalProperties:
   crossVersionUpdate: true
   limit: 0
   recommend: 1000
-  document: https://www.tingreader.cn/guide
   website: https://www.tingreader.cn
   github: https://github.com/dqsq2e2/ting-reader
+  architectures:
+    - amd64
+    - arm64
