@@ -1,0 +1,25 @@
+name: Ting Reader
+tags:
+  - Website
+  - Media
+title: 轻量级自托管有声书管理平台
+description: Ting Reader 是一款轻量级的自托管有声书管理平台，旨在为用户提供一个美观、智能的个人音频图书馆。
+
+additionalProperties:
+  key: ting-reader
+  name: Ting Reader
+  type: website
+  tags:
+    - Website
+    - Media
+  shortDescZh: 轻量级自托管有声书管理平台
+  shortDescEn: Lightweight self-hosted audiobook platform
+  description:
+    zh: Ting Reader 是一款轻量级的自托管有声书管理平台，旨在为用户提供一个美观、智能的个人音频图书馆。支持自动元数据刮削、多端进度同步及 WebDAV 远程存储。
+    en: Ting Reader is a lightweight self-hosted audiobook management platform designed to provide users with a beautiful and intelligent personal audio library. It supports automatic metadata scraping, multi-device progress synchronization, and WebDAV remote storage.
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 1000
+  document: https://www.tingreader.cn/guide
+  website: https://www.tingreader.cn
+  github: https://github.com/dqsq2e2/ting-reader

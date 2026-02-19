@@ -1,0 +1,23 @@
+networks:
+  1panel-network:
+    external: true
+
+services:
+  ting-reader:
+    container_name: ${CONTAINER_NAME}
+    image: dqsq2e2/ting-reader:latest
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:3000"
+    volumes:
+      - ./data:/app/data
+      - ${AUDIOBOOK_PATH}:/app/storage
+      - ./cache:/app/cache
+    environment:
+      - JWT_SECRET=${JWT_SECRET}
+      - PORT=3000
+      - DB_PATH=/app/data/ting-reader.db
+    labels:
+      createdBy: "Apps"

@@ -1,0 +1,24 @@
+additionalProperties:
+  formFields:
+    - type: "text"
+      labelZh: "应用端口"
+      labelEn: "App Port"
+      required: true
+      envKey: "PANEL_APP_PORT_HTTP"
+      default: 3000
+      edit: true
+      rule: "paramPort"
+      description:
+        zh: "设置应用的访问端口，有效范围：1-65535"
+        en: "Set the access port for the application, valid range: 1-65535"
+
+    - type: "text"
+      labelZh: "有声书存储路径"
+      labelEn: "Audiobook Storage Path"
+      required: true
+      envKey: "AUDIOBOOK_PATH"
+      default: "./storage"
+      edit: true
+      description:
+        zh: "有声书文件的存储位置，默认为安装目录下的 storage 文件夹，可修改为其他绝对路径"
+        en: "Storage location for audiobooks. Defaults to the storage folder in the installation directory, can be changed to an absolute path."
