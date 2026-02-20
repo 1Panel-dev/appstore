@@ -1,6 +1,6 @@
 services:
   forgejo-runner:
-    image: code.forgejo.org/forgejo/runner:12.6.4
+    image: code.forgejo.org/forgejo/runner:12.7.0
     container_name: ${CONTAINER_NAME}
     user: root
     depends_on:
