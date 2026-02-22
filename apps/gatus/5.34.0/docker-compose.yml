@@ -1,6 +1,6 @@
 services:
   gatus:
-    image: twinproduction/gatus:v5.34.0
+    image: twinproduction/gatus:v5.35.0
     ports:
       - ${PANEL_APP_PORT_HTTP}:8080
     volumes:
