@@ -1,6 +1,6 @@
 services:
   new-api:
-    image: calciumion/new-api:v0.10.8
+    image: calciumion/new-api:v0.10.9
     container_name: ${CONTAINER_NAME}
     restart: always
     ports:
