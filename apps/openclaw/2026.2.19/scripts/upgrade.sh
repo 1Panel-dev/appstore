@@ -13,3 +13,22 @@ else
     sed -i -E "s|^\s*image:.*|  image: $OPENCLAW_IMAGE|" "docker-compose-cli.yml"
     echo "CLI image has been updated to: $OPENCLAW_IMAGE"
 fi
+
+ARCH=$(uname -m)
+
+case "$ARCH" in
+  x86_64|amd64)
+    BIN="openclaw-setup-linux-amd64"
+    ;;
+  aarch64|arm64)
+    BIN="openclaw-setup-linux-arm64"
+    ;;
+  *)
+    echo "Unsupported architecture: $ARCH"
+    exit 1
+    ;;
+esac
+
+chmod +x "scripts/${BIN}"
+./scripts/${BIN} update controlUi
+
