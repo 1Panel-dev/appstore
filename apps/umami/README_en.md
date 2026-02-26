@@ -1,4 +1,4 @@
-## Instructions
+## Setup Notes
 
 - Supported database versions:
     - V2: MySQL ≥ 5.7, PostgreSQL ≥ 12.14

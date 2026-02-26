@@ -1,7 +1,7 @@
 ## Default Credentials
 
-username: `Admin`
-password: `zabbix`
+- Username: `Admin`
+- Password: `zabbix`
 
 ## Introduction
 

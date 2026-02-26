@@ -1,4 +1,4 @@
-## Instructions
+## Setup Notes
 
 1. Register an account at `https://huggingface.co/` and get model access to create a token.
 2. Ensure the machine has an Nvidia GPU.

@@ -1,4 +1,4 @@
-## Instructions
+## Setup Notes
 
 After deploying CouchDB successfully, you need to manually create a database for the plugin to connect and sync. 
 

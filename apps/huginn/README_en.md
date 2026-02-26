@@ -1,7 +1,7 @@
 ## Default Credentials
 
-username: `admin`
-password: `password`
+- Username: `admin`
+- Password: `password`
 
 ## Introduction
 

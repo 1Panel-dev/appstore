@@ -2,13 +2,13 @@
 
 **Manage dedicated Palworld servers with a visual interface and REST API.**
 
-Features and Roadmap Based on `Level.sav` Save File Parsing:
+## Features and Roadmap (Based on `Level.sav` Parsing)
 
 - [x] Complete player data
 - [x] Player Pal data
 - [x] Guild data
 
-Features Based on Official RCON Commands (Server-Only):
+## Features Based on Official RCON Commands (Server-Only)
 
 - [x] Retrieve server information
 - [x] View online player list
@@ -26,9 +26,9 @@ Ensure that private server RCON is enabled by following the instructions in the 
 
 ---
 
-Notes on Save File Parsing
+## Notes on Save File Parsing
 
-> Parsing the `Level.sav` save file temporarily requires a certain amount of system memory (1GB~3GB) for short periods (<20s). The memory is released after the task is completed. Ensure your server has sufficient memory. If not, consider the following alternatives:
+> Parsing the `Level.sav` save file temporarily requires a certain amount of system memory (1GB to 3GB) for short periods (<20s). The memory is released after the task is completed. Ensure your server has sufficient memory. If not, consider the following alternatives:
 
 1. Deploy the tool on a separate server.
 2. Use a local personal computer for deployment.

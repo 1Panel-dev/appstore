@@ -28,7 +28,7 @@
 ## Obtain the Moltbot Token
 
 Open the **moltbot.json** file and copy the value of `"gateway.auth.token"`.  
-This token will be used to access the Moltbot application.
+Use this token to access the Moltbot application.
 
 ```yaml
   "gateway": {

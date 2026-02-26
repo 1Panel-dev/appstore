@@ -11,7 +11,7 @@
 - **Static File Serving**: Efficient static file server with support for file compression, cache control, directory browsing, and other features. Built-in file server with excellent performance, suitable for hosting static websites.
 - **Plugin System**: Rich plugin ecosystem supporting authentication, logging, monitoring, caching, and various other functional extensions. You can select and configure appropriate plugins as needed.
 
-## Configuration and Usage Instructions
+## Setup and Usage
 
 ### Important Notes
 

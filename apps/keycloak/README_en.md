@@ -1,10 +1,10 @@
 ## Default Credentials
 
-username: `admin`
+- Username: `admin`
 
-password: Go to the App Store and get it from the app's parameter settings
+- Password: Go to the App Store and get it from the app's parameter settings
 
-## Configuration and Usage Instructions
+## Setup and Usage
 
 -   **admin** is a temporary administrator account. After the initial login, please create a new account, **assign it the administrator role**, and then delete the **admin** account.
     1.  Find **Users** in the left sidebar, click **Add Users** to create an account.

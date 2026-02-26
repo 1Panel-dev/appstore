@@ -48,7 +48,7 @@ Job containers in this mode (i.e., the containers that actually run the workflow
   - Artifacts that workflows create, such as new images created by docker build or containers created by docker run, will be left in the DIND container. Any future workflow execution on the same runner will be able to inspect these artifacts and could extract confidential information from them.
   - Resource Constraints configured on Forgejo Runner won’t have any impact on containers created from workflow actions. However, resources will be constrained to those configured on the created DIND container.
 
-## Configuration and Usage Instructions
+## Setup and Usage
 
 - **Forgejo Instance URL**: (e.g., `https://git.example.com`)
 - **Registration Token**: Obtained from the "Create new runner" button. This token is used exclusively for the Runner instance and should differ from a Personal Access Token (PAT).

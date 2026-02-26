@@ -2,7 +2,7 @@
 
 **Synapse** is an open-source Matrix home server written and maintained by the Matrix.org Foundation.
 
-## Instructions
+## Setup Notes
 
 - Before creating, use the following terminal command to generate the required configuration file. Modify the parameter `my.matrix.host` as needed:
 

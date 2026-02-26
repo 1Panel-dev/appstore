@@ -1,4 +1,4 @@
-## Instructions
+## Setup Notes
 
 After deployment, follow the prompts on the page and execute the command in the terminal to start the service.
 

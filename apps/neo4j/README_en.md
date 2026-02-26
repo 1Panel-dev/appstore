@@ -1,7 +1,7 @@
 ## Default Credentials
 
-username: `neo4j`
-password: `neo4j`
+- Username: `neo4j`
+- Password: `neo4j`
 
 ## Introduction
 
