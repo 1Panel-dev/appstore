@@ -214,6 +214,14 @@
     {
       "matchFileNames": ["apps/n8n/2.7.*/*.yml"],
       "allowedVersions": "/^2.7.*/"
+    },
+    {
+      "matchFileNames": ["apps/n8n/2.8.*/*.yml"],
+      "allowedVersions": "/^2.8.*/"
+    },
+    {
+      "matchFileNames": ["apps/n8n/2.9.*/*.yml"],
+      "allowedVersions": "/^2.9.*/"
     }
   ],
   "prCreation": "immediate"
