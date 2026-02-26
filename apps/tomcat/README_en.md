@@ -1,4 +1,4 @@
-## Instructions
+## Setup Notes
 
 - Admin Username: `manager`
 - The image uses `Java 17`

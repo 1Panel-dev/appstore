@@ -2,7 +2,7 @@
 
 **ClickHouse** is a columnar database management system (DBMS) designed for online analytical processing (OLAP).
 
-##  Features
+## Features
 
 - True columnar database management system
 - Data compression

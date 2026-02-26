@@ -1,4 +1,4 @@
-## Instructions
+## Setup Notes
 
 > Note: On first instantiation, accessing the root folder will generate an error. Access the `YOURLS` admin interface via the `/admin/` path.
 

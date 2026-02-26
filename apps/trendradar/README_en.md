@@ -1,4 +1,4 @@
-## Configuration and Usage Instructions
+## Setup and Usage
 
 After installing the application, please go to `application installation directory/config/config.yaml` to configure the remaining parameters.
 

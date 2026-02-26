@@ -30,7 +30,7 @@ If you want a personal, single-user assistant that feels local, fast, and always
 - Mistral: `mistral/large-latest`
 - Cohere: `cohere/command-r-plus`
 
-##  Local Ollama Model Configuration
+## Local Ollama Model Setup
 
 1. Install Ollama from the 1Panel App Store, then open the **AI - Models** menu to add a model.
 2. It is recommended to use newer models, such as:
@@ -50,7 +50,7 @@ If you want a personal, single-user assistant that feels local, fast, and always
 ## Obtain the OpenClaw Token
 
 Open the **openclaw.json** file and copy the value of `"gateway.auth.token"`.  
-This token will be used to access the OpenClaw application.
+Use this token to access the OpenClaw application.
 
 ```yaml
   "gateway": {

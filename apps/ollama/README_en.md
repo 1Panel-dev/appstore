@@ -1,4 +1,4 @@
-## Instructions
+## Setup Notes
 
 > Access the `Containers` list, find the Ollama container, and open the terminal to chat with [DeepSeek R1](https://ollama.com/library/deepseek-r1):
 

@@ -1,4 +1,4 @@
-## Configuration and Usage Instructions
+## Setup and Usage
 
 After installation, you must go to `application installation directory/config/config.yml` to complete the configuration. For the configuration file, refer to the [documentation](https://github.com/TwiN/gatus#configuration).
 

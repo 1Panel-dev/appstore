@@ -9,7 +9,7 @@
 - **Multiple Data Source Support**: Langflow supports connections to various data sources, including text files, databases, API interfaces, and more. Users can easily integrate external data into their AI workflows.
 - **Templates and Sharing**: The system provides rich preset templates that users can use to quickly start their projects. Users can also save their created workflows as templates to share with team members.
 
-## Configuration and Usage Instructions
+## Setup and Usage
 
 ### Important Notes
 

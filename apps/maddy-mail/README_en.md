@@ -1,4 +1,4 @@
-## Instructions
+## Setup Notes
 
 ### 1. Prepare Domain Certificates
 

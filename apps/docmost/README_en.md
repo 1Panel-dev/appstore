@@ -1,4 +1,4 @@
-## Configuration and Usage Instructions
+## Setup and Usage
 
 After installation, you can configure additional environment variables via the `config.env` file located in the application installation directory. For more information, please refer to the [documentation](https://docmost.com/docs/self-hosting/environment-variables). Environment variables in `config.env` have lower priority than the configuration entered during installation.
 

@@ -38,12 +38,12 @@ If you want to invite members to join the Outline knowledge base via email or pe
 
 Please fill in the correct SMTP email service information during installation. If you do not have an SMTP service, you can use some free SMTP providers or your own email provider's SMTP service.
 
-## 4. Login
+## Login
 
 After installation, visit `http://<your-server-ip>:<port>` to log in to Outline. Normally, you will be redirected to the GitHub authorization page. After successful authorization, you will be redirected back to the Outline knowledge base homepage.
 
 > If not redirected, you can click the `Continue with GitHub` button.
 
-## Suggestion
+## Recommendations
 
 Check "Allow external access to port" so you can access Outline via reverse proxy or directly by IP.
