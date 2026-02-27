@@ -1,24 +1,24 @@
 name: OpenWebUI
 tags:
     - AI
-title: 面向 LLM 的用户友好型 WebUI
-description: 面向 LLM 的用户友好型 WebUI
+title: 用户友好的 AI 界面（支持 Ollama、OpenAI API 等）
+description: 用户友好的 AI 界面（支持 Ollama、OpenAI API 等）
 additionalProperties:
     key: ollama-webui
     name: OpenWebUI
     tags:
         - AI
-    shortDescZh: 面向 LLM 的用户友好型 WebUI
-    shortDescEn: User-friendly WebUI for LLMs
+    shortDescZh: 用户友好的 AI 界面（支持 Ollama、OpenAI API 等）
+    shortDescEn: User-friendly AI Interface (Supports Ollama, OpenAI API, ...)
     description:
-        en: User-friendly WebUI for LLMs
-        ja: LLM向けの使いやすいWebUI
-        ms: WebUI mesra pengguna untuk LLM
-        pt-br: WebUI amigável para LLMs
-        ru: Удобный WebUI для LLM
-        ko: LLM을 위한 사용자 친화적인 WebUI
-        zh-hant: 用於 LLM 的友好型 WebUI
-        zh: 面向 LLM 的用户友好型 WebUI
+        en: User-friendly AI Interface (Supports Ollama, OpenAI API, ...)
+        ja: ユーザーフレンドリーなAIインターフェース（Ollama、OpenAI APIなどをサポート）
+        ms: Antaramuka AI yang Mesra Pengguna (Menyokong Ollama, OpenAI API, ...)
+        pt-br: Interface de IA amigável ao usuário (Suporta Ollama, OpenAI API, ...)
+        ru: Удобный интерфейс ИИ (поддерживает Ollama, OpenAI API, ...)
+        ko: 사용자 친화적인 AI 인터페이스 (Ollama, OpenAI API 등 지원)
+        zh-hant: 用户友好的 AI 界面（支持 Ollama、OpenAI API 等）
+        zh: 用户友好的 AI 界面（支持 Ollama、OpenAI API 等）
     type: website
     crossVersionUpdate: true
     limit: 1
