@@ -1,24 +1,24 @@
 name: Ollama
 tags:
     - AI
-title: 启动并运行 DeepSeek-R1、Llama 3.3、qwen2.5 及其他大型语言模型
-description: 启动并运行 DeepSeek-R1、Llama 3.3、qwen2.5 及其他大型语言模型
+title: 快速部署并开始使用 Kimi-K2.5、GLM-5、MiniMax、DeepSeek、gpt-oss、Qwen、Gemma 等多种模型
+description: 快速部署并开始使用 Kimi-K2.5、GLM-5、MiniMax、DeepSeek、gpt-oss、Qwen、Gemma 等多种模型
 additionalProperties:
     key: ollama
     name: Ollama
     tags:
         - AI
-    shortDescZh: 启动并运行 DeepSeek-R1、Llama 3.3、qwen2.5 及其他大型语言模型
-    shortDescEn: Get up and running with DeepSeek-R1, Llama 3.3, qwen2.5 and other large language models
+    shortDescZh: 快速部署并开始使用 Kimi-K2.5、GLM-5、MiniMax、DeepSeek、gpt-oss、Qwen、Gemma 等多种模型
+    shortDescEn: Get up and running with Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models
     description:
-        en: Get up and running with DeepSeek-R1, Llama 3.3, qwen2.5 and other large language models
-        ja: DeepSeek-R1、Llama 3.3、qwen2.5 などの大規模言語モデルを起動して実行
-        ms: Mulakan dan jalankan DeepSeek-R1, Llama 3.3, qwen2.5 dan model bahasa besar lain
-        pt-br: Inicie e execute DeepSeek-R1, Llama 3.3, qwen2.5 e outros modelos de linguagem grandes
-        ru: Запустите и выполните DeepSeek-R1, Llama 3.3, qwen2.5 и другие крупные языковые модели
-        ko: DeepSeek-R1, Llama 3.3, qwen2.5 및 기타 대형 언어 모델을 시작하고 실행
-        zh-hant: 啟動並執行 DeepSeek-R1、Llama 3.3、qwen2.5 及其他大型語言模型
-        zh: 启动并运行 DeepSeek-R1、Llama 3.3、qwen2.5 及其他大型语言模型
+        en: Get up and running with Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models
+        ja: Kimi-K2.5、GLM-5、MiniMax、DeepSeek、gpt-oss、Qwen、Gemma などのモデルを起動して実行
+        ms: Mulakan dan jalankan Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma dan model lain
+        pt-br: Inicie e execute Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma e outros modelos
+        ru: Запустите и выполните Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma и другие модели
+        ko: Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma 및 기타 모델을 시작하고 실행
+        zh-hant: 快速部署並開始使用 Kimi-K2.5、GLM-5、MiniMax、DeepSeek、gpt-oss、Qwen、Gemma 等多種模型
+        zh: 快速部署并开始使用 Kimi-K2.5、GLM-5、MiniMax、DeepSeek、gpt-oss、Qwen、Gemma 等多种模型
     type: website
     crossVersionUpdate: true
     limit: 1
