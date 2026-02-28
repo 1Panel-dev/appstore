@@ -1,0 +1,32 @@
+name: CoPAW
+tags:
+  - AI
+title: CoPAW AI 助手
+description: CoPAW AI 助手
+additionalProperties:
+  key: copaw
+  name: CoPAW
+  tags:
+    - AI
+  shortDescZh: CoPAW AI 助手
+  shortDescEn: CoPAW AI assistant
+  description:
+    en: CoPAW AI assistant
+    zh: CoPAW AI 助手
+    zh-Hant: CoPAW AI 助手
+    ja: CoPAW AI アシスタント
+    ms: Pembantu AI CoPAW
+    pt-br: Assistente de IA CoPAW
+    ru: AI-помощник CoPAW
+    ko: CoPAW AI 어시스턴트
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 16
+  batchInstallSupport: true
+  website: https://github.com/agentscope-ai/copaw
+  github: https://github.com/agentscope-ai/copaw
+  document: https://github.com/agentscope-ai/copaw
+  architectures:
+    - amd64
+    - arm64

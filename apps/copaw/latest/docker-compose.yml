@@ -1,0 +1,17 @@
+services:
+  copaw:
+    container_name: ${CONTAINER_NAME}
+    image: agentscope/copaw:latest
+    restart: unless-stopped
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8088
+    volumes:
+      - ./data:/app/working
+    labels:
+      createdBy: "Apps"
+
+networks:
+  1panel-network:
+    external: true
