@@ -1,11 +1,11 @@
-name: CoPAW
+name: CoPaw
 tags:
   - AI
 title: 你的 AI 个人助理
 description: 你的 AI 个人助理
 additionalProperties:
   key: copaw
-  name: CoPAW
+  name: CoPaw
   tags:
     - AI
   shortDescZh: 你的 AI 个人助理
