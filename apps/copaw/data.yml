@@ -1,24 +1,24 @@
 name: CoPAW
 tags:
   - AI
-title: CoPAW AI 助手
-description: CoPAW AI 助手
+title: 你的 AI 个人助理
+description: 你的 AI 个人助理
 additionalProperties:
   key: copaw
   name: CoPAW
   tags:
     - AI
-  shortDescZh: CoPAW AI 助手
-  shortDescEn: CoPAW AI assistant
+  shortDescZh: 你的 AI 个人助理
+  shortDescEn: Your Personal AI Assistant
   description:
-    en: CoPAW AI assistant
-    zh: CoPAW AI 助手
-    zh-Hant: CoPAW AI 助手
-    ja: CoPAW AI アシスタント
-    ms: Pembantu AI CoPAW
-    pt-br: Assistente de IA CoPAW
-    ru: AI-помощник CoPAW
-    ko: CoPAW AI 어시스턴트
+    en: Your Personal AI Assistant
+    zh: 你的 AI 个人助理
+    zh-Hant: 你的 AI 个人助理
+    ja: あなたの AI パーソナルアシスタント
+    ms: Pembantu AI Peribadi Anda
+    pt-br: Seu Assistente Pessoal de IA
+    ru: Ваш персональный AI-ассистент
+    ko: 당신의 AI 개인 비서
   type: website
   crossVersionUpdate: true
   limit: 0
