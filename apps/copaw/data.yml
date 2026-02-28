@@ -24,9 +24,9 @@ additionalProperties:
   limit: 0
   recommend: 16
   batchInstallSupport: true
-  website: https://github.com/agentscope-ai/copaw
+  website: http://copaw.agentscope.io/
   github: https://github.com/agentscope-ai/copaw
-  document: https://github.com/agentscope-ai/copaw
+  document: https://copaw.agentscope.io/docs/intro
   architectures:
     - amd64
     - arm64
