@@ -1,6 +1,6 @@
 ## Introduction
 
-**CoPAW** is your Personal AI Assistant; easy to install, deploy on your own machine or on the cloud; supports multiple chat apps with easily extensible capabilities.
+**CoPaw** is an open-source AI personal assistant from Alibaba; easy to install, deploy on your own machine or on the cloud; supports multiple chat apps with easily extensible capabilities.
 
 ## Core capabilities
 
