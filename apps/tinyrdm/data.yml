@@ -1,24 +1,24 @@
-name: TinyRDM
+name: Tiny RDM
 tags:
     - 开发工具
-title: 一个现代化轻量级的跨平台Redis客户端。
-description: 一个现代化轻量级的跨平台Redis客户端。
+title: 一个现代化轻量级的跨平台 Redis 客户端
+description: 一个现代化轻量级的跨平台 Redis 客户端
 additionalProperties:
     key: tinyrdm
-    name: TinyRDM
+    name: Tiny RDM
     tags:
         - DevTool
-    shortDescZh: 一个现代化轻量级的跨平台Redis客户端。
-    shortDescEn: A modern, lightweight, cross-platform Redis client.
+    shortDescZh: 一个现代化轻量级的跨平台 Redis 客户端
+    shortDescEn: A modern, lightweight, cross-platform Redis client
     description:
-        en: A modern, lightweight, cross-platform Redis client.
-        ja: 最新の軽量なクロスプラットフォーム Redis クライアント。
-        ms: Klien Redis merentas platform yang moden, ringan.
-        pt-br: TUm cliente Redis moderno, leve e multiplataforma.
-        ru: Современный, легковесный, кроссплатформенный клиент Redis.
-        ko: 최신 기술을 적용한 경량의 크로스 플랫폼 Redis 클라이언트입니다.
-        zh-Hant: T一個現代化輕量級的跨平台Redis客戶端。
-        zh: 一个现代化轻量级的跨平台Redis客户端。
+        en: A modern, lightweight, cross-platform Redis client
+        ja: 最新の軽量なクロスプラットフォーム Redis クライアント
+        ms: Klien Redis merentas platform yang moden, ringan
+        pt-br: TUm cliente Redis moderno, leve e multiplataforma
+        ru: Современный, легковесный, кроссплатформенный клиент Redis
+        ko: 최신 기술을 적용한 경량의 크로스 플랫폼 Redis 클라이언트입니다
+        zh-Hant: 一個現代化輕量級的跨平台 Redis 客戶端
+        zh: 一个现代化轻量级的跨平台 Redis 客户端
     type: website
     crossVersionUpdate: true
     limit: 1
@@ -26,7 +26,7 @@ additionalProperties:
     batchInstallSupport: true
     website: https://www.tinyrdm.com
     github: https://github.com/tiny-craft/tiny-rdm
-    document: https://github.com/tiny-craft/tiny-rdm
+    document: https://www.tinyrdm.com/guide/
     architectures:
       - amd64
       - arm64
