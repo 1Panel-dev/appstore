@@ -1,30 +1,30 @@
 name: TinyRDM
 tags:
     - 开发工具
-title: Tiny RDM 是一个现代化轻量级的跨平台Redis桌面客户端，支持Mac、Windows和Linux，同时提供Web版本，可通过Docker快速部署。
-description: Tiny RDM 是一个现代化轻量级的跨平台Redis桌面客户端，支持Mac、Windows和Linux，同时提供Web版本，可通过Docker快速部署。
+title: 一个现代化轻量级的跨平台Redis客户端。
+description: 一个现代化轻量级的跨平台Redis客户端。
 additionalProperties:
     key: tinyrdm
     name: TinyRDM
     tags:
         - DevTool
-    shortDescZh: 一个现代化轻量级的跨平台Redis管理工具
-    shortDescEn: A modern, lightweight, cross-platform Redis management tool
+    shortDescZh: 一个现代化轻量级的跨平台Redis客户端。
+    shortDescEn: A modern, lightweight, cross-platform Redis client.
     description:
-        en: Tiny RDM is a modern lightweight cross-platform Redis desktop manager available for Mac, Windows, and Linux.
-        ja: Tiny RDMは、Mac、Windows、Linuxで利用可能な、モダンで軽量なクロスプラットフォームのRedisデスクトップマネージャーです。Docker経由でデプロイ可能なWeb版も提供しています。
-        ms: Tiny RDM ialah pengurus desktop Redis merentas platform moden yang ringan yang tersedia untuk Mac, Windows dan Linux. Ia juga menyediakan versi web yang boleh digunakan melalui Docker.
-        pt-br: Tiny RDM é um gerenciador Redis moderno, leve e multiplataforma, disponível para Mac, Windows e Linux. Também oferece uma versão web que pode ser implantada via Docker.
-        ru: Tiny RDM — современный легковесный кроссплатформенный менеджер Redis для Mac, Windows и Linux. Также доступна веб-версия с возможностью развёртывания через Docker.
-        ko: Tiny RDM은 Mac, Windows, Linux에서 사용할 수 있는 현대적이고 가벼운 크로스 플랫폼 Redis 데스크톱 관리자입니다. Docker를 통해 배포할 수 있는 웹 버전도 제공합니다.
-        zh-Hant: Tiny RDM 是一款現代化輕量級的跨平台 Redis 桌面管理工具，支援 Mac、Windows 和 Linux，同時提供 Web 版本，可透過 Docker 快速部署
-        zh: Tiny RDM 是一个现代化轻量级的跨平台Redis桌面客户端，支持Mac、Windows和Linux，同时提供Web版本，可通过Docker快速部署。
+        en: A modern, lightweight, cross-platform Redis client.
+        ja: 最新の軽量なクロスプラットフォーム Redis クライアント。
+        ms: Klien Redis merentas platform yang moden, ringan.
+        pt-br: TUm cliente Redis moderno, leve e multiplataforma.
+        ru: Современный, легковесный, кроссплатформенный клиент Redis.
+        ko: 최신 기술을 적용한 경량의 크로스 플랫폼 Redis 클라이언트입니다.
+        zh-Hant: T一個現代化輕量級的跨平台Redis客戶端。
+        zh: 一个现代化轻量级的跨平台Redis客户端。
     type: website
     crossVersionUpdate: true
     limit: 1
     recommend: 0
     batchInstallSupport: true
-    website: https://github.com/tiny-craft/tiny-rdm
+    website: https://www.tinyrdm.com
     github: https://github.com/tiny-craft/tiny-rdm
     document: https://github.com/tiny-craft/tiny-rdm
     architectures:
