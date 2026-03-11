@@ -9,6 +9,7 @@ services:
       - ${PANEL_APP_PORT_HTTP}:8088
     volumes:
       - ./data:/app/working
+      - ./secret:/app/working.secret
     labels:
       createdBy: "Apps"
 
