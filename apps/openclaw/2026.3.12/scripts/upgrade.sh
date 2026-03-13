@@ -1,6 +1,32 @@
 #!/bin/bash
 set -e
 
+ensure_https_port_env() {
+  local env_file=".env"
+
+  if [ ! -f "$env_file" ]; then
+    echo ".env file not found, skip HTTPS port migration."
+    return
+  fi
+
+  if grep -q '^PANEL_APP_PORT_HTTPS=' "$env_file"; then
+    echo "PANEL_APP_PORT_HTTPS already exists."
+    return
+  fi
+
+  local http_port
+  http_port=$(grep '^PANEL_APP_PORT_HTTP=' "$env_file" | tail -n 1 | cut -d'=' -f2-)
+  if [ -z "$http_port" ]; then
+    echo "PANEL_APP_PORT_HTTP not found, skip HTTPS port migration."
+    return
+  fi
+
+  echo "PANEL_APP_PORT_HTTPS=${http_port}" >> "$env_file"
+  echo "Migrated PANEL_APP_PORT_HTTP -> PANEL_APP_PORT_HTTPS=${http_port}"
+}
+
+ensure_https_port_env
+
 OPENCLAW_IMAGE=$(grep -E '^\s*image:' "docker-compose.yml" | awk '{print $2}')
 CLI_IMAGE=$(grep -E '^\s*image:' "docker-compose-cli.yml" | awk '{print $2}')
 
@@ -32,3 +58,4 @@ esac
 chmod +x "scripts/${BIN}"
 ./scripts/${BIN} update controlUi
 
+chown -R 1000:1000 data

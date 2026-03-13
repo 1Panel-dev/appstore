@@ -1,7 +1,7 @@
 services:
   openclaw:
     container_name: ${CONTAINER_NAME}
-    image: 1panel/openclaw:2026.3.8
+    image: 1panel/openclaw:2026.3.12
     restart: unless-stopped
     networks:
       - 1panel-network
@@ -11,22 +11,14 @@ services:
     volumes:
       - ./data/conf:/home/node/.openclaw
       - ./data/workspace:/home/node/.openclaw/workspace
+      - ./data/caddy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - ./data/caddy/data:/data
     ports:
-      - ${PANEL_APP_PORT_HTTP}:18789
-      - ${PANEL_APP_PORT_BRIDGE}:18790
+      - ${PANEL_APP_PORT_HTTPS}:8443
     init: true
-    command:
-      [
-        "node",
-        "dist/index.js",
-        "gateway",
-        "--bind",
-        "lan",
-        "--port",
-        "18789"
-      ]
     labels:
       createdBy: "Apps"
+
 networks:
   1panel-network:
     external: true
