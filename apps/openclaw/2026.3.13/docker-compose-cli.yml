@@ -1,24 +1,20 @@
 services:
-  openclaw:
+  openclaw-cli:
     container_name: ${CONTAINER_NAME}
-    image: 1panel/openclaw:2026.3.12
-    restart: unless-stopped
+    image: 1panel/openclaw:2026.3.13
     networks:
       - 1panel-network
     environment:
       HOME: /home/node
       TERM: xterm-256color
+      BROWSER: echo
     volumes:
       - ./data/conf:/home/node/.openclaw
       - ./data/workspace:/home/node/.openclaw/workspace
-      - ./data/caddy/Caddyfile:/etc/caddy/Caddyfile:ro
-      - ./data/caddy/data:/data
-    ports:
-      - ${PANEL_APP_PORT_HTTPS}:8443
+    stdin_open: true
+    tty: true
     init: true
-    labels:
-      createdBy: "Apps"
-
+    entrypoint: ["node", "dist/index.js"]
 networks:
   1panel-network:
     external: true
