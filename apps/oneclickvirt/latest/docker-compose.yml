@@ -1,0 +1,25 @@
+services:
+  oneclickvirt:
+    image: spiritlhl/oneclickvirt:latest
+    container_name: ${CONTAINER_NAME}
+    restart: unless-stopped
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:80
+    environment:
+      - FRONTEND_URL=${FRONTEND_URL}
+    volumes:
+      - ./mysql:/var/lib/mysql
+      - ./storage:/app/storage
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O - http://localhost/api/v1/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true

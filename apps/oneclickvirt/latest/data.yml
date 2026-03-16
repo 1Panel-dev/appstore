@@ -1,0 +1,36 @@
+additionalProperties:
+    formFields:
+        - default: 80
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: WebUI Port
+          labelZh: 网页端口
+          required: true
+          rule: paramPort
+          type: number
+          label:
+              en: WebUI Port
+              ja: WebUI ポート
+              ms: Port WebUI
+              pt-br: Porta WebUI
+              ru: Порт WebUI
+              ko: WebUI 포트
+              zh-Hant: WebUI 埠
+              zh: 网页端口
+        - default: ""
+          edit: true
+          envKey: FRONTEND_URL
+          labelEn: Frontend URL
+          labelZh: 前端访问地址
+          required: false
+          rule: paramExtUrl
+          type: text
+          label:
+              en: Frontend URL (optional, e.g. https://your-domain.com)
+              ja: フロントエンド URL(例：https://your-domain.com)
+              ms: URL bahagian hadapan (cth. https://your-domain.com)
+              pt-br: URL do frontend (ex. https://your-domain.com)
+              ru: URL фронтенда (напр. https://your-domain.com)
+              ko: 프론트엔드 URL (예：https://your-domain.com)
+              zh-Hant: 前端存取位址（選填，如 https://your-domain.com）
+              zh: 前端访问地址（选填，如 https://your-domain.com）
