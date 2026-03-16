@@ -1,6 +1,6 @@
 services:
   oneclickvirt:
-    image: spiritlhl/oneclickvirt:latest
+    image: spiritlhl/oneclickvirt:no-db
     container_name: ${CONTAINER_NAME}
     restart: unless-stopped
     networks:
@@ -10,14 +10,23 @@ services:
     environment:
       - FRONTEND_URL=${FRONTEND_URL}
     volumes:
-      - ./mysql:/var/lib/mysql
       - ./storage:/app/storage
+    command:
+      - /bin/bash
+      - -c
+      - |
+        sed -i '/^    path:/c\    path: ${PANEL_DB_HOST}' /app/config.yaml &&
+        sed -i '/^    port:/c\    port: ${PANEL_DB_PORT}' /app/config.yaml &&
+        sed -i '/^    db-name:/c\    db-name: ${PANEL_DB_NAME}' /app/config.yaml &&
+        sed -i '/^    username:/c\    username: ${PANEL_DB_USER}' /app/config.yaml &&
+        sed -i '/^    password:/c\    password: ${PANEL_DB_USER_PASSWORD}' /app/config.yaml &&
+        exec /start.sh
     healthcheck:
       test: ["CMD-SHELL", "wget -q -O - http://localhost/api/v1/health || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 5
-      start_period: 60s
+      start_period: 30s
     labels:
       createdBy: "Apps"
 networks:

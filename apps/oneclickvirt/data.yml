@@ -8,17 +8,17 @@ additionalProperties:
     name: OneClickVirt
     tags:
         - Tool
-    shortDescZh: 一键虚拟化管理面板，自带前后端与数据库
-    shortDescEn: One-click virtualization management panel with built-in frontend, backend and database
+    shortDescZh: 可扩展的通用虚拟化管理平台，需外部 MySQL/MariaDB
+    shortDescEn: Extensible virtualization management platform requiring external MySQL/MariaDB
     description:
-        en: OneClickVirt is an all-in-one virtualization management panel with built-in database. It supports multiple virtualization backends including Docker, LXD, Incus, OpenVZ, and Proxmox VE, making it easy to provision and manage virtual machines and containers.
-        ja: OneClickVirtは、組み込みデータベースを備えたオールインワン仮想化管理パネルです。Docker、LXD、Incus、OpenVZ、Proxmox VEなど複数の仮想化バックエンドをサポートし、仮想マシンとコンテナの構築・管理を容易にします。
-        ms: OneClickVirt ialah panel pengurusan virtualisasi all-in-one dengan pangkalan data terbina dalam. Ia menyokong pelbagai backend virtualisasi termasuk Docker, LXD, Incus, OpenVZ, dan Proxmox VE.
-        pt-br: OneClickVirt é um painel de gerenciamento de virtualização all-in-one com banco de dados integrado. Suporta múltiplos backends de virtualização, incluindo Docker, LXD, Incus, OpenVZ e Proxmox VE.
-        ru: OneClickVirt — комплексная панель управления виртуализацией со встроенной базой данных. Поддерживает несколько бэкендов виртуализации, включая Docker, LXD, Incus, OpenVZ и Proxmox VE.
-        ko: OneClickVirt는 내장 데이터베이스를 갖춘 올인원 가상화 관리 패널입니다. Docker, LXD, Incus, OpenVZ, Proxmox VE 등 다양한 가상화 백엔드를 지원합니다.
-        zh-Hant: OneClickVirt 是一個內建資料庫的一體化虛擬化管理面板，支援 Docker、LXD、Incus、OpenVZ、Proxmox VE 等多種虛擬化後端。
-        zh: OneClickVirt 是一款自带数据库的一体化虚拟化管理面板，支持 Docker、LXD、Incus、OpenVZ、Proxmox VE 等多种虚拟化后端，轻松实现虚拟机与容器的创建与管理。
+        en: OneClickVirt is an extensible universal virtualization management platform. It supports multiple virtualization backends including Docker, LXD, Incus, Podman, Containerd, Proxmox VE, QEMU, and KubeVirt, making it easy to provision and manage virtual machines and containers.
+        ja: OneClickVirtは、拡張可能な汎用仮想化管理プラットフォームです。Docker、LXD、Incus、Podman、Containerd、Proxmox VE、QEMU、KubeVirtなど複数の仮想化バックエンドをサポートします。
+        ms: OneClickVirt ialah platform pengurusan virtualisasi universal yang boleh dikembangkan. Ia menyokong pelbagai backend virtualisasi termasuk Docker, LXD, Incus, Podman, Containerd, Proxmox VE, QEMU dan KubeVirt.
+        pt-br: OneClickVirt é uma plataforma extensível de gerenciamento de virtualização. Suporta múltiplos backends de virtualização, incluindo Docker, LXD, Incus, Podman, Containerd, Proxmox VE, QEMU e KubeVirt.
+        ru: OneClickVirt — расширяемая универсальная платформа управления виртуализацией. Поддерживает множество бэкендов виртуализации, включая Docker, LXD, Incus, Podman, Containerd, Proxmox VE, QEMU и KubeVirt.
+        ko: OneClickVirt는 확장 가능한 범용 가상화 관리 플랫폼입니다. Docker, LXD, Incus, Podman, Containerd, Proxmox VE, QEMU, KubeVirt 등 다양한 가상화 백엔드를 지원합니다.
+        zh-Hant: OneClickVirt 是一個可擴展的通用虛擬化管理平台，支援 Docker、LXD、Incus、Podman、Containerd、Proxmox VE、QEMU、KubeVirt 等多種虛擬化後端。
+        zh: OneClickVirt 是一款可扩展的通用虚拟化管理平台，支持 Docker、LXD、Incus、Podman、Containerd、Proxmox VE、QEMU、KubeVirt 等多种虚拟化后端，轻松实现虚拟机与容器的创建与管理。
     type: website
     crossVersionUpdate: false
     limit: 0
