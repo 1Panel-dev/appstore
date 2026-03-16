@@ -31,16 +31,30 @@ additionalProperties:
           value: deepseek
         - label: Ollama
           value: ollama
-        - label: Moonshot (Kimi)
+        - label: Moonshot
           value: moonshot
-        - label: ZAI (GLM)
+        - label: Kimi
+          value: kimi
+        - label: Kimi Coding
+          value: kimi-coding
+        - label: Z.ai
           value: zai
+        - label: Bailian Coding Plan
+          value: bailian-coding-plan
+        - label: Ark Coding Plan
+          value: ark-coding-plan
         - label: OpenAI
           value: openai
         - label: Anthropic
           value: anthropic
         - label: Gemini
           value: gemini
+        - label: OpenRouter
+          value: openrouter
+        - label: vLLM
+          value: vllm
+        - label: Custom
+          value: custom
       label:
         en: Provider
         ja: プロバイダー
@@ -108,6 +122,22 @@ additionalProperties:
         tr: "Ollama'yı kullanırken, bu alanı doldurmanız gerekir, örneğin: http://192.168.1.2:11434/v1"
         zh-hant: "使用 Ollama 時，需要填寫此欄位，例如：http://192.168.1.2:11434/v1"
         zh: "当使用 Ollama 的时候，需要填写此项，例如：http://192.168.1.2:11434/v1"
+    - envKey: ALLOWED_ORIGIN
+      default: ""
+      edit: false
+      labelEn: External Access Address
+      labelZh: 外部访问地址
+      required: true
+      type: text
+      label:
+        en: External Access Address
+        ja: 外部アクセスアドレス
+        ms: Alamat Akses Luaran
+        pt-br: Endereço de Acesso Externo
+        ru: Адрес внешнего доступа
+        ko: 외부 접속 주소
+        zh-Hant: 外部訪問地址
+        zh: 外部访问地址
     - default: ""
       disabled: true
       envKey: OPENCLAW_GATEWAY_TOKEN
