@@ -1,0 +1,36 @@
+services:
+  openclaw:
+    container_name: ${CONTAINER_NAME}
+    image: 1panel/openclaw:2026.3.13
+    restart: unless-stopped
+    networks:
+      - 1panel-network
+    environment:
+      HOME: /home/node
+      TERM: xterm-256color
+    volumes:
+      - ./data/conf:/home/node/.openclaw
+      - ./data/workspace:/home/node/.openclaw/workspace
+      - ./data/caddy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - ./data/caddy/data:/data
+    ports:
+      - ${PANEL_APP_PORT_HTTPS}:8443
+    init: true
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "fetch('http://127.0.0.1:18789/healthz').then((r)=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"
+        ]
+      interval: 3m
+      timeout: 10s
+      start_period: 15s
+      retries: 3
+    labels:
+      createdBy: "Apps"
+
+networks:
+  1panel-network:
+    external: true
