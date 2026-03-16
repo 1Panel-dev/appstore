@@ -124,7 +124,6 @@ additionalProperties:
         zh: "当使用 Ollama 的时候，需要填写此项，例如：http://192.168.1.2:11434/v1"
     - envKey: ALLOWED_ORIGIN
       default: ""
-      edit: false
       labelEn: External Access Address
       labelZh: 外部访问地址
       required: true
@@ -138,6 +137,16 @@ additionalProperties:
         ko: 외부 접속 주소
         zh-Hant: 外部訪問地址
         zh: 外部访问地址
+      description:
+        en: "The default access URL is https://IP:Port and HTTPS is required"
+        ja: "デフォルトのアクセスURLは https://IP:Port であり、HTTPSが必要です"
+        ms: "URL akses lalai ialah https://IP:Port dan HTTPS diperlukan"
+        pt-br: "O URL de acesso padrão é https://IP:Port e o HTTPS é obrigatório"
+        ru: "URL доступа по умолчанию: https://IP:Port, требуется HTTPS"
+        ko: "기본 액세스 URL은 https://IP:Port이며 HTTPS가 필요합니다"
+        tr: "Varsayılan erişim URL'si https://IP:Port ve HTTPS gereklidir"
+        zh-hant: "預設訪問地址為 https://IP:Port，強制使用 HTTPS 協議"
+        zh: "默认访问地址为 https://IP:Port，强制使用 HTTPS 协议"
     - default: ""
       disabled: true
       envKey: OPENCLAW_GATEWAY_TOKEN
