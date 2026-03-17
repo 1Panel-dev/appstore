@@ -68,17 +68,17 @@ additionalProperties:
             - label: imagick
               value: imagick
           envKey: PHP_EXTENSIONS
-        - default: 8.4.13
+        - default: 8.5.4
           envKey: PHP_VERSION
           labelEn: PHP Version
           labelZh: PHP 版本
           required: true
           type: select
           values:
-            - label: "8.5.2"
-              value: "8.5.2"
-            - label: "8.4.17"
-              value: "8.4.17"
+            - label: "8.5.4"
+              value: "8.5.4"
+            - label: "8.4.19"
+              value: "8.4.19"
             - label: "8.3.30"
               value: "8.3.30"
             - label: "8.2.30"
