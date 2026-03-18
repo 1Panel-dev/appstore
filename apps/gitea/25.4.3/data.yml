@@ -20,6 +20,7 @@ additionalProperties:
           value: mariadb
       label:
         en: Database Service
+        es-es: Servicio de base de datos
         ja: データベースサービス
         ms: Perkhidmatan Pangkalan Data
         pt-br: Serviço de Banco de Dados
@@ -27,6 +28,7 @@ additionalProperties:
         ko: 데이터베이스 서비스
         zh-hant: 資料庫服務
         zh: 数据库服务
+        tr: Veritabanı Hizmeti
     - default: gitea
       envKey: PANEL_DB_NAME
       labelEn: Database
@@ -37,6 +39,7 @@ additionalProperties:
       type: text
       label:
         en: Database
+        es-es: Base de datos
         ja: データベース
         ms: Pangkalan Data
         pt-br: Banco de Dados
@@ -44,6 +47,7 @@ additionalProperties:
         ko: 데이터베이스
         zh-hant: 資料庫
         zh: 数据库
+        tr: Veritabanı
     - default: gitea
       envKey: PANEL_DB_USER
       random: true
@@ -54,6 +58,7 @@ additionalProperties:
       labelZh: 数据库用户
       label:
         en: Database User
+        es-es: Usuario de la base de datos
         ja: データベースユーザー
         ms: Pengguna Pangkalan Data
         pt-br: Usuário do Banco de Dados
@@ -61,6 +66,7 @@ additionalProperties:
         ko: 데이터베이스 사용자
         zh-hant: 資料庫用戶
         zh: 数据库用户
+        tr: Veritabanı Kullanıcısı
     - default: gitea
       envKey: PANEL_DB_USER_PASSWORD
       random: true
@@ -70,6 +76,7 @@ additionalProperties:
       labelZh: 数据库密码
       label:
         en: Database Password
+        es-es: Contraseña de la base de datos
         ja: データベースのパスワード
         ms: Kata Laluan Pangkalan Data
         pt-br: Senha do Banco de Dados
@@ -77,6 +84,7 @@ additionalProperties:
         ko: 데이터베이스 비밀번호
         zh-hant: 資料庫密碼
         zh: 数据库密码
+        tr: Veritabanı Parolası
     - default: 3000
       envKey: PANEL_APP_PORT_HTTP
       labelEn: Port
@@ -86,13 +94,15 @@ additionalProperties:
       type: number
       label:
         en: HTTP Port
+        es-es: Puerto HTTP
         ja: HTTP ポート
-        ms: HTTP Port
+        ms: Port HTTP
         pt-br: HTTP Porta
         ru: HTTP Порт
         ko: HTTP 포트
         zh-Hant: HTTP 埠
         zh: HTTP 端口
+        tr: HTTP Bağlantı Noktası
     - default: 222
       envKey: PANEL_APP_PORT_SSH
       labelEn: Port
@@ -102,6 +112,7 @@ additionalProperties:
       type: number
       label:
         en: SSH Port
+        es-es: Puerto SSH
         ja: SSH ポート
         ms: SSH Port
         pt-br: SSH Porta
@@ -109,3 +120,4 @@ additionalProperties:
         ko: SSH 포트
         zh-Hant: SSH 埠
         zh: SSH 端口
+        tr: SSH Bağlantı Noktası

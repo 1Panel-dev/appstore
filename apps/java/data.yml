@@ -12,6 +12,7 @@ additionalProperties:
   shortDescEn: Java Runtime
   description:
     en: Java Runtime Environment
+    es-es: Entorno de ejecución de Java
     ja: Java 実行環境
     ms: Persekitaran Larian Java
     pt-br: Ambiente de Execução Java
@@ -19,6 +20,7 @@ additionalProperties:
     ko: Java 런타임 환경
     zh-Hant: Java 執行環境
     zh: Java 运行环境
+    tr: Java Çalışma Zamanı Ortamı
   type: java
   crossVersionUpdate: false
   limit: 0

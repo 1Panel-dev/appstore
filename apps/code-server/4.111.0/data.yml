@@ -10,6 +10,7 @@ additionalProperties:
       type: number
       label:
         en: Port
+        es-es: Puerto
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -17,6 +18,7 @@ additionalProperties:
         ko: 포트
         zh-Hant: 埠
         zh: 端口
+        tr: Bağlantı Noktası
     - default: code
       edit: true
       envKey: WEB_PASSWORD
@@ -28,6 +30,7 @@ additionalProperties:
       type: password
       label:
         en: Web access password
+        es-es: Contraseña de acceso web
         ja: ウェブアクセスパスワード
         ms: Kata laluan akses web
         pt-br: Senha de acesso à web
@@ -35,6 +38,7 @@ additionalProperties:
         ko: 웹 액세스 비밀번호
         zh-Hant: 網頁存取密碼
         zh: 网页访问密码
+        tr: Web Erişim Parolası
     - default: code
       edit: true
       envKey: SUDO_PASSWORD
@@ -46,6 +50,7 @@ additionalProperties:
       type: password
       label:
         en: Sudo password
+        es-es: Contraseña de sudo
         ja: Sudo パスワード
         ms: Kata laluan Sudo
         pt-br: Senha do Sudo
@@ -53,4 +58,5 @@ additionalProperties:
         ko: Sudo 비밀번호
         zh-Hant: Sudo 密碼
         zh: Sudo 密码
+        tr: Sudo Parolası
 

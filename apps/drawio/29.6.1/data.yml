@@ -10,13 +10,15 @@ additionalProperties:
           type: number
           label:
             en: HTTP Port
+            es-es: Puerto HTTP
             ja: HTTP ポート
-            ms: HTTP Port
+            ms: Port HTTP
             pt-br: HTTP Porta
             ru: HTTP Порт
             ko: HTTP 포트
             zh-Hant: HTTP 埠
             zh: HTTP 端口
+            tr: HTTP Bağlantı Noktası
         - default: 6443
           edit: true
           envKey: PANEL_APP_PORT_HTTPS
@@ -27,10 +29,12 @@ additionalProperties:
           type: number
           label:
             en: HTTPS Port
+            es-es: Puerto HTTPS
             ja: HTTPS ポート
-            ms: HTTPS Port
+            ms: Port HTTPS
             pt-br: HTTPS Porta
             ru: HTTPS Порт
             ko: HTTPS 포트
             zh-Hant: HTTPS 埠
             zh: HTTPS 端口
+            tr: HTTPS Bağlantı Noktası

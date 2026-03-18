@@ -10,6 +10,17 @@ additionalProperties:
         - Tool
     shortDescZh: 基于 Spring-Boot 的通用文件在线预览项目
     shortDescEn: Universal File Online Preview Project based on Spring-Boot
+    description:
+      en: Universal File Online Preview Project based on Spring-Boot
+      zh: 基于 Spring-Boot 的通用文件在线预览项目
+      es-es: Proyecto universal de vista previa de archivos en línea basado en Spring Boot
+      zh-Hant: 基於 Spring-Boot 的通用檔案線上預覽專案
+      ja: Spring-Boot ベースの汎用ファイルオンラインプレビュー・プロジェクト
+      ko: Spring-Boot 기반 범용 파일 온라인 미리보기 프로젝트
+      ms: Projek pratonton fail dalam talian sejagat berasaskan Spring-Boot
+      pt-br: Projeto universal de visualização online de arquivos baseado em Spring-Boot
+      ru: Универсальный проект онлайн-просмотра файлов на базе Spring-Boot
+      tr: Spring-Boot tabanlı evrensel çevrimiçi dosya önizleme projesi
     type: website
     crossVersionUpdate: true
     limit: 0

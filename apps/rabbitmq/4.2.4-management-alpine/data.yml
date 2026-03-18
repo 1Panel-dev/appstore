@@ -6,6 +6,7 @@ additionalProperties:
           labelZh: 管理员
           label:
             en: RabbitMQ User
+            es-es: RabbitMQ Usuario
             ja: RabbitMQ ユーザー
             ms: Pengguna RabbitMQ
             pt-br: Usuário RabbitMQ
@@ -13,6 +14,7 @@ additionalProperties:
             ko: RabbitMQ 사용자
             zh: 管理员
             zh-Hant: 管理員
+            tr: RabbitMQ Kullanıcı
           required: true
           type: text
         - default: rabbitmq
@@ -21,6 +23,7 @@ additionalProperties:
           labelZh: 管理员密码
           label:
             en: RabbitMQ User Password
+            es-es: RabbitMQ Usuario Contraseña
             ja: RabbitMQ ユーザーパスワード
             ms: Kata Laluan Pengguna RabbitMQ
             pt-br: Senha do Usuário RabbitMQ
@@ -28,6 +31,7 @@ additionalProperties:
             ko: RabbitMQ 사용자 비밀번호
             zh: 管理员密码
             zh-Hant: 管理員密碼
+            tr: RabbitMQ Kullanıcı Parola
           required: true
           type: text
         - default: 15672
@@ -37,6 +41,7 @@ additionalProperties:
           labelZh: Dashboard 端口
           label:
             en: Dashboard Port
+            es-es: Dashboard Puerto
             ja: ダッシュボードポート
             ms: Port Papan Pemuka
             pt-br: Porta do Painel
@@ -44,6 +49,7 @@ additionalProperties:
             ko: 대시보드 포트
             zh: Dashboard 端口
             zh-Hant: Dashboard 埠
+            tr: Kontrol Paneli Bağlantı Noktası
           required: true
           rule: paramPort
           type: number
@@ -54,6 +60,7 @@ additionalProperties:
           labelZh: 服务端口
           label:
             en: Service Port
+            es-es: Servicio Puerto
             ja: サービスポート
             ms: Port Perkhidmatan
             pt-br: Porta de Serviço
@@ -61,6 +68,7 @@ additionalProperties:
             ko: 서비스 포트
             zh: 服务端口
             zh-Hant: 服務埠
+            tr: Hizmet Bağlantı Noktası
           required: true
           rule: paramPort
           type: number

@@ -6,6 +6,7 @@ additionalProperties:
       labelZh: 端口
       label:
         en: Port
+        es-es: Puerto
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -13,6 +14,7 @@ additionalProperties:
         ko: 포트
         zh: 端口
         zh-Hant: 埠
+        tr: Bağlantı Noktası
       edit: true
       required: true
       rule: paramPort
@@ -23,6 +25,7 @@ additionalProperties:
       labelZh: 主密钥
       label:
         en: MasterKey
+        es-es: MasterClave
         ja: マスターキー
         ms: Kunci Utama
         pt-br: Chave Mestra
@@ -30,6 +33,7 @@ additionalProperties:
         ko: 마스터 키
         zh: 主密钥
         zh-Hant: 主密鑰
+        tr: Ana Anahtar
       edit: true
       required: true
       random: true
@@ -41,6 +45,7 @@ additionalProperties:
       labelZh: Meilisearch 的内置遥测
       label:
         en: Meilisearch's built-in telemetry
+        es-es: Telemetría integrada de Meilisearch
         ja: Meilisearch の組み込みテレメトリ
         ms: Telemetri Bawaan Meilisearch
         pt-br: Telemetria Interna do Meilisearch
@@ -48,6 +53,7 @@ additionalProperties:
         ko: Meilisearch의 내장 원격 측정
         zh: Meilisearch 的内置遥测
         zh-Hant: Meilisearch 的內置遙測
+        tr: Meilisearch Yerleşik Telemetrisi
       edit: true
       type: select
       values:

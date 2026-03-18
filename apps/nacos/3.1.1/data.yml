@@ -4,6 +4,17 @@ additionalProperties:
       envKey: NACOS_AUTH_ENABLE
       labelEn: Enable Authentication
       labelZh: 开启鉴权
+      label:
+        en: Enable Authentication
+        zh: 开启鉴权
+        es-es: Habilitar autenticación
+        zh-Hant: 啟用驗證
+        ja: 認証を有効化
+        ko: 인증 활성화
+        ms: Dayakan pengesahan
+        pt-br: Ativar autenticação
+        ru: Включить аутентификацию
+        tr: Kimlik doğrulamayı etkinleştir
       required: true
       type: select
       values:
@@ -16,6 +27,17 @@ additionalProperties:
       envKey: PANEL_APP_PORT_HTTP
       labelEn: Nacos GUI port
       labelZh: Nacos 界面 访问端口
+      label:
+        en: Nacos GUI port
+        zh: Nacos 界面 访问端口
+        es-es: Puerto GUI de Nacos
+        zh-Hant: Nacos GUI 埠
+        ja: Nacos GUI ポート
+        ko: Nacos GUI 포트
+        ms: Port GUI Nacos
+        pt-br: Porta GUI do Nacos
+        ru: GUI-порт Nacos
+        tr: Nacos GUI bağlantı noktası
       required: true
       rule: paramPort
       type: number
@@ -24,6 +46,17 @@ additionalProperties:
       envKey: PANEL_APP_PORT_API_HTTP
       labelEn: Nacos api port
       labelZh: Nacos API端口
+      label:
+        en: Nacos api port
+        zh: Nacos API端口
+        es-es: Puerto API de Nacos
+        zh-Hant: Nacos API 埠
+        ja: Nacos API ポート
+        ko: Nacos API 포트
+        ms: Port API Nacos
+        pt-br: Porta API do Nacos
+        ru: API-порт Nacos
+        tr: Nacos API bağlantı noktası
       required: true
       rule: paramPort
       type: number
@@ -32,6 +65,17 @@ additionalProperties:
       envKey: PANEL_APP_PORT_COMMUNICATION
       labelEn: Nacos communication port
       labelZh: Nacos 通讯端口
+      label:
+        en: Nacos communication port
+        zh: Nacos 通讯端口
+        es-es: Puerto de comunicación de Nacos
+        zh-Hant: Nacos 通訊埠
+        ja: Nacos 通信ポート
+        ko: Nacos 통신 포트
+        ms: Port komunikasi Nacos
+        pt-br: Porta de comunicação do Nacos
+        ru: Порт связи Nacos
+        tr: Nacos iletişim bağlantı noktası
       required: true
       rule: paramPort
       type: number
@@ -40,6 +84,17 @@ additionalProperties:
       envKey: NACOS_AUTH_IDENTITY_KEY
       labelEn: Nacos auth identity key
       labelZh: Nacos身份验证密钥键
+      label:
+        en: Nacos auth identity key
+        zh: Nacos身份验证密钥键
+        es-es: Clave de identidad de autenticación de Nacos
+        zh-Hant: Nacos 驗證識別鍵
+        ja: Nacos 認証 ID キー
+        ko: Nacos 인증 식별 키
+        ms: Kunci identiti auth Nacos
+        pt-br: Chave de identidade de autenticação do Nacos
+        ru: Ключ идентификации аутентификации Nacos
+        tr: Nacos kimlik doğrulama anahtarı
       required: true
       type: text
     - default: "security"
@@ -47,6 +102,17 @@ additionalProperties:
       envKey: NACOS_AUTH_IDENTITY_VALUE
       labelEn: Nacos auth identity value
       labelZh: Nacos身份验证密钥值
+      label:
+        en: Nacos auth identity value
+        zh: Nacos身份验证密钥值
+        es-es: Valor de identidad de autenticación de Nacos
+        zh-Hant: Nacos 驗證識別值
+        ja: Nacos 認証 ID 値
+        ko: Nacos 인증 식별 값
+        ms: Nilai identiti auth Nacos
+        pt-br: Valor de identidade de autenticação do Nacos
+        ru: Значение идентификации аутентификации Nacos
+        tr: Nacos kimlik doğrulama değeri
       required: true
       type: text
     - default: "SecretKey012345678901234567890123456789012345678901234567890123456789"
@@ -54,6 +120,17 @@ additionalProperties:
       envKey: NACOS_AUTH_TOKEN
       labelEn: Nacos auth token
       labelZh: Nacos身份验证令牌
+      label:
+        en: Nacos auth token
+        zh: Nacos身份验证令牌
+        es-es: Token de autenticación de Nacos
+        zh-Hant: Nacos 驗證 Token
+        ja: Nacos 認証トークン
+        ko: Nacos 인증 토큰
+        ms: Token auth Nacos
+        pt-br: Token de autenticação do Nacos
+        ru: Токен аутентификации Nacos
+        tr: Nacos kimlik doğrulama tokenı
       required: true
       type: text
     - default: ""
@@ -61,6 +138,17 @@ additionalProperties:
       envKey: NACOS_SERVER_IP
       labelEn: IP can be specified in multi network card mode
       labelZh: 多网卡模式下可以指定IP
+      label:
+        en: IP can be specified in multi network card mode
+        zh: 多网卡模式下可以指定IP
+        es-es: Se puede especificar la IP en modo multitarjeta de red
+        zh-Hant: 多網卡模式下可指定 IP
+        ja: マルチネットワークカードモードでは IP を指定できます
+        ko: 다중 네트워크 카드 모드에서 IP를 지정할 수 있습니다
+        ms: IP boleh ditentukan dalam mod berbilang kad rangkaian
+        pt-br: O IP pode ser especificado no modo de múltiplas placas de rede
+        ru: IP можно указать в режиме нескольких сетевых карт
+        tr: Çoklu ağ kartı modunda IP belirtilebilir
       required: false
       type: text
     - default: "2g"
@@ -68,6 +156,17 @@ additionalProperties:
       envKey: JVM_XMS
       labelEn: JVM_XMS
       labelZh: JVM_XMS
+      label:
+        en: JVM_XMS
+        zh: JVM_XMS
+        es-es: Valor JVM_XMS
+        zh-Hant: JVM_XMS
+        ja: JVM_XMS
+        ko: JVM_XMS
+        ms: JVM_XMS
+        pt-br: JVM_XMS
+        ru: JVM_XMS
+        tr: JVM_XMS degeri
       required: true
       type: text
     - default: "2g"
@@ -75,6 +174,17 @@ additionalProperties:
       envKey: JVM_XMX
       labelEn: JVM_XMX
       labelZh: JVM_XMX
+      label:
+        en: JVM_XMX
+        zh: JVM_XMX
+        es-es: Valor JVM_XMX
+        zh-Hant: JVM_XMX
+        ja: JVM_XMX
+        ko: JVM_XMX
+        ms: JVM_XMX
+        pt-br: JVM_XMX
+        ru: JVM_XMX
+        tr: JVM_XMX degeri
       required: true
       type: text
     - default: "1g"
@@ -82,6 +192,17 @@ additionalProperties:
       envKey: JVM_XMN
       labelEn: JVM_XMN
       labelZh: JVM_XMN
+      label:
+        en: JVM_XMN
+        zh: JVM_XMN
+        es-es: Valor JVM_XMN
+        zh-Hant: JVM_XMN
+        ja: JVM_XMN
+        ko: JVM_XMN
+        ms: JVM_XMN
+        pt-br: JVM_XMN
+        ru: JVM_XMN
+        tr: JVM_XMN degeri
       required: true
       type: text
     - default: "128m"
@@ -89,6 +210,17 @@ additionalProperties:
       envKey: JVM_MS
       labelEn: JVM_MS
       labelZh: JVM_MS
+      label:
+        en: JVM_MS
+        zh: JVM_MS
+        es-es: Valor JVM_MS
+        zh-Hant: JVM_MS
+        ja: JVM_MS
+        ko: JVM_MS
+        ms: JVM_MS
+        pt-br: JVM_MS
+        ru: JVM_MS
+        tr: JVM_MS degeri
       required: true
       type: text
     - default: "320m"
@@ -96,5 +228,16 @@ additionalProperties:
       envKey: JVM_MMS
       labelEn: JVM_MMS
       labelZh: JVM_MMS
+      label:
+        en: JVM_MMS
+        zh: JVM_MMS
+        es-es: Valor JVM_MMS
+        zh-Hant: JVM_MMS
+        ja: JVM_MMS
+        ko: JVM_MMS
+        ms: JVM_MMS
+        pt-br: JVM_MMS
+        ru: JVM_MMS
+        tr: JVM_MMS degeri
       required: true
       type: text

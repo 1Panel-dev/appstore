@@ -10,6 +10,17 @@ additionalProperties:
     - Tool
   shortDescZh: 简单易用的 DDNS
   shortDescEn: Simple and easy to use DDNS
+  description:
+    en: Simple and easy to use DDNS
+    zh: 简单易用的 DDNS
+    es-es: DDNS simple y fácil de usar
+    zh-Hant: 簡單易用的 DDNS
+    ja: シンプルで使いやすい DDNS
+    ko: 간단하고 사용하기 쉬운 DDNS
+    ms: DDNS yang ringkas dan mudah digunakan
+    pt-br: Um DDNS simples e fácil de usar
+    ru: Простой и удобный DDNS
+    tr: Basit ve kullanımı kolay DDNS
   type: website
   crossVersionUpdate: true
   limit: 0

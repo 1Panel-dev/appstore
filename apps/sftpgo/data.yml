@@ -12,6 +12,7 @@ additionalProperties:
     shortDescEn: Fully featured and highly configurable SFTP server
     description:
         en: Fully featured and highly configurable SFTP server
+        es-es: Fully featured and highly configurable SFTP servidor
         ja: 完全機能を備え、高度に構成可能なSFTPサーバー
         ms: Pelayan SFTP yang lengkap dan sangat boleh dikonfigurasikan
         pt-br: Servidor SFTP totalmente funcional e altamente configurável
@@ -19,6 +20,7 @@ additionalProperties:
         ko: 완전히 기능이 갖추어지고 매우 구성 가능한 SFTP 서버
         zh-hant: 功能齊全且高度可配置的 SFTP 伺服器
         zh: 功能齐全且高度可配置的 SFTP 服务器
+        tr: Fully featured and highly configurable SFTP sunucu
     type: website
     crossVersionUpdate: false
     limit: 1

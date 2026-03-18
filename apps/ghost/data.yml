@@ -12,6 +12,7 @@ additionalProperties:
   shortDescEn: The best open source blog & newsletter platform.
   description:
     en: The best open source blog & newsletter platform.
+    es-es: The best de código abierto blog & newsletter plataforma.
     ja: 最高のオープンソースブログ＆ニュースレタープラットフォーム。
     ms: Platform blog & surat berita sumber terbuka terbaik.
     pt-br: A melhor plataforma de blog e boletins informativos de código aberto.
@@ -19,6 +20,7 @@ additionalProperties:
     ko: 최고의 오픈 소스 블로그 및 뉴스레터 플랫폼입니다.
     zh-hant: 最佳開源博客與電子報平台。
     zh: 最佳开源博客和电子报平台。
+    tr: The best open source blog & bülten platform.
   type: website
   crossVersionUpdate: true
   limit: 0

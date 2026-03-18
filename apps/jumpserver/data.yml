@@ -12,6 +12,7 @@ additionalProperties:
   shortDescEn: The world's first open-source Bastion Host
   description:
     en: The world's first open-source Bastion Host
+    es-es: El primer bastión de código abierto del mundo
     ja: 世界初のオープンソースのバスティオンホスト
     ms: Bastion Host sumber terbuka pertama di dunia
     pt-br: O primeiro Bastion Host de código aberto do mundo
@@ -19,6 +20,7 @@ additionalProperties:
     ko: 세계 최초의 오픈 소스 Bastion Host
     zh-Hant: 全球首個開源堡壘主機
     zh: 广受欢迎的开源堡垒机
+    tr: Dunyanin ilk acik kaynakli bastion hostu
   type: website
   crossVersionUpdate: false
   limit: 1

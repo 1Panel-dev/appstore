@@ -20,6 +20,7 @@ additionalProperties:
     document: https://github.com/dgtlmoon/changedetection.io/wiki
     description:
         en: free open source website change detection, website watcher, restock monitor and notification service
+        es-es: free de código abierto website change detection, website watcher, restock monitor and notification service
         zh: 免费开源网站变更检测、网站观察、补货监控和通知服务
         zh-Hant: 免費開源網站變更檢測、網站觀察、補貨監控和通知服務
         ja: 無料のオープンソースのウェブサイト変更検出、ウェブサイトウォッチャー、在庫補充モニターおよび通知サービス
@@ -27,6 +28,7 @@ additionalProperties:
         pt-br: Serviço gratuito e de código aberto para detecção de mudanças em sites, monitoramento de sites, monitor de reposição e notificações
         ru: Бесплатный сервис с открытым исходным кодом для отслеживания изменений на веб-сайтах, наблюдения за сайтами, мониторинга пополнения запасов и уведомлений
         ko: 무료 오픈 소스 웹사이트 변경 감지, 웹사이트 감시, 재입고 모니터링 및 알림 서비스
+        tr: ücretsiz açık kaynaklı website change detection, website watcher, restock monitor and notification hizmet
     architectures:
       - amd64
       - arm64

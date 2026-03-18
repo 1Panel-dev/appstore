@@ -7,6 +7,7 @@ additionalProperties:
       labelZh: 外部访问端口
       label:
         en: External access port
+        es-es: Puerto de acceso externo
         ja: 外部アクセスポート
         ms: Port Akses Luar
         pt-br: Porta de Acesso Externo
@@ -14,6 +15,7 @@ additionalProperties:
         ko: 외부 액세스 포트
         zh: 外部访问端口
         zh-Hant: 外部訪問埠
+        tr: Harici erisim portu
       required: true
       rule: paramPort
       type: number
@@ -24,6 +26,7 @@ additionalProperties:
       labelZh: TURN 端口
       label:
         en: TURN Port
+        es-es: TURN Puerto
         ja: TURN ポート
         ms: Port TURN
         pt-br: Porta TURN
@@ -31,6 +34,7 @@ additionalProperties:
         ko: TURN 포트
         zh: TURN 端口
         zh-Hant: TURN 埠
+        tr: TURN Bağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -41,6 +45,7 @@ additionalProperties:
       labelZh: 外部 IP 
       label:
         en: EXTERNAL IP
+        es-es: IP externa
         ja: 外部 IP
         ms: IP Luaran
         pt-br: IP Externo
@@ -48,6 +53,7 @@ additionalProperties:
         ko: 외부 IP
         zh: 外部 IP
         zh-Hant: 外部 IP
+        tr: Harici IP
       required: true
       rule: paramCommon
       type: text
@@ -58,6 +64,7 @@ additionalProperties:
       labelZh: TURN 端口范围
       label:
         en: Turn Port Range
+        es-es: Turn Puerto Range
         ja: TURN ポート範囲
         ms: Julat Port TURN
         pt-br: Intervalo de Portas TURN
@@ -65,6 +72,7 @@ additionalProperties:
         ko: TURN 포트 범위
         zh: TURN 端口范围
         zh-Hant: TURN 埠範圍
+        tr: Turn Bağlantı Noktası Aralığı
       required: true
       rule: paramCommon
       type: text

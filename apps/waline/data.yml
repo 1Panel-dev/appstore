@@ -10,6 +10,17 @@ additionalProperties:
         - Tool
     shortDescZh: 一款简洁、安全的评论系统
     shortDescEn: A Simple, Safe Comment System
+    description:
+      en: A Simple, Safe Comment System
+      zh: 一款简洁、安全的评论系统
+      es-es: Un Simple, Safe Comment System
+      zh-Hant: 簡單且安全的評論系統
+      ja: シンプルで安全なコメントシステム
+      ko: 간단하고 안전한 댓글 시스템
+      ms: Sistem komen yang ringkas dan selamat
+      pt-br: Um sistema de comentários simples e seguro
+      ru: Простая и безопасная система комментариев
+      tr: Basit ve güvenli bir yorum sistemi
     type: website
     crossVersionUpdate: true
     limit: 0

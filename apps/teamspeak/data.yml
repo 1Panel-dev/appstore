@@ -18,6 +18,7 @@ additionalProperties:
     document: https://teamspeak.com/en/support/get-started/
     description:
         en: An out-of-this-world VoIP solution
+        es-es: Un out-of-this-world VoIP solution
         zh: 一款出色的网络语音 (VoIP) 解决方案
         zh-Hant: 一款出色的網絡語音 (VoIP) 解決方案
         ja: 卓越したネットワーク音声 (VoIP) ソリューション
@@ -25,5 +26,6 @@ additionalProperties:
         pt-br: Uma solução VoIP fora deste mundo
         ru: Уникальное решение VoIP
         ko: 뛰어난 네트워크 음성 (VoIP) 솔루션
+        tr: Bir out-of-this-world VoIP solution
     architectures:
       - amd64

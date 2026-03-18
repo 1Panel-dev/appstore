@@ -12,6 +12,7 @@ additionalProperties:
     shortDescEn: Open source blogging software and content management system
     description:
         en: Open source blogging software and content management system
+        es-es: De código abierto blogging software and content sistema de gestión
         ja: オープンソースのブログソフトウェアおよびコンテンツ管理システム
         ms: Perisian blog dan sistem pengurusan kandungan sumber terbuka
         pt-br: Software de blog de código aberto e sistema de gerenciamento de conteúdo
@@ -19,6 +20,7 @@ additionalProperties:
         ko: 오픈 소스 블로깅 소프트웨어 및 콘텐츠 관리 시스템
         zh-hant: 開源的博客軟體與內容管理系統
         zh: 著名的开源博客软件和 CMS 系统
+        tr: Açık kaynaklı blogging software and content yönetim system
     type: website
     crossVersionUpdate: true
     limit: 0

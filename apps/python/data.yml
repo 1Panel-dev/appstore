@@ -12,6 +12,7 @@ additionalProperties:
   shortDescEn: Python Runtime
   description:
     en: Python Runtime Environment
+    es-es: Entorno de ejecución de Python
     ja: Python 実行環境
     ms: Persekitaran Larian Python
     pt-br: Ambiente de Execução Python
@@ -19,6 +20,7 @@ additionalProperties:
     ko: Python 런타임 환경
     zh-Hant: Python 執行環境
     zh: Python 运行环境
+    tr: Python Çalışma Zamanı Ortamı
   type: python
   crossVersionUpdate: false
   limit: 0

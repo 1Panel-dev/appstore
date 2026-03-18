@@ -7,13 +7,15 @@ additionalProperties:
       labelZh: HTTP 端口
       label:
         en: HTTP Port
+        es-es: Puerto HTTP
         ja: HTTP ポート
-        ms: HTTP Port
+        ms: Port HTTP
         pt-br: HTTP Porta
         ru: HTTP Порт
         ko: HTTP 포트
         zh-Hant: HTTP 埠
         zh: HTTP 端口
+        tr: HTTP Bağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -24,13 +26,15 @@ additionalProperties:
       labelZh: MCP 端口
       label:
         en: MCP Port
+        es-es: Puerto MCP
         ja: MCP ポート
-        ms: MCP Port
+        ms: Port MCP
         pt-br: MCP Porta
         ru: MCP Порт
         ko: MCP 포트
         zh-Hant: MCP 埠
         zh: MCP 端口
+        tr: MCP Bağlantı Noktası
       required: true
       rule: paramPort
       type: number

@@ -12,6 +12,7 @@ additionalProperties:
     shortDescEn: Build great things at any scale
     description:
         en: Build great things at any scale
+        es-es: Crea grandes cosas a cualquier escala
         ja: あらゆる規模で素晴らしいものを作りましょう
         ms: Bina perkara hebat pada sebarang skala
         pt-br: Construa grandes coisas em qualquer escala
@@ -19,6 +20,7 @@ additionalProperties:
         ko: 모든 규모에서 위대한 것을 만들어보세요
         zh-Hant: 在任何規模上建造偉大的事物
         zh: 在任何规模上建造伟大的事物
+        tr: Her olcekte harika seyler insa edin
     type: website
     crossVersionUpdate: false
     limit: 1

@@ -19,6 +19,7 @@ additionalProperties:
     document: https://kafka.apache.org/documentation/
     description:
         en: Open-source distributed event streaming platform
+        es-es: Open-source distribuido event streaming plataforma
         zh: 开源分布式事件流平台
         zh-Hant: 開源分佈式事件流平台
         ja: オープンソースの分散イベントストリーミングプラットフォーム
@@ -26,6 +27,7 @@ additionalProperties:
         pt-br: Plataforma de streaming de eventos distribuída de código aberto
         ru: Открытая распределённая платформа потоковой передачи событий
         ko: 오픈 소스 분산 이벤트 스트리밍 플랫폼
+        tr: Open-source dağıtık event streaming platform
     memoryRequired: 1024
     architectures:
       - amd64

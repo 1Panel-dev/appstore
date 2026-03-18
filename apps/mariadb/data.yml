@@ -12,6 +12,7 @@ additionalProperties:
     shortDescEn: The open source relational database
     description:
         en: The open source relational database
+        es-es: The de código abierto relational base de datos
         ja: オープンソースのリレーショナルデータベース
         ms: Pangkalan data relasional sumber terbuka
         pt-br: O banco de dados relacional de código aberto
@@ -19,6 +20,7 @@ additionalProperties:
         ko: 오픈 소스 관계형 데이터베이스
         zh-Hant: 開源關聯式資料庫
         zh: 著名的 MySQL 分支版本
+        tr: The open source relational veritabanı
     type: runtime
     crossVersionUpdate: false
     limit: 0

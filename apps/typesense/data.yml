@@ -12,6 +12,7 @@ additionalProperties:
     shortDescEn: Lightning-fast, open-source search engine
     description:
         en: Lightning-fast, open-source search engine
+        es-es: Lightning-fast, open-source motor de búsqueda
         ja: 高速でオープンソースの検索エンジン
         ms: Enjin carian sumber terbuka yang sangat pantas
         pt-br: Motor de busca de código aberto extremamente rápido
@@ -19,6 +20,7 @@ additionalProperties:
         ko: 빠르고 오픈 소스 검색 엔진
         zh-Hant: 速度極快的開源搜索引擎
         zh: 速度极快的开源搜索引擎
+        tr: Lightning-fast, open-source arama motoru
     type: tool
     crossVersionUpdate: false
     limit: 0

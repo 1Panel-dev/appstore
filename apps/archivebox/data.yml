@@ -12,6 +12,7 @@ additionalProperties:
     shortDescEn: Open source self-hosted web archiving
     description:
       en: Open source self-hosted web archiving
+      es-es: Archivado web autoalojado y de codigo abierto
       ja: オープンソースのセルフホスト型ウェブアーカイブツール
       ms: Alat pengarkiban web sumber terbuka yang dihoskan sendiri
       pt-br: Ferramenta de arquivamento web de código aberto auto-hospedada
@@ -19,6 +20,7 @@ additionalProperties:
       ko: 오픈 소스 셀프 호스팅 웹 아카이빙 도구
       zh-Hant: 開源自託管網頁歸檔工具
       zh: 开源自托管网页存档工具
+      tr: Acik kaynakli, self-hosted web arsivleme araci
     type: website
     crossVersionUpdate: true
     limit: 0

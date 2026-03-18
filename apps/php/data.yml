@@ -10,6 +10,17 @@ additionalProperties:
     - Runtime
   shortDescZh: PHP 运行环境
   shortDescEn: PHP Runtime
+  description:
+    en: PHP Runtime
+    zh: PHP 运行环境
+    es-es: Entorno de ejecución de PHP
+    zh-Hant: PHP 執行環境
+    ja: PHP 実行環境
+    ko: PHP 실행 환경
+    ms: Persekitaran masa jalan PHP
+    pt-br: Ambiente de execução PHP
+    ru: Среда выполнения PHP
+    tr: PHP çalışma zamanı ortamı
   type: php
   crossVersionUpdate: false
   limit: 0

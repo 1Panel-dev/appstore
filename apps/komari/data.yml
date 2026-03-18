@@ -12,6 +12,7 @@ additionalProperties:
     shortDescEn: A lightweight self-hosted server monitoring tool
     description:
         en: A lightweight self-hosted server monitoring tool
+        es-es: Un ligero autoalojado servidor monitorización herramienta
         ja: 軽量なセルフホスト型サーバーモニタリングツール
         ms: Alat pemantauan pelayan yang dihoskan sendiri yang ringan
         pt-br: Uma ferramenta leve de monitoramento de servidor auto-hospedado
@@ -19,6 +20,7 @@ additionalProperties:
         ko: 경량 셀프 호스팅 서버 모니터링 도구
         zh-Hant: 輕量級的自架伺服器監控工具
         zh: 轻量级的自托管服务器监控工具
+        tr: Hafif ve self-hosted sunucu izleme araci
     type: website
     crossVersionUpdate: true
     limit: 0

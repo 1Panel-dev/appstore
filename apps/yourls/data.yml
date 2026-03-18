@@ -19,6 +19,7 @@ additionalProperties:
     document: https://yourls.org/docs
     description:
         en: The de facto standard self-hosted URL shortener in PHP
+        es-es: The de facto standard autoalojado URL shortener in PHP
         zh: PHP 驱动的标准自托管 URL 缩短器
         zh-Hant: PHP 驅動的標準自託管 URL 縮短器
         ja: PHP で駆動される事実上の標準的な自己ホスト型 URL 短縮ツール
@@ -26,6 +27,7 @@ additionalProperties:
         pt-br: O encurtador de URL auto-hospedado padrão de fato em PHP
         ru: Фактический стандартный самохостинг для сокращения URL на PHP
         ko: PHP에서 구동되는 사실상의 표준 자체 호스팅 URL 단축기
+        tr: The de facto standard kendi kendine barındırılan URL shortener in PHP
     architectures:
         - amd64
         - arm64

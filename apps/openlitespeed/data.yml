@@ -20,6 +20,7 @@ additionalProperties:
     document: https://openlitespeed.org/#install
     description:
         en: A high-performance, lightweight, open source HTTP server
+        es-es: Un high-performance, ligero, de código abierto HTTP servidor
         zh: 高性能、轻量级、开源的 HTTP 服务器
         zh-Hant: 高性能、輕量級、開源的 HTTP 伺服器
         ja: 高性能で軽量、オープンソースの HTTP サーバー
@@ -27,5 +28,6 @@ additionalProperties:
         pt-br: Um servidor HTTP de alto desempenho, leve e de código aberto
         ru: Высокопроизводительный, легковесный, открытый HTTP-сервер
         ko: 고성능, 경량, 오픈 소스 HTTP 서버
+        tr: Bir high-performance, hafif, open source HTTP sunucu
     architectures:
       - amd64

@@ -20,6 +20,7 @@ additionalProperties:
     document: https://freshrss.github.io/FreshRSS/
     description:
         en: A self-hosted RSS and Atom feed aggregator
+        es-es: Un autoalojado RSS and Atom feed aggregator
         zh: 自托管的 RSS 和 Atom 源聚合器
         zh-Hant: 自託管的 RSS 和 Atom 源聚合器
         ja: 自己ホスト型の RSS および Atom フィードアグリゲーター
@@ -27,6 +28,7 @@ additionalProperties:
         pt-br: Um agregador de feeds RSS e Atom auto-hospedado
         ru: Самостоятельно размещаемый агрегатор RSS и Atom-каналов
         ko: 자체 호스팅 RSS 및 Atom 피드 집계기
+        tr: Self-hosted RSS ve Atom besleme toplayicisi
     architectures:
       - amd64
       - arm64

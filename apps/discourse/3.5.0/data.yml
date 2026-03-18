@@ -7,13 +7,15 @@ additionalProperties:
       labelZh: 访问域名
       label:
         en: HOST
+        es-es: Host
         ja: ホスト
         ms: HOS
-        pt-br: HOST
+        pt-br: Host
         ru: ХОСТ
         ko: 호스트
         zh: 访问域名
         zh-Hant: 訪問域名
+        tr: Ana Bilgisayar
       required: true
       type: text
     - default: 3000
@@ -22,6 +24,7 @@ additionalProperties:
       labelZh: HTTP 端口
       label:
         en: Port
+        es-es: Puerto
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -29,6 +32,7 @@ additionalProperties:
         ko: 포트
         zh: HTTP 端口
         zh-Hant: HTTP 埠
+        tr: Bağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -39,6 +43,7 @@ additionalProperties:
       labelZh: 管理员
       label:
         en: Admin User
+        es-es: Usuario administrador
         ja: 管理者
         ms: Pengguna Admin
         pt-br: Usuário Admin
@@ -46,6 +51,7 @@ additionalProperties:
         ko: 관리자
         zh: 管理员
         zh-Hant: 管理員
+        tr: Yönetici Kullanıcısı
       required: true
       type: text
     - default: ""
@@ -55,6 +61,7 @@ additionalProperties:
       labelZh: 管理员邮箱
       label:
         en: email
+        es-es: correo electrónico
         ja: メール
         ms: E-mel
         pt-br: E-mail
@@ -62,6 +69,7 @@ additionalProperties:
         ko: 이메일
         zh: 管理员邮箱
         zh-Hant: 管理員郵箱
+        tr: E-posta
       required: true
       type: text
     - default: ""
@@ -71,6 +79,7 @@ additionalProperties:
       labelZh: 管理员密码(长度必须>10)
       label:
         en: password(must length > 10)
+        es-es: contraseña (la longitud debe ser > 10)
         ja: パスワード(長さ > 10 必須)
         ms: kata laluan (panjang mesti > 10)
         pt-br: senha (deve ter comprimento > 10)
@@ -78,6 +87,7 @@ additionalProperties:
         ko: 비밀번호(길이 > 10 필수)
         zh: 管理员密码(长度必须>10)
         zh-Hant: 管理員密碼(長度必須>10)
+        tr: parola (uzunluk 10'dan buyuk olmalidir)
       required: true
       type: password
       rule: paramCommon
@@ -88,6 +98,7 @@ additionalProperties:
       labelZh: postgresql数据库服务
       label:
         en: postgresql Database Service
+        es-es: Servicio de base de datos PostgreSQL
         ja: postgresql データベース サービス
         ms: Perkhidmatan Pangkalan Data postgresql
         pt-br: Serviço de Banco de Dados postgresql
@@ -95,6 +106,7 @@ additionalProperties:
         ko: postgresql 데이터베이스 서비스
         zh: postgresql数据库服务
         zh-Hant: postgresql數據庫服務
+        tr: PostgreSQL Veritabanı Hizmeti
       required: true
       type: service
     - default: discourse
@@ -103,6 +115,7 @@ additionalProperties:
       labelZh: 数据库名
       label:
         en: Database
+        es-es: Base de datos
         ja: データベース
         ms: Pangkalan Data
         pt-br: Banco de Dados
@@ -110,6 +123,7 @@ additionalProperties:
         ko: 데이터베이스
         zh: 数据库名
         zh-Hant: 數據庫名
+        tr: Veritabanı
       random: true
       required: true
       rule: paramCommon
@@ -120,6 +134,7 @@ additionalProperties:
       labelZh: 数据库用户
       label:
         en: User
+        es-es: Usuario
         ja: ユーザー
         ms: Pengguna
         pt-br: Usuário
@@ -127,6 +142,7 @@ additionalProperties:
         ko: 사용자
         zh: 数据库用户
         zh-Hant: 數據庫用戶
+        tr: Kullanıcı
       random: true
       required: true
       rule: paramCommon
@@ -137,6 +153,7 @@ additionalProperties:
       labelZh: 数据库用户密码
       label:
         en: Password
+        es-es: Contraseña
         ja: パスワード
         ms: Kata laluan
         pt-br: Senha
@@ -144,6 +161,7 @@ additionalProperties:
         ko: 비밀번호
         zh: 数据库用户密码
         zh-Hant: 數據庫用戶密碼
+        tr: Parola
       random: true
       required: true
       type: password
@@ -154,6 +172,7 @@ additionalProperties:
       labelZh: redis 服务
       label:
         en: Redis Service
+        es-es: Servicio de Redis
         ja: redis サービス
         ms: Perkhidmatan Redis
         pt-br: Serviço Redis
@@ -161,6 +180,7 @@ additionalProperties:
         ko: redis 서비스
         zh: redis 服务
         zh-Hant: redis 服務
+        tr: Redis Hizmeti
       required: true
       type: service
     - default: ""
@@ -169,6 +189,7 @@ additionalProperties:
       labelZh: redis 密码
       label:
         en: Password
+        es-es: Contraseña
         ja: パスワード
         ms: Kata laluan
         pt-br: Senha
@@ -176,6 +197,7 @@ additionalProperties:
         ko: 비밀번호
         zh: redis 密码
         zh-Hant: redis 密碼
+        tr: Parola
       random: true
       required: true
       rule: paramComplexity

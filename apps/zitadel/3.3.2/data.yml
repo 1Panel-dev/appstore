@@ -6,6 +6,7 @@ additionalProperties:
       labelZh: 端口
       label:
         en: Port
+        es-es: Puerto
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -13,6 +14,7 @@ additionalProperties:
         ko: 포트
         zh-Hant: 埠
         zh: 端口
+        tr: Bağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -24,6 +26,7 @@ additionalProperties:
       type: apps
       label:
         en: Database Service
+        es-es: Servicio de base de datos
         ja: データベースサービス
         ms: Perkhidmatan Pangkalan Data
         pt-br: Serviço de Banco de Dados
@@ -31,6 +34,7 @@ additionalProperties:
         ko: 데이터베이스 서비스
         zh-hant: 資料庫服務
         zh: 数据库服务
+        tr: Veritabanı Hizmeti
       values:
         - label: PostgreSQL
           value: postgresql
@@ -45,6 +49,7 @@ additionalProperties:
       labelZh: 数据库名称
       label:
         en: Database Name
+        es-es: Nombre de la base de datos
         ja: データベース名
         ms: Nama Pangkalan Database
         pt-br: Nome do Banco de Dados
@@ -52,6 +57,7 @@ additionalProperties:
         ko: 데이터베이스 이름
         zh-hant: 數據庫名稱
         zh: 数据库名称
+        tr: Veritabanı Adı
       random: true
       required: true
       rule: paramCommon
@@ -62,6 +68,7 @@ additionalProperties:
       labelZh: 数据库用户
       label:
         en: Database User
+        es-es: Usuario de la base de datos
         ja: データベースユーザー
         ms: Pengguna Pangkalan Data
         pt-br: Usuário do Banco de Dados
@@ -69,6 +76,7 @@ additionalProperties:
         ko: 데이터베이스 사용자
         zh-hant: 數據庫用戶
         zh: 数据库用户
+        tr: Veritabanı Kullanıcısı
       random: true
       required: true
       rule: paramCommon
@@ -79,6 +87,7 @@ additionalProperties:
       labelZh: 数据库密码
       label:
         en: Database Password
+        es-es: Contraseña de la base de datos
         ja: データベースパスワード
         ms: Kata Laluan Pangkalan Data
         pt-br: Senha do Banco de Dados
@@ -86,6 +95,7 @@ additionalProperties:
         ko: 데이터베이스 비밀번호
         zh-hant: 數據庫密碼
         zh: 数据库密码 
+        tr: Veritabanı Parolası
       random: true
       required: true
       type: password
@@ -95,6 +105,7 @@ additionalProperties:
       labelZh: 管理密钥（32位长度）
       label:
         en: Management Key (32 characters)
+        es-es: Management Clave (32 characters)
         ja: 管理キー（32文字）
         ms: Kunci Pengurusan (32 aksara)
         pt-br: Chave de Gerenciamento (32 caracteres)
@@ -102,6 +113,7 @@ additionalProperties:
         ko: 관리 키 (32자)
         zh-Hant: 管理密鑰（32位長度）
         zh: 管理密钥（32位长度）
+        tr: Management Anahtar (32 characters)
       required: true
       type: password
     - default: sso.example.com
@@ -110,6 +122,7 @@ additionalProperties:
       labelZh: 外部域名
       label:
         en: External Domain
+        es-es: External Dominio
         ja: 外部ドメイン
         ms: Domain Luar
         pt-br: Domínio Externo
@@ -117,6 +130,7 @@ additionalProperties:
         ko: 외부 도메인
         zh-hant: 外部域名
         zh: 外部域名
+        tr: External Alan Adı
       random: false
       required: true
       rule: paramCommon
@@ -127,6 +141,7 @@ additionalProperties:
       labelZh: 组织管理员
       label:
         en: Organization Admin
+        es-es: Administrador de la organización
         ja: 組織管理者
         ms: Pentadbir Organisasi
         pt-br: Administrador da Organização
@@ -134,6 +149,7 @@ additionalProperties:
         ko: 조직 관리자
         zh-Hant: 組織管理員
         zh: 组织管理员
+        tr: Kurum yoneticisi
       random: false
       required: true
       rule: paramComplexity
@@ -144,6 +160,7 @@ additionalProperties:
       labelZh: 组织管理员密码
       label:
         en: Organization admin password
+        es-es: Contraseña del administrador de la organización
         ja: 組織管理者パスワード
         ms: Kata Laluan Pentadbir Organisasi
         pt-br: Senha do Administrador da Organização
@@ -151,6 +168,7 @@ additionalProperties:
         ko: 조직 관리자 비밀번호
         zh-hant: 組織管理員密碼
         zh: 组织管理员密码
+        tr: Kurum yoneticisi parolasi
       random: true
       required: true
       type: password

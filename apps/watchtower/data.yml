@@ -20,6 +20,7 @@ additionalProperties:
     document: https://containrrr.dev/watchtower/
     description:
         en: Tool to automatically update Docker container base images
+        es-es: Herramienta para actualizar automáticamente las imágenes base de contenedores Docker
         zh: 自动更新 Docker 容器基础镜像的工具
         zh-Hant: 自動更新 Docker 容器基礎鏡像的工具
         ja: Docker コンテナのベースイメージを自動更新するツール
@@ -27,6 +28,7 @@ additionalProperties:
         pt-br: Ferramenta para atualizar automaticamente as imagens base dos contêineres Docker
         ru: Инструмент для автоматического обновления базовых образов контейнеров Docker
         ko: Docker 컨테이너 기본 이미지를 자동으로 업데이트하는 도구
+        tr: Docker konteyner temel imajlarini otomatik guncelleme araci
     architectures:
       - amd64
       - arm64

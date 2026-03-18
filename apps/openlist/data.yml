@@ -14,6 +14,7 @@ additionalProperties:
     shortDescEn: A file list program that supports multiple storage
     description:
         en: A file list program that supports multiple storage
+        es-es: Un file list program that supports multiple storage
         ja: 複数のストレージをサポートするファイルリストプログラム
         ms: Satu program senarai fail yang menyokong pelbagai storan
         pt-br: Um programa de lista de arquivos que suporta vários armazenamentos
@@ -21,6 +22,7 @@ additionalProperties:
         ko: 여러 저장소를 지원하는 파일 목록 프로그램
         zh-Hant: 一個支持多種存儲的文件列表程序
         zh: 一个支持多种存储的文件列表程序
+        tr: Coklu depolamayi destekleyen dosya listeleme programi
     type: website
     crossVersionUpdate: true
     limit: 0

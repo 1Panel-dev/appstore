@@ -20,6 +20,7 @@ additionalProperties:
     document: https://hub.docker.com/r/bitnami/openldap
     description:
         en: An open source implementation of the Lightweight Directory Access Protocol
+        es-es: Un de código abierto implementation of the Lightweight Directory Access Protocol
         zh: 轻量级目录访问协议的开源实现
         zh-Hant: 輕量級目錄訪問協議的開源實現
         ja: 軽量ディレクトリアクセスプロトコルのオープンソース実装
@@ -27,6 +28,7 @@ additionalProperties:
         pt-br: Uma implementação de código aberto do Protocolo de Acesso a Diretórios Leves
         ru: Открытая реализация протокола легкого доступа к каталогам
         ko: 경량 디렉토리 액세스 프로토콜의 오픈 소스 구현
+        tr: Bir open source implementation of the Lightweight Directory Access Protocol
     architectures:
       - amd64
       - arm64

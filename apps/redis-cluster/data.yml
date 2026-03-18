@@ -10,6 +10,7 @@ additionalProperties:
       - Database
     description:
         en: Redis Cluster
+        es-es: Clúster de Redis
         ja: Redis クラスター
         ms: Redis Kumpulan
         pt-br: Redis Cluster
@@ -17,6 +18,7 @@ additionalProperties:
         ko: 레디스 클러스터
         zh-hant: Redis 集群
         zh: Redis 集群
+        tr: Redis kumesi
     type: runtime
     crossVersionUpdate: false
     limit: 0

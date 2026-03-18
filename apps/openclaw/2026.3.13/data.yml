@@ -10,6 +10,7 @@ additionalProperties:
       type: number
       label:
         en: Web UI Port
+        es-es: Puerto web
         ja: Web UIポート
         ms: Port Web UI
         pt-br: Porta da Web UI
@@ -17,6 +18,7 @@ additionalProperties:
         ko: 웹 UI 포트
         zh-Hant: Web UI 埠
         zh: Web UI 端口
+        tr: Web UI Bağlantı Noktası
     - envKey: PROVIDER
       default: minimax
       edit: false
@@ -57,6 +59,7 @@ additionalProperties:
           value: custom
       label:
         en: Provider
+        es-es: Proveedor
         ja: プロバイダー
         ms: Penyedia
         pt-br: Provedor
@@ -64,6 +67,7 @@ additionalProperties:
         ko: 공급자
         zh-Hant: 供應商
         zh: 模型提供商
+        tr: Saglayici
     - envKey: MODEL
       default: minimax/MiniMax-M2.1
       edit: false
@@ -73,6 +77,7 @@ additionalProperties:
       type: text
       label:
         en: Model
+        es-es: Modelo
         ja: モデル
         ms: Model
         pt-br: Modelo
@@ -80,6 +85,7 @@ additionalProperties:
         ko: 모델
         zh-Hant: 模型
         zh: 模型
+        tr: Model adi
     - envKey: API_KEY
       default: ""
       edit: false
@@ -89,13 +95,15 @@ additionalProperties:
       type: text
       label:
         en: API Key
+        es-es: API Clave
         ja: APIキー
         ms: Kunci API
         pt-br: Chave da API
         ru: API ключ
         ko: API 키
-        zh-Hant: API Key
+        zh-Hant: API 金鑰
         zh: API Key
+        tr: API Anahtarı
     - envKey: BASE_URL
       default: ""
       edit: false
@@ -105,6 +113,7 @@ additionalProperties:
       type: text
       label:
         en: Base URL
+        es-es: URL base
         ja: Base URL
         ms: Base URL
         pt-br: Base URL
@@ -112,6 +121,7 @@ additionalProperties:
         ko: Base URL
         zh-Hant: Base URL
         zh: Base URL
+        tr: Temel URL
       description:
         en: "When using Ollama, you need to fill in this field, for example: http://192.168.1.2:11434/v1"
         ja: "Ollama を使用する場合は、このフィールドに記入する必要があります。例：http://192.168.1.2:11434/v1"
@@ -122,6 +132,7 @@ additionalProperties:
         tr: "Ollama'yı kullanırken, bu alanı doldurmanız gerekir, örneğin: http://192.168.1.2:11434/v1"
         zh-hant: "使用 Ollama 時，需要填寫此欄位，例如：http://192.168.1.2:11434/v1"
         zh: "当使用 Ollama 的时候，需要填写此项，例如：http://192.168.1.2:11434/v1"
+        es-es: "Cuando use Ollama, debe completar este campo; por ejemplo: http://192.168.1.2:11434/v1"
     - envKey: ALLOWED_ORIGIN
       default: ""
       labelEn: External Access Address
@@ -130,6 +141,7 @@ additionalProperties:
       type: text
       label:
         en: External Access Address
+        es-es: External Access Dirección
         ja: 外部アクセスアドレス
         ms: Alamat Akses Luaran
         pt-br: Endereço de Acesso Externo
@@ -137,6 +149,7 @@ additionalProperties:
         ko: 외부 접속 주소
         zh-Hant: 外部訪問地址
         zh: 外部访问地址
+        tr: External Access Adres
       description:
         en: "The default access URL is https://IP:Port and HTTPS is required"
         ja: "デフォルトのアクセスURLは https://IP:Port であり、HTTPSが必要です"
@@ -147,6 +160,7 @@ additionalProperties:
         tr: "Varsayılan erişim URL'si https://IP:Port ve HTTPS gereklidir"
         zh-hant: "預設訪問地址為 https://IP:Port，強制使用 HTTPS 協議"
         zh: "默认访问地址为 https://IP:Port，强制使用 HTTPS 协议"
+        es-es: "La URL de acceso predeterminada es https://IP:Puerto y se requiere HTTPS"
     - default: ""
       disabled: true
       envKey: OPENCLAW_GATEWAY_TOKEN
@@ -154,6 +168,7 @@ additionalProperties:
       labelZh: 令牌
       label:
         en: Token
+        es-es: Token de acceso
         ja: トークン
         ms: Token
         pt-br: Token
@@ -161,6 +176,7 @@ additionalProperties:
         ko: 토큰
         zh-Hant: 權杖
         zh: 令牌
+        tr: Belirteç
       description:
         en: "After installation, enter the installation directory and obtain the Token from the ./data/conf/openclaw.json file. You can later click the Parameters button to edit the application and enter the Token into the input field for convenient use.\nAfter opening the page in your browser, append ?token=xxx to the URL, for example: http://your_address:port?token=xxx, to access it."
         ja: "インストール後、インストールディレクトリに入り、./data/conf/openclaw.json ファイルからトークンを取得します。後でパラメータボタンをクリックしてアプリケーションを編集し、そのトークンを入力フィールドに入力して便利に使用できます。\nブラウザでページを開いた後、URL に ?token=xxx を追加します。例：http://your_address:port?token=xxx でアクセスできます。"
@@ -171,5 +187,6 @@ additionalProperties:
         tr: "Yüklemeden sonra, yükleme dizinine girin ve ./data/conf/openclaw.json dosyasından Token'ı alın. Daha sonra Parametreler düğmesine tıklayarak uygulamayı düzenleyebilir ve Token'ı giriş alanına girerek kolay kullanım sağlayabilirsiniz.\nTarayıcınızda sayfayı açtıktan sonra URL'ye ?token=xxx ekleyin, örneğin: http://your_address:port?token=xxx, erişmek için."
         zh-hant: "安裝成功後，進入安裝目錄，從 ./data/conf/openclaw.json 文件中獲取 Token，後續可以點擊參數按鈕編輯應用，將該 Token 填入輸入框，方便使用。\n瀏覽器打開後，在地址欄 URL 後追加 ?token=xxx，如：http://your_address:port?token=xxx 即可訪問。"
         zh: "安装成功后，进入安装目录，从 ./data/conf/openclaw.json 文件中获取 Token，后续可以点击参数按钮编辑应用，将该 Token 填入输入框，方便使用。\n浏览器打开后，在地址栏 URL 后追加 ?token=xxx，如：http://your_address:port?token=xxx 即可访问。"
+        es-es: "Despues de la instalacion, entre en el directorio de instalacion y obtenga el token del archivo ./data/conf/openclaw.json. Mas adelante puede hacer clic en el boton Parametros para editar la aplicacion e introducir el token en el campo correspondiente para usarlo comodamente.\nDespues de abrir la pagina en el navegador, anada ?token=xxx a la URL, por ejemplo: http://your_address:port?token=xxx, para acceder."
       type: text
       edit: true

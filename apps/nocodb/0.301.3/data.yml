@@ -12,6 +12,7 @@ additionalProperties:
       labelEn: Database Service
       label:
         en: Database Service
+        es-es: Servicio de base de datos
         ja: データベースサービス
         ms: Perkhidmatan Pangkalan Data
         pt-br: Serviço de Banco de Dados
@@ -19,6 +20,7 @@ additionalProperties:
         ko: 데이터베이스 서비스
         zh: 数据库 服务
         zh-Hant: 數據庫 服務
+        tr: Veritabanı Hizmeti
       required: true
       type: apps
       values:
@@ -34,6 +36,7 @@ additionalProperties:
       labelZh: 数据库名
       label:
         en: Database
+        es-es: Base de datos
         ja: データベース
         ms: Pangkalan Data
         pt-br: Banco de Dados
@@ -41,6 +44,7 @@ additionalProperties:
         ko: 데이터베이스
         zh: 数据库名
         zh-Hant: 數據庫名
+        tr: Veritabanı
       random: true
       required: true
       rule: paramCommon
@@ -51,6 +55,7 @@ additionalProperties:
       labelZh: 数据库用户
       label:
         en: User
+        es-es: Usuario
         ja: ユーザー
         ms: Pengguna
         pt-br: Usuário
@@ -58,6 +63,7 @@ additionalProperties:
         ko: 사용자
         zh: 数据库用户
         zh-Hant: 數據庫用戶
+        tr: Kullanıcı
       random: true
       required: true
       rule: paramCommon
@@ -68,6 +74,7 @@ additionalProperties:
       labelZh: 数据库用户密码
       label:
         en: Password
+        es-es: Contraseña
         ja: パスワード
         ms: Kata laluan
         pt-br: Senha
@@ -75,6 +82,7 @@ additionalProperties:
         ko: 비밀번호
         zh: 数据库用户密码
         zh-Hant: 數據庫用戶密碼
+        tr: Parola
       random: true
       required: true
       type: password
@@ -84,6 +92,7 @@ additionalProperties:
       labelZh: 端口
       label:
         en: Port
+        es-es: Puerto
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -91,6 +100,7 @@ additionalProperties:
         ko: 포트
         zh: 端口
         zh-Hant: 埠
+        tr: Bağlantı Noktası
       required: true
       rule: paramPort
       type: number

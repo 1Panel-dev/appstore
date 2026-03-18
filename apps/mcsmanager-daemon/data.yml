@@ -10,6 +10,17 @@ additionalProperties:
   - Game
   shortDescZh: Minecraft 服务器控制面板（后端）
   shortDescEn: Minecraft server control panel(Daemon)
+  description:
+    en: Minecraft server control panel(Daemon)
+    zh: Minecraft 服务器控制面板（后端）
+    es-es: Minecraft servidor control panel(Daemon)
+    zh-Hant: Minecraft 伺服器控制面板（守護程序）
+    ja: Minecraft サーバー管理パネル（デーモン）
+    ko: Minecraft 서버 제어 패널(데몬)
+    ms: Panel kawalan pelayan Minecraft (daemon)
+    pt-br: Painel de controle do servidor Minecraft (daemon)
+    ru: Панель управления сервером Minecraft (демон)
+    tr: Minecraft sunucu kontrol paneli (daemon)
   type: tool
   crossVersionUpdate: true
   limit: 0

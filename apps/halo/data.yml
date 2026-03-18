@@ -10,6 +10,17 @@ additionalProperties:
     - Website
   shortDescZh: 强大易用的开源建站工具
   shortDescEn: Powerful and easy-to-use open source website builder
+  description:
+    en: Powerful and easy-to-use open source website builder
+    zh: 强大易用的开源建站工具
+    es-es: Potente y fácil de usar, creador de sitios web de código abierto
+    zh-Hant: 強大且易用的開源網站建置工具
+    ja: 強力で使いやすいオープンソースのウェブサイト構築ツール
+    ko: 강력하고 사용하기 쉬운 오픈소스 웹사이트 빌더
+    ms: Pembina laman web sumber terbuka yang berkuasa dan mudah digunakan
+    pt-br: Construtor de sites de código aberto poderoso e fácil de usar
+    ru: Мощный и удобный конструктор сайтов с открытым исходным кодом
+    tr: Güçlü ve kullanımı kolay açık kaynaklı web sitesi oluşturucu
   type: website
   crossVersionUpdate: true
   limit: 0

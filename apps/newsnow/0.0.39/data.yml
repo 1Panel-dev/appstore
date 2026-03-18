@@ -7,6 +7,7 @@ additionalProperties:
         zh: "HTTP 端口"
         zh-hant: "HTTP 埠"
         en: "HTTP Port"
+        es-es: Puerto HTTP
         ja: "HTTPポート"
         ms: "Port HTTP"
         pt-br: "Porta HTTP"
@@ -23,6 +24,7 @@ additionalProperties:
         ru: "Установите порт HTTP-доступа для приложения, допустимый диапазон: 1-65535"
         ko: "애플리케이션의 HTTP 접근 포트를 설정합니다. 유효 범위: 1-65535"
         tr: "Uygulama için HTTP erişim bağlantı noktasını ayarlayın, geçerli aralık: 1-65535"
+        es-es: "Establezca el puerto de acceso HTTP de la aplicacion; rango valido: 1-65535"
       required: true
       envKey: "PANEL_APP_PORT_HTTP"
       default: 4444
@@ -35,6 +37,7 @@ additionalProperties:
         zh: "Github 客户端 ID"
         zh-hant: "Github 用戶端 ID"
         en: "Github Client ID"
+        es-es: ID de cliente de GitHub
         ja: "Github クライアント ID"
         ms: "ID Klien Github"
         pt-br: "ID do Cliente Github"
@@ -51,6 +54,7 @@ additionalProperties:
         ru: "ID клиента для входа в Github (необязательно)"
         ko: "Github 로그인을 위한 클라이언트 ID (선택사항)"
         tr: "Github girişi için müşteri kimliği (isteğe bağlı)"
+        es-es: "ID de cliente para el inicio de sesion con GitHub (opcional)"
       required: false
       envKey: "G_CLIENT_ID"
       default: ""
@@ -62,6 +66,7 @@ additionalProperties:
         zh: "Github 客户端密钥"
         zh-hant: "Github 用戶端密鑰"
         en: "Github Client Secret"
+        es-es: Secreto de cliente de GitHub
         ja: "Github クライアントシークレット"
         ms: "Rahsia Klien Github"
         pt-br: "Segredo do Cliente Github"
@@ -78,6 +83,7 @@ additionalProperties:
         ru: "Секрет клиента для входа в Github (необязательно)"
         ko: "Github 로그인을 위한 클라이언트 시크릿 (선택사항)"
         tr: "Github girişi için müşteri sırrı (isteğe bağlı)"
+        es-es: "Secreto de cliente para el inicio de sesion con GitHub (opcional)"
       required: false
       envKey: "G_CLIENT_SECRET"
       default: ""
@@ -89,6 +95,7 @@ additionalProperties:
         zh: "JWT 密钥"
         zh-hant: "JWT 密鑰"
         en: "JWT Secret"
+        es-es: Secreto JWT
         ja: "JWT シークレット"
         ms: "Rahsia JWT"
         pt-br: "Segredo JWT"
@@ -105,6 +112,7 @@ additionalProperties:
         ru: "Секретный ключ для генерации JWT, рекомендуется случайная строка"
         ko: "JWT 생성을 위한 시크릿 키, 랜덤 문자열 권장"
         tr: "JWT oluşturmak için gizli anahtar, rastgele dize önerilir"
+        es-es: "Clave secreta para generar JWT; se recomienda una cadena aleatoria"
       required: true
       envKey: "JWT_SECRET"
       default: "Jwt"
@@ -117,6 +125,7 @@ additionalProperties:
         zh: "初始化数据库表"
         zh-hant: "初始化資料庫表"
         en: "Initialize Database Tables"
+        es-es: Initialize Base de datos Tables
         ja: "データベーステーブルの初期化"
         ms: "Inisialisasi Jadual Pangkalan Data"
         pt-br: "Inicializar Tabelas do Banco de Dados"
@@ -133,6 +142,7 @@ additionalProperties:
         ru: "Инициализировать ли таблицы базы данных при запуске"
         ko: "시작 시 데이터베이스 테이블을 초기화할지 여부"
         tr: "Başlangıçta veritabanı tablolarını başlatıp başlatmama"
+        es-es: "Si se deben inicializar las tablas de la base de datos al iniciar"
       required: true
       envKey: "INIT_TABLE"
       default: "true"
@@ -149,6 +159,7 @@ additionalProperties:
         zh: "启用缓存"
         zh-hant: "啟用緩存"
         en: "Enable Cache"
+        es-es: Habilitar caché
         ja: "キャッシュを有効にする"
         ms: "Dayakan Cache"
         pt-br: "Habilitar Cache"
@@ -165,6 +176,7 @@ additionalProperties:
         ru: "Включить ли кэширование"
         ko: "캐싱을 활성화할지 여부"
         tr: "Önbelleğin etkinleştirilip etkinleştirilmeyeceği"
+        es-es: "Si se debe habilitar la cache"
       required: true
       envKey: "ENABLE_CACHE"
       default: "true"

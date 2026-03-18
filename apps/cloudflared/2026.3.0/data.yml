@@ -6,6 +6,7 @@ additionalProperties:
       labelZh: 令牌
       label:
         en: token
+        es-es: Token de acceso
         ja: トークン
         ms: token
         pt-br: token
@@ -13,6 +14,7 @@ additionalProperties:
         ko: 토큰
         zh: 令牌
         zh-Hant: 權杖
+        tr: Belirteç
       random: false
       required: true
       type: password

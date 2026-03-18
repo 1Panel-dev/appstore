@@ -10,6 +10,17 @@ additionalProperties:
     - Game
   shortDescZh: 中文 DOS 游戏合集
   shortDescEn: Chinese DOS games collections
+  description:
+    en: Chinese DOS games collections
+    zh: 中文 DOS 游戏合集
+    es-es: Colección de juegos DOS chinos
+    zh-Hant: 中文 DOS 遊戲合集
+    ja: 中国語 DOS ゲームコレクション
+    ko: 중국어 DOS 게임 컬렉션
+    ms: Koleksi permainan DOS berbahasa Cina
+    pt-br: Coleção de jogos DOS em chinês
+    ru: Коллекция китайских DOS-игр
+    tr: Çince DOS oyun koleksiyonu
   type: website
   crossVersionUpdate: false
   limit: 0

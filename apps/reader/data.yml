@@ -10,6 +10,17 @@ additionalProperties:
     - Tool
   shortDescZh: 阅读3服务器版
   shortDescEn: Read 3 Server Edition
+  description:
+    en: Read 3 Server Edition
+    zh: 阅读3服务器版
+    es-es: Read 3 edición servidor
+    zh-Hant: Read 3 伺服器版
+    ja: Read 3 サーバー版
+    ko: Read 3 서버 에디션
+    ms: Read 3 Edisi Pelayan
+    pt-br: Read 3 Edição de Servidor
+    ru: Read 3 серверная редакция
+    tr: Read 3 Sunucu Sürümü
   type: website
   crossVersionUpdate: true
   limit: 0

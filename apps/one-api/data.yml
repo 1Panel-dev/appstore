@@ -10,6 +10,17 @@ additionalProperties:
     - AI
   shortDescZh: 通过标准的 OpenAI API 格式访问所有的大模型，开箱即用
   shortDescEn: Access all LLM through the standard OpenAI API format, easy to deploy & use
+  description:
+    en: Access all LLM through the standard OpenAI API format, easy to deploy & use
+    zh: 通过标准的 OpenAI API 格式访问所有的大模型，开箱即用
+    es-es: Accede a todos los LLM mediante el formato estándar de la API de OpenAI, fácil de desplegar y usar
+    zh-Hant: 透過標準 OpenAI API 格式存取所有 LLM，易於部署與使用
+    ja: 標準の OpenAI API 形式であらゆる LLM にアクセスでき、導入と利用が簡単です
+    ko: 표준 OpenAI API 형식을 통해 모든 LLM에 접근할 수 있으며 배포와 사용이 쉽습니다
+    ms: Akses semua LLM melalui format API standard OpenAI, mudah untuk digunakan dan dilaksanakan
+    pt-br: Acesse todos os LLMs pelo formato padrão da API OpenAI, fácil de implantar e usar
+    ru: Доступ ко всем LLM через стандартный формат OpenAI API, легко разворачивать и использовать
+    tr: Standart OpenAI API formatı üzerinden tüm LLM’lere erişin; kurulumu ve kullanımı kolaydır
   type: website
   crossVersionUpdate: true
   limit: 0

@@ -20,6 +20,7 @@ additionalProperties:
     document: https://helpcenter.onlyoffice.com
     description:
         en: A free collaborative online office suite
+        es-es: Un free collaborative online office suite
         zh: 免费的在线办公套件
         zh-Hant: 免費的在線辦公套件
         ja: 無料のオンライン共同作業オフィススイート
@@ -27,6 +28,7 @@ additionalProperties:
         pt-br: Um pacote de escritório online colaborativo gratuito
         ru: Бесплатный совместный онлайн-офисный пакет
         ko: 무료 협업 온라인 오피스 스위트
+        tr: Bir free collaborative online office suite
     memoryRequired: 2048
     architectures:
       - amd64

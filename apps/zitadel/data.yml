@@ -12,6 +12,7 @@ additionalProperties:
   shortDescEn: An open-source Identity and Access Management (IAM) platform
   description:
     en: An open-source Identity and Access Management (IAM) platform
+    es-es: Un open-source Identity and Access Management (IAM) plataforma
     ja: オープンソースのIDおよびアクセス管理（IAM）プラットフォーム
     ms: Sebuah platform Pengurusan Identiti dan Akses (IAM) sumber terbuka
     pt-br: Uma plataforma de Gerenciamento de Identidade e Acesso (IAM) de código aberto
@@ -19,6 +20,7 @@ additionalProperties:
     ko: 오픈 소스 ID 및 액세스 관리(IAM) 플랫폼
     zh-Hant: 開源的身份與訪問管理（IAM）平台
     zh: 开源的身份与访问管理（IAM）平台
+    tr: Bir open-source Identity and Access Management (IAM) platform
   type: website
   crossVersionUpdate: false
   limit: 0

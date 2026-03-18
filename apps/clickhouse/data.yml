@@ -19,6 +19,7 @@ additionalProperties:
     document: https://clickhouse.com/docs/zh
     description:
         en: a free analytics DBMS for big data
+        es-es: un SGBD analítico gratuito para big data
         zh: 一款免费的大数据分析 DBMS
         zh-Hant: 一款免費的大數據分析 DBMS
         ja: 無料のビッグデータ分析用 DBMS
@@ -26,6 +27,7 @@ additionalProperties:
         pt-br: um DBMS de análise gratuito para big data
         ru: бесплатная аналитическая СУБД для больших данных
         ko: 빅데이터를 위한 무료 분석 DBMS
+        tr: Buyuk veri icin ucretsiz bir analitik VTYS
     memoryRequired: 2048
     architectures:
       - amd64

@@ -9,6 +9,7 @@ additionalProperties:
           type: password
           label:
             en: Root Password
+            es-es: Contraseña de root
             ja: ルートパスワード
             ms: Kata laluan root
             pt-br: Senha do root
@@ -16,6 +17,7 @@ additionalProperties:
             ko: 루트 비밀번호
             zh-Hant: Root 密碼
             zh: Root 用户密码
+            tr: Root Parolası
         - default: 3306
           edit: true
           envKey: PANEL_APP_PORT_HTTP
@@ -26,6 +28,7 @@ additionalProperties:
           type: number
           label:
             en: Port
+            es-es: Puerto
             ja: ポート
             ms: Port
             pt-br: Porta
@@ -33,3 +36,4 @@ additionalProperties:
             ko: 포트
             zh-Hant: 埠
             zh: 端口
+            tr: Bağlantı Noktası

@@ -7,6 +7,7 @@ additionalProperties:
       labelZh: 端口
       label:
         en: Port
+        es-es: Puerto
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -14,6 +15,7 @@ additionalProperties:
         ko: 포트
         zh-Hant: 埠
         zh: 端口
+        tr: Bağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -23,6 +25,7 @@ additionalProperties:
       labelZh: 主密钥
       label:
         en: Master Key
+        es-es: Master Clave
         ja: マスターキー
         ms: Kunci induk
         pt-br: Chave mestra
@@ -30,6 +33,7 @@ additionalProperties:
         ko: 주 키
         zh-Hant: 主密鑰
         zh: 主密钥
+        tr: Master Anahtar
       edit: true
       required: true
       random: true
@@ -42,6 +46,7 @@ additionalProperties:
       labelZh: 外部访问地址
       label:
         en: External URL
+        es-es: URL externa
         ja: 外部アクセスアドレス
         ms: Alamat akses luaran
         pt-br: Endereço de acesso externo
@@ -49,6 +54,7 @@ additionalProperties:
         ko: 외부 접속 주소
         zh-Hant: 外部訪問地址
         zh: 外部访问地址
+        tr: Harici URL
       required: true
       rule: paramHttp
       type: text
@@ -58,6 +64,7 @@ additionalProperties:
       labelZh: 托管平台
       label:
         en: Hosting platform
+        es-es: Plataforma de alojamiento
         ja: ホスティングプラットフォーム
         ms: Platform hosting
         pt-br: Plataforma de hospedagem
@@ -65,6 +72,7 @@ additionalProperties:
         ko: 호스팅 플랫폼
         zh-Hant: 託管平台
         zh: 托管平台
+        tr: Barindirma platformu
       edit: true
       required: true
       type: select
@@ -85,6 +93,7 @@ additionalProperties:
       labelZh: 托管服务器地址
       label:
         en: Hosting server address
+        es-es: Dirección del servidor de alojamiento
         ja: ホストサーバーのアドレス
         ms: Alamat pelayan yang dihoskan
         pt-br: Endereço do servidor hospedado
@@ -92,6 +101,7 @@ additionalProperties:
         ko: 서버 호스팅 주소
         zh-Hant: 託管服務器地址
         zh: 托管服务器地址
+        tr: Barindirma sunucusu adresi
       edit: true
       required: true
       rule: paramExtUrl
@@ -102,6 +112,7 @@ additionalProperties:
       labelZh: 客户端 ID
       label:
         en: Client ID
+        es-es: ID de cliente
         ja: クライアントID
         ms: ID Klien
         pt-br: ID do cliente
@@ -109,6 +120,7 @@ additionalProperties:
         ko: 클라이언트 ID
         zh-Hant: 客戶端 ID
         zh: 客户端 ID
+        tr: Istemci kimligi
       edit: true
       required: true
       rule: paramComplexity
@@ -119,6 +131,7 @@ additionalProperties:
       labelZh: 客户端密钥
       label:
         en: Client secret
+        es-es: Secreto del cliente
         ja: クライアントキー
         ms: Klien Utama
         pt-br: Chave do cliente
@@ -126,6 +139,7 @@ additionalProperties:
         ko: 클라이언트 키
         zh-Hant: 客戶端密鑰
         zh: 客户端密钥
+        tr: Istemci gizli anahtari
       edit: true
       required: true
       rule: paramComplexity

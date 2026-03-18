@@ -10,6 +10,17 @@ additionalProperties:
     - Tool
   shortDescZh: 您自己的工作空间中的下一代 noIM 应用程序
   shortDescEn: Next generation noIM application in your own workspace
+  description:
+    en: Next generation noIM application in your own workspace
+    zh: 您自己的工作空间中的下一代 noIM 应用程序
+    es-es: Aplicacion noIM de nueva generacion en tu propio espacio de trabajo
+    zh-Hant: 在你自己的工作空間中的新一代 noIM 應用
+    ja: あなた自身のワークスペース向け次世代 noIM アプリケーション
+    ko: 자신의 워크스페이스를 위한 차세대 noIM 애플리케이션
+    ms: Aplikasi noIM generasi seterusnya dalam ruang kerja anda sendiri
+    pt-br: Aplicação noIM de próxima geração no seu próprio espaço de trabalho
+    ru: Приложение noIM нового поколения в вашем собственном рабочем пространстве
+    tr: Kendi çalışma alanınızdaki yeni nesil noIM uygulaması
   type: website
   crossVersionUpdate: true
   limit: 1

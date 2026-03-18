@@ -12,6 +12,7 @@ additionalProperties:
   shortDescEn: Your own personal AI assistant
   description:
     en: Your own personal AI assistant
+    es-es: Tu propio asistente personal de IA
     ja: あなた専用のパーソナルAIアシスタント
     ms: Pembantu AI peribadi anda sendiri
     pt-br: Seu assistente pessoal de IA
@@ -19,6 +20,7 @@ additionalProperties:
     ko: 나만의 개인 AI 비서
     zh-Hant: 開源、自托管的個人 AI 助手
     zh: 开源、自托管的个人 AI 助手
+    tr: Kendi kisisel yapay zeka asistaniniz
   type: website
   crossVersionUpdate: true
   limit: 0

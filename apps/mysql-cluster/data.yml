@@ -10,6 +10,7 @@ additionalProperties:
         - Database
     description:
         en: MySQL Master-Multiple-Slave Deployment
+        es-es: Implementación MySQL maestro-múltiples esclavos
         ja: MySQL マスター複数スレーブデプロイ
         ms: Penyebaran MySQL Master-Berbilang-Slave
         pt-br: Implantação MySQL Mestre-Multiplos-Escravos
@@ -17,6 +18,7 @@ additionalProperties:
         ko: MySQL 마스터 다중 슬레이브 배포
         zh-hant: MySQL 一主多從
         zh: MySQL 一主多从
+        tr: MySQL ana-coklu yardimci kurulum
     type: runtime
     crossVersionUpdate: false
     limit: 0

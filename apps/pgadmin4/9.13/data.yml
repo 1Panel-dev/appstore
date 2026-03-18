@@ -7,6 +7,7 @@ additionalProperties:
       labelZh: 端口
       label:
         en: Port
+        es-es: Puerto
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -14,6 +15,7 @@ additionalProperties:
         ko: 포트
         zh-Hant: 埠
         zh: 端口
+        tr: Bağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -24,6 +26,7 @@ additionalProperties:
       labelZh: 管理员邮箱
       label:
         en: Admin Email
+        es-es: Correo del administrador
         ja: 管理者のメール
         ms: Emel Pentadbir
         pt-br: E-mail do Administrador
@@ -31,6 +34,7 @@ additionalProperties:
         ko: 관리자 이메일
         zh-hant: 管理員郵箱
         zh: 管理员邮箱
+        tr: Yonetici e-postasi
       required: true
       type: text
     - default: hgraZPD3v00I5AwuzSpL
@@ -40,6 +44,7 @@ additionalProperties:
       labelZh: 管理员密码
       label:
         en: Admin Password
+        es-es: Contraseña del administrador
         ja: 管理者パスワード
         ms: Kata Laluan Admin
         pt-br: Senha de Administrador
@@ -47,5 +52,6 @@ additionalProperties:
         ko: 관리자 비밀번호
         zh-hant: 管理員密碼
         zh: 管理员密码
+        tr: Yönetici Parolası
       required: true
       type: password

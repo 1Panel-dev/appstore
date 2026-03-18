@@ -10,6 +10,17 @@ additionalProperties:
     - Database
   shortDescZh: Redis 的多线程分支
   shortDescEn: A Multithreaded Fork of Redis
+  description:
+    en: A Multithreaded Fork of Redis
+    zh: Redis 的多线程分支
+    es-es: Un Multithreaded Fork of Redis
+    zh-Hant: Redis 的多執行緒分支版本
+    ja: Redis のマルチスレッドフォーク
+    ko: Redis의 멀티스레드 포크
+    ms: Fork berbilang benang bagi Redis
+    pt-br: Um fork multithread do Redis
+    ru: Многопоточный форк Redis
+    tr: Redis’in çok iş parçacıklı bir çatalı
   type: runtime
   crossVersionUpdate: true
   limit: 0

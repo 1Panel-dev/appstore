@@ -5,6 +5,17 @@ additionalProperties:
       envKey: PANEL_APP_PORT_HTTP
       labelEn: Port
       labelZh: 端口
+      label:
+        en: Port
+        zh: 端口
+        es-es: Puerto
+        zh-Hant: 埠
+        ja: ポート
+        ko: 포트
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        tr: Bağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -13,6 +24,17 @@ additionalProperties:
       envKey: OPENAI_API_KEY
       labelEn: OpenAI API Key
       labelZh: OpenAI API 密钥
+      label:
+        en: OpenAI API Key
+        zh: OpenAI API 密钥
+        es-es: OpenAI API Clave
+        zh-Hant: OpenAI API 金鑰
+        ja: OpenAI API キー
+        ko: OpenAI API 키
+        ms: Kunci API OpenAI
+        pt-br: Chave da API OpenAI
+        ru: Ключ API OpenAI
+        tr: OpenAI API anahtari
       required: false
       type: password
     - default: "https://api.openai.com/v1"
@@ -20,6 +42,17 @@ additionalProperties:
       envKey: OPENAI_PROXY_URL
       labelEn: OpenAI Proxy URL
       labelZh: OpenAI 代理 URL
+      label:
+        en: OpenAI Proxy URL
+        zh: OpenAI 代理 URL
+        es-es: URL del proxy de OpenAI
+        zh-Hant: OpenAI 代理 URL
+        ja: OpenAI プロキシ URL
+        ko: OpenAI 프록시 URL
+        ms: URL proksi OpenAI
+        pt-br: URL do proxy OpenAI
+        ru: URL прокси OpenAI
+        tr: OpenAI proxy URL'si
       required: false
       type: text
     - default: ""
@@ -27,6 +60,17 @@ additionalProperties:
       envKey: ACCESS_CODE
       labelEn: Access Code
       labelZh: 访问密码
+      label:
+        en: Access Code
+        zh: 访问密码
+        es-es: Código de acceso
+        zh-Hant: 存取碼
+        ja: アクセスコード
+        ko: 접근 코드
+        ms: Kod akses
+        pt-br: Código de acesso
+        ru: Код доступа
+        tr: Erisim kodu
       random: true
       required: false
       rule: paramComplexity 
@@ -36,5 +80,16 @@ additionalProperties:
       envKey: OPENAI_MODEL_LIST
       labelEn: OpenAI Model List
       labelZh: OpenAI 模型列表
+      label:
+        en: OpenAI Model List
+        zh: OpenAI 模型列表
+        es-es: OpenAI Modol List
+        zh-Hant: OpenAI 模型清單
+        ja: OpenAI モデル一覧
+        ko: OpenAI 모델 목록
+        ms: Senarai model OpenAI
+        pt-br: Lista de modelos OpenAI
+        ru: Список моделей OpenAI
+        tr: OpenAI model listesi
       required: false
       type: text

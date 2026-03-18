@@ -20,6 +20,7 @@ additionalProperties:
     document: https://github.com/huginn/huginn/wiki
     description:
         en: A system for building agents that perform automated tasks for you online
+        es-es: Un system for building agents that perform automated tasks for you online
         zh: 一个用于构建代理系统的工具，可以为你在线执行自动化任务
         zh-Hant: 一個用於構建代理系統的工具，可以為你在線執行自動化任務
         ja: オンラインで自動化タスクを実行するエージェントを構築するためのシステム
@@ -27,5 +28,6 @@ additionalProperties:
         pt-br: Um sistema para construir agentes que executam tarefas automatizadas para você online
         ru: Система для создания агентов, выполняющих автоматизированные задачи для вас в Интернете
         ko: 온라인에서 자동화된 작업을 수행하는 에이전트를 구축하기 위한 시스템
+        tr: Sizin icin cevrimici otomatik gorevler yapan ajanlar olusturma sistemi
     architectures:
         - amd64

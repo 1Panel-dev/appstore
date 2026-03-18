@@ -10,6 +10,17 @@ additionalProperties:
     - Game
   shortDescZh: Minecraft 服务器控制面板（前端）
   shortDescEn: Minecraft server control panel(Web)
+  description:
+    en: Minecraft server control panel(Web)
+    zh: Minecraft 服务器控制面板（前端）
+    es-es: Minecraft servidor control panel(Web)
+    zh-Hant: Minecraft 伺服器控制面板（網頁）
+    ja: Minecraft サーバー管理パネル（Web）
+    ko: Minecraft 서버 제어 패널(웹)
+    ms: Panel kawalan pelayan Minecraft (web)
+    pt-br: Painel de controle do servidor Minecraft (web)
+    ru: Панель управления сервером Minecraft (веб)
+    tr: Minecraft sunucu kontrol paneli (web)
   type: website
   crossVersionUpdate: true
   limit: 0

@@ -5,6 +5,17 @@ additionalProperties:
           envKey: PANEL_APP_PORT_HTTP
           labelEn: Port
           labelZh: 端口
+          label:
+            en: Port
+            zh: 端口
+            es-es: Puerto
+            zh-Hant: 埠
+            ja: ポート
+            ko: 포트
+            ms: Port
+            pt-br: Porta
+            ru: Порт
+            tr: Bağlantı Noktası
           required: true
           rule: paramPort
           type: number
@@ -13,6 +24,17 @@ additionalProperties:
           envKey: API_KEY
           labelEn: OPENAI API KEY
           labelZh: OPENAI API KEY
+          label:
+            en: OPENAI API KEY
+            zh: OPENAI API KEY
+            es-es: Clave API de OpenAI
+            zh-Hant: OPENAI API 金鑰
+            ja: OPENAI API キー
+            ko: OPENAI API 키
+            ms: Kunci API OPENAI
+            pt-br: Chave da API OPENAI
+            ru: Ключ OPENAI API
+            tr: OPENAI API Anahtarı
           required: true
           type: text
         - default: "chatgptnextweb"
@@ -20,6 +42,17 @@ additionalProperties:
           envKey: SECRET_KEY
           labelEn: Access rights key, optional (recommended)
           labelZh: 访问权限密钥，可选(强烈建议填写)
+          label:
+            en: Access rights key, optional (recommended)
+            zh: 访问权限密钥，可选(强烈建议填写)
+            es-es: Clave de acceso, opcional (recomendado)
+            zh-Hant: 存取權限金鑰，可選（建議）
+            ja: アクセス権キー、任意（推奨）
+            ko: 접근 권한 키, 선택 사항(권장)
+            ms: Kunci hak akses, pilihan (disyorkan)
+            pt-br: Chave de acesso, opcional (recomendado)
+            ru: Ключ прав доступа, необязательно (рекомендуется)
+            tr: Erişim yetkisi anahtarı, isteğe bağlı (önerilir)
           random: true
           required: false
           rule: paramComplexity
@@ -29,6 +62,17 @@ additionalProperties:
           envKey: PROXY
           labelEn: Proxy (example：http://127.0.0.1:7890 user password)
           labelZh: 代理地址(例子：http://127.0.0.1:7890 user password)
+          label:
+            en: Proxy (example：http://127.0.0.1:7890 user password)
+            zh: 代理地址(例子：http://127.0.0.1:7890 user password)
+            es-es: Proxy (ejemplo：http://127.0.0.1:7890 user password)
+            zh-Hant: 代理（例如：http://127.0.0.1:7890 user password）
+            ja: プロキシ（例：http://127.0.0.1:7890 user password）
+            ko: 프록시 (예：http://127.0.0.1:7890 user password)
+            ms: Proksi (contoh：http://127.0.0.1:7890 user password)
+            pt-br: Proxy (exemplo：http://127.0.0.1:7890 user password)
+            ru: Прокси (пример：http://127.0.0.1:7890 user password)
+            tr: Proxy (örnek：http://127.0.0.1:7890 user password)
           required: false
           type: text
         - default: "https://api.openai.com"
@@ -36,6 +80,17 @@ additionalProperties:
           envKey: API_BASE_URL
           labelEn: API interface address
           labelZh: API接口地址
+          label:
+            en: API interface address
+            zh: API接口地址
+            es-es: Dirección de la interfaz API
+            zh-Hant: API 介面地址
+            ja: API インターフェースアドレス
+            ko: API 인터페이스 주소
+            ms: Alamat antara muka API
+            pt-br: Endereço da interface da API
+            ru: Адрес API-интерфейса
+            tr: API arayüz adresi
           required: true
           type: text
         - default: ""
@@ -43,5 +98,16 @@ additionalProperties:
           envKey: WHITE_WEBDAV_ENDPOINTS
           labelEn: White list of webdev endpoints
           labelZh: webdev 白名单
+          label:
+            en: White list of webdev endpoints
+            zh: webdev 白名单
+            es-es: Lista blanca de endpoints de webdev
+            zh-Hant: webdev 端點白名單
+            ja: webdev エンドポイントのホワイトリスト
+            ko: webdev 엔드포인트 허용 목록
+            ms: Senarai putih titik akhir webdev
+            pt-br: Lista de permissões dos endpoints webdev
+            ru: Белый список webdev-эндпоинтов
+            tr: webdev uç noktaları beyaz listesi
           required: false
           type: text

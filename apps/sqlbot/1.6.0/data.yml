@@ -7,6 +7,7 @@ additionalProperties:
       labelZh: 管理员
       label:
         en: Admin User
+        es-es: Usuario administrador
         ja: 管理者ユーザー
         ms: Pengguna Pentadbir
         pt-br: Usuário do Administrador
@@ -14,6 +15,7 @@ additionalProperties:
         ko: 관리자
         zh-Hant: 管理員
         zh: 管理员
+        tr: Yönetici Kullanıcısı
       required: true
       type: text
     - default: SQLBot@123456
@@ -23,6 +25,7 @@ additionalProperties:
       labelZh: 管理员默认密码
       label:
         en: Admin default password
+        es-es: Contraseña predeterminada del administrador
         ja: 管理者のデフォルトパスワード
         ms: Kata Laluan Pentadbir Lalai
         pt-br: Senha padrão do Administrador
@@ -30,6 +33,7 @@ additionalProperties:
         ko: 관리자 기본 비밀번호
         zh-Hant: 管理員預設密碼
         zh: 管理员默认密码
+        tr: Varsayilan yonetici parolasi
       required: true
       type: text
     - default: 8000
@@ -39,13 +43,15 @@ additionalProperties:
       labelZh: HTTP 端口
       label:
         en: HTTP Port
+        es-es: Puerto HTTP
         ja: HTTP ポート
-        ms: HTTP Port
+        ms: Port HTTP
         pt-br: HTTP Porta
         ru: HTTP Порт
         ko: HTTP 포트
         zh-Hant: HTTP 埠
         zh: HTTP 端口
+        tr: HTTP Bağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -56,13 +62,15 @@ additionalProperties:
       labelZh: MCP 端口
       label:
         en: MCP Port
+        es-es: Puerto MCP
         ja: MCP ポート
-        ms: MCP Port
+        ms: Port MCP
         pt-br: MCP Porta
         ru: MCP Порт
         ko: MCP 포트
         zh-Hant: MCP 埠
         zh: MCP 端口
+        tr: MCP Bağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -73,6 +81,7 @@ additionalProperties:
       labelZh: 图片服务器地址（默认服务器 IP）
       label:
         en: Image Server Host (Default server IP)
+        es-es: Host del servidor de imágenes (IP predeterminada del servidor)
         ja: 画像サーバーホスト（デフォルトのサーバーIP）
         ms: Pelayan Gambar Host (IP Pelayan Lalai)
         pt-br: Servidor de Imagens Host (IP do servidor padrão)
@@ -80,6 +89,7 @@ additionalProperties:
         ko: 이미지 서버 호스트 (기본 서버 IP)
         zh-hant: 圖片伺服器地址（預設伺服器 IP）
         zh: 图片服务器地址（默认服务器 IP）
+        tr: Image Sunucu Host (Default server IP)
       required: true
       rule: paramExtUrl
       type: text

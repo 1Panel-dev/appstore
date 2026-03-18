@@ -10,6 +10,17 @@ additionalProperties:
         - Media
     shortDescZh: 高颜值的第三方网易云播放器
     shortDescEn: A high-end third-party NetEase cloud player
+    description:
+      en: A high-end third-party NetEase cloud player
+      zh: 高颜值的第三方网易云播放器
+      es-es: Un high-end third-party NetEase cloud player
+      zh-Hant: 高階第三方網易雲播放器
+      ja: 高機能なサードパーティ製 NetEase クラウドプレイヤー
+      ko: 고급형 서드파티 NetEase 클라우드 플레이어
+      ms: Pemain awan NetEase pihak ketiga bertaraf tinggi
+      pt-br: Um player NetEase Cloud de terceiros de alto nível
+      ru: Высококлассный сторонний плеер NetEase Cloud
+      tr: Üst düzey üçüncü taraf NetEase Cloud oynatıcısı
     type: website
     crossVersionUpdate: true
     limit: 0

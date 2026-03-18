@@ -10,6 +10,7 @@ additionalProperties:
       type: number
       label:
         en: Access Port
+        es-es: Access Puerto
         ja: アクセスポート
         ms: Port Akses
         pt-br: Porta de Acesso
@@ -17,6 +18,7 @@ additionalProperties:
         ko: 액세스 포트
         zh-Hant: 存取埠
         zh: 访问端口
+        tr: Access Bağlantı Noktası
     - default: ""
       envKey: PANEL_DB_HOST
       key: postgresql
@@ -26,6 +28,7 @@ additionalProperties:
       type: service
       label:
         en: PostgreSQL Database Service
+        es-es: Servicio de base de datos PostgreSQL
         ja: PostgreSQL データベースサービス
         ms: Perkhidmatan Pangkalan Data PostgreSQL
         pt-br: Serviço de Banco de Dados PostgreSQL
@@ -33,6 +36,7 @@ additionalProperties:
         ko: PostgreSQL 데이터베이스 서비스
         zh-Hant: PostgreSQL 資料庫服務
         zh: PostgreSQL 数据库服务
+        tr: PostgreSQL Veritabanı Hizmeti
     - default: outline_db
       envKey: PANEL_DB_NAME
       labelEn: Database
@@ -43,6 +47,7 @@ additionalProperties:
       type: text
       label:
         en: Database Name
+        es-es: Nombre de la base de datos
         ja: データベース名
         ms: Nama Pangkalan Data
         pt-br: Nome do Banco de Dados
@@ -50,6 +55,7 @@ additionalProperties:
         ko: 데이터베이스 이름
         zh-Hant: 資料庫名稱
         zh: 数据库名
+        tr: Veritabanı Adı
     - default: user_outline
       envKey: PANEL_DB_USER
       labelEn: Database User
@@ -60,6 +66,7 @@ additionalProperties:
       type: text
       label:
         en: Database User
+        es-es: Usuario de la base de datos
         ja: データベースユーザー
         ms: Pengguna Pangkalan Data
         pt-br: Usuário do Banco de Dados
@@ -67,6 +74,7 @@ additionalProperties:
         ko: 데이터베이스 사용자
         zh-Hant: 資料庫使用者
         zh: 数据库用户
+        tr: Veritabanı Kullanıcısı
     - default: passwd_rDV5Yv7Js
       envKey: PANEL_DB_USER_PASSWORD
       labelEn: Database Password
@@ -76,6 +84,7 @@ additionalProperties:
       type: password
       label:
         en: Database Password
+        es-es: Contraseña de la base de datos
         ja: データベースパスワード
         ms: Kata Laluan Pangkalan Data
         pt-br: Senha do Banco de Dados
@@ -83,6 +92,7 @@ additionalProperties:
         ko: 데이터베이스 비밀번호
         zh-Hant: 資料庫密碼
         zh: 数据库用户密码
+        tr: Veritabanı Parolası
     - default: ""
       envKey: PANEL_REDIS_HOST
       key: redis
@@ -92,6 +102,7 @@ additionalProperties:
       type: service
       label:
         en: Redis Service
+        es-es: Servicio de Redis
         ja: Redis サービス
         ms: Perkhidmatan Redis
         pt-br: Serviço Redis
@@ -99,6 +110,7 @@ additionalProperties:
         ko: Redis 서비스
         zh-Hant: Redis 服務
         zh: redis 服务
+        tr: Redis Hizmeti
     - default: ""
       disabled: true
       envKey: PANEL_REDIS_ROOT_PASSWORD
@@ -107,6 +119,7 @@ additionalProperties:
       type: text
       label:
         en: Redis Password
+        es-es: Contraseña de Redis
         ja: Redis パスワード
         ms: Kata Laluan Redis
         pt-br: Senha Redis
@@ -114,6 +127,7 @@ additionalProperties:
         ko: Redis 비밀번호
         zh-Hant: Redis 密碼
         zh: redis 密码
+        tr: Redis Parolası
     - default: ""
       edit: true
       envKey: GITHUB_OAUTH_CLIENT_ID
@@ -123,6 +137,7 @@ additionalProperties:
       type: text
       label:
         en: GitHub OAuth Client ID
+        es-es: ID de cliente de GitHub OAuth
         ja: GitHub OAuth クライアントID
         ms: ID Klien OAuth GitHub
         pt-br: ID do Cliente OAuth do GitHub
@@ -130,6 +145,7 @@ additionalProperties:
         ko: GitHub OAuth 클라이언트 ID
         zh-Hant: GitHub OAuth 用戶端 ID
         zh: GitHub OAuth 客户端 ID
+        tr: GitHub OAuth istemci kimligi
     - default: ""
       edit: true
       envKey: GITHUB_OAUTH_SECRET
@@ -139,6 +155,7 @@ additionalProperties:
       type: text
       label:
         en: GitHub OAuth SECRET
+        es-es: Secreto de GitHub OAuth
         ja: GitHub OAuth シークレット
         ms: Rahsia OAuth GitHub
         pt-br: Segredo OAuth do GitHub
@@ -146,6 +163,7 @@ additionalProperties:
         ko: GitHub OAuth 시크릿
         zh-Hant: GitHub OAuth 密鑰
         zh: GitHub OAuth 密钥
+        tr: GitHub OAuth gizli anahtari
     - default: smtp.mailgun.org
       edit: true
       envKey: PANEL_SMTP_HOST
@@ -155,6 +173,7 @@ additionalProperties:
       type: text
       label:
         en: SMTP Server (Optional)
+        es-es: Servidor SMTP (opcional)
         ja: SMTPサーバー（オプション）
         ms: Pelayan SMTP (Pilihan)
         pt-br: Servidor SMTP (Opcional)
@@ -162,6 +181,7 @@ additionalProperties:
         ko: SMTP 서버(선택 사항)
         zh-Hant: SMTP 伺服器（可選）
         zh: SMTP 服务器（可选）
+        tr: SMTP Sunucu (Optional)
     - default: 465
       edit: true
       envKey: PANEL_SMTP_PORT
@@ -172,6 +192,7 @@ additionalProperties:
       type: number
       label:
         en: SMTP Server Port (Optional)
+        es-es: SMTP Server Puerto (Optional)
         ja: SMTPサーバーポート（オプション）
         ms: Port Pelayan SMTP (Pilihan)
         pt-br: Porta do Servidor SMTP (Opcional)
@@ -179,6 +200,7 @@ additionalProperties:
         ko: SMTP 서버 포트(선택 사항)
         zh-Hant: SMTP 伺服器埠（可選）
         zh: SMTP 服务器端口（可选）
+        tr: SMTP Sunucu Bağlantı Noktası (Optional)
     - default: example@mail.com
       edit: true
       envKey: PANEL_SMTP_USERNAME
@@ -188,6 +210,7 @@ additionalProperties:
       type: text
       label:
         en: SMTP mail Username (Optional)
+        es-es: SMTP mail Nombre de usuario (Optional)
         ja: SMTPメールユーザー名（オプション）
         ms: Nama Pengguna Mel SMTP (Pilihan)
         pt-br: Nome de Usuário SMTP (Opcional)
@@ -195,6 +218,7 @@ additionalProperties:
         ko: SMTP 메일 사용자 이름(선택 사항)
         zh-Hant: SMTP 郵箱用戶名（可選）
         zh: SMTP 邮箱用户名（可选）
+        tr: SMTP mail Kullanıcı Adı (Optional)
     - default: ""
       edit: true
       envKey: PANEL_SMTP_PASSWORD
@@ -204,6 +228,7 @@ additionalProperties:
       type: text
       label:
         en: SMTP mail password (Optional)
+        es-es: Contraseña SMTP (opcional)
         ja: SMTPメールパスワード（オプション）
         ms: Kata Laluan Mel SMTP (Pilihan)
         pt-br: Senha de E-mail SMTP (Opcional)
@@ -211,6 +236,7 @@ additionalProperties:
         ko: SMTP 메일 비밀번호(선택 사항)
         zh-Hant: SMTP 郵箱密碼（可選）
         zh: SMTP 邮箱密码（可选）
+        tr: SMTP posta parolasi (istege bagli)
     - default: example@mail.com
       edit: true
       envKey: PANEL_SMTP_FROM_EMAIL
@@ -220,6 +246,7 @@ additionalProperties:
       type: text
       label:
         en: SMTP mail Receiver Email (Optional)
+        es-es: Correo receptor SMTP (opcional)
         ja: SMTPメール受信者メールアドレス（オプション）
         ms: E-mel Penerima Mel SMTP (Pilihan)
         pt-br: E-mail do Destinatário SMTP (Opcional)
@@ -227,6 +254,7 @@ additionalProperties:
         ko: SMTP 메일 수신 이메일(선택 사항)
         zh-Hant: SMTP 郵件接收信箱（可選）
         zh: SMTP 信息接收邮箱（用户邮件接收邮箱）（可选）
+        tr: SMTP alici e-postasi (istege bagli)
     - default: zh_CN
       edit: true
       envKey: PANEL_LANGUAGE
@@ -236,6 +264,7 @@ additionalProperties:
       type: text
       label:
         en: Language
+        es-es: Idioma
         ja: 言語
         ms: Bahasa
         pt-br: Idioma
@@ -243,6 +272,7 @@ additionalProperties:
         ko: 언어
         zh-Hant: 語言
         zh: 语言
+        tr: Dil
     - default: ""
       edit: true
       envKey: PANEL_APP_URL
@@ -253,6 +283,7 @@ additionalProperties:
       type: text
       label:
         en: Reverse Proxy Domain (If no domain, you can fill in http://<ip_address>:12115)
+        es-es: Reverse Proxy Dominio (If no domain, you can fill in http://<ip_address>:12115)
         ja: リバースプロキシドメイン（ドメインがない場合は http://<ipアドレス>:12115 を入力できます）
         ms: Domain Proksi Balik (Jika tiada domain, boleh isi http://<ip_address>:12115)
         pt-br: Domínio de Proxy Reverso (Se não houver domínio, você pode preencher http://<ip_address>:12115)
@@ -260,3 +291,4 @@ additionalProperties:
         ko: 리버스 프록시 도메인(도메인이 없으면 http://<ip_address>:12115 입력 가능)
         zh-Hant: 反向代理域名（如無域名可填 http://<ip地址>:12115）
         zh: 反向代理域名（如果没有域名则可以填写 http://<ip地址>:12115）
+        tr: Ters Proxy Alan Adı (Alan adınız yoksa http://<ip_address>:12115 girebilirsiniz)

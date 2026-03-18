@@ -19,6 +19,7 @@ additionalProperties:
   document: https://www.audiobookshelf.org/docs
   description:
       en: Self-hosted audiobook and podcast server
+      es-es: Self-hosted audiobook and podcast servidor
       zh: 自托管有声读物和播客服务器
       zh-Hant: 自託管有聲讀物和播客伺服器
       ja: 自己ホストのオーディオブックとポッドキャストサーバー
@@ -26,6 +27,7 @@ additionalProperties:
       pt-br: Servidor de audiolivros e podcasts auto-hospedado
       ru: Самостоятельно размещенный сервер аудиокниг и подкастов
       ko: 셀프 호스팅 오디오북 및 팟캐스트 서버
+      tr: Self-hosted audiobook and podcast sunucu
   architectures:
     - amd64
     - arm64

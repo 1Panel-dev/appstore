@@ -12,6 +12,7 @@ additionalProperties:
     shortDescEn: Get up and running with Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models
     description:
         en: Get up and running with Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models
+        es-es: Ponte en marcha con Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma y otros modelos
         ja: Kimi-K2.5、GLM-5、MiniMax、DeepSeek、gpt-oss、Qwen、Gemma などのモデルを起動して実行
         ms: Mulakan dan jalankan Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma dan model lain
         pt-br: Inicie e execute Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma e outros modelos
@@ -19,6 +20,7 @@ additionalProperties:
         ko: Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma 및 기타 모델을 시작하고 실행
         zh-hant: 快速部署並開始使用 Kimi-K2.5、GLM-5、MiniMax、DeepSeek、gpt-oss、Qwen、Gemma 等多種模型
         zh: 快速部署并开始使用 Kimi-K2.5、GLM-5、MiniMax、DeepSeek、gpt-oss、Qwen、Gemma 等多种模型
+        tr: Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma ve diger modellerle hizlica baslayin
     type: website
     crossVersionUpdate: true
     limit: 1

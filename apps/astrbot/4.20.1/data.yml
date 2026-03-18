@@ -10,6 +10,7 @@ additionalProperties:
       type: number
       label:
         en: WebUI Port
+        es-es: Puerto web
         ja: WebUI ポート
         ms: Port WebUI
         pt-br: Porta WebUI
@@ -17,6 +18,7 @@ additionalProperties:
         ko: WebUI 포트
         zh-Hant: WebUI 埠
         zh: WebUI 端口
+        tr: WebUI portu
     - default: 6194
       edit: true
       envKey: ASTRBOT_WEIXIN_OFFICIAL_PORT
@@ -27,6 +29,7 @@ additionalProperties:
       type: number
       label:
         en: Weixin Official Account Platform Port
+        es-es: Weixin Official Account Platform Puerto
         ja: Weixin 公式アカウントポート
         ms: Port Platform Akaun Rasmi Weixin
         pt-br: Porta da Plataforma de Conta Oficial Weixin
@@ -34,6 +37,7 @@ additionalProperties:
         ko: Weixin 공식 계정 플랫폼 포트
         zh-Hant: 微信公眾平台端口
         zh: 微信公众平台端口
+        tr: Weixin Resmi Hesap Platformu Bağlantı Noktası
     - default: 6195
       edit: true
       envKey: ASTRBOT_WECOM_PORT
@@ -44,6 +48,7 @@ additionalProperties:
       type: number
       label:
         en: WeCom Port
+        es-es: WeCom Puerto
         ja: WeCom ポート
         ms: Port WeCom
         pt-br: Porta WeCom
@@ -51,6 +56,7 @@ additionalProperties:
         ko: WeCom 포트
         zh-Hant: 企業微信端口
         zh: 企业微信端口
+        tr: WeCom Bağlantı Noktası
     - default: 6196
       edit: true
       envKey: ASTRBOT_QQ_OFFICIAL_PORT
@@ -61,6 +67,7 @@ additionalProperties:
       type: number
       label:
         en: QQ Official Bot Port (Webhook)
+        es-es: QQ Official Bot Puerto (Webhook)
         ja: QQ公式ボットポート (Webhook)
         ms: Port Bot Rasmi QQ (Webhook)
         pt-br: Porta do Bot Oficial QQ (Webhook)
@@ -68,6 +75,7 @@ additionalProperties:
         ko: QQ 공식 봇 포트 (Webhook)
         zh-Hant: QQ 官方機器人端口 (Webhook)
         zh: QQ 官方机器人端口 (Webhook)
+        tr: QQ Resmi Bot Bağlantı Noktası (Webhook)
     - default: 6199
       edit: true
       envKey: ASTRBOT_QQ_PERSONAL_PORT
@@ -78,6 +86,7 @@ additionalProperties:
       type: number
       label:
         en: QQ Personal Port (aiocqhttp)
+        es-es: QQ Personal Puerto (aiocqhttp)
         ja: QQ個人用ポート (aiocqhttp)
         ms: Port QQ Peribadi (aiocqhttp)
         pt-br: Porta QQ Pessoal (aiocqhttp)
@@ -85,6 +94,7 @@ additionalProperties:
         ko: QQ 개인 계정 포트 (aiocqhttp)
         zh-Hant: QQ個人帳號端口 (aiocqhttp)
         zh: QQ个人号端口 (aiocqhttp)
+        tr: QQ Kişisel Bağlantı Noktası (aiocqhttp)
     - default: 11451
       edit: true
       envKey: ASTRBOT_WECHAT_PERSONAL_PORT
@@ -95,6 +105,7 @@ additionalProperties:
       type: number
       label:
         en: WeChat Personal Port (Gewechat)
+        es-es: WeChat Personal Puerto (Gewechat)
         ja: 微信個人用ポート (Gewechat)
         ms: Port WeChat Peribadi (Gewechat)
         pt-br: Porta WeChat Pessoal (Gewechat)
@@ -102,6 +113,7 @@ additionalProperties:
         ko: WeChat 개인 계정 포트 (Gewechat)
         zh-Hant: 微信個人帳號端口 (Gewechat)
         zh: 微信个人号端口 (Gewechat)
+        tr: WeChat Kişisel Bağlantı Noktası (Gewechat)
     - default: Asia/Shanghai
       edit: true
       envKey: TIME_ZONE
@@ -109,6 +121,7 @@ additionalProperties:
       labelZh: 时区
       label:
         en: Time zone
+        es-es: Zona horaria
         ja: タイムゾーン
         ms: Zon masa
         pt-br: Fuso horário
@@ -116,5 +129,6 @@ additionalProperties:
         ko: 시간대
         zh: 时区
         zh-Hant: 時區
+        tr: Saat Dilimi
       required: true
       type: text

@@ -10,6 +10,17 @@ additionalProperties:
   - Middleware
   shortDescZh: 动态服务发现、配置管理和服务管理平台
   shortDescEn: Dynamic service discovery, configuration and service management platform
+  description:
+    en: Dynamic service discovery, configuration and service management platform
+    zh: 动态服务发现、配置管理和服务管理平台
+    es-es: Dynamic service discovery, configuration and service gestión plataforma
+    zh-Hant: 動態服務發現、配置與服務管理平台
+    ja: 動的サービスディスカバリ、設定、サービス管理プラットフォーム
+    ko: 동적 서비스 검색, 구성 및 서비스 관리 플랫폼
+    ms: Platform penemuan perkhidmatan dinamik, konfigurasi dan pengurusan perkhidmatan
+    pt-br: Plataforma dinâmica de descoberta de serviços, configuração e gerenciamento de serviços
+    ru: Платформа динамического обнаружения сервисов, конфигурации и управления сервисами
+    tr: Dinamik servis keşfi, yapılandırma ve servis yönetim platformu
   type: website
   crossVersionUpdate: false
   limit: 1

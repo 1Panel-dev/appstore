@@ -15,6 +15,7 @@ additionalProperties:
         zh-hant: "AI"
         zh: "AI"
         tr: "AI"
+        es-es: "IA"
     - key: Website
       name: 建站
       sort: 10
@@ -28,6 +29,7 @@ additionalProperties:
         zh-hant: "網站"
         zh: "建站"
         tr: "Web Sitesi"
+        es-es: "Sitio web"
     - key: Database
       name: 数据库
       sort: 20
@@ -41,6 +43,7 @@ additionalProperties:
         zh-hant: "資料庫"
         zh: "数据库"
         tr: "Veritabanı"
+        es-es: "Base de datos"
     - key: Server
       name: Web 服务器
       sort: 30
@@ -54,6 +57,7 @@ additionalProperties:
         zh-hant: "網頁伺服器"
         zh: "Web 服务器"
         tr: "Web Sunucusu"
+        es-es: "Servidor web"
     - key: Runtime
       name: 运行环境
       sort: 40
@@ -67,6 +71,7 @@ additionalProperties:
         zh-hant: "執行環境"
         zh: "运行环境"
         tr: "Çalışma Zamanı"
+        es-es: "Entorno de ejecucion"
     - key: Tool
       name: 实用工具
       sort: 50
@@ -80,6 +85,7 @@ additionalProperties:
         zh-hant: "實用工具"
         zh: "实用工具"
         tr: "Araç"
+        es-es: "Herramienta"
     - key: Storage
       name: 云存储
       sort: 60
@@ -93,6 +99,7 @@ additionalProperties:
         zh-hant: "雲存儲"
         zh: "云存储"
         tr: "Bulut Depolama"
+        es-es: "Almacenamiento en la nube"
     - key: BI
       name: BI
       sort: 80
@@ -106,6 +113,7 @@ additionalProperties:
         zh-hant: "BI"
         zh: "BI"
         tr: "BI"
+        es-es: "BI"
     - key: CRM
       name: CRM
       sort: 85
@@ -119,6 +127,7 @@ additionalProperties:
         zh-hant: "CRM"
         zh: "CRM"
         tr: "CRM"
+        es-es: "CRM"
     - key: Security
       name: 安全
       sort: 90
@@ -132,6 +141,7 @@ additionalProperties:
         zh-hant: "安全"
         zh: "安全"
         tr: "Güvenlik"
+        es-es: "Seguridad"
     - key: DevTool
       name: 开发工具
       sort: 100
@@ -145,6 +155,7 @@ additionalProperties:
         zh-hant: "開發工具"
         zh: "开发工具"
         tr: "Geliştirme Aracı"
+        es-es: "Herramienta de desarrollo"
     - key: DevOps
       name: DevOps
       sort: 110
@@ -158,6 +169,7 @@ additionalProperties:
         zh-hant: "DevOps"
         zh: "DevOps"
         tr: "DevOps"
+        es-es: "DevOps"
     - key: Middleware
       name: 中间件
       sort: 120
@@ -171,6 +183,7 @@ additionalProperties:
         zh-hant: "中間件"
         zh: "中间件"
         tr: "Ara Yazılım"
+        es-es: "Middleware"
     - key: Media
       name: 多媒体
       sort: 130
@@ -184,6 +197,7 @@ additionalProperties:
         zh-hant: "多媒體"
         zh: "多媒体"
         tr: "Medya"
+        es-es: "Multimedia"
     - key: Email
       name: 邮件服务
       sort: 140
@@ -197,6 +211,7 @@ additionalProperties:
         zh-hant: "郵件服務"
         zh: "邮件服务"
         tr: "E-posta Hizmeti"
+        es-es: "Servicio de correo"
     - key: Game
       name: 休闲游戏
       sort: 150
@@ -210,6 +225,7 @@ additionalProperties:
         zh-hant: "休閒遊戲"
         zh: "休闲游戏"
         tr: "Gündelik Oyunlar"
+        es-es: "Juegos casuales"
     - key: Local
       name: 本地
       sort: 9999
@@ -223,4 +239,5 @@ additionalProperties:
         zh-hant: "本機"
         zh: "本地"
         tr: "Yerel"
+        es-es: "Local"
   version: v1.6.0

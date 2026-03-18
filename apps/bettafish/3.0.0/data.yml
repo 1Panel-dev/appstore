@@ -8,6 +8,7 @@ additionalProperties:
         zh: HTTP 端口
         zh-Hant: HTTP 連接埠
         en: HTTP Port
+        es-es: Puerto HTTP
         ja: HTTP ポート
         ko: HTTP 포트
         ms: Port HTTP
@@ -24,6 +25,7 @@ additionalProperties:
         pt-br: "Defina a porta de acesso HTTP para o aplicativo, intervalo válido: 1-65535"
         ru: "Установите порт доступа HTTP для приложения, допустимый диапазон: 1-65535"
         tr: "Uygulama için HTTP erişim portunu ayarlayın, geçerli aralık: 1-65535"
+        es-es: "Establezca el puerto de acceso HTTP de la aplicacion; rango valido: 1-65535"
       required: true
       type: number
       edit: true
@@ -36,6 +38,7 @@ additionalProperties:
         zh: Query Engine 访问端口
         zh-Hant: Query Engine 存取埠
         en: Query Engine Access Port
+        es-es: Query Engine Access Puerto
         ja: Query Engine アクセスポート
         ko: Query Engine 액세스 포트
         ms: Port Akses Query Engine
@@ -54,6 +57,7 @@ additionalProperties:
         zh: Media Engine 访问端口
         zh-Hant: Media Engine 存取埠
         en: Media Engine Access Port
+        es-es: Media Engine Access Puerto
         ja: Media Engine アクセスポート
         ko: Media Engine 액세스 포트
         ms: Port Akses Media Engine
@@ -72,6 +76,7 @@ additionalProperties:
         zh: Insight Engine 访问端口
         zh-Hant: Insight Engine 存取埠
         en: Insight Engine Access Port
+        es-es: Insight Engine Access Puerto
         ja: Insight Engine アクセスポート
         ko: Insight Engine 액세스 포트
         ms: Port Akses Insight Engine
@@ -90,6 +95,7 @@ additionalProperties:
         zh: 数据库
         zh-Hant: 資料庫
         en: Database
+        es-es: Base de datos
         ja: データベース
         ko: 데이터베이스
         ms: Pangkalan Data
@@ -106,6 +112,7 @@ additionalProperties:
         pt-br: Prefere PostgreSQL, compatível com MySQL
         ru: Предпочтительно PostgreSQL, совместимо с MySQL
         tr: PostgreSQL tercih edilir, MySQL ile uyumlu
+        es-es: Se recomienda PostgreSQL; tambien es compatible con MySQL
       required: true
       type: apps
       edit: true
@@ -127,6 +134,7 @@ additionalProperties:
         zh: 数据库名称
         zh-Hant: 資料庫名稱
         en: Database Name
+        es-es: Nombre de la base de datos
         ja: データベース名
         ko: 데이터베이스 이름
         ms: Nama Pangkalan Data
@@ -145,6 +153,7 @@ additionalProperties:
         zh: 数据库用户名
         zh-Hant: 資料庫使用者名稱
         en: Database Username
+        es-es: Usuario de la base de datosname
         ja: データベースユーザー名
         ko: 데이터베이스 사용자 이름
         ms: Nama Pengguna Pangkalan Data
@@ -163,6 +172,7 @@ additionalProperties:
         zh: 数据库密码
         zh-Hant: 資料庫密碼
         en: Database Password
+        es-es: Contraseña de la base de datos
         ja: データベースパスワード
         ko: 데이터베이스 비밀번호
         ms: Kata Laluan Pangkalan Data

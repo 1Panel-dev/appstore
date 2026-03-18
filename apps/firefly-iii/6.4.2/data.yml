@@ -6,6 +6,7 @@ additionalProperties:
       labelZh: 应用密钥 (必须为 32 位字符)
       label:
         en: Application Key (Must be exactly 32 characters)
+        es-es: Application Clave (Must be exactly 32 characters)
         ja: アプリケーションキー (正確に32文字である必要があります)
         ms: Kunci Aplikasi (Mesti tepat 32 aksara)
         pt-br: Chave de Aplicação (Deve ter exatamente 32 caracteres)
@@ -13,6 +14,7 @@ additionalProperties:
         ko: 애플리케이션 키 (정확히 32자여야 함)
         zh: 应用密钥 (必须为 32 位字符)
         zh-Hant: 應用密鑰 (必須為 32 位字符)
+        tr: Uygulama Anahtarı (Tam olarak 32 karakter olmalıdır)
       required: true
       type: text
     - default: mysql
@@ -21,6 +23,7 @@ additionalProperties:
       labelZh: 数据库服务
       label:
         en: Database Service
+        es-es: Servicio de base de datos
         ja: データベースサービス
         ms: Perkhidmatan Pangkalan Data
         pt-br: Serviço de Banco de Dados
@@ -28,6 +31,7 @@ additionalProperties:
         ko: 데이터베이스 서비스
         zh: 数据库服务
         zh-Hant: 數據庫服務
+        tr: Veritabanı Hizmeti
       required: true
       type: apps
       child:
@@ -46,6 +50,7 @@ additionalProperties:
       labelZh: 数据库名称
       label:
         en: Database
+        es-es: Base de datos
         ja: データベース
         ms: Pangkalan Data
         pt-br: Banco de Dados
@@ -53,6 +58,7 @@ additionalProperties:
         ko: 데이터베이스
         zh: 数据库名称
         zh-Hant: 數據庫名稱
+        tr: Veritabanı
       random: true
       required: true
       rule: paramCommon
@@ -63,6 +69,7 @@ additionalProperties:
       labelZh: 数据库用户
       label:
         en: User
+        es-es: Usuario
         ja: ユーザー
         ms: Pengguna
         pt-br: Usuário
@@ -70,6 +77,7 @@ additionalProperties:
         ko: 사용자
         zh: 数据库用户
         zh-Hant: 數據庫用戶
+        tr: Kullanıcı
       random: true
       required: true
       rule: paramCommon
@@ -80,6 +88,7 @@ additionalProperties:
       labelZh: 数据库用户密码
       label:
         en: Password
+        es-es: Contraseña
         ja: パスワード
         ms: Kata laluan
         pt-br: Senha
@@ -87,6 +96,7 @@ additionalProperties:
         ko: 비밀번호
         zh: 数据库用户密码
         zh-Hant: 數據庫用戶密碼
+        tr: Parola
       random: true
       required: true
       type: password
@@ -96,6 +106,7 @@ additionalProperties:
       labelZh: HTTP 端口
       label:
         en: Port
+        es-es: Puerto
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -103,6 +114,7 @@ additionalProperties:
         ko: 포트
         zh: HTTP 端口
         zh-Hant: HTTP 埠
+        tr: Bağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -113,6 +125,7 @@ additionalProperties:
       labelZh: 反向代理域名（可选）
       label:
         en: Reverse Proxy Domain (Optional)
+        es-es: Reverse Proxy Dominio (Optional)
         ja: リバースプロキシドメイン（オプション）
         ms: Domain Proksi Terbalik (Pilihan)
         pt-br: Domínio de Proxy Reverso (Opcional)
@@ -120,6 +133,7 @@ additionalProperties:
         ko: 리버스 프록시 도메인 (선택 사항)
         zh: 反向代理域名（可选）
         zh-Hant: 反向代理域名（可選）
+        tr: Ters Proxy Alan Adı (İsteğe Bağlı)
       required: false
       rule: paramHttp
       type: text

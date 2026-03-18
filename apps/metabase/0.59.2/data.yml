@@ -9,6 +9,7 @@ additionalProperties:
           type: service
           label:
             en: Database Service
+            es-es: Servicio de base de datos
             ja: データベースサービス
             ms: Perkhidmatan Pangkalan Data
             pt-br: Serviço de Banco de Dados
@@ -16,6 +17,7 @@ additionalProperties:
             ko: 데이터베이스 서비스
             zh-hant: 資料庫服務
             zh: 数据库服务
+            tr: Veritabanı Hizmeti
         - default: metabase
           envKey: PANEL_DB_NAME
           labelEn: Database
@@ -26,6 +28,7 @@ additionalProperties:
           type: text
           label:
             en: Database
+            es-es: Base de datos
             ja: データベース
             ms: Pangkalan Data
             pt-br: Banco de Dados
@@ -33,6 +36,7 @@ additionalProperties:
             ko: 데이터베이스
             zh-hant: 資料庫
             zh: 数据库
+            tr: Veritabanı
         - default: metabase
           envKey: PANEL_DB_USER
           labelEn: User
@@ -43,6 +47,7 @@ additionalProperties:
           type: text
           label:
             en: Database User
+            es-es: Usuario de la base de datos
             ja: データベースユーザー
             ms: Pengguna Pangkalan Data
             pt-br: Usuário do Banco de Dados
@@ -50,6 +55,7 @@ additionalProperties:
             ko: 데이터베이스 사용자
             zh-hant: 資料庫用戶
             zh: 数据库用户
+            tr: Veritabanı Kullanıcısı
         - default: metabase
           envKey: PANEL_DB_USER_PASSWORD
           labelEn: Password
@@ -59,6 +65,7 @@ additionalProperties:
           type: password
           label:
             en: Database Password
+            es-es: Contraseña de la base de datos
             ja: データベースのパスワード
             ms: Kata Laluan Pangkalan Data
             pt-br: Senha do Banco de Dados
@@ -66,6 +73,7 @@ additionalProperties:
             ko: 데이터베이스 비밀번호
             zh-hant: 資料庫密碼
             zh: 数据库密码
+            tr: Veritabanı Parolası
         - default: 3000
           envKey: PANEL_APP_PORT_HTTP
           labelEn: Port
@@ -75,6 +83,7 @@ additionalProperties:
           type: number
           label:
             en: Port
+            es-es: Puerto
             ja: ポート
             ms: Port
             pt-br: Porta
@@ -82,3 +91,4 @@ additionalProperties:
             ko: 포트
             zh-Hant: 埠
             zh: 端口
+            tr: Bağlantı Noktası

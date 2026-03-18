@@ -7,6 +7,7 @@ additionalProperties:
         zh: "HTTP 端口"
         zh-hant: "HTTP 埠"
         en: "HTTP Port"
+        es-es: Puerto HTTP
         ja: "HTTPポート"
         ms: "Port HTTP"
         pt-br: "Porta HTTP"
@@ -23,6 +24,7 @@ additionalProperties:
         ru: "Установите порт HTTP-доступа для приложения, допустимый диапазон: 1-65535"
         ko: "애플리케이션의 HTTP 접근 포트를 설정합니다. 유효 범위: 1-65535"
         tr: "Uygulama için HTTP erişim bağlantı noktasını ayarlayın, geçerli aralık: 1-65535"
+        es-es: "Establezca el puerto de acceso HTTP de la aplicacion; rango valido: 1-65535"
       required: true
       envKey: "PANEL_APP_PORT_HTTP"
       default: 7860
@@ -36,6 +38,7 @@ additionalProperties:
         zh: "数据库服务"
         zh-hant: "資料庫服務"
         en: "Database Service"
+        es-es: Servicio de base de datos
         ja: "データベースサービス"
         ms: "Perkhidmatan Pangkalan Data"
         pt-br: "Serviço de Banco de Dados"
@@ -52,6 +55,7 @@ additionalProperties:
         ru: "Выберите тип базы данных и соответствующий экземпляр службы, от которых зависит приложение (расположите службу базы данных в 1Panel заранее)"
         ko: "애플리케이션이 의존하는 데이터베이스 유형 및 해당 서비스 인스턴스를 선택합니다 (1Panel에서 미리 데이터베이스 서비스를 배포해야 함)"
         tr: "Uygulamanın bağımlı olduğu veritabanı türünü ve ilgili hizmet örneğini seçin (önceden 1Panel'de veritabanı hizmetini dağıtmanız gerekiyor)"
+        es-es: "Seleccione el tipo de base de datos y la instancia de servicio correspondiente de la que depende la aplicacion (implemente previamente el servicio de base de datos en 1Panel)"
       required: true
       envKey: "PANEL_DB_HOST"
       default: ""
@@ -63,6 +67,7 @@ additionalProperties:
         zh: "数据库名称"
         zh-hant: "資料庫名稱"
         en: "Database Name"
+        es-es: Nombre de la base de datos
         ja: "データベース名"
         ms: "Nama Pangkalan Data"
         pt-br: "Nome do Banco de Dados"
@@ -79,6 +84,7 @@ additionalProperties:
         ru: "Имя базы данных, необходимое для приложения, будет создано автоматически (соблюдайте правило именования: английский/цифры/.-_)"
         ko: "애플리케이션에 필요한 데이터베이스 이름으로, 자동으로 생성됩니다 (영문/숫자/.-_ 명명 규칙 준수)"
         tr: "Uygulama için gerekli veritabanı adı, otomatik olarak oluşturulur (İngilizce/sayılar/.-_ adlandırma kuralını izleyin)"
+        es-es: "El nombre de la base de datos requerida por la aplicacion se creara automaticamente (siga la regla de nombres: letras inglesas/numeros/.-_)"
       required: true
       envKey: "PANEL_DB_NAME"
       default: "langflow"
@@ -92,6 +98,7 @@ additionalProperties:
         zh: "数据库用户"
         zh-hant: "資料庫用戶"
         en: "Database User"
+        es-es: Usuario de la base de datos
         ja: "データベースユーザー"
         ms: "Pengguna Pangkalan Data"
         pt-br: "Usuário do Banco de Dados"
@@ -108,6 +115,7 @@ additionalProperties:
         ru: "Выделенный пользователь для доступа приложения к базе данных, будет создан автоматически (права привязаны к соответствующей базе данных)"
         ko: "애플리케이션이 데이터베이스에 접근하기 위한 전용 사용자로, 자동으로 생성됩니다 (해당 데이터베이스에 권한 바인딩)"
         tr: "Uygulamanın veritabanına erişmesi için özel kullanıcı, otomatik olarak oluşturulur (ilgili veritabanına izin bağlama)"
+        es-es: "Usuario dedicado para que la aplicacion acceda a la base de datos; se creara automaticamente (los permisos quedaran vinculados a la base de datos correspondiente)"
       required: true
       envKey: "PANEL_DB_USER"
       default: "langflow"
@@ -121,6 +129,7 @@ additionalProperties:
         zh: "数据库密码"
         zh-hant: "資料庫密碼"
         en: "Database Password"
+        es-es: Contraseña de la base de datos
         ja: "データベースパスワード"
         ms: "Kata Laluan Pangkalan Data"
         pt-br: "Senha do Banco de Dados"
@@ -137,6 +146,7 @@ additionalProperties:
         ru: "Пароль доступа для пользователя базы данных, автоматически генерируется сложный случайный пароль (ручной ввод не требуется)"
         ko: "데이터베이스 사용자의 접근 비밀번호로, 고강도 랜덤 비밀번호가 자동 생성됩니다（수동 입력 불필요）"
         tr: "Veritabanı kullanıcısı için erişim parolası, yüksek güvenlikli rastgele parola otomatik olarak oluşturulur (elle giriş gerekmez)"
+        es-es: "Contrasena de acceso del usuario de base de datos; se generara automaticamente una contrasena aleatoria de alta seguridad (no requiere entrada manual)"
       required: true
       envKey: "PANEL_DB_USER_PASSWORD"
       default: "langflow"

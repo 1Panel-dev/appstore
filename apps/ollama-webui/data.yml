@@ -12,6 +12,7 @@ additionalProperties:
     shortDescEn: User-friendly AI Interface (Supports Ollama, OpenAI API, ...)
     description:
         en: User-friendly AI Interface (Supports Ollama, OpenAI API, ...)
+        es-es: Interfaz de IA fácil de usar (compatible con Ollama, OpenAI API, ...)
         ja: ユーザーフレンドリーなAIインターフェース（Ollama、OpenAI APIなどをサポート）
         ms: Antaramuka AI yang Mesra Pengguna (Menyokong Ollama, OpenAI API, ...)
         pt-br: Interface de IA amigável ao usuário (Suporta Ollama, OpenAI API, ...)
@@ -19,6 +20,7 @@ additionalProperties:
         ko: 사용자 친화적인 AI 인터페이스 (Ollama, OpenAI API 등 지원)
         zh-hant: 用户友好的 AI 界面（支持 Ollama、OpenAI API 等）
         zh: 用户友好的 AI 界面（支持 Ollama、OpenAI API 等）
+        tr: Kullanici dostu yapay zeka arayuzu (Ollama, OpenAI API, ... destekler)
     type: website
     crossVersionUpdate: true
     limit: 1

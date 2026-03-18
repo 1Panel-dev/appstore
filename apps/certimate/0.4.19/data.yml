@@ -5,6 +5,17 @@ additionalProperties:
           envKey: PANEL_APP_PORT_HTTP
           labelEn: WebUI Port
           labelZh: 网页端口
+          label:
+            en: WebUI Port
+            zh: 网页端口
+            es-es: Puerto web
+            zh-Hant: WebUI 埠
+            ja: WebUI ポート
+            ko: WebUI 포트
+            ms: Port WebUI
+            pt-br: Porta WebUI
+            ru: Порт WebUI
+            tr: WebUI portu
           required: true
           rule: paramPort
           type: number
@@ -13,6 +24,17 @@ additionalProperties:
           envKey: PANEL_HTTP_PROXY
           labelEn: HTTP_PROXY (e.g., http://<URL_ADDRESS>:<Port>)
           labelZh: HTTP_PROXY (例如：http://<URL_ADDRESS>:<Port>)
+          label:
+            en: HTTP_PROXY (e.g., http://<URL_ADDRESS>:<Port>)
+            zh: HTTP_PROXY (例如：http://<URL_ADDRESS>:<Port>)
+            es-es: HTTP_PROXY (e.g., http://<URL_ADDRESS>:<Puerto>)
+            zh-Hant: HTTP_PROXY（例如：http://<URL_ADDRESS>:<Port>）
+            ja: HTTP_PROXY（例：http://<URL_ADDRESS>:<Port>）
+            ko: HTTP_PROXY (예：http://<URL_ADDRESS>:<Port>)
+            ms: HTTP_PROXY (cth：http://<URL_ADDRESS>:<Port>)
+            pt-br: HTTP_PROXY (ex.：http://<URL_ADDRESS>:<Port>)
+            ru: HTTP_PROXY (например：http://<URL_ADDRESS>:<Port>)
+            tr: HTTP_PROXY (örn. http://<URL_ADDRESS>:<Port>)
           required: false
           rule: paramExtUrl
           type: text
@@ -21,6 +43,17 @@ additionalProperties:
           envKey: PANEL_HTTPS_PROXY
           labelEn: HTTPS_PROXY (e.g., http://<URL_ADDRESS>:<Port>)
           labelZh: HTTPS_PROXY (例如：http://<URL_ADDRESS>:<Port>)
+          label:
+            en: HTTPS_PROXY (e.g., http://<URL_ADDRESS>:<Port>)
+            zh: HTTPS_PROXY (例如：http://<URL_ADDRESS>:<Port>)
+            es-es: HTTPS_PROXY (e.g., http://<URL_ADDRESS>:<Puerto>)
+            zh-Hant: HTTPS_PROXY（例如：http://<URL_ADDRESS>:<Port>）
+            ja: HTTPS_PROXY（例：http://<URL_ADDRESS>:<Port>）
+            ko: HTTPS_PROXY (예：http://<URL_ADDRESS>:<Port>)
+            ms: HTTPS_PROXY (cth：http://<URL_ADDRESS>:<Port>)
+            pt-br: HTTPS_PROXY (ex.：http://<URL_ADDRESS>:<Port>)
+            ru: HTTPS_PROXY (например：http://<URL_ADDRESS>:<Port>)
+            tr: HTTPS_PROXY (örn. http://<URL_ADDRESS>:<Port>)
           required: false
           rule: paramExtUrl
           type: text
@@ -29,5 +62,16 @@ additionalProperties:
           envKey: PANEL_NO_PROXY
           labelEn: NO_PROXY (e.g., 172.18.0.0/16,127.0.0.1,localhost)
           labelZh: NO_PROXY (例如：172.18.0.0/16,127.0.0.1,localhost)
+          label:
+            en: NO_PROXY (e.g., 172.18.0.0/16,127.0.0.1,localhost)
+            zh: NO_PROXY (例如：172.18.0.0/16,127.0.0.1,localhost)
+            es-es: NO_PROXY (p. ej., 172.18.0.0/16,127.0.0.1,localhost)
+            zh-Hant: NO_PROXY（例如：172.18.0.0/16,127.0.0.1,localhost）
+            ja: NO_PROXY（例：172.18.0.0/16,127.0.0.1,localhost）
+            ko: NO_PROXY (예：172.18.0.0/16,127.0.0.1,localhost)
+            ms: NO_PROXY (cth：172.18.0.0/16,127.0.0.1,localhost)
+            pt-br: NO_PROXY (ex.：172.18.0.0/16,127.0.0.1,localhost)
+            ru: NO_PROXY (например：172.18.0.0/16,127.0.0.1,localhost)
+            tr: NO_PROXY (örn. 172.18.0.0/16,127.0.0.1,localhost)
           required: false
           type: text

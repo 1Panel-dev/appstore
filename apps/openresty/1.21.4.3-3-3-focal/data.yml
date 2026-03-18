@@ -8,6 +8,7 @@ additionalProperties:
           type: number
           label:
             en: HTTP Port
+            es-es: Puerto HTTP
             ja: HTTP ポート
             ms: Port HTTP
             pt-br: Porta HTTP
@@ -24,6 +25,7 @@ additionalProperties:
           type: number
           label:
             en: HTTPS Port
+            es-es: Puerto HTTPS
             ja: HTTPS ポート
             ms: Port HTTPS
             pt-br: Porta HTTPS

@@ -10,6 +10,7 @@ additionalProperties:
       type: number
       label:
         en: Web UI Port
+        es-es: Puerto web
         ja: Web UIポート
         ms: Port Web UI
         pt-br: Porta da Web UI
@@ -17,6 +18,7 @@ additionalProperties:
         ko: 웹 UI 포트
         zh-Hant: Web UI 埠
         zh: Web UI 端口
+        tr: Web UI Bağlantı Noktası
     - default: 2280-2290
       envKey: LANGBOT_PORT_RANGE
       edit: true
@@ -27,6 +29,7 @@ additionalProperties:
       type: text
       label:
         en: LangBot Port Range
+        es-es: LangBot Puerto Range
         ja: LangBotポート範囲
         ms: Julat Port LangBot
         pt-br: Intervalo de portas do LangBot
@@ -34,6 +37,7 @@ additionalProperties:
         ko: LangBot 포트 범위
         zh: LangBot 端口范围
         zh-Hant: LangBot 埠範圍
+        tr: LangBot Bağlantı Noktası Aralığı
     - default: Asia/Shanghai
       edit: true
       envKey: TIME_ZONE
@@ -41,6 +45,7 @@ additionalProperties:
       labelZh: 时区
       label:
         en: Time Zone
+        es-es: Zona horaria
         ja: タイムゾーン
         ms: Zon masa
         pt-br: Fuso horário
@@ -48,5 +53,6 @@ additionalProperties:
         ko: 시간대
         zh: 时区
         zh-Hant: 時區
+        tr: Saat Dilimi
       required: true
       type: text

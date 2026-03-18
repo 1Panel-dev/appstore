@@ -5,6 +5,17 @@ additionalProperties:
       envKey: PANEL_APP_PORT_HTTP
       labelEn: Port
       labelZh: 端口
+      label:
+        en: Port
+        zh: 端口
+        es-es: Puerto
+        zh-Hant: 埠
+        ja: ポート
+        ko: 포트
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        tr: Bağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -13,5 +24,16 @@ additionalProperties:
       envKey: TIME_ZONE
       labelEn: Time zone
       labelZh: 时区
+      label:
+        en: Time zone
+        zh: 时区
+        es-es: Zona horaria
+        zh-Hant: 時區
+        ja: タイムゾーン
+        ko: 시간대
+        ms: Zon masa
+        pt-br: Fuso horário
+        ru: Часовой пояс
+        tr: Saat Dilimi
       required: true
       type: text

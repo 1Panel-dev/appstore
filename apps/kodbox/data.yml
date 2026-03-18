@@ -10,6 +10,17 @@ additionalProperties:
     - Storage
   shortDescZh: 可道云推出的企业级私有云存储解决方案
   shortDescEn: An enterprise-class private cloud storage solution launched by Kedao Cloud
+  description:
+    en: An enterprise-class private cloud storage solution launched by Kedao Cloud
+    zh: 可道云推出的企业级私有云存储解决方案
+    es-es: Un enterprise-class private cloud storage solution launched by Kedao Cloud
+    zh-Hant: 可道雲推出的企業級私有雲儲存解決方案
+    ja: Kedao Cloud が提供するエンタープライズ向けプライベートクラウドストレージソリューション
+    ko: Kedao Cloud가 출시한 엔터프라이즈급 프라이빗 클라우드 스토리지 솔루션
+    ms: Penyelesaian storan awan peribadi kelas perusahaan yang dilancarkan oleh Kedao Cloud
+    pt-br: Uma solução de armazenamento em nuvem privada de nível empresarial lançada pela Kedao Cloud
+    ru: Корпоративное решение для частного облачного хранилища от Kedao Cloud
+    tr: Kedao Cloud tarafından sunulan kurumsal özel bulut depolama çözümü
   type: website
   crossVersionUpdate: true
   limit: 0

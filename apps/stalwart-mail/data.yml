@@ -12,6 +12,7 @@ additionalProperties:
   shortDescEn: Secure & Modern All-in-One Mail Server
   description:
     en: Secure & Modern All-in-One Mail Server
+    es-es: Servidor de correo todo en uno, seguro y moderno
     ja: 安全で最新の統合型メールサーバー
     ms: Pelayan Mel Semua-dalam-Satu yang Selamat & Moden
     pt-br: Servidor de E-mail Tudo-em-Um Seguro e Moderno
@@ -19,6 +20,7 @@ additionalProperties:
     ko: 안전하고 현대적인 올인원 메일 서버
     zh-hant: 安全且現代化的一體化郵件伺服器
     zh: 安全且现代的一体化邮件服务器
+    tr: Guvenli ve modern hepsi bir arada posta sunucusu
   type: website
   crossVersionUpdate: true
   limit: 1

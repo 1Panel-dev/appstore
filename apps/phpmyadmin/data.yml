@@ -12,6 +12,7 @@ additionalProperties:
     shortDescEn: A web interface for MySQL and MariaDB
     description:
         en: A web interface for MySQL and MariaDB
+        es-es: Un web interface for MySQL and MariaDB
         ja: MySQL と MariaDB 用のウェブインターフェース
         ms: Antaramuka web untuk MySQL dan MariaDB
         pt-br: Uma interface web para MySQL e MariaDB
@@ -19,6 +20,7 @@ additionalProperties:
         ko: MySQL 및 MariaDB를 위한 웹 인터페이스
         zh-hant: MySQL 和 MariaDB 的網頁介面
         zh: MySQL 和 MariaDB 的 Web 界面
+        tr: MySQL ve MariaDB icin web arayuzu
     type: website
     crossVersionUpdate: true
     limit: 1

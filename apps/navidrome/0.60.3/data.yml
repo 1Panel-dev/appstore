@@ -7,6 +7,7 @@ additionalProperties:
           labelZh: HTTP端口
           label:
             en: HTTP Port
+            es-es: Puerto HTTP
             ja: HTTPポート
             ms: Port HTTP
             pt-br: Porta HTTP
@@ -14,6 +15,7 @@ additionalProperties:
             ko: HTTP 포트
             zh: HTTP端口
             zh-Hant: HTTP連接埠
+            tr: HTTP Bağlantı Noktası
           required: true
           rule: paramPort
           type: number

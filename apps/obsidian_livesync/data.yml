@@ -20,6 +20,7 @@ additionalProperties:
   document:  https://github.com/vrtmrz/obsidian-livesync/blob/main/docs/setup_own_server_cn.md
   description:
     en: Obsidian Self-hosted LiveSync
+    es-es: LiveSync autoalojado de Obsidian
     zh: Obsidian 自托管实时同步
     zh-Hant: Obsidian 自託管實時同步
     ja: Obsidian 自己ホスト型ライブ同期
@@ -27,6 +28,7 @@ additionalProperties:
     pt-br: Obsidian LiveSync auto-hospedado
     ru: Обсидиан Самостоятельно размещаемая синхронизация в реальном времени
     ko: Obsidian 자체 호스팅 실시간 동기화
+    tr: Obsidian self-hosted LiveSync
   architectures:
     - amd64
     - arm64

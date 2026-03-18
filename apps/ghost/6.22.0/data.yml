@@ -9,6 +9,7 @@ additionalProperties:
       envKey: PANEL_DB_TYPE
       label:
         en: Database Service
+        es-es: Servicio de base de datos
         ja: データベースサービス
         ms: Perkhidmatan Pangkalan Data
         pt-br: Serviço de Banco de Dados
@@ -16,6 +17,7 @@ additionalProperties:
         ko: 데이터베이스 서비스
         zh-hant: 資料庫服務
         zh: 数据库服务
+        tr: Veritabanı Hizmeti
       required: true
       type: apps
       values:
@@ -25,6 +27,7 @@ additionalProperties:
       envKey: PANEL_DB_NAME
       label:
         en: Database
+        es-es: Base de datos
         ja: データベース
         ms: Pangkalan Data
         pt-br: Banco de Dados
@@ -32,6 +35,7 @@ additionalProperties:
         ko: 데이터베이스
         zh-hant: 資料庫
         zh: 数据库
+        tr: Veritabanı
       required: true
       random: true
       type: text
@@ -39,6 +43,7 @@ additionalProperties:
       envKey: PANEL_DB_USER
       label:
         en: Database User
+        es-es: Usuario de la base de datos
         ja: データベースユーザー
         ms: Pengguna Pangkalan Data
         pt-br: Usuário do Banco de Dados
@@ -46,6 +51,7 @@ additionalProperties:
         ko: 데이터베이스 사용자
         zh-hant: 資料庫用戶
         zh: 数据库用户
+        tr: Veritabanı Kullanıcısı
       required: true
       random: true
       type: text
@@ -53,6 +59,7 @@ additionalProperties:
       envKey: PANEL_DB_USER_PASSWORD
       label:
         en: Database Password
+        es-es: Contraseña de la base de datos
         ja: データベースのパスワード
         ms: Kata Laluan Pangkalan Data
         pt-br: Senha do Banco de Dados
@@ -60,6 +67,7 @@ additionalProperties:
         ko: 데이터베이스 비밀번호
         zh-hant: 資料庫密碼
         zh: 数据库密码
+        tr: Veritabanı Parolası
       required: true
       type: password
       random: true
@@ -67,6 +75,7 @@ additionalProperties:
       envKey: PANEL_APP_PORT_HTTP
       label:
         en: Port
+        es-es: Puerto
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -74,6 +83,7 @@ additionalProperties:
         ko: 포트
         zh-hant: 埠
         zh: 端口
+        tr: Bağlantı Noktası
       required: true
       type: number
       rule: paramPort
@@ -81,6 +91,7 @@ additionalProperties:
       envKey: GHOST_URL
       label:
         en: Site URL
+        es-es: URL del sitio
         ja: サイトURL
         ms: URL Laman
         pt-br: URL do Site
@@ -88,5 +99,6 @@ additionalProperties:
         ko: 사이트 URL
         zh-hant: 網站網址
         zh: 网站地址
+        tr: Site URL'si
       required: true
       type: text

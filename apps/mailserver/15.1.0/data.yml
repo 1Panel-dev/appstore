@@ -10,6 +10,7 @@ additionalProperties:
           type: text
           label:
             en: Domain
+            es-es: Dominio
             ja: ドメイン
             ms: Domain
             pt-br: Domínio
@@ -17,6 +18,7 @@ additionalProperties:
             ko: 도메인
             zh-Hant: 域名
             zh: 域名
+            tr: Alan Adı
         - default: 25
           edit: true
           envKey: PANEL_APP_PORT_SMTP
@@ -27,6 +29,7 @@ additionalProperties:
           type: number
           label:
             en: SMTP port
+            es-es: Puerto SMTP
             ja: SMTP ポート
             ms: Port SMTP
             pt-br: Porta SMTP
@@ -34,6 +37,7 @@ additionalProperties:
             ko: SMTP 포트
             zh-Hant: SMTP 埠
             zh: SMTP 端口
+            tr: SMTP Bağlantı Noktası
         - default: 143
           edit: true
           envKey: PANEL_APP_PORT_IMAP4_143
@@ -44,6 +48,7 @@ additionalProperties:
           type: number
           label:
             en: IMAP4 port
+            es-es: Puerto IMAP4
             ja: IMAP4 ポート
             ms: Port IMAP4
             pt-br: Porta IMAP4
@@ -51,6 +56,7 @@ additionalProperties:
             ko: IMAP4 포트
             zh-Hant: IMAP4 埠
             zh: IMAP4 端口
+            tr: IMAP4 Bağlantı Noktası
         - default: 465
           edit: true
           envKey: PANEL_APP_PORT_ESMTP_465
@@ -61,6 +67,7 @@ additionalProperties:
           type: number
           label:
             en: ESMTP port
+            es-es: Puerto ESMTP
             ja: ESMTP ポート
             ms: Port ESMTP
             pt-br: Porta ESMTP
@@ -68,6 +75,7 @@ additionalProperties:
             ko: ESMTP 포트
             zh-Hant: ESMTP 埠
             zh: ESMTP 端口
+            tr: ESMTP Bağlantı Noktası
         - default: 587
           edit: true
           envKey: PANEL_APP_PORT_ESMTP_587
@@ -78,6 +86,7 @@ additionalProperties:
           type: number
           label:
             en: ESMTP port
+            es-es: Puerto ESMTP
             ja: ESMTP ポート
             ms: Port ESMTP
             pt-br: Porta ESMTP
@@ -85,6 +94,7 @@ additionalProperties:
             ko: ESMTP 포트
             zh-Hant: ESMTP 埠
             zh: ESMTP 端口
+            tr: ESMTP Bağlantı Noktası
         - default: 993
           edit: true
           envKey: PANEL_APP_PORT_IMAP4_993
@@ -95,6 +105,7 @@ additionalProperties:
           type: number
           label:
             en: IMAP4 port
+            es-es: Puerto IMAP4
             ja: IMAP4 ポート
             ms: Port IMAP4
             pt-br: Porta IMAP4
@@ -102,5 +113,6 @@ additionalProperties:
             ko: IMAP4 포트
             zh-Hant: IMAP4 埠
             zh: IMAP4 端口
+            tr: IMAP4 Bağlantı Noktası
  
 

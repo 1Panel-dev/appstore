@@ -10,6 +10,17 @@ additionalProperties:
     - Website
   shortDescZh: 开源自部署的个人微博
   shortDescEn: Open source self hosted personal micro blog platform
+  description:
+    en: Open source self hosted personal micro blog platform
+    zh: 开源自部署的个人微博
+    es-es: De código abierto self hosted personal micro blog plataforma
+    zh-Hant: 開源自架個人微網誌平台
+    ja: オープンソースのセルフホスト型個人向けマイクロブログプラットフォーム
+    ko: 오픈소스 자체 호스팅 개인 마이크로블로그 플랫폼
+    ms: Platform mikroblog peribadi hos sendiri sumber terbuka
+    pt-br: Plataforma pessoal de microblog auto-hospedada e de código aberto
+    ru: Открытая самохостируемая персональная микроблог-платформа
+    tr: Açık kaynaklı, self-hosted kişisel mikro blog platformu
   type: website
   crossVersionUpdate: true
   limit: 0

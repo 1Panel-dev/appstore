@@ -5,6 +5,17 @@ additionalProperties:
       envKey: PANEL_APP_PORT_HTTP
       labelEn: Port
       labelZh: 端口
+      label:
+        en: Port
+        zh: 端口
+        es-es: Puerto
+        zh-Hant: 埠
+        ja: ポート
+        ko: 포트
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        tr: Bağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -13,6 +24,17 @@ additionalProperties:
       envKey: READER_APP_USERLIMIT
       labelEn: User Limit
       labelZh: 用户上限
+      label:
+        en: User Limit
+        zh: 用户上限
+        es-es: Usuario Limit
+        zh-Hant: 使用者上限
+        ja: ユーザー上限
+        ko: 사용자 제한
+        ms: Had pengguna
+        pt-br: Limite de usuários
+        ru: Лимит пользователей
+        tr: Kullanici siniri
       required: true
       type: number
     - default: '200'
@@ -20,12 +42,34 @@ additionalProperties:
       envKey: READER_APP_USERBOOKLIMIT
       labelEn: User Book Limit
       labelZh: 用户书籍上限
+      label:
+        en: User Book Limit
+        zh: 用户书籍上限
+        es-es: Usuario Book Limit
+        zh-Hant: 使用者書籍上限
+        ja: ユーザーの書籍上限
+        ko: 사용자 도서 제한
+        ms: Had buku pengguna
+        pt-br: Limite de livros por usuário
+        ru: Лимит книг пользователя
+        tr: Kullanici kitap siniri
       required: true
       type: number
     - default: "false"
       envKey: READER_APP_SECURE
       labelEn: Enable Login Authentication
       labelZh: 开启登录鉴权，开启后将支持多用户模式
+      label:
+        en: Enable Login Authentication
+        zh: 开启登录鉴权，开启后将支持多用户模式
+        es-es: Habilitar autenticación de inicio de sesión
+        zh-Hant: 啟用登入驗證
+        ja: ログイン認証を有効化
+        ko: 로그인 인증 활성화
+        ms: Dayakan pengesahan log masuk
+        pt-br: Ativar autenticação de login
+        ru: Включить аутентификацию входа
+        tr: Giris dogrulamasini etkinlestir
       required: true
       type: select
       values:
@@ -37,6 +81,17 @@ additionalProperties:
       envKey: READER_APP_SECUREKEY
       labelEn: Admin Password
       labelZh: 管理员密码
+      label:
+        en: Admin Password
+        zh: 管理员密码
+        es-es: Contraseña del administrador
+        zh-Hant: 管理員密碼
+        ja: 管理者パスワード
+        ko: 관리자 비밀번호
+        ms: Kata Laluan Admin
+        pt-br: Senha do Administrador
+        ru: Пароль администратора
+        tr: Yönetici Parolası
       random: true
       required: true
       rule: paramComplexity
@@ -45,6 +100,17 @@ additionalProperties:
       envKey: READER_APP_CACHECHAPTERCONTENT
       labelEn: Cache Chapter Content
       labelZh: 开启缓存章节内容 V2.0
+      label:
+        en: Cache Chapter Content
+        zh: 开启缓存章节内容 V2.0
+        es-es: Almacenar en caché el contenido de los capítulos
+        zh-Hant: 快取章節內容
+        ja: 章コンテンツをキャッシュ
+        ko: 장 내용 캐시
+        ms: Cache kandungan bab
+        pt-br: Armazenar em cache o conteúdo dos capítulos
+        ru: Кэшировать содержимое глав
+        tr: Bolum icerigini onbellege al
       required: true
       type: select
       values:

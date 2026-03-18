@@ -12,6 +12,7 @@ additionalProperties:
     shortDescEn: A lightweight, self-hosted memo hub
     description:
         en: A lightweight, self-hosted memo hub
+        es-es: Un ligero, autoalojado memo hub
         ja: 軽量な自己ホスト型メモハブ
         ms: Pusat memo ringan yang dihoskan sendiri
         pt-br: Um hub de anotações leve e auto-hospedado
@@ -19,6 +20,7 @@ additionalProperties:
         ko: 가벼운 자체 호스팅 메모 허브
         zh-Hant: 輕量級自託管備忘錄中心
         zh: 轻量级自托管备忘录中心
+        tr: Bir hafif, kendi kendine barındırılan memo hub
     type: website
     crossVersionUpdate: false
     limit: 0

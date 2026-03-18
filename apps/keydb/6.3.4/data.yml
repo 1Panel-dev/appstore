@@ -4,6 +4,17 @@ additionalProperties:
           envKey: PANEL_KEYDB_ROOT_PASSWORD
           labelEn: Password
           labelZh: 密码
+          label:
+            en: Password
+            zh: 密码
+            es-es: Contraseña
+            zh-Hant: 用戶密碼
+            ja: パスワード
+            ko: 비밀번호
+            ms: Kata Laluan
+            pt-br: Senha
+            ru: Пароль
+            tr: Parola
           random: true
           required: true
           rule: paramComplexity
@@ -12,6 +23,17 @@ additionalProperties:
           envKey: PANEL_APP_PORT_HTTP
           labelEn: Port
           labelZh: 端口
+          label:
+            en: Port
+            zh: 端口
+            es-es: Puerto
+            zh-Hant: 埠
+            ja: ポート
+            ko: 포트
+            ms: Port
+            pt-br: Porta
+            ru: Порт
+            tr: Bağlantı Noktası
           required: true
           rule: paramPort
           type: number
@@ -19,6 +41,17 @@ additionalProperties:
           default: 'x86_64'
           labelEn: Chip architecture
           labelZh: 芯片架构
+          label:
+            en: Chip architecture
+            zh: 芯片架构
+            es-es: Arquitectura del chip
+            zh-Hant: 晶片架構
+            ja: チップアーキテクチャ
+            ko: 칩 아키텍처
+            ms: Seni bina cip
+            pt-br: Arquitetura do chip
+            ru: Архитектура чипа
+            tr: Cip mimarisi
           edit: true
           type: select
           values:

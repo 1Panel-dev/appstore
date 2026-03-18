@@ -10,6 +10,7 @@ additionalProperties:
           type: number
           label:
             en: HTTP Port
+            es-es: Puerto HTTP
             ja: HTTPポート
             ms: Port HTTP
             pt-br: Porta HTTP
@@ -17,6 +18,7 @@ additionalProperties:
             ko: HTTP 포트
             zh: HTTP端口
             zh-Hant: HTTP連接埠
+            tr: HTTP Bağlantı Noktası
         - default: 8600
           edit: true
           envKey: PANEL_APP_PORT_DNS
@@ -27,6 +29,7 @@ additionalProperties:
           type: number
           label:
             en: DNS Port
+            es-es: DNS Puerto
             ja: DNSポート
             ms: Port DNS
             pt-br: Porta DNS
@@ -34,3 +37,4 @@ additionalProperties:
             ko: DNS 포트
             zh: DNS端口
             zh-Hant: DNS連接埠
+            tr: DNS Bağlantı Noktası

@@ -7,6 +7,7 @@ additionalProperties:
       random: true
       label:
         en: Root Password
+        es-es: Contraseña de root
         ja: ルートパスワード
         ms: Kata Laluan Root
         pt-br: Senha Root
@@ -14,12 +15,14 @@ additionalProperties:
         ko: 루트 비밀번호
         zh-Hant: Root 密碼
         zh: Root 密码
+        tr: Root Parolası
     - default: replica_user
       envKey: REPLICATION_USER
       required: true
       type: text
       label:
         en: Replication User
+        es-es: Replication Usuario
         ja: レプリケーションユーザー
         ms: Pengguna Replikasi
         pt-br: Usuário de Replicação
@@ -27,6 +30,7 @@ additionalProperties:
         ko: 복제 사용자
         zh-Hant: 複製使用者
         zh: 复制用户
+        tr: Replication Kullanıcı
     - default: replica_passwd
       envKey: REPLICATION_PASSWORD
       random: true
@@ -34,6 +38,7 @@ additionalProperties:
       type: password
       label:
         en: Replication Password
+        es-es: Replication Contraseña
         ja: レプリケーションパスワード
         ms: Kata Laluan Replikasi
         pt-br: Senha de Replicação
@@ -41,6 +46,7 @@ additionalProperties:
         ko: 복제 비밀번호
         zh-Hant: 複製密碼
         zh: 复制密码
+        tr: Replication Parola
     - default: 3306
       envKey: PANEL_APP_PORT_HTTP
       required: true
@@ -48,6 +54,7 @@ additionalProperties:
       type: number
       label:
         en: Port
+        es-es: Puerto
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -55,3 +62,4 @@ additionalProperties:
         ko: 포트
         zh-Hant: 埠
         zh: 端口
+        tr: Bağlantı Noktası

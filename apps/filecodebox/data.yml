@@ -12,7 +12,17 @@ additionalProperties:
   - Tool
   shortDescZh: 文件快递柜-匿名口令分享文本，文件，像拿快递一样取文件
   shortDescEn: File Express Cabinet - Anonymous Passcode Sharing Text, Files, Like
-    Taking Express Delivery for Files
+  description:
+    en: File Express Cabinet - Anonymous Passcode Sharing Text, Files, Like Taking Express Delivery for Files
+    zh: 文件快递柜-匿名口令分享文本，文件，像拿快递一样取文件
+    es-es: Armario de archivos con código anónimo para compartir texto y archivos, como recoger un paquete
+    zh-Hant: 文件快遞櫃，匿名口令分享文字與檔案，像取快遞一樣取檔案
+    ja: 宅配便の受け取りのようにファイルを受け取れる、匿名パスコード共有のテキストとファイルの受け渡しサービス
+    ko: 택배를 찾듯이 파일을 받을 수 있는 익명 패스코드 공유 텍스트 및 파일 서비스
+    ms: Kabinet Ekspres Fail, perkongsian teks dan fail dengan kod laluan tanpa nama, seperti mengambil bungkusan untuk mengambil fail
+    pt-br: Armário expresso de arquivos, compartilhamento anônimo de textos e arquivos por senha, como retirar uma encomenda para obter arquivos
+    ru: Экспресс-шкаф для файлов, анонимный обмен текстом и файлами по паролю, как получение посылки для получения файлов
+    tr: Dosyalari kargo teslim alir gibi alabileceginiz, anonim sifre paylasimli metin ve dosya dolabi
   type: website
   crossVersionUpdate: true
   limit: 1

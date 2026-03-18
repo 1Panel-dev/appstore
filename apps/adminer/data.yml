@@ -12,6 +12,7 @@ additionalProperties:
     shortDescEn: Database management in a single PHP file
     description:
         en: Lightweight PHP Database Management Tool
+        es-es: Herramienta ligera de gestion de bases de datos PHP
         ja: 軽量 PHP データベース管理ツール
         ms: Alat Pengurusan Pangkalan Data PHP Ringan
         pt-br: Ferramenta de Gerenciamento de Banco de Dados PHP Leve
@@ -19,6 +20,7 @@ additionalProperties:
         ko: 경량 PHP 데이터베이스 관리 도구
         zh-Hant: PHP 輕量級資料庫管理工具
         zh: PHP 轻量级数据库管理工具
+        tr: Hafif PHP veritabani yonetim araci
     type: website
     crossVersionUpdate: false
     limit: 1

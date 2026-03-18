@@ -4,6 +4,17 @@ additionalProperties:
       envKey: PANEL_APP_PORT_SERVICE
       labelEn: Service Port
       labelZh: 服务端口
+      label:
+        en: Service Port
+        zh: 服务端口
+        es-es: Servicio Puerto
+        zh-Hant: 服務埠
+        ja: サービスポート
+        ko: 서비스 포트
+        ms: Port Perkhidmatan
+        pt-br: Porta de Serviço
+        ru: Порт службы
+        tr: Hizmet Bağlantı Noktası
       required: true
       type: number
       rule: paramPort
@@ -11,6 +22,17 @@ additionalProperties:
       envKey: PANEL_APP_PORT_HTTP
       labelEn: Dashboard Port
       labelZh: Dashboard 端口
+      label:
+        en: Dashboard Port
+        zh: Dashboard 端口
+        es-es: Dashboard Puerto
+        zh-Hant: Dashboard 埠
+        ja: ダッシュボードポート
+        ko: 대시보드 포트
+        ms: Port Papan Pemuka
+        pt-br: Porta do Painel
+        ru: Порт панели управления
+        tr: Kontrol Paneli Bağlantı Noktası
       required: true
       type: number
       rule: paramPort
@@ -18,12 +40,34 @@ additionalProperties:
       envKey: USER_NAME
       labelEn: Username
       labelZh: 用户名
+      label:
+        en: Username
+        zh: 用户名
+        es-es: Nombre de usuario
+        zh-Hant: 使用者名稱
+        ja: ユーザー名
+        ko: 사용자 이름
+        ms: Nama Pengguna
+        pt-br: Nome de usuário
+        ru: Имя пользователя
+        tr: Kullanıcı Adı
       required: true
       type: text
     - default: admin
       envKey: PASSWORD
       labelEn: Password
       labelZh: 密码
+      label:
+        en: Password
+        zh: 密码
+        es-es: Contraseña
+        zh-Hant: 用戶密碼
+        ja: パスワード
+        ko: 비밀번호
+        ms: Kata Laluan
+        pt-br: Senha
+        ru: Пароль
+        tr: Parola
       required: true
       random: true
       rule: paramComplexity
@@ -32,5 +76,16 @@ additionalProperties:
       envKey: AUTH_TOKEN
       labelEn: Auth Token
       labelZh: 密钥
+      label:
+        en: Auth Token
+        zh: 密钥
+        es-es: Token de autenticación
+        zh-Hant: 驗證 Token
+        ja: 認証トークン
+        ko: 인증 토큰
+        ms: Token pengesahan
+        pt-br: Token de autenticação
+        ru: Токен аутентификации
+        tr: Kimlik doğrulama tokenı
       required: true
       type: text

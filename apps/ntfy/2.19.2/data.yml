@@ -7,6 +7,7 @@ additionalProperties:
       labelZh: 端口
       label:
         en: Port
+        es-es: Puerto
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -14,6 +15,7 @@ additionalProperties:
         ko: 포트
         zh: 端口
         zh-Hant: 埠
+        tr: Bağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -24,6 +26,7 @@ additionalProperties:
       labelZh: 容器内部端口
       label:
         en: Internal Container Ports
+        es-es: Internal Container Puertos
         ja: 内部コンテナポート
         ms: Port Dalaman Kontena
         pt-br: Portas Internas do Contêiner
@@ -31,6 +34,7 @@ additionalProperties:
         ko: 내부 컨테이너 포트
         zh: 容器内部端口
         zh-Hant: 容器內部埠
+        tr: Dahili Konteyner Bağlantı Noktaları
       required: true
       rule: paramPort
       type: number
@@ -41,6 +45,7 @@ additionalProperties:
       labelZh: 时区
       label:
         en: Time Zone
+        es-es: Zona horaria
         ja: タイムゾーン
         ms: Zon Masa
         pt-br: Fuso Horário
@@ -48,6 +53,7 @@ additionalProperties:
         ko: 시간대
         zh: 时区
         zh-Hant: 時區
+        tr: Saat Dilimi
       required: true
       type: text
     - default: "1000"
@@ -57,6 +63,7 @@ additionalProperties:
       labelZh: 用户 ID
       label:
         en: User ID
+        es-es: Usuario ID
         ja: ユーザー ID
         ms: ID Pengguna
         pt-br: ID do Usuário
@@ -64,6 +71,7 @@ additionalProperties:
         ko: 사용자 ID
         zh: 用户 ID
         zh-Hant: 用戶 ID
+        tr: Kullanıcı ID
       required: true
       type: number
     - default: "1000"
@@ -73,6 +81,7 @@ additionalProperties:
       labelZh: 组 ID
       label:
         en: Group ID
+        es-es: ID de grupo
         ja: グループ ID
         ms: ID Kumpulan
         pt-br: ID do Grupo
@@ -80,5 +89,6 @@ additionalProperties:
         ko: 그룹 ID
         zh: 组 ID
         zh-Hant: 組 ID
+        tr: Grup kimligi
       required: true
       type: number

@@ -12,6 +12,7 @@ additionalProperties:
   shortDescEn: High-performance enterprise-level short link service platform
   description:
     en: High-Performance Enterprise Short-Link Service Platform
+    es-es: Plataforma empresarial de enlaces cortos de alto rendimiento
     ja: 高性能エンタープライズ短縮リンクサービスプラットフォーム
     ms: Platform Perkhidmatan Pautan Pendek Perusahaan Berprestasi Tinggi
     pt-br: Plataforma de Serviço de Links Curtos Empresarial de Alto Desempenho
@@ -19,6 +20,7 @@ additionalProperties:
     ko: 고성능 엔터프라이즈 단축 링크 서비스 플랫폼
     zh-hant: 高效能企業級短網址服務平台
     zh: 高性能的企业级短链接服务平台
+    tr: Yuksek performansli kurumsal kisa baglanti hizmet platformu
   type: website
   crossVersionUpdate: true
   limit: 0

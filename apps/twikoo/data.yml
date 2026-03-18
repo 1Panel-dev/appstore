@@ -10,6 +10,17 @@ additionalProperties:
     - Tool
   shortDescZh: 简洁、安全、免费的静态网站评论系统
   shortDescEn: A simple, safe, free comment system
+  description:
+    en: A simple, safe, free comment system
+    zh: 简洁、安全、免费的静态网站评论系统
+    es-es: Un simple, safe, free comment system
+    zh-Hant: 簡單、安全、免費的評論系統
+    ja: シンプルで安全な無料コメントシステム
+    ko: 간단하고 안전하며 무료인 댓글 시스템
+    ms: Sistem komen yang ringkas, selamat dan percuma
+    pt-br: Um sistema de comentários simples, seguro e gratuito
+    ru: Простая, безопасная и бесплатная система комментариев
+    tr: Basit, güvenli ve ücretsiz bir yorum sistemi
   type: website
   crossVersionUpdate: true
   limit: 0

@@ -10,6 +10,7 @@ additionalProperties:
       type: text
       label:
         en: User
+        es-es: Usuario
         ja: ユーザー
         ms: Pengguna
         pt-br: Usuário
@@ -17,6 +18,7 @@ additionalProperties:
         ko: 사용자
         zh-Hant: 用戶
         zh: 用户
+        tr: Kullanıcı
     - default: minio
       envKey: PANEL_MINIO_ROOT_PASSWORD
       labelEn: Password
@@ -27,6 +29,7 @@ additionalProperties:
       type: password
       label:
         en: Password
+        es-es: Contraseña
         ja: パスワード
         ms: Kata laluan
         pt-br: Senha
@@ -34,6 +37,7 @@ additionalProperties:
         ko: 비밀번호
         zh-Hant: 密碼
         zh: 密码
+        tr: Parola
     - default: 9001
       envKey: PANEL_APP_PORT_HTTP
       labelEn: Port
@@ -43,6 +47,7 @@ additionalProperties:
       type: number
       label:
         en: Port
+        es-es: Puerto
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -50,6 +55,7 @@ additionalProperties:
         ko: 포트
         zh-Hant: 埠
         zh: 端口
+        tr: Bağlantı Noktası
     - default: 9000
       envKey: PANEL_APP_PORT_API
       labelEn: Port
@@ -59,6 +65,7 @@ additionalProperties:
       type: number
       label:
         en: API port
+        es-es: Puerto API
         ja: API ポート
         ms: Port API
         pt-br: Porta API
@@ -66,6 +73,7 @@ additionalProperties:
         ko: API 포트
         zh-Hant: API 埠
         zh: API 端口
+        tr: API Bağlantı Noktası
     - default: "12h"
       envKey: MINIO_BROWSER_SESSION_DURATION
       labelEn: Session duration
@@ -74,6 +82,7 @@ additionalProperties:
       type: text
       label:
         en: Session duration
+        es-es: Duración de la sesión
         ja: セッションの期間
         ms: Tempoh sesi
         pt-br: Duração da sessão
@@ -81,6 +90,7 @@ additionalProperties:
         ko: 세션 지속 시간
         zh-Hant: 會話持續時間
         zh: 会话持续时间
+        tr: Oturum suresi
     - default: "on"
       envKey: MINIO_BROWSER
       labelEn: Enable WebUI
@@ -94,6 +104,7 @@ additionalProperties:
           value: "off"
       label:
         en: Enable WebUI
+        es-es: Habilitar WebUI
         ja: WebUI を有効にする
         ms: Aktifkan WebUI
         pt-br: Habilitar WebUI
@@ -101,6 +112,7 @@ additionalProperties:
         ko: WebUI 활성화
         zh-Hant: 啟用 WebUI
         zh: 启用 WebUI
+        tr: WebUI'yi etkinlestir
     - default: "on"
       envKey: MINIO_BROWSER_LOGIN_ANIMATION
       labelEn: WebUI login animation
@@ -114,6 +126,7 @@ additionalProperties:
           value: "off"
       label:
         en: WebUI login animation
+        es-es: Animación de inicio de sesión de WebUI
         ja: WebUI ログインアニメーション
         ms: Animasi log masuk WebUI
         pt-br: Animação de login do WebUI
@@ -121,3 +134,4 @@ additionalProperties:
         ko: WebUI 로그인 애니메이션
         zh-Hant: WebUI 登入動畫
         zh: WebUI 登录动画
+        tr: WebUI giris animasyonu

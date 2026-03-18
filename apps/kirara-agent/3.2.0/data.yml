@@ -7,6 +7,7 @@ additionalProperties:
         zh: "HTTP 端口"
         zh-hant: "HTTP 埠"
         en: "HTTP Port"
+        es-es: Puerto HTTP
         ja: "HTTPポート"
         ms: "Port HTTP"
         pt-br: "Porta HTTP"
@@ -23,6 +24,7 @@ additionalProperties:
         ru: "Установите порт HTTP-доступа для приложения, допустимый диапазон: 1-65535"
         ko: "애플리케이션의 HTTP 접근 포트를 설정합니다. 유효 범위: 1-65535"
         tr: "Uygulama için HTTP erişim bağlantı noktasını ayarlayın, geçerli aralık: 1-65535"
+        es-es: "Establezca el puerto de acceso HTTP de la aplicacion; rango valido: 1-65535"
       required: true
       envKey: "PANEL_APP_PORT_HTTP"
       default: 8080

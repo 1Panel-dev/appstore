@@ -21,6 +21,7 @@ additionalProperties:
     document: https://dbeaver.com/docs/cloudbeaver/
     description:
         en: Cloud Database Manager
+        es-es: Administrador de bases de datos en la nube
         zh: 云数据库管理器
         zh-Hant: 雲數據庫管理器
         ja: クラウドデータベースマネージャー
@@ -28,6 +29,7 @@ additionalProperties:
         pt-br: Gerenciador de Banco de Dados em Nuvem
         ru: Облачный менеджер баз данных
         ko: 클라우드 데이터베이스 관리자
+        tr: Bulut veritabani yoneticisi
     architectures:
         - amd64
         - arm64

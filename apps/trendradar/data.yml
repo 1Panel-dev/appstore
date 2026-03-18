@@ -12,6 +12,7 @@ additionalProperties:
   shortDescEn: Multi-platform Hot Content Push
   description:
     en: Multi-platform Hot Content Push
+    es-es: Multi-plataforma Hot Content Push
     zh: 多平台热点推送
     zh-Hant: 多平台熱點推送
     ja: マルチプラットフォームホットコンテンツプッシュ
@@ -19,6 +20,7 @@ additionalProperties:
     pt-br: Push de Conteúdo Quente Multiplataforma
     ru: Мультиплатформенная пуш-рассылка горячего контента
     ko: 멀티 플랫폼 핫 콘텐츠 푸시
+    tr: Cok platformlu sicak icerik gonderimi
   type: tool
   crossVersionUpdate: true
   limit: 0

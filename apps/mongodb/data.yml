@@ -12,6 +12,7 @@ additionalProperties:
     shortDescEn: Fractional file storage database
     description:
         en: Fractional file storage database
+        es-es: Fractional file storage base de datos
         ja: 分数ファイルストレージデータベース
         ms: Pangkalan data penyimpanan fail pecahan
         pt-br: Banco de dados de armazenamento de arquivos fracionados
@@ -19,6 +20,7 @@ additionalProperties:
         ko: 분수 파일 저장소 데이터베이스
         zh-Hant: 分段文件儲存資料庫
         zh: 分段文件存储数据库
+        tr: Fractional file storage veritabanı
     type: runtime
     crossVersionUpdate: false
     limit: 1

@@ -19,6 +19,7 @@ additionalProperties:
     document: https://docs.flarum.org/
     description:
         en: Simple forum software for building great communities
+        es-es: Software de foros sencillo para crear grandes comunidades
         zh: 用于构建优秀社区的简单论坛软件
         zh-Hant: 用於構建優秀社區的簡單論壇軟件
         ja: 素晴らしいコミュニティを構築するためのシンプルなフォーラムソフトウェア
@@ -26,6 +27,7 @@ additionalProperties:
         pt-br: Software de fórum simples para construir grandes comunidades
         ru: Простое программное обеспечение для форумов для создания отличных сообществ
         ko: 훌륭한 커뮤니티를 구축하기 위한 간단한 포럼 소프트웨어
+        tr: Harika topluluklar kurmak icin basit forum yazilimi
     architectures:
       - amd64
       - arm/v6

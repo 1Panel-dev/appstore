@@ -6,6 +6,7 @@ additionalProperties:
       labelZh: PHP-FPM 端口
       label:
         en: PHP-FPM Port
+        es-es: PHP-FPM Puerto
         ja: PHP-FPM ポート
         ms: Port PHP-FPM
         pt-br: Porta PHP-FPM
@@ -13,6 +14,7 @@ additionalProperties:
         ko: PHP-FPM 포트
         zh-Hant: PHP-FPM 埠
         zh: PHP-FPM 端口
+        tr: PHP-FPM Bağlantı Noktası
       required: true
       rule: paramPort
       type: number

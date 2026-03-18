@@ -10,6 +10,7 @@ additionalProperties:
           type: number
           label:
             en: SMTP inbound port
+            es-es: Puerto de entrada SMTP
             ja: SMTP 受信ポート
             ms: Port masuk SMTP
             pt-br: Porta de entrada SMTP
@@ -17,6 +18,7 @@ additionalProperties:
             ko: SMTP 수신 포트
             zh-Hant: SMTP 進口埠
             zh: SMTP 入站端口
+            tr: SMTP Gelen Bağlantı Noktası
         - default: 143
           disabled: true
           envKey: IMAP4_PORT
@@ -27,6 +29,7 @@ additionalProperties:
           type: number
           label:
             en: IMAP4 port
+            es-es: Puerto IMAP4
             ja: IMAP4 ポート
             ms: Port IMAP4
             pt-br: Porta IMAP4
@@ -34,6 +37,7 @@ additionalProperties:
             ko: IMAP4 포트
             zh-Hant: IMAP4 埠
             zh: IMAP4 端口
+            tr: IMAP4 Bağlantı Noktası
         - default: 993
           disabled: true
           envKey: IMAP4_PORT2
@@ -44,6 +48,7 @@ additionalProperties:
           type: number
           label:
             en: IMAP4 port
+            es-es: Puerto IMAP4
             ja: IMAP4 ポート
             ms: Port IMAP4
             pt-br: Porta IMAP4
@@ -51,6 +56,7 @@ additionalProperties:
             ko: IMAP4 포트
             zh-Hant: IMAP4 埠
             zh: IMAP4 端口
+            tr: IMAP4 Bağlantı Noktası
         - default: 465
           disabled: true
           envKey: SMTP_S_PORT
@@ -61,6 +67,7 @@ additionalProperties:
           type: number
           label:
             en: SMTP Submission ports
+            es-es: Puertos de envío SMTP
             ja: SMTP 提出ポート
             ms: Port Penghantaran SMTP
             pt-br: Portas de envio SMTP
@@ -68,6 +75,7 @@ additionalProperties:
             ko: SMTP 제출 포트
             zh-Hant: SMTP 提交埠
             zh: SMTP 提交端口
+            tr: SMTP Gönderim Bağlantı Noktaları
         - default: 587
           disabled: true
           envKey: SMTP_S_PORT2
@@ -78,6 +86,7 @@ additionalProperties:
           type: number
           label:
             en: SMTP Submission ports
+            es-es: Puertos de envío SMTP
             ja: SMTP 提出ポート
             ms: Port Penghantaran SMTP
             pt-br: Portas de envio SMTP
@@ -85,6 +94,7 @@ additionalProperties:
             ko: SMTP 제출 포트
             zh-Hant: SMTP 提交埠
             zh: SMTP 提交端口
+            tr: SMTP Gönderim Bağlantı Noktaları
         - default: mail.example.com
           edit: true
           envKey: MAIL_HOSTNAME
@@ -94,6 +104,7 @@ additionalProperties:
           type: text
           label:
             en: Mail MX hostname
+            es-es: Nombre de host MX del correo
             ja: メール MX ホスト名
             ms: Nama hos MX mel
             pt-br: Nome do host MX de e-mail
@@ -101,6 +112,7 @@ additionalProperties:
             ko: 메일 MX 호스트 이름
             zh-Hant: 郵件 MX 主機名稱
             zh: 邮件 MX 主机名
+            tr: Posta MX Ana Bilgisayar Adı
         - default: example.com
           edit: true
           envKey: MAIL_DOMAIN
@@ -110,6 +122,7 @@ additionalProperties:
           type: text
           label:
             en: Mail domain
+            es-es: Dominio del correo
             ja: メールドメイン
             ms: Domain mel
             pt-br: Domínio de e-mail
@@ -117,3 +130,4 @@ additionalProperties:
             ko: 메일 도메인
             zh-Hant: 郵件域名
             zh: 邮件域名
+            tr: Posta Alan Adı

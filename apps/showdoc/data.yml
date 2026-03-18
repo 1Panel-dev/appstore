@@ -10,6 +10,17 @@ additionalProperties:
     - DevOps
   shortDescZh: 一个非常适合 IT 团队的在线 API 文档、技术文档工具
   shortDescEn: ShowDoc is a tool greatly applicable for an IT team to share documents online
+  description:
+    en: ShowDoc is a tool greatly applicable for an IT team to share documents online
+    zh: 一个非常适合 IT 团队的在线 API 文档、技术文档工具
+    es-es: ShowDoc is a herramienta greatly applicable for an IT team to share documents online
+    zh-Hant: ShowDoc 是一款非常適合 IT 團隊線上共享文件的工具
+    ja: ShowDoc は IT チームがオンラインでドキュメントを共有するのに非常に適したツールです
+    ko: ShowDoc은 IT 팀이 온라인으로 문서를 공유하기에 매우 적합한 도구입니다
+    ms: ShowDoc ialah alat yang sangat sesuai untuk pasukan IT berkongsi dokumen secara dalam talian
+    pt-br: ShowDoc é uma ferramenta muito adequada para equipes de TI compartilharem documentos online
+    ru: ShowDoc — это инструмент, отлично подходящий для онлайн-обмена документами в IT-командах
+    tr: ShowDoc, BT ekiplerinin çevrimiçi belge paylaşımı için son derece uygun bir araçtır
   type: website
   crossVersionUpdate: false
   limit: 0

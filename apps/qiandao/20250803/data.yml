@@ -5,6 +5,17 @@ additionalProperties:
           envKey: PANEL_APP_PORT_HTTP
           labelEn: Port
           labelZh: 端口
+          label:
+            en: Port
+            zh: 端口
+            es-es: Puerto
+            zh-Hant: 埠
+            ja: ポート
+            ko: 포트
+            ms: Port
+            pt-br: Porta
+            ru: Порт
+            tr: Bağlantı Noktası
           required: true
           rule: paramPort
           type: number
@@ -12,6 +23,17 @@ additionalProperties:
           envKey: AES_PWD
           labelEn: AES encryption key
           labelZh: AES加密密钥
+          label:
+            en: AES encryption key
+            zh: AES加密密钥
+            es-es: Clave de cifrado AES
+            zh-Hant: AES 加密金鑰
+            ja: AES 暗号化キー
+            ko: AES 암호화 키
+            ms: Kunci penyulitan AES
+            pt-br: Chave de criptografia AES
+            ru: Ключ шифрования AES
+            tr: AES sifreleme anahtari
           random: true
           required: true
           rule: paramCommon
@@ -20,6 +42,17 @@ additionalProperties:
           envKey: COOKIE_PWD
           labelEn: COOKIE encryption key
           labelZh: COOKIE加密密钥
+          label:
+            en: COOKIE encryption key
+            zh: COOKIE加密密钥
+            es-es: Clave de cifrado de COOKIE
+            zh-Hant: COOKIE 加密金鑰
+            ja: COOKIE 暗号化キー
+            ko: COOKIE 암호화 키
+            ms: Kunci penyulitan COOKIE
+            pt-br: Chave de criptografia de COOKIE
+            ru: Ключ шифрования COOKIE
+            tr: COOKIE sifreleme anahtari
           random: true
           required: true
           rule: paramCommon

@@ -10,6 +10,7 @@ additionalProperties:
       type: number
       label:
         en: WebUI Port
+        es-es: Puerto web
         ja: WebUI ポート
         ms: Port WebUI
         pt-br: Porta WebUI
@@ -17,6 +18,7 @@ additionalProperties:
         ko: WebUI 포트
         zh-Hant: WebUI 埠
         zh: WebUI 端口
+        tr: WebUI portu
     - default: 5246
       edit: true
       envKey: PANEL_APP_PORT_S3
@@ -27,6 +29,7 @@ additionalProperties:
       type: number
       label:
         en: S3 Port
+        es-es: Puerto S3
         ja: S3 ポート
         ms: Port S3
         pt-br: Porta S3
@@ -34,12 +37,14 @@ additionalProperties:
         ko: S3 포트
         zh-Hant: S3 埠
         zh: S3 端口
+        tr: S3 Bağlantı Noktası
     - default: ""
       envKey: PRE_INSTALLED
       required: false
       type: select
       label:
         en: Preinstalled Environment
+        es-es: Entorno preinstalado
         ja: プリインストール環境
         ms: Persekitaran Terpasang Awal
         pt-br: Ambiente Pré-instalado
@@ -47,6 +52,7 @@ additionalProperties:
         ko: 사전 설치된 환경
         zh-hant: 預裝環境
         zh: 预装环境
+        tr: Onceden yuklenmis ortam
       values:
         - label: 缩略图 (预装：ffmpeg)
           value: "ffmpeg"
@@ -61,6 +67,7 @@ additionalProperties:
       labelZh: 时区
       label:
         en: Time zone
+        es-es: Zona horaria
         ja: タイムゾーン
         ms: Zon masa
         pt-br: Fuso horário
@@ -68,5 +75,6 @@ additionalProperties:
         ko: 시간대
         zh: 时区
         zh-Hant: 時區
+        tr: Saat Dilimi
       required: true
       type: text

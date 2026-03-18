@@ -22,6 +22,7 @@ additionalProperties:
   document: https://openvpn.net/access-server-manual/introduction/
   description:
     en: Open source VPN daemon
+    es-es: De código abierto VPN daemon
     zh: 开源 VPN 守护进程
     zh-Hant: 開源 VPN 守護進程
     ja: オープンソースの VPN デーモン
@@ -29,6 +30,7 @@ additionalProperties:
     pt-br: Daemon VPN de código aberto
     ru: Открытый демон VPN
     ko: 오픈 소스 VPN 데몬
+    tr: Açık kaynaklı VPN daemon
   architectures:
     - amd64
     - arm64

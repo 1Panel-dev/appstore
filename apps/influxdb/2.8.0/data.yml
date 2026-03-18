@@ -6,6 +6,7 @@ additionalProperties:
       labelZh: 端口
       label:
         en: Port
+        es-es: Puerto
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -13,6 +14,7 @@ additionalProperties:
         ko: 포트
         zh: 端口
         zh-Hant: 埠
+        tr: Bağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -23,6 +25,7 @@ additionalProperties:
       labelZh: 用户
       label:
         en: User
+        es-es: Usuario
         ja: ユーザー
         ms: Pengguna
         pt-br: Usuário
@@ -30,6 +33,7 @@ additionalProperties:
         ko: 사용자
         zh: 用户
         zh-Hant: 用戶
+        tr: Kullanıcı
       random: true
       required: true
       rule: paramCommon
@@ -41,6 +45,7 @@ additionalProperties:
       labelZh: 密码
       label:
         en: Password
+        es-es: Contraseña
         ja: パスワード
         ms: Kata laluan
         pt-br: Senha
@@ -48,6 +53,7 @@ additionalProperties:
         ko: 비밀번호
         zh: 密码
         zh-Hant: 密碼
+        tr: Parola
       random: true
       required: true
       rule: paramComplexity
@@ -59,6 +65,7 @@ additionalProperties:
       labelZh: 初始化组织
       label:
         en: Init Organization
+        es-es: Organización inicial
         ja: 初期化組織
         ms: Organisasi Awal
         pt-br: Organização Inicial
@@ -66,6 +73,7 @@ additionalProperties:
         ko: 초기화 조직
         zh: 初始化组织
         zh-Hant: 初始化組織
+        tr: Kuruluşu Başlat
       random: true
       required: true
       rule: paramCommon
@@ -77,6 +85,7 @@ additionalProperties:
       labelZh: 初始化存储桶
       label:
         en: Init Bucket
+        es-es: Bucket inicial
         ja: 初期化バケット
         ms: Bucket Awal
         pt-br: Bucket Inicial
@@ -84,6 +93,7 @@ additionalProperties:
         ko: 초기화 버킷
         zh: 初始化存储桶
         zh-Hant: 初始化存儲桶
+        tr: Bucket'ı Başlat
       random: true
       required: true
       rule: paramCommon

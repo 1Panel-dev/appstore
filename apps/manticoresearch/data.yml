@@ -12,6 +12,7 @@ additionalProperties:
   shortDescEn: A high-performance, multi-storage database purpose-built for search and analytics
   description:
     en: A high-performance, multi-storage database purpose-built for search and analytics
+    es-es: Un high-performance, multi-storage base de datos purpose-built for search and analytics
     ja: 検索と分析のために設計された高性能でマルチストレージのデータベース
     ms: Pangkalan data berprestasi tinggi dan pelbagai storan yang direka khusus untuk carian dan analitik
     pt-br: Um banco de dados de alto desempenho e multiarmazenamento projetado para busca e análise
@@ -19,6 +20,7 @@ additionalProperties:
     ko: 검색 및 분석을 위해 설계된 고성능 다중 스토리지 데이터베이스
     zh-hant: 一個高性能、多存儲的數據庫，專為搜索和分析而設計
     zh: 一个高性能、多存储的数据库，专为搜索和分析而设计
+    tr: Arama ve analiz icin ozel olarak tasarlanmis yuksek performansli, coklu depolamali veritabani
   type: tool
   crossVersionUpdate: true
   limit: 0

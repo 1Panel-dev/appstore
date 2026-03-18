@@ -10,6 +10,17 @@ additionalProperties:
   - Middleware
   shortDescZh: 流量控制、熔断降级规则统一配置和管理的入口
   shortDescEn: Unified configuration and management of flow control and circuit breaker degradation rules
+  description:
+    en: Unified configuration and management of flow control and circuit breaker degradation rules
+    zh: 流量控制、熔断降级规则统一配置和管理的入口
+    es-es: Unified configuration and gestión of flow control and circuit breaker degradation rules
+    zh-Hant: 流量控制與熔斷降級規則的統一配置與管理
+    ja: フロー制御およびサーキットブレーカー降格ルールの統一設定と管理
+    ko: 트래픽 제어 및 서킷 브레이커 강등 규칙의 통합 구성 및 관리
+    ms: Konfigurasi dan pengurusan bersatu untuk kawalan aliran dan peraturan degradasi pemutus litar
+    pt-br: Configuração e gerenciamento unificados de controle de fluxo e regras de degradação de circuit breaker
+    ru: Единая настройка и управление правилами управления потоком и деградации circuit breaker
+    tr: Akış kontrolü ve devre kesici düşürme kurallarının birleşik yapılandırması ve yönetimi
   type: website
   crossVersionUpdate: false
   limit: 0

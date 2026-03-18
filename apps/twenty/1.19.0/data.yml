@@ -6,6 +6,7 @@ additionalProperties:
       labelZh: HTTP 端口
       label:
         en: Web Port
+        es-es: Puerto web
         ja: ウェブポート
         ms: Port Web
         pt-br: Porta Web
@@ -13,6 +14,7 @@ additionalProperties:
         ko: 웹 포트
         zh-Hant: Web 埠
         zh: Web 端口
+        tr: Web Bağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -23,6 +25,7 @@ additionalProperties:
       labelZh: 数据库服务
       label:
         en: Database Service
+        es-es: Servicio de base de datos
         ja: データベースサービス
         ms: Perkhidmatan Pangkalan Data
         pt-br: Serviço de Banco de Dados
@@ -30,6 +33,7 @@ additionalProperties:
         ko: 데이터베이스 서비스
         zh-Hant: 資料庫服務
         zh: 数据库服务
+        tr: Veritabanı Hizmeti
       required: true
       type: service
     - default: twenty
@@ -38,6 +42,7 @@ additionalProperties:
       labelZh: 数据库名
       label:
         en: Database
+        es-es: Base de datos
         ja: データベース
         ms: Pangkalan Data
         pt-br: Banco de Dados
@@ -45,6 +50,7 @@ additionalProperties:
         ko: 데이터베이스
         zh-Hant: 資料庫名稱
         zh: 数据库名
+        tr: Veritabanı
       random: true
       required: true
       rule: paramCommon
@@ -55,6 +61,7 @@ additionalProperties:
       labelZh: 数据库用户
       label:
         en: User
+        es-es: Usuario
         ja: ユーザー
         ms: Pengguna
         pt-br: Usuário
@@ -62,6 +69,7 @@ additionalProperties:
         ko: 사용자
         zh-Hant: 資料庫使用者
         zh: 数据库用户
+        tr: Kullanıcı
       random: true
       required: true
       rule: paramCommon
@@ -72,6 +80,7 @@ additionalProperties:
       labelZh: 数据库用户密码
       label:
         en: Password
+        es-es: Contraseña
         ja: パスワード
         ms: Kata laluan
         pt-br: Senha
@@ -79,6 +88,7 @@ additionalProperties:
         ko: 비밀번호
         zh-Hant: 資料庫使用者密碼
         zh: 数据库用户密码
+        tr: Parola
       random: true
       required: true
       type: password
@@ -89,6 +99,7 @@ additionalProperties:
       labelZh: Redis 服务
       label:
         en: Redis Service
+        es-es: Servicio de Redis
         ja: Redisサービス
         ms: Perkhidmatan Redis
         pt-br: Serviço Redis
@@ -96,6 +107,7 @@ additionalProperties:
         ko: Redis 서비스
         zh-Hant: Redis 服務
         zh: Redis 服务
+        tr: Redis Hizmeti
       required: true
       type: service
     - default: ""
@@ -105,6 +117,7 @@ additionalProperties:
       labelZh: 密码
       label:
         en: Password
+        es-es: Contraseña
         ja: パスワード
         ms: Kata laluan
         pt-br: Senha
@@ -112,6 +125,7 @@ additionalProperties:
         ko: 비밀번호
         zh-Hant: 密碼
         zh: 密码
+        tr: Parola
       required: true
       type: text
     - default: ""
@@ -121,6 +135,7 @@ additionalProperties:
       labelZh: 应用密钥
       label:
         en: App Secret
+        es-es: Secreto de la aplicación
         ja: アプリの秘密
         ms: Rahsia Aplikasi
         pt-br: Chave do Aplicativo
@@ -128,6 +143,7 @@ additionalProperties:
         ko: 앱 비밀
         zh-hant: 應用密鑰
         zh: 应用密钥
+        tr: Uygulama gizli anahtari
       required: true
       type: password
     - default: http://<YOUR IP>:3000
@@ -137,6 +153,7 @@ additionalProperties:
       labelZh: 服务地址（默认服务器 IP）
       label:
         en: Service Address (Default Server IP)
+        es-es: Servicio Dirección (Default Server IP)
         ja: サービスアドレス（デフォルトサーバーIP）
         ms: Alamat Perkhidmatan (IP Pelayan Lalai)
         pt-br: Serviço de Endereço (IP do Servidor Padrão)
@@ -144,6 +161,7 @@ additionalProperties:
         ko: 서비스 주소 (기본 서버 IP)
         zh-hant: 服務地址（默認伺服器 IP）
         zh: 服务地址（默认服务器 IP）
+        tr: Hizmeti Adres (Default Sunucu IP)
       required: true
       rule: paramExtUrl
       type: text

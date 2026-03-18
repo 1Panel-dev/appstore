@@ -11,6 +11,7 @@ additionalProperties:
           labelZh: 数据库服务
           label:
             en: Database Service
+            es-es: Servicio de base de datos
             ja: データベースサービス
             ms: Perkhidmatan Pangkalan Data
             pt-br: Serviço de Banco de Dados
@@ -18,6 +19,7 @@ additionalProperties:
             ko: 데이터베이스 서비스
             zh: 数据库服务
             zh-Hant: 數據庫服務
+            tr: Veritabanı Hizmeti
           required: true
           type: apps
           values:
@@ -29,6 +31,7 @@ additionalProperties:
           labelZh: 数据库名
           label:
             en: Database
+            es-es: Base de datos
             ja: データベース
             ms: Pangkalan Data
             pt-br: Banco de Dados
@@ -36,6 +39,7 @@ additionalProperties:
             ko: 데이터베이스
             zh: 数据库名
             zh-Hant: 數據庫名
+            tr: Veritabanı
           random: true
           required: true
           rule: paramCommon
@@ -46,6 +50,7 @@ additionalProperties:
           labelZh: 数据库用户
           label:
             en: User
+            es-es: Usuario
             ja: ユーザー
             ms: Pengguna
             pt-br: Usuário
@@ -53,6 +58,7 @@ additionalProperties:
             ko: 사용자
             zh: 数据库用户
             zh-Hant: 數據庫用戶
+            tr: Kullanıcı
           random: true
           required: true
           rule: paramCommon
@@ -63,6 +69,7 @@ additionalProperties:
           labelZh: 数据库用户密码
           label:
             en: Password
+            es-es: Contraseña
             ja: パスワード
             ms: Kata Laluan
             pt-br: Senha
@@ -70,6 +77,7 @@ additionalProperties:
             ko: 비밀번호
             zh: 数据库用户密码
             zh-Hant: 數據庫用戶密碼
+            tr: Parola
           random: true
           required: true
           type: password
@@ -79,6 +87,7 @@ additionalProperties:
           labelZh: 数据库前缀
           label:
             en: Database prefix
+            es-es: Base de datos prefix
             ja: データベースプレフィックス
             ms: Pangkalan Data awalan
             pt-br: Prefixo do Banco de Dados
@@ -86,6 +95,7 @@ additionalProperties:
             ko: 데이터베이스 접두사
             zh: 数据库前缀
             zh-Hant: 數據庫前綴
+            tr: Veritabanı Öneki
           required: true
           type: text
         - default: 40037
@@ -95,6 +105,7 @@ additionalProperties:
           labelZh: 端口
           label:
             en: Port
+            es-es: Puerto
             ja: ポート
             ms: Port
             pt-br: Porta
@@ -102,6 +113,7 @@ additionalProperties:
             ko: 포트
             zh: 端口
             zh-Hant: 埠
+            tr: Bağlantı Noktası
           required: true
           rule: paramPort
           type: number
@@ -111,6 +123,7 @@ additionalProperties:
           labelZh: 用户
           label:
             en: User
+            es-es: Usuario
             ja: ユーザー
             ms: Pengguna
             pt-br: Usuário
@@ -118,6 +131,7 @@ additionalProperties:
             ko: 사용자
             zh: 用户
             zh-Hant: 用戶
+            tr: Kullanıcı
           random: true
           required: true
           rule: paramCommon
@@ -128,6 +142,7 @@ additionalProperties:
           labelZh: 用户密码
           label:
             en: Password
+            es-es: Contraseña
             ja: パスワード
             ms: Kata Laluan
             pt-br: Senha
@@ -135,6 +150,7 @@ additionalProperties:
             ko: 비밀번호
             zh: 用户密码
             zh-Hant: 用戶密碼
+            tr: Parola
           random: true
           required: true
           rule: paramComplexity
@@ -146,6 +162,7 @@ additionalProperties:
           labelZh: 外部访问地址
           label:
             en: External URL
+            es-es: URL externa
             ja: 外部URL
             ms: URL Luaran
             pt-br: URL externo
@@ -153,5 +170,6 @@ additionalProperties:
             ko: 외부 URL
             zh: 外部访问地址
             zh-Hant: 外部訪問地址
+            tr: Harici URL
           required: true
           type: text
