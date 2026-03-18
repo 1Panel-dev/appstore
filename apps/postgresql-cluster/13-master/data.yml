@@ -4,6 +4,7 @@ additionalProperties:
       envKey: PANEL_DB_ROOT_USER
       label:
         en: Username
+        es-es: Nombre de usuario
         ja: ユーザー名
         ms: Nama pengguna
         pt-br: Nome de usuário
@@ -11,6 +12,7 @@ additionalProperties:
         ko: 사용자 이름
         zh-hant: 用戶名
         zh: 用户名
+        tr: Kullanıcı Adı
       required: true
       type: text
       disabled: true
@@ -18,6 +20,7 @@ additionalProperties:
       envKey: PANEL_DB_ROOT_PASSWORD
       label:
         en: Password
+        es-es: Contraseña
         ja: パスワード
         ms: Kata laluan
         pt-br: Senha
@@ -25,6 +28,7 @@ additionalProperties:
         ko: 비밀번호
         zh-hant: 密碼
         zh: 密码
+        tr: Parola
       random: true
       required: true
       type: password
@@ -34,6 +38,7 @@ additionalProperties:
       type: text
       label:
         en: Replication User
+        es-es: Replication Usuario
         ja: レプリケーションユーザー
         ms: Pengguna Replikasi
         pt-br: Usuário de Replicação
@@ -41,6 +46,7 @@ additionalProperties:
         ko: 복제 사용자
         zh-Hant: 複製使用者
         zh: 复制用户
+        tr: Replication Kullanıcı
     - default: replica
       envKey: REPLICATION_PASSWORD
       random: true
@@ -48,6 +54,7 @@ additionalProperties:
       type: password
       label:
         en: Replication Password
+        es-es: Replication Contraseña
         ja: レプリケーションパスワード
         ms: Kata Laluan Replikasi
         pt-br: Senha de Replicação
@@ -55,10 +62,12 @@ additionalProperties:
         ko: 복제 비밀번호
         zh-Hant: 複製密碼
         zh: 复制密码
+        tr: Replication Parola
     - default: 5432
       envKey: PANEL_APP_PORT_HTTP
       label:
         en: Port
+        es-es: Puerto
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -66,6 +75,7 @@ additionalProperties:
         ko: 포트
         zh-Hant: 埠
         zh: 端口
+        tr: Bağlantı Noktası
       required: true
       rule: paramPort
       type: number

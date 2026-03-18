@@ -10,6 +10,7 @@ additionalProperties:
       type: number
       label:
         en: Web UI Port
+        es-es: Puerto web
         ja: Web UIポート
         ms: Port Web UI
         pt-br: Porta da Web UI
@@ -17,6 +18,7 @@ additionalProperties:
         ko: 웹 UI 포트
         zh-Hant: Web UI 埠
         zh: Web UI 端口
+        tr: Web UI Bağlantı Noktası
     - default: 18790
       edit: true
       envKey: PANEL_APP_PORT_BRIDGE
@@ -27,6 +29,7 @@ additionalProperties:
       type: number
       label:
         en: Bridge Port
+        es-es: Bridge Puerto
         ja: ブリッジポート
         ms: Port Bridge
         pt-br: Porta Bridge
@@ -34,6 +37,7 @@ additionalProperties:
         ko: 브리지 포트
         zh-Hant: Bridge 埠
         zh: Bridge 端口
+        tr: Bridge Bağlantı Noktası
     - envKey: PROVIDER
       default: deepseek
       edit: true
@@ -66,6 +70,7 @@ additionalProperties:
           value: zai
       label:
         en: Provider
+        es-es: Proveedor
         ja: プロバイダー
         ms: Penyedia
         pt-br: Provedor
@@ -73,6 +78,7 @@ additionalProperties:
         ko: 공급자
         zh-Hant: 供應商
         zh: 模型提供商
+        tr: Saglayici
     - envKey: MODEL
       default: deepseek/deepseek-chat
       edit: true
@@ -82,6 +88,7 @@ additionalProperties:
       type: text
       label:
         en: Model
+        es-es: Modelo
         ja: モデル
         ms: Model
         pt-br: Modelo
@@ -89,6 +96,7 @@ additionalProperties:
         ko: 모델
         zh-Hant: 模型
         zh: 模型
+        tr: Model adi
     - envKey: API_KEY
       default: ""
       edit: true
@@ -98,13 +106,15 @@ additionalProperties:
       type: text
       label:
         en: API Key
+        es-es: API Clave
         ja: APIキー
         ms: Kunci API
         pt-br: Chave da API
         ru: API ключ
         ko: API 키
-        zh-Hant: API Key
+        zh-Hant: API 金鑰
         zh: API Key
+        tr: API Anahtarı
     - default: ""
       disabled: true
       envKey: MOLTBOT_GATEWAY_TOKEN
@@ -112,6 +122,7 @@ additionalProperties:
       labelZh: 令牌
       label:
         en: Token
+        es-es: Token de acceso
         ja: トークン
         ms: Token
         pt-br: Token
@@ -119,6 +130,7 @@ additionalProperties:
         ko: 토큰
         zh-Hant: 權杖
         zh: 令牌
+        tr: Belirteç
       description:
         en: "After installation, enter the installation directory and obtain the Token from the ./data/conf/moltbot.json file. You can later click the Parameters button to edit the application and enter the Token into the input field for convenient use.\nAfter opening the page in your browser, append ?token=xxx to the URL, for example: http://your_address:port?token=xxx, to access it."
         ja: "インストール後、インストールディレクトリに入り、./data/conf/moltbot.json ファイルからトークンを取得します。後でパラメータボタンをクリックしてアプリケーションを編集し、そのトークンを入力フィールドに入力して便利に使用できます。\nブラウザでページを開いた後、URL に ?token=xxx を追加します。例：http://your_address:port?token=xxx でアクセスできます。"
@@ -129,5 +141,6 @@ additionalProperties:
         tr: "Yüklemeden sonra, yükleme dizinine girin ve ./data/conf/moltbot.json dosyasından Token'ı alın. Daha sonra Parametreler düğmesine tıklayarak uygulamayı düzenleyebilir ve Token'ı giriş alanına girerek kolay kullanım sağlayabilirsiniz.\nTarayıcınızda sayfayı açtıktan sonra URL'ye ?token=xxx ekleyin, örneğin: http://your_address:port?token=xxx, erişmek için."
         zh-hant: "安裝成功後，進入安裝目錄，從 ./data/conf/moltbot.json 文件中獲取 Token，後續可以點擊參數按鈕編輯應用，將該 Token 填入輸入框，方便使用。\n瀏覽器打開後，在地址欄 URL 後追加 ?token=xxx，如：http://your_address:port?token=xxx 即可訪問。"
         zh: "安装成功后，进入安装目录，从 ./data/conf/moltbot.json 文件中获取 Token，后续可以点击参数按钮编辑应用，将该 Token 填入输入框，方便使用。\n浏览器打开后，在地址栏 URL 后追加 ?token=xxx，如：http://your_address:port?token=xxx 即可访问。"
+        es-es: "Despues de la instalacion, entre en el directorio de instalacion y obtenga el token del archivo ./data/conf/moltbot.json. Mas adelante puede hacer clic en el boton Parametros para editar la aplicacion e introducir el token en el campo correspondiente para usarlo comodamente.\nDespues de abrir la pagina en el navegador, anada ?token=xxx a la URL, por ejemplo: http://your_address:port?token=xxx, para acceder."
       type: text
       edit: true

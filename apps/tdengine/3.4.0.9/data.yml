@@ -6,6 +6,7 @@ additionalProperties:
       labelZh: taosExplorer 服务端口
       label:
         en: taosExplorer service port
+        es-es: Puerto del servicio taosExplorer
         zh: taosExplorer 服务端口
         zh-hant: taosExplorer 服務通訊埠
         ja: taosExplorer サービスポート
@@ -24,6 +25,7 @@ additionalProperties:
       labelZh: 原生接口（taosc）端口
       label:
         en: Native interface (taosc) Port
+        es-es: Native interface (taosc) Puerto
         zh: 原生接口（taosc）端口
         zh-hant: 原生介面（taosc）通訊埠
         ja: ネイティブインターフェース（taosc）ポート
@@ -42,6 +44,7 @@ additionalProperties:
       labelZh: TDgpt 端口
       label:
         en: TDgpt Port
+        es-es: TDgpt Puerto
         zh: TDgpt 端口
         zh-hant: TDgpt 連接埠
         ja: TDgpt ポート
@@ -60,6 +63,7 @@ additionalProperties:
       labelZh: RESTful and WebSocket 端口
       label:
         en: RESTful and WebSocket Port
+        es-es: RESTful and WebSocket Puerto
         zh: RESTful and WebSocket 端口
         zh-hant: RESTful 與 WebSocket 通訊埠
         ja: RESTful および WebSocket ポート
@@ -78,6 +82,7 @@ additionalProperties:
       labelZh: 映射容器内端口 6043-6049
       label:
         en: Mapping Port within Container 6043-6049
+        es-es: Mapping Puerto within Container 6043-6049
         zh: 映射容器内端口 6043-6049
         zh-hant: 映射容器內通訊埠 6043-6049
         ja: コンテナ内ポート 6043-6049 のマッピング
@@ -95,6 +100,7 @@ additionalProperties:
       labelZh: taosX REST API 监听端口
       label:
         en: taosX REST API listening port
+        es-es: Puerto de escucha de la API REST de taosX
         zh: taosX REST API 监听端口
         zh-hant: taosX REST API 監聽通訊埠
         ja: taosX REST API リスニングポート
@@ -113,6 +119,7 @@ additionalProperties:
       labelZh: taosX gRPC 服务监听端口
       label:
         en: taosX gRPC service listening port
+        es-es: Puerto de escucha del servicio gRPC de taosX
         zh: taosX gRPC 服务监听端口
         zh-hant: taosX gRPC 服務監聽通訊埠
         ja: taosX gRPC サービスリスニングポート

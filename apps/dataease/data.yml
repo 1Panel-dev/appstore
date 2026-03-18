@@ -10,6 +10,17 @@ additionalProperties:
     - BI
   shortDescZh: 人人可用的开源 BI 工具
   shortDescEn: An open-source BI tool alternative to Tableau
+  description:
+    en: An open-source BI tool alternative to Tableau
+    zh: 人人可用的开源 BI 工具
+    es-es: Un open-source BI herramienta alternative to Tableau
+    zh-Hant: 可替代 Tableau 的開源 BI 工具
+    ja: Tableau の代替となるオープンソース BI ツール
+    ko: Tableau를 대체할 수 있는 오픈소스 BI 도구
+    ms: Alternatif alat BI sumber terbuka kepada Tableau
+    pt-br: Uma alternativa de ferramenta de BI de código aberto ao Tableau
+    ru: Открытый BI-инструмент, являющийся альтернативой Tableau
+    tr: Tableau’ya alternatif açık kaynaklı bir BI aracı
   type: website
   crossVersionUpdate: false
   limit: 0

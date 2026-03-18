@@ -12,6 +12,7 @@ additionalProperties:
     shortDescEn: Fair-code workflow automation platform with native AI capabilities
     description:
         en: Fair-code workflow automation platform with native AI capabilities
+        es-es: Fair-code workflow automation plataforma with native AI capabilities
         ja: フェアコードのワークフロー自動化プラットフォーム、ネイティブAI機能を備えています
         ms: Platform automasi aliran kerja kod adil dengan keupayaan AI asli
         pt-br: Plataforma de automação de fluxo de trabalho com código justo e recursos nativos de IA
@@ -19,6 +20,7 @@ additionalProperties:
         ko: 공정 코드 워크플로 자동화 플랫폼, 네이티브 AI 기능 제공
         zh-Hant: 具備原生 AI 功能的 Fair-code 工作流程自動化平台
         zh: 具有原生 AI 能力的 Fair-code 工作流自动化平台
+        tr: Yerel yapay zeka yeteneklerine sahip fair-code is akisi otomasyon platformu
     type: website
     crossVersionUpdate: true
     limit: 0

@@ -7,6 +7,7 @@ additionalProperties:
           labelZh: 端口
           label:
             en: Port
+            es-es: Puerto
             ja: ポート
             ms: Port
             pt-br: Porta
@@ -14,6 +15,7 @@ additionalProperties:
             ko: 포트
             zh: 端口
             zh-Hant: 埠
+            tr: Bağlantı Noktası
           required: true
           rule: paramPort
           type: number
@@ -24,6 +26,7 @@ additionalProperties:
           labelZh: 内存最大占用量(MB)
           label:
             en: Maximum memory usage(MB)
+            es-es: Uso máximo de memoria (MB)
             ja: 最大メモリ使用量(MB)
             ms: Penggunaan Memori Maksimum(MB)
             pt-br: Uso Máximo de Memória(MB)
@@ -31,5 +34,6 @@ additionalProperties:
             ko: 최대 메모리 사용량(MB)
             zh: 内存最大占用量(MB)
             zh-Hant: 內存最大佔用量(MB)
+            tr: Maksimum Bellek Kullanımı (MB)
           required: true
           type: number

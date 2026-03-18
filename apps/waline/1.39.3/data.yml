@@ -5,6 +5,17 @@ additionalProperties:
       envKey: PANEL_APP_PORT_HTTP
       labelEn: Port
       labelZh: 端口
+      label:
+        en: Port
+        zh: 端口
+        es-es: Puerto
+        zh-Hant: 埠
+        ja: ポート
+        ko: 포트
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        tr: Bağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -12,12 +23,34 @@ additionalProperties:
       envKey: TZ
       labelEn: Time Zone
       labelZh: 时区
+      label:
+        en: Time Zone
+        zh: 时区
+        es-es: Zona horaria
+        zh-Hant: 時區
+        ja: タイムゾーン
+        ko: 시간대
+        ms: Zon Masa
+        pt-br: Fuso Horário
+        ru: Часовой пояс
+        tr: Saat Dilimi
       required: true
       type: text
     - default: "Ep1sH0AEw128"
       envKey: JWT_TOKEN
       labelEn: JWT Token
       labelZh: 用户登录密钥
+      label:
+        en: JWT Token
+        zh: 用户登录密钥
+        es-es: Token JWT
+        zh-Hant: JWT 權杖
+        ja: JWT トークン
+        ko: JWT 토큰
+        ms: Token JWT
+        pt-br: Token JWT
+        ru: JWT токен
+        tr: JWT belirteci
       random: true
       required: true
       rule: paramComplexity
@@ -26,6 +59,17 @@ additionalProperties:
       envKey: COMMENT_AUDIT
       labelEn: Comment Audit
       labelZh: 开启评论审核
+      label:
+        en: Comment Audit
+        zh: 开启评论审核
+        es-es: Moderación de comentarios
+        zh-Hant: 評論審核
+        ja: コメント審査
+        ko: 댓글 검토
+        ms: Semakan komen
+        pt-br: Moderação de comentários
+        ru: Модерация комментариев
+        tr: Yorum denetimi
       required: true
       type: select
       values:
@@ -37,18 +81,51 @@ additionalProperties:
       envKey: AUTHOR_EMAIL
       labelEn: Author Email
       labelZh: 作者邮箱
+      label:
+        en: Author Email
+        zh: 作者邮箱
+        es-es: Correo del autor
+        zh-Hant: 作者電子郵件
+        ja: 著者メール
+        ko: 작성자 이메일
+        ms: E-mel penulis
+        pt-br: E-mail do autor
+        ru: Электронная почта автора
+        tr: Yazar e-postasi
       required: false
       type: text
     - default: ""
       envKey: SITE_NAME
       labelEn: Site Name
       labelZh: 博客名称
+      label:
+        en: Site Name
+        zh: 博客名称
+        es-es: Site Nombre
+        zh-Hant: 網站名稱
+        ja: サイト名
+        ko: 사이트 이름
+        ms: Nama laman
+        pt-br: Nome do site
+        ru: Название сайта
+        tr: Site adi
       required: false
       type: text
     - default: ""
       envKey: SITE_URL
       labelEn: Site Url
       labelZh: 博客地址
+      label:
+        en: Site Url
+        zh: 博客地址
+        es-es: URL del sitio
+        zh-Hant: 網站 URL
+        ja: サイト URL
+        ko: 사이트 URL
+        ms: URL laman
+        pt-br: URL do site
+        ru: URL сайта
+        tr: Site URL'si
       required: false
       rule: paramHttp
       type: text
@@ -56,5 +133,16 @@ additionalProperties:
       envKey: SECURE_DOMAINS
       labelEn: Secure Domains
       labelZh: 安全域名
+      label:
+        en: Secure Domains
+        zh: 安全域名
+        es-es: Secure Dominios
+        zh-Hant: 安全網域
+        ja: セキュアドメイン
+        ko: 보안 도메인
+        ms: Domain selamat
+        pt-br: Domínios seguros
+        ru: Безопасные домены
+        tr: Guvenli alan adlari
       required: false
       type: text

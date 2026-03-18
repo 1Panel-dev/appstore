@@ -20,6 +20,7 @@ additionalProperties:
   document: https://github.com/louislam/dockge/blob/master/README.md
   description:
     en: Self-hosted - Docker compose.yaml - Stack-oriented Manager
+    es-es: Administrador autoalojado orientado a stacks para Docker compose.yaml
     zh: 自托管 - Docker compose.yaml - 面向堆栈的管理器
     zh-Hant: 自託管 - Docker compose.yaml - 面向堆棧的管理器
     ja: セルフホスト - Docker compose.yaml - スタック指向のマネージャー
@@ -27,6 +28,7 @@ additionalProperties:
     pt-br: Auto-hospedado - Docker compose.yaml - Gerenciador orientado a pilhas
     ru: Самостоятельно размещаемый - Docker compose.yaml - Менеджер, ориентированный на стеки
     ko: 셀프 호스팅 - Docker compose.yaml - 스택 지향 관리자
+    tr: Docker compose.yaml icin stack odakli self-hosted yonetici
   architectures:
     - amd64
     - arm64

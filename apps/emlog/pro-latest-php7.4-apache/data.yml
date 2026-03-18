@@ -9,6 +9,17 @@ additionalProperties:
       envKey: PANEL_DB_TYPE
       labelEn: Database Service
       labelZh: 数据库服务
+      label:
+        en: Database Service
+        zh: 数据库服务
+        es-es: Servicio de base de datos
+        zh-Hant: 資料庫服務
+        ja: データベースサービス
+        ko: 데이터베이스 서비스
+        ms: Perkhidmatan Pangkalan Data
+        pt-br: Serviço de Banco de Dados
+        ru: Сервис баз данных
+        tr: Veritabanı Hizmeti
       required: true
       type: apps
       values:
@@ -20,6 +31,17 @@ additionalProperties:
       envKey: PANEL_DB_NAME
       labelEn: Database
       labelZh: 数据库名
+      label:
+        en: Database
+        zh: 数据库名
+        es-es: Base de datos
+        zh-Hant: 數據庫名
+        ja: データベース
+        ko: 데이터베이스
+        ms: Pangkalan Data
+        pt-br: Banco de Dados
+        ru: База данных
+        tr: Veritabanı
       random: true
       required: true
       rule: paramCommon
@@ -28,6 +50,17 @@ additionalProperties:
       envKey: PANEL_DB_USER
       labelEn: Database User
       labelZh: 数据库用户
+      label:
+        en: Database User
+        zh: 数据库用户
+        es-es: Usuario de la base de datos
+        zh-Hant: 數據庫用戶
+        ja: データベースユーザー
+        ko: 데이터베이스 사용자
+        ms: Pengguna Pangkalan Data
+        pt-br: Usuário do Banco de Dados
+        ru: Пользователь базы данных
+        tr: Veritabanı Kullanıcısı
       random: true
       required: true
       rule: paramCommon
@@ -36,6 +69,17 @@ additionalProperties:
       envKey: PANEL_DB_USER_PASSWORD
       labelEn: Database User Password
       labelZh: 数据库用户密码
+      label:
+        en: Database User Password
+        zh: 数据库用户密码
+        es-es: Contraseña del usuario de la base de datos
+        zh-Hant: 資料庫使用者密碼
+        ja: データベースユーザーパスワード
+        ko: 데이터베이스 사용자 비밀번호
+        ms: Kata laluan pengguna pangkalan data
+        pt-br: Senha do usuário do banco de dados
+        ru: Пароль пользователя базы данных
+        tr: Veritabanı kullanıcı parolası
       random: true
       required: true
       type: password
@@ -44,6 +88,17 @@ additionalProperties:
       envKey: PANEL_APP_PORT_HTTP
       labelEn: Port
       labelZh: 端口，建议填写 8080，然后在【网站】管理中安装 OpenResty，创建网站关联emlog应用，暴露80、443端口
+      label:
+        en: Port
+        zh: 端口，建议填写 8080，然后在【网站】管理中安装 OpenResty，创建网站关联emlog应用，暴露80、443端口
+        es-es: Puerto
+        zh-Hant: 埠
+        ja: ポート
+        ko: 포트
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        tr: Bağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -52,6 +107,17 @@ additionalProperties:
       envKey: EMLOG_EXTERNAL_URL
       labelEn: site domain
       labelZh: 域名，建议填写 localhost， 然后在【网站】管理中安装 OpenResty，创建网站关联emlog应用绑定域名
+      label:
+        en: site domain
+        zh: 域名，建议填写 localhost， 然后在【网站】管理中安装 OpenResty，创建网站关联emlog应用绑定域名
+        es-es: dominio del sitio
+        zh-Hant: 站點網域
+        ja: サイトドメイン
+        ko: 사이트 도메인
+        ms: Domain laman
+        pt-br: Domínio do site
+        ru: Домен сайта
+        tr: Site alan adı
       required: true
       rule: paramExtUrl
       type: text

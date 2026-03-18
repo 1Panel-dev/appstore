@@ -10,6 +10,17 @@ additionalProperties:
     - AI
   shortDescZh: 一键拥有你自己的跨平台 ChatGPT/Gemini 应用
   shortDescEn: A cross-platform ChatGPT/Gemini UI
+  description:
+    en: A cross-platform ChatGPT/Gemini UI
+    zh: 一键拥有你自己的跨平台 ChatGPT/Gemini 应用
+    es-es: Un cross-plataforma ChatGPT/Gemini UI
+    zh-Hant: 跨平台的 ChatGPT/Gemini 使用者介面
+    ja: クロスプラットフォームの ChatGPT/Gemini UI
+    ko: 크로스 플랫폼 ChatGPT/Gemini UI
+    ms: UI ChatGPT/Gemini merentas platform
+    pt-br: Uma interface ChatGPT/Gemini multiplataforma
+    ru: Кроссплатформенный интерфейс ChatGPT/Gemini
+    tr: Platformlar arası ChatGPT/Gemini arayüzü
   type: website
   crossVersionUpdate: true
   limit: 0

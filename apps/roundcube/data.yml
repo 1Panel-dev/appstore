@@ -12,6 +12,7 @@ additionalProperties:
     shortDescEn: Web-based multilingual IMAP mail client
     description:
         en: Web-based multilingual IMAP mail client
+        es-es: Web-based multilingual IMAP mail cliente
         ja: Webベースの多言語IMAPメールクライアント
         ms: Klien e-mel IMAP berbilang bahasa berasaskan web
         pt-br: Cliente de e-mail IMAP multilíngue baseado na web
@@ -19,6 +20,7 @@ additionalProperties:
         ko: 웹 기반 다국어 IMAP 메일 클라이언트
         zh-hant: 基於網頁的多語言 IMAP 郵件客戶端
         zh: 基于 Web 的多语言 IMAP 邮件客户端
+        tr: Web-based multilingual IMAP mail istemci
     type: website
     crossVersionUpdate: false
     limit: 0

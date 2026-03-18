@@ -7,6 +7,7 @@ additionalProperties:
           labelZh: Redis 服务
           label:
             en: Redis Service
+            es-es: Servicio de Redis
             ja: Redis サービス
             ms: Perkhidmatan Redis
             pt-br: Serviço Redis
@@ -14,6 +15,7 @@ additionalProperties:
             ko: Redis 서비스
             zh: Redis 服务
             zh-Hant: Redis 服務
+            tr: Redis Hizmeti
           required: true
           type: service
         - default: ""
@@ -22,6 +24,7 @@ additionalProperties:
           labelZh: Redis 密码
           label:
             en: Redis Password
+            es-es: Contraseña de Redis
             ja: Redis パスワード
             ms: Kata Laluan Redis
             pt-br: Senha Redis
@@ -29,6 +32,7 @@ additionalProperties:
             ko: Redis 비밀번호
             zh: Redis 密码
             zh-Hant: Redis 密碼
+            tr: Redis Parolası
           required: true
           type: password
         - default: "0"
@@ -38,6 +42,7 @@ additionalProperties:
           labelZh: 数据库
           label:
             en: Database
+            es-es: Base de datos
             ja: データベース
             ms: Pangkalan Data
             pt-br: Banco de Dados
@@ -45,6 +50,7 @@ additionalProperties:
             ko: 데이터베이스
             zh: 数据库
             zh-Hant: 數據庫
+            tr: Veritabanı
           required: true
           type: select
           values:
@@ -87,6 +93,7 @@ additionalProperties:
           labelZh: 登录用户名
           label:
             en: Username
+            es-es: Nombre de usuario
             ja: ユーザー名
             ms: Nama Pengguna
             pt-br: Nome de Usuário
@@ -94,6 +101,7 @@ additionalProperties:
             ko: 사용자 이름
             zh: 登录用户名
             zh-Hant: 登錄用戶名
+            tr: Kullanıcı Adı
           random: true
           required: true
           rule: paramCommon
@@ -105,6 +113,7 @@ additionalProperties:
           labelZh: 登录密码
           label:
             en: Password
+            es-es: Contraseña
             ja: パスワード
             ms: Kata Laluan
             pt-br: Senha
@@ -112,6 +121,7 @@ additionalProperties:
             ko: 비밀번호
             zh: 登录密码
             zh-Hant: 登錄密碼
+            tr: Parola
           random: true
           required: true
           type: text
@@ -122,6 +132,7 @@ additionalProperties:
           labelZh: 端口
           label:
             en: Port
+            es-es: Puerto
             ja: ポート
             ms: Port
             pt-br: Porta
@@ -129,6 +140,7 @@ additionalProperties:
             ko: 포트
             zh: 端口
             zh-Hant: 埠
+            tr: Bağlantı Noktası
           required: true
           rule: paramPort
           type: number

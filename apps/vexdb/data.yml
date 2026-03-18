@@ -12,6 +12,7 @@ additionalProperties:
     shortDescEn: Vector database with relational data and semantic search
     description:
         en: Vector database with relational data and semantic search
+        es-es: Vector base de datos with relational data and semantic search
         ja: リレーショナルデータとセマンティック検索を備えたベクターデータベース
         ms: Pangkalan Data Vektor dengan Data Relasi dan Carian Semantik
         pt-br: Banco de Dados Vetorial com Dados Relacionais e Pesquisa Semântica
@@ -19,6 +20,7 @@ additionalProperties:
         ko: 관계형 데이터 및 의미 검색 기능을 갖춘 벡터 데이터베이스
         zh-hant: 融合關係數據能力、多路語義檢索能力的向量數據庫
         zh: 融合关系数据能力、多路语义检索能力的向量数据库
+        tr: Vector veritabanı with relational data and semantic search
     type: runtime
     crossVersionUpdate: false
     limit: 0

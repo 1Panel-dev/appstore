@@ -7,6 +7,7 @@ additionalProperties:
       labelZh: Web 端口
       label:
         en: Web Port
+        es-es: Puerto web
         ja: ウェブポート
         ms: Port Web
         pt-br: Porta Web
@@ -14,6 +15,7 @@ additionalProperties:
         ko: 웹 포트
         zh: Web 端口
         zh-Hant: Web 埠
+        tr: Web Bağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -24,6 +26,7 @@ additionalProperties:
       labelZh: Game 端口
       label:
         en: Game Port
+        es-es: Puerto de juego
         ja: ゲームポート
         ms: Port Permainan
         pt-br: Porta do Jogo
@@ -31,6 +34,7 @@ additionalProperties:
         ko: 게임 포트
         zh: Game 端口
         zh-Hant: Game 埠
+        tr: Oyun Bağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -40,6 +44,7 @@ additionalProperties:
       labelZh: 时区
       label:
         en: Time zone
+        es-es: Zona horaria
         ja: タイムゾーン
         ms: Zon masa
         pt-br: Fuso horário
@@ -47,5 +52,6 @@ additionalProperties:
         ko: 시간대
         zh: 时区
         zh-Hant: 時區
+        tr: Saat Dilimi
       required: true
       type: text

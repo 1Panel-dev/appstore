@@ -7,6 +7,7 @@ additionalProperties:
       labelZh: 端口
       label:
         en: Port
+        es-es: Puerto
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -14,6 +15,7 @@ additionalProperties:
         ko: 포트
         zh-Hant: 埠
         zh: 端口
+        tr: Bağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -23,6 +25,7 @@ additionalProperties:
       labelZh: API 端口
       label:
         en: API Port
+        es-es: Puerto API
         ja: API ポート
         ms: Port API
         pt-br: Porta API
@@ -30,6 +33,7 @@ additionalProperties:
         ko: API 포트
         zh-hant: API 埠
         zh: API 端口
+        tr: API Bağlantı Noktası
       required: true
       rule: paramPort
       type: number

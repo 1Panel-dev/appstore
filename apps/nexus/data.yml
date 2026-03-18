@@ -20,6 +20,7 @@ additionalProperties:
     document: https://help.sonatype.com/repomanager3
     description:
         en: An open source repository for build artifacts
+        es-es: Un de código abierto repository for build artifacts
         zh: 开源的构建工件存储库
         zh-Hant: 開源的構建工件存儲庫
         ja: ビルドアーティファクトのためのオープンソースリポジトリ
@@ -27,6 +28,7 @@ additionalProperties:
         pt-br: Um repositório de código aberto para artefatos de build
         ru: Открытый репозиторий для артефактов сборки
         ko: 빌드 아티팩트를 위한 오픈 소스 저장소
+        tr: Derleme ciktilari icin acik kaynakli depo
     memoryRequired: 1024
     architectures:
       - amd64

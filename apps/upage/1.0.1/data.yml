@@ -7,6 +7,7 @@ additionalProperties:
       labelZh: HTTP 端口
       label:
         en: Port
+        es-es: Puerto
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -24,6 +25,7 @@ additionalProperties:
       labelZh: LLM 提供商
       label:
         en: LLM provider
+        es-es: Proveedor de LLM
         ja: LLMプロバイダー
         ms: Penyedia LLM
         pt-br: Fornecedor LLM
@@ -86,6 +88,7 @@ additionalProperties:
       labelZh: API 密钥
       label:
         en: API Key
+        es-es: API Clave
         ja: APIキー
         ms: Kunci API
         pt-br: Chave de API
@@ -103,12 +106,13 @@ additionalProperties:
       labelZh: API 地址
       label:
         en: API URL
+        es-es: URL de la API
         ja: API URL
         ms: API URL
         pt-br: API URL
         ru: API URL
         ko: API URL
-        tr: API URL
+        tr: API URL'si
         zh-hant: API URL
         zh: API 地址
       description:
@@ -121,6 +125,7 @@ additionalProperties:
         tr: "Not: Yalnızca OpenAI LLM sağlayıcısını kullanırken doldurun."
         zh-hant: "注意：僅在使用 OpenAI LLM 提供商時填寫。"
         zh: "注意：仅在使用 OpenAI LLM 提供商时填写。"
+        es-es: "Nota: complete este campo solo cuando use el proveedor LLM de OpenAI"
       required: false
       rule: paramHttp
       type: text
@@ -131,6 +136,7 @@ additionalProperties:
       labelZh: 页面默认模型
       label:
         en: Default page model
+        es-es: Modelo de página predeterminado
         ja: デフォルトのページモデル
         ms: Model halaman lalai
         pt-br: Modelo de página padrão
@@ -148,6 +154,7 @@ additionalProperties:
       labelZh: 辅助任务模型
       label:
         en: Auxiliary task model
+        es-es: Modelo de tarea auxiliar
         ja: 補助タスクモデル
         ms: Model tugas tambahan
         pt-br: Modelo de tarefa auxiliar

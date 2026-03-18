@@ -12,6 +12,7 @@ additionalProperties:
     shortDescEn: Distributed Storage System
     description:
       en: Distributed Storage System
+      es-es: Sistema de almacenamiento distribuido
       ja: 分散型ストレージシステム
       ms: Sistem Storan Teragih
       pt-br: Sistema de Armazenamento Distribuído
@@ -19,6 +20,7 @@ additionalProperties:
       ko: 분산 스토리지 시스템
       zh-Hant: 分散式儲存系統
       zh: 分布式存储系统
+      tr: Dagitik depolama sistemi
     type: website
     crossVersionUpdate: true
     limit: 0

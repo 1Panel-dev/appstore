@@ -19,6 +19,7 @@ additionalProperties:
   document: https://docs.nocodb.com/
   description:
     en: Code-free database platform
+    es-es: Code-free base de datos plataforma
     zh: 无代码数据库平台
     zh-Hant: 無代碼數據庫平台
     ja: コード不要のデータベースプラットフォーム
@@ -26,6 +27,7 @@ additionalProperties:
     pt-br: Plataforma de banco de dados sem código
     ru: Платформа базы данных без кода
     ko: 코드 없는 데이터베이스 플랫폼
+    tr: Code-free veritabanı platform
   memoryRequired: 1024
   architectures:
     - amd64

@@ -12,6 +12,7 @@ additionalProperties:
     shortDescEn: Web-based MongoDB admin interface
     description:
         en: Web-based MongoDB admin interface
+        es-es: Interfaz de administración de MongoDB basada en web
         ja: WebベースのMongoDB管理インターフェース
         ms: Antara muka pentadbiran MongoDB berasaskan web
         pt-br: Interface administrativa do MongoDB baseada na web
@@ -19,6 +20,7 @@ additionalProperties:
         ko: 웹 기반 MongoDB 관리 인터페이스
         zh-hant: 基於網頁的 MongoDB 管理介面
         zh: 基于 Web 的 MongoDB 管理界面
+        tr: Web tabanli MongoDB yonetim arayuzu
     type: website
     crossVersionUpdate: true
     limit: 0

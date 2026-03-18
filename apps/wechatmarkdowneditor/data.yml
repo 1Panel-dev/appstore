@@ -12,6 +12,7 @@ additionalProperties:
   shortDescZh: 一款高度简洁的微信 Markdown 编辑器
   description:
     en: WeChat Markdown Editor
+    es-es: Editor Markdown de WeChat
     ja: 非常シンプルなWeChat Markdownエディタ
     ms: Sunting Markdown WeChat yang sangat ringkas
     pt-br: Um editor Markdown do WeChat altamente simplificado
@@ -19,6 +20,7 @@ additionalProperties:
     ko: 간결한 WeChat Markdown 편집기
     zh-Hant: 一款高度簡潔的微信 Markdown 編輯器
     zh: 一款高度简洁的微信 Markdown 编辑器
+    tr: WeChat Markdown duzenleyici
   type: website
   crossVersionUpdate: true
   limit: 0

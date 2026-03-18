@@ -7,6 +7,7 @@ additionalProperties:
       labelZh: 端口
       label:
         en: Port
+        es-es: Puerto
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -14,6 +15,7 @@ additionalProperties:
         ko: 포트
         zh: 端口
         zh-Hant: 埠
+        tr: Bağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -24,6 +26,7 @@ additionalProperties:
       labelZh: 栈目录
       label:
         en: Stacks Directory
+        es-es: Directorio de stacks
         ja: スタックディレクトリ
         ms: Direktori Stacks
         pt-br: Diretório de Pilhas
@@ -31,5 +34,6 @@ additionalProperties:
         ko: 스택 디렉토리
         zh: 栈目录
         zh-Hant: 棧目錄
+        tr: Stack dizini
       required: true
       type: text

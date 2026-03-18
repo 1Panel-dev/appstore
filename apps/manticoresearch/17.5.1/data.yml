@@ -7,6 +7,7 @@ additionalProperties:
       labelZh: HTTP 端口
       label:
         en: HTTP Port
+        es-es: Puerto HTTP
         ja: HTTP ポート
         ms: Port HTTP
         pt-br: Porta HTTP
@@ -14,6 +15,7 @@ additionalProperties:
         ko: HTTP 포트
         zh-Hant: HTTP 埠
         zh: HTTP 端口
+        tr: HTTP Bağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -24,6 +26,7 @@ additionalProperties:
       labelZh: SQL 端口
       label:
         en: SQL Port
+        es-es: SQL Puerto
         ja: SQL ポート
         ms: Port SQL
         pt-br: Porta SQL
@@ -31,6 +34,7 @@ additionalProperties:
         ko: SQL 포트
         zh-Hant: SQL 埠
         zh: SQL 端口
+        tr: SQL Bağlantı Noktası
       required: true
       rule: paramPort
       type: number

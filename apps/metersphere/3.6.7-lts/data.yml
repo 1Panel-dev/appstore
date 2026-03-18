@@ -4,6 +4,17 @@ additionalProperties:
       envKey: PANEL_APP_PORT_HTTP
       labelEn: Web Port
       labelZh: Web 端口
+      label:
+        en: Web Port
+        zh: Web 端口
+        es-es: Puerto web
+        zh-Hant: HTTP 埠
+        ja: ウェブポート
+        ko: 웹 포트
+        ms: Port Web
+        pt-br: Porta Web
+        ru: Веб-порт
+        tr: Web Bağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -11,6 +22,17 @@ additionalProperties:
       envKey: JAVA_MAX_HEAP_RATIO
       labelEn: Java Max Heap Ratio
       labelZh: Java 最大堆内存比例
+      label:
+        en: Java Max Heap Ratio
+        zh: Java 最大堆内存比例
+        es-es: Proporción máxima del heap de Java
+        zh-Hant: Java 最大堆積記憶體比例
+        ja: Java 最大ヒープ比率
+        ko: Java 최대 힙 비율
+        ms: Nisbah heap maksimum Java
+        pt-br: Proporção máxima de heap do Java
+        ru: Максимальное соотношение кучи Java
+        tr: Java maksimum heap orani
       required: true
       rule: paramPort
       type: number

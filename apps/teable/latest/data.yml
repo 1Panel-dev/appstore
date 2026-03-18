@@ -9,13 +9,15 @@ additionalProperties:
       type: number
       label:
         en: HTTP Port
+        es-es: Puerto HTTP
         ja: HTTP ポート
-        ms: HTTP Port
+        ms: Port HTTP
         pt-br: HTTP Porta
         ru: HTTP Порт
         ko: HTTP 포트
         zh-Hant: HTTP 埠
         zh: HTTP 端口
+        tr: HTTP Bağlantı Noktası
     - default: postgresql
       envKey: PANEL_DB_TYPE
       labelEn: Database Service
@@ -32,6 +34,7 @@ additionalProperties:
           value: postgresql
       label:
         en: Database Service
+        es-es: Servicio de base de datos
         ja: データベースサービス
         ms: Perkhidmatan Pangkalan Data
         pt-br: Serviço de Banco de Dados
@@ -39,6 +42,7 @@ additionalProperties:
         ko: 데이터베이스 서비스
         zh-hant: 資料庫服務
         zh: 数据库服务
+        tr: Veritabanı Hizmeti
     - default: teable
       envKey: PANEL_DB_NAME
       labelEn: Database
@@ -49,6 +53,7 @@ additionalProperties:
       type: text
       label:
         en: Database
+        es-es: Base de datos
         ja: データベース
         ms: Pangkalan Data
         pt-br: Banco de Dados
@@ -56,6 +61,7 @@ additionalProperties:
         ko: 데이터베이스
         zh-hant: 資料庫
         zh: 数据库
+        tr: Veritabanı
     - default: teable
       envKey: PANEL_DB_USER
       random: true
@@ -66,6 +72,7 @@ additionalProperties:
       labelZh: 数据库用户
       label:
         en: Database User
+        es-es: Usuario de la base de datos
         ja: データベースユーザー
         ms: Pengguna Pangkalan Data
         pt-br: Usuário do Banco de Dados
@@ -73,6 +80,7 @@ additionalProperties:
         ko: 데이터베이스 사용자
         zh-hant: 資料庫用戶
         zh: 数据库用户
+        tr: Veritabanı Kullanıcısı
     - default: teable
       envKey: PANEL_DB_USER_PASSWORD
       random: true
@@ -82,6 +90,7 @@ additionalProperties:
       labelZh: 数据库密码
       label:
         en: Database Password
+        es-es: Contraseña de la base de datos
         ja: データベースのパスワード
         ms: Kata Laluan Pangkalan Data
         pt-br: Senha do Banco de Dados
@@ -89,6 +98,7 @@ additionalProperties:
         ko: 데이터베이스 비밀번호
         zh-hant: 資料庫密碼
         zh: 数据库密码
+        tr: Veritabanı Parolası
     - default: ""
       edit: true
       envKey: PANEL_REDIS_HOST
@@ -99,6 +109,7 @@ additionalProperties:
       type: service
       label:
         en: Redis Service
+        es-es: Servicio de Redis
         ja: Redis サービス
         ms: Perkhidmatan Redis
         pt-br: Serviço Redis
@@ -106,6 +117,7 @@ additionalProperties:
         ko: Redis 서비스
         zh-Hant: Redis 服務
         zh: Redis 服务
+        tr: Redis Hizmeti
     - default: ""
       edit: true
       envKey: PANEL_REDIS_ROOT_PASSWORD
@@ -115,6 +127,7 @@ additionalProperties:
       type: password
       label:
         en: Redis service password
+        es-es: Contraseña del servicio Redis
         ja: Redis サービスのパスワード
         ms: Kata laluan perkhidmatan Redis
         pt-br: Senha do serviço Redis
@@ -122,6 +135,7 @@ additionalProperties:
         ko: Redis 서비스 비밀번호
         zh-Hant: Redis 服務密碼
         zh: Redis 服务密码
+        tr: Redis Hizmet Parolası
     - default: http://<YOUR IP>:3000
       edit: true
       envKey: PUBLIC_ORIGIN
@@ -129,6 +143,7 @@ additionalProperties:
       labelZh: 公开访问地址（默认服务器 IP）
       label:
         en: PUBLIC ADDRESS (Default server IP)
+        es-es: Dirección pública (IP predeterminada del servidor)
         ja: パブリックアドレス（デフォルトのサーバーIP）
         ms: ALAMAT PUBLIK (IP Pelayan Lalai)
         pt-br: ENDEREÇO PÚBLICO (IP do servidor padrão)
@@ -136,6 +151,7 @@ additionalProperties:
         ko: 공개 주소 (기본 서버 IP)
         zh-hant: 公開訪問地址（預設伺服器 IP）
         zh: 公开访问地址（默认服务器 IP）
+        tr: GENEL ADRES (Varsayilan sunucu IP'si)
       required: true
       rule: paramExtUrl
       type: text
@@ -146,6 +162,7 @@ additionalProperties:
       labelZh: 时区
       label:
         en: Time zone
+        es-es: Zona horaria
         ja: タイムゾーン
         ms: Zon masa
         pt-br: Fuso horário
@@ -153,5 +170,6 @@ additionalProperties:
         ko: 시간대
         zh: 时区
         zh-Hant: 時區
+        tr: Saat Dilimi
       required: true
       type: text

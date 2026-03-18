@@ -10,6 +10,17 @@ additionalProperties:
         - Website
     shortDescZh: 开源社交建站系统
     shortDescEn: Open Source Social Building System
+    description:
+      en: Open Source Social Building System
+      zh: 开源社交建站系统
+      es-es: De código abierto Social Building System
+      zh-Hant: 開源社交建站系統
+      ja: オープンソースのソーシャルサイト構築システム
+      ko: 오픈소스 소셜 구축 시스템
+      ms: Sistem pembinaan sosial sumber terbuka
+      pt-br: Sistema de construção social de código aberto
+      ru: Открытая система для создания социальных платформ
+      tr: Açık kaynaklı sosyal site oluşturma sistemi
     type: website
     crossVersionUpdate: false
     limit: 0

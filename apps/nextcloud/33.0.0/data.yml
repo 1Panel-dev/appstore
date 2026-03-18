@@ -10,6 +10,7 @@ additionalProperties:
           type: number
           label:
             en: Port
+            es-es: Puerto
             ja: ポート
             ms: Port
             pt-br: Porta
@@ -17,6 +18,7 @@ additionalProperties:
             ko: 포트
             zh-Hant: 埠
             zh: 端口
+            tr: Bağlantı Noktası
         - default: Asia/Shanghai
           edit: true
           envKey: TIME_ZONE
@@ -26,6 +28,7 @@ additionalProperties:
           type: text
           label:
             en: Time Zone
+            es-es: Zona horaria
             ja: タイムゾーン
             ms: Zon Waktu
             pt-br: Fuso Horário
@@ -33,3 +36,4 @@ additionalProperties:
             ko: 시간대
             zh-Hant: 時區
             zh: 时区
+            tr: Saat Dilimi

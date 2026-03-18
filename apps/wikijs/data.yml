@@ -19,6 +19,7 @@ additionalProperties:
     document: https://docs.requarks.io/
     description:
         en: A modern and powerful wiki app built on Node.js
+        es-es: Aplicacion wiki moderna y potente construida sobre Node.js
         zh: 基于 Node.js 构建的现代而强大的 Wiki 应用程序
         zh-Hant: 基於 Node.js 構建的現代而強大的 Wiki 應用程序
         ja: Node.js 上に構築されたモダンで強力な Wiki アプリ
@@ -26,6 +27,7 @@ additionalProperties:
         pt-br: Um aplicativo wiki moderno e poderoso construído no Node.js
         ru: Современное и мощное приложение Wiki, построенное на Node.js
         ko: Node.js 기반의 현대적이고 강력한 위키 앱
+        tr: Bir modern and powerful wiki app built on Node.js
     architectures:
       - amd64
       - arm64

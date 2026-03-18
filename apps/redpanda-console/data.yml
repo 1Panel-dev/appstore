@@ -20,6 +20,7 @@ additionalProperties:
     document: https://docs.redpanda.com/current/manage/console/
     description:
         en: Redpanda Console – A UI for Data Streaming
+        es-es: "Redpanda Console: una interfaz para streaming de datos"
         zh: Redpanda Console – 数据流的用户界面
         zh-Hant: Redpanda Console – 數據流的用戶界面
         ja: Redpanda Console – データストリーミングのためのUI
@@ -27,6 +28,7 @@ additionalProperties:
         pt-br: Redpanda Console – Uma interface para streaming de dados
         ru: Redpanda Console – Интерфейс для потоковой передачи данных
         ko: Redpanda Console – 데이터 스트리밍을 위한 UI
+        tr: Redpanda Console - veri akisi icin bir arayuz
     architectures:
       - amd64
       - arm64

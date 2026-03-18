@@ -12,6 +12,7 @@ additionalProperties:
     shortDescEn: Universal database MCP server connecting to MySQL, PostgreSQL, SQL Server, MariaDB, Oracle
     description:
         en: Universal database MCP server connecting to MySQL, PostgreSQL, SQL Server, MariaDB, Oracle
+        es-es: Universal base de datos MCP servidor connecting to MySQL, PostgreSQL, SQL Server, MariaDB, Oracle
         ja: 通用データベース MCP サーバーは、MySQL、PostgreSQL、SQL Server、MariaDB、Oracle に接続します
         ms: MCP pelayan pangkalan data sejagat menyambung ke MySQL, PostgreSQL, SQL Server, MariaDB, Oracle
         pt-br: Servidor MCP de banco de dados universal conectado ao MySQL, PostgreSQL, SQL Server, MariaDB, Oracle
@@ -19,6 +20,7 @@ additionalProperties:
         ko: 범용 데이터베이스 MCP 서버는 MySQL, PostgreSQL, SQL Server, MariaDB, Oracle 에 연결됩니다
         zh-Hant: 通用資料庫 MCP 伺服器連接到 MySQL、PostgreSQL、SQL Server、MariaDB、Oracle
         zh: 通用数据库 MCP 服务器连接到 MySQL、PostgreSQL、SQL Server、MariaDB、Oracle
+        tr: Universal veritabanı MCP sunucu connecting to MySQL, PostgreSQL, SQL Server, MariaDB, Oracle
     type: tool
     crossVersionUpdate: true
     limit: 0

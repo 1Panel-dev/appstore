@@ -12,6 +12,7 @@ additionalProperties:
     shortDescEn: Open source home automation that puts local control and privacy first
     description:
         en: Open source home automation that puts local control and privacy first
+        es-es: De código abierto home automation that puts local control and privacy first
         ja: ローカルコントロールとプライバシーを重視するオープンソースのホームオートメーション
         ms: Automasi rumah sumber terbuka yang mengutamakan kawalan tempatan dan privasi
         pt-br: Automação residencial de código aberto que prioriza o controle local e a privacidade
@@ -19,6 +20,7 @@ additionalProperties:
         ko: 로컬 제어와 개인 정보 보호를 우선시하는 오픈 소스 홈 오토메이션
         zh-Hant: 以本機控制和隱私為先的開源家居自動化
         zh: 以本地控制和隐私为先的开源家居自动化
+        tr: Yerel kontrolu ve gizliligi onceleyen acik kaynakli ev otomasyonu
     type: website
     crossVersionUpdate: true
     limit: 0

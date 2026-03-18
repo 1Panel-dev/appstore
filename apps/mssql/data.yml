@@ -20,6 +20,7 @@ additionalProperties:
     document: https://github.com/microsoft/mssql-docker
     description:
         en: Official Microsoft repository for SQL Server in Docker resources
+        es-es: Repositorio oficial de Microsoft para recursos de SQL Server en Docker
         zh: SQL Server 在 Docker 资源中的官方微软存储库
         zh-Hant: SQL Server 在 Docker 資源中的官方微軟存儲庫
         ja: Docker リソース内の SQL Server 用の公式 Microsoft リポジトリ
@@ -27,6 +28,7 @@ additionalProperties:
         pt-br: Repositório oficial da Microsoft para SQL Server em recursos Docker
         ru: Официальный репозиторий Microsoft для SQL Server в ресурсах Docker
         ko: Docker 리소스에서 SQL Server를 위한 Microsoft 공식 저장소
+        tr: Docker kaynaklarindaki SQL Server icin resmi Microsoft deposu
     memoryRequired: 1024
     architectures:
       - amd64

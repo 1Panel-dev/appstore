@@ -6,6 +6,7 @@ additionalProperties:
       labelZh: 数据库密码
       label:
         en: Database Password
+        es-es: Contraseña de la base de datos
         ja: データベースのパスワード
         ms: Kata Laluan Pangkalan Data
         pt-br: Senha do Banco de Dados
@@ -13,6 +14,7 @@ additionalProperties:
         ko: 데이터베이스 비밀번호
         zh-hant: 資料庫密碼
         zh: 数据库密码
+        tr: Veritabanı Parolası
       random: true
       required: true
       type: password
@@ -22,6 +24,7 @@ additionalProperties:
       labelZh: 端口
       label:
         en: Port
+        es-es: Puerto
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -29,6 +32,7 @@ additionalProperties:
         ko: 포트
         zh-Hant: 埠
         zh: 端口
+        tr: Bağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -38,6 +42,7 @@ additionalProperties:
       type: text
       label:
         en: Master Host
+        es-es: Host maestro
         ja: マスターホスト
         ms: Host Utama
         pt-br: Host Mestre
@@ -45,12 +50,14 @@ additionalProperties:
         ko: 마스터 호스트
         zh-Hant: 主节点 IP
         zh: 主节点 IP
+        tr: Ana host
     - default: 6379
       envKey: MASTER_PORT
       required: true
       type: text
       label:
         en: Master Port
+        es-es: Master Puerto
         ja: マスターポート
         ms: Port Utama
         pt-br: Porta Mestre
@@ -58,6 +65,7 @@ additionalProperties:
         ko: 마스터 포트
         zh-Hant: 主节点端口
         zh: 主节点端口
+        tr: Master Bağlantı Noktası
     - default: ''
       envKey: MASTER_ROOT_PASSWORD
       disabled: true
@@ -65,6 +73,7 @@ additionalProperties:
       type: text
       label:
         en: Master Root Password
+        es-es: Master Contraseña de root
         ja: マスタールートパスワード
         ms: Kata Laluan Root Utama
         pt-br: Senha Root Mestre
@@ -72,3 +81,4 @@ additionalProperties:
         ko: 마스터 루트 비밀번호
         zh-Hant: 主节点 Root 密码
         zh: 主节点 Root 密码
+        tr: Master Root Parolası

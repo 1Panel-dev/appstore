@@ -20,6 +20,7 @@ additionalProperties:
   document: https://docs.nodebb.org
   description:
     en: Node.js based forum software built for the modern web
+    es-es: Software de foros basado en Node.js y pensado para la web moderna
     zh: 基于 Node.js 的现代化论坛软件
     zh-Hant: 基於 Node.js 的現代化論壇軟件
     ja: モダンな Web のために構築された Node.js ベースのフォーラムソフトウェア
@@ -27,6 +28,7 @@ additionalProperties:
     pt-br: Software de fórum baseado em Node.js construído para a web moderna
     ru: Программное обеспечение для форумов на основе Node.js, созданное для современной сети
     ko: 현대 웹을 위해 구축된 Node.js 기반 포럼 소프트웨어
+    tr: Modern web icin gelistirilmis Node.js tabanli forum yazilimi
   memoryRequired: 2048
   architectures:
     - amd64

@@ -12,6 +12,7 @@ additionalProperties:
   shortDescEn: Collection of handy online tools for developers, with great UX
   description:
     en: Collection of handy online tools for developers, with great UX
+    es-es: Collection of handy online herramientas for developers, with great UX
     ja: 開発者のための便利なオンラインツール集、優れたUX付き
     ms: Koleksi alat dalam talian yang berguna untuk pembangun, dengan UX yang hebat
     pt-br: Coleção de ferramentas online úteis para desenvolvedores, com ótima UX
@@ -19,6 +20,7 @@ additionalProperties:
     ko: 개발자를 위한 편리한 온라인 도구 모음, 훌륭한 UX 제공
     zh-Hant: 開發者使用的便捷在線工具集合，具有出色的用戶體驗
     zh: 开发者使用的便捷在线工具集合，具有出色的用户体验
+    tr: Gelistiriciler icin harika bir kullanici deneyimine sahip kullanisli cevrimici arac koleksiyonu
   type: website
   crossVersionUpdate: true
   limit: 0

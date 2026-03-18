@@ -12,6 +12,7 @@ additionalProperties:
     shortDescEn: PHP5 Runtime
     description:
         en: PHP5 Runtime
+        es-es: Entorno de ejecución de PHP5
         ja: PHP5 ランタイム
         ms: Persekitaran masa laku PHP5
         pt-br: Ambiente de execução PHP5
@@ -19,6 +20,7 @@ additionalProperties:
         ko: PHP5 런타임
         zh-hant: PHP5 執行環境
         zh: PHP5 运行环境
+        tr: PHP5 calisma ortami
     type: php
     crossVersionUpdate: false
     limit: 0

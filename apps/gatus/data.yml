@@ -12,6 +12,7 @@ additionalProperties:
   shortDescEn: Developer-oriented health dashboard
   description:
     en: Developer-oriented health dashboard
+    es-es: Developer-oriented health panel
     zh: 面向开发者的健康监控面板
     zh-Hant: 面向開發者的健康監控面板
     ja: 開発者向けヘルスダッシュボード
@@ -19,6 +20,7 @@ additionalProperties:
     pt-br: Painel de saúde orientado a desenvolvedores
     ru: Информационная панель состояния для разработчиков
     ko: 개발자 지향 헬스 대시보드
+    tr: Developer-oriented health pano
   type: website
   crossVersionUpdate: true
   limit: 0

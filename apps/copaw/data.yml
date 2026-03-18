@@ -12,6 +12,7 @@ additionalProperties:
   shortDescEn: An open-source AI personal assistant by Alibaba
   description:
     en: An open-source AI personal assistant by Alibaba
+    es-es: Un open-source AI personal assistant by Alibaba
     zh: 阿里开源的 AI 个人助理
     zh-Hant: 阿里開源的 AI 個人助理
     ja: アリババがオープンソース化したAIパーソナルアシスタント
@@ -19,6 +20,7 @@ additionalProperties:
     pt-br: Um assistente pessoal de IA de código aberto da Alibaba
     ru: Открытый персональный помощник ИИ от Alibaba
     ko: 알리바바의 오픈 소스 AI 개인 비서
+    tr: Alibaba tarafindan gelistirilen acik kaynakli yapay zeka kisisel asistani
   type: website
   crossVersionUpdate: true
   limit: 0

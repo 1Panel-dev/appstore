@@ -10,6 +10,7 @@ additionalProperties:
       type: text
       label:
         en: Gitea Instance
+        es-es: Instancia de Gitea
         ja: Gitea インスタンス
         ms: Instans Gitea
         pt-br: Instância Gitea
@@ -17,6 +18,7 @@ additionalProperties:
         ko: Gitea 인스턴스
         zh-Hant: Gitea 實例
         zh: Gitea 实例
+        tr: Gitea Örneği
     - default: '<registration_token>'
       edit: true
       envKey: RUNNER_REGISTRATION_TOKEN
@@ -26,6 +28,7 @@ additionalProperties:
       type: text
       label:
         en: Registration Token
+        es-es: Token de registro
         ja: 登録トークン
         ms: Token Pendaftaran
         pt-br: Token de Registro
@@ -33,6 +36,7 @@ additionalProperties:
         ko: 등록 토큰
         zh-Hant: 註冊令牌
         zh: 注册令牌
+        tr: Kayıt Tokenı
     - default: '<runner_name>'
       edit: true
       envKey: RUNNER_NAME
@@ -42,6 +46,7 @@ additionalProperties:
       type: text
       label:
         en: Runner Name
+        es-es: Nombre del ejecutor
         ja: ランナー名
         ms: Nama Pelari
         pt-br: Nome do Runner
@@ -49,6 +54,7 @@ additionalProperties:
         ko: 러너 이름
         zh-Hant: 執行器名稱
         zh: 运行器名称
+        tr: Çalıştırıcı Adı
     - default: '<runner_labels>'
       edit: true
       envKey: RUNNER_LABELS
@@ -58,6 +64,7 @@ additionalProperties:
       type: text
       label:
         en: Runner Labels
+        es-es: Etiquetas del ejecutor
         ja: ランナータグ
         ms: Label Pelari
         pt-br: Rótulos do Runner
@@ -65,3 +72,4 @@ additionalProperties:
         ko: 러너 레이블
         zh-Hant: 執行器標籤
         zh: 运行器标签
+        tr: Çalıştırıcı Etiketleri

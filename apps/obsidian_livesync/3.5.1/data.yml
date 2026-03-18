@@ -6,6 +6,7 @@ additionalProperties:
       labelZh: 用户名
       label:
         en: Username
+        es-es: Nombre de usuario
         ja: ユーザー名
         ms: Nama Pengguna
         pt-br: Nome de Usuário
@@ -13,6 +14,7 @@ additionalProperties:
         ko: 사용자 이름
         zh: 用户名
         zh-Hant: 用戶名
+        tr: Kullanıcı Adı
       required: true
       rule: paramCommon
       type: text
@@ -22,6 +24,7 @@ additionalProperties:
       labelZh: 密码
       label:
         en: Password
+        es-es: Contraseña
         ja: パスワード
         ms: Kata laluan
         pt-br: Senha
@@ -29,6 +32,7 @@ additionalProperties:
         ko: 비밀번호
         zh: 密码
         zh-Hant: 密碼
+        tr: Parola
       random: true
       required: true
       rule: paramComplexity
@@ -40,6 +44,7 @@ additionalProperties:
       labelZh: 端口
       label:
         en: Port
+        es-es: Puerto
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -47,6 +52,7 @@ additionalProperties:
         ko: 포트
         zh: 端口
         zh-Hant: 埠
+        tr: Bağlantı Noktası
       required: true
       rule: paramPort
       type: number

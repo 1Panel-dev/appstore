@@ -12,6 +12,7 @@ additionalProperties:
   shortDescEn: Open Source Identity and Access Management For Modern Applications and Services
   description:
     en: Open Source Identity and Access Management For Modern Applications and Services
+    es-es: De código abierto Identity and Access Management For Modern Applications and Services
     zh: 面向现代应用与服务的开源身份和访问管理器
     zh-Hant: 面向現代應用與服務的開源身份和存取管理器
     ja: モダンなアプリケーションとサービスのためのオープンソースのアイデンティティおよびアクセス管理
@@ -19,6 +20,7 @@ additionalProperties:
     pt-br: Gerenciamento de Identidade e Acesso de Código Aberto Para Aplicações e Serviços Modernos
     ru: Управление идентификацией и доступом с открытым исходным кодом для современных приложений и сервисов
     ko: 현대 애플리케이션 및 서비스를 위한 오픈 소스 신원 및 액세스 관리
+    tr: Modern uygulama ve hizmetler icin acik kaynak kimlik ve erisim yonetimi
   type: website
   crossVersionUpdate: true
   limit: 0

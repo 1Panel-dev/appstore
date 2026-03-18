@@ -12,6 +12,7 @@ additionalProperties:
     shortDescEn: PostgreSQL open source management and development platform
     description:
         en: PostgreSQL open source management and development platform
+        es-es: PostgreSQL de código abierto gestión and development plataforma
         ja: PostgreSQL オープンソース管理および開発プラットフォーム
         ms: Platform pengurusan dan pembangunan sumber terbuka PostgreSQL
         pt-br: Plataforma de gerenciamento e desenvolvimento de código aberto do PostgreSQL
@@ -19,6 +20,7 @@ additionalProperties:
         ko: PostgreSQL 오픈 소스 관리 및 개발 플랫폼
         zh-hant: PostgreSQL 開源管理與開發平台
         zh: PostgreSQL 开源管理工具
+        tr: PostgreSQL open source yönetim and development platform
     type: website
     crossVersionUpdate: true
     limit: 1

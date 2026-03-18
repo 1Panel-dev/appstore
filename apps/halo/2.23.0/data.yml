@@ -9,6 +9,17 @@ additionalProperties:
           envKey: PANEL_DB_TYPE
           labelEn: Database
           labelZh: 数据库服务
+          label:
+            en: Database
+            zh: 数据库服务
+            es-es: Base de datos
+            zh-Hant: 資料庫服務
+            ja: データベースサービス
+            ko: 데이터베이스 서비스
+            ms: Perkhidmatan Pangkalan Data
+            pt-br: Serviço de Banco de Dados
+            ru: Сервис базы данных
+            tr: Veritabanı Hizmeti
           required: true
           type: apps
           values:
@@ -22,6 +33,17 @@ additionalProperties:
           envKey: PANEL_DB_NAME
           labelEn: Database name
           labelZh: 数据库名
+          label:
+            en: Database name
+            zh: 数据库名
+            es-es: Nombre de la base de datos
+            zh-Hant: 資料庫名稱
+            ja: データベース名
+            ko: 데이터베이스 이름
+            ms: Nama pangkalan data
+            pt-br: Nome do banco de dados
+            ru: Имя базы данных
+            tr: Veritabanı adı
           random: true
           required: true
           rule: paramCommon
@@ -30,6 +52,17 @@ additionalProperties:
           envKey: PANEL_DB_USER
           labelEn: Database username
           labelZh: 数据库用户
+          label:
+            en: Database username
+            zh: 数据库用户
+            es-es: Usuario de la base de datos
+            zh-Hant: 資料庫使用者名稱
+            ja: データベースユーザー名
+            ko: 데이터베이스 사용자 이름
+            ms: Nama pengguna pangkalan data
+            pt-br: Nome de usuário do banco de dados
+            ru: Имя пользователя базы данных
+            tr: Veritabanı kullanıcı adı
           random: true
           required: true
           rule: paramCommon
@@ -38,6 +71,17 @@ additionalProperties:
           envKey: PANEL_DB_USER_PASSWORD
           labelEn: Database password
           labelZh: 数据库用户密码
+          label:
+            en: Database password
+            zh: 数据库用户密码
+            es-es: Contraseña de la base de datos
+            zh-Hant: 資料庫密碼
+            ja: データベースパスワード
+            ko: 데이터베이스 비밀번호
+            ms: Kata laluan pangkalan data
+            pt-br: Senha do banco de dados
+            ru: Пароль базы данных
+            tr: Veritabanı parolası
           random: true
           required: true
           type: password
@@ -46,6 +90,17 @@ additionalProperties:
           envKey: HALO_EXTERNAL_URL
           labelEn: External URL
           labelZh: 外部访问地址
+          label:
+            en: External URL
+            zh: 外部访问地址
+            es-es: URL externa
+            zh-Hant: 外部訪問地址
+            ja: 外部URL
+            ko: 외부 URL
+            ms: URL Luaran
+            pt-br: URL externo
+            ru: Внешний URL
+            tr: Harici URL
           required: true
           rule: paramHttp
           type: text
@@ -54,6 +109,17 @@ additionalProperties:
           envKey: PANEL_APP_PORT_HTTP
           labelEn: Port
           labelZh: 端口
+          label:
+            en: Port
+            zh: 端口
+            es-es: Puerto
+            zh-Hant: 埠
+            ja: ポート
+            ko: 포트
+            ms: Port
+            pt-br: Porta
+            ru: Порт
+            tr: Bağlantı Noktası
           required: true
           rule: paramPort
           type: number

@@ -12,6 +12,7 @@ additionalProperties:
     shortDescEn: An open-source AI-powered CRM system that serves as an alternative to Salesforce CRM
     description:
         en: An open-source AI-powered CRM system that serves as an alternative to Salesforce CRM
+        es-es: Un open-source AI-powered CRM system that serves as an alternative to Salesforce CRM
         ja: Salesforce CRMの代替となるオープンソースのAI CRMシステム
         ms: Sistem CRM berkuasa AI sumber terbuka yang berfungsi sebagai alternatif kepada Salesforce CRM
         pt-br: Um sistema CRM alimentado por IA de código aberto que serve como uma alternativa ao Salesforce CRM
@@ -19,6 +20,7 @@ additionalProperties:
         ko: Salesforce CRM의 대안으로 제공되는 오픈 소스 AI 기반 CRM 시스템
         zh-Hant: 開源 AI CRM 系統，是 Salesforce CRM 的開源替代
         zh: 开源 AI CRM 系统，是 Salesforce CRM 的开源替代
+        tr: Salesforce CRM'e alternatif olan acik kaynakli, yapay zeka destekli CRM sistemi
     type: website
     crossVersionUpdate: false
     limit: 0

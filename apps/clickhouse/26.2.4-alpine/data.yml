@@ -6,6 +6,7 @@ additionalProperties:
       labelZh: TCP 端口
       label:
         en: Port
+        es-es: Puerto
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -13,6 +14,7 @@ additionalProperties:
         ko: 포트
         zh: TCP 端口
         zh-Hant: TCP 連接埠
+        tr: Bağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -23,6 +25,7 @@ additionalProperties:
       labelZh: API 端口
       label:
         en: Port
+        es-es: Puerto
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -30,6 +33,7 @@ additionalProperties:
         ko: 포트
         zh: API 端口
         zh-Hant: API 連接埠
+        tr: Bağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -39,6 +43,7 @@ additionalProperties:
       labelZh: 管理员
       label:
         en: Admin User
+        es-es: Usuario administrador
         ja: 管理者ユーザー
         ms: Pengguna Pentadbir
         pt-br: Usuário do Administrador
@@ -46,6 +51,7 @@ additionalProperties:
         ko: 관리자
         zh-Hant: 管理員
         zh: 管理员
+        tr: Yönetici Kullanıcısı
       required: true
       type: text
     - default: clickhouse
@@ -54,6 +60,7 @@ additionalProperties:
       labelZh: 管理员密码
       label:
         en: Admin Password
+        es-es: Contraseña del administrador
         ja: 管理者パスワード
         ms: Kata Laluan Pentadbir
         pt-br: Senha do Administrador
@@ -61,6 +68,7 @@ additionalProperties:
         ko: 관리자 비밀번호
         zh-Hant: 管理員密碼
         zh: 管理员密码
+        tr: Yönetici Parolası
       random: true
       required: true
       type: password

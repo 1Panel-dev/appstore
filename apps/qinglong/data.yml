@@ -10,6 +10,17 @@ additionalProperties:
     - Tool
   shortDescZh: 定时任务管理平台
   shortDescEn: Scheduled Task Management Platform
+  description:
+    en: Scheduled Task Management Platform
+    zh: 定时任务管理平台
+    es-es: Plataforma de gestión de tareas programadas
+    zh-Hant: 定時任務管理平台
+    ja: スケジュールタスク管理プラットフォーム
+    ko: 예약 작업 관리 플랫폼
+    ms: Platform pengurusan tugasan berjadual
+    pt-br: Plataforma de gerenciamento de tarefas agendadas
+    ru: Платформа управления запланированными задачами
+    tr: Zamanlanmış görev yönetim platformu
   type: website
   crossVersionUpdate: true
   limit: 0

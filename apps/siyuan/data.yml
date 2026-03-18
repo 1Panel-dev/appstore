@@ -10,6 +10,17 @@ additionalProperties:
     - Tool
   shortDescZh: 隐私优先的个人知识管理系统
   shortDescEn: Privacy-Prioritized Personal Knowledge Management System
+  description:
+    en: Privacy-Prioritized Personal Knowledge Management System
+    zh: 隐私优先的个人知识管理系统
+    es-es: Sistema personal de gestión del conocimiento centrado en la privacidad
+    zh-Hant: 以隱私優先的個人知識管理系統
+    ja: プライバシーを重視した個人知識管理システム
+    ko: 개인정보를 우선시하는 개인 지식 관리 시스템
+    ms: Sistem pengurusan pengetahuan peribadi yang mengutamakan privasi
+    pt-br: Sistema de gestão do conhecimento pessoal com foco em privacidade
+    ru: Система управления личными знаниями с приоритетом конфиденциальности
+    tr: Gizliliği ön planda tutan kişisel bilgi yönetim sistemi
   type: website
   crossVersionUpdate: true
   limit: 0

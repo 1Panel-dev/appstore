@@ -9,6 +9,7 @@ additionalProperties:
       type: number
       label:
         en: API Port
+        es-es: Puerto API
         ja: API ポート
         ms: Port API
         pt-br: Porta API
@@ -16,6 +17,7 @@ additionalProperties:
         ko: API 포트
         zh-Hant: API 埠
         zh: API 端口
+        tr: API Bağlantı Noktası
     - default: 9001
       envKey: PANEL_APP_PORT_HTTP
       labelEn: Web Port
@@ -25,6 +27,7 @@ additionalProperties:
       type: number
       label:
         en: Web Port
+        es-es: Puerto web
         ja: Web ポート
         ms: Port Web
         pt-br: Porta Web
@@ -32,6 +35,7 @@ additionalProperties:
         ko: 웹 포트
         zh-Hant: Web 埠
         zh: Web 端口
+        tr: Web Bağlantı Noktası
     - default: rustfsadmin
       envKey: RUSTFS_ACCESS_KEY
       labelEn: User
@@ -41,6 +45,7 @@ additionalProperties:
       type: text
       label:
         en: User
+        es-es: Usuario
         ja: ユーザー
         ms: Pengguna
         pt-br: Usuário
@@ -48,6 +53,7 @@ additionalProperties:
         ko: 사용자
         zh-Hant: 用戶
         zh: 用户
+        tr: Kullanıcı
     - default: rustfsadmin
       envKey: RUSTFS_SECRET_KEY
       labelEn: Password
@@ -58,6 +64,7 @@ additionalProperties:
       type: password
       label:
         en: Password
+        es-es: Contraseña
         ja: パスワード
         ms: Kata laluan
         pt-br: Senha
@@ -65,6 +72,7 @@ additionalProperties:
         ko: 비밀번호
         zh-Hant: 密碼
         zh: 密码
+        tr: Parola
     - default: "true"
       envKey: RUSTFS_CONSOLE_ENABLE
       labelEn: Enable Console
@@ -78,6 +86,7 @@ additionalProperties:
           value: "false"
       label:
         en: Enable Console
+        es-es: Habilitar consola
         ja: Console を有効にする
         ms: Aktifkan Console
         pt-br: Habilitar Console
@@ -85,6 +94,7 @@ additionalProperties:
         ko: Console 활성화
         zh-Hant: 啟用 Console
         zh: 启用管控台
+        tr: Konsolu etkinlestir
       description:
         en: "When enabled, operations can be performed via Web UI"
         ja: "有効にすると、Web UI を通じて操作できます"
@@ -94,3 +104,5 @@ additionalProperties:
         ko: "활성화하면 Web UI를 통해 작업을 수행할 수 있습니다"
         zh: "开启后可以通过 Web UI 操作"
         zh-Hant: "開啟後可以透過 Web UI 操作"
+        es-es: "Cuando esta opcion esta habilitada, las operaciones pueden realizarse desde la interfaz web"
+        tr: "Etkinlestirildiginde islemler web arayuzu uzerinden yapilabilir"

@@ -10,6 +10,17 @@ additionalProperties:
     - DevOps
   shortDescZh: 敏捷（scrum）项目管理系统/工具，永久免费升级
   shortDescEn: An agile(scrum) project management system/tool,
+  description:
+    en: An agile(scrum) project management system/tool,
+    zh: 敏捷（scrum）项目管理系统/工具，永久免费升级
+    es-es: Un agile(scrum) project sistema de gestión/herramienta,
+    zh-Hant: 敏捷（scrum）專案管理系統/工具
+    ja: アジャイル（scrum）プロジェクト管理システム/ツール
+    ko: 애자일(scrum) 프로젝트 관리 시스템/도구
+    ms: Sistem/alat pengurusan projek tangkas (scrum)
+    pt-br: Sistema/ferramenta de gerenciamento de projetos ágil (scrum)
+    ru: Система/инструмент управления agile (scrum) проектами
+    tr: Çevik (scrum) proje yönetim sistemi/aracı
   type: website
   crossVersionUpdate: true
   limit: 0

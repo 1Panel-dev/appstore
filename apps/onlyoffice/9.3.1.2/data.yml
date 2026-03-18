@@ -7,6 +7,7 @@ additionalProperties:
           labelZh: HTTP 端口
           label:
             en: HTTP Port
+            es-es: Puerto HTTP
             ja: HTTP ポート
             ms: Port HTTP
             pt-br: Porta HTTP
@@ -14,6 +15,7 @@ additionalProperties:
             ko: HTTP 포트
             zh: HTTP 端口
             zh-Hant: HTTP 埠
+            tr: HTTP Bağlantı Noktası
           required: true
           rule: paramPort
           type: number
@@ -24,6 +26,7 @@ additionalProperties:
           labelZh: JWT密钥
           label:
             en: JWT Secret
+            es-es: Secreto JWT
             ja: JWT シークレット
             ms: Rahsia JWT
             pt-br: Segredo JWT
@@ -31,6 +34,7 @@ additionalProperties:
             ko: JWT 비밀
             zh: JWT密钥
             zh-Hant: JWT密鑰
+            tr: JWT Sırrı
           random: true
           required: true
           rule: paramComplexity

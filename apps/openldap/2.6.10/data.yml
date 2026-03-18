@@ -6,6 +6,7 @@ additionalProperties:
       labelZh: LDAP baseDN
       label:
         en: LDAP baseDN
+        es-es: baseDN de LDAP
         ja: LDAP ベースDN
         ms: LDAP baseDN
         pt-br: LDAP baseDN
@@ -13,6 +14,7 @@ additionalProperties:
         ko: LDAP baseDN
         zh: LDAP baseDN
         zh-Hant: LDAP baseDN
+        tr: LDAP temel DN
       random: false
       required: true
       type: text
@@ -22,6 +24,7 @@ additionalProperties:
       labelZh: LDAP 管理员用户名
       label:
         en: LDAP admin username
+        es-es: Nombre de usuario del administrador LDAP
         ja: LDAP 管理者ユーザー名
         ms: Nama pengguna admin LDAP
         pt-br: Nome de usuário admin LDAP
@@ -29,6 +32,7 @@ additionalProperties:
         ko: LDAP 관리자 사용자 이름
         zh: LDAP 管理员用户名
         zh-Hant: LDAP 管理員用戶名
+        tr: LDAP yonetici kullanici adi
       random: false
       required: true
       rule: paramCommon
@@ -39,6 +43,7 @@ additionalProperties:
       labelZh: LDAP 管理员密码
       label:
         en: LDAP admin password
+        es-es: Contraseña del administrador LDAP
         ja: LDAP 管理者パスワード
         ms: Kata laluan admin LDAP
         pt-br: Senha do admin LDAP
@@ -46,6 +51,7 @@ additionalProperties:
         ko: LDAP 관리자 비밀번호
         zh: LDAP 管理员密码
         zh-Hant: LDAP 管理員密碼
+        tr: LDAP yonetici parolasi
       random: true
       required: true
       rule: paramComplexity
@@ -57,6 +63,7 @@ additionalProperties:
       labelZh: LDAP 监听端口
       label:
         en: LDAP listening port
+        es-es: Puerto de escucha LDAP
         ja: LDAP リスニングポート
         ms: Port pendengaran LDAP
         pt-br: Porta de escuta LDAP
@@ -64,6 +71,7 @@ additionalProperties:
         ko: LDAP 수신 포트
         zh: LDAP 监听端口
         zh-Hant: LDAP 監聽埠
+        tr: LDAP dinleme portu
       required: true
       rule: paramPort
       type: number

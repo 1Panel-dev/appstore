@@ -12,6 +12,7 @@ additionalProperties:
     shortDescEn: A multimedia application software suite
     description:
         en: A multimedia application software suite
+        es-es: Suite de software de aplicaciones multimedia
         ja: マルチメディアアプリケーションソフトウェアスイート
         ms: Suite perisian aplikasi multimedia
         pt-br: Um conjunto de software de aplicação multimídia
@@ -19,6 +20,7 @@ additionalProperties:
         ko: 멀티미디어 응용 소프트웨어 패키지
         zh-Hant: 多媒體應用程式軟體套裝
         zh: 多媒体应用软件套件
+        tr: Multimedya uygulama yazilim paketi
     type: website
     crossVersionUpdate: true
     limit: 0

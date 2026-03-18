@@ -9,6 +9,7 @@ additionalProperties:
       type: select
       label:
         en: Image Name
+        es-es: Image Nombre
         ja: イメージ名
         ms: Nama Imej
         pt-br: Nome da imagem
@@ -16,6 +17,7 @@ additionalProperties:
         ko: 이미지 이름
         zh: 镜像名称
         zh-Hant: 鏡像名稱
+        tr: Image Adı
       values:
         - label: "m1k1o/neko:kde"
           value: "m1k1o/neko:kde"
@@ -61,6 +63,7 @@ additionalProperties:
       type: number
       label:
         en: Port
+        es-es: Puerto
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -68,6 +71,7 @@ additionalProperties:
         ko: 포트
         zh: 端口
         zh-Hant: 端口
+        tr: Bağlantı Noktası
     - default: "1920x1080@30"
       edit: true
       envKey: NEKO_SCREEN
@@ -77,6 +81,7 @@ additionalProperties:
       type: text
       label:
         en: Screen Resolution
+        es-es: Resolución de pantalla
         ja: 画面解像度
         ms: Resolusi Skrin
         pt-br: Resolução de tela
@@ -84,6 +89,7 @@ additionalProperties:
         ko: 화면 해상도
         zh: 屏幕分辨率
         zh-Hant: 螢幕解析度
+        tr: Ekran cozunurlugu
     - default: "neko"
       edit: true
       envKey: NEKO_PASSWORD
@@ -93,6 +99,7 @@ additionalProperties:
       type: password
       label:
         en: User Password
+        es-es: Usuario Contraseña
         ja: ユーザーパスワード
         ms: Kata Laluan Pengguna
         pt-br: Senha do usuário
@@ -100,6 +107,7 @@ additionalProperties:
         ko: 사용자 비밀번호
         zh: 用户密码
         zh-Hant: 使用者密碼
+        tr: Kullanıcı Parola
     - default: "admin"
       edit: true
       envKey: NEKO_PASSWORD_ADMIN
@@ -109,6 +117,7 @@ additionalProperties:
       type: password
       label:
         en: Admin Password
+        es-es: Contraseña del administrador
         ja: 管理者パスワード
         ms: Kata Laluan Pentadbir
         pt-br: Senha do administrador
@@ -116,6 +125,7 @@ additionalProperties:
         ko: 관리자 비밀번호
         zh: 管理员密码
         zh-Hant: 管理員密碼
+        tr: Yönetici Parolası
     - default: "127.0.0.1"
       edit: true
       envKey: NEKO_WEBRTC_NAT1TO1
@@ -125,6 +135,7 @@ additionalProperties:
       type: text
       label:
         en: Bind Address
+        es-es: Bind Dirección
         ja: バインドアドレス
         ms: Alamat Ikat
         pt-br: Endereço de ligação
@@ -132,6 +143,7 @@ additionalProperties:
         ko: 바인드 주소
         zh: 绑定地址
         zh-Hant: 綁定地址
+        tr: Bind Adres
     - default: "52000-52100"
       edit: true
       envKey: NEKO_EPR
@@ -141,6 +153,7 @@ additionalProperties:
       type: text
       label:
         en: WebRTC UDP Port Range
+        es-es: WebRTC UDP Puerto Range
         ja: WebRTC UDP ポート範囲
         ms: Julat Port UDP WebRTC
         pt-br: Faixa de portas UDP WebRTC
@@ -148,6 +161,7 @@ additionalProperties:
         ko: WebRTC UDP 포트 범위
         zh: WebRTC UDP 端口范围
         zh-Hant: WebRTC UDP 連接埠範圍
+        tr: WebRTC UDP Bağlantı Noktası Aralığı
     - default: "1"
       edit: true
       envKey: NEKO_ICELITE
@@ -157,6 +171,7 @@ additionalProperties:
       type: number
       label:
         en: ICELite Mode
+        es-es: ICELite Modo
         ja: ICELite モード
         ms: Mod ICELite
         pt-br: Modo ICELite
@@ -164,6 +179,7 @@ additionalProperties:
         ko: ICELite 모드
         zh: ICELite 模式
         zh-Hant: ICELite 模式
+        tr: ICELite Mod
     - default: "1024m"
       edit: true
       envKey: MEM_USE
@@ -173,6 +189,7 @@ additionalProperties:
       type: text
       label:
         en: Shared Memory Footprint (1GB)
+        es-es: Huella de memoria compartida (1 GB)
         ja: 共有メモリ使用量 (1GB)
         ms: Jejak Ingatan Dikongsi (1GB)
         pt-br: Uso de memória compartilhada (1GB)
@@ -180,6 +197,7 @@ additionalProperties:
         ko: 공유 메모리 사용량 (1GB)
         zh: 共享内存占用 (1gb)
         zh-Hant: 共用記憶體占用 (1GB)
+        tr: Paylasilan bellek ayak izi (1GB)
     - default: "false"
       edit: true
       envKey: NEKO_CONTROL_PROTECTION
@@ -194,6 +212,7 @@ additionalProperties:
           value: "true"
       label:
         en: Control Protection
+        es-es: Protección de control
         ja: コントロール保護
         ms: Perlindungan Kawalan
         pt-br: Proteção de controle
@@ -201,6 +220,7 @@ additionalProperties:
         ko: 제어 보호
         zh: 控制保护
         zh-Hant: 控制保護
+        tr: Kontrol korumasi
     - default: "false"
       edit: true
       envKey: NEKO_IMPLICIT_CONTROL
@@ -215,6 +235,7 @@ additionalProperties:
           value: "true"
       label:
         en: Implicit Control
+        es-es: Control implícito
         ja: 暗黙の制御
         ms: Kawalan Tersirat
         pt-br: Controle Implícito
@@ -222,6 +243,7 @@ additionalProperties:
         ko: 암묵적 제어
         zh: 隐式控制
         zh-Hant: 隱式控制
+        tr: Dolayli kontrol
     - default: ""
       edit: true
       envKey: NEKO_LOCKS
@@ -231,6 +253,7 @@ additionalProperties:
       type: text
       label:
         en: Locks
+        es-es: Bloqueos
         ja: ロック
         ms: Kunci
         pt-br: Bloqueios
@@ -238,6 +261,7 @@ additionalProperties:
         ko: 잠금
         zh: 锁定
         zh-Hant: 鎖定
+        tr: Kilitler
     - default: ""
       edit: true
       envKey: NEKO_NAT1TO1
@@ -247,6 +271,7 @@ additionalProperties:
       type: text
       label:
         en: NAT1to1 IP
+        es-es: IP NAT1to1
         ja: NAT1to1 IP
         ms: NAT1to1 IP
         pt-br: IP NAT1to1
@@ -254,6 +279,7 @@ additionalProperties:
         ko: NAT1to1 IP
         zh: NAT1to1 IP
         zh-Hant: NAT1to1 IP
+        tr: NAT1to1 IP adresi
     - default: ""
       edit: true
       envKey: NEKO_IPFETCH
@@ -263,6 +289,7 @@ additionalProperties:
       type: text
       label:
         en: IP Fetch URL
+        es-es: URL de obtención de IP
         ja: IP 取得URL
         ms: URL Dapatkan IP
         pt-br: URL de obtenção de IP
@@ -270,6 +297,7 @@ additionalProperties:
         ko: IP 가져오기 URL
         zh: IP 获取URL
         zh-Hant: IP 取得UR
+        tr: IP alma URL'si
     - default: ""
       edit: true
       envKey: NEKO_ICESERVER
@@ -279,6 +307,7 @@ additionalProperties:
       type: text
       label:
         en: ICE Server
+        es-es: Servidor ICE
         ja: ICE サーバー
         ms: Pelayan ICE
         pt-br: Servidor ICE
@@ -286,6 +315,7 @@ additionalProperties:
         ko: ICE 서버
         zh: ICE 服务器
         zh-Hant: ICE 伺服器
+        tr: ICE Sunucu
     - default: ""
       edit: true
       envKey: NEKO_ICESERVERS
@@ -295,6 +325,7 @@ additionalProperties:
       type: text
       label:
         en: ICE Servers
+        es-es: Servidores ICE
         ja: ICE サーバー群
         ms: Pelayan-pelayan ICE
         pt-br: Servidores ICE
@@ -302,6 +333,7 @@ additionalProperties:
         ko: ICE 서버 그룹
         zh: ICE 服务器组
         zh-Hant: ICE 伺服器群
+        tr: ICE Sunucus
     - default: "vp8"
       edit: true
       envKey: NEKO_VIDEO_CODEC
@@ -311,6 +343,7 @@ additionalProperties:
       type: text
       label:
         en: Video Codec
+        es-es: Códec de video
         ja: ビデオコーデック
         ms: Codec Video
         pt-br: Codec de Vídeo
@@ -318,6 +351,7 @@ additionalProperties:
         ko: 비디오 코덱
         zh: 视频编解码器
         zh-Hant: 視頻編解碼器
+        tr: Video kodegi
     - default: "3500"
       edit: true
       envKey: NEKO_VIDEO_BITRATE
@@ -327,6 +361,7 @@ additionalProperties:
       type: number
       label:
         en: Video Bitrate
+        es-es: Tasa de bits de video
         ja: ビデオビットレート
         ms: Bitrate Video
         pt-br: Taxa de bits do vídeo
@@ -334,6 +369,7 @@ additionalProperties:
         ko: 비디오 비트레이트
         zh: 视频比特率
         zh-Hant: 視頻比特率
+        tr: Video bit hizi
     - default: "0"
       edit: true
       envKey: NEKO_MAX_FPS
@@ -343,6 +379,7 @@ additionalProperties:
       type: number
       label:
         en: Max FPS
+        es-es: FPS máximos
         ja: 最大FPS
         ms: FPS Maksimum
         pt-br: FPS Máximo
@@ -350,6 +387,7 @@ additionalProperties:
         ko: 최대 FPS
         zh: 最大FPS
         zh-Hant: 最大FPS
+        tr: Maksimum FPS
     - default: "none"
       edit: true
       envKey: NEKO_HWENC
@@ -359,6 +397,7 @@ additionalProperties:
       type: text
       label:
         en: Hardware Encoder
+        es-es: Codificador por hardware
         ja: ハードウェアエンコーダ
         ms: Pengekod Perkakasan
         pt-br: Codificador de Hardware
@@ -366,6 +405,7 @@ additionalProperties:
         ko: 하드웨어 인코더
         zh: 硬件编码器
         zh-Hant: 硬體編碼器
+        tr: Donanim kodlayici
     - default: "opus"
       edit: true
       envKey: NEKO_AUDIO_CODEC
@@ -375,6 +415,7 @@ additionalProperties:
       type: text
       label:
         en: Audio Codec
+        es-es: Códec de audio
         ja: オーディオコーデック
         ms: Codec Audio
         pt-br: Codec de Áudio
@@ -382,6 +423,7 @@ additionalProperties:
         ko: 오디오 코덱
         zh: 音频编解码器
         zh-Hant: 音訊編解碼器
+        tr: Ses kodegi
     - default: 196
       edit: true
       envKey: NEKO_AUDIO_BITRATE
@@ -391,6 +433,7 @@ additionalProperties:
       type: number
       label:
         en: Audio Bitrate
+        es-es: Tasa de bits de audio
         ja: オーディオビットレート
         ms: Bitrate Audio
         pt-br: Taxa de bits do áudio
@@ -398,6 +441,7 @@ additionalProperties:
         ko: 오디오 비트레이트
         zh: 音频比特率
         zh-Hant: 音訊比特率
+        tr: Ses bit hizi
     - default: ""
       edit: true
       envKey: NEKO_BROADCAST_PIPELINE
@@ -407,6 +451,7 @@ additionalProperties:
       type: text
       label:
         en: Broadcast Pipeline
+        es-es: Canalización de transmisión
         ja: ブロードキャストパイプライン
         ms: Saluran Penyiaran
         pt-br: Pipeline de transmissão
@@ -414,6 +459,7 @@ additionalProperties:
         ko: 방송 파이프라인
         zh: 广播管道
         zh-Hant: 廣播管道
+        tr: Yayin hatti
     - default: ""
       edit: true
       envKey: NEKO_BROADCAST_URL
@@ -423,6 +469,7 @@ additionalProperties:
       type: text
       label:
         en: Broadcast URL
+        es-es: URL de transmisión
         ja: ブロードキャストURL
         ms: URL Penyiaran
         pt-br: URL de transmissão
@@ -430,6 +477,7 @@ additionalProperties:
         ko: 방송 URL
         zh: 广播URL
         zh-Hant: 廣播URL
+        tr: Yayin URL'si
     - default: "false"
       edit: true
       envKey: NEKO_BROADCAST_AUTOSTART
@@ -444,6 +492,7 @@ additionalProperties:
           value: "true"
       label:
         en: Broadcast Autostart
+        es-es: Inicio automático de transmisión
         ja: ブロードキャスト自動起動
         ms: Mula Siaran Automatik
         pt-br: Inicialização automática de transmissão
@@ -451,6 +500,7 @@ additionalProperties:
         ko: 방송 자동 시작
         zh: 广播自动启动
         zh-Hant: 廣播自動啟動
+        tr: Yayin otomatik baslatma
     - default: ""
       edit: true
       envKey: NEKO_CERT
@@ -460,6 +510,7 @@ additionalProperties:
       type: text
       label:
         en: SSL Certificate Path
+        es-es: SSL Certificate Ruta
         ja: SSL証明書パス
         ms: Laluan Sijil SSL
         pt-br: Caminho do certificado SSL
@@ -467,6 +518,7 @@ additionalProperties:
         ko: SSL 인증서 경로
         zh: SSL证书路径
         zh-Hant: SSL憑證路徑
+        tr: SSL Certificate Yolu
     - default: ""
       edit: true
       envKey: NEKO_KEY
@@ -476,6 +528,7 @@ additionalProperties:
       type: text
       label:
         en: SSL Key Path
+        es-es: SSL Clave Ruta
         ja: SSLキーのパス
         ms: Laluan Kunci SSL
         pt-br: Caminho da chave SSL
@@ -483,6 +536,7 @@ additionalProperties:
         ko: SSL 키 경로
         zh: SSL 密钥路径
         zh-Hant: SSL 金鑰路徑
+        tr: SSL Anahtar Yolu
     - default: "false"
       edit: true
       envKey: NEKO_PROXY
@@ -497,6 +551,7 @@ additionalProperties:
           value: "true"
       label:
         en: Proxy Mode
+        es-es: Proxy Modo
         ja: プロキシモード
         ms: Mod Proksi
         pt-br: Modo Proxy
@@ -504,6 +559,7 @@ additionalProperties:
         ko: 프록시 모드
         zh: 代理模式
         zh-Hant: 代理模式
+        tr: Proxy Mod
     - default: ""
       edit: true
       envKey: NEKO_PATH_PREFIX
@@ -513,6 +569,7 @@ additionalProperties:
       type: text
       label:
         en: Path Prefix
+        es-es: Ruta Prefix
         ja: パスプレフィックス
         ms: Awalan Laluan
         pt-br: Prefixo de Caminho
@@ -520,6 +577,7 @@ additionalProperties:
         ko: 경로 접두사
         zh: 路径前缀
         zh-Hant: 路徑前綴
+        tr: Yolu Prefix
     - default: ""
       edit: true
       envKey: NEKO_CORS
@@ -529,6 +587,7 @@ additionalProperties:
       type: text
       label:
         en: CORS
+        es-es: Configuración CORS
         ja: CORS
         ms: CORS
         pt-br: CORS
@@ -536,6 +595,7 @@ additionalProperties:
         ko: CORS
         zh: 跨域资源共享
         zh-Hant: 跨域資源共享
+        tr: CORS ayarlari
     - default: "true"
       edit: true
       envKey: NEKO_FILE_TRANSFER_ENABLED
@@ -550,6 +610,7 @@ additionalProperties:
           value: "false"
       label:
         en: File Transfer Enabled
+        es-es: Transferencia de archivos habilitada
         ja: ファイル転送有効
         ms: Pemindahan Fail Diaktifkan
         pt-br: Transferência de Arquivos Habilitada
@@ -557,6 +618,7 @@ additionalProperties:
         ko: 파일 전송 활성화
         zh: 文件传输已启用
         zh-Hant: 檔案傳輸已啟用
+        tr: Dosya aktarimi etkin
     - default: ""
       edit: true
       envKey: NEKO_DISPLAY
@@ -566,6 +628,7 @@ additionalProperties:
       type: text
       label:
         en: Display
+        es-es: Pantalla
         ja: ディスプレイ
         ms: Paparan
         pt-br: Tela
@@ -573,6 +636,7 @@ additionalProperties:
         ko: 디스플레이
         zh: 显示
         zh-Hant: 顯示
+        tr: Goruntu
     - default: ""
       edit: true
       envKey: NEKO_DEVICE
@@ -582,6 +646,7 @@ additionalProperties:
       type: text
       label:
         en: Device
+        es-es: Dispositivo
         ja: デバイス
         ms: Peranti
         pt-br: Dispositivo
@@ -589,6 +654,7 @@ additionalProperties:
         ko: 장치
         zh: 设备
         zh-Hant: 裝置
+        tr: Cihaz
     - default: ""
       edit: true
       envKey: NEKO_STATIC
@@ -598,6 +664,7 @@ additionalProperties:
       type: text
       label:
         en: Static Files Path
+        es-es: Static Files Ruta
         ja: 静的ファイルパス
         ms: Laluan Fail Statik
         pt-br: Caminho de arquivos estáticos
@@ -605,3 +672,4 @@ additionalProperties:
         ko: 정적 파일 경로
         zh: 静态文件路径
         zh-Hant: 靜態檔案路徑
+        tr: Static Files Yolu

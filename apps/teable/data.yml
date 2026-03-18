@@ -12,6 +12,7 @@ additionalProperties:
     shortDescEn: The Next Gen Airtable Alternative
     description:
         en: The Next Gen Airtable Alternative
+        es-es: La alternativa de nueva generación a Airtable
         ja: 次世代の Airtable 代替
         ms: The Next Gen Airtable Alternative
         pt-br: A Alternativa ao Airtable da Próxima Geração
@@ -19,6 +20,7 @@ additionalProperties:
         ko: 다음 세대 Airtable 대안
         zh-Hant: 下一代 Airtable 替代方案
         zh: 下一代 Airtable 替代方案
+        tr: Yeni nesil Airtable alternatifi
     type: website
     crossVersionUpdate: false
     limit: 0

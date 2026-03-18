@@ -12,6 +12,7 @@ additionalProperties:
   shortDescEn: Open-Source Personal Subscription Tracker
   description:
     en: Open-Source Personal Subscription Tracker
+    es-es: Rastreador personal de suscripciones de código abierto
     ja: オープンソースの個人サブスクリプショントラッカー
     ms: Penjejak langganan peribadi sumber terbuka
     pt-br: Rastreador de assinaturas pessoais de código aberto
@@ -19,6 +20,7 @@ additionalProperties:
     zh-Hant: 開源個人訂閱跟蹤器
     zh: 开源个人订阅跟踪器
     ko: 오픈 소스 개인 구독 추적기
+    tr: Açık kaynaklı Personal Subscription Tracker
   type: website
   crossVersionUpdate: true
   limit: 0

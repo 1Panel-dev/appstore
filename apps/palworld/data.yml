@@ -12,6 +12,7 @@ additionalProperties:
     shortDescEn: Palworld Dedicated Server
     description:
         en: Palworld Dedicated Server
+        es-es: Servidor dedicado de Palworld
         ja: Palworld 専用サーバー
         ms: Pelayan Dedikasi Palworld
         pt-br: Servidor dedicado Palworld
@@ -19,6 +20,7 @@ additionalProperties:
         ko: Palworld 전용 서버
         zh-hant: Palworld 專用伺服器
         zh: 幻兽帕鲁服务端
+        tr: Palworld adanmis sunucusu
     type: website
     crossVersionUpdate: true
     limit: 0

@@ -9,6 +9,7 @@ additionalProperties:
       type: number
       label:
         en: Web Port
+        es-es: Puerto web
         ja: ウェブポート
         ms: Port Web
         pt-br: Porta Web
@@ -16,6 +17,7 @@ additionalProperties:
         ko: 웹 포트
         zh: HTTP 端口
         zh-Hant: HTTP 埠
+        tr: Web Bağlantı Noktası
     - default: ""
       envKey: PANEL_DB_HOST
       key: postgresql
@@ -25,6 +27,7 @@ additionalProperties:
       type: service
       label:
         en: PostgreSQL Database Service
+        es-es: Servicio de base de datos PostgreSQL
         ja: PostgreSQLデータベースサービス
         ms: Perkhidmatan Pangkalan Data PostgreSQL
         pt-br: Serviço de Banco de Dados PostgreSQL
@@ -32,6 +35,7 @@ additionalProperties:
         ko: PostgreSQL 데이터베이스 서비스
         zh: PostgreSQL 数据库服务
         zh-Hant: PostgreSQL 数据库服务
+        tr: PostgreSQL Veritabanı Hizmeti
     - default: affine
       envKey: PANEL_DB_NAME
       labelEn: Database
@@ -42,6 +46,7 @@ additionalProperties:
       type: text
       label:
         en: Database
+        es-es: Base de datos
         ja: データベース
         ms: Pangkalan Data
         pt-br: Banco de Dados
@@ -49,6 +54,7 @@ additionalProperties:
         ko: 데이터베이스
         zh: 数据库名
         zh-Hant: 資料庫名稱
+        tr: Veritabanı
     - default: affine
       envKey: PANEL_DB_USER
       labelEn: User
@@ -59,6 +65,7 @@ additionalProperties:
       type: text
       label:
         en: User
+        es-es: Usuario
         ja: ユーザー
         ms: Pengguna
         pt-br: Usuário
@@ -66,6 +73,7 @@ additionalProperties:
         ko: 사용자
         zh: 数据库用户
         zh-Hant: 資料庫使用者
+        tr: Kullanıcı
     - default: affine
       envKey: PANEL_DB_USER_PASSWORD
       labelEn: Password
@@ -75,6 +83,7 @@ additionalProperties:
       type: password
       label:
         en: Password
+        es-es: Contraseña
         ja: パスワード
         ms: Kata laluan
         pt-br: Senha
@@ -82,6 +91,7 @@ additionalProperties:
         ko: 비밀번호
         zh: 数据库用户密码
         zh-Hant: 資料庫使用者密碼
+        tr: Parola
     - default: ""
       envKey: PANEL_REDIS_HOST
       key: redis
@@ -91,6 +101,7 @@ additionalProperties:
       type: service
       label:
         en: Redis Service
+        es-es: Servicio de Redis
         ja: Redisサービス
         ms: Perkhidmatan Redis
         pt-br: Serviço Redis
@@ -98,6 +109,7 @@ additionalProperties:
         ko: Redis 서비스
         zh: redis 服务
         zh-Hant: redis 服务
+        tr: Redis Hizmeti
     - default: ""
       disabled: true
       envKey: PANEL_REDIS_ROOT_PASSWORD
@@ -106,6 +118,7 @@ additionalProperties:
       type: text
       label:
         en: Password
+        es-es: Contraseña
         ja: パスワード
         ms: Kata laluan
         pt-br: Senha
@@ -113,3 +126,4 @@ additionalProperties:
         ko: 비밀번호
         zh: redis 密码
         zh-Hant: redis 密码
+        tr: Parola

@@ -12,12 +12,15 @@ additionalProperties:
   shortDescEn: .NET Runtime
   description:
     en: .NET Runtime Environment
+    es-es: Entorno de ejecución de .NET
     ja: .NET 実行環境
     ms: Persekitaran Larian .NET
     pt-br: Ambiente de Execução .NET
     ru: Среда выполнения .NET
     zh-Hant: .NET 執行環境
     zh: .NET 运行环境
+    tr: .NET Çalışma Zamanı Ortamı
+    ko: .NET 런타임 환경
   type: dotnet
   crossVersionUpdate: false
   limit: 0

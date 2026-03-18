@@ -12,6 +12,7 @@ additionalProperties:
     shortDescEn: The next generation of code hosting platform
     description:
         en: The next generation of code hosting platform
+        es-es: The next generation of code hosting plataforma
         ja: 次世代のコードホスティングプラットフォーム
         ms: Platform hosting kod generasi seterusnya
         pt-br: A próxima geração de plataforma de hospedagem de código
@@ -19,6 +20,7 @@ additionalProperties:
         ko: 다음 세대 코드 호스팅 플랫폼
         zh-Hant: 下一代代碼託管平台
         zh: 下一代代码托管平台
+        tr: The next generation of kod barındırma platform
     type: website
     crossVersionUpdate: true
     limit: 0

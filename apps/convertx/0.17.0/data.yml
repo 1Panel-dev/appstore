@@ -10,6 +10,7 @@ additionalProperties:
       type: number
       label:
         en: Port
+        es-es: Puerto
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -17,3 +18,4 @@ additionalProperties:
         ko: 포트
         zh-Hant: 埠
         zh: 端口
+        tr: Bağlantı Noktası

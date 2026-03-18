@@ -10,6 +10,17 @@ additionalProperties:
     - DevOps
   shortDescZh: 新一代的测试管理和接口测试工具
   shortDescEn: The next-gen test management and interface testing tools
+  description:
+    en: The next-gen test management and interface testing tools
+    zh: 新一代的测试管理和接口测试工具
+    es-es: The next-gen test gestión and interface testing herramientas
+    zh-Hant: 新一代測試管理與介面測試工具
+    ja: 次世代のテスト管理およびインターフェーステストツール
+    ko: 차세대 테스트 관리 및 인터페이스 테스트 도구
+    ms: Alat pengurusan ujian dan ujian antara muka generasi baharu
+    pt-br: Ferramentas de próxima geração para gerenciamento de testes e testes de interface
+    ru: Инструменты нового поколения для управления тестированием и тестирования интерфейсов
+    tr: Yeni nesil test yönetimi ve arayüz testi araçları
   type: website
   crossVersionUpdate: false
   limit: 1

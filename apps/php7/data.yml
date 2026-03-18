@@ -12,6 +12,7 @@ additionalProperties:
     shortDescEn: PHP7 Runtime
     description:
         en: PHP7 Runtime
+        es-es: Entorno de ejecución de PHP7
         ja: PHP7 ランタイム
         ms: Persekitaran masa laku PHP7
         pt-br: Ambiente de execução PHP7
@@ -19,6 +20,7 @@ additionalProperties:
         ko: PHP7 런타임
         zh-hant: PHP7 執行環境
         zh: PHP7 运行环境
+        tr: PHP7 calisma ortami
     type: php
     crossVersionUpdate: false
     limit: 0

@@ -6,6 +6,7 @@ additionalProperties:
       labelZh: 数据库密码
       label:
         en: Database Password
+        es-es: Contraseña de la base de datos
         ja: データベースのパスワード
         ms: Kata Laluan Pangkalan Data
         pt-br: Senha do Banco de Dados
@@ -13,6 +14,7 @@ additionalProperties:
         ko: 데이터베이스 비밀번호
         zh-hant: 資料庫密碼
         zh: 数据库密码
+        tr: Veritabanı Parolası
       random: true
       required: false
       type: password
@@ -22,6 +24,7 @@ additionalProperties:
       labelZh: 端口
       label:
         en: Port
+        es-es: Puerto
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -29,6 +32,7 @@ additionalProperties:
         ko: 포트
         zh-Hant: 埠
         zh: 端口
+        tr: Bağlantı Noktası
       required: true
       rule: paramPort
       type: number

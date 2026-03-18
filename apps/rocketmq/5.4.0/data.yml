@@ -7,6 +7,7 @@ additionalProperties:
       labelZh: NameServer 端口
       label:
         en: NameServer Port
+        es-es: NombreServer Puerto
         ja: NameServer ポート
         ms: Port NameServer
         pt-br: Porta NameServer
@@ -14,6 +15,7 @@ additionalProperties:
         ko: NameServer 포트
         zh: NameServer 端口
         zh-Hant: NameServer 埠
+        tr: AdıSunucu Bağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -24,6 +26,7 @@ additionalProperties:
       labelZh: Broker 监听端口
       label:
         en: Broker ListenPort
+        es-es: Broker ListenPuerto
         ja: Broker リッスンポート
         ms: Port Dengar Broker
         pt-br: Porta de Escuta do Broker
@@ -31,6 +34,7 @@ additionalProperties:
         ko: 브로커 수신 포트
         zh: Broker 监听端口
         zh-Hant: Broker 監聽埠
+        tr: Broker ListenBağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -41,6 +45,7 @@ additionalProperties:
       labelZh: Broker 快速监听端口
       label:
         en: Broker FastListenPort
+        es-es: Broker FastListenPuerto
         ja: Broker 高速リッスンポート
         ms: Port Dengar Cepat Broker
         pt-br: Porta de Escuta Rápida do Broker
@@ -48,6 +53,7 @@ additionalProperties:
         ko: 브로커 빠른 수신 포트
         zh: Broker 快速监听端口
         zh-Hant: Broker 快速監聽埠
+        tr: Broker FastListenBağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -58,6 +64,7 @@ additionalProperties:
       labelZh: Broker HA 监听端口
       label:
         en: Broker HaListenPort
+        es-es: Broker HaListenPuerto
         ja: Broker HA リッスンポート
         ms: Port Dengar HA Broker
         pt-br: Porta de Escuta HA do Broker
@@ -65,6 +72,7 @@ additionalProperties:
         ko: 브로커 HA 수신 포트
         zh: Broker HA 监听端口
         zh-Hant: Broker HA 監聽埠
+        tr: Broker HaListenBağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -75,6 +83,7 @@ additionalProperties:
       labelZh: Proxy 远程监听端口
       label:
         en: Proxy RemotingListenPort
+        es-es: Proxy RemotingListenPuerto
         ja: Proxy リモートリッスンポート
         ms: Port Dengar Jauh Proxy
         pt-br: Porta de Escuta Remota do Proxy
@@ -82,6 +91,7 @@ additionalProperties:
         ko: 프록시 원격 수신 포트
         zh: Proxy 远程监听端口
         zh-Hant: Proxy 遠程監聽埠
+        tr: Proxy RemotingListenBağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -92,6 +102,7 @@ additionalProperties:
       labelZh: Proxy grpc 端口
       label:
         en: Proxy GrpcServerPort
+        es-es: Proxy GrpcServerPuerto
         ja: Proxy grpc サーバーポート
         ms: Port Pelayan Grpc Proxy
         pt-br: Porta do Servidor Grpc do Proxy
@@ -99,6 +110,7 @@ additionalProperties:
         ko: 프록시 grpc 서버 포트
         zh: Proxy grpc 端口
         zh-Hant: Proxy grpc 埠
+        tr: Proxy GrpcSunucuBağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -109,6 +121,7 @@ additionalProperties:
       labelZh: Dashboard 端口
       label:
         en: Dashboard Port
+        es-es: Dashboard Puerto
         ja: ダッシュボードポート
         ms: Port Papan Pemuka
         pt-br: Porta do Painel
@@ -116,6 +129,7 @@ additionalProperties:
         ko: 대시보드 포트
         zh: Dashboard 端口
         zh-Hant: Dashboard 埠
+        tr: Kontrol Paneli Bağlantı Noktası
       required: true
       rule: paramPort
       type: number

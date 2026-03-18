@@ -7,6 +7,7 @@ additionalProperties:
       labelZh: HTTP 端口
       label:
         en: HTTP Port
+        es-es: Puerto HTTP
         ja: HTTP ポート
         ko: HTTP 포트
         ms: Port HTTP
@@ -25,6 +26,7 @@ additionalProperties:
       labelZh: 数据接收端口
       label:
         en: Data Receiving Port
+        es-es: Data Receiving Puerto
         ja: データ受信ポート
         ko: 데이터 수신 포트
         ms: Port Penerimaan Data
@@ -46,6 +48,7 @@ additionalProperties:
       labelZh: 数据库服务
       label:
         en: Database Service
+        es-es: Servicio de base de datos
         ja: データベースサービス
         ms: Perkhidmatan Pangkalan Data
         pt-br: Serviço de Banco de Dados
@@ -53,6 +56,7 @@ additionalProperties:
         ko: 데이터베이스 서비스
         zh-hant: 資料庫服務
         zh: 数据库服务
+        tr: Veritabanı Hizmeti
       required: true
       type: apps
       values:
@@ -64,6 +68,7 @@ additionalProperties:
       labelZh: Root 密码
       label:
         en: Root Password
+        es-es: Contraseña de root
         ja: ルートパスワード
         ms: Kata Laluan Root
         pt-br: Senha Root
@@ -71,6 +76,7 @@ additionalProperties:
         ko: 루트 비밀번호
         zh-hant: Root 密碼
         zh: Root 密码
+        tr: Root Parolası
       required: true
       type: text
     - default: zabbix
@@ -79,6 +85,7 @@ additionalProperties:
       labelZh: 数据库名称
       label:
         en: Database Name
+        es-es: Nombre de la base de datos
         ja: データベース名
         ms: Nama Pangkalan Data
         pt-br: Nome do Banco de Dados
@@ -86,6 +93,7 @@ additionalProperties:
         ko: 데이터베이스 이름
         zh-hant: 資料庫名稱
         zh: 数据库名称
+        tr: Veritabanı Adı
       random: true
       required: true
       rule: paramCommon
@@ -96,6 +104,7 @@ additionalProperties:
       labelZh: 数据库用户
       label:
         en: Database User
+        es-es: Usuario de la base de datos
         ja: データベースユーザー
         ms: Pengguna Pangkalan Data
         pt-br: Usuário do Banco de Dados
@@ -103,6 +112,7 @@ additionalProperties:
         ko: 데이터베이스 사용자
         zh-hant: 資料庫用戶
         zh: 数据库用户
+        tr: Veritabanı Kullanıcısı
       random: true
       required: true
       rule: paramCommon
@@ -113,6 +123,7 @@ additionalProperties:
       labelZh: 数据库密码
       label:
         en: Database Password
+        es-es: Contraseña de la base de datos
         ja: データベースのパスワード
         ms: Kata Laluan Pangkalan Data
         pt-br: Senha do Banco de Dados
@@ -120,6 +131,7 @@ additionalProperties:
         ko: 데이터베이스 비밀번호
         zh-hant: 資料庫密碼
         zh: 数据库密码
+        tr: Veritabanı Parolası
       random: true
       required: true
       type: password

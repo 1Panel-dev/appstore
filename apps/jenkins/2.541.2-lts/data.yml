@@ -9,6 +9,7 @@ additionalProperties:
           type: text
           label:
             en: Docker Binary
+            es-es: Binario de Docker
             ja: Docker バイナリ
             ms: Binari Docker
             pt-br: Binário Docker
@@ -16,6 +17,7 @@ additionalProperties:
             ko: 도커 바이너리
             zh-Hant: Docker 二進制文件
             zh: Docker 二进制文件
+            tr: Docker İkili Dosyası
         - default: 8080
           edit: true
           envKey: PANEL_APP_PORT_HTTP
@@ -26,6 +28,7 @@ additionalProperties:
           type: number
           label:
             en: Port
+            es-es: Puerto
             ja: ポート
             ms: Port
             pt-br: Porta
@@ -33,3 +36,4 @@ additionalProperties:
             ko: 포트
             zh-Hant: 埠
             zh: 端口
+            tr: Bağlantı Noktası

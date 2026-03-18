@@ -10,6 +10,17 @@ additionalProperties:
         - Storage
     shortDescZh: 基于 Java 的在线网盘程序
     shortDescEn: Java-based online disk program
+    description:
+      en: Java-based online disk program
+      zh: 基于 Java 的在线网盘程序
+      es-es: Programa de disco en línea basado en Java
+      zh-Hant: 基於 Java 的線上網盤程式
+      ja: Java ベースのオンラインディスクプログラム
+      ko: Java 기반 온라인 디스크 프로그램
+      ms: Program cakera dalam talian berasaskan Java
+      pt-br: Programa de disco online baseado em Java
+      ru: Онлайн-дисковая программа на базе Java
+      tr: Java tabanlı çevrimiçi disk programı
     type: website
     crossVersionUpdate: true
     limit: 0

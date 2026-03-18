@@ -12,6 +12,7 @@ additionalProperties:
   shortDescEn: An LLM-driven visual web builder — the open-source alternative to Lovable
   description:
     en: An LLM-driven visual web builder — the open-source alternative to Lovable
+    es-es: Un LLM-driven visual web builder — the open-source alternative to Lovable
     ja: LLM駆動のビジュアルWebビルダー - Lovableのオープンソース代替
     ms: Pembina web visual yang digerakkan oleh LLM — alternatif sumber terbuka untuk Lovable
     pt-br: Um construtor de sites visual movido por LLM — a alternativa de código aberto ao Lovable

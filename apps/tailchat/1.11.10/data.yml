@@ -5,6 +5,17 @@ additionalProperties:
           envKey: PANEL_APP_PORT_HTTP
           labelEn: Port
           labelZh: 端口
+          label:
+            en: Port
+            zh: 端口
+            es-es: Puerto
+            zh-Hant: 埠
+            ja: ポート
+            ko: 포트
+            ms: Port
+            pt-br: Porta
+            ru: Порт
+            tr: Bağlantı Noktası
           required: true
           rule: paramPort
           type: number
@@ -14,12 +25,34 @@ additionalProperties:
           key: redis
           labelEn: Redis Service
           labelZh: 缓存服务服务
+          label:
+            en: Redis Service
+            zh: 缓存服务服务
+            es-es: Servicio de Redis
+            zh-Hant: Redis 服務
+            ja: Redisサービス
+            ko: Redis 서비스
+            ms: Perkhidmatan Redis
+            pt-br: Serviço Redis
+            ru: Сервис Redis
+            tr: Redis Hizmeti
           required: true
           type: service
         - default: ""
           envKey: PANEL_REDIS_ROOT_PASSWORD
           labelEn: Redis Service Password
           labelZh: 缓存服务服务密码
+          label:
+            en: Redis Service Password
+            zh: 缓存服务服务密码
+            es-es: Redis Servicio Contraseña
+            zh-Hant: Redis 服務密碼
+            ja: Redis サービスパスワード
+            ko: Redis 서비스 비밀번호
+            ms: Kata Laluan Perkhidmatan Redis
+            pt-br: Senha do Serviço Redis
+            ru: Пароль службы Redis
+            tr: Redis Hizmet Parolası
           required: true
           type: password
         - default: ""
@@ -28,6 +61,17 @@ additionalProperties:
           key: mongodb
           labelEn: Database Service
           labelZh: 数据库服务
+          label:
+            en: Database Service
+            zh: 数据库服务
+            es-es: Servicio de base de datos
+            zh-Hant: 資料庫服務
+            ja: データベースサービス
+            ko: 데이터베이스 서비스
+            ms: Perkhidmatan Pangkalan Data
+            pt-br: Serviço de Banco de Dados
+            ru: Сервис баз данных
+            tr: Veritabanı Hizmeti
           required: true
           type: service
         - default: tailchat
@@ -35,6 +79,17 @@ additionalProperties:
           envKey: MONGO_DB
           labelEn: Database Name
           labelZh: 数据库名
+          label:
+            en: Database Name
+            zh: 数据库名
+            es-es: Nombre de la base de datos
+            zh-Hant: 數據庫名稱
+            ja: データベース名
+            ko: 데이터베이스 이름
+            ms: Nama Pangkalan Database
+            pt-br: Nome do Banco de Dados
+            ru: Имя базы данных
+            tr: Veritabanı Adı
           required: true
           rule: paramCommon
           type: text
@@ -43,6 +98,17 @@ additionalProperties:
           envKey: PANEL_DB_ROOT_USER
           labelEn: Database User Name
           labelZh: 数据库用户名
+          label:
+            en: Database User Name
+            zh: 数据库用户名
+            es-es: Usuario de la base de datos Nombre
+            zh-Hant: 資料庫使用者名稱
+            ja: データベースユーザー名
+            ko: 데이터베이스 사용자 이름
+            ms: Nama pengguna pangkalan data
+            pt-br: Nome de usuário do banco de dados
+            ru: Имя пользователя базы данных
+            tr: Veritabani kullanici adi
           required: true
           rule: paramCommon
           type: text
@@ -51,6 +117,17 @@ additionalProperties:
           envKey: PANEL_DB_ROOT_PASSWORD
           labelEn: Database User Password
           labelZh: 数据库密码
+          label:
+            en: Database User Password
+            zh: 数据库密码
+            es-es: Contraseña del usuario de la base de datos
+            zh-Hant: 資料庫使用者密碼
+            ja: データベースユーザーパスワード
+            ko: 데이터베이스 사용자 비밀번호
+            ms: Kata laluan pengguna pangkalan data
+            pt-br: Senha do usuário do banco de dados
+            ru: Пароль пользователя базы данных
+            tr: Veritabanı kullanıcı parolası
           required: true
           type: password
         - default: ""
@@ -59,6 +136,17 @@ additionalProperties:
           key: minio
           labelEn: Storage Service
           labelZh: 文件存储服务
+          label:
+            en: Storage Service
+            zh: 文件存储服务
+            es-es: Storage Servicio
+            zh-Hant: 儲存服務
+            ja: ストレージサービス
+            ko: 스토리지 서비스
+            ms: Perkhidmatan storan
+            pt-br: Serviço de armazenamento
+            ru: Сервис хранения
+            tr: Depolama hizmeti
           required: true
           type: service
         - default: ""
@@ -66,6 +154,17 @@ additionalProperties:
           envKey: PANEL_MINIO_ROOT_USER
           labelEn: User
           labelZh: 文件存储服务用户名
+          label:
+            en: User
+            zh: 文件存储服务用户名
+            es-es: Usuario
+            zh-Hant: 用戶
+            ja: ユーザー
+            ko: 사용자
+            ms: Pengguna
+            pt-br: Usuário
+            ru: Пользователь
+            tr: Kullanıcı
           required: true
           rule: paramCommon
           type: text
@@ -74,6 +173,17 @@ additionalProperties:
           envKey: PANEL_MINIO_ROOT_PASSWORD
           labelEn: User
           labelZh: 文件存储服务密码
+          label:
+            en: User
+            zh: 文件存储服务密码
+            es-es: Usuario
+            zh-Hant: 用戶
+            ja: ユーザー
+            ko: 사용자
+            ms: Pengguna
+            pt-br: Usuário
+            ru: Пользователь
+            tr: Kullanıcı
           required: true
           rule: paramComplexity
           type: password
@@ -82,6 +192,17 @@ additionalProperties:
           envKey: SECRET
           labelEn: Secret
           labelZh: 秘钥
+          label:
+            en: Secret
+            zh: 秘钥
+            es-es: Secreto
+            zh-Hant: 密鑰
+            ja: シークレット
+            ko: 시크릿
+            ms: Rahsia
+            pt-br: Segredo
+            ru: Секрет
+            tr: Gizli anahtar
           random: true
           required: true
           rule: paramComplexity
@@ -91,6 +212,17 @@ additionalProperties:
           envKey: API_URL
           labelEn: External URL
           labelZh: 外部访问地址
+          label:
+            en: External URL
+            zh: 外部访问地址
+            es-es: URL externa
+            zh-Hant: 外部訪問地址
+            ja: 外部URL
+            ko: 외부 URL
+            ms: URL Luaran
+            pt-br: URL externo
+            ru: Внешний URL
+            tr: Harici URL
           required: true
           rule: paramExtUrl
           type: text
@@ -99,6 +231,17 @@ additionalProperties:
           envKey: SMTP_SENDER
           labelEn: SMTP Sender
           labelZh: 邮件服务发送人
+          label:
+            en: SMTP Sender
+            zh: 邮件服务发送人
+            es-es: Remitente SMTP
+            zh-Hant: SMTP 寄件者
+            ja: SMTP 送信者
+            ko: SMTP 발신자
+            ms: Pengirim SMTP
+            pt-br: Remetente SMTP
+            ru: Отправитель SMTP
+            tr: SMTP gondericisi
           required: false
           rule: paramExtUrl
           type: text
@@ -107,6 +250,17 @@ additionalProperties:
           envKey: PANEL_APP_PORT_ADMIN
           labelEn: Admin Port
           labelZh: 后台管理平台端口
+          label:
+            en: Admin Port
+            zh: 后台管理平台端口
+            es-es: Admin Puerto
+            zh-Hant: 管理員埠
+            ja: 管理ポート
+            ko: 관리자 포트
+            ms: Port admin
+            pt-br: Porta do administrador
+            ru: Порт администратора
+            tr: Yonetici baglanti noktasi
           required: true
           rule: paramPort
           type: number
@@ -115,6 +269,17 @@ additionalProperties:
           envKey: ADMIN_USERNAME
           labelEn: Admin Username
           labelZh: 后台管理平台用户名
+          label:
+            en: Admin Username
+            zh: 后台管理平台用户名
+            es-es: Usuario administradorname
+            zh-Hant: 管理員用戶名
+            ja: 管理者ユーザー名
+            ko: 관리자 사용자 이름
+            ms: Nama Pengguna Admin
+            pt-br: Nome de Usuário Administrador
+            ru: Имя пользователя администратора
+            tr: Yönetici Kullanıcısıname
           required: true
           rule: paramCommon
           type: text
@@ -123,6 +288,17 @@ additionalProperties:
           envKey: ADMIN_PASSWORD
           labelEn: Admin Password
           labelZh: 后台管理平台密码
+          label:
+            en: Admin Password
+            zh: 后台管理平台密码
+            es-es: Contraseña del administrador
+            zh-Hant: 管理員密碼
+            ja: 管理者パスワード
+            ko: 관리자 비밀번호
+            ms: Kata Laluan Admin
+            pt-br: Senha do Administrador
+            ru: Пароль администратора
+            tr: Yönetici Parolası
           random: true
           required: true
           rule: paramCommon
@@ -132,6 +308,17 @@ additionalProperties:
           envKey: SMTP_URI
           labelEn: SMTP Sender
           labelZh: 邮件服务URI
+          label:
+            en: SMTP Sender
+            zh: 邮件服务URI
+            es-es: Remitente SMTP
+            zh-Hant: SMTP 寄件者
+            ja: SMTP 送信者
+            ko: SMTP 발신자
+            ms: Pengirim SMTP
+            pt-br: Remetente SMTP
+            ru: Отправитель SMTP
+            tr: SMTP gondericisi
           required: false
           rule: paramExtUrl
           type: text

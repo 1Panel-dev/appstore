@@ -12,6 +12,7 @@ additionalProperties:
   shortDescEn: Open-source collaborative wiki and documentation software
   description:
     en: Open-source collaborative wiki and documentation software
+    es-es: Software colaborativo de wiki y documentacion de codigo abierto
     zh: 开源协作 wiki 与文档软件
     zh-Hant: 開源協作 wiki 與文件軟體
     ja: オープンソースの共同編集可能なウィキおよびドキュメントソフトウェア
@@ -19,6 +20,7 @@ additionalProperties:
     pt-br: Software de wiki e documentação colaborativo de código aberto
     ru: Программное обеспечение для вики и документации с открытым исходным кодом
     ko: 오픈 소스 협업 위키 및 문서화 소프트웨어
+    tr: Open-source collaborative wiki and dokümantasyon yazılımı
   type: website
   crossVersionUpdate: true
   limit: 0

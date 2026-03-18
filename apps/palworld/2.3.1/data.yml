@@ -7,6 +7,7 @@ additionalProperties:
       labelZh: 端口
       label:
         en: Port
+        es-es: Puerto
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -14,6 +15,7 @@ additionalProperties:
         ko: 포트
         zh-Hant: 埠
         zh: 端口
+        tr: Bağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -24,6 +26,7 @@ additionalProperties:
       labelZh: RCON 端口
       label:
         en: RCON Port
+        es-es: RCON Puerto
         ja: RCON ポート
         ms: Port RCON
         pt-br: Porta RCON
@@ -31,6 +34,7 @@ additionalProperties:
         ko: RCON 포트
         zh-hant: RCON 埠
         zh: RCON 端口
+        tr: RCON Bağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -41,6 +45,7 @@ additionalProperties:
       labelZh: REST API 端口
       label:
         en: REST API Port
+        es-es: REST API Puerto
         ja: REST API ポート
         ms: Port REST API
         pt-br: Porta REST API
@@ -48,6 +53,7 @@ additionalProperties:
         ko: REST API 포트
         zh-Hant: REST API 埠
         zh: REST API 端口
+        tr: REST API Bağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -58,6 +64,7 @@ additionalProperties:
       labelZh: Query 端口 (用于与 Steam 服务器通信的查询端口)
       label:
         en: Query port used to communicate with Steam servers
+        es-es: Puerto de consulta usado para comunicarse con los servidores de Steam
         ja: Steam サーバーと通信するために使用されるクエリポート
         ms: Port kueri yang digunakan untuk berkomunikasi dengan pelayan Steam
         pt-br: Porta de consulta usada para se comunicar com servidores Steam
@@ -65,6 +72,7 @@ additionalProperties:
         ko: Steam 서버와 통신하는 데 사용되는 쿼리 포트
         zh-Hant: Query 埠 (用於與 Steam 伺服器通信的查詢埠)
         zh: Query 端口 (用于与 Steam 服务器通信的查询端口)
+        tr: Steam sunuculari ile iletisim icin kullanilan sorgu portu
       required: true
       rule: paramPort
       type: number
@@ -75,6 +83,7 @@ additionalProperties:
       labelZh: 玩家数量限制
       label:
         en: Maximum number of participants on the server
+        es-es: Número máximo de participantes en el servidor
         ja: サーバーの最大参加者数
         ms: Bilangan maksimum peserta di pelayan
         pt-br: Número máximo de participantes no servidor
@@ -82,6 +91,7 @@ additionalProperties:
         ko: 서버의 최대 참가자 수
         zh-hant: 伺服器上的最大參與者數
         zh: 玩家数量限制
+        tr: Sunucudaki maksimum katilimci sayisi
       required: true
       rule: paramPort
       type: number
@@ -92,6 +102,7 @@ additionalProperties:
       labelZh: 是否启用 CPU 多线程优化 (true / false)
       label:
         en: Improves performance in multi-threaded CPU environments (true / false)
+        es-es: Mejora el rendimiento en entornos de CPU multihilo (true / false)
         ja: マルチスレッドCPU環境でのパフォーマンスを向上させます（true / false）
         ms: Meningkatkan prestasi dalam persekitaran CPU berbilang benang (benar / palsu)
         pt-br: Melhora o desempenho em ambientes de CPU multithread (verdadeiro / falso)
@@ -99,6 +110,7 @@ additionalProperties:
         ko: 다중 스레드 CPU 환경에서 성능을 향상시킵니다 (true / false)
         zh-hant: 提升多線程CPU環境中的效能（true / false）
         zh: 是否启用 CPU 多线程优化 (true / false)
+        tr: Cok is parcacikli CPU ortamlarinda performansi iyilestirir (true / false)
       required: true
       type: select
       values:
@@ -113,6 +125,7 @@ additionalProperties:
       labelZh: 是否将服务器设置为社区服务器 (true / false)
       label:
         en: Setup server as a community server (true / false)
+        es-es: Configurar el servidor como servidor de la comunidad (true / false)
         ja: サーバーをコミュニティサーバーとして設定（true / false）
         ms: Sediakan pelayan sebagai pelayan komuniti (benar / salah)
         pt-br: Configurar o servidor como um servidor comunitário (verdadeiro / falso)
@@ -120,6 +133,7 @@ additionalProperties:
         ko: 서버를 커뮤니티 서버로 설정 (true / false)
         zh-hant: 將伺服器設定為社區伺服器（true / false）
         zh: 是否将服务器设置为社区服务器 (true / false)
+        tr: Sunucuyu topluluk sunucusu olarak ayarla (true / false)
       required: true
       type: select
       values:
@@ -134,6 +148,7 @@ additionalProperties:
       labelZh: 服务器 IP (留空自动检测)
       label:
         en: PUBLIC IP (If not specified, it will be detected automatically)
+        es-es: IP pública (si no se especifica, se detectará automáticamente)
         ja: 公開IP（指定しない場合は自動的に検出されます）
         ms: IP AWAM (Jika tidak dinyatakan, ia akan dikesan secara automatik)
         pt-br: IP PÚBLICO (Se não especificado, será detectado automaticamente)
@@ -141,6 +156,7 @@ additionalProperties:
         ko: 공용 IP (지정하지 않으면 자동으로 감지됩니다)
         zh-hant: 公開IP（如果未指定，將自動檢測）
         zh: 服务器 IP (留空自动检测)
+        tr: GENEL IP (Belirtilmezse otomatik algilanir)
       required: false
       type: text
     - default: ''
@@ -150,6 +166,7 @@ additionalProperties:
       labelZh: 服务器端口 (留空自动检测)
       label:
         en: PUBLIC PORT (If not specified, it will be detected automatically)
+        es-es: Puerto público (si no se especifica, se detectará automáticamente)
         ja: 公開ポート（指定しない場合は自動的に検出されます）
         ms: PORT AWAM (Jika tidak ditentukan, ia akan dikesan secara automatik)
         pt-br: PORTA PÚBLICA (Se não especificado, será detectado automaticamente)
@@ -157,6 +174,7 @@ additionalProperties:
         ko: 공용 포트 (지정하지 않으면 자동으로 감지됩니다)
         zh-hant: 公開埠（如果未指定，將自動檢測）
         zh: 服务器端口 (留空自动检测)
+        tr: GENEL PORT (Belirtilmezse otomatik algilanir)
       required: false
       rule: paramPort
       type: text
@@ -167,6 +185,7 @@ additionalProperties:
       labelZh: 是否每次启动都更新服务器 (true / false)
       label:
         en: Whether the server should be update each time start (true / false)
+        es-es: Si el servidor debe actualizarse en cada inicio (true / false)
         ja: サーバーが毎回起動時に更新されるべきかどうか（true / false）
         ms: Sama ada pelayan perlu dikemas kini setiap kali dimulakan (benar / salah)
         pt-br: Se o servidor deve ser atualizado a cada inicialização (verdadeiro / falso)
@@ -174,6 +193,7 @@ additionalProperties:
         ko: 서버가 시작할 때마다 업데이트되어야 하는지 여부 (true / false)
         zh-hant: 伺服器是否應每次啟動時更新（true / false）
         zh: 是否每次启动都更新服务器 (true / false)
+        tr: Sunucu her baslangicta guncellensin mi (true / false)
       required: true
       type: select
       values:
@@ -188,6 +208,7 @@ additionalProperties:
       labelZh: 玩家进入/离开服务器是否通知 (true / false)
       label:
         en: Enable players login/logout message (true / false)
+        es-es: Habilitar mensajes de inicio/cierre de sesión de jugadores (true / false)
         ja: プレイヤーのログイン/ログアウトメッセージを有効にする（true / false）
         ms: Aktifkan mesej log masuk/keluar pemain (benar / palsu)
         pt-br: Ativar mensagem de login/logout dos jogadores (verdadeiro / falso)
@@ -195,6 +216,7 @@ additionalProperties:
         ko: 플레이어 로그인/로그아웃 메시지 활성화 (true / false)
         zh-hant: 啟用玩家登入/登出訊息（true / false）
         zh: 玩家进入/离开服务器是否通知 (true / false)
+        tr: Oyuncu giris/cikis mesajlarini etkinlestir (true / false)
       required: true
       type: select
       values:
@@ -209,6 +231,7 @@ additionalProperties:
       labelZh: 禁用自动生成配置文件(会影响下方配置项生效)
       label:
         en: Disable auto-generated configuration files (affects the settings below)
+        es-es: Deshabilitar archivos de configuración generados automáticamente (afecta a la configuración siguiente)
         ja: 自動生成された設定ファイルを無効にする（以下の設定に影響します）
         ms: Matikan fail konfigurasi yang dijana secara automatik (mempengaruhi tetapan di bawah)
         pt-br: Desativar arquivos de configuração gerados automaticamente (afeta as configurações abaixo)
@@ -216,6 +239,7 @@ additionalProperties:
         ko: 자동 생성된 구성 파일 비활성화(아래 설정에 영향을 줍니다)
         zh-Hant: 禁用自动生成配置文件(會影響下方配置項生效)
         zh: 禁用自动生成配置文件(会影响下方配置项生效)
+        tr: Otomatik olusturulan yapilandirma dosyalarini devre disi birak (asagidaki ayarlari etkiler)
       required: true
       type: select
       values:
@@ -230,6 +254,7 @@ additionalProperties:
       labelZh: 服务器名
       label:
         en: Server Name
+        es-es: Server Nombre
         ja: サーバー名
         ms: Nama Pelayan
         pt-br: Nome do Servidor
@@ -237,6 +262,7 @@ additionalProperties:
         ko: 서버 이름
         zh-hant: 伺服器名稱
         zh: 服务器名
+        tr: Sunucu Adı
       required: true
       type: text
     - default: ''
@@ -246,6 +272,7 @@ additionalProperties:
       labelZh: 服务器说明
       label:
         en: Server Description
+        es-es: Descripción del servidor
         ja: サーバーの説明
         ms: Penerangan Pelayan
         pt-br: Descrição do Servidor
@@ -253,6 +280,7 @@ additionalProperties:
         ko: 서버 설명
         zh-hant: 伺服器描述
         zh: 服务器说明
+        tr: Sunucu Description
       required: false
       type: text
     - default: palworld
@@ -262,6 +290,7 @@ additionalProperties:
       labelZh: 管理员密码
       label:
         en: Admin Password
+        es-es: Contraseña del administrador
         ja: 管理者パスワード
         ms: Kata Laluan Admin
         pt-br: Senha de Admin
@@ -269,6 +298,7 @@ additionalProperties:
         ko: 관리자 비밀번호
         zh-hant: 管理員密碼
         zh: 管理员密码
+        tr: Yönetici Parolası
       random: true
       required: true
       type: text
@@ -279,6 +309,7 @@ additionalProperties:
       labelZh: 服务器密码
       label:
         en: Server Password
+        es-es: Server Contraseña
         ja: サーバーパスワード
         ms: Kata laluan pelayan
         pt-br: Senha do servidor
@@ -286,6 +317,7 @@ additionalProperties:
         ko: 서버 비밀번호
         zh-hant: 伺服器密碼
         zh: 服务器密码
+        tr: Sunucu Parola
       required: true
       type: text
     - default: 'true'
@@ -295,6 +327,7 @@ additionalProperties:
       labelZh: 是否启用 RCON (true / false)
       label:
         en: Enable RCON (true / false)
+        es-es: Habilitar RCON (true / false)
         ja: RCONを有効にする（true / false）
         ms: Dayakan RCON (true / false)
         pt-br: Habilitar RCON (true / false)
@@ -302,6 +335,7 @@ additionalProperties:
         ko: RCON 활성화 (true / false)
         zh-hant: RCON 啟用 (true / false)
         zh: 是否启用 RCON (true / false)
+        tr: RCON'u etkinlestir (true / false)
       required: true
       type: select
       values:
@@ -316,6 +350,7 @@ additionalProperties:
       labelZh: 是否启用 REST API (true / false)
       label:
         en: Enable REST API (true / false)
+        es-es: Habilitar API REST (true / false)
         ja: REST APIを有効にする（true / false）
         ms: Dayakan REST API (true / false)
         pt-br: Habilitar REST API (true / false)
@@ -323,6 +358,7 @@ additionalProperties:
         ko: REST API 활성화 (true / false)
         zh-hant: 啟用 REST API（true / false）
         zh: 是否启用 REST API (true / false)
+        tr: REST API'yi etkinlestir (true / false)
       required: true
       type: select
       values:

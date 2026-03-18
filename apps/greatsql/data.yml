@@ -12,6 +12,7 @@ additionalProperties:
     shortDescEn: GreatSQL is a MySQL branch originated from GreatDB
     description:
         en: GreatSQL is a MySQL branch originated from GreatDB
+        es-es: GreatSQL es una rama de MySQL originada en GreatDB
         ja: GreatSQLは、GreatDBから派生したMySQLブランチです
         ms: GreatSQL adalah cabang MySQL yang berasal dari GreatDB
         pt-br: GreatSQL é um ramo do MySQL originado do GreatDB
@@ -19,6 +20,7 @@ additionalProperties:
         ko: GreatSQL은 GreatDB에서 파생된 MySQL 분기입니다
         zh-Hant: GreatSQL 是源自 GreatDB 的 MySQL 分支
         zh: 可作为 MySQL 或 Percona Server for MySQL 的理想可选替换
+        tr: GreatSQL, GreatDB kokenli bir MySQL dalidir
     type: runtime
     crossVersionUpdate: false
     limit: 0

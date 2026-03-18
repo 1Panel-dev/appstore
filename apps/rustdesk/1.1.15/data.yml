@@ -7,6 +7,7 @@ additionalProperties:
       labelZh: NAT 类型测试端口
       label:
         en: NAT type test port
+        es-es: Puerto de prueba del tipo NAT
         ja: NATタイプテストポート
         ms: Port ujian jenis NAT
         t-br: Porta de teste de tipo NAT
@@ -14,6 +15,8 @@ additionalProperties:
         ko: NAT 유형 테스트 포트
         zh-hant: NAT 類型測試埠
         zh: NAT 类型测试端口
+        tr: NAT turu test portu
+        pt-br: Porta de teste de tipo NAT
       required: true
       rule: paramPort
       type: number
@@ -24,6 +27,7 @@ additionalProperties:
       labelZh: hbbs 端口(配合IP/域名使用)
       label:
         en: hbbs port (used with IP/domain)
+        es-es: puerto hbbs (usado con IP/dominio)
         ja: hbbs ポート（IP/ドメインと一緒に使用）
         ms: Port hbbs (digunakan dengan IP/domain)
         pt-br: Porta hbbs (usado com IP/domínio)
@@ -31,6 +35,7 @@ additionalProperties:
         ko: hbbs 포트 (IP/도메인과 함께 사용)
         zh-hant: hbbs 埠（與 IP/域名一起使用）
         zh: hbbs 端口(配合IP/域名使用)
+        tr: hbbs portu (IP/alan adi ile kullanilir)
       required: true
       rule: paramPort
       type: number
@@ -41,6 +46,7 @@ additionalProperties:
       labelZh: hbbr 端口(客户端中继服务器端口)
       label:
         en: hbbr port (client relay server port)
+        es-es: puerto hbbr (puerto del servidor de retransmisión del cliente)
         ja: hbbr ポート（クライアントリレイサーバーポート）
         ms: Port hbbr (port relai pelayan klien)
         pt-br: Porta hbbr (porta do servidor de retransmissão do cliente)
@@ -48,6 +54,7 @@ additionalProperties:
         ko: hbbr 포트 (클라이언트 릴레이 서버 포트)
         zh-hant: hbbr 埠（客戶端中繼服務器埠）
         zh: hbbr 端口(客户端中继服务器端口)
+        tr: hbbr portu (istemci relay sunucu portu)
       required: true
       rule: paramPort
       type: number
@@ -58,6 +65,7 @@ additionalProperties:
       labelZh: 网页客户端支持端口 1
       label:
         en: Web Client Support Port 1
+        es-es: Web Client Support Puerto 1
         ja: Webクライアントサポートポート1
         ms: Port Sokongan Pelanggan Web 1
         pt-br: Porta de Suporte ao Cliente Web 1
@@ -65,6 +73,7 @@ additionalProperties:
         ko: 웹 클라이언트 지원 포트 1
         zh-hant: Web 客戶端支持埠 1
         zh: 网页客户端支持端口 1
+        tr: Web Client Support Bağlantı Noktası 1
       required: true
       rule: paramPort
       type: number
@@ -75,6 +84,7 @@ additionalProperties:
       labelZh: 网页客户端支持端口 2
       label:
         en: Web Client Support Port 2
+        es-es: Web Client Support Puerto 2
         ja: Webクライアントサポートポート2
         ms: Port Sokongan Pelanggan Web 2
         pt-br: Porta de Suporte ao Cliente Web 2
@@ -82,6 +92,7 @@ additionalProperties:
         ko: 웹 클라이언트 지원 포트 2
         zh-hant: Web 客戶端支持埠 2
         zh: 网页客户端支持端口 2
+        tr: Web Client Support Bağlantı Noktası 2
       required: true
       rule: paramPort
       type: number
@@ -92,6 +103,7 @@ additionalProperties:
       labelZh: IP 地址或域名(必改项)
       label:
         en: IP address or domain name (must change item)
+        es-es: Dirección IP o nombre de dominio (debe modificarse)
         ja: IPアドレスまたはドメイン名（変更必須項目）
         ms: Alamat IP atau nama domain (item wajib diubah)
         pt-br: Endereço IP ou nome de domínio (item obrigatório a ser alterado)
@@ -99,6 +111,7 @@ additionalProperties:
         ko: IP 주소 또는 도메인 이름(항목 변경 필요)
         zh-hant: IP 地址或域名（必須更改項目）
         zh: IP 地址或域名(必改项)
+        tr: IP adresi veya alan adi (degistirilmelidir)
       required: true
       rule: paramCommon
       type: text

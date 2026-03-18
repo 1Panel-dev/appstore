@@ -8,6 +8,7 @@ additionalProperties:
       type: text
       label:
         en: Windows Version (Supports network address)
+        es-es: Versión de Windows (compatible con dirección de red)
         ja: Windowsバージョン（ネットワークアドレスをサポート）
         ms: Versi Windows (Menyokong alamat rangkaian)
         pt-br: Versão do Windows (Suporta endereço de rede)
@@ -15,6 +16,7 @@ additionalProperties:
         ko: Windows 버전(네트워크 주소 지원)
         zh-hant: Windows 版本（支援網路位址）
         zh: Windows 版本123（支持网络地址）
+        tr: Windows surumu (ag adresini destekler)
     - default: 8006
       edit: true
       envKey: PANEL_APP_PORT_HTTP
@@ -22,6 +24,7 @@ additionalProperties:
       labelZh: 端口
       label:
         en: Port
+        es-es: Puerto
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -29,6 +32,7 @@ additionalProperties:
         ko: 포트
         zh: 端口
         zh-Hant: 埠
+        tr: Bağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -41,6 +45,7 @@ additionalProperties:
       type: text
       label:
         en: RAM Size(GB)
+        es-es: Tamaño de la RAM (GB)
         ja: RAMサイズ(GB)
         ms: Saiz RAM(Gb)
         pt-br: Tamanho da RAM(GB)
@@ -48,6 +53,7 @@ additionalProperties:
         ko: RAM 크기(GB)
         zh-hant: 隨機存取記憶體大小(GB)
         zh: 内存大小(GB)
+        tr: RAM boyutu (GB)
     - default: "4"
       edit: true
       envKey: CPU_CORES
@@ -57,6 +63,7 @@ additionalProperties:
       type: text
       label:
         en: CPU Cores
+        es-es: Núcleos de CPU
         ja: CPUコア
         ms: Teras CPU
         pt-br: Núcleos de CPU
@@ -64,6 +71,7 @@ additionalProperties:
         ko: CPU 코어
         zh-hant: 中央處理器核心數量
         zh: CPU 核心数
+        tr: CPU cekirdekleri
     - default: 64
       edit: true
       envKey: DISK_SIZE
@@ -71,6 +79,7 @@ additionalProperties:
       labelZh: 磁盘大小(GB)
       label:
         en: Disk Size(GB)
+        es-es: Tamaño del disco (GB)
         ja: ディスクサイズ(GB)
         ms: Saiz Cakera(Gb)
         pt-br: Tamanho do Disco(GB)
@@ -78,6 +87,7 @@ additionalProperties:
         ko: 디스크 크기(GB)
         zh-hant: 磁碟大小(GB)
         zh: 磁盘大小(GB)
+        tr: Disk boyutu (GB)
       required: true
       type: number
     - default: "Docker"
@@ -89,6 +99,7 @@ additionalProperties:
       type: text
       label:
         en: Username
+        es-es: Nombre de usuario
         ja: ユーザー名
         ms: Nama Pengguna
         pt-br: Nome de usuário
@@ -96,6 +107,7 @@ additionalProperties:
         ko: 사용자 이름
         zh-hant: 使用者名稱
         zh: 系统用户名
+        tr: Kullanıcı Adı
     - default: "admin"
       edit: true
       envKey: PASSWORD
@@ -105,6 +117,7 @@ additionalProperties:
       type: password
       label:
         en: Password
+        es-es: Contraseña
         ja: パスワード
         ms: Kata Laluan
         pt-br: Senha
@@ -112,6 +125,7 @@ additionalProperties:
         ko: 비밀번호
         zh-hant: 密碼
         zh: 系统密码
+        tr: Parola
     - default: "Chinese"
       edit: true
       envKey: LANGUAGE
@@ -121,6 +135,7 @@ additionalProperties:
       type: text
       label:
         en: Language
+        es-es: Idioma
         ja: 言語
         ms: Bahasa
         pt-br: Idioma
@@ -128,6 +143,7 @@ additionalProperties:
         ko: 언어
         zh-hant: 語言
         zh: 语言
+        tr: Dil
     - default: "en-US"
       edit: true
       envKey: KEYBOARD_LAYOUT
@@ -137,6 +153,7 @@ additionalProperties:
       type: text
       label:
         en: Keyboard Layout
+        es-es: Claveboard Layout
         ja: キーボードレイアウト
         ms: Susun Atur Papan Kekunci
         pt-br: Layout do Teclado
@@ -144,3 +161,4 @@ additionalProperties:
         ko: 키보드 레이아웃
         zh-hant: 鍵盤佈局
         zh: 键盘布局
+        tr: Anahtarboard Layout

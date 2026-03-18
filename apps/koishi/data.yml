@@ -10,6 +10,17 @@ additionalProperties:
     - Tool
   shortDescZh: 跨平台、可扩展、高性能的聊天机器人框架
   shortDescEn: Cross-platform, extensive, high-performance chatbot framework
+  description:
+    en: Cross-platform, extensive, high-performance chatbot framework
+    zh: 跨平台、可扩展、高性能的聊天机器人框架
+    es-es: Cross-plataforma, extensive, high-performance chatbot framework
+    zh-Hant: 跨平台、可擴展且高效能的聊天機器人框架
+    ja: クロスプラットフォームで拡張性が高く高性能なチャットボットフレームワーク
+    ko: 크로스 플랫폼, 확장 가능하고 고성능인 챗봇 프레임워크
+    ms: Rangka kerja chatbot merentas platform, boleh dikembangkan dan berprestasi tinggi
+    pt-br: Framework de chatbot multiplataforma, extensível e de alto desempenho
+    ru: Кроссплатформенный, расширяемый и высокопроизводительный фреймворк чат-ботов
+    tr: Platformlar arası, kapsamlı ve yüksek performanslı sohbet botu çerçevesi
   type: website
   crossVersionUpdate: true
   limit: 0

@@ -12,6 +12,7 @@ additionalProperties:
     shortDescEn: Open source relational database management system
     description:
         en: Open Source Relational Database
+        es-es: Base de datos relacional de código abierto
         ja: オープンソースのリレーショナルデータベース
         ms: Pangkalan Data Relasi Sumber Terbuka
         pt-br: Banco de Dados Relacional de Código Aberto
@@ -19,6 +20,7 @@ additionalProperties:
         ko: 오픈 소스 관계형 데이터베이스
         zh-hant: 開源關係型資料庫
         zh: 开源关系型数据库
+        tr: Açık Kaynaklı İlişkisel Veritabanı
     type: runtime
     crossVersionUpdate: false
     limit: 0

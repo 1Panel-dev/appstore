@@ -12,6 +12,7 @@ additionalProperties:
   shortDescEn: A multi-agent public opinion analysis assistant for everyone
   description:
     en: A multi-agent public opinion analysis assistant for everyone
+    es-es: Un multi-agent public opinion analysis assistant for everyone
     ja: みんなが使えるマルチエージェント世論分析アシスタント
     ms: Sistem analisis pendapat umum multi-ejen yang boleh digunakan oleh semua orang
     pt-br: Um assistente de análise de opinião pública multiagente acessível a todos
@@ -19,6 +20,7 @@ additionalProperties:
     ko: 모두를 위한 다중 에이전트 여론 분석 도우미
     zh-Hant: 人人可用的多 Agent 輿情分析助手
     zh: 人人可用的多 Agent 舆情分析助手
+    tr: Herkes icin cok ajanli kamuoyu analiz asistani
   type: website
   crossVersionUpdate: true
   limit: 0

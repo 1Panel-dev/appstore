@@ -12,6 +12,7 @@ additionalProperties:
     shortDescEn: JavaScript, client-side editor for general diagramming
     description:
         en: JavaScript, client-side editor for general diagramming
+        es-es: JavaScript, cliente-side editor for general diagramming
         ja: JavaScript、一般的なダイアグラム作成のためのクライアントサイドエディタ
         ms: JavaScript, penyunting sisi-klien untuk diagram am
         pt-br: JavaScript, editor do lado do cliente para diagramas gerais
@@ -19,6 +20,7 @@ additionalProperties:
         ko: 일반 다이어그램을 위한 JavaScript 클라이언트 측 편집기
         zh-Hant: 用於一般圖表繪製的 JavaScript 客戶端編輯器
         zh: 用于一般图表绘制的 JavaScript 客户端编辑器
+        tr: Genel diyagram olusturma icin istemci tarafli JavaScript duzenleyicisi
     type: website
     crossVersionUpdate: true
     limit: 0

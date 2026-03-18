@@ -3,6 +3,17 @@ additionalProperties:
         - type: select
           multiple: true
           labelZh: 默认扩展
+          label:
+            en: Extensions
+            zh: 默认扩展
+            es-es: Extensiones
+            zh-Hant: 擴充套件
+            ja: 拡張機能
+            ko: 확장 기능
+            ms: Sambungan
+            pt-br: Extensões
+            ru: Расширения
+            tr: Uzantılar
           labelEn: Extensions
           allowCreate: true
           default:
@@ -72,6 +83,17 @@ additionalProperties:
           envKey: PHP_VERSION
           labelEn: PHP Version
           labelZh: PHP 版本
+          label:
+            en: PHP Version
+            zh: PHP 版本
+            es-es: Versión de PHP
+            zh-Hant: PHP 版本
+            ja: PHP バージョン
+            ko: PHP 버전
+            ms: Versi PHP
+            pt-br: Versão do PHP
+            ru: Версия PHP
+            tr: PHP sürümü
           required: true
           type: select
           values:
@@ -81,6 +103,17 @@ additionalProperties:
           envKey: CONTAINER_PACKAGE_URL
           labelEn: Package Source
           labelZh: 扩展源
+          label:
+            en: Package Source
+            zh: 扩展源
+            es-es: Origen del paquete
+            zh-Hant: 套件來源
+            ja: パッケージソース
+            ko: 패키지 소스
+            ms: Sumber pakej
+            pt-br: Fonte do pacote
+            ru: Источник пакета
+            tr: Paket kaynağı
           required: true
           type: select
           values:
@@ -90,6 +123,17 @@ additionalProperties:
           envKey: PANEL_APP_PORT_HTTP
           labelEn: PHP-FPM Port
           labelZh: PHP-FPM 端口
+          label:
+            en: PHP-FPM Port
+            zh: PHP-FPM 端口
+            es-es: PHP-FPM Puerto
+            zh-Hant: PHP-FPM 埠
+            ja: PHP-FPM ポート
+            ko: PHP-FPM 포트
+            ms: Port PHP-FPM
+            pt-br: Porta PHP-FPM
+            ru: Порт PHP-FPM
+            tr: PHP-FPM Bağlantı Noktası
           required: true
           rule: paramPort
           type: number

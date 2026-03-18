@@ -20,6 +20,7 @@ additionalProperties:
           value: mariadb
       label:
         en: Database Service
+        es-es: Servicio de base de datos
         ja: データベースサービス
         ms: Perkhidmatan Pangkalan Data
         pt-br: Serviço de Banco de Dados
@@ -27,6 +28,7 @@ additionalProperties:
         ko: 데이터베이스 서비스
         zh-hant: 資料庫服務
         zh: 数据库服务
+        tr: Veritabanı Hizmeti
     - default: dwz
       envKey: PANEL_DB_NAME
       labelEn: Database
@@ -37,6 +39,7 @@ additionalProperties:
       type: text
       label:
         en: Database
+        es-es: Base de datos
         ja: データベース
         ms: Pangkalan Data
         pt-br: Banco de Dados
@@ -44,6 +47,7 @@ additionalProperties:
         ko: 데이터베이스
         zh-hant: 資料庫
         zh: 数据库
+        tr: Veritabanı
     - default: dwz
       envKey: PANEL_DB_USER
       random: true
@@ -54,6 +58,7 @@ additionalProperties:
       labelZh: 数据库用户
       label:
         en: Database User
+        es-es: Usuario de la base de datos
         ja: データベースユーザー
         ms: Pengguna Pangkalan Data
         pt-br: Usuário do Banco de Dados
@@ -61,6 +66,7 @@ additionalProperties:
         ko: 데이터베이스 사용자
         zh-hant: 資料庫用戶
         zh: 数据库用户
+        tr: Veritabanı Kullanıcısı
     - default: dwz
       envKey: PANEL_DB_USER_PASSWORD
       labelEn: Database User Password
@@ -70,6 +76,7 @@ additionalProperties:
       type: password
       label:
         en: Database Password
+        es-es: Contraseña de la base de datos
         ja: データベースのパスワード
         ms: Kata Laluan Pangkalan Data
         pt-br: Senha do Banco de Dados
@@ -77,6 +84,7 @@ additionalProperties:
         ko: 데이터베이스 비밀번호
         zh-hant: 資料庫密碼
         zh: 数据库密码
+        tr: Veritabanı Parolası
     - default: ""
       edit: true
       envKey: PANEL_REDIS_HOST
@@ -87,6 +95,7 @@ additionalProperties:
       type: service
       label:
         en: Redis Service
+        es-es: Servicio de Redis
         ja: Redis サービス
         ms: Perkhidmatan Redis
         pt-br: Serviço Redis
@@ -94,6 +103,7 @@ additionalProperties:
         ko: Redis 서비스
         zh-Hant: Redis 服務
         zh: Redis 服务
+        tr: Redis Hizmeti
     - default: ""
       edit: true
       envKey: PANEL_REDIS_ROOT_PASSWORD
@@ -103,6 +113,7 @@ additionalProperties:
       type: password
       label:
         en: Redis service password
+        es-es: Contraseña del servicio Redis
         ja: Redis サービスのパスワード
         ms: Kata laluan perkhidmatan Redis
         pt-br: Senha do serviço Redis
@@ -110,6 +121,7 @@ additionalProperties:
         ko: Redis 서비스 비밀번호
         zh-Hant: Redis 服務密碼
         zh: Redis 服务密码
+        tr: Redis Hizmet Parolası
     - default: 8081
       edit: true
       envKey: PANEL_APP_PORT_HTTP
@@ -117,6 +129,7 @@ additionalProperties:
       labelZh: 端口
       label:
         en: Port
+        es-es: Puerto
         ja: ポート
         ms: Pelabuhan
         pt-br: Porta
@@ -124,6 +137,7 @@ additionalProperties:
         ko: 포트
         zh-hant: 埠
         zh: 端口
+        tr: Bağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -134,6 +148,7 @@ additionalProperties:
       labelZh: 时区
       label:
         en: Time zone
+        es-es: Zona horaria
         ja: タイムゾーン
         ms: Zon masa
         pt-br: Fuso horário
@@ -141,5 +156,6 @@ additionalProperties:
         ko: 시간대
         zh: 时区
         zh-Hant: 時區
+        tr: Saat Dilimi
       required: true
       type: text

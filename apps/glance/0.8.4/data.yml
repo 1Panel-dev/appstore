@@ -7,6 +7,7 @@ additionalProperties:
       labelZh: 网页端口
       label:
         en: WebUI Port
+        es-es: Puerto web
         ja: WebUI ポート
         ms: Port WebUI
         pt-br: Porta WebUI
@@ -14,6 +15,7 @@ additionalProperties:
         ko: WebUI 포트
         zh: 网页端口
         zh-Hant: 網頁埠
+        tr: WebUI portu
       required: true
       rule: paramPort
       type: number

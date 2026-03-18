@@ -10,6 +10,17 @@ additionalProperties:
     - Tool
   shortDescZh: 域名 SSL 证书监测平台
   shortDescEn: Domain and SSL Cert monitor System
+  description:
+    en: Domain and SSL Cert monitor System
+    zh: 域名 SSL 证书监测平台
+    es-es: Sistema de monitoreo de dominios y certificados SSL
+    zh-Hant: 網域與 SSL 憑證監控系統
+    ja: ドメインと SSL 証明書の監視システム
+    ko: 도메인 및 SSL 인증서 모니터링 시스템
+    ms: Sistem pemantauan domain dan sijil SSL
+    pt-br: Sistema de monitoramento de domínio e certificado SSL
+    ru: Система мониторинга доменов и SSL-сертификатов
+    tr: Alan adı ve SSL sertifikası izleme sistemi
   type: website
   crossVersionUpdate: true
   limit: 0

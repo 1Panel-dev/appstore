@@ -5,12 +5,34 @@ additionalProperties:
           key: mysql
           labelEn: Database Service
           labelZh: 数据库服务
+          label:
+            en: Database Service
+            zh: 数据库服务
+            es-es: Servicio de base de datos
+            zh-Hant: 資料庫服務
+            ja: データベースサービス
+            ko: 데이터베이스 서비스
+            ms: Perkhidmatan Pangkalan Data
+            pt-br: Serviço de Banco de Dados
+            ru: Сервис баз данных
+            tr: Veritabanı Hizmeti
           required: true
           type: service
         - default: de
           envKey: PANEL_DB_NAME
           labelEn: Database
           labelZh: 数据库名
+          label:
+            en: Database
+            zh: 数据库名
+            es-es: Base de datos
+            zh-Hant: 數據庫名
+            ja: データベース
+            ko: 데이터베이스
+            ms: Pangkalan Data
+            pt-br: Banco de Dados
+            ru: База данных
+            tr: Veritabanı
           random: true
           required: true
           rule: paramCommon
@@ -19,6 +41,17 @@ additionalProperties:
           envKey: PANEL_DB_USER
           labelEn: User
           labelZh: 数据库用户
+          label:
+            en: User
+            zh: 数据库用户
+            es-es: Usuario
+            zh-Hant: 用戶
+            ja: ユーザー
+            ko: 사용자
+            ms: Pengguna
+            pt-br: Usuário
+            ru: Пользователь
+            tr: Kullanıcı
           random: true
           required: true
           rule: paramCommon
@@ -27,6 +60,17 @@ additionalProperties:
           envKey: PANEL_DB_USER_PASSWORD
           labelEn: Password
           labelZh: 数据库用户密码
+          label:
+            en: Password
+            zh: 数据库用户密码
+            es-es: Contraseña
+            zh-Hant: 用戶密碼
+            ja: パスワード
+            ko: 비밀번호
+            ms: Kata Laluan
+            pt-br: Senha
+            ru: Пароль
+            tr: Parola
           random: true
           required: true
           type: password
@@ -35,6 +79,17 @@ additionalProperties:
           envKey: DE_ADMIN
           labelEn: Admin User
           labelZh: 管理员
+          label:
+            en: Admin User
+            zh: 管理员
+            es-es: Usuario administrador
+            zh-Hant: 管理員
+            ja: 管理者ユーザー
+            ko: 관리자
+            ms: Pengguna Pentadbir
+            pt-br: Usuário do Administrador
+            ru: Администратор
+            tr: Yönetici Kullanıcısı
           required: true
           type: text
         - default: DataEase@123456
@@ -42,6 +97,17 @@ additionalProperties:
           envKey: DE_ADMIN_PASSWORD
           labelEn: Admin Password
           labelZh: 管理员默认密码
+          label:
+            en: Admin Password
+            zh: 管理员默认密码
+            es-es: Contraseña del administrador
+            zh-Hant: 管理員密碼
+            ja: 管理者パスワード
+            ko: 관리자 비밀번호
+            ms: Kata Laluan Admin
+            pt-br: Senha do Administrador
+            ru: Пароль администратора
+            tr: Yönetici Parolası
           required: true
           type: text
         - default: 8080
@@ -49,6 +115,17 @@ additionalProperties:
           envKey: PANEL_APP_PORT_HTTP
           labelEn: Port
           labelZh: 端口
+          label:
+            en: Port
+            zh: 端口
+            es-es: Puerto
+            zh-Hant: 埠
+            ja: ポート
+            ko: 포트
+            ms: Port
+            pt-br: Porta
+            ru: Порт
+            tr: Bağlantı Noktası
           required: true
           rule: paramPort
           type: number

@@ -12,6 +12,7 @@ additionalProperties:
     shortDescEn: Palworld service visual management tool
     description:
         en: Palworld service visual management tool
+        es-es: Palworld service visual herramienta de gestión
         ja: Palworld サービスのビジュアル管理ツール
         ms: Alat pengurusan visual perkhidmatan Palworld
         pt-br: Ferramenta de gerenciamento visual de serviço do Palworld
@@ -19,6 +20,7 @@ additionalProperties:
         ko: 팔월드 서비스 시각적 관리 도구
         zh-hant: Palworld 服務視覺管理工具
         zh: 幻兽帕鲁服务可视化管理工具
+        tr: Palworld hizmet visual yönetim araç
     type: website
     crossVersionUpdate: true
     limit: 0

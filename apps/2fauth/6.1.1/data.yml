@@ -6,6 +6,7 @@ additionalProperties:
       labelZh: 应用名称
       label:
         en: APP NAME
+        es-es: Nombre de la aplicación
         ja: アプリ名
         ms: NAMA APLIKASI
         pt-br: NOME DO APLICATIVO
@@ -13,6 +14,7 @@ additionalProperties:
         ko: 앱 이름
         zh: 应用名称
         zh-Hant: 應用名稱
+        tr: Uygulama Adı
       required: true
       type: text
     - default: 8000
@@ -22,6 +24,7 @@ additionalProperties:
       labelZh: 端口
       label:
         en: Port
+        es-es: Puerto
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -29,6 +32,7 @@ additionalProperties:
         ko: 포트
         zh: 端口
         zh-Hant: 埠
+        tr: Bağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -39,6 +43,7 @@ additionalProperties:
       labelZh: 外部地址
       label:
         en: APP URL
+        es-es: URL de la aplicación
         ja: アプリURL
         ms: URL APLIKASI
         pt-br: URL DO APLICATIVO
@@ -46,6 +51,7 @@ additionalProperties:
         ko: 앱 URL
         zh: 外部地址
         zh-Hant: 外部地址
+        tr: Uygulama URL'si
       description:
         zh: 可以添加为反向代理网站，并启用 HTTPS
         en: You can add it as a reverse proxy site and enable HTTPS
@@ -55,6 +61,8 @@ additionalProperties:
         ru: Вы можете добавить его в качестве сайта обратного прокси и включить HTTPS
         ko: 리버스 프록시 사이트로 추가하고 HTTPS를 활성화할 수 있습니다
         zh-Hant: 可以添加為反向代理網站，並啟用 HTTPS
+        es-es: Puede agregarlo como un sitio de proxy inverso y habilitar HTTPS
+        tr: Bunu ters proxy sitesi olarak ekleyip HTTPS'i etkinlestirebilirsiniz
       required: true
       rule: paramExtUrl
       type: text
@@ -64,6 +72,7 @@ additionalProperties:
       labelZh: 加密键
       label:
         en: APP KEY
+        es-es: Clave de la aplicación
         ja: アプリキー
         ms: KUNCI APLIKASI
         pt-br: CHAVE DO APLICATIVO
@@ -71,5 +80,6 @@ additionalProperties:
         ko: 앱 키
         zh: 加密键
         zh-Hant: 加密鍵
+        tr: Uygulama Anahtarı
       required: true
       type: text

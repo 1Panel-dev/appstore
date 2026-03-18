@@ -7,6 +7,7 @@ additionalProperties:
           labelZh: HTTP端口
           label:
             en: HTTP Port
+            es-es: Puerto HTTP
             ja: HTTPポート
             ms: Port HTTP
             pt-br: Porta HTTP
@@ -14,6 +15,7 @@ additionalProperties:
             ko: HTTP 포트
             zh: HTTP端口
             zh-Hant: HTTP連接埠
+            tr: HTTP Bağlantı Noktası
           required: true
           rule: paramPort
           type: number
@@ -24,6 +26,7 @@ additionalProperties:
           labelZh: 开启密码验证
           label:
             en: Password Verification
+            es-es: Contraseña Verification
             ja: パスワード検証
             ms: Pengesahan Kata Laluan
             pt-br: Verificação de Senha
@@ -31,6 +34,7 @@ additionalProperties:
             ko: 비밀번호 확인
             zh: 开启密码验证
             zh-Hant: 開啟密碼驗證
+            tr: Parola Doğrulama
           required: true
           type: select
           values:
@@ -45,6 +49,7 @@ additionalProperties:
           labelZh: 密码
           label:
             en: Password
+            es-es: Contraseña
             ja: パスワード
             ms: Kata laluan
             pt-br: Senha
@@ -52,6 +57,7 @@ additionalProperties:
             ko: 비밀번호
             zh: 密码
             zh-Hant: 密碼
+            tr: Parola
           random: true
           required: true
           type: password
@@ -62,12 +68,14 @@ additionalProperties:
           labelZh: ES JAVA OPTS
           label:
             en: ES JAVA OPTS
+            es-es: Opciones JAVA de ES
             ja: ES JAVA オプション
             ms: Pilihan ES JAVA
             pt-br: Opções ES JAVA
             ru: Параметры ES JAVA
             ko: ES JAVA 옵션
             zh: ES JAVA OPTS
-            zh-Hant: ES JAVA OPTS
+            zh-Hant: ES JAVA 選項
+            tr: ES JAVA secenekleri
           required: true
           type: text

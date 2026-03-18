@@ -10,6 +10,7 @@ additionalProperties:
       type: number
       label:
         en: WebUI Port
+        es-es: Puerto web
         ja: WebUI ポート
         ms: Port WebUI
         pt-br: Porta WebUI
@@ -17,6 +18,7 @@ additionalProperties:
         ko: WebUI 포트
         zh-Hant: WebUI 埠
         zh: WebUI 端口
+        tr: WebUI portu
     - default: admin
       edit: true
       envKey: ADMIN_USERNAME
@@ -24,6 +26,7 @@ additionalProperties:
       labelZh: 管理员用户名
       label:
         en: Admin user
+        es-es: Usuario administrador
         ja: 管理者ユーザー
         ms: Pengguna Admin
         pt-br: Usuário Administrador
@@ -31,6 +34,7 @@ additionalProperties:
         ko: 관리자 사용자
         zh: 管理员用户名
         zh-Hant: 管理員用戶名
+        tr: Yönetici Kullanıcısı
       required: true
       type: text
     - default: password
@@ -40,6 +44,7 @@ additionalProperties:
       labelZh: 管理员密码
       label:
         en: Admin Password
+        es-es: Contraseña del administrador
         ja: 管理者パスワード
         ms: Kata Laluan Admin
         pt-br: Senha do Administrador
@@ -47,6 +52,7 @@ additionalProperties:
         ko: 관리자 비밀번호
         zh: 管理员密码
         zh-Hant: 管理員密碼
+        tr: Yönetici Parolası
       random: true
       required: true
       type: password

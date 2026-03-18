@@ -4,12 +4,34 @@ additionalProperties:
       envKey: SERVER_ADDRESS
       labelEn: Server Address
       labelZh: 服务端IP
+      label:
+        en: Server Address
+        zh: 服务端IP
+        es-es: Server Dirección
+        zh-Hant: 服務端地址
+        ja: サーバーアドレス
+        ko: 서버 주소
+        ms: Alamat Pelayan
+        pt-br: Endereço do Servidor
+        ru: Адрес сервера
+        tr: Sunucu Adresi
       required: true
       type: text
     - default: 7000
       envKey: SERVER_PORT
       labelEn: Server Port
       labelZh: 服务端端口
+      label:
+        en: Server Port
+        zh: 服务端端口
+        es-es: Server Puerto
+        zh-Hant: 伺服端埠
+        ja: サーバーポート
+        ko: 서버 포트
+        ms: Port Pelayan
+        pt-br: Porta do Servidor
+        ru: Порт сервера
+        tr: Sunucu Portu
       required: true
       type: number
       rule: paramPort
@@ -17,6 +39,17 @@ additionalProperties:
       envKey: PANEL_APP_PORT_HTTP
       labelEn: Dashboard Port
       labelZh: Dashboard 端口
+      label:
+        en: Dashboard Port
+        zh: Dashboard 端口
+        es-es: Dashboard Puerto
+        zh-Hant: Dashboard 埠
+        ja: ダッシュボードポート
+        ko: 대시보드 포트
+        ms: Port Papan Pemuka
+        pt-br: Porta do Painel
+        ru: Порт панели управления
+        tr: Kontrol Paneli Bağlantı Noktası
       required: true
       type: number
       rule: paramPort
@@ -24,12 +57,34 @@ additionalProperties:
       envKey: USER_NAME
       labelEn: Dashboard Username
       labelZh: Dashboard 用户名
+      label:
+        en: Dashboard Username
+        zh: Dashboard 用户名
+        es-es: Dashboard Nombre de usuario
+        zh-Hant: 儀表板使用者名稱
+        ja: ダッシュボードユーザー名
+        ko: 대시보드 사용자 이름
+        ms: Nama pengguna papan pemuka
+        pt-br: Nome de usuário do painel
+        ru: Имя пользователя панели
+        tr: Kontrol paneli kullanıcı adı
       required: true
       type: text
     - default: admin
       envKey: PASSWORD
       labelEn: Dashboard Password
       labelZh: Dashboard 密码
+      label:
+        en: Dashboard Password
+        zh: Dashboard 密码
+        es-es: Dashboard Contraseña
+        zh-Hant: Dashboard 密碼
+        ja: ダッシュボードのパスワード
+        ko: 대시보드 비밀번호
+        ms: Kata Laluan Papan Pemuka
+        pt-br: Senha do Painel
+        ru: Пароль панели управления
+        tr: Kontrol Paneli Parolası
       required: true
       random: true
       rule: paramComplexity
@@ -38,5 +93,16 @@ additionalProperties:
       envKey: AUTH_TOKEN
       labelEn: Auth Token
       labelZh: 密钥
+      label:
+        en: Auth Token
+        zh: 密钥
+        es-es: Token de autenticación
+        zh-Hant: 驗證 Token
+        ja: 認証トークン
+        ko: 인증 토큰
+        ms: Token pengesahan
+        pt-br: Token de autenticação
+        ru: Токен аутентификации
+        tr: Kimlik doğrulama tokenı
       required: true
       type: text

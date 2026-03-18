@@ -23,6 +23,7 @@ additionalProperties:
     - arm64
   description:
     en: Self hosted virtual browser that runs in docker and uses WebRTC
+    es-es: Navegador virtual autoalojado que se ejecuta en Docker y usa WebRTC
     ja: Docker で実行され、WebRTC を使用するセルフホスト型仮想ブラウザ
     ms: Pelayar maya hos sendiri yang berjalan dalam docker dan menggunakan WebRTC
     pt-br: Navegador virtual auto-hospedado que é executado no docker e usa WebRTC
@@ -30,3 +31,4 @@ additionalProperties:
     ko: Docker에서 실행되고 WebRTC를 사용하는 자체 호스팅 가상 브라우저
     zh-Hant: 基於 Docker 和 WebRTC 的自託管虛擬瀏覽器
     zh: 基于 Docker 和 WebRTC 的自托管虚拟浏览器
+    tr: Docker icinde calisan ve WebRTC kullanan self-hosted sanal tarayici

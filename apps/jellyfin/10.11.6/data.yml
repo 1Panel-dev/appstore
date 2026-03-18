@@ -10,6 +10,7 @@ additionalProperties:
           type: number
           label:
             en: Port
+            es-es: Puerto
             ja: ポート
             ms: Port
             pt-br: Porta
@@ -17,6 +18,7 @@ additionalProperties:
             ko: 포트
             zh-Hant: 埠
             zh: 端口
+            tr: Bağlantı Noktası
         - default: ./data/media
           edit: true
           envKey: MEDIA_FOLDER_PATH
@@ -26,6 +28,7 @@ additionalProperties:
           type: text
           label:
             en: Media folder path
+            es-es: Ruta de la carpeta multimedia
             ja: メディアフォルダのパス
             ms: Laluan folder media
             pt-br: Caminho da pasta de mídia
@@ -33,6 +36,7 @@ additionalProperties:
             ko: 미디어 폴더 경로
             zh-Hant: 媒體資料夾路徑
             zh: 媒体文件夹路径
+            tr: Medya Klasörü Yolu
         - default: ./data/cache
           edit: true
           envKey: CACHE_FOLDER_PATH
@@ -42,6 +46,7 @@ additionalProperties:
           type: text
           label:
             en: Cache folder path
+            es-es: Ruta de la carpeta de caché
             ja: キャッシュフォルダのパス
             ms: Laluan folder cache
             pt-br: Caminho da pasta de cache
@@ -49,3 +54,4 @@ additionalProperties:
             ko: 캐시 폴더 경로
             zh-Hant: 快取資料夾路徑
             zh: 缓存文件夹路径
+            tr: Önbellek Klasörü Yolu

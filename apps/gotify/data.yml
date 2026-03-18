@@ -19,6 +19,7 @@ additionalProperties:
     document: https://gotify.net/docs/
     description:
         en: A simple server for sending and receiving messages
+        es-es: Un simple servidor for sending and receiving messages
         zh: 简单的服务器，用于发送和接收消息
         zh-Hant: 簡單的伺服器，用於發送和接收消息
         ja: メッセージの送受信に使用するシンプルなサーバー
@@ -26,5 +27,6 @@ additionalProperties:
         pt-br: Um servidor simples para enviar e receber mensagens
         ru: Простой сервер для отправки и получения сообщений
         ko: 메시지를 보내고 받는 간단한 서버
+        tr: Mesaj gonderip almak icin basit sunucu
     architectures:
         - amd64

@@ -7,6 +7,7 @@ additionalProperties:
           labelZh: HTTP端口
           label:
             en: HTTP Port
+            es-es: Puerto HTTP
             ja: HTTPポート
             ms: Port HTTP
             pt-br: Porta HTTP
@@ -14,6 +15,7 @@ additionalProperties:
             ko: HTTP 포트
             zh: HTTP端口
             zh-Hant: HTTP連接埠
+            tr: HTTP Bağlantı Noktası
           required: true
           rule: paramPort
           type: number
@@ -24,6 +26,7 @@ additionalProperties:
           labelZh: HTTPS端口
           label:
             en: HTTPS Port
+            es-es: Puerto HTTPS
             ja: HTTPSポート
             ms: Port HTTPS
             pt-br: Porta HTTPS
@@ -31,6 +34,7 @@ additionalProperties:
             ko: HTTPS 포트
             zh: HTTPS端口
             zh-Hant: HTTPS連接埠
+            tr: HTTPS Bağlantı Noktası
           required: true
           rule: paramPort
           type: number
@@ -41,6 +45,7 @@ additionalProperties:
           labelZh: 控制台端口
           label:
             en: Console Port
+            es-es: Console Puerto
             ja: コンソールポート
             ms: Port Konsol
             pt-br: Porta do Console
@@ -48,6 +53,7 @@ additionalProperties:
             ko: 콘솔 포트
             zh: 控制台端口
             zh-Hant: 控制台埠
+            tr: Console Bağlantı Noktası
           required: true
           rule: paramPort
           type: number
@@ -58,6 +64,7 @@ additionalProperties:
           labelZh: 时区
           label:
             en: Time zone
+            es-es: Zona horaria
             ja: タイムゾーン
             ms: Zon masa
             pt-br: Fuso horário
@@ -65,5 +72,6 @@ additionalProperties:
             ko: 시간대
             zh: 时区
             zh-Hant: 時區
+            tr: Saat Dilimi
           required: true
           type: text

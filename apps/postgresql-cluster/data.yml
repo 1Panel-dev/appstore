@@ -10,6 +10,7 @@ additionalProperties:
         - Database
     description:
         en: PostgreSQL Master-Slave Cluster
+        es-es: Clúster maestro-esclavo de PostgreSQL
         ja: オープンソースリレーショナルデータベース
         ms: Pangkalan Data Relasional Sumber Terbuka
         pt-br: Banco de Dados Relacional de Código Aberto
@@ -17,6 +18,7 @@ additionalProperties:
         ko: 오픈 소스 관계형 데이터베이스
         zh-hant: PostgreSQL 一主多從
         zh: PostgreSQL 一主多从
+        tr: PostgreSQL ana-yardimci kumesi
     type: runtime
     crossVersionUpdate: false
     limit: 0

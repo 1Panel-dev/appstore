@@ -10,6 +10,17 @@ additionalProperties:
     - Tool
   shortDescZh: 一款简洁的自托管评论系统
   shortDescEn: A concise self hosted comment system
+  description:
+    en: A concise self hosted comment system
+    zh: 一款简洁的自托管评论系统
+    es-es: Un concise self hosted comment system
+    zh-Hant: 簡潔的自架評論系統
+    ja: 簡潔なセルフホスト型コメントシステム
+    ko: 간결한 자체 호스팅 댓글 시스템
+    ms: Sistem komen hos sendiri yang ringkas
+    pt-br: Um sistema de comentarios auto-hospedado e conciso
+    ru: Лаконичная самохостируемая система комментариев
+    tr: Kısa ve öz bir self-hosted yorum sistemi
   type: website
   crossVersionUpdate: true
   limit: 0

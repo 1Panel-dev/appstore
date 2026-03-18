@@ -12,6 +12,7 @@ additionalProperties:
   shortDescEn: Forgejo Runner is a daemon process that connects to a Forgejo instance and runs continuous integration jobs
   description:
     en: Forgejo Runner is a daemon process that connects to a Forgejo instance and runs continuous integration jobs
+    es-es: Forgejo Runner es un proceso daemon que se conecta a una instancia de Forgejo y ejecuta trabajos de integración continua
     zh: Forgejo Runner 是连接 Forgejo 实例并运行持续集成作业的守护进程
     zh-Hant: Forgejo Runner 是連接 Forgejo 實例並執行持續整合作業的守護行程
     ja: Forgejo Runner は、Forgejo インスタンスに接続し、継続的インテグレーションジョブを実行するデーモンプロセスです
@@ -19,6 +20,7 @@ additionalProperties:
     pt-br: Forgejo Runner é um processo daemon que se conecta a uma instância do Forgejo e executa trabalhos de integração contínua
     ru: Forgejo Runner — это процесс-демон, который подключается к экземпляру Forgejo и запускает задания непрерывной интеграции
     ko: Forgejo Runner는 Forgejo 인스턴스에 연결하여 지속적 통합 작업을 실행하는 데몬 프로세스입니다
+    tr: Forgejo Runner, bir Forgejo ornegine baglanan ve surekli entegrasyon islerini calistiran daemon surecidir
   type: tool
   crossVersionUpdate: true
   recommend: 0

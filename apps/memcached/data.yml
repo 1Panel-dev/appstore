@@ -19,6 +19,7 @@ additionalProperties:
     document: https://github.com/memcached/memcached/wiki
     description:
         en: A distributed caching system
+        es-es: Un distribuido caching system
         zh: 分布式高速缓存系统
         zh-Hant: 分佈式高速緩存系統
         ja: 分散型キャッシングシステム
@@ -26,6 +27,7 @@ additionalProperties:
         pt-br: Um sistema de cache distribuído
         ru: Распределённая система кэширования
         ko: 분산 캐싱 시스템
+        tr: Bir dağıtık caching system
     architectures:
       - amd64
       - arm64

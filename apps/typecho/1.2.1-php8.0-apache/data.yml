@@ -9,6 +9,17 @@ additionalProperties:
           envKey: PANEL_DB_TYPE
           labelEn: Database Service
           labelZh: 数据库服务
+          label:
+            en: Database Service
+            zh: 数据库服务
+            es-es: Servicio de base de datos
+            zh-Hant: 資料庫服務
+            ja: データベースサービス
+            ko: 데이터베이스 서비스
+            ms: Perkhidmatan Pangkalan Data
+            pt-br: Serviço de Banco de Dados
+            ru: Сервис баз данных
+            tr: Veritabanı Hizmeti
           required: true
           type: apps
           values:
@@ -22,6 +33,17 @@ additionalProperties:
           envKey: PANEL_DB_NAME
           labelEn: Database
           labelZh: 数据库名
+          label:
+            en: Database
+            zh: 数据库名
+            es-es: Base de datos
+            zh-Hant: 數據庫名
+            ja: データベース
+            ko: 데이터베이스
+            ms: Pangkalan Data
+            pt-br: Banco de Dados
+            ru: База данных
+            tr: Veritabanı
           random: true
           required: true
           rule: paramCommon
@@ -30,6 +52,17 @@ additionalProperties:
           envKey: PANEL_DB_USER
           labelEn: Database User
           labelZh: 数据库用户
+          label:
+            en: Database User
+            zh: 数据库用户
+            es-es: Usuario de la base de datos
+            zh-Hant: 數據庫用戶
+            ja: データベースユーザー
+            ko: 데이터베이스 사용자
+            ms: Pengguna Pangkalan Data
+            pt-br: Usuário do Banco de Dados
+            ru: Пользователь базы данных
+            tr: Veritabanı Kullanıcısı
           random: true
           required: true
           rule: paramCommon
@@ -38,6 +71,17 @@ additionalProperties:
           envKey: PANEL_DB_USER_PASSWORD
           labelEn: Database User Password
           labelZh: 数据库用户密码
+          label:
+            en: Database User Password
+            zh: 数据库用户密码
+            es-es: Contraseña del usuario de la base de datos
+            zh-Hant: 資料庫使用者密碼
+            ja: データベースユーザーパスワード
+            ko: 데이터베이스 사용자 비밀번호
+            ms: Kata laluan pengguna pangkalan data
+            pt-br: Senha do usuário do banco de dados
+            ru: Пароль пользователя базы данных
+            tr: Veritabanı kullanıcı parolası
           random: true
           required: true
           type: password
@@ -45,12 +89,34 @@ additionalProperties:
           envKey: TYPECHO_USER_NAME
           labelEn: User
           labelZh: 管理员
+          label:
+            en: User
+            zh: 管理员
+            es-es: Usuario
+            zh-Hant: 用戶
+            ja: ユーザー
+            ko: 사용자
+            ms: Pengguna
+            pt-br: Usuário
+            ru: Пользователь
+            tr: Kullanıcı
           required: true
           type: text
         - default: typecho
           envKey: TYPECHO_USER_PASSWORD
           labelEn: Password
           labelZh: 管理员密码
+          label:
+            en: Password
+            zh: 管理员密码
+            es-es: Contraseña
+            zh-Hant: 用戶密碼
+            ja: パスワード
+            ko: 비밀번호
+            ms: Kata Laluan
+            pt-br: Senha
+            ru: Пароль
+            tr: Parola
           required: true
           type: text
         - default: 8080
@@ -58,6 +124,17 @@ additionalProperties:
           envKey: PANEL_APP_PORT_HTTP
           labelEn: Port
           labelZh: 端口
+          label:
+            en: Port
+            zh: 端口
+            es-es: Puerto
+            zh-Hant: 埠
+            ja: ポート
+            ko: 포트
+            ms: Port
+            pt-br: Porta
+            ru: Порт
+            tr: Bağlantı Noktası
           required: true
           rule: paramPort
           type: number
@@ -66,6 +143,17 @@ additionalProperties:
           envKey: TYPECHO_USER_MAIL
           labelEn: User Email
           labelZh: 用户邮箱
+          label:
+            en: User Email
+            zh: 用户邮箱
+            es-es: Usuario Email
+            zh-Hant: 使用者電子郵件
+            ja: ユーザーメール
+            ko: 사용자 이메일
+            ms: E-mel pengguna
+            pt-br: E-mail do usuário
+            ru: Электронная почта пользователя
+            tr: Kullanici e-postasi
           required: true
           type: text
         - default: http://localhost:8080
@@ -73,6 +161,17 @@ additionalProperties:
           envKey: TYPECHO_EXTERNAL_URL
           labelEn: External URL
           labelZh: 外部访问地址
+          label:
+            en: External URL
+            zh: 外部访问地址
+            es-es: URL externa
+            zh-Hant: 外部訪問地址
+            ja: 外部URL
+            ko: 외부 URL
+            ms: URL Luaran
+            pt-br: URL externo
+            ru: Внешний URL
+            tr: Harici URL
           required: true
           rule: paramExtUrl
           type: text

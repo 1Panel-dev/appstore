@@ -12,6 +12,7 @@ additionalProperties:
     shortDescEn: An open-source platform for building enterprise-grade agents
     description:
         en: An open-source platform for building enterprise-grade agents
+        es-es: Un open-source plataforma for building enterprise-grade agents
         ja: エンタープライズグレードのエージェントを構築するためのオープンソースプラットフォーム
         ms: Platform sumber terbuka untuk membina ejen peringkat perusahaan
         pt-br: Plataforma de código aberto para construção de agentes de nível empresarial
@@ -19,6 +20,7 @@ additionalProperties:
         ko: 엔터프라이즈급 에이전트를 구축하기 위한 오픈 소스 플랫폼
         zh-Hant: 強大易用的企業級智能體平台
         zh: 强大易用的企业级智能体平台
+        tr: Kurumsal duzeyde ajanlar olusturmak icin acik kaynakli platform
     type: website
     crossVersionUpdate: false
     limit: 0

@@ -10,6 +10,17 @@ additionalProperties:
     - DevTool
   shortDescZh: Linux 命令大全搜索工具
   shortDescEn: Comprehensive Linux command search tool
+  description:
+    en: Comprehensive Linux command search tool
+    zh: Linux 命令大全搜索工具
+    es-es: Comprehensive Linux command search herramienta
+    zh-Hant: 全面的 Linux 指令搜尋工具
+    ja: 包括的な Linux コマンド検索ツール
+    ko: 포괄적인 Linux 명령 검색 도구
+    ms: Alat carian arahan Linux yang komprehensif
+    pt-br: Ferramenta abrangente de busca de comandos Linux
+    ru: Комплексный инструмент поиска Linux-команд
+    tr: Kapsamlı Linux komut arama aracı
   type: website
   crossVersionUpdate: true
   limit: 0

@@ -10,6 +10,17 @@ additionalProperties:
         - Website
     shortDescZh: 基于 PHP 的博客软件
     shortDescEn: A PHP Blogging Platform. Simple and Powerful
+    description:
+      en: A PHP Blogging Platform. Simple and Powerful
+      zh: 基于 PHP 的博客软件
+      es-es: Un PHP Blogging Platform. Simple and Powerful
+      zh-Hant: 一個 PHP 部落格平台，簡單而強大
+      ja: シンプルで強力な PHP ブログプラットフォーム
+      ko: 간단하고 강력한 PHP 블로그 플랫폼
+      ms: Platform blog PHP yang ringkas dan berkuasa
+      pt-br: Uma plataforma de blog em PHP. Simples e poderosa
+      ru: PHP-платформа для блогов. Простая и мощная
+      tr: Basit ve güçlü bir PHP blog platformu
     type: website
     crossVersionUpdate: true
     limit: 0

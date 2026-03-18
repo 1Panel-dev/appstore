@@ -12,6 +12,7 @@ additionalProperties:
     shortDescEn: PHP8 Runtime
     description:
         en: PHP8 Runtime
+        es-es: Entorno de ejecución de PHP8
         ja: PHP8 ランタイム
         ms: Persekitaran masa laku PHP8
         pt-br: Ambiente de execução PHP8
@@ -19,6 +20,7 @@ additionalProperties:
         ko: PHP8 런타임
         zh-hant: PHP8 執行環境
         zh: PHP8 运行环境
+        tr: PHP8 calisma ortami
     type: php
     crossVersionUpdate: false
     limit: 0

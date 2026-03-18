@@ -6,6 +6,7 @@ additionalProperties:
           labelZh: 端口
           label:
             en: Port
+            es-es: Puerto
             ja: ポート
             ms: Port
             pt-br: Porta
@@ -13,6 +14,7 @@ additionalProperties:
             ko: 포트
             zh: 端口
             zh-Hant: 埠
+            tr: Bağlantı Noktası
           required: true
           rule: paramPort
           type: number
@@ -22,6 +24,7 @@ additionalProperties:
           labelZh: Kafka 服务
           label:
             en: Kafka Service
+            es-es: Kafka Servicio
             ja: Kafka サービス
             ms: Perkhidmatan Kafka
             pt-br: Serviço Kafka
@@ -29,6 +32,7 @@ additionalProperties:
             ko: Kafka 서비스
             zh: Kafka 服务
             zh-Hant: Kafka 服務
+            tr: Kafka Hizmeti
           required: true
           key: kafka
           type: service

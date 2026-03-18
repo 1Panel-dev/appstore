@@ -10,6 +10,7 @@ additionalProperties:
           type: number
           label:
             en: HTTP Web Port
+            es-es: Puerto web HTTP
             ja: HTTP ウェブポート
             ms: Port Web HTTP
             pt-br: Porta Web HTTP
@@ -17,6 +18,7 @@ additionalProperties:
             ko: HTTP 웹 포트
             zh-Hant: HTTP 網頁埠
             zh: HTTP 网页端口
+            tr: HTTP Web Bağlantı Noktası
         - default: 23001
           edit: true
           envKey: PANEL_APP_PORT_HTTP
@@ -27,6 +29,7 @@ additionalProperties:
           type: number
           label:
             en: Initial Setup Web Port
+            es-es: Puerto web de configuración inicial
             ja: 初期設定ウェブポート
             ms: Port Web Persediaan Awal
             pt-br: Porta Web de Configuração Inicial
@@ -34,6 +37,7 @@ additionalProperties:
             ko: 초기 설정 웹 포트
             zh-Hant: 初始設定網頁埠
             zh: 初始设置网页端口
+            tr: İlk Kurulum Web Bağlantı Noktası
         - default: 20053
           edit: true
           envKey: PANEL_APP_PORT_DNS
@@ -44,6 +48,7 @@ additionalProperties:
           type: number
           label:
             en: Standard DNS Port
+            es-es: Standard DNS Puerto
             ja: 標準DNSポート
             ms: Port DNS Standard
             pt-br: Porta DNS Padrão
@@ -51,6 +56,7 @@ additionalProperties:
             ko: 표준 DNS 포트
             zh-Hant: 普通 DNS 埠
             zh: 普通 DNS 端口
+            tr: Standart DNS Bağlantı Noktası
         - default: 20067
           edit: true
           envKey: PANEL_APP_PORT_DHCP_1
@@ -61,6 +67,7 @@ additionalProperties:
           type: number
           label:
             en: DHCP Service Port 1
+            es-es: DHCP Servicio Puerto 1
             ja: DHCP サービスポート 1
             ms: Port Perkhidmatan DHCP 1
             pt-br: Port de Serviço DHCP 1
@@ -68,6 +75,7 @@ additionalProperties:
             ko: DHCP 서비스 포트 1
             zh-Hant: DHCP 服務埠 1
             zh: DHCP 服务端口 1
+            tr: DHCP Hizmet Bağlantı Noktası 1
         - default: 20068
           edit: true
           envKey: PANEL_APP_PORT_DHCP_2
@@ -78,6 +86,7 @@ additionalProperties:
           type: number
           label:
             en: DHCP Service Port 2
+            es-es: DHCP Servicio Puerto 2
             ja: DHCP サービスポート 2
             ms: Port Perkhidmatan DHCP 2
             pt-br: Port de Serviço DHCP 2
@@ -85,6 +94,7 @@ additionalProperties:
             ko: DHCP 서비스 포트 2
             zh-Hant: DHCP 服務埠 2
             zh: DHCP 服务端口 2
+            tr: DHCP Hizmet Bağlantı Noktası 2
         - default: 20443
           edit: true
           envKey: PANEL_APP_PORT_DOH
@@ -95,6 +105,7 @@ additionalProperties:
           type: number
           label:
             en: DOH Service Port
+            es-es: DOH Servicio Puerto
             ja: DOH サービスポート
             ms: Port Perkhidmatan DOH
             pt-br: Porta de Serviço DOH
@@ -102,6 +113,7 @@ additionalProperties:
             ko: DOH 서비스 포트
             zh-Hant: DOH 服務埠
             zh: DOH 服务端口
+            tr: DOH Hizmet Bağlantı Noktası
         - default: 853
           edit: true
           envKey: PANEL_APP_PORT_DOT
@@ -112,6 +124,7 @@ additionalProperties:
           type: number
           label:
             en: DOT Service Port
+            es-es: DOT Servicio Puerto
             ja: DOT サービスポート
             ms: Port Perkhidmatan DOT
             pt-br: Porta de Serviço DOT
@@ -119,6 +132,7 @@ additionalProperties:
             ko: DOT 서비스 포트
             zh-Hant: DOT 服務埠
             zh: DOT 服务端口
+            tr: DOT Hizmet Bağlantı Noktası
         - default: 20784
           edit: true
           envKey: PANEL_APP_PORT_QUIC_1
@@ -129,6 +143,7 @@ additionalProperties:
           type: number
           label:
             en: QUIC Service Port 1
+            es-es: QUIC Servicio Puerto 1
             ja: QUIC サービスポート 1
             ms: Port Perkhidmatan QUIC 1
             pt-br: Porta de Serviço QUIC 1
@@ -136,6 +151,7 @@ additionalProperties:
             ko: QUIC 서비스 포트 1
             zh-Hant: QUIC 服務埠 1
             zh: QUIC 服务端口 1
+            tr: QUIC Hizmet Bağlantı Noktası 1
         - default: 8853
           edit: true
           envKey: PANEL_APP_PORT_QUIC_2
@@ -146,6 +162,7 @@ additionalProperties:
           type: number
           label:
             en: QUIC Service Port 2
+            es-es: QUIC Servicio Puerto 2
             ja: QUIC サービスポート 2
             ms: Port Perkhidmatan QUIC 2
             pt-br: Porta de Serviço QUIC 2
@@ -153,6 +170,7 @@ additionalProperties:
             ko: QUIC 서비스 포트 2
             zh-Hant: QUIC 服務埠 2
             zh: QUIC 服务端口 2
+            tr: QUIC Hizmet Bağlantı Noktası 2
         - default: 5443
           edit: true
           envKey: PANEL_APP_PORT_DNS_CRYPT
@@ -163,6 +181,7 @@ additionalProperties:
           type: number
           label:
             en: DNS Crypt Service Port
+            es-es: DNS Crypt Servicio Puerto
             ja: DNS Crypt サービスポート
             ms: Port Perkhidmatan DNS Crypt
             pt-br: Porta de Serviço DNS Crypt
@@ -170,3 +189,4 @@ additionalProperties:
             ko: DNS Crypt 서비스 포트
             zh-Hant: DNS Crypt 服務埠
             zh: DNS Crypt 服务端口
+            tr: DNS Crypt Hizmet Bağlantı Noktası

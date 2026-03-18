@@ -19,6 +19,7 @@ additionalProperties:
     document: https://docs.firefly-iii.org/
     description:
         en: A free and open source personal finance manager
+        es-es: Un free and de código abierto personal finance manager
         zh: 开源的个人财务管理工具
         zh-Hant: 開源的個人財務管理工具
         ja: 無料でオープンソースの個人財務管理ツール
@@ -26,6 +27,7 @@ additionalProperties:
         pt-br: Gerenciador de finanças pessoais gratuito e de código aberto
         ru: Бесплатный и открытый менеджер личных финансов
         ko: 무료 오픈 소스 개인 금융 관리자
+        tr: Ucretsiz ve acik kaynakli kisisel finans yoneticisi
     architectures:
       - amd64
       - arm64

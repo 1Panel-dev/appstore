@@ -23,6 +23,7 @@ additionalProperties:
     - arm/v7
   description:
     en: A workspace with fully merged docs, whiteboards and databases
+    es-es: Espacio de trabajo con documentos, pizarras y bases de datos totalmente integrados
     zh: 将文档、白板和数据库完全整合的工作空间
     zh-Hant: 將文檔、白板和數據庫完全整合的工作空間
     ja: 文書、ホワイトボード、データベースを完全に統合したワークスペース
@@ -30,4 +31,5 @@ additionalProperties:
     pt-br: Um espaço de trabalho com documentos, quadros brancos e bancos de dados totalmente integrados
     ru: Рабочее пространство с полностью объединенными документами, досками и базами данных
     ko: 문서, 화이트보드 및 데이터베이스가 완전히 통합된 작업 공간
+    tr: Belgeleri, beyaz tahtalari ve veritabanlarini tam olarak birlestiren bir calisma alani
   memoryRequired: 1024

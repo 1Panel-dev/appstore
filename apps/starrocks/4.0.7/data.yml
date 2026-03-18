@@ -6,6 +6,7 @@ additionalProperties:
       labelZh: Web 控制台端口
       label:
         en: Web Port
+        es-es: Puerto web
         ja: Web ポート
         ms: Port Web
         pt-br: Porta Web
@@ -13,6 +14,7 @@ additionalProperties:
         ko: 웹 포트
         zh: Web 控制台端口
         zh-Hant: Web 控制台連接埠
+        tr: Web Bağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -22,6 +24,7 @@ additionalProperties:
       labelZh: MySQL 端口
       label:
         en: MySQL Port
+        es-es: MySQL Puerto
         ja: MySQL ポート
         ms: Port MySQL
         pt-br: Porta MySQL
@@ -29,6 +32,7 @@ additionalProperties:
         ko: MySQL 포트
         zh: MySQL 端口
         zh-Hant: MySQL 連接埠
+        tr: MySQL Bağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -38,6 +42,7 @@ additionalProperties:
       labelZh: Stream Load 端口
       label:
         en: Stream Load Port
+        es-es: Stream Load Puerto
         ja: ストリームロードポート
         ms: Port Stream Load
         pt-br: Porta Stream Load
@@ -45,6 +50,7 @@ additionalProperties:
         ko: 스트림 로드 포트
         zh: Stream Load 端口
         zh-Hant: Stream Load 連接埠
+        tr: Stream Load Bağlantı Noktası
       required: true
       rule: paramPort
       type: number

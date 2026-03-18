@@ -12,6 +12,7 @@ additionalProperties:
     shortDescEn: GUI container management tools
     description:
         en: GUI container management tools
+        es-es: GUI container herramienta de gestións
         ja: GUIコンテナ管理ツール
         ms: Alat pengurusan kontena GUI
         pt-br: Ferramentas de gerenciamento de contêiner GUI
@@ -19,6 +20,7 @@ additionalProperties:
         ko: GUI 컨테이너 관리 도구
         zh-hant: GUI 容器管理工具
         zh: 图形界面容器管理工具
+        tr: GUI container yönetim araçs
     type: website
     crossVersionUpdate: true
     limit: 1

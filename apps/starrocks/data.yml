@@ -12,6 +12,7 @@ additionalProperties:
     shortDescEn: Next-generation ultra-fast all-scenario MPP database
     description:
         en: Next-generation ultra-fast all-scenario MPP database
+        es-es: Next-generation ultra-fast all-scenario MPP base de datos
         ja: 次世代の超高速オールシナリオ MPP データベース
         ms: Pangkalan data MPP serba guna generasi baharu yang amat pantas
         pt-br: Banco de dados MPP ultrarrápido de nova geração para todos os cenários
@@ -19,6 +20,7 @@ additionalProperties:
         ko: 차세대 초고속 올 시나리오 MPP 데이터베이스
         zh-Hant: 新一代極速全場景 MPP 資料庫
         zh: 新一代极速全场景 MPP 数据库
+        tr: Next-generation ultra-fast all-scenario MPP veritabanı
     type: tool
     crossVersionUpdate: false
     limit: 0

@@ -10,6 +10,17 @@ additionalProperties:
     - Database
   shortDescZh: 兼容 MySQL 的单机分布式一体化国产开源数据库
   shortDescEn: An integrated domestic open-source database that is compatible with MySQL and supports single-node distributed architecture
+  description:
+    en: An integrated domestic open-source database that is compatible with MySQL and supports single-node distributed architecture
+    zh: 兼容 MySQL 的单机分布式一体化国产开源数据库
+    es-es: Un integrated domestic open-source base de datos that is compatible with MySQL and supports single-node distribuido architecture
+    zh-Hant: 相容 MySQL 並支援單節點分散式架構的國產一體化開源資料庫
+    ja: MySQL と互換性があり、シングルノード分散アーキテクチャをサポートする統合型国産オープンソースデータベース
+    ko: MySQL과 호환되고 단일 노드 분산 아키텍처를 지원하는 통합형 국산 오픈소스 데이터베이스
+    ms: Pangkalan data sumber terbuka bersepadu tempatan yang serasi dengan MySQL dan menyokong seni bina teragih nod tunggal
+    pt-br: Banco de dados integrado nacional de código aberto compatível com MySQL e com suporte a arquitetura distribuída de nó único
+    ru: Интегрированная отечественная открытая база данных, совместимая с MySQL и поддерживающая одноузловую распределённую архитектуру
+    tr: MySQL ile uyumlu ve tek düğümlü dağıtık mimariyi destekleyen entegre yerli açık kaynaklı veritabanı
   type: runtime
   crossVersionUpdate: false
   limit: 0

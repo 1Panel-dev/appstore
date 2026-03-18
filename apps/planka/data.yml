@@ -19,6 +19,7 @@ additionalProperties:
     document: https://docs.planka.cloud/docs/intro
     description:
         en: Elegant open source project tracking
+        es-es: Elegant de código abierto project tracking
         zh: 优雅的开源项目跟踪
         zh-Hant: 優雅的開源項目跟蹤
         ja: エレガントなオープンソースプロジェクト追跡
@@ -26,6 +27,7 @@ additionalProperties:
         pt-br: Rastreamento de projetos de código aberto elegante
         ru: Элегантное отслеживание проектов с открытым исходным кодом
         ko: 우아한 오픈 소스 프로젝트 추적
+        tr: Zarif acik kaynak proje takibi
     architectures:
       - amd64
       - arm/v7

@@ -10,6 +10,17 @@ additionalProperties:
     - Tool
   shortDescZh: 专注于内网穿透的高性能反向代理应用
   shortDescEn: High-performance reverse proxy application focused on intranet penetration
+  description:
+    en: High-performance reverse proxy application focused on intranet penetration
+    zh: 专注于内网穿透的高性能反向代理应用
+    es-es: High-performance reverse proxy aplicación focused on intranet penetration
+    zh-Hant: 專注於內網穿透的高效能反向代理應用
+    ja: イントラネット貫通に特化した高性能リバースプロキシアプリケーション
+    ko: 인트라넷 관통에 중점을 둔 고성능 리버스 프록시 애플리케이션
+    ms: Aplikasi proksi songsang berprestasi tinggi yang memfokuskan penembusan intranet
+    pt-br: Aplicação de proxy reverso de alto desempenho focada em penetração de intranet
+    ru: Высокопроизводительное приложение обратного прокси для проброса во внутреннюю сеть
+    tr: İç ağ erişimine odaklanan yüksek performanslı ters proxy uygulaması
   type: website
   crossVersionUpdate: true
   limit: 0

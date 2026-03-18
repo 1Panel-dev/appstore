@@ -20,6 +20,7 @@ additionalProperties:
     document: https://docs.mattermost.com/guides/boards.html
     description:
         en: An open source, self-hosted alternative to Trello, Notion, and Asana
+        es-es: Un de código abierto, autoalojado alternative to Trello, Notion, and Asana
         zh: Trello、Notion 和 Asana 的开源自托管替代方案
         zh-Hant: Trello、Notion 和 Asana 的開源自託管替代方案
         ja: Trello、Notion、および Asana のオープンソースのセルフホスト型代替手段
@@ -27,5 +28,6 @@ additionalProperties:
         pt-br: Uma alternativa de código aberto e auto-hospedada ao Trello, Notion e Asana
         ru: Открытая альтернатива с самостоятельным хостингом для Trello, Notion и Asana
         ko: Trello, Notion 및 Asana에 대한 오픈 소스 자체 호스팅 대안
+        tr: Trello, Notion ve Asana'ya self-hosted, acik kaynakli alternatif
     architectures:
       - amd64

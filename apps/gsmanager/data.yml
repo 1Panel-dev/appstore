@@ -10,6 +10,17 @@ additionalProperties:
     - Game
   shortDescZh: 新一代游戏服务器管理平台
   shortDescEn: A next-generation game server management platform
+  description:
+    en: A next-generation game server management platform
+    zh: 新一代游戏服务器管理平台
+    es-es: Una plataforma de gestión de servidores de juegos de próxima generación
+    zh-Hant: 新一代遊戲伺服器管理平台
+    ja: 次世代ゲームサーバー管理プラットフォーム
+    ko: 차세대 게임 서버 관리 플랫폼
+    ms: Platform pengurusan pelayan permainan generasi seterusnya
+    pt-br: Uma plataforma de gerenciamento de servidores de jogos de próxima geração
+    ru: Платформа нового поколения для управления игровыми серверами
+    tr: Yeni nesil oyun sunucusu yönetim platformu
   type: website
   crossVersionUpdate: true
   limit: 0

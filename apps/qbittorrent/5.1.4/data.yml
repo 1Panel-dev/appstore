@@ -7,6 +7,7 @@ additionalProperties:
       labelZh: 网页端口
       label:
         en: WebUI Port
+        es-es: Puerto web
         ja: WebUI ポート
         ms: Port WebUI
         pt-br: Porta WebUI
@@ -14,6 +15,7 @@ additionalProperties:
         ko: WebUI 포트
         zh: 网页端口
         zh-Hant: 網頁埠
+        tr: WebUI portu
       required: true
       rule: paramPort
       type: number
@@ -24,6 +26,7 @@ additionalProperties:
       labelZh: 做种端口
       label:
         en: Torrenting port
+        es-es: Puerto de torrents
         ja: トレントポート
         ms: Port Torrenting
         pt-br: Porta de Torrenting
@@ -31,6 +34,7 @@ additionalProperties:
         ko: 토렌트 포트
         zh: 做种端口
         zh-Hant: 做種埠
+        tr: Torrent portu
       required: true
       type: number
     - default: Asia/Shanghai
@@ -40,6 +44,7 @@ additionalProperties:
       labelZh: 时区
       label:
         en: Time zone
+        es-es: Zona horaria
         ja: タイムゾーン
         ms: Zon Masa
         pt-br: Fuso Horário
@@ -47,5 +52,6 @@ additionalProperties:
         ko: 시간대
         zh: 时区
         zh-Hant: 時區
+        tr: Saat Dilimi
       required: true
       type: text

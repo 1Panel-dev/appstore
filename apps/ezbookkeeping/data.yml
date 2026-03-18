@@ -13,6 +13,7 @@ additionalProperties:
   shortDescEn: A lightweight, self-hosted personal finance app
   description:
     en: A lightweight, self-hosted personal finance app
+    es-es: Aplicacion ligera y autoalojada de finanzas personales
     ja: 軽量でセルフホスト型の個人向け家計簿アプリ
     ms: Aplikasi kewangan peribadi yang ringan dan dihoskan sendiri
     pt-br: Um aplicativo de finanças pessoais leve e auto-hospedado

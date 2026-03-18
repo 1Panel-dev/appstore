@@ -9,6 +9,7 @@ additionalProperties:
       type: password
       label:
         en: Cryptographic signing
+        es-es: Firma criptográfica
         ja: 暗号署名
         ms: Tandatangan kriptografi
         pt-br: Assinatura criptográfica
@@ -16,6 +17,7 @@ additionalProperties:
         ko: 암호 서명
         zh-Hant: 加密簽名
         zh: 加密签名
+        tr: Kriptografik İmzalama
     - default: K1ffDfLSIK8SV2PZj6VaxOiv8KuawlJK
       edit: true
       envKey: BOOTSTRAP_TOKEN
@@ -25,6 +27,7 @@ additionalProperties:
       type: password
       label:
         en: Bootstrap token
+        es-es: Token de arranque
         ja: ブートストラップトークン
         ms: Token Bootstrap
         pt-br: Token de inicialização
@@ -32,6 +35,7 @@ additionalProperties:
         ko: 부트 스트랩 토큰
         zh-Hant: 引導令牌
         zh: 认证令牌
+        tr: Bootstrap Tokenı
     - default: "false"
       envKey: DEBUG
       labelEn: Debug mode
@@ -45,6 +49,7 @@ additionalProperties:
           value: "false"
       label:
         en: Debug mode
+        es-es: Modo de depuración
         ja: デバッグモード
         ms: Modus Debug
         pt-br: Modo de depuração
@@ -52,6 +57,7 @@ additionalProperties:
         ko: 디버그 모드
         zh-Hant: 調試模式
         zh: 调试模式
+        tr: Hata Ayıklama Modu
     - default: "ERROR"
       envKey: LOG_LEVEL
       labelEn: Log level
@@ -71,6 +77,7 @@ additionalProperties:
           value: "CRITICAL"
       label:
         en: Log level
+        es-es: Nivel de registro
         ja: ログレベル
         ms: Tahap log
         pt-br: Nível de log
@@ -78,6 +85,7 @@ additionalProperties:
         ko: 로그 레벨
         zh-Hant: 日誌級別
         zh: 日志级别
+        tr: Günlük Seviyesi
     - child:
         default: ""
         envKey: PANEL_DB_HOST
@@ -98,6 +106,7 @@ additionalProperties:
           value: mariadb
       label:
         en: Database Service
+        es-es: Servicio de base de datos
         ja: データベースサービス
         ms: Perkhidmatan Pangkalan Data
         pt-br: Serviço de Banco de Dados
@@ -105,6 +114,7 @@ additionalProperties:
         ko: 데이터베이스 서비스
         zh-hant: 資料庫服務
         zh: 数据库服务
+        tr: Veritabanı Hizmeti
     - default: jumpserver
       envKey: PANEL_DB_NAME
       labelEn: Database
@@ -115,6 +125,7 @@ additionalProperties:
       type: text
       label:
         en: Database
+        es-es: Base de datos
         ja: データベース
         ms: Pangkalan Data
         pt-br: Banco de Dados
@@ -122,6 +133,7 @@ additionalProperties:
         ko: 데이터베이스
         zh-hant: 資料庫
         zh: 数据库
+        tr: Veritabanı
     - default: jumpserver
       envKey: PANEL_DB_USER
       random: true
@@ -132,6 +144,7 @@ additionalProperties:
       labelZh: 数据库用户
       label:
         en: Database User
+        es-es: Usuario de la base de datos
         ja: データベースユーザー
         ms: Pengguna Pangkalan Data
         pt-br: Usuário do Banco de Dados
@@ -139,6 +152,7 @@ additionalProperties:
         ko: 데이터베이스 사용자
         zh-hant: 資料庫用戶
         zh: 数据库用户
+        tr: Veritabanı Kullanıcısı
     - default: jumpserver
       envKey: PANEL_DB_USER_PASSWORD
       labelEn: Database User Password
@@ -148,6 +162,7 @@ additionalProperties:
       type: password
       label:
         en: Database Password
+        es-es: Contraseña de la base de datos
         ja: データベースのパスワード
         ms: Kata Laluan Pangkalan Data
         pt-br: Senha do Banco de Dados
@@ -155,6 +170,7 @@ additionalProperties:
         ko: 데이터베이스 비밀번호
         zh-hant: 資料庫密碼
         zh: 数据库密码
+        tr: Veritabanı Parolası
     - default: ""
       edit: true
       envKey: PANEL_REDIS_HOST
@@ -165,6 +181,7 @@ additionalProperties:
       type: service
       label:
         en: Redis Service
+        es-es: Servicio de Redis
         ja: Redis サービス
         ms: Perkhidmatan Redis
         pt-br: Serviço Redis
@@ -172,6 +189,7 @@ additionalProperties:
         ko: Redis 서비스
         zh-Hant: Redis 服務
         zh: Redis 服务
+        tr: Redis Hizmeti
     - default: ""
       edit: true
       envKey: PANEL_REDIS_ROOT_PASSWORD
@@ -181,6 +199,7 @@ additionalProperties:
       type: password
       label:
         en: Redis service password
+        es-es: Contraseña del servicio Redis
         ja: Redis サービスのパスワード
         ms: Kata laluan perkhidmatan Redis
         pt-br: Senha do serviço Redis
@@ -188,6 +207,7 @@ additionalProperties:
         ko: Redis 서비스 비밀번호
         zh-Hant: Redis 服務密碼
         zh: Redis 服务密码
+        tr: Redis Hizmet Parolası
     - default: 'true'
       edit: true
       envKey: WITH_NGINX
@@ -195,6 +215,7 @@ additionalProperties:
       labelZh: 使用内置的 Nginx 服务
       label:
         en: Use the built-in nginx service
+        es-es: Usar el servicio nginx integrado
         ja: 組み込みの Nginx サービスを使用してください
         ms: Gunakan perkhidmatan Nginx terbina dalam
         pt-br: Use o serviço Nginx incorporado
@@ -202,6 +223,7 @@ additionalProperties:
         ko: 내장된 Nginx 서비스를 사용하세요
         zh-hant: 使用內建的 Nginx 服務
         zh: 使用内置的 Nginx 服务
+        tr: Yerleşik nginx hizmetini kullan
       required: true
       type: select
       values:
@@ -219,13 +241,15 @@ additionalProperties:
       type: number
       label:
         en: HTTP Port
+        es-es: Puerto HTTP
         ja: HTTP ポート
-        ms: HTTP Port
+        ms: Port HTTP
         pt-br: HTTP Porta
         ru: HTTP Порт
         ko: HTTP 포트
         zh-Hant: HTTP 埠
         zh: HTTP 端口
+        tr: HTTP Bağlantı Noktası
     - default: 2222
       edit: true
       envKey: SSH_PORT
@@ -236,6 +260,7 @@ additionalProperties:
       type: number
       label:
         en: SSH Port
+        es-es: Puerto SSH
         ja: SSH ポート
         ms: SSH Port
         pt-br: SSH Porta
@@ -243,6 +268,7 @@ additionalProperties:
         ko: SSH 포트
         zh-Hant: SSH 埠
         zh: SSH 端口
+        tr: SSH Bağlantı Noktası
     - default: ""
       edit: true
       envKey: DOMAINS
@@ -251,6 +277,7 @@ additionalProperties:
       type: text
       label:
         en: DOMAINS
+        es-es: Dominios
         ja: ドメイン
         ms: DOMAIN
         pt-br: DOMÍNIOS
@@ -258,3 +285,4 @@ additionalProperties:
         ko: 도메인
         zh-Hant: 域名
         zh: 域名
+        tr: Alan Adları

@@ -9,6 +9,7 @@ additionalProperties:
           type: number
           label:
             en: HTTP Port
+            es-es: Puerto HTTP
             ja: HTTP ポート
             ms: Port HTTP
             pt-br: Porta HTTP
@@ -25,6 +26,7 @@ additionalProperties:
           type: number
           label:
             en: HTTPS Port
+            es-es: Puerto HTTPS
             ja: HTTPS ポート
             ms: Port HTTPS
             pt-br: Porta HTTPS
@@ -41,6 +43,7 @@ additionalProperties:
           type: text
           label:
             en: Website directory
+            es-es: Directorio del sitio web
             ja: ウェブサイトディレクトリ
             ms: Direktori laman web
             pt-br: Diretório do site
@@ -59,3 +62,4 @@ additionalProperties:
             ru: Директория сайта будет размещена в каталоге установки 1Panel
             ko: 웹사이트 디렉토리는 1Panel 설치 디렉토리에 배치됩니다
             tr: Web sitesi dizini 1Panel kurulum dizini altında yer alacaktır
+            es-es: El directorio del sitio web se ubicara dentro del directorio de instalacion de 1Panel

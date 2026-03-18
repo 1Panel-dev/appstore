@@ -10,6 +10,17 @@ additionalProperties:
     - Security
   shortDescZh: 南墙 WEB 应用防火墙
   shortDescEn: UUSEC Web Application Firewall
+  description:
+    en: UUSEC Web Application Firewall
+    zh: 南墙 WEB 应用防火墙
+    es-es: Firewall de aplicaciones web de UUSEC
+    zh-Hant: UUSEC Web 應用防火牆
+    ja: UUSEC Web アプリケーションファイアウォール
+    ko: UUSEC 웹 애플리케이션 방화벽
+    ms: Tembok api aplikasi web UUSEC
+    pt-br: Firewall de aplicação web UUSEC
+    ru: Межсетевой экран веб-приложений UUSEC
+    tr: UUSEC Web Uygulama Güvenlik Duvarı
   type: website
   crossVersionUpdate: false
   limit: 1

@@ -12,6 +12,7 @@ additionalProperties:
     shortDescEn: High performance web platform based on Nginx and LuaJIT
     description:
         en: Web Platform Based on NGINX and LuaJIT
+        es-es: Plataforma web basada en NGINX y LuaJIT
         ja: NGINX と LuaJIT に基づく Web プラットフォーム
         ms: Platform Web Berdasarkan NGINX dan LuaJIT
         pt-br: Plataforma Web Baseada em NGINX e LuaJIT
@@ -19,6 +20,7 @@ additionalProperties:
         ko: NGINX 및 LuaJIT 기반 웹 플랫폼
         zh-Hant: 基於 NGINX 和 LuaJIT 的 Web 平台
         zh: 基于 NGINX 和 LuaJIT 的 Web 平台
+        tr: NGINX ve LuaJIT tabanli web platformu
     type: runtime
     crossVersionUpdate: true
     limit: 1

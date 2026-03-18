@@ -10,6 +10,17 @@ additionalProperties:
     - Media
   shortDescZh: 一个跨平台的电子书阅读器
   shortDescEn: A cross-platform ebook reader
+  description:
+    en: A cross-platform ebook reader
+    zh: 一个跨平台的电子书阅读器
+    es-es: Un cross-plataforma ebook reader
+    zh-Hant: 跨平台電子書閱讀器
+    ja: クロスプラットフォームの電子書籍リーダー
+    ko: 크로스 플랫폼 전자책 리더
+    ms: Pembaca e-buku merentas platform
+    pt-br: Um leitor de e-books multiplataforma
+    ru: Кроссплатформенная читалка электронных книг
+    tr: Platformlar arası e-kitap okuyucu
   type: website
   crossVersionUpdate: true
   limit: 0

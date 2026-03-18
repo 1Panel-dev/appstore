@@ -5,6 +5,17 @@ additionalProperties:
           envKey: PANEL_APP_PORT_HTTP
           labelEn: HTTP WebUI Port
           labelZh: HTTP 网页端口
+          label:
+            en: HTTP WebUI Port
+            zh: HTTP 网页端口
+            es-es: Puerto web HTTP
+            zh-Hant: HTTP WebUI 埠
+            ja: HTTP WebUI ポート
+            ko: HTTP WebUI 포트
+            ms: Port HTTP WebUI
+            pt-br: Porta HTTP WebUI
+            ru: HTTP порт WebUI
+            tr: HTTP WebUI portu
           required: true
           rule: paramPort
           type: number
@@ -13,6 +24,17 @@ additionalProperties:
           envKey: PANEL_APP_PORT_HTTPS
           labelEn: HTTPS WebUI Port
           labelZh: HTTPS 网页端口
+          label:
+            en: HTTPS WebUI Port
+            zh: HTTPS 网页端口
+            es-es: Puerto web HTTPS
+            zh-Hant: HTTPS WebUI 埠
+            ja: HTTPS WebUI ポート
+            ko: HTTPS WebUI 포트
+            ms: Port HTTPS WebUI
+            pt-br: Porta HTTPS WebUI
+            ru: HTTPS порт WebUI
+            tr: HTTPS WebUI portu
           required: true
           rule: paramPort
           type: number

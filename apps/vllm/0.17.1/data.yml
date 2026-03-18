@@ -10,6 +10,7 @@ additionalProperties:
       type: number
       label:
         en: Port
+        es-es: Puerto
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -17,6 +18,7 @@ additionalProperties:
         zh-Hant: 埠
         zh: 端口
         ko: 포트
+        tr: Bağlantı Noktası
     - default: ""
       edit: true
       envKey: HUGGING_FACE_HUB_TOKEN
@@ -26,6 +28,7 @@ additionalProperties:
       type: text
       label:
         en: Hugging Face Token
+        es-es: Token de Hugging Face
         ja: Hugging Face Token
         ms: Hugging Face Token
         pt-br: Hugging Face Token
@@ -33,6 +36,7 @@ additionalProperties:
         zh-Hant: Hugging Face Token
         zh: Hugging Face Token
         ko: Hugging Face Token
+        tr: Hugging Face Tokenı
     - default: facebook/opt-125m
       edit: true
       envKey: MODEL
@@ -42,6 +46,7 @@ additionalProperties:
       type: text
       label:
         en: Model
+        es-es: Modelo
         ja: モデル
         ms: Model
         pt-br: Modelo
@@ -49,3 +54,4 @@ additionalProperties:
         zh-Hant: 模型
         zh: Model
         ko: 모델
+        tr: Model adi

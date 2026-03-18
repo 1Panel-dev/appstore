@@ -10,6 +10,17 @@ additionalProperties:
     - Tool
   shortDescZh: 一款功能强大无数据库的图床 2.0 版
   shortDescEn: A powerful database-free graph bed version 2.0
+  description:
+    en: A powerful database-free graph bed version 2.0
+    zh: 一款功能强大无数据库的图床 2.0 版
+    es-es: Un powerful base de datos-free graph bed version 2.0
+    zh-Hant: 功能強大的無資料庫圖床 2.0 版本
+    ja: 強力なデータベース不要の画像ホスティング 2.0 版
+    ko: 강력한 데이터베이스 없는 이미지 호스팅 2.0 버전
+    ms: Versi 2.0 hos imej tanpa pangkalan data yang berkuasa
+    pt-br: Versão 2.0 de um poderoso serviço de hospedagem de imagens sem banco de dados
+    ru: Мощная версия 2.0 безбазовой системы хостинга изображений
+    tr: Güçlü, veritabanı gerektirmeyen bir görsel barındırma aracı 2.0 sürümü
   type: website
   crossVersionUpdate: true
   limit: 0

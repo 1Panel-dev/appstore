@@ -10,6 +10,7 @@ additionalProperties:
       type: number
       label:
         en: Port
+        es-es: Puerto
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -17,6 +18,7 @@ additionalProperties:
         ko: 포트
         zh-Hant: 埠
         zh: 端口
+        tr: Bağlantı Noktası
     - default: xyz
       edit: true
       envKey: TYPESENSE_API_KEY
@@ -26,6 +28,7 @@ additionalProperties:
       type: text
       label:
         en: API KEY
+        es-es: Clave API
         ja: APIキー
         ms: KUNCI API
         pt-br: CHAVE DE API
@@ -33,3 +36,4 @@ additionalProperties:
         ko: API 키
         zh-Hant: API 金鑰
         zh: API 密钥
+        tr: API anahtari
