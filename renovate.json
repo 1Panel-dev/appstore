@@ -88,14 +88,6 @@
       "allowedVersions": "/^18.*/"
     },
     {
-      "matchFileNames": ["apps/maxkb/1.*/*.yml"],
-      "allowedVersions": "/^1.*/"
-    },
-    {
-      "matchFileNames": ["apps/maxkb/2.*/*.yml"],
-      "allowedVersions": "/^2.*/"
-    },
-    {
       "matchFileNames": ["apps/elasticsearch/7.*/*.yml"],
       "allowedVersions": "/^7.*/"
     },
