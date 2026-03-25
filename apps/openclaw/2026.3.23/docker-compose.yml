@@ -11,11 +11,9 @@ services:
     volumes:
       - ./data/conf:/home/node/.openclaw
       - ./data/workspace:/home/node/.openclaw/workspace
-      - ./data/caddy/Caddyfile:/etc/caddy/Caddyfile:ro
-      - ./data/caddy/data:/data
       - /etc/localtime:/etc/localtime
     ports:
-      - ${PANEL_APP_PORT_HTTPS}:8443
+      - ${PANEL_APP_PORT_HTTP}:18789
     init: true
     healthcheck:
       test:
