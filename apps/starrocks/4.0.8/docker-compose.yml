@@ -1,6 +1,6 @@
 services:
   starrocks:
-    image: starrocks/allin1-ubuntu:4.0.7
+    image: starrocks/allin1-ubuntu:4.0.8
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
