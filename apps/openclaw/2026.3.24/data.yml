@@ -2,7 +2,7 @@ additionalProperties:
   formFields:
     - default: 18789
       edit: true
-      envKey: PANEL_APP_PORT_HTTPS
+      envKey: PANEL_APP_PORT_HTTP
       labelEn: Web UI Port
       labelZh: Web UI 端口
       required: true
