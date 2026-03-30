@@ -115,8 +115,10 @@ LABEL resty_pcre_options="${RESTY_PCRE_OPTIONS}"
 
 COPY tmp /tmp
 ARG CONTAINER_PACKAGE_URL
-RUN sed -i "s|http://archive.ubuntu.com/ubuntu/|${CONTAINER_PACKAGE_URL}|g" /etc/apt/sources.list \
-    && sed -i "s|http://security.ubuntu.com/ubuntu/|${CONTAINER_PACKAGE_URL}|g" /etc/apt/sources.list 
+RUN if [ -n "${CONTAINER_PACKAGE_URL}" ]; then \
+      sed -i "s|http://archive.ubuntu.com/ubuntu/|${CONTAINER_PACKAGE_URL}|g" /etc/apt/sources.list \
+      && sed -i "s|http://security.ubuntu.com/ubuntu/|${CONTAINER_PACKAGE_URL}|g" /etc/apt/sources.list; \
+    fi
     
 COPY --from=panel-openresty /usr/local/openresty/modules/ngx_brotli /usr/local/openresty/modules/ngx_brotli
 
