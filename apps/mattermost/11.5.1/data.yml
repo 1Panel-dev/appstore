@@ -1,0 +1,218 @@
+additionalProperties:
+  formFields:
+    - default: 40271
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      label:
+        en: Port
+        es-es: Puerto
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh-Hant: 埠
+        zh: 端口
+        tr: Baglanti Noktasi
+      required: true
+      rule: paramPort
+      type: number
+    - default: 40272
+      edit: true
+      envKey: PANEL_APP_PORT_CALLS
+      labelEn: RTC Port
+      labelZh: RTC 服务端口
+      label:
+        en: RTC Port
+        es-es: Puerto RTC
+        ja: RTC ポート
+        ms: Port RTC
+        pt-br: Porta RTC
+        ru: Порт RTC
+        ko: RTC 포트
+        zh-Hant: RTC 服務埠
+        zh: RTC 服务端口
+        tr: RTC Baglanti Noktasi
+      required: true
+      rule: paramPort
+      type: number
+    - default: "false"
+      edit: true
+      envKey: MATTERMOST_CONTAINER_READONLY
+      labelEn: Read Only Container
+      labelZh: 只读容器
+      label:
+        en: Read Only Container
+        es-es: Contenedor de solo lectura
+        ja: 読み取り専用コンテナ
+        ms: Bekas baca sahaja
+        pt-br: Contêiner somente leitura
+        ru: Контейнер только для чтения
+        ko: 읽기 전용 컨테이너
+        zh-Hant: 唯讀容器
+        zh: 只读容器
+        tr: Salt okunur kapsayici
+      required: false
+      type: select
+      values:
+        - label: "True"
+          value: "true"
+        - label: "False"
+          value: "false"
+    - default: "Asia/Shanghai"
+      edit: true
+      envKey: TZ
+      labelEn: Time Zone
+      labelZh: 时区
+      label:
+        en: Time Zone
+        es-es: Zona horaria
+        ja: タイムゾーン
+        ms: Zon waktu
+        pt-br: Fuso horário
+        ru: Часовой пояс
+        ko: 시간대
+        zh-Hant: 時區
+        zh: 时区
+        tr: Saat dilimi
+      required: true
+      type: text
+    - default: "postgres"
+      disabled: true
+      envKey: MM_SQLSETTINGS_DRIVERNAME
+      labelEn: SQL Driver Name
+      labelZh: SQL 驱动名称
+      label:
+        en: SQL Driver Name
+        es-es: Nombre del controlador SQL
+        ja: SQL ドライバー名
+        ms: Nama pemacu SQL
+        pt-br: Nome do driver SQL
+        ru: Имя драйвера SQL
+        ko: SQL 드라이버 이름
+        zh-Hant: SQL 驅動名稱
+        zh: SQL 驱动名称
+        tr: SQL surucu adi
+      required: true
+      type: text
+    - default: "/mattermost/bleve-indexes"
+      disabled: true
+      envKey: MM_BLEVESETTINGS_INDEXDIR
+      labelEn: Bleve Index Directory
+      labelZh: Bleve 索引目录
+      label:
+        en: Bleve Index Directory
+        es-es: Directorio de índices Bleve
+        ja: Bleve インデックスディレクトリ
+        ms: Direktori indeks Bleve
+        pt-br: Diretório de índices Bleve
+        ru: Каталог индексов Bleve
+        ko: Bleve 인덱스 디렉터리
+        zh-Hant: Bleve 索引目錄
+        zh: Bleve 索引目录
+        tr: Bleve indeks dizini
+      required: true
+      type: text
+    - default: "http://localhost:40271"
+      edit: true
+      envKey: MM_SERVICESETTINGS_SITEURL
+      labelEn: Site URL
+      labelZh: 站点 URL
+      label:
+        en: Site URL
+        es-es: URL del sitio
+        ja: サイト URL
+        ms: URL laman
+        pt-br: URL do site
+        ru: URL сайта
+        ko: 사이트 URL
+        zh-Hant: 站點 URL
+        zh: 站点 URL
+        tr: Site URL'si
+      required: true
+      rule: paramExtUrl
+      type: text
+    - default: postgresql
+      envKey: PANEL_DB_TYPE
+      labelEn: Database Service
+      labelZh: 数据库服务
+      label:
+        en: Database Service
+        es-es: Servicio de base de datos
+        ja: データベースサービス
+        ms: Perkhidmatan pangkalan data
+        pt-br: Serviço de banco de dados
+        ru: Служба базы данных
+        ko: 데이터베이스 서비스
+        zh-Hant: 資料庫服務
+        zh: 数据库服务
+        tr: Veritabani hizmeti
+      required: true
+      type: apps
+      child:
+        default: ""
+        envKey: PANEL_DB_HOST
+        required: true
+        type: service
+      values:
+        - label: PostgreSQL
+          value: postgresql
+    - default: mattermost
+      envKey: PANEL_DB_NAME
+      labelEn: Database
+      labelZh: 数据库名
+      label:
+        en: Database
+        es-es: Base de datos
+        ja: データベース
+        ms: Pangkalan data
+        pt-br: Banco de dados
+        ru: База данных
+        ko: 데이터베이스
+        zh-Hant: 資料庫名稱
+        zh: 数据库名
+        tr: Veritabani
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: mattermost
+      envKey: PANEL_DB_USER
+      labelEn: User
+      labelZh: 数据库用户
+      label:
+        en: User
+        es-es: Usuario
+        ja: ユーザー
+        ms: Pengguna
+        pt-br: Usuário
+        ru: Пользователь
+        ko: 사용자
+        zh-Hant: 資料庫使用者
+        zh: 数据库用户
+        tr: Kullanici
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: mattermost
+      envKey: PANEL_DB_USER_PASSWORD
+      labelEn: Password
+      labelZh: 数据库用户密码
+      label:
+        en: Password
+        es-es: Contraseña
+        ja: パスワード
+        ms: Kata laluan
+        pt-br: Senha
+        ru: Пароль
+        ko: 비밀번호
+        zh-Hant: 資料庫使用者密碼
+        zh: 数据库用户密码
+        tr: Parola
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
