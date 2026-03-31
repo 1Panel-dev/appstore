@@ -1,0 +1,31 @@
+name: Kibana
+tags:
+  - 实用工具
+title: 面向 Elasticsearch 的数据分析与可视化平台
+description: 面向 Elasticsearch 的数据分析与可视化平台
+additionalProperties:
+  key: kibana
+  name: Kibana
+  tags:
+    - Tool
+  shortDescZh: 面向 Elasticsearch 的数据分析与可视化平台
+  shortDescEn: Data analytics and visualization platform for Elasticsearch
+  description:
+    en: Data analytics and visualization platform for Elasticsearch
+    es-es: Plataforma de análisis y visualización de datos para Elasticsearch
+    ja: Elasticsearch 向けのデータ分析および可視化プラットフォーム
+    ms: Platform analitik dan visualisasi data untuk Elasticsearch
+    pt-br: Plataforma de análise e visualização de dados para Elasticsearch
+    ru: Платформа анализа и визуализации данных для Elasticsearch
+    ko: Elasticsearch용 데이터 분석 및 시각화 플랫폼
+    zh-Hant: 面向 Elasticsearch 的數據分析與可視化平台
+    zh: 面向 Elasticsearch 的数据分析与可视化平台
+    tr: Elasticsearch icin veri analizi ve gorsellestirme platformu
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  batchInstallSupport: true
+  website: https://www.elastic.co/
+  github: https://github.com/elastic/kibana/
+  document: https://www.elastic.co/docs/
