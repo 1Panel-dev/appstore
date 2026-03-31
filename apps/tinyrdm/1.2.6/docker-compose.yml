@@ -1,6 +1,6 @@
 services:
   dashboard:
-    image: ghcr.io/tiny-craft/tiny-rdm:1.2.6
+    image: ghcr.io/tiny-craft/tiny-rdm:1.2.7
     container_name: ${CONTAINER_NAME}
     restart: always
     user: "0:0"
