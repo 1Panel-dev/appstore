@@ -1,0 +1,35 @@
+name: Netdata
+tags:
+  - 实用工具
+title: 开源实时基础设施监控平台
+description: 开源实时基础设施监控平台
+additionalProperties:
+  key: netdata
+  name: Netdata
+  tags:
+    - Tool
+  shortDescZh: 开源实时基础设施监控平台
+  shortDescEn: Open-source real-time infrastructure monitoring platform
+  description:
+    en: Open-source real-time infrastructure monitoring platform
+    es-es: Plataforma de monitoreo de infraestructura en tiempo real de código abierto
+    ja: オープンソースのリアルタイムインフラ監視プラットフォーム
+    ms: Platform pemantauan infrastruktur masa nyata sumber terbuka
+    pt-br: Plataforma de monitoramento de infraestrutura em tempo real de código aberto
+    ru: Открытая платформа мониторинга инфраструктуры в реальном времени
+    ko: 오픈 소스 실시간 인프라 모니터링 플랫폼
+    zh-Hant: 開源即時基礎設施監控平台
+    zh: 开源实时基础设施监控平台
+    tr: Acik kaynakli gercek zamanli altyapi izleme platformu
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  batchInstallSupport: true
+  website: https://www.netdata.cloud
+  github: https://github.com/netdata/netdata
+  document: https://learn.netdata.cloud/docs/
+  architectures:
+    - amd64
+    - arm64
+    - arm/v7
