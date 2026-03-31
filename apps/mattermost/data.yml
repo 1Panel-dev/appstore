@@ -1,0 +1,30 @@
+name: Mattermost
+tags:
+  - 实用工具
+title: 开源安全团队协作平台
+description: 开源安全团队协作平台
+additionalProperties:
+  key: mattermost
+  name: Mattermost
+  tags:
+    - Tool
+  shortDescZh: 开源安全团队协作平台
+  shortDescEn: Open-source secure team collaboration platform
+  description:
+    en: Open-source secure team collaboration platform
+    es-es: Plataforma de colaboración segura para equipos de código abierto
+    ja: オープンソースのセキュアなチームコラボレーションプラットフォーム
+    ms: Platform kolaborasi pasukan selamat sumber terbuka
+    pt-br: Plataforma de colaboração segura em equipe de código aberto
+    ru: Открытая платформа для безопасной совместной работы команд
+    ko: 오픈 소스 보안 팀 협업 플랫폼
+    zh-Hant: 開源安全團隊協作平台
+    zh: 开源安全团队协作平台
+    tr: Acik kaynakli guvenli ekip is birligi platformu
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://mattermost.com
+  github: https://github.com/mattermost/mattermost
+  document: https://docs.mattermost.com
