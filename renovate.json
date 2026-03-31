@@ -96,6 +96,10 @@
       "allowedVersions": "/^8.*/"
     },
     {
+      "matchFileNames": ["apps/kibana/8.*/*.yml"],
+      "allowedVersions": "/^8.*/"
+    },
+    {
       "matchFileNames": ["apps/tomcat/8.*/*.yml"],
       "allowedVersions": "/^8.*/"
     },
