@@ -1,0 +1,30 @@
+name: CyberChef
+tags:
+  - 实用工具
+title: 浏览器中的数据编码、解码与分析工具
+description: 浏览器中的数据编码、解码与分析工具
+additionalProperties:
+  key: cyberchef
+  name: CyberChef
+  tags:
+    - Tool
+  shortDescZh: 浏览器中的数据编码、解码与分析工具
+  shortDescEn: Browser-based toolbox for encoding, decoding and data analysis
+  description:
+    en: Browser-based toolbox for encoding, decoding and data analysis
+    es-es: Caja de herramientas en el navegador para codificacion, decodificacion y analisis de datos
+    zh: 浏览器中的数据编码、解码与分析工具
+    zh-Hant: 瀏覽器中的資料編碼、解碼與分析工具
+    ja: ブラウザで使えるデータのエンコード、デコード、解析ツール
+    ko: 브라우저 기반 데이터 인코딩, 디코딩 및 분석 도구
+    ru: Набор инструментов в браузере для кодирования, декодирования и анализа данных
+    ms: Kotak alat berasaskan pelayar untuk pengekodan, penyahkodan dan analisis data
+    pt-br: Caixa de ferramentas no navegador para codificacao, decodificacao e analise de dados
+    tr: Tarayici tabanli kodlama, kod cozumleme ve veri analizi araci
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://gchq.github.io/CyberChef/
+  github: https://github.com/gchq/CyberChef
+  document: https://github.com/gchq/CyberChef/wiki
