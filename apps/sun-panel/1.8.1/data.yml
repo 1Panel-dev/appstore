@@ -1,0 +1,21 @@
+additionalProperties:
+  formFields:
+    - default: 3002
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      label:
+        en: Port
+        es-es: Puerto
+        zh: 端口
+        zh-Hant: 連接埠
+        ja: ポート
+        ko: 포트
+        ru: Порт
+        ms: Port
+        pt-br: Porta
+        tr: Baglanti noktasi
+      required: true
+      rule: paramPort
+      type: number
