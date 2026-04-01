@@ -1,0 +1,30 @@
+name: Music Tag Web
+tags:
+  - 多媒体
+title: 适用于远程与 NAS 音乐库的 Web 音乐标签编辑器
+description: 适用于远程与 NAS 音乐库的 Web 音乐标签编辑器
+additionalProperties:
+  key: music-tag-web
+  name: Music Tag Web
+  tags:
+    - Media
+  shortDescZh: 适用于远程与 NAS 音乐库的 Web 音乐标签编辑器
+  shortDescEn: Web-based music tag editor for remote and NAS music libraries
+  description:
+    en: Web-based music tag editor for remote and NAS music libraries
+    es-es: Editor web de etiquetas musicales para bibliotecas remotas y NAS
+    zh: 适用于远程与 NAS 音乐库的 Web 音乐标签编辑器
+    zh-Hant: 適用於遠端與 NAS 音樂庫的 Web 音樂標籤編輯器
+    ja: リモートや NAS の音楽ライブラリ向け Web ベースの音楽タグエディタ
+    ko: 원격 및 NAS 음악 라이브러리를 위한 웹 기반 음악 태그 편집기
+    ru: Веб-редактор музыкальных тегов для удаленных и NAS-библиотек
+    ms: Penyunting tag muzik berasaskan web untuk pustaka muzik jauh dan NAS
+    pt-br: Editor web de tags musicais para bibliotecas remotas e NAS
+    tr: Uzak ve NAS muzik kutuphaneleri icin web tabanli muzik etiket duzenleyici
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://xiers-organization.gitbook.io/music-tag-web-v2
+  github: https://github.com/xhongc/music-tag-web
+  document: https://xiers-organization.gitbook.io/music-tag-web/
