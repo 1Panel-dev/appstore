@@ -1,0 +1,30 @@
+name: Sun-Panel
+tags:
+  - 实用工具
+title: 一个服务器、NAS 导航面板、首页与浏览器起始页
+description: 一个服务器、NAS 导航面板、首页与浏览器起始页
+additionalProperties:
+  key: sun-panel
+  name: Sun-Panel
+  tags:
+    - Tool
+  shortDescZh: 一个服务器、NAS 导航面板、首页与浏览器起始页
+  shortDescEn: Server and NAS dashboard, homepage and browser start page
+  description:
+    en: Server and NAS dashboard, homepage and browser start page
+    es-es: Panel para servidor y NAS, homepage y pagina de inicio del navegador
+    zh: 一个服务器、NAS 导航面板、首页与浏览器起始页
+    zh-Hant: 一個伺服器、NAS 導航面板、首頁與瀏覽器起始頁
+    ja: サーバーや NAS 向けのナビゲーションパネル、ホームページ、ブラウザのスタートページ
+    ko: 서버와 NAS용 내비게이션 패널, 홈페이지 및 브라우저 시작 페이지
+    ru: Панель навигации для сервера и NAS, домашняя страница и стартовая страница браузера
+    ms: Panel pelayan dan NAS, homepage dan halaman mula pelayar
+    pt-br: Painel para servidor e NAS, homepage e pagina inicial do navegador
+    tr: Sunucu ve NAS icin pano, ana sayfa ve tarayici baslangic sayfasi
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://doc.sun-panel.top/
+  github: https://github.com/hslr-s/sun-panel
+  document: http://doc.sun-panel.top/
