@@ -1,0 +1,35 @@
+name: linker
+tags:
+    - Tool
+title: 极具特色的，P2P打洞(UDP+TCP、IPV4+IPV6) + 服务器转发，实现的异地组网、内网穿透
+description: 极具特色的，P2P打洞(UDP+TCP、IPV4+IPV6) + 服务器转发，实现的异地组网、内网穿透
+additionalProperties:
+    key: linker
+    name: linker
+    tags:
+        - Tool
+    shortDescZh: 极具特色的，P2P打洞(UDP+TCP、IPV4+IPV6) + 服务器转发，实现的异地组网、内网穿透
+    shortDescEn: The highly distinctive feature is the implementation of P2P hole punching (UDP+TCP, IPv4+IPv6) combined with server forwarding, enabling remote networking and intranet penetration.
+    type: website
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    batchInstallSupport: true
+    website: https://linker.snltty.com/
+    github: https://github.com/snltty/linker
+    document: https://linker-doc.snltty.com/
+    description:
+        en: The highly distinctive feature is the implementation of P2P hole punching (UDP+TCP, IPv4+IPv6) combined with server forwarding, enabling remote networking and intranet penetration.
+        es-es: La característica más distintiva es la implementación de agujereo P2P (UDP+TCP, IPv4+IPv6) combinado con reenvío por servidor, permitiendo redes remotas y penetración de intranet.
+        zh: 极具特色的，P2P打洞(UDP+TCP、IPV4+IPV6) + 服务器转发，实现的异地组网、内网穿透
+        zh-Hant: 极具特色的，P2P打洞(UDP+TCP、IPV4+IPV6) + 伺服器轉發，實現的異地組網、內網穿透
+        ja: 非常に特徴的な、P2Pホールパンチング（UDP+TCP、IPv4+IPv6）+サーバーリレーによるリモートネットワーキング、イントラネット透過
+        ms: Ciri yang sangat tersendiri ialah pelaksanaan lubang P2P (UDP+TCP, IPv4+IPv6) digabungkan dengan pemajuan pelayan, membolehkan rangkaian jarak jauh dan penembusan intranet.
+        pt-br: A característica mais distintiva é a implementação de furo P2P (UDP+TCP, IPv4+IPv6) combinado com encaminhamento por servidor, permitindo redes remotas e penetração de intranet.
+        ru: Отличительной особенностью является реализация P2P-пробоя (UDP+TCP, IPv4+IPv6) в сочетании с серверной пересылкой, обеспечивающая удаленное объединение сетей и проникновение в интранет.
+        ko: 매우 독특한 특징은 P2P 홀 펀칭(UDP+TCP, IPv4+IPv6)과 서버 포워딩을 결합하여 원격 네트워킹 및 내부망 침투를 구현하는 것입니다.
+        tr: Oldukça ayırt edici özellik, sunucu yönlendirmesiyle birleştirilmiş P2P delik açma (UDP+TCP, IPv4+IPv6) ile uzak ağ oluşturma ve intranet geçişinin uygulanmasıdır.
+    architectures:
+      - amd64
+      - arm/v7
+      - arm64

@@ -1,0 +1,41 @@
+additionalProperties:
+  formFields:
+    - default: 1804
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Client Port
+      labelZh: 前端端口
+      label:
+        en: Port
+        es-es: Puerto
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh: 前端端口
+        zh-Hant: 埠
+        tr: Bağlantı Noktası
+      required: true
+      rule: paramPort
+      type: number
+
+    - default: 1802
+      edit: true
+      envKey: PANEL_APP_PORT_SERVICE
+      labelEn: Server Port
+      labelZh: 服务端端口
+      label:
+        en: Server Port
+        es-es: Puerto
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh: 服务端端口
+        zh-Hant: 埠
+        tr: Bağlantı Noktası
+      required: true
+      rule: paramPort
+      type: number
