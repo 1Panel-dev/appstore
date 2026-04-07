@@ -13,7 +13,7 @@ services:
       - DEFAULT_ADMIN_PASSWORD=${DEFAULT_ADMIN_PASSWORD}
       - DEFAULT_ADMIN_EMAIL=${DEFAULT_ADMIN_EMAIL}
 
-      # - TRUST_PROXY=0
+      # - TRUST_PROXY=false
       # - TOKEN_EXPIRES_IN=365 # In days
 
       # related: https://github.com/knex/knex/issues/2354
@@ -25,7 +25,6 @@ services:
       # - KNEX_REJECT_UNAUTHORIZED_SSL_CERTIFICATE=false
 
       # - SHOW_DETAILED_AUTH_ERRORS=false # Set to true to show more detailed authentication error messages. It should not be enabled without a rate limiter for security reasons.
-      # - ALLOW_ALL_TO_CREATE_PROJECTS=true
 
       # - S3_ENDPOINT=
       # - S3_REGION=
@@ -71,14 +70,6 @@ services:
       #     "excludedEvents": ["notificationCreate", "notificationUpdate"]
       #   }]
 
-      # - SLACK_BOT_TOKEN=
-      # - SLACK_CHANNEL_ID=
-
-      # - GOOGLE_CHAT_WEBHOOK_URL=
-
-      # - TELEGRAM_BOT_TOKEN=
-      # - TELEGRAM_CHAT_ID=
-      # - TELEGRAM_THREAD_ID=
     restart: always
     networks:
       - 1panel-network
