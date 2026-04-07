@@ -83,9 +83,7 @@ services:
     networks:
       - 1panel-network
     volumes:
-      - ./data/user-avatars:/app/public/user-avatars
-      - ./data/project-background-images:/app/public/project-background-images
-      - ./data/attachments:/app/private/attachments
+      - ./data:/app/data
     ports:
       - "${PANEL_APP_PORT_HTTP}:1337"
     labels:
