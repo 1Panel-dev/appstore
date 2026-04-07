@@ -1,6 +1,6 @@
 services:
   docker-registry:
-    image: registry:3.0.0
+    image: registry:3.1.0
     restart: always
     container_name: ${CONTAINER_NAME}
     ports:
