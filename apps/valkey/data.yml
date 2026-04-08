@@ -1,0 +1,31 @@
+name: Valkey
+tags:
+    - 数据库
+title: 高性能开源数据结构服务器
+description: 高性能开源数据结构服务器
+additionalProperties:
+    key: valkey
+    name: Valkey
+    tags:
+      - Database
+    shortDescZh: 高性能开源数据结构服务器
+    shortDescEn: High-performance open-source data structure server
+    description:
+        en: High-performance open-source data structure server
+        es-es: Servidor de estructuras de datos de codigo abierto y alto rendimiento
+        ja: 高性能なオープンソースのデータ構造サーバー
+        ms: Pelayan struktur data sumber terbuka berprestasi tinggi
+        pt-br: Servidor de estruturas de dados de codigo aberto e alto desempenho
+        ru: Высокопроизводительный сервер структур данных с открытым исходным кодом
+        ko: 고성능 오픈 소스 데이터 구조 서버
+        zh-hant: 高效能開源資料結構伺服器
+        zh: 高性能开源数据结构服务器
+        tr: Yuksek performansli acik kaynak veri yapisi sunucusu
+    type: runtime
+    crossVersionUpdate: false
+    limit: 0
+    recommend: 0
+    batchInstallSupport: true
+    website: https://valkey.io/
+    github: https://github.com/valkey-io/valkey
+    document: https://valkey.io/docs/

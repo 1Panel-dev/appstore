@@ -1,0 +1,39 @@
+additionalProperties:
+  formFields:
+    - default: valkey
+      envKey: PANEL_VALKEY_ROOT_PASSWORD
+      labelEn: Database Password
+      labelZh: 数据库密码
+      label:
+        en: Database Password
+        es-es: Contrasena de la base de datos
+        ja: データベースパスワード
+        ms: Kata Laluan Pangkalan Data
+        pt-br: Senha do Banco de Dados
+        ru: Пароль базы данных
+        ko: 데이터베이스 비밀번호
+        zh-Hant: 資料庫密碼
+        zh: 数据库密码
+        tr: Veritabani Parolasi
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+    - default: 6379
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      label:
+        en: Port
+        es-es: Puerto
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh-Hant: 埠
+        zh: 端口
+        tr: Baglanti Noktasi
+      required: true
+      rule: paramPort
+      type: number
