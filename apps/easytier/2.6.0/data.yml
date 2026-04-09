@@ -1,0 +1,74 @@
+additionalProperties:
+  formFields:
+    - default: "true"
+      disabled: true
+      envKey: PRIVILEGED_MODE
+      labelEn: Privilege mode switch
+      labelZh: 特权模式开关
+      label:
+        en: Privilege mode switch
+        es-es: Interruptor del modo privilegiado
+        ja: 特権モードスイッチ
+        ms: Suis mod istimewa
+        pt-br: Interruptor do modo privilegiado
+        ru: Переключатель привилегированного режима
+        ko: 권한 모드 스위치
+        zh-Hant: 特權模式開關
+        zh: 特权模式开关
+        tr: Ayricalikli mod anahtari
+      required: true
+      type: text
+    - default: "easytier"
+      edit: true
+      envKey: HOSTNAME
+      labelEn: Hostname
+      labelZh: 主机名
+      label:
+        en: Hostname
+        es-es: Nombre del host
+        ja: ホスト名
+        ms: Nama hos
+        pt-br: Nome do host
+        ru: Имя хоста
+        ko: 호스트 이름
+        zh-Hant: 主機名稱
+        zh: 主机名
+        tr: Ana bilgisayar adi
+      required: true
+      type: text
+    - default: "-c /root/config.toml"
+      disabled: true
+      envKey: COMMAND
+      labelEn: Command
+      labelZh: 命令
+      label:
+        en: Command
+        es-es: Comando
+        ja: コマンド
+        ms: Arahan
+        pt-br: Comando
+        ru: Команда
+        ko: 명령
+        zh-Hant: 命令
+        zh: 命令
+        tr: Komut
+      required: true
+      type: text
+    - default: "Asia/Shanghai"
+      edit: true
+      envKey: TIME_ZONE
+      labelEn: Time Zone
+      labelZh: 时区
+      label:
+        en: Time Zone
+        es-es: Zona horaria
+        ja: タイムゾーン
+        ms: Zon masa
+        pt-br: Fuso horario
+        ru: Часовой пояс
+        ko: 시간대
+        zh-Hant: 時區
+        zh: 时区
+        tr: Saat dilimi
+      required: true
+      type: text
