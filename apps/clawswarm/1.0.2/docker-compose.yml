@@ -1,7 +1,7 @@
 services:
   clawswarm:
     container_name: ${CONTAINER_NAME}
-    image: 1panel/clawswarm:v1.0.2
+    image: 1panel/clawswarm:v1.0.3
     restart: always
     networks:
       - 1panel-network
