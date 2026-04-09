@@ -1,0 +1,34 @@
+name: ClawSwarm
+tags:
+  - AI
+title: 面向 OpenClaw 的开源群体智能协作编排系统
+description: 面向 OpenClaw 的开源群体智能协作编排系统
+additionalProperties:
+  key: clawswarm
+  name: ClawSwarm
+  tags:
+    - AI
+  shortDescZh: 面向 OpenClaw 的开源群体智能协作编排系统
+  shortDescEn: An open-source swarm orchestration system for OpenClaw agents
+  description:
+    en: An open-source swarm orchestration system for OpenClaw agents
+    es-es: Un sistema open-source de orquestacion de enjambre para agentes OpenClaw
+    ja: OpenClawエージェント向けのオープンソース群知能オーケストレーションシステム
+    ms: Sistem orkestrasi swarm sumber terbuka untuk ejen OpenClaw
+    pt-br: Um sistema de orquestracao em swarm de codigo aberto para agentes OpenClaw
+    ru: Открытая система оркестрации роевого взаимодействия для агентов OpenClaw
+    ko: OpenClaw 에이전트를 위한 오픈 소스 스웜 오케스트레이션 시스템
+    zh-Hant: 面向 OpenClaw 的開源群體智能協作編排系統
+    zh: 面向 OpenClaw 的开源群体智能协作编排系统
+    tr: OpenClaw ajanlari icin acik kaynakli swarm orkestrasyon sistemi
+  type: website
+  crossVersionUpdate: false
+  limit: 0
+  recommend: 15
+  batchInstallSupport: true
+  website: https://github.com/1Panel-dev/ClawSwarm
+  github: https://github.com/1Panel-dev/ClawSwarm
+  document: https://github.com/1Panel-dev/ClawSwarm
+  architectures:
+    - amd64
+    - arm64
