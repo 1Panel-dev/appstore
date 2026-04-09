@@ -194,6 +194,22 @@
     {
       "matchFileNames": ["apps/umami/3.*/*.yml"],
       "allowedVersions": "/^3.*/"
+    },
+    {
+      "matchFileNames": ["apps/valkey/9.0.*/*.yml"],
+      "allowedVersions": "/^9.0.*/"
+    },
+    {
+      "matchFileNames": ["apps/valkey/8.1.*/*.yml"],
+      "allowedVersions": "/^8.1.*/"
+    },
+    {
+      "matchFileNames": ["apps/valkey/8.0.*/*.yml"],
+      "allowedVersions": "/^8.0.*/"
+    },
+    {
+      "matchFileNames": ["apps/valkey/7.2.*/*.yml"],
+      "allowedVersions": "/^7.2.*/"
     }
   ],
   "prCreation": "immediate"
