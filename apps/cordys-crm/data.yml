@@ -24,7 +24,7 @@ additionalProperties:
     type: website
     crossVersionUpdate: false
     limit: 0
-    recommend: 15
+    recommend: 54
     batchInstallSupport: true
     website: https://github.com/1Panel-dev/CordysCRM
     github: https://github.com/1Panel-dev/CordysCRM
