@@ -5,7 +5,7 @@ additionalProperties:
         envKey: PANEL_DB_HOST
         required: true
         type: service
-      default: mysql
+      default: postgresql
       edit: true
       envKey: PANEL_DB_TYPE
       labelZh: 数据库 服务
@@ -24,12 +24,8 @@ additionalProperties:
       required: true
       type: apps
       values:
-        - label: MySQL
-          value: mysql
         - label: PostgreSQL
           value: postgresql
-        - label: MariaDB
-          value: mariadb
     - default: nocodb
       envKey: PANEL_DB_NAME
       labelEn: Database
