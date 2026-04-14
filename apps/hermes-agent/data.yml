@@ -1,0 +1,35 @@
+name: Hermes Agent
+tags:
+  - AI
+title: Nous Research 开源的自托管 AI 智能体
+description: Nous Research 开源的自托管 AI 智能体
+additionalProperties:
+  key: hermes-agent
+  name: Hermes Agent
+  type: tool
+  tags:
+    - AI
+  shortDescZh: Nous Research 开源的自托管 AI 智能体
+  shortDescEn: A self-hosted AI agent by Nous Research
+  description:
+    en: A self-hosted AI agent by Nous Research
+    es-es: Un agente de IA autoalojado de Nous Research
+    ja: Nous Research によるセルフホスト型 AI エージェント
+    ms: Ejen AI hos sendiri oleh Nous Research
+    pt-br: Um agente de IA auto-hospedado da Nous Research
+    ru: Самостоятельно размещаемый ИИ-агент от Nous Research
+    ko: Nous Research의 셀프 호스팅 AI 에이전트
+    zh-Hant: Nous Research 開源的自託管 AI 智能體
+    zh: Nous Research 开源的自托管 AI 智能体
+    tr: Nous Research tarafindan gelistirilen self-hosted yapay zeka ajani
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 15
+  batchInstallSupport: true
+  version: 2.0
+  website: https://hermes-agent.nousresearch.com/docs/
+  github: https://github.com/NousResearch/hermes-agent
+  document: https://hermes-agent.nousresearch.com/docs/
+  architectures:
+    - amd64
+    - arm64

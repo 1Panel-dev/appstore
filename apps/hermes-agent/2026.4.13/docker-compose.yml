@@ -1,0 +1,30 @@
+services:
+  hermes-agent:
+    container_name: ${CONTAINER_NAME}
+    image: nousresearch/hermes-agent:2026.4.13
+    restart: unless-stopped
+    networks:
+      - 1panel-network
+    environment:
+      HOME: /opt/data/home
+      HERMES_HOME: /opt/data
+      TERM: xterm-256color
+    volumes:
+      - ./data:/opt/data
+      - /etc/localtime:/etc/localtime
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:9119
+    command:
+      - web
+      - --host
+      - 0.0.0.0
+      - --port
+      - "9119"
+      - --no-open
+    init: true
+    labels:
+      createdBy: "Apps"
+
+networks:
+  1panel-network:
+    external: true

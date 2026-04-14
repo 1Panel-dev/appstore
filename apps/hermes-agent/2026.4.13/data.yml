@@ -1,0 +1,21 @@
+additionalProperties:
+  formFields:
+    - default: 9119
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Web UI Port
+      labelZh: Web UI 端口
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        en: Web UI Port
+        es-es: Puerto web
+        ja: Web UIポート
+        ms: Port Web UI
+        pt-br: Porta da Web UI
+        ru: Порт веб-интерфейса
+        ko: 웹 UI 포트
+        zh-Hant: Web UI 埠
+        zh: Web UI 端口
+        tr: Web UI Bağlantı Noktası
