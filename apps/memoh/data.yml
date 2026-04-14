@@ -1,0 +1,34 @@
+name: Memoh
+tags:
+ - AI
+title: 常驻运行的多成员长记忆容器化 AI Agent 平台
+description: 常驻运行的多成员长记忆容器化 AI Agent 平台
+additionalProperties:
+ key: memoh
+ name: Memoh
+ tags:
+ - AI
+ shortDescZh: 常驻运行的多成员、结构化长记忆、容器化 AI Agent 平台
+ shortDescEn: Always-on multi-member, structured long-memory AI agent platform
+ description:
+  en: Always-on, multi-member, structured long-memory, containerized AI agent platform
+  es-es: Plataforma de agentes de IA en contenedores con memoria estructurada de largo plazo
+  ja: 構造化された長期記憶を備えたマルチメンバーのコンテナ化 AI エージェントプラットフォーム
+  ms: Platform ejen AI berasaskan kontena untuk berbilang ahli dengan memori jangka panjang berstruktur
+  pt-br: Plataforma de agentes de IA em contêineres com memória estruturada de longo prazo para múltiplos membros
+  ru: Контейнерная платформа ИИ-агентов для нескольких участников со структурированной долговременной памятью
+  ko: 구조화된 장기 기억을 갖춘 멀티멤버 컨테이너형 AI 에이전트 플랫폼
+  zh-hant: 常駐運行的多成員、結構化長記憶、容器化 AI Agent 平台
+  zh: 常驻运行的多成员、结构化长记忆、容器化 AI Agent 平台
+  tr: Yapılandırılmış uzun süreli belleğe sahip çok üyeli konteyner tabanlı yapay zeka ajan platformu
+ type: tool
+ crossVersionUpdate: false
+ limit: 0
+ batchInstallSupport: false
+ website: https://memoh.ai
+ github: https://github.com/memohai/Memoh
+ document: https://docs.memoh.ai
+ memoryRequired: 4096
+ architectures:
+ - amd64
+ - arm64

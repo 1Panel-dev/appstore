@@ -1,0 +1,165 @@
+additionalProperties:
+ formFields:
+ - default: 8082
+   envKey: PANEL_APP_PORT_HTTP
+   labelEn: Web UI Port
+   labelZh: Web UI 端口
+   required: true
+   rule: paramPort
+   type: number
+   label:
+    en: Web UI Port
+    es-es: Puerto de Web UI
+    ja: Web UI ポート
+    ms: Port Web UI
+    pt-br: Porta da Web UI
+    ru: Порт Web UI
+    ko: Web UI 포트
+    zh-Hant: Web UI 埠
+    zh: Web UI 端口
+    tr: Web UI Bağlantı Noktası
+ - default: 8080
+   envKey: PANEL_APP_PORT_API
+   labelEn: API Port
+   labelZh: API 端口
+   required: true
+   rule: paramPort
+   type: number
+   label:
+    en: API Port
+    es-es: Puerto de API
+    ja: API ポート
+    ms: Port API
+    pt-br: Porta da API
+    ru: Порт API
+    ko: API 포트
+    zh-Hant: API 埠
+    zh: API 端口
+    tr: API Bağlantı Noktası
+ - default: admin
+   envKey: MEMOH_ADMIN_USERNAME
+   labelEn: Admin Username
+   labelZh: 管理员用户名
+   required: true
+   rule: paramCommon
+   type: text
+   label:
+    en: Admin Username
+    es-es: Usuario administrador
+    ja: 管理者ユーザー名
+    ms: Nama pengguna pentadbir
+    pt-br: Usuário administrador
+    ru: Имя администратора
+    ko: 관리자 사용자명
+    zh-Hant: 管理員使用者名稱
+    zh: 管理员用户名
+    tr: Yönetici Kullanıcı Adı
+ - default: memoh-admin
+   envKey: MEMOH_ADMIN_PASSWORD
+   labelEn: Admin Password
+   labelZh: 管理员密码
+   random: true
+   required: true
+   rule: paramComplexity
+   type: password
+   label:
+    en: Admin Password
+    es-es: Contraseña del administrador
+    ja: 管理者パスワード
+    ms: Kata laluan pentadbir
+    pt-br: Senha do administrador
+    ru: Пароль администратора
+    ko: 관리자 비밀번호
+    zh-Hant: 管理員密碼
+    zh: 管理员密码
+    tr: Yönetici Parolası
+ - default: admin@memoh.local
+   envKey: MEMOH_ADMIN_EMAIL
+   labelEn: Admin Email
+   labelZh: 管理员邮箱
+   required: true
+   type: text
+   label:
+    en: Admin Email
+    es-es: Correo del administrador
+    ja: 管理者メールアドレス
+    ms: E-mel pentadbir
+    pt-br: E-mail do administrador
+    ru: Email администратора
+    ko: 관리자 이메일
+    zh-Hant: 管理員郵箱
+    zh: 管理员邮箱
+    tr: Yönetici E-postası
+ - default: memoh-db
+   envKey: POSTGRES_PASSWORD
+   labelEn: PostgreSQL Password
+   labelZh: PostgreSQL 密码
+   random: true
+   required: true
+   rule: paramComplexity
+   type: password
+   label:
+    en: PostgreSQL Password
+    es-es: Contraseña de PostgreSQL
+    ja: PostgreSQL パスワード
+    ms: Kata laluan PostgreSQL
+    pt-br: Senha do PostgreSQL
+    ru: Пароль PostgreSQL
+    ko: PostgreSQL 비밀번호
+    zh-Hant: PostgreSQL 密碼
+    zh: PostgreSQL 密码
+    tr: PostgreSQL Parolası
+ - default: memoh-jwt
+   envKey: MEMOH_JWT_SECRET
+   labelEn: JWT Secret
+   labelZh: JWT 密钥
+   random: true
+   required: true
+   rule: paramComplexity
+   type: password
+   label:
+    en: JWT Secret
+    es-es: Secreto JWT
+    ja: JWT シークレット
+    ms: Rahsia JWT
+    pt-br: Segredo JWT
+    ru: JWT секрет
+    ko: JWT 비밀키
+    zh-Hant: JWT 密鑰
+    zh: JWT 密钥
+    tr: JWT Gizli Anahtarı
+ - default: Asia/Shanghai
+   envKey: MEMOH_TIMEZONE
+   labelEn: Timezone
+   labelZh: 时区
+   required: true
+   type: text
+   label:
+    en: Timezone
+    es-es: Zona horaria
+    ja: タイムゾーン
+    ms: Zon masa
+    pt-br: Fuso horário
+    ru: Часовой пояс
+    ko: 시간대
+    zh-Hant: 時區
+    zh: 时区
+    tr: Saat Dilimi
+ - default: "docker.1ms.run"
+   envKey: MEMOH_WORKSPACE_REGISTRY
+   labelEn: Workspace Registry
+   labelZh: Workspace 镜像仓库
+   edit: true
+   required: false
+   type: text
+   label:
+    en: Workspace Registry
+    es-es: Registro de workspace
+    ja: Workspace レジストリ
+    ms: Registry workspace
+    pt-br: Registro do workspace
+    ru: Реестр workspace
+    ko: Workspace 레지스트리
+    zh-Hant: Workspace 鏡像倉庫
+    zh: Workspace 镜像仓库
+    tr: Workspace Registry

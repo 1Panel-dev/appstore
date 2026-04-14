@@ -1,0 +1,118 @@
+services:
+  postgres:
+    image: postgres:18-alpine
+    container_name: ${CONTAINER_NAME}-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: memoh
+      POSTGRES_USER: memoh
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+      - /etc/localtime:/etc/localtime:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U memoh"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - 1panel-network
+    labels:
+      createdBy: "Apps"
+
+  migrate:
+    image: memohai/server:0.6.3
+    container_name: ${CONTAINER_NAME}-migrate
+    entrypoint: ["/app/memoh-server", "migrate", "up"]
+    restart: "no"
+    volumes:
+      - ./data/config.toml:/app/config.toml:ro
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - 1panel-network
+    labels:
+      createdBy: "Apps"
+
+  server:
+    image: memohai/server:0.6.3
+    container_name: ${CONTAINER_NAME}-server
+    privileged: true
+    pid: host
+    restart: unless-stopped
+    volumes:
+      - ./data/config.toml:/app/config.toml:ro
+      - ./data/containerd:/var/lib/containerd
+      - ./data/cni:/var/lib/cni
+      - ./data/memoh:/opt/memoh/data
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - ${PANEL_APP_PORT_API}:8080
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    networks:
+      1panel-network:
+        aliases:
+          - memoh-server
+    labels:
+      createdBy: "Apps"
+
+  web:
+    image: memohai/web:0.6.3
+    container_name: ${CONTAINER_NAME}-web
+    restart: unless-stopped
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8082
+    depends_on:
+      - server
+    networks:
+      - 1panel-network
+    labels:
+      createdBy: "Apps"
+
+  qdrant:
+    image: qdrant/qdrant:v1.17
+    container_name: ${CONTAINER_NAME}-qdrant
+    restart: unless-stopped
+    volumes:
+      - ./data/qdrant:/qdrant/storage
+      - /etc/localtime:/etc/localtime:ro
+    networks:
+      - 1panel-network
+    labels:
+      createdBy: "Apps"
+
+  sparse:
+    image: memohai/sparse:0.6.3
+    container_name: ${CONTAINER_NAME}-sparse
+    restart: unless-stopped
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    depends_on:
+      - qdrant
+    networks:
+      - 1panel-network
+    labels:
+      createdBy: "Apps"
+
+  browser:
+    image: memohai/browser:0.6.3
+    container_name: ${CONTAINER_NAME}-browser
+    restart: unless-stopped
+    environment:
+      BROWSER_CORES: chromium,firefox
+    volumes:
+      - ./data/config.toml:/config.toml:ro
+      - /etc/localtime:/etc/localtime:ro
+    depends_on:
+      - server
+    networks:
+      - 1panel-network
+    labels:
+      createdBy: "Apps"
+
+networks:
+  1panel-network:
+    external: true
