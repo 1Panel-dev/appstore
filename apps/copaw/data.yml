@@ -1,11 +1,11 @@
-name: CoPaw
+name: QwenPaw
 tags:
   - AI
 title: 阿里开源的 AI 个人助理
 description: 阿里开源的 AI 个人助理
 additionalProperties:
   key: copaw
-  name: CoPaw
+  name: QwenPaw
   tags:
     - AI
   shortDescZh: 阿里开源的 AI 个人助理
@@ -26,9 +26,9 @@ additionalProperties:
   limit: 0
   recommend: 16
   batchInstallSupport: true
-  website: http://copaw.agentscope.io/
-  github: https://github.com/agentscope-ai/copaw
-  document: https://copaw.agentscope.io/docs/intro
+  website: https://qwenpaw.agentscope.io/
+  github: https://github.com/agentscope-ai/QwenPaw
+  document: https://qwenpaw.agentscope.io/docs/intro/
   architectures:
     - amd64
     - arm64
