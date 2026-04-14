@@ -6,7 +6,7 @@ description: Nous Research 开源的自托管 AI 智能体
 additionalProperties:
   key: hermes-agent
   name: Hermes Agent
-  type: tool
+  type: website
   tags:
     - AI
   shortDescZh: Nous Research 开源的自托管 AI 智能体
@@ -24,7 +24,7 @@ additionalProperties:
     tr: Nous Research tarafindan gelistirilen self-hosted yapay zeka ajani
   crossVersionUpdate: true
   limit: 0
-  recommend: 15
+  recommend: 13
   batchInstallSupport: true
   version: 2.0
   website: https://hermes-agent.nousresearch.com/docs/
