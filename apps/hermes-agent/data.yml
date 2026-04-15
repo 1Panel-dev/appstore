@@ -26,7 +26,6 @@ additionalProperties:
   limit: 0
   recommend: 13
   batchInstallSupport: true
-  version: 2.0
   website: https://hermes-agent.nousresearch.com/docs/
   github: https://github.com/NousResearch/hermes-agent
   document: https://hermes-agent.nousresearch.com/docs/
