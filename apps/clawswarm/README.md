@@ -2,6 +2,10 @@
 
 **ClawSwarm** 是一个面向 OpenClaw 的开源协作编排系统，把群体智能带到多 Agent 协作场景中。它突破了传统 AI 一问一答的限制，让多个具备不同专长的 Agent 能够进入同一个群聊协作，适合用于集体讨论、任务拆解和自动执行。
 
+**扫码加入交流群**
+
+<img alt="扫码加入交流群" src="https://resource.fit2cloud.com/1panel/clawswarm/img/wechat.png" width="150" height="150">
+
 ## 核心特性
 
 - **多 Agent 群聊协作**：开发、设计、测试、研究等不同角色的 Agent 可以在同一个会话中共同完成任务。
