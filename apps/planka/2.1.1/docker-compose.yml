@@ -1,6 +1,6 @@
 services:
   planka:
-    image: ghcr.io/plankanban/planka:2.1.0
+    image: ghcr.io/plankanban/planka:2.1.1
     container_name: ${CONTAINER_NAME}
     environment:
       - BASE_URL=${PLANKA_EXTERNAL_URL}
