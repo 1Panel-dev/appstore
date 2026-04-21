@@ -1,0 +1,40 @@
+additionalProperties:
+  formFields:
+    - default: 5044
+      edit: true
+      envKey: PANEL_APP_PORT_BEATS
+      labelEn: Beats Input Port
+      labelZh: Beats 输入端口
+      label:
+        en: Beats Input Port
+        es-es: Puerto de entrada Beats
+        ja: Beats 入力ポート
+        ms: Port input Beats
+        pt-br: Porta de entrada do Beats
+        ru: Порт входа Beats
+        ko: Beats 입력 포트
+        zh: Beats 输入端口
+        zh-Hant: Beats 輸入連接埠
+        tr: Beats Giris Baglanti Noktasi
+      required: true
+      rule: paramPort
+      type: number
+    - default: 9600
+      edit: true
+      envKey: PANEL_APP_PORT_API
+      labelEn: API Port
+      labelZh: API 端口
+      label:
+        en: API Port
+        es-es: Puerto de API
+        ja: API ポート
+        ms: Port API
+        pt-br: Porta da API
+        ru: Порт API
+        ko: API 포트
+        zh: API 端口
+        zh-Hant: API 連接埠
+        tr: API Baglanti Noktasi
+      required: true
+      rule: paramPort
+      type: number

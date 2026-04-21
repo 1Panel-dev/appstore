@@ -1,0 +1,34 @@
+name: Logstash
+tags:
+  - 实用工具
+title: 服务器端数据处理管道
+description: 服务器端数据处理管道
+additionalProperties:
+  key: logstash
+  name: Logstash
+  tags:
+    - Tool
+  shortDescZh: 服务器端数据处理管道
+  shortDescEn: Server-side data processing pipeline
+  description:
+    en: Server-side data processing pipeline
+    es-es: Canal de procesamiento de datos del lado del servidor
+    ja: サーバーサイドのデータ処理パイプライン
+    ms: Saluran pemprosesan data sisi pelayan
+    pt-br: Pipeline de processamento de dados do lado do servidor
+    ru: Серверный конвейер обработки данных
+    ko: 서버 측 데이터 처리 파이프라인
+    zh: 服务器端数据处理管道
+    zh-Hant: 伺服器端資料處理管道
+    tr: Sunucu tarafli veri isleme hatti
+  type: tool
+  crossVersionUpdate: false
+  limit: 0
+  recommend: 0
+  batchInstallSupport: true
+  website: https://www.elastic.co/logstash
+  github: https://github.com/elastic/logstash
+  document: https://www.elastic.co/docs/reference/logstash/docker
+  architectures:
+    - amd64
+    - arm64
