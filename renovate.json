@@ -108,6 +108,14 @@
       "allowedVersions": "/^8.*/"
     },
     {
+      "matchFileNames": ["apps/logstash/9.*/*.yml"],
+      "allowedVersions": "/^9.*/"
+    },
+    {
+      "matchFileNames": ["apps/logstash/8.*/*.yml"],
+      "allowedVersions": "/^8.*/"
+    },
+    {
       "matchFileNames": ["apps/tomcat/8.*/*.yml"],
       "allowedVersions": "/^8.*/"
     },
