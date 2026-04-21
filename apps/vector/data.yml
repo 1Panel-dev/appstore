@@ -1,0 +1,36 @@
+name: Vector
+tags:
+  - 实用工具
+title: 高性能可观测性数据管道
+description: 高性能可观测性数据管道
+additionalProperties:
+  key: vector
+  name: Vector
+  tags:
+    - Tool
+  shortDescZh: 高性能可观测性数据管道
+  shortDescEn: High-performance observability data pipeline
+  description:
+    en: High-performance observability data pipeline
+    zh: 高性能可观测性数据管道
+    es-es: Canal de datos de observabilidad de alto rendimiento
+    zh-Hant: 高效能可觀測性資料管道
+    ja: 高性能なオブザーバビリティデータパイプライン
+    ko: 고성능 관측 가능성 데이터 파이프라인
+    ms: Saluran data kebolehmerhatian berprestasi tinggi
+    pt-br: Pipeline de dados de observabilidade de alto desempenho
+    ru: Высокопроизводительный конвейер данных наблюдаемости
+    tr: Yüksek performansli gözlemlenebilirlik veri hattı
+  type: tool
+  crossVersionUpdate: false
+  limit: 0
+  recommend: 0
+  batchInstallSupport: true
+  website: https://vector.dev
+  github: https://github.com/vectordotdev/vector
+  document: https://vector.dev/docs/setup/installation/platforms/docker/
+  architectures:
+    - amd64
+    - arm/v6
+    - arm/v7
+    - arm64

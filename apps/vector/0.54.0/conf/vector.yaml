@@ -1,0 +1,40 @@
+api:
+  enabled: true
+  address: 0.0.0.0:8686
+
+sources:
+  demo_logs:
+    type: demo_logs
+    interval: 1
+    format: json
+
+sinks:
+  console:
+    inputs:
+      - demo_logs
+    target: stdout
+    type: console
+    encoding:
+      codec: json
+
+  # Example: send logs to Elasticsearch instead of stdout.
+  # Official reference:
+  # https://vector.dev/docs/reference/configuration/sinks/elasticsearch/
+  # The field names below are taken from Vector's official Elasticsearch sink documentation.
+  # In a 1Panel deployment, if Elasticsearch is deployed on the same 1panel-network,
+  # you can start by trying the service name shown in the 1Panel Elasticsearch app package.
+  # Replace the endpoint, index, and credentials with your actual values.
+  #
+  # elasticsearch:
+  #   type: elasticsearch
+  #   inputs:
+  #     - demo_logs
+  #   endpoints:
+  #     - http://elasticsearch:9200
+  #   mode: bulk
+  #   bulk:
+  #     index: vector-demo-%Y-%m-%d
+  #   auth:
+  #     strategy: basic
+  #     user: elastic
+  #     password: your-password
