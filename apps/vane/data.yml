@@ -1,0 +1,32 @@
+name: Vane
+tags:
+  - AI
+title: AI 驱动的智能问答引擎
+description: AI 驱动的智能问答引擎
+additionalProperties:
+  key: vane
+  name: Vane
+  tags:
+    - AI
+  shortDescZh: AI 驱动的智能问答引擎
+  shortDescEn: AI-powered answering engine
+  description:
+    en: AI-powered answering engine
+    ja: AI駆動のスマートな質問応答エンジン
+    ms: Enjin menjawab pintar yang didukung AI
+    pt-br: Motor de resposta inteligente movido a IA
+    ru: Интеллектуальный движок ответов на базе ИИ
+    ko: AI 기반의 스마트한 질문 답변 엔진
+    zh-Hant: AI 驅動的智能問答引擎
+    zh: AI 驱动的智能问答引擎
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  batchInstallSupport: true
+  website: https://github.com/ItzCrazyKns/Vane
+  github: https://github.com/ItzCrazyKns/Vane
+  document: https://github.com/ItzCrazyKns/Vane
+  architectures:
+    - amd64
+    - arm64
