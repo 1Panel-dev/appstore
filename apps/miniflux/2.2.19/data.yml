@@ -1,0 +1,157 @@
+additionalProperties:
+  formFields:
+  - labelEn: Database Service
+    labelZh: 数据库服务
+    label:
+      en: Database Service
+      es-es: Servicio de base de datos
+      ja: データベースサービス
+      ms: Perkhidmatan Pangkalan Data
+      pt-br: Serviço de Banco de Dados
+      ru: Сервис баз данных
+      ko: 데이터베이스 서비스
+      zh-hant: 資料庫服务
+      zh: 数据库服务
+      tr: Veritabanı Hizmeti
+    default: postgresql
+    envKey: PANEL_DB_TYPE
+    required: true
+    type: apps
+    values:
+      - label: PostgreSQL
+        value: postgresql
+    child:
+      labelEn: Database Instance
+      labelZh: 数据库实例
+      label:
+        en: Database Instance
+        es-es: Instancia de base de datos
+        ja: データベースインスタンス
+        ms: Instansi Pangkalan Data
+        pt-br: Instância de Banco de Dados
+        ru: Экземпляр базы данных
+        ko: 데이터베이스 인스턴스
+        zh-hant: 資料库实例
+        zh: 数据库实例
+        tr: Veritabanı Örneği
+      default: ""
+      envKey: PANEL_DB_HOST
+      required: true
+      type: service
+
+  - default: miniflux
+    envKey: PANEL_DB_USER
+    label:
+      en: User
+      es-es: Usuario
+      ja: ユーザー
+      ms: Pengguna
+      pt-br: Usuário
+      ru: Пользователь
+      ko: 사용자
+      zh: 数据库用户
+      zh-Hant: 資料庫使用者
+      tr: Kullanıcı
+    required: true
+    rule: paramCommon
+    type: text
+
+  - default: secret
+    envKey: PANEL_DB_PASSWORD
+    labelEn: Database Password
+    labelZh: 数据库密码
+    label:
+      en: Database Password
+      es-es: Contraseña de la base de datos
+      ja: データベースのパスワード
+      ms: Kata Laluan Pangkalan Data
+      pt-br: Senha do Banco de Dados
+      ru: Пароль базы данных
+      ko: 데이터베이스 비밀번호
+      zh-hant: 資料庫密碼
+      zh: 数据库密码
+      tr: Veritabanı Şifresi
+    required: true
+    type: password
+
+  - default: "5432"
+    envKey: PANEL_DB_PORT
+    label:
+      en: Database Port
+      es-es: Puerto de la base de datos
+      ja: データベースのポート
+      ms: Pangkalan Data Port
+      pt-br: Porta do Banco de Dados
+      ru: Порт базы данных
+      ko: 데이터베이스 포트
+      zh-hant: 資料庫端口
+      zh: 数据库端口
+      tr: Veritabanı Portu
+    edit: true
+    type: text
+
+  - default: miniflux
+    envKey: PANEL_DB_NAME
+    edit: true
+    type: text
+    label:
+      en: Database Name
+      es-es: Nombre de la base de datos
+      ja: データベース名
+      ms: Nama Pangkalan Data
+      pt-br: Nome do Banco de Dados
+      ru: Имя базы данных
+      ko: 데이터베이스 이름
+      zh-hant: 資料库名称
+      zh: 数据库名称
+      tr: Veritabanı Adı
+
+  - default: 8080
+    edit: true
+    envKey: PANEL_APP_PORT_HTTP
+    label:
+      en: Port
+      es-es: Puerto
+      ja: ポート
+      ms: Port
+      pt-br: Porta
+      ru: Порт
+      ko: 포트
+      zh: 端口
+      zh-Hant: 埠
+      tr: Port
+    required: true
+    rule: paramPort
+    type: number
+
+  - default: admin
+    envKey: ADMIN_USERNAME
+    label:
+      en: Admin Username
+      es-es: Nombre de usuario administrador
+      ja: 管理者のユーザー名
+      ms: Nama Pengguna Admin
+      pt-br: Nome de Usuário do Administrador
+      ru: Имя пользователя администратора
+      ko: 관리자 사용자 이름
+      zh-hant: 管理员用户名
+      zh: 管理员用户名
+      tr: Yönetici Kullanıcı Adı
+    type: text
+    required: true
+
+  - default: test123
+    envKey: ADMIN_PASSWORD
+    label:
+      en: Admin Password
+      es-es: Contraseña de administrador
+      ja: 管理者のパスワード
+      ms: Kata Laluan Admin
+      pt-br: Senha do Administrador
+      ru: Пароль администратора
+      ko: 관리자 비밀번호
+      zh-hant: 管理员密码
+      zh: 管理员密码
+      tr: Yönetici Şifresi
+    type: password
+    required: true

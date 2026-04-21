@@ -1,0 +1,21 @@
+additionalProperties:
+  key: miniflux
+  name: Miniflux
+  tags:
+    - Tool
+  shortDescZh: 极简主义的 RSS 阅读器
+  shortDescEn: Miniflux is a minimalist and opinionated feed reader.
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  website: https://miniflux.app/
+  github: https://github.com/miniflux/v2
+  description:
+    en: Minimalist and opinionated feed reader
+    zh: 极简主义的 RSS 阅读器
+    zh-Hant: 極簡主義的 RSS 閱讀器
+    ja: ミニマリストで独自の見解を持つフィードリーダー
+    ms: Pembaca umpan minimalisme dan berpendapat
+    pt-br: Leitor de feeds minimalista e opinativo
+    ru: Минималистичный и принципиальный читатель лент
+    ko: 미니멀리스트이면서 주관적인 피드 리더
