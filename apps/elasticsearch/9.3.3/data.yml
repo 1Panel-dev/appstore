@@ -19,7 +19,7 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
-        - default: "true"
+        - default: "false"
           edit: true
           envKey: ELASTIC_SECURITY
           labelEn: Password Verification
