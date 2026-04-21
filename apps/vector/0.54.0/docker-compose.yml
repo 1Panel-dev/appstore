@@ -1,0 +1,17 @@
+services:
+  vector:
+    image: timberio/vector:0.54.0-debian
+    container_name: ${CONTAINER_NAME}
+    restart: unless-stopped
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8686
+    volumes:
+      - ./conf/vector.yaml:/etc/vector/vector.yaml:ro
+    labels:
+      createdBy: "Apps"
+
+networks:
+  1panel-network:
+    external: true

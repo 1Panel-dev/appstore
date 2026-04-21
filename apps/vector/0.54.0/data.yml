@@ -1,0 +1,32 @@
+additionalProperties:
+  formFields:
+    - default: 8686
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: API Port
+      labelZh: API 端口
+      label:
+        en: API Port
+        es-es: Puerto de API
+        ja: API ポート
+        ms: Port API
+        pt-br: Porta da API
+        ru: Порт API
+        ko: API 포트
+        zh: API 端口
+        zh-Hant: API 埠
+        tr: API Bağlantı Noktası
+      description:
+        en: "Vector's GraphQL API port. The official documentation states that this API does not currently support authentication, so it should only be exposed to trusted networks."
+        es-es: "Puerto de la API GraphQL de Vector. La documentación oficial indica que esta API actualmente no admite autenticación, por lo que solo debe exponerse a redes de confianza."
+        zh-Hant: "Vector 的 GraphQL API 連接埠。官方文件說明該 API 目前不支援驗證，因此只應向受信任的網路開放。"
+        ja: "Vector の GraphQL API ポートです。公式ドキュメントでは、この API は現在認証をサポートしていないため、信頼できるネットワークにのみ公開すべきとされています。"
+        ko: "Vector의 GraphQL API 포트입니다. 공식 문서에 따르면 이 API는 현재 인증을 지원하지 않으므로, 신뢰할 수 있는 네트워크에만 노출해야 합니다."
+        ms: "Port API GraphQL Vector. Dokumentasi rasmi menyatakan bahawa API ini pada masa ini tidak menyokong pengesahan, jadi ia hanya patut didedahkan kepada rangkaian yang dipercayai."
+        pt-br: "Porta da API GraphQL do Vector. A documentação oficial informa que essa API atualmente não oferece suporte à autenticação, portanto ela deve ser exposta apenas a redes confiáveis."
+        ru: "Порт GraphQL API Vector. В официальной документации указано, что этот API в настоящее время не поддерживает аутентификацию, поэтому его следует открывать только для доверенных сетей."
+        tr: "Vector'un GraphQL API portu. Resmi belgeler bu API'nin şu anda kimlik doğrulamayı desteklemediğini belirtir; bu nedenle yalnızca güvenilir ağlara açılmalıdır."
+        zh: "Vector 的 GraphQL API 端口。官方文档说明该 API 当前不支持认证，因此只应向受信任网络开放。"
+      required: true
+      rule: paramPort
+      type: number
