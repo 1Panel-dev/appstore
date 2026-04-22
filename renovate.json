@@ -148,6 +148,10 @@
       "allowedVersions": "/^10.*/"
     },
     {
+      "matchFileNames": ["apps/sonarqube/26.*/*.yml"],
+      "allowedVersions": "/^26.*/"
+    },
+    {
       "matchFileNames": ["apps/mssql/2017-*/*.yml"],
       "allowedVersions": "/^2017-*/"
     },
