@@ -1,6 +1,6 @@
 services:
   vector:
-    image: timberio/vector:0.54.0-debian
+    image: timberio/vector:0.55.0-debian
     container_name: ${CONTAINER_NAME}
     restart: unless-stopped
     networks:
