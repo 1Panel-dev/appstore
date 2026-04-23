@@ -1,0 +1,73 @@
+additionalProperties:
+  formFields:
+    - default: 1200
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      label:
+        en: Port
+        es-es: Puerto
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh: 端口
+        zh-Hant: 埠
+        tr: Port
+      required: true
+      rule: paramPort
+      type: number
+
+    - default: ""
+      envKey: PANEL_REDIS_HOST
+      key: redis
+      label:
+        en: Redis Instance
+        es-es: Instancia de Redis
+        ja: Redis インスタンス
+        ms: Instansi Redis
+        pt-br: Instância de Redis
+        ru: Экземпляр Redis
+        ko: Redis 인스턴스
+        zh: Redis 实例
+        zh-Hant: Redis 實例
+        tr: Redis Örneği
+      required: true
+      type: service
+
+    - default: redis
+      envKey: PANEL_REDIS_PASSWORD
+      type: password
+      labelEn: Redis password
+      labelZh: Redis 密码
+      label:
+        en: Redis password
+        es-es: Contraseña de Redis
+        ja: Redisのパスワード
+        ms: Kata Laluan Redis
+        pt-br: Senha do Redis
+        ru: Пароль Redis
+        ko: Redis 비밀번호
+        zh: Redis 密码
+        zh-Hant: Redis 密碼
+        tr: Redis Şifresi
+
+    - default: 6379
+      envKey: PANEL_REDIS_PORT
+      required: true
+      type: number
+      labelEn: Redis Port
+      labelZh: Redis 端口
+      label:
+        en: Redis Port
+        es-es: Puerto de Redis
+        ja: Redisのポート
+        ms: Port Redis
+        pt-br: Porta do Redis
+        ru: Порт Redis
+        ko: Redis 포트
+        zh: Redis 端口
+        zh-Hant: Redis 端口
+        tr: Redis Portu
