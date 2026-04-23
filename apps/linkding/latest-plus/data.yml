@@ -1,0 +1,42 @@
+additionalProperties:
+  formFields:
+    - default: 9090
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+
+    - default: admin
+      envKey: ADMIN_USERNAME
+      label:
+        en: Admin Username
+        es-es: Nombre de usuario administrador
+        ja: 管理者のユーザー名
+        ms: Nama Pengguna Admin
+        pt-br: Nome de Usuário do Administrador
+        ru: Имя пользователя администратора
+        ko: 관리자 사용자 이름
+        zh-Hant: 管理員用戶名
+        zh: 管理员用户名
+        tr: Yönetici Kullanıcı Adı
+      type: text
+      required: true
+
+    - default: passwd
+      envKey: ADMIN_PASSWORD
+      label:
+        en: Admin Password
+        es-es: Contraseña de administrador
+        ja: 管理者のパスワード
+        ms: Kata Laluan Admin
+        pt-br: Senha do Administrador
+        ru: Пароль администратора
+        ko: 관리자 비밀번호
+        zh-Hant: 管理員密碼
+        zh: 管理员密码
+        tr: Yönetici Şifresi
+      type: password
+      required: true

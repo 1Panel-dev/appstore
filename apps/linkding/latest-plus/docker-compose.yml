@@ -1,0 +1,13 @@
+services:
+  linkding:
+    container_name: ${CONTAINER_NAME}
+    image: sissbruecker/linkding:latest
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:9090"
+    volumes:
+      - "./data:/etc/linkding/data"
+    restart: unless-stopped
+    environment:
+      # 创建一个初始超级用户
+      LD_SUPERUSER_NAME: ${ADMIN_USERNAME}
+      LD_SUPERUSER_PASSWORD: ${ADMIN_PASSWORD}
