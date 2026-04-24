@@ -8,3 +8,14 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
+      label:
+        en: Port
+        zh: 端口
+        es-es: Puerto
+        zh-Hant: 埠
+        ja: ポート
+        ko: 포트
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        tr: Bağlantı Noktası
