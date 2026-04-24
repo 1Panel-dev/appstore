@@ -8,25 +8,46 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
+      label:
+        en: Port
+        zh: 端口
+        es-es: Puerto
+        zh-Hant: 埠
+        ja: ポート
+        ko: 포트
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        tr: Bağlantı Noktası
 
     - default: admin
+      edit: true
       envKey: ADMIN_USERNAME
+      labelEn: Admin Username
+      labelZh: 管理员用户
+      required: true
+      rule: paramCommon
+      type: text
       label:
         en: Admin Username
+        zh: 管理员用户名
         es-es: Nombre de usuario administrador
+        zh-Hant: 管理員用戶名
         ja: 管理者のユーザー名
+        ko: 관리자 사용자 이름
         ms: Nama Pengguna Admin
         pt-br: Nome de Usuário do Administrador
         ru: Имя пользователя администратора
-        ko: 관리자 사용자 이름
-        zh-Hant: 管理員用戶名
-        zh: 管理员用户名
         tr: Yönetici Kullanıcı Adı
-      type: text
-      required: true
 
     - default: passwd
+      edit: true
       envKey: ADMIN_PASSWORD
+      labelEn: Admin Password
+      labelZh: 管理员密码
+      required: true
+      rule: paramComplexity
+      type: password
       label:
         en: Admin Password
         es-es: Contraseña de administrador
@@ -38,5 +59,3 @@ additionalProperties:
         zh-Hant: 管理員密碼
         zh: 管理员密码
         tr: Yönetici Şifresi
-      type: password
-      required: true
