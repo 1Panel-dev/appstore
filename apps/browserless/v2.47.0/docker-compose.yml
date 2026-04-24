@@ -1,12 +1,12 @@
 services:
   browerless:
-    image: ghcr.io/browserless/chrome:latest
+    image: ghcr.io/browserless/chrome:v2.47.0
     container_name: ${CONTAINER_NAME}
-    ports:
-      - "${PANEL_APP_PORT_HTTP}:3000"
     restart: always
     networks:
       - 1panel-network
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:3000"
     ulimits:
       core:
         hard: 0
@@ -16,6 +16,8 @@ services:
       interval: 30s
       timeout: 10s
       retries: 3
+    labels:
+      createdBy: "Apps"
 
 networks:
   1panel-network:
