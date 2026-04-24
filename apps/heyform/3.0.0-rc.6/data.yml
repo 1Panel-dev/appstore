@@ -1,0 +1,91 @@
+additionalProperties:
+  formFields:
+
+    - child:
+        default: ""
+        envKey: MONGO_HOST
+        required: true
+        type: service
+      default: mongodb
+      envKey: MONGO_TYPE
+      label:
+        zh: MongoDB 服务
+        en: MongoDB Service
+      required: true
+      type: apps
+      values:
+        - label: MongoDB
+          value: mongodb
+
+    - default: heyform
+      envKey: MONGO_DB
+      label:
+        zh: 数据库名
+        en: Database Name
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+
+    - child:
+        default: ""
+        envKey: REDIS_HOST
+        required: true
+        type: service
+      default: redis
+      envKey: REDIS_TYPE
+      label:
+        zh: Redis 服务
+        en: Redis Service
+      required: true
+      type: apps
+      values:
+        - label: Redis
+          value: redis
+
+    - default: 6379
+      envKey: REDIS_PORT
+      label:
+        zh: Redis 端口
+        en: Redis Port
+      required: true
+      rule: paramPort
+      type: number
+
+    - default: http://localhost:9513
+      envKey: APP_HOMEPAGE_URL
+      label:
+        zh: 访问地址
+        en: Homepage URL
+      required: true
+      rule: paramExtUrl
+      type: text
+
+    - default: ""
+      envKey: SESSION_KEY
+      label:
+        zh: 会话密钥
+        en: Session Key
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+
+    - default: ""
+      envKey: FORM_ENCRYPTION_KEY
+      label:
+        zh: 表单加密密钥
+        en: Encryption Key
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+
+    - default: 9513
+      envKey: PANEL_APP_PORT_HTTP
+      label:
+        zh: 端口
+        en: Port
+      required: true
+      rule: paramPort
+      type: number

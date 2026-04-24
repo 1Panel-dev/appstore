@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+  heyform:
+    image: heyform/community-edition:3.0.0-rc.6
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8000
+    volumes:
+      - ./data:/app/static/upload
+    environment:
+      - APP_HOMEPAGE_URL=${APP_HOMEPAGE_URL}
+      - SESSION_KEY=${SESSION_KEY}
+      - FORM_ENCRYPTION_KEY=${FORM_ENCRYPTION_KEY}
+      - MONGO_URI=mongodb://${MONGO_HOST}:27017/${MONGO_DB}
+      - REDIS_HOST=${REDIS_HOST}
+      - REDIS_PORT=${REDIS_PORT}
+    labels:
+      createdBy: "Apps"
+
+networks:
+  1panel-network:
+    external: true

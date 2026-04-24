@@ -1,0 +1,23 @@
+name: HeyForm
+tags:
+  - 工具
+title: 开源在线表单与问卷构建工具
+description: 一个适合自托管的开源在线表单与问卷构建工具。
+additionalProperties:
+  key: heyform
+  name: HeyForm
+  tags:
+    - Tool
+    - Website
+  shortDescZh: 一个适合自托管的开源在线表单与问卷构建工具。
+  shortDescEn: An open-source form and survey builder for self-hosting.
+  description:
+    en: An open-source form and survey builder for self-hosting.
+    zh: 一个适合自托管的开源在线表单与问卷构建工具。
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://heyform.net/
+  github: https://github.com/heyform/heyform
+  document: https://docs.heyform.net/
