@@ -34,8 +34,24 @@ additionalProperties:
         zh: Redis 实例
         zh-Hant: Redis 實例
         tr: Redis Örneği
-      required: true
       type: service
+
+    - default: 6379
+      envKey: PANEL_REDIS_PORT
+      type: number
+      labelEn: Redis Port
+      labelZh: Redis 端口
+      label:
+        en: Redis Port
+        es-es: Puerto de Redis
+        ja: Redisのポート
+        ms: Port Redis
+        pt-br: Porta do Redis
+        ru: Порт Redis
+        ko: Redis 포트
+        zh: Redis 端口
+        zh-Hant: Redis 端口
+        tr: Redis Portu
 
     - default: redis
       envKey: PANEL_REDIS_PASSWORD
@@ -54,20 +70,34 @@ additionalProperties:
         zh-Hant: Redis 密碼
         tr: Redis Şifresi
 
-    - default: 6379
-      envKey: PANEL_REDIS_PORT
-      required: true
-      type: number
-      labelEn: Redis Port
-      labelZh: Redis 端口
+    - default: browserless
+      envKey: PANEL_BROWSERLESS_HOST
       label:
-        en: Redis Port
-        es-es: Puerto de Redis
+        en: Browserless Instance
+        es-es: Instancia de Browserless
+        ja: Browserless インスタンス
+        ms: Instansi Browserless
+        pt-br: Instância de Browserless
+        ru: Экземпляр Browserless
+        ko: Browserless 인스턴스
+        zh: Browserless 实例
+        zh-Hant: Browserless 實例
+        tr: Browserless Örneği
+      type: text
+
+    - default: 3000
+      envKey: PANEL_BROWSERLESS_PORT
+      type: number
+      labelEn: Browserless Port
+      labelZh: Browserless 端口
+      label:
+        en: Browserless Port
+        es-es: Puerto de Browserless
         ja: Redisのポート
-        ms: Port Redis
-        pt-br: Porta do Redis
-        ru: Порт Redis
-        ko: Redis 포트
-        zh: Redis 端口
-        zh-Hant: Redis 端口
-        tr: Redis Portu
+        ms: Port Browserless
+        pt-br: Porta do Browserless
+        ru: Порт Browserless
+        ko: Browserless 포트
+        zh: Browserless端口
+        zh-Hant: Browserless 端口
+        tr: Browserless Portu
