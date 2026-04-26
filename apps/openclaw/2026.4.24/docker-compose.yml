@@ -1,13 +1,14 @@
 services:
   openclaw:
     container_name: ${CONTAINER_NAME}
-    image: 1panel/openclaw:2026.4.23
+    image: 1panel/openclaw:2026.4.24
     restart: unless-stopped
     networks:
       - 1panel-network
     environment:
       HOME: /home/node
       TERM: xterm-256color
+      OPENCLAW_DISABLE_BONJOUR: "1"
     volumes:
       - ./data/conf:/home/node/.openclaw
       - ./data/workspace:/home/node/.openclaw/workspace
