@@ -1,0 +1,33 @@
+name: linkding
+tags:
+  - 实用工具
+title: A self-hosted bookmark manager designed to be minimal, fast, and easy to set up
+description: 一款自托管的书签管理器，设计简洁、快速且易于部署
+additionalProperties:
+  key: linkding
+  name: linkding
+  tags:
+    - Tool
+  shortDescZh: 一款自托管的书签管理器，设计简洁、快速且易于部署
+  shortDescEn: A self-hosted bookmark manager designed to be minimal, fast, and easy to set up
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  batchInstallSupport: true
+  website: https://linkding.link/
+  github: https://github.com/sissbruecker/linkding
+  document: https://linkding.link/installation/
+  description:
+    en: A self-hosted bookmark manager that is simple, fast, and easy to deploy
+    zh: 一款自托管的书签管理器，设计简洁、快速且易于部署
+    zh-Hant: 一款自託管的書籤管理器，設計簡潔、快速且易於部署
+    ja: シンプルで高速、デプロイが容易なセルフホスト型ブックマークマネージャー
+    ms: Pengurus penanda buku hos sendiri yang ringkas, pantas dan mudah digunakan
+    pt-br: Um gerenciador de favoritos auto-hospedado, simples, rápido e fácil de implantar
+    ru: Селф-хост менеджер закладок простой, быстрый и удобный в развертывании
+    ko: 단순하고 빠르며 배포가 용이한 셀프 호스팅 북마크 관리자
+  architectures:
+    - amd64
+    - arm64
+    - arm/v7
