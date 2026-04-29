@@ -1,0 +1,24 @@
+services:
+  browerless:
+    image: ghcr.io/browserless/chrome:v2.47.0
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:3000"
+    ulimits:
+      core:
+        hard: 0
+        soft: 0
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/pressure"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    labels:
+      createdBy: "Apps"
+
+networks:
+  1panel-network:
+    external: true
