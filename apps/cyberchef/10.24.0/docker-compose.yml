@@ -1,6 +1,6 @@
 services:
   cyberchef:
-    image: ghcr.io/gchq/cyberchef:10.24.0
+    image: ghcr.io/gchq/cyberchef:11.0.0
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
