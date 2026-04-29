@@ -1,7 +1,7 @@
 name: linkding
 tags:
   - 实用工具
-title: A self-hosted bookmark manager designed to be minimal, fast, and easy to set up
+title: 一款自托管的书签管理器，设计简洁、快速且易于部署
 description: 一款自托管的书签管理器，设计简洁、快速且易于部署
 additionalProperties:
   key: linkding

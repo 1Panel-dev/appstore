@@ -15,6 +15,6 @@
 - **Deep integration with Folo** – Works seamlessly with **Folo**, an AI RSS reader for intelligent feed discovery and reading
 - **Open source (AGPL-3.0)** – Fully transparent codebase, supports self-hosting for data privacy and full control
 
-## Instructions
+## Configuration
 
-The Browserless Instance should be filled with the container name located in the left sidebar under **Containers** > **Container** > **Name**.
+Set Browserless Instance to the Browserless app container name. The default value is `browserless`.

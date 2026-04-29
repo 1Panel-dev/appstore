@@ -1,5 +1,5 @@
 services:
-  browerless:
+  browserless:
     image: ghcr.io/browserless/chrome:v2.47.0
     container_name: ${CONTAINER_NAME}
     restart: always
