@@ -1,6 +1,6 @@
 ## Product Introduction
 
-linkding is a bookmark manager that you can host yourself. It's designed be to be minimal, fast, and easy to set up using Docker.
+linkding is a bookmark manager that you can host yourself. It's designed to be minimal, fast, and easy to set up using Docker.
 
 ## Key Features
 
@@ -16,4 +16,3 @@ linkding is a bookmark manager that you can host yourself. It's designed be to b
 - SSO support via OIDC or authentication proxies
 - REST API for developing 3rd party apps
 - Admin panel for user self-service and raw data access
-

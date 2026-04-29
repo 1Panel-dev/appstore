@@ -40,7 +40,7 @@ additionalProperties:
         ru: Имя пользователя администратора
         tr: Yönetici Kullanıcı Adı
 
-    - default: passwd
+    - default: passwd_1Panel
       edit: true
       envKey: ADMIN_PASSWORD
       labelEn: Admin Password

@@ -1,15 +1,15 @@
 name: Browserless
 tags:
   - 实用工具
-title: 在Docker中部署无头浏览器。非商业用途免费。
-description: 在Docker中部署无头浏览器。非商业用途免费。
+title: 在 Docker 中部署无头浏览器
+description: 在 Docker 中部署无头浏览器
 additionalProperties:
   key: browserless
   name: Browserless
   tags:
     - Tool
-  shortDescZh: 在Docker中部署无头浏览器。非商业用途免费。
-  shortDescEn: Deploy headless browsers in Docker. Free for non-commercial uses.
+  shortDescZh: 在 Docker 中部署无头浏览器
+  shortDescEn: Deploy headless browsers in Docker
   type: tool
   crossVersionUpdate: true
   limit: 0
@@ -18,14 +18,14 @@ additionalProperties:
   website: https://www.browserless.io
   github: https://github.com/browserless/browserless
   description:
-    en: Deploy headless browsers in Docker. Free for non-commercial uses.
-    zh: Docker中部署无头浏览器。非商业用途免费。
-    zh-Hant: 在 Docker 中部署無頭瀏覽器。非商業用途免費。
-    ja: Docker でヘッドレスブラウザをデプロイ。非商用利用は無料です。
-    ms: Atur gerak pelayar headless dalam Docker. Percuma untuk kegunaan bukan komersial.
-    pt-br: Implante navegadores headless no Docker. Gratuito para uso não comercial.
-    ru: Развертывание безголовых браузеров в Docker. Бесплатно для некоммерческого использования.
-    ko: Docker에서 헤드리스 브라우저 배포. 비상업적 용도로는 무료입니다.
+    en: Deploy headless browsers in Docker
+    zh: 在 Docker 中部署无头浏览器
+    zh-Hant: 在 Docker 中部署無頭瀏覽器
+    ja: Docker でヘッドレスブラウザをデプロイ
+    ms: Atur gerak pelayar headless dalam Docker
+    pt-br: Implante navegadores headless no Docker
+    ru: Развертывание безголовых браузеров в Docker
+    ko: Docker에서 헤드리스 브라우저 배포
   architectures:
     - amd64
     - arm64

@@ -24,16 +24,17 @@ additionalProperties:
       envKey: PANEL_REDIS_HOST
       key: redis
       label:
-        en: Redis Instance
+        en: Redis Service
         es-es: Instancia de Redis
-        ja: Redis インスタンス
-        ms: Instansi Redis
-        pt-br: Instância de Redis
-        ru: Экземпляр Redis
-        ko: Redis 인스턴스
-        zh: Redis 实例
-        zh-Hant: Redis 實例
+        ja: Redis サービス
+        ms: Perkhidmatan Redis
+        pt-br: Serviço Redis
+        ru: Сервис Redis
+        ko: Redis 서비스
+        zh: Redis 服务
+        zh-Hant: Redis 服務
         tr: Redis Örneği
+      required: true
       type: service
 
     - default: 6379
@@ -53,9 +54,10 @@ additionalProperties:
         zh-Hant: Redis 端口
         tr: Redis Portu
 
-    - default: redis
-      envKey: PANEL_REDIS_PASSWORD
-      type: password
+    - default: ""
+      disabled: true
+      envKey: PANEL_REDIS_ROOT_PASSWORD
+      type: text
       labelEn: Redis password
       labelZh: Redis 密码
       label:
@@ -93,11 +95,11 @@ additionalProperties:
       label:
         en: Browserless Port
         es-es: Puerto de Browserless
-        ja: Redisのポート
+        ja: Browserless のポート
         ms: Port Browserless
         pt-br: Porta do Browserless
         ru: Порт Browserless
         ko: Browserless 포트
-        zh: Browserless端口
+        zh: Browserless 端口
         zh-Hant: Browserless 端口
         tr: Browserless Portu
