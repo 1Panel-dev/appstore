@@ -1,0 +1,34 @@
+name: "CloudFlare ImgBed"
+tags:
+  - WebSite
+  - Storage
+title: "CloudFlare ImgBed"
+description: "开源文件托管解决方案，支持 Docker 部署、多种存储渠道、RESTful API 和 WebDAV。"
+additionalProperties:
+  key: cloudflare-imgbed
+  name: "CloudFlare ImgBed"
+  tags:
+    - WebSite
+    - Storage
+  shortDescZh: "开源文件托管解决方案，支持 Docker 部署、多种存储渠道、RESTful API 和 WebDAV。"
+  shortDescEn: "Open-source file hosting solution supporting Docker deployment, multiple storage channels, RESTful APIs, and WebDAV."
+  description:
+    en: "Open-source file hosting solution supporting Docker deployment, multiple storage channels, RESTful APIs, and WebDAV."
+    es-es: "Open-source file hosting solution supporting Docker deployment, multiple storage channels, RESTful APIs, and WebDAV."
+    ja: "Open-source file hosting solution supporting Docker deployment, multiple storage channels, RESTful APIs, and WebDAV."
+    ms: "Open-source file hosting solution supporting Docker deployment, multiple storage channels, RESTful APIs, and WebDAV."
+    pt-br: "Open-source file hosting solution supporting Docker deployment, multiple storage channels, RESTful APIs, and WebDAV."
+    ru: "Open-source file hosting solution supporting Docker deployment, multiple storage channels, RESTful APIs, and WebDAV."
+    ko: "Open-source file hosting solution supporting Docker deployment, multiple storage channels, RESTful APIs, and WebDAV."
+    zh-Hant: "開源文件託管解決方案，支援 Docker 部署、多種儲存通道、RESTful API 和 WebDAV。"
+    zh: "开源文件托管解决方案，支持 Docker 部署、多种存储渠道、RESTful API 和 WebDAV。"
+    tr: "Open-source file hosting solution supporting Docker deployment, multiple storage channels, RESTful APIs, and WebDAV."
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  architectures:
+    - amd64
+    - arm64
+  website: https://cfbed.sanyue.de/en
+  github: https://github.com/MarSeventh/CloudFlare-ImgBed
+  document: https://cfbed.sanyue.de/en
