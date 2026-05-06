@@ -1,0 +1,35 @@
+services:
+  fossbilling:
+    image: fossbilling/fossbilling:v1.5.0
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:80
+    environment:
+      DB_HOST: ${PANEL_DB_HOST}
+      DB_NAME: ${PANEL_DB_NAME}
+      DB_USER: ${PANEL_DB_USER}
+      DB_PASS: ${PANEL_DB_USER_PASSWORD}
+      FOSSBILLING_APP_URL: ${FOSSBILLING_APP_URL}
+      ADMIN_USERNAME: ${FOSSBILLING_ADMIN_USER}
+      ADMIN_PASSWORD: ${FOSSBILLING_ADMIN_PASSWORD}
+      PHP_MEMORY_LIMIT: 256M
+      UPLOAD_MAX_FILESIZE: 100M
+      POST_MAX_SIZE: 100M
+    volumes:
+      - ./data:/var/www/html
+      - ./config:/var/www/html/config
+    labels:
+      createdBy: "Apps"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+networks:
+  1panel-network:
+    external: true
