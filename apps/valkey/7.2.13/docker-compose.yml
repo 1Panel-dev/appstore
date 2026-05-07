@@ -1,6 +1,6 @@
 services:
   valkey:
-    image: valkey/valkey:7.2.12
+    image: valkey/valkey:7.2.13
     restart: always
     container_name: ${CONTAINER_NAME}
     networks:
