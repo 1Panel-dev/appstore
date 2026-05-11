@@ -1,0 +1,20 @@
+additionalProperties:
+  formFields:
+    - default: 4224
+      envKey: PANEL_APP_PORT_HTTP
+      label:
+        zh: 端口
+        en: Port
+      required: true
+      rule: paramPort
+      type: number
+
+    - default: dbx_password
+      envKey: PANEL_DB_PASSWORD
+      label:
+        zh: 访问密码
+        en: Access Password
+      required: true
+      rule: paramComplexity
+      type: password
+      random: true
