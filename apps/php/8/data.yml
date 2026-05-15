@@ -97,16 +97,16 @@ additionalProperties:
           required: true
           type: select
           values:
-            - label: "8.5.5"
-              value: "8.5.5"
-            - label: "8.4.19"
-              value: "8.4.19"
-            - label: "8.3.30"
-              value: "8.3.30"
-            - label: "8.2.30"
-              value: "8.2.30"
-            - label: "8.1.33"
-              value: "8.1.33"
+            - label: "8.5.6"
+              value: "8.5.6"
+            - label: "8.4.21"
+              value: "8.4.21"
+            - label: "8.3.31"
+              value: "8.3.31"
+            - label: "8.2.31"
+              value: "8.2.31"
+            - label: "8.1.34"
+              value: "8.1.34"
             - label: "8.0.30"
               value: "8.0.30"
         - default: https://mirrors.tuna.tsinghua.edu.cn
