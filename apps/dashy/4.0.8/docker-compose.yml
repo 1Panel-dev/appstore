@@ -1,7 +1,7 @@
 services:
   dashy:
     container_name: ${CONTAINER_NAME}
-    image: lissy93/dashy:4.0.8
+    image: lissy93/dashy:4.0.9
     restart: always
     networks:
       - 1panel-network
