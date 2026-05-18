@@ -1,0 +1,17 @@
+{
+  "id":"10021",
+  "state": "on",
+  "name": "Apache apisix",
+  "cve": "CVE-2020-13945",
+  "type": "rce",
+  "remark": "",
+  "rule": {
+    "method":"POST",
+    "type": "request_uri",
+    "uri": "/apisix/admin/routes",
+    "pattern": "eq",
+    "params": {
+      "script": ""
+    }
+  }
+}
