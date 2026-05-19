@@ -403,25 +403,3 @@ additionalProperties:
         zh: 最大上传大小 (MB)
       required: false
       type: number
-    - default: true
-      envKey: USAGE_LOG_FILE
-      labelEn: Enable file logging
-      labelZh: 启用文件日志
-      label:
-        en: Enable file logging
-        es-es: Habilitar registro de archivos
-        ja: ファイルログを有効にする
-        ms: Dayakan log fail
-        pt-br: Habilitar registro de arquivo
-        ru: Включить файловое логирование
-        ko: 파일 로깅 활성화
-        tr: Dosya günlüğünü etkinleştir
-        zh-hant: 啟用檔案日誌
-        zh: 启用文件日志
-      required: false
-      type: select
-      values:
-        - label: "true"
-          value: "true"
-        - label: "false"
-          value: "false"

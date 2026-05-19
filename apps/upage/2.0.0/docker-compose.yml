@@ -20,7 +20,7 @@ services:
       SERPER_API_KEY: ${SERPER_API_KEY}
       WEATHER_API_KEY: ${WEATHER_API_KEY}
       MAX_UPLOAD_SIZE_MB: ${MAX_UPLOAD_SIZE_MB}
-      USAGE_LOG_FILE: ${USAGE_LOG_FILE}
+      USAGE_LOG_FILE: "true"
       OPERATING_ENV: production
       LOG_LEVEL: debug
     volumes:
