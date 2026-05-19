@@ -1,0 +1,405 @@
+additionalProperties:
+  formFields:
+    - default: 3000
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: HTTP 端口
+      label:
+        en: Port
+        es-es: Puerto
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        tr: liman
+        zh-Hant: HTTP連接埠
+        zh: HTTP 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: OpenAI
+      envKey: LLM_PROVIDER
+      labelEn: LLM provider
+      labelZh: LLM 提供商
+      label:
+        en: LLM provider
+        es-es: Proveedor de LLM
+        ja: LLMプロバイダー
+        ms: Penyedia LLM
+        pt-br: Fornecedor LLM
+        ru: Поставщик LLM
+        ko: LLM 공급자
+        tr: LLM sağlayıcısı
+        zh-hant: LLM 提供商
+        zh: LLM 提供商
+      required: true
+      type: select
+      values:
+        - label: OpenAI
+          value: OpenAI
+        - label: DeepSeek
+          value: DeepSeek
+        - label: 豆包 (DouBao)
+          value: DouBao
+        - label: 文心一言 (Ernie)
+          value: Ernie
+        - label: 月之暗面 (Kimi)
+          value: Kimi
+        - label: 通义千问 (Qwen)
+          value: Qwen
+        - label: 智谱 AI (ZhiPu)
+          value: ZhiPu
+        - label: Amazon Bedrock
+          value: AmazonBedrock
+        - label: Anthropic Claude
+          value: Anthropic
+        - label: Cohere
+          value: Cohere
+        - label: Github
+          value: Github
+        - label: Google
+          value: Google
+        - label: Groq
+          value: Groq
+        - label: HuggingFace
+          value: HuggingFace
+        - label: Hyperbolic
+          value: Hyperbolic
+        - label: LMStudio
+          value: LMStudio
+        - label: Mistral
+          value: Mistral
+        - label: Ollama
+          value: Ollama
+        - label: OpenRouter
+          value: OpenRouter
+        - label: Perplexity
+          value: Perplexity
+        - label: Together
+          value: Together
+        - label: xAI
+          value: xAI
+    - default: ""
+      edit: true
+      envKey: PROVIDER_API_KEY
+      labelEn: API Key
+      labelZh: API 密钥
+      label:
+        en: API Key
+        es-es: API Clave
+        ja: APIキー
+        ms: Kunci API
+        pt-br: Chave de API
+        ru: API-ключ
+        ko: API 키
+        tr: API Anahtarı
+        zh-hant: API 密鑰
+        zh: API 密钥
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: PROVIDER_BASE_URL
+      labelEn: API URL
+      labelZh: API 地址
+      label:
+        en: API URL
+        es-es: URL de la API
+        ja: API URL
+        ms: API URL
+        pt-br: API URL
+        ru: API URL
+        ko: API URL
+        tr: API URL'si
+        zh-hant: API URL
+        zh: API 地址
+      description:
+        en: "Note: Fill in only when using the OpenAI LLM provider."
+        ja: "注：OpenAI LLMプロバイダーを使用する場合のみ記入してください。"
+        ms: "Catatan: Isi hanya apabila menggunakan penyedia LLM OpenAI."
+        pt-br: "Nota: Preencha apenas ao usar o provedor LLM OpenAI."
+        ru: "Примечание: Заполняйте только при использовании поставщика LLM OpenAI."
+        ko: "참고: OpenAI LLM 공급자를 사용하는 경우에만 작성하십시오."
+        tr: "Not: Yalnızca OpenAI LLM sağlayıcısını kullanırken doldurun."
+        zh-hant: "注意：僅在使用 OpenAI LLM 提供商時填寫。"
+        zh: "注意：仅在使用 OpenAI LLM 提供商时填写。"
+        es-es: "Nota: complete este campo solo cuando use el proveedor LLM de OpenAI"
+      required: false
+      rule: paramHttp
+      type: text
+    - default: ""
+      edit: true
+      envKey: LLM_DEFAULT_MODEL
+      labelEn: Default page model
+      labelZh: 页面默认模型
+      label:
+        en: Default page model
+        es-es: Modelo de página predeterminado
+        ja: デフォルトのページモデル
+        ms: Model halaman lalai
+        pt-br: Modelo de página padrão
+        ru: Модель страницы по умолчанию
+        ko: 기본 페이지 모델
+        tr: Varsayılan sayfa modeli
+        zh-hant: 页面默认模型
+        zh: 页面默认模型
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: LLM_MINOR_MODEL
+      labelEn: Auxiliary task model
+      labelZh: 辅助任务模型
+      label:
+        en: Auxiliary task model
+        es-es: Modelo de tarea auxiliar
+        ja: 補助タスクモデル
+        ms: Model tugas tambahan
+        pt-br: Modelo de tarefa auxiliar
+        ru: Вспомогательная модель задачи
+        ko: 보조 작업 모델
+        tr: Yardımcı görev modeli
+        zh-hant: 辅助任务模型
+        zh: 辅助任务模型
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: LLM_VISION_PROVIDER
+      labelEn: Vision model provider
+      labelZh: 视觉模型提供商
+      label:
+        en: Vision model provider
+        es-es: Proveedor de modelo de visión
+        ja: ビジョンモデルプロバイダー
+        ms: Pembekal model penglihatan
+        pt-br: Provedor de modelo de visão
+        ru: Поставщик модели зрения
+        ko: 비전 모델 공급자
+        tr: Görüntü modeli sağlayıcısı
+        zh-hant: 視覺模型提供商
+        zh: 视觉模型提供商
+      description:
+        en: "Optional. Configure when the primary model does not support multimodal capabilities."
+        ja: "オプション。主モデルがマルチモーダル機能をサポートしていない場合に設定します。"
+        ms: "Pilihan. Konfigurasikan apabila model utama tidak menyokong keupayaan multimodal."
+        pt-br: "Opcional. Configure quando o modelo principal não suportar recursos multimodais."
+        ru: "Необязательно. Настройте, если основная модель не поддерживает мультимодальные возможности."
+        ko: "선택 사항. 기본 모델이 다중 모달 기능을 지원하지 않을 때 구성하세요."
+        tr: "İsteğe bağlı. Ana model çok modlu yetenekleri desteklemediğinde yapılandırın."
+        zh-hant: "可選。當主模型不支援多模態功能時配置。"
+        zh: "可选。当主模型不支持多模态功能时配置。"
+        es-es: "Opcional. Configúrelo cuando el modelo principal no admita capacidades multimodales."
+      required: false
+      type: select
+      values:
+        - label: OpenAI
+          value: OpenAI
+        - label: DeepSeek
+          value: DeepSeek
+        - label: 豆包 (DouBao)
+          value: DouBao
+        - label: 文心一言 (Ernie)
+          value: Ernie
+        - label: 月之暗面 (Kimi)
+          value: Kimi
+        - label: 通义千问 (Qwen)
+          value: Qwen
+        - label: 智谱 AI (ZhiPu)
+          value: ZhiPu
+        - label: Amazon Bedrock
+          value: AmazonBedrock
+        - label: Anthropic Claude
+          value: Anthropic
+        - label: Cohere
+          value: Cohere
+        - label: Github
+          value: Github
+        - label: Google
+          value: Google
+        - label: Groq
+          value: Groq
+        - label: HuggingFace
+          value: HuggingFace
+        - label: Hyperbolic
+          value: Hyperbolic
+        - label: LMStudio
+          value: LMStudio
+        - label: Mistral
+          value: Mistral
+        - label: Ollama
+          value: Ollama
+        - label: OpenRouter
+          value: OpenRouter
+        - label: Perplexity
+          value: Perplexity
+        - label: Together
+          value: Together
+        - label: xAI
+          value: xAI
+    - default: ""
+      edit: true
+      envKey: LLM_VISION_MODEL
+      labelEn: Vision model
+      labelZh: 视觉模型
+      label:
+        en: Vision model
+        es-es: Modelo de visión
+        ja: ビジョンモデル
+        ms: Model penglihatan
+        pt-br: Modelo de visão
+        ru: Модель зрения
+        ko: 비전 모델
+        tr: Görüntü modeli
+        zh-hant: 視覺模型
+        zh: 视觉模型
+      description:
+        en: "Optional. Vision model for processing images when the primary model lacks multimodal support."
+        ja: "オプション。主モデルがマルチモーダルをサポートしていない場合に画像を処理するビジョンモデル。"
+        ms: "Pilihan. Model penglihatan untuk memproses imej apabila model utama tidak menyokong multimodal."
+        pt-br: "Opcional. Modelo de visão para processamento de imagens quando o modelo principal não tem suporte multimodal."
+        ru: "Необязательно. Модель зрения для обработки изображений, когда основная модель не поддерживает мультимодальность."
+        ko: "선택 사항. 기본 모델이 다중 모달을 지원하지 않을 때 이미지를 처리하는 비전 모델."
+        tr: "İsteğe bağlı. Ana model çok modlu desteğe sahip olmadığında görüntüleri işlemek için görüntü modeli."
+        zh-hant: "可選。當主模型不支援多模態時用於處理圖像的視覺模型。"
+        zh: "可选。当主模型不支持多模态时用于处理图像的视觉模型。"
+        es-es: "Opcional. Modelo de visión para procesar imágenes cuando el modelo principal no tiene soporte multimodal."
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: VISION_PROVIDER_BASE_URL
+      labelEn: Vision API URL
+      labelZh: 视觉 API 地址
+      label:
+        en: Vision API URL
+        es-es: URL de API de visión
+        ja: ビジョン API URL
+        ms: URL API Penglihatan
+        pt-br: URL da API de visão
+        ru: URL API зрения
+        ko: 비전 API URL
+        tr: Görüntü API URL'si
+        zh-hant: 視覺 API 位址
+        zh: 视觉 API 地址
+      description:
+        en: "Optional. Base URL for the vision model provider."
+        ja: "オプション。ビジョンモデルプロバイダーのベースURL。"
+        ms: "Pilihan. URL asas untuk pembekal model penglihatan."
+        pt-br: "Opcional. URL base para o provedor de modelo de visão."
+        ru: "Необязательно. Базовый URL для поставщика модели зрения."
+        ko: "선택 사항. 비전 모델 공급자의 기본 URL."
+        tr: "İsteğe bağlı. Görüntü modeli sağlayıcısı için temel URL."
+        zh-hant: "可選。視覺模型提供商的基礎 URL。"
+        zh: "可选。视觉模型提供商的基础 URL。"
+        es-es: "Opcional. URL base para el proveedor de modelo de visión."
+      required: false
+      rule: paramHttp
+      type: text
+    - default: ""
+      edit: true
+      envKey: VISION_PROVIDER_API_KEY
+      labelEn: Vision API Key
+      labelZh: 视觉 API 密钥
+      label:
+        en: Vision API Key
+        es-es: Clave de API de visión
+        ja: ビジョン API キー
+        ms: Kunci API Penglihatan
+        pt-br: Chave da API de visão
+        ru: Ключ API зрения
+        ko: 비전 API 키
+        tr: Görüntü API Anahtarı
+        zh-hant: 視覺 API 密鑰
+        zh: 视觉 API 密钥
+      description:
+        en: "Optional. API Key for the vision model provider."
+        ja: "オプション。ビジョンモデルプロバイダーの API キー。"
+        ms: "Pilihan. Kunci API untuk pembekal model penglihatan."
+        pt-br: "Opcional. Chave de API para o provedor de modelo de visão."
+        ru: "Необязательно. Ключ API для поставщика модели зрения."
+        ko: "선택 사항. 비전 모델 공급자의 API 키."
+        tr: "İsteğe bağlı. Görüntü modeli sağlayıcısı için API Anahtarı."
+        zh-hant: "可選。視覺模型提供商的 API 密鑰。"
+        zh: "可选。视觉模型提供商的 API 密钥。"
+        es-es: "Opcional. Clave de API para el proveedor de modelo de visión."
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: SERPER_API_KEY
+      labelEn: Serper API Key
+      labelZh: Serper API 密钥
+      label:
+        en: Serper API Key
+        es-es: Clave de API de Serper
+        ja: Serper API キー
+        ms: Kunci API Serper
+        pt-br: Chave da API Serper
+        ru: Ключ API Serper
+        ko: Serper API 키
+        tr: Serper API Anahtarı
+        zh-hant: Serper API 密鑰
+        zh: Serper API 密钥
+      description:
+        en: "Optional. Get your key at https://serper.dev/ for AI search capabilities."
+        ja: "オプション。AI 検索機能のために https://serper.dev/ でキーを取得してください。"
+        ms: "Pilihan. Dapatkan kunci anda di https://serper.dev/ untuk keupayaan carian AI."
+        pt-br: "Opcional. Obtenha sua chave em https://serper.dev/ para recursos de pesquisa de IA."
+        ru: "Необязательно. Получите свой ключ на https://serper.dev/ для возможностей поиска с помощью ИИ."
+        ko: "선택 사항. AI 검색 기능을 위해 https://serper.dev/에서 키를 받으세요."
+        tr: "İsteğe bağlı. AI arama yetenekleri için https://serper.dev/ adresinden anahtarınızı alın."
+        zh-hant: "可選。在 https://serper.dev/ 獲取密鑰以使用 AI 搜尋功能。"
+        zh: "可选。在 https://serper.dev/ 获取密钥以使用 AI 搜索功能。"
+        es-es: "Opcional. Obtenga su clave en https://serper.dev/ para capacidades de búsqueda de IA."
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: WEATHER_API_KEY
+      labelEn: Weather API Key
+      labelZh: 天气 API 密钥
+      label:
+        en: Weather API Key
+        es-es: Clave de API del clima
+        ja: 天気 API キー
+        ms: Kunci API Cuaca
+        pt-br: Chave da API de clima
+        ru: Ключ API погоды
+        ko: 날씨 API 키
+        tr: Hava Durumu API Anahtarı
+        zh-hant: 天氣 API 密鑰
+        zh: 天气 API 密钥
+      description:
+        en: "Optional. Get your key at https://www.weatherapi.com/my/ for weather tools."
+        ja: "オプション。天気ツールのために https://www.weatherapi.com/my/ でキーを取得してください。"
+        ms: "Pilihan. Dapatkan kunci anda di https://www.weatherapi.com/my/ untuk alat cuaca."
+        pt-br: "Opcional. Obtenha sua chave em https://www.weatherapi.com/my/ para ferramentas de clima."
+        ru: "Необязательно. Получите свой ключ на https://www.weatherapi.com/my/ для инструментов погоды."
+        ko: "선택 사항. 날씨 도구를 위해 https://www.weatherapi.com/my/에서 키를 받으세요."
+        tr: "İsteğe bağlı. Hava durumu araçları için https://www.weatherapi.com/my/ adresinden anahtarınızı alın."
+        zh-hant: "可選。在 https://www.weatherapi.com/my/ 獲取密鑰以使用天氣工具。"
+        zh: "可选。在 https://www.weatherapi.com/my/ 获取密钥以使用天气工具。"
+        es-es: "Opcional. Obtenga su clave en https://www.weatherapi.com/my/ para herramientas meteorológicas."
+      required: false
+      type: text
+    - default: 5
+      edit: true
+      envKey: MAX_UPLOAD_SIZE_MB
+      labelEn: Max upload size (MB)
+      labelZh: 最大上传大小 (MB)
+      label:
+        en: Max upload size (MB)
+        es-es: Tamaño máximo de carga (MB)
+        ja: 最大アップロードサイズ (MB)
+        ms: Saiz muat naik maksimum (MB)
+        pt-br: Tamanho máximo de upload (MB)
+        ru: Максимальный размер загрузки (МБ)
+        ko: 최대 업로드 크기 (MB)
+        tr: Maksimum yükleme boyutu (MB)
+        zh-hant: 最大上傳大小 (MB)
+        zh: 最大上传大小 (MB)
+      required: false
+      type: number
