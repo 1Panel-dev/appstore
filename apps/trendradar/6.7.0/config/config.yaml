@@ -1,6 +1,6 @@
 # ═══════════════════════════════════════════════════════════════
 #                    TrendRadar 配置文件
-#                      Version: 2.0.0
+#                      Version: 2.2.0
 # ═══════════════════════════════════════════════════════════════
 
 
@@ -105,7 +105,7 @@ rss:
   freshness_filter:
     enabled: true                     # 是否启用新鲜度过滤（默认启用）
 
-    max_age_days: 3                   # 最大文章年龄（天）
+    max_age_days: 1                   # 最大文章年龄（天）
                                       # - 正整数：只推送 N 天内的文章
                                       # - 0：禁用过滤，推送所有文章
 
@@ -117,17 +117,16 @@ rss:
     - id: "hacker-news"
       name: "Hacker News"
       url: "https://hnrss.org/frontpage"
-      # max_age_days: 1               # 示例：只推送1天内的文章
 
     - id: "ruanyifeng"
       name: "阮一峰的网络日志"
       url: "http://www.ruanyifeng.com/blog/atom.xml"
-      # max_age_days: 7               # 示例：推送7天内的文章（更新较慢的博客）
-    
+      enabled: false                  # 禁用
+      # max_age_days: 3               # 示例：推送 3 天内的文章（更新较慢的博客）
+     
     - id: "yahoo-finance"
       name: "雅虎财经"
       url: "https://finance.yahoo.com/news/rssindex"
-      enabled: false                  # 禁用
 
     # 自定义源示例
     # - id: "custom-feed"
@@ -140,38 +139,99 @@ rss:
 # ===============================================================
 # 4. 报告模式
 #
-# 🔸 daily（当日汇总模式）
-#    • 推送时机：按时推送(默认每小时推送一次)
-#    • 显示内容：当日所有匹配新闻 + 新增新闻区域
-#    • 适用场景：日报总结、全面了解当日热点趋势
+# 新手 5 行：
+# 1) 先选 mode：daily(当日汇总) / current(当前榜单) / incremental(仅新增)
+# 2) 再选 display_mode：keyword(按词/标签) / platform(按平台)
+# 3) 如果你开了 schedule，这里的 mode 只是默认值，会被 timeline 时段覆盖
+# 4) sort_by_position_first 只影响 keyword 模式排序
+# 5) rank_threshold 和 max_news_per_keyword 只影响展示，不影响抓取
 #
-# 🔸 current（当前榜单模式）
-#    • 推送时机：按时推送(默认每小时推送一次)
-#    • 显示内容：当前榜单匹配新闻 + 新增新闻区域
-#    • 适用场景：实时热点追踪、了解当前最火的内容
-#
-# 🔸 incremental（增量监控模式）
-#    • 推送时机：有新增才推送
-#    • 显示内容：新出现的匹配频率词新闻
-#    • 适用场景：避免重复信息干扰
+# 进阶说明：
+# - daily：信息最全，但重复最多
+# - current：适合盯当前热度
+# - incremental：最少打扰，只看新增
 # ===============================================================
 report:
-  mode: "current"                     # 可选: daily | current | incremental
-                                      # ⚠️ 开启调度系统后，此值会被当前时间段的 report_mode 覆盖
-
+  mode: "current"                     # daily | current | incremental（schedule 开启时作为默认值）
 
   display_mode: "keyword"             # 分组维度: keyword | platform
                                       # keyword: 按关键词分组显示（默认）
                                       # platform: 按平台/来源分组显示
 
-  # 关键词组排序方式（仅 display_mode: keyword 时生效）
-  # true: 按 frequency_words.txt 中的定义顺序排列
+  # 关键词模式分组排序方式（仅 keyword 模式生效）
+  # true: 按 frequency_words.txt 的定义顺序排列
   # false: 按匹配到的热点条数排序（条数多的在前）
   sort_by_position_first: false
 
-  rank_threshold: 5                   # 排名高亮阈值
+  rank_threshold: 5                   # 排名高亮阈值（影响展示强调，不改变抓取范围）
 
-  max_news_per_keyword: 0             # 每个关键词最大显示数量（0=不限制）
+  max_news_per_keyword: 0             # 每个关键词/标签最大显示数量（0=不限制，仅影响展示裁剪）
+
+
+# ===============================================================
+# 4.5 筛选策略
+#
+# 新手 5 行：
+# 1) 先选 method：keyword（关键词）或 ai（兴趣分类）
+# 2) keyword 模式：看 config/frequency_words.txt
+# 3) ai 模式：看 config/ai_interests.txt + 下方 ai_filter 配置
+# 4) priority_sort_enabled 只影响 ai 模式标签排序
+# 5) 这里决定“筛选路径”，不决定 AI 模型（模型在 ai 段）
+# ===============================================================
+filter:
+  method: "ai"                     # 可选: keyword | ai
+
+  # AI 模式标签排序开关（仅 ai 模式生效）
+  # true: 按标签优先级排序（来自兴趣描述提取顺序）
+  # false: 按匹配条数排序（条数多的在前）
+  priority_sort_enabled: true
+
+
+# ===============================================================
+# 4.6 AI 智能筛选配置（当 filter.method=ai 时生效）
+#
+# 新手 5 行：
+# 1) 先调 min_score（推荐 0.5~0.7）
+# 2) 再调 reclassify_threshold（大改兴趣建议更低）
+# 3) 批量参数只影响速度/限流，不影响分类逻辑
+# 4) interests_file 不填就用 config/ai_interests.txt
+# 5) prompt_file 系列属于进阶项，默认一般不用改
+#
+# 进阶说明：
+# - min_score 越高，结果越“准”但会漏召回
+# - reclassify_threshold 越低，越倾向全量重分类（更耗 token）
+# - 模型配置统一在下方 ai 段
+# ===============================================================
+ai_filter:
+  batch_size: 200                         # 每批发送给 AI 的标题数（控制单次 API 调用量）
+                                          # 新闻超过此数量时自动分批处理
+  batch_interval: 2                       # 分批处理时，每批之间的等待时间（秒）
+                                          # 避免频繁调用 API 触发限流，设为 0 则不等待
+
+  min_score: 0.7                          # 推送最低分数阈值（0.0 ~ 1.0）
+                                          # 0 = 不过滤；值越高越严格（推荐先用 0.5~0.7）
+
+  # 兴趣描述文件
+  # 默认使用 config/ai_interests.txt，无需在此配置
+  # 这里设置的是“全局默认”，可被 timeline.yaml 时段内的 interests_file 覆盖
+  # 如需使用自定义文件，将文件放入 config/custom/ai/ 目录，然后指定文件名：
+  # interests_file: "finance.txt"    # → 加载 config/custom/ai/finance.txt
+
+  # 全量重分类触发阈值（0~1）
+  # change_ratio >= 此值：全量重分类；否则增量更新
+  # 0.0 最准确最费；1.0 最省但可能陈旧；0.6 是平衡点
+  reclassify_threshold: 0.6
+
+  # 以下提示词模板一般无需修改（不建议动）
+
+  # 分类提示词模板
+  prompt_file: "prompt.txt"
+
+  # 标签提取提示词模板（首次运行时使用）
+  extract_prompt_file: "extract_prompt.txt"
+
+  # 标签更新提示词模板（兴趣变更时 AI 对比新旧标签）
+  update_tags_prompt_file: "update_tags_prompt.txt"
 
 
 # ===============================================================
@@ -192,16 +252,16 @@ display:
   #   1. 在此列表中
   #   2. 下方 regions 中对应开关为 true
   region_order:
-    - new_items                       # 1️⃣ 新增热点区域
-    - hotlist                         # 2️⃣ 热榜区域（关键词匹配）
-    - rss                             # 3️⃣ RSS 订阅区域
-    - standalone                      # 4️⃣ 独立展示区
-    - ai_analysis                     # 5️⃣ AI 分析区域
+    - new_items                           # 1️⃣ 新增热点区域
+    - hotlist                             # 2️⃣ 热榜区域（关键词匹配 / AI 智能筛选）
+    - rss                                 # 3️⃣ RSS 订阅区域
+    - standalone                          # 4️⃣ 独立展示区
+    - ai_analysis                         # 5️⃣ AI 分析区域
 
   # 推送区域开关
   # 控制各区域是否启用（配合 region_order 使用）
   regions:
-    hotlist: true                     # 热榜区域（关键词匹配的热点新闻）
+    hotlist: true                     # 热榜区域（关键词匹配 / AI 智能筛选）
     new_items: false                   # 新增热点区域（含热榜新增 + RSS 新增）
                                       # 注：热点词汇统计中的新增标记🆕不受此配置影响
 
@@ -216,7 +276,7 @@ display:
   # 用途：将指定平台的完整热榜/RSS 数据独立提取，不受关键词过滤影响
   # 两个独立用途：
   #   - 推送展示：由 regions.standalone 开关控制，在推送中单独展示完整热榜
-  #   - AI 分析：由 ai.include_standalone 开关控制，将完整数据送入 AI 做深度分析
+  #   - AI 分析：由 ai_analysis.include_standalone 开关控制，将完整数据送入 AI 做深度分析
   # 两者共享此处的平台/RSS 配置，但开关互相独立（可只开 AI 分析、不推送展示）
   standalone:
     platforms: ["zhihu", "wallstreetcn-hot"]     # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
@@ -243,6 +303,10 @@ display:
 # • 需要配对的配置（如 Telegram 的 token 和 chat_id）数量必须一致
 # • 每个渠道最多支持 max_accounts_per_channel 个账号
 # • 邮箱已支持多收件人（逗号分隔）
+#
+# 新手建议：
+# • 第一次先只配置 1 个渠道（建议 ntfy 或 telegram）验证通路
+# • 跑通后再增加多渠道和多账号，排障成本最低
 # ===============================================================
 notification:
   enabled: true                       # 是否启用通知功能（总开关）
@@ -338,7 +402,7 @@ storage:
 # ===============================================================
 # 8. AI 模型配置（共享）
 #
-# ai_analysis 和 ai_translation 共用此模型配置
+# ai_analysis / ai_translation / ai_filter 共用此模型配置
 # 基于 LiteLLM 统一接口，支持 100+ AI 提供商
 # ===============================================================
 ai:
@@ -446,7 +510,8 @@ ai_analysis:
 
   include_rss: false                # 是否包含 RSS 内容进行分析
   
-  include_standalone: true          # 是否将独立展示区数据纳入 AI 分析（只需上方 display 区的 standalone 配置了平台/RSS 即可）
+  include_standalone: true          # 是否将独立展示区数据纳入 AI 分析
+                                    # 数据源列表来自 display.standalone.platforms / display.standalone.rss_feeds
 
   include_rank_timeline: true       # 是否传递完整排名时间线
                                     # false: 使用简化格式（排名范围+时间范围+出现次数）
@@ -459,11 +524,11 @@ ai_analysis:
 # ===============================================================
 # 10. AI 翻译功能
 #
-# 对推送内容进行多语言翻译，不包含 ai_analysis 分析的内容 
+# 对推送内容进行多语言翻译，不包含 ai_analysis 分析的内容
 # 模型配置见上方 ai 配置段
 # ===============================================================
 ai_translation:
-  enabled: false                    # 是否启用翻译功能
+  enabled: true                    # 是否启用翻译功能
 
   # 翻译目标语言
   # 格式：自然语言描述
@@ -472,6 +537,17 @@ ai_translation:
 
   # 提示词配置文件路径（相对于 config 目录）
   prompt_file: "ai_translation_prompt.txt"
+
+  # 翻译范围
+  # 控制哪些区域的标题会被翻译
+  # hotlist: 热榜标题 + 新增热点
+  # rss: RSS 统计 + RSS 新增
+  # standalone: 独立展示区（热榜平台 + RSS 源）
+  # 如果 display.regions 关闭了显示，那么这边即使开启了也不会翻译
+  scope:
+    hotlist: false                  # 热榜区域
+    rss: true                      # RSS 区域
+    standalone: true               # 独立展示区
 
 
 # ===============================================================
@@ -509,6 +585,7 @@ advanced:
   # 多账号限制
   max_accounts_per_channel: 3         # 每个渠道最大账号数量
 
+  # 以下为内部参数（一般无需修改）
   # 消息分批大小（字节）- 内部配置，请勿修改
   batch_size:
     default: 4000
