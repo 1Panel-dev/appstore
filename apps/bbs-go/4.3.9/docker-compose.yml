@@ -1,0 +1,31 @@
+services:
+  bbs-go:
+    image: mlogclub/bbs-go:v4.3.9
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./uploads:/app/res/uploads
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:3000"
+    environment:
+      - TZ=Asia/Shanghai
+      - BBSGO_ENV=prod
+      - NODE_ENV=production
+      - PORT=3000
+      - BBSGO_SERVER_URL=http://127.0.0.1:8082
+      - BBSGO_INSTALL_DOCKER_BUILTIN_MYSQL=true
+      - BBSGO_DOCKER_BUILTIN_MYSQL_HOST=${PANEL_DB_HOST}
+      - BBSGO_DOCKER_BUILTIN_MYSQL_PORT=${PANEL_DB_PORT}
+      - BBSGO_DOCKER_BUILTIN_MYSQL_DATABASE=${PANEL_DB_NAME}
+      - BBSGO_DOCKER_BUILTIN_MYSQL_USERNAME=${PANEL_DB_USER}
+      - BBSGO_DOCKER_BUILTIN_MYSQL_PASSWORD=${PANEL_DB_USER_PASSWORD}
+    labels:
+      createdBy: "Apps"
+
+networks:
+  1panel-network:
+    external: true

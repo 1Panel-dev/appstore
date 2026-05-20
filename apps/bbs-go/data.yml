@@ -1,0 +1,27 @@
+name: bbs-go
+tags:
+    - 建站
+title: 轻量级社区和问答平台
+description: 轻量级社区和问答平台
+additionalProperties:
+    key: bbs-go
+    name: bbs-go
+    tags:
+        - Website
+    shortDescZh: 轻量级社区和问答平台
+    shortDescEn: Lightweight community and Q&A platform
+    type: website
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://bbs-go.com
+    github: https://github.com/mlogclub/bbs-go
+    document: https://hub.docker.com/r/mlogclub/bbs-go
+    description:
+        en: Lightweight community and Q&A platform for forums, knowledge bases, and discussions.
+        zh: 适合搭建论坛、知识库、问答社区和讨论社区的轻量级社区平台。
+        zh-Hant: 適合搭建論壇、知識庫、問答社區和討論社區的輕量級社區平台。
+    memoryRequired: 512
+    architectures:
+        - amd64
+        - arm64
