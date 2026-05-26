@@ -1,0 +1,17 @@
+{
+  "id":"10042",
+  "state": "on",
+  "name": "Solr",
+  "cve": "CVE-2019-0193",
+  "type": "rce",
+  "remark": "",
+  "rule": {
+    "method":"POST",
+    "type": "request_uri",
+    "uri": "^/solr/[\\w-]+/dataimport(?:\\?.*)?$",
+    "pattern": "regex",
+    "params": {
+      "command": ""
+    }
+  }
+}
