@@ -1,0 +1,75 @@
+additionalProperties:
+  formFields:
+    - default: 8800
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        en: Port
+        es-es: Puerto
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        zh-Hant: 埠
+        zh: 端口
+        ko: 포트
+        tr: Bağlantı Noktası
+    - default: ./models
+      edit: true
+      envKey: MODEL_DIR
+      labelEn: Model directory
+      labelZh: 模型目录
+      required: true
+      type: text
+      label:
+        en: Model directory
+        es-es: Directorio del modelo
+        ja: モデルディレクトリ
+        ms: Direktori model
+        pt-br: Diretório do modelo
+        ru: Каталог модели
+        zh-Hant: 模型目錄
+        zh: 模型目录
+        ko: 모델 디렉터리
+        tr: Model dizini
+    - default: model
+      edit: true
+      envKey: MODEL_NAME
+      labelEn: Model name
+      labelZh: 模型名称
+      required: true
+      type: text
+      label:
+        en: Model name
+        es-es: Nombre del modelo
+        ja: モデル名
+        ms: Nama model
+        pt-br: Nome do modelo
+        ru: Название модели
+        zh-Hant: 模型名稱
+        zh: 模型名称
+        ko: 모델 이름
+        tr: Model adı
+    - default: /models/model --served-model-name model --host 0.0.0.0 --port 8001
+      edit: true
+      envKey: START_COMMAND
+      labelEn: Start command
+      labelZh: 启动命令
+      required: true
+      type: text
+      label:
+        en: Start command
+        es-es: Comando de inicio
+        ja: 起動コマンド
+        ms: Arahan mula
+        pt-br: Comando de inicialização
+        ru: Команда запуска
+        zh-Hant: 啟動命令
+        zh: 启动命令
+        ko: 시작 명령
+        tr: Başlatma komutu
