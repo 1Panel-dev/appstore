@@ -4,6 +4,9 @@ networks:
 services:
   vllm:
     image: intel/llm-scaler-vllm:0.14.0-b8.3
+    entrypoint:
+      - vllm
+      - serve
     container_name: ${CONTAINER_NAME}
     restart: always
     devices:
