@@ -1,7 +1,7 @@
 services:
   hermes-agent:
     container_name: ${CONTAINER_NAME}
-    image: 1panel/hermes-agent:2026.5.28
+    image: 1panel/hermes-agent:2026.5.29
     restart: unless-stopped
     networks:
       - 1panel-network
@@ -17,7 +17,6 @@ services:
       - /etc/localtime:/etc/localtime
     ports:
       - ${PANEL_APP_PORT_HTTP}:9119
-    init: true
     labels:
       createdBy: "Apps"
 
