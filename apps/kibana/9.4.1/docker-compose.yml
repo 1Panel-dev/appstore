@@ -1,6 +1,6 @@
 services:
   kibana:
-    image: kibana:9.4.1
+    image: kibana:9.4.2
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
