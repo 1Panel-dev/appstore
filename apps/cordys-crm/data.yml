@@ -1,14 +1,14 @@
 name: Cordys CRM
 tags:
   - CRM
-title: 开源 AI CRM 系统，是 Salesforce CRM 的开源替代
-description: 开源 AI CRM 系统，是 Salesforce CRM 的开源替代
+title: 开源 AI CRM 系统
+description: 开源 AI CRM 系统，是 Salesforce 的开源替代
 additionalProperties:
     key: cordys-crm
     name: Cordys CRM
     tags:
         - CRM
-    shortDescZh: 开源 AI CRM 系统，是 Salesforce CRM 的开源替代
+    shortDescZh: 开源 AI CRM 系统，是 Salesforce 的开源替代
     shortDescEn: An open-source AI-powered CRM system that serves as an alternative to Salesforce CRM
     description:
         en: An open-source AI-powered CRM system that serves as an alternative to Salesforce CRM
