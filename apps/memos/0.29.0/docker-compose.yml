@@ -1,6 +1,6 @@
 services:
   memos:
-    image: neosmemo/memos:0.29.0
+    image: neosmemo/memos:0.29.1
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
