@@ -1,26 +1,26 @@
 name: ZPan
 tags:
   - 云存储
-title: S3 原生文件托管平台
-description: S3 原生文件托管平台
+title: 面向 S3 兼容存储的开源文件托管平台
+description: 面向 S3 兼容存储的开源文件托管平台
 additionalProperties:
   key: zpan
   name: ZPan
   tags:
     - Storage
-  shortDescZh: S3 原生文件托管平台
-  shortDescEn: S3-native file hosting platform
+  shortDescZh: 面向 S3 兼容存储的开源文件托管平台
+  shortDescEn: Open-source file hosting for S3-compatible storage
   description:
-    en: S3-native file hosting platform for web drive, file sharing, and image hosting workflows
-    zh: 面向网盘、文件分享和图床场景的 S3 原生文件托管平台
-    es-es: Plataforma de alojamiento de archivos nativa de S3 para unidad web, uso compartido de archivos y alojamiento de imágenes
-    zh-Hant: 面向網盤、檔案分享和圖床場景的 S3 原生檔案託管平台
-    ja: Web ドライブ、ファイル共有、画像ホスティング向けの S3 ネイティブなファイルホスティングプラットフォーム
-    ko: 웹 드라이브, 파일 공유, 이미지 호스팅 워크플로를 위한 S3 네이티브 파일 호스팅 플랫폼
-    ms: Platform pengehosan fail asli S3 untuk pemacu web, perkongsian fail dan pengehosan imej
-    pt-br: Plataforma de hospedagem de arquivos nativa de S3 para web drive, compartilhamento de arquivos e hospedagem de imagens
-    ru: S3-ориентированная платформа размещения файлов для веб-диска, обмена файлами и хостинга изображений
-    tr: Web sürücüsü, dosya paylaşımı ve görsel barındırma için S3 yerel dosya barındırma platformu
+    en: Open-source file hosting for S3-compatible storage with web drive, file sharing, image hosting, WebDAV, and remote downloader workflows
+    zh: 面向 S3 兼容存储的开源文件托管平台，支持网盘、文件分享、图床、WebDAV 和远程下载工作流
+    es-es: Plataforma abierta de alojamiento de archivos para almacenamiento compatible con S3
+    zh-Hant: 面向 S3 相容儲存的開源檔案託管平台，支援網盤、檔案分享、圖床、WebDAV 和遠端下載工作流
+    ja: S3 互換ストレージ向けのオープンソースファイルホスティングプラットフォーム
+    ko: S3 호환 스토리지를 위한 오픈소스 파일 호스팅 플랫폼
+    ms: Platform pengehosan fail sumber terbuka untuk storan serasi S3
+    pt-br: Plataforma aberta de hospedagem de arquivos para armazenamento compatível com S3
+    ru: Открытая платформа размещения файлов для S3-совместимого хранилища
+    tr: S3 uyumlu depolama için açık kaynak dosya barındırma platformu
   type: website
   crossVersionUpdate: true
   limit: 0

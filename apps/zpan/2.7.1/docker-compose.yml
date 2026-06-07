@@ -13,6 +13,38 @@ services:
       - DATABASE_URL=/data/zpan.db
     volumes:
       - ./data:/data
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:8222/api/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+      start_period: 10s
+    labels:
+      createdBy: "Apps"
+
+  downloader:
+    image: ghcr.io/saltbo/zpan:2.7.1-cli
+    container_name: ${CONTAINER_NAME}-downloader
+    hostname: ${CONTAINER_NAME}-downloader
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - ${ZPAN_BT_PORT}:6881/tcp
+      - ${ZPAN_BT_PORT}:6881/udp
+    command: ["--config", "/data/config.yaml", "downloader", "up"]
+    environment:
+      - ZPAN_SERVER_URL=http://zpan:8222
+      - ZPAN_DOWNLOADER_ENGINE=auto
+      - ZPAN_DOWNLOADER_DOWNLOAD_DIR=/data/downloads
+      - ZPAN_DOWNLOADER_STATE_DIR=/data/state
+      - ZPAN_DOWNLOADER_BT_LISTEN_PORT=6881
+      - ZPAN_DOWNLOADER_SEED_CACHE_LIMIT=10GB
+    volumes:
+      - ./downloader:/data
+    depends_on:
+      zpan:
+        condition: service_healthy
     labels:
       createdBy: "Apps"
 networks:

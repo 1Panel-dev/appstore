@@ -38,3 +38,22 @@ additionalProperties:
       required: true
       rule: paramExtUrl
       type: text
+    - default: 46881
+      edit: true
+      envKey: ZPAN_BT_PORT
+      labelEn: Downloader BitTorrent Port
+      labelZh: 下载器 BT 端口
+      label:
+        en: Downloader BitTorrent Port
+        es-es: Puerto BitTorrent del descargador
+        ja: ダウンローダー BitTorrent ポート
+        ms: Port BitTorrent Pemuat Turun
+        pt-br: Porta BitTorrent do downloader
+        ru: BitTorrent-порт загрузчика
+        ko: 다운로더 BitTorrent 포트
+        zh: 下载器 BT 端口
+        zh-Hant: 下載器 BT 連接埠
+        tr: İndirici BitTorrent Bağlantı Noktası
+      required: true
+      rule: paramPort
+      type: number
