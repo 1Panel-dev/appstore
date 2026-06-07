@@ -1,0 +1,40 @@
+additionalProperties:
+  formFields:
+    - default: 40222
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: HTTP Port
+      labelZh: HTTP 端口
+      label:
+        en: HTTP Port
+        es-es: Puerto HTTP
+        ja: HTTP ポート
+        ms: Port HTTP
+        pt-br: Porta HTTP
+        ru: HTTP-порт
+        ko: HTTP 포트
+        zh: HTTP 端口
+        zh-Hant: HTTP 連接埠
+        tr: HTTP Bağlantı Noktası
+      required: true
+      rule: paramPort
+      type: number
+    - default: http://localhost:40222
+      edit: true
+      envKey: BETTER_AUTH_URL
+      labelEn: External URL
+      labelZh: 外部访问地址
+      label:
+        en: External URL
+        es-es: URL externa
+        ja: 外部 URL
+        ms: URL Luaran
+        pt-br: URL externa
+        ru: Внешний URL
+        ko: 외부 URL
+        zh: 外部访问地址
+        zh-Hant: 外部訪問地址
+        tr: Harici URL
+      required: true
+      rule: paramExtUrl
+      type: text

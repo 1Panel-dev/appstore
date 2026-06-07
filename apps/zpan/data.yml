@@ -1,0 +1,34 @@
+name: ZPan
+tags:
+  - 云存储
+title: S3 原生文件托管平台
+description: S3 原生文件托管平台
+additionalProperties:
+  key: zpan
+  name: ZPan
+  tags:
+    - Storage
+  shortDescZh: S3 原生文件托管平台
+  shortDescEn: S3-native file hosting platform
+  description:
+    en: S3-native file hosting platform for web drive, file sharing, and image hosting workflows
+    zh: 面向网盘、文件分享和图床场景的 S3 原生文件托管平台
+    es-es: Plataforma de alojamiento de archivos nativa de S3 para unidad web, uso compartido de archivos y alojamiento de imágenes
+    zh-Hant: 面向網盤、檔案分享和圖床場景的 S3 原生檔案託管平台
+    ja: Web ドライブ、ファイル共有、画像ホスティング向けの S3 ネイティブなファイルホスティングプラットフォーム
+    ko: 웹 드라이브, 파일 공유, 이미지 호스팅 워크플로를 위한 S3 네이티브 파일 호스팅 플랫폼
+    ms: Platform pengehosan fail asli S3 untuk pemacu web, perkongsian fail dan pengehosan imej
+    pt-br: Plataforma de hospedagem de arquivos nativa de S3 para web drive, compartilhamento de arquivos e hospedagem de imagens
+    ru: S3-ориентированная платформа размещения файлов для веб-диска, обмена файлами и хостинга изображений
+    tr: Web sürücüsü, dosya paylaşımı ve görsel barındırma için S3 yerel dosya barındırma platformu
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  batchInstallSupport: true
+  website: https://github.com/saltbo/zpan
+  github: https://github.com/saltbo/zpan
+  document: https://github.com/saltbo/zpan#readme
+  architectures:
+    - amd64
+    - arm64

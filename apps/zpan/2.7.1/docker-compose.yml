@@ -1,0 +1,20 @@
+services:
+  zpan:
+    image: ghcr.io/saltbo/zpan:2.7.1
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8222
+    environment:
+      - PORT=8222
+      - BETTER_AUTH_URL=${BETTER_AUTH_URL}
+      - DATABASE_URL=/data/zpan.db
+    volumes:
+      - ./data:/data
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true
