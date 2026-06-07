@@ -1,6 +1,6 @@
 services:
   zpan:
-    image: ghcr.io/saltbo/zpan:2.7.1
+    image: ghcr.io/saltbo/zpan:2.7.2
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
@@ -23,7 +23,7 @@ services:
       createdBy: "Apps"
 
   downloader:
-    image: ghcr.io/saltbo/zpan:2.7.1-cli
+    image: ghcr.io/saltbo/zpan:2.7.2-cli
     container_name: ${CONTAINER_NAME}-downloader
     hostname: ${CONTAINER_NAME}-downloader
     restart: always
