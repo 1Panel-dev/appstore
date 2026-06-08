@@ -52,6 +52,14 @@
       "allowedVersions": "/^11.*/"
     },
     {
+      "matchFileNames": ["apps/grafana/12.*/*.yml"],
+      "allowedVersions": "/^12.*/"
+    },
+    {
+      "matchFileNames": ["apps/grafana/13.*/*.yml"],
+      "allowedVersions": "/^13.*/"
+    },
+    {
       "matchFileNames": ["apps/mariadb/10.6.*/*.yml"],
       "allowedVersions": "/^10.6.*/"
     },
