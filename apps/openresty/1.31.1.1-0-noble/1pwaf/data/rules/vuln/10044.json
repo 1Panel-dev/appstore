@@ -1,0 +1,17 @@
+{
+  "id":"10044",
+  "state": "on",
+  "name": "Coremail",
+  "cve": "",
+  "type": "il",
+  "remark": "",
+  "rule": {
+    "method":"GET",
+    "type": "uri",
+    "uri": "/mailsms/s",
+    "pattern": "eq",
+    "args": {
+      "func": ""
+    }
+  }
+}
