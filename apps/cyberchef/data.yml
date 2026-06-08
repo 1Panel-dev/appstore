@@ -22,7 +22,7 @@ additionalProperties:
     pt-br: Caixa de ferramentas no navegador para codificacao, decodificacao e analise de dados
     tr: Tarayici tabanli kodlama, kod cozumleme ve veri analizi araci
   type: website
-  crossVersionUpdate: true
+  crossVersionUpdate: false
   limit: 0
   recommend: 0
   website: https://gchq.github.io/CyberChef/
