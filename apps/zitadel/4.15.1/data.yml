@@ -99,6 +99,23 @@ additionalProperties:
       random: true
       required: true
       type: password
+    - default: ""
+      envKey: ZITADEL_MASTER_KEY
+      labelEn: Master Key (optional, exactly 32 chars; auto-generated if empty)
+      labelZh: 管理密钥（选填，必须 32 位；留空自动生成）
+      label:
+        en: Master Key (optional, exactly 32 chars; auto-generated if empty)
+        es-es: Clave maestra (opcional, exactamente 32 caracteres; se genera automáticamente si está vacía)
+        ja: マスターキー（任意、32文字固定。空欄なら自動生成）
+        ms: Kunci Induk (pilihan, tepat 32 aksara; dijana automatik jika kosong)
+        pt-br: Chave Mestra (opcional, exatamente 32 caracteres; gerada automaticamente se vazia)
+        ru: Мастер-ключ (необязательно, ровно 32 символа; генерируется автоматически, если пусто)
+        ko: 마스터 키 (선택, 정확히 32자. 비워 두면 자동 생성)
+        zh-Hant: 管理密鑰（選填，必須 32 位；留空自動生成）
+        zh: 管理密钥（选填，必须 32 位；留空自动生成）
+        tr: Ana Anahtar (isteğe bağlı, tam 32 karakter; boşsa otomatik oluşturulur)
+      required: false
+      type: password
     - default: sso.example.com
       envKey: ZITADEL_EXTERNALDOMAIN
       labelEn: External Domain
