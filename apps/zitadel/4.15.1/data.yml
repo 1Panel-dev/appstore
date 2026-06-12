@@ -135,28 +135,28 @@ additionalProperties:
       required: true
       rule: paramCommon
       type: text
-    - default: "true"
-      envKey: ZITADEL_EXTERNALSECURE
-      labelEn: Access via HTTPS reverse proxy
-      labelZh: 经 HTTPS 反向代理访问
+    - default: external
+      envKey: ZITADEL_TLSMODE
+      labelEn: Access mode
+      labelZh: 访问方式
       label:
-        en: Access via HTTPS reverse proxy
-        es-es: Acceso mediante proxy inverso HTTPS
-        ja: HTTPS リバースプロキシ経由でアクセス
-        ms: Akses melalui proksi songsang HTTPS
-        pt-br: Acesso via proxy reverso HTTPS
-        ru: Доступ через обратный HTTPS-прокси
-        ko: HTTPS 리버스 프록시를 통한 액세스
-        zh-Hant: 經 HTTPS 反向代理訪問
-        zh: 经 HTTPS 反向代理访问
-        tr: HTTPS ters proxy üzerinden erişim
+        en: Access mode
+        es-es: Modo de acceso
+        ja: アクセスモード
+        ms: Mod akses
+        pt-br: Modo de acesso
+        ru: Режим доступа
+        ko: 액세스 모드
+        zh-Hant: 訪問方式
+        zh: 访问方式
+        tr: Erişim modu
       required: true
       type: select
       values:
-        - label: HTTPS (recommended)
-          value: "true"
-        - label: HTTP
-          value: "false"
+        - label: HTTPS reverse proxy (recommended)
+          value: external
+        - label: Plain HTTP
+          value: disabled
     - default: 443
       envKey: ZITADEL_EXTERNALPORT
       labelEn: External Port (443 for HTTPS proxy)
