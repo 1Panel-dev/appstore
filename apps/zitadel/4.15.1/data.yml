@@ -1,0 +1,197 @@
+additionalProperties:
+  formFields:
+    - default: 8080
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      label:
+        en: Port
+        es-es: Puerto
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh-Hant: 埠
+        zh: 端口
+        tr: Bağlantı Noktası
+      required: true
+      rule: paramPort
+      type: number
+    - default: postgresql
+      envKey: PANEL_DB_TYPE
+      labelEn: Database Service
+      labelZh: 数据库服务
+      required: true
+      type: apps
+      label:
+        en: Database Service
+        es-es: Servicio de base de datos
+        ja: データベースサービス
+        ms: Perkhidmatan Pangkalan Data
+        pt-br: Serviço de Banco de Dados
+        ru: Сервис баз данных
+        ko: 데이터베이스 서비스
+        zh-hant: 資料庫服務
+        zh: 数据库服务
+        tr: Veritabanı Hizmeti
+      values:
+        - label: PostgreSQL
+          value: postgresql
+      child:
+        default: ""
+        envKey: PANEL_DB_HOST
+        required: true
+        type: service
+    - default: zitadel
+      envKey: PANEL_DB_NAME
+      labelEn: Database Name
+      labelZh: 数据库名称
+      label:
+        en: Database Name
+        es-es: Nombre de la base de datos
+        ja: データベース名
+        ms: Nama Pangkalan Database
+        pt-br: Nome do Banco de Dados
+        ru: Имя базы данных
+        ko: 데이터베이스 이름
+        zh-hant: 數據庫名稱
+        zh: 数据库名称
+        tr: Veritabanı Adı
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: zitadel
+      envKey: PANEL_DB_USER
+      labelEn: Database User
+      labelZh: 数据库用户
+      label:
+        en: Database User
+        es-es: Usuario de la base de datos
+        ja: データベースユーザー
+        ms: Pengguna Pangkalan Data
+        pt-br: Usuário do Banco de Dados
+        ru: Пользователь базы данных
+        ko: 데이터베이스 사용자
+        zh-hant: 數據庫用戶
+        zh: 数据库用户
+        tr: Veritabanı Kullanıcısı
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: zitadel
+      envKey: PANEL_DB_USER_PASSWORD
+      labelEn: Database Password
+      labelZh: 数据库密码
+      label:
+        en: Database Password
+        es-es: Contraseña de la base de datos
+        ja: データベースパスワード
+        ms: Kata Laluan Pangkalan Data
+        pt-br: Senha do Banco de Dados
+        ru: Пароль базы данных
+        ko: 데이터베이스 비밀번호
+        zh-hant: 數據庫密碼
+        zh: 数据库密码
+        tr: Veritabanı Parolası
+      random: true
+      required: true
+      type: password
+    - default: sso.example.com
+      envKey: ZITADEL_EXTERNALDOMAIN
+      labelEn: External Domain
+      labelZh: 外部域名
+      label:
+        en: External Domain
+        es-es: External Dominio
+        ja: 外部ドメイン
+        ms: Domain Luar
+        pt-br: Domínio Externo
+        ru: Внешний домен
+        ko: 외부 도메인
+        zh-hant: 外部域名
+        zh: 外部域名
+        tr: External Alan Adı
+      random: false
+      required: true
+      rule: paramCommon
+      type: text
+    - default: "true"
+      envKey: ZITADEL_EXTERNALSECURE
+      labelEn: Access via HTTPS reverse proxy
+      labelZh: 经 HTTPS 反向代理访问
+      label:
+        en: Access via HTTPS reverse proxy
+        es-es: Acceso mediante proxy inverso HTTPS
+        ja: HTTPS リバースプロキシ経由でアクセス
+        ms: Akses melalui proksi songsang HTTPS
+        pt-br: Acesso via proxy reverso HTTPS
+        ru: Доступ через обратный HTTPS-прокси
+        ko: HTTPS 리버스 프록시를 통한 액세스
+        zh-Hant: 經 HTTPS 反向代理訪問
+        zh: 经 HTTPS 反向代理访问
+        tr: HTTPS ters proxy üzerinden erişim
+      required: true
+      type: select
+      values:
+        - label: HTTPS (recommended)
+          value: "true"
+        - label: HTTP
+          value: "false"
+    - default: 443
+      envKey: ZITADEL_EXTERNALPORT
+      labelEn: External Port (443 for HTTPS proxy)
+      labelZh: 外部端口（HTTPS 反代填 443）
+      label:
+        en: External Port (443 for HTTPS proxy)
+        es-es: Puerto externo (443 para proxy HTTPS)
+        ja: 外部ポート（HTTPS プロキシは 443）
+        ms: Port Luaran (443 untuk proksi HTTPS)
+        pt-br: Porta Externa (443 para proxy HTTPS)
+        ru: Внешний порт (443 для HTTPS-прокси)
+        ko: 외부 포트 (HTTPS 프록시는 443)
+        zh-Hant: 外部埠（HTTPS 反代填 443）
+        zh: 外部端口（HTTPS 反代填 443）
+        tr: Harici Bağlantı Noktası (HTTPS proxy için 443)
+      required: true
+      rule: paramPort
+      type: number
+    - default: admin@sso.example.com
+      envKey: ZITADEL_FIRSTINSTANCE_ORG_HUMAN_USERNAME
+      labelEn: Organization Admin
+      labelZh: 组织管理员
+      label:
+        en: Organization Admin
+        es-es: Administrador de la organización
+        ja: 組織管理者
+        ms: Pentadbir Organisasi
+        pt-br: Administrador da Organização
+        ru: Администратор организации
+        ko: 조직 관리자
+        zh-Hant: 組織管理員
+        zh: 组织管理员
+        tr: Kurum yoneticisi
+      random: false
+      required: true
+      rule: paramComplexity
+      type: text
+    - default: root2Password!
+      envKey: ZITADEL_FIRSTINSTANCE_ORG_HUMAN_PASSWORD
+      labelEn: Organization admin password (upper/lower/digit/symbol)
+      labelZh: 组织管理员密码（需含大小写、数字、符号）
+      label:
+        en: Organization admin password (upper/lower/digit/symbol)
+        es-es: Contraseña del administrador de la organización
+        ja: 組織管理者パスワード
+        ms: Kata Laluan Pentadbir Organisasi
+        pt-br: Senha do Administrador da Organização
+        ru: Пароль администратора организации
+        ko: 조직 관리자 비밀번호
+        zh-hant: 組織管理員密碼
+        zh: 组织管理员密码
+        tr: Kurum yoneticisi parolasi
+      random: true
+      required: true
+      type: password
