@@ -1,6 +1,6 @@
 services:
   oceanbase:
-    image: oceanbase/oceanbase-ce:4.3.5-lts
+    image: oceanbase/oceanbase-ce:4.4.2-lts
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
