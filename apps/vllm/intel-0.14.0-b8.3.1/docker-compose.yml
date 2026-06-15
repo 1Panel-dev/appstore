@@ -1,0 +1,25 @@
+networks:
+  1panel-network:
+    external: true
+services:
+  vllm:
+    image: intel/llm-scaler-vllm:0.14.0-b8.3.1
+    entrypoint:
+      - vllm
+      - serve
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    devices:
+      - /dev/dri:/dev/dri
+    environment:
+      - no_proxy=localhost,127.0.0.1
+      - ZE_AFFINITY_MASK=0,1,2,3
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8001
+    privileged: true
+    shm_size: 32g
+    volumes:
+      - ${MODEL_DIR}/:/models/${MODEL_NAME}
+    command: ${START_COMMAND}
