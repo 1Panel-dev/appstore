@@ -24,7 +24,7 @@ additionalProperties:
     tr: Nous Research tarafindan gelistirilen self-hosted yapay zeka ajani
   crossVersionUpdate: true
   limit: 0
-  recommend: 13
+  recommend: 20
   batchInstallSupport: true
   website: https://hermes-agent.nousresearch.com/docs/
   github: https://github.com/NousResearch/hermes-agent
