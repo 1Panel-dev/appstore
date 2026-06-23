@@ -3,7 +3,7 @@ additionalProperties:
   name: Zabbix
   tags:
     - Tool
-  shortDescZh: 企业级开源监控解决方案 | 需外接数据库，Agent/Proxy 可选，支持插件安装
+  shortDescZh: 企业级开源监控解决方案 | 需外接数据库，Agent/Proxy 可选，支持插件自动安装
   shortDescEn: Enterprise-class monitoring with external DB, optional Agent/Proxy, auto plugin install
   type: tool
   crossVersionUpdate: true

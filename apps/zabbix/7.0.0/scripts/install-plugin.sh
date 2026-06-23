@@ -71,18 +71,7 @@ else
     echo "⚠ 未找到内层 zip"
 fi
 
-# 5) 清理 HA 残留（避免 Server 异常重启）
-echo "→ 清理 HA 残留节点..."
-ENVFILE="${APP_DIR}/.env"
-if [ -f "$ENVFILE" ]; then
-    HOST=$(grep ZABBIX_DB_HOST "$ENVFILE" | cut -d= -f2 | tr -d "'" | xargs)
-    USER=$(grep ZABBIX_DB_USER "$ENVFILE" | cut -d= -f2 | tr -d "'" | xargs)
-    PASS=$(grep ZABBIX_DB_PASSWORD "$ENVFILE" | cut -d= -f2 | tr -d "'" | xargs)
-    DB=$(grep ZABBIX_DB_NAME "$ENVFILE" | cut -d= -f2 | tr -d "'" | xargs)
-    mysql -h"$HOST" -u"$USER" -p"$PASS" -e "DELETE FROM ha_node;" "$DB" 2>/dev/null && echo "✓ 已清理" || true
-fi
-
-# 6) 重启 Web 容器
+# 5) 重启 Web 容器
 echo "→ 重启 Web 容器..."
 cd "$APP_DIR"
 docker-compose restart zabbix-web 2>/dev/null && echo "✓ Web 已重启" || echo "⚠ 手动重启: cd $APP_DIR && docker compose restart zabbix-web"

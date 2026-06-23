@@ -66,17 +66,17 @@ for dir in \
     echo "[Zabbix Init] ✓ ${dir}"
 done
 
-# ── 清理 HA 残留节点（避免 Server 反复重启） ──
+# ── 清理 HA 残留节点（用 docker 跑，不依赖宿主机 mysql 客户端） ──
 DB_HOST="${ZABBIX_DB_HOST}"
 DB_PORT="${ZABBIX_DB_PORT:-3306}"
-if command -v mysql &> /dev/null; then
-    echo "[Zabbix Init] 清理 HA 残留节点..."
+echo "[Zabbix Init] 清理 HA 残留节点..."
+docker run --rm --pull never --network host \
+    zabbix/zabbix-server-mysql:ubuntu-7.0-latest \
     mysql -h"${DB_HOST}" -P"${DB_PORT}" \
         -u"${ZABBIX_DB_USER}" -p"${ZABBIX_DB_PASSWORD}" \
         -e "DELETE FROM ha_node;" "${ZABBIX_DB_NAME}" 2>/dev/null && \
-        echo "[Zabbix Init] ✓ HA 节点已清理" || \
-        echo "[Zabbix Init] ⚠ HA 清理跳过（首次安装无此表属正常）"
-fi
+    echo "[Zabbix Init] ✓ HA 节点已清理" || \
+    echo "[Zabbix Init] ⚠ HA 清理跳过（首次装无此表，正常）"
 
 # ── 验证数据库连通性（可选） ──
 if command -v mysqladmin &> /dev/null; then

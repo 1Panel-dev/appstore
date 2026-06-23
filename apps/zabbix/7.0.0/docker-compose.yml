@@ -11,6 +11,32 @@
 
 services:
   # ---------------------------------------------------------------------------
+  # HA 节点清理（每次部署执行，清理残留避免 Server 重启循环）
+  # ---------------------------------------------------------------------------
+  zabbix-ha-cleanup:
+    image: zabbix/zabbix-server-mysql:ubuntu-7.0-latest
+    pull_policy: missing
+    container_name: ${CONTAINER_NAME}-ha-cleanup
+    restart: "no"
+    entrypoint: ["/bin/bash", "-c"]
+    command:
+      - |
+        mysql -h"${ZABBIX_DB_HOST}" -P"${ZABBIX_DB_PORT:-3306}" \
+              -u"${ZABBIX_DB_USER}" -p"$ZABBIX_DB_PASSWORD" \
+              -e "DELETE FROM ha_node;" "${ZABBIX_DB_NAME}" 2>/dev/null && \
+          echo "[HA Cleanup] ✓ ha_node 已清理" || \
+          echo "[HA Cleanup] 跳过（首次安装无此表）"
+        exec tail -f /dev/null
+    environment:
+      DB_SERVER_HOST: ${ZABBIX_DB_HOST}
+      DB_SERVER_PORT: ${ZABBIX_DB_PORT:-3306}
+      MYSQL_DATABASE: ${ZABBIX_DB_NAME}
+      MYSQL_USER: ${ZABBIX_DB_USER}
+      MYSQL_PASSWORD: ${ZABBIX_DB_PASSWORD}
+    networks:
+      - 1panel-network
+
+  # ---------------------------------------------------------------------------
   # 数据库初始化（仅首次运行，创建 Zabbix 表结构后自动退出）
   # ---------------------------------------------------------------------------
   zabbix-db-init:
@@ -50,6 +76,13 @@ services:
     pull_policy: missing
     container_name: ${CONTAINER_NAME}
     restart: unless-stopped
+    entrypoint: ["/bin/bash", "-c"]
+    command:
+      - |
+        mysql -h"${ZABBIX_DB_HOST}" -P"${ZABBIX_DB_PORT:-3306}" \
+              -u"${ZABBIX_DB_USER}" -p"${ZABBIX_DB_PASSWORD}" \
+              -e "DELETE FROM ha_node;" "${ZABBIX_DB_NAME}" 2>/dev/null || true
+        exec /usr/bin/docker-entrypoint.sh /usr/sbin/zabbix_server --foreground -c /etc/zabbix/zabbix_server.conf
     ports:
       - ${ZABBIX_SERVER_PORT:-10051}:10051
     environment:
@@ -59,6 +92,7 @@ services:
       MYSQL_USER: ${ZABBIX_DB_USER}
       MYSQL_PASSWORD: ${ZABBIX_DB_PASSWORD}
       ZBX_ALLOWUNSUPPORTEDDBVERSIONS: "1"
+      ZBX_HANODENAME: ${CONTAINER_NAME}
       ZBX_ENABLE_SNMP_TRAPS: "${ZABBIX_ENABLE_SNMP_TRAPS:-false}"
       ZBX_JAVAGATEWAY_ENABLE: "${ZABBIX_JAVAGATEWAY:-false}"
     volumes:
