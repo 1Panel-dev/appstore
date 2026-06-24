@@ -1,0 +1,26 @@
+additionalProperties:
+  key: zabbix-xinchuang-edition
+  name: zabbix信创版
+  tags:
+    - Tool
+  shortDescZh: 企业级开源监控解决方案 | 需外接数据库，Agent/Proxy 可选，支持插件自动安装
+  shortDescEn: Enterprise-class monitoring with external DB, optional Agent/Proxy, auto plugin install
+  shortDescEs: Solución de monitorización empresarial con base de datos externa, Agent/Proxy opcionales, instalación automática de plugins
+  shortDescTr: Kurumsal izleme çözümü, harici veritabanı gerektirir, isteğe bağlı Agent/Proxy, eklenti otomatik yükleme
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  website: https://www.zabbix.com
+  github: https://github.com/zabbix/zabbix
+  document: https://www.zabbix.com/documentation/current/
+  description:
+    en: Zabbix is an enterprise-class open source distributed monitoring solution for networks, servers, virtual machines and cloud services. Requires external database. Agent and Proxy are optional. Plugins auto-installed on startup.
+    zh: Zabbix 企业级开源监控，需外接数据库（TDSQL/MySQL）。Agent/Proxy 可选，关闭时容器空转不占资源。Web 启动自动安装插件。注意：镜像不含数据库，本地已有镜像不会联网拉取。Server 状态跳变可清理数据库 ha_node 表。
+    zh-Hant: Zabbix 企業級開源監控，需外接資料庫。Agent/Proxy 可選，關閉時容器空轉不佔資源。Web 啟動自動安裝插件。
+    ja: Zabbixはエンタープライズ級のオープンソース分散監視ソリューションです。外部データベースが必要。Agent/Proxyはオプション。
+    ms: Zabbix ialah penyelesaian pemantauan sumber terbuka kelas perusahaan. Memerlukan pangkalan data luaran. Agent/Proxy adalah pilihan.
+    pt-br: Zabbix é uma solução de monitoramento de código aberto de nível empresarial. Requer banco de dados externo. Agent/Proxy são opcionais.
+    ru: Zabbix — корпоративное решение для мониторинга с открытым кодом. Требуется внешняя база данных. Agent/Proxy опциональны.
+    ko: Zabbix는 엔터프라이즈급 오픈 소스 모니터링 솔루션입니다. 외부 데이터베이스가 필요합니다. Agent/Proxy는 선택 사항입니다.
+    es-es: Zabbix es una solución de supervisión distribuida de código abierto de nivel empresarial para redes, servidores, máquinas virtuales y servicios en la nube. Requiere base de datos externa. Agent y Proxy son opcionales. Los complementos se instalan automáticamente al iniciar.
+    tr: Zabbix, ağlar, sunucular, sanal makineler ve bulut hizmetleri için kurumsal sınıf açık kaynaklı dağıtılmış bir izleme çözümüdür. Harici veritabanı gerektirir. Agent ve Proxy isteğe bağlıdır. Başlangıçta eklentiler otomatik olarak yüklenir.

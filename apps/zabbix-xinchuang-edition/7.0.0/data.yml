@@ -1,0 +1,351 @@
+additionalProperties:
+  formFields:
+    # 数据库地址（支持外部数据库，如 TDSQL / MySQL / MariaDB）
+    - default: ""
+      edit: true
+      envKey: ZABBIX_DB_HOST
+      label:
+        en: Database Host
+        es-es: Host de la base de datos
+        ja: データベースホスト
+        ms: Hos Pangkalan Data
+        pt-br: Host do Banco de Dados
+        ru: Хост базы данных
+        ko: 데이터베이스 호스트
+        tr: Veritabanı Ana Bilgisi
+        zh: 数据库地址
+        zh-Hant: 資料庫主機
+      required: true
+      type: text
+    # 数据库端口
+    - default: 3306
+      edit: true
+      envKey: ZABBIX_DB_PORT
+      label:
+        en: Database Port
+        es-es: Puerto de la base de datos
+        ja: データベースポート
+        ms: Port Pangkalan Data
+        pt-br: Porta do Banco de Dados
+        ru: Порт базы данных
+        ko: 데이터베이스 포트
+        tr: Veritabanı Bağlantı Noktası
+        zh: 数据库端口
+        zh-Hant: 資料庫埠
+      required: true
+      rule: paramPort
+      type: number
+    # 数据库名
+    - default: zabbix
+      envKey: ZABBIX_DB_NAME
+      label:
+        en: Database Name
+        es-es: Nombre de la base de datos
+        ja: データベース名
+        ms: Nama Pangkalan Data
+        pt-br: Nome do Banco de Dados
+        ru: Имя базы данных
+        ko: 데이터베이스 이름
+        tr: Veritabanı Adı
+        zh: 数据库名
+        zh-Hant: 資料庫名稱
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    # 数据库用户
+    - default: zabbix
+      envKey: ZABBIX_DB_USER
+      label:
+        en: Database User
+        es-es: Usuario de base de datos
+        ja: データベースユーザー
+        ms: Pengguna Pangkalan Data
+        pt-br: Usuário do Banco de Dados
+        ru: Пользователь базы данных
+        ko: 데이터베이스 사용자
+        tr: Veritabanı Kullanıcısı
+        zh: 数据库用户
+        zh-Hant: 資料庫使用者
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    # 数据库密码
+    - default: ""
+      envKey: ZABBIX_DB_PASSWORD
+      label:
+        en: Database Password
+        es-es: Contraseña de la base de datos
+        ja: データベースパスワード
+        ms: Kata Laluan Pangkalan Data
+        pt-br: Senha do Banco de Dados
+        ru: Пароль базы данных
+        ko: 데이터베이스 비밀번호
+        tr: Veritabanı Parolası
+        zh: 数据库密码
+        zh-Hant: 資料庫密碼
+      random: true
+      required: true
+      type: password
+    # 服务器名称
+    - default: Zabbix
+      edit: true
+      envKey: ZABBIX_SERVER_NAME
+      label:
+        en: Server Name
+        es-es: Nombre del servidor
+        ja: サーバー名
+        ms: Nama Pelayan
+        pt-br: Nome do Servidor
+        ru: Имя сервера
+        ko: 서버 이름
+        tr: Sunucu Adı
+        zh: 服务器名称
+        zh-Hant: 伺服器名稱
+      required: true
+      type: text
+    # Web 界面端口（使用 PANEL_APP_PORT_HTTP 前缀，1Panel 自动校验端口占用）
+    - default: 8080
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      label:
+        en: Web UI Port
+        es-es: Puerto de la interfaz web
+        ja: Web UI ポート
+        ms: Port UI Web
+        pt-br: Porta da UI Web
+        ru: Порт веб-интерфейса
+        ko: 웹 UI 포트
+        tr: Web UI Bağlantı Noktası
+        zh: Web 界面端口
+        zh-Hant: Web 介面埠
+      required: true
+      rule: paramPort
+      type: number
+    # Agent 端口
+    - default: 10051
+      edit: true
+      envKey: ZABBIX_SERVER_PORT
+      label:
+        en: Server Port
+        es-es: Puerto del servidor (para Agent/Proxy)
+        ja: サーバーポート
+        ms: Port Pelayan
+        pt-br: Porta do Servidor
+        ru: Порт сервера
+        ko: 서버 포트
+        tr: Sunucu Bağlantı Noktası (Agent/Proxy için)
+        zh: Server 端口（Agent/Proxy 连接用）
+        zh-Hant: Server 埠
+      required: true
+      rule: paramPort
+      type: number
+    # 时区
+    - default: Asia/Shanghai
+      edit: true
+      envKey: PHP_TZ
+      label:
+        en: Timezone
+        es-es: Zona horaria
+        ja: タイムゾーン
+        ms: Zon Waktu
+        pt-br: Fuso Horário
+        ru: Часовой пояс
+        ko: 시간대
+        tr: Saat Dilimi
+        zh: 时区
+        zh-Hant: 時區
+      required: true
+      type: text
+    # ========== Zabbix Agent（可选） ==========
+    - default: "true"
+      envKey: ZABBIX_AGENT_ENABLED
+      label:
+        zh: 启用 Zabbix Agent
+        zh-Hant: 啟用 Zabbix Agent
+        en: Enable Zabbix Agent
+        es-es: Habilitar Zabbix Agent
+        ja: Zabbix Agent を有効にする
+        ms: Dayakan Zabbix Agent
+        pt-br: Ativar Zabbix Agent
+        ru: Включить Zabbix Agent
+        ko: Zabbix Agent 활성화
+        tr: Zabbix Agent'i Etkinleştir
+      required: true
+      type: select
+      values:
+        - label: "关闭"
+          value: "false"
+        - label: "开启"
+          value: "true"
+    - default: ""
+      edit: true
+      envKey: ZABBIX_AGENT_EXTERNAL_SERVERS
+      label:
+        zh: 外部 Server 地址（逗号分隔，选填）
+        zh-Hant: 外部 Server 地址（逗號分隔，選填）
+        en: External Servers (comma separated, optional)
+        es-es: Servidores externos (separados por comas, opcional)
+        ja: 外部サーバーのアドレス（カンマ区切り、任意）
+        ms: Pelayan luaran (dipisahkan dengan koma, pilihan)
+        pt-br: Servidores externos (separados por vírgulas, opcional)
+        ru: Внешние серверы (через запятую, необязательно)
+        ko: 외부 서버 주소(쉼표로 구분, 선택 사항)
+        tr: Harici Sunucular (virgülle ayrılmış, isteğe bağlı)
+      required: false
+      type: text
+    - default: 10050
+      edit: true
+      envKey: ZABBIX_AGENT_PORT
+      label:
+        zh: Agent 端口（启用后生效）
+        zh-Hant: Agent 端口（啟用後生效）
+        en: Agent Port (when enabled)
+        es-es: Puerto de Agent (cuando esté habilitado)
+        ja: Agent ポート（有効時）
+        ms: Port Agent (apabila diaktifkan)
+        pt-br: Porta do Agent (quando habilitado)
+        ru: Порт агента (при включении)
+        ko: Agent 포트(활성화 시)
+        tr: Agent Bağlantı Noktası (etkinleştirildiğinde)
+      required: true
+      rule: paramPort
+      type: number
+    # ========== Zabbix Proxy（可选） ==========
+    - default: "false"
+      envKey: ZABBIX_PROXY_ENABLED
+      label:
+        zh: 启用 Zabbix Proxy
+        zh-Hant: 啟用 Zabbix Proxy
+        en: Enable Zabbix Proxy
+        es-es: Habilitar Zabbix Proxy
+        ja: Zabbix Proxy を有効にする
+        ms: Dayakan Zabbix Proxy
+        pt-br: Ativar Zabbix Proxy
+        ru: Включить Zabbix Proxy
+        ko: Zabbix Proxy 활성화
+        tr: Zabbix Proxy'yi Etkinleştir
+      required: true
+      type: select
+      values:
+        - label: "关闭"
+          value: "false"
+        - label: "开启"
+          value: "true"
+    - default: "0"
+      envKey: ZABBIX_PROXY_MODE
+      label:
+        zh: Proxy 模式
+        zh-Hant: Proxy 模式
+        en: Proxy Mode
+        es-es: Modo Proxy
+        ja: Proxy モード
+        ms: Mod Proksi
+        pt-br: Modo Proxy
+        ru: Режим Proxy
+        ko: Proxy 모드
+        tr: Proxy Modu
+      required: true
+      type: select
+      values:
+        - label: Active（主动推送）
+          value: "0"
+        - label: Passive（被动等待）
+          value: "1"
+    - default: 10071
+      edit: true
+      envKey: ZABBIX_PROXY_PORT
+      label:
+        zh: Proxy 端口（Passive 模式需要）
+        zh-Hant: Proxy 端口（Passive 模式需要）
+        en: Proxy Port (for passive mode)
+        es-es: Puerto Proxy (para modo pasivo)
+        ja: Proxy ポート（パッシブモード用）
+        ms: Port Proksi (untuk mod pasif)
+        pt-br: Porta Proxy (para modo passivo)
+        ru: Порт Proxy (для пассивного режима)
+        ko: Proxy 포트(패시브 모드용)
+        tr: Proxy Bağlantı Noktası (pasif mod için)
+      required: true
+      rule: paramPort
+      type: number
+    - default: ""
+      edit: true
+      envKey: ZABBIX_PROXY_DB_HOST
+      label:
+        zh: Proxy 数据库地址
+        zh-Hant: Proxy 資料庫地址
+        en: Proxy DB Host
+        es-es: Host DB Proxy
+        ja: Proxy DB ホスト
+        ms: Hos DB Proxy
+        pt-br: Host DB Proxy
+        ru: Хост БД Proxy
+        ko: Proxy DB 호스트
+        tr: Proxy DB Ana Bilgisi
+      required: false
+      type: text
+    - default: 3306
+      edit: true
+      envKey: ZABBIX_PROXY_DB_PORT
+      label:
+        zh: Proxy 数据库端口
+        zh-Hant: Proxy 資料庫埠
+        en: Proxy DB Port
+        es-es: Puerto DB Proxy
+        ja: Proxy DB ポート
+        ms: Port DB Proxy
+        pt-br: Porta DB Proxy
+        ru: Порт БД Proxy
+        ko: Proxy DB 포트
+        tr: Proxy DB Bağlantı Noktası
+      required: false
+      rule: paramPort
+      type: number
+    - default: zabbix_proxy
+      envKey: ZABBIX_PROXY_DB_NAME
+      label:
+        zh: Proxy 数据库名
+        zh-Hant: Proxy 資料庫名
+        en: Proxy DB Name
+        es-es: Nombre DB Proxy
+        ja: Proxy DB 名
+        ms: Nama DB Proxy
+        pt-br: Nome DB Proxy
+        ru: Имя БД Proxy
+        ko: Proxy DB 이름
+        tr: Proxy DB Adı
+      required: false
+      type: text
+    - default: zabbix
+      envKey: ZABBIX_PROXY_DB_USER
+      label:
+        zh: Proxy 数据库用户
+        zh-Hant: Proxy 資料庫使用者
+        en: Proxy DB User
+        es-es: Usuario DB Proxy
+        ja: Proxy DB ユーザー
+        ms: Pengguna DB Proxy
+        pt-br: Usuário DB Proxy
+        ru: Пользователь БД Proxy
+        ko: Proxy DB 사용자
+        tr: Proxy DB Kullanıcısı
+      required: false
+      type: text
+    - default: ""
+      envKey: ZABBIX_PROXY_DB_PASSWORD
+      label:
+        zh: Proxy 数据库密码
+        zh-Hant: Proxy 資料庫密碼
+        en: Proxy DB Password
+        es-es: Contraseña DB Proxy
+        ja: Proxy DB パスワード
+        ms: Kata Laluan DB Proxy
+        pt-br: Senha DB Proxy
+        ru: Пароль БД Proxy
+        ko: Proxy DB 비밀번호
+        tr: Proxy DB Parolası
+      required: false
+      type: password
+
