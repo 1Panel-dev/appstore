@@ -114,14 +114,14 @@ additionalProperties:
       edit: true
       envKey: ZABBIX_SERVER_PORT
       label:
-        en: Agent Port
-        ja: エージェントポート
-        ms: Port Agent
-        pt-br: Porta do Agent
-        ru: Порт агента
-        ko: 에이전트 포트
-        zh: Agent 端口
-        zh-Hant: Agent 埠
+        en: Server Port
+        ja: サーバーポート
+        ms: Port Pelayan
+        pt-br: Porta do Servidor
+        ru: Порт сервера
+        ko: 서버 포트
+        zh: Server 端口（Agent/Proxy 连接用）
+        zh-Hant: Server 埠
       required: true
       rule: paramPort
       type: number
@@ -141,7 +141,7 @@ additionalProperties:
       required: true
       type: text
     # ========== Zabbix Agent（可选） ==========
-    - default: "false"
+    - default: "true"
       envKey: ZABBIX_AGENT_ENABLED
       label:
         zh: 启用 Zabbix Agent
@@ -153,6 +153,14 @@ additionalProperties:
           value: "false"
         - label: "开启"
           value: "true"
+    - default: ""
+      edit: true
+      envKey: ZABBIX_AGENT_EXTERNAL_SERVERS
+      label:
+        zh: 外部 Server 地址（逗号分隔，选填）
+        en: External Servers (comma separated, optional)
+      required: false
+      type: text
     - default: 10050
       edit: true
       envKey: ZABBIX_AGENT_PORT
@@ -234,41 +242,4 @@ additionalProperties:
         en: Proxy DB Password
       required: false
       type: password
-    # 启用 SNMP Traps
-    - default: "false"
-      envKey: ZABBIX_ENABLE_SNMP_TRAPS
-      label:
-        en: Enable SNMP Traps
-        ja: SNMPトラップを有効にする
-        ms: Dayakan SNMP Traps
-        pt-br: Habilitar SNMP Traps
-        ru: Включить SNMP Traps
-        ko: SNMP 트랩 활성화
-        zh: 启用 SNMP Traps
-        zh-Hant: 啟用 SNMP Traps
-      required: true
-      type: select
-      values:
-        - label: "关闭"
-          value: "false"
-        - label: "开启"
-          value: "true"
-    # 启用 Java Gateway
-    - default: "false"
-      envKey: ZABBIX_JAVAGATEWAY
-      label:
-        en: Enable Java Gateway
-        ja: Javaゲートウェイを有効にする
-        ms: Dayakan Java Gateway
-        pt-br: Habilitar Java Gateway
-        ru: Включить Java Gateway
-        ko: Java 게이트웨이 활성화
-        zh: 启用 Java Gateway
-        zh-Hant: 啟用 Java Gateway
-      required: true
-      type: select
-      values:
-        - label: "关闭"
-          value: "false"
-        - label: "开启"
-          value: "true"
+

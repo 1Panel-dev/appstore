@@ -78,11 +78,7 @@ services:
     restart: unless-stopped
     entrypoint: ["/bin/bash", "-c"]
     command:
-      - |
-        mysql -h"${ZABBIX_DB_HOST}" -P"${ZABBIX_DB_PORT:-3306}" \
-              -u"${ZABBIX_DB_USER}" -p"${ZABBIX_DB_PASSWORD}" \
-              -e "DELETE FROM ha_node;" "${ZABBIX_DB_NAME}" 2>/dev/null || true
-        exec /usr/bin/docker-entrypoint.sh /usr/sbin/zabbix_server --foreground -c /etc/zabbix/zabbix_server.conf
+      - mysql -h${ZABBIX_DB_HOST} -P${ZABBIX_DB_PORT:-3306} -u${ZABBIX_DB_USER} -p"${ZABBIX_DB_PASSWORD}" -e "DELETE FROM ha_node; UPDATE interface SET ip='${CONTAINER_NAME}-agent',dns='${CONTAINER_NAME}-agent',useip=0 WHERE hostid=(SELECT hostid FROM hosts WHERE host='Zabbix server') AND type=1;" ${ZABBIX_DB_NAME} 2>/dev/null; exec /usr/bin/docker-entrypoint.sh /usr/sbin/zabbix_server --foreground -c /etc/zabbix/zabbix_server.conf
     ports:
       - ${ZABBIX_SERVER_PORT:-10051}:10051
     environment:
@@ -93,8 +89,6 @@ services:
       MYSQL_PASSWORD: ${ZABBIX_DB_PASSWORD}
       ZBX_ALLOWUNSUPPORTEDDBVERSIONS: "1"
       ZBX_HANODENAME: ${CONTAINER_NAME}
-      ZBX_ENABLE_SNMP_TRAPS: "${ZABBIX_ENABLE_SNMP_TRAPS:-false}"
-      ZBX_JAVAGATEWAY_ENABLE: "${ZABBIX_JAVAGATEWAY:-false}"
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - ./data/server/alertscripts:/usr/lib/zabbix/alertscripts:ro
@@ -136,7 +130,7 @@ services:
       ZBX_SERVER_HOST: ${CONTAINER_NAME}
       ZBX_SERVER_NAME: ${ZABBIX_SERVER_NAME:-Zabbix}
       PHP_TZ: ${PHP_TZ:-Asia/Shanghai}
-      ZABBIX_PLUGINS_AUTO_INSTALL: "false"
+      ZABBIX_PLUGINS_AUTO_INSTALL: "true"
       ZABBIX_PLUGIN_LOADER_AUTO_INSTALL: "true"
       ZABBIX_PLUGIN_LOADER_DIR: /var/lib/zabbix/plugin_loader
       ZABBIX_MODULES_INSTALL_DIR: /usr/share/zabbix/modules
@@ -144,6 +138,7 @@ services:
       - /etc/localtime:/etc/localtime:ro
       - ./data/web/ssl:/etc/ssl/nginx:ro
       - ./data/modules:/usr/share/zabbix/modules:rw
+      - ./data/plugins:/var/lib/zabbix/plugins:rw
       - ./data/plugin_loader:/var/lib/zabbix/plugin_loader:ro
       - ./scripts/install-plugins-entrypoint.sh:/opt/zabbix/install-plugins-entrypoint.sh:ro
     tmpfs:
@@ -176,6 +171,11 @@ services:
       - |
         if [ "$${ZABBIX_AGENT_ENABLED}" = "true" ]; then
           echo "[Zabbix Agent] 启动中，连接 Server: ${CONTAINER_NAME}"
+          /usr/bin/docker-entrypoint.sh /bin/true
+          sed -i 's|^Server=.*|Server=0.0.0.0/0|' /etc/zabbix/zabbix_agentd.conf
+          ACTIVE="${CONTAINER_NAME}"
+          [ -n "$${ZABBIX_AGENT_EXTERNAL_SERVERS:-}" ] && ACTIVE="$$ACTIVE,$${ZABBIX_AGENT_EXTERNAL_SERVERS}"
+          sed -i "s|^ServerActive=.*|ServerActive=$$ACTIVE|" /etc/zabbix/zabbix_agentd.conf
           exec /usr/sbin/zabbix_agentd --foreground -c /etc/zabbix/zabbix_agentd.conf
         else
           echo "[Zabbix Agent] 已关闭"
@@ -189,8 +189,9 @@ services:
       ZBX_PASSIVE_ALLOW: "true"
       ZBX_ACTIVE_ALLOW: "true"
       ZBX_HOSTNAMEITEM: system.hostname
-      ZBX_HOSTNAME: ${CONTAINER_NAME}-agent
+      ZBX_HOSTNAME: Zabbix server
       ZABBIX_AGENT_ENABLED: ${ZABBIX_AGENT_ENABLED:-false}
+      ZABBIX_AGENT_EXTERNAL_SERVERS: ${ZABBIX_AGENT_EXTERNAL_SERVERS:-}
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - ./data/agent/zabbix_agentd.d:/etc/zabbix/zabbix_agentd.d:ro

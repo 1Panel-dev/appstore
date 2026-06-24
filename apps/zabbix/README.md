@@ -16,7 +16,7 @@
 
 ## 镜像说明
 
-> **注意**：`zabbix/zabbix-server-mysql` 和 `zabbix/zabbix-web-nginx-mysql` 中的 "mysql" 表示编译了 MySQL 客户端支持，**不是数据库镜像**。本应用不包含数据库，所有镜像均使用 `pull_policy: missing`，本地有即用，不联网拉取。
+> **注意**：`zabbix/zabbix-server-mysql` 和 `zabbix/zabbix-web-nginx-mysql` 中的 "mysql" 表示编译了 MySQL 客户端支持，**不是数据库镜像**。本应用不包含数据库服务。
 
 | 镜像 | 标签 |
 |------|------|
@@ -55,16 +55,13 @@
 
 ## 安装插件
 
-SSH 登录服务器，两条命令：
+上传 `zabbix-plugins-xxx.zip` 到 `data/plugins/` 目录，可通过 1Panel 文件管理或 SCP：
 
 ```bash
-# 1. 把插件 zip 放入 data/ 目录
-cp zabbix-plugins-xxx.zip /opt/1panel/apps/local/zabbix/zabbix/data/
-
-# 2. 运行安装脚本（自动解压、放置、重启 Web）
-cd /opt/1panel/apps/local/zabbix/zabbix && ./scripts/install-plugin.sh
+cp zabbix-plugins-xxx.zip /opt/1panel/apps/local/zabbix/zabbix/data/plugins/
 ```
 
+1Panel → Zabbix → 重建，Web 启动时自动解压安装（PHP 内置 PharData，纯本地无需网络）。
 完成后去 Zabbix Web → 管理 → 模块 → 扫描目录 → 激活。
 
 ## 故障排查

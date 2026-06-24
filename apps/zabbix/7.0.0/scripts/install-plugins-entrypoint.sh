@@ -1,7 +1,7 @@
 #!/bin/bash
 # Zabbix Web 容器入口：启动前自动安装 plugins 目录中的插件合集包
 # 1. 可选：从挂载目录安装 plugin_loader.so（data/plugin_loader/）
-# 2. 检测 *.zip → 解压 → 执行 ./install.sh -m auto（安装模块与 plugin_loader.so）
+# 2. 检测 *.zip → PHP PharData 解压（核心内置，无需扩展）→ 执行 ./install.sh -m auto
 # 完成后委托官方 docker-entrypoint.sh 启动 Nginx + PHP-FPM
 
 set -euo pipefail
@@ -10,33 +10,24 @@ ORIGINAL_ENTRYPOINT="/usr/bin/docker-entrypoint.sh"
 PLUGINS_DIR="${ZABBIX_PLUGINS_DIR:-/var/lib/zabbix/plugins}"
 PLUGIN_LOADER_DIR="${ZABBIX_PLUGIN_LOADER_DIR:-/var/lib/zabbix/plugin_loader}"
 WORK_DIR="${ZABBIX_PLUGINS_WORK_DIR:-/var/lib/zabbix/plugin-install}"
-STAMP_FILE="${WORK_DIR}/.installed.sha256"
+MANIFEST_FILE="${ZABBIX_MODULES_INSTALL_DIR:-/usr/share/zabbix/modules}/.plugin-manifest"
 PLUGIN_LOADER_STAMP_FILE="${WORK_DIR}/.plugin_loader.sha256"
 
-ensure_unzip() {
-    if command -v unzip >/dev/null 2>&1; then
+ensure_php_extract() {
+    # PharData 是 PHP 核心内置类，无需额外扩展，优先使用
+    if php -r "exit(class_exists('PharData') ? 0 : 1);" 2>/dev/null; then
+        export PHP_EXTRACT_METHOD="phar"
         return 0
     fi
 
-    echo "** unzip 未安装，正在安装（仅首次需要网络）..."
-
-    if command -v apt-get >/dev/null 2>&1; then
-        export DEBIAN_FRONTEND=noninteractive
-        apt-get update -qq
-        apt-get install -y -qq --no-install-recommends unzip
-        rm -rf /var/lib/apt/lists/*
-    elif command -v microdnf >/dev/null 2>&1; then
-        microdnf install -y unzip
-    elif command -v dnf >/dev/null 2>&1; then
-        dnf install -y unzip
-    elif command -v yum >/dev/null 2>&1; then
-        yum install -y unzip
-    elif command -v apk >/dev/null 2>&1; then
-        apk add --no-cache unzip
-    else
-        echo "** 错误: 未找到支持的包管理器，无法安装 unzip"
-        return 1
+    # 回退 ZipArchive
+    if php -r "exit(class_exists('ZipArchive') ? 0 : 1);" 2>/dev/null; then
+        export PHP_EXTRACT_METHOD="ziparchive"
+        return 0
     fi
+
+    echo "** 错误: PHP 缺少 PharData 和 ZipArchive，无法解压插件包"
+    exit 1
 }
 
 export_php_fpm_env_defaults() {
@@ -74,6 +65,12 @@ resolve_zabbix_php_fpm_user() {
         fi
     fi
 
+    # pool 配置尚未生成时，优先使用 Zabbix 镜像标准环境变量
+    if [ -n "${DAEMON_USER:-}" ] && getent passwd "$DAEMON_USER" >/dev/null 2>&1; then
+        echo "$DAEMON_USER"
+        return 0
+    fi
+
     for candidate in zabbix apache nginx www-data; do
         if getent passwd "$candidate" >/dev/null 2>&1; then
             echo "$candidate"
@@ -96,6 +93,160 @@ fix_modules_ownership() {
     echo "** 修正模块目录所有权为 ${php_user}（供 Web 写入 activation.dat）"
     chown -R "${php_user}:${php_user}" "$modules_dir"
     chmod -R u+rwX,g+rX "$modules_dir"
+}
+
+# 修复插件 includeConfig() 可能导致的函数重复声明问题
+# 将 include $path 改为 include_once $path
+patch_include_once() {
+    local modules_dir="${ZABBIX_MODULES_INSTALL_DIR:-/usr/share/zabbix/modules}"
+    find "$modules_dir" -name 'CControllerZabbixDBBackup.php' -print0 2>/dev/null | while IFS= read -r -d '' f; do
+        if grep -q 'include \$path' "$f" 2>/dev/null && ! grep -q 'include_once \$path' "$f" 2>/dev/null; then
+            echo "** 修补 $(basename "$(dirname "$(dirname "$f")")")/actions/CControllerZabbixDBBackup.php: include → include_once"
+            sed -i 's/include \$path/include_once \$path/' "$f"
+        fi
+    done
+}
+
+# ── 激活码文件备份/恢复，防止 install.sh 中的 unzip -o 或 update_activation 覆盖 ──
+ACTIVATION_BACKUP_DIR=""
+
+backup_activation_files() {
+    local modules_dir="${ZABBIX_MODULES_INSTALL_DIR:-/usr/share/zabbix/modules}"
+    ACTIVATION_BACKUP_DIR=$(mktemp -d)
+
+    local count=0
+    while IFS= read -r -d '' f; do
+        local rel="${f#$modules_dir/}"
+        local backup_path="${ACTIVATION_BACKUP_DIR}/${rel}"
+        mkdir -p "$(dirname "$backup_path")"
+        cp -a "$f" "$backup_path"
+        count=$((count + 1))
+    done < <(find "$modules_dir" -maxdepth 2 -name 'activation.dat' -print0 2>/dev/null)
+
+    if [ "$count" -gt 0 ]; then
+        echo "** 已备份 ${count} 个 activation.dat → ${ACTIVATION_BACKUP_DIR}"
+    fi
+}
+
+restore_activation_files() {
+    local modules_dir="${ZABBIX_MODULES_INSTALL_DIR:-/usr/share/zabbix/modules}"
+
+    if [ -z "${ACTIVATION_BACKUP_DIR:-}" ] || [ ! -d "$ACTIVATION_BACKUP_DIR" ]; then
+        return 0
+    fi
+
+    # restore 内部关闭 errexit，防止单个文件失败导致整个脚本退出
+    set +e
+
+    local restored=0 skipped=0 error_count=0
+    while IFS= read -r -d '' f; do
+        local rel="${f#$ACTIVATION_BACKUP_DIR/}"
+        local target="${modules_dir}/${rel}"
+
+        if [ -f "$target" ]; then
+            local target_sum backup_sum
+            target_sum=$(sha256sum "$target" 2>/dev/null | awk '{print $1}')
+            backup_sum=$(sha256sum "$f" 2>/dev/null | awk '{print $1}')
+            if [ -n "$target_sum" ] && [ "$target_sum" = "$backup_sum" ]; then
+                skipped=$((skipped + 1))
+                continue
+            fi
+        fi
+
+        # 确保目标父目录存在（install.sh 可能 rm -rf 了）
+        mkdir -p "$(dirname "$target")" 2>/dev/null || true
+
+        if cp -a "$f" "$target" 2>/dev/null; then
+            local php_user="${ZABBIX_PHP_FPM_USER:-zabbix}"
+            chown "${php_user}:${php_user}" "$target" 2>/dev/null || true
+            restored=$((restored + 1))
+        else
+            echo "** 警告: 恢复 activation.dat 失败: ${target}" >&2
+            error_count=$((error_count + 1))
+        fi
+    done < <(find "$ACTIVATION_BACKUP_DIR" -name 'activation.dat' -print0 2>/dev/null)
+
+    if [ "$restored" -gt 0 ] || [ "$skipped" -gt 0 ]; then
+        echo "** activation.dat: 恢复 ${restored} 个, 未变化 ${skipped} 个" \
+            "${error_count:+(${error_count} 个失败)}"
+    fi
+
+    rm -rf "$ACTIVATION_BACKUP_DIR"
+    ACTIVATION_BACKUP_DIR=""
+
+    set -e
+}
+
+# ── 将 activation.dat 传播到所有缺它的模块 ──
+# 独立插件 zip 包不含 activation.dat，install.sh 的 update_activation() 会跳过，
+# 导致新安装的模块没有许可证文件。此函数按优先级查找来源：
+#   1. 已有模块目录中的 activation.dat
+#   2. $PLUGINS_DIR/activation.dat（用户放在 data/plugins/ 下）
+#   3. $PLUGIN_LOADER_DIR/activation.dat（用户放在 data/plugin_loader/ 下）
+# 复制到所有缺失的模块（所有模块共用同一份站点许可证）。
+propagate_activation_dat() {
+    local modules_dir="${ZABBIX_MODULES_INSTALL_DIR:-/usr/share/zabbix/modules}"
+    local source_file=""
+
+    # 优先级1: 已有模块中的 activation.dat
+    source_file=$(find "$modules_dir" -maxdepth 2 -name 'activation.dat' -print -quit 2>/dev/null)
+
+    # 优先级2: plugins 目录（用户可以把激活码文件放在 zip 同级）
+    if [ -z "$source_file" ] || [ ! -f "$source_file" ]; then
+        if [ -f "${PLUGINS_DIR}/activation.dat" ]; then
+            source_file="${PLUGINS_DIR}/activation.dat"
+            echo "** activation.dat: 从 ${PLUGINS_DIR}/ 读取来源"
+        fi
+    fi
+
+    # 优先级3: plugin_loader 目录
+    if [ -z "$source_file" ] || [ ! -f "$source_file" ]; then
+        if [ -n "${PLUGIN_LOADER_DIR:-}" ] && [ -f "${PLUGIN_LOADER_DIR}/activation.dat" ]; then
+            source_file="${PLUGIN_LOADER_DIR}/activation.dat"
+            echo "** activation.dat: 从 ${PLUGIN_LOADER_DIR}/ 读取来源"
+        fi
+    fi
+
+    if [ -z "$source_file" ] || [ ! -f "$source_file" ]; then
+        echo "** activation.dat: 未找到许可证来源文件"
+        echo "**    → 请将 activation.dat 放到 data/plugins/ 目录下后重启容器"
+        echo "**    → 或手动复制到各模块目录: zabbix-module-*/activation.dat"
+        return 0
+    fi
+
+    local source_content
+    source_content=$(tr -d ' \n\r' < "$source_file")
+    if [ -z "$source_content" ]; then
+        echo "** activation.dat: 来源文件内容为空，跳过"
+        return 0
+    fi
+
+    local php_user
+    php_user="$(resolve_zabbix_php_fpm_user)"
+
+    local copied=0 skipped=0
+    for mod_dir in "$modules_dir"/zabbix-module-*/; do
+        [ -d "$mod_dir" ] || continue
+
+        local target="${mod_dir}activation.dat"
+        if [ -f "$target" ]; then
+            local target_content
+            target_content=$(tr -d ' \n\r' < "$target")
+            if [ "$target_content" = "$source_content" ]; then
+                skipped=$((skipped + 1))
+                continue
+            fi
+        fi
+
+        cp "$source_file" "$target"
+        chmod 644 "$target"
+        chown "${php_user}:${php_user}" "$target" 2>/dev/null || true
+        copied=$((copied + 1))
+    done
+
+    if [ "$copied" -gt 0 ]; then
+        echo "** activation.dat: 已传播到 ${copied} 个缺失模块 (跳过 ${skipped} 个已有)"
+    fi
 }
 
 PHP_FPM_INFO_CACHE=""
@@ -193,6 +344,34 @@ plugins_zip_checksum() {
     done | sort > "$checksum_file"
 }
 
+# ── 从 zip 文件名解析出预期的 Zabbix modules 子目录名 ──
+# 输入: host-import-export-1.0.0-zabbix70-php85-ubuntu26-amd64.zip
+# 输出: zabbix-module-host-import-export-1.0.0（写入全局变量 PARSED_MODULE_DIR）
+# 返回: 0=解析成功, 1=无法解析
+PARSED_MODULE_DIR=""
+PARSED_PLUGIN_NAME=""
+parse_module_dir_from_zip_name() {
+    local zip_name="$1"
+
+    PARSED_MODULE_DIR=""
+    PARSED_PLUGIN_NAME=""
+
+    # 提取版本号: 文件名中第一个 x.y.z 三段式
+    local version
+    version=$(echo "$zip_name" | sed -n 's/.*-\([0-9]\+\.[0-9]\+\.[0-9]\+\)-.*/\1/p')
+    if [ -z "$version" ]; then
+        return 1
+    fi
+
+    # 插件名: 版本号之前的所有内容
+    local plugin_name
+    plugin_name=$(echo "$zip_name" | sed "s/-${version}-.*//")
+
+    PARSED_PLUGIN_NAME="$plugin_name"
+    PARSED_MODULE_DIR="zabbix-module-${plugin_name}-${version}"
+    return 0
+}
+
 find_install_script() {
     local root="$1"
 
@@ -214,11 +393,37 @@ find_install_script() {
 
 prepare_work_dir() {
     local zip="$1"
-    local zip_name
+    local zip_name method
 
     zip_name=$(basename "$zip")
-    echo "** 解压插件包: ${zip_name}"
-    unzip -oq "$zip" -d "$WORK_DIR"
+    method="${PHP_EXTRACT_METHOD:-phar}"
+    echo "** 解压插件包（PHP ${method}）: ${zip_name}"
+
+    if [ "$method" = "phar" ]; then
+        php -r "
+            try {
+                \$phar = new PharData('$zip');
+                \$phar->extractTo('$WORK_DIR', null, true);
+            } catch (Exception \$e) {
+                fwrite(STDERR, \"** 错误: PharData 解压失败: \" . \$e->getMessage() . \"\\n\");
+                exit(1);
+            }
+        " || { echo "** 错误: PHP PharData 解压 ${zip_name} 失败"; exit 1; }
+    else
+        php -r "
+            \$zip = new ZipArchive();
+            if (\$zip->open('$zip') !== true) {
+                fwrite(STDERR, \"** 错误: 无法打开 $zip\\n\");
+                exit(1);
+            }
+            if (!\$zip->extractTo('$WORK_DIR')) {
+                fwrite(STDERR, \"** 错误: 解压失败 $zip\\n\");
+                \$zip->close();
+                exit(1);
+            }
+            \$zip->close();
+        " || { echo "** 错误: PHP ZipArchive 解压 ${zip_name} 失败"; exit 1; }
+    fi
 }
 
 resolve_php_bin() {
@@ -382,8 +587,9 @@ install_mounted_plugin_loader_if_needed() {
 }
 
 install_plugins_if_needed() {
-    local install_sh checksum_file current_checksum
+    local install_sh
     local has_zip="no"
+    local changed_zips=()
 
     if [ "${ZABBIX_PLUGINS_AUTO_INSTALL:-true}" != "true" ]; then
         echo "** ZABBIX_PLUGINS_AUTO_INSTALL=false，跳过插件自动安装"
@@ -409,35 +615,158 @@ install_plugins_if_needed() {
         fi
     else
         has_zip="yes"
-        checksum_file=$(mktemp)
-        plugins_zip_checksum "$checksum_file"
-        current_checksum=$(sha256sum "$checksum_file" | awk '{print $1}')
-        rm -f "$checksum_file"
 
-        if [ -f "$STAMP_FILE" ] && [ "$(cat "$STAMP_FILE")" = "$current_checksum" ]; then
-            echo "** 插件包未变化，跳过重复安装"
+        # ── 构建当前 per-zip checksum 映射 ──
+        local -A current_checksums
+        for zip in "${zips[@]}"; do
+            local zip_name sum
+            zip_name=$(basename "$zip")
+            sum=$(sha256sum "$zip" | awk '{print $1}')
+            current_checksums["$zip_name"]="$sum"
+        done
+
+        # ── 读取上次安装 manifest ──
+        local -A installed_checksums
+        if [ -f "$MANIFEST_FILE" ]; then
+            while IFS='  ' read -r sum name; do
+                [ -n "$name" ] && installed_checksums["$name"]="$sum"
+            done < "$MANIFEST_FILE"
+        fi
+
+        # ── 找出新的/变化的 zip ──
+        # 规则1: modules 目录下无同名插件 → 首次安装，必须装
+        # 规则2: modules 目录下有同名插件 → 对比 zip SHA256 与 manifest，变了才装
+        local any_changed=false
+        local modules_dir="${ZABBIX_MODULES_INSTALL_DIR:-/usr/share/zabbix/modules}"
+        for zip_name in "${!current_checksums[@]}"; do
+            local current="${current_checksums[$zip_name]}"
+            local installed="${installed_checksums[$zip_name]:-}"
+
+            if parse_module_dir_from_zip_name "$zip_name"; then
+                if [ -d "${modules_dir}/${PARSED_MODULE_DIR}" ]; then
+                    # 已有同名模块 → 对比 SHA256
+                    if [ "$current" != "$installed" ]; then
+                        echo "** [更新] ${zip_name} → ${PARSED_MODULE_DIR}/ 已存在，zip 有变化，重新安装"
+                        changed_zips+=("$PLUGINS_DIR/$zip_name")
+                        any_changed=true
+                    else
+                        echo "** [跳过] ${zip_name} → ${PARSED_MODULE_DIR}/ 已安装且 zip 未变化"
+                    fi
+                else
+                    # 无同名模块 → 新安装
+                    echo "** [新增] ${zip_name} → ${PARSED_MODULE_DIR}/ 不存在，首次安装"
+                    changed_zips+=("$PLUGINS_DIR/$zip_name")
+                    any_changed=true
+                fi
+            else
+                # 无法解析 zip 名 → 回退到纯 SHA256 对比
+                echo "** 警告: 无法解析 ${zip_name} 的插件名/版本号，回退到 SHA256 对比"
+                if [ "$current" != "$installed" ]; then
+                    changed_zips+=("$PLUGINS_DIR/$zip_name")
+                    any_changed=true
+                fi
+            fi
+        done
+
+        if [ "$any_changed" = false ]; then
+            echo "** 所有插件包未变化，跳过安装"
             return 0
         fi
 
-        ensure_unzip
-        rm -rf "$WORK_DIR"
+        echo "** 检测到 ${#changed_zips[@]}/${#current_checksums[@]} 个插件有变化，增量安装"
+
+        ensure_php_extract
         mkdir -p "$WORK_DIR"
 
-        for zip in "${zips[@]}"; do
+        # ── 只解压变化/新增的 zip，解压后立即定位其 install.sh ──
+        local changed_scripts=()
+        for zip in "${changed_zips[@]}"; do
+            local zip_name zip_stem
+            zip_name=$(basename "$zip")
+            zip_stem="${zip_name%.zip}"
+
+            # 删除该 zip 之前解压的旧目录（按 zip 文件名匹配）
+            if [ -d "${WORK_DIR}/${zip_stem}" ]; then
+                rm -rf "${WORK_DIR:?}/${zip_stem}"
+            fi
+
             prepare_work_dir "$zip"
+
+            # 解压后在对应目录中找 install.sh
+            # 优先使用根级 install.sh（如 zabbix-plugins-xxx 合集包，与 activation.dat 同级）
+            # 找不到时再递归查找嵌套的 install.sh（独立插件包场景）
+            local scr
+            if [ -x "${WORK_DIR}/${zip_stem}/install.sh" ]; then
+                scr="${WORK_DIR}/${zip_stem}/install.sh"
+            else
+                scr=$(find "${WORK_DIR}/${zip_stem}" -maxdepth 3 -type f -name 'install.sh' -print -quit 2>/dev/null)
+            fi
+            if [ -n "$scr" ] && [ -f "$scr" ]; then
+                changed_scripts+=("$scr")
+            fi
         done
 
-        install_sh=$(find_install_script "$WORK_DIR") || {
-            echo "** 警告: 解压后未找到 install.sh，跳过插件安装"
+        if [ ${#changed_scripts[@]} -eq 0 ]; then
+            echo "** 变化插件未包含 install.sh，跳过"
+            save_manifest
             return 0
-        }
-        WORK_DIR=$(dirname "$install_sh")
+        fi
     fi
 
-    install_sh=$(find_install_script "$WORK_DIR") || {
-        echo "** 警告: 未找到 install.sh，跳过插件安装"
-        return 0
-    }
+    # ── 收集需要执行的 install.sh ──
+    local install_scripts=()
+    if [ "$has_zip" = "yes" ]; then
+        install_scripts=("${changed_scripts[@]}")
+    else
+        install_scripts+=("$install_sh")
+    fi
+
+    echo "** 执行 ${#install_scripts[@]} 个插件安装"
+
+    # ── unzip wrapper ──
+    # 劫持 install.sh 中的 unzip 调用：解压前保存 activation.dat，解压后恢复
+    local unzip_wrapper="/usr/local/bin/unzip"
+    cat > "$unzip_wrapper" <<'UNZIPWRAPPER'
+#!/bin/sh
+dest="."
+while [ $# -gt 0 ]; do
+    case "$1" in
+        -d) dest="$2"; shift 2 ;;
+        -o|-q) shift ;;
+        -*) shift ;;
+        *)  zipfile="$1"; shift ;;
+    esac
+done
+if [ -z "${zipfile:-}" ]; then
+    echo "unzip: missing file operand" >&2; exit 1
+fi
+export UNZIP_FILE="$zipfile" UNZIP_DEST="$dest"
+php -r '
+$zipfile=getenv("UNZIP_FILE");
+$dest=getenv("UNZIP_DEST");
+// 保存目标目录中已有的 activation.dat
+$saved=[];
+$patterns=["$dest/zabbix-module-*/activation.dat","$dest/activation.dat"];
+foreach($patterns as $pat){
+    $files=glob($pat) ?: [];
+    foreach($files as $f) $saved[$f]=@file_get_contents($f);
+}
+// 解压
+try{$p=new PharData($zipfile);$p->extractTo($dest,null,true);}
+catch(Exception $e){fwrite(STDERR,"unzip error: ".$e->getMessage()."\n");exit(1);}
+// 恢复被覆盖的 activation.dat
+$n=0;
+foreach($saved as $path=>$content){
+    if($content===false) continue;
+    $dir=dirname($path);
+    if(!is_dir($dir)) @mkdir($dir,0777,true);
+    @file_put_contents($path,$content);
+    $n++;
+}
+if($n>0) fwrite(STDERR,"** unzip wrapper: 已保护 ".$n." 个 activation.dat\n");
+'
+UNZIPWRAPPER
+    chmod +x "$unzip_wrapper"
 
     start_temp_php_fpm
 
@@ -445,35 +774,68 @@ install_plugins_if_needed() {
     php_fpm_user="$(resolve_zabbix_php_fpm_user)"
     echo "** PHP-FPM pool 用户: ${php_fpm_user}（install.sh 将用此用户 chown 模块目录）"
 
-    echo "** 执行 $(basename "$install_sh") -m auto （目录: ${WORK_DIR}）"
-    set +e
-    (cd "$WORK_DIR" && PHP_USER="$php_fpm_user" ./install.sh -m auto)
-    local install_status=$?
-    set -e
+    # ── 备份所有已安装模块的 activation.dat，防止 install.sh 覆盖 ──
+    backup_activation_files
+    trap restore_activation_files EXIT
 
+    local install_status=0
+    for install_sh in "${install_scripts[@]}"; do
+        local plugin_work_dir
+        plugin_work_dir=$(dirname "$install_sh")
+
+        chmod +x "$install_sh" 2>/dev/null || true
+
+        echo "** 执行 $(basename "$plugin_work_dir")/install.sh -m auto"
+
+        set +e
+        (cd "$plugin_work_dir" && PHP_USER="$php_fpm_user" ./install.sh -m auto)
+        install_status=$?
+        set -e
+
+        if [ "$install_status" -ne 0 ]; then
+            echo "** 错误: $(basename "$plugin_work_dir")/install.sh 退出码 ${install_status}"
+            restore_activation_files
+            exit "$install_status"
+        fi
+
+        sleep 1
+    done
+
+    restore_activation_files
+    trap - EXIT
+
+    rm -f "$unzip_wrapper"
     stop_temp_php_fpm
 
-    if [ "$install_status" -ne 0 ]; then
-        echo "** 错误: install.sh 退出码 ${install_status}"
-        exit "$install_status"
-    fi
+    # ── 传播 activation.dat：新安装模块如果缺少，从已有模块复制 ──
+    propagate_activation_dat
 
     fix_modules_ownership
-
-    if [ "$has_zip" = "yes" ]; then
-        mkdir -p "$(dirname "$STAMP_FILE")"
-        checksum_file=$(mktemp)
-        plugins_zip_checksum "$checksum_file"
-        sha256sum "$checksum_file" | awk '{print $1}' > "$STAMP_FILE"
-        rm -f "$checksum_file"
-    fi
+    patch_include_once
+    save_manifest
 
     echo "** 插件自动安装完成"
+}
+
+save_manifest() {
+    mkdir -p "$(dirname "$MANIFEST_FILE")"
+    local tmp_manifest
+    tmp_manifest=$(mktemp)
+    shopt -s nullglob
+    local zips=("$PLUGINS_DIR"/*.zip)
+    shopt -u nullglob
+    for zip in "${zips[@]}"; do
+        sha256sum "$zip"
+    done | while read -r sum path; do
+        echo "$sum  $(basename "$path")"
+    done > "$tmp_manifest"
+    mv "$tmp_manifest" "$MANIFEST_FILE"
 }
 
 if [ "$(id -u)" = "0" ]; then
     install_mounted_plugin_loader_if_needed || true
     install_plugins_if_needed || true
+    propagate_activation_dat
     fix_modules_ownership
 else
     echo "** 非 root 用户，跳过插件自动安装（请使用 compose.plugin-loader.yaml 中的 user: \"0\"）"
