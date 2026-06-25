@@ -1,0 +1,13 @@
+additionalProperties:
+  key: blinko
+  name: Blinko
+  tags:
+    - Tool
+  description:
+    en: An open-source, self-hosted personal note-taking tool.
+    zh: 开源自托管的个人轻量笔记/闪念胶囊工具
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  website: https://blinko.space/
+  github: https://github.com/blinko-space/blinko

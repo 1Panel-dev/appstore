@@ -1,0 +1,112 @@
+additionalProperties:
+  formFields:
+    - child:
+        default: ""
+        envKey: PANEL_DB_HOST
+        required: true
+        type: service
+      default: postgresql
+      envKey: PANEL_DB_TYPE
+      labelEn: Database Service
+      labelZh: 数据库服务
+      label:
+        en: Database Service
+        es-es: Servicio de base de datos
+        ja: データベース服务
+        ms: Perkhidmatan Pangkalan Data
+        pt-br: Serviço de Banco de Dados
+        ru: Сервис базы данных
+        ko: 数据베이스 서비스
+        zh: 数据库服务
+        zh-Hant: 數據庫 服務
+        tr: Veritabanı Hizmeti
+      required: true
+      type: apps
+      values:
+        - label: PostgreSQL
+          value: postgresql
+    - default: blinko
+      envKey: PANEL_DB_NAME
+      labelEn: Database
+      labelZh: 数据库名
+      label:
+        en: Database
+        es-es: Base de datos
+        ja: 数据库
+        ms: Pangkalan Data
+        pt-br: Banco de Dados
+        ru: База данных
+        ko: 데이터베이스
+        zh: 数据库名
+        zh-Hant: 數據庫名
+        tr: Veritabanı
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: blinko
+      envKey: PANEL_DB_USER
+      labelEn: User
+      labelZh: 数据库用户
+      label:
+        en: User
+        es-es: Usuario
+        ja: ユーザー
+        ms: Pengguna
+        pt-br: Usuário
+        ru: Пользователь
+        ko: 사용자
+        zh: 数据库用户
+        zh-Hant: 數據庫用戶
+        tr: Kullanıcı
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: blinko
+      envKey: PANEL_DB_USER_PASSWORD
+      labelEn: Password
+      labelZh: 数据库用户密码
+      label:
+        en: Password
+        es-es: Contraseña
+        ja: パスワード
+        ms: Kata Laluan
+        pt-br: Senha
+        ru: 单次密码
+        ko: 비밀번호
+        zh: 数据库用户密码
+        zh-Hant: 數據庫用戶密碼
+        tr: Parola
+      random: true
+      required: true
+      type: password
+    - default: 1111
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: HTTP 端口
+      label:
+        en: Port
+        es-es: Puerto
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh: HTTP 端口
+        zh-Hant: HTTP連接埠
+        tr: Bağlantı Noktası
+      required: true
+      rule: paramPort
+      type: number
+    - default: blinko_secret
+      edit: true
+      envKey: NEXTAUTH_SECRET
+      labelEn: NextAuth Secret
+      labelZh: NextAuth 认证密钥
+      label:
+        en: NextAuth Secret
+        zh: NextAuth 认证密钥
+      random: true
+      required: true
+      type: password
