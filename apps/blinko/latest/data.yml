@@ -1,112 +1,151 @@
 additionalProperties:
   formFields:
-    - child:
-        default: ""
-        envKey: PANEL_DB_HOST
-        required: true
-        type: service
-      default: postgresql
-      envKey: PANEL_DB_TYPE
-      labelEn: Database Service
-      labelZh: 数据库服务
+    - default: "1111"
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: HTTP Port
+      labelZh: HTTP 端口
       label:
-        en: Database Service
-        es-es: Servicio de base de datos
-        ja: データベース服务
-        ms: Perkhidmatan Pangkalan Data
-        pt-br: Serviço de Banco de Dados
-        ru: Сервис базы данных
-        ko: 数据베이스 서비스
-        zh: 数据库服务
-        zh-Hant: 數據庫 服務
-        tr: Veritabanı Hizmeti
+        en: 'HTTP Port'
+        zh: 'HTTP 端口'
+        zh-Hant: 'HTTP 埠'
+        ja: 'HTTP ポート'
+        ko: 'HTTP 포트'
+        ru: 'HTTP-порт'
+        ms: 'Port HTTP'
+        pt-br: 'Porta HTTP'
       required: true
-      type: apps
-      values:
-        - label: PostgreSQL
-          value: postgresql
-    - default: blinko
+      rule: paramPort
+      type: number
+    - default: "http://1.2.3.4:1111"
+      envKey: NEXTAUTH_URL
+      labelEn: NextAuth URL
+      labelZh: 基本 URL
+      label:
+        en: 'NextAuth URL'
+        zh: '基本 URL'
+        zh-Hant: '基本 URL'
+        ja: 'NextAuth URL（認証用URL）'
+        ko: 'NextAuth URL(인증 URL)'
+        ru: 'URL NextAuth'
+        ms: 'URL NextAuth'
+        pt-br: 'URL do NextAuth'
+      required: true
+      rule: paramExtUrl
+      type: text
+    - default: "http://1.2.3.4:1111"
+      envKey: NEXT_PUBLIC_BASE_URL
+      labelEn: Next Public Base URL
+      labelZh: 公共基本 URL
+      label:
+        en: 'Next Public Base URL'
+        zh: '公共基本 URL'
+        zh-Hant: '公共基本 URL'
+        ja: 'Next 公開ベース URL'
+        ko: 'Next 공개 기본 주소 URL'
+        ru: 'Публичный базовый URL Next'
+        ms: 'URL asas awam Next'
+        pt-br: 'URL base pública do Next'
+      required: true
+      rule: paramExtUrl
+      type: text
+    - default: "my_ultra_secure_nextauth_secret"
+      envKey: NEXTAUTH_SECRET
+      labelEn: NextAuth Secret
+      labelZh: NextAuth 密钥
+      label:
+        en: 'NextAuth Secret'
+        zh: 'NextAuth 密钥'
+        zh-Hant: 'NextAuth 密鑰'
+        ja: 'NextAuth シークレット'
+        ko: 'NextAuth 비밀키'
+        ru: 'Секрет NextAuth'
+        ms: 'Rahsia NextAuth'
+        pt-br: 'Segredo do NextAuth'
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+    - default: ""
+      envKey: PANEL_DB_HOST
+      key: postgresql
+      labelEn: PostgreSQL Database Service
+      labelZh: PostgreSQL 数据库服务
+      label:
+        en: 'PostgreSQL Database Service'
+        zh: 'PostgreSQL 数据库服务'
+        zh-Hant: 'PostgreSQL 數據庫服務'
+        ja: 'PostgreSQL データベース服务'
+        ko: 'PostgreSQL 데이터베이스 서비스'
+        ru: 'Сервис базы данных PostgreSQL'
+        ms: 'Perkhidmatan pangkalan data PostgreSQL'
+        pt-br: 'Serviço de banco de dados PostgreSQL'
+      required: true
+      type: service
+    - default: "5432"
+      edit: true
+      envKey: PANEL_DB_PORT
+      labelEn: Database Port Number
+      labelZh: 数据库端口号
+      label:
+        en: 'Database Port Number'
+        zh: '数据库端口号'
+        zh-Hant: '資料庫埠號'
+        ja: 'データベースポート番号'
+        ko: '데이터베이스 포트 번호'
+        ru: 'Номер порта базы данных'
+        ms: 'Nombor port pangkalan data'
+        pt-br: 'Número da porta do banco de dados'
+      required: true
+      rule: paramPort
+      type: number
+    - default: "blinko"
       envKey: PANEL_DB_NAME
       labelEn: Database
       labelZh: 数据库名
       label:
-        en: Database
-        es-es: Base de datos
-        ja: 数据库
-        ms: Pangkalan Data
-        pt-br: Banco de Dados
-        ru: База данных
-        ko: 데이터베이스
-        zh: 数据库名
-        zh-Hant: 數據庫名
-        tr: Veritabanı
+        en: 'Database'
+        zh: '数据库名'
+        zh-Hant: '數據庫名'
+        ja: 'データベース'
+        ko: '데이터베이스'
+        ru: 'База данных'
+        ms: 'Pangkalan Data'
+        pt-br: 'Banco de Dados'
       random: true
       required: true
       rule: paramCommon
       type: text
-    - default: blinko
+    - default: "blinko"
       envKey: PANEL_DB_USER
       labelEn: User
       labelZh: 数据库用户
       label:
-        en: User
-        es-es: Usuario
-        ja: ユーザー
-        ms: Pengguna
-        pt-br: Usuário
-        ru: Пользователь
-        ko: 사용자
-        zh: 数据库用户
-        zh-Hant: 數據庫用戶
-        tr: Kullanıcı
+        en: 'User'
+        zh: '数据库用户'
+        zh-Hant: '數據庫用戶'
+        ja: 'ユーザー'
+        ko: '사용자'
+        ru: 'Пользователь'
+        ms: 'Pengguna'
+        pt-br: 'Usuário'
       random: true
       required: true
       rule: paramCommon
       type: text
-    - default: blinko
+    - default: "blinko"
       envKey: PANEL_DB_USER_PASSWORD
       labelEn: Password
       labelZh: 数据库用户密码
       label:
-        en: Password
-        es-es: Contraseña
-        ja: パスワード
-        ms: Kata Laluan
-        pt-br: Senha
-        ru: 单次密码
-        ko: 비밀번호
-        zh: 数据库用户密码
-        zh-Hant: 數據庫用戶密碼
-        tr: Parola
+        en: 'Password'
+        zh: '数据库用户密码'
+        zh-Hant: '數據庫用戶密碼'
+        ja: 'パスワード'
+        ko: '비밀번호'
+        ru: 'Пароль'
+        ms: 'Kata laluan'
+        pt-br: 'Senha'
       random: true
       required: true
-      type: password
-    - default: 1111
-      envKey: PANEL_APP_PORT_HTTP
-      labelEn: Port
-      labelZh: HTTP 端口
-      label:
-        en: Port
-        es-es: Puerto
-        ja: ポート
-        ms: Port
-        pt-br: Porta
-        ru: Порт
-        ko: 포트
-        zh: HTTP 端口
-        zh-Hant: HTTP連接埠
-        tr: Bağlantı Noktası
-      required: true
-      rule: paramPort
-      type: number
-    - default: blinko_secret
-      edit: true
-      envKey: NEXTAUTH_SECRET
-      labelEn: NextAuth Secret
-      labelZh: NextAuth 认证密钥
-      label:
-        en: NextAuth Secret
-        zh: NextAuth 认证密钥
-      random: true
-      required: true
+      rule: paramComplexity
       type: password
