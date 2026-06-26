@@ -1,0 +1,47 @@
+services:
+  vllm:
+    image: quay.io/ascend/vllm-ascend:v0.21.0rc1-310p
+    entrypoint:
+      - vllm
+      - serve
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    devices:
+      - /dev/davinci0:/dev/davinci0
+      - /dev/davinci1:/dev/davinci1
+      - /dev/davinci2:/dev/davinci2
+      - /dev/davinci3:/dev/davinci3
+      - /dev/davinci4:/dev/davinci4
+      - /dev/davinci5:/dev/davinci5
+      - /dev/davinci6:/dev/davinci6
+      - /dev/davinci7:/dev/davinci7
+      - /dev/davinci_manager:/dev/davinci_manager
+      - /dev/devmm_svm:/dev/devmm_svm
+      - /dev/hisi_hdc:/dev/hisi_hdc
+    volumes:
+      - ${MODEL_DIR}/:/models/${MODEL_NAME}
+      - /root/.cache:/root/.cache
+      - /usr/local/dcmi:/usr/local/dcmi
+      - /usr/local/bin/npu-smi:/usr/local/bin/npu-smi
+      - /usr/local/Ascend/driver/lib64/:/usr/local/Ascend/driver/lib64/
+      - /usr/local/Ascend/driver/version.info:/usr/local/Ascend/driver/version.info
+      - /etc/ascend_install.info:/etc/ascend_install.info
+    environment:
+      - ASCEND_RT_VISIBLE_DEVICES=${ASCEND_RT_VISIBLE_DEVICES}
+      - VLLM_USE_MODELSCOPE=True
+      - PYTORCH_NPU_ALLOC_CONF=expandable_segments:True
+      - HCCL_BUFFSIZE=512
+      - OMP_PROC_BIND=false
+      - OMP_NUM_THREADS=1
+      - TASK_QUEUE_ENABLE=1
+      - HCCL_OP_EXPANSION_MODE=AIV
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8000
+    privileged: true
+    shm_size: 10g
+    command: ${START_COMMAND}
+networks:
+  1panel-network:
+    external: true
