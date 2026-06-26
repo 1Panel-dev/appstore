@@ -1,0 +1,31 @@
+name: Blinko
+tags:
+  - 工具
+title: Blinko 闪念胶囊
+description: 开源自托管的个人轻量笔记/闪念胶囊工具
+additionalProperties:
+  key: blinko
+  name: Blinko
+  tags:
+    - Tool
+  shortDescZh: 开源自托管的个人轻量笔记工具
+  shortDescEn: An open-source, self-hosted personal note-taking tool
+  description:
+    en: An open-source, self-hosted personal note-taking tool.
+    es-es: Una herramienta de toma de notas personal de código abierto y autoalojada.
+    ja: オープンソースでセルフホスト可能な個人向け軽量メモツール。
+    ms: Alat mengambil nota peribadi sumber terbuka dan dihoskan sendiri.
+    pt-br: Uma ferramenta de notas pessoais de código aberto e auto-hospedada.
+    ru: Открытый инструмент для личных заметок с возможностью самохостинга.
+    ko: 오픈 소스 및 셀프 호스팅이 가능한 개인용 경량 노트 필기 도구.
+    zh-Hant: 開源自託管的個人輕量筆記工具
+    zh: 开源自托管的个人轻量笔记/闪念胶囊工具
+    tr: Açık kaynaklı ve kendi kendine barındırılabilen kişisel not alma aracı.
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  website: https://blinko.space/
+  github: https://github.com/blinko-space/blinko
+  architectures:
+    - amd64
+    - arm64
