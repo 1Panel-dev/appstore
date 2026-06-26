@@ -1,5 +1,44 @@
 additionalProperties:
   formFields:
+    - default: admin
+      edit: true
+      envKey: HERMES_DASHBOARD_USERNAME
+      labelEn: Dashboard Username
+      labelZh: Dashboard 用户名
+      required: true
+      rule: paramCommon
+      type: text
+      label:
+        en: Dashboard Username
+        es-es: Dashboard Username
+        ja: Dashboard Username
+        ms: Dashboard Username
+        pt-br: Dashboard Username
+        ru: Dashboard Username
+        ko: Dashboard Username
+        zh-Hant: Dashboard Username
+        zh: Dashboard 用户名
+        tr: Dashboard Username
+    - default: admin
+      edit: true
+      envKey: HERMES_DASHBOARD_PASSWORD
+      labelEn: Dashboard Password
+      labelZh: Dashboard 密码
+      random: true
+      required: true
+      rule: paramCommon
+      type: password
+      label:
+        en: Dashboard Password
+        es-es: Dashboard Password
+        ja: Dashboard Password
+        ms: Dashboard Password
+        pt-br: Dashboard Password
+        ru: Dashboard Password
+        ko: Dashboard Password
+        zh-Hant: Dashboard Password
+        zh: Dashboard 密码
+        tr: Dashboard Password
     - default: 9119
       edit: true
       envKey: PANEL_APP_PORT_HTTP
