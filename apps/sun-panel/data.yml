@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: Server and NAS dashboard, homepage and browser start page
     es-es: Panel para servidor y NAS, homepage y pagina de inicio del navegador
+    fa: 'داشبورد سرور و NAS، صفحه خانه و صفحه شروع مرورگر'
     zh: 一个服务器、NAS 导航面板、首页与浏览器起始页
     zh-Hant: 一個伺服器、NAS 導航面板、首頁與瀏覽器起始頁
     ja: サーバーや NAS 向けのナビゲーションパネル、ホームページ、ブラウザのスタートページ

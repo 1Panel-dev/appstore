@@ -21,6 +21,7 @@ additionalProperties:
     description:
         en: Official Microsoft repository for SQL Server in Docker resources
         es-es: Repositorio oficial de Microsoft para recursos de SQL Server en Docker
+        fa: 'مخزن رسمی Microsoft برای منابع SQL Server در Docker'
         zh: SQL Server 在 Docker 资源中的官方微软存储库
         zh-Hant: SQL Server 在 Docker 資源中的官方微軟存儲庫
         ja: Docker リソース内の SQL Server 用の公式 Microsoft リポジトリ

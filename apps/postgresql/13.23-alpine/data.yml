@@ -7,6 +7,7 @@ additionalProperties:
       label:
         en: Username
         es-es: Nombre de usuario
+        fa: 'نام کاربری'
         ja: ユーザー名
         ms: Nama pengguna
         pt-br: Nome de usuário
@@ -26,6 +27,7 @@ additionalProperties:
       label:
         en: Password
         es-es: Contraseña
+        fa: 'رمز عبور'
         ja: パスワード
         ms: Kata laluan
         pt-br: Senha
@@ -44,6 +46,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta

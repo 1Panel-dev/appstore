@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: A web interface for MySQL and MariaDB
         es-es: Un web interface for MySQL and MariaDB
+        fa: 'رابط وب برای MySQL و MariaDB'
         ja: MySQL と MariaDB 用のウェブインターフェース
         ms: Antaramuka web untuk MySQL dan MariaDB
         pt-br: Uma interface web para MySQL e MariaDB

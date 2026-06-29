@@ -7,6 +7,7 @@ additionalProperties:
       label:
         en: Root Password
         es-es: Contraseña de root
+        fa: 'رمز عبور root'
         ja: ルートパスワード
         ms: Kata Laluan Root
         pt-br: Senha Root
@@ -25,6 +26,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -44,6 +46,7 @@ additionalProperties:
       label:
         en: Time zone
         es-es: Zona horaria
+        fa: 'منطقه زمانی'
         ja: タイムゾーン
         ms: Zon masa
         pt-br: Fuso horário

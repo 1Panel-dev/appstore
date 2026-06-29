@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: The fastest knowledge base for growing teams. Beautiful, realtime collaborative, feature packed, and markdown compatible
     es-es: La base de conocimiento más rápida para equipos en crecimiento. Bonita, colaborativa en tiempo real, completa y compatible con Markdown
+    fa: 'سریع ترین پایگاه دانش برای تیم های در حال رشد؛ زیبا، مشارکتی بلادرنگ، پرامکانات و سازگار با Markdown'
     ja: 成長中のチームに最適な最速のナレッジベース。美しく、リアルタイム共同作業、機能満載、Markdown対応
     ms: Pangkalan pengetahuan terpantas untuk pasukan yang sedang berkembang. Cantik, kolaboratif masa nyata, penuh ciri, dan serasi dengan Markdown
     pt-br: A base de conhecimento mais rápida para equipes em crescimento. Bonita, colaborativa em tempo real, repleta de recursos e compatível com Markdown

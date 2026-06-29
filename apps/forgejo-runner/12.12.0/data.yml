@@ -10,6 +10,7 @@ additionalProperties:
         zh-Hant: Docker 背景服務執行模式
         en: Docker daemon run mode
         es-es: Modo de ejecución del daemon de Docker
+        fa: 'حالت اجرای daemon داکر'
         ja: Docker デーモン実行モード
         ko: Docker 데몬 실행 모드
         ms: Mod operasi daemon Docker
@@ -34,6 +35,7 @@ additionalProperties:
       label:
         en: Forgejo Instance
         es-es: Instancia de Forgejo
+        fa: 'نمونه Forgejo'
         ja: Forgejo インスタンス
         ms: Instans Forgejo
         pt-br: Instância Forgejo
@@ -52,6 +54,7 @@ additionalProperties:
       label:
         en: Registration Token
         es-es: Token de registro
+        fa: 'توکن ثبت نام'
         ja: 登録トークン
         ms: Token Pendaftaran
         pt-br: Token de Registro
@@ -69,6 +72,7 @@ additionalProperties:
       label:
         en: Runner Name
         es-es: Nombre del ejecutor
+        fa: 'نام Runner'
         ja: ランナー名
         ms: Nama Pelari
         pt-br: Nome do Runner
@@ -86,6 +90,7 @@ additionalProperties:
       label:
         en: Runner Labels
         es-es: Etiquetas del ejecutor
+        fa: 'برچسب های Runner'
         ja: ランナータグ
         ms: Label Pelari
         pt-br: Rótulos do Runner

@@ -9,6 +9,7 @@ additionalProperties:
         en: Port
         zh: 端口
         es-es: Puerto
+        fa: 'پورت'
         zh-Hant: 埠
         ja: ポート
         ko: 포트
@@ -28,6 +29,7 @@ additionalProperties:
         en: User Limit
         zh: 用户上限
         es-es: Usuario Limit
+        fa: 'محدودیت کاربر'
         zh-Hant: 使用者上限
         ja: ユーザー上限
         ko: 사용자 제한
@@ -46,6 +48,7 @@ additionalProperties:
         en: User Book Limit
         zh: 用户书籍上限
         es-es: Usuario Book Limit
+        fa: 'محدودیت کتاب کاربر'
         zh-Hant: 使用者書籍上限
         ja: ユーザーの書籍上限
         ko: 사용자 도서 제한
@@ -63,6 +66,7 @@ additionalProperties:
         en: Enable Login Authentication
         zh: 开启登录鉴权，开启后将支持多用户模式
         es-es: Habilitar autenticación de inicio de sesión
+        fa: 'فعال سازی احراز هویت ورود'
         zh-Hant: 啟用登入驗證
         ja: ログイン認証を有効化
         ko: 로그인 인증 활성화
@@ -85,6 +89,7 @@ additionalProperties:
         en: Admin Password
         zh: 管理员密码
         es-es: Contraseña del administrador
+        fa: 'رمز عبور مدیر'
         zh-Hant: 管理員密碼
         ja: 管理者パスワード
         ko: 관리자 비밀번호
@@ -104,6 +109,7 @@ additionalProperties:
         en: Cache Chapter Content
         zh: 开启缓存章节内容 V2.0
         es-es: Almacenar en caché el contenido de los capítulos
+        fa: 'کش کردن محتوای فصل'
         zh-Hant: 快取章節內容
         ja: 章コンテンツをキャッシュ
         ko: 장 내용 캐시

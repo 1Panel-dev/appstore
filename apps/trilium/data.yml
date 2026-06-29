@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: Build your personal knowledge base with Trilium Notes
     es-es: Construye tu base de conocimiento personal con Trilium Notes
+    fa: 'پایگاه دانش شخصی خود را با Trilium Notes بسازید'
     ja: Trilium Notesで個人の知識ベースを構築する
     ms: Bangunkan pangkalan pengetahuan peribadi anda dengan Trilium Notes
     pt-br: Construa sua base de conhecimento pessoal com o Trilium Notes

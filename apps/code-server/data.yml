@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: VS Code in the browser
         es-es: VS Code en el navegador
+        fa: 'VS Code در مرورگر'
         ja: ブラウザでのVS Code
         ms: VS Code di pelayar
         pt-br: VS Code no navegador

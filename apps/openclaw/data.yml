@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: Your own personal AI assistant
     es-es: Tu propio asistente personal de IA
+    fa: 'دستیار هوش مصنوعی شخصی شما'
     ja: あなた専用のパーソナルAIアシスタント
     ms: Pembantu AI peribadi anda sendiri
     pt-br: Seu assistente pessoal de IA

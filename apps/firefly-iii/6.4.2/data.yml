@@ -7,6 +7,7 @@ additionalProperties:
       label:
         en: Application Key (Must be exactly 32 characters)
         es-es: Application Clave (Must be exactly 32 characters)
+        fa: 'کلید برنامه (باید دقیقا 32 کاراکتر باشد)'
         ja: アプリケーションキー (正確に32文字である必要があります)
         ms: Kunci Aplikasi (Mesti tepat 32 aksara)
         pt-br: Chave de Aplicação (Deve ter exatamente 32 caracteres)
@@ -24,6 +25,7 @@ additionalProperties:
       label:
         en: Database Service
         es-es: Servicio de base de datos
+        fa: 'سرویس پایگاه داده'
         ja: データベースサービス
         ms: Perkhidmatan Pangkalan Data
         pt-br: Serviço de Banco de Dados
@@ -51,6 +53,7 @@ additionalProperties:
       label:
         en: Database
         es-es: Base de datos
+        fa: 'پایگاه داده'
         ja: データベース
         ms: Pangkalan Data
         pt-br: Banco de Dados
@@ -70,6 +73,7 @@ additionalProperties:
       label:
         en: User
         es-es: Usuario
+        fa: 'کاربر'
         ja: ユーザー
         ms: Pengguna
         pt-br: Usuário
@@ -89,6 +93,7 @@ additionalProperties:
       label:
         en: Password
         es-es: Contraseña
+        fa: 'رمز عبور'
         ja: パスワード
         ms: Kata laluan
         pt-br: Senha
@@ -107,6 +112,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -126,6 +132,7 @@ additionalProperties:
       label:
         en: Reverse Proxy Domain (Optional)
         es-es: Reverse Proxy Dominio (Optional)
+        fa: 'دامنه پروکسی معکوس (اختیاری)'
         ja: リバースプロキシドメイン（オプション）
         ms: Domain Proksi Terbalik (Pilihan)
         pt-br: Domínio de Proxy Reverso (Opcional)

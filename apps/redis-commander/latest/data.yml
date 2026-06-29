@@ -8,6 +8,7 @@ additionalProperties:
           label:
             en: Redis Service
             es-es: Servicio de Redis
+            fa: 'سرویس Redis'
             ja: Redis サービス
             ms: Perkhidmatan Redis
             pt-br: Serviço Redis
@@ -25,6 +26,7 @@ additionalProperties:
           label:
             en: Redis Password
             es-es: Contraseña de Redis
+            fa: 'رمز عبور Redis'
             ja: Redis パスワード
             ms: Kata Laluan Redis
             pt-br: Senha Redis
@@ -43,6 +45,7 @@ additionalProperties:
           label:
             en: Database
             es-es: Base de datos
+            fa: 'پایگاه داده'
             ja: データベース
             ms: Pangkalan Data
             pt-br: Banco de Dados
@@ -94,6 +97,7 @@ additionalProperties:
           label:
             en: Username
             es-es: Nombre de usuario
+            fa: 'نام کاربری'
             ja: ユーザー名
             ms: Nama Pengguna
             pt-br: Nome de Usuário
@@ -114,6 +118,7 @@ additionalProperties:
           label:
             en: Password
             es-es: Contraseña
+            fa: 'رمز عبور'
             ja: パスワード
             ms: Kata Laluan
             pt-br: Senha
@@ -133,6 +138,7 @@ additionalProperties:
           label:
             en: Port
             es-es: Puerto
+            fa: 'پورت'
             ja: ポート
             ms: Port
             pt-br: Porta

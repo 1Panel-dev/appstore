@@ -9,6 +9,7 @@ additionalProperties:
             en: Port
             zh: 端口
             es-es: Puerto
+            fa: 'پورت'
             zh-Hant: 埠
             ja: ポート
             ko: 포트
@@ -27,6 +28,7 @@ additionalProperties:
             en: AES encryption key
             zh: AES加密密钥
             es-es: Clave de cifrado AES
+            fa: 'کلید رمزنگاری AES'
             zh-Hant: AES 加密金鑰
             ja: AES 暗号化キー
             ko: AES 암호화 키
@@ -46,6 +48,7 @@ additionalProperties:
             en: COOKIE encryption key
             zh: COOKIE加密密钥
             es-es: Clave de cifrado de COOKIE
+            fa: 'کلید رمزنگاری COOKIE'
             zh-Hant: COOKIE 加密金鑰
             ja: COOKIE 暗号化キー
             ko: COOKIE 암호화 키

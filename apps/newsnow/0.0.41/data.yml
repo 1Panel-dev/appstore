@@ -8,6 +8,7 @@ additionalProperties:
         zh-hant: "HTTP 埠"
         en: "HTTP Port"
         es-es: Puerto HTTP
+        fa: 'پورت HTTP'
         ja: "HTTPポート"
         ms: "Port HTTP"
         pt-br: "Porta HTTP"
@@ -38,6 +39,7 @@ additionalProperties:
         zh-hant: "Github 用戶端 ID"
         en: "Github Client ID"
         es-es: ID de cliente de GitHub
+        fa: 'شناسه کلاینت GitHub'
         ja: "Github クライアント ID"
         ms: "ID Klien Github"
         pt-br: "ID do Cliente Github"
@@ -67,6 +69,7 @@ additionalProperties:
         zh-hant: "Github 用戶端密鑰"
         en: "Github Client Secret"
         es-es: Secreto de cliente de GitHub
+        fa: 'رمز محرمانه کلاینت GitHub'
         ja: "Github クライアントシークレット"
         ms: "Rahsia Klien Github"
         pt-br: "Segredo do Cliente Github"
@@ -96,6 +99,7 @@ additionalProperties:
         zh-hant: "JWT 密鑰"
         en: "JWT Secret"
         es-es: Secreto JWT
+        fa: 'رمز محرمانه JWT'
         ja: "JWT シークレット"
         ms: "Rahsia JWT"
         pt-br: "Segredo JWT"
@@ -126,6 +130,7 @@ additionalProperties:
         zh-hant: "初始化資料庫表"
         en: "Initialize Database Tables"
         es-es: Initialize Base de datos Tables
+        fa: 'مقداردهی اولیه جدول های پایگاه داده'
         ja: "データベーステーブルの初期化"
         ms: "Inisialisasi Jadual Pangkalan Data"
         pt-br: "Inicializar Tabelas do Banco de Dados"
@@ -160,6 +165,7 @@ additionalProperties:
         zh-hant: "啟用緩存"
         en: "Enable Cache"
         es-es: Habilitar caché
+        fa: 'فعال سازی کش'
         ja: "キャッシュを有効にする"
         ms: "Dayakan Cache"
         pt-br: "Habilitar Cache"

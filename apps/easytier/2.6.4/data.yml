@@ -8,6 +8,7 @@ additionalProperties:
       label:
         en: Privilege mode switch
         es-es: Interruptor del modo privilegiado
+        fa: 'سوییچ حالت Privileged'
         ja: 特権モードスイッチ
         ms: Suis mod istimewa
         pt-br: Interruptor do modo privilegiado
@@ -26,6 +27,7 @@ additionalProperties:
       label:
         en: Hostname
         es-es: Nombre del host
+        fa: 'نام میزبان'
         ja: ホスト名
         ms: Nama hos
         pt-br: Nome do host
@@ -44,6 +46,7 @@ additionalProperties:
       label:
         en: Command
         es-es: Comando
+        fa: 'دستور'
         ja: コマンド
         ms: Arahan
         pt-br: Comando
@@ -62,6 +65,7 @@ additionalProperties:
       label:
         en: Time Zone
         es-es: Zona horaria
+        fa: 'منطقه زمانی'
         ja: タイムゾーン
         ms: Zon masa
         pt-br: Fuso horario

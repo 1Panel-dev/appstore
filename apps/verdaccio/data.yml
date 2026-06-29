@@ -21,6 +21,7 @@ additionalProperties:
     description:
         en: Local private NPM registry
         es-es: Registro NPM privado local
+        fa: 'رجیستری خصوصی محلی NPM'
         zh: 本地私有 NPM 注册中心
         zh-Hant: 本地私有 NPM 註冊中心
         ja: ローカルプライベート NPM レジストリ

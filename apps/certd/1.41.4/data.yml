@@ -8,6 +8,7 @@ additionalProperties:
       label:
         en: HTTP Port
         es-es: Puerto HTTP
+        fa: 'پورت HTTP'
         zh: HTTP 端口
         ja: HTTP ポート
         ms: Port HTTP
@@ -27,6 +28,7 @@ additionalProperties:
       label:
         en: HTTPS Port
         es-es: Puerto HTTPS
+        fa: 'پورت HTTPS'
         zh: HTTPS 端口
         ja: HTTPS ポート
         ms: Port HTTPS

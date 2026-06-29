@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: The next generation of code hosting platform
     es-es: The next generation of code hosting plataforma
+    fa: 'نسل بعدی پلتفرم میزبانی کد'
     zh: 下一代代码托管平台
     zh-Hant: 下一代代碼託管平台
     ja: 次世代のコードホスティングプラットフォーム

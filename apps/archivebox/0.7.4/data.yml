@@ -9,6 +9,7 @@ additionalProperties:
       label:
         en: WebUI Port
         es-es: Puerto web
+        fa: 'پورت WebUI'
         zh: WebUI 端口
         ja: WebUI ポート
         ms: Port WebUI
@@ -26,6 +27,7 @@ additionalProperties:
       label:
         en: Admin username
         es-es: Nombre de usuario del administrador
+        fa: 'نام کاربری مدیر'
         zh: 管理员用户名
         ja: 管理者ユーザー名
         ms: Nama pengguna pentadbir
@@ -44,6 +46,7 @@ additionalProperties:
       label:
         en: Admin password
         es-es: Contraseña del administrador
+        fa: 'رمز عبور مدیر'
         zh: 管理员密码
         ja: 管理者パスワード
         ms: Kata laluan pentadbir

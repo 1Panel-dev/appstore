@@ -10,6 +10,7 @@ additionalProperties:
       label:
         en: API Port
         es-es: Puerto API
+        fa: 'پورت API'
         ja: API ポート
         ms: Port API
         pt-br: Porta API
@@ -28,6 +29,7 @@ additionalProperties:
       label:
         en: Web Port
         es-es: Puerto web
+        fa: 'پورت وب'
         ja: Web ポート
         ms: Port Web
         pt-br: Porta Web
@@ -46,6 +48,7 @@ additionalProperties:
       label:
         en: User
         es-es: Usuario
+        fa: 'کاربر'
         ja: ユーザー
         ms: Pengguna
         pt-br: Usuário
@@ -65,6 +68,7 @@ additionalProperties:
       label:
         en: Password
         es-es: Contraseña
+        fa: 'رمز عبور'
         ja: パスワード
         ms: Kata laluan
         pt-br: Senha
@@ -87,6 +91,7 @@ additionalProperties:
       label:
         en: Enable Console
         es-es: Habilitar consola
+        fa: 'فعال سازی کنسول'
         ja: Console を有効にする
         ms: Aktifkan Console
         pt-br: Habilitar Console

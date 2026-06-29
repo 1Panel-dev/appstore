@@ -13,6 +13,7 @@ additionalProperties:
     description:
       en: Distributed Storage System
       es-es: Sistema de almacenamiento distribuido
+      fa: 'سیستم ذخیره سازی توزیع شده'
       ja: 分散型ストレージシステム
       ms: Sistem Storan Teragih
       pt-br: Sistema de Armazenamento Distribuído

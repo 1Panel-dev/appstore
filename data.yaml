@@ -16,6 +16,7 @@ additionalProperties:
         zh: "AI"
         tr: "AI"
         es-es: "IA"
+        fa: 'هوش مصنوعی'
     - key: Website
       name: 建站
       sort: 10
@@ -30,6 +31,7 @@ additionalProperties:
         zh: "建站"
         tr: "Web Sitesi"
         es-es: "Sitio web"
+        fa: 'وب سایت'
     - key: Database
       name: 数据库
       sort: 20
@@ -44,6 +46,7 @@ additionalProperties:
         zh: "数据库"
         tr: "Veritabanı"
         es-es: "Base de datos"
+        fa: 'پایگاه داده'
     - key: Server
       name: Web 服务器
       sort: 30
@@ -58,6 +61,7 @@ additionalProperties:
         zh: "Web 服务器"
         tr: "Web Sunucusu"
         es-es: "Servidor web"
+        fa: 'سرور وب'
     - key: Runtime
       name: 运行环境
       sort: 40
@@ -72,6 +76,7 @@ additionalProperties:
         zh: "运行环境"
         tr: "Çalışma Zamanı"
         es-es: "Entorno de ejecucion"
+        fa: 'محیط اجرا'
     - key: Tool
       name: 实用工具
       sort: 50
@@ -86,6 +91,7 @@ additionalProperties:
         zh: "实用工具"
         tr: "Araç"
         es-es: "Herramienta"
+        fa: 'ابزار'
     - key: Storage
       name: 云存储
       sort: 60
@@ -100,6 +106,7 @@ additionalProperties:
         zh: "云存储"
         tr: "Bulut Depolama"
         es-es: "Almacenamiento en la nube"
+        fa: 'ذخیره سازی ابری'
     - key: BI
       name: BI
       sort: 80
@@ -114,6 +121,7 @@ additionalProperties:
         zh: "BI"
         tr: "BI"
         es-es: "BI"
+        fa: 'هوش تجاری'
     - key: CRM
       name: CRM
       sort: 85
@@ -128,6 +136,7 @@ additionalProperties:
         zh: "CRM"
         tr: "CRM"
         es-es: "CRM"
+        fa: 'CRM'
     - key: Security
       name: 安全
       sort: 90
@@ -142,6 +151,7 @@ additionalProperties:
         zh: "安全"
         tr: "Güvenlik"
         es-es: "Seguridad"
+        fa: 'امنیت'
     - key: DevTool
       name: 开发工具
       sort: 100
@@ -156,6 +166,7 @@ additionalProperties:
         zh: "开发工具"
         tr: "Geliştirme Aracı"
         es-es: "Herramienta de desarrollo"
+        fa: 'ابزار توسعه'
     - key: DevOps
       name: DevOps
       sort: 110
@@ -170,6 +181,7 @@ additionalProperties:
         zh: "DevOps"
         tr: "DevOps"
         es-es: "DevOps"
+        fa: 'DevOps'
     - key: Middleware
       name: 中间件
       sort: 120
@@ -184,6 +196,7 @@ additionalProperties:
         zh: "中间件"
         tr: "Ara Yazılım"
         es-es: "Middleware"
+        fa: 'میان افزار'
     - key: Media
       name: 多媒体
       sort: 130
@@ -198,6 +211,7 @@ additionalProperties:
         zh: "多媒体"
         tr: "Medya"
         es-es: "Multimedia"
+        fa: 'رسانه'
     - key: Email
       name: 邮件服务
       sort: 140
@@ -212,6 +226,7 @@ additionalProperties:
         zh: "邮件服务"
         tr: "E-posta Hizmeti"
         es-es: "Servicio de correo"
+        fa: 'سرویس ایمیل'
     - key: Game
       name: 休闲游戏
       sort: 150
@@ -226,6 +241,7 @@ additionalProperties:
         zh: "休闲游戏"
         tr: "Gündelik Oyunlar"
         es-es: "Juegos casuales"
+        fa: 'بازی های سرگرمی'
     - key: Local
       name: 本地
       sort: 9999
@@ -240,4 +256,5 @@ additionalProperties:
         zh: "本地"
         tr: "Yerel"
         es-es: "Local"
+        fa: 'محلی'
   version: v1.6.0

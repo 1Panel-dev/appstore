@@ -11,6 +11,7 @@ additionalProperties:
       label:
         en: WebUI Port
         es-es: Puerto web
+        fa: 'پورت WebUI'
         ja: WebUI ポート
         ms: Port WebUI
         pt-br: Porta WebUI
@@ -28,6 +29,7 @@ additionalProperties:
       label:
         en: Jupyter-Token
         es-es: Token de Jupyter
+        fa: 'توکن Jupyter'
         ja: Jupyter トークン
         ms: Jupyter-Token
         pt-br: Jupyter-Token

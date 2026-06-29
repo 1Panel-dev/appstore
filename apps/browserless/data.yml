@@ -19,6 +19,7 @@ additionalProperties:
   github: https://github.com/browserless/browserless
   description:
     en: Deploy headless browsers in Docker
+    fa: 'استقرار مرورگرهای headless در Docker'
     zh: 在 Docker 中部署无头浏览器
     zh-Hant: 在 Docker 中部署無頭瀏覽器
     ja: Docker でヘッドレスブラウザをデプロイ

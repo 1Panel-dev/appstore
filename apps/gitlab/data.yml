@@ -14,6 +14,7 @@ additionalProperties:
   description:
     en: An open source end-to-end software development platform with built-in version control, issue tracking, code review, CI/CD, and more
     es-es: Plataforma de desarrollo de software de extremo a extremo y de codigo abierto con control de versiones, seguimiento de incidencias, revision de codigo y CI/CD integrados
+    fa: 'پلتفرم متن باز end-to-end توسعه نرم افزار با کنترل نسخه، پیگیری issue، بازبینی کد، CI/CD و امکانات بیشتر'
     ja: オープンソースのエンドツーエンドのソフトウェア開発プラットフォームで、バージョン管理、問題追跡、コードレビュー、CI/CDなどの機能が組み込まれています。
     ms: Platform pembangunan perisian hujung ke hujung sumber terbuka dengan kawalan versi terbina dalam, penjejakan isu, semakan kod, CI/CD, dan banyak lagi
     pt-br: Uma plataforma de desenvolvimento de software de ponta a ponta de código aberto com controle de versão embutido, rastreamento de problemas, revisão de código, CI/CD e muito mais

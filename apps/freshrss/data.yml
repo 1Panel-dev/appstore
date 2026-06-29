@@ -21,6 +21,7 @@ additionalProperties:
     description:
         en: A self-hosted RSS and Atom feed aggregator
         es-es: Un autoalojado RSS and Atom feed aggregator
+        fa: 'گردآورنده فید RSS و Atom به صورت خودمیزبان'
         zh: 自托管的 RSS 和 Atom 源聚合器
         zh-Hant: 自託管的 RSS 和 Atom 源聚合器
         ja: 自己ホスト型の RSS および Atom フィードアグリゲーター

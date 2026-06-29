@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: Fully featured and highly configurable SFTP server
         es-es: Fully featured and highly configurable SFTP servidor
+        fa: 'سرور SFTP کامل و بسیار قابل پیکربندی'
         ja: 完全機能を備え、高度に構成可能なSFTPサーバー
         ms: Pelayan SFTP yang lengkap dan sangat boleh dikonfigurasikan
         pt-br: Servidor SFTP totalmente funcional e altamente configurável

@@ -21,6 +21,7 @@ additionalProperties:
     description:
         en: A high-performance, lightweight, open source HTTP server
         es-es: Un high-performance, ligero, de código abierto HTTP servidor
+        fa: 'سرور HTTP متن باز، سبک و پرکارایی'
         zh: 高性能、轻量级、开源的 HTTP 服务器
         zh-Hant: 高性能、輕量級、開源的 HTTP 伺服器
         ja: 高性能で軽量、オープンソースの HTTP サーバー

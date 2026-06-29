@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: PHP5 Runtime
         es-es: Entorno de ejecución de PHP5
+        fa: 'محیط اجرای PHP5'
         ja: PHP5 ランタイム
         ms: Persekitaran masa laku PHP5
         pt-br: Ambiente de execução PHP5

@@ -8,6 +8,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -26,6 +27,7 @@ additionalProperties:
       label:
         en: Redis Service
         es-es: Instancia de Redis
+        fa: 'سرویس Redis'
         ja: Redis サービス
         ms: Perkhidmatan Redis
         pt-br: Serviço Redis
@@ -45,6 +47,7 @@ additionalProperties:
       label:
         en: Redis Port
         es-es: Puerto de Redis
+        fa: 'پورت Redis'
         ja: Redisのポート
         ms: Port Redis
         pt-br: Porta do Redis
@@ -63,6 +66,7 @@ additionalProperties:
       label:
         en: Redis password
         es-es: Contraseña de Redis
+        fa: 'رمز عبور Redis'
         ja: Redisのパスワード
         ms: Kata Laluan Redis
         pt-br: Senha do Redis
@@ -77,6 +81,7 @@ additionalProperties:
       label:
         en: Browserless Instance
         es-es: Instancia de Browserless
+        fa: 'نمونه Browserless'
         ja: Browserless インスタンス
         ms: Instansi Browserless
         pt-br: Instância de Browserless
@@ -95,6 +100,7 @@ additionalProperties:
       label:
         en: Browserless Port
         es-es: Puerto de Browserless
+        fa: 'پورت Browserless'
         ja: Browserless のポート
         ms: Port Browserless
         pt-br: Porta do Browserless

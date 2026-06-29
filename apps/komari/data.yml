@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: A lightweight self-hosted server monitoring tool
         es-es: Un ligero autoalojado servidor monitorización herramienta
+        fa: 'ابزار سبک مانیتورینگ سرور به صورت خودمیزبان'
         ja: 軽量なセルフホスト型サーバーモニタリングツール
         ms: Alat pemantauan pelayan yang dihoskan sendiri yang ringan
         pt-br: Uma ferramenta leve de monitoramento de servidor auto-hospedado

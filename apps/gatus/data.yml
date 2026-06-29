@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: Developer-oriented health dashboard
     es-es: Developer-oriented health panel
+    fa: 'داشبورد سلامت ویژه توسعه دهندگان'
     zh: 面向开发者的健康监控面板
     zh-Hant: 面向開發者的健康監控面板
     ja: 開発者向けヘルスダッシュボード

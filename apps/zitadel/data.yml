@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: An open-source Identity and Access Management (IAM) platform
     es-es: Un open-source Identity and Access Management (IAM) plataforma
+    fa: 'پلتفرم متن باز مدیریت هویت و دسترسی (IAM)'
     ja: オープンソースのIDおよびアクセス管理（IAM）プラットフォーム
     ms: Sebuah platform Pengurusan Identiti dan Akses (IAM) sumber terbuka
     pt-br: Uma plataforma de Gerenciamento de Identidade e Acesso (IAM) de código aberto

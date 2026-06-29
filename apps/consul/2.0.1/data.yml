@@ -11,6 +11,7 @@ additionalProperties:
           label:
             en: HTTP Port
             es-es: Puerto HTTP
+            fa: 'پورت HTTP'
             ja: HTTPポート
             ms: Port HTTP
             pt-br: Porta HTTP
@@ -30,6 +31,7 @@ additionalProperties:
           label:
             en: DNS Port
             es-es: DNS Puerto
+            fa: 'پورت DNS'
             ja: DNSポート
             ms: Port DNS
             pt-br: Porta DNS

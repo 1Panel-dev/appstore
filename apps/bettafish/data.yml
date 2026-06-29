@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: A multi-agent public opinion analysis assistant for everyone
     es-es: Un multi-agent public opinion analysis assistant for everyone
+    fa: 'دستیار تحلیل افکار عمومی چندعامله برای همه'
     ja: みんなが使えるマルチエージェント世論分析アシスタント
     ms: Sistem analisis pendapat umum multi-ejen yang boleh digunakan oleh semua orang
     pt-br: Um assistente de análise de opinião pública multiagente acessível a todos

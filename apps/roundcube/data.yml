@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: Web-based multilingual IMAP mail client
         es-es: Web-based multilingual IMAP mail cliente
+        fa: 'کلاینت ایمیل IMAP چندزبانه مبتنی بر وب'
         ja: Webベースの多言語IMAPメールクライアント
         ms: Klien e-mel IMAP berbilang bahasa berasaskan web
         pt-br: Cliente de e-mail IMAP multilíngue baseado na web

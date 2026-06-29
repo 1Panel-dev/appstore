@@ -11,6 +11,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -29,6 +30,7 @@ additionalProperties:
       label:
         en: Hugging Face Token
         es-es: Token de Hugging Face
+        fa: 'توکن Hugging Face'
         ja: Hugging Face Token
         ms: Hugging Face Token
         pt-br: Hugging Face Token
@@ -47,6 +49,7 @@ additionalProperties:
       label:
         en: Model
         es-es: Modelo
+        fa: 'مدل'
         ja: モデル
         ms: Model
         pt-br: Modelo

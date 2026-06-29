@@ -8,6 +8,7 @@ additionalProperties:
       label:
         en: HTTP Port
         es-es: Puerto HTTP
+        fa: 'پورت HTTP'
         ja: HTTP ポート
         ms: Port HTTP
         pt-br: HTTP Porta
@@ -27,6 +28,7 @@ additionalProperties:
       label:
         en: MCP Port
         es-es: Puerto MCP
+        fa: 'پورت MCP'
         ja: MCP ポート
         ms: Port MCP
         pt-br: MCP Porta

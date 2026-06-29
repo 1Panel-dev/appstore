@@ -20,6 +20,7 @@ additionalProperties:
     description:
         en: A distributed caching system
         es-es: Un distribuido caching system
+        fa: 'سیستم کش توزیع شده'
         zh: 分布式高速缓存系统
         zh-Hant: 分佈式高速緩存系統
         ja: 分散型キャッシングシステム

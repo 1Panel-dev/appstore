@@ -7,6 +7,7 @@ additionalProperties:
       label:
         en: HTTPS Port
         es-es: Puerto HTTPS
+        fa: 'پورت HTTPS'
         ja: HTTPSポート
         ms: Port HTTPS
         pt-br: Porta HTTPS
@@ -24,6 +25,7 @@ additionalProperties:
       label:
         en: HTTP Port
         es-es: Puerto HTTP
+        fa: 'پورت HTTP'
         ja: HTTPポート
         ms: Port HTTP
         pt-br: Porta HTTP
@@ -41,6 +43,7 @@ additionalProperties:
       label:
         en: SMTP Port
         es-es: SMTP Puerto
+        fa: 'پورت SMTP'
         ja: SMTPポート
         ms: Port SMTP
         pt-br: Porta SMTP
@@ -58,6 +61,7 @@ additionalProperties:
       label:
         en: SMTP Submission Port
         es-es: SMTP Submission Puerto
+        fa: 'پورت ارسال SMTP'
         ja: SMTP送信ポート
         ms: Port Penyerahan SMTP
         pt-br: Porta de Submissão SMTP
@@ -75,6 +79,7 @@ additionalProperties:
       label:
         en: SMTP SSL Port
         es-es: SMTP SSL Puerto
+        fa: 'پورت SSL برای SMTP'
         ja: SMTP SSLポート
         ms: Port SMTP SSL
         pt-br: Porta SMTP SSL
@@ -92,6 +97,7 @@ additionalProperties:
       label:
         en: IMAP Port
         es-es: IMAP Puerto
+        fa: 'پورت IMAP'
         ja: IMAPポート
         ms: Port IMAP
         pt-br: Porta IMAP
@@ -109,6 +115,7 @@ additionalProperties:
       label:
         en: IMAP SSL Port
         es-es: IMAP SSL Puerto
+        fa: 'پورت SSL برای IMAP'
         ja: IMAP SSLポート
         ms: Port IMAP SSL
         pt-br: Porta IMAP SSL
@@ -126,6 +133,7 @@ additionalProperties:
       label:
         en: POP3 Port
         es-es: POP3 Puerto
+        fa: 'پورت POP3'
         ja: POP3ポート
         ms: Port POP3
         pt-br: Porta POP3
@@ -143,6 +151,7 @@ additionalProperties:
       label:
         en: POP3 SSL Port
         es-es: POP3 SSL Puerto
+        fa: 'پورت SSL برای POP3'
         ja: POP3 SSLポート
         ms: Port POP3 SSL
         pt-br: Porta POP3 SSL
@@ -160,6 +169,7 @@ additionalProperties:
       label:
         en: ManageSieve Port
         es-es: ManageSieve Puerto
+        fa: 'پورت ManageSieve'
         ja: ManageSieveポート
         ms: Port ManageSieve
         pt-br: Porta ManageSieve

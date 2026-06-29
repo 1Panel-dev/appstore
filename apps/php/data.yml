@@ -14,6 +14,7 @@ additionalProperties:
     en: PHP Runtime
     zh: PHP 运行环境
     es-es: Entorno de ejecución de PHP
+    fa: 'محیط اجرای PHP'
     zh-Hant: PHP 執行環境
     ja: PHP 実行環境
     ko: PHP 실행 환경

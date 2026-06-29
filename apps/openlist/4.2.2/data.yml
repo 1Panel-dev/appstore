@@ -11,6 +11,7 @@ additionalProperties:
       label:
         en: WebUI Port
         es-es: Puerto web
+        fa: 'پورت WebUI'
         ja: WebUI ポート
         ms: Port WebUI
         pt-br: Porta WebUI
@@ -30,6 +31,7 @@ additionalProperties:
       label:
         en: S3 Port
         es-es: Puerto S3
+        fa: 'پورت S3'
         ja: S3 ポート
         ms: Port S3
         pt-br: Porta S3
@@ -45,6 +47,7 @@ additionalProperties:
       label:
         en: Preinstalled Environment
         es-es: Entorno preinstalado
+        fa: 'محیط از پیش نصب شده'
         ja: プリインストール環境
         ms: Persekitaran Terpasang Awal
         pt-br: Ambiente Pré-instalado
@@ -68,6 +71,7 @@ additionalProperties:
       label:
         en: Time zone
         es-es: Zona horaria
+        fa: 'منطقه زمانی'
         ja: タイムゾーン
         ms: Zon masa
         pt-br: Fuso horário

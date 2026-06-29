@@ -20,6 +20,7 @@ additionalProperties:
   description:
       en: Self-hosted audiobook and podcast server
       es-es: Self-hosted audiobook and podcast servidor
+      fa: 'سرور خودمیزبان کتاب صوتی و پادکست'
       zh: 自托管有声读物和播客服务器
       zh-Hant: 自託管有聲讀物和播客伺服器
       ja: 自己ホストのオーディオブックとポッドキャストサーバー

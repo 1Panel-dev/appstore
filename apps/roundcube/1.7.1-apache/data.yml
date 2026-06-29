@@ -7,6 +7,7 @@ additionalProperties:
       label:
         en: Database Service
         es-es: Servicio de base de datos
+        fa: 'سرویس پایگاه داده'
         ja: データベースサービス
         ms: Perkhidmatan Pangkalan Data
         pt-br: Serviço de Banco de Dados
@@ -34,6 +35,7 @@ additionalProperties:
       label:
         en: Database
         es-es: Base de datos
+        fa: 'پایگاه داده'
         ja: データベース
         ms: Pangkalan Data
         pt-br: Banco de Dados
@@ -53,6 +55,7 @@ additionalProperties:
       label:
         en: Database User
         es-es: Usuario de la base de datos
+        fa: 'کاربر پایگاه داده'
         ja: データベースユーザー
         ms: Pengguna Pangkalan Data
         pt-br: Usuário do Banco de Dados
@@ -72,6 +75,7 @@ additionalProperties:
       label:
         en: Database Password
         es-es: Contraseña de la base de datos
+        fa: 'رمز عبور پایگاه داده'
         ja: データベースのパスワード
         ms: Kata Laluan Pangkalan Data
         pt-br: Senha do Banco de Dados
@@ -91,6 +95,7 @@ additionalProperties:
       label:
         en: IMAP Server
         es-es: Servidor IMAP
+        fa: 'سرور IMAP'
         ja: IMAP サーバー
         ms: Pelayan IMAP
         pt-br: Servidor IMAP
@@ -109,6 +114,7 @@ additionalProperties:
       label:
         en: IMAP Port
         es-es: IMAP Puerto
+        fa: 'پورت IMAP'
         ja: IMAP ポート
         ms: Port IMAP
         pt-br: Porta IMAP
@@ -128,6 +134,7 @@ additionalProperties:
       label:
         en: SMTP Server
         es-es: Servidor SMTP
+        fa: 'سرور SMTP'
         ja: SMTP サーバー
         ms: Pelayan SMTP
         pt-br: Servidor SMTP
@@ -146,6 +153,7 @@ additionalProperties:
       label:
         en: SMTP Port
         es-es: SMTP Puerto
+        fa: 'پورت SMTP'
         ja: SMTP ポート
         ms: Port SMTP
         pt-br: Porta SMTP
@@ -165,6 +173,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -184,6 +193,7 @@ additionalProperties:
       label:
         en: File Upload Size Limit
         es-es: Límite de tamaño de carga de archivos
+        fa: 'محدودیت اندازه بارگذاری فایل'
         ja: ファイルアップロードサイズ制限
         ms: Had Saiz Muat Naik Fail
         pt-br: Limite de Tamanho de Upload de Arquivo

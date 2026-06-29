@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: Nginx visual management tool
         es-es: Nginx visual herramienta de gestión
+        fa: 'ابزار مدیریت بصری Nginx'
         ja: Nginx の視覚的管理ツール
         ms: Alat pengurusan visual Nginx
         pt-br: Ferramenta de gerenciamento visual do Nginx

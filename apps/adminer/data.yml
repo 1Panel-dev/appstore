@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: Lightweight PHP Database Management Tool
         es-es: Herramienta ligera de gestion de bases de datos PHP
+        fa: 'ابزار سبک مدیریت پایگاه داده PHP'
         ja: 軽量 PHP データベース管理ツール
         ms: Alat Pengurusan Pangkalan Data PHP Ringan
         pt-br: Ferramenta de Gerenciamento de Banco de Dados PHP Leve

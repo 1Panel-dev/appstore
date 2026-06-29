@@ -8,6 +8,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -27,6 +28,7 @@ additionalProperties:
       label:
         en: WEB Admin Password
         es-es: WEB Contraseña del administrador
+        fa: 'رمز عبور مدیر وب'
         ja: WEB 管理者パスワード
         ms: Kata Laluan Admin WEB
         pt-br: Senha de Administrador WEB
@@ -45,6 +47,7 @@ additionalProperties:
       label:
         en: Sync interval
         es-es: Intervalo de sincronización
+        fa: 'بازه همگام سازی'
         ja: 同期インターバル
         ms: Selang masa penyegerakan
         pt-br: Interval de sincronização
@@ -63,6 +66,7 @@ additionalProperties:
       label:
         en: Enable players login/logout message
         es-es: Habilitar mensajes de inicio/cierre de sesión de jugadores
+        fa: 'فعال سازی پیام ورود/خروج بازیکنان'
         ja: プレイヤーのログイン/ログアウトメッセージを有効にする
         ms: Mengaktifkan mesej log masuk/keluar pemain
         pt-br: Habilitar mensagem de login/logout dos jogadores
@@ -86,6 +90,7 @@ additionalProperties:
       label:
         en: Login message
         es-es: Mensaje de inicio de sesión
+        fa: 'پیام ورود'
         ja: ログインメッセージ
         ms: Mesej log masuk
         pt-br: Mensagem de login
@@ -104,6 +109,7 @@ additionalProperties:
       label:
         en: Logout message
         es-es: Mensaje de cierre de sesión
+        fa: 'پیام خروج'
         ja: ログアウトメッセージ
         ms: Mesej log keluar
         pt-br: Mensagem de logout
@@ -122,6 +128,7 @@ additionalProperties:
       label:
         en: RCON Address
         es-es: RCON Dirección
+        fa: 'آدرس RCON'
         ja: RCON アドレス
         ms: Alamat RCON
         pt-br: Endereço RCON
@@ -140,6 +147,7 @@ additionalProperties:
       label:
         en: REST API Address
         es-es: REST API Dirección
+        fa: 'آدرس REST API'
         ja: REST API アドレス
         ms: Alamat API REST
         pt-br: Endereço da API REST
@@ -158,6 +166,7 @@ additionalProperties:
       label:
         en: Admin Password
         es-es: Contraseña del administrador
+        fa: 'رمز عبور مدیر'
         ja: 管理者パスワード
         ms: Kata Laluan Pentadbir
         pt-br: Senha de Administrador
@@ -176,6 +185,7 @@ additionalProperties:
       label:
         en: Enable PalGuard Base64 RCON
         es-es: Habilitar RCON Base64 de PalGuard
+        fa: 'فعال سازی PalGuard Base64 RCON'
         ja: PalGuard Base64 RCONを有効にする
         ms: Aktifkan PalGuard Base64 RCON
         pt-br: Habilitar PalGuard Base64 RCON
@@ -199,6 +209,7 @@ additionalProperties:
       label:
         en: Palworld External Save Path
         es-es: Palworld External Save Ruta
+        fa: 'مسیر خارجی ذخیره Palworld'
         ja: Palworld 外部保存パス
         ms: Laluan Simpan Luaran Palworld
         pt-br: Caminho de salvamento externo do Palworld
@@ -217,6 +228,7 @@ additionalProperties:
       label:
         en: Save Sync Interval
         es-es: Intervalo de guardado de sincronización
+        fa: 'بازه ذخیره همگام سازی'
         ja: 同期インターバルを保存
         ms: Simpan Selang Penyegerakan
         pt-br: Salvar Interval de Sincronização
@@ -235,6 +247,7 @@ additionalProperties:
       label:
         en: Save Backup Interval
         es-es: Intervalo de guardado de copias de seguridad
+        fa: 'بازه ذخیره بکاپ'
         ja: バックアップ保存間隔
         ms: Selang Simpan Salinan Sandar
         pt-br: Interval de Salvamento de Backup
@@ -253,6 +266,7 @@ additionalProperties:
       label:
         en: Automatically kick non-whitelisted players
         es-es: Expulsar automáticamente a los jugadores no incluidos en la lista blanca
+        fa: 'اخراج خودکار بازیکنان خارج از فهرست سفید'
         ja: ホワイトリストにないプレイヤーを自動的に追い出す
         ms: Secara automatik tendang pemain yang tidak tersenarai dalam senarai putih
         pt-br: Expulsar automaticamente jogadores não incluídos na lista branca

@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: An open-source platform for building enterprise-grade agents
         es-es: Un open-source plataforma for building enterprise-grade agents
+        fa: 'پلتفرم متن باز برای ساخت عامل های سازمانی'
         ja: エンタープライズグレードのエージェントを構築するためのオープンソースプラットフォーム
         ms: Platform sumber terbuka untuk membina ejen peringkat perusahaan
         pt-br: Plataforma de código aberto para construção de agentes de nível empresarial

@@ -21,6 +21,7 @@ additionalProperties:
     description:
         en: Monitoring system and time series database
         es-es: Monitoring system and time series base de datos
+        fa: 'سیستم مانیتورینگ و پایگاه داده سری زمانی'
         zh: 监控系统和时间序列数据库
         zh-Hant: 監控系統和時間序列數據庫
         ja: 監視システムおよび時系列データベース

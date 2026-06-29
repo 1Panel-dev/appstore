@@ -14,6 +14,7 @@ additionalProperties:
       en: Certimate aims to provide users with a secure and user-friendly SSL certificate management solution.
       zh: 一个安全、简便的 SSL 证书管理解决方案
       es-es: Certimate aims to provide users with a seguro and user-friendly SSL certificate gestión solution.
+      fa: 'Certimate راهکاری امن و کاربرپسند برای مدیریت گواهی های SSL ارائه می کند.'
       zh-Hant: Certimate 旨在為使用者提供安全且易用的 SSL 憑證管理解決方案。
       ja: Certimate は、安全で使いやすい SSL 証明書管理ソリューションを提供することを目指しています。
       ko: Certimate는 사용자에게 안전하고 사용하기 쉬운 SSL 인증서 관리 솔루션을 제공하는 것을 목표로 합니다.

@@ -8,6 +8,7 @@ additionalProperties:
       label:
         en: Root Password
         es-es: Contraseña de root
+        fa: 'رمز عبور root'
         ja: ルートパスワード
         ms: Kata Laluan Root
         pt-br: Senha Root
@@ -24,6 +25,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -40,6 +42,7 @@ additionalProperties:
       label:
         en: Replication User
         es-es: Replication Usuario
+        fa: 'کاربر Replication'
         ja: レプリケーションユーザー
         ms: Pengguna Replikasi
         pt-br: Usuário de Replicação
@@ -56,6 +59,7 @@ additionalProperties:
       label:
         en: Replication Password
         es-es: Replication Contraseña
+        fa: 'رمز عبور Replication'
         ja: レプリケーションパスワード
         ms: Kata Laluan Replikasi
         pt-br: Senha de Replicação
@@ -71,6 +75,7 @@ additionalProperties:
       label:
         en: Master Host
         es-es: Host maestro
+        fa: 'میزبان Master'
         ja: マスターホスト
         ms: Host Utama
         pt-br: Host Mestre
@@ -87,6 +92,7 @@ additionalProperties:
       label:
         en: Master Port
         es-es: Master Puerto
+        fa: 'پورت Master'
         ja: マスターポート
         ms: Port Utama
         pt-br: Porta Mestre
@@ -103,6 +109,7 @@ additionalProperties:
       label:
         en: Master Root Password
         es-es: Master Contraseña de root
+        fa: 'رمز عبور root در Master'
         ja: マスタールートパスワード
         ms: Kata Laluan Root Utama
         pt-br: Senha Root Mestre

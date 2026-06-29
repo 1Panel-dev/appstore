@@ -9,6 +9,7 @@ additionalProperties:
       label:
         en: Windows Version (Supports network address)
         es-es: Versión de Windows (compatible con dirección de red)
+        fa: 'نسخه Windows (از آدرس شبکه پشتیبانی می کند)'
         ja: Windowsバージョン（ネットワークアドレスをサポート）
         ms: Versi Windows (Menyokong alamat rangkaian)
         pt-br: Versão do Windows (Suporta endereço de rede)
@@ -25,6 +26,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -46,6 +48,7 @@ additionalProperties:
       label:
         en: RAM Size(GB)
         es-es: Tamaño de la RAM (GB)
+        fa: 'اندازه RAM (GB)'
         ja: RAMサイズ(GB)
         ms: Saiz RAM(Gb)
         pt-br: Tamanho da RAM(GB)
@@ -64,6 +67,7 @@ additionalProperties:
       label:
         en: CPU Cores
         es-es: Núcleos de CPU
+        fa: 'هسته های CPU'
         ja: CPUコア
         ms: Teras CPU
         pt-br: Núcleos de CPU
@@ -80,6 +84,7 @@ additionalProperties:
       label:
         en: Disk Size(GB)
         es-es: Tamaño del disco (GB)
+        fa: 'اندازه دیسک (GB)'
         ja: ディスクサイズ(GB)
         ms: Saiz Cakera(Gb)
         pt-br: Tamanho do Disco(GB)
@@ -100,6 +105,7 @@ additionalProperties:
       label:
         en: Username
         es-es: Nombre de usuario
+        fa: 'نام کاربری'
         ja: ユーザー名
         ms: Nama Pengguna
         pt-br: Nome de usuário
@@ -118,6 +124,7 @@ additionalProperties:
       label:
         en: Password
         es-es: Contraseña
+        fa: 'رمز عبور'
         ja: パスワード
         ms: Kata Laluan
         pt-br: Senha
@@ -136,6 +143,7 @@ additionalProperties:
       label:
         en: Language
         es-es: Idioma
+        fa: 'زبان'
         ja: 言語
         ms: Bahasa
         pt-br: Idioma
@@ -154,6 +162,7 @@ additionalProperties:
       label:
         en: Keyboard Layout
         es-es: Claveboard Layout
+        fa: 'چیدمان صفحه کلید'
         ja: キーボードレイアウト
         ms: Susun Atur Papan Kekunci
         pt-br: Layout do Teclado

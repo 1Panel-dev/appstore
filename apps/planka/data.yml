@@ -20,6 +20,7 @@ additionalProperties:
     description:
         en: Elegant open source project tracking
         es-es: Elegant de código abierto project tracking
+        fa: 'رهگیری پروژه متن باز و خوش ساخت'
         zh: 优雅的开源项目跟踪
         zh-Hant: 優雅的開源項目跟蹤
         ja: エレガントなオープンソースプロジェクト追跡

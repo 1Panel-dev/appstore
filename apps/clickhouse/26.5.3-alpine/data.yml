@@ -7,6 +7,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -26,6 +27,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -44,6 +46,7 @@ additionalProperties:
       label:
         en: Admin User
         es-es: Usuario administrador
+        fa: 'کاربر مدیر'
         ja: 管理者ユーザー
         ms: Pengguna Pentadbir
         pt-br: Usuário do Administrador
@@ -61,6 +64,7 @@ additionalProperties:
       label:
         en: Admin Password
         es-es: Contraseña del administrador
+        fa: 'رمز عبور مدیر'
         ja: 管理者パスワード
         ms: Kata Laluan Pentadbir
         pt-br: Senha do Administrador

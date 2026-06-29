@@ -21,6 +21,7 @@ additionalProperties:
     description:
         en: A feature rich, multi-protocol messaging and streaming broker
         es-es: Un feature rich, multi-protocol messaging and streaming broker
+        fa: 'بروکر پیام رسانی و استریم چندپروتکلی با امکانات کامل'
         zh: 功能丰富的多协议消息传递和流媒体代理
         zh-Hant: 功能豐富的多協議消息傳遞和流媒體代理
         ja: 機能豊富なマルチプロトコルメッセージングおよびストリーミングブローカー

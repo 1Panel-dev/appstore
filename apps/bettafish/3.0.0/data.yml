@@ -9,6 +9,7 @@ additionalProperties:
         zh-Hant: HTTP 連接埠
         en: HTTP Port
         es-es: Puerto HTTP
+        fa: 'پورت HTTP'
         ja: HTTP ポート
         ko: HTTP 포트
         ms: Port HTTP
@@ -39,6 +40,7 @@ additionalProperties:
         zh-Hant: Query Engine 存取埠
         en: Query Engine Access Port
         es-es: Query Engine Access Puerto
+        fa: 'پورت دسترسی موتور Query'
         ja: Query Engine アクセスポート
         ko: Query Engine 액세스 포트
         ms: Port Akses Query Engine
@@ -58,6 +60,7 @@ additionalProperties:
         zh-Hant: Media Engine 存取埠
         en: Media Engine Access Port
         es-es: Media Engine Access Puerto
+        fa: 'پورت دسترسی موتور رسانه'
         ja: Media Engine アクセスポート
         ko: Media Engine 액세스 포트
         ms: Port Akses Media Engine
@@ -77,6 +80,7 @@ additionalProperties:
         zh-Hant: Insight Engine 存取埠
         en: Insight Engine Access Port
         es-es: Insight Engine Access Puerto
+        fa: 'پورت دسترسی موتور Insight'
         ja: Insight Engine アクセスポート
         ko: Insight Engine 액세스 포트
         ms: Port Akses Insight Engine
@@ -96,6 +100,7 @@ additionalProperties:
         zh-Hant: 資料庫
         en: Database
         es-es: Base de datos
+        fa: 'پایگاه داده'
         ja: データベース
         ko: 데이터베이스
         ms: Pangkalan Data
@@ -135,6 +140,7 @@ additionalProperties:
         zh-Hant: 資料庫名稱
         en: Database Name
         es-es: Nombre de la base de datos
+        fa: 'نام پایگاه داده'
         ja: データベース名
         ko: 데이터베이스 이름
         ms: Nama Pangkalan Data
@@ -154,6 +160,7 @@ additionalProperties:
         zh-Hant: 資料庫使用者名稱
         en: Database Username
         es-es: Usuario de la base de datosname
+        fa: 'نام کاربری پایگاه داده'
         ja: データベースユーザー名
         ko: 데이터베이스 사용자 이름
         ms: Nama Pengguna Pangkalan Data
@@ -173,6 +180,7 @@ additionalProperties:
         zh-Hant: 資料庫密碼
         en: Database Password
         es-es: Contraseña de la base de datos
+        fa: 'رمز عبور پایگاه داده'
         ja: データベースパスワード
         ko: 데이터베이스 비밀번호
         ms: Kata Laluan Pangkalan Data

@@ -20,6 +20,7 @@ additionalProperties:
   description:
     en: A simple, fast, privacy-focused alternative to Google Analytics
     es-es: Un simple, fast, privacy-focused alternative to Google Analytics
+    fa: 'جایگزینی ساده، سریع و حریم خصوصی محور برای Google Analytics'
     zh: Google Analytics 的简单、快速、注重隐私的替代方案
     zh-Hant: Google Analytics 的簡單、快速、注重隱私的替代方案
     ja: Google Analytics のシンプルで高速、プライバシー重視の代替手段

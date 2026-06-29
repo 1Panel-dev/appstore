@@ -10,6 +10,7 @@ additionalProperties:
       label:
         en: Root Password
         es-es: Contraseña de root
+        fa: 'رمز عبور root'
         ja: ルートパスワード
         ms: Kata laluan root
         pt-br: Senha do root
@@ -29,6 +30,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta

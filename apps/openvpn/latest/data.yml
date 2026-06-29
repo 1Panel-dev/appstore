@@ -8,6 +8,7 @@ additionalProperties:
       label:
         en: Console Port
         es-es: Console Puerto
+        fa: 'پورت کنسول'
         ja: コンソールポート
         ms: Port Konsol
         pt-br: Porta do Console
@@ -27,6 +28,7 @@ additionalProperties:
       label:
         en: HTTPS Port
         es-es: Puerto HTTPS
+        fa: 'پورت HTTPS'
         ja: HTTPSポート
         ms: Port HTTPS
         pt-br: Porta HTTPS
@@ -46,6 +48,7 @@ additionalProperties:
       label:
         en: UDP Port
         es-es: Puerto UDP
+        fa: 'پورت UDP'
         ja: UDPポート
         ms: Port UDP
         pt-br: Porta UDP

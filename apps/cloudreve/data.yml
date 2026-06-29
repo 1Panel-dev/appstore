@@ -14,6 +14,7 @@ additionalProperties:
     en: Self-hosted file management system with muilt-cloud support
     zh: 支持多家云存储的云盘系统
     es-es: Self-hosted file sistema de gestión with muilt-cloud support
+    fa: 'سیستم مدیریت فایل خودمیزبان با پشتیبانی چندابری'
     zh-Hant: 支援多雲端的自架檔案管理系統
     ja: マルチクラウド対応のセルフホスト型ファイル管理システム
     ko: 멀티 클라우드를 지원하는 자체 호스팅 파일 관리 시스템

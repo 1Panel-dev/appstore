@@ -11,6 +11,7 @@ additionalProperties:
           label:
             en: Port
             es-es: Puerto
+            fa: 'پورت'
             ja: ポート
             ms: Port
             pt-br: Porta
@@ -29,6 +30,7 @@ additionalProperties:
           label:
             en: Time Zone
             es-es: Zona horaria
+            fa: 'منطقه زمانی'
             ja: タイムゾーン
             ms: Zon Waktu
             pt-br: Fuso Horário

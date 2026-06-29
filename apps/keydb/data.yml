@@ -14,6 +14,7 @@ additionalProperties:
     en: A Multithreaded Fork of Redis
     zh: Redis 的多线程分支
     es-es: Un Multithreaded Fork of Redis
+    fa: 'فورک چندرشته ای Redis'
     zh-Hant: Redis 的多執行緒分支版本
     ja: Redis のマルチスレッドフォーク
     ko: Redis의 멀티스레드 포크

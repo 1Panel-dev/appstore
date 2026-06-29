@@ -7,6 +7,7 @@ additionalProperties:
           label:
             en: RabbitMQ User
             es-es: RabbitMQ Usuario
+            fa: 'کاربر RabbitMQ'
             ja: RabbitMQ ユーザー
             ms: Pengguna RabbitMQ
             pt-br: Usuário RabbitMQ
@@ -24,6 +25,7 @@ additionalProperties:
           label:
             en: RabbitMQ User Password
             es-es: RabbitMQ Usuario Contraseña
+            fa: 'رمز عبور کاربر RabbitMQ'
             ja: RabbitMQ ユーザーパスワード
             ms: Kata Laluan Pengguna RabbitMQ
             pt-br: Senha do Usuário RabbitMQ
@@ -42,6 +44,7 @@ additionalProperties:
           label:
             en: Dashboard Port
             es-es: Dashboard Puerto
+            fa: 'پورت داشبورد'
             ja: ダッシュボードポート
             ms: Port Papan Pemuka
             pt-br: Porta do Painel
@@ -61,6 +64,7 @@ additionalProperties:
           label:
             en: Service Port
             es-es: Servicio Puerto
+            fa: 'پورت سرویس'
             ja: サービスポート
             ms: Port Perkhidmatan
             pt-br: Porta de Serviço

@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: A fancy self-hosted monitoring tool
         es-es: Un fancy autoalojado monitorización herramienta
+        fa: 'ابزار مانیتورینگ خودمیزبان با ظاهر زیبا'
         ja: おしゃれなセルフホスト型の監視ツール
         ms: Alat pemantauan self-hosted yang menarik
         pt-br: Uma ferramenta de monitoramento auto-hospedada sofisticada

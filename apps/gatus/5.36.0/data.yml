@@ -9,6 +9,7 @@ additionalProperties:
         zh-Hant: HTTP 連接埠
         en: HTTP Port
         es-es: Puerto HTTP
+        fa: 'پورت HTTP'
         ja: HTTP ポート
         ko: HTTP 포트
         ms: Port HTTP

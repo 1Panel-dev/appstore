@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: Powerful locally hosted web based PDF manipulation tool
         es-es: Powerful locally hosted web based PDF manipulation herramienta
+        fa: 'ابزار قدرتمند محلی و مبتنی بر وب برای کار با PDF'
         ja: 強力なローカルホスト型ウェブベースのPDF操作ツール
         ms: Alat manipulasi PDF berasaskan web yang dihoskan secara tempatan yang hebat
         pt-br: Ferramenta poderosa de manipulação de PDF baseada na web e hospedada localmente

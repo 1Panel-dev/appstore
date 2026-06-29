@@ -14,6 +14,7 @@ additionalProperties:
   description:
     en: Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS
     es-es: Fast and extensible multi-plataforma HTTP/1-2-3 web servidor with automatic HTTPS
+    fa: 'سرور وب چندسکویی HTTP/1-2-3 سریع و توسعه پذیر با HTTPS خودکار'
     ja: 高速で拡張性のあるマルチプラットフォームHTTP/1-2-3ウェブサーバーで、自動HTTPSをサポート
     ms: Pelayan web HTTP/1-2-3 pelbagai platform yang pantas dan boleh diperluas dengan sokongan HTTPS automatik
     pt-br: Servidor web HTTP/1-2-3 multi-plataforma rápido e extensível com suporte a HTTPS automático

@@ -20,6 +20,7 @@ additionalProperties:
     description:
         en: AI-Powered Photos App for the Decentralized Web
         es-es: Aplicación de fotos con IA para la web descentralizada
+        fa: 'برنامه عکس مبتنی بر هوش مصنوعی برای وب غیرمتمرکز'
         zh: 去中心化网络的人工智能照片应用程序
         zh-Hant: 去中心化網絡的人工智能照片應用程序
         ja: 分散型 Web 用の AI 搭載写真アプリ

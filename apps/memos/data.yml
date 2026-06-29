@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: A lightweight, self-hosted memo hub
         es-es: Un ligero, autoalojado memo hub
+        fa: 'مرکز یادداشت سبک و خودمیزبان'
         ja: 軽量な自己ホスト型メモハブ
         ms: Pusat memo ringan yang dihoskan sendiri
         pt-br: Um hub de anotações leve e auto-hospedado

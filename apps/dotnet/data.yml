@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: .NET Runtime Environment
     es-es: Entorno de ejecución de .NET
+    fa: 'محیط اجرای .NET'
     ja: .NET 実行環境
     ms: Persekitaran Larian .NET
     pt-br: Ambiente de Execução .NET

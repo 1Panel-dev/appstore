@@ -21,6 +21,7 @@ additionalProperties:
     description:
         en: Scalable datastore for metrics, events, and real-time analytics
         es-es: Almacén de datos escalable para métricas, eventos y analítica en tiempo real
+        fa: 'ذخیره ساز مقیاس پذیر برای متریک ها، رویدادها و تحلیل بلادرنگ'
         zh: 用于指标、事件和实时分析的可扩展数据存储
         zh-Hant: 用於指標、事件和實時分析的可擴展數據存儲
         ja: メトリクス、イベント、およびリアルタイム分析のためのスケーラブルなデータストア

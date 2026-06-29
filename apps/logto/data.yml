@@ -20,6 +20,7 @@ additionalProperties:
     description:
         en: An Auth0 alternative designed for modern apps and SaaS products
         es-es: Un Auth0 alternative designed for moderno apps and SaaS products
+        fa: 'جایگزینی برای Auth0، طراحی شده برای برنامه های مدرن و محصولات SaaS'
         zh: 专为现代应用和 SaaS 产品设计的 Auth0 替代品
         zh-Hant: 專為現代應用和 SaaS 產品設計的 Auth0 替代品
         ja: モダンなアプリと SaaS 製品向けに設計された Auth0 の代替品

@@ -20,6 +20,7 @@ additionalProperties:
     description:
         en: A simple server for sending and receiving messages
         es-es: Un simple servidor for sending and receiving messages
+        fa: 'سروری ساده برای ارسال و دریافت پیام'
         zh: 简单的服务器，用于发送和接收消息
         zh-Hant: 簡單的伺服器，用於發送和接收消息
         ja: メッセージの送受信に使用するシンプルなサーバー

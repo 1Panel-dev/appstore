@@ -9,6 +9,7 @@ additionalProperties:
         zh-hant: "HTTP 連接埠"
         en: "HTTP Port"
         es-es: Puerto HTTP
+        fa: 'پورت HTTP'
         ja: "HTTPポート"
         ms: "Port HTTP"
         pt-br: "Porta HTTP"
@@ -39,6 +40,7 @@ additionalProperties:
         zh-hant: "SSH 連接埠"
         en: "SSH Port"
         es-es: Puerto SSH
+        fa: 'پورت SSH'
         ja: "SSHポート"
         ms: "Port SSH"
         pt-br: "Porta SSH"
@@ -68,6 +70,7 @@ additionalProperties:
       label:
         en: Shared Memory
         es-es: Memoria compartida
+        fa: 'حافظه مشترک'
         ja: 共有メモリ
         ms: Memori Bersama
         pt-br: Memória Compartilhada
@@ -86,6 +89,7 @@ additionalProperties:
       label:
         en: Time Zone
         es-es: Zona horaria
+        fa: 'منطقه زمانی'
         ja: タイムゾーン
         ms: Zon Masa
         pt-br: Fuso Horário

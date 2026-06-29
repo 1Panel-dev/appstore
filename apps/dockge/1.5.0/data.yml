@@ -8,6 +8,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -27,6 +28,7 @@ additionalProperties:
       label:
         en: Stacks Directory
         es-es: Directorio de stacks
+        fa: 'دایرکتوری Stackها'
         ja: スタックディレクトリ
         ms: Direktori Stacks
         pt-br: Diretório de Pilhas

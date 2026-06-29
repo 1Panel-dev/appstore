@@ -12,6 +12,7 @@ additionalProperties:
         en: Port
         zh: 端口
         es-es: Puerto
+        fa: 'پورت'
         zh-Hant: 埠
         ja: ポート
         ko: 포트
@@ -32,6 +33,7 @@ additionalProperties:
         en: Admin Username
         zh: 管理员用户名
         es-es: Nombre de usuario administrador
+        fa: 'نام کاربری مدیر'
         zh-Hant: 管理員用戶名
         ja: 管理者のユーザー名
         ko: 관리자 사용자 이름
@@ -51,6 +53,7 @@ additionalProperties:
       label:
         en: Admin Password
         es-es: Contraseña de administrador
+        fa: 'رمز عبور مدیر'
         ja: 管理者のパスワード
         ms: Kata Laluan Admin
         pt-br: Senha do Administrador

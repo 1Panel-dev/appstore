@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: Server-side data processing pipeline
     es-es: Canal de procesamiento de datos del lado del servidor
+    fa: 'Pipeline پردازش داده سمت سرور'
     ja: サーバーサイドのデータ処理パイプライン
     ms: Saluran pemprosesan data sisi pelayan
     pt-br: Pipeline de processamento de dados do lado do servidor

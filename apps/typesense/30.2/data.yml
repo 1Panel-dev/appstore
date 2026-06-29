@@ -11,6 +11,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -29,6 +30,7 @@ additionalProperties:
       label:
         en: API KEY
         es-es: Clave API
+        fa: 'کلید API'
         ja: APIキー
         ms: KUNCI API
         pt-br: CHAVE DE API

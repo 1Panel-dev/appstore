@@ -21,6 +21,7 @@ additionalProperties:
     description:
         en: Web app for browsing, reading and downloading eBooks stored in a Calibre database
         es-es: Aplicacion web para explorar, leer y descargar libros electronicos almacenados en una base de datos de Calibre
+        fa: 'برنامه وب برای مرور، خواندن و دانلود کتاب های الکترونیکی ذخیره شده در پایگاه داده Calibre'
         zh: 用于浏览、阅读和下载 Calibre 数据库中存储的电子书的 Web 应用程序
         zh-Hant: 用於瀏覽、閱讀和下載 Calibre 數據庫中存儲的電子書的 Web 應用程序
         ja: Calibre データベースに保存されている電子書籍を閲覧、読書、ダウンロードするための Web アプリ

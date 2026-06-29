@@ -20,6 +20,7 @@ additionalProperties:
     description:
         en: Simple forum software for building great communities
         es-es: Software de foros sencillo para crear grandes comunidades
+        fa: 'نرم افزار انجمن ساده برای ساخت جامعه های کاربری عالی'
         zh: 用于构建优秀社区的简单论坛软件
         zh-Hant: 用於構建優秀社區的簡單論壇軟件
         ja: 素晴らしいコミュニティを構築するためのシンプルなフォーラムソフトウェア

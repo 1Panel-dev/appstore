@@ -21,6 +21,7 @@ additionalProperties:
     description:
         en: Cross-platform open source BitTorrent client
         es-es: Cross-plataforma de código abierto BitTorrent cliente
+        fa: 'کلاینت BitTorrent متن باز و چندسکویی'
         zh: 跨平台的开源 BitTorrent 客户端
         zh-Hant: 跨平台的開源 BitTorrent 客戶端
         ja: クロスプラットフォームのオープンソース BitTorrent クライアント

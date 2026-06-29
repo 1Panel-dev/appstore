@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: PHP7 Runtime
         es-es: Entorno de ejecución de PHP7
+        fa: 'محیط اجرای PHP7'
         ja: PHP7 ランタイム
         ms: Persekitaran masa laku PHP7
         pt-br: Ambiente de execução PHP7

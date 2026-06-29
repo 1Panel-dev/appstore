@@ -11,6 +11,7 @@ additionalProperties:
           label:
             en: WebUI Port
             es-es: Puerto web
+            fa: 'پورت WebUI'
             ja: WebUI ポート
             ms: Port WebUI
             pt-br: Porta WebUI
@@ -30,6 +31,7 @@ additionalProperties:
           label:
             en: S3 Port
             es-es: Puerto S3
+            fa: 'پورت S3'
             ja: S3 ポート
             ms: Port S3
             pt-br: Porta S3

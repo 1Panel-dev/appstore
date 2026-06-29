@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: A Distributed Tracing System
     es-es: Un Distributed Tracing System
+    fa: 'سیستم ردیابی توزیع شده'
     zh: 分布式追踪系统
     zh-Hant: 分散式追蹤系統
     ja: 分散型トレーシングシステム

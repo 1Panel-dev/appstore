@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: Fair-code workflow automation platform with native AI capabilities
         es-es: Fair-code workflow automation plataforma with native AI capabilities
+        fa: 'پلتفرم خودکارسازی گردش کار fair-code با قابلیت های بومی هوش مصنوعی'
         ja: フェアコードのワークフロー自動化プラットフォーム、ネイティブAI機能を備えています
         ms: Platform automasi aliran kerja kod adil dengan keupayaan AI asli
         pt-br: Plataforma de automação de fluxo de trabalho com código justo e recursos nativos de IA

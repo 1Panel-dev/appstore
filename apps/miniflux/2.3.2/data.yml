@@ -5,6 +5,7 @@ additionalProperties:
     label:
       en: Database Service
       es-es: Servicio de base de datos
+      fa: 'سرویس پایگاه داده'
       ja: データベースサービス
       ms: Perkhidmatan Pangkalan Data
       pt-br: Serviço de Banco de Dados
@@ -26,6 +27,7 @@ additionalProperties:
       label:
         en: Database Instance
         es-es: Instancia de base de datos
+        fa: 'نمونه پایگاه داده'
         ja: データベースインスタンス
         ms: Instansi Pangkalan Data
         pt-br: Instância de Banco de Dados
@@ -43,6 +45,7 @@ additionalProperties:
     label:
       en: User
       es-es: Usuario
+      fa: 'کاربر'
       ja: ユーザー
       ms: Pengguna
       pt-br: Usuário
@@ -61,6 +64,7 @@ additionalProperties:
     label:
       en: Database Password
       es-es: Contraseña de la base de datos
+      fa: 'رمز عبور پایگاه داده'
       ja: データベースのパスワード
       ms: Kata Laluan Pangkalan Data
       pt-br: Senha do Banco de Dados
@@ -76,6 +80,7 @@ additionalProperties:
     label:
       en: Database Port
       es-es: Puerto de la base de datos
+      fa: 'پورت پایگاه داده'
       ja: データベースのポート
       ms: Pangkalan Data Port
       pt-br: Porta do Banco de Dados
@@ -93,6 +98,7 @@ additionalProperties:
     label:
       en: Database Name
       es-es: Nombre de la base de datos
+      fa: 'نام پایگاه داده'
       ja: データベース名
       ms: Nama Pangkalan Data
       pt-br: Nome do Banco de Dados
@@ -107,6 +113,7 @@ additionalProperties:
     label:
       en: Port
       es-es: Puerto
+      fa: 'پورت'
       ja: ポート
       ms: Port
       pt-br: Porta
@@ -123,6 +130,7 @@ additionalProperties:
     label:
       en: Admin Username
       es-es: Nombre de usuario administrador
+      fa: 'نام کاربری مدیر'
       ja: 管理者のユーザー名
       ms: Nama Pengguna Admin
       pt-br: Nome de Usuário do Administrador
@@ -138,6 +146,7 @@ additionalProperties:
     label:
       en: Admin Password
       es-es: Contraseña de administrador
+      fa: 'رمز عبور مدیر'
       ja: 管理者のパスワード
       ms: Kata Laluan Admin
       pt-br: Senha do Administrador

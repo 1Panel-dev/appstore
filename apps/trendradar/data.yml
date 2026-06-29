@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: Multi-platform Hot Content Push
     es-es: Multi-plataforma Hot Content Push
+    fa: 'ارسال محتوای ترند به چند پلتفرم'
     zh: 多平台热点推送
     zh-Hant: 多平台熱點推送
     ja: マルチプラットフォームホットコンテンツプッシュ

@@ -21,6 +21,7 @@ additionalProperties:
   description:
     en: The world’s leading Graph Database
     es-es: La base de datos de grafos líder en el mundo
+    fa: 'پایگاه داده گراف پیشرو در جهان'
     zh: 世界领先的图数据库
     zh-Hant: 世界領先的圖數據庫
     ja: 世界をリードするグラフデータベース

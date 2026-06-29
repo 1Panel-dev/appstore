@@ -8,6 +8,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -26,6 +27,7 @@ additionalProperties:
       label:
         en: LLM provider
         es-es: Proveedor de LLM
+        fa: 'ارائه دهنده LLM'
         ja: LLMプロバイダー
         ms: Penyedia LLM
         pt-br: Fornecedor LLM
@@ -89,6 +91,7 @@ additionalProperties:
       label:
         en: API Key
         es-es: API Clave
+        fa: 'کلید API'
         ja: APIキー
         ms: Kunci API
         pt-br: Chave de API
@@ -107,6 +110,7 @@ additionalProperties:
       label:
         en: API URL
         es-es: URL de la API
+        fa: 'نشانی API'
         ja: API URL
         ms: API URL
         pt-br: API URL
@@ -137,6 +141,7 @@ additionalProperties:
       label:
         en: Default page model
         es-es: Modelo de página predeterminado
+        fa: 'مدل صفحه پیش فرض'
         ja: デフォルトのページモデル
         ms: Model halaman lalai
         pt-br: Modelo de página padrão
@@ -155,6 +160,7 @@ additionalProperties:
       label:
         en: Auxiliary task model
         es-es: Modelo de tarea auxiliar
+        fa: 'مدل وظیفه کمکی'
         ja: 補助タスクモデル
         ms: Model tugas tambahan
         pt-br: Modelo de tarefa auxiliar

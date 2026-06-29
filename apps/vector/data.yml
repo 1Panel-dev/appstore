@@ -14,6 +14,7 @@ additionalProperties:
     en: High-performance observability data pipeline
     zh: 高性能可观测性数据管道
     es-es: Canal de datos de observabilidad de alto rendimiento
+    fa: 'Pipeline داده observability با کارایی بالا'
     zh-Hant: 高效能可觀測性資料管道
     ja: 高性能なオブザーバビリティデータパイプライン
     ko: 고성능 관측 가능성 데이터 파이프라인

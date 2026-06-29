@@ -20,6 +20,7 @@ additionalProperties:
     description:
         en: Open-source distributed event streaming platform
         es-es: Open-source distribuido event streaming plataforma
+        fa: 'پلتفرم متن باز و توزیع شده استریم رویداد'
         zh: 开源分布式事件流平台
         zh-Hant: 開源分佈式事件流平台
         ja: オープンソースの分散イベントストリーミングプラットフォーム

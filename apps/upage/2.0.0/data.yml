@@ -8,6 +8,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -26,6 +27,7 @@ additionalProperties:
       label:
         en: LLM provider
         es-es: Proveedor de LLM
+        fa: 'ارائه دهنده LLM'
         ja: LLMプロバイダー
         ms: Penyedia LLM
         pt-br: Fornecedor LLM
@@ -89,6 +91,7 @@ additionalProperties:
       label:
         en: API Key
         es-es: API Clave
+        fa: 'کلید API'
         ja: APIキー
         ms: Kunci API
         pt-br: Chave de API
@@ -107,6 +110,7 @@ additionalProperties:
       label:
         en: API URL
         es-es: URL de la API
+        fa: 'نشانی API'
         ja: API URL
         ms: API URL
         pt-br: API URL
@@ -137,6 +141,7 @@ additionalProperties:
       label:
         en: Default page model
         es-es: Modelo de página predeterminado
+        fa: 'مدل صفحه پیش فرض'
         ja: デフォルトのページモデル
         ms: Model halaman lalai
         pt-br: Modelo de página padrão
@@ -155,6 +160,7 @@ additionalProperties:
       label:
         en: Auxiliary task model
         es-es: Modelo de tarea auxiliar
+        fa: 'مدل وظیفه کمکی'
         ja: 補助タスクモデル
         ms: Model tugas tambahan
         pt-br: Modelo de tarefa auxiliar
@@ -173,6 +179,7 @@ additionalProperties:
       label:
         en: Vision model provider
         es-es: Proveedor de modelo de visión
+        fa: 'ارائه دهنده مدل بینایی'
         ja: ビジョンモデルプロバイダー
         ms: Pembekal model penglihatan
         pt-br: Provedor de modelo de visão
@@ -247,6 +254,7 @@ additionalProperties:
       label:
         en: Vision model
         es-es: Modelo de visión
+        fa: 'مدل بینایی'
         ja: ビジョンモデル
         ms: Model penglihatan
         pt-br: Modelo de visão
@@ -276,6 +284,7 @@ additionalProperties:
       label:
         en: Vision API URL
         es-es: URL de API de visión
+        fa: 'URL API بینایی'
         ja: ビジョン API URL
         ms: URL API Penglihatan
         pt-br: URL da API de visão
@@ -306,6 +315,7 @@ additionalProperties:
       label:
         en: Vision API Key
         es-es: Clave de API de visión
+        fa: 'کلید API بینایی'
         ja: ビジョン API キー
         ms: Kunci API Penglihatan
         pt-br: Chave da API de visão
@@ -335,6 +345,7 @@ additionalProperties:
       label:
         en: Serper API Key
         es-es: Clave de API de Serper
+        fa: 'کلید API Serper'
         ja: Serper API キー
         ms: Kunci API Serper
         pt-br: Chave da API Serper
@@ -364,6 +375,7 @@ additionalProperties:
       label:
         en: Weather API Key
         es-es: Clave de API del clima
+        fa: 'کلید API آب وهوا'
         ja: 天気 API キー
         ms: Kunci API Cuaca
         pt-br: Chave da API de clima
@@ -393,6 +405,7 @@ additionalProperties:
       label:
         en: Max upload size (MB)
         es-es: Tamaño máximo de carga (MB)
+        fa: 'حداکثر اندازه بارگذاری (MB)'
         ja: 最大アップロードサイズ (MB)
         ms: Saiz muat naik maksimum (MB)
         pt-br: Tamanho máximo de upload (MB)

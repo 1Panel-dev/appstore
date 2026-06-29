@@ -21,6 +21,7 @@ additionalProperties:
     description:
         en: An open source, self-hosted alternative to Trello, Notion, and Asana
         es-es: Un de código abierto, autoalojado alternative to Trello, Notion, and Asana
+        fa: 'جایگزین متن باز و خودمیزبان برای Trello، Notion و Asana'
         zh: Trello、Notion 和 Asana 的开源自托管替代方案
         zh-Hant: Trello、Notion 和 Asana 的開源自託管替代方案
         ja: Trello、Notion、および Asana のオープンソースのセルフホスト型代替手段

@@ -8,6 +8,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -27,6 +28,7 @@ additionalProperties:
       label:
         en: Ollama Base Url
         es-es: URL base de Ollama
+        fa: 'URL پایه Ollama'
         ja: OllamaベースURL
         ms: URL Asas Ollama
         pt-br: URL Base Ollama
@@ -46,6 +48,7 @@ additionalProperties:
       label:
         en: Secret Key
         es-es: Secret Clave
+        fa: 'کلید محرمانه'
         ja: シークレットキー
         ms: Kunci Rahsia
         pt-br: Chave Secreta

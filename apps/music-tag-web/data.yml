@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: Web-based music tag editor for remote and NAS music libraries
     es-es: Editor web de etiquetas musicales para bibliotecas remotas y NAS
+    fa: 'ویرایشگر برچسب موسیقی مبتنی بر وب برای کتابخانه های موسیقی راه دور و NAS'
     zh: 适用于远程与 NAS 音乐库的 Web 音乐标签编辑器
     zh-Hant: 適用於遠端與 NAS 音樂庫的 Web 音樂標籤編輯器
     ja: リモートや NAS の音楽ライブラリ向け Web ベースの音楽タグエディタ

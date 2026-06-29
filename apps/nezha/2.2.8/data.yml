@@ -11,6 +11,7 @@ additionalProperties:
       label:
         en: WebUI Port
         es-es: Puerto web
+        fa: 'پورت WebUI'
         ja: WebUI ポート
         ms: Port WebUI
         pt-br: Porta WebUI

@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: Open-Source Personal Subscription Tracker
     es-es: Rastreador personal de suscripciones de código abierto
+    fa: 'رهگیر متن باز اشتراک های شخصی'
     ja: オープンソースの個人サブスクリプショントラッカー
     ms: Penjejak langganan peribadi sumber terbuka
     pt-br: Rastreador de assinaturas pessoais de código aberto

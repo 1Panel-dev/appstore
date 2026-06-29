@@ -21,6 +21,7 @@ additionalProperties:
     description:
         en: An open source implementation of the Lightweight Directory Access Protocol
         es-es: Un de código abierto implementation of the Lightweight Directory Access Protocol
+        fa: 'پیاده سازی متن باز پروتکل LDAP'
         zh: 轻量级目录访问协议的开源实现
         zh-Hant: 輕量級目錄訪問協議的開源實現
         ja: 軽量ディレクトリアクセスプロトコルのオープンソース実装

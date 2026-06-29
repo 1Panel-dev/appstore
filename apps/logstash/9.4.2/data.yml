@@ -8,6 +8,7 @@ additionalProperties:
       label:
         en: Beats Input Port
         es-es: Puerto de entrada Beats
+        fa: 'پورت Beats Input'
         ja: Beats 入力ポート
         ms: Port input Beats
         pt-br: Porta de entrada do Beats
@@ -27,6 +28,7 @@ additionalProperties:
       label:
         en: API Port
         es-es: Puerto de API
+        fa: 'پورت API'
         ja: API ポート
         ms: Port API
         pt-br: Porta da API

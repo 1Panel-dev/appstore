@@ -8,6 +8,7 @@ additionalProperties:
         en: Enable Authentication
         zh: 开启鉴权
         es-es: Habilitar autenticación
+        fa: 'فعال سازی احراز هویت'
         zh-Hant: 啟用驗證
         ja: 認証を有効化
         ko: 인증 활성화
@@ -31,6 +32,7 @@ additionalProperties:
         en: Nacos GUI port
         zh: Nacos 界面 访问端口
         es-es: Puerto GUI de Nacos
+        fa: 'پورت رابط گرافیکی Nacos'
         zh-Hant: Nacos GUI 埠
         ja: Nacos GUI ポート
         ko: Nacos GUI 포트
@@ -50,6 +52,7 @@ additionalProperties:
         en: Nacos api port
         zh: Nacos API端口
         es-es: Puerto API de Nacos
+        fa: 'پورت API در Nacos'
         zh-Hant: Nacos API 埠
         ja: Nacos API ポート
         ko: Nacos API 포트
@@ -69,6 +72,7 @@ additionalProperties:
         en: Nacos communication port
         zh: Nacos 通讯端口
         es-es: Puerto de comunicación de Nacos
+        fa: 'پورت ارتباطی Nacos'
         zh-Hant: Nacos 通訊埠
         ja: Nacos 通信ポート
         ko: Nacos 통신 포트
@@ -88,6 +92,7 @@ additionalProperties:
         en: Nacos auth identity key
         zh: Nacos身份验证密钥键
         es-es: Clave de identidad de autenticación de Nacos
+        fa: 'کلید شناسه احراز هویت Nacos'
         zh-Hant: Nacos 驗證識別鍵
         ja: Nacos 認証 ID キー
         ko: Nacos 인증 식별 키
@@ -106,6 +111,7 @@ additionalProperties:
         en: Nacos auth identity value
         zh: Nacos身份验证密钥值
         es-es: Valor de identidad de autenticación de Nacos
+        fa: 'مقدار شناسه احراز هویت Nacos'
         zh-Hant: Nacos 驗證識別值
         ja: Nacos 認証 ID 値
         ko: Nacos 인증 식별 값
@@ -124,6 +130,7 @@ additionalProperties:
         en: Nacos auth token
         zh: Nacos身份验证令牌
         es-es: Token de autenticación de Nacos
+        fa: 'توکن احراز هویت Nacos'
         zh-Hant: Nacos 驗證 Token
         ja: Nacos 認証トークン
         ko: Nacos 인증 토큰
@@ -142,6 +149,7 @@ additionalProperties:
         en: IP can be specified in multi network card mode
         zh: 多网卡模式下可以指定IP
         es-es: Se puede especificar la IP en modo multitarjeta de red
+        fa: 'در حالت چند کارت شبکه می توان IP را مشخص کرد'
         zh-Hant: 多網卡模式下可指定 IP
         ja: マルチネットワークカードモードでは IP を指定できます
         ko: 다중 네트워크 카드 모드에서 IP를 지정할 수 있습니다
@@ -160,6 +168,7 @@ additionalProperties:
         en: JVM_XMS
         zh: JVM_XMS
         es-es: Valor JVM_XMS
+        fa: 'JVM_XMS'
         zh-Hant: JVM_XMS
         ja: JVM_XMS
         ko: JVM_XMS
@@ -178,6 +187,7 @@ additionalProperties:
         en: JVM_XMX
         zh: JVM_XMX
         es-es: Valor JVM_XMX
+        fa: 'JVM_XMX'
         zh-Hant: JVM_XMX
         ja: JVM_XMX
         ko: JVM_XMX
@@ -196,6 +206,7 @@ additionalProperties:
         en: JVM_XMN
         zh: JVM_XMN
         es-es: Valor JVM_XMN
+        fa: 'JVM_XMN'
         zh-Hant: JVM_XMN
         ja: JVM_XMN
         ko: JVM_XMN
@@ -214,6 +225,7 @@ additionalProperties:
         en: JVM_MS
         zh: JVM_MS
         es-es: Valor JVM_MS
+        fa: 'JVM_MS'
         zh-Hant: JVM_MS
         ja: JVM_MS
         ko: JVM_MS
@@ -232,6 +244,7 @@ additionalProperties:
         en: JVM_MMS
         zh: JVM_MMS
         es-es: Valor JVM_MMS
+        fa: 'JVM_MMS'
         zh-Hant: JVM_MMS
         ja: JVM_MMS
         ko: JVM_MMS

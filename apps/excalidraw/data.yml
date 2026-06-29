@@ -20,6 +20,7 @@ additionalProperties:
     description:
         en: Virtual whiteboard for sketching hand-drawn like diagrams
         es-es: Pizarra virtual para dibujar diagramas a mano alzada
+        fa: 'تخته سفید مجازی برای رسم نمودارهایی شبیه طراحی دستی'
         zh: 用于绘制手绘风格图表的虚拟白板
         zh-Hant: 用於繪製手繪風格圖表的虛擬白板
         ja: 手描き風の図をスケッチするための仮想ホワイトボード

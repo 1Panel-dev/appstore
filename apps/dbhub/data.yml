@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: Universal database MCP server connecting to MySQL, PostgreSQL, SQL Server, MariaDB, Oracle
         es-es: Universal base de datos MCP servidor connecting to MySQL, PostgreSQL, SQL Server, MariaDB, Oracle
+        fa: 'سرور MCP عمومی پایگاه داده برای اتصال به MySQL، PostgreSQL، SQL Server، MariaDB و Oracle'
         ja: 通用データベース MCP サーバーは、MySQL、PostgreSQL、SQL Server、MariaDB、Oracle に接続します
         ms: MCP pelayan pangkalan data sejagat menyambung ke MySQL, PostgreSQL, SQL Server, MariaDB, Oracle
         pt-br: Servidor MCP de banco de dados universal conectado ao MySQL, PostgreSQL, SQL Server, MariaDB, Oracle

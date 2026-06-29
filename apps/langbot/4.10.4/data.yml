@@ -11,6 +11,7 @@ additionalProperties:
       label:
         en: Web UI Port
         es-es: Puerto web
+        fa: 'پورت رابط وب'
         ja: Web UIポート
         ms: Port Web UI
         pt-br: Porta da Web UI
@@ -30,6 +31,7 @@ additionalProperties:
       label:
         en: LangBot Port Range
         es-es: LangBot Puerto Range
+        fa: 'بازه پورت LangBot'
         ja: LangBotポート範囲
         ms: Julat Port LangBot
         pt-br: Intervalo de portas do LangBot
@@ -46,6 +48,7 @@ additionalProperties:
       label:
         en: Time Zone
         es-es: Zona horaria
+        fa: 'منطقه زمانی'
         ja: タイムゾーン
         ms: Zon masa
         pt-br: Fuso horário

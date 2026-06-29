@@ -8,6 +8,7 @@ additionalProperties:
       label:
         en: HTTP Port
         es-es: Puerto HTTP
+        fa: 'پورت HTTP'
         ja: HTTP ポート
         ms: Port HTTP
         pt-br: Porta HTTP
@@ -27,6 +28,7 @@ additionalProperties:
       label:
         en: SQL Port
         es-es: SQL Puerto
+        fa: 'پورت SQL'
         ja: SQL ポート
         ms: Port SQL
         pt-br: Porta SQL

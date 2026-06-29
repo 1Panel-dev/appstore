@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: Web Platform Based on NGINX and LuaJIT
         es-es: Plataforma web basada en NGINX y LuaJIT
+        fa: 'پلتفرم وب مبتنی بر NGINX و LuaJIT'
         ja: NGINX と LuaJIT に基づく Web プラットフォーム
         ms: Platform Web Berdasarkan NGINX dan LuaJIT
         pt-br: Plataforma Web Baseada em NGINX e LuaJIT

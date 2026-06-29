@@ -20,6 +20,7 @@ additionalProperties:
     description:
         en: A modern and powerful wiki app built on Node.js
         es-es: Aplicacion wiki moderna y potente construida sobre Node.js
+        fa: 'برنامه ویکی مدرن و قدرتمند ساخته شده با Node.js'
         zh: 基于 Node.js 构建的现代而强大的 Wiki 应用程序
         zh-Hant: 基於 Node.js 構建的現代而強大的 Wiki 應用程序
         ja: Node.js 上に構築されたモダンで強力な Wiki アプリ

@@ -8,6 +8,7 @@ additionalProperties:
       label:
         en: HTTP Port
         es-es: Puerto HTTP
+        fa: 'پورت HTTP'
         ja: HTTP ポート
         ms: Port HTTP
         pt-br: HTTP Porta
@@ -27,6 +28,7 @@ additionalProperties:
       label:
         en: Database Service
         es-es: Servicio de base de datos
+        fa: 'سرویس پایگاه داده'
         ja: データベースサービス
         ms: Perkhidmatan Pangkalan Data
         pt-br: Serviço de Banco de Dados
@@ -44,6 +46,7 @@ additionalProperties:
       label:
         en: Database
         es-es: Base de datos
+        fa: 'پایگاه داده'
         ja: データベース
         ms: Pangkalan Data
         pt-br: Banco de Dados
@@ -63,6 +66,7 @@ additionalProperties:
       label:
         en: Database User
         es-es: Usuario de la base de datos
+        fa: 'کاربر پایگاه داده'
         ja: データベースユーザー
         ms: Pengguna Pangkalan Data
         pt-br: Usuário do Banco de Dados
@@ -82,6 +86,7 @@ additionalProperties:
       label:
         en: Database Password
         es-es: Contraseña de la base de datos
+        fa: 'رمز عبور پایگاه داده'
         ja: データベースのパスワード
         ms: Kata Laluan Pangkalan Data
         pt-br: Senha do Banco de Dados

@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: Fullstack but simple containerized mail server
         es-es: Fullstack but simple containerized mail servidor
+        fa: 'سرور ایمیل کانتینری کامل اما ساده'
         ja: フルスタックでありながらシンプルなコンテナ化されたメールサーバー
         ms: Pelayan mel yang terkontainerisasi tetapi mudah
         pt-br: Servidor de e-mail completo e simples, contêinerizado

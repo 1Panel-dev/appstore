@@ -20,6 +20,7 @@ additionalProperties:
   description:
     en: A simple, yet powerful CI/CD engine with great extensibility.
     es-es: Un simple, yet powerful CI/CD engine with great extensibility.
+    fa: 'موتور CI/CD ساده اما قدرتمند با قابلیت توسعه پذیری بالا.'
     ja: シンプルでありながら強力なCI/CDエンジンで、優れた拡張性を備えています。
     ms: Enjin CI/CD yang ringkas tetapi berkuasa dengan kebolehluasan yang hebat.
     pt-br: Um mecanismo CI/CD simples, mas poderoso, com grande extensibilidade.

@@ -21,6 +21,7 @@ additionalProperties:
     description:
         en: A system for building agents that perform automated tasks for you online
         es-es: Un system for building agents that perform automated tasks for you online
+        fa: 'سیستمی برای ساخت عامل هایی که وظایف آنلاین را برای شما خودکار انجام می دهند'
         zh: 一个用于构建代理系统的工具，可以为你在线执行自动化任务
         zh-Hant: 一個用於構建代理系統的工具，可以為你在線執行自動化任務
         ja: オンラインで自動化タスクを実行するエージェントを構築するためのシステム

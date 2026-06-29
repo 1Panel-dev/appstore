@@ -8,6 +8,7 @@ additionalProperties:
       label:
         en: Admin User
         es-es: Usuario administrador
+        fa: 'کاربر مدیر'
         ja: 管理者ユーザー
         ms: Pengguna Pentadbir
         pt-br: Usuário do Administrador
@@ -26,6 +27,7 @@ additionalProperties:
       label:
         en: Admin default password
         es-es: Contraseña predeterminada del administrador
+        fa: 'رمز عبور پیش فرض مدیر'
         ja: 管理者のデフォルトパスワード
         ms: Kata Laluan Pentadbir Lalai
         pt-br: Senha padrão do Administrador
@@ -44,6 +46,7 @@ additionalProperties:
       label:
         en: HTTP Port
         es-es: Puerto HTTP
+        fa: 'پورت HTTP'
         ja: HTTP ポート
         ms: Port HTTP
         pt-br: HTTP Porta
@@ -63,6 +66,7 @@ additionalProperties:
       label:
         en: MCP Port
         es-es: Puerto MCP
+        fa: 'پورت MCP'
         ja: MCP ポート
         ms: Port MCP
         pt-br: MCP Porta
@@ -82,6 +86,7 @@ additionalProperties:
       label:
         en: Image Server Host (Default server IP)
         es-es: Host del servidor de imágenes (IP predeterminada del servidor)
+        fa: 'میزبان سرور تصویر (IP پیش فرض سرور)'
         ja: 画像サーバーホスト（デフォルトのサーバーIP）
         ms: Pelayan Gambar Host (IP Pelayan Lalai)
         pt-br: Servidor de Imagens Host (IP do servidor padrão)

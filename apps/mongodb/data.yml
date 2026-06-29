@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: Fractional file storage database
         es-es: Fractional file storage base de datos
+        fa: 'پایگاه داده ذخیره سازی فایل تکه ای'
         ja: 分数ファイルストレージデータベース
         ms: Pangkalan data penyimpanan fail pecahan
         pt-br: Banco de dados de armazenamento de arquivos fracionados

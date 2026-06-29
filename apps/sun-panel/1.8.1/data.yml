@@ -8,6 +8,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         zh: 端口
         zh-Hant: 連接埠
         ja: ポート

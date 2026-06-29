@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: A modern, lightweight, cross-platform Redis client
         es-es: Un moderno, ligero, cross-plataforma Redis cliente
+        fa: 'کلاینت Redis مدرن، سبک و چندسکویی'
         ja: 最新の軽量なクロスプラットフォーム Redis クライアント
         ms: Klien Redis merentas platform yang moden, ringan
         pt-br: TUm cliente Redis moderno, leve e multiplataforma

@@ -21,6 +21,7 @@ additionalProperties:
     description:
         en: Distributed, highly available, and data center aware solution
         es-es: Solución distribuida, de alta disponibilidad y consciente del centro de datos
+        fa: 'راهکاری توزیع شده، با دسترس پذیری بالا و آگاه از دیتاسنتر'
         zh: 分布式、高可用且具有数据中心感知能力的解决方案
         zh-Hant: 分佈式、高可用且具有數據中心感知能力的解決方案
         ja: 分散型で高可用性、データセンター対応のソリューション

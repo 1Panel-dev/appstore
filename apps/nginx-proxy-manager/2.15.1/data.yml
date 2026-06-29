@@ -11,6 +11,7 @@ additionalProperties:
           label:
             en: HTTP port
             es-es: Puerto HTTP
+            fa: 'پورت HTTP'
             ja: HTTP ポート
             ms: Port HTTP
             pt-br: Porta HTTP
@@ -30,6 +31,7 @@ additionalProperties:
           label:
             en: Console port
             es-es: Puerto de consola
+            fa: 'پورت کنسول'
             ja: コンソールポート
             ms: Port konsol
             pt-br: Porta do console
@@ -49,6 +51,7 @@ additionalProperties:
           label:
             en: HTTPS port
             es-es: Puerto HTTPS
+            fa: 'پورت HTTPS'
             ja: HTTPS ポート
             ms: Port HTTPS
             pt-br: Porta HTTPS

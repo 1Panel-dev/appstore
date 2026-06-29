@@ -21,6 +21,7 @@ additionalProperties:
     description:
         en: A simple HTTP-based pub-sub notification service
         es-es: Un simple HTTP-based pub-sub notification service
+        fa: 'سرویس اعلان pub-sub ساده مبتنی بر HTTP'
         zh: 基于 HTTP 的简单 pub-sub 通知服务
         zh-Hant: 基於 HTTP 的簡單 pub-sub 通知服務
         ja: HTTP ベースのシンプルな pub-sub 通知サービス

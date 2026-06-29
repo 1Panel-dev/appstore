@@ -14,6 +14,7 @@ additionalProperties:
     en: A powerful database-free graph bed version 2.0
     zh: 一款功能强大无数据库的图床 2.0 版
     es-es: Un powerful base de datos-free graph bed version 2.0
+    fa: 'نسخه 2.0 یک سرویس قدرتمند میزبانی تصویر بدون نیاز به پایگاه داده'
     zh-Hant: 功能強大的無資料庫圖床 2.0 版本
     ja: 強力なデータベース不要の画像ホスティング 2.0 版
     ko: 강력한 데이터베이스 없는 이미지 호스팅 2.0 버전

@@ -14,6 +14,7 @@ additionalProperties:
     en: An HTTP request timed task automation framework
     zh: HTTP 请求定时任务自动执行框架
     es-es: Un HTTP request timed task automation framework
+    fa: 'چارچوب خودکارسازی وظایف زمان بندی شده مبتنی بر درخواست HTTP'
     zh-Hant: HTTP 請求定時任務自動化框架
     ja: HTTP リクエストの定期タスク自動化フレームワーク
     ko: HTTP 요청 예약 작업 자동화 프레임워크

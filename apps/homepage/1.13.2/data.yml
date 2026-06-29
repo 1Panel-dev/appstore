@@ -8,6 +8,7 @@ additionalProperties:
       label:
         en: HTTP Port
         es-es: Puerto HTTP
+        fa: 'پورت HTTP'
         ja: HTTPポート
         ms: Port HTTP
         pt-br: Porta HTTP
@@ -27,6 +28,7 @@ additionalProperties:
       label:
         en: Allowed Hosts
         es-es: Hosts permitidos
+        fa: 'میزبان های مجاز'
         ja: 許可されたホスト
         ms: Hos yang Dibenarkan
         pt-br: Hosts permitidos
@@ -45,6 +47,7 @@ additionalProperties:
       label:
         en: Time zone
         es-es: Zona horaria
+        fa: 'منطقه زمانی'
         ja: タイムゾーン
         ms: Zon masa
         pt-br: Fuso horário

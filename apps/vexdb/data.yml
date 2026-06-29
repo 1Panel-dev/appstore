@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: Vector database with relational data and semantic search
         es-es: Vector base de datos with relational data and semantic search
+        fa: 'پایگاه داده برداری با داده رابطه ای و جستجوی معنایی'
         ja: リレーショナルデータとセマンティック検索を備えたベクターデータベース
         ms: Pangkalan Data Vektor dengan Data Relasi dan Carian Semantik
         pt-br: Banco de Dados Vetorial com Dados Relacionais e Pesquisa Semântica

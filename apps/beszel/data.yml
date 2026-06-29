@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: Simple, lightweight server monitoring
         es-es: Simple, ligero servidor monitorización
+        fa: 'مانیتورینگ ساده و سبک سرور'
         ja: シンプルで軽量なサーバー監視
         ms: Pemantauan pelayan yang ringkas dan ringan
         pt-br: Monitoramento de servidor simples e leve

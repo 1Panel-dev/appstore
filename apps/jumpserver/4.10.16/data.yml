@@ -10,6 +10,7 @@ additionalProperties:
       label:
         en: Cryptographic signing
         es-es: Firma criptográfica
+        fa: 'امضای رمزنگاری'
         ja: 暗号署名
         ms: Tandatangan kriptografi
         pt-br: Assinatura criptográfica
@@ -28,6 +29,7 @@ additionalProperties:
       label:
         en: Bootstrap token
         es-es: Token de arranque
+        fa: 'توکن Bootstrap'
         ja: ブートストラップトークン
         ms: Token Bootstrap
         pt-br: Token de inicialização
@@ -50,6 +52,7 @@ additionalProperties:
       label:
         en: Debug mode
         es-es: Modo de depuración
+        fa: 'حالت Debug'
         ja: デバッグモード
         ms: Modus Debug
         pt-br: Modo de depuração
@@ -78,6 +81,7 @@ additionalProperties:
       label:
         en: Log level
         es-es: Nivel de registro
+        fa: 'سطح لاگ'
         ja: ログレベル
         ms: Tahap log
         pt-br: Nível de log
@@ -107,6 +111,7 @@ additionalProperties:
       label:
         en: Database Service
         es-es: Servicio de base de datos
+        fa: 'سرویس پایگاه داده'
         ja: データベースサービス
         ms: Perkhidmatan Pangkalan Data
         pt-br: Serviço de Banco de Dados
@@ -126,6 +131,7 @@ additionalProperties:
       label:
         en: Database
         es-es: Base de datos
+        fa: 'پایگاه داده'
         ja: データベース
         ms: Pangkalan Data
         pt-br: Banco de Dados
@@ -145,6 +151,7 @@ additionalProperties:
       label:
         en: Database User
         es-es: Usuario de la base de datos
+        fa: 'کاربر پایگاه داده'
         ja: データベースユーザー
         ms: Pengguna Pangkalan Data
         pt-br: Usuário do Banco de Dados
@@ -163,6 +170,7 @@ additionalProperties:
       label:
         en: Database Password
         es-es: Contraseña de la base de datos
+        fa: 'رمز عبور پایگاه داده'
         ja: データベースのパスワード
         ms: Kata Laluan Pangkalan Data
         pt-br: Senha do Banco de Dados
@@ -182,6 +190,7 @@ additionalProperties:
       label:
         en: Redis Service
         es-es: Servicio de Redis
+        fa: 'سرویس Redis'
         ja: Redis サービス
         ms: Perkhidmatan Redis
         pt-br: Serviço Redis
@@ -200,6 +209,7 @@ additionalProperties:
       label:
         en: Redis service password
         es-es: Contraseña del servicio Redis
+        fa: 'رمز عبور سرویس Redis'
         ja: Redis サービスのパスワード
         ms: Kata laluan perkhidmatan Redis
         pt-br: Senha do serviço Redis
@@ -216,6 +226,7 @@ additionalProperties:
       label:
         en: Use the built-in nginx service
         es-es: Usar el servicio nginx integrado
+        fa: 'استفاده از سرویس nginx داخلی'
         ja: 組み込みの Nginx サービスを使用してください
         ms: Gunakan perkhidmatan Nginx terbina dalam
         pt-br: Use o serviço Nginx incorporado
@@ -242,6 +253,7 @@ additionalProperties:
       label:
         en: HTTP Port
         es-es: Puerto HTTP
+        fa: 'پورت HTTP'
         ja: HTTP ポート
         ms: Port HTTP
         pt-br: HTTP Porta
@@ -261,6 +273,7 @@ additionalProperties:
       label:
         en: SSH Port
         es-es: Puerto SSH
+        fa: 'پورت SSH'
         ja: SSH ポート
         ms: SSH Port
         pt-br: SSH Porta
@@ -278,6 +291,7 @@ additionalProperties:
       label:
         en: DOMAINS
         es-es: Dominios
+        fa: 'دامنه ها'
         ja: ドメイン
         ms: DOMAIN
         pt-br: DOMÍNIOS

@@ -8,6 +8,7 @@ additionalProperties:
           label:
             en: Dashboard Port
             es-es: Dashboard Puerto
+            fa: 'پورت داشبورد'
             ja: ダッシュボード ポート
             ms: Port Papan Pemuka
             pt-br: Porta do Painel
@@ -27,6 +28,7 @@ additionalProperties:
           label:
             en: MQTT Port
             es-es: MQTT Puerto
+            fa: 'پورت MQTT'
             ja: MQTT ポート
             ms: Port MQTT
             pt-br: Porta MQTT
@@ -46,6 +48,7 @@ additionalProperties:
           label:
             en: WebSocket Port
             es-es: WebSocket Puerto
+            fa: 'پورت WebSocket'
             ja: WebSocket ポート
             ms: Port WebSocket
             pt-br: Porta WebSocket
@@ -65,6 +68,7 @@ additionalProperties:
           label:
             en: WebSocket SSL Port
             es-es: WebSocket SSL Puerto
+            fa: 'پورت SSL برای WebSocket'
             ja: WebSocket SSL ポート
             ms: Port WebSocket SSL
             pt-br: Porta WebSocket SSL
@@ -84,6 +88,7 @@ additionalProperties:
           label:
             en: MQTT SSL Port
             es-es: MQTT SSL Puerto
+            fa: 'پورت SSL برای MQTT'
             ja: MQTT SSL ポート
             ms: Port MQTT SSL
             pt-br: Porta MQTT SSL
@@ -102,6 +107,7 @@ additionalProperties:
           label:
             en: Dashboard Password
             es-es: Dashboard Contraseña
+            fa: 'رمز عبور داشبورد'
             ja: ダッシュボードのパスワード
             ms: Kata Laluan Papan Pemuka
             pt-br: Senha do Painel
@@ -121,6 +127,7 @@ additionalProperties:
           label:
             en: EMQX Cookie
             es-es: Cookie de EMQX
+            fa: 'کوکی EMQX'
             ja: EMQX クッキー値
             ms: EMQX Cookie
             pt-br: EMQX Cookie
@@ -140,6 +147,7 @@ additionalProperties:
           label:
             en: Log To
             es-es: Destino del registro
+            fa: 'ثبت لاگ در'
             ja: ログ出力先
             ms: Log Kepada
             pt-br: Enviar Log Para
@@ -165,6 +173,7 @@ additionalProperties:
           label:
             en: Time zone
             es-es: Zona horaria
+            fa: 'منطقه زمانی'
             ja: タイムゾーン
             ms: Zon masa
             pt-br: Fuso horário

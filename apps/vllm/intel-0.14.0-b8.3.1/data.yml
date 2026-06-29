@@ -11,6 +11,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -29,6 +30,7 @@ additionalProperties:
       label:
         en: Model directory
         es-es: Directorio del modelo
+        fa: 'دایرکتوری مدل'
         ja: モデルディレクトリ
         ms: Direktori model
         pt-br: Diretório do modelo
@@ -47,6 +49,7 @@ additionalProperties:
       label:
         en: Model name
         es-es: Nombre del modelo
+        fa: 'نام مدل'
         ja: モデル名
         ms: Nama model
         pt-br: Nome do modelo
@@ -65,6 +68,7 @@ additionalProperties:
       label:
         en: Start command
         es-es: Comando de inicio
+        fa: 'دستور شروع'
         ja: 起動コマンド
         ms: Arahan mula
         pt-br: Comando de inicialização

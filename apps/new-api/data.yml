@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: The next-generation LLM gateway and AI asset management system
     es-es: The de próxima generación LLM gateway and AI asset sistema de gestión
+    fa: 'دروازه LLM و سیستم مدیریت دارایی هوش مصنوعی نسل جدید'
     ja: 次世代LLMゲートウェイとAI資産管理システム
     ms: Sistem pengurusan aset AI dan gerbang LLM generasi akan datang
     pt-br: O sistema de gerenciamento de ativos de IA e o gateway LLM de próxima geração

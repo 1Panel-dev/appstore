@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: An open-source swarm orchestration system for OpenClaw agents
     es-es: Un sistema open-source de orquestacion de enjambre para agentes OpenClaw
+    fa: 'سیستم ارکستراسیون swarm متن باز برای عامل های OpenClaw'
     ja: OpenClawエージェント向けのオープンソース群知能オーケストレーションシステム
     ms: Sistem orkestrasi swarm sumber terbuka untuk ejen OpenClaw
     pt-br: Um sistema de orquestracao em swarm de codigo aberto para agentes OpenClaw

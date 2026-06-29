@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: High-performance, scalable time-series database designed for Industrial IoT (IIoT) scenarios
     es-es: High-performance, escalable time-series base de datos designed for Industrial IoT (IIoT) scenarios
+    fa: 'پایگاه داده سری زمانی پرکارایی و مقیاس پذیر برای سناریوهای اینترنت اشیای صنعتی (IIoT)'
     ja: 高性能で拡張可能な時系列データベースで、工業 IoT（IIoT）シナリオ向けに設計
     ms: Pantai berprestasi tinggi, pangkalan data berukuran besar beraturan masa dirancang untuk keadaan Internet of Things Industri (IIoT)
     pt-br: Banco de dados de séries temporais de alta performance e escalável, projetado para cenários de Internet das Coisas Industriais (IIoT)

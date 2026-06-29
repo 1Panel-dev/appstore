@@ -11,6 +11,7 @@ additionalProperties:
     description:
         en: PostgreSQL Master-Slave Cluster
         es-es: Clúster maestro-esclavo de PostgreSQL
+        fa: 'کلاستر Master-Slave در PostgreSQL'
         ja: オープンソースリレーショナルデータベース
         ms: Pangkalan Data Relasional Sumber Terbuka
         pt-br: Banco de Dados Relacional de Código Aberto

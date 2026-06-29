@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: PHP8 Runtime
         es-es: Entorno de ejecución de PHP8
+        fa: 'محیط اجرای PHP8'
         ja: PHP8 ランタイム
         ms: Persekitaran masa laku PHP8
         pt-br: Ambiente de execução PHP8

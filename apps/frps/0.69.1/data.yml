@@ -8,6 +8,7 @@ additionalProperties:
         en: Service Port
         zh: 服务端口
         es-es: Servicio Puerto
+        fa: 'پورت سرویس'
         zh-Hant: 服務埠
         ja: サービスポート
         ko: 서비스 포트
@@ -26,6 +27,7 @@ additionalProperties:
         en: Dashboard Port
         zh: Dashboard 端口
         es-es: Dashboard Puerto
+        fa: 'پورت داشبورد'
         zh-Hant: Dashboard 埠
         ja: ダッシュボードポート
         ko: 대시보드 포트
@@ -44,6 +46,7 @@ additionalProperties:
         en: Username
         zh: 用户名
         es-es: Nombre de usuario
+        fa: 'نام کاربری'
         zh-Hant: 使用者名稱
         ja: ユーザー名
         ko: 사용자 이름
@@ -61,6 +64,7 @@ additionalProperties:
         en: Password
         zh: 密码
         es-es: Contraseña
+        fa: 'رمز عبور'
         zh-Hant: 用戶密碼
         ja: パスワード
         ko: 비밀번호
@@ -80,6 +84,7 @@ additionalProperties:
         en: Auth Token
         zh: 密钥
         es-es: Token de autenticación
+        fa: 'توکن احراز هویت'
         zh-Hant: 驗證 Token
         ja: 認証トークン
         ko: 인증 토큰

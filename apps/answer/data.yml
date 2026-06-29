@@ -23,6 +23,7 @@ additionalProperties:
   description:
     en: A Q&A platform software for teams at any scales
     es-es: Software de plataforma de preguntas y respuestas para equipos de cualquier tamano
+    fa: 'نرم افزار پرسش و پاسخ برای تیم ها در هر مقیاس'
     zh: 适用于任何规模团队的问答平台软件
     zh-Hant: 適用於任何規模團隊的問答平台軟件
     ja: あらゆる規模のチーム向けのQ&Aプラットフォームソフトウェア

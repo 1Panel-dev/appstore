@@ -21,6 +21,7 @@ additionalProperties:
     description:
         en: free open source website change detection, website watcher, restock monitor and notification service
         es-es: free de código abierto website change detection, website watcher, restock monitor and notification service
+        fa: 'سرویس آزاد و متن باز تشخیص تغییرات وب سایت، پایش وب سایت، مانیتور موجودی مجدد و اعلان'
         zh: 免费开源网站变更检测、网站观察、补货监控和通知服务
         zh-Hant: 免費開源網站變更檢測、網站觀察、補貨監控和通知服務
         ja: 無料のオープンソースのウェブサイト変更検出、ウェブサイトウォッチャー、在庫補充モニターおよび通知サービス

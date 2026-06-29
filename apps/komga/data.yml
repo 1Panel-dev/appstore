@@ -21,6 +21,7 @@ additionalProperties:
   description:
     en: Komga is a media server for your comics, mangas, BDs and magazines.
     es-es: Komga is a media servidor for your comics, mangas, BDs and magazines.
+    fa: 'Komga سرور رسانه برای کمیک ها، مانگاها، BDها و مجله های شماست.'
     zh: Komga 是一个用于漫画、杂志等的媒体服务器。
     zh-Hant: Komga 是一個用於漫畫、雜誌等的媒體伺服器。
     ja: Komga は、コミック、マンガ、BD、雑誌のためのメディアサーバーです。

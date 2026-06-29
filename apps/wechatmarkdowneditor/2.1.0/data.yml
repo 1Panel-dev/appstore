@@ -8,6 +8,7 @@ additionalProperties:
       label:
         en: Web Port
         es-es: Puerto web
+        fa: 'پورت وب'
         ja: ウェブポート
         ms: Port Web
         pt-br: Porta Web

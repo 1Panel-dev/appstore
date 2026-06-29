@@ -11,6 +11,7 @@ additionalProperties:
       label:
         en: WebUI Port
         es-es: Puerto web
+        fa: 'پورت WebUI'
         ja: WebUI ポート
         ms: Port WebUI
         pt-br: Porta WebUI
@@ -27,6 +28,7 @@ additionalProperties:
       label:
         en: Admin user
         es-es: Usuario administrador
+        fa: 'کاربر مدیر'
         ja: 管理者ユーザー
         ms: Pengguna Admin
         pt-br: Usuário Administrador
@@ -45,6 +47,7 @@ additionalProperties:
       label:
         en: Admin Password
         es-es: Contraseña del administrador
+        fa: 'رمز عبور مدیر'
         ja: 管理者パスワード
         ms: Kata Laluan Admin
         pt-br: Senha do Administrador

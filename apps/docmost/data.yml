@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: Open-source collaborative wiki and documentation software
     es-es: Software colaborativo de wiki y documentacion de codigo abierto
+    fa: 'نرم افزار متن باز و مشارکتی ویکی و مستندسازی'
     zh: 开源协作 wiki 与文档软件
     zh-Hant: 開源協作 wiki 與文件軟體
     ja: オープンソースの共同編集可能なウィキおよびドキュメントソフトウェア

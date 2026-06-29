@@ -20,6 +20,7 @@ additionalProperties:
     description:
         en: a free analytics DBMS for big data
         es-es: un SGBD analítico gratuito para big data
+        fa: 'سامانه مدیریت پایگاه داده تحلیلی رایگان برای داده های بزرگ'
         zh: 一款免费的大数据分析 DBMS
         zh-Hant: 一款免費的大數據分析 DBMS
         ja: 無料のビッグデータ分析用 DBMS

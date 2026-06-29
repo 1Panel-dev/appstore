@@ -21,6 +21,7 @@ additionalProperties:
     description:
         en: The open-source platform for monitoring and observability
         es-es: The open-source plataforma for monitorización and observability
+        fa: 'پلتفرم متن باز برای مانیتورینگ و observability'
         zh: 用于监控和可观测性的开源平台
         zh-Hant: 用於監控和可觀測性的開源平台
         ja: 監視と可観測性のためのオープンソースプラットフォーム

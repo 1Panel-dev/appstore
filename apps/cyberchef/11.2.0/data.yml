@@ -8,6 +8,7 @@ additionalProperties:
       label:
         en: WebUI port
         es-es: Puerto de WebUI
+        fa: 'پورت WebUI'
         zh: WebUI 端口
         zh-Hant: WebUI 連接埠
         ja: WebUI ポート

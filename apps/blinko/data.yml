@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: An open-source, self-hosted personal note-taking tool.
     es-es: Una herramienta de toma de notas personal de código abierto y autoalojada.
+    fa: 'ابزار متن باز و خودمیزبان برای یادداشت برداری شخصی.'
     ja: オープンソースでセルフホスト可能な個人向け軽量メモツール。
     ms: Alat mengambil nota peribadi sumber terbuka dan dihoskan sendiri.
     pt-br: Uma ferramenta de notas pessoais de código aberto e auto-hospedada.

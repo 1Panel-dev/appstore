@@ -7,6 +7,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -26,6 +27,7 @@ additionalProperties:
       label:
         en: MasterKey
         es-es: MasterClave
+        fa: 'کلید Master'
         ja: マスターキー
         ms: Kunci Utama
         pt-br: Chave Mestra
@@ -46,6 +48,7 @@ additionalProperties:
       label:
         en: Meilisearch's built-in telemetry
         es-es: Telemetría integrada de Meilisearch
+        fa: 'Telemetry داخلی Meilisearch'
         ja: Meilisearch の組み込みテレメトリ
         ms: Telemetri Bawaan Meilisearch
         pt-br: Telemetria Interna do Meilisearch

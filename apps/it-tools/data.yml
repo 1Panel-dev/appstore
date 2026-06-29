@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: Collection of handy online tools for developers, with great UX
     es-es: Collection of handy online herramientas for developers, with great UX
+    fa: 'مجموعه ابزارهای آنلاین کاربردی برای توسعه دهندگان با تجربه کاربری عالی'
     ja: 開発者のための便利なオンラインツール集、優れたUX付き
     ms: Koleksi alat dalam talian yang berguna untuk pembangun, dengan UX yang hebat
     pt-br: Coleção de ferramentas online úteis para desenvolvedores, com ótima UX

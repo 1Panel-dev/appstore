@@ -10,6 +10,7 @@ additionalProperties:
           label:
             en: HTTP Port
             es-es: Puerto HTTP
+            fa: 'پورت HTTP'
             ja: HTTP ポート
             ms: Port HTTP
             pt-br: Porta HTTP
@@ -27,6 +28,7 @@ additionalProperties:
           label:
             en: HTTPS Port
             es-es: Puerto HTTPS
+            fa: 'پورت HTTPS'
             ja: HTTPS ポート
             ms: Port HTTPS
             pt-br: Porta HTTPS
@@ -44,6 +46,7 @@ additionalProperties:
           label:
             en: Website directory
             es-es: Directorio del sitio web
+            fa: 'دایرکتوری وب سایت'
             ja: ウェブサイトディレクトリ
             ms: Direktori laman web
             pt-br: Diretório do site

@@ -13,6 +13,7 @@ additionalProperties:
     description:
       en: Open source self-hosted web archiving
       es-es: Archivado web autoalojado y de codigo abierto
+      fa: 'بایگانی وب متن باز و خودمیزبان'
       ja: オープンソースのセルフホスト型ウェブアーカイブツール
       ms: Alat pengarkiban web sumber terbuka yang dihoskan sendiri
       pt-br: Ferramenta de arquivamento web de código aberto auto-hospedada

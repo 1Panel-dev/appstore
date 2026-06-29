@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: The Next Gen Airtable Alternative
         es-es: La alternativa de nueva generación a Airtable
+        fa: 'جایگزین نسل جدید Airtable'
         ja: 次世代の Airtable 代替
         ms: The Next Gen Airtable Alternative
         pt-br: A Alternativa ao Airtable da Próxima Geração

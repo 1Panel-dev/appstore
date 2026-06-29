@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: The best open source blog & newsletter platform.
     es-es: The best de código abierto blog & newsletter plataforma.
+    fa: 'بهترین پلتفرم متن باز وبلاگ و خبرنامه.'
     ja: 最高のオープンソースブログ＆ニュースレタープラットフォーム。
     ms: Platform blog & surat berita sumber terbuka terbaik.
     pt-br: A melhor plataforma de blog e boletins informativos de código aberto.

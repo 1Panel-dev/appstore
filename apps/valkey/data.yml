@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: High-performance open-source data structure server
         es-es: Servidor de estructuras de datos de codigo abierto y alto rendimiento
+        fa: 'سرور متن باز ساختار داده با کارایی بالا'
         ja: 高性能なオープンソースのデータ構造サーバー
         ms: Pelayan struktur data sumber terbuka berprestasi tinggi
         pt-br: Servidor de estruturas de dados de codigo aberto e alto desempenho

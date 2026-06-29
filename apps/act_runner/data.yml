@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: A runner for Gitea based on Gitea fork of act
         es-es: Runner para Gitea basado en la bifurcacion de act de Gitea
+        fa: 'Runner مخصوص Gitea بر پایه فورک act توسط Gitea'
         ja: act の Gitea フォークに基づいた Gitea 用ランナー
         ms: Penjalank untuk Gitea berdasarkan fork Gitea dari act
         pt-br: Um runner para Gitea baseado no fork do Gitea do act
