@@ -20,6 +20,7 @@ additionalProperties:
     description:
         en: The de facto standard self-hosted URL shortener in PHP
         es-es: The de facto standard autoalojado URL shortener in PHP
+        fa: 'استاندارد رایج کوتاه کننده URL خودمیزبان در PHP'
         zh: PHP 驱动的标准自托管 URL 缩短器
         zh-Hant: PHP 驅動的標準自託管 URL 縮短器
         ja: PHP で駆動される事実上の標準的な自己ホスト型 URL 短縮ツール

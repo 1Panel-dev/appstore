@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: Java Runtime Environment
     es-es: Entorno de ejecución de Java
+    fa: 'محیط اجرای Java'
     ja: Java 実行環境
     ms: Persekitaran Larian Java
     pt-br: Ambiente de Execução Java

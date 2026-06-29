@@ -20,6 +20,7 @@ additionalProperties:
   document: https://miniflux.app/docs/
   description:
     en: Minimalist and opinionated feed reader
+    fa: 'فیدخوان مینیمال با طراحی هدفمند'
     zh: 极简主义的 Feed 阅读器
     zh-Hant: 極簡主義的 Feed 閱讀器
     ja: ミニマリストで独自の見解を持つフィードリーダー

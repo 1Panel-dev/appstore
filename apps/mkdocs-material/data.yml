@@ -21,6 +21,7 @@ additionalProperties:
   description:
     en: A powerful documentation framework on top of MkDocs
     es-es: Un powerful documentation framework on top of MkDocs
+    fa: 'چارچوب مستندسازی قدرتمند مبتنی بر MkDocs'
     zh: 基于 MkDocs 的强大文档框架
     zh-Hant: 基於 MkDocs 的強大文檔框架
     ja: MkDocs 上に構築された強力なドキュメントフレームワーク

@@ -12,6 +12,7 @@ additionalProperties:
           label:
             en: Database Service
             es-es: Servicio de base de datos
+            fa: 'سرویس پایگاه داده'
             ja: データベースサービス
             ms: Perkhidmatan Pangkalan Data
             pt-br: Serviço de Banco de Dados
@@ -32,6 +33,7 @@ additionalProperties:
           label:
             en: Database
             es-es: Base de datos
+            fa: 'پایگاه داده'
             ja: データベース
             ms: Pangkalan Data
             pt-br: Banco de Dados
@@ -51,6 +53,7 @@ additionalProperties:
           label:
             en: User
             es-es: Usuario
+            fa: 'کاربر'
             ja: ユーザー
             ms: Pengguna
             pt-br: Usuário
@@ -70,6 +73,7 @@ additionalProperties:
           label:
             en: Password
             es-es: Contraseña
+            fa: 'رمز عبور'
             ja: パスワード
             ms: Kata Laluan
             pt-br: Senha
@@ -88,6 +92,7 @@ additionalProperties:
           label:
             en: Database prefix
             es-es: Base de datos prefix
+            fa: 'پیشوند پایگاه داده'
             ja: データベースプレフィックス
             ms: Pangkalan Data awalan
             pt-br: Prefixo do Banco de Dados
@@ -106,6 +111,7 @@ additionalProperties:
           label:
             en: Port
             es-es: Puerto
+            fa: 'پورت'
             ja: ポート
             ms: Port
             pt-br: Porta
@@ -124,6 +130,7 @@ additionalProperties:
           label:
             en: User
             es-es: Usuario
+            fa: 'کاربر'
             ja: ユーザー
             ms: Pengguna
             pt-br: Usuário
@@ -143,6 +150,7 @@ additionalProperties:
           label:
             en: Password
             es-es: Contraseña
+            fa: 'رمز عبور'
             ja: パスワード
             ms: Kata Laluan
             pt-br: Senha
@@ -163,6 +171,7 @@ additionalProperties:
           label:
             en: External URL
             es-es: URL externa
+            fa: 'URL خارجی'
             ja: 外部URL
             ms: URL Luaran
             pt-br: URL externo

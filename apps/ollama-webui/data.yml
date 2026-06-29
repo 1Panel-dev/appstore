@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: User-friendly AI Interface (Supports Ollama, OpenAI API, ...)
         es-es: Interfaz de IA fácil de usar (compatible con Ollama, OpenAI API, ...)
+        fa: 'رابط کاربری هوش مصنوعی کاربرپسند (با پشتیبانی از Ollama، OpenAI API و ...)'
         ja: ユーザーフレンドリーなAIインターフェース（Ollama、OpenAI APIなどをサポート）
         ms: Antaramuka AI yang Mesra Pengguna (Menyokong Ollama, OpenAI API, ...)
         pt-br: Interface de IA amigável ao usuário (Suporta Ollama, OpenAI API, ...)

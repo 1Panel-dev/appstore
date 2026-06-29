@@ -7,6 +7,7 @@ additionalProperties:
       label:
         en: APP NAME
         es-es: Nombre de la aplicación
+        fa: 'نام APP'
         ja: アプリ名
         ms: NAMA APLIKASI
         pt-br: NOME DO APLICATIVO
@@ -25,6 +26,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -44,6 +46,7 @@ additionalProperties:
       label:
         en: APP URL
         es-es: URL de la aplicación
+        fa: 'URL برنامه'
         ja: アプリURL
         ms: URL APLIKASI
         pt-br: URL DO APLICATIVO
@@ -73,6 +76,7 @@ additionalProperties:
       label:
         en: APP KEY
         es-es: Clave de la aplicación
+        fa: 'کلید APP'
         ja: アプリキー
         ms: KUNCI APLIKASI
         pt-br: CHAVE DO APLICATIVO

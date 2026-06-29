@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: High-Performance Enterprise Short-Link Service Platform
     es-es: Plataforma empresarial de enlaces cortos de alto rendimiento
+    fa: 'پلتفرم سازمانی پرکارایی برای سرویس لینک کوتاه'
     ja: 高性能エンタープライズ短縮リンクサービスプラットフォーム
     ms: Platform Perkhidmatan Pautan Pendek Perusahaan Berprestasi Tinggi
     pt-br: Plataforma de Serviço de Links Curtos Empresarial de Alto Desempenho

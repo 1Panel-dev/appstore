@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: An open-source AI personal assistant by Alibaba
     es-es: Un open-source AI personal assistant by Alibaba
+    fa: 'دستیار شخصی هوش مصنوعی متن باز از Alibaba'
     zh: 阿里开源的 AI 个人助理
     zh-Hant: 阿里開源的 AI 個人助理
     ja: アリババがオープンソース化したAIパーソナルアシスタント

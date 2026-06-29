@@ -20,6 +20,7 @@ additionalProperties:
   document: https://docs.rsshub.app/guide/
   description:
     en: 🧡 Everything is RSSible
+    fa: '🧡 همه چیز RSS شدنی است'
     zh: 🧡 万物皆可 RSS
     zh-Hant: 🧡 萬物皆可 RSS
     ja: 🧡 すべてが RSS になる

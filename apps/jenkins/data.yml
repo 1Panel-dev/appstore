@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: Build great things at any scale
         es-es: Crea grandes cosas a cualquier escala
+        fa: 'ساخت چیزهای عالی در هر مقیاس'
         ja: あらゆる規模で素晴らしいものを作りましょう
         ms: Bina perkara hebat pada sebarang skala
         pt-br: Construa grandes coisas em qualquer escala

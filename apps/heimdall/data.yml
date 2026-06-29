@@ -21,6 +21,7 @@ additionalProperties:
     description:
         en: An Application dashboard and launcher
         es-es: Un panel y lanzador de aplicaciones
+        fa: 'داشبورد و اجراکننده برنامه ها'
         zh: 应用程序仪表板和启动器
         zh-Hant: 應用程式儀表板和啟動器
         ja: アプリケーションダッシュボードとランチャー

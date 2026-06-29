@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: Go Runtime Environment
     es-es: Entorno de ejecución de Go
+    fa: 'محیط اجرای Go'
     ja: Go 実行環境
     ms: Persekitaran Larian Go
     pt-br: Ambiente de Execução Go

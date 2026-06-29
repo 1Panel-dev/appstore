@@ -21,6 +21,7 @@ additionalProperties:
     description:
         en: An open-source, beautiful JSON explorer
         es-es: Un open-source, beautiful JSON explorer
+        fa: 'کاوشگر JSON زیبا و متن باز'
         zh: 开源、美观的 Web JSON 浏览器
         zh-Hant: 開源、美觀的 Web JSON 瀏覽器
         ja: オープンソースで美しい JSON エクスプローラー

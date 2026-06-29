@@ -14,6 +14,7 @@ additionalProperties:
     en: Minecraft server control panel(Daemon)
     zh: Minecraft 服务器控制面板（后端）
     es-es: Minecraft servidor control panel(Daemon)
+    fa: 'پنل کنترل سرور Minecraft (Daemon)'
     zh-Hant: Minecraft 伺服器控制面板（守護程序）
     ja: Minecraft サーバー管理パネル（デーモン）
     ko: Minecraft 서버 제어 패널(데몬)

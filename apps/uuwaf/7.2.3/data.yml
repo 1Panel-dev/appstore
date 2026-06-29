@@ -9,6 +9,7 @@ additionalProperties:
         en: HTTP Port
         zh: HTTP 端口
         es-es: Puerto HTTP
+        fa: 'پورت HTTP'
         zh-Hant: HTTP 埠
         ja: HTTP ポート
         ko: HTTP 포트
@@ -27,6 +28,7 @@ additionalProperties:
         en: HTTPS Port
         zh: HTTPS 端口
         es-es: Puerto HTTPS
+        fa: 'پورت HTTPS'
         zh-Hant: HTTPS 連接埠
         ja: HTTPSポート
         ko: HTTPS 포트
@@ -45,6 +47,7 @@ additionalProperties:
         en: Port
         zh: 面板端口
         es-es: Puerto
+        fa: 'پورت'
         zh-Hant: 埠
         ja: ポート
         ko: 포트

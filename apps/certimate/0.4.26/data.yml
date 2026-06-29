@@ -9,6 +9,7 @@ additionalProperties:
             en: WebUI Port
             zh: 网页端口
             es-es: Puerto web
+            fa: 'پورت WebUI'
             zh-Hant: WebUI 埠
             ja: WebUI ポート
             ko: WebUI 포트
@@ -28,6 +29,7 @@ additionalProperties:
             en: HTTP_PROXY (e.g., http://<URL_ADDRESS>:<Port>)
             zh: HTTP_PROXY (例如：http://<URL_ADDRESS>:<Port>)
             es-es: HTTP_PROXY (e.g., http://<URL_ADDRESS>:<Puerto>)
+            fa: 'HTTP_PROXY (مثلا http://<URL_ADDRESS>:<Port>)'
             zh-Hant: HTTP_PROXY（例如：http://<URL_ADDRESS>:<Port>）
             ja: HTTP_PROXY（例：http://<URL_ADDRESS>:<Port>）
             ko: HTTP_PROXY (예：http://<URL_ADDRESS>:<Port>)
@@ -47,6 +49,7 @@ additionalProperties:
             en: HTTPS_PROXY (e.g., http://<URL_ADDRESS>:<Port>)
             zh: HTTPS_PROXY (例如：http://<URL_ADDRESS>:<Port>)
             es-es: HTTPS_PROXY (e.g., http://<URL_ADDRESS>:<Puerto>)
+            fa: 'HTTPS_PROXY (مثلا http://<URL_ADDRESS>:<Port>)'
             zh-Hant: HTTPS_PROXY（例如：http://<URL_ADDRESS>:<Port>）
             ja: HTTPS_PROXY（例：http://<URL_ADDRESS>:<Port>）
             ko: HTTPS_PROXY (예：http://<URL_ADDRESS>:<Port>)
@@ -66,6 +69,7 @@ additionalProperties:
             en: NO_PROXY (e.g., 172.18.0.0/16,127.0.0.1,localhost)
             zh: NO_PROXY (例如：172.18.0.0/16,127.0.0.1,localhost)
             es-es: NO_PROXY (p. ej., 172.18.0.0/16,127.0.0.1,localhost)
+            fa: 'NO_PROXY (مثلا 172.18.0.0/16,127.0.0.1,localhost)'
             zh-Hant: NO_PROXY（例如：172.18.0.0/16,127.0.0.1,localhost）
             ja: NO_PROXY（例：172.18.0.0/16,127.0.0.1,localhost）
             ko: NO_PROXY (예：172.18.0.0/16,127.0.0.1,localhost)

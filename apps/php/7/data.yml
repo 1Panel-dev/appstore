@@ -7,6 +7,7 @@ additionalProperties:
             en: Extensions
             zh: 默认扩展
             es-es: Extensiones
+            fa: 'افزونه ها'
             zh-Hant: 擴充套件
             ja: 拡張機能
             ko: 확장 기능
@@ -87,6 +88,7 @@ additionalProperties:
             en: PHP Version
             zh: PHP 版本
             es-es: Versión de PHP
+            fa: 'نسخه PHP'
             zh-Hant: PHP 版本
             ja: PHP バージョン
             ko: PHP 버전
@@ -115,6 +117,7 @@ additionalProperties:
             en: Package Source
             zh: 扩展源
             es-es: Origen del paquete
+            fa: 'منبع بسته'
             zh-Hant: 套件來源
             ja: パッケージソース
             ko: 패키지 소스
@@ -135,6 +138,7 @@ additionalProperties:
             en: PHP-FPM Port
             zh: PHP-FPM 端口
             es-es: PHP-FPM Puerto
+            fa: 'پورت PHP-FPM'
             zh-Hant: PHP-FPM 埠
             ja: PHP-FPM ポート
             ko: PHP-FPM 포트

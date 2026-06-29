@@ -8,6 +8,7 @@ additionalProperties:
             en: Password
             zh: 密码
             es-es: Contraseña
+            fa: 'رمز عبور'
             zh-Hant: 用戶密碼
             ja: パスワード
             ko: 비밀번호
@@ -27,6 +28,7 @@ additionalProperties:
             en: Port
             zh: 端口
             es-es: Puerto
+            fa: 'پورت'
             zh-Hant: 埠
             ja: ポート
             ko: 포트
@@ -45,6 +47,7 @@ additionalProperties:
             en: Chip architecture
             zh: 芯片架构
             es-es: Arquitectura del chip
+            fa: 'معماری تراشه'
             zh-Hant: 晶片架構
             ja: チップアーキテクチャ
             ko: 칩 아키텍처

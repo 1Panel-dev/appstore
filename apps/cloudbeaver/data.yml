@@ -22,6 +22,7 @@ additionalProperties:
     description:
         en: Cloud Database Manager
         es-es: Administrador de bases de datos en la nube
+        fa: 'مدیر پایگاه داده ابری'
         zh: 云数据库管理器
         zh-Hant: 雲數據庫管理器
         ja: クラウドデータベースマネージャー

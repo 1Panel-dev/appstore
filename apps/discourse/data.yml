@@ -20,6 +20,7 @@ additionalProperties:
     description:
         en: A platform for community discussion. Free, open, simple.
         es-es: Un plataforma for community discussion. Free, open, simple.
+        fa: 'پلتفرمی برای گفت وگوی جامعه؛ رایگان، باز و ساده.'
         zh: 社区讨论的平台。免费、开放、简单。
         zh-Hant: 社區討論的平台。免費、開放、簡單。
         ja: コミュニティディスカッションのためのプラットフォーム。無料、オープン、シンプル。

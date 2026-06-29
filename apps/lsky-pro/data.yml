@@ -14,6 +14,7 @@ additionalProperties:
     en: An image bed program for uploading and managing images online
     zh: 用于在线上传、管理图片的图床程序
     es-es: Un image bed program for uploading and managing images online
+    fa: 'برنامه میزبانی تصویر برای بارگذاری و مدیریت آنلاین تصاویر'
     zh-Hant: 用於線上上傳與管理圖片的圖床程式
     ja: 画像のオンラインアップロードと管理のための画像ホスティングプログラム
     ko: 이미지를 온라인으로 업로드하고 관리하는 이미지 호스팅 프로그램

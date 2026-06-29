@@ -8,6 +8,7 @@ additionalProperties:
           label:
             en: Port
             es-es: Puerto
+            fa: 'پورت'
             ja: ポート
             ms: Port
             pt-br: Porta
@@ -27,6 +28,7 @@ additionalProperties:
           label:
             en: SSH Port
             es-es: Puerto SSH
+            fa: 'پورت SSH'
             ja: SSH ポート
             ms: Port SSH
             pt-br: Porta SSH

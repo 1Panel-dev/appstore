@@ -21,6 +21,7 @@ additionalProperties:
     description:
         en: Open-source Matrix homeserver, build your own chat server
         es-es: Open-source Matrix homeservidor, build your own chat servidor
+        fa: 'Homeserver متن باز Matrix برای ساخت سرور چت خودتان'
         zh: 开源的 Matrix 家庭服务器，自建聊天服务器
         zh-Hant: 開源的 Matrix 家庭伺服器，自建聊天伺服器
         ja: オープンソースの Matrix ホームサーバー、自分のチャットサーバーを構築

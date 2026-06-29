@@ -7,6 +7,7 @@ additionalProperties:
       label:
         en: LDAP baseDN
         es-es: baseDN de LDAP
+        fa: 'baseDN در LDAP'
         ja: LDAP ベースDN
         ms: LDAP baseDN
         pt-br: LDAP baseDN
@@ -25,6 +26,7 @@ additionalProperties:
       label:
         en: LDAP admin username
         es-es: Nombre de usuario del administrador LDAP
+        fa: 'نام کاربری مدیر LDAP'
         ja: LDAP 管理者ユーザー名
         ms: Nama pengguna admin LDAP
         pt-br: Nome de usuário admin LDAP
@@ -44,6 +46,7 @@ additionalProperties:
       label:
         en: LDAP admin password
         es-es: Contraseña del administrador LDAP
+        fa: 'رمز عبور مدیر LDAP'
         ja: LDAP 管理者パスワード
         ms: Kata laluan admin LDAP
         pt-br: Senha do admin LDAP
@@ -64,6 +67,7 @@ additionalProperties:
       label:
         en: LDAP listening port
         es-es: Puerto de escucha LDAP
+        fa: 'پورت LDAP listening'
         ja: LDAP リスニングポート
         ms: Port pendengaran LDAP
         pt-br: Porta de escuta LDAP

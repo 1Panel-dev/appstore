@@ -21,6 +21,7 @@ additionalProperties:
   description:
     en: Low-code programming for event-driven applications
     es-es: Low-code programming for event-driven aplicacións
+    fa: 'برنامه نویسی Low-code برای برنامه های رویدادمحور'
     zh: 用于事件驱动应用的低代码编程
     zh-Hant: 用於事件驅動應用的低代碼編程
     ja: イベント駆動型アプリケーションのためのローコードプログラミング

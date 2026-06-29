@@ -14,6 +14,7 @@ additionalProperties:
     en: Scheduled Task Management Platform
     zh: 定时任务管理平台
     es-es: Plataforma de gestión de tareas programadas
+    fa: 'پلتفرم مدیریت وظایف زمان بندی شده'
     zh-Hant: 定時任務管理平台
     ja: スケジュールタスク管理プラットフォーム
     ko: 예약 작업 관리 플랫폼

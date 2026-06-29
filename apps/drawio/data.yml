@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: JavaScript, client-side editor for general diagramming
         es-es: JavaScript, cliente-side editor for general diagramming
+        fa: 'ویرایشگر سمت کلاینت JavaScript برای رسم نمودارهای عمومی'
         ja: JavaScript、一般的なダイアグラム作成のためのクライアントサイドエディタ
         ms: JavaScript, penyunting sisi-klien untuk diagram am
         pt-br: JavaScript, editor do lado do cliente para diagramas gerais

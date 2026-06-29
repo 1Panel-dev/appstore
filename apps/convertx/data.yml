@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: Self-hosted online file converter
         es-es: Convertidor de archivos en línea autoalojado
+        fa: 'تبدیل کننده آنلاین فایل به صورت خودمیزبان'
         ja: 自己ホスト型オンラインファイルコンバーター
         ms: Penukar fail dalam talian yang dihoskan sendiri
         pt-br: Conversor de arquivos online auto-hospedado

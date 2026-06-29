@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: Node Runtime Environment
     es-es: Entorno de ejecución de Node.js
+    fa: 'محیط اجرای Node'
     ja: Node 実行環境
     ms: Persekitaran Larian Node
     pt-br: Ambiente de Execução Node

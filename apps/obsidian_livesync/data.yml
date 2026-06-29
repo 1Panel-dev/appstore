@@ -21,6 +21,7 @@ additionalProperties:
   description:
     en: Obsidian Self-hosted LiveSync
     es-es: LiveSync autoalojado de Obsidian
+    fa: 'LiveSync خودمیزبان Obsidian'
     zh: Obsidian 自托管实时同步
     zh-Hant: Obsidian 自託管實時同步
     ja: Obsidian 自己ホスト型ライブ同期

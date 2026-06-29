@@ -7,6 +7,7 @@ additionalProperties:
       label:
         en: Web Port
         es-es: Puerto web
+        fa: 'پورت وب'
         ja: ウェブポート
         ms: Port Web
         pt-br: Porta Web
@@ -26,6 +27,7 @@ additionalProperties:
       label:
         en: Database Service
         es-es: Servicio de base de datos
+        fa: 'سرویس پایگاه داده'
         ja: データベースサービス
         ms: Perkhidmatan Pangkalan Data
         pt-br: Serviço de Banco de Dados
@@ -43,6 +45,7 @@ additionalProperties:
       label:
         en: Database
         es-es: Base de datos
+        fa: 'پایگاه داده'
         ja: データベース
         ms: Pangkalan Data
         pt-br: Banco de Dados
@@ -62,6 +65,7 @@ additionalProperties:
       label:
         en: User
         es-es: Usuario
+        fa: 'کاربر'
         ja: ユーザー
         ms: Pengguna
         pt-br: Usuário
@@ -81,6 +85,7 @@ additionalProperties:
       label:
         en: Password
         es-es: Contraseña
+        fa: 'رمز عبور'
         ja: パスワード
         ms: Kata laluan
         pt-br: Senha
@@ -100,6 +105,7 @@ additionalProperties:
       label:
         en: Redis Service
         es-es: Servicio de Redis
+        fa: 'سرویس Redis'
         ja: Redisサービス
         ms: Perkhidmatan Redis
         pt-br: Serviço Redis
@@ -118,6 +124,7 @@ additionalProperties:
       label:
         en: Password
         es-es: Contraseña
+        fa: 'رمز عبور'
         ja: パスワード
         ms: Kata laluan
         pt-br: Senha
@@ -136,6 +143,7 @@ additionalProperties:
       label:
         en: App Secret
         es-es: Secreto de la aplicación
+        fa: 'رمز محرمانه برنامه'
         ja: アプリの秘密
         ms: Rahsia Aplikasi
         pt-br: Chave do Aplicativo
@@ -154,6 +162,7 @@ additionalProperties:
       label:
         en: Service Address (Default Server IP)
         es-es: Servicio Dirección (Default Server IP)
+        fa: 'آدرس سرویس (IP پیش فرض سرور)'
         ja: サービスアドレス（デフォルトサーバーIP）
         ms: Alamat Perkhidmatan (IP Pelayan Lalai)
         pt-br: Serviço de Endereço (IP do Servidor Padrão)

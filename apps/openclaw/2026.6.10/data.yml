@@ -11,6 +11,7 @@ additionalProperties:
       label:
         en: Web UI Port
         es-es: Puerto web
+        fa: 'پورت رابط وب'
         ja: Web UIポート
         ms: Port Web UI
         pt-br: Porta da Web UI
@@ -60,6 +61,7 @@ additionalProperties:
       label:
         en: Provider
         es-es: Proveedor
+        fa: 'ارائه دهنده'
         ja: プロバイダー
         ms: Penyedia
         pt-br: Provedor
@@ -78,6 +80,7 @@ additionalProperties:
       label:
         en: Model
         es-es: Modelo
+        fa: 'مدل'
         ja: モデル
         ms: Model
         pt-br: Modelo
@@ -96,6 +99,7 @@ additionalProperties:
       label:
         en: API Key
         es-es: API Clave
+        fa: 'کلید API'
         ja: APIキー
         ms: Kunci API
         pt-br: Chave da API
@@ -114,6 +118,7 @@ additionalProperties:
       label:
         en: Base URL
         es-es: URL base
+        fa: 'URL پایه'
         ja: Base URL
         ms: Base URL
         pt-br: Base URL
@@ -142,6 +147,7 @@ additionalProperties:
       label:
         en: External Access Address
         es-es: External Access Dirección
+        fa: 'آدرس دسترسی خارجی'
         ja: 外部アクセスアドレス
         ms: Alamat Akses Luaran
         pt-br: Endereço de Acesso Externo
@@ -169,6 +175,7 @@ additionalProperties:
       label:
         en: Token
         es-es: Token de acceso
+        fa: 'توکن'
         ja: トークン
         ms: Token
         pt-br: Token

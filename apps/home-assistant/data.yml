@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: Open source home automation that puts local control and privacy first
         es-es: De código abierto home automation that puts local control and privacy first
+        fa: 'اتوماسیون خانگی متن باز با اولویت کنترل محلی و حریم خصوصی'
         ja: ローカルコントロールとプライバシーを重視するオープンソースのホームオートメーション
         ms: Automasi rumah sumber terbuka yang mengutamakan kawalan tempatan dan privasi
         pt-br: Automação residencial de código aberto que prioriza o controle local e a privacidade

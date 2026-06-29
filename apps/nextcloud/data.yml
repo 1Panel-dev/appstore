@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: Nextcloud server, a safe home for all your data
         es-es: Nextcloud servidor, a safe home for all your data
+        fa: 'سرور Nextcloud؛ خانه ای امن برای همه داده های شما'
         ja: Nextcloud サーバー、あなたのすべてのデータの安全な保管場所
         ms: Pelayan Nextcloud, rumah yang selamat untuk semua data anda
         pt-br: Servidor Nextcloud, um lar seguro para todos os seus dados

@@ -10,6 +10,7 @@ additionalProperties:
           label:
             en: Docker Binary
             es-es: Binario de Docker
+            fa: 'فایل اجرایی Docker'
             ja: Docker バイナリ
             ms: Binari Docker
             pt-br: Binário Docker
@@ -29,6 +30,7 @@ additionalProperties:
           label:
             en: Port
             es-es: Puerto
+            fa: 'پورت'
             ja: ポート
             ms: Port
             pt-br: Porta

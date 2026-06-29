@@ -8,6 +8,7 @@ additionalProperties:
       label:
         en: Web Port
         es-es: Puerto web
+        fa: 'پورت وب'
         ja: ウェブポート
         ms: Port Web
         pt-br: Porta da Web
@@ -27,6 +28,7 @@ additionalProperties:
       label:
         en: SFTP Port
         es-es: SFTP Puerto
+        fa: 'پورت SFTP'
         ja: SFTP ポート
         ms: Port SFTP
         pt-br: Porta SFTP
@@ -46,6 +48,7 @@ additionalProperties:
       label:
         en: FTP Port
         es-es: FTP Puerto
+        fa: 'پورت FTP'
         ja: FTP ポート
         ms: Port FTP
         pt-br: Porta FTP
@@ -65,6 +68,7 @@ additionalProperties:
       label:
         en: FTP Passive Mod Start Port
         es-es: FTP Passive Mod Start Puerto
+        fa: 'پورت FTP Passive Mod Start'
         ja: FTPパッシブモード開始ポート
         ms: Port Mula Mod Pasif FTP
         pt-br: Porta de Início do Modo Passivo FTP
@@ -84,6 +88,7 @@ additionalProperties:
       label:
         en: FTP Passive Mod End Port (Greater than the starting port)
         es-es: FTP Passive Mod End Puerto (Greater than the starting port)
+        fa: 'پورت پایان حالت Passive در FTP (باید بزرگ تر از پورت شروع باشد)'
         ja: FTPパッシブモード終了ポート（開始ポートより大きい）
         ms: Port Tamat Mod Pasif FTP (Lebih besar daripada port permulaan)
         pt-br: Porta Final do Modo Passivo FTP (Maior que a porta inicial)
@@ -103,6 +108,7 @@ additionalProperties:
       label:
         en: FTP External Ip (must change item)
         es-es: IP externa de FTP (debe modificarse)
+        fa: 'IP خارجی FTP (باید تغییر کند)'
         ja: FTP 外部 IP（変更必須項目）
         ms: FTP IP Luaran (item mesti diubah)
         pt-br: IP Externo do FTP (item obrigatório a ser alterado)
@@ -122,6 +128,7 @@ additionalProperties:
       label:
         en: WebDAV Port
         es-es: WebDAV Puerto
+        fa: 'پورت WebDAV'
         ja: WebDAV ポート
         ms: Port WebDAV
         pt-br: Porta WebDAV

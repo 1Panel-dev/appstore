@@ -14,6 +14,7 @@ additionalProperties:
       en: High-performance reverse proxy application focused on intranet penetration
       zh: 专注于内网穿透的高性能反向代理应用
       es-es: High-performance reverse proxy aplicación focused on intranet penetration
+      fa: 'برنامه پروکسی معکوس پرکارایی با تمرکز بر دسترسی تونلی به شبکه داخلی'
       zh-Hant: 專注於內網穿透的高效能反向代理應用
       ja: イントラネット貫通に特化した高性能リバースプロキシアプリケーション
       ko: 인트라넷 관통에 중점을 둔 고성능 리버스 프록시 애플리케이션

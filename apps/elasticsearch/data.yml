@@ -21,6 +21,7 @@ additionalProperties:
     description:
         en: Free and Open, Distributed, RESTful Search Engine
         es-es: Motor de búsqueda distribuido, RESTful, libre y abierto
+        fa: 'موتور جستجوی RESTful، توزیع شده، آزاد و متن باز'
         zh: 免费开放、分布式、RESTful 搜索引擎
         zh-Hant: 免費開放、分佈式、RESTful 搜索引擎
         ja: 無料でオープン、分散型、RESTful 検索エンジン

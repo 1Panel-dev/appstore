@@ -10,6 +10,7 @@ additionalProperties:
       label:
         en: Web Port
         es-es: Puerto web
+        fa: 'پورت وب'
         ja: ウェブポート
         ms: Port Web
         pt-br: Porta Web
@@ -28,6 +29,7 @@ additionalProperties:
       label:
         en: PostgreSQL Database Service
         es-es: Servicio de base de datos PostgreSQL
+        fa: 'سرویس پایگاه داده PostgreSQL'
         ja: PostgreSQLデータベースサービス
         ms: Perkhidmatan Pangkalan Data PostgreSQL
         pt-br: Serviço de Banco de Dados PostgreSQL
@@ -47,6 +49,7 @@ additionalProperties:
       label:
         en: Database
         es-es: Base de datos
+        fa: 'پایگاه داده'
         ja: データベース
         ms: Pangkalan Data
         pt-br: Banco de Dados
@@ -66,6 +69,7 @@ additionalProperties:
       label:
         en: User
         es-es: Usuario
+        fa: 'کاربر'
         ja: ユーザー
         ms: Pengguna
         pt-br: Usuário
@@ -84,6 +88,7 @@ additionalProperties:
       label:
         en: Password
         es-es: Contraseña
+        fa: 'رمز عبور'
         ja: パスワード
         ms: Kata laluan
         pt-br: Senha
@@ -102,6 +107,7 @@ additionalProperties:
       label:
         en: Redis Service
         es-es: Servicio de Redis
+        fa: 'سرویس Redis'
         ja: Redisサービス
         ms: Perkhidmatan Redis
         pt-br: Serviço Redis
@@ -119,6 +125,7 @@ additionalProperties:
       label:
         en: Password
         es-es: Contraseña
+        fa: 'رمز عبور'
         ja: パスワード
         ms: Kata laluan
         pt-br: Senha

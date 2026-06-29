@@ -8,6 +8,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -27,6 +28,7 @@ additionalProperties:
       label:
         en: Admin Email
         es-es: Correo del administrador
+        fa: 'ایمیل مدیر'
         ja: 管理者のメール
         ms: Emel Pentadbir
         pt-br: E-mail do Administrador
@@ -45,6 +47,7 @@ additionalProperties:
       label:
         en: Admin Password
         es-es: Contraseña del administrador
+        fa: 'رمز عبور مدیر'
         ja: 管理者パスワード
         ms: Kata Laluan Admin
         pt-br: Senha de Administrador

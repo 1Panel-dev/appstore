@@ -7,6 +7,7 @@ additionalProperties:
       label:
         en: Database Password
         es-es: Contraseña de la base de datos
+        fa: 'رمز عبور پایگاه داده'
         ja: データベースのパスワード
         ms: Kata Laluan Pangkalan Data
         pt-br: Senha do Banco de Dados
@@ -25,6 +26,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -43,6 +45,7 @@ additionalProperties:
       label:
         en: Master Host
         es-es: Host maestro
+        fa: 'میزبان Master'
         ja: マスターホスト
         ms: Host Utama
         pt-br: Host Mestre
@@ -58,6 +61,7 @@ additionalProperties:
       label:
         en: Master Port
         es-es: Master Puerto
+        fa: 'پورت Master'
         ja: マスターポート
         ms: Port Utama
         pt-br: Porta Mestre
@@ -74,6 +78,7 @@ additionalProperties:
       label:
         en: Master Root Password
         es-es: Master Contraseña de root
+        fa: 'رمز عبور root در Master'
         ja: マスタールートパスワード
         ms: Kata Laluan Root Utama
         pt-br: Senha Root Mestre

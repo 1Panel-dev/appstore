@@ -8,6 +8,7 @@ additionalProperties:
       label:
         en: WebUI Port
         es-es: Puerto web
+        fa: 'پورت WebUI'
         ja: WebUI ポート
         ms: Port WebUI
         pt-br: Porta WebUI
@@ -27,6 +28,7 @@ additionalProperties:
       label:
         en: Torrenting port
         es-es: Puerto de torrents
+        fa: 'پورت تورنت'
         ja: トレントポート
         ms: Port Torrenting
         pt-br: Porta de Torrenting
@@ -45,6 +47,7 @@ additionalProperties:
       label:
         en: Time zone
         es-es: Zona horaria
+        fa: 'منطقه زمانی'
         ja: タイムゾーン
         ms: Zon Masa
         pt-br: Fuso Horário

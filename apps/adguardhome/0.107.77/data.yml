@@ -11,6 +11,7 @@ additionalProperties:
           label:
             en: HTTP Web Port
             es-es: Puerto web HTTP
+            fa: 'پورت وب HTTP'
             ja: HTTP ウェブポート
             ms: Port Web HTTP
             pt-br: Porta Web HTTP
@@ -30,6 +31,7 @@ additionalProperties:
           label:
             en: Initial Setup Web Port
             es-es: Puerto web de configuración inicial
+            fa: 'پورت وب راه اندازی اولیه'
             ja: 初期設定ウェブポート
             ms: Port Web Persediaan Awal
             pt-br: Porta Web de Configuração Inicial
@@ -49,6 +51,7 @@ additionalProperties:
           label:
             en: Standard DNS Port
             es-es: Standard DNS Puerto
+            fa: 'پورت استاندارد DNS'
             ja: 標準DNSポート
             ms: Port DNS Standard
             pt-br: Porta DNS Padrão
@@ -68,6 +71,7 @@ additionalProperties:
           label:
             en: DHCP Service Port 1
             es-es: DHCP Servicio Puerto 1
+            fa: 'پورت سرویس DHCP 1'
             ja: DHCP サービスポート 1
             ms: Port Perkhidmatan DHCP 1
             pt-br: Port de Serviço DHCP 1
@@ -87,6 +91,7 @@ additionalProperties:
           label:
             en: DHCP Service Port 2
             es-es: DHCP Servicio Puerto 2
+            fa: 'پورت سرویس DHCP 2'
             ja: DHCP サービスポート 2
             ms: Port Perkhidmatan DHCP 2
             pt-br: Port de Serviço DHCP 2
@@ -106,6 +111,7 @@ additionalProperties:
           label:
             en: DOH Service Port
             es-es: DOH Servicio Puerto
+            fa: 'پورت سرویس DoH'
             ja: DOH サービスポート
             ms: Port Perkhidmatan DOH
             pt-br: Porta de Serviço DOH
@@ -125,6 +131,7 @@ additionalProperties:
           label:
             en: DOT Service Port
             es-es: DOT Servicio Puerto
+            fa: 'پورت سرویس DoT'
             ja: DOT サービスポート
             ms: Port Perkhidmatan DOT
             pt-br: Porta de Serviço DOT
@@ -144,6 +151,7 @@ additionalProperties:
           label:
             en: QUIC Service Port 1
             es-es: QUIC Servicio Puerto 1
+            fa: 'پورت سرویس QUIC 1'
             ja: QUIC サービスポート 1
             ms: Port Perkhidmatan QUIC 1
             pt-br: Porta de Serviço QUIC 1
@@ -163,6 +171,7 @@ additionalProperties:
           label:
             en: QUIC Service Port 2
             es-es: QUIC Servicio Puerto 2
+            fa: 'پورت سرویس QUIC 2'
             ja: QUIC サービスポート 2
             ms: Port Perkhidmatan QUIC 2
             pt-br: Porta de Serviço QUIC 2
@@ -182,6 +191,7 @@ additionalProperties:
           label:
             en: DNS Crypt Service Port
             es-es: DNS Crypt Servicio Puerto
+            fa: 'پورت سرویس DNSCrypt'
             ja: DNS Crypt サービスポート
             ms: Port Perkhidmatan DNS Crypt
             pt-br: Porta de Serviço DNS Crypt

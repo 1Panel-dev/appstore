@@ -14,6 +14,7 @@ additionalProperties:
   description:
     en: A chatbot that supports mainstream large language models and major chat platforms
     es-es: Un chatbot that supports mainstream large language models and major chat plataformas
+    fa: 'چت باتی با پشتیبانی از مدل های زبانی بزرگ رایج و پلتفرم های اصلی چت'
     ja: 主流の大規模言語モデルと主要なチャットプラットフォームをサポートするチャットボット
     ms: Chatbot yang menyokong model bahasa besar arus perdana dan platform sembang utama
     pt-br: Um chatbot que suporta grandes modelos de linguagem e principais plataformas de chat

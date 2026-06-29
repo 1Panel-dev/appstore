@@ -11,6 +11,7 @@ additionalProperties:
       label:
         en: WebUI Port
         es-es: Puerto web
+        fa: 'پورت WebUI'
         ja: WebUI ポート
         ms: Port WebUI
         pt-br: Porta WebUI
@@ -30,6 +31,7 @@ additionalProperties:
       label:
         en: Weixin Official Account Platform Port
         es-es: Weixin Official Account Platform Puerto
+        fa: 'پورت پلتفرم حساب رسمی Weixin'
         ja: Weixin 公式アカウントポート
         ms: Port Platform Akaun Rasmi Weixin
         pt-br: Porta da Plataforma de Conta Oficial Weixin
@@ -49,6 +51,7 @@ additionalProperties:
       label:
         en: WeCom Port
         es-es: WeCom Puerto
+        fa: 'پورت WeCom'
         ja: WeCom ポート
         ms: Port WeCom
         pt-br: Porta WeCom
@@ -68,6 +71,7 @@ additionalProperties:
       label:
         en: QQ Official Bot Port (Webhook)
         es-es: QQ Official Bot Puerto (Webhook)
+        fa: 'پورت بات رسمی QQ (Webhook)'
         ja: QQ公式ボットポート (Webhook)
         ms: Port Bot Rasmi QQ (Webhook)
         pt-br: Porta do Bot Oficial QQ (Webhook)
@@ -87,6 +91,7 @@ additionalProperties:
       label:
         en: QQ Personal Port (aiocqhttp)
         es-es: QQ Personal Puerto (aiocqhttp)
+        fa: 'پورت QQ شخصی (aiocqhttp)'
         ja: QQ個人用ポート (aiocqhttp)
         ms: Port QQ Peribadi (aiocqhttp)
         pt-br: Porta QQ Pessoal (aiocqhttp)
@@ -106,6 +111,7 @@ additionalProperties:
       label:
         en: WeChat Personal Port (Gewechat)
         es-es: WeChat Personal Puerto (Gewechat)
+        fa: 'پورت WeChat شخصی (Gewechat)'
         ja: 微信個人用ポート (Gewechat)
         ms: Port WeChat Peribadi (Gewechat)
         pt-br: Porta WeChat Pessoal (Gewechat)
@@ -122,6 +128,7 @@ additionalProperties:
       label:
         en: Time zone
         es-es: Zona horaria
+        fa: 'منطقه زمانی'
         ja: タイムゾーン
         ms: Zon masa
         pt-br: Fuso horário

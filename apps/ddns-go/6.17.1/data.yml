@@ -9,6 +9,7 @@ additionalProperties:
         en: WebUI Port
         zh: 网页端口
         es-es: Puerto web
+        fa: 'پورت WebUI'
         zh-Hant: WebUI 埠
         ja: WebUI ポート
         ko: WebUI 포트

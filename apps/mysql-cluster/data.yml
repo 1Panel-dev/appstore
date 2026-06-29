@@ -11,6 +11,7 @@ additionalProperties:
     description:
         en: MySQL Master-Multiple-Slave Deployment
         es-es: Implementación MySQL maestro-múltiples esclavos
+        fa: 'استقرار MySQL با یک Master و چند Slave'
         ja: MySQL マスター複数スレーブデプロイ
         ms: Penyebaran MySQL Master-Berbilang-Slave
         pt-br: Implantação MySQL Mestre-Multiplos-Escravos

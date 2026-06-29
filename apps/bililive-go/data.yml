@@ -14,6 +14,7 @@ additionalProperties:
       en: A live recording tool that supports multiple live streaming platforms
       zh: 支持多种直播平台的直播录制工具
       es-es: Un live recording herramienta that supports multiple live streaming plataformas
+      fa: 'ابزار ضبط زنده با پشتیبانی از چند پلتفرم پخش زنده'
       zh-Hant: 支援多個直播平台的直播錄製工具
       ja: 複数のライブ配信プラットフォームに対応した録画ツール
       ko: 여러 라이브 스트리밍 플랫폼을 지원하는 녹화 도구

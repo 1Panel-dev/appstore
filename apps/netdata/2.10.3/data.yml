@@ -8,6 +8,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -27,6 +28,7 @@ additionalProperties:
       label:
         en: Hostname
         es-es: Nombre del host
+        fa: 'نام میزبان'
         ja: ホスト名
         ms: Nama hos
         pt-br: Nome do host
@@ -45,6 +47,7 @@ additionalProperties:
       label:
         en: Docker Socket Path
         es-es: Ruta del socket de Docker
+        fa: 'مسیر Socket داکر'
         ja: Docker ソケットパス
         ms: Laluan soket Docker
         pt-br: Caminho do socket do Docker

@@ -8,6 +8,7 @@ additionalProperties:
           label:
             en: HTTP Port
             es-es: Puerto HTTP
+            fa: 'پورت HTTP'
             ja: HTTPポート
             ms: Port HTTP
             pt-br: Porta HTTP
@@ -27,6 +28,7 @@ additionalProperties:
           label:
             en: HTTPS Port
             es-es: Puerto HTTPS
+            fa: 'پورت HTTPS'
             ja: HTTPSポート
             ms: Port HTTPS
             pt-br: Porta HTTPS
@@ -46,6 +48,7 @@ additionalProperties:
           label:
             en: Console Port
             es-es: Console Puerto
+            fa: 'پورت کنسول'
             ja: コンソールポート
             ms: Port Konsol
             pt-br: Porta do Console
@@ -65,6 +68,7 @@ additionalProperties:
           label:
             en: Time zone
             es-es: Zona horaria
+            fa: 'منطقه زمانی'
             ja: タイムゾーン
             ms: Zon masa
             pt-br: Fuso horário

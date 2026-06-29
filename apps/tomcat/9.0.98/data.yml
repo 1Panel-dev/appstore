@@ -7,6 +7,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -25,6 +26,7 @@ additionalProperties:
       label:
         en: Tomcat Password
         es-es: Tomcat Contraseña
+        fa: 'رمز عبور Tomcat'
         ja: Tomcat パスワード
         ms: Kata Laluan Tomcat
         pt-br: Senha do Tomcat

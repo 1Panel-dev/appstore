@@ -7,6 +7,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -26,6 +27,7 @@ additionalProperties:
       label:
         en: SA PASSWORD
         es-es: Contraseña de SA
+        fa: 'رمز عبور SA'
         ja: SA パスワード
         ms: Kata Laluan SA
         pt-br: SENHA SA

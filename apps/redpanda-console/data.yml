@@ -21,6 +21,7 @@ additionalProperties:
     description:
         en: Redpanda Console – A UI for Data Streaming
         es-es: "Redpanda Console: una interfaz para streaming de datos"
+        fa: 'Redpanda Console؛ رابط کاربری برای استریم داده'
         zh: Redpanda Console – 数据流的用户界面
         zh-Hant: Redpanda Console – 數據流的用戶界面
         ja: Redpanda Console – データストリーミングのためのUI

@@ -8,6 +8,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -26,6 +27,7 @@ additionalProperties:
       label:
         en: Master Key
         es-es: Master Clave
+        fa: 'کلید Master'
         ja: マスターキー
         ms: Kunci induk
         pt-br: Chave mestra
@@ -47,6 +49,7 @@ additionalProperties:
       label:
         en: External URL
         es-es: URL externa
+        fa: 'URL خارجی'
         ja: 外部アクセスアドレス
         ms: Alamat akses luaran
         pt-br: Endereço de acesso externo
@@ -65,6 +68,7 @@ additionalProperties:
       label:
         en: Hosting platform
         es-es: Plataforma de alojamiento
+        fa: 'پلتفرم میزبانی'
         ja: ホスティングプラットフォーム
         ms: Platform hosting
         pt-br: Plataforma de hospedagem
@@ -94,6 +98,7 @@ additionalProperties:
       label:
         en: Hosting server address
         es-es: Dirección del servidor de alojamiento
+        fa: 'آدرس سرور میزبان'
         ja: ホストサーバーのアドレス
         ms: Alamat pelayan yang dihoskan
         pt-br: Endereço do servidor hospedado
@@ -113,6 +118,7 @@ additionalProperties:
       label:
         en: Client ID
         es-es: ID de cliente
+        fa: 'شناسه کلاینت'
         ja: クライアントID
         ms: ID Klien
         pt-br: ID do cliente
@@ -132,6 +138,7 @@ additionalProperties:
       label:
         en: Client secret
         es-es: Secreto del cliente
+        fa: 'رمز محرمانه کلاینت'
         ja: クライアントキー
         ms: Klien Utama
         pt-br: Chave do cliente

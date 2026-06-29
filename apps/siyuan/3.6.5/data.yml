@@ -9,6 +9,7 @@ additionalProperties:
         en: Port
         zh: 端口
         es-es: Puerto
+        fa: 'پورت'
         zh-Hant: 埠
         ja: ポート
         ko: 포트
@@ -27,6 +28,7 @@ additionalProperties:
         en: Access Authorization Code
         zh: 访问授权码
         es-es: Código de autorización de acceso
+        fa: 'کد مجوز دسترسی'
         zh-Hant: 存取授權碼
         ja: アクセス認証コード
         ko: 접근 인증 코드
@@ -47,6 +49,7 @@ additionalProperties:
         en: Time zone
         zh: 时区
         es-es: Zona horaria
+        fa: 'منطقه زمانی'
         zh-Hant: 時區
         ja: タイムゾーン
         ko: 시간대

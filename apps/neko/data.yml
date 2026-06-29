@@ -24,6 +24,7 @@ additionalProperties:
   description:
     en: Self hosted virtual browser that runs in docker and uses WebRTC
     es-es: Navegador virtual autoalojado que se ejecuta en Docker y usa WebRTC
+    fa: 'مرورگر مجازی خودمیزبان که در Docker اجرا می شود و از WebRTC استفاده می کند'
     ja: Docker で実行され、WebRTC を使用するセルフホスト型仮想ブラウザ
     ms: Pelayar maya hos sendiri yang berjalan dalam docker dan menggunakan WebRTC
     pt-br: Navegador virtual auto-hospedado que é executado no docker e usa WebRTC

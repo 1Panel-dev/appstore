@@ -9,6 +9,7 @@ additionalProperties:
         en: Port
         zh: 端口
         es-es: Puerto
+        fa: 'پورت'
         zh-Hant: 埠
         ja: ポート
         ko: 포트
@@ -28,6 +29,7 @@ additionalProperties:
         en: Time zone
         zh: 时区
         es-es: Zona horaria
+        fa: 'منطقه زمانی'
         zh-Hant: 時區
         ja: タイムゾーン
         ko: 시간대

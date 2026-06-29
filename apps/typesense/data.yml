@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: Lightning-fast, open-source search engine
         es-es: Lightning-fast, open-source motor de búsqueda
+        fa: 'موتور جستجوی متن باز و بسیار سریع'
         ja: 高速でオープンソースの検索エンジン
         ms: Enjin carian sumber terbuka yang sangat pantas
         pt-br: Motor de busca de código aberto extremamente rápido

@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: Palworld Dedicated Server
         es-es: Servidor dedicado de Palworld
+        fa: 'سرور اختصاصی Palworld'
         ja: Palworld 専用サーバー
         ms: Pelayan Dedikasi Palworld
         pt-br: Servidor dedicado Palworld

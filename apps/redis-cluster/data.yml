@@ -11,6 +11,7 @@ additionalProperties:
     description:
         en: Redis Cluster
         es-es: Clúster de Redis
+        fa: 'کلاستر Redis'
         ja: Redis クラスター
         ms: Redis Kumpulan
         pt-br: Redis Cluster

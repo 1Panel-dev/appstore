@@ -14,6 +14,7 @@ additionalProperties:
     en: Unified configuration and management of flow control and circuit breaker degradation rules
     zh: 流量控制、熔断降级规则统一配置和管理的入口
     es-es: Unified configuration and gestión of flow control and circuit breaker degradation rules
+    fa: 'پیکربندی و مدیریت یکپارچه قوانین کنترل جریان و افت کیفیت Circuit Breaker'
     zh-Hant: 流量控制與熔斷降級規則的統一配置與管理
     ja: フロー制御およびサーキットブレーカー降格ルールの統一設定と管理
     ko: 트래픽 제어 및 서킷 브레이커 강등 규칙의 통합 구성 및 관리

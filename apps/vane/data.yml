@@ -12,6 +12,7 @@ additionalProperties:
   shortDescEn: AI-powered answering engine
   description:
     en: AI-powered answering engine
+    fa: 'موتور پاسخ دهی مبتنی بر هوش مصنوعی'
     ja: AI駆動のスマートな質問応答エンジン
     ms: Enjin menjawab pintar yang didukung AI
     pt-br: Motor de resposta inteligente movido a IA

@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: High-performance open-source key-value database
         es-es: High-performance open-source key-value base de datos
+        fa: 'پایگاه داده کلید-مقدار متن باز با کارایی بالا'
         ja: 高性能のオープンソースキー・バリューデータベース
         ms: Pangkalan data nilai-kunci sumber terbuka berprestasi tinggi
         pt-br: Banco de dados chave-valor de alto desempenho e código aberto

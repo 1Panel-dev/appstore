@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: WeChat Markdown Editor
     es-es: Editor Markdown de WeChat
+    fa: 'ویرایشگر Markdown وی چت'
     ja: 非常シンプルなWeChat Markdownエディタ
     ms: Sunting Markdown WeChat yang sangat ringkas
     pt-br: Um editor Markdown do WeChat altamente simplificado

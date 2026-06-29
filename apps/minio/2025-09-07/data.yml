@@ -11,6 +11,7 @@ additionalProperties:
       label:
         en: User
         es-es: Usuario
+        fa: 'کاربر'
         ja: ユーザー
         ms: Pengguna
         pt-br: Usuário
@@ -30,6 +31,7 @@ additionalProperties:
       label:
         en: Password
         es-es: Contraseña
+        fa: 'رمز عبور'
         ja: パスワード
         ms: Kata laluan
         pt-br: Senha
@@ -48,6 +50,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -66,6 +69,7 @@ additionalProperties:
       label:
         en: API port
         es-es: Puerto API
+        fa: 'پورت API'
         ja: API ポート
         ms: Port API
         pt-br: Porta API
@@ -83,6 +87,7 @@ additionalProperties:
       label:
         en: Session duration
         es-es: Duración de la sesión
+        fa: 'مدت نشست'
         ja: セッションの期間
         ms: Tempoh sesi
         pt-br: Duração da sessão
@@ -105,6 +110,7 @@ additionalProperties:
       label:
         en: Enable WebUI
         es-es: Habilitar WebUI
+        fa: 'فعال سازی WebUI'
         ja: WebUI を有効にする
         ms: Aktifkan WebUI
         pt-br: Habilitar WebUI
@@ -127,6 +133,7 @@ additionalProperties:
       label:
         en: WebUI login animation
         es-es: Animación de inicio de sesión de WebUI
+        fa: 'انیمیشن ورود WebUI'
         ja: WebUI ログインアニメーション
         ms: Animasi log masuk WebUI
         pt-br: Animação de login do WebUI

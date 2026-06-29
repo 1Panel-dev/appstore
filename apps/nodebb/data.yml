@@ -21,6 +21,7 @@ additionalProperties:
   description:
     en: Node.js based forum software built for the modern web
     es-es: Software de foros basado en Node.js y pensado para la web moderna
+    fa: 'نرم افزار انجمن مبتنی بر Node.js برای وب مدرن'
     zh: 基于 Node.js 的现代化论坛软件
     zh-Hant: 基於 Node.js 的現代化論壇軟件
     ja: モダンな Web のために構築された Node.js ベースのフォーラムソフトウェア

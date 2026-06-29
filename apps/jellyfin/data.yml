@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: A multimedia application software suite
         es-es: Suite de software de aplicaciones multimedia
+        fa: 'مجموعه نرم افزاری برنامه های چندرسانه ای'
         ja: マルチメディアアプリケーションソフトウェアスイート
         ms: Suite perisian aplikasi multimedia
         pt-br: Um conjunto de software de aplicação multimídia

@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: Open-source real-time infrastructure monitoring platform
     es-es: Plataforma de monitoreo de infraestructura en tiempo real de código abierto
+    fa: 'پلتفرم متن باز مانیتورینگ بلادرنگ زیرساخت'
     ja: オープンソースのリアルタイムインフラ監視プラットフォーム
     ms: Platform pemantauan infrastruktur masa nyata sumber terbuka
     pt-br: Plataforma de monitoramento de infraestrutura em tempo real de código aberto

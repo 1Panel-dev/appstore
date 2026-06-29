@@ -11,6 +11,7 @@ additionalProperties:
           label:
             en: Domain
             es-es: Dominio
+            fa: 'دامنه'
             ja: ドメイン
             ms: Domain
             pt-br: Domínio
@@ -30,6 +31,7 @@ additionalProperties:
           label:
             en: SMTP port
             es-es: Puerto SMTP
+            fa: 'پورت SMTP'
             ja: SMTP ポート
             ms: Port SMTP
             pt-br: Porta SMTP
@@ -49,6 +51,7 @@ additionalProperties:
           label:
             en: IMAP4 port
             es-es: Puerto IMAP4
+            fa: 'پورت IMAP4'
             ja: IMAP4 ポート
             ms: Port IMAP4
             pt-br: Porta IMAP4
@@ -68,6 +71,7 @@ additionalProperties:
           label:
             en: ESMTP port
             es-es: Puerto ESMTP
+            fa: 'پورت ESMTP'
             ja: ESMTP ポート
             ms: Port ESMTP
             pt-br: Porta ESMTP
@@ -87,6 +91,7 @@ additionalProperties:
           label:
             en: ESMTP port
             es-es: Puerto ESMTP
+            fa: 'پورت ESMTP'
             ja: ESMTP ポート
             ms: Port ESMTP
             pt-br: Porta ESMTP
@@ -106,6 +111,7 @@ additionalProperties:
           label:
             en: IMAP4 port
             es-es: Puerto IMAP4
+            fa: 'پورت IMAP4'
             ja: IMAP4 ポート
             ms: Port IMAP4
             pt-br: Porta IMAP4

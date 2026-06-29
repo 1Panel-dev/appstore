@@ -20,6 +20,7 @@ additionalProperties:
   document: https://linkding.link/installation/
   description:
     en: A self-hosted bookmark manager that is simple, fast, and easy to deploy
+    fa: 'مدیر نشانک خودمیزبان، ساده، سریع و آسان برای استقرار'
     zh: 一款自托管的书签管理器，设计简洁、快速且易于部署
     zh-Hant: 一款自託管的書籤管理器，設計簡潔、快速且易於部署
     ja: シンプルで高速、デプロイが容易なセルフホスト型ブックマークマネージャー

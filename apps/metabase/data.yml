@@ -14,6 +14,7 @@ additionalProperties:
     description:
         en: Open source data analysis and visualization tool
         es-es: De código abierto data analysis and visualization herramienta
+        fa: 'ابزار متن باز تحلیل و مصورسازی داده'
         ja: オープンソースのデータ分析と可視化ツール
         ms: Alat analisis data dan visualisasi sumber terbuka
         pt-br: Ferramenta de análise e visualização de dados de código aberto

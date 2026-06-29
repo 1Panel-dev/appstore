@@ -21,6 +21,7 @@ additionalProperties:
     description:
         en: Cloud native messaging and streaming platform
         es-es: Cloud native messaging and streaming plataforma
+        fa: 'پلتفرم پیام رسانی و استریم Cloud Native'
         zh: 云原生消息传递和流媒体平台
         zh-Hant: 雲原生消息傳遞和流媒體平台
         ja: クラウドネイティブメッセージングおよびストリーミングプラットフォーム

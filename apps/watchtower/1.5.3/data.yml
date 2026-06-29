@@ -8,6 +8,7 @@ additionalProperties:
           label:
             en: Environmental parameters (split by ;)
             es-es: Parámetros de entorno (separados por ;)
+            fa: 'پارامترهای محیطی (با ; جدا شوند)'
             ja: 環境パラメータ(分割)
             ms: Parameter persekitaran (pisahkan dengan ;)
             pt-br: Parâmetros ambientais (divididos por ;)
@@ -26,6 +27,7 @@ additionalProperties:
           label:
             en: Command arguments (space-separated, single quotes not supported)
             es-es: Argumentos del comando (separados por espacios, no se admiten comillas simples)
+            fa: 'آرگومان های دستور (با فاصله جدا شوند، تک کوتیشن پشتیبانی نمی شود)'
             ja: コマンド引数（スペースで区切り、シングルクォートはサポートされていません）
             ms: Argumen perintah (dipisahkan dengan ruang, tanda petik tunggal tidak disokong)
             pt-br: Argumentos de comando (separados por espaço, aspas simples não suportadas)

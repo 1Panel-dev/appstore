@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: The world's first open-source Bastion Host
     es-es: El primer bastión de código abierto del mundo
+    fa: 'اولین Bastion Host متن باز جهان'
     ja: 世界初のオープンソースのバスティオンホスト
     ms: Bastion Host sumber terbuka pertama di dunia
     pt-br: O primeiro Bastion Host de código aberto do mundo

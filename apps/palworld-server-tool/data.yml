@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: Palworld service visual management tool
         es-es: Palworld service visual herramienta de gestión
+        fa: 'ابزار مدیریت بصری سرویس Palworld'
         ja: Palworld サービスのビジュアル管理ツール
         ms: Alat pengurusan visual perkhidmatan Palworld
         pt-br: Ferramenta de gerenciamento visual de serviço do Palworld

@@ -21,6 +21,7 @@ additionalProperties:
     description:
         en: Tool to automatically update Docker container base images
         es-es: Herramienta para actualizar automáticamente las imágenes base de contenedores Docker
+        fa: 'ابزاری برای به روزرسانی خودکار image پایه کانتینرهای Docker'
         zh: 自动更新 Docker 容器基础镜像的工具
         zh-Hant: 自動更新 Docker 容器基礎鏡像的工具
         ja: Docker コンテナのベースイメージを自動更新するツール

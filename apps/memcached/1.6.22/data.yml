@@ -8,6 +8,7 @@ additionalProperties:
           label:
             en: Port
             es-es: Puerto
+            fa: 'پورت'
             ja: ポート
             ms: Port
             pt-br: Porta
@@ -27,6 +28,7 @@ additionalProperties:
           label:
             en: Maximum memory usage(MB)
             es-es: Uso máximo de memoria (MB)
+            fa: 'حداکثر مصرف حافظه (MB)'
             ja: 最大メモリ使用量(MB)
             ms: Penggunaan Memori Maksimum(MB)
             pt-br: Uso Máximo de Memória(MB)

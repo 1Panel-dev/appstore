@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: Multi language interactive programming environment and data science notebook support
         es-es: Entorno de programación interactivo multilingüe y soporte para cuadernos de ciencia de datos
+        fa: 'محیط برنامه نویسی تعاملی چندزبانه با پشتیبانی از notebookهای علم داده'
         ja: 多言語対応インタラクティブプログラミング環境とデータサイエンスノート
         ms: Menyokong persekitaran pengaturcaraan interaktif pelbagai bahasa dan buku nota sains data
         pt-br: Ambiente de programação interativa multilingual e suporte de notebook científico de dados

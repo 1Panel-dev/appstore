@@ -8,6 +8,7 @@ additionalProperties:
       label:
         en: NAT type test port
         es-es: Puerto de prueba del tipo NAT
+        fa: 'پورت تست نوع NAT'
         ja: NATタイプテストポート
         ms: Port ujian jenis NAT
         t-br: Porta de teste de tipo NAT
@@ -28,6 +29,7 @@ additionalProperties:
       label:
         en: hbbs port (used with IP/domain)
         es-es: puerto hbbs (usado con IP/dominio)
+        fa: 'پورت hbbs (برای استفاده با IP/دامنه)'
         ja: hbbs ポート（IP/ドメインと一緒に使用）
         ms: Port hbbs (digunakan dengan IP/domain)
         pt-br: Porta hbbs (usado com IP/domínio)
@@ -47,6 +49,7 @@ additionalProperties:
       label:
         en: hbbr port (client relay server port)
         es-es: puerto hbbr (puerto del servidor de retransmisión del cliente)
+        fa: 'پورت hbbr (پورت سرور رله کلاینت)'
         ja: hbbr ポート（クライアントリレイサーバーポート）
         ms: Port hbbr (port relai pelayan klien)
         pt-br: Porta hbbr (porta do servidor de retransmissão do cliente)
@@ -66,6 +69,7 @@ additionalProperties:
       label:
         en: Web Client Support Port 1
         es-es: Web Client Support Puerto 1
+        fa: 'پورت پشتیبانی کلاینت وب 1'
         ja: Webクライアントサポートポート1
         ms: Port Sokongan Pelanggan Web 1
         pt-br: Porta de Suporte ao Cliente Web 1
@@ -85,6 +89,7 @@ additionalProperties:
       label:
         en: Web Client Support Port 2
         es-es: Web Client Support Puerto 2
+        fa: 'پورت پشتیبانی کلاینت وب 2'
         ja: Webクライアントサポートポート2
         ms: Port Sokongan Pelanggan Web 2
         pt-br: Porta de Suporte ao Cliente Web 2
@@ -104,6 +109,7 @@ additionalProperties:
       label:
         en: IP address or domain name (must change item)
         es-es: Dirección IP o nombre de dominio (debe modificarse)
+        fa: 'آدرس IP یا نام دامنه (باید تغییر کند)'
         ja: IPアドレスまたはドメイン名（変更必須項目）
         ms: Alamat IP atau nama domain (item wajib diubah)
         pt-br: Endereço IP ou nome de domínio (item obrigatório a ser alterado)

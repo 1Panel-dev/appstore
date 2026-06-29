@@ -8,6 +8,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -27,6 +28,7 @@ additionalProperties:
       label:
         en: Time Zone
         es-es: Zona horaria
+        fa: 'منطقه زمانی'
         ja: タイムゾーン
         ms: Zon Masa
         pt-br: Fuso Horário
@@ -45,6 +47,7 @@ additionalProperties:
       label:
         en: Default User Name
         es-es: Default Usuario Nombre
+        fa: 'نام کاربری پیش فرض'
         ja: デフォルトユーザー名
         ms: Nama Pengguna Lalai
         pt-br: Nome de Usuário Padrão
@@ -63,6 +66,7 @@ additionalProperties:
       label:
         en: Default User Password
         es-es: Default Usuario Contraseña
+        fa: 'رمز عبور پیش فرض کاربر'
         ja: デフォルトユーザーパスワード
         ms: Kata Laluan Pengguna Lalai
         pt-br: Senha do Usuário Padrão
@@ -83,6 +87,7 @@ additionalProperties:
       label:
         en: Enable Registration
         es-es: Habilitar registro
+        fa: 'فعال سازی ثبت نام'
         ja: 登録を有効にする
         ms: Aktifkan Pendaftaran
         pt-br: Ativar Registro
@@ -106,6 +111,7 @@ additionalProperties:
       label:
         en: Minimum Password Strength
         es-es: Minimum Contraseña Strength
+        fa: 'حداقل قدرت رمز عبور'
         ja: 最低パスワード強度
         ms: Kekuatan Kata Laluan Minimum
         pt-br: Força Mínima da Senha
@@ -124,6 +130,7 @@ additionalProperties:
       label:
         en: Internal Container Ports
         es-es: Internal Container Puertos
+        fa: 'پورت های داخلی کانتینر'
         ja: 内部コンテナポート
         ms: Port Dalaman Kontena
         pt-br: Portas Internas do Contêiner
@@ -144,6 +151,7 @@ additionalProperties:
         en: Keepalive Period (seconds)
         zh: 保持活跃时间（秒）
         es-es: Periodo de keepalive (segundos)
+        fa: 'بازه Keepalive (ثانیه)'
         zh-Hant: 保持連線週期（秒）
         ja: キープアライブ期間（秒）
         ko: Keepalive 주기(초)
@@ -162,6 +170,7 @@ additionalProperties:
         en: Listen Address
         zh: 监听地址
         es-es: Listen Dirección
+        fa: 'آدرس شنود'
         zh-Hant: 監聽位址
         ja: リッスンアドレス
         ko: 리슨 주소
@@ -180,6 +189,7 @@ additionalProperties:
         en: Enable SSL
         zh: 启用 SSL
         es-es: Habilitar SSL
+        fa: 'فعال سازی SSL'
         zh-Hant: 啟用 SSL
         ja: SSL を有効化
         ko: SSL 활성화
@@ -203,6 +213,7 @@ additionalProperties:
         en: Redirect to HTTPS
         zh: 重定向到 HTTPS
         es-es: Redirigir a HTTPS
+        fa: 'هدایت به HTTPS'
         zh-Hant: 重新導向到 HTTPS
         ja: HTTPS へリダイレクト
         ko: HTTPS로 리디렉션
@@ -226,6 +237,7 @@ additionalProperties:
         en: SSL Listen Address
         zh: SSL 监听地址
         es-es: SSL Listen Dirección
+        fa: 'آدرس شنود SSL'
         zh-Hant: SSL 監聽位址
         ja: SSL リッスンアドレス
         ko: SSL 리슨 주소
@@ -244,6 +256,7 @@ additionalProperties:
         en: SSL Port
         zh: SSL 端口
         es-es: SSL Puerto
+        fa: 'پورت SSL'
         zh-Hant: SSL 埠
         ja: SSL ポート
         ko: SSL 포트
@@ -263,6 +276,7 @@ additionalProperties:
         en: SSL Certificate File (inside container)
         zh: SSL 证书文件 (容器内部)
         es-es: Archivo de certificado SSL (dentro del contenedor)
+        fa: 'فایل گواهی SSL (داخل کانتینر)'
         zh-Hant: SSL 憑證檔案（容器內）
         ja: SSL 証明書ファイル（コンテナ内）
         ko: SSL 인증서 파일(컨테이너 내부)
@@ -281,6 +295,7 @@ additionalProperties:
         en: SSL Certificate Key (inside container)
         zh: SSL 证书密钥 (容器内部)
         es-es: SSL Certificate Clave (inside container)
+        fa: 'کلید گواهی SSL (داخل کانتینر)'
         zh-Hant: SSL 憑證金鑰檔案（容器內）
         ja: SSL 証明書キー（コンテナ内）
         ko: SSL 인증서 키 파일(컨테이너 내부)
@@ -299,6 +314,7 @@ additionalProperties:
         en: Enable Let's Encrypt
         zh: 启用 Let's Encrypt
         es-es: Habilitar Let's Encrypt
+        fa: 'فعال سازی Let''s Encrypt'
         zh-Hant: 啟用 Let's Encrypt
         ja: Let's Encrypt を有効化
         ko: Let's Encrypt 활성화
@@ -322,6 +338,7 @@ additionalProperties:
         en: Accept Let's Encrypt TOS
         zh: 接受 Let's Encrypt 条款
         es-es: Aceptar los términos de servicio de Let's Encrypt
+        fa: 'پذیرش شرایط استفاده Let''s Encrypt'
         zh-Hant: 接受 Let's Encrypt 服務條款
         ja: Let's Encrypt の利用規約に同意
         ko: Let's Encrypt 이용 약관에 동의
@@ -345,6 +362,7 @@ additionalProperties:
         en: Let's Encrypt Cache Directory
         zh: Let's Encrypt 缓存目录
         es-es: Directorio de caché de Let's Encrypt
+        fa: 'دایرکتوری کش Let''s Encrypt'
         zh-Hant: Let's Encrypt 快取目錄
         ja: Let's Encrypt キャッシュディレクトリ
         ko: Let's Encrypt 캐시 디렉터리
@@ -363,6 +381,7 @@ additionalProperties:
         en: Let's Encrypt Hosts
         zh: Let's Encrypt 域名
         es-es: Hosts de Let's Encrypt
+        fa: 'میزبان های Let''s Encrypt'
         zh-Hant: Let's Encrypt 主機
         ja: Let's Encrypt ホスト
         ko: Let's Encrypt 호스트
@@ -381,6 +400,7 @@ additionalProperties:
         en: Response Headers
         zh: 响应头
         es-es: Encabezados de respuesta
+        fa: 'هدرهای پاسخ'
         zh-Hant: 回應標頭
         ja: レスポンスヘッダー
         ko: 응답 헤더
@@ -399,6 +419,7 @@ additionalProperties:
         en: CORS Allow Origins
         zh: 允许跨域来源
         es-es: Orígenes permitidos de CORS
+        fa: 'مبداهای مجاز CORS'
         zh-Hant: CORS 允許來源
         ja: CORS 許可オリジン
         ko: CORS 허용 출처
@@ -417,6 +438,7 @@ additionalProperties:
         en: CORS Allow Methods
         zh: 允许跨域方法
         es-es: Métodos permitidos de CORS
+        fa: 'روش های مجاز CORS'
         zh-Hant: CORS 允許方法
         ja: CORS 許可メソッド
         ko: CORS 허용 메서드
@@ -435,6 +457,7 @@ additionalProperties:
         en: CORS Allow Headers
         zh: 允许跨域头
         es-es: Encabezados permitidos de CORS
+        fa: 'هدرهای مجاز CORS'
         zh-Hant: CORS 允許標頭
         ja: CORS 許可ヘッダー
         ko: CORS 허용 헤더
@@ -453,6 +476,7 @@ additionalProperties:
         en: Allowed origins for websocket connections
         zh: Websocket 连接的允许来源
         es-es: Orígenes permitidos para conexiones WebSocket
+        fa: 'مبداهای مجاز برای اتصال های WebSocket'
         zh-Hant: WebSocket 連線允許來源
         ja: WebSocket 接続で許可するオリジン
         ko: WebSocket 연결 허용 출처
@@ -471,6 +495,7 @@ additionalProperties:
         en: The interval in which websocket pings will be sent (seconds)
         zh: 发送 websocket ping 的时间间隔（秒）
         es-es: Intervalo en el que se enviarán los pings de WebSocket (segundos)
+        fa: 'بازه ارسال pingهای WebSocket (ثانیه)'
         zh-Hant: 發送 WebSocket ping 的間隔（秒）
         ja: WebSocket ping を送信する間隔（秒）
         ko: WebSocket 핑 전송 간격(초)
@@ -489,6 +514,7 @@ additionalProperties:
         en: Database Dialect
         zh: 数据库方式
         es-es: Base de datos Dialect
+        fa: 'گویش پایگاه داده'
         zh-Hant: 資料庫方言
         ja: データベース方言
         ko: 데이터베이스 방언
@@ -507,6 +533,7 @@ additionalProperties:
         en: Database Connection
         zh: 数据库连接
         es-es: Base de datos Connection
+        fa: 'اتصال پایگاه داده'
         zh-Hant: 資料庫連線
         ja: データベース接続
         ko: 데이터베이스 연결
@@ -525,6 +552,7 @@ additionalProperties:
         en: Uploaded Images Directory
         zh: 上传的图片目录
         es-es: Directorio de imágenes subidas
+        fa: 'دایرکتوری تصاویر بارگذاری شده'
         zh-Hant: 已上傳圖片目錄
         ja: アップロード済み画像ディレクトリ
         ko: 업로드된 이미지 디렉터리
@@ -543,6 +571,7 @@ additionalProperties:
         en: Plugins Directory
         zh: 插件目录
         es-es: Directorio de plugins
+        fa: 'دایرکتوری افزونه ها'
         zh-Hant: 外掛目錄
         ja: プラグインディレクトリ
         ko: 플러그인 디렉터리

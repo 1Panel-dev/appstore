@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: Open-source LLM-native IM bot development platform
         es-es: Open-source LLM-native IM bot development plataforma
+        fa: 'پلتفرم متن باز توسعه بات IM بومی LLM'
         ja: LLM ネイティブ IM ボット開発プラットフォーム
         ms: Platform Pembangunan Bot IM Asli LLM Sumber Terbuka
         pt-br: Plataforma de Desenvolvimento de Bot IM Nativo LLM de Código Aberto

@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: Browser-based toolbox for encoding, decoding and data analysis
     es-es: Caja de herramientas en el navegador para codificacion, decodificacion y analisis de datos
+    fa: 'جعبه ابزار مبتنی بر مرورگر برای کدگذاری، رمزگشایی و تحلیل داده'
     zh: 浏览器中的数据编码、解码与分析工具
     zh-Hant: 瀏覽器中的資料編碼、解碼與分析工具
     ja: ブラウザで使えるデータのエンコード、デコード、解析ツール

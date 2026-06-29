@@ -11,6 +11,7 @@ additionalProperties:
           label:
             en: Port
             es-es: Puerto
+            fa: 'پورت'
             ja: ポート
             ms: Port
             pt-br: Porta
@@ -29,6 +30,7 @@ additionalProperties:
           label:
             en: Media folder path
             es-es: Ruta de la carpeta multimedia
+            fa: 'مسیر پوشه رسانه'
             ja: メディアフォルダのパス
             ms: Laluan folder media
             pt-br: Caminho da pasta de mídia
@@ -47,6 +49,7 @@ additionalProperties:
           label:
             en: Cache folder path
             es-es: Ruta de la carpeta de caché
+            fa: 'مسیر پوشه کش'
             ja: キャッシュフォルダのパス
             ms: Laluan folder cache
             pt-br: Caminho da pasta de cache

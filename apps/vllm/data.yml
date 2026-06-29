@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: A high-throughput and memory-efficient inference and serving engine for LLMs
         es-es: Un high-throughput and memory-efficient inference and serving engine for LLMs
+        fa: 'موتور inference و سرویس دهی LLM با توان عملیاتی بالا و مصرف حافظه بهینه'
         ja: 大規模言語モデル向けの高スループットでメモリ効率の良い推論およびサービスエンジン
         ms: Enjin inferens dan perkhidmatan yang cekap memori dan berkapasiti tinggi untuk LLM
         pt-br: Motor de inferência e serviço eficiente em memória e de alto rendimento para LLMs

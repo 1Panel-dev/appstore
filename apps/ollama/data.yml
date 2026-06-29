@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: Get up and running with Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models
         es-es: Ponte en marcha con Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma y otros modelos
+        fa: 'راه اندازی سریع Kimi-K2.5، GLM-5، MiniMax، DeepSeek، gpt-oss، Qwen، Gemma و مدل های دیگر'
         ja: Kimi-K2.5、GLM-5、MiniMax、DeepSeek、gpt-oss、Qwen、Gemma などのモデルを起動して実行
         ms: Mulakan dan jalankan Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma dan model lain
         pt-br: Inicie e execute Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma e outros modelos

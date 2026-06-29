@@ -21,6 +21,7 @@ additionalProperties:
     description:
         en: Exporter for machine metrics
         es-es: Exportador de métricas de máquina
+        fa: 'Exporter برای شاخص های ماشین'
         zh: 服务器指标导出器
         zh-Hant: 伺服器指標導出器
         ja: マシンメトリクスのエクスポーター

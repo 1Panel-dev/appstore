@@ -11,6 +11,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -31,6 +32,7 @@ additionalProperties:
       label:
         en: Web access password
         es-es: Contraseña de acceso web
+        fa: 'رمز عبور دسترسی وب'
         ja: ウェブアクセスパスワード
         ms: Kata laluan akses web
         pt-br: Senha de acesso à web
@@ -51,6 +53,7 @@ additionalProperties:
       label:
         en: Sudo password
         es-es: Contraseña de sudo
+        fa: 'رمز عبور sudo'
         ja: Sudo パスワード
         ms: Kata laluan Sudo
         pt-br: Senha do Sudo

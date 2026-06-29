@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: A simple, secure, and decentralized VPN networking solution for intranet penetration
     es-es: Una solucion de red VPN simple, segura y descentralizada para penetracion de intranet
+    fa: 'راهکار ساده، امن و غیرمتمرکز VPN برای دسترسی تونلی به شبکه داخلی'
     ja: イントラネット貫通向けのシンプルで安全かつ分散型のVPNネットワーキングソリューション
     ms: Penyelesaian rangkaian VPN yang mudah, selamat dan terdesentralisasi untuk penembusan intranet
     pt-br: Uma solucao de rede VPN simples, segura e descentralizada para penetracao de intranet

@@ -8,6 +8,7 @@ additionalProperties:
       label:
         en: Agent Port
         es-es: Agent Puerto
+        fa: 'پورت Agent'
         ja: エージェントポート
         ms: Ejen Port
         pt-br: Porta do Agente
@@ -27,6 +28,7 @@ additionalProperties:
       label:
         en: Monitoring Hostname
         es-es: Nombre de host de monitorización
+        fa: 'نام میزبان مانیتورینگ'
         ja: 監視ホスト名
         ko: 모니터링 호스트 이름
         ms: Nama Hos Pemantauan
@@ -45,6 +47,7 @@ additionalProperties:
       label:
         en: Server Address
         es-es: Server Dirección
+        fa: 'آدرس سرور'
         ja: サーバーアドレス
         ko: 서버 주소
         ms: Alamat Pelayan
@@ -63,6 +66,7 @@ additionalProperties:
       label:
         en: Server Port
         es-es: Server Puerto
+        fa: 'پورت سرور'
         ja: サーバーポート
         ko: 서버 포트
         ms: Port Pelayan

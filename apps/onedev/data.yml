@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: Git Server with CI/CD, Kanban, and Packages
         es-es: Servidor Git con CI/CD, Kanban y paquetes
+        fa: 'سرور Git با CI/CD، Kanban و Packages'
         zh: 带有 CI/CD、Kanban 和 Packages 的 Git 服务器
         zh-Hant: 帶有 CI/CD、Kanban 和 Packages 的 Git 伺服器
         ja: CI/CD、カンバン、およびパッケージを備えた Git サーバー

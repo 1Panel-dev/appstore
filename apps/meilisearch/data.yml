@@ -21,6 +21,7 @@ additionalProperties:
   description:
     en: An open-source, lightning-fast, and hyper-relevant search engine that fits effortlessly into your workflow
     es-es: Un open-source, lightning-fast, and hyper-relevant motor de búsqueda that fits effortlessly into your workflow
+    fa: 'موتور جستجوی متن باز، بسیار سریع و بسیار مرتبط که به راحتی در گردش کار شما جای می گیرد'
     zh: 开源、快如闪电且高度相关的搜索引擎，轻松融入您的工作流程
     zh-Hant: 開源、快如閃電且高度相關的搜索引擎，輕鬆融入您的工作流程
     ja: オープンソースで、稲妻のように速く、高度に関連性のある検索エンジンで、ワークフローに簡単に適合します

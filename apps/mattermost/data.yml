@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: Open-source secure team collaboration platform
     es-es: Plataforma de colaboración segura para equipos de código abierto
+    fa: 'پلتفرم متن باز و امن همکاری تیمی'
     ja: オープンソースのセキュアなチームコラボレーションプラットフォーム
     ms: Platform kolaborasi pasukan selamat sumber terbuka
     pt-br: Plataforma de colaboração segura em equipe de código aberto

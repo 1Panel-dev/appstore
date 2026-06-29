@@ -8,6 +8,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -27,6 +28,7 @@ additionalProperties:
       label:
         en: RCON Port
         es-es: RCON Puerto
+        fa: 'پورت RCON'
         ja: RCON ポート
         ms: Port RCON
         pt-br: Porta RCON
@@ -46,6 +48,7 @@ additionalProperties:
       label:
         en: REST API Port
         es-es: REST API Puerto
+        fa: 'پورت REST API'
         ja: REST API ポート
         ms: Port REST API
         pt-br: Porta REST API
@@ -65,6 +68,7 @@ additionalProperties:
       label:
         en: Query port used to communicate with Steam servers
         es-es: Puerto de consulta usado para comunicarse con los servidores de Steam
+        fa: 'پورت Query برای ارتباط با سرورهای Steam'
         ja: Steam サーバーと通信するために使用されるクエリポート
         ms: Port kueri yang digunakan untuk berkomunikasi dengan pelayan Steam
         pt-br: Porta de consulta usada para se comunicar com servidores Steam
@@ -84,6 +88,7 @@ additionalProperties:
       label:
         en: Maximum number of participants on the server
         es-es: Número máximo de participantes en el servidor
+        fa: 'حداکثر تعداد شرکت کنندگان روی سرور'
         ja: サーバーの最大参加者数
         ms: Bilangan maksimum peserta di pelayan
         pt-br: Número máximo de participantes no servidor
@@ -103,6 +108,7 @@ additionalProperties:
       label:
         en: Improves performance in multi-threaded CPU environments (true / false)
         es-es: Mejora el rendimiento en entornos de CPU multihilo (true / false)
+        fa: 'بهبود عملکرد در محیط های CPU چندرشته ای (true / false)'
         ja: マルチスレッドCPU環境でのパフォーマンスを向上させます（true / false）
         ms: Meningkatkan prestasi dalam persekitaran CPU berbilang benang (benar / palsu)
         pt-br: Melhora o desempenho em ambientes de CPU multithread (verdadeiro / falso)
@@ -126,6 +132,7 @@ additionalProperties:
       label:
         en: Setup server as a community server (true / false)
         es-es: Configurar el servidor como servidor de la comunidad (true / false)
+        fa: 'تنظیم سرور به عنوان سرور Community (true / false)'
         ja: サーバーをコミュニティサーバーとして設定（true / false）
         ms: Sediakan pelayan sebagai pelayan komuniti (benar / salah)
         pt-br: Configurar o servidor como um servidor comunitário (verdadeiro / falso)
@@ -149,6 +156,7 @@ additionalProperties:
       label:
         en: PUBLIC IP (If not specified, it will be detected automatically)
         es-es: IP pública (si no se especifica, se detectará automáticamente)
+        fa: 'IP عمومی (اگر وارد نشود، خودکار تشخیص داده می شود)'
         ja: 公開IP（指定しない場合は自動的に検出されます）
         ms: IP AWAM (Jika tidak dinyatakan, ia akan dikesan secara automatik)
         pt-br: IP PÚBLICO (Se não especificado, será detectado automaticamente)
@@ -167,6 +175,7 @@ additionalProperties:
       label:
         en: PUBLIC PORT (If not specified, it will be detected automatically)
         es-es: Puerto público (si no se especifica, se detectará automáticamente)
+        fa: 'پورت عمومی (اگر وارد نشود، خودکار تشخیص داده می شود)'
         ja: 公開ポート（指定しない場合は自動的に検出されます）
         ms: PORT AWAM (Jika tidak ditentukan, ia akan dikesan secara automatik)
         pt-br: PORTA PÚBLICA (Se não especificado, será detectado automaticamente)
@@ -186,6 +195,7 @@ additionalProperties:
       label:
         en: Whether the server should be update each time start (true / false)
         es-es: Si el servidor debe actualizarse en cada inicio (true / false)
+        fa: 'آیا سرور در هر بار شروع به روزرسانی شود (true / false)'
         ja: サーバーが毎回起動時に更新されるべきかどうか（true / false）
         ms: Sama ada pelayan perlu dikemas kini setiap kali dimulakan (benar / salah)
         pt-br: Se o servidor deve ser atualizado a cada inicialização (verdadeiro / falso)
@@ -209,6 +219,7 @@ additionalProperties:
       label:
         en: Enable players login/logout message (true / false)
         es-es: Habilitar mensajes de inicio/cierre de sesión de jugadores (true / false)
+        fa: 'فعال سازی پیام ورود/خروج بازیکنان (true / false)'
         ja: プレイヤーのログイン/ログアウトメッセージを有効にする（true / false）
         ms: Aktifkan mesej log masuk/keluar pemain (benar / palsu)
         pt-br: Ativar mensagem de login/logout dos jogadores (verdadeiro / falso)
@@ -232,6 +243,7 @@ additionalProperties:
       label:
         en: Disable auto-generated configuration files (affects the settings below)
         es-es: Deshabilitar archivos de configuración generados automáticamente (afecta a la configuración siguiente)
+        fa: 'غیرفعال کردن فایل های پیکربندی تولیدشده خودکار (روی تنظیمات زیر اثر می گذارد)'
         ja: 自動生成された設定ファイルを無効にする（以下の設定に影響します）
         ms: Matikan fail konfigurasi yang dijana secara automatik (mempengaruhi tetapan di bawah)
         pt-br: Desativar arquivos de configuração gerados automaticamente (afeta as configurações abaixo)
@@ -255,6 +267,7 @@ additionalProperties:
       label:
         en: Server Name
         es-es: Server Nombre
+        fa: 'نام سرور'
         ja: サーバー名
         ms: Nama Pelayan
         pt-br: Nome do Servidor
@@ -273,6 +286,7 @@ additionalProperties:
       label:
         en: Server Description
         es-es: Descripción del servidor
+        fa: 'توضیح سرور'
         ja: サーバーの説明
         ms: Penerangan Pelayan
         pt-br: Descrição do Servidor
@@ -291,6 +305,7 @@ additionalProperties:
       label:
         en: Admin Password
         es-es: Contraseña del administrador
+        fa: 'رمز عبور مدیر'
         ja: 管理者パスワード
         ms: Kata Laluan Admin
         pt-br: Senha de Admin
@@ -310,6 +325,7 @@ additionalProperties:
       label:
         en: Server Password
         es-es: Server Contraseña
+        fa: 'رمز عبور سرور'
         ja: サーバーパスワード
         ms: Kata laluan pelayan
         pt-br: Senha do servidor
@@ -328,6 +344,7 @@ additionalProperties:
       label:
         en: Enable RCON (true / false)
         es-es: Habilitar RCON (true / false)
+        fa: 'فعال سازی RCON (true / false)'
         ja: RCONを有効にする（true / false）
         ms: Dayakan RCON (true / false)
         pt-br: Habilitar RCON (true / false)
@@ -351,6 +368,7 @@ additionalProperties:
       label:
         en: Enable REST API (true / false)
         es-es: Habilitar API REST (true / false)
+        fa: 'فعال سازی REST API (true / false)'
         ja: REST APIを有効にする（true / false）
         ms: Dayakan REST API (true / false)
         pt-br: Habilitar REST API (true / false)

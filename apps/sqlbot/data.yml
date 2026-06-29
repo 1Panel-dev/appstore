@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: Intelligent Data Query System Based on LLM and RAG
     es-es: Sistema inteligente de consulta de datos basado en LLM y RAG
+    fa: 'سیستم هوشمند پرس وجوی داده مبتنی بر LLM و RAG'
     ja: LLMとRAGに基づくインテリジェントデータクエリシステム
     ms: Sistem Pertanyaan Data Pintar Berdasarkan LLM dan RAG
     pt-br: Sistema de Consulta de Dados Inteligente Baseado em LLM e RAG

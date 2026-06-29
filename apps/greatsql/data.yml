@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: GreatSQL is a MySQL branch originated from GreatDB
         es-es: GreatSQL es una rama de MySQL originada en GreatDB
+        fa: 'GreatSQL شاخه ای از MySQL است که از GreatDB منشأ گرفته است'
         ja: GreatSQLは、GreatDBから派生したMySQLブランチです
         ms: GreatSQL adalah cabang MySQL yang berasal dari GreatDB
         pt-br: GreatSQL é um ramo do MySQL originado do GreatDB

@@ -14,6 +14,7 @@ additionalProperties:
   description:
     en: An end-to-end developer platform with Source Control Management
     es-es: Un end-to-end developer plataforma with Source Control Management
+    fa: 'پلتفرم توسعه دهنده end-to-end با مدیریت کنترل منبع'
     ms: Satu platform pemaju hujung ke hujung dengan Pengurusan Kawalan Sumber
     pt-br: Uma plataforma de desenvolvedor de ponta a ponta com Gerenciamento de Controle de Versão
     ru: Платформа для разработчиков с полным циклом разработки с управлением версиями исходного кода

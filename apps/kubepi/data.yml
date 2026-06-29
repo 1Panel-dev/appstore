@@ -14,6 +14,7 @@ additionalProperties:
     en: A modernized K8s dashboard
     zh: 现代化的 K8s 面板
     es-es: Un modernoized K8s panel
+    fa: 'داشبورد مدرن شده K8s'
     zh-Hant: 現代化的 K8s 儀表板
     ja: モダン化された K8s ダッシュボード
     ko: 현대화된 K8s 대시보드

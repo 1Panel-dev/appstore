@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: Open source object storage server
         es-es: De código abierto object storage servidor
+        fa: 'سرور ذخیره سازی شیء متن باز'
         ja: オープンソースのオブジェクトストレージサーバー
         ms: Pelayan storan objek sumber terbuka
         pt-br: Servidor de armazenamento de objetos de código aberto

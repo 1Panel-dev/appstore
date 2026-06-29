@@ -8,6 +8,7 @@ additionalProperties:
         en: Web Port
         zh: Web 端口
         es-es: Puerto web
+        fa: 'پورت وب'
         zh-Hant: HTTP 埠
         ja: ウェブポート
         ko: 웹 포트
@@ -26,6 +27,7 @@ additionalProperties:
         en: Java Max Heap Ratio
         zh: Java 最大堆内存比例
         es-es: Proporción máxima del heap de Java
+        fa: 'نسبت حداکثر Heap جاوا'
         zh-Hant: Java 最大堆積記憶體比例
         ja: Java 最大ヒープ比率
         ko: Java 최대 힙 비율

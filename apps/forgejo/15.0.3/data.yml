@@ -9,6 +9,7 @@ additionalProperties:
         zh-Hant: HTTP 埠
         en: HTTP Port
         es-es: Puerto HTTP
+        fa: 'پورت HTTP'
         ja: HTTP ポート
         ko: HTTP 포트
         ms: Port HTTP
@@ -28,6 +29,7 @@ additionalProperties:
         zh-Hant: SSH 埠
         en: SSH Port
         es-es: Puerto SSH
+        fa: 'پورت SSH'
         ja: SSH ポート
         ko: SSH 포트
         ms: SSH Port
@@ -47,6 +49,7 @@ additionalProperties:
         zh-Hant: 無根模式
         en: Rootless Mode
         es-es: Rootless Modo
+        fa: 'حالت Rootless'
         ja: Rootlessモード
         ko: 루트리스 모ード
         ms: Mod Tanpa Keistimewaan
@@ -67,6 +70,7 @@ additionalProperties:
       label:
         en: Database
         es-es: Base de datos
+        fa: 'پایگاه داده'
         ja: データベース
         ko: 데이터베이스
         ms: Pangkalan Data
@@ -94,6 +98,7 @@ additionalProperties:
       label:
         en: Database Name
         es-es: Nombre de la base de datos
+        fa: 'نام پایگاه داده'
         ja: データベース名
         ko: 데이터베이스 이름
         ms: Nama Pangkalan Data
@@ -113,6 +118,7 @@ additionalProperties:
       label:
         en: Database Username
         es-es: Usuario de la base de datosname
+        fa: 'نام کاربری پایگاه داده'
         ja: データベースユーザー名
         ko: 데이터베이스 사용자 이름
         ms: Nama Pengguna Pangkalan Data
@@ -132,6 +138,7 @@ additionalProperties:
       label:
         en: Database Password
         es-es: Contraseña de la base de datos
+        fa: 'رمز عبور پایگاه داده'
         ja: データベースパスワード
         ko: 데이터베이스 비밀번호
         ms: Kata Laluan Pangkalan Data

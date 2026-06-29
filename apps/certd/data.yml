@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: An open source full automated certificate management tool
         es-es: Un de código abierto full automated certificate herramienta de gestión
+        fa: 'ابزار متن باز مدیریت کاملا خودکار گواهی ها'
         ja: オープンソースの完全自動化された証明書管理ツール
         ms: Alat pengurusan sijil automatik sumber terbuka
         pt-br: Uma ferramenta de gerenciamento de certificados totalmente automatizada e de código aberto

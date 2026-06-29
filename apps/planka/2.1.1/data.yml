@@ -7,6 +7,7 @@ additionalProperties:
       label:
         en: Database Service
         es-es: Servicio de base de datos
+        fa: 'سرویس پایگاه داده'
         ja: データベースサービス
         ms: Perkhidmatan Pangkalan Data
         pt-br: Serviço de Banco de Dados
@@ -32,6 +33,7 @@ additionalProperties:
       label:
         en: Database
         es-es: Base de datos
+        fa: 'پایگاه داده'
         ja: データベース
         ms: Pangkalan Data
         pt-br: Banco de Dados
@@ -55,6 +57,7 @@ additionalProperties:
       label:
         en: Database User
         es-es: Usuario de la base de datos
+        fa: 'کاربر پایگاه داده'
         ja: データベースユーザー
         ms: Pengguna Pangkalan Data
         pt-br: Usuário do Banco de Dados
@@ -73,6 +76,7 @@ additionalProperties:
       label:
         en: Database Password
         es-es: Contraseña de la base de datos
+        fa: 'رمز عبور پایگاه داده'
         ja: データベースパスワード
         ms: Kata Laluan Pangkalan Data
         pt-br: Senha do Banco de Dados
@@ -89,6 +93,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -108,6 +113,7 @@ additionalProperties:
       label:
         en: Admin Username
         es-es: Usuario administradorname
+        fa: 'نام کاربری مدیر'
         ja: 管理者ユーザー名
         ms: Nama Pengguna Admin
         pt-br: Nome de Usuário Administrador
@@ -126,6 +132,7 @@ additionalProperties:
       label:
         en: Admin Password
         es-es: Contraseña del administrador
+        fa: 'رمز عبور مدیر'
         ja: 管理者パスワード
         ms: Kata Laluan Admin
         pt-br: Senha do Administrador
@@ -145,6 +152,7 @@ additionalProperties:
       label:
         en: Admin Email
         es-es: Correo del administrador
+        fa: 'ایمیل مدیر'
         ja: 管理者メール
         ms: E-mel Admin
         pt-br: E-mail do Administrador
@@ -163,6 +171,7 @@ additionalProperties:
       label:
         en: Admin Name
         es-es: Admin Nombre
+        fa: 'نام مدیر'
         ja: 管理者名
         ms: Nama Admin
         pt-br: Nome do Administrador
@@ -181,6 +190,7 @@ additionalProperties:
       label:
         en: External URL
         es-es: URL externa
+        fa: 'URL خارجی'
         ja: 外部URL
         ms: URL Luaran
         pt-br: URL Externa
@@ -200,6 +210,7 @@ additionalProperties:
       label:
         en: SECRET KEY
         es-es: Clave secreta
+        fa: 'کلید محرمانه'
         ja: シークレットキー
         ms: Kunci Rahsia
         pt-br: CHAVE SECRETA

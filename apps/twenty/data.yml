@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: Building a modern alternative to Salesforce, powered by the community
     es-es: Building a moderno alternative to Salesforce, powered by the community
+    fa: 'ساخت جایگزینی مدرن برای Salesforce با پشتیبانی جامعه کاربری'
     ja: Salesforceのモダンな代替品をコミュニティ主導で構築
     ms: Membangun alternatif moden untuk Salesforce, didorong oleh komuniti
     pt-br: Construindo uma alternativa moderna ao Salesforce, impulsionada pela comunidade

@@ -7,6 +7,7 @@ additionalProperties:
           label:
             en: Port
             es-es: Puerto
+            fa: 'پورت'
             ja: ポート
             ms: Port
             pt-br: Porta
@@ -25,6 +26,7 @@ additionalProperties:
           label:
             en: Kafka Service
             es-es: Kafka Servicio
+            fa: 'سرویس Kafka'
             ja: Kafka サービス
             ms: Perkhidmatan Kafka
             pt-br: Serviço Kafka

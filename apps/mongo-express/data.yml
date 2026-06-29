@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: Web-based MongoDB admin interface
         es-es: Interfaz de administración de MongoDB basada en web
+        fa: 'رابط مدیریت MongoDB مبتنی بر وب'
         ja: WebベースのMongoDB管理インターフェース
         ms: Antara muka pentadbiran MongoDB berasaskan web
         pt-br: Interface administrativa do MongoDB baseada na web

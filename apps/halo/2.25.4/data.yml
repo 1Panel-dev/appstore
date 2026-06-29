@@ -13,6 +13,7 @@ additionalProperties:
             en: Database
             zh: 数据库服务
             es-es: Base de datos
+            fa: 'پایگاه داده'
             zh-Hant: 資料庫服務
             ja: データベースサービス
             ko: 데이터베이스 서비스
@@ -37,6 +38,7 @@ additionalProperties:
             en: Database name
             zh: 数据库名
             es-es: Nombre de la base de datos
+            fa: 'نام پایگاه داده'
             zh-Hant: 資料庫名稱
             ja: データベース名
             ko: 데이터베이스 이름
@@ -56,6 +58,7 @@ additionalProperties:
             en: Database username
             zh: 数据库用户
             es-es: Usuario de la base de datos
+            fa: 'نام کاربری پایگاه داده'
             zh-Hant: 資料庫使用者名稱
             ja: データベースユーザー名
             ko: 데이터베이스 사용자 이름
@@ -75,6 +78,7 @@ additionalProperties:
             en: Database password
             zh: 数据库用户密码
             es-es: Contraseña de la base de datos
+            fa: 'رمز عبور پایگاه داده'
             zh-Hant: 資料庫密碼
             ja: データベースパスワード
             ko: 데이터베이스 비밀번호
@@ -94,6 +98,7 @@ additionalProperties:
             en: External URL
             zh: 外部访问地址
             es-es: URL externa
+            fa: 'URL خارجی'
             zh-Hant: 外部訪問地址
             ja: 外部URL
             ko: 외부 URL
@@ -113,6 +118,7 @@ additionalProperties:
             en: Port
             zh: 端口
             es-es: Puerto
+            fa: 'پورت'
             zh-Hant: 埠
             ja: ポート
             ko: 포트

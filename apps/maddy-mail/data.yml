@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: Composable all-in-one mail server
         es-es: Composable all-in-one mail servidor
+        fa: 'سرور ایمیل جامع و ترکیب پذیر'
         ja: 組み合わせ可能なオールインワンメールサーバー
         ms: Pelayan mel semua-dalam-satu yang boleh disusun
         pt-br: Servidor de e-mail tudo-em-um composível

@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: An open-source AI-powered CRM system that serves as an alternative to Salesforce CRM
         es-es: Un open-source AI-powered CRM system that serves as an alternative to Salesforce CRM
+        fa: 'سیستم CRM متن باز مبتنی بر هوش مصنوعی به عنوان جایگزینی برای Salesforce CRM'
         ja: Salesforce CRMの代替となるオープンソースのAI CRMシステム
         ms: Sistem CRM berkuasa AI sumber terbuka yang berfungsi sebagai alternatif kepada Salesforce CRM
         pt-br: Um sistema CRM alimentado por IA de código aberto que serve como uma alternativa ao Salesforce CRM

@@ -20,6 +20,7 @@ additionalProperties:
     description:
         en: DVWA (Damn Vulnerable Web Application)
         es-es: DVWA (Aplicación web deliberadamente vulnerable)
+        fa: 'DVWA (برنامه وب عمدا آسیب پذیر)'
         zh: 一个用来进行安全脆弱性鉴定的 PHP/MySQL Web 应用平台。
         zh-Hant: 一個用來進行安全脆弱性鑑定的 PHP/MySQL Web 應用平台。
         ja: セキュリティ脆弱性評価のための PHP/MySQL Web アプリケーションプラットフォーム。

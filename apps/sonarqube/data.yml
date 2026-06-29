@@ -20,6 +20,7 @@ additionalProperties:
     description:
         en: An open-source code quality management platform
         es-es: Un open-source code quality gestión plataforma
+        fa: 'پلتفرم متن باز مدیریت کیفیت کد'
         zh: 开源的代码质量管理平台
         zh-Hant: 開源的代碼質量管理平台
         ja: オープンソースのコード品質管理プラットフォーム

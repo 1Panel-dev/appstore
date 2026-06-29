@@ -20,6 +20,7 @@ additionalProperties:
   description:
     en: Code-free database platform
     es-es: Code-free base de datos plataforma
+    fa: 'پلتفرم پایگاه داده بدون کدنویسی'
     zh: 无代码数据库平台
     zh-Hant: 無代碼數據庫平台
     ja: コード不要のデータベースプラットフォーム

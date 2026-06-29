@@ -13,6 +13,7 @@ additionalProperties:
         en: Database Service
         zh: 数据库服务
         es-es: Servicio de base de datos
+        fa: 'سرویس پایگاه داده'
         zh-Hant: 資料庫服務
         ja: データベースサービス
         ko: 데이터베이스 서비스
@@ -35,6 +36,7 @@ additionalProperties:
         en: Database
         zh: 数据库名
         es-es: Base de datos
+        fa: 'پایگاه داده'
         zh-Hant: 數據庫名
         ja: データベース
         ko: 데이터베이스
@@ -54,6 +56,7 @@ additionalProperties:
         en: Database User
         zh: 数据库用户
         es-es: Usuario de la base de datos
+        fa: 'کاربر پایگاه داده'
         zh-Hant: 數據庫用戶
         ja: データベースユーザー
         ko: 데이터베이스 사용자
@@ -73,6 +76,7 @@ additionalProperties:
         en: Database User Password
         zh: 数据库用户密码
         es-es: Contraseña del usuario de la base de datos
+        fa: 'رمز عبور کاربر پایگاه داده'
         zh-Hant: 資料庫使用者密碼
         ja: データベースユーザーパスワード
         ko: 데이터베이스 사용자 비밀번호
@@ -92,6 +96,7 @@ additionalProperties:
         en: Port
         zh: 端口，建议填写 8080，然后在【网站】管理中安装 OpenResty，创建网站关联emlog应用，暴露80、443端口
         es-es: Puerto
+        fa: 'پورت'
         zh-Hant: 埠
         ja: ポート
         ko: 포트
@@ -111,6 +116,7 @@ additionalProperties:
         en: site domain
         zh: 域名，建议填写 localhost， 然后在【网站】管理中安装 OpenResty，创建网站关联emlog应用绑定域名
         es-es: dominio del sitio
+        fa: 'دامنه سایت'
         zh-Hant: 站點網域
         ja: サイトドメイン
         ko: 사이트 도메인

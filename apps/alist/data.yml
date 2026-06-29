@@ -15,6 +15,7 @@ additionalProperties:
     description:
         en: Supporting multi-storage file listing program and private cloud storage
         es-es: Programa de listado de archivos con soporte para múltiples almacenamientos y nube privada
+        fa: 'برنامه فهرست فایل با پشتیبانی از چند نوع ذخیره سازی و فضای ابری خصوصی'
         ja: 複数ストレージのファイルリスト表示プログラムとプライベートクラウドストレージのサポート
         ms: Menyokong program senarai fail multi-penyimpanan dan penyimpanan awan peribadi
         pt-br: Suporte para programa de listagem de arquivos em múltiplos armazenamentos e armazenamento em nuvem privado

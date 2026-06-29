@@ -14,6 +14,7 @@ additionalProperties:
     en: UUSEC Web Application Firewall
     zh: 南墙 WEB 应用防火墙
     es-es: Firewall de aplicaciones web de UUSEC
+    fa: 'فایروال برنامه وب UUSEC'
     zh-Hant: UUSEC Web 應用防火牆
     ja: UUSEC Web アプリケーションファイアウォール
     ko: UUSEC 웹 애플리케이션 방화벽

@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: DNS server blocking ads and trackers across the network
         es-es: Servidor DNS que bloquea anuncios y rastreadores en toda la red
+        fa: 'سرور DNS برای مسدودسازی تبلیغات و ردیاب ها در کل شبکه'
         ja: ネットワーク全体で広告とトラッカーをブロックするDNSサーバー
         ms: Pelayan DNS yang menyekat iklan dan penjejak di seluruh rangkaian
         pt-br: Servidor DNS bloqueando anúncios e rastreadores em toda a rede

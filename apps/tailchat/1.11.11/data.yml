@@ -9,6 +9,7 @@ additionalProperties:
             en: Port
             zh: 端口
             es-es: Puerto
+            fa: 'پورت'
             zh-Hant: 埠
             ja: ポート
             ko: 포트
@@ -29,6 +30,7 @@ additionalProperties:
             en: Redis Service
             zh: 缓存服务服务
             es-es: Servicio de Redis
+            fa: 'سرویس Redis'
             zh-Hant: Redis 服務
             ja: Redisサービス
             ko: Redis 서비스
@@ -46,6 +48,7 @@ additionalProperties:
             en: Redis Service Password
             zh: 缓存服务服务密码
             es-es: Redis Servicio Contraseña
+            fa: 'رمز عبور سرویس Redis'
             zh-Hant: Redis 服務密碼
             ja: Redis サービスパスワード
             ko: Redis 서비스 비밀번호
@@ -65,6 +68,7 @@ additionalProperties:
             en: Database Service
             zh: 数据库服务
             es-es: Servicio de base de datos
+            fa: 'سرویس پایگاه داده'
             zh-Hant: 資料庫服務
             ja: データベースサービス
             ko: 데이터베이스 서비스
@@ -83,6 +87,7 @@ additionalProperties:
             en: Database Name
             zh: 数据库名
             es-es: Nombre de la base de datos
+            fa: 'نام پایگاه داده'
             zh-Hant: 數據庫名稱
             ja: データベース名
             ko: 데이터베이스 이름
@@ -102,6 +107,7 @@ additionalProperties:
             en: Database User Name
             zh: 数据库用户名
             es-es: Usuario de la base de datos Nombre
+            fa: 'نام کاربر پایگاه داده'
             zh-Hant: 資料庫使用者名稱
             ja: データベースユーザー名
             ko: 데이터베이스 사용자 이름
@@ -121,6 +127,7 @@ additionalProperties:
             en: Database User Password
             zh: 数据库密码
             es-es: Contraseña del usuario de la base de datos
+            fa: 'رمز عبور کاربر پایگاه داده'
             zh-Hant: 資料庫使用者密碼
             ja: データベースユーザーパスワード
             ko: 데이터베이스 사용자 비밀번호
@@ -140,6 +147,7 @@ additionalProperties:
             en: Storage Service
             zh: 文件存储服务
             es-es: Storage Servicio
+            fa: 'سرویس ذخیره سازی'
             zh-Hant: 儲存服務
             ja: ストレージサービス
             ko: 스토리지 서비스
@@ -158,6 +166,7 @@ additionalProperties:
             en: User
             zh: 文件存储服务用户名
             es-es: Usuario
+            fa: 'کاربر'
             zh-Hant: 用戶
             ja: ユーザー
             ko: 사용자
@@ -177,6 +186,7 @@ additionalProperties:
             en: User
             zh: 文件存储服务密码
             es-es: Usuario
+            fa: 'کاربر'
             zh-Hant: 用戶
             ja: ユーザー
             ko: 사용자
@@ -196,6 +206,7 @@ additionalProperties:
             en: Secret
             zh: 秘钥
             es-es: Secreto
+            fa: 'رمز محرمانه'
             zh-Hant: 密鑰
             ja: シークレット
             ko: 시크릿
@@ -216,6 +227,7 @@ additionalProperties:
             en: External URL
             zh: 外部访问地址
             es-es: URL externa
+            fa: 'URL خارجی'
             zh-Hant: 外部訪問地址
             ja: 外部URL
             ko: 외부 URL
@@ -235,6 +247,7 @@ additionalProperties:
             en: SMTP Sender
             zh: 邮件服务发送人
             es-es: Remitente SMTP
+            fa: 'فرستنده SMTP'
             zh-Hant: SMTP 寄件者
             ja: SMTP 送信者
             ko: SMTP 발신자
@@ -254,6 +267,7 @@ additionalProperties:
             en: Admin Port
             zh: 后台管理平台端口
             es-es: Admin Puerto
+            fa: 'پورت مدیر'
             zh-Hant: 管理員埠
             ja: 管理ポート
             ko: 관리자 포트
@@ -273,6 +287,7 @@ additionalProperties:
             en: Admin Username
             zh: 后台管理平台用户名
             es-es: Usuario administradorname
+            fa: 'نام کاربری مدیر'
             zh-Hant: 管理員用戶名
             ja: 管理者ユーザー名
             ko: 관리자 사용자 이름
@@ -292,6 +307,7 @@ additionalProperties:
             en: Admin Password
             zh: 后台管理平台密码
             es-es: Contraseña del administrador
+            fa: 'رمز عبور مدیر'
             zh-Hant: 管理員密碼
             ja: 管理者パスワード
             ko: 관리자 비밀번호
@@ -312,6 +328,7 @@ additionalProperties:
             en: SMTP Sender
             zh: 邮件服务URI
             es-es: Remitente SMTP
+            fa: 'فرستنده SMTP'
             zh-Hant: SMTP 寄件者
             ja: SMTP 送信者
             ko: SMTP 발신자

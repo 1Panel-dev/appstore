@@ -7,6 +7,7 @@ additionalProperties:
       label:
         en: Web Port
         es-es: Puerto web
+        fa: 'پورت وب'
         ja: Web ポート
         ms: Port Web
         pt-br: Porta Web
@@ -25,6 +26,7 @@ additionalProperties:
       label:
         en: MySQL Port
         es-es: MySQL Puerto
+        fa: 'پورت MySQL'
         ja: MySQL ポート
         ms: Port MySQL
         pt-br: Porta MySQL
@@ -43,6 +45,7 @@ additionalProperties:
       label:
         en: Stream Load Port
         es-es: Stream Load Puerto
+        fa: 'پورت Stream Load'
         ja: ストリームロードポート
         ms: Port Stream Load
         pt-br: Porta Stream Load

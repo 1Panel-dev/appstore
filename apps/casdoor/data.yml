@@ -19,6 +19,7 @@ additionalProperties:
   description:
     en: An Identity and Access Management (IAM) / Single-Sign-On (SSO) platform with web UI supporting OAuth 2.0, OIDC, SAML and CAS
     es-es: Un Identity and Access Management (IAM) / Single-Sign-On (SSO) plataforma with web UI supporting OAuth 2.0, OIDC, SAML and CAS
+    fa: 'پلتفرم مدیریت هویت و دسترسی (IAM) / ورود یکپارچه (SSO) با رابط وب و پشتیبانی از OAuth 2.0، OIDC، SAML و CAS'
     zh: 支持 OAuth 2.0、OIDC、SAML 和 CAS 的 Web UI 优先的 IAM/SSO 平台
     zh-Hant: 支援 OAuth 2.0、OIDC、SAML 和 CAS 的 Web UI 優先的 IAM/SSO 平台
     ja: OAuth 2.0、OIDC、SAML、および CAS をサポートする Web UI 優先の IAM/SSO プラットフォーム

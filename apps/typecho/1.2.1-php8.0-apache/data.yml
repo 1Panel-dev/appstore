@@ -13,6 +13,7 @@ additionalProperties:
             en: Database Service
             zh: 数据库服务
             es-es: Servicio de base de datos
+            fa: 'سرویس پایگاه داده'
             zh-Hant: 資料庫服務
             ja: データベースサービス
             ko: 데이터베이스 서비스
@@ -37,6 +38,7 @@ additionalProperties:
             en: Database
             zh: 数据库名
             es-es: Base de datos
+            fa: 'پایگاه داده'
             zh-Hant: 數據庫名
             ja: データベース
             ko: 데이터베이스
@@ -56,6 +58,7 @@ additionalProperties:
             en: Database User
             zh: 数据库用户
             es-es: Usuario de la base de datos
+            fa: 'کاربر پایگاه داده'
             zh-Hant: 數據庫用戶
             ja: データベースユーザー
             ko: 데이터베이스 사용자
@@ -75,6 +78,7 @@ additionalProperties:
             en: Database User Password
             zh: 数据库用户密码
             es-es: Contraseña del usuario de la base de datos
+            fa: 'رمز عبور کاربر پایگاه داده'
             zh-Hant: 資料庫使用者密碼
             ja: データベースユーザーパスワード
             ko: 데이터베이스 사용자 비밀번호
@@ -93,6 +97,7 @@ additionalProperties:
             en: User
             zh: 管理员
             es-es: Usuario
+            fa: 'کاربر'
             zh-Hant: 用戶
             ja: ユーザー
             ko: 사용자
@@ -110,6 +115,7 @@ additionalProperties:
             en: Password
             zh: 管理员密码
             es-es: Contraseña
+            fa: 'رمز عبور'
             zh-Hant: 用戶密碼
             ja: パスワード
             ko: 비밀번호
@@ -128,6 +134,7 @@ additionalProperties:
             en: Port
             zh: 端口
             es-es: Puerto
+            fa: 'پورت'
             zh-Hant: 埠
             ja: ポート
             ko: 포트
@@ -147,6 +154,7 @@ additionalProperties:
             en: User Email
             zh: 用户邮箱
             es-es: Usuario Email
+            fa: 'ایمیل کاربر'
             zh-Hant: 使用者電子郵件
             ja: ユーザーメール
             ko: 사용자 이메일
@@ -165,6 +173,7 @@ additionalProperties:
             en: External URL
             zh: 外部访问地址
             es-es: URL externa
+            fa: 'URL خارجی'
             zh-Hant: 外部訪問地址
             ja: 外部URL
             ko: 외부 URL

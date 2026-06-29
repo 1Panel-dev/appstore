@@ -6,6 +6,7 @@ additionalProperties:
       labelZh: HTTP 端口
       label:
         en: 'HTTP Port'
+        fa: 'پورت HTTP'
         zh: 'HTTP 端口'
         zh-Hant: 'HTTP 埠'
         ja: 'HTTP ポート'
@@ -22,6 +23,7 @@ additionalProperties:
       labelZh: 基本 URL
       label:
         en: 'NextAuth URL'
+        fa: 'URL مربوط به NextAuth'
         zh: '基本 URL'
         zh-Hant: '基本 URL'
         ja: 'NextAuth URL（認証用URL）'
@@ -38,6 +40,7 @@ additionalProperties:
       labelZh: 公共基本 URL
       label:
         en: 'Next Public Base URL'
+        fa: 'URL پایه عمومی Next'
         zh: '公共基本 URL'
         zh-Hant: '公共基本 URL'
         ja: 'Next 公開ベース URL'
@@ -54,6 +57,7 @@ additionalProperties:
       labelZh: NextAuth 密钥
       label:
         en: 'NextAuth Secret'
+        fa: 'رمز محرمانه NextAuth'
         zh: 'NextAuth 密钥'
         zh-Hant: 'NextAuth 密鑰'
         ja: 'NextAuth シークレット'
@@ -72,6 +76,7 @@ additionalProperties:
       labelZh: PostgreSQL 数据库服务
       label:
         en: 'PostgreSQL Database Service'
+        fa: 'سرویس پایگاه داده PostgreSQL'
         zh: 'PostgreSQL 数据库服务'
         zh-Hant: 'PostgreSQL 數據庫服務'
         ja: 'PostgreSQL データベース服务'
@@ -88,6 +93,7 @@ additionalProperties:
       labelZh: 数据库端口号
       label:
         en: 'Database Port Number'
+        fa: 'شماره پورت پایگاه داده'
         zh: '数据库端口号'
         zh-Hant: '資料庫埠號'
         ja: 'データベースポート番号'
@@ -104,6 +110,7 @@ additionalProperties:
       labelZh: 数据库名
       label:
         en: 'Database'
+        fa: 'پایگاه داده'
         zh: '数据库名'
         zh-Hant: '數據庫名'
         ja: 'データベース'
@@ -121,6 +128,7 @@ additionalProperties:
       labelZh: 数据库用户
       label:
         en: 'User'
+        fa: 'کاربر'
         zh: '数据库用户'
         zh-Hant: '數據庫用戶'
         ja: 'ユーザー'
@@ -138,6 +146,7 @@ additionalProperties:
       labelZh: 数据库用户密码
       label:
         en: 'Password'
+        fa: 'رمز عبور'
         zh: '数据库用户密码'
         zh-Hant: '數據庫用戶密碼'
         ja: 'パスワード'

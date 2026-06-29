@@ -14,6 +14,7 @@ additionalProperties:
   description:
     en: A powerful tool for building and deploying AI-powered agents and workflows
     es-es: Un powerful herramienta for building and deploying AI-powered agents and workflows
+    fa: 'ابزاری قدرتمند برای ساخت و استقرار عامل ها و گردش کارهای مبتنی بر هوش مصنوعی'
     ja: AI駆動のエージェントとワークフローを構築および展開するための強力なツール
     ms: AI-berkuasa ejen dan aliran kerja yang kuat untuk membina dan menyebarkan
     pt-br: Uma ferramenta poderosa para construir e implantar agentes e fluxos de trabalho baseados em IA

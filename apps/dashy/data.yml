@@ -21,6 +21,7 @@ additionalProperties:
     description:
         en: A self-hostable personal dashboard built for you
         es-es: Un autoalojable personal panel built for you
+        fa: 'داشبورد شخصی قابل خودمیزبانی، ساخته شده برای شما'
         zh: 专为您打造的可自行托管的个人仪表板
         zh-Hant: 專為您打造的可自行託管的個人儀表板
         ja: あなたのために作られたセルフホスト可能な個人用ダッシュボード

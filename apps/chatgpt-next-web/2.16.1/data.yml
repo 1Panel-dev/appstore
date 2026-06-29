@@ -9,6 +9,7 @@ additionalProperties:
             en: Port
             zh: 端口
             es-es: Puerto
+            fa: 'پورت'
             zh-Hant: 埠
             ja: ポート
             ko: 포트
@@ -28,6 +29,7 @@ additionalProperties:
             en: OPENAI API KEY
             zh: OPENAI API KEY
             es-es: Clave API de OpenAI
+            fa: 'کلید API OpenAI'
             zh-Hant: OPENAI API 金鑰
             ja: OPENAI API キー
             ko: OPENAI API 키
@@ -46,6 +48,7 @@ additionalProperties:
             en: Access rights key, optional (recommended)
             zh: 访问权限密钥，可选(强烈建议填写)
             es-es: Clave de acceso, opcional (recomendado)
+            fa: 'کلید دسترسی، اختیاری (پیشنهادی)'
             zh-Hant: 存取權限金鑰，可選（建議）
             ja: アクセス権キー、任意（推奨）
             ko: 접근 권한 키, 선택 사항(권장)
@@ -66,6 +69,7 @@ additionalProperties:
             en: Proxy (example：http://127.0.0.1:7890 user password)
             zh: 代理地址(例子：http://127.0.0.1:7890 user password)
             es-es: Proxy (ejemplo：http://127.0.0.1:7890 user password)
+            fa: 'پروکسی (مثال: http://127.0.0.1:7890 user password)'
             zh-Hant: 代理（例如：http://127.0.0.1:7890 user password）
             ja: プロキシ（例：http://127.0.0.1:7890 user password）
             ko: 프록시 (예：http://127.0.0.1:7890 user password)
@@ -84,6 +88,7 @@ additionalProperties:
             en: API interface address
             zh: API接口地址
             es-es: Dirección de la interfaz API
+            fa: 'آدرس رابط API'
             zh-Hant: API 介面地址
             ja: API インターフェースアドレス
             ko: API 인터페이스 주소
@@ -102,6 +107,7 @@ additionalProperties:
             en: White list of webdev endpoints
             zh: webdev 白名单
             es-es: Lista blanca de endpoints de webdev
+            fa: 'فهرست سفید endpointهای webdev'
             zh-Hant: webdev 端點白名單
             ja: webdev エンドポイントのホワイトリスト
             ko: webdev 엔드포인트 허용 목록

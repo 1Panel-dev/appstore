@@ -9,6 +9,7 @@ additionalProperties:
         zh-Hant: HTTP 連接埠
         en: HTTP Port
         es-es: Puerto HTTP
+        fa: 'پورت HTTP'
         ja: HTTP ポート
         ko: HTTP 포트
         ms: Port HTTP
@@ -39,6 +40,7 @@ additionalProperties:
         zh-Hant: 輸出路徑
         en: Output Path
         es-es: Output Ruta
+        fa: 'مسیر خروجی'
         ja: 出力パス
         ko: 출력 경로
         ms: Laluan Output
@@ -68,6 +70,7 @@ additionalProperties:
         zh-Hant: 定時任務表達式
         en: Cron Expression
         es-es: Expresión cron
+        fa: 'عبارت Cron'
         ja: クロン式
         ko: 크론 표현식
         ms: Ungkapan Cron
@@ -86,6 +89,7 @@ additionalProperties:
         zh-Hant: 執行模式
         en: Run Mode
         es-es: Run Modo
+        fa: 'حالت اجرا'
         ja: 実行モード
         ko: 실행 모드
         ms: Mod Operasi
@@ -109,6 +113,7 @@ additionalProperties:
         zh-Hant: 啟動時立即執行一次
         en: Execute immediately upon startup
         es-es: Ejecutar inmediatamente al iniciar
+        fa: 'اجرای فوری هنگام راه اندازی'
         ja: 起動時に即時実行
         ko: 시작 시 즉시 실행
         ms: Laksanakan segera semasa permulaan

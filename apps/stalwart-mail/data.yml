@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: Secure & Modern All-in-One Mail Server
     es-es: Servidor de correo todo en uno, seguro y moderno
+    fa: 'سرور ایمیل جامع، امن و مدرن'
     ja: 安全で最新の統合型メールサーバー
     ms: Pelayan Mel Semua-dalam-Satu yang Selamat & Moden
     pt-br: Servidor de E-mail Tudo-em-Um Seguro e Moderno

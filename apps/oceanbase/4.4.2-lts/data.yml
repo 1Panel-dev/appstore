@@ -9,6 +9,7 @@ additionalProperties:
         en: Port
         zh: 端口
         es-es: Puerto
+        fa: 'پورت'
         zh-Hant: 埠
         ja: ポート
         ko: 포트
@@ -28,6 +29,7 @@ additionalProperties:
         en: TENANT NAME
         zh: 租户名
         es-es: Nombre del tenant
+        fa: 'نام Tenant'
         zh-Hant: 租戶名稱
         ja: テナント名
         ko: 테넌트 이름
@@ -47,6 +49,7 @@ additionalProperties:
         en: Password of sys@root
         zh: SYS 租户密码
         es-es: Contraseña of sys@root
+        fa: 'رمز عبور sys@root'
         zh-Hant: sys@root 的密碼
         ja: sys@root のパスワード
         ko: sys@root 비밀번호
@@ -65,6 +68,7 @@ additionalProperties:
         en: MEMORY LIMIT(Unit GB)
         zh: 内存 (单位：GB)
         es-es: Límite de memoria (GB)
+        fa: 'محدودیت حافظه (واحد GB)'
         zh-Hant: 記憶體上限（GB）
         ja: メモリ上限（GB）
         ko: 메모리 제한(GB)
@@ -84,6 +88,7 @@ additionalProperties:
         en: Mount path of OceanBase files
         zh: OceanBase 文件挂载路径
         es-es: Ruta de montaje de los archivos de OceanBase
+        fa: 'مسیر Mount فایل های OceanBase'
         zh-Hant: OceanBase 檔案掛載路徑
         ja: OceanBase ファイルのマウントパス
         ko: OceanBase 파일 마운트 경로
@@ -102,6 +107,7 @@ additionalProperties:
         en: DATAFILE SIZE(Unit GB)
         zh: 数据文件大小 (单位：GB)
         es-es: Tamaño del archivo de datos (GB)
+        fa: 'اندازه فایل داده (واحد GB)'
         zh-Hant: 資料檔大小（GB）
         ja: データファイルサイズ（GB）
         ko: 데이터 파일 크기(GB)
@@ -121,6 +127,7 @@ additionalProperties:
         en: COMMIT LOG DISK SIZE(Unit GB)
         zh: 事务日志磁盘大小 (单位：GB)
         es-es: Tamaño del disco de registro de commits (GB)
+        fa: 'اندازه دیسک لاگ Commit (واحد GB)'
         zh-Hant: 提交日誌磁碟大小（GB）
         ja: コミットログディスクサイズ（GB）
         ko: 커밋 로그 디스크 크기(GB)

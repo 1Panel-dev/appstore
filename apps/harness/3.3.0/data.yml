@@ -9,6 +9,7 @@ additionalProperties:
         zh-hant: "HTTP 埠"
         en: "HTTP Port"
         es-es: Puerto HTTP
+        fa: 'پورت HTTP'
         ja: "HTTPポート"
         ms: "Port HTTP"
         pt-br: "Porta HTTP"
@@ -39,6 +40,7 @@ additionalProperties:
         zh-hant: "SSH 埠"
         en: "SSH Port"
         es-es: Puerto SSH
+        fa: 'پورت SSH'
         ja: "SSHポート"
         ms: "Port SSH"
         pt-br: "Porta SSH"

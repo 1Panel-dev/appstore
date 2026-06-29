@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: Python Runtime Environment
     es-es: Entorno de ejecución de Python
+    fa: 'محیط اجرای Python'
     ja: Python 実行環境
     ms: Persekitaran Larian Python
     pt-br: Ambiente de Execução Python

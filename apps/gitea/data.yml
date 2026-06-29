@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: The next generation of code hosting platform
         es-es: The next generation of code hosting plataforma
+        fa: 'نسل بعدی پلتفرم میزبانی کد'
         ja: 次世代のコードホスティングプラットフォーム
         ms: Platform hosting kod generasi seterusnya
         pt-br: A próxima geração de plataforma de hospedagem de código

@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: A high-performance, multi-storage database purpose-built for search and analytics
     es-es: Un high-performance, multi-storage base de datos purpose-built for search and analytics
+    fa: 'پایگاه داده پرکارایی با چند نوع ذخیره سازی، ویژه جستجو و تحلیل'
     ja: 検索と分析のために設計された高性能でマルチストレージのデータベース
     ms: Pangkalan data berprestasi tinggi dan pelbagai storan yang direka khusus untuk carian dan analitik
     pt-br: Um banco de dados de alto desempenho e multiarmazenamento projetado para busca e análise

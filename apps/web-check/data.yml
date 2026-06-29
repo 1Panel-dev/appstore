@@ -21,6 +21,7 @@ additionalProperties:
     description:
         en: All-in-one OSINT tool for analysing any website
         es-es: All-in-one OSINT herramienta for analysing any website
+        fa: 'ابزار جامع OSINT برای تحلیل هر وب سایت'
         zh: 用于分析任何网站的多合一 OSINT 工具
         zh-Hant: 用於分析任何網站的多合一 OSINT 工具
         ja: 任意のウェブサイトを分析するためのオールインワン OSINT ツール

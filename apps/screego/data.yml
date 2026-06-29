@@ -21,6 +21,7 @@ additionalProperties:
   description:
     en: Open source screen sharing tools
     es-es: De código abierto screen sharing herramientas
+    fa: 'ابزار متن باز اشتراک گذاری صفحه نمایش'
     zh: 开源屏幕共享工具
     zh-Hant: 開源屏幕共享工具
     ja: オープンソースの画面共有ツール

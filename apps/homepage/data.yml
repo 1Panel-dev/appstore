@@ -21,6 +21,7 @@ additionalProperties:
     description:
         en: A modern, fully static, fast, secure fully proxied, highly customizable application dashboard
         es-es: Un moderno, fully static, fast, seguro fully proxied, highly customizable aplicación panel
+        fa: 'داشبورد برنامه مدرن، کاملا استاتیک، سریع، امن، کاملا پروکسی شده و بسیار قابل سفارشی سازی'
         zh: 现代的、完全静态的、快速的、安全的、完全代理的、高度可定制的应用程序仪表板
         zh-Hant: 現代的、完全靜態的、快速的、安全的、完全代理的、高度可定制的應用程式儀表板
         ja: モダンで完全に静的、高速、安全、完全プロキシ化された高度にカスタマイズ可能なアプリケーションダッシュボード

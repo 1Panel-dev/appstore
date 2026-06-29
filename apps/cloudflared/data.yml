@@ -21,6 +21,7 @@ additionalProperties:
   description:
     en: Cloudflare Tunnel client
     es-es: Cloudflare Tunnel cliente
+    fa: 'کلاینت Cloudflare Tunnel'
     zh: Cloudflare Tunnel 客户端
     zh-Hant: Cloudflare Tunnel 客戶端
     ja: Cloudflare トンネルクライアント

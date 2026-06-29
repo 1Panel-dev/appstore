@@ -8,6 +8,7 @@ additionalProperties:
       label:
         en: Web Port
         es-es: Puerto web
+        fa: 'پورت وب'
         ja: ウェブポート
         ms: Port Web
         pt-br: Porta Web
@@ -27,6 +28,7 @@ additionalProperties:
       label:
         en: Game Port
         es-es: Puerto de juego
+        fa: 'پورت بازی'
         ja: ゲームポート
         ms: Port Permainan
         pt-br: Porta do Jogo
@@ -45,6 +47,7 @@ additionalProperties:
       label:
         en: Time zone
         es-es: Zona horaria
+        fa: 'منطقه زمانی'
         ja: タイムゾーン
         ms: Zon masa
         pt-br: Fuso horário

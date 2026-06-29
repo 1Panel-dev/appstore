@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: Open Source Relational Database
         es-es: Base de datos relacional de código abierto
+        fa: 'پایگاه داده رابطه ای متن باز'
         ja: オープンソースのリレーショナルデータベース
         ms: Pangkalan Data Relasi Sumber Terbuka
         pt-br: Banco de Dados Relacional de Código Aberto

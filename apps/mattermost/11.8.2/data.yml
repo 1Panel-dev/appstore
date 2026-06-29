@@ -8,6 +8,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -27,6 +28,7 @@ additionalProperties:
       label:
         en: RTC Port
         es-es: Puerto RTC
+        fa: 'پورت RTC'
         ja: RTC ポート
         ms: Port RTC
         pt-br: Porta RTC
@@ -46,6 +48,7 @@ additionalProperties:
       label:
         en: Read Only Container
         es-es: Contenedor de solo lectura
+        fa: 'کانتینر فقط خواندنی'
         ja: 読み取り専用コンテナ
         ms: Bekas baca sahaja
         pt-br: Contêiner somente leitura
@@ -69,6 +72,7 @@ additionalProperties:
       label:
         en: Time Zone
         es-es: Zona horaria
+        fa: 'منطقه زمانی'
         ja: タイムゾーン
         ms: Zon waktu
         pt-br: Fuso horário
@@ -87,6 +91,7 @@ additionalProperties:
       label:
         en: SQL Driver Name
         es-es: Nombre del controlador SQL
+        fa: 'نام درایور SQL'
         ja: SQL ドライバー名
         ms: Nama pemacu SQL
         pt-br: Nome do driver SQL
@@ -105,6 +110,7 @@ additionalProperties:
       label:
         en: Bleve Index Directory
         es-es: Directorio de índices Bleve
+        fa: 'دایرکتوری ایندکس Bleve'
         ja: Bleve インデックスディレクトリ
         ms: Direktori indeks Bleve
         pt-br: Diretório de índices Bleve
@@ -123,6 +129,7 @@ additionalProperties:
       label:
         en: Site URL
         es-es: URL del sitio
+        fa: 'URL سایت'
         ja: サイト URL
         ms: URL laman
         pt-br: URL do site
@@ -141,6 +148,7 @@ additionalProperties:
       label:
         en: Database Service
         es-es: Servicio de base de datos
+        fa: 'سرویس پایگاه داده'
         ja: データベースサービス
         ms: Perkhidmatan pangkalan data
         pt-br: Serviço de banco de dados
@@ -166,6 +174,7 @@ additionalProperties:
       label:
         en: Database
         es-es: Base de datos
+        fa: 'پایگاه داده'
         ja: データベース
         ms: Pangkalan data
         pt-br: Banco de dados
@@ -185,6 +194,7 @@ additionalProperties:
       label:
         en: User
         es-es: Usuario
+        fa: 'کاربر'
         ja: ユーザー
         ms: Pengguna
         pt-br: Usuário
@@ -204,6 +214,7 @@ additionalProperties:
       label:
         en: Password
         es-es: Contraseña
+        fa: 'رمز عبور'
         ja: パスワード
         ms: Kata laluan
         pt-br: Senha

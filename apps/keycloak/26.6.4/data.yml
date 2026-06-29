@@ -9,6 +9,7 @@ additionalProperties:
         zh-Hant: HTTP 連接埠
         en: HTTP Port
         es-es: Puerto HTTP
+        fa: 'پورت HTTP'
         ja: HTTP ポート
         ko: HTTP 포트
         ms: Port HTTP
@@ -39,6 +40,7 @@ additionalProperties:
         zh-Hant: 計劃為 Keycloak 分配的網域名稱
         en: Domain name planned for Keycloak
         es-es: Dominio name planned for Clavecloak
+        fa: 'نام دامنه در نظر گرفته شده برای Keycloak'
         ja: Keycloak に計画されているドメイン名
         ko: Keycloak에 계획된 도메인 이름
         ms: Nama domain yang dirancang untuk Keycloak
@@ -68,6 +70,7 @@ additionalProperties:
         zh-Hant: 資料庫
         en: Database
         es-es: Base de datos
+        fa: 'پایگاه داده'
         ja: データベース
         ko: 데이터베이스
         ms: Pangkalan Data
@@ -98,6 +101,7 @@ additionalProperties:
         zh-Hant: 資料庫使用者名稱
         en: Database Username
         es-es: Usuario de la base de datosname
+        fa: 'نام کاربری پایگاه داده'
         ja: データベースユーザー名
         ko: 데이터베이스 사용자 이름
         ms: Nama Pengguna Pangkalan Data
@@ -118,6 +122,7 @@ additionalProperties:
         zh-Hant: 資料庫密碼
         en: Database Password
         es-es: Contraseña de la base de datos
+        fa: 'رمز عبور پایگاه داده'
         ja: データベースパスワード
         ko: 데이터베이스 비밀번호
         ms: Kata Laluan Pangkalan Data
@@ -138,6 +143,7 @@ additionalProperties:
         zh-Hant: 資料庫名稱
         en: Database Name
         es-es: Nombre de la base de datos
+        fa: 'نام پایگاه داده'
         ja: データベース名
         ko: 데이터베이스 이름
         ms: Nama Pangkalan Data
@@ -158,6 +164,7 @@ additionalProperties:
         zh-Hant: 預設管理員帳戶密碼
         en: Default Administrator Account Password
         es-es: Default Administrator Account Contraseña
+        fa: 'رمز عبور پیش فرض حساب مدیر'
         ja: デフォルト管理者アカウントパスワード
         ko: 기본 관리자 계정 비밀번호
         ms: Kata Laluan Akaun Pentadbir Lalai

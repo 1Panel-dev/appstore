@@ -12,6 +12,7 @@ additionalProperties:
       label:
         en: Database Service
         es-es: Servicio de base de datos
+        fa: 'سرویس پایگاه داده'
         ja: データベース サービス
         ms: Perkhidmatan Pangkalan Data
         pt-br: Serviço de Banco de Dados
@@ -34,6 +35,7 @@ additionalProperties:
       label:
         en: Database
         es-es: Base de datos
+        fa: 'پایگاه داده'
         ja: データベース
         ms: Pangkalan Data
         pt-br: Banco de Dados
@@ -53,6 +55,7 @@ additionalProperties:
       label:
         en: User
         es-es: Usuario
+        fa: 'کاربر'
         ja: ユーザー
         ms: Pengguna
         pt-br: Usuário
@@ -72,6 +75,7 @@ additionalProperties:
       label:
         en: Password
         es-es: Contraseña
+        fa: 'رمز عبور'
         ja: パスワード
         ms: Kata laluan
         pt-br: Senha
@@ -90,6 +94,7 @@ additionalProperties:
       label:
         en: Security level
         es-es: Nivel de seguridad
+        fa: 'سطح امنیت'
         ja: セキュリティレベル
         ms: Tahap Keselamatan
         pt-br: Nível de Segurança
@@ -116,6 +121,7 @@ additionalProperties:
       label:
         en: Locale
         es-es: Configuración regional
+        fa: 'زبان/محلی سازی'
         ja: ロケール
         ms: Lokal
         pt-br: Localidade
@@ -139,6 +145,7 @@ additionalProperties:
       label:
         en: Recaptcha Public Key
         es-es: Recaptcha Public Clave
+        fa: 'کلید عمومی reCAPTCHA'
         ja: Recaptcha 公開鍵
         ms: Kunci Awam Recaptcha
         pt-br: Chave Pública Recaptcha
@@ -158,6 +165,7 @@ additionalProperties:
       label:
         en: Recaptcha Private Key
         es-es: Recaptcha Private Clave
+        fa: 'کلید خصوصی reCAPTCHA'
         ja: Recaptcha 秘密鍵
         ms: Kunci Peribadi Recaptcha
         pt-br: Chave Privada Recaptcha
@@ -177,6 +185,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta

@@ -15,6 +15,7 @@ additionalProperties:
     description:
         en: A file list program that supports multiple storage
         es-es: Un file list program that supports multiple storage
+        fa: 'برنامه فهرست فایل با پشتیبانی از چند نوع فضای ذخیره سازی'
         ja: 複数のストレージをサポートするファイルリストプログラム
         ms: Satu program senarai fail yang menyokong pelbagai storan
         pt-br: Um programa de lista de arquivos que suporta vários armazenamentos

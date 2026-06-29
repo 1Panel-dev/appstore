@@ -9,6 +9,7 @@ additionalProperties:
         en: Web port
         zh: Web 端口
         es-es: Puerto web
+        fa: 'پورت وب'
         zh-Hant: Web 埠
         ja: Web ポート
         ko: 웹 포트
@@ -28,6 +29,7 @@ additionalProperties:
         en: Communication port
         zh: 通讯端口
         es-es: Puerto de comunicación
+        fa: 'پورت ارتباطی'
         zh-Hant: 通訊埠
         ja: 通信ポート
         ko: 통신 포트

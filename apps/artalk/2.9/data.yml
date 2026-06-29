@@ -9,6 +9,7 @@ additionalProperties:
         en: Port
         zh: 端口
         es-es: Puerto
+        fa: 'پورت'
         zh-Hant: 埠
         ja: ポート
         ko: 포트
@@ -28,6 +29,7 @@ additionalProperties:
         en: Default Site Name
         zh: 站点名称
         es-es: Default Site Nombre
+        fa: 'نام پیش فرض سایت'
         zh-Hant: 預設站點名稱
         ja: デフォルトサイト名
         ko: 기본 사이트 이름
@@ -46,6 +48,7 @@ additionalProperties:
         en: Default Site Url
         zh: 站点地址
         es-es: URL del sitio predeterminada
+        fa: 'URL پیش فرض سایت'
         zh-Hant: 預設站點網址
         ja: デフォルトサイトURL
         ko: 기본 사이트 URL
@@ -64,6 +67,7 @@ additionalProperties:
         en: Locale
         zh: 语言
         es-es: Configuración regional
+        fa: 'زبان/محلی سازی'
         zh-Hant: 語言環境
         ja: ロケール
         ko: 로케일
@@ -92,6 +96,7 @@ additionalProperties:
         en: Time Zone
         zh: 时区
         es-es: Zona horaria
+        fa: 'منطقه زمانی'
         zh-Hant: 時區
         ja: タイムゾーン
         ko: 시간대

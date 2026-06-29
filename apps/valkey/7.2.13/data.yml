@@ -7,6 +7,7 @@ additionalProperties:
       label:
         en: Database Password
         es-es: Contrasena de la base de datos
+        fa: 'رمز عبور پایگاه داده'
         ja: データベースパスワード
         ms: Kata Laluan Pangkalan Data
         pt-br: Senha do Banco de Dados
@@ -26,6 +27,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta

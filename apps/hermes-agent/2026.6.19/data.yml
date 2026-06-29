@@ -11,6 +11,7 @@ additionalProperties:
       label:
         en: Dashboard Username
         es-es: Usuario del Dashboard
+        fa: 'نام کاربری داشبورد'
         ja: Dashboard ユーザー名
         ms: Nama pengguna Dashboard
         pt-br: Usuário do Dashboard
@@ -31,6 +32,7 @@ additionalProperties:
       label:
         en: Dashboard Password
         es-es: Contraseña del Dashboard
+        fa: 'رمز عبور داشبورد'
         ja: Dashboard パスワード
         ms: Kata laluan Dashboard
         pt-br: Senha do Dashboard
@@ -50,6 +52,7 @@ additionalProperties:
       label:
         en: Web UI Port
         es-es: Puerto web
+        fa: 'پورت رابط وب'
         ja: Web UIポート
         ms: Port Web UI
         pt-br: Porta da Web UI

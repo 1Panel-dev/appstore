@@ -21,6 +21,7 @@ additionalProperties:
   description:
     en: Self-hosted - Docker compose.yaml - Stack-oriented Manager
     es-es: Administrador autoalojado orientado a stacks para Docker compose.yaml
+    fa: 'مدیر خودمیزبان و Stack محور برای Docker compose.yaml'
     zh: 自托管 - Docker compose.yaml - 面向堆栈的管理器
     zh-Hant: 自託管 - Docker compose.yaml - 面向堆棧的管理器
     ja: セルフホスト - Docker compose.yaml - スタック指向のマネージャー

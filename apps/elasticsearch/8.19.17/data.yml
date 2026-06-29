@@ -8,6 +8,7 @@ additionalProperties:
           label:
             en: HTTP Port
             es-es: Puerto HTTP
+            fa: 'پورت HTTP'
             ja: HTTPポート
             ms: Port HTTP
             pt-br: Porta HTTP
@@ -27,6 +28,7 @@ additionalProperties:
           label:
             en: Password Verification
             es-es: Contraseña Verification
+            fa: 'تایید رمز عبور'
             ja: パスワード検証
             ms: Pengesahan Kata Laluan
             pt-br: Verificação de Senha
@@ -50,6 +52,7 @@ additionalProperties:
           label:
             en: Password
             es-es: Contraseña
+            fa: 'رمز عبور'
             ja: パスワード
             ms: Kata laluan
             pt-br: Senha
@@ -69,6 +72,7 @@ additionalProperties:
           label:
             en: ES JAVA OPTS
             es-es: Opciones JAVA de ES
+            fa: 'گزینه های Java برای ES'
             ja: ES JAVA オプション
             ms: Pilihan ES JAVA
             pt-br: Opções ES JAVA

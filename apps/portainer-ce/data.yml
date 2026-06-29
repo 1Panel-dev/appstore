@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: GUI container management tools
         es-es: GUI container herramienta de gestións
+        fa: 'ابزارهای گرافیکی مدیریت کانتینر'
         ja: GUIコンテナ管理ツール
         ms: Alat pengurusan kontena GUI
         pt-br: Ferramentas de gerenciamento de contêiner GUI

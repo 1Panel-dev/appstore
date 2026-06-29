@@ -8,6 +8,7 @@ additionalProperties:
       label:
         en: Root Password
         es-es: Contraseña de root
+        fa: 'رمز عبور root'
         ja: ルートパスワード
         ms: Kata Laluan Root
         pt-br: Senha Root
@@ -23,6 +24,7 @@ additionalProperties:
       label:
         en: Replication User
         es-es: Replication Usuario
+        fa: 'کاربر Replication'
         ja: レプリケーションユーザー
         ms: Pengguna Replikasi
         pt-br: Usuário de Replicação
@@ -39,6 +41,7 @@ additionalProperties:
       label:
         en: Replication Password
         es-es: Replication Contraseña
+        fa: 'رمز عبور Replication'
         ja: レプリケーションパスワード
         ms: Kata Laluan Replikasi
         pt-br: Senha de Replicação
@@ -55,6 +58,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta

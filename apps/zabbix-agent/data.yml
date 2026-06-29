@@ -13,6 +13,7 @@ additionalProperties:
   description:
     en: The universal, open-source observability solution for IT & OT
     es-es: La solución universal y de código abierto de observabilidad para TI y TO
+    fa: 'راهکار جامع و متن باز observability برای IT و OT'
     ja: ITおよびOT向けのユニバーサルでオープンソースの可観測性ソリューション
     ms: IT dan OT untuk penyelesaian observabiliti sumber terbuka yang universal
     pt-br: A solução universal e de código aberto para observabilidade para TI e OT

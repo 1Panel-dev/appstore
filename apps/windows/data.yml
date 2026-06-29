@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: Windows inside a Docker container
         es-es: Windows dentro de un contenedor Docker
+        fa: 'Windows داخل یک کانتینر Docker'
         ja: Docker コンテナ内の Windows
         ms: Docker 容器內的 Windows
         pt-br: Windows dentro de um contêiner Docker

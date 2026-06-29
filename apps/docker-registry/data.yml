@@ -21,6 +21,7 @@ additionalProperties:
     description:
         en: A storage and distribution system for named Docker images
         es-es: Un storage and distribution system for named Docker images
+        fa: 'سیستم ذخیره سازی و توزیع imageهای نام گذاری شده Docker'
         zh: Docker 镜像存储库
         zh-Hant: Docker 映像存儲庫
         ja: 名前付き Docker イメージのためのストレージおよび配布システム

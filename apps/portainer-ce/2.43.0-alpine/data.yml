@@ -8,6 +8,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -26,6 +27,7 @@ additionalProperties:
       label:
         en: API Port
         es-es: Puerto API
+        fa: 'پورت API'
         ja: API ポート
         ms: Port API
         pt-br: Porta API

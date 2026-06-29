@@ -11,6 +11,7 @@ additionalProperties:
       label:
         en: Access Port
         es-es: Access Puerto
+        fa: 'پورت دسترسی'
         ja: アクセスポート
         ms: Port Akses
         pt-br: Porta de Acesso
@@ -29,6 +30,7 @@ additionalProperties:
       label:
         en: PostgreSQL Database Service
         es-es: Servicio de base de datos PostgreSQL
+        fa: 'سرویس پایگاه داده PostgreSQL'
         ja: PostgreSQL データベースサービス
         ms: Perkhidmatan Pangkalan Data PostgreSQL
         pt-br: Serviço de Banco de Dados PostgreSQL
@@ -48,6 +50,7 @@ additionalProperties:
       label:
         en: Database Name
         es-es: Nombre de la base de datos
+        fa: 'نام پایگاه داده'
         ja: データベース名
         ms: Nama Pangkalan Data
         pt-br: Nome do Banco de Dados
@@ -67,6 +70,7 @@ additionalProperties:
       label:
         en: Database User
         es-es: Usuario de la base de datos
+        fa: 'کاربر پایگاه داده'
         ja: データベースユーザー
         ms: Pengguna Pangkalan Data
         pt-br: Usuário do Banco de Dados
@@ -85,6 +89,7 @@ additionalProperties:
       label:
         en: Database Password
         es-es: Contraseña de la base de datos
+        fa: 'رمز عبور پایگاه داده'
         ja: データベースパスワード
         ms: Kata Laluan Pangkalan Data
         pt-br: Senha do Banco de Dados
@@ -103,6 +108,7 @@ additionalProperties:
       label:
         en: Redis Service
         es-es: Servicio de Redis
+        fa: 'سرویس Redis'
         ja: Redis サービス
         ms: Perkhidmatan Redis
         pt-br: Serviço Redis
@@ -120,6 +126,7 @@ additionalProperties:
       label:
         en: Redis Password
         es-es: Contraseña de Redis
+        fa: 'رمز عبور Redis'
         ja: Redis パスワード
         ms: Kata Laluan Redis
         pt-br: Senha Redis
@@ -138,6 +145,7 @@ additionalProperties:
       label:
         en: GitHub OAuth Client ID
         es-es: ID de cliente de GitHub OAuth
+        fa: 'شناسه کلاینت OAuth در GitHub'
         ja: GitHub OAuth クライアントID
         ms: ID Klien OAuth GitHub
         pt-br: ID do Cliente OAuth do GitHub
@@ -156,6 +164,7 @@ additionalProperties:
       label:
         en: GitHub OAuth SECRET
         es-es: Secreto de GitHub OAuth
+        fa: 'رمز محرمانه OAuth در GitHub'
         ja: GitHub OAuth シークレット
         ms: Rahsia OAuth GitHub
         pt-br: Segredo OAuth do GitHub
@@ -174,6 +183,7 @@ additionalProperties:
       label:
         en: SMTP Server (Optional)
         es-es: Servidor SMTP (opcional)
+        fa: 'سرور SMTP (اختیاری)'
         ja: SMTPサーバー（オプション）
         ms: Pelayan SMTP (Pilihan)
         pt-br: Servidor SMTP (Opcional)
@@ -193,6 +203,7 @@ additionalProperties:
       label:
         en: SMTP Server Port (Optional)
         es-es: SMTP Server Puerto (Optional)
+        fa: 'پورت سرور SMTP (اختیاری)'
         ja: SMTPサーバーポート（オプション）
         ms: Port Pelayan SMTP (Pilihan)
         pt-br: Porta do Servidor SMTP (Opcional)
@@ -211,6 +222,7 @@ additionalProperties:
       label:
         en: SMTP mail Username (Optional)
         es-es: SMTP mail Nombre de usuario (Optional)
+        fa: 'نام کاربری ایمیل SMTP (اختیاری)'
         ja: SMTPメールユーザー名（オプション）
         ms: Nama Pengguna Mel SMTP (Pilihan)
         pt-br: Nome de Usuário SMTP (Opcional)
@@ -229,6 +241,7 @@ additionalProperties:
       label:
         en: SMTP mail password (Optional)
         es-es: Contraseña SMTP (opcional)
+        fa: 'رمز عبور ایمیل SMTP (اختیاری)'
         ja: SMTPメールパスワード（オプション）
         ms: Kata Laluan Mel SMTP (Pilihan)
         pt-br: Senha de E-mail SMTP (Opcional)
@@ -247,6 +260,7 @@ additionalProperties:
       label:
         en: SMTP mail Receiver Email (Optional)
         es-es: Correo receptor SMTP (opcional)
+        fa: 'ایمیل گیرنده SMTP (اختیاری)'
         ja: SMTPメール受信者メールアドレス（オプション）
         ms: E-mel Penerima Mel SMTP (Pilihan)
         pt-br: E-mail do Destinatário SMTP (Opcional)
@@ -265,6 +279,7 @@ additionalProperties:
       label:
         en: Language
         es-es: Idioma
+        fa: 'زبان'
         ja: 言語
         ms: Bahasa
         pt-br: Idioma
@@ -284,6 +299,7 @@ additionalProperties:
       label:
         en: Reverse Proxy Domain (If no domain, you can fill in http://<ip_address>:12115)
         es-es: Reverse Proxy Dominio (If no domain, you can fill in http://<ip_address>:12115)
+        fa: 'دامنه پروکسی معکوس (اگر دامنه ندارید، می توانید http://<ip_address>:12115 را وارد کنید)'
         ja: リバースプロキシドメイン（ドメインがない場合は http://<ipアドレス>:12115 を入力できます）
         ms: Domain Proksi Balik (Jika tiada domain, boleh isi http://<ip_address>:12115)
         pt-br: Domínio de Proxy Reverso (Se não houver domínio, você pode preencher http://<ip_address>:12115)

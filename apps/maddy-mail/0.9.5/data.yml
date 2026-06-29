@@ -11,6 +11,7 @@ additionalProperties:
           label:
             en: SMTP inbound port
             es-es: Puerto de entrada SMTP
+            fa: 'پورت ورودی SMTP'
             ja: SMTP 受信ポート
             ms: Port masuk SMTP
             pt-br: Porta de entrada SMTP
@@ -30,6 +31,7 @@ additionalProperties:
           label:
             en: IMAP4 port
             es-es: Puerto IMAP4
+            fa: 'پورت IMAP4'
             ja: IMAP4 ポート
             ms: Port IMAP4
             pt-br: Porta IMAP4
@@ -49,6 +51,7 @@ additionalProperties:
           label:
             en: IMAP4 port
             es-es: Puerto IMAP4
+            fa: 'پورت IMAP4'
             ja: IMAP4 ポート
             ms: Port IMAP4
             pt-br: Porta IMAP4
@@ -68,6 +71,7 @@ additionalProperties:
           label:
             en: SMTP Submission ports
             es-es: Puertos de envío SMTP
+            fa: 'پورت های ارسال SMTP'
             ja: SMTP 提出ポート
             ms: Port Penghantaran SMTP
             pt-br: Portas de envio SMTP
@@ -87,6 +91,7 @@ additionalProperties:
           label:
             en: SMTP Submission ports
             es-es: Puertos de envío SMTP
+            fa: 'پورت های ارسال SMTP'
             ja: SMTP 提出ポート
             ms: Port Penghantaran SMTP
             pt-br: Portas de envio SMTP
@@ -105,6 +110,7 @@ additionalProperties:
           label:
             en: Mail MX hostname
             es-es: Nombre de host MX del correo
+            fa: 'نام میزبان MX ایمیل'
             ja: メール MX ホスト名
             ms: Nama hos MX mel
             pt-br: Nome do host MX de e-mail
@@ -123,6 +129,7 @@ additionalProperties:
           label:
             en: Mail domain
             es-es: Dominio del correo
+            fa: 'دامنه ایمیل'
             ja: メールドメイン
             ms: Domain mel
             pt-br: Domínio de e-mail

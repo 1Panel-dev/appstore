@@ -10,6 +10,7 @@ additionalProperties:
       label:
         en: Image Name
         es-es: Image Nombre
+        fa: 'نام تصویر'
         ja: イメージ名
         ms: Nama Imej
         pt-br: Nome da imagem
@@ -64,6 +65,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -82,6 +84,7 @@ additionalProperties:
       label:
         en: Screen Resolution
         es-es: Resolución de pantalla
+        fa: 'رزولوشن صفحه'
         ja: 画面解像度
         ms: Resolusi Skrin
         pt-br: Resolução de tela
@@ -100,6 +103,7 @@ additionalProperties:
       label:
         en: User Password
         es-es: Usuario Contraseña
+        fa: 'رمز عبور کاربر'
         ja: ユーザーパスワード
         ms: Kata Laluan Pengguna
         pt-br: Senha do usuário
@@ -118,6 +122,7 @@ additionalProperties:
       label:
         en: Admin Password
         es-es: Contraseña del administrador
+        fa: 'رمز عبور مدیر'
         ja: 管理者パスワード
         ms: Kata Laluan Pentadbir
         pt-br: Senha do administrador
@@ -136,6 +141,7 @@ additionalProperties:
       label:
         en: Bind Address
         es-es: Bind Dirección
+        fa: 'آدرس Bind'
         ja: バインドアドレス
         ms: Alamat Ikat
         pt-br: Endereço de ligação
@@ -154,6 +160,7 @@ additionalProperties:
       label:
         en: WebRTC UDP Port Range
         es-es: WebRTC UDP Puerto Range
+        fa: 'بازه پورت UDP برای WebRTC'
         ja: WebRTC UDP ポート範囲
         ms: Julat Port UDP WebRTC
         pt-br: Faixa de portas UDP WebRTC
@@ -172,6 +179,7 @@ additionalProperties:
       label:
         en: ICELite Mode
         es-es: ICELite Modo
+        fa: 'حالت ICELite'
         ja: ICELite モード
         ms: Mod ICELite
         pt-br: Modo ICELite
@@ -190,6 +198,7 @@ additionalProperties:
       label:
         en: Shared Memory Footprint (1GB)
         es-es: Huella de memoria compartida (1 GB)
+        fa: 'اندازه حافظه مشترک (1GB)'
         ja: 共有メモリ使用量 (1GB)
         ms: Jejak Ingatan Dikongsi (1GB)
         pt-br: Uso de memória compartilhada (1GB)
@@ -213,6 +222,7 @@ additionalProperties:
       label:
         en: Control Protection
         es-es: Protección de control
+        fa: 'محافظت کنترل'
         ja: コントロール保護
         ms: Perlindungan Kawalan
         pt-br: Proteção de controle
@@ -236,6 +246,7 @@ additionalProperties:
       label:
         en: Implicit Control
         es-es: Control implícito
+        fa: 'کنترل ضمنی'
         ja: 暗黙の制御
         ms: Kawalan Tersirat
         pt-br: Controle Implícito
@@ -254,6 +265,7 @@ additionalProperties:
       label:
         en: Locks
         es-es: Bloqueos
+        fa: 'قفل ها'
         ja: ロック
         ms: Kunci
         pt-br: Bloqueios
@@ -272,6 +284,7 @@ additionalProperties:
       label:
         en: NAT1to1 IP
         es-es: IP NAT1to1
+        fa: 'IP NAT یک به یک'
         ja: NAT1to1 IP
         ms: NAT1to1 IP
         pt-br: IP NAT1to1
@@ -290,6 +303,7 @@ additionalProperties:
       label:
         en: IP Fetch URL
         es-es: URL de obtención de IP
+        fa: 'URL دریافت IP'
         ja: IP 取得URL
         ms: URL Dapatkan IP
         pt-br: URL de obtenção de IP
@@ -308,6 +322,7 @@ additionalProperties:
       label:
         en: ICE Server
         es-es: Servidor ICE
+        fa: 'سرور ICE'
         ja: ICE サーバー
         ms: Pelayan ICE
         pt-br: Servidor ICE
@@ -326,6 +341,7 @@ additionalProperties:
       label:
         en: ICE Servers
         es-es: Servidores ICE
+        fa: 'سرورهای ICE'
         ja: ICE サーバー群
         ms: Pelayan-pelayan ICE
         pt-br: Servidores ICE
@@ -344,6 +360,7 @@ additionalProperties:
       label:
         en: Video Codec
         es-es: Códec de video
+        fa: 'کدک ویدیو'
         ja: ビデオコーデック
         ms: Codec Video
         pt-br: Codec de Vídeo
@@ -362,6 +379,7 @@ additionalProperties:
       label:
         en: Video Bitrate
         es-es: Tasa de bits de video
+        fa: 'نرخ بیت ویدیو'
         ja: ビデオビットレート
         ms: Bitrate Video
         pt-br: Taxa de bits do vídeo
@@ -380,6 +398,7 @@ additionalProperties:
       label:
         en: Max FPS
         es-es: FPS máximos
+        fa: 'حداکثر FPS'
         ja: 最大FPS
         ms: FPS Maksimum
         pt-br: FPS Máximo
@@ -398,6 +417,7 @@ additionalProperties:
       label:
         en: Hardware Encoder
         es-es: Codificador por hardware
+        fa: 'کدگذار سخت افزاری'
         ja: ハードウェアエンコーダ
         ms: Pengekod Perkakasan
         pt-br: Codificador de Hardware
@@ -416,6 +436,7 @@ additionalProperties:
       label:
         en: Audio Codec
         es-es: Códec de audio
+        fa: 'کدک صدا'
         ja: オーディオコーデック
         ms: Codec Audio
         pt-br: Codec de Áudio
@@ -434,6 +455,7 @@ additionalProperties:
       label:
         en: Audio Bitrate
         es-es: Tasa de bits de audio
+        fa: 'نرخ بیت صدا'
         ja: オーディオビットレート
         ms: Bitrate Audio
         pt-br: Taxa de bits do áudio
@@ -452,6 +474,7 @@ additionalProperties:
       label:
         en: Broadcast Pipeline
         es-es: Canalización de transmisión
+        fa: 'Pipeline پخش'
         ja: ブロードキャストパイプライン
         ms: Saluran Penyiaran
         pt-br: Pipeline de transmissão
@@ -470,6 +493,7 @@ additionalProperties:
       label:
         en: Broadcast URL
         es-es: URL de transmisión
+        fa: 'URL پخش'
         ja: ブロードキャストURL
         ms: URL Penyiaran
         pt-br: URL de transmissão
@@ -493,6 +517,7 @@ additionalProperties:
       label:
         en: Broadcast Autostart
         es-es: Inicio automático de transmisión
+        fa: 'شروع خودکار Broadcast'
         ja: ブロードキャスト自動起動
         ms: Mula Siaran Automatik
         pt-br: Inicialização automática de transmissão
@@ -511,6 +536,7 @@ additionalProperties:
       label:
         en: SSL Certificate Path
         es-es: SSL Certificate Ruta
+        fa: 'مسیر گواهی SSL'
         ja: SSL証明書パス
         ms: Laluan Sijil SSL
         pt-br: Caminho do certificado SSL
@@ -529,6 +555,7 @@ additionalProperties:
       label:
         en: SSL Key Path
         es-es: SSL Clave Ruta
+        fa: 'مسیر کلید SSL'
         ja: SSLキーのパス
         ms: Laluan Kunci SSL
         pt-br: Caminho da chave SSL
@@ -552,6 +579,7 @@ additionalProperties:
       label:
         en: Proxy Mode
         es-es: Proxy Modo
+        fa: 'حالت پروکسی'
         ja: プロキシモード
         ms: Mod Proksi
         pt-br: Modo Proxy
@@ -570,6 +598,7 @@ additionalProperties:
       label:
         en: Path Prefix
         es-es: Ruta Prefix
+        fa: 'پیشوند مسیر'
         ja: パスプレフィックス
         ms: Awalan Laluan
         pt-br: Prefixo de Caminho
@@ -588,6 +617,7 @@ additionalProperties:
       label:
         en: CORS
         es-es: Configuración CORS
+        fa: 'CORS'
         ja: CORS
         ms: CORS
         pt-br: CORS
@@ -611,6 +641,7 @@ additionalProperties:
       label:
         en: File Transfer Enabled
         es-es: Transferencia de archivos habilitada
+        fa: 'انتقال فایل فعال باشد'
         ja: ファイル転送有効
         ms: Pemindahan Fail Diaktifkan
         pt-br: Transferência de Arquivos Habilitada
@@ -629,6 +660,7 @@ additionalProperties:
       label:
         en: Display
         es-es: Pantalla
+        fa: 'نمایش'
         ja: ディスプレイ
         ms: Paparan
         pt-br: Tela
@@ -647,6 +679,7 @@ additionalProperties:
       label:
         en: Device
         es-es: Dispositivo
+        fa: 'دستگاه'
         ja: デバイス
         ms: Peranti
         pt-br: Dispositivo
@@ -665,6 +698,7 @@ additionalProperties:
       label:
         en: Static Files Path
         es-es: Static Files Ruta
+        fa: 'مسیر فایل های استاتیک'
         ja: 静的ファイルパス
         ms: Laluan Fail Statik
         pt-br: Caminho de arquivos estáticos

@@ -20,6 +20,7 @@ additionalProperties:
     description:
         en: A Web app to manage your Two-Factor Authentication (2FA) accounts and generate their security codes
         es-es: Aplicacion web para gestionar tus cuentas de autenticacion de dos factores (2FA) y generar sus codigos de seguridad
+        fa: 'برنامه وب برای مدیریت حساب های احراز هویت دومرحله ای (2FA) و تولید کدهای امنیتی آن ها'
         zh: 管理双因素身份验证（2FA）帐户并生成安全代码的 Web 应用程序
         zh-Hant: 管理雙因素身份驗證（2FA）帳戶並生成安全代碼的 Web 應用程式
         ja: 二要素認証（2FA）アカウントを管理し、安全コードを生成するWebアプリ

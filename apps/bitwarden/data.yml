@@ -13,6 +13,7 @@ additionalProperties:
     description:
         en: Open source password management service
         es-es: De código abierto password gestión service
+        fa: 'سرویس متن باز مدیریت رمز عبور'
         ja: オープンソースのパスワード管理サービス
         ms: Perkhidmatan pengurusan kata laluan sumber terbuka
         pt-br: Serviço de gerenciamento de senhas de código aberto
