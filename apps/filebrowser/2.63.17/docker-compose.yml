@@ -1,15 +1,16 @@
 services:
-  bytebase:
-    image: bytebase/bytebase:3.19.1
+  filebrowser:
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
       - 1panel-network
     ports:
-      - ${PANEL_APP_PORT_HTTP}:8080
+      - ${PANEL_APP_PORT_HTTP}:80
     volumes:
-      - ./data:/var/opt/bytebase
-    init: true
+      - ${MOUNT_PATH}:/srv
+      - ./config:/config
+      - ./database:/database
+    image: filebrowser/filebrowser:v2.63.17
     labels:
       createdBy: "Apps"
 networks:
