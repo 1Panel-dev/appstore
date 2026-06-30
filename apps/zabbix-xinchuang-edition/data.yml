@@ -1,6 +1,11 @@
+name: Zabbix信创版
+tags:
+  - 实用工具
+title: Zabbix信创版
+description: Zabbix信创版
 additionalProperties:
   key: zabbix-xinchuang-edition
-  name: zabbix信创版
+  name: Zabbix信创版
   tags:
     - Tool
   shortDescZh: 企业级开源监控解决方案 | 需外接数据库，Agent/Proxy 可选，支持插件自动安装
@@ -10,6 +15,10 @@ additionalProperties:
   type: tool
   crossVersionUpdate: true
   limit: 0
+  architectures:
+    - amd64
+    - arm64
+  recommend: 0
   website: https://www.zabbix.com
   github: https://github.com/zabbix/zabbix
   document: https://www.zabbix.com/documentation/current/

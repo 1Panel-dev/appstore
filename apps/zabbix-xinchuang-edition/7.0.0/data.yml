@@ -1,6 +1,49 @@
 additionalProperties:
   formFields:
-    # 数据库地址（支持外部数据库，如 TDSQL / MySQL / MariaDB）
+    # 数据库服务（通过 1Panel 一键安装 MySQL，选填）
+    - child:
+        default: ""
+        envKey: ZABBIX_DB_HOST
+        required: true
+        type: service
+      default: mysql
+      labelEn: Database Service
+      labelZh: 数据库服务（选填，1Panel 安装）
+      label:
+        en: Database Service (optional, 1Panel install)
+        es-es: Servicio de base de datos (opcional, instalación 1Panel)
+        ja: データベースサービス（オプション、1Panel インストール）
+        ko: 데이터베이스 서비스 (선택 사항, 1Panel 설치)
+        ms: Perkhidmatan Pangkalan Data (pilihan, pemasangan 1Panel)
+        pt-br: Serviço de Banco de Dados (opcional, instalação 1Panel)
+        ru: Сервис баз данных (опционально, установка 1Panel)
+        tr: Veritabanı Hizmeti (isteğe bağlı, 1Panel kurulumu)
+        zh: 数据库服务（选填，1Panel 安装）
+        zh-Hant: 資料庫服務（選填，1Panel 安裝）
+      required: false
+      type: apps
+      values:
+        - label: MySQL
+          value: mysql
+    # Root 密码（1Panel 自动安装 MySQL 时使用，选填）
+    - default: ""
+      envKey: PANEL_DB_ROOT_PASSWORD
+      labelEn: Root Password
+      labelZh: Root 密码（选填，1Panel 安装用）
+      label:
+        en: Root Password (optional, for 1Panel install)
+        es-es: Contraseña de root (opcional)
+        ja: ルートパスワード（オプション）
+        ko: 루트 비밀번호 (선택 사항)
+        ms: Kata Laluan Root (pilihan)
+        pt-br: Senha Root (opcional)
+        ru: Пароль root (опционально)
+        tr: Root Parolası (isteğe bağlı)
+        zh: Root 密码（选填，1Panel 安装用）
+        zh-Hant: Root 密碼（選填）
+      required: false
+      type: password
+    # 数据库地址（手动输入外部数据库 IP）
     - default: ""
       edit: true
       envKey: ZABBIX_DB_HOST
@@ -13,7 +56,7 @@ additionalProperties:
         ru: Хост базы данных
         ko: 데이터베이스 호스트
         tr: Veritabanı Ana Bilgisi
-        zh: 数据库地址
+        zh: 数据库地址（外部数据库必填）
         zh-Hant: 資料庫主機
       required: true
       type: text
