@@ -6,6 +6,10 @@
 
 set -e
 
+# ── 自动修复脚本执行权限 ──
+SCRIPTS_DIR="$(cd "$(dirname "$0")" && pwd)"
+chmod +x "${SCRIPTS_DIR}"/*.sh 2>/dev/null || true
+
 APP_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 DATA_DIR="${APP_DIR}/data"
 

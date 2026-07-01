@@ -117,7 +117,7 @@ services:
     user: "0"
     container_name: ${CONTAINER_NAME}-web
     restart: unless-stopped
-    entrypoint: ["/opt/zabbix/install-plugins-entrypoint.sh"]
+    entrypoint: ["/bin/bash", "/opt/zabbix/install-plugins-entrypoint.sh"]
     ports:
       - ${PANEL_APP_PORT_HTTP}:8080
     environment:

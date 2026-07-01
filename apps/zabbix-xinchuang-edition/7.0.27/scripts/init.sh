@@ -6,6 +6,12 @@
 
 set -e
 
+# ── 自动修复脚本执行权限（解决下载/解压后脚本无 +x 的问题） ──
+SCRIPTS_DIR="$(cd "$(dirname "$0")" && pwd)"
+echo "[Zabbix Init] 修复脚本执行权限..."
+chmod +x "${SCRIPTS_DIR}"/*.sh 2>/dev/null || true
+echo "[Zabbix Init] ✓ 脚本权限已修复"
+
 APP_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 DATA_DIR="${APP_DIR}/data"
 

@@ -43,7 +43,7 @@ additionalProperties:
         zh-Hant: Root 密碼（選填）
       required: false
       type: password
-    # 数据库地址（手动输入外部数据库 IP）
+    # 数据库地址
     - default: ""
       edit: true
       envKey: ZABBIX_DB_HOST
@@ -56,7 +56,7 @@ additionalProperties:
         ru: Хост базы данных
         ko: 데이터베이스 호스트
         tr: Veritabanı Ana Bilgisi
-        zh: 数据库地址（外部数据库必填）
+        zh: 数据库地址
         zh-Hant: 資料庫主機
       required: true
       type: text
