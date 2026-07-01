@@ -1,12 +1,7 @@
 #!/bin/bash
-# =============================================================================
-# Zabbix 7.0 信创版 - 安装初始化脚本
-# 此脚本在 docker-compose up 之前执行
-# =============================================================================
 
 set -e
 
-# ── 自动修复脚本执行权限（解决下载/解压后脚本无 +x 的问题） ──
 SCRIPTS_DIR="$(cd "$(dirname "$0")" && pwd)"
 echo "[Zabbix Init] 修复脚本执行权限..."
 chmod +x "${SCRIPTS_DIR}"/*.sh 2>/dev/null || true
@@ -19,8 +14,6 @@ echo "========================================="
 echo "[Zabbix Init] 开始初始化数据目录..."
 echo "========================================="
 
-# ── 创建所有必要的目录和 .gitkeep 文件 ──
-# Server 端
 for dir in \
     server/alertscripts \
     server/externalscripts \
@@ -34,24 +27,19 @@ for dir in \
     echo "[Zabbix Init] ✓ ${dir}"
 done
 
-# 确保 export 目录可写
 chmod -R 755 "${DATA_DIR}/server/export" 2>/dev/null || true
 
-# Web 端（前端插件/模块）
 for dir in web/ssl modules plugins plugin_loader; do
     mkdir -p "${DATA_DIR}/${dir}"
     [ ! -f "${DATA_DIR}/${dir}/.gitkeep" ] && touch "${DATA_DIR}/${dir}/.gitkeep"
     echo "[Zabbix Init] ✓ ${dir}"
 done
 
-# modules 目录需要可写（插件安装、activation.dat 写入）
-# plugins 也需要 rw（容器内 stamp 文件写入）
 chmod -R 777 "${DATA_DIR}/modules" 2>/dev/null || true
 chmod -R 777 "${DATA_DIR}/plugins" 2>/dev/null || true
 chmod -R 777 "${DATA_DIR}/plugin_loader" 2>/dev/null || true
 chmod 777 "${DATA_DIR}" 2>/dev/null || true
 
-# Agent 端
 for dir in \
     agent/zabbix_agentd.d \
     agent/user_scripts; do
@@ -60,7 +48,6 @@ for dir in \
     echo "[Zabbix Init] ✓ ${dir}"
 done
 
-# Proxy 端
 for dir in \
     proxy/externalscripts \
     proxy/modules \
@@ -72,7 +59,6 @@ for dir in \
     echo "[Zabbix Init] ✓ ${dir}"
 done
 
-# ── 清理 HA 残留节点（用 docker 跑，不依赖宿主机 mysql 客户端） ──
 DB_HOST="${ZABBIX_DB_HOST}"
 DB_PORT="${ZABBIX_DB_PORT:-3306}"
 echo "[Zabbix Init] 清理 HA 残留节点..."
@@ -84,7 +70,6 @@ docker run --rm --pull never --network host \
     echo "[Zabbix Init] ✓ HA 节点已清理" || \
     echo "[Zabbix Init] ⚠ HA 清理跳过（首次装无此表，正常）"
 
-# ── 验证数据库连通性（可选） ──
 if command -v mysqladmin &> /dev/null; then
     echo "[Zabbix Init] 检查数据库连接 (${DB_HOST}:${DB_PORT})..."
     if mysqladmin ping -h"${DB_HOST}" -P"${DB_PORT}" \

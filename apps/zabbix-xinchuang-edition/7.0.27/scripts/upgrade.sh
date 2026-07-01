@@ -1,12 +1,7 @@
 #!/bin/bash
-# =============================================================================
-# Zabbix 升级脚本
-# 保留数据目录，仅更新容器镜像
-# =============================================================================
 
 set -e
 
-# ── 自动修复脚本执行权限 ──
 SCRIPTS_DIR="$(cd "$(dirname "$0")" && pwd)"
 chmod +x "${SCRIPTS_DIR}"/*.sh 2>/dev/null || true
 
@@ -17,7 +12,6 @@ echo "========================================="
 echo "[Zabbix Upgrade] 开始升级 Zabbix..."
 echo "========================================="
 
-# 确保数据目录存在
 for dir in server/alertscripts server/externalscripts server/export web/ssl; do
     mkdir -p "${DATA_DIR}/${dir}"
     if [ ! -f "${DATA_DIR}/${dir}/.gitkeep" ]; then

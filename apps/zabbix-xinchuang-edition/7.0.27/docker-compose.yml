@@ -1,18 +1,4 @@
-# =============================================================================
-# Zabbix 7.0 信创版
-# =============================================================================
-# 镜像说明：
-#   - zabbix-server-mysql: Zabbix Server（镜像名含 mysql 表示编译了 MySQL 客户端）
-#   - zabbix-web-nginx-mysql: Zabbix Web 前端（Nginx + PHP + MySQL 客户端）
-#   - zabbix-agent: Zabbix Agent 守护进程
-#   - zabbix-proxy-mysql: Zabbix Proxy（含 MySQL 客户端）
-# 注意：本 compose 不包含数据库服务，需自行准备外部数据库
-# =============================================================================
-
 services:
-  # ---------------------------------------------------------------------------
-  # HA 节点清理（每次部署执行，清理残留避免 Server 重启循环）
-  # ---------------------------------------------------------------------------
   zabbix-ha-cleanup:
     image: zabbix/zabbix-server-mysql:ubuntu-7.0.27
     pull_policy: missing
@@ -35,10 +21,6 @@ services:
       MYSQL_PASSWORD: ${ZABBIX_DB_PASSWORD}
     networks:
       - 1panel-network
-
-  # ---------------------------------------------------------------------------
-  # 数据库初始化（仅首次运行，创建 Zabbix 表结构后自动退出）
-  # ---------------------------------------------------------------------------
   zabbix-db-init:
     image: zabbix/zabbix-server-mysql:ubuntu-7.0.27
     pull_policy: missing
@@ -67,10 +49,6 @@ services:
       - /etc/localtime:/etc/localtime:ro
     networks:
       - 1panel-network
-
-  # ---------------------------------------------------------------------------
-  # Zabbix Server 核心服务
-  # ---------------------------------------------------------------------------
   zabbix-server:
     image: zabbix/zabbix-server-mysql:ubuntu-7.0.27
     pull_policy: missing
@@ -93,7 +71,6 @@ services:
       - ./data/server/alertscripts:/usr/lib/zabbix/alertscripts:ro
       - ./data/server/externalscripts:/usr/lib/zabbix/externalscripts:ro
       - ./data/server/export:/var/lib/zabbix/export:rw
-      # Server 模块、SSH 密钥、SSL 证书
       - ./data/server/modules:/var/lib/zabbix/modules:ro
       - ./data/server/ssh_keys:/var/lib/zabbix/ssh_keys:ro
       - ./data/server/ssl/certs:/var/lib/zabbix/ssl/certs:ro
@@ -107,10 +84,6 @@ services:
     networks:
       - 1panel-network
     stop_grace_period: 30s
-
-  # ---------------------------------------------------------------------------
-  # Zabbix Web 前端（Nginx + PHP），启动自动加载 plugin_loader.so
-  # ---------------------------------------------------------------------------
   zabbix-web:
     image: zabbix/zabbix-web-nginx-mysql:ubuntu-7.0.27
     pull_policy: missing
@@ -152,12 +125,6 @@ services:
     networks:
       - 1panel-network
     stop_grace_period: 10s
-
-  # ---------------------------------------------------------------------------
-  # Zabbix Agent（可选，通过表单开关控制）
-  #   - 关闭时容器空转，开启后监控宿主机
-  #   - privileged + pid:host 用于获取宿主机进程信息
-  # ---------------------------------------------------------------------------
   zabbix-agent:
     image: zabbix/zabbix-agent:ubuntu-7.0.27
     pull_policy: missing
@@ -198,10 +165,6 @@ services:
     networks:
       - 1panel-network
     stop_grace_period: 5s
-
-  # ---------------------------------------------------------------------------
-  # Zabbix Proxy 数据库初始化（仅首次，建表后退出）
-  # ---------------------------------------------------------------------------
   zabbix-proxy-db-init:
     image: zabbix/zabbix-proxy-mysql:ubuntu-7.0.27
     pull_policy: missing
@@ -230,12 +193,6 @@ services:
       - /etc/localtime:/etc/localtime:ro
     networks:
       - 1panel-network
-
-  # ---------------------------------------------------------------------------
-  # Zabbix Proxy（可选，通过表单开关控制）
-  #   - 关闭时容器空转，开启后需要独立数据库
-  #   - 需要独立数据库，不可与 Server 共用
-  # ---------------------------------------------------------------------------
   zabbix-proxy:
     image: zabbix/zabbix-proxy-mysql:ubuntu-7.0.27
     pull_policy: missing
