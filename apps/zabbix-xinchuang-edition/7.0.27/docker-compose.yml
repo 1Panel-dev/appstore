@@ -1,0 +1,297 @@
+# =============================================================================
+# Zabbix 7.0 信创版
+# =============================================================================
+# 镜像说明：
+#   - zabbix-server-mysql: Zabbix Server（镜像名含 mysql 表示编译了 MySQL 客户端）
+#   - zabbix-web-nginx-mysql: Zabbix Web 前端（Nginx + PHP + MySQL 客户端）
+#   - zabbix-agent: Zabbix Agent 守护进程
+#   - zabbix-proxy-mysql: Zabbix Proxy（含 MySQL 客户端）
+# 注意：本 compose 不包含数据库服务，需自行准备外部数据库
+# =============================================================================
+
+services:
+  # ---------------------------------------------------------------------------
+  # HA 节点清理（每次部署执行，清理残留避免 Server 重启循环）
+  # ---------------------------------------------------------------------------
+  zabbix-ha-cleanup:
+    image: zabbix/zabbix-server-mysql:ubuntu-7.0.27
+    pull_policy: missing
+    container_name: ${CONTAINER_NAME}-ha-cleanup
+    restart: "no"
+    entrypoint: ["/bin/bash", "-c"]
+    command:
+      - |
+        mysql -h"${ZABBIX_DB_HOST}" -P"${ZABBIX_DB_PORT:-3306}" \
+              -u"${ZABBIX_DB_USER}" -p"$ZABBIX_DB_PASSWORD" \
+              -e "DELETE FROM ha_node;" "${ZABBIX_DB_NAME}" 2>/dev/null && \
+          echo "[HA Cleanup] ✓ ha_node 已清理" || \
+          echo "[HA Cleanup] 跳过（首次安装无此表）"
+        exec tail -f /dev/null
+    environment:
+      DB_SERVER_HOST: ${ZABBIX_DB_HOST}
+      DB_SERVER_PORT: ${ZABBIX_DB_PORT:-3306}
+      MYSQL_DATABASE: ${ZABBIX_DB_NAME}
+      MYSQL_USER: ${ZABBIX_DB_USER}
+      MYSQL_PASSWORD: ${ZABBIX_DB_PASSWORD}
+    networks:
+      - 1panel-network
+
+  # ---------------------------------------------------------------------------
+  # 数据库初始化（仅首次运行，创建 Zabbix 表结构后自动退出）
+  # ---------------------------------------------------------------------------
+  zabbix-db-init:
+    image: zabbix/zabbix-server-mysql:ubuntu-7.0.27
+    pull_policy: missing
+    container_name: ${CONTAINER_NAME}-db-init
+    restart: unless-stopped
+    entrypoint: ["/bin/bash", "-c"]
+    command:
+      - |
+        echo "[DB Init] 开始初始化 Zabbix 数据库..."
+        /usr/bin/docker-entrypoint.sh init_db_only
+        EXIT_CODE=$?
+        if [ $$EXIT_CODE -eq 0 ]; then
+          echo "[DB Init] ✓ 数据库初始化成功"
+        else
+          echo "[DB Init] ⚠ 退出码: $$EXIT_CODE（可能已初始化）"
+        fi
+        echo "[DB Init] 容器保持运行"
+        exec tail -f /dev/null
+    environment:
+      DB_SERVER_HOST: ${ZABBIX_DB_HOST}
+      DB_SERVER_PORT: ${ZABBIX_DB_PORT:-3306}
+      MYSQL_DATABASE: ${ZABBIX_DB_NAME}
+      MYSQL_USER: ${ZABBIX_DB_USER}
+      MYSQL_PASSWORD: ${ZABBIX_DB_PASSWORD}
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    networks:
+      - 1panel-network
+
+  # ---------------------------------------------------------------------------
+  # Zabbix Server 核心服务
+  # ---------------------------------------------------------------------------
+  zabbix-server:
+    image: zabbix/zabbix-server-mysql:ubuntu-7.0.27
+    pull_policy: missing
+    container_name: ${CONTAINER_NAME}
+    restart: unless-stopped
+    entrypoint: ["/bin/bash", "-c"]
+    command:
+      - mysql -h${ZABBIX_DB_HOST} -P${ZABBIX_DB_PORT:-3306} -u${ZABBIX_DB_USER} -p"${ZABBIX_DB_PASSWORD}" -e "DELETE FROM ha_node; UPDATE interface SET ip='${CONTAINER_NAME}-agent',dns='${CONTAINER_NAME}-agent',useip=0 WHERE hostid=(SELECT hostid FROM hosts WHERE host='Zabbix server') AND type=1;" ${ZABBIX_DB_NAME} 2>/dev/null; exec /usr/bin/docker-entrypoint.sh /usr/sbin/zabbix_server --foreground -c /etc/zabbix/zabbix_server.conf
+    ports:
+      - ${ZABBIX_SERVER_PORT:-10051}:10051
+    environment:
+      DB_SERVER_HOST: ${ZABBIX_DB_HOST}
+      DB_SERVER_PORT: ${ZABBIX_DB_PORT:-3306}
+      MYSQL_DATABASE: ${ZABBIX_DB_NAME}
+      MYSQL_USER: ${ZABBIX_DB_USER}
+      MYSQL_PASSWORD: ${ZABBIX_DB_PASSWORD}
+      ZBX_ALLOWUNSUPPORTEDDBVERSIONS: "1"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./data/server/alertscripts:/usr/lib/zabbix/alertscripts:ro
+      - ./data/server/externalscripts:/usr/lib/zabbix/externalscripts:ro
+      - ./data/server/export:/var/lib/zabbix/export:rw
+      # Server 模块、SSH 密钥、SSL 证书
+      - ./data/server/modules:/var/lib/zabbix/modules:ro
+      - ./data/server/ssh_keys:/var/lib/zabbix/ssh_keys:ro
+      - ./data/server/ssl/certs:/var/lib/zabbix/ssl/certs:ro
+      - ./data/server/ssl/keys:/var/lib/zabbix/ssl/keys:ro
+    tmpfs: /tmp
+    ulimits:
+      nproc: 65535
+      nofile:
+        soft: 20000
+        hard: 40000
+    networks:
+      - 1panel-network
+    stop_grace_period: 30s
+
+  # ---------------------------------------------------------------------------
+  # Zabbix Web 前端（Nginx + PHP），启动自动加载 plugin_loader.so
+  # ---------------------------------------------------------------------------
+  zabbix-web:
+    image: zabbix/zabbix-web-nginx-mysql:ubuntu-7.0.27
+    pull_policy: missing
+    user: "0"
+    container_name: ${CONTAINER_NAME}-web
+    restart: unless-stopped
+    entrypoint: ["/bin/bash", "/opt/zabbix/install-plugins-entrypoint.sh"]
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8080
+    environment:
+      DB_SERVER_HOST: ${ZABBIX_DB_HOST}
+      DB_SERVER_PORT: ${ZABBIX_DB_PORT:-3306}
+      MYSQL_DATABASE: ${ZABBIX_DB_NAME}
+      MYSQL_USER: ${ZABBIX_DB_USER}
+      MYSQL_PASSWORD: ${ZABBIX_DB_PASSWORD}
+      ZBX_SERVER_HOST: ${CONTAINER_NAME}
+      ZBX_SERVER_NAME: ${ZABBIX_SERVER_NAME:-Zabbix}
+      PHP_TZ: ${PHP_TZ:-Asia/Shanghai}
+      ZABBIX_PLUGINS_AUTO_INSTALL: "true"
+      ZABBIX_PLUGIN_LOADER_AUTO_INSTALL: "true"
+      ZABBIX_PLUGIN_LOADER_DIR: /var/lib/zabbix/plugin_loader
+      ZABBIX_MODULES_INSTALL_DIR: /usr/share/zabbix/modules
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./data/web/ssl:/etc/ssl/nginx:ro
+      - ./data/modules:/usr/share/zabbix/modules:rw
+      - ./data/plugins:/var/lib/zabbix/plugins:rw
+      - ./data/plugin_loader:/var/lib/zabbix/plugin_loader:ro
+      - ./scripts/install-plugins-entrypoint.sh:/opt/zabbix/install-plugins-entrypoint.sh:ro
+    tmpfs:
+      - /tmp
+      - /var/lib/php/session:mode=770,uid=1997,gid=1995
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/ping"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 40s
+    networks:
+      - 1panel-network
+    stop_grace_period: 10s
+
+  # ---------------------------------------------------------------------------
+  # Zabbix Agent（可选，通过表单开关控制）
+  #   - 关闭时容器空转，开启后监控宿主机
+  #   - privileged + pid:host 用于获取宿主机进程信息
+  # ---------------------------------------------------------------------------
+  zabbix-agent:
+    image: zabbix/zabbix-agent:ubuntu-7.0.27
+    pull_policy: missing
+    container_name: ${CONTAINER_NAME}-agent
+    restart: unless-stopped
+    privileged: true
+    pid: "host"
+    entrypoint: ["/bin/bash", "-c"]
+    command:
+      - |
+        if [ "$${ZABBIX_AGENT_ENABLED}" = "true" ]; then
+          echo "[Zabbix Agent] 启动中，连接 Server: ${CONTAINER_NAME}"
+          /usr/bin/docker-entrypoint.sh /bin/true
+          sed -i 's|^Server=.*|Server=0.0.0.0/0|' /etc/zabbix/zabbix_agentd.conf
+          ACTIVE="${CONTAINER_NAME}"
+          [ -n "$${ZABBIX_AGENT_EXTERNAL_SERVERS:-}" ] && ACTIVE="$$ACTIVE,$${ZABBIX_AGENT_EXTERNAL_SERVERS}"
+          sed -i "s|^ServerActive=.*|ServerActive=$$ACTIVE|" /etc/zabbix/zabbix_agentd.conf
+          exec /usr/sbin/zabbix_agentd --foreground -c /etc/zabbix/zabbix_agentd.conf
+        else
+          echo "[Zabbix Agent] 已关闭"
+          exec tail -f /dev/null
+        fi
+    ports:
+      - ${ZABBIX_AGENT_PORT:-10050}:10050
+    environment:
+      ZBX_SERVER_HOST: ${CONTAINER_NAME}
+      ZBX_SERVER_PORT: ${ZABBIX_SERVER_PORT:-10051}
+      ZBX_PASSIVE_ALLOW: "true"
+      ZBX_ACTIVE_ALLOW: "true"
+      ZBX_HOSTNAMEITEM: system.hostname
+      ZBX_HOSTNAME: Zabbix server
+      ZABBIX_AGENT_ENABLED: ${ZABBIX_AGENT_ENABLED:-false}
+      ZABBIX_AGENT_EXTERNAL_SERVERS: ${ZABBIX_AGENT_EXTERNAL_SERVERS:-}
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./data/agent/zabbix_agentd.d:/etc/zabbix/zabbix_agentd.d:ro
+      - ./data/agent/user_scripts:/var/lib/zabbix/user_scripts:ro
+    networks:
+      - 1panel-network
+    stop_grace_period: 5s
+
+  # ---------------------------------------------------------------------------
+  # Zabbix Proxy 数据库初始化（仅首次，建表后退出）
+  # ---------------------------------------------------------------------------
+  zabbix-proxy-db-init:
+    image: zabbix/zabbix-proxy-mysql:ubuntu-7.0.27
+    pull_policy: missing
+    container_name: ${CONTAINER_NAME}-proxy-db-init
+    restart: unless-stopped
+    entrypoint: ["/bin/bash", "-c"]
+    command:
+      - |
+        echo "[Proxy DB Init] 开始初始化 Proxy 数据库..."
+        /usr/bin/docker-entrypoint.sh init_db_only
+        EXIT_CODE=$?
+        if [ $$EXIT_CODE -eq 0 ]; then
+          echo "[Proxy DB Init] ✓ 初始化成功"
+        else
+          echo "[Proxy DB Init] ⚠ 退出码: $$EXIT_CODE"
+        fi
+        echo "[Proxy DB Init] 容器保持运行"
+        exec tail -f /dev/null
+    environment:
+      DB_SERVER_HOST: ${ZABBIX_PROXY_DB_HOST}
+      DB_SERVER_PORT: ${ZABBIX_PROXY_DB_PORT:-3306}
+      MYSQL_DATABASE: ${ZABBIX_PROXY_DB_NAME:-zabbix_proxy}
+      MYSQL_USER: ${ZABBIX_PROXY_DB_USER:-zabbix}
+      MYSQL_PASSWORD: ${ZABBIX_PROXY_DB_PASSWORD}
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    networks:
+      - 1panel-network
+
+  # ---------------------------------------------------------------------------
+  # Zabbix Proxy（可选，通过表单开关控制）
+  #   - 关闭时容器空转，开启后需要独立数据库
+  #   - 需要独立数据库，不可与 Server 共用
+  # ---------------------------------------------------------------------------
+  zabbix-proxy:
+    image: zabbix/zabbix-proxy-mysql:ubuntu-7.0.27
+    pull_policy: missing
+    container_name: ${CONTAINER_NAME}-proxy
+    restart: unless-stopped
+    entrypoint: ["/bin/bash", "-c"]
+    command:
+      - |
+        if [ "$(printenv ZABBIX_PROXY_ENABLED 2>/dev/null || echo false)" = "true" ]; then
+          exec /usr/bin/docker-entrypoint.sh /usr/sbin/zabbix_proxy --foreground -c /etc/zabbix/zabbix_proxy.conf
+        else
+          echo "[Zabbix Proxy] 已关闭"
+          exec tail -f /dev/null
+        fi
+    ports:
+      - ${ZABBIX_PROXY_PORT:-10071}:10051
+    environment:
+      DB_SERVER_HOST: ${ZABBIX_PROXY_DB_HOST}
+      DB_SERVER_PORT: ${ZABBIX_PROXY_DB_PORT:-3306}
+      MYSQL_DATABASE: ${ZABBIX_PROXY_DB_NAME:-zabbix_proxy}
+      MYSQL_USER: ${ZABBIX_PROXY_DB_USER:-zabbix}
+      MYSQL_PASSWORD: ${ZABBIX_PROXY_DB_PASSWORD}
+      ZBX_SERVER_HOST: ${ZBX_SERVER_HOST}
+      ZBX_HOSTNAME: ${ZBX_HOSTNAME}
+      ZBX_PROXYMODE: ${ZABBIX_PROXY_MODE:-0}
+      ZBX_SERVER_PORT: ${ZABBIX_SERVER_PORT:-10051}
+      ZBX_CONFIGFREQUENCY: ${ZBX_CONFIGFREQUENCY:-3600}
+      ZBX_DATASENDERFREQUENCY: ${ZBX_DATASENDERFREQUENCY:-1}
+      ZBX_STARTPOLLERS: ${ZBX_STARTPOLLERS:-5}
+      ZBX_STARTTRAPPERS: ${ZBX_STARTTRAPPERS:-5}
+      ZBX_STARTPINGERS: ${ZBX_STARTPINGERS:-1}
+      ZBX_STARTDISCOVERERS: ${ZBX_STARTDISCOVERERS:-1}
+      ZBX_STARTHTTPPOLLERS: ${ZBX_STARTHTTPPOLLERS:-1}
+      ZBX_CACHESIZE: ${ZBX_CACHESIZE:-8M}
+      ZBX_TIMEOUT: ${ZBX_TIMEOUT:-4}
+      ZBX_PROXYLOCALBUFFER: ${ZBX_PROXYLOCALBUFFER:-0}
+      ZBX_PROXYOFFLINEBUFFER: ${ZBX_PROXYOFFLINEBUFFER:-1}
+      ZBX_PROXYHEARTBEATFREQUENCY: ${ZBX_PROXYHEARTBEATFREQUENCY:-60}
+      ZABBIX_PROXY_ENABLED: ${ZABBIX_PROXY_ENABLED:-false}
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./data/proxy/externalscripts:/usr/lib/zabbix/externalscripts:ro
+      - ./data/proxy/modules:/var/lib/zabbix/modules:ro
+      - ./data/proxy/ssh_keys:/var/lib/zabbix/ssh_keys:ro
+      - ./data/proxy/ssl/certs:/var/lib/zabbix/ssl/certs:ro
+      - ./data/proxy/ssl/keys:/var/lib/zabbix/ssl/keys:ro
+    tmpfs: /tmp
+    ulimits:
+      nproc: 65535
+      nofile:
+        soft: 20000
+        hard: 40000
+    networks:
+      - 1panel-network
+    stop_grace_period: 10s
+
+networks:
+  1panel-network:
+    external: true
