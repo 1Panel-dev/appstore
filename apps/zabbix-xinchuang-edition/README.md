@@ -1,6 +1,6 @@
 # Zabbix 7.0 信创版
 
-企业级开源监控解决方案，支持网络、服务器、虚拟机和云服务的全方位监控。需外接数据库（TDSQL/MySQL/MariaDB），部署后自动初始化。Agent/Proxy 默认关闭，开启后容器启动。
+企业级开源监控解决方案，支持网络、服务器、虚拟机和云服务的全方位监控。需外接数据库（TDSQL / MySQL / MariaDB），部署后自动初始化。Agent / Proxy 默认关闭，开启后容器启动。
 
 ---
 
@@ -34,7 +34,7 @@
 
 ## 安装后
 
-1. 浏览器访问 `http://<服务器IP>:<Web 界面端口>`
+1. 浏览器访问 `http://<服务器 IP>:<Web 界面端口>`
 2. 默认登录：`Admin` / `zabbix`，**首次登录后立即修改密码！**
 
 ## 端口说明
@@ -42,7 +42,7 @@
 | 端口 | 默认值 | 用途 |
 |------|--------|------|
 | Web UI | 8080 | Zabbix Web 管理界面 |
-| Server | 10051 | Agent/Proxy 连接 Server |
+| Server | 10051 | Agent / Proxy 连接 Server |
 | Agent | 10050 | 本机 Agent（需先启用） |
 | Proxy | 10071 | Proxy 监听（需先启用，Passive 模式） |
 
@@ -69,7 +69,7 @@ cp zabbix-plugins-xxx.zip /opt/1panel/apps/local/zabbix/zabbix/data/plugins/
 | 现象 | 原因 | 处理 |
 |------|------|------|
 | Server 状态一会是一会否 | 数据库 ha_node 表有残留 | 清理: `DELETE FROM ha_node;` |
-| Agent/Proxy「不存在」 | 开关未开 | 参数里改为「开启」后重建 |
+| Agent / Proxy「不存在」 | 开关未开 | 参数里改为「开启」后重建 |
 | db-init「异常」 | 已初始化后不需要重建 | 正常，容器会保持运行 |
 
 ## 相关链接

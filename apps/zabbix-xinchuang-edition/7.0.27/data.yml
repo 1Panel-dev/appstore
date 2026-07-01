@@ -1,6 +1,5 @@
 additionalProperties:
   formFields:
-    # 数据库服务（通过 1Panel 一键安装 MySQL，选填）
     - child:
         default: ""
         envKey: ZABBIX_DB_HOST
@@ -25,7 +24,6 @@ additionalProperties:
       values:
         - label: MySQL
           value: mysql
-    # Root 密码（1Panel 自动安装 MySQL 时使用，选填）
     - default: ""
       envKey: PANEL_DB_ROOT_PASSWORD
       labelEn: Root Password
@@ -43,7 +41,6 @@ additionalProperties:
         zh-Hant: Root 密碼（選填）
       required: false
       type: password
-    # 数据库地址
     - default: ""
       edit: true
       envKey: ZABBIX_DB_HOST
@@ -60,7 +57,6 @@ additionalProperties:
         zh-Hant: 資料庫主機
       required: true
       type: text
-    # 数据库端口
     - default: 3306
       edit: true
       envKey: ZABBIX_DB_PORT
@@ -78,7 +74,6 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-    # 数据库名
     - default: zabbix
       envKey: ZABBIX_DB_NAME
       label:
@@ -96,7 +91,6 @@ additionalProperties:
       required: true
       rule: paramCommon
       type: text
-    # 数据库用户
     - default: zabbix
       envKey: ZABBIX_DB_USER
       label:
@@ -114,7 +108,6 @@ additionalProperties:
       required: true
       rule: paramCommon
       type: text
-    # 数据库密码
     - default: ""
       envKey: ZABBIX_DB_PASSWORD
       label:
@@ -131,7 +124,6 @@ additionalProperties:
       random: true
       required: true
       type: password
-    # 服务器名称
     - default: Zabbix
       edit: true
       envKey: ZABBIX_SERVER_NAME
@@ -148,7 +140,6 @@ additionalProperties:
         zh-Hant: 伺服器名稱
       required: true
       type: text
-    # Web 界面端口（使用 PANEL_APP_PORT_HTTP 前缀，1Panel 自动校验端口占用）
     - default: 8080
       edit: true
       envKey: PANEL_APP_PORT_HTTP
@@ -166,25 +157,23 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-    # Agent 端口
     - default: 10051
       edit: true
       envKey: ZABBIX_SERVER_PORT
       label:
         en: Server Port
-        es-es: Puerto del servidor (para Agent/Proxy)
+        es-es: Puerto del servidor (para Agent / Proxy)
         ja: サーバーポート
         ms: Port Pelayan
         pt-br: Porta do Servidor
         ru: Порт сервера
         ko: 서버 포트
-        tr: Sunucu Bağlantı Noktası (Agent/Proxy için)
-        zh: Server 端口（Agent/Proxy 连接用）
+        tr: Sunucu Bağlantı Noktası (Agent / Proxy için)
+        zh: Server 端口（Agent / Proxy 连接用）
         zh-Hant: Server 埠
       required: true
       rule: paramPort
       type: number
-    # 时区
     - default: Asia/Shanghai
       edit: true
       envKey: PHP_TZ
@@ -201,7 +190,6 @@ additionalProperties:
         zh-Hant: 時區
       required: true
       type: text
-    # ========== Zabbix Agent（可选） ==========
     - default: "true"
       envKey: ZABBIX_AGENT_ENABLED
       label:
@@ -255,7 +243,6 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-    # ========== Zabbix Proxy（可选） ==========
     - default: "false"
       envKey: ZABBIX_PROXY_ENABLED
       label:
@@ -391,4 +378,3 @@ additionalProperties:
         tr: Proxy DB Parolası
       required: false
       type: password
-
