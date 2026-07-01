@@ -1,6 +1,6 @@
 services:
   logstash:
-    image: logstash:9.4.2
+    image: logstash:9.4.3
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
