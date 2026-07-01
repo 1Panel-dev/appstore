@@ -1,0 +1,76 @@
+additionalProperties:
+  formFields:
+    - default: admintest
+      edit: true
+      envKey: INIT_ADMIN_PASSWORD
+      labelEn: "Initial Admin Password"
+      labelZh: "初始管理员密码"
+      label:
+        en: "Initial Admin Password"
+        es-es: "Initial Admin Password"
+        ja: "Initial Admin Password"
+        ms: "Initial Admin Password"
+        pt-br: "Initial Admin Password"
+        ru: "Initial Admin Password"
+        ko: "Initial Admin Password"
+        zh-Hant: "初始管理員密碼"
+        zh: "初始管理员密码"
+        tr: "Initial Admin Password"
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+    - default: ""
+      edit: true
+      envKey: PANEL_BASE_URL
+      labelEn: "1Panel Base URL"
+      labelZh: "1Panel 网关地址"
+      label:
+        en: "1Panel Base URL"
+        es-es: "1Panel Base URL"
+        ja: "1Panel Base URL"
+        ms: "1Panel Base URL"
+        pt-br: "1Panel Base URL"
+        ru: "1Panel Base URL"
+        ko: "1Panel Base URL"
+        zh-Hant: "1Panel 閘道地址"
+        zh: "1Panel 网关地址"
+        tr: "1Panel Base URL"
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: PANEL_API_KEY
+      labelEn: "1Panel API Key"
+      labelZh: "1Panel API Key"
+      label:
+        en: "1Panel API Key"
+        es-es: "1Panel API Key"
+        ja: "1Panel API Key"
+        ms: "1Panel API Key"
+        pt-br: "1Panel API Key"
+        ru: "1Panel API Key"
+        ko: "1Panel API Key"
+        zh-Hant: "1Panel API Key"
+        zh: "1Panel API Key"
+        tr: "1Panel API Key"
+      required: false
+      type: password
+    - default: 3000
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: "Web UI Port"
+      labelZh: "Web UI 端口"
+      label:
+        en: "Web UI Port"
+        es-es: "Puerto web"
+        ja: "Web UIポート"
+        ms: "Port Web UI"
+        pt-br: "Porta da Web UI"
+        ru: "Порт веб-интерфейса"
+        ko: "웹 UI 포트"
+        zh-Hant: "Web UI 埠"
+        zh: "Web UI 端口"
+        tr: "Web UI Bağlantı Noktası"
+      required: true
+      rule: paramPort
+      type: number

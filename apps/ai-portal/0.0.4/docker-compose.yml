@@ -1,0 +1,30 @@
+services:
+  app:
+    image: 1panel/ai-portal:v0.0.4
+    container_name: "${CONTAINER_NAME}"
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:3000"
+    environment:
+      INIT_ADMIN_PASSWORD: "${INIT_ADMIN_PASSWORD}"
+      PANEL_BASE_URL: "${PANEL_BASE_URL}"
+      PANEL_API_KEY: "${PANEL_API_KEY}"
+    volumes:
+      - ./data:/app/data
+    healthcheck:
+      test:
+        - CMD
+        - node
+        - "-e"
+        - "require('http').get('http://localhost:3000/api/health', (r) => r.statusCode === 200 ? process.exit(0) : process.exit(1)).on('error', () => process.exit(1))"
+      interval: 30s
+      timeout: 5s
+      start_period: 40s
+      retries: 3
+    labels:
+      createdBy: Apps
+networks:
+  1panel-network:
+    external: true
