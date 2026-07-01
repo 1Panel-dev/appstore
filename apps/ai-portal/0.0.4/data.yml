@@ -1,6 +1,6 @@
 additionalProperties:
   formFields:
-    - default: admintest
+    - default: admin
       edit: true
       envKey: INIT_ADMIN_PASSWORD
       labelEn: "Initial Admin Password"
