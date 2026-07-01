@@ -1,6 +1,6 @@
 services:
   ollama:
-    image: ollama/ollama:0.30.11
+    image: ollama/ollama:0.31.1
     container_name: ${CONTAINER_NAME}
     restart: unless-stopped
     ports:
