@@ -167,6 +167,25 @@ EOF
     docker-php-ext-install gd
 }
 
+install_intl() {
+    apt-get update && apt-get install -y libicu-dev pkg-config
+
+    cat > /usr/local/bin/icu-config <<'EOF'
+#!/bin/sh
+case "$1" in
+    --version) pkg-config --modversion icu-i18n ;;
+    --prefix) echo /usr ;;
+    --cppflags|--cppflags-searchpath|--cflags) pkg-config --cflags icu-i18n ;;
+    --ldflags*) pkg-config --libs icu-i18n icu-io ;;
+    *) pkg-config --libs icu-i18n ;;
+esac
+EOF
+    chmod +x /usr/local/bin/icu-config
+
+    export CXXFLAGS="${CXXFLAGS:+$CXXFLAGS }-DU_USING_ICU_NAMESPACE=1"
+    docker_php_ext_install intl
+}
+
 
 install_extension() {
     local extension=$1
@@ -243,7 +262,7 @@ install_extension() {
     elif [ "$extension" = "imap" ]; then
         install_php_extensions imap
     elif [ "$extension" = "intl" ]; then
-        install_php_extensions intl
+        install_intl
     elif [ "$extension" = "swoole" ]; then
         installExtensionFromTgz swoole-2.0.11
     elif [ "$extension" = "pgsql" ]; then
