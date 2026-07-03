@@ -1,0 +1,17 @@
+additionalProperties:
+  key: talebook
+  name: TaleBook
+  tags:
+    - Tool
+    - Local
+  shortDescZh: Calibre 个人电子书管理系统
+  shortDescEn: Personal e-book library manager based on Calibre
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  website: https://www.talebook.org
+  github: https://github.com/talebook/talebook
+  document: https://github.com/talebook/talebook/blob/master/document/README.zh_CN.md
+  description:
+    en: Personal e-book library management system based on Calibre, with online reading, OPDS, multi-user access, metadata management and book import features.
+    zh: 基于 Calibre 的个人电子书管理系统，支持在线阅读、OPDS、多用户访问、元数据管理和书籍导入。
