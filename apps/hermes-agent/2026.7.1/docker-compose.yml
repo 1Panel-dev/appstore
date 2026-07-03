@@ -1,7 +1,7 @@
 services:
   hermes-agent:
     container_name: ${CONTAINER_NAME}
-    image: 1panel/hermes-agent:2026.6.19
+    image: 1panel/hermes-agent:2026.7.1
     restart: unless-stopped
     networks:
       - 1panel-network

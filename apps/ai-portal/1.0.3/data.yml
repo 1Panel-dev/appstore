@@ -23,37 +23,37 @@ additionalProperties:
     - default: ""
       edit: true
       envKey: PANEL_BASE_URL
-      labelEn: "1Panel Base URL"
-      labelZh: "1Panel 网关地址"
+      labelEn: "1Panel Server URL"
+      labelZh: "1Panel 服务地址"
       label:
-        en: "1Panel Base URL"
-        es-es: "1Panel Base URL"
-        ja: "1Panel Base URL"
-        ms: "1Panel Base URL"
-        pt-br: "1Panel Base URL"
-        ru: "1Panel Base URL"
-        ko: "1Panel Base URL"
-        zh-Hant: "1Panel 閘道地址"
-        zh: "1Panel 网关地址"
-        tr: "1Panel Base URL"
+        en: "1Panel Server URL"
+        es-es: "URL del servidor 1Panel"
+        ja: "1Panel サーバー URL"
+        ms: "URL Pelayan 1Panel"
+        pt-br: "URL do servidor 1Panel"
+        ru: "URL сервера 1Panel"
+        ko: "1Panel 서버 URL"
+        zh-Hant: "1Panel 服務地址"
+        zh: "1Panel 服务地址"
+        tr: "1Panel Sunucu URL'si"
       required: false
       type: text
     - default: ""
       edit: true
       envKey: PANEL_API_KEY
       labelEn: "1Panel API Key"
-      labelZh: "1Panel API Key"
+      labelZh: "1Panel API 密钥"
       label:
         en: "1Panel API Key"
-        es-es: "1Panel API Key"
-        ja: "1Panel API Key"
-        ms: "1Panel API Key"
-        pt-br: "1Panel API Key"
-        ru: "1Panel API Key"
-        ko: "1Panel API Key"
-        zh-Hant: "1Panel API Key"
-        zh: "1Panel API Key"
-        tr: "1Panel API Key"
+        es-es: "Clave API de 1Panel"
+        ja: "1Panel API キー"
+        ms: "Kunci API 1Panel"
+        pt-br: "Chave de API do 1Panel"
+        ru: "API-ключ 1Panel"
+        ko: "1Panel API 키"
+        zh-Hant: "1Panel API 金鑰"
+        zh: "1Panel API 密钥"
+        tr: "1Panel API Anahtarı"
       required: false
       type: password
     - default: 3000
