@@ -1,0 +1,36 @@
+name: llama.cpp
+tags:
+    - AI
+title: 使用 GGUF 模型运行本地大语言模型推理服务
+description: 使用 GGUF 模型运行本地大语言模型推理服务
+additionalProperties:
+    key: llama-cpp
+    name: llama.cpp
+    tags:
+        - AI
+    shortDescZh: 使用 GGUF 模型运行本地大语言模型推理服务
+    shortDescEn: Run a local LLM inference server with GGUF models
+    description:
+        en: Run a local LLM inference server with GGUF models
+        es-es: Ejecuta un servidor local de inferencia LLM con modelos GGUF
+        fa: 'اجرای سرور محلی inference مدل زبانی بزرگ با مدل های GGUF'
+        ja: GGUF モデルでローカル LLM 推論サーバーを実行
+        ms: Jalankan pelayan inferens LLM setempat dengan model GGUF
+        pt-br: Execute um servidor local de inferência de LLM com modelos GGUF
+        ru: Запустите локальный сервер вывода LLM с моделями GGUF
+        ko: GGUF 모델로 로컬 LLM 추론 서버 실행
+        zh-Hant: 使用 GGUF 模型執行本地大語言模型推理服務
+        zh: 使用 GGUF 模型运行本地大语言模型推理服务
+        tr: GGUF modelleriyle yerel bir LLM çıkarım sunucusu çalıştırın
+    type: tool
+    crossVersionUpdate: false
+    limit: 0
+    recommend: 0
+    batchInstallSupport: true
+    website: https://github.com/ggml-org/llama.cpp
+    github: https://github.com/ggml-org/llama.cpp
+    document: https://github.com/ggml-org/llama.cpp/tree/master/examples/server
+    memoryRequired: 2048
+    architectures:
+      - amd64
+      - arm64
