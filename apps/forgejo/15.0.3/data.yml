@@ -84,6 +84,8 @@ additionalProperties:
       values:
         - label: MySQL
           value: mysql
+        - label: MariaDB
+          value: mariadb
         - label: PostgreSQL
           value: postgres
       child:

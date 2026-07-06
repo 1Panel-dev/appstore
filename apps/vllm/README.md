@@ -1,8 +1,10 @@
 ## 使用说明
 
-1. 在 `https://huggingface.co/` 注册账号并获取模型权限创建 token 
-2. 机器上有 Nvidia GPU
-3. 修改 `/etc/docker/daemon.json` 并增加
+### NVIDIA 版本
+
+1. 在 `https://huggingface.co/` 注册账号并获取模型权限创建 token。
+2. 机器上有 NVIDIA GPU。
+3. 修改 `/etc/docker/daemon.json` 并增加：
 
 ```json
    "runtimes": {
@@ -13,7 +15,15 @@
    }
 ```
 
-4. 安装 nvidia-container-runtime 和 nvidia-docker2 组件
+4. 安装 nvidia-container-runtime 和 nvidia-docker2 组件。
+
+### Ascend 310P 版本
+
+1. 宿主机需要已安装 Ascend 驱动/CANN，执行 `npu-smi info` 能正常看到 NPU。
+2. 确认宿主机存在 `/dev/davinci*`、`/dev/davinci_manager`、`/dev/devmm_svm`、`/dev/hisi_hdc` 等设备文件。
+3. Ascend 版本的 Compose 已经显式挂载 NPU 设备和驱动目录，不需要开启通用 GPU 配置。
+4. Atlas 300I DUO / Ascend 310P 不建议使用 `triton` 或 `triton-ascend`。如果遇到 `module 'triton' has no attribute 'language'`，请检查容器内是否残留相关包并卸载。
+5. 推荐优先使用 Qwen3 W8A8SC-310 适配模型；Qwen3.5/Qwen3.6 属于预览支持，需要按模型说明调整启动参数。
 
 ## 产品介绍
 

@@ -21,6 +21,15 @@ do
 	  # Trim the "v" prefix
 	  trimmed_version=${version/#"v"}
 
-      mv apps/$app_name/$old_version apps/$app_name/$trimmed_version
+      target_version=$trimmed_version
+      if [[ "$app_name" == "vllm" ]]; then
+        case "$image" in
+          vllm/vllm-openai:*) target_version="nvidia-$trimmed_version" ;;
+          intel/llm-scaler-vllm:*) target_version="intel-$trimmed_version" ;;
+          quay.io/ascend/vllm-ascend:*) target_version="ascend-$trimmed_version" ;;
+        esac
+      fi
+
+      mv apps/$app_name/$old_version apps/$app_name/$target_version
     fi
 done

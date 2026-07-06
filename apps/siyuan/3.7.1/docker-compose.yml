@@ -7,7 +7,7 @@ services:
       - ${PANEL_APP_PORT_HTTP}:6806
     networks:
       - 1panel-network
-    command: ['--workspace=/siyuan/workspace/', '--accessAuthCode=${ACCESS_AUTH_CODE}']
+    command: ['serve', '--workspace=/siyuan/workspace/', '--accessAuthCode=${ACCESS_AUTH_CODE}']
     volumes:
       - ./data:/siyuan/workspace
     environment:
