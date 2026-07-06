@@ -1,7 +1,9 @@
 ## Setup Notes
 
+### NVIDIA versions
+
 1. Register an account at `https://huggingface.co/` and get model access to create a token.
-2. Ensure the machine has an Nvidia GPU.
+2. Ensure the machine has an NVIDIA GPU.
 3. Modify the `/etc/docker/daemon.json` file and add:
 
 ```json
@@ -14,6 +16,14 @@
 ```
 
 4. Install the nvidia-container-runtime and nvidia-docker2 components.
+
+### Ascend 310P version
+
+1. The host must have the Ascend driver/CANN installed, and `npu-smi info` must list the NPU correctly.
+2. Verify that `/dev/davinci*`, `/dev/davinci_manager`, `/dev/devmm_svm`, and `/dev/hisi_hdc` exist on the host.
+3. The Ascend Compose file mounts NPU devices and driver directories explicitly, so do not enable the generic GPU configuration.
+4. Atlas 300I DUO / Ascend 310P should not depend on `triton` or `triton-ascend`. If `module 'triton' has no attribute 'language'` appears, check and uninstall residual packages in the container.
+5. Prefer Qwen3 W8A8SC-310 adapted models for stable use. Qwen3.5/Qwen3.6 support is preview-level and may need model-specific launch arguments.
 
 ## Introduction
 
