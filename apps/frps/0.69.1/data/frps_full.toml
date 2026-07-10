@@ -34,7 +34,7 @@ transport.maxPoolCount = 5
 
 # Specify keep alive interval for tcp mux.
 # only valid if tcpMux is true.
-# transport.tcpMuxKeepaliveInterval = 60
+# transport.tcpMuxKeepaliveInterval = 30
 
 # tcpKeepalive specifies the interval between keep-alive probes for an active network connection between frpc and frps.
 # If negative, keep-alive probes are disabled.
@@ -104,6 +104,11 @@ auth.method = "token"
 
 # auth token
 auth.token = "12345678"
+
+# alternatively, you can use tokenSource to load the token from a file
+# this is mutually exclusive with auth.token
+# auth.tokenSource.type = "file"
+# auth.tokenSource.file.path = "/etc/frp/token"
 
 # oidc issuer specifies the issuer to verify OIDC tokens with.
 auth.oidc.issuer = ""

@@ -1,6 +1,8 @@
 serverAddr = "0.0.0.0"
 serverPort = 7000
 
+user = "Frp Client"
+
 auth.method = "token"
 auth.token = "token123456"
 
@@ -9,6 +11,8 @@ webServer.port = 40001
 webServer.user = "admin"
 webServer.password = "password123456"
 webServer.pprofEnable = false
+
+store.path = "./frpc_store.json"
 
 # tls
 #transport.tls.certFile = "/etc/frp/ssl/client.crt"
