@@ -130,3 +130,48 @@ additionalProperties:
         tr: Kimlik doğrulama tokenı
       required: true
       type: text
+    - default: "false"
+      envKey: ENABLE_VIRTUAL_NET
+      labelEn: Enable Virtual Network
+      labelZh: 启用虚拟网络
+      label:
+        en: Enable Virtual Network
+        zh: 启用虚拟网络
+        es-es: Habilitar red virtual
+        fa: 'فعال‌سازی شبکه مجازی'
+        zh-Hant: 啟用虛擬網絡
+        ja: 仮想ネットワークを有効にする
+        ko: 가상 네트워크 활성화
+        ms: Dayakan rangkaian maya
+        pt-br: Habilitar rede virtual
+        ru: Включить виртуальную сеть
+        tr: Sanal ağı etkinleştir
+      required: true
+      type: select
+      values:
+        - label: "开启"
+          value: "true"
+        - label: "关闭"
+          value: "false"
+    - default: "10.0.0.1/24"
+      envKey: VIRTUAL_NET_IP
+      labelEn: Virtual Network IP (CIDR)
+      labelZh: 虚拟网络IP (CIDR)（仅启用虚拟网络时生效）
+      label:
+        en: Virtual Network IP (CIDR)
+        zh: 虚拟网络IP (CIDR)（仅启用虚拟网络时生效）
+        es-es: IP de red virtual (CIDR)
+        fa: 'آدرس شبکه مجازی (CIDR)'
+        zh-Hant: 虛擬網絡IP (CIDR)（僅啟用虛擬網絡時生效）
+        ja: 仮想ネットワークIP (CIDR)
+        ko: 가상 네트워크 IP (CIDR)
+        ms: IP rangkaian maya (CIDR)
+        pt-br: IP da rede virtual (CIDR)
+        ru: IP виртуальной сети (CIDR)
+        tr: Sanal ağ IP'si (CIDR)
+      required: true
+      type: text
+
+
+
+

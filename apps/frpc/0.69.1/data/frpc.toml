@@ -1,6 +1,11 @@
 serverAddr = "0.0.0.0"
 serverPort = 7000
 
+# featureGates = { VirtualNet = true }
+
+# 配置虚拟网络接口
+# virtualNet.address = "10.10.10.10/24"
+
 user = "Frp Client"
 
 auth.method = "token"
