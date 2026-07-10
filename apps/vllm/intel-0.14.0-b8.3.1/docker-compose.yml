@@ -14,6 +14,9 @@ services:
     environment:
       - no_proxy=localhost,127.0.0.1
       - ZE_AFFINITY_MASK=0,1,2,3
+      - VLLM_ALLOW_LONG_MAX_MODEL_LEN=1
+      - VLLM_WORKER_MULTIPROC_METHOD=spawn
+      - VLLM_OFFLOAD_WEIGHTS_BEFORE_QUANT=0
     networks:
       - 1panel-network
     ports:

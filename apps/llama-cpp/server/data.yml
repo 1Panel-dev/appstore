@@ -1,0 +1,60 @@
+additionalProperties:
+  formFields:
+    - default: 8080
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      label:
+        en: Port
+        es-es: Puerto
+        fa: 'پورت'
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh-Hant: 埠
+        zh: 端口
+        tr: Bağlantı Noktası
+      required: true
+      rule: paramPort
+      type: number
+    - default: -m /models/model.gguf --host 0.0.0.0 --port 8080
+      edit: true
+      envKey: START_COMMAND
+      labelEn: Server arguments
+      labelZh: 服务启动参数
+      label:
+        en: Server arguments
+        es-es: Argumentos del servidor
+        fa: 'آرگومان های سرور'
+        ja: サーバー引数
+        ms: Argumen pelayan
+        pt-br: Argumentos do servidor
+        ru: Аргументы сервера
+        ko: 서버 인수
+        zh-Hant: 服務啟動參數
+        zh: 服务启动参数
+        tr: Sunucu argümanları
+      required: true
+      type: text
+    - default: ./models
+      edit: true
+      envKey: MODEL_DIR
+      labelEn: Model directory
+      labelZh: 模型目录
+      label:
+        en: Model directory
+        es-es: Directorio del modelo
+        fa: 'دایرکتوری مدل'
+        ja: モデルディレクトリ
+        ms: Direktori model
+        pt-br: Diretório do modelo
+        ru: Каталог модели
+        ko: 모델 디렉터리
+        zh-Hant: 模型目錄
+        zh: 模型目录
+        tr: Model dizini
+      required: true
+      type: text
