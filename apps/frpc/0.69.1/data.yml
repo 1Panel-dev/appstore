@@ -1,5 +1,23 @@
 additionalProperties:
   formFields:
+    - default: Frp Client
+      envKey: CLIENT_NAME
+      labelEn: Client Name
+      labelZh: 客户端名称
+      label:
+        en: Client Name
+        zh: 客户端名称
+        es-es: Nombre del Cliente
+        fa: 'نام کلاینت'
+        zh-Hant: 用戶端名稱
+        ja: クライアント名
+        ko: 클라이언트 이름
+        ms: Nama Pelanggan
+        pt-br: Nome do Cliente
+        ru: Имя клиента
+        tr: İstemci Adı
+      required: true
+      type: text
     - default: 127.0.0.1
       envKey: SERVER_ADDRESS
       labelEn: Server Address
