@@ -2,6 +2,7 @@
 
 source ./.env
 
+sed -i "s/user = \".*\"/user = \"${CLIENT_NAME}\"/" ./data/frpc.toml
 sed -i "s/serverAddr = \".*\"/serverAddr = \"${SERVER_ADDRESS}\"/" ./data/frpc.toml
 sed -i "s/serverPort = .*$/serverPort = ${SERVER_PORT}/" ./data/frpc.toml
 sed -i "s/auth\.token = \".*\"/auth.token = \"${AUTH_TOKEN}\"/" ./data/frpc.toml

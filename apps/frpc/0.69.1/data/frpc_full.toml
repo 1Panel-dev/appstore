@@ -1,5 +1,7 @@
 # This configuration file is for reference only. Please do not use this configuration directly to run the program as it may have various issues.
 
+# Optional unique identifier for this frpc instance.
+clientID = "your_client_id"
 # your proxy name will be changed to {user}.{proxy}
 user = "your_name"
 
@@ -32,6 +34,11 @@ auth.method = "token"
 # auth token
 auth.token = "12345678"
 
+# alternatively, you can use tokenSource to load the token from a file
+# this is mutually exclusive with auth.token
+# auth.tokenSource.type = "file"
+# auth.tokenSource.file.path = "/etc/frp/token"
+
 # oidc.clientID specifies the client ID to use to get a token in OIDC authentication.
 # auth.oidc.clientID = ""
 # oidc.clientSecret specifies the client secret to use to get a token in OIDC authentication.
@@ -49,6 +56,20 @@ auth.token = "12345678"
 # frp will add "audience=<value>" "var1=<value>" to the additional parameters.
 # auth.oidc.additionalEndpointParams.audience = "https://dev.auth.com/api/v2/"
 # auth.oidc.additionalEndpointParams.var1 = "foobar"
+
+# OIDC TLS and proxy configuration
+# Specify a custom CA certificate file for verifying the OIDC token endpoint's TLS certificate.
+# This is useful when the OIDC provider uses a self-signed certificate or a custom CA.
+# auth.oidc.trustedCaFile = "/path/to/ca.crt"
+
+# Skip TLS certificate verification for the OIDC token endpoint.
+# INSECURE: Only use this for debugging purposes, not recommended for production.
+# auth.oidc.insecureSkipVerify = false
+
+# Specify a proxy server for OIDC token endpoint connections.
+# Supports http, https, socks5, and socks5h proxy protocols.
+# If not specified, no proxy is used for OIDC connections.
+# auth.oidc.proxyURL = "http://proxy.example.com:8080"
 
 # Set admin address for control frpc's action by http api such as reload
 webServer.addr = "127.0.0.1"
@@ -76,11 +97,15 @@ transport.poolCount = 5
 
 # Specify keep alive interval for tcp mux.
 # only valid if tcpMux is enabled.
-# transport.tcpMuxKeepaliveInterval = 60
+# transport.tcpMuxKeepaliveInterval = 30
 
 # Communication protocol used to connect to server
 # supports tcp, kcp, quic, websocket and wss now, default is tcp
 transport.protocol = "tcp"
+
+# FRP wire protocol used inside the selected transport.
+# supports v1 and v2, default is v1. v2 requires frps support and must be enabled explicitly.
+# transport.wireProtocol = "v1"
 
 # set client binding ip when connect server, default is empty.
 # only when protocol = tcp or websocket, the value will be used.
@@ -122,12 +147,29 @@ transport.tls.enable = true
 
 # Proxy names you want to start.
 # Default is empty, means all proxies.
+# This list is a global allowlist after config + store are merged, so entries
+# created via Store API are also filtered by this list.
+# If start is non-empty, any proxy/visitor not listed here will not be started.
 # start = ["ssh", "dns"]
+
+# Alternative to 'start': You can control each proxy individually using the 'enabled' field.
+# Set 'enabled = false' in a proxy configuration to disable it.
+# If 'enabled' is not set or set to true, the proxy is enabled by default.
+# The 'enabled' field provides more granular control and is recommended over 'start'.
 
 # Specify udp packet size, unit is byte. If not set, the default value is 1500.
 # This parameter should be same between client and server.
 # It affects the udp and sudp proxy.
 udpPacketSize = 1500
+
+# Feature gates allows you to enable or disable experimental features
+# Format is a map of feature names to boolean values
+# You can enable specific features:
+#featureGates = { VirtualNet = true }
+
+# VirtualNet settings for experimental virtual network capabilities
+# The virtual network feature requires enabling the VirtualNet feature gate above
+# virtualNet.address = "100.86.1.1/24"
 
 # Additional metadatas for client.
 metadatas.var1 = "abc"
@@ -141,6 +183,8 @@ metadatas.var2 = "123"
 # If global user is not empty, it will be changed to {user}.{proxy} such as 'your_name.ssh'
 name = "ssh"
 type = "tcp"
+# Enable or disable this proxy. true or omit this field to enable, false to disable.
+# enabled = true
 localIP = "127.0.0.1"
 localPort = 22
 # Limit bandwidth for this proxy, unit is KB and MB
@@ -209,6 +253,7 @@ locations = ["/", "/pic"]
 # routeByHTTPUser = abc
 hostHeaderRewrite = "example.com"
 requestHeaders.set.x-from-where = "frp"
+responseHeaders.set.foo = "bar"
 healthCheck.type = "http"
 # frpc will send a GET http request '/status' to local http service
 # http service is alive when it return 2xx http response code
@@ -224,6 +269,8 @@ healthCheck.httpHeaders=[
 [[proxies]]
 name = "web02"
 type = "https"
+# Disable this proxy by setting enabled to false
+# enabled = false
 localIP = "127.0.0.1"
 localPort = 8000
 subdomain = "web02"
@@ -315,6 +362,26 @@ hostHeaderRewrite = "127.0.0.1"
 requestHeaders.set.x-from-where = "frp"
 
 [[proxies]]
+name = "plugin_http2http"
+type = "tcp"
+remotePort = 6007
+[proxies.plugin]
+type = "http2http"
+localAddr = "127.0.0.1:80"
+hostHeaderRewrite = "127.0.0.1"
+requestHeaders.set.x-from-where = "frp"
+
+[[proxies]]
+name = "plugin_tls2raw"
+type = "tcp"
+remotePort = 6008
+[proxies.plugin]
+type = "tls2raw"
+localAddr = "127.0.0.1:80"
+crtPath = "./server.crt"
+keyPath = "./server.key"
+
+[[proxies]]
 name = "secret_tcp"
 # If the type is secret tcp, remotePort is useless
 # Who want to connect local port should deploy another frpc with stcp proxy and role is visitor
@@ -336,6 +403,21 @@ localPort = 22
 # If not empty, only visitors from specified users can connect.
 # Otherwise, visitors from same user can connect. '*' means allow all users.
 allowUsers = ["user1", "user2"]
+
+# NAT traversal configuration (optional)
+[proxies.natTraversal]
+# Disable the use of local network interfaces (assisted addresses) for NAT traversal.
+# When enabled, only STUN-discovered public addresses will be used.
+# This can improve performance when you have slow VPN connections.
+# Default: false
+disableAssistedAddrs = false
+
+[[proxies]]
+name = "vnet-server"
+type = "stcp"
+secretKey = "your-secret-key"
+[proxies.plugin]
+type = "virtual_net"
 
 # frpc role visitor -> frps -> frpc role server
 [[visitors]]
@@ -368,3 +450,20 @@ maxRetriesAnHour = 8
 minRetryInterval = 90
 # fallbackTo = "stcp_visitor"
 # fallbackTimeoutMs = 500
+
+# NAT traversal configuration (optional)
+[visitors.natTraversal]
+# Disable the use of local network interfaces (assisted addresses) for NAT traversal.
+# When enabled, only STUN-discovered public addresses will be used.
+# Default: false
+disableAssistedAddrs = false
+
+[[visitors]]
+name = "vnet-visitor"
+type = "stcp"
+serverName = "vnet-server"
+secretKey = "your-secret-key"
+bindPort = -1
+[visitors.plugin]
+type = "virtual_net"
+destinationIP = "100.86.0.1"
