@@ -3,7 +3,11 @@ services:
     image: snowdreamtech/frpc:0.69.1
     container_name: ${CONTAINER_NAME}
     restart: always
+    cap_add:
+      - NET_ADMIN
     network_mode: host
+    devices:
+      - "/dev/net/tun:/dev/net/tun"
     volumes:
       - ./data:/etc/frp
     labels:
