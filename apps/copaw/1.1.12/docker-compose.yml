@@ -1,7 +1,7 @@
 services:
   copaw:
     container_name: ${CONTAINER_NAME}
-    image: agentscope/qwenpaw:v1.1.12
+    image: agentscope/qwenpaw:v2.0.0
     restart: unless-stopped
     networks:
       - 1panel-network
