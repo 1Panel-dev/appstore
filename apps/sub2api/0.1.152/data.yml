@@ -78,26 +78,7 @@ additionalProperties:
       required: true
       rule: paramCommon
       type: text
-    - default: 5432
-      edit: true
-      envKey: PANEL_DB_PORT
-      labelEn: Database Port
-      labelZh: 数据库端口
-      label:
-        en: Database Port
-        es-es: Puerto de base de datos
-        zh: 数据库端口
-        zh-Hant: 資料庫連接埠
-        ja: データベースポート
-        ko: 데이터베이스 포트
-        ru: Порт базы данных
-        ms: Port pangkalan data
-        pt-br: Porta do banco de dados
-        tr: Veritabanı Bağlantı Noktası
-      required: true
-      rule: paramPort
-      type: number
-    - default: ""
+    - default: sub2api
       edit: true
       envKey: PANEL_DB_USER_PASSWORD
       labelEn: Database Password
@@ -122,76 +103,40 @@ additionalProperties:
       envKey: PANEL_REDIS_HOST
       key: redis
       labelEn: Redis Service
-      labelZh: Redis服务
-      label:
-        en: Redis Service
-        es-es: Servicio Redis
-        zh: Redis服务
-        zh-Hant: Redis 服務
-        ja: Redis サービス
-        ko: Redis 서비스
-        ru: Служба Redis
-        ms: Perkhidmatan Redis
-        pt-br: Serviço Redis
-        tr: Redis Hizmeti
+      labelZh: Redis 服务
       required: true
       type: service
-    - default: 6379
-      edit: true
-      envKey: PANEL_REDIS_PORT
-      labelEn: Redis Service Port
-      labelZh: Redis服务端口
       label:
-        en: Redis Service Port
-        es-es: Puerto del servicio Redis
-        zh: Redis服务端口
-        zh-Hant: Redis 服務連接埠
-        ja: Redis サービスポート
-        ko: Redis 서비스 포트
-        ru: Порт службы Redis
-        ms: Port Perkhidmatan Redis
-        pt-br: Porta do serviço Redis
-        tr: Redis Hizmet Bağlantı Noktası
-      required: true
-      rule: paramPort
-      type: number
+        en: Redis Service
+        es-es: Servicio de Redis
+        fa: 'سرویس Redis'
+        ja: Redis サービス
+        ms: Perkhidmatan Redis
+        pt-br: Serviço Redis
+        ru: Сервис Redis
+        ko: Redis 서비스
+        zh-Hant: Redis 服務
+        zh: Redis 服务
+        tr: Redis Hizmeti
     - default: ""
       edit: true
       envKey: PANEL_REDIS_ROOT_PASSWORD
-      labelEn: Redis Password
-      labelZh: Redis 密码
-      label:
-        en: Redis Password
-        es-es: Contraseña de Redis
-        zh: Redis 密码
-        zh-Hant: Redis 密碼
-        ja: Redis パスワード
-        ko: Redis 비밀번호
-        ru: Пароль Redis
-        ms: Kata laluan Redis
-        pt-br: Senha do Redis
-        tr: Redis Parolası
-      random: true
+      labelEn: Redis service password
+      labelZh: Redis 服务密码
       required: true
       type: password
-    - default: 0
-      edit: true
-      envKey: REDIS_DB
-      labelEn: Redis Database
-      labelZh: Redis 数据库
       label:
-        en: Redis Database
-        es-es: Base de datos Redis
-        zh: Redis 数据库
-        zh-Hant: Redis 資料庫
-        ja: Redis データベース
-        ko: Redis 데이터베이스
-        ru: База данных Redis
-        ms: Pangkalan Data Redis
-        pt-br: Banco de dados Redis
-        tr: Redis Veritabanı
-      required: true
-      type: number
+        en: Redis service password
+        es-es: Contraseña del servicio Redis
+        fa: 'رمز عبور سرویس Redis'
+        ja: Redis サービスのパスワード
+        ms: Kata laluan perkhidmatan Redis
+        pt-br: Senha do serviço Redis
+        ru: Пароль службы Redis
+        ko: Redis 서비스 비밀번호
+        zh-Hant: Redis 服務密碼
+        zh: Redis 服务密码
+        tr: Redis Hizmet Parolası
     - default: 8080
       edit: true
       envKey: PANEL_APP_PORT_HTTP
@@ -293,7 +238,7 @@ additionalProperties:
         tr: Yönetici E-postası
       required: true
       type: text
-    - default: ""
+    - default: sub2api
       edit: true
       envKey: ADMIN_PASSWORD
       labelEn: Admin Password
