@@ -1,7 +1,7 @@
 services:
   web-check:
     container_name: ${CONTAINER_NAME}
-    image: lissy93/web-check:2.1.9
+    image: lissy93/web-check:2.1.10
     restart: always
     networks:
       - 1panel-network
