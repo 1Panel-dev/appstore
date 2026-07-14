@@ -1,0 +1,33 @@
+name: DBX
+tags:
+  - 工具
+title: 轻量级跨平台数据库客户端
+description: 轻量级跨平台数据库客户端，支持 60+ 种数据库
+additionalProperties:
+  key: dbx
+  name: DBX
+  tags:
+    - Tool
+  shortDescZh: 轻量级跨平台数据库客户端，支持 60+ 种数据库
+  shortDescEn: Lightweight cross-platform database client supporting 60+ databases
+  description:
+    en: Lightweight cross-platform database client supporting 60+ databases
+    es-es: Cliente de bases de datos multiplataforma y ligero compatible con más de 60 bases de datos
+    ja: 60 種類以上のデータベースに対応する軽量なクロスプラットフォームデータベースクライアント
+    ms: Klien pangkalan data merentas platform yang ringan dan menyokong lebih 60 pangkalan data
+    pt-br: Cliente de banco de dados multiplataforma leve com suporte a mais de 60 bancos de dados
+    ru: Легковесный кроссплатформенный клиент баз данных с поддержкой более 60 СУБД
+    ko: 60개 이상의 데이터베이스를 지원하는 경량 크로스 플랫폼 데이터베이스 클라이언트
+    zh-Hant: 輕量級跨平台資料庫用戶端，支援 60 種以上的資料庫
+    zh: 轻量级跨平台数据库客户端，支持 60+ 种数据库
+    tr: 60'tan fazla veritabanını destekleyen hafif ve platformlar arası veritabanı istemcisi
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://dbxio.com
+  github: https://github.com/t8y2/dbx
+  document: https://dbxio.com/cn/docs/what-is-dbx
+  architectures:
+    - amd64
+    - arm64

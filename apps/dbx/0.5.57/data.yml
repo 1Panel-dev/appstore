@@ -1,0 +1,41 @@
+additionalProperties:
+  formFields:
+    - default: 4224
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      label:
+        en: Port
+        es-es: Puerto
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh-Hant: 連接埠
+        zh: 端口
+        tr: Port
+      required: true
+      rule: paramPort
+      type: number
+    - default: dbx_password
+      edit: true
+      envKey: PANEL_DB_PASSWORD
+      labelEn: Access Password
+      labelZh: 访问密码
+      label:
+        en: Access Password
+        es-es: Contraseña de acceso
+        ja: アクセスパスワード
+        ms: Kata Laluan Akses
+        pt-br: Senha de acesso
+        ru: Пароль доступа
+        ko: 액세스 비밀번호
+        zh-Hant: 存取密碼
+        zh: 访问密码
+        tr: Erişim Parolası
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
