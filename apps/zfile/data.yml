@@ -32,3 +32,4 @@ additionalProperties:
     document: https://docs.zfile.vip/
     architectures:
         - amd64
+        - arm64

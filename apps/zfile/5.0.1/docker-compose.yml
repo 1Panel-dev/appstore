@@ -1,6 +1,6 @@
 services:
   zfile:
-    image: zhaojun1998/zfile:4.5.0
+    image: zhaojun1998/zfile:5.0.1
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
@@ -11,8 +11,8 @@ services:
       - "./data/db:/root/.zfile-v4/db"
       - "./data/logs:/root/.zfile-v4/logs"
       - "./data/mnt:/data/file"
-    labels:  
+    labels:
       createdBy: "Apps"
-networks:  
-  1panel-network:  
+networks:
+  1panel-network:
     external: true
