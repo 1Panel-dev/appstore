@@ -1,17 +1,21 @@
 services:
   copaw:
     container_name: ${CONTAINER_NAME}
-    image: agentscope/qwenpaw:v1.1.12
-    restart: unless-stopped
+    image: agentscope/qwenpaw:v2.0.0
+    init: true
+    restart: always
     networks:
       - 1panel-network
     ports:
       - ${PANEL_APP_PORT_HTTP}:8088
     environment:
-      - COPAW_AUTH_ENABLED=true
+      - QWENPAW_AUTH_ENABLED=true
+      - QWENPAW_AUTH_USERNAME=${QWENPAW_AUTH_USERNAME}
+      - QWENPAW_AUTH_PASSWORD=${QWENPAW_AUTH_PASSWORD}
     volumes:
       - ./data:/app/working
       - ./secret:/app/working.secret
+      - ./backups:/app/working.backups
     labels:
       createdBy: "Apps"
 networks:

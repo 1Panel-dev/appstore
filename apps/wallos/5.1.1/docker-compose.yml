@@ -1,6 +1,6 @@
 services:
   wallos:
-    image: bellamy/wallos:4.9.6
+    image: bellamy/wallos:5.1.1
     container_name: ${CONTAINER_NAME}
     restart: unless-stopped
     networks:
@@ -12,8 +12,10 @@ services:
       - ./data/logos:/var/www/html/images/uploads/logos
     environment:
       - TZ=${TIME_ZONE}
-    labels:  
+    healthcheck:
+      test: ["NONE"]
+    labels:
       createdBy: "Apps"
-networks:  
-  1panel-network:  
+networks:
+  1panel-network:
     external: true
