@@ -1,0 +1,41 @@
+additionalProperties:
+  formFields:
+    - default: '8080'
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      label:
+        en: Port
+        es-es: Puerto
+        fa: 'پورت'
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh-Hant: 埠
+        zh: 端口
+        tr: Bağlantı Noktası
+      required: true
+      rule: paramPort
+      type: number
+    - default: '/opt/1panel/apps/palworld/palworld/data/Pal/Saved'
+      edit: true
+      envKey: PALWORLD_SAVE_PATH
+      labelEn: Palworld External Save Path
+      labelZh: 帕鲁服务器外部存档路径
+      label:
+        en: Palworld External Save Path
+        es-es: Palworld External Save Ruta
+        fa: 'مسیر خارجی ذخیره Palworld'
+        ja: Palworld 外部保存パス
+        ms: Laluan Simpan Luaran Palworld
+        pt-br: Caminho de salvamento externo do Palworld
+        ru: Внешний путь сохранения Palworld
+        ko: Palworld 외부 저장 경로
+        zh-Hant: Palworld 外部儲存路徑
+        zh: 帕鲁服务器外部存档路径
+        tr: Palworld External Save Yolu
+      required: true
+      type: text
