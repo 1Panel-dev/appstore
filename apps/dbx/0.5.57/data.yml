@@ -8,6 +8,7 @@ additionalProperties:
       label:
         en: Port
         es-es: Puerto
+        fa: 'پورت'
         ja: ポート
         ms: Port
         pt-br: Porta
@@ -27,6 +28,7 @@ additionalProperties:
       label:
         en: Access Password
         es-es: Contraseña de acceso
+        fa: 'رمز عبور دسترسی'
         ja: アクセスパスワード
         ms: Kata Laluan Akses
         pt-br: Senha de acesso

@@ -1,18 +1,19 @@
 name: DBX
 tags:
-  - 工具
+  - 开发工具
 title: 轻量级跨平台数据库客户端
 description: 轻量级跨平台数据库客户端，支持 60+ 种数据库
 additionalProperties:
   key: dbx
   name: DBX
   tags:
-    - Tool
+    - DevTool
   shortDescZh: 轻量级跨平台数据库客户端，支持 60+ 种数据库
   shortDescEn: Lightweight cross-platform database client supporting 60+ databases
   description:
     en: Lightweight cross-platform database client supporting 60+ databases
     es-es: Cliente de bases de datos multiplataforma y ligero compatible con más de 60 bases de datos
+    fa: 'کلاینت سبک و چندسکویی پایگاه داده با پشتیبانی از بیش از ۶۰ نوع پایگاه داده'
     ja: 60 種類以上のデータベースに対応する軽量なクロスプラットフォームデータベースクライアント
     ms: Klien pangkalan data merentas platform yang ringan dan menyokong lebih 60 pangkalan data
     pt-br: Cliente de banco de dados multiplataforma leve com suporte a mais de 60 bancos de dados
