@@ -1,0 +1,14 @@
+{
+  "id":"10028",
+  "state": "on",
+  "name": "Apache HTTPD",
+  "cve": "",
+  "type": "rce",
+  "remark": "",
+  "rule": {
+    "method":"GET",
+    "type": "request_uri",
+    "uri": "^/uploadfiles/.*\\.php\\.(?:jpg|jpeg)$",
+    "pattern": "regex"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id":"10033",
+  "state": "on",
+  "name": "Nexus Repository Manager3",
+  "cve": "CVE-2020-10199",
+  "type": "rce",
+  "remark": "",
+  "rule": {
+    "method":"POST",
+    "type": "uri",
+    "uri": "/service/rest/beta/repositories/go/group",
+    "pattern": "eq",
+    "params": {
+      "memberNames": ""
+    }
+  }
+}

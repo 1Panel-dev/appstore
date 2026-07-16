@@ -1,0 +1,14 @@
+{
+  "id":"10012",
+  "state": "on",
+  "name": "Jetty",
+  "cve": "CVE-2021-28169",
+  "type": "id",
+  "remark": "",
+  "rule": {
+    "method":"GET",
+    "type": "request_uri",
+    "uri": "/static?/%2557EB-INF/web.xml",
+    "pattern": "eq"
+  }
+}
