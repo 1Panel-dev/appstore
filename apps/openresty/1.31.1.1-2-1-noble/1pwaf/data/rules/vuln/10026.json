@@ -1,0 +1,14 @@
+{
+  "id":"10026",
+  "state": "on",
+  "name": "WebLogic",
+  "cve": "CVE-2017-3506",
+  "type": "rce",
+  "remark": "",
+  "rule": {
+    "method":"POST",
+    "type": "request_uri",
+    "uri": "/wls-wsat/CoordinatorPortType",
+    "pattern": "eq"
+  }
+}
