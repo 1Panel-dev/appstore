@@ -18,6 +18,8 @@ services:
       - ./conf/mime.types:/usr/local/openresty/nginx/conf/mime.types
       - ./conf/default:/usr/local/openresty/nginx/conf/default/
       - ./conf/ssl:/usr/local/openresty/nginx/conf/ssl/
+      - ./conf/modules-enabled:/usr/local/openresty/nginx/conf/modules-enabled/:ro
+      - ./modules:/usr/local/openresty/nginx/modules/1panel/:ro
       - ./log:/var/log/nginx
       - ./root:/usr/share/nginx/html
       - /etc/localtime:/etc/localtime

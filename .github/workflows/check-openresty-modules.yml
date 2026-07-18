@@ -1,0 +1,20 @@
+name: Check OpenResty Modules
+
+on:
+  pull_request:
+    paths:
+      - 'apps/openresty/**'
+      - 'scripts/check-openresty-modules.sh'
+  push:
+    branches: ['dev']
+    paths:
+      - 'apps/openresty/**'
+      - 'scripts/check-openresty-modules.sh'
+
+jobs:
+  check-openresty-modules:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify module.json matches module.catalog.json
+        run: bash scripts/check-openresty-modules.sh
