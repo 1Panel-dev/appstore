@@ -353,7 +353,7 @@ additionalProperties:
           value: "true"
         - label: "false"
           value: "false"
-    - default: "certs"
+    - default: "data/certs"
       disabled: true
       envKey: GOTIFY_SERVER_SSL_LETSENCRYPT_CACHE
       labelEn: Let's Encrypt Cache Directory
@@ -375,115 +375,115 @@ additionalProperties:
     - default: ""
       edit: true
       envKey: GOTIFY_SERVER_SSL_LETSENCRYPT_HOSTS
-      labelEn: Let's Encrypt Hosts
-      labelZh: Let's Encrypt 域名
+      labelEn: Let's Encrypt Hosts (CSV)
+      labelZh: Let's Encrypt 域名（CSV，逗号分隔）
       label:
-        en: Let's Encrypt Hosts
-        zh: Let's Encrypt 域名
-        es-es: Hosts de Let's Encrypt
-        fa: 'میزبان های Let''s Encrypt'
-        zh-Hant: Let's Encrypt 主機
-        ja: Let's Encrypt ホスト
-        ko: Let's Encrypt 호스트
-        ms: Hos Let's Encrypt
-        pt-br: Hosts do Let's Encrypt
-        ru: Хосты Let's Encrypt
-        tr: Let's Encrypt ana bilgisayarlari
+        en: Let's Encrypt Hosts (CSV)
+        zh: Let's Encrypt 域名（CSV，逗号分隔）
+        es-es: Hosts de Let's Encrypt (CSV)
+        fa: 'میزبان های Let''s Encrypt (CSV)'
+        zh-Hant: Let's Encrypt 主機（CSV，逗號分隔）
+        ja: Let's Encrypt ホスト (CSV)
+        ko: Let's Encrypt 호스트 (CSV)
+        ms: Hos Let's Encrypt (CSV)
+        pt-br: Hosts do Let's Encrypt (CSV)
+        ru: Хосты Let's Encrypt (CSV)
+        tr: Let's Encrypt ana bilgisayarlari (CSV)
       required: false
       type: text
     - default: ""
       edit: true
       envKey: GOTIFY_SERVER_RESPONSEHEADERS
-      labelEn: Response Headers
-      labelZh: 响应头
+      labelEn: Response Headers (JSON)
+      labelZh: 响应头（JSON）
       label:
-        en: Response Headers
-        zh: 响应头
-        es-es: Encabezados de respuesta
-        fa: 'هدرهای پاسخ'
-        zh-Hant: 回應標頭
-        ja: レスポンスヘッダー
-        ko: 응답 헤더
-        ms: Pengepala respons
-        pt-br: Cabeçalhos de resposta
-        ru: Заголовки ответа
-        tr: Yanit basliklari
+        en: Response Headers (JSON)
+        zh: 响应头（JSON）
+        es-es: Encabezados de respuesta (JSON)
+        fa: 'هدرهای پاسخ (JSON)'
+        zh-Hant: 回應標頭（JSON）
+        ja: レスポンスヘッダー (JSON)
+        ko: 응답 헤더 (JSON)
+        ms: Pengepala respons (JSON)
+        pt-br: Cabeçalhos de resposta (JSON)
+        ru: Заголовки ответа (JSON)
+        tr: Yanit basliklari (JSON)
       required: false
       type: text
     - default: ""
       edit: true
       envKey: GOTIFY_SERVER_CORS_ALLOWORIGINS
-      labelEn: CORS Allow Origins
-      labelZh: 允许跨域来源
+      labelEn: CORS Allow Origins (CSV)
+      labelZh: 允许跨域来源（CSV，逗号分隔）
       label:
-        en: CORS Allow Origins
-        zh: 允许跨域来源
-        es-es: Orígenes permitidos de CORS
-        fa: 'مبداهای مجاز CORS'
-        zh-Hant: CORS 允許來源
-        ja: CORS 許可オリジン
-        ko: CORS 허용 출처
-        ms: Asal dibenarkan CORS
-        pt-br: Origens permitidas pelo CORS
-        ru: Разрешённые источники CORS
-        tr: CORS izin verilen kaynaklar
+        en: CORS Allow Origins (CSV)
+        zh: 允许跨域来源（CSV，逗号分隔）
+        es-es: Orígenes permitidos de CORS (CSV)
+        fa: 'مبداهای مجاز CORS (CSV)'
+        zh-Hant: CORS 允許來源（CSV，逗號分隔）
+        ja: CORS 許可オリジン (CSV)
+        ko: CORS 허용 출처 (CSV)
+        ms: Asal dibenarkan CORS (CSV)
+        pt-br: Origens permitidas pelo CORS (CSV)
+        ru: Разрешённые источники CORS (CSV)
+        tr: CORS izin verilen kaynaklar (CSV)
       required: false
       type: text
     - default: ""
       edit: true
       envKey: GOTIFY_SERVER_CORS_ALLOWMETHODS
-      labelEn: CORS Allow Methods
-      labelZh: 允许跨域方法
+      labelEn: CORS Allow Methods (CSV)
+      labelZh: 允许跨域方法（CSV，逗号分隔）
       label:
-        en: CORS Allow Methods
-        zh: 允许跨域方法
-        es-es: Métodos permitidos de CORS
-        fa: 'روش های مجاز CORS'
-        zh-Hant: CORS 允許方法
-        ja: CORS 許可メソッド
-        ko: CORS 허용 메서드
-        ms: Kaedah dibenarkan CORS
-        pt-br: Métodos permitidos pelo CORS
-        ru: Разрешённые методы CORS
-        tr: CORS izin verilen yontemler
+        en: CORS Allow Methods (CSV)
+        zh: 允许跨域方法（CSV，逗号分隔）
+        es-es: Métodos permitidos de CORS (CSV)
+        fa: 'روش های مجاز CORS (CSV)'
+        zh-Hant: CORS 允許方法（CSV，逗號分隔）
+        ja: CORS 許可メソッド (CSV)
+        ko: CORS 허용 메서드 (CSV)
+        ms: Kaedah dibenarkan CORS (CSV)
+        pt-br: Métodos permitidos pelo CORS (CSV)
+        ru: Разрешённые методы CORS (CSV)
+        tr: CORS izin verilen yontemler (CSV)
       required: false
       type: text
     - default: ""
       edit: true
       envKey: GOTIFY_SERVER_CORS_ALLOWHEADERS
-      labelEn: CORS Allow Headers
-      labelZh: 允许跨域头
+      labelEn: CORS Allow Headers (CSV)
+      labelZh: 允许跨域头（CSV，逗号分隔）
       label:
-        en: CORS Allow Headers
-        zh: 允许跨域头
-        es-es: Encabezados permitidos de CORS
-        fa: 'هدرهای مجاز CORS'
-        zh-Hant: CORS 允許標頭
-        ja: CORS 許可ヘッダー
-        ko: CORS 허용 헤더
-        ms: Pengepala dibenarkan CORS
-        pt-br: Cabeçalhos permitidos pelo CORS
-        ru: Разрешённые заголовки CORS
-        tr: CORS izin verilen basliklar
+        en: CORS Allow Headers (CSV)
+        zh: 允许跨域头（CSV，逗号分隔）
+        es-es: Encabezados permitidos de CORS (CSV)
+        fa: 'هدرهای مجاز CORS (CSV)'
+        zh-Hant: CORS 允許標頭（CSV，逗號分隔）
+        ja: CORS 許可ヘッダー (CSV)
+        ko: CORS 허용 헤더 (CSV)
+        ms: Pengepala dibenarkan CORS (CSV)
+        pt-br: Cabeçalhos permitidos pelo CORS (CSV)
+        ru: Разрешённые заголовки CORS (CSV)
+        tr: CORS izin verilen basliklar (CSV)
       required: false
       type: text
     - default: ""
       edit: true
       envKey: GOTIFY_SERVER_STREAM_ALLOWEDORIGINS
-      labelEn: Allowed origins for websocket connections
-      labelZh: Websocket 连接的允许来源
+      labelEn: Allowed origins for websocket connections (CSV)
+      labelZh: Websocket 连接的允许来源（CSV，逗号分隔）
       label:
-        en: Allowed origins for websocket connections
-        zh: Websocket 连接的允许来源
-        es-es: Orígenes permitidos para conexiones WebSocket
-        fa: 'مبداهای مجاز برای اتصال های WebSocket'
-        zh-Hant: WebSocket 連線允許來源
-        ja: WebSocket 接続で許可するオリジン
-        ko: WebSocket 연결 허용 출처
-        ms: Asal dibenarkan untuk sambungan websocket
-        pt-br: Origens permitidas para conexões websocket
-        ru: Разрешённые источники для WebSocket-соединений
-        tr: WebSocket baglantilari icin izin verilen kaynaklar
+        en: Allowed origins for websocket connections (CSV)
+        zh: Websocket 连接的允许来源（CSV，逗号分隔）
+        es-es: Orígenes permitidos para conexiones WebSocket (CSV)
+        fa: 'مبداهای مجاز برای اتصال های WebSocket (CSV)'
+        zh-Hant: WebSocket 連線允許來源（CSV，逗號分隔）
+        ja: WebSocket 接続で許可するオリジン (CSV)
+        ko: WebSocket 연결 허용 출처 (CSV)
+        ms: Asal dibenarkan untuk sambungan websocket (CSV)
+        pt-br: Origens permitidas para conexões websocket (CSV)
+        ru: Разрешённые источники для WebSocket-соединений (CSV)
+        tr: WebSocket baglantilari icin izin verilen kaynaklar (CSV)
       required: false
       type: text
     - default: 45
