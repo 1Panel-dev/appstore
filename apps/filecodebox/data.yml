@@ -2,19 +2,19 @@ name: FileCodeBox
 tags:
 - 实用工具
 - 云存储
-title: 文件快递柜-匿名口令分享文本，文件，像拿快递一样取文件
-description: 文件快递柜-匿名口令分享文本，文件，像拿快递一样取文件
+title: 轻量、现代的自托管文件分享工具
+description: 无需注册，上传文件或文本后通过取件码分享
 additionalProperties:
   key: filecodebox
   name: FileCodeBox
   tags:
   - Storage
   - Tool
-  shortDescZh: 文件快递柜-匿名口令分享文本，文件，像拿快递一样取文件
-  shortDescEn: File Express Cabinet - Anonymous Passcode Sharing Text, Files, Like
+  shortDescZh: 轻量、现代的自托管文件分享工具
+  shortDescEn: A lightweight, modern, self-hosted file sharing tool
   description:
-    en: File Express Cabinet - Anonymous Passcode Sharing Text, Files, Like Taking Express Delivery for Files
-    zh: 文件快递柜-匿名口令分享文本，文件，像拿快递一样取文件
+    en: A lightweight, modern, self-hosted tool for sharing files and text with pickup codes
+    zh: 轻量、现代的自托管文件分享工具，通过取件码分享文件和文本
     es-es: Armario de archivos con código anónimo para compartir texto y archivos, como recoger un paquete
     fa: 'کابینت فایل اکسپرس؛ اشتراک گذاری ناشناس متن و فایل با رمز عبور، شبیه دریافت بسته برای فایل ها'
     zh-Hant: 文件快遞櫃，匿名口令分享文字與檔案，像取快遞一樣取檔案
@@ -31,7 +31,7 @@ additionalProperties:
   batchInstallSupport: true
   website: https://share.lanol.cn
   github: https://github.com/vastsa/FileCodeBox
-  document: https://fcb-docs.aiuo.net
+  document: https://fcb-docs.aiuo.net/
   architectures:
     - amd64
     - arm64
