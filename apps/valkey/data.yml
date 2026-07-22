@@ -19,7 +19,7 @@ additionalProperties:
         pt-br: Servidor de estruturas de dados de codigo aberto e alto desempenho
         ru: Высокопроизводительный сервер структур данных с открытым исходным кодом
         ko: 고성능 오픈 소스 데이터 구조 서버
-        zh-hant: 高效能開源資料結構伺服器
+        zh-Hant: 高效能開源資料結構伺服器
         zh: 高性能开源数据结构服务器
         tr: Yuksek performansli acik kaynak veri yapisi sunucusu
     type: runtime
