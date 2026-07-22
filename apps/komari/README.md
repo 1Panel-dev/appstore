@@ -1,9 +1,6 @@
 ## 使用说明
 
-> 默认端口号为 **25774**，后台账号为 **admin**，后台密码为 **password+随机**，请在安装填写信息的时候及时修改
-> 如果填写的时候未记住或忘记那么可以通过容器日志查看
-> 例如 **1Panel-localkomari-pThk  | 2026/02/09 08:08:13 [INFO] Default admin account created. Username: admin , Password: password_jWZ62s (github.com/komari-monitor/komari/cmd/server.go:391)**
-> 其中 **Username: admin , Password: password_jWZ62s** 就是你的用户名和密码
+> 从 1.3.0​ 版本起，新安装的实例不再通过启动日志或环境变量提供默认管理员账号，请直接访问后台网页（默认端口号为 25774），按照引导完成管理员用户和密码的注册。
 
 ## 产品介绍
 
