@@ -15,6 +15,6 @@ jobs:
   check-openresty-modules:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Verify module.json matches module.catalog.json
         run: bash scripts/check-openresty-modules.sh
