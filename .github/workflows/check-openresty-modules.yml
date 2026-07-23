@@ -16,5 +16,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Verify module.json matches module.catalog.json
+      - name: Validate immutable module catalogs
         run: bash scripts/check-openresty-modules.sh
