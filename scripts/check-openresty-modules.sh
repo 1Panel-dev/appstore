@@ -9,6 +9,8 @@ catalog_count=0
 for catalog_json in "${root_dir}"/apps/openresty/*/build/module.catalog.json; do
     [[ -f "${catalog_json}" ]] || continue
     catalog_count=$((catalog_count + 1))
+    app_dir="$(dirname "$(dirname "${catalog_json}")")"
+    version="$(basename "${app_dir}")"
     module_json="$(dirname "${catalog_json}")/module.json"
     if [[ -e "${module_json}" ]]; then
         echo "INVALID: packaged state file must not exist: ${module_json}"
@@ -34,6 +36,16 @@ for catalog_json in "${root_dir}"/apps/openresty/*/build/module.catalog.json; do
         )
     ' "${catalog_json}" >/dev/null; then
         echo "INVALID: ${catalog_json}"
+        failed=1
+    fi
+    if ! grep -Fq "PANEL_OPENRESTY_VERSION=${version}" "${app_dir}/docker-compose.yml" ||
+        ! grep -Fq "image: 1panel/openresty:${version}" "${app_dir}/docker-compose.yml" ||
+        ! grep -Fq "ARG PANEL_OPENRESTY_VERSION=\"${version}\"" "${app_dir}/build/Dockerfile.modules"; then
+        echo "INVALID: OpenResty image version does not match ${version}"
+        failed=1
+    fi
+    if ! grep -Fq 'include /usr/local/openresty/nginx/conf/modules-enabled/*.conf;' "${app_dir}/conf/nginx.conf"; then
+        echo "INVALID: dynamic module include is missing from ${app_dir}/conf/nginx.conf"
         failed=1
     fi
 done
