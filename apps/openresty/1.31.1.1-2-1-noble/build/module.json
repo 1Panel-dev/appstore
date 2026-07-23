@@ -1,37 +1,59 @@
 [
   {
-    "name":"ngx_brotli",
-    "script":"",
-    "packages":[],
+    "name": "ngx_brotli",
+    "script": "",
+    "packages": [
+      "libbrotli-dev"
+    ],
     "params": "--add-module=/usr/local/openresty/modules/ngx_brotli",
-    "enable":false
+    "enable": false,
+    "buildMode": "dynamic",
+    "provider": "local",
+    "dynamicSupport": "unknown",
+    "loadOrder": 10
   },
   {
-    "name":"rtmp",
-    "script":"unzip -o /tmp/nginx-rtmp-module.zip -d /tmp",
-    "packages":[],
+    "name": "rtmp",
+    "script": "unzip -o /tmp/nginx-rtmp-module.zip -d /tmp",
+    "packages": [],
     "params": "--add-module=/tmp/nginx-rtmp-module",
-    "enable":false
+    "enable": false,
+    "buildMode": "dynamic",
+    "provider": "local",
+    "dynamicSupport": "unknown",
+    "loadOrder": 20
   },
   {
-    "name":"web_dav",
-    "script":"unzip -o /tmp/nginx-dav-ext-module.zip -d /tmp",
-    "packages":[],
-    "params": "--with-http_dav_module  --add-module=/tmp/nginx-dav-ext-module",
-    "enable":false
+    "name": "web_dav",
+    "script": "unzip -o /tmp/nginx-dav-ext-module.zip -d /tmp",
+    "packages": [],
+    "params": "--with-http_dav_module --add-module=/tmp/nginx-dav-ext-module",
+    "enable": false,
+    "buildMode": "dynamic",
+    "provider": "local",
+    "dynamicSupport": "unknown",
+    "loadOrder": 30
   },
   {
-    "name":"geoip2",
-    "script":"unzip -o /tmp/ngx_http_geoip2_module.zip -d /tmp && tar -zxvf /tmp/libmaxminddb.tar.gz -C /tmp && cd /tmp/libmaxminddb && ./configure && make && make install",
-    "packages":[],
+    "name": "geoip2",
+    "script": "unzip -o /tmp/ngx_http_geoip2_module.zip -d /tmp && tar -zxvf /tmp/libmaxminddb.tar.gz -C /tmp && cd /tmp/libmaxminddb && ./configure && make && make install",
+    "packages": [],
     "params": "--add-module=/tmp/ngx_http_geoip2_module",
-    "enable":false
+    "enable": false,
+    "buildMode": "dynamic",
+    "provider": "local",
+    "dynamicSupport": "unknown",
+    "loadOrder": 40
   },
   {
-    "name":"http_substitutions_filter",
-    "script":"unzip -o /tmp/ngx_http_substitutions_filter_module.zip -d /tmp",
-    "packages":[],
+    "name": "http_substitutions_filter",
+    "script": "unzip -o /tmp/ngx_http_substitutions_filter_module.zip -d /tmp",
+    "packages": [],
     "params": "--add-module=/tmp/ngx_http_substitutions_filter_module",
-    "enable":false
+    "enable": false,
+    "buildMode": "dynamic",
+    "provider": "local",
+    "dynamicSupport": "unknown",
+    "loadOrder": 50
   }
 ]
