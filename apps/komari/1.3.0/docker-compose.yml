@@ -10,9 +10,6 @@ services:
       - ${PANEL_APP_PORT_HTTP}:25774
     volumes:
       - ./data:/app/data
-    environment:
-      ADMIN_USERNAME: ${ADMIN_USERNAME}
-      ADMIN_PASSWORD: ${ADMIN_PASSWORD}
     labels:
       createdBy: "Apps"
 
