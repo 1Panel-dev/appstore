@@ -1,0 +1,14 @@
+{
+  "id":"10023",
+  "state": "on",
+  "name": "Ofbiz",
+  "cve": "CVE-2020-9496",
+  "type": "suid",
+  "remark": "",
+  "rule": {
+    "method":"POST",
+    "type": "uri",
+    "uri": "/webtools/control/xmlrpc",
+    "pattern": "eq"
+  }
+}

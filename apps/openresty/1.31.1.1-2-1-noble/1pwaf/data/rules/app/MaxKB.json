@@ -1,0 +1,16 @@
+{
+  "name":"MaxKB",
+  "state": "on",
+  "rules": [
+    {
+      "type": "whiteUrl",
+      "pattern": "startWith",
+      "values": [
+        "/api/application/chat_message",
+        "/api/function_lib",
+        "/function_lib/pylint",
+        "/api/dataset"
+      ]
+    }
+  ]
+} 
