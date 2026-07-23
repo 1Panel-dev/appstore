@@ -3,11 +3,11 @@ services:
     build:
       context: ./build
       args:
-        - PANEL_OPENRESTY_VERSION=1.31.1.1-0-noble
+        - PANEL_OPENRESTY_VERSION=1.31.1.1-2-1-noble
         - RESTY_CONFIG_OPTIONS_MORE=${RESTY_CONFIG_OPTIONS_MORE}
         - RESTY_ADD_PACKAGE_BUILDDEPS=${RESTY_ADD_PACKAGE_BUILDDEPS}
         - CONTAINER_PACKAGE_URL=${CONTAINER_PACKAGE_URL}
-    image: 1panel/openresty:1.31.1.1-0-noble
+    image: 1panel/openresty:1.31.1.1-2-1-noble
     container_name: ${CONTAINER_NAME}
     restart: always
     network_mode: host
