@@ -1,0 +1,181 @@
+additionalProperties:
+  formFields:
+    - default: 3000
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: HTTP Port
+      labelZh: HTTP 端口
+      label:
+        en: HTTP Port
+        es-es: Puerto HTTP
+        fa: 'پورت HTTP'
+        ja: HTTP ポート
+        ms: Port HTTP
+        pt-br: Porta HTTP
+        ru: HTTP-порт
+        ko: HTTP 포트
+        zh-Hant: HTTP 埠
+        zh: HTTP 端口
+        tr: HTTP Bağlantı Noktası
+      required: true
+      rule: paramPort
+      type: number
+    - default: http://localhost:3000
+      edit: true
+      envKey: BASE_URL
+      labelEn: Base URL
+      labelZh: 外部访问地址
+      label:
+        en: Base URL
+        es-es: URL base
+        fa: 'نشانی پایه'
+        ja: ベース URL
+        ms: URL Asas
+        pt-br: URL base
+        ru: Базовый URL
+        ko: 기본 URL
+        zh-Hant: 外部訪問地址
+        zh: 外部访问地址
+        tr: Temel URL
+      required: true
+      rule: paramHttp
+      type: text
+    - default: fizzy
+      envKey: SECRET_KEY_BASE
+      labelEn: Secret Key Base
+      labelZh: 加密密钥
+      label:
+        en: Secret Key Base
+        es-es: Clave secreta base
+        fa: 'کلید رمزنگاری پایه'
+        ja: シークレットキーベース
+        ms: Asas Kunci Rahsia
+        pt-br: Chave secreta base
+        ru: Базовый секретный ключ
+        ko: 기본 비밀 키
+        zh-Hant: 加密金鑰
+        zh: 加密密钥
+        tr: Temel Gizli Anahtar
+      random: true
+      required: true
+      type: password
+    - default: ""
+      edit: true
+      envKey: MAILER_FROM_ADDRESS
+      labelEn: Mail From Address
+      labelZh: 发件地址
+      label:
+        en: Mail From Address
+        es-es: Dirección del remitente
+        fa: 'نشانی فرستنده ایمیل'
+        ja: メール送信元アドレス
+        ms: Alamat Pengirim E-mel
+        pt-br: Endereço do remetente
+        ru: Адрес отправителя
+        ko: 메일 발신 주소
+        zh-Hant: 發件地址
+        zh: 发件地址
+        tr: Gönderen E-posta Adresi
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: SMTP_ADDRESS
+      labelEn: SMTP Server
+      labelZh: SMTP 服务器
+      label:
+        en: SMTP Server
+        es-es: Servidor SMTP
+        fa: 'سرور SMTP'
+        ja: SMTP サーバー
+        ms: Pelayan SMTP
+        pt-br: Servidor SMTP
+        ru: SMTP-сервер
+        ko: SMTP 서버
+        zh-Hant: SMTP 伺服器
+        zh: SMTP 服务器
+        tr: SMTP Sunucusu
+      required: false
+      type: text
+    - default: 587
+      edit: true
+      envKey: SMTP_PORT
+      labelEn: SMTP Port
+      labelZh: SMTP 端口
+      label:
+        en: SMTP Port
+        es-es: Puerto SMTP
+        fa: 'پورت SMTP'
+        ja: SMTP ポート
+        ms: Port SMTP
+        pt-br: Porta SMTP
+        ru: SMTP-порт
+        ko: SMTP 포트
+        zh-Hant: SMTP 埠
+        zh: SMTP 端口
+        tr: SMTP Bağlantı Noktası
+      required: false
+      rule: paramPort
+      type: number
+    - default: ""
+      edit: true
+      envKey: SMTP_USERNAME
+      labelEn: SMTP Username
+      labelZh: SMTP 用户名
+      label:
+        en: SMTP Username
+        es-es: Usuario SMTP
+        fa: 'نام کاربری SMTP'
+        ja: SMTP ユーザー名
+        ms: Nama Pengguna SMTP
+        pt-br: Usuário SMTP
+        ru: Имя пользователя SMTP
+        ko: SMTP 사용자 이름
+        zh-Hant: SMTP 使用者名稱
+        zh: SMTP 用户名
+        tr: SMTP Kullanıcı Adı
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: SMTP_PASSWORD
+      labelEn: SMTP Password
+      labelZh: SMTP 密码
+      label:
+        en: SMTP Password
+        es-es: Contraseña SMTP
+        fa: 'رمز عبور SMTP'
+        ja: SMTP パスワード
+        ms: Kata Laluan SMTP
+        pt-br: Senha SMTP
+        ru: Пароль SMTP
+        ko: SMTP 비밀번호
+        zh-Hant: SMTP 密碼
+        zh: SMTP 密码
+        tr: SMTP Parolası
+      required: false
+      type: password
+    - default: "false"
+      edit: true
+      envKey: SMTP_TLS
+      labelEn: SMTP Implicit TLS
+      labelZh: SMTP 隐式 TLS
+      label:
+        en: SMTP Implicit TLS
+        es-es: TLS implícito SMTP
+        fa: 'TLS ضمنی SMTP'
+        ja: SMTP 暗黙的 TLS
+        ms: TLS Tersirat SMTP
+        pt-br: TLS implícito SMTP
+        ru: Неявный TLS для SMTP
+        ko: SMTP 암시적 TLS
+        zh-Hant: SMTP 隱式 TLS
+        zh: SMTP 隐式 TLS
+        tr: SMTP Örtük TLS
+      required: false
+      type: select
+      values:
+        - label: "false"
+          value: "false"
+        - label: "true"
+          value: "true"

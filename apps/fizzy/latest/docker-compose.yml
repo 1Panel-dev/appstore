@@ -1,0 +1,26 @@
+services:
+  fizzy:
+    image: ghcr.io/basecamp/fizzy:latest
+    container_name: ${CONTAINER_NAME}
+    restart: unless-stopped
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:80
+    environment:
+      - SECRET_KEY_BASE=${SECRET_KEY_BASE}
+      - DISABLE_SSL=true
+      - BASE_URL=${BASE_URL}
+      - MAILER_FROM_ADDRESS=${MAILER_FROM_ADDRESS}
+      - SMTP_ADDRESS=${SMTP_ADDRESS}
+      - SMTP_PORT=${SMTP_PORT}
+      - SMTP_USERNAME=${SMTP_USERNAME}
+      - SMTP_PASSWORD=${SMTP_PASSWORD}
+      - SMTP_TLS=${SMTP_TLS}
+    volumes:
+      - ./data:/rails/storage
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true
