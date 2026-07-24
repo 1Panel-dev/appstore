@@ -1,0 +1,34 @@
+name: Fizzy
+tags:
+  - 实用工具
+title: 可自托管的 Kanban 项目管理工具
+description: 可自托管的 Kanban 项目管理工具
+additionalProperties:
+  key: fizzy
+  name: Fizzy
+  tags:
+    - Tool
+  shortDescZh: 可自托管的 Kanban 项目管理工具
+  shortDescEn: A self-hosted Kanban project management tool
+  description:
+    en: A self-hosted Kanban project management tool
+    es-es: Una herramienta de gestión de proyectos Kanban autoalojada
+    fa: 'ابزار مدیریت پروژه کانبان خودمیزبان'
+    ja: セルフホスト型のカンバンプロジェクト管理ツール
+    ms: Alat pengurusan projek Kanban hos sendiri
+    pt-br: Uma ferramenta de gerenciamento de projetos Kanban auto-hospedada
+    ru: Самостоятельно размещаемый инструмент управления проектами Kanban
+    ko: 셀프 호스팅 Kanban 프로젝트 관리 도구
+    zh-Hant: 可自託管的 Kanban 專案管理工具
+    zh: 可自托管的 Kanban 项目管理工具
+    tr: Kendi sunucunuzda barındırabileceğiniz Kanban proje yönetim aracı
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://fizzy.do/
+  github: https://github.com/basecamp/fizzy
+  document: https://github.com/basecamp/fizzy/blob/main/docs/docker-deployment.md
+  architectures:
+    - amd64
+    - arm64
