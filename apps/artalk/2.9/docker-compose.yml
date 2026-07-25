@@ -1,6 +1,6 @@
 services:
   artalk:
-    image: artalk/artalk-go:2.9
+    image: artalk/artalk-go:2.10
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
