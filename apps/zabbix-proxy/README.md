@@ -16,8 +16,6 @@ Zabbix分布式监控代理组件，适用于多机房、跨网段、内网隔�
 ## 安装前提
 1. 提前准备**独立外置MySQL数据库**（支持MySQL 5.7+ / MariaDB 10.5+），禁止与Zabbix Server共用数据库；
 2. 服务器最低配置：内存 ≥1G，CPU ≥1核；
-3. 网络权限：Proxy节点可**单向访问**Zabbix Server的10051端口，Server无需主动访问Proxy；
-4. 数据库需提前创建空库 `zabbix_proxy`。
 
 ## 安装后
 1. 容器启动后自动连接外置数据库，自动创建Proxy所需数据表；
