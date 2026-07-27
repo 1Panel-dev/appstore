@@ -5,11 +5,17 @@ services:
     image: zabbix/zabbix-proxy-mysql:alpine-7.0.27
     container_name: ${CONTAINER_NAME}
     restart: always
+    mem_limit: 1g
+    memswap_limit: 1g
     networks:
       - 1panel-network
     ports:
       - "${PANEL_APP_PORT_RECEIVE}:10051"
+    volumes:
+      - ./zabbix-proxy-data:/var/lib/zabbix
+      - ./zabbix-proxy-logs:/var/log/zabbix
     environment:
+      - TZ=Asia/Shanghai
       - ZBX_HOSTNAME=zabbix-proxy
       - ZBX_SERVER_HOST=${ZABBIX_SERVER}
       - ZBX_SERVER_PORT=10051
@@ -19,7 +25,6 @@ services:
       - MYSQL_DATABASE=${PANEL_DB_NAME}
       - MYSQL_USER=${PANEL_DB_USER}
       - MYSQL_PASSWORD=${PANEL_DB_USER_PASSWORD}
-      - TZ=Asia/Shanghai
     labels:
       createdBy: "Apps"
 
