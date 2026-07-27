@@ -1,0 +1,21 @@
+additionalProperties:
+  key: zabbix-proxy
+  name: Zabbix Proxy
+  tags:
+    - Tool
+    - Server
+  description:
+    en: Distributed monitoring proxy for Zabbix, support isolated intranet deployment
+    zh: Zabbix分布式监控代理，适用于多机房、内网隔离场景
+	  zh-Hant:
+	  ja:   
+	  ms: 
+	  pt-br: 
+	  ru:  
+	  ko: 
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  website: https://www.zabbix.com/
+  github: https://github.com/zabbix/zabbix
+  document: https://www.zabbix.com/documentation/current/manual/distributed_monitoring/proxies
