@@ -1,0 +1,14 @@
+{
+  "id":"10008",
+  "state": "on",
+  "name": "Apache OFBiz",
+  "cve": "CVE-2021-26295",
+  "type": "rce",
+  "remark": "",
+  "rule": {
+    "method":"POST",
+    "type": "request_uri",
+    "uri": "/webtools/control/SOAPServic",
+    "pattern": "contain"
+  }
+}

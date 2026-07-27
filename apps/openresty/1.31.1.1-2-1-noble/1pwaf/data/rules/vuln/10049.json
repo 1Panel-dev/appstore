@@ -1,0 +1,17 @@
+{
+  "id":"10049",
+  "state": "on",
+  "name": "Liferay Portal",
+  "cve": "CVE-2020-7961",
+  "type": "rce",
+  "remark": "",
+  "rule": {
+    "method":"POST",
+    "type": "uri",
+    "uri": "/api/jsonws/invoke",
+    "pattern": "eq",
+    "params": {
+      "cmd": ""
+    }
+  }
+}
