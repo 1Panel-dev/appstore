@@ -5,8 +5,6 @@ services:
     image: zabbix/zabbix-proxy-mysql:alpine-7.4.5
     container_name: ${CONTAINER_NAME}
     restart: always
-    mem_limit: 1g
-    memswap_limit: 1g
     networks:
       - 1panel-network
     ports:
