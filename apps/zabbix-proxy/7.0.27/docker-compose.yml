@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   zabbix-proxy-mysql:
-    image: zabbix/zabbix-proxy-mysql:alpine-7.0.27
+    image: zabbix/zabbix-proxy-mysql:alpine-7.4.5
     container_name: ${CONTAINER_NAME}
     restart: always
     mem_limit: 1g
