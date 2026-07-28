@@ -11,7 +11,7 @@ Zabbix分布式监控代理组件，适用于多机房、跨网段、内网隔�
 
 | 镜像 | 标签 |
 |------|------|
-| zabbix/zabbix-proxy-mysql | alpine-7.0.27 |
+| zabbix/zabbix-proxy-mysql | alpine-7.4.5 |
 
 ## 安装前提
 1. 提前准备**独立外置MySQL数据库**（支持MySQL 5.7+ / MariaDB 10.5+），禁止与Zabbix Server共用数据库；
