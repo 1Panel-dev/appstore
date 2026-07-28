@@ -11,9 +11,6 @@ services:
       - 1panel-network
     ports:
       - "${PANEL_APP_PORT_RECEIVE}:10051"
-    volumes:
-      - ./zabbix-proxy-data:/var/lib/zabbix
-      - ./zabbix-proxy-logs:/var/log/zabbix
     environment:
       - TZ=Asia/Shanghai
       - ZBX_HOSTNAME=zabbix-proxy
