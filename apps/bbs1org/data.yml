@@ -1,0 +1,25 @@
+name: bbs1org
+tags:
+    - 建站
+title: 极简、原生 PHP 论坛
+description: 极简、原生 PHP 论坛
+additionalProperties:
+    key: bbs1org
+    name: bbs1org
+    tags:
+        - Website
+    shortDescZh: 极简、原生 PHP 论坛
+    shortDescEn: A minimalist, native PHP forum
+    description:
+        en: A minimalist, native PHP forum
+        zh: 极简、原生 PHP 论坛
+    type: website
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://bbs1.org/
+    github: https://github.com/bbs1org/bbs1org
+    document: https://github.com/bbs1org/bbs1org_docker/blob/main/README_1PANEL.md
+    architectures:
+        - amd64
+        - arm64

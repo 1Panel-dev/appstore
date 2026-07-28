@@ -1,0 +1,68 @@
+services:
+  php-init:
+    image: ghcr.io/bbs1org/bbs1org:6.5
+    container_name: ${CONTAINER_NAME}-init
+    user: "0:0"
+    command: sh -c 'chown -R www-data:www-data app && chown root:www-data . && chmod 775 .'
+    networks:
+      - 1panel-network
+    volumes:
+      - ./data:/var/www/html/app/data
+      - ./avatars:/var/www/html/app/avatars
+      - ./upload:/var/www/html/app/upload
+      - ./plugins:/var/www/html/app/plugins
+
+  php:
+    image: ghcr.io/bbs1org/bbs1org:6.5
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    depends_on:
+      php-init:
+        condition: service_completed_successfully
+    networks:
+      - 1panel-network
+    volumes:
+      - ./data:/var/www/html/app/data
+      - ./avatars:/var/www/html/app/avatars
+      - ./upload:/var/www/html/app/upload
+      - ./plugins:/var/www/html/app/plugins
+    labels:
+      createdBy: "Apps"
+
+  cron:
+    image: ghcr.io/bbs1org/bbs1org:6.5
+    container_name: ${CONTAINER_NAME}-cron
+    restart: always
+    depends_on:
+      php-init:
+        condition: service_completed_successfully
+    command: ["sh", "/usr/local/bin/bbs1-cron"]
+    networks:
+      - 1panel-network
+    volumes:
+      - ./data:/var/www/html/app/data
+      - ./avatars:/var/www/html/app/avatars
+      - ./upload:/var/www/html/app/upload
+      - ./plugins:/var/www/html/app/plugins
+    labels:
+      createdBy: "Apps"
+
+  nginx:
+    image: ghcr.io/bbs1org/bbs1org-nginx:6.5
+    container_name: ${CONTAINER_NAME}-nginx
+    restart: always
+    depends_on:
+      - php
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:80"
+    networks:
+      - 1panel-network
+    volumes:
+      - ./avatars:/var/www/html/app/avatars:ro
+      - ./upload:/var/www/html/app/upload:ro
+    labels:
+      createdBy: "Apps"
+
+networks:
+  1panel-network:
+    external: true
