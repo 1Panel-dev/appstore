@@ -69,7 +69,7 @@ additionalProperties:
       labelEn: Root Password
       labelZh: Root 密码
       required: true
-      type: text
+      type: password
     - default: zabbix_proxy
       envKey: PANEL_DB_NAME
       labelEn: Database name
