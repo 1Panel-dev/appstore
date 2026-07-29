@@ -29,7 +29,7 @@ additionalProperties:
   recommend: 45
   website: https://www.zabbix.com/
   github: https://github.com/zabbix/zabbix
-  document: https://www.zabbix.com/documentation/current/manual/distributed_monitoring/proxies
+  document: https://www.zabbix.com/documentation/7.4/en/manual/distributed_monitoring/proxies
   memoryRequired: 512
   architectures:
     - amd64

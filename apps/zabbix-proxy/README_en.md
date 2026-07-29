@@ -1,33 +1,44 @@
 # Zabbix Proxy Distributed Monitoring Proxy
-Zabbix distributed monitoring proxy component, suitable for monitoring scenarios with multiple computer rooms, cross-network segments, and isolated internal networks. It adopts the active reporting mode where only the Proxy initiates one-way access to the Zabbix Server, delivering higher security for isolated intranet environments. This component relies on an external independent MySQL database, and automatic initialization of database tables will be completed after the container starts.
+
+## Introduction
+
+Zabbix Proxy is a distributed monitoring component for multi-site, cross-network, and isolated intranet environments. It runs in active mode by default, connects outbound to Zabbix Server, and uses a separate external MySQL or MariaDB database.
 
 ## Component Description
+
 | Component | Description | Default Status |
 | ---- | ---- | ---- |
 | zabbix-proxy-mysql | Zabbix distributed monitoring proxy with built-in MySQL client | Persistently running |
 
 ## Image Instructions
-Note: The `mysql` suffix in the image name only indicates a built-in MySQL client. The image does NOT include a database service. An external independent MySQL instance is mandatory for this application.
+
+Note: The `mysql` suffix in the image name only indicates a built-in MySQL client. The image does not include a database service. A separate MySQL or MariaDB database is required.
 
 | Image | Tag |
 | ---- | ---- |
 | zabbix/zabbix-proxy-mysql | alpine-7.4.5 |
 
 ## Prerequisites for Installation
-1. Prepare an independent external MySQL database in advance (MySQL 5.7+ / MariaDB 10.5+ supported). Sharing a database with Zabbix Server is prohibited.
-2. Minimum server specifications: Memory ≥ 1 GB, CPU ≥ 1 core.
+
+1. Prepare a separate database. The minimum supported versions are MySQL/Percona 8.0.30 and MariaDB 10.5.00. Do not share the Zabbix Server database.
+2. Use Zabbix Proxy 7.4.5 with Zabbix Server 7.4.x to ensure full compatibility.
+3. The default Zabbix Server port is `10051`. For a non-default port, enter the server address as `host:port`.
+4. Choose a Proxy name. The value entered during installation must exactly match the proxy name configured in the Zabbix Server frontend; names are case-sensitive.
 
 ## Post-Installation Behavior
+
 1. The container automatically connects to the external database after startup and creates all data tables required by the Proxy.
-2. The Proxy actively registers itself as an agent node to the specified Zabbix Server after launch.
-3. Log in to the Zabbix Server web backend, navigate to **Administration → Proxies** to check the online status of this Proxy and assign intranet hosts for monitoring.
+2. In the Zabbix Server frontend, go to **Administration → Proxies** and create an active proxy whose name exactly matches the Proxy name entered during installation.
+3. The Proxy connects to Zabbix Server and requests its configuration. After the connection succeeds, check its status and assign monitored hosts in the proxy list.
 
 ## Port Specifications
+
 | Port Type | Default Value | Purpose |
 | ---- | ---- | ---- |
-| Proxy Communication Port | 10051 | Data reporting communication port between Proxy and Zabbix Server |
+| Proxy Data Receiving Port | 10051 | Used by monitored agents, senders, and other clients connecting to the Proxy |
 
 ## Relevant Links
+
 - Official Website: https://www.zabbix.com
-- Official Proxy Documentation: https://www.zabbix.com/documentation/current/manual/distributed_monitoring/proxies
+- Official Proxy Documentation: https://www.zabbix.com/documentation/7.4/en/manual/distributed_monitoring/proxies
 - Official GitHub Repository: https://github.com/zabbix/zabbix
