@@ -1,0 +1,27 @@
+{
+  "name":"SiYuan",
+  "state": "on",
+  "rules": [
+    {
+      "type": "whiteUrl",
+      "pattern": "contain",
+      "method": "POST",
+      "values": [
+        "/api/transactions"
+      ],
+      "check": {
+        "type": "cookie",
+        "pattern": "eq",
+        "values": ["siyuan"]
+      }
+    },
+    {
+      "type": "whiteUrl",
+      "pattern": "contain",
+      "method": "POST",
+      "values": [
+        "/api/notebook/lsNotebooks"
+      ]
+    }
+  ]
+} 
