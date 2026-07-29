@@ -72,12 +72,10 @@ additionalProperties:
           value: "DEBUG"
         - label: INFO
           value: "INFO"
-        - label: WARNING
-          value: "WARNING"
+        - label: WARN
+          value: "WARN"
         - label: ERROR
           value: "ERROR"
-        - label: CRITICAL
-          value: "CRITICAL"
       label:
         en: Log level
         es-es: Nivel de registro
