@@ -1,0 +1,95 @@
+additionalProperties:
+  formFields:
+    - default: 10051
+      edit: true
+      envKey: PANEL_APP_PORT_RECEIVE
+      labelEn: Data receiving port
+      labelZh: 数据接收端口
+      label:
+       label:
+        en: Data Receiving Port
+        zh: 数据接收端口
+        es-es: Puerto de recepción de datos
+        fa: پورت دریافت داده
+        zh-Hant: 資料接收埠
+        ja: データ受信ポート
+        ko: 데이터 수신 포트
+        ms: Port Penerimaan Data
+        pt-br: Porta de Recebimento de Dados
+        ru: Порт приема данных
+        tr: Veri Alma Portu
+      required: true
+      rule: paramPort
+      type: number
+    - default: ""
+      envKey: ZABBIX_SERVER
+      labelEn: Zabbix Server Address
+      labelZh: Zabbix服务端地址
+      label:
+        en: Zabbix Server Address
+        zh: Zabbix服务端地址
+        es-es: Dirección del servidor Zabbix
+        fa: آدرس سرور Zabbix
+        zh-Hant: Zabbix伺服器位址
+        ja: Zabbixサーバーアドレス
+        ko: Zabbix 서버 주소
+        ms: Alamat Pelayan Zabbix
+        pt-br: Endereço do servidor Zabbix
+        ru: Адрес сервера Zabbix
+        tr: Zabbix Sunucu Adresi
+      required: true
+      type: text
+    - child:
+        default: ""
+        envKey: PANEL_DB_HOST
+        required: true
+        type: service
+      default: mysql
+      labelEn: Database Service
+      labelZh: 数据库服务
+      label:
+        en: Database Service
+        zh: 数据库服务
+        es-es: Servicio de base de datos
+        fa: سرویس پایگاه داده
+        zh-Hant: 資料庫服務
+        ja: データベースサービス
+        ko: 데이터베이스 서비스
+        ms: Perkhidmatan Pangkalan Data
+        pt-br: Serviço de banco de dados
+        ru: Служба базы данных
+        tr: Veritabanı Hizmeti
+      required: true
+      type: apps
+      values:
+        - label: MySQL
+          value: mysql
+    - default: ""
+      envKey: PANEL_DB_ROOT_PASSWORD
+      labelEn: Root Password
+      labelZh: Root 密码
+      required: true
+      type: password
+    - default: zabbix_proxy
+      envKey: PANEL_DB_NAME
+      labelEn: Database name
+      labelZh: 数据库名称
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: zabbix
+      envKey: PANEL_DB_USER
+      labelEn: Database username
+      labelZh: 数据库用户
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: zabbix@123
+      envKey: PANEL_DB_USER_PASSWORD
+      labelEn: Database Password
+      labelZh: 数据库密码
+      random: true
+      required: true
+      type: password
