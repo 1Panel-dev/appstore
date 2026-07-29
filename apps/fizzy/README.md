@@ -24,9 +24,14 @@ Fizzy 自身后台不提供 SMTP 服务器配置页面。请在 1Panel 的 Fizzy
 
 ## 域名和 HTTPS
 
-Fizzy 容器内部只提供 HTTP。请使用 1Panel 网站功能创建反向代理并配置 HTTPS
-证书。域名启用后，将 `BASE_URL` 修改为最终地址，例如
-`https://fizzy.example.com`，然后重启应用。
+直接通过 HTTP 端口访问时，请选择 HTTP 模式（`DISABLE_SSL=true`），并将
+`BASE_URL` 设置为 `http://` 地址。
+
+Fizzy 容器内部只提供 HTTP。若在 1Panel 网站中创建 HTTPS 反向代理并配置证书，
+请在应用参数中选择 HTTPS 模式（`DISABLE_SSL=false`），将 `BASE_URL` 改为最终的
+`https://` 地址（例如 `https://fizzy.example.com`），确认反向代理发送
+`X-Forwarded-Proto`，然后重启应用。HTTPS 模式会启用 Rails 安全 Cookie、HSTS 和
+HTTP 到 HTTPS 的重定向，因此容器的原始 HTTP 端口不再是正常访问路径。
 
 ## 数据和备份
 

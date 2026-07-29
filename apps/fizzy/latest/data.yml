@@ -59,6 +59,30 @@ additionalProperties:
       random: true
       required: true
       type: password
+    - default: "true"
+      edit: true
+      envKey: DISABLE_SSL
+      labelEn: HTTPS Mode
+      labelZh: HTTPS 模式
+      label:
+        en: HTTPS Mode
+        es-es: Modo HTTPS
+        fa: 'حالت HTTPS'
+        ja: HTTPS モード
+        ms: Mod HTTPS
+        pt-br: Modo HTTPS
+        ru: Режим HTTPS
+        ko: HTTPS 모드
+        zh-Hant: HTTPS 模式
+        zh: HTTPS 模式
+        tr: HTTPS Modu
+      required: true
+      type: select
+      values:
+        - label: Direct HTTP (true)
+          value: "true"
+        - label: HTTPS Reverse Proxy (false)
+          value: "false"
     - default: ""
       edit: true
       envKey: MAILER_FROM_ADDRESS

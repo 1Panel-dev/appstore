@@ -7,9 +7,10 @@ services:
       - 1panel-network
     ports:
       - ${PANEL_APP_PORT_HTTP}:80
+    entrypoint: ["/usr/local/bin/fizzy-entrypoint", "./bin/thrust", "./bin/rails", "server"]
     environment:
       - SECRET_KEY_BASE=${SECRET_KEY_BASE}
-      - DISABLE_SSL=true
+      - DISABLE_SSL=${DISABLE_SSL}
       - BASE_URL=${BASE_URL}
       - MAILER_FROM_ADDRESS=${MAILER_FROM_ADDRESS}
       - SMTP_ADDRESS=${SMTP_ADDRESS}
@@ -19,6 +20,7 @@ services:
       - SMTP_TLS=${SMTP_TLS}
     volumes:
       - ./data:/rails/storage
+      - ./scripts/entrypoint.sh:/usr/local/bin/fizzy-entrypoint:ro
     labels:
       createdBy: "Apps"
 networks:

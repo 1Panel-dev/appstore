@@ -29,10 +29,16 @@ on port `587`.
 
 ## Domain and HTTPS
 
-The Fizzy container serves HTTP only. Create a reverse-proxy website and manage
-the HTTPS certificate in 1Panel. After enabling the domain, change `BASE_URL` to
-the final address, such as `https://fizzy.example.com`, and restart the
-application.
+For direct access through the HTTP port, select HTTP mode (`DISABLE_SSL=true`)
+and set `BASE_URL` to an `http://` address.
+
+The Fizzy container serves HTTP only. When deploying behind a 1Panel HTTPS
+reverse proxy with a managed certificate, select HTTPS mode
+(`DISABLE_SSL=false`), set `BASE_URL` to the final `https://` address (for
+example, `https://fizzy.example.com`), ensure the proxy sends
+`X-Forwarded-Proto`, and restart the application. HTTPS mode enables Rails
+secure cookies, HSTS, and HTTP-to-HTTPS redirects, so the raw HTTP port is no
+longer the normal access path.
 
 ## Data and backups
 
