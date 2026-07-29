@@ -10,16 +10,18 @@ stores its databases, queues, cache, and attachments in the installation's
 1. Choose an unused HTTP port.
 2. Set `BASE_URL` to the complete URL that browsers use to reach Fizzy.
 3. 1Panel generates `SECRET_KEY_BASE`; do not change it after installation.
-4. SMTP may be left empty. Without SMTP, sign-in verification codes are written
-   to the Fizzy container logs and can be read from the 1Panel container log
-   page.
+4. A working SMTP configuration is required. Fizzy uses email verification
+   codes for sign-up and sign-in, so users cannot complete email-code login
+   until mail delivery works.
 
 ## SMTP
 
 Fizzy does not provide an SMTP server configuration page in its own
-administration UI. To enable email, edit the Fizzy application parameters in
-1Panel, enter the sender address, SMTP server, port, username, password, and TLS
-option, then restart the application.
+administration UI. In the Fizzy application parameters in 1Panel, enter the
+sender address, SMTP server, and port; provide the username, password, and TLS
+option as required by your SMTP provider. These settings may be edited later in
+1Panel, but restart the application after every change; users cannot complete
+email-code login until mail delivery works.
 
 Set `SMTP_TLS=true` only for an SMTP server that requires implicit TLS, usually
 on port `465`. Most servers using STARTTLS should keep `SMTP_TLS=false`, usually

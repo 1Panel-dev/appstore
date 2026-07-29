@@ -76,7 +76,7 @@ additionalProperties:
         zh-Hant: 發件地址
         zh: 发件地址
         tr: Gönderen E-posta Adresi
-      required: false
+      required: true
       type: text
     - default: ""
       edit: true
@@ -95,7 +95,7 @@ additionalProperties:
         zh-Hant: SMTP 伺服器
         zh: SMTP 服务器
         tr: SMTP Sunucusu
-      required: false
+      required: true
       type: text
     - default: 587
       edit: true
@@ -114,7 +114,7 @@ additionalProperties:
         zh-Hant: SMTP 埠
         zh: SMTP 端口
         tr: SMTP Bağlantı Noktası
-      required: false
+      required: true
       rule: paramPort
       type: number
     - default: ""

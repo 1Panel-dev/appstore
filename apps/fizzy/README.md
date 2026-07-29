@@ -9,14 +9,15 @@ Fizzy 是 37signals 推出的 Kanban 项目管理工具，用于组织议题、�
 1. 选择一个未占用的 HTTP 端口。
 2. 将 `BASE_URL` 设置为浏览器实际访问 Fizzy 的完整地址。
 3. `SECRET_KEY_BASE` 由 1Panel 自动生成，安装后不要修改。
-4. SMTP 可以留空。没有配置 SMTP 时，登录验证码会写入 Fizzy 容器日志，可在
-   1Panel 的容器日志页面查看。
+4. 必须填写可用的 SMTP 配置。Fizzy 的注册和登录通过电子邮件验证码完成，只有
+   邮件投递正常后用户才能完成登录。
 
 ## SMTP
 
-Fizzy 自身后台不提供 SMTP 服务器配置页面。需要发邮件时，请在 1Panel 的 Fizzy
-应用参数中填写发件地址、SMTP 服务器、端口、用户名、密码和 TLS 选项，然后重启
-应用。
+Fizzy 自身后台不提供 SMTP 服务器配置页面。请在 1Panel 的 Fizzy 应用参数中填写
+发件地址、SMTP 服务器和端口；用户名、密码和 TLS 选项按 SMTP 服务商要求填写。
+这些 SMTP 设置以后仍可在 1Panel 中编辑，但每次修改后都必须重启应用；在邮件投递
+恢复正常前，用户无法完成邮件验证码登录。
 
 `SMTP_TLS=true` 仅用于要求隐式 TLS 的 SMTPS 服务器，通常使用端口 `465`。
 大多数使用 STARTTLS 的服务器应保持 `SMTP_TLS=false`，通常使用端口 `587`。
