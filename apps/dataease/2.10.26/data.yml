@@ -2,7 +2,7 @@ additionalProperties:
     formFields:
         - default: ""
           envKey: PANEL_DB_HOST
-          key: mysql
+          key: mariadb
           labelEn: Database Service
           labelZh: 数据库服务
           label:
