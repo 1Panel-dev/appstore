@@ -1,0 +1,17 @@
+{
+  "id":"10041",
+  "state": "on",
+  "name": "Confluence",
+  "cve": "CVE-2019-3396",
+  "type": "rce",
+  "remark": "",
+  "rule": {
+    "method":"POST",
+    "type": "request_uri",
+    "uri": "/rest/tinymce/1/macro/preview",
+    "pattern": "eq",
+    "params": {
+      "_template": ""
+    }
+  }
+}
