@@ -25,6 +25,15 @@
 4. Atlas 300I DUO / Ascend 310P should not depend on `triton` or `triton-ascend`. If `module 'triton' has no attribute 'language'` appears, check and uninstall residual packages in the container.
 5. Prefer Qwen3 W8A8SC-310 adapted models for stable use. Qwen3.5/Qwen3.6 support is preview-level and may need model-specific launch arguments.
 
+### Ascend 910B (openEuler) version
+
+1. Targets Atlas 800 / Atlas 300T Pro and other 910B-series NPU servers. Image: `vllm-ascend:v0.20.2rc1-openeuler`.
+2. The host must have the Ascend driver/CANN installed, and `npu-smi info` must correctly identify the 910B devices.
+3. The Compose file uses `ipc: host`, `privileged: true`, `seccomp=unconfined`, and explicitly mounts `/dev/davinci0`–`/dev/davinci7` plus management devices.
+4. The default launch template is the Qwen3.6-35B-A3B dual-card (`ASCEND_RT_VISIBLE_DEVICES=0,1`) best-practice command, including tensor-parallel-size 2, expert-parallel, qwen3_5_mtp speculative decoding, FULL_DECODE_ONLY cudagraph, and enable_cpu_binding.
+5. `MODEL_DIR` defaults to `/data01/models`, `MODEL_NAME` defaults to `Qwen3.6-35B-A3B`; the in-container working directory is `/workspace`.
+6. `HCCL_BUFFSIZE` is set to 1024 (recommended for 910B); lower it if you encounter memory pressure.
+
 ## Introduction
 
 **vLLM** is a fast and easy-to-use library for LLM inference and serving.
