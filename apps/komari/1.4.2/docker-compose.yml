@@ -1,6 +1,6 @@
 services:
   dashboard:
-    image: ghcr.io/komari-monitor/komari:1.4.1
+    image: ghcr.io/komari-monitor/komari:1.4.2
     container_name: ${CONTAINER_NAME}
     restart: always
     user: "0:0"
