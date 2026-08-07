@@ -1,0 +1,14 @@
+{
+  "id":"10006",
+  "state": "on",
+  "name": "Apache Spark",
+  "cve": "CVE-2022-33891",
+  "type": "rce",
+  "remark": "",
+  "rule": {
+    "method":"GET",
+    "type": "request_uri",
+    "uri": "/\\?doAs",
+    "pattern": "contain"
+  }
+}
