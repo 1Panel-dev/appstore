@@ -25,6 +25,15 @@
 4. Atlas 300I DUO / Ascend 310P 不建议使用 `triton` 或 `triton-ascend`。如果遇到 `module 'triton' has no attribute 'language'`，请检查容器内是否残留相关包并卸载。
 5. 推荐优先使用 Qwen3 W8A8SC-310 适配模型；Qwen3.5/Qwen3.6 属于预览支持，需要按模型说明调整启动参数。
 
+### Ascend 910B (openEuler) 版本
+
+1. 面向 Atlas 800 / Atlas 300T Pro 等 910B 系列 NPU 服务器，镜像为 `vllm-ascend:v0.20.2rc1-openeuler`。
+2. 宿主机需已安装 Ascend 驱动/CANN，`npu-smi info` 能正常识别 910B 设备。
+3. Compose 使用 `ipc: host`、`privileged: true`、`seccomp=unconfined`，并显式挂载 `/dev/davinci0`–`/dev/davinci7` 及管理设备。
+4. 默认启动模板为 Qwen3.6-35B-A3B 双卡（`ASCEND_RT_VISIBLE_DEVICES=0,1`）最佳实践命令，含 tensor-parallel-size 2、expert-parallel、qwen3_5_mtp 投机解码、FULL_DECODE_ONLY cudagraph、enable_cpu_binding 等参数。
+5. `MODEL_DIR` 默认 `/data01/models`，`MODEL_NAME` 默认 `Qwen3.6-35B-A3B`；容器内工作目录为 `/workspace`。
+6. `HCCL_BUFFSIZE` 设为 1024（910B 推荐），如遇内存不足可适当调低。
+
 ## 产品介绍
 
 **vLLM** is a fast and easy-to-use library for LLM inference and serving.
