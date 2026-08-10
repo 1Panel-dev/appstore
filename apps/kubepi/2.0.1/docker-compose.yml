@@ -1,6 +1,6 @@
 services:
   kubepi:
-    image: 1panel/kubepi:v2.0.1
+    image: 1panel/kubepi:v2.0.2
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
