@@ -10,7 +10,7 @@ services:
     volumes:
       - ./data:/data
       - ./config:/config
-    image: gotson/komga:1.25.0
+    image: gotson/komga:1.26.0
     labels:
       createdBy: "Apps"
 networks:
