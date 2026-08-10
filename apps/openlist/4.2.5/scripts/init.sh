@@ -3,7 +3,7 @@
 [ -f ./.env ] && source ./.env
 
 # Default image name without pre-install environment
-OPENLIST_IMAGE=openlistteam/openlist:v4.2.4
+OPENLIST_IMAGE=openlistteam/openlist:v4.2.5
 
 {
   # Retain the original environment variables
