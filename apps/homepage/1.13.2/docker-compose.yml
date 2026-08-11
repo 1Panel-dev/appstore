@@ -9,10 +9,8 @@ services:
       - "${PANEL_APP_PORT_HTTP}:3000"
     volumes:
       - ./config:/app/config
-      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/run/docker.sock:/var/run/docker.sock:ro
     environment:
-      - PUID=1000
-      - PGID=1000
       - HOMEPAGE_ALLOWED_HOSTS=${HOMEPAGE_ALLOWED_HOSTS}
       - TZ=${TIME_ZONE}
     labels:  
