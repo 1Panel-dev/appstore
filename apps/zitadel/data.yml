@@ -29,6 +29,7 @@ additionalProperties:
   website: https://zitadel.com/
   github: https://github.com/zitadel/zitadel
   document: https://zitadel.com/docs
+  memoryRequired: 2048
   architectures:
     - amd64
     - arm64

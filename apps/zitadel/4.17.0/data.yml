@@ -1,0 +1,229 @@
+additionalProperties:
+  formFields:
+    - default: 8080
+      envKey: PANEL_APP_PORT_HTTP
+      edit: true
+      required: true
+      rule: paramPort
+      type: number
+      labelEn: HTTP Port
+      labelZh: HTTP 端口
+      label:
+        en: HTTP Port
+        es-es: Puerto HTTP
+        fa: 'پورت HTTP'
+        ja: HTTP ポート
+        ms: Port HTTP
+        pt-br: Porta HTTP
+        ru: HTTP-порт
+        ko: HTTP 포트
+        zh-Hant: HTTP 連接埠
+        zh: HTTP 端口
+        tr: HTTP Portu
+      description:
+        en: Port used by the 1Panel HTTPS reverse proxy to reach ZITADEL.
+        es-es: Puerto utilizado por el proxy inverso HTTPS de 1Panel para acceder a ZITADEL.
+        fa: 'پورتی که پروکسی معکوس HTTPS در 1Panel برای دسترسی به ZITADEL استفاده می‌کند.'
+        ja: 1Panel の HTTPS リバースプロキシが ZITADEL への接続に使用するポートです。
+        ms: Port yang digunakan oleh proksi songsang HTTPS 1Panel untuk mencapai ZITADEL.
+        pt-br: Porta usada pelo proxy reverso HTTPS do 1Panel para acessar o ZITADEL.
+        ru: Порт, через который HTTPS-прокси 1Panel обращается к ZITADEL.
+        ko: 1Panel HTTPS 리버스 프록시가 ZITADEL에 연결할 때 사용하는 포트입니다.
+        zh-Hant: 1Panel HTTPS 反向代理連接 ZITADEL 所使用的連接埠。
+        zh: 1Panel HTTPS 反向代理连接 ZITADEL 所使用的端口。
+        tr: 1Panel HTTPS ters proxy sunucusunun ZITADEL'e ulaşmak için kullandığı port.
+    - default: postgresql
+      envKey: PANEL_DB_TYPE
+      labelEn: Database Service
+      labelZh: 数据库服务
+      label:
+        en: Database Service
+        es-es: Servicio de base de datos
+        fa: 'سرویس پایگاه داده'
+        ja: データベースサービス
+        ms: Perkhidmatan Pangkalan Data
+        pt-br: Serviço de banco de dados
+        ru: Сервис базы данных
+        ko: 데이터베이스 서비스
+        zh-Hant: 資料庫服務
+        zh: 数据库服务
+        tr: Veritabanı Hizmeti
+      description:
+        en: ZITADEL V4 supports PostgreSQL 14 through 18.
+        es-es: ZITADEL V4 admite PostgreSQL de la versión 14 a la 18.
+        fa: 'ZITADEL V4 از PostgreSQL نسخه 14 تا 18 پشتیبانی می‌کند.'
+        ja: ZITADEL V4 は PostgreSQL 14 から 18 をサポートします。
+        ms: ZITADEL V4 menyokong PostgreSQL 14 hingga 18.
+        pt-br: O ZITADEL V4 oferece suporte ao PostgreSQL 14 a 18.
+        ru: ZITADEL V4 поддерживает PostgreSQL версий 14–18.
+        ko: ZITADEL V4는 PostgreSQL 14~18을 지원합니다.
+        zh-Hant: ZITADEL V4 支援 PostgreSQL 14 至 18。
+        zh: ZITADEL V4 支持 PostgreSQL 14 至 18。
+        tr: ZITADEL V4, PostgreSQL 14 ile 18 arasındaki sürümleri destekler.
+      required: true
+      type: apps
+      values:
+        - label: PostgreSQL
+          value: postgresql
+      child:
+        default: ""
+        envKey: PANEL_DB_HOST
+        required: true
+        type: service
+    - default: zitadel
+      envKey: PANEL_DB_NAME
+      labelEn: Database Name
+      labelZh: 数据库名称
+      label:
+        en: Database Name
+        es-es: Nombre de la base de datos
+        fa: 'نام پایگاه داده'
+        ja: データベース名
+        ms: Nama Pangkalan Data
+        pt-br: Nome do banco de dados
+        ru: Имя базы данных
+        ko: 데이터베이스 이름
+        zh-Hant: 資料庫名稱
+        zh: 数据库名称
+        tr: Veritabanı Adı
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: zitadel
+      envKey: PANEL_DB_USER
+      labelEn: Database User
+      labelZh: 数据库用户
+      label:
+        en: Database User
+        es-es: Usuario de la base de datos
+        fa: 'کاربر پایگاه داده'
+        ja: データベースユーザー
+        ms: Pengguna Pangkalan Data
+        pt-br: Usuário do banco de dados
+        ru: Пользователь базы данных
+        ko: 데이터베이스 사용자
+        zh-Hant: 資料庫使用者
+        zh: 数据库用户
+        tr: Veritabanı Kullanıcısı
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: zitadel_db_password
+      envKey: PANEL_DB_USER_PASSWORD
+      labelEn: Database Password
+      labelZh: 数据库密码
+      label:
+        en: Database Password
+        es-es: Contraseña de la base de datos
+        fa: 'رمز عبور پایگاه داده'
+        ja: データベースパスワード
+        ms: Kata Laluan Pangkalan Data
+        pt-br: Senha do banco de dados
+        ru: Пароль базы данных
+        ko: 데이터베이스 비밀번호
+        zh-Hant: 資料庫密碼
+        zh: 数据库密码
+        tr: Veritabanı Parolası
+      random: true
+      required: true
+      rule: paramCommon
+      type: password
+    - default: ""
+      envKey: ZITADEL_DOMAIN
+      edit: false
+      labelEn: Public HTTPS Domain
+      labelZh: 公网 HTTPS 域名
+      label:
+        en: Public HTTPS Domain
+        es-es: Dominio HTTPS público
+        fa: 'دامنه عمومی HTTPS'
+        ja: 公開 HTTPS ドメイン
+        ms: Domain HTTPS Awam
+        pt-br: Domínio HTTPS público
+        ru: Публичный HTTPS-домен
+        ko: 공개 HTTPS 도메인
+        zh-Hant: 公網 HTTPS 網域
+        zh: 公网 HTTPS 域名
+        tr: Genel HTTPS Alan Adı
+      description:
+        en: Must exactly match the domain configured in the 1Panel HTTPS reverse proxy. Do not include a scheme or path.
+        es-es: Debe coincidir exactamente con el dominio configurado en el proxy inverso HTTPS de 1Panel. No incluya esquema ni ruta.
+        fa: 'باید دقیقاً با دامنه پیکربندی‌شده در پروکسی معکوس HTTPS در 1Panel یکسان باشد. طرح یا مسیر را وارد نکنید.'
+        ja: 1Panel の HTTPS リバースプロキシに設定するドメインと完全に一致させてください。スキームやパスは含めません。
+        ms: Mesti sepadan tepat dengan domain yang dikonfigurasi dalam proksi songsang HTTPS 1Panel. Jangan sertakan skema atau laluan.
+        pt-br: Deve corresponder exatamente ao domínio configurado no proxy reverso HTTPS do 1Panel. Não inclua esquema nem caminho.
+        ru: Должен точно совпадать с доменом HTTPS-прокси в 1Panel. Не указывайте схему и путь.
+        ko: 1Panel HTTPS 리버스 프록시에 설정한 도메인과 정확히 일치해야 합니다. 스킴이나 경로는 포함하지 마십시오.
+        zh-Hant: 必須與 1Panel HTTPS 反向代理設定的網域完全一致；不要包含協定或路徑。
+        zh: 必须与 1Panel HTTPS 反向代理配置的域名完全一致；不要包含协议或路径。
+        tr: 1Panel HTTPS ters proxy yapılandırmasındaki alan adıyla tam olarak eşleşmelidir. Şema veya yol eklemeyin.
+      required: true
+      rule: domain
+      type: text
+    - default: zitadel-admin
+      envKey: ZITADEL_FIRSTINSTANCE_ORG_HUMAN_USERNAME
+      edit: false
+      labelEn: Initial Organization Administrator
+      labelZh: 初始组织管理员
+      label:
+        en: Initial Organization Administrator
+        es-es: Administrador inicial de la organización
+        fa: 'مدیر اولیه سازمان'
+        ja: 初期組織管理者
+        ms: Pentadbir Organisasi Awal
+        pt-br: Administrador inicial da organização
+        ru: Начальный администратор организации
+        ko: 초기 조직 관리자
+        zh-Hant: 初始組織管理員
+        zh: 初始组织管理员
+        tr: İlk Kuruluş Yöneticisi
+      description:
+        en: Applied only while the first ZITADEL instance is initialized.
+        es-es: Solo se aplica al inicializar la primera instancia de ZITADEL.
+        fa: 'فقط هنگام راه‌اندازی نخستین نمونه ZITADEL اعمال می‌شود.'
+        ja: 最初の ZITADEL インスタンスを初期化するときだけ適用されます。
+        ms: Digunakan hanya semasa kejadian ZITADEL pertama dimulakan.
+        pt-br: Aplicado somente durante a inicialização da primeira instância do ZITADEL.
+        ru: Применяется только при инициализации первого экземпляра ZITADEL.
+        ko: 첫 번째 ZITADEL 인스턴스를 초기화할 때만 적용됩니다.
+        zh-Hant: 僅在初始化第一個 ZITADEL 執行個體時生效。
+        zh: 仅在初始化第一个 ZITADEL 实例时生效。
+        tr: Yalnızca ilk ZITADEL örneği başlatılırken uygulanır.
+      required: true
+      rule: paramCommon
+      type: text
+    - default: Zitadel1!Admin
+      envKey: ZITADEL_FIRSTINSTANCE_ORG_HUMAN_PASSWORD
+      edit: false
+      labelEn: Initial Organization Administrator Password
+      labelZh: 初始组织管理员密码
+      label:
+        en: Initial Organization Administrator Password
+        es-es: Contraseña del administrador inicial de la organización
+        fa: 'رمز عبور مدیر اولیه سازمان'
+        ja: 初期組織管理者パスワード
+        ms: Kata Laluan Pentadbir Organisasi Awal
+        pt-br: Senha do administrador inicial da organização
+        ru: Пароль начального администратора организации
+        ko: 초기 조직 관리자 비밀번호
+        zh-Hant: 初始組織管理員密碼
+        zh: 初始组织管理员密码
+        tr: İlk Kuruluş Yöneticisi Parolası
+      description:
+        en: Applied only during first initialization; it must contain uppercase and lowercase letters, a number, and a symbol.
+        es-es: Solo se aplica durante la primera inicialización; debe contener mayúsculas, minúsculas, un número y un símbolo.
+        fa: 'فقط در نخستین راه‌اندازی اعمال می‌شود و باید شامل حروف بزرگ و کوچک، عدد و نماد باشد.'
+        ja: 初回初期化時のみ適用され、大文字、小文字、数字、記号を含める必要があります。
+        ms: Digunakan hanya semasa pemulaaan pertama; mesti mengandungi huruf besar, huruf kecil, nombor dan simbol.
+        pt-br: Aplicada somente na primeira inicialização; deve conter letras maiúsculas e minúsculas, número e símbolo.
+        ru: Применяется только при первой инициализации; должен содержать прописные и строчные буквы, цифру и символ.
+        ko: 최초 초기화 시에만 적용되며 대문자, 소문자, 숫자 및 기호를 포함해야 합니다.
+        zh-Hant: 僅在首次初始化時生效；必須包含大小寫字母、數字及符號。
+        zh: 仅在首次初始化时生效；必须包含大小写字母、数字及符号。
+        tr: Yalnızca ilk başlatmada uygulanır; büyük ve küçük harf, sayı ve simge içermelidir.
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password

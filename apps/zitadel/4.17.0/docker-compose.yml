@@ -1,0 +1,39 @@
+services:
+  zitadel:
+    image: ghcr.io/zitadel/zitadel:v4.17.0
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    command: start-from-init --masterkeyFromEnv
+    env_file:
+      - ./data/masterkey.env
+    environment:
+      ZITADEL_PORT: 8080
+      ZITADEL_EXTERNALDOMAIN: ${ZITADEL_DOMAIN}
+      ZITADEL_EXTERNALPORT: 443
+      ZITADEL_EXTERNALSECURE: "true"
+      ZITADEL_TLS_ENABLED: "false"
+      ZITADEL_DATABASE_POSTGRES_DSN: postgresql://${PANEL_DB_USER}:${PANEL_DB_USER_PASSWORD}@${PANEL_DB_HOST}:${PANEL_DB_PORT}/${PANEL_DB_NAME}?sslmode=disable
+      ZITADEL_FIRSTINSTANCE_ORG_HUMAN_USERNAME: ${ZITADEL_FIRSTINSTANCE_ORG_HUMAN_USERNAME}
+      ZITADEL_FIRSTINSTANCE_ORG_HUMAN_PASSWORD: ${ZITADEL_FIRSTINSTANCE_ORG_HUMAN_PASSWORD}
+      ZITADEL_FIRSTINSTANCE_ORG_HUMAN_PASSWORDCHANGEREQUIRED: "false"
+      ZITADEL_DEFAULTINSTANCE_FEATURES_LOGINV2_REQUIRED: "false"
+      ZITADEL_LOGSTORE_ACCESS_STDOUT_ENABLED: "true"
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:8080"
+    networks:
+      - 1panel-network
+    healthcheck:
+      test:
+        - CMD
+        - /app/zitadel
+        - ready
+      interval: 10s
+      timeout: 30s
+      retries: 12
+      start_period: 20s
+    labels:
+      createdBy: "Apps"
+
+networks:
+  1panel-network:
+    external: true
