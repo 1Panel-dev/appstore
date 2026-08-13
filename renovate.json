@@ -192,6 +192,11 @@
       "allowedVersions": "/^3.*/"
     },
     {
+      "matchFileNames": ["apps/zitadel/4.*/*.yml"],
+      "matchPackageNames": ["ghcr.io/zitadel/zitadel"],
+      "allowedVersions": "/^4.*/"
+    },
+    {
       "matchFileNames": ["apps/odoo/18.*/*.yml"],
       "allowedVersions": "/^18.*/"
     },

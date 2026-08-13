@@ -34,7 +34,7 @@ additionalProperties:
         pt-br: Serviço de Banco de Dados
         ru: Сервис баз данных
         ko: 데이터베이스 서비스
-        zh-hant: 資料庫服務
+        zh-Hant: 資料庫服務
         zh: 数据库服务
         tr: Veritabanı Hizmeti
       values:
@@ -58,7 +58,7 @@ additionalProperties:
         pt-br: Nome do Banco de Dados
         ru: Имя базы данных
         ko: 데이터베이스 이름
-        zh-hant: 數據庫名稱
+        zh-Hant: 資料庫名稱
         zh: 数据库名称
         tr: Veritabanı Adı
       random: true
@@ -78,7 +78,7 @@ additionalProperties:
         pt-br: Usuário do Banco de Dados
         ru: Пользователь базы данных
         ko: 데이터베이스 사용자
-        zh-hant: 數據庫用戶
+        zh-Hant: 資料庫使用者
         zh: 数据库用户
         tr: Veritabanı Kullanıcısı
       random: true
@@ -98,7 +98,7 @@ additionalProperties:
         pt-br: Senha do Banco de Dados
         ru: Пароль базы данных
         ko: 데이터베이스 비밀번호
-        zh-hant: 數據庫密碼
+        zh-Hant: 資料庫密碼
         zh: 数据库密码 
         tr: Veritabanı Parolası
       random: true
@@ -136,7 +136,7 @@ additionalProperties:
         pt-br: Domínio Externo
         ru: Внешний домен
         ko: 외부 도메인
-        zh-hant: 外部域名
+        zh-Hant: 外部域名
         zh: 外部域名
         tr: External Alan Adı
       random: false
@@ -176,7 +176,7 @@ additionalProperties:
         pt-br: Senha do Administrador da Organização
         ru: Пароль администратора организации
         ko: 조직 관리자 비밀번호
-        zh-hant: 組織管理員密碼
+        zh-Hant: 組織管理員密碼
         zh: 组织管理员密码
         tr: Kurum yoneticisi parolasi
       random: true
