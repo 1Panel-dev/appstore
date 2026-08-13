@@ -1,0 +1,35 @@
+name: DeepSeek Harness
+tags:
+  - AI
+title: DeepSeek 开源智能体开发环境
+description: DeepSeek 开源智能体开发环境
+additionalProperties:
+  key: deepseek-harness
+  name: DeepSeek Harness
+  tags:
+    - AI
+  shortDescZh: DeepSeek 开源智能体开发环境
+  shortDescEn: Open-source agent harness from DeepSeek
+  description:
+    en: Open-source agent harness from DeepSeek
+    es-es: Entorno de agentes de codigo abierto de DeepSeek
+    fa: 'محیط عامل متن باز دیپ سیک'
+    ja: DeepSeek のオープンソースエージェント環境
+    ms: Persekitaran ejen sumber terbuka daripada DeepSeek
+    pt-br: Ambiente de agentes de codigo aberto da DeepSeek
+    ru: Среда агентов с открытым исходным кодом от DeepSeek
+    ko: DeepSeek의 오픈 소스 에이전트 환경
+    zh-Hant: DeepSeek 開源智能體開發環境
+    zh: DeepSeek 开源智能体开发环境
+    tr: DeepSeek acik kaynakli ajan ortami
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 11
+  batchInstallSupport: true
+  website: https://github.com/deepseek-ai/deepseek-harness
+  github: https://github.com/deepseek-ai/deepseek-harness
+  document: https://github.com/deepseek-ai/deepseek-harness/tree/master/docs
+  architectures:
+    - amd64
+    - arm64

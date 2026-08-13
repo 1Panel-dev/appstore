@@ -1,0 +1,45 @@
+services:
+  deepseek-harness:
+    image: 1panel/deepseek-harness:0.1.0-rc.6
+    container_name: ${CONTAINER_NAME}
+    restart: unless-stopped
+    networks:
+      - 1panel-network
+    environment:
+      HTTPS_ACCESS_HOST: ${HTTPS_ACCESS_HOST}
+      DSH_AUTH_USERNAME: ${DSH_AUTH_USERNAME}
+      DSH_AUTH_PASSWORD: ${DSH_AUTH_PASSWORD}
+      DSH_HOME: /data/dsh
+      DSH_TELEMETRY_DISABLED: "1"
+    volumes:
+      - ./data/dsh:/data/dsh
+      - ./data/workspace:/workspace
+      - ./data/caddy:/data/caddy
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - ${PANEL_APP_PORT_HTTPS}:8443
+    read_only: true
+    tmpfs:
+      - /tmp:mode=1777,size=256m
+    security_opt:
+      - no-new-privileges:true
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "curl",
+          "-fsS",
+          "--max-time",
+          "5",
+          "http://127.0.0.1:3080/"
+        ]
+      interval: 30s
+      timeout: 5s
+      start_period: 30s
+      retries: 3
+    labels:
+      createdBy: "Apps"
+
+networks:
+  1panel-network:
+    external: true
