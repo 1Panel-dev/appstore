@@ -1,11 +1,15 @@
 services:
   vllm:
-    image: quay.io/ascend/vllm-ascend:v0.23.0rc1-310p
+    image: quay.io/ascend/vllm-ascend:v0.23.0-openeuler
     entrypoint:
       - vllm
       - serve
     container_name: ${CONTAINER_NAME}
     restart: always
+    privileged: true
+    security_opt:
+      - seccomp=unconfined
+    ipc: host
     networks:
       - 1panel-network
     devices:
@@ -21,7 +25,7 @@ services:
       - /dev/devmm_svm:/dev/devmm_svm
       - /dev/hisi_hdc:/dev/hisi_hdc
     volumes:
-      - ${MODEL_DIR}/:/models/${MODEL_NAME}
+      - ${MODEL_DIR}/:/workspace/${MODEL_NAME}
       - /root/.cache:/root/.cache
       - /usr/local/dcmi:/usr/local/dcmi
       - /usr/local/bin/npu-smi:/usr/local/bin/npu-smi
@@ -30,17 +34,14 @@ services:
       - /etc/ascend_install.info:/etc/ascend_install.info
     environment:
       - ASCEND_RT_VISIBLE_DEVICES=${ASCEND_RT_VISIBLE_DEVICES}
-      - VLLM_USE_MODELSCOPE=True
       - PYTORCH_NPU_ALLOC_CONF=expandable_segments:True
-      - HCCL_BUFFSIZE=512
+      - HCCL_BUFFSIZE=1024
       - OMP_PROC_BIND=false
       - OMP_NUM_THREADS=1
       - TASK_QUEUE_ENABLE=1
-      - HCCL_OP_EXPANSION_MODE=AIV
     ports:
-      - ${PANEL_APP_PORT_HTTP}:8000
-    privileged: true
-    shm_size: 10g
+      - ${PANEL_APP_PORT_HTTP}:8001
+    working_dir: /workspace
     command: ${START_COMMAND}
 networks:
   1panel-network:
