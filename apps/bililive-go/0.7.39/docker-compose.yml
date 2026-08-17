@@ -1,6 +1,6 @@
 services:
   bililive-go:
-    image: chigusa/bililive-go:v0.7.39
+    image: chigusa/bililive-go:v0.8.0
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
