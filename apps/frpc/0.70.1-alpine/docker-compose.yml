@@ -1,6 +1,6 @@
 services:
   frpc:
-    image: snowdreamtech/frpc:0.70.1-alpine
+    image: snowdreamtech/frpc:0.71.0-alpine
     container_name: ${CONTAINER_NAME}
     restart: always
     cap_add:
