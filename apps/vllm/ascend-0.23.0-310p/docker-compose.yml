@@ -1,9 +1,9 @@
 services:
   vllm:
-    image: quay.io/ascend/vllm-ascend:v0.23.0-310p
+    image: ${IMAGE:-quay.io/ascend/vllm-ascend:v0.23.0-310p}
     entrypoint:
-      - vllm
-      - serve
+      - bash
+      - -lc
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
@@ -41,7 +41,10 @@ services:
       - ${PANEL_APP_PORT_HTTP}:8000
     privileged: true
     shm_size: 10g
-    command: ${START_COMMAND}
+    command:
+      - |
+        rm -rf /usr/local/python3.12.13/lib/python3.12/site-packages/triton*
+        exec vllm serve ${START_COMMAND}
 networks:
   1panel-network:
     external: true
