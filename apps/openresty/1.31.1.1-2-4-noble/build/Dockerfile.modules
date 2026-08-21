@@ -1,5 +1,5 @@
 ARG RESTY_IMAGE_BASE="ubuntu"
-ARG RESTY_IMAGE_TAG="noble"
+ARG RESTY_IMAGE_TAG="resolute"
 ARG PANEL_OPENRESTY_VERSION="1.31.1.1-2-1-noble"
 
 FROM 1panel/openresty:${PANEL_OPENRESTY_VERSION} AS panel-openresty
