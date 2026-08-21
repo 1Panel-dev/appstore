@@ -1,6 +1,6 @@
 services:
   vllm:
-    image: quay.io/ascend/vllm-ascend:v0.23.0-openeuler
+    image: ${IMAGE:-quay.io/ascend/vllm-ascend:v0.23.0-openeuler}
     entrypoint:
       - vllm
       - serve

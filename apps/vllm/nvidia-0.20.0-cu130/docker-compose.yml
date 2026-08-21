@@ -1,6 +1,6 @@
 services:
   vllm:
-    image: vllm/vllm-openai:v0.20.0-cu130
+    image: ${IMAGE:-vllm/vllm-openai:v0.20.0-cu130}
     container_name: ${CONTAINER_NAME}
     restart: always
     runtime: nvidia
@@ -15,13 +15,14 @@ services:
       - 1panel-network
     volumes:
       - ./cache/huggingface:/root/.cache/huggingface
+      - ${MODEL_DIR:-./cache/models}/:/models/${MODEL_NAME:-model}
     environment:
-      HUGGING_FACE_HUB_TOKEN: ${HUGGING_FACE_HUB_TOKEN}
+      HUGGING_FACE_HUB_TOKEN: ${HUGGING_FACE_HUB_TOKEN:-}
       HF_ENDPOINT: https://hf-mirror.com
     ports:
       - ${PANEL_APP_PORT_HTTP}:8000
     ipc: host
-    command: --model ${MODEL}
+    command: ${START_COMMAND:---model ${MODEL}}
 networks:
   1panel-network:
     external: true
