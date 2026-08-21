@@ -1,6 +1,6 @@
 services:
   upage:
-    image: halohub/upage:1.0.1
+    image: halohub/upage:2.0.0
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
