@@ -14,7 +14,6 @@ services:
       COMFYUI_PORT: "8188"
     volumes:
       - ./data:/data
-      - ./data/model:/opt/ComfyUI/models
     ulimits:
       memlock: -1
       stack: 67108864
