@@ -1,0 +1,36 @@
+name: Arcadia
+tags:
+  - DevOps
+title: "一站式代码自动化运维平台"
+description: "写脚本、跑定时任务、服务托管、消息聚合、AI Agent 运行基座，一个面板搞定全流程"
+additionalProperties:
+  key: arcadia
+  name: Arcadia
+  tags:
+    - DevOps
+  shortDescZh: "一站式代码自动化运维平台"
+  shortDescEn: "One-Stop Code Automation & DevOps Platform"
+  description:
+    en: "Script writing, scheduled task execution, service hosting, message aggregation, and AI Agent runtime infrastructure—all managed through a single dashboard for the entire workflow"
+    es-es: "Script writing, scheduled task execution, service hosting, message aggregation, and AI Agent runtime infrastructure—all managed through a single dashboard for the entire workflow"
+    fa: "Script writing, scheduled task execution, service hosting, message aggregation, and AI Agent runtime infrastructure—all managed through a single dashboard for the entire workflow"
+    ja: "Script writing, scheduled task execution, service hosting, message aggregation, and AI Agent runtime infrastructure—all managed through a single dashboard for the entire workflow"
+    ms: "Script writing, scheduled task execution, service hosting, message aggregation, and AI Agent runtime infrastructure—all managed through a single dashboard for the entire workflow"
+    pt-br: "Script writing, scheduled task execution, service hosting, message aggregation, and AI Agent runtime infrastructure—all managed through a single dashboard for the entire workflow"
+    ru: "Script writing, scheduled task execution, service hosting, message aggregation, and AI Agent runtime infrastructure—all managed through a single dashboard for the entire workflow"
+    ko: "Script writing, scheduled task execution, service hosting, message aggregation, and AI Agent runtime infrastructure—all managed through a single dashboard for the entire workflow"
+    zh-Hant: "寫腳本、跑定時任務、服務託管、訊息聚合、AI Agent 執行基座，一個面板搞定全流程"
+    zh: "写脚本、跑定时任务、服务托管、消息聚合、AI Agent 运行基座，一个面板搞定全流程"
+    tr: "Script writing, scheduled task execution, service hosting, message aggregation, and AI Agent runtime infrastructure—all managed through a single dashboard for the entire workflow"
+  type: website
+  crossVersionUpdate: false
+  limit: 0
+  batchInstallSupport: true
+  architectures:
+    - amd64
+    - arm64
+  recommend: 0
+  website: https://arcadia.cool
+  github: https://github.com/SuperManito/Arcadia
+  document: https://arcadia.cool/docs
+  memoryRequired: 256
