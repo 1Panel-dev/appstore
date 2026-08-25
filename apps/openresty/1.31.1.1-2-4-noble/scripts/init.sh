@@ -2,7 +2,7 @@
 
 source ./.env
 
-mkdir -p modules conf/modules-enabled
+mkdir -p modules conf/modules-enabled conf/http.d
 
 sed -i -E "s/(listen[[:space:]]+)80([[:space:]]*default_server;)/\1${PANEL_APP_PORT_HTTP}\2/" conf/default/00.default.conf
 sed -i -E "s/(listen[[:space:]]+)\[::]:80([[:space:]]*default_server;)/\1\[::]:${PANEL_APP_PORT_HTTP}\2/" conf/default/00.default.conf
