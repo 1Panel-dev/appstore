@@ -17,6 +17,13 @@
 
 4. Install the nvidia-container-runtime and nvidia-docker2 components.
 
+### NVIDIA GB10 DSpark Version
+
+1. This version targets two fixed NVIDIA GB10 servers: head `10.0.1.1` and worker `10.0.1.2`.
+2. The head must have passwordless SSH access to `10.0.1.2`. Both hosts require Docker, NVIDIA Container Toolkit, and a working RoCE/InfiniBand device.
+3. The model must already exist at `/opt/1panel/ai/DeepSeek-V4-Flash-0731` on both hosts.
+4. Runtime parameters, interfaces, and node addresses are stored in the version `.env`; use `scripts/start.sh` and `scripts/stop.sh` for the two-node lifecycle.
+
 ### Ascend 310P version
 
 1. The host must have the Ascend driver/CANN installed, and `npu-smi info` must list the NPU correctly.

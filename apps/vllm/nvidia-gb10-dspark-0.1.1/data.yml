@@ -1,0 +1,44 @@
+additionalProperties:
+  formFields:
+    - default: 8000
+      disabled: true
+      edit: false
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        en: Port
+        es-es: Puerto
+        fa: 'پورت'
+        ja: ポート
+        lo: ພອດ
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        zh-Hant: 埠
+        zh: 端口
+        ko: 포트
+        tr: Bağlantı Noktası
+    - default: ""
+      edit: true
+      envKey: VLLM_API_KEY
+      labelEn: API Key
+      labelZh: API Key
+      required: false
+      type: password
+      label:
+        en: API Key
+        es-es: Clave API
+        fa: 'کلید API'
+        ja: APIキー
+        lo: API Key
+        ms: Kunci API
+        pt-br: Chave da API
+        ru: API-ключ
+        zh-Hant: API 金鑰
+        zh: API Key
+        ko: API 키
+        tr: API Anahtarı
