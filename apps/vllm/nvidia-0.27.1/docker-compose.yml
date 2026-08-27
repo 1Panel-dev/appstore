@@ -1,6 +1,6 @@
 services:
   vllm:
-    image: ${IMAGE:-vllm/vllm-openai:v0.27.1}
+    image: ${IMAGE:-vllm/vllm-openai:v0.28.0}
     container_name: ${CONTAINER_NAME}
     restart: always
     runtime: nvidia
