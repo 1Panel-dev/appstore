@@ -19,9 +19,14 @@ test -d "$DSPARK_MODEL_HOST" || {
   exit 1
 }
 
+test -f "$DSPARK_MODEL_HOST/encoding/encoding_dsv4.py" || {
+  echo "Missing encoding file on head: $DSPARK_MODEL_HOST/encoding/encoding_dsv4.py" >&2
+  exit 1
+}
+
 ssh -o BatchMode=yes -o ConnectTimeout=10 "$WORKER_HOST" \
-  "test -d '$DSPARK_MODEL_HOST'" || {
-  echo "Missing model directory on worker $WORKER_HOST: $DSPARK_MODEL_HOST" >&2
+  "test -d '$DSPARK_MODEL_HOST' && test -f '$DSPARK_MODEL_HOST/encoding/encoding_dsv4.py'" || {
+  echo "Missing model directory or encoding file on worker $WORKER_HOST: $DSPARK_MODEL_HOST" >&2
   exit 1
 }
 
