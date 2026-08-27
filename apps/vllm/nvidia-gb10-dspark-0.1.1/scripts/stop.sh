@@ -13,4 +13,4 @@ set +a
 
 export PROJECT_NAME="${PROJECT_NAME:-vllm-gb10-dspark}"
 
-exec bash "$APP_DIR/stop-deepseek-v4-flash-dspark.sh" "$@"
+exec bash "$APP_DIR/scripts/stop-deepseek-v4-flash-dspark.sh" "$@"

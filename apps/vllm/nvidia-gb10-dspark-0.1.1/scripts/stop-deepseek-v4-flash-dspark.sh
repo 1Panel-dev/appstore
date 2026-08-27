@@ -2,11 +2,12 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-ENV_FILE="${ENV_FILE:-$SCRIPT_DIR/.env.dspark}"
-COMPOSE_FILE="${COMPOSE_FILE:-$SCRIPT_DIR/docker-compose.dspark.yml}"
-SIDECAR_COMPOSE_FILE="${SIDECAR_COMPOSE_FILE:-$SCRIPT_DIR/docker-compose.vl-sidecar.yml}"
+APP_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
+ENV_FILE="${ENV_FILE:-$APP_DIR/.env.dspark}"
+COMPOSE_FILE="${COMPOSE_FILE:-$APP_DIR/docker-compose.dspark.yml}"
+SIDECAR_COMPOSE_FILE="${SIDECAR_COMPOSE_FILE:-$APP_DIR/docker-compose.vl-sidecar.yml}"
 PROJECT_NAME="${PROJECT_NAME:-deepseek-v4-flash}"
-LEGACY_PROJECT_NAME="${LEGACY_PROJECT_NAME:-$(basename "$SCRIPT_DIR" | tr '[:upper:]' '[:lower:]')}"
+LEGACY_PROJECT_NAME="${LEGACY_PROJECT_NAME:-$(basename "$APP_DIR" | tr '[:upper:]' '[:lower:]')}"
 
 if [ -f "$ENV_FILE" ]; then
   set -a
@@ -17,9 +18,9 @@ fi
 
 : "${WORKER_HOST:?WORKER_HOST must be set in $ENV_FILE or environment}"
 
-cd "$SCRIPT_DIR"
+cd "$APP_DIR"
 
-WORKER_DIR="${WORKER_SCRIPT_DIR:-${WORKER_DIR:-$SCRIPT_DIR}}"
+WORKER_DIR="${WORKER_SCRIPT_DIR:-${WORKER_DIR:-$APP_DIR}}"
 WORKER_HF_CACHE="${WORKER_HF_CACHE:-${HF_CACHE:-}}"
 WORKER_VLLM_HOST_IP="${WORKER_VLLM_HOST_IP:-}"
 
@@ -198,7 +199,7 @@ if [ "$LEGACY_PROJECT_NAME" != "$PROJECT_NAME" ]; then
 fi
 
 if [ "$STOP_FAILURES" -gt 0 ]; then
-  echo "WARN: $STOP_FAILURES remote stop step(s) failed on ${WORKER_HOST}; the worker may still be serving a stale rank (restart: unless-stopped restores it on reboot). Re-run ./stop-deepseek-v4-flash-dspark.sh once the worker is reachable." >&2
+  echo "WARN: $STOP_FAILURES remote stop step(s) failed on ${WORKER_HOST}; the worker may still be serving a stale rank (restart: unless-stopped restores it on reboot). Re-run ./scripts/stop.sh once the worker is reachable." >&2
   exit 1
 fi
 

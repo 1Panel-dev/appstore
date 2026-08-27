@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Shared numeric-knob validation for the DSpark launcher and validator.
+# Shared numeric-knob validation sourced by the DSpark launcher and validator.
 #
 # MAX_NUM_SEQS / MTP_NUM_TOKENS / MAX_NUM_BATCHED_TOKENS are interpolated into
 # bash arithmetic (and forwarded unevaluated into the container's own $(( )) via

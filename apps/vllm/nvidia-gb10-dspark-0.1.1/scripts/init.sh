@@ -5,7 +5,7 @@ APP_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 
 install -d -m 0755 /opt/1pds/cache
 chmod 0600 "$APP_DIR/.env"
-chmod 0755 "$APP_DIR"/*.sh
+chmod 0755 "$APP_DIR/scripts"/*.sh
 
 set -a
 # shellcheck disable=SC1091
@@ -32,4 +32,4 @@ ssh -o BatchMode=yes -o ConnectTimeout=10 "$WORKER_HOST" \
 
 ENV_FILE="$APP_DIR/.env" \
 COMPOSE_FILE="$APP_DIR/docker-compose.yml" \
-  bash "$APP_DIR/validate-dspark-config.sh"
+  bash "$APP_DIR/scripts/validate-dspark-config.sh"

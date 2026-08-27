@@ -2,8 +2,9 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-ENV_FILE="${ENV_FILE:-$SCRIPT_DIR/.env.dspark}"
-COMPOSE_FILE="${COMPOSE_FILE:-$SCRIPT_DIR/docker-compose.dspark.yml}"
+APP_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
+ENV_FILE="${ENV_FILE:-$APP_DIR/.env.dspark}"
+COMPOSE_FILE="${COMPOSE_FILE:-$APP_DIR/docker-compose.dspark.yml}"
 PROJECT_NAME="${PROJECT_NAME:-deepseek-v4-flash}"
 WAIT_ATTEMPTS="${WAIT_ATTEMPTS:-100}"
 WAIT_SECONDS="${WAIT_SECONDS:-15}"
@@ -227,7 +228,7 @@ fi
 
 VLLM_HOST_IP="${VLLM_HOST_IP:-$MASTER_ADDR}"
 WORKER_VLLM_HOST_IP="${WORKER_VLLM_HOST_IP:-$WORKER_HOST}"
-WORKER_DIR="${WORKER_SCRIPT_DIR:-${WORKER_DIR:-$SCRIPT_DIR}}"
+WORKER_DIR="${WORKER_SCRIPT_DIR:-${WORKER_DIR:-$APP_DIR}}"
 WORKER_HF_CACHE="${WORKER_HF_CACHE:-${HF_CACHE:-}}"
 # Per-node CX7/RoCE pins (3-node ring: facing ports often differ by hostname).
 # Set WORKER_NCCL_* in the head .env; start script injects them on remote compose.
@@ -853,7 +854,7 @@ ssh -o BatchMode=yes -o ConnectTimeout=10 "$WORKER_HOST" "true" >/dev/null || {
 }
 
 already_running_hint() {
-  echo "This is not a failed start: dockerd likely restored ranks after a reboot (compose restart: unless-stopped). The cluster may already be serving. Run ./stop-deepseek-v4-flash-dspark.sh only if you want a cold start. Supervisors: treat exit 3 as already-up (systemd SuccessExitStatus=3)." >&2
+  echo "This is not a failed start: dockerd likely restored ranks after a reboot (compose restart: unless-stopped). The cluster may already be serving. Run ./scripts/stop.sh only if you want a cold start. Supervisors: treat exit 3 as already-up (systemd SuccessExitStatus=3)." >&2
 }
 
 if docker ps --format '{{.Names}}' | grep -qx "${PROJECT_NAME}-vllm-dspark-1"; then
@@ -875,7 +876,7 @@ else
   exit "$worker_rc"
 fi
 
-cd "$SCRIPT_DIR"
+cd "$APP_DIR"
 resolve_nccl_gid_indexes
 STARTUP_LOG_SINCE="$(log_since)"
 trap on_error ERR
@@ -901,7 +902,7 @@ ssh "$WORKER_HOST" "
   _env_tmp=
   trap - EXIT HUP INT TERM
 " < "$COMPOSE_ENV_FILE"
-SIDECAR_COMPOSE_FILE="${SIDECAR_COMPOSE_FILE:-$SCRIPT_DIR/docker-compose.vl-sidecar.yml}"
+SIDECAR_COMPOSE_FILE="${SIDECAR_COMPOSE_FILE:-$APP_DIR/docker-compose.vl-sidecar.yml}"
 if [ -f "$SIDECAR_COMPOSE_FILE" ]; then
   scp "$SIDECAR_COMPOSE_FILE" "${WORKER_HOST}:${REMOTE_WORKER_DIR}/docker-compose.vl-sidecar.yml"
 fi
@@ -916,7 +917,7 @@ compose_base 0 "" up -d
 # VL TP=2 sidecar is launched AFTER the main API is healthy (see wait loop):
 # DeepSeek and VL must not GPU-profile concurrently. VL uses a separate
 # NCCL master port (VL_SIDECAR_MASTER_PORT, default 25100).
-SIDECAR_COMPOSE_FILE="${SIDECAR_COMPOSE_FILE:-$SCRIPT_DIR/docker-compose.vl-sidecar.yml}"
+SIDECAR_COMPOSE_FILE="${SIDECAR_COMPOSE_FILE:-$APP_DIR/docker-compose.vl-sidecar.yml}"
 
 if [ "${DSPARK_SKIP_HOTFIX:-0}" = "1" ]; then
   echo "Entrypoint will skip DSV4 v0.27 perf hotfixes (DSPARK_SKIP_HOTFIX=1)."
@@ -963,7 +964,7 @@ for _ in $(seq 1 "$WAIT_ATTEMPTS"); do
         # not explicitly disabled. INSTALL_VISION_MCP defaults to follow the flag.
         if [ "${ENABLE_VL_SIDECAR:-0}" = "1" ] && [ "${INSTALL_VISION_MCP:-1}" = "1" ]; then
           echo "Registering ds4f-vision MCP into detected harnesses (pi/omp/hermes/opencode/goose/grok/openclaw/zcode/prime/factory/commandcode)..."
-          if ! "$SCRIPT_DIR/scripts/install-ds4f-vision-mcp.sh"; then
+          if ! "$SCRIPT_DIR/install-ds4f-vision-mcp.sh"; then
             echo "WARN: vision MCP harness install failed (non-fatal)." >&2
           fi
         elif [ "${INSTALL_VISION_MCP:-1}" = "0" ]; then
@@ -1006,7 +1007,7 @@ for _ in $(seq 1 "$WAIT_ATTEMPTS"); do
       fi
       DSPARK_WARMUP_MAX_CONCURRENCY="${MAX_NUM_SEQS:-6}" \
         DSPARK_WARMUP_BEARER="$_warmup_bearer" \
-        bash "$SCRIPT_DIR/scripts/boot-shape-warmup.sh" \
+        bash "$SCRIPT_DIR/boot-shape-warmup.sh" \
         "${CHAT_URL%/v1/chat/completions}" "${SERVED_MODEL_NAME:-deepseek-v4-flash-dspark}" || \
         echo "WARN: boot shape warmup incomplete — uncovered shapes may JIT mid-serve (issue #117)" >&2
     else
