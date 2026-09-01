@@ -1,6 +1,6 @@
 # ═══════════════════════════════════════════════════════════════
 #                    TrendRadar 配置文件
-#                      Version: 2.3.0
+#                      Version: 2.4.0
 # ═══════════════════════════════════════════════════════════════
 
 
@@ -444,6 +444,9 @@ ai_translation:
   enabled: true                     # 是否启用翻译功能（true=启用, false=关闭）
   language: "中文"                   # 翻译目标语言（如 "English", "Korean", "法语"）
   prompt_file: "ai_translation_prompt.txt"   # 提示词文件（相对于 config 目录）
+
+  batch_size: 100                   # 每批发送给 AI 的标题数，超过此数量自动分批
+  batch_interval: 2                 # 分批间隔（秒），避免触发 API 限流，0=不等待
 
   # 翻译范围（display.regions 关闭的区域即使开启也不会翻译）
   scope:
