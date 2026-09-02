@@ -1,8 +1,12 @@
 ## 产品介绍
 
-**[1Panel AI 网关](https://github.com/1Panel-dev/1Panel-Gateway)** 是面向企业和团队的 AI 统一接入与治理平台，提供模型代理、智能路由、权限控制、内容合规和用量分析等能力，让 AI 应用更安全、稳定、经济地使用不同模型资源。
+**1Panel AI 网关** 是面向企业和团队的 AI 统一接入与治理平台，提供模型代理、智能路由、权限控制、内容合规和用量分析等能力，让 AI 应用更安全、稳定、经济地使用不同模型资源。
 
 AI 应用只需配置统一的 Base URL 和 API Key，即可通过标准接口访问公有云 API、本地模型及其他模型服务。
+
+**扫码加入交流群**
+
+<img alt="扫码加入交流群" src="https://resource.fit2cloud.com/1panel/img/wechat.png" width="150" height="150">
 
 ## 主要功能
 

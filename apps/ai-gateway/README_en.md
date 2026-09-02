@@ -1,6 +1,6 @@
 ## Introduction
 
-**[1Panel AI Gateway](https://github.com/1Panel-dev/1Panel-Gateway)** is an enterprise AI access and governance platform. It provides model proxying, intelligent routing, permission control, content compliance, and usage analytics so applications can use different model resources securely, reliably, and efficiently.
+**1Panel AI Gateway** is an enterprise AI access and governance platform. It provides model proxying, intelligent routing, permission control, content compliance, and usage analytics so applications can use different model resources securely, reliably, and efficiently.
 
 Applications only need a unified Base URL and API key to access public cloud APIs, local models, and other model services through standard interfaces.
 

@@ -1,26 +1,26 @@
 name: "1Panel AI 网关"
 tags:
   - AI
-title: "企业级 AI 网关"
-description: "企业级 AI 网关"
+title: "企业级 AI 模型统一接入与治理平台"
+description: "企业级 AI 模型统一接入与治理平台"
 additionalProperties:
   key: ai-gateway
   name: "1Panel AI 网关"
   tags:
     - AI
-  shortDescZh: "企业级 AI 网关"
-  shortDescEn: "Enterprise-grade AI gateway"
+  shortDescZh: "企业级 AI 模型统一接入与治理平台"
+  shortDescEn: "Enterprise-grade platform for unified AI model access and governance"
   description:
-    en: "Enterprise-grade AI gateway"
-    es-es: "Enterprise-grade AI gateway"
-    ja: "Enterprise-grade AI gateway"
-    ms: "Enterprise-grade AI gateway"
-    pt-br: "Enterprise-grade AI gateway"
-    ru: "Enterprise-grade AI gateway"
-    ko: "Enterprise-grade AI gateway"
-    zh-Hant: "企業級 AI 網關"
-    zh: "企业级 AI 网关"
-    tr: "Enterprise-grade AI gateway"
+    en: "Enterprise-grade platform for unified AI model access and governance"
+    es-es: "Plataforma empresarial para el acceso unificado y la gobernanza de modelos de IA"
+    ja: "統一されたAIモデルアクセスとガバナンスのためのエンタープライズプラットフォーム"
+    ms: "Platform perusahaan untuk akses dan tadbir urus model AI yang disatukan"
+    pt-br: "Plataforma empresarial para acesso unificado e governança de modelos de IA"
+    ru: "Корпоративная платформа для унифицированного доступа к моделям ИИ и их управления"
+    ko: "통합 AI 모델 액세스 및 거버넌스를 위한 엔터프라이즈 플랫폼"
+    zh-Hant: "企業級 AI 模型統一接入與治理平台"
+    zh: "企业级 AI 模型统一接入与治理平台"
+    tr: "Kurumsal düzeyde AI modeli için birleşik erişim ve yönetim platformu"
   type: website
   crossVersionUpdate: true
   recommend: 1
@@ -28,6 +28,6 @@ additionalProperties:
   architectures:
     - amd64
     - arm64
-  website: https://docs.fit2cloud.com/1Panel-Gateway
+  website: https://1panel.cn/ai-gateway.html
   github: https://github.com/1Panel-dev/1Panel-Gateway
   document: https://docs.fit2cloud.com/1Panel-Gateway
