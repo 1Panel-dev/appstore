@@ -1,0 +1,29 @@
+services:
+  ai-gateway:
+    image: 1panel/ai-gateway:v1.0.0
+    container_name: "${CONTAINER_NAME}"
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:8080"
+    environment:
+      AI_GATEWAY_DATABASE_DRIVER: sqlite
+      AI_GATEWAY_DATABASE_SQLITE_PATH: /opt/ai-gateway/data/db/ai-gateway.db
+      AI_GATEWAY_INITIAL_ADMIN_USERNAME: "${AI_GATEWAY_INITIAL_ADMIN_USERNAME}"
+      AI_GATEWAY_INITIAL_ADMIN_PASSWORD: "${AI_GATEWAY_INITIAL_ADMIN_PASSWORD}"
+    volumes:
+      - ./data:/opt/ai-gateway/data
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - "wget -q -O - http://127.0.0.1:8080/health/ready >/dev/null || exit 1"
+      interval: 30s
+      timeout: 5s
+      start_period: 10s
+      retries: 3
+    labels:
+      createdBy: Apps
+networks:
+  1panel-network:
+    external: true

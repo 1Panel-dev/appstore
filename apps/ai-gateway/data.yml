@@ -1,0 +1,33 @@
+name: "1Panel AI 网关"
+tags:
+  - AI
+title: "企业级 AI 网关"
+description: "企业级 AI 网关"
+additionalProperties:
+  key: ai-gateway
+  name: "1Panel AI 网关"
+  tags:
+    - AI
+  shortDescZh: "企业级 AI 网关"
+  shortDescEn: "Enterprise-grade AI gateway"
+  description:
+    en: "Enterprise-grade AI gateway"
+    es-es: "Enterprise-grade AI gateway"
+    ja: "Enterprise-grade AI gateway"
+    ms: "Enterprise-grade AI gateway"
+    pt-br: "Enterprise-grade AI gateway"
+    ru: "Enterprise-grade AI gateway"
+    ko: "Enterprise-grade AI gateway"
+    zh-Hant: "企業級 AI 網關"
+    zh: "企业级 AI 网关"
+    tr: "Enterprise-grade AI gateway"
+  type: website
+  crossVersionUpdate: true
+  recommend: 1
+  limit: 0
+  architectures:
+    - amd64
+    - arm64
+  website: https://docs.fit2cloud.com/1Panel-Gateway
+  github: https://github.com/1Panel-dev/1Panel-Gateway
+  document: https://docs.fit2cloud.com/1Panel-Gateway
