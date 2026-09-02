@@ -30,4 +30,4 @@ additionalProperties:
     - arm64
   website: https://1panel.cn/ai-gateway.html
   github: https://github.com/1Panel-dev/1Panel-Gateway
-  document: https://docs.fit2cloud.com/1Panel-Gateway
+  document: https://docs.fit2cloud.com/ai-gateway
