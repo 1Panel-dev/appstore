@@ -140,3 +140,68 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
+    - default: "TRUE"
+      edit: true
+      envKey: DASHBOARD_LOGIN_REQUIRED
+      labelEn: Enable Dashboard Login
+      labelZh: 开启 Dashboard 登录认证
+      label:
+        en: Enable Dashboard Login
+        es-es: Habilitar inicio de sesión del Dashboard
+        fa: 'فعال‌سازی ورود به داشبورد'
+        ja: ダッシュボードログインを有効化
+        ms: Dayakan Log Masuk Papan Pemuka
+        pt-br: Ativar login do Painel
+        ru: Включить вход в панель управления
+        ko: 대시보드 로그인 활성화
+        zh: 开启 Dashboard 登录认证
+        zh-Hant: 開啟 Dashboard 登入認證
+        tr: Kontrol Paneli Girişini Etkinleştir
+      required: true
+      type: select
+      values:
+        - label: "TRUE"
+          value: "TRUE"
+        - label: "FALSE"
+          value: "FALSE"
+    - default: admin
+      edit: true
+      envKey: DASHBOARD_USER
+      labelEn: Dashboard Username
+      labelZh: Dashboard 用户名
+      label:
+        en: Dashboard Username
+        es-es: Dashboard Nombre de usuario
+        fa: 'نام کاربری داشبورد'
+        ja: ダッシュボードユーザー名
+        ms: Nama Pengguna Papan Pemuka
+        pt-br: Nome de Usuário do Painel
+        ru: Имя пользователя панели
+        ko: 대시보드 사용자 이름
+        zh: Dashboard 用户名
+        zh-Hant: Dashboard 使用者名稱
+        tr: Dashboard Kullanıcı Adı
+      required: true
+      rule: paramCommon
+      type: text
+    - default: Rocketmq@123
+      edit: true
+      envKey: DASHBOARD_PASSWORD
+      labelEn: Dashboard Password
+      labelZh: Dashboard 密码
+      label:
+        en: Dashboard Password
+        es-es: Dashboard Contraseña
+        fa: 'رمز عبور داشبورد'
+        ja: ダッシュボードパスワード
+        ms: Kata Laluan Papan Pemuka
+        pt-br: Senha do Painel
+        ru: Пароль панели
+        ko: 대시보드 비밀번호
+        zh: Dashboard 密码
+        zh-Hant: Dashboard 密碼
+        tr: Dashboard Parola
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
