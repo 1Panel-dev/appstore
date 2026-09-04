@@ -54,7 +54,7 @@ services:
     labels:
       createdBy: "Apps"
   dashboard:
-    image: apacherocketmq/rocketmq-dashboard:latest
+    image: apacherocketmq/rocketmq-dashboard:2.1.0
     container_name: ${CONTAINER_NAME}-rmqdashboard
     links:
       - namesrv
@@ -66,7 +66,26 @@ services:
       - 1panel-network
     restart: on-failure
     environment:
-      - JAVA_OPTS=-Drocketmq.namesrv.addr=namesrv:9876
+      - JAVA_OPTS=-Drocketmq.namesrv.addr=namesrv:9876 -Drocketmq.config.loginRequired=${DASHBOARD_LOGIN_REQUIRED} -Drocketmq.config.authMode=file -Drocketmq.config.dataPath=/dashboard-data
+      - DASHBOARD_USER=${DASHBOARD_USER}
+      - DASHBOARD_PASSWORD=${DASHBOARD_PASSWORD}
+      - SPRING_SECURITY_USER_NAME=${DASHBOARD_USER}
+      - SPRING_SECURITY_USER_PASSWORD=${DASHBOARD_PASSWORD}
+    volumes:
+      - ./data/dashboard:/dashboard-data
+    entrypoint:
+      - sh
+      - -c
+      - |
+        mkdir -p /dashboard-data
+        GEN=$$(printf '%s=%s,1\n' "$$DASHBOARD_USER" "$$DASHBOARD_PASSWORD")
+        if [ ! -f /dashboard-data/users.properties ] || [ "$$(cat /dashboard-data/.users.properties.generated 2>/dev/null)" != "$$GEN" ]; then
+          printf '%s\n' "$$GEN" > /dashboard-data/users.properties
+          printf '%s' "$$GEN" > /dashboard-data/.users.properties.generated
+          chmod 600 /dashboard-data/users.properties /dashboard-data/.users.properties.generated
+          echo 'users.properties regenerated from DASHBOARD_USER/DASHBOARD_PASSWORD'
+        fi
+        exec java $$JAVA_OPTS -jar /rocketmq-dashboard.jar
     labels:
       createdBy: "Apps"
 networks:
