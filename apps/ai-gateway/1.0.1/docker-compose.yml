@@ -1,6 +1,6 @@
 services:
   ai-gateway:
-    image: 1panel/ai-gateway:v1.0.0
+    image: 1panel/ai-gateway:v1.0.1
     container_name: "${CONTAINER_NAME}"
     restart: always
     networks:
