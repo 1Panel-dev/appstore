@@ -23,7 +23,7 @@ additionalProperties:
         ko: CI/CD, Kanban 및 패키지가 포함된 Git 서버
         tr: CI/CD, Kanban ve paketlerle Git sunucusu
     type: tool
-    crossVersionUpdate: false
+    crossVersionUpdate: true
     limit: 0
     recommend: 0
     batchInstallSupport: true
