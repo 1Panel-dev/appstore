@@ -25,7 +25,7 @@ additionalProperties:
     type: website
     crossVersionUpdate: true
     limit: 1
-    recommend: 30
+    recommend: 31
     batchInstallSupport: true
     website: https://www.phpmyadmin.net/
     github: https://github.com/phpmyadmin/phpmyadmin

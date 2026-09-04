@@ -25,7 +25,7 @@ additionalProperties:
   type: tool
   crossVersionUpdate: true
   limit: 0
-  recommend: 0
+  recommend: 30
   website: https://dbxio.com
   github: https://github.com/t8y2/dbx
   document: https://dbxio.com/cn/docs/what-is-dbx
