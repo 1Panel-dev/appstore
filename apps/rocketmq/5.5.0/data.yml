@@ -203,5 +203,5 @@ additionalProperties:
         tr: Dashboard Parola
       random: true
       required: true
-      rule: paramCommon
+      rule: paramComplexity
       type: password
