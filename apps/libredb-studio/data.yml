@@ -1,0 +1,37 @@
+name: LibreDB Studio
+tags:
+  - 数据库
+  - 开发工具
+title: 自托管的浏览器数据库 IDE
+description: 自托管的浏览器数据库 IDE，支持 16 种数据库引擎
+additionalProperties:
+    key: libredb-studio
+    name: LibreDB Studio
+    tags:
+        - Database
+        - DevTool
+    shortDescZh: 自托管的浏览器数据库 IDE，支持 16 种引擎
+    shortDescEn: Self-hosted browser database IDE for 16 engines
+    description:
+        en: Self-hosted, browser-based database IDE supporting 16 engines including PostgreSQL, MySQL, MongoDB, Redis and ClickHouse, with SSO, RBAC and audit logs in the MIT build.
+        zh: 自托管的浏览器数据库 IDE，支持 PostgreSQL、MySQL、MongoDB、Redis、ClickHouse 等 16 种引擎，MIT 版内置 SSO、RBAC 和审计日志。
+        tr: PostgreSQL, MySQL, MongoDB, Redis ve ClickHouse dahil 16 motoru destekleyen, kendi sunucunuzda calisan tarayici tabanli veritabani IDE'si.
+        ja: PostgreSQL、MySQL、MongoDB、Redis、ClickHouse など 16 種類のエンジンに対応した、セルフホスト型のブラウザベース データベース IDE。
+        ko: PostgreSQL, MySQL, MongoDB, Redis, ClickHouse 등 16개 엔진을 지원하는 셀프 호스팅 브라우저 데이터베이스 IDE.
+        ru: Самостоятельно размещаемая браузерная СУБД-IDE с поддержкой 16 движков, включая PostgreSQL, MySQL, MongoDB, Redis и ClickHouse.
+        pt-br: IDE de banco de dados baseada em navegador e auto-hospedada, com suporte a 16 engines incluindo PostgreSQL, MySQL, MongoDB, Redis e ClickHouse.
+        es-es: IDE de base de datos basado en navegador y autoalojado, compatible con 16 motores incluidos PostgreSQL, MySQL, MongoDB, Redis y ClickHouse.
+        ms: IDE pangkalan data berasaskan pelayar dan hos sendiri yang menyokong 16 enjin termasuk PostgreSQL, MySQL, MongoDB, Redis dan ClickHouse.
+        fa: 'یک IDE پایگاه‌داده مبتنی بر مرورگر و self-hosted با پشتیبانی از ۱۶ موتور از جمله PostgreSQL، MySQL، MongoDB، Redis و ClickHouse.'
+        zh-Hant: 自架的瀏覽器資料庫 IDE，支援 PostgreSQL、MySQL、MongoDB、Redis、ClickHouse 等 16 種引擎。
+    type: website
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    batchInstallSupport: true
+    website: https://libredb.org
+    github: https://github.com/libredb/libredb-studio
+    document: https://github.com/libredb/libredb-studio
+    architectures:
+      - amd64
+      - arm64
