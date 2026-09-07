@@ -5,6 +5,7 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 APP_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 ENV_FILE="${ENV_FILE:-$APP_DIR/.env.dspark}"
 COMPOSE_FILE="${COMPOSE_FILE:-$APP_DIR/docker-compose.dspark.yml}"
+VISION_ASSET_DIR="$APP_DIR/scripts/vision-exp"
 PROJECT_NAME="${PROJECT_NAME:-deepseek-v4-flash}"
 WAIT_ATTEMPTS="${WAIT_ATTEMPTS:-100}"
 WAIT_SECONDS="${WAIT_SECONDS:-15}"
@@ -885,6 +886,19 @@ print_resolved_profile
 echo "Syncing DSpark deployment files to ${WORKER_HOST}:${WORKER_DIR}"
 ssh "$WORKER_HOST" "mkdir -p $REMOTE_WORKER_DIR"
 scp "$COMPOSE_FILE" "${WORKER_HOST}:${REMOTE_COMPOSE_FILE}"
+if [ "${DSPARK_DEPLOY_PROFILE:-flash-0731}" = "vision-exp" ]; then
+  test -f "$VISION_ASSET_DIR/hotfix-dsv4-vision-exp.py" || {
+    echo "Missing Vision patch: $VISION_ASSET_DIR/hotfix-dsv4-vision-exp.py" >&2
+    exit 1
+  }
+  test -d "$VISION_ASSET_DIR/vision_exp" || {
+    echo "Missing Vision support package: $VISION_ASSET_DIR/vision_exp" >&2
+    exit 1
+  }
+  ssh "$WORKER_HOST" "rm -rf '$REMOTE_WORKER_DIR/scripts/vision-exp' && mkdir -p '$REMOTE_WORKER_DIR/scripts/vision-exp'"
+  scp "$VISION_ASSET_DIR/hotfix-dsv4-vision-exp.py" "${WORKER_HOST}:${REMOTE_WORKER_DIR}/scripts/vision-exp/"
+  scp -r "$VISION_ASSET_DIR/vision_exp" "${WORKER_HOST}:${REMOTE_WORKER_DIR}/scripts/vision-exp/"
+fi
 # Stream into a private sibling, then atomically replace the worker env file.
 ssh "$WORKER_HOST" "
   set -euo pipefail

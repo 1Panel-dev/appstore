@@ -12,6 +12,25 @@ set -a
 source "$APP_DIR/.env"
 set +a
 
+case "${DSPARK_DEPLOY_PROFILE:-flash-0731}" in
+  flash-0731|vision-exp) ;;
+  *)
+    echo "Unsupported DSPARK_DEPLOY_PROFILE: ${DSPARK_DEPLOY_PROFILE}" >&2
+    exit 2
+    ;;
+esac
+
+if [ "${DSPARK_DEPLOY_PROFILE:-flash-0731}" = "vision-exp" ]; then
+  test -f "$APP_DIR/scripts/vision-exp/hotfix-dsv4-vision-exp.py" || {
+    echo "Missing Vision patch in application package" >&2
+    exit 1
+  }
+  test -d "$APP_DIR/scripts/vision-exp/vision_exp" || {
+    echo "Missing Vision support package in application package" >&2
+    exit 1
+  }
+fi
+
 : "${DSPARK_MODEL_HOST:?DSPARK_MODEL_HOST must be set in $APP_DIR/.env}"
 
 test -d "$DSPARK_MODEL_HOST" || {
