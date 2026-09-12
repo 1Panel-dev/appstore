@@ -5,7 +5,7 @@
 # Generated from official installation evidence:
 #   - Dockerfile（仓库根）：`addgroup -g 1000 -S app` / `adduser -u 1000 -S app -G app`
 #     → 容器运行时 UID/GID 固定为 1000:1000
-#   - deploy/1panel/apps/pay-unify/2.0.1/docker-compose.yml：
+#   - deploy/1panel/apps/pay-unify/2.0.2/docker-compose.yml：
 #     volumes `./data/certs:/app/runtime/certs`、`./data/logs:/app/logs`
 #     → 两个宿主目录必须对 uid 1000 可写
 #

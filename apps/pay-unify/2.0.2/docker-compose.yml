@@ -1,6 +1,6 @@
 services:
   pay-unify:
-    image: difyz9/pay-unify:2.0.1
+    image: difyz9/pay-unify:2.0.2
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
