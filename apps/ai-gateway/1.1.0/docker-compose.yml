@@ -1,6 +1,6 @@
 services:
   ai-gateway:
-    image: 1panel/ai-gateway:v1.0.2
+    image: 1panel/ai-gateway:v1.1.0
     container_name: "${CONTAINER_NAME}"
     restart: always
     networks:
@@ -20,6 +20,7 @@ services:
       PGPASSWORD: "${PANEL_DB_USER_PASSWORD:-}"
     volumes:
       - ./data:/opt/ai-gateway/data
+      - /etc/1panel:/opt/ai-gateway/1panel
     healthcheck:
       test:
         - CMD-SHELL
