@@ -1,0 +1,36 @@
+name: Pay-Unify
+tags:
+  - 工具
+title: 统一支付中台（支付宝 / 微信支付 / PayPal）
+description: 统一支付中台（支付宝 / 微信支付 / PayPal）
+additionalProperties:
+  key: pay-unify
+  name: Pay-Unify
+  tags:
+    - Tool
+  shortDescZh: 统一支付中台：聚合支付宝 / 微信支付 / PayPal，内置管理控制台与商户开放 API
+  shortDescEn: Unified payment platform aggregating Alipay, WeChat Pay and PayPal, with an admin console and merchant open API
+  description:
+    en: Unified payment platform aggregating Alipay, WeChat Pay and PayPal, with an admin console, OAuth2 merchant open API and hot-reload payment channel configuration.
+    zh: 统一支付中台：聚合支付宝 / 微信支付 / PayPal，内置管理控制台、OAuth2 商户开放 API 与支付渠道热配置。
+    es-es: Plataforma de pagos unificada que integra Alipay, WeChat Pay y PayPal, con consola de administración, API abierta para comercios y configuración en caliente.
+    fa: 'پلتفرم پرداخت یکپارچه با پشتیبانی Alipay، WeChat Pay و PayPal، همراه با کنسول مدیریت و API بازرگانان.'
+    zh-Hant: 統一支付中台：聚合支付寶 / 微信支付 / PayPal，內建管理主控台、OAuth2 商戶開放 API 與支付渠道熱配置。
+    ja: Alipay・WeChat Pay・PayPal を統合した決済プラットフォーム。管理コンソール、加盟店向け OAuth2 オープン API、決済チャネルのホット設定を備えます。
+    ko: Alipay, WeChat Pay, PayPal을 통합한 결제 플랫폼으로 관리 콘솔, 가맹점용 OAuth2 오픈 API, 결제 채널 핫 설정을 제공합니다.
+    ms: Platform pembayaran bersepadu yang menggabungkan Alipay, WeChat Pay dan PayPal, dengan konsol pentadbir dan API terbuka pedagang.
+    pt-br: Plataforma de pagamentos unificada que integra Alipay, WeChat Pay e PayPal, com console de administração e API aberta para comerciantes.
+    ru: Унифицированная платёжная платформа с поддержкой Alipay, WeChat Pay и PayPal, консолью администратора и открытым API для мерчантов.
+    tr: Alipay, WeChat Pay ve PayPal'ı birleştiren, yönetim konsolu ve iş ortağı açık API'si içeren birleşik ödeme platformu.
+  type: tool
+  crossVersionUpdate: true
+  recommend: 0
+  batchInstallSupport: true
+  limit: 0
+  website: https://github.com/difyz9/pay-unify
+  github: https://github.com/difyz9/pay-unify
+  document: https://github.com/difyz9/pay-unify#readme
+  memoryRequired: 256
+  architectures:
+    - amd64
+    - arm64

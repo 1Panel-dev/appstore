@@ -1,0 +1,40 @@
+services:
+  pay-unify:
+    image: difyz9/pay-unify:2.0.1
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8080
+    environment:
+      # 服务监听（容器内固定 8080，由 1Panel 反向代理对外暴露）
+      - PAY_LISTEN=:8080
+      - CONFIG_FILE=/app/config.toml
+      # 支付渠道证书落盘目录（控制台上传后自动写入并热加载）
+      - PAY_CERT_DIR=/app/runtime/certs
+      - TZ=Asia/Shanghai
+      # 数据库（由 1Panel 数据库服务注入，后端按 PANEL_DB_TYPE 自动组装连接串）
+      - PANEL_DB_TYPE=${PANEL_DB_TYPE}
+      - PANEL_DB_HOST=${PANEL_DB_HOST}
+      - PANEL_DB_PORT=${PANEL_DB_PORT}
+      - PANEL_DB_NAME=${PANEL_DB_NAME}
+      - PANEL_DB_USER=${PANEL_DB_USER}
+      - PANEL_DB_USER_PASSWORD=${PANEL_DB_USER_PASSWORD}
+      # 控制台会话密钥与初始管理员密码（安装时自动生成）
+      - PAY_JWT_SECRET=${PAY_JWT_SECRET}
+      - PAY_ADMIN_PASSWORD=${PAY_ADMIN_PASSWORD}
+    volumes:
+      - ./data/certs:/app/runtime/certs
+      - ./data/logs:/app/logs
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1:8080/health/db"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true
