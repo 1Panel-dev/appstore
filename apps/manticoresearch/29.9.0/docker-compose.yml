@@ -1,7 +1,7 @@
 services:
   manticore:
     container_name: ${CONTAINER_NAME}
-    image: manticoresearch/manticore:29.0.2
+    image: manticoresearch/manticore:29.9.0
     restart: always
     ports:
       - ${PANEL_APP_PORT_SQL}:9306
