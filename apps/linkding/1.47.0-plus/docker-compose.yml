@@ -1,6 +1,6 @@
 services:
   linkding:
-    image: sissbruecker/linkding:1.46.2-plus
+    image: sissbruecker/linkding:1.47.0-plus
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
