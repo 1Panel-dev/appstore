@@ -1,4 +1,4 @@
-## Instructions
+## Setup Notes
 
 - **Create Application**: The Logto admin console address must be `https://admin.domain.com` (replace `domain.com` with your actual domain).
 - **Create Reverse Proxy Website**: Set the proxy address to `http://127.0.0.1:3002` (replace IP and port as needed).

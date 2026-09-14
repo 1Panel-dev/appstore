@@ -1,4 +1,4 @@
-## Instructions
+## Setup Notes
 
 - The default username is `root`, and the password should be left empty to log in.
 

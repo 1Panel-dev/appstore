@@ -1,0 +1,42 @@
+additionalProperties:
+  formFields:
+    - default: 8081
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: HTTP Port
+      labelZh: HTTP 端口
+      label:
+        en: HTTP Port
+        es-es: Puerto HTTP
+        fa: 'پورت HTTP'
+        ja: HTTP ポート
+        ms: Port HTTP
+        pt-br: HTTP Porta
+        ru: HTTP Порт
+        ko: HTTP 포트
+        zh-Hant: HTTP 埠
+        zh: HTTP 端口
+        tr: HTTP Bağlantı Noktası
+      required: true
+      rule: paramPort
+      type: number
+    - default: 8082
+      edit: true
+      envKey: PANEL_APP_PORT_MCP
+      labelEn: MCP Port
+      labelZh: MCP 端口
+      label:
+        en: MCP Port
+        es-es: Puerto MCP
+        fa: 'پورت MCP'
+        ja: MCP ポート
+        ms: Port MCP
+        pt-br: MCP Porta
+        ru: MCP Порт
+        ko: MCP 포트
+        zh-Hant: MCP 埠
+        zh: MCP 端口
+        tr: MCP Bağlantı Noktası
+      required: true
+      rule: paramPort
+      type: number

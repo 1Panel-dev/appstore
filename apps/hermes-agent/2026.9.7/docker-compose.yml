@@ -1,0 +1,27 @@
+services:
+  hermes-agent:
+    container_name: ${CONTAINER_NAME}
+    image: 1panel/hermes-agent:2026.9.7
+    restart: unless-stopped
+    networks:
+      - 1panel-network
+    environment:
+      HOME: /opt/data/home
+      HERMES_HOME: /opt/data
+      HERMES_DASHBOARD: "1"
+      HERMES_DASHBOARD_HOST: 0.0.0.0
+      HERMES_DASHBOARD_BASIC_AUTH_USERNAME: ${HERMES_DASHBOARD_USERNAME:-admin}
+      HERMES_DASHBOARD_BASIC_AUTH_PASSWORD: ${HERMES_DASHBOARD_PASSWORD:-changeme}
+      HERMES_DASHBOARD_PORT: 9119
+      TERM: xterm-256color
+    volumes:
+      - ./data:/opt/data
+      - /etc/localtime:/etc/localtime
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:9119
+    labels:
+      createdBy: "Apps"
+
+networks:
+  1panel-network:
+    external: true

@@ -1,0 +1,97 @@
+additionalProperties:
+  formFields:
+    - default: 10443
+      edit: true
+      envKey: PANEL_APP_PORT_HTTPS
+      labelEn: HTTPS Port
+      labelZh: HTTPS 端口
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        en: HTTPS Port
+        es-es: Puerto HTTPS
+        fa: 'پورت HTTPS'
+        ja: HTTPS ポート
+        ms: Port HTTPS
+        pt-br: Porta HTTPS
+        ru: Порт HTTPS
+        ko: HTTPS 포트
+        zh-Hant: HTTPS 埠
+        zh: HTTPS 端口
+        tr: HTTPS Bağlantı Noktası
+      description:
+        en: Host ports 80 and 443 are not used.
+        zh: 不占用宿主机的 80、443 端口。
+        zh-Hant: 不佔用宿主機的 80、443 埠。
+    - default: ""
+      edit: true
+      envKey: HTTPS_ACCESS_HOST
+      labelEn: Access Address
+      labelZh: 访问地址
+      required: true
+      type: text
+      label:
+        en: Access Address
+        es-es: Direccion de acceso
+        fa: 'آدرس دسترسی'
+        ja: アクセスアドレス
+        ms: Alamat Akses
+        pt-br: Endereco de acesso
+        ru: Адрес доступа
+        ko: 접속 주소
+        zh-Hant: 存取位址
+        zh: 访问地址
+        tr: Erisim Adresi
+      description:
+        en: Enter the IPv4 address or hostname used in the browser, without https:// or a port. For example, 192.168.1.10.
+        zh: 填写浏览器实际使用的 IPv4 地址或主机名，不要包含 https:// 和端口，例如 192.168.1.10。
+        zh-Hant: 填寫瀏覽器實際使用的 IPv4 位址或主機名稱，不要包含 https:// 和連接埠，例如 192.168.1.10。
+    - default: admin
+      edit: true
+      envKey: DSH_AUTH_USERNAME
+      labelEn: Web Username
+      labelZh: Web 用户名
+      required: true
+      type: text
+      label:
+        en: Web Username
+        es-es: Usuario web
+        fa: 'نام کاربری وب'
+        ja: Web ユーザー名
+        ms: Nama Pengguna Web
+        pt-br: Usuario web
+        ru: Веб-пользователь
+        ko: 웹 사용자 이름
+        zh-Hant: Web 使用者名稱
+        zh: Web 用户名
+        tr: Web Kullanici Adi
+      description:
+        en: Letters, numbers, dot, underscore, and hyphen are supported.
+        zh: 仅支持字母、数字、点、下划线和连字符。
+        zh-Hant: 僅支援字母、數字、點、底線和連字號。
+    - default: deepseek-harness
+      edit: true
+      envKey: DSH_AUTH_PASSWORD
+      labelEn: Web Password
+      labelZh: Web 访问密码
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+      label:
+        en: Web Password
+        es-es: Contrasena web
+        fa: 'رمز عبور وب'
+        ja: Web パスワード
+        ms: Kata Laluan Web
+        pt-br: Senha web
+        ru: Веб-пароль
+        ko: 웹 비밀번호
+        zh-Hant: Web 存取密碼
+        zh: Web 访问密码
+        tr: Web Parolasi
+      description:
+        en: Use a strong password of at least 12 characters.
+        zh: 请使用至少 12 位的强密码。
+        zh-Hant: 請使用至少 12 位的強密碼。

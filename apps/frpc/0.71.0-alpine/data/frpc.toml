@@ -1,0 +1,25 @@
+serverAddr = "0.0.0.0"
+serverPort = 7000
+
+# featureGates = { VirtualNet = true }
+
+# 配置虚拟网络接口
+# virtualNet.address = "10.10.10.10/24"
+
+user = "Frp Client"
+
+auth.method = "token"
+auth.token = "token123456"
+
+webServer.addr = "0.0.0.0"
+webServer.port = 40001
+webServer.user = "admin"
+webServer.password = "password123456"
+webServer.pprofEnable = false
+
+store.path = "./frpc_store.json"
+
+# tls
+#transport.tls.certFile = "/etc/frp/ssl/client.crt"
+#transport.tls.keyFile = "/etc/frp/ssl/client.key"
+#transport.tls.trustedCaFile = "/etc/frp/ssl/ca.crt"

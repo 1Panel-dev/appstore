@@ -1,0 +1,14 @@
+{
+  "id":"10014",
+  "state": "on",
+  "name": "Shiro",
+  "cve": "CVE-2020-1957",
+  "type": "aa",
+  "remark": "",
+  "rule": {
+    "method":"GET",
+    "type": "request_uri",
+    "uri": "/..;/admin/",
+    "pattern": "regex"
+  }
+}

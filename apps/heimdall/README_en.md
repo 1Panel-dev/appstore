@@ -2,7 +2,7 @@
 
 **Heimdall** is a dashboard for all your web applications. However, it doesn't have to be limited to applications; you can add links to anything you like.
 
-## Advantages
+## Advantagess
 
 - Easy to edit and save directly online without editing code.
 - Fully customizable icons and colors without changing the overall template.

@@ -1,0 +1,500 @@
+# ═══════════════════════════════════════════════════════════════
+#                   TrendRadar Configuration
+#                      Version: 2.4.0
+# ═══════════════════════════════════════════════════════════════
+
+
+# Visual config editor: https://sansan0.github.io/TrendRadar/
+
+
+# ===============================================================
+# 1. Basic Settings
+# ===============================================================
+app:
+  # Timezone (affects all time displays, schedule evaluation, and data storage)
+  # Common timezones:
+  #   - Asia/Shanghai (Beijing time, UTC+8)
+  #   - America/New_York (US Eastern, UTC-5/-4)
+  #   - Europe/London (London time, UTC+0/+1)
+  # Full list: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  timezone: "Asia/Shanghai"
+  show_version_update: true           # Show version-update prompt (true=show, false=hide)
+
+
+# ===============================================================
+# 1.5 Schedule System — what to do, and when
+#
+# Controlled by the time periods defined in timeline.yaml:
+#   - When to push notifications
+#   - When to run AI analysis
+#   - Which report mode to use
+#
+# Quick start: pick a preset template and just change the preset value
+#
+#   always_on       → always on, push as soon as there's anything new
+#   morning_evening → push all day + an evening daily summary (recommended)
+#   office_hours    → three-block workday (onboarding → noon → wrap-up), free incremental on weekends
+#   night_owl       → afternoon brief + late-night full-day summary
+#   custom          → fully custom, see timeline.yaml
+#
+# For the detailed timeline diagram see config/timeline.yaml
+# ===============================================================
+schedule:
+  enabled: false                        # Enable the schedule system (true=on, false=off, default off)
+  preset: "morning_evening"             # Preset template name (see above)
+
+
+# ===============================================================
+# 2. Data Source - Hot-list platforms
+#
+# Data sourced from the open-source newsnow project: https://github.com/ourongxing/newsnow
+# You may self-host newsnow and point api_url to your own instance.
+#
+# enabled: whether to crawl hot lists (master switch)
+# api_url: hot-list data API URL (optional; leave empty to use the default)
+# sources: platform list
+#   - id: unique platform ID (do not change)
+#     reference: https://github.com/sansan0/TrendRadar/issues/95
+#   - name: display name (customizable; changing it does not affect operation)
+#   - expected_domain: domain security check (optional, recommended)
+#     Enter the main domain (e.g. baidu.com); it auto-matches the domain and all its subdomains.
+#     It verifies that links in the returned data are HTTPS and match the domain; on mismatch the
+#     platform's data is dropped and a warning is logged.
+#     Effectively guards against link hijacking or data tampering.
+#     As long as api_url is not your own instance, configuring expected_domain is recommended.
+# ===============================================================
+platforms:
+  enabled: true                         # Enable hot-list crawling (true=on, false=off)
+  api_url: ""                           # Hot-list data API URL (leave empty to use the default)
+                                        # If you self-host newsnow, enter your address, e.g. https://your-domain.com/api/s
+  sources:
+    - id: "toutiao"
+      name: "Toutiao"
+      expected_domain: "toutiao.com"
+    - id: "baidu"
+      name: "Baidu Hot"
+      expected_domain: "baidu.com"
+    - id: "wallstreetcn-hot"
+      name: "WallStreetCN"
+      expected_domain: "wallstreetcn.com"
+    - id: "thepaper"
+      name: "The Paper"
+      expected_domain: "thepaper.cn"
+    - id: "bilibili-hot-search"
+      name: "Bilibili Hot"
+      expected_domain: "bilibili.com"
+    - id: "cls-hot"
+      name: "CLS Hot"
+      expected_domain: "cls.cn"
+    - id: "ifeng"
+      name: "iFeng"
+      expected_domain: "ifeng.com"
+    - id: "tieba"
+      name: "Tieba"
+      expected_domain: "baidu.com"
+    - id: "weibo"
+      name: "Weibo"
+      expected_domain: "weibo.com"
+    - id: "douyin"
+      name: "Douyin"
+      expected_domain: "douyin.com"
+    - id: "zhihu"
+      name: "Zhihu"
+      expected_domain: "zhihu.com"
+
+
+
+# ===============================================================
+# 3. Data Source - RSS feeds
+#
+# Stored separately from hot-list data and shown as a time stream.
+# Each feed: id (unique), name (display), url (subscription URL)
+# enabled: optional, defaults to true
+# max_age_days: optional, overrides global freshness_filter.max_age_days
+# ===============================================================
+rss:
+  enabled: true                       # Enable RSS crawling (true=on, false=off)
+
+  # Article freshness filter (filters out stale articles to avoid duplicate pushes)
+  # Filtering happens only at push time; all articles are still stored in the database.
+  freshness_filter:
+    enabled: true                     # Enable freshness filter (true=on, false=off)
+
+    max_age_days: 1                   # Max article age (days)
+                                      # - Positive integer: push only articles within N days
+                                      # - 0: disable filtering, push all articles
+
+  # A single feed may set max_age_days to override the global setting:
+  # - Not set: use global freshness_filter.max_age_days (default 3 days)
+  # - Positive integer: override the global setting, push only articles within this many days
+  # - 0: disable freshness filtering for this feed, push all articles
+  feeds:
+    - id: "hacker-news"
+      name: "Hacker News"
+      url: "https://hnrss.org/frontpage"
+
+    - id: "ruanyifeng"
+      name: "Ruan Yi Feng's Blog"
+      url: "http://www.ruanyifeng.com/blog/atom.xml"
+      enabled: false                  # Disabled
+      # max_age_days: 3               # Example: push articles within 3 days (slower-updating blogs)
+
+    - id: "yahoo-finance"
+      name: "Yahoo Finance"
+      url: "https://finance.yahoo.com/news/rssindex"
+
+    # Custom feed example
+    # - id: "custom-feed"
+    #   name: "Custom Feed"
+    #   url: "https://example.com/feed.xml"
+    #   enabled: false
+    #   max_age_days: 0               # Example: disable filtering, push all articles
+
+
+# ===============================================================
+# 4. Report Mode
+# ===============================================================
+report:
+  mode: "current"                     # Report mode (the default once schedule is on; overridden by timeline periods)
+                                      # daily = daily summary, push all matched news of the day on schedule (may include previously pushed items)
+                                      # current = current ranking, push currently-ranked matched news on schedule (persistent items reappear each time)
+                                      # incremental = incremental monitoring, push only new content, zero duplication (no push if nothing new)
+
+  display_mode: "keyword"             # Grouping dimension
+                                      # keyword = group by keyword
+                                      # platform = group by platform/source
+
+  sort_by_position_first: false       # Keyword-mode ordering (only effective when display_mode=keyword)
+                                      # true = by the definition order in frequency_words.txt
+                                      # false = by matched hit count (more hits first)
+
+  rank_threshold: 5                   # Rank highlight threshold (affects display emphasis, not crawl scope)
+
+  max_news_per_keyword: 0             # Max items shown per keyword/tag (0=unlimited; only trims display)
+
+
+# ===============================================================
+# 4.5 Filter Strategy
+# ===============================================================
+filter:
+  method: "keyword"                     # Filter method (choose one)
+                                       # keyword = keyword matching, no AI, no token cost, but fixed rules
+                                       #           word groups are defined in config/frequency_words.txt
+                                       # ai = AI smart classification, more flexible but costs tokens each run
+                                       #      interests are in config/ai_interests.txt, requires ai_filter below
+
+  priority_sort_enabled: true          # AI-mode tag ordering (only effective when method=ai)
+                                       # true = by the definition order in the interest description
+                                       # false = by matched hit count (more hits first)
+
+
+# ===============================================================
+# 4.6 AI Smart Filter (only effective when filter.method=ai)
+# ===============================================================
+ai_filter:
+  batch_size: 200                         # Titles sent to the AI per batch; auto-batched beyond this
+  batch_interval: 2                       # Batch interval (seconds) to avoid API rate limits; 0=no wait
+
+  min_score: 0.7                          # Min push-score threshold (0.0~1.0); higher is stricter
+                                          # Recommend starting at 0.5~0.7; 0=no filtering
+
+  # Interest description file (defaults to config/ai_interests.txt; no need to configure)
+  # Put custom files in config/custom/ai/ and specify the name:
+  # interests_file: "finance.txt"    # → loads config/custom/ai/finance.txt
+
+  reclassify_threshold: 0.6              # Full reclassification trigger threshold (0~1)
+                                          # Lower → favors full reclassification (more accurate, more tokens)
+                                          # Higher → favors incremental updates (cheaper, may be less fresh)
+
+  # The prompt templates below generally need no changes (not recommended to touch)
+
+  # Classification prompt template
+  prompt_file: "prompt.txt"
+
+  # Tag extraction prompt template (used on first run)
+  extract_prompt_file: "extract_prompt.txt"
+
+  # Tag update prompt template (AI compares old vs new tags when interests change)
+  update_tags_prompt_file: "update_tags_prompt.txt"
+
+
+# ===============================================================
+# 5. Push Content Control
+#
+# Centrally manage which regions appear in the push message and in what order
+# ===============================================================
+display:
+  # Region display order (top to bottom = top to bottom in the push)
+  # To reorder: just cut and paste whole lines
+  # A region shows only when: 1. it is in this list AND 2. its toggle below is true
+  region_order:
+    - new_items                           # 1️⃣ New-items region
+    - hotlist                             # 2️⃣ Hot-list region (keyword match / AI smart filter)
+    - rss                                 # 3️⃣ RSS region
+    - standalone                          # 4️⃣ Standalone region
+    - ai_analysis                         # 5️⃣ AI analysis region
+
+  # Push region toggles (used together with region_order above)
+  regions:
+    hotlist: true                     # Hot-list region: keyword match / AI smart filter (true=show, false=hide)
+    new_items: false                  # New-items region: hot-list new + RSS new (true=show, false=hide)
+                                      # Note: the 🆕 new-marker in the hotspot-word stats is not affected by this
+
+    rss: true                         # RSS region (true=show and analyze, false=hide and skip analysis)
+    standalone: false                 # Standalone region: full hot-list/RSS, not subject to keyword filtering (true=show, false=hide)
+    ai_analysis: true                 # AI analysis region (true=show, false=hide)
+
+  # Standalone region: show specified platforms/RSS in full, not subject to keyword filtering
+  # Push display is controlled by regions.standalone; AI analysis by ai_analysis.include_standalone
+  standalone:
+    platforms: ["zhihu", "wallstreetcn-hot"]     # Hot-list platform IDs (e.g. ["zhihu", "weibo"])
+    rss_feeds: []                                # RSS feed IDs (e.g. ["hacker-news"])
+    max_items: 20                                # Max items per source (0=unlimited)
+
+
+# ===============================================================
+# 6. Push Notifications
+#
+# ⚠️ Security warning: do not expose webhook URLs!
+#    On GitHub deployments, store webhooks as GitHub Secrets, not here.
+#
+# 📌 Multiple accounts: separate with semicolons (;), e.g. "url1;url2;url3"
+#    Paired items (e.g. Telegram token and chat_id) must have matching counts
+# ===============================================================
+notification:
+  enabled: true                       # Enable notifications (true=on, false=off) — master switch
+                                      # Still the master switch once schedule is on: false=never push, true=controlled by schedule
+
+  # Push channel configuration
+  channels:
+    feishu:
+      webhook_url: ""                 # Feishu bot webhook URL
+
+    dingtalk:
+      webhook_url: ""                 # DingTalk bot webhook URL
+
+    wework:
+      webhook_url: ""                 # WeCom (Enterprise WeChat) bot webhook URL
+      msg_type: "markdown"            # Message type: markdown (group bot) | text (personal WeCom app)
+
+    telegram:
+      bot_token: ""                   # Telegram Bot Token
+      chat_id: ""                     # Telegram Chat ID
+
+    email:
+      from: ""                        # Sender email address
+      password: ""                    # Sender email password or authorization code
+      to: ""                          # Recipient email(s); separate multiple addresses with commas
+      smtp_server: ""                 # SMTP server (optional; auto-detected if empty)
+      smtp_port: ""                   # SMTP port (optional; auto-detected if empty)
+
+    ntfy:
+      server_url: "https://ntfy.sh"   # ntfy server address (can be self-hosted)
+      topic: ""                       # ntfy topic name
+      token: ""                       # ntfy access token (optional, for private topics)
+
+    bark:
+      url: ""                         # Bark push URL (format: https://api.day.app/your_device_key)
+
+    slack:
+      webhook_url: ""                 # Slack Incoming Webhook URL
+
+    generic_webhook:
+      webhook_url: ""                 # Generic Webhook URL (supports Discord, Matrix, IFTTT, etc.)
+      payload_template: ""            # JSON template, supports {title} and {content} placeholders
+                                      # Example: {"content": "{content}"}
+                                      # Leave empty to use the default: {"title": "{title}", "content": "{content}"}
+
+
+# ===============================================================
+# 7. Storage
+# ===============================================================
+storage:
+  # Storage backend selection
+  # - auto: auto-select (uses remote when running in GitHub Actions with remote storage, otherwise local)
+  # - local: local SQLite + TXT/HTML files
+  # - remote: remote cloud storage (S3-compatible, supports R2/OSS/COS, etc.)
+  backend: "auto"
+
+  # Data format options
+  formats:
+    sqlite: true                      # Primary storage (must stay true; do not disable)
+    txt: false                        # Generate TXT snapshots (true=generate, false=skip)
+    html: true                        # Generate HTML reports (true=generate, false=skip)
+                                      # ⚠️ Must be true for email pushes or to view the web report
+
+  # Local storage configuration
+  local:
+    data_dir: "output"                # Data directory
+    retention_days: 0                 # Retention days (0=keep forever)
+
+  # Remote storage configuration (S3-compatible)
+  # Supports: Cloudflare R2, Alibaba Cloud OSS, Tencent Cloud COS, AWS S3, MinIO, etc.
+  # Recommended to put sensitive info in GitHub Secrets or environment variables
+  remote:
+    retention_days: 0                 # Retention days (0=keep forever)
+
+    # S3-compatible config (or use env vars S3_ENDPOINT_URL, etc.)
+    endpoint_url: ""                  # Service endpoint
+                                      # Cloudflare R2: https://<account_id>.r2.cloudflarestorage.com
+                                      # Alibaba Cloud OSS: https://oss-cn-hangzhou.aliyuncs.com
+                                      # Tencent Cloud COS: https://cos.ap-guangzhou.myqcloud.com
+    bucket_name: ""                   # Bucket name
+    access_key_id: ""                 # Access key ID
+    secret_access_key: ""             # Secret access key
+    region: ""                        # Region (optional; required by some providers)
+
+  # Data pull (sync from remote to local, for MCP Server, etc.)
+  pull:
+    enabled: false                    # Enable auto-pull on startup (true=on, false=off)
+    days: 7                           # Pull the last N days of data
+
+
+# ===============================================================
+# 8. AI Model Configuration (shared by ai_analysis / ai_translation / ai_filter)
+# ===============================================================
+ai:
+  # LiteLLM model format: provider/model-name
+  # Examples:
+  #   - deepseek/deepseek-v4-flash (DeepSeek; cheap and sufficient, recommended)
+  #   - deepseek/deepseek-v4-pro
+  #   - openai/gpt-4o (OpenAI)
+  #   - gemini/gemini-2.5-flash (Google Gemini)
+  #   - anthropic/claude-sonnet-4-20250514 (Anthropic)
+  #   - ollama/llama3 (local Ollama)
+  # Full list: https://docs.litellm.ai/docs/providers
+
+  model: "deepseek/deepseek-v4-flash"
+
+  api_key: ""                       # API Key (prefer using the AI_API_KEY environment variable)
+
+  api_base: ""                      # Custom API URL (optional; leave empty in most cases)
+                                    #
+                                    # ❓ When do you need this?
+                                    #    When your AI provider is not in the supported list above.
+                                    #    For example, some API proxies, privately deployed services, etc.
+                                    #    If you use DeepSeek, OpenAI, Gemini, etc., leave it empty.
+                                    #
+                                    # 🔧 How to fill it? Two steps:
+                                    #    Step 1 — set api_base to the endpoint given by your provider
+                                    #      e.g. https://your-provider.com/v1
+                                    #
+                                    #    Step 2 — prefix the model with "openai/"
+                                    #      e.g. openai/deepseek-ai/DeepSeek-V3
+                                    #
+                                    # 💡 Why the openai/ prefix?
+                                    #    Most AI providers share a common API format.
+                                    #    Adding openai/ tells the system "connect using this common format",
+                                    #    so almost any provider can be hooked up.
+
+
+  timeout: 120                      # Request timeout (seconds)
+
+  temperature: 1.0                  # Sampling temperature (0.0-2.0)
+                                    # Note: some models (e.g. gpt-5) may require exactly 1.0, or they error
+
+  max_tokens: 5000                  # Max generated tokens
+                                    # Note: if the API rejects this param (HTTP 400), set to 0 to stop sending it
+  # Advanced options
+  num_retries: 1                    # Retry count on failure
+  fallback_models: []               # Fallback model list (optional)
+                                    # Example: ["openai/gpt-4o-mini", "openai/deepseek-ai/DeepSeek-V3"]
+
+  # Extra params (usually no need to change; uncomment to enable)
+  # extra_params:
+  #   top_p: 1.0
+  #   presence_penalty: 0.0
+  #   stop: ["END"]
+
+
+# ===============================================================
+# 9. AI Analysis (model config is in the ai section above)
+# ===============================================================
+ai_analysis:
+  enabled: true                     # Enable AI analysis (true=on, false=off) — master switch
+                                    # Still the master switch once schedule is on: false=never analyze, true=controlled by schedule
+
+  language: "English"               # Analysis report language (e.g. "English", "Chinese", "Korean")
+  prompt_file: "ai_analysis_prompt.txt"   # Prompt file (relative to the config directory)
+
+  mode: "follow_report"             # AI analysis mode (can differ from report.mode)
+                                    # follow_report = follow report.mode (default)
+                                    # daily / current / incremental = force the specified mode
+
+  max_news_for_analysis: 150        # Max number of news items for analysis (key to controlling token cost)
+                                    # Hot lists take the quota first; RSS uses the remainder; standalone is not limited
+
+  include_rss: false                # Include RSS content in analysis (true=include, false=exclude)
+  include_standalone: true          # Include standalone-region data (true=include, false=exclude)
+
+  include_rank_timeline: true       # Rank-timeline detail level
+                                    # true = full trajectory (e.g. 1(09:30)→2(10:00)); more accurate but costs 0.5~1x more tokens
+                                    # false = simplified format (rank range + occurrence count); cheaper
+
+
+
+
+# ===============================================================
+# 10. AI Translation (model config is in the ai section above)
+#
+# Translates push titles; does not cover AI analysis content
+# ===============================================================
+ai_translation:
+  enabled: true                     # Enable translation (true=on, false=off)
+  language: "English"               # Target language (e.g. "English", "Chinese", "Korean")
+  prompt_file: "ai_translation_prompt.txt"   # Prompt file (relative to the config directory)
+
+  batch_size: 100                   # Titles sent to the AI per batch; auto-batched beyond this
+  batch_interval: 2                 # Batch interval (seconds) to avoid API rate limits; 0=no wait
+
+  # Translation scope (regions turned off in display.regions are never translated even if enabled here)
+  scope:
+    hotlist: false                  # Translate hot-list titles (true=translate, false=skip)
+    rss: true                       # Translate RSS titles (true=translate, false=skip)
+    standalone: true                # Translate standalone-region titles (true=translate, false=skip)
+
+
+# ===============================================================
+# 11. Advanced Settings (usually no need to change)
+# ===============================================================
+advanced:
+  debug: false                        # Debug mode (true=verbose logs, false=normal)
+
+  # Version checks
+  version_check_url: "https://raw.githubusercontent.com/sansan0/TrendRadar/refs/heads/master/version"
+  mcp_version_check_url: "https://raw.githubusercontent.com/sansan0/TrendRadar/refs/heads/master/version_mcp"
+  configs_version_check_url: "https://raw.githubusercontent.com/sansan0/TrendRadar/refs/heads/master/version_configs"
+
+  # Hot-list crawler technical params
+  crawler:
+    request_interval: 2000            # Request interval (ms)
+    use_proxy: false                  # Enable proxy (true=on, false=off)
+    default_proxy: "http://127.0.0.1:10801"
+
+  # RSS settings
+  rss:
+    request_interval: 1000            # Request interval (ms)
+    timeout: 15                       # Request timeout (seconds)
+    use_proxy: false                  # Use proxy (true=on, false=off)
+    proxy_url: ""                     # RSS-specific proxy (empty → use crawler.default_proxy)
+
+  # Sorting weights (used to re-rank hotlist items across platforms)
+  # Must sum to 1
+  weight:
+    rank: 0.6                         # Rank weight
+    frequency: 0.3                    # Frequency weight
+    hotness: 0.1                      # Hotness weight
+
+  # Multi-account limit
+  max_accounts_per_channel: 3         # Max accounts per channel
+
+  # Internal params below (usually no need to change)
+  # Message batch size (bytes) — internal config, do not modify
+  batch_size:
+    default: 4000
+    dingtalk: 20000
+    feishu: 30000
+    bark: 4000
+    slack: 4000
+  batch_send_interval: 3              # Batch send interval (seconds)
+  feishu_message_separator: "━━━━━━━━━━━━━━━━"

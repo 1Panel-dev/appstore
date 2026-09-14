@@ -254,8 +254,18 @@ fi
 
 if [[ -z "${EXTENSIONS##*,intl,*}" ]]; then
     echo "---------- Install intl ----------"
+
     apk add --no-cache icu-dev
+
+    export CPPFLAGS="${CPPFLAGS:-${PHP_CPPFLAGS:-}} -DU_USING_ICU_NAMESPACE=1"
+    export CXXFLAGS="${CXXFLAGS:-} -DU_USING_ICU_NAMESPACE=1"
+
+    docker-php-source extract
+    rm -f /usr/src/php/ext/intl/Makefile /usr/src/php/ext/intl/config.cache
+
     docker-php-ext-install ${MC} intl
+
+    php -m | grep -i '^intl$'
 fi
 
 if [[ -z "${EXTENSIONS##*,bz2,*}" ]]; then

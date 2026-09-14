@@ -1,0 +1,33 @@
+name: ComfyUI
+tags:
+  - AI
+title: ComfyUI
+description: "具备可视化节点图界面的强大模块化 AI 创作引擎"
+additionalProperties:
+  key: comfyui
+  name: ComfyUI
+  tags:
+    - AI
+  shortDescZh: "具备可视化节点图界面的强大模块化 AI 创作引擎"
+  shortDescEn: "A powerful and modular AI creation engine with a visual node graph interface"
+  description:
+    en: "A powerful and modular AI creation engine with a visual node graph interface"
+    es-es: "Un potente y modular motor de creacion con IA con una interfaz visual basada en grafos de nodos"
+    ja: "ビジュアルノードグラフインターフェースを備えた強力でモジュール式の AI 制作エンジン"
+    ms: "Enjin penciptaan AI yang berkuasa dan modular dengan antara muka graf nod visual"
+    pt-br: "Um poderoso e modular mecanismo de criacao com IA com uma interface visual de grafo de nos"
+    ru: "Мощный модульный ИИ-движок для творчества с визуальным интерфейсом на основе графа узлов"
+    ko: "시각적 노드 그래프 인터페이스를 갖춘 강력하고 모듈화된 AI 제작 엔진"
+    zh-Hant: "具備視覺化節點圖介面的強大模組化 AI 創作引擎"
+    zh: "具备可视化节点图界面的强大模块化 AI 创作引擎"
+    tr: "Gorsel dugum grafigi arayuzune sahip guclu ve moduler bir yapay zeka uretim motoru"
+  type: website
+  crossVersionUpdate: true
+  limit: 1
+  architectures:
+    - amd64
+    - arm64
+  website: https://www.comfy.org/
+  github: https://github.com/Comfy-Org/ComfyUI
+  document: https://docs.comfy.org/
+  gpuSupport: true

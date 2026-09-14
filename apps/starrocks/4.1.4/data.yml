@@ -1,0 +1,59 @@
+additionalProperties:
+  formFields:
+    - default: 8030
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Web Port
+      labelZh: Web 控制台端口
+      label:
+        en: Web Port
+        es-es: Puerto web
+        fa: 'پورت وب'
+        ja: Web ポート
+        ms: Port Web
+        pt-br: Porta Web
+        ru: Веб-порт
+        ko: 웹 포트
+        zh: Web 控制台端口
+        zh-Hant: Web 控制台連接埠
+        tr: Web Bağlantı Noktası
+      required: true
+      rule: paramPort
+      type: number
+    - default: 9030
+      envKey: PANEL_APP_PORT_TCP
+      labelEn: MySQL Port
+      labelZh: MySQL 端口
+      label:
+        en: MySQL Port
+        es-es: MySQL Puerto
+        fa: 'پورت MySQL'
+        ja: MySQL ポート
+        ms: Port MySQL
+        pt-br: Porta MySQL
+        ru: Порт MySQL
+        ko: MySQL 포트
+        zh: MySQL 端口
+        zh-Hant: MySQL 連接埠
+        tr: MySQL Bağlantı Noktası
+      required: true
+      rule: paramPort
+      type: number
+    - default: 8040
+      envKey: PANEL_APP_PORT_STREAM
+      labelEn: Stream Load Port
+      labelZh: Stream Load 端口
+      label:
+        en: Stream Load Port
+        es-es: Stream Load Puerto
+        fa: 'پورت Stream Load'
+        ja: ストリームロードポート
+        ms: Port Stream Load
+        pt-br: Porta Stream Load
+        ru: Порт Stream Load
+        ko: 스트림 로드 포트
+        zh: Stream Load 端口
+        zh-Hant: Stream Load 連接埠
+        tr: Stream Load Bağlantı Noktası
+      required: true
+      rule: paramPort
+      type: number

@@ -1,0 +1,94 @@
+additionalProperties:
+  formFields:
+    - default: 8800
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        en: Port
+        es-es: Puerto
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        zh-Hant: 埠
+        zh: 端口
+        ko: 포트
+        tr: Bağlantı Noktası
+    - default: ./models
+      edit: true
+      envKey: MODEL_DIR
+      labelEn: Model directory
+      labelZh: 模型目录
+      required: true
+      type: text
+      label:
+        en: Model directory
+        es-es: Directorio del modelo
+        ja: モデルディレクトリ
+        ms: Direktori model
+        pt-br: Diretório do modelo
+        ru: Каталог модели
+        zh-Hant: 模型目錄
+        zh: 模型目录
+        ko: 모델 디렉터리
+        tr: Model dizini
+    - default: model
+      edit: true
+      envKey: MODEL_NAME
+      labelEn: Model name
+      labelZh: 模型名称
+      required: true
+      type: text
+      label:
+        en: Model name
+        es-es: Nombre del modelo
+        ja: モデル名
+        ms: Nama model
+        pt-br: Nome do modelo
+        ru: Название модели
+        zh-Hant: 模型名稱
+        zh: 模型名称
+        ko: 모델 이름
+        tr: Model adı
+    - default: 0,1,2,3
+      edit: true
+      envKey: ASCEND_RT_VISIBLE_DEVICES
+      labelEn: Ascend visible devices
+      labelZh: Ascend 可见设备
+      required: true
+      type: text
+      label:
+        en: Ascend visible devices
+        es-es: Dispositivos Ascend visibles
+        ja: Ascend 表示デバイス
+        ms: Peranti Ascend boleh dilihat
+        pt-br: Dispositivos Ascend visíveis
+        ru: Видимые устройства Ascend
+        zh-Hant: Ascend 可見設備
+        zh: Ascend 可见设备
+        ko: Ascend 표시 장치
+        tr: Ascend görünür cihazlar
+    - default: >-
+        /models/model --served-model-name model --host 0.0.0.0 --port 8000 --tensor-parallel-size 4 --max_num_seqs 16 --max-model-len 16384 --gpu_memory_utilization 0.80 --dtype float16 --additional-config '{"ascend_compilation_config": {"fuse_norm_quant": false}}' --compilation-config '{"cudagraph_mode": "FULL_DECODE_ONLY", "cudagraph_capture_sizes": [1,4]}' --allowed-local-media-path /
+      edit: true
+      envKey: START_COMMAND
+      labelEn: Start command
+      labelZh: 启动命令
+      required: true
+      type: text
+      label:
+        en: Start command
+        es-es: Comando de inicio
+        ja: 起動コマンド
+        ms: Arahan mula
+        pt-br: Comando de inicialização
+        ru: Команда запуска
+        zh-Hant: 啟動命令
+        zh: 启动命令
+        ko: 시작 명령
+        tr: Başlatma komutu

@@ -1,0 +1,60 @@
+additionalProperties:
+  formFields:
+    - default: 3000
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: HTTP Port
+      labelZh: HTTP端口
+      label:
+        en: HTTP Port
+        es-es: Puerto HTTP
+        fa: 'پورت HTTP'
+        ja: HTTPポート
+        ms: Port HTTP
+        pt-br: Porta HTTP
+        ru: HTTP-порт
+        ko: HTTP 포트
+        zh: HTTP端口
+        zh-Hant: HTTP連接埠
+        tr: HTTP Bağlantı Noktası
+      required: true
+      rule: paramPort
+      type: number
+    - default: ""
+      edit: true
+      envKey: HOMEPAGE_ALLOWED_HOSTS
+      labelEn: Allowed Hosts
+      labelZh: 允许的主机地址
+      label:
+        en: Allowed Hosts
+        es-es: Hosts permitidos
+        fa: 'میزبان های مجاز'
+        ja: 許可されたホスト
+        ms: Hos yang Dibenarkan
+        pt-br: Hosts permitidos
+        ru: Разрешенные хосты
+        ko: 허용된 호스트
+        zh: 允许的主机地址
+        zh-Hant: 允許的主機位址
+        tr: İzin Verilen Ana Bilgisayarlar
+      required: true
+      type: text
+    - default: Asia/Shanghai
+      edit: true
+      envKey: TIME_ZONE
+      labelEn: Time zone
+      labelZh: 时区
+      label:
+        en: Time zone
+        es-es: Zona horaria
+        fa: 'منطقه زمانی'
+        ja: タイムゾーン
+        ms: Zon masa
+        pt-br: Fuso horário
+        ru: Часовой пояс
+        ko: 시간대
+        zh: 时区
+        zh-Hant: 時區
+        tr: Saat Dilimi
+      required: true
+      type: text

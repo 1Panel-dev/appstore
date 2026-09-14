@@ -44,6 +44,22 @@
       "allowedVersions": "/^8.*/"
     },
     {
+      "matchFileNames": ["apps/cyberchef/10.*/*.yml"],
+      "allowedVersions": "/^10.*/"
+    },
+    {
+      "matchFileNames": ["apps/cyberchef/11.*/*.yml"],
+      "allowedVersions": "/^11.*/"
+    },
+    {
+      "matchFileNames": ["apps/grafana/12.*/*.yml"],
+      "allowedVersions": "/^12.*/"
+    },
+    {
+      "matchFileNames": ["apps/grafana/13.*/*.yml"],
+      "allowedVersions": "/^13.*/"
+    },
+    {
       "matchFileNames": ["apps/mariadb/10.6.*/*.yml"],
       "allowedVersions": "/^10.6.*/"
     },
@@ -88,19 +104,31 @@
       "allowedVersions": "/^18.*/"
     },
     {
-      "matchFileNames": ["apps/maxkb/1.*/*.yml"],
-      "allowedVersions": "/^1.*/"
+      "matchFileNames": ["apps/elasticsearch/9.*/*.yml"],
+      "allowedVersions": "/^9.*/"
     },
     {
-      "matchFileNames": ["apps/maxkb/2.*/*.yml"],
-      "allowedVersions": "/^2.*/"
+      "matchFileNames": ["apps/elasticsearch/8.*/*.yml"],
+      "allowedVersions": "/^8.*/"
     },
     {
       "matchFileNames": ["apps/elasticsearch/7.*/*.yml"],
       "allowedVersions": "/^7.*/"
     },
     {
-      "matchFileNames": ["apps/elasticsearch/8.*/*.yml"],
+      "matchFileNames": ["apps/kibana/9.*/*.yml"],
+      "allowedVersions": "/^9.*/"
+    },
+    {
+      "matchFileNames": ["apps/kibana/8.*/*.yml"],
+      "allowedVersions": "/^8.*/"
+    },
+    {
+      "matchFileNames": ["apps/logstash/9.*/*.yml"],
+      "allowedVersions": "/^9.*/"
+    },
+    {
+      "matchFileNames": ["apps/logstash/8.*/*.yml"],
       "allowedVersions": "/^8.*/"
     },
     {
@@ -136,6 +164,10 @@
       "allowedVersions": "/^10.*/"
     },
     {
+      "matchFileNames": ["apps/sonarqube/26.*/*.yml"],
+      "allowedVersions": "/^26.*/"
+    },
+    {
       "matchFileNames": ["apps/mssql/2017-*/*.yml"],
       "allowedVersions": "/^2017-*/"
     },
@@ -160,20 +192,17 @@
       "allowedVersions": "/^3.*/"
     },
     {
+      "matchFileNames": ["apps/zitadel/4.*/*.yml"],
+      "matchPackageNames": ["ghcr.io/zitadel/zitadel"],
+      "allowedVersions": "/^4.*/"
+    },
+    {
       "matchFileNames": ["apps/odoo/18.*/*.yml"],
       "allowedVersions": "/^18.*/"
     },
     {
       "matchFileNames": ["apps/odoo/19.*/*.yml"],
       "allowedVersions": "/^19.*/"
-    },
-    {
-      "matchFileNames": ["apps/onedev/12.*/*.yml"],
-      "allowedVersions": "/^12.*/"
-    },
-    {
-      "matchFileNames": ["apps/onedev/13.*/*.yml"],
-      "allowedVersions": "/^13.*/"
     },
     {
       "matchFileNames": ["apps/uptime-kuma/1.*/*.yml"],
@@ -190,6 +219,22 @@
     {
       "matchFileNames": ["apps/umami/3.*/*.yml"],
       "allowedVersions": "/^3.*/"
+    },
+    {
+      "matchFileNames": ["apps/valkey/9.0.*/*.yml"],
+      "allowedVersions": "/^9.0.*/"
+    },
+    {
+      "matchFileNames": ["apps/valkey/8.1.*/*.yml"],
+      "allowedVersions": "/^8.1.*/"
+    },
+    {
+      "matchFileNames": ["apps/valkey/8.0.*/*.yml"],
+      "allowedVersions": "/^8.0.*/"
+    },
+    {
+      "matchFileNames": ["apps/valkey/7.2.*/*.yml"],
+      "allowedVersions": "/^7.2.*/"
     }
   ],
   "prCreation": "immediate"

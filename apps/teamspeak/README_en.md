@@ -1,4 +1,4 @@
-## Instructions
+## Setup Notes
 
 Connect to a TEAMSPEAK server in 3 simple steps:
 

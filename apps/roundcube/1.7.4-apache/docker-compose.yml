@@ -1,0 +1,29 @@
+services:
+  roundcube:
+    image: roundcube/roundcubemail:1.7.4-apache
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    environment:
+      ROUNDCUBEMAIL_DB_HOST: ${PANEL_DB_HOST}
+      ROUNDCUBEMAIL_DB_NAME: ${PANEL_DB_NAME}
+      ROUNDCUBEMAIL_DB_PASSWORD: ${PANEL_DB_USER_PASSWORD}
+      ROUNDCUBEMAIL_DB_PORT: ${PANEL_DB_PORT}
+      ROUNDCUBEMAIL_DB_TYPE: ${PANEL_DB_TYPE}
+      ROUNDCUBEMAIL_DB_USER: ${PANEL_DB_USER}
+      ROUNDCUBEMAIL_DEFAULT_HOST: ${IMAP_SERVER}
+      ROUNDCUBEMAIL_DEFAULT_PORT: ${IMAP_SERVER_PORT}
+      ROUNDCUBEMAIL_SMTP_SERVER: ${SMTP_SERVER}
+      ROUNDCUBEMAIL_SMTP_PORT: ${SMTP_SERVER_PORT}
+      ROUNDCUBEMAIL_UPLOAD_MAX_FILESIZE: ${UPLOAD_MAX_FILESIZE}
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:80
+    volumes:
+      - ./logs:/var/log/apache2
+      - ./data:/var/www/html
+    networks:
+      - 1panel-network
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true

@@ -1,7 +1,7 @@
 ## Default Credentials
 
-username: `flarum`
-password: `flarum`
+- Username: `flarum`
+- Password: `flarum`
 
 ## Introduction
 

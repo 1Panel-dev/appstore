@@ -1,7 +1,9 @@
-## Instructions
+## Setup Notes
+
+### NVIDIA versions
 
 1. Register an account at `https://huggingface.co/` and get model access to create a token.
-2. Ensure the machine has an Nvidia GPU.
+2. Ensure the machine has an NVIDIA GPU.
 3. Modify the `/etc/docker/daemon.json` file and add:
 
 ```json
@@ -14,6 +16,21 @@
 ```
 
 4. Install the nvidia-container-runtime and nvidia-docker2 components.
+
+### NVIDIA GB10 DSpark Version
+
+1. This version targets two fixed NVIDIA GB10 servers: head `10.0.1.1` and worker `10.0.1.2`.
+2. The head must have passwordless SSH access to `10.0.1.2`. Both hosts require Docker, NVIDIA Container Toolkit, and a working RoCE/InfiniBand device.
+3. The model must already exist at `/opt/1panel/ai/DeepSeek-V4-Flash-0731` on both hosts.
+4. Runtime parameters, interfaces, and node addresses are stored in the version `.env`; use `scripts/start.sh` and `scripts/stop.sh` for the two-node lifecycle.
+
+### Ascend 310P version
+
+1. The host must have the Ascend driver/CANN installed, and `npu-smi info` must list the NPU correctly.
+2. Verify that `/dev/davinci*`, `/dev/davinci_manager`, `/dev/devmm_svm`, and `/dev/hisi_hdc` exist on the host.
+3. The Ascend Compose file mounts NPU devices and driver directories explicitly, so do not enable the generic GPU configuration.
+4. Atlas 300I DUO / Ascend 310P should not depend on `triton` or `triton-ascend`. If `module 'triton' has no attribute 'language'` appears, check and uninstall residual packages in the container.
+5. Prefer Qwen3 W8A8SC-310 adapted models for stable use. Qwen3.5/Qwen3.6 support is preview-level and may need model-specific launch arguments.
 
 ## Introduction
 

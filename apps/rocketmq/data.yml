@@ -14,11 +14,14 @@ additionalProperties:
     crossVersionUpdate: false
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://rocketmq.apache.org/
     github: https://github.com/apache/rocketmq/
     document: https://rocketmq.apache.org/docs/
     description:
         en: Cloud native messaging and streaming platform
+        es-es: Cloud native messaging and streaming plataforma
+        fa: 'پلتفرم پیام رسانی و استریم Cloud Native'
         zh: 云原生消息传递和流媒体平台
         zh-Hant: 雲原生消息傳遞和流媒體平台
         ja: クラウドネイティブメッセージングおよびストリーミングプラットフォーム
@@ -26,6 +29,7 @@ additionalProperties:
         pt-br: Plataforma de mensagens e streaming nativa da nuvem
         ru: Облачная платформа для обмена сообщениями и потоковой передачи
         ko: 클라우드 네이티브 메시징 및 스트리밍 플랫폼
+        tr: Bulut yerel mesajlasma ve akis platformu
     memoryRequired: 2048
     architectures:
       - amd64

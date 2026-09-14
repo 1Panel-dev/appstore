@@ -12,6 +12,8 @@ additionalProperties:
     shortDescEn: Composable all-in-one mail server
     description:
         en: Composable all-in-one mail server
+        es-es: Composable all-in-one mail servidor
+        fa: 'سرور ایمیل جامع و ترکیب پذیر'
         ja: 組み合わせ可能なオールインワンメールサーバー
         ms: Pelayan mel semua-dalam-satu yang boleh disusun
         pt-br: Servidor de e-mail tudo-em-um composível
@@ -19,10 +21,12 @@ additionalProperties:
         ko: 구성 가능한 올인원 메일 서버
         zh-Hant: 可組合的一體化郵件伺服器
         zh: 可组合的全能邮件服务器
+        tr: Composable all-in-one mail sunucu
     type: website
     crossVersionUpdate: true
     limit: 1
     recommend: 0
+    batchInstallSupport: true
     website: https://maddy.email
     github: https://github.com/foxcpp/maddy
     document: https://maddy.email

@@ -1,4 +1,4 @@
-## Instructions
+## Setup Notes
 
 Navigate to `/opt/1panel/apps/mkdocs-material/mkdocs-material/data/docs` to start your documentation writing.
 

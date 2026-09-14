@@ -12,6 +12,8 @@ additionalProperties:
     shortDescEn: Fullstack but simple containerized mail server
     description:
         en: Fullstack but simple containerized mail server
+        es-es: Fullstack but simple containerized mail servidor
+        fa: 'سرور ایمیل کانتینری کامل اما ساده'
         ja: フルスタックでありながらシンプルなコンテナ化されたメールサーバー
         ms: Pelayan mel yang terkontainerisasi tetapi mudah
         pt-br: Servidor de e-mail completo e simples, contêinerizado
@@ -19,10 +21,12 @@ additionalProperties:
         ko: 풀스택이지만 간단한 컨테이너화된 메일 서버
         zh-Hant: 全堆疊但簡單的容器化郵件伺服器
         zh: 全栈但简单的容器化邮件服务器
+        tr: Fullstack but basit containerized mail sunucu
     type: website
     crossVersionUpdate: false
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://docker-mailserver.github.io/docker-mailserver/latest/
     github: https://github.com/docker-mailserver/docker-mailserver
     document: https://docker-mailserver.github.io/docker-mailserver/latest/

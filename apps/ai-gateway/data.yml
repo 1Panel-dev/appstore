@@ -1,0 +1,33 @@
+name: "1Panel AI 网关"
+tags:
+  - AI
+title: "企业级 AI 统一接入与治理平台"
+description: "企业级 AI 统一接入与治理平台"
+additionalProperties:
+  key: ai-gateway
+  name: "1Panel AI 网关"
+  tags:
+    - AI
+  shortDescZh: "企业级 AI 统一接入与治理平台"
+  shortDescEn: "Enterprise-grade platform for unified AI access and governance"
+  description:
+    en: "Enterprise-grade platform for unified AI access and governance"
+    es-es: "Plataforma empresarial para el acceso unificado y la gobernanza de IA"
+    ja: "統一されたAIアクセスとガバナンスのためのエンタープライズプラットフォーム"
+    ms: "Platform perusahaan untuk akses dan tadbir urus AI yang disatukan"
+    pt-br: "Plataforma empresarial para acesso unificado e governança de IA"
+    ru: "Корпоративная платформа для унифицированного доступа к ИИ и их управления"
+    ko: "통합 AI 액세스 및 거버넌스를 위한 엔터프라이즈 플랫폼"
+    zh-Hant: "企業級 AI 統一接入與治理平台"
+    zh: "企业级 AI 统一接入与治理平台"
+    tr: "Kurumsal düzeyde AI için birleşik erişim ve yönetim platformu"
+  type: website
+  crossVersionUpdate: true
+  recommend: 1
+  limit: 0
+  architectures:
+    - amd64
+    - arm64
+  website: https://1panel.cn/ai-gateway.html
+  github: https://github.com/1Panel-dev/1Panel-Gateway
+  document: https://docs.fit2cloud.com/ai-gateway

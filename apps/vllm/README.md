@@ -1,8 +1,10 @@
 ## 使用说明
 
-1. 在 `https://huggingface.co/` 注册账号并获取模型权限创建 token 
-2. 机器上有 Nvidia GPU
-3. 修改 `/etc/docker/daemon.json` 并增加
+### NVIDIA 版本
+
+1. 在 `https://huggingface.co/` 注册账号并获取模型权限创建 token。
+2. 机器上有 NVIDIA GPU。
+3. 修改 `/etc/docker/daemon.json` 并增加：
 
 ```json
    "runtimes": {
@@ -13,7 +15,22 @@
    }
 ```
 
-4. 安装 nvidia-container-runtime 和 nvidia-docker2 组件
+4. 安装 nvidia-container-runtime 和 nvidia-docker2 组件。
+
+### NVIDIA GB10 DSpark 版本
+
+1. 仅适用于两台固定配置的 NVIDIA GB10 服务器，主节点为 `10.0.1.1`，工作节点为 `10.0.1.2`。
+2. 主节点必须能够免密 SSH 到 `10.0.1.2`，两台机器都需要安装 Docker、NVIDIA Container Toolkit，并提供可用的 RoCE/InfiniBand 设备。
+3. 两台机器都必须提前准备模型目录 `/opt/1panel/ai/DeepSeek-V4-Flash-0731`。
+4. 启动参数、网卡和节点地址保存在应用版本目录的 `.env`，双机启动和停止分别使用 `scripts/start.sh` 与 `scripts/stop.sh`。
+
+### Ascend 310P 版本
+
+1. 宿主机需要已安装 Ascend 驱动/CANN，执行 `npu-smi info` 能正常看到 NPU。
+2. 确认宿主机存在 `/dev/davinci*`、`/dev/davinci_manager`、`/dev/devmm_svm`、`/dev/hisi_hdc` 等设备文件。
+3. Ascend 版本的 Compose 已经显式挂载 NPU 设备和驱动目录，不需要开启通用 GPU 配置。
+4. Atlas 300I DUO / Ascend 310P 不建议使用 `triton` 或 `triton-ascend`。如果遇到 `module 'triton' has no attribute 'language'`，请检查容器内是否残留相关包并卸载。
+5. 推荐优先使用 Qwen3 W8A8SC-310 适配模型；Qwen3.5/Qwen3.6 属于预览支持，需要按模型说明调整启动参数。
 
 ## 产品介绍
 

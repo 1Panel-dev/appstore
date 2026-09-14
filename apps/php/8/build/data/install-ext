@@ -3,6 +3,9 @@
 export MC="-j$(nproc)"
 ERROR_CODE=0
 
+pear config-set php_ini ''
+mkdir -p "$(php -d display_errors=stderr -r 'echo ini_get("extension_dir");')"
+
 echo
 echo "============================================"
 echo "PHP version               : ${PHP_VERSION}"
@@ -49,6 +52,23 @@ install_php_extensions() {
      echo "------ install-php-extensions $extension failed ------"
      ERROR_CODE=1
      return 1
+}
+
+install_php_extensions_batch() {
+    local extension
+
+    install-php-extensions "$@"
+
+    for extension in "$@"; do
+        if is_extension_installed "$extension"; then
+            continue
+        fi
+        echo "------ install-php-extensions $* failed ------"
+        ERROR_CODE=1
+        return 1
+    done
+
+    echo "------ install-php-extensions $* succeeded ------"
 }
 
 pecl_install() {
@@ -151,6 +171,15 @@ install_protobuf() {
   fi
 }
 
+trim_extension() {
+    local extension=$1
+
+    extension="${extension#"${extension%%[![:space:]]*}"}"
+    extension="${extension%"${extension##*[![:space:]]}"}"
+
+    printf '%s' "$extension"
+}
+
 install_extension() {
     local extension=$1
     if [ -z "$extension" ]; then
@@ -226,7 +255,7 @@ install_extension() {
     elif [ "$extension" = "apcu" ]; then
         pecl_install  apcu 
     elif [ "$extension" = "redis" ]; then
-        pecl_install redis
+        install_php_extensions redis
     elif [ "$extension" = "xdebug" ]; then
         install_php_extensions xdebug
     elif [ "$extension" = "imap" ]; then
@@ -302,14 +331,100 @@ install_extension() {
     fi 
 }
 
+install_extension_list() {
+    local extension_list=$1
+    local extension=
+    local has_redis=0
+    local has_igbinary=0
+    local has_msgpack=0
+    local extension_array=()
+    local extensions=()
+    local remaining_extensions=()
+    local redis_extensions=()
+
+    IFS=',' read -r -a extension_array <<< "$extension_list"
+
+    for extension in "${extension_array[@]}"; do
+        extension=$(trim_extension "$extension")
+        if [ -z "$extension" ]; then
+            continue
+        fi
+
+        extensions+=("$extension")
+        case "$extension" in
+            redis)
+                has_redis=1
+                ;;
+            msgpack)
+                has_msgpack=1
+                ;;
+            igbinary)
+                has_igbinary=1
+                ;;
+            *)
+                remaining_extensions+=("$extension")
+                ;;
+        esac
+    done
+
+    if [ $has_redis -eq 0 ]; then
+        for extension in "${extensions[@]}"; do
+            install_extension "$extension"
+            if [ $ERROR_CODE -ne 0 ]; then
+                return 1
+            fi
+        done
+        return 0
+    fi
+
+    for extension in "${remaining_extensions[@]}"; do
+        install_extension "$extension"
+        if [ $ERROR_CODE -ne 0 ]; then
+            return 1
+        fi
+    done
+
+    if [ $has_redis -eq 1 ] && ([ $has_igbinary -eq 1 ] || [ $has_msgpack -eq 1 ]); then
+        if [ $has_igbinary -eq 1 ] && ! is_extension_installed igbinary; then
+            redis_extensions+=("igbinary")
+        fi
+        if [ $has_msgpack -eq 1 ] && ! is_extension_installed msgpack; then
+            redis_extensions+=("msgpack")
+        fi
+        redis_extensions+=("redis")
+        install_php_extensions_batch "${redis_extensions[@]}"
+        return $?
+    fi
+
+    if [ $has_igbinary -eq 1 ]; then
+        install_extension igbinary
+        if [ $ERROR_CODE -ne 0 ]; then
+            return 1
+        fi
+    fi
+    if [ $has_msgpack -eq 1 ]; then
+        install_extension msgpack
+        if [ $ERROR_CODE -ne 0 ]; then
+            return 1
+        fi
+    fi
+    if [ $has_redis -eq 1 ]; then
+        install_extension redis
+        if [ $ERROR_CODE -ne 0 ]; then
+            return 1
+        fi
+    fi
+}
+
 extension=$1
 
 if [[ $extension == *,* ]]; then
-    echo "${extension}" | tr ',' '\n' | while read -r extension; do
-        install_extension $extension
-    done
+    install_extension_list "$extension"
+    if [ $ERROR_CODE -ne 0 ]; then
+        exit $ERROR_CODE
+    fi
 else
-    install_extension $extension
+    install_extension "$extension"
     if [ $ERROR_CODE -ne 0 ]; then
         exit $ERROR_CODE
     fi

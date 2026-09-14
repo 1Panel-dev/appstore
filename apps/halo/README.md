@@ -1,6 +1,6 @@
 ## 产品介绍
 
-**Halo** 是一个简洁、高效的开源建站平台。它提供了易于使用的界面和丰富的功能，使用户可以轻松地创建个人博客或专业网站。
+**Halo** 是一个简洁、高效的开源建站平台。它提供了易于使用的界面和丰富的功能，使用户可以轻松地创建博客、知识库、企业官网和在线商城。
 
 ## 主要功能
 
@@ -20,8 +20,8 @@
 
 ## 相关链接
 
-- 官网：<https://www.halo.run>
-- 专业版官网：<https://www.lxware.cn/halo>
-- 应用市场：<https://www.halo.run/store/apps>
-- 用户社区：<https://bbs.halo.run>
-- GitHub 开源仓库：<https://github.com/halo-dev/halo>
+- 官网：https://www.halo.run
+- 专业版官网：https://www.lxware.cn/halo
+- 应用市场：https://www.halo.run/store/apps
+- 用户社区：https://bbs.halo.run
+- GitHub 开源仓库：https://github.com/halo-dev/halo

@@ -1,0 +1,63 @@
+additionalProperties:
+  formFields:
+    - default: admin
+      edit: true
+      envKey: HERMES_DASHBOARD_USERNAME
+      labelEn: Username
+      labelZh: 用户名
+      required: true
+      rule: paramCommon
+      type: text
+      label:
+        en: Username
+        es-es: Usuario
+        fa: 'نام کاربری داشبورد'
+        ja: ユーザー名
+        ms: Pengguna
+        pt-br: Usuário
+        ru: пользователя
+        ko: 사용자 이름
+        zh-Hant: 使用者名稱
+        zh: 用户名
+        tr: Kullanıcı adı
+    - default: admin
+      edit: true
+      envKey: HERMES_DASHBOARD_PASSWORD
+      labelEn: Password
+      labelZh: 密码
+      random: true
+      required: true
+      rule: paramCommon
+      type: password
+      label:
+        en: Password
+        es-es: Contraseña
+        fa: 'رمز عبور داشبورد'
+        ja: パスワード
+        ms: Kata Laluan
+        pt-br: Senha
+        ru: Пароль
+        ko: 비밀번호
+        zh-Hant: 密碼
+        zh: 密码
+        tr: Şifre
+    - default: 9119
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Web UI Port
+      labelZh: Web UI 端口
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        en: Web UI Port
+        es-es: Puerto web
+        fa: 'پورت رابط وب'
+        ja: Web UIポート
+        ms: Port Web UI
+        pt-br: Porta da Web UI
+        ru: Порт веб-интерфейса
+        ko: 웹 UI 포트
+        zh-Hant: Web UI 埠
+        zh: Web UI 端口
+        tr: Web UI Bağlantı Noktası

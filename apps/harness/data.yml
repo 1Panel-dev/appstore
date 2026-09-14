@@ -13,6 +13,8 @@ additionalProperties:
   shortDescEn: An end-to-end developer platform with Source Control Management
   description:
     en: An end-to-end developer platform with Source Control Management
+    es-es: Un end-to-end developer plataforma with Source Control Management
+    fa: 'پلتفرم توسعه دهنده end-to-end با مدیریت کنترل منبع'
     ms: Satu platform pemaju hujung ke hujung dengan Pengurusan Kawalan Sumber
     pt-br: Uma plataforma de desenvolvedor de ponta a ponta com Gerenciamento de Controle de Versão
     ru: Платформа для разработчиков с полным циклом разработки с управлением версиями исходного кода
@@ -20,9 +22,11 @@ additionalProperties:
     tr: Kaynak Kontrol Yönetimi ile uçtan uca bir geliştirici platformu
     zh-hant: 一個集成源代碼管理的端到端開發者平台
     zh: 一个集成源代码管理的端到端开发者平台
+    ja: ソースコード管理を備えたエンドツーエンドの開発者プラットフォーム
   architectures:
     - amd64
     - arm64
+  batchInstallSupport: true
   website: https://www.harness.io/open-source
   github: https://github.com/harness/harness
   document: https://developer.harness.io/docs/

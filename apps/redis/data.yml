@@ -12,6 +12,8 @@ additionalProperties:
     shortDescEn: High-performance open-source key-value database
     description:
         en: High-performance open-source key-value database
+        es-es: High-performance open-source key-value base de datos
+        fa: 'پایگاه داده کلید-مقدار متن باز با کارایی بالا'
         ja: 高性能のオープンソースキー・バリューデータベース
         ms: Pangkalan data nilai-kunci sumber terbuka berprestasi tinggi
         pt-br: Banco de dados chave-valor de alto desempenho e código aberto
@@ -19,10 +21,12 @@ additionalProperties:
         ko: 고성능 오픈 소스 키-값 데이터베이스
         zh-hant: 高性能開源鍵值資料庫
         zh: 高性能的开源键值数据库
+        tr: High-performance open-source key-value veritabanı
     type: runtime
     crossVersionUpdate: false
     limit: 0
     recommend: 10
+    batchInstallSupport: true
     website: https://redis.io/
     github: https://github.com/redis/redis
     document: https://redis.io/docs/

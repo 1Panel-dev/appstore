@@ -1,8 +1,8 @@
-## Instructions
+## Setup Notes
 
 Data Directory: `./data`
 Default Username: `admin`
-Password: `Temporary password is printed to container logs.`
+- Password: `Temporary password is printed to container logs.`
 
 > Note: You must change the username/password in the Web UI settings. If you do not change the password, a new password will be generated every time the container starts.
 

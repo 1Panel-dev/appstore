@@ -1,0 +1,41 @@
+additionalProperties:
+  formFields:
+  - default: 3000
+    edit: true
+    envKey: PANEL_APP_PORT_HTTP
+    labelEn: Port
+    labelZh: 端口
+    label:
+      en: Port
+      es-es: Puerto
+      fa: 'پورت'
+      ja: ポート
+      ms: Port
+      pt-br: Porta
+      ru: Порт
+      ko: 포트
+      zh-Hant: 埠
+      zh: 端口
+      tr: Bağlantı Noktası
+    required: true
+    rule: paramPort
+    type: number
+  - default: Asia/Shanghai
+    edit: true
+    envKey: TZ
+    labelEn: Time Zone
+    labelZh: 时区
+    label:
+      en: Time zone
+      es-es: Zona horaria
+      fa: 'منطقه زمانی'
+      ja: タイムゾーン
+      ms: Zon masa
+      pt-br: Fuso horário
+      ru: Часовой пояс
+      ko: 시간대
+      zh: 时区
+      zh-Hant: 時區
+      tr: Saat Dilimi
+    required: true
+    type: text

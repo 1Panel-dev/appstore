@@ -12,6 +12,8 @@ additionalProperties:
     shortDescEn: A runner for Gitea based on Gitea fork of act
     description:
         en: A runner for Gitea based on Gitea fork of act
+        es-es: Runner para Gitea basado en la bifurcacion de act de Gitea
+        fa: 'Runner مخصوص Gitea بر پایه فورک act توسط Gitea'
         ja: act の Gitea フォークに基づいた Gitea 用ランナー
         ms: Penjalank untuk Gitea berdasarkan fork Gitea dari act
         pt-br: Um runner para Gitea baseado no fork do Gitea do act
@@ -19,10 +21,12 @@ additionalProperties:
         ko: act의 Gitea 포크를 기반으로 한 Gitea용 러너
         zh-Hant: 基於 Gitea fork 的 act 的 Gitea 執行器
         zh: 基于 Gitea fork 的 act 的 Gitea 运行器
+        tr: Gitea'nin act catali tabanli bir calistiricisi
     type: tool
     crossVersionUpdate: true
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://gitea.com/gitea/act_runner
     github: https://gitea.com/gitea/act_runner
     document: https://docs.gitea.com/next/usage/actions/act-runner

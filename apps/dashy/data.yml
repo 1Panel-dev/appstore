@@ -14,11 +14,14 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://dashy.to
     github: https://github.com/Lissy93/dashy
     document: https://dashy.to/docs
     description:
         en: A self-hostable personal dashboard built for you
+        es-es: Un autoalojable personal panel built for you
+        fa: 'داشبورد شخصی قابل خودمیزبانی، ساخته شده برای شما'
         zh: 专为您打造的可自行托管的个人仪表板
         zh-Hant: 專為您打造的可自行託管的個人儀表板
         ja: あなたのために作られたセルフホスト可能な個人用ダッシュボード
@@ -26,6 +29,7 @@ additionalProperties:
         pt-br: Um painel pessoal auto-hospedável feito para você
         ru: Самостоятельно размещаемая персональная панель управления, созданная для вас
         ko: 당신을 위해 만들어진 셀프 호스팅 개인 대시보드
+        tr: Sizin icin tasarlanmis, self-hosted kisisel pano
     architectures:
       - amd64
       - arm64

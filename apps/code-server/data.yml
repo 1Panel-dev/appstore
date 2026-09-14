@@ -12,6 +12,8 @@ additionalProperties:
     shortDescEn: VS Code in the browser
     description:
         en: VS Code in the browser
+        es-es: VS Code en el navegador
+        fa: 'VS Code در مرورگر'
         ja: ブラウザでのVS Code
         ms: VS Code di pelayar
         pt-br: VS Code no navegador
@@ -19,10 +21,12 @@ additionalProperties:
         ko: 브라우저에서 VS Code
         zh-Hant: 瀏覽器中的 VS Code
         zh: 浏览器中的 VS Code
+        tr: Tarayicida VS Code
     type: website
     crossVersionUpdate: true
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://coder.com/
     github: https://github.com/coder/code-server
     document: https://coder.com/docs/code-server/latest

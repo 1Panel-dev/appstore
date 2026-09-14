@@ -2,7 +2,7 @@ name: Renovate
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 * * * *"
   workflow_dispatch:
     inputs:
       manual-trigger:
@@ -14,9 +14,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Run Renovate
-        uses: renovatebot/github-action@5712c6a41dea6cdf32c72d92a763bd417e6606aa # v44.0.5
+        uses: renovatebot/github-action@37beffda261423addd537c33f2d126df7f6ffbab # v46.2.6
         with:
           useSlim: false
           token: ${{ secrets.GITHUBTOKEN }}

@@ -1,4 +1,4 @@
-## Instructions
+## Setup Notes
 
 After installation, a default sample configuration file is included, containing examples of various widgets. You can modify the configuration file to add or remove widgets based on your needs.
 For detailed configuration instructions, refer to the [Configuration Guide](https://github.com/glanceapp/glance/blob/main/docs/configuration.md) and [Preconfigured Pages](https://github.com/glanceapp/glance/blob/main/docs/preconfigured-pages.md).

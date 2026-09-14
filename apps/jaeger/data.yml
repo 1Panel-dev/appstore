@@ -12,6 +12,8 @@ additionalProperties:
   shortDescEn: A Distributed Tracing System
   description:
     en: A Distributed Tracing System
+    es-es: Un Distributed Tracing System
+    fa: 'سیستم ردیابی توزیع شده'
     zh: 分布式追踪系统
     zh-Hant: 分散式追蹤系統
     ja: 分散型トレーシングシステム
@@ -19,10 +21,12 @@ additionalProperties:
     pt-br: Um Sistema de Rastreamento Distribuído
     ru: Распределённая система трассировки
     ko: 분산 추적 시스템
+    tr: Dagitik izleme sistemi
   type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 0
+  batchInstallSupport: true
   website: https://www.jaegertracing.io
   github: https://github.com/jaegertracing/jaeger
   document: https://www.jaegertracing.io/docs

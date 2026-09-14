@@ -12,6 +12,8 @@ additionalProperties:
   shortDescEn: Build your personal knowledge base with Trilium Notes
   description:
     en: Build your personal knowledge base with Trilium Notes
+    es-es: Construye tu base de conocimiento personal con Trilium Notes
+    fa: 'پایگاه دانش شخصی خود را با Trilium Notes بسازید'
     ja: Trilium Notesで個人の知識ベースを構築する
     ms: Bangunkan pangkalan pengetahuan peribadi anda dengan Trilium Notes
     pt-br: Construa sua base de conhecimento pessoal com o Trilium Notes
@@ -19,10 +21,12 @@ additionalProperties:
     ko: Trilium Notes로 개인 지식 기반을 구축하세요
     zh-Hant: 使用 Trilium Notes 建立個人知識庫
     zh: 使用 Trilium Notes 建立个人知识库
+    tr: Trilium Notes ile kisisel bilgi tabaninizi olusturun
   type: website
   crossVersionUpdate: true
   limit: 1
   recommend: 0
+  batchInstallSupport: true
   website: https://trilium.rocks/
   github: https://github.com/TriliumNext/Trilium
   document: https://trilium.rocks/

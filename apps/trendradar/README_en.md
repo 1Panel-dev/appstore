@@ -1,10 +1,14 @@
-## Configuration and Usage Instructions
+## Setup and Usage
 
 After installing the application, please go to `application installation directory/config/config.yaml` to configure the remaining parameters.
 
 After installing the application, please navigate to `application installation directory/config/frequency_words.txt` to configure the hot keywords you care about.
 
-> [Keyword Configuration](https://github.com/sansan0/TrendRadar/blob/master/README-EN.md#2-keyword-configuration)
+> After upgrading the application, the `config.yaml` needs to be updated as well.
+> [Configuration Guide](https://github.com/sansan0/TrendRadar/blob/master/README-EN.md#%EF%B8%8F-configuration-guide)
+> [Visual Configuration Editor](https://sansan0.github.io/TrendRadar)
+
+Web Service: After entering the container, execute `python manage.py start_webserver` to start the service.
 
 ## Introduction
 

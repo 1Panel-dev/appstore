@@ -1,0 +1,36 @@
+name: ArchiveBox
+tags:
+    - 实用工具
+title: 开源自托管网页存档工具
+description: 开源自托管网页存档工具
+additionalProperties:
+    key: archivebox
+    name: ArchiveBox
+    tags:
+        - Tool
+    shortDescZh: 开源自托管网页存档工具
+    shortDescEn: Open source self-hosted web archiving
+    description:
+      en: Open source self-hosted web archiving
+      es-es: Archivado web autoalojado y de codigo abierto
+      fa: 'بایگانی وب متن باز و خودمیزبان'
+      ja: オープンソースのセルフホスト型ウェブアーカイブツール
+      ms: Alat pengarkiban web sumber terbuka yang dihoskan sendiri
+      pt-br: Ferramenta de arquivamento web de código aberto auto-hospedada
+      ru: Открытый инструмент для самостоятельного архивирования веб-страниц
+      ko: 오픈 소스 셀프 호스팅 웹 아카이빙 도구
+      zh-Hant: 開源自託管網頁歸檔工具
+      zh: 开源自托管网页存档工具
+      tr: Acik kaynakli, self-hosted web arsivleme araci
+    type: website
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    batchInstallSupport: true
+    website: https://archivebox.io/
+    github: https://github.com/ArchiveBox/ArchiveBox
+    document: https://github.com/ArchiveBox/ArchiveBox/wiki
+    architectures:
+      - amd64
+      - arm64
+      - arm/v7

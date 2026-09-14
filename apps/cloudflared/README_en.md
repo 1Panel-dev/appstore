@@ -2,7 +2,7 @@
 
 **Cloudflared** is a tool provided by Cloudflare for creating secure connections and exposing private networks and services to the public internet.
 
-## Instructions
+## Setup Notes
 
 1. **Installation and Setup:**
 

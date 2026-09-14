@@ -1,0 +1,108 @@
+additionalProperties:
+  formFields:
+    - default: "23366"
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      label:
+        en: Port
+        zh: 端口
+        es-es: Puerto
+        fa: 'پورت'
+        zh-Hant: 埠
+        ja: ポート
+        ko: 포트
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        tr: Bağlantı Noktası
+      required: true
+      rule: paramPort
+      type: number
+    - default: "My Blog Site"
+      edit: true
+      envKey: ATK_SITE_DEFAULT
+      labelEn: Default Site Name
+      labelZh: 站点名称
+      label:
+        en: Default Site Name
+        zh: 站点名称
+        es-es: Default Site Nombre
+        fa: 'نام پیش فرض سایت'
+        zh-Hant: 預設站點名稱
+        ja: デフォルトサイト名
+        ko: 기본 사이트 이름
+        ms: Nama tapak lalai
+        pt-br: Nome padrão do site
+        ru: Имя сайта по умолчанию
+        tr: Varsayılan site adı
+      required: false
+      type: text
+    - default: "https://example.myblog.com"
+      edit: true
+      envKey: ATK_SITE_URL
+      labelEn: Default Site Url
+      labelZh: 站点地址
+      label:
+        en: Default Site Url
+        zh: 站点地址
+        es-es: URL del sitio predeterminada
+        fa: 'URL پیش فرض سایت'
+        zh-Hant: 預設站點網址
+        ja: デフォルトサイトURL
+        ko: 기본 사이트 URL
+        ms: URL tapak lalai
+        pt-br: URL padrão do site
+        ru: URL сайта по умолчанию
+        tr: Varsayılan site URL’si
+      required: false
+      rule: paramHttp
+      type: text
+    - default: "zh-CN"
+      envKey: ATK_LOCALE
+      labelEn: Locale
+      labelZh: 语言
+      label:
+        en: Locale
+        zh: 语言
+        es-es: Configuración regional
+        fa: 'زبان/محلی سازی'
+        zh-Hant: 語言環境
+        ja: ロケール
+        ko: 로케일
+        ms: Lokal
+        pt-br: Localidade
+        ru: Локаль
+        tr: Yerel Ayar
+      required: true
+      type: select
+      values:
+        - label: 简体中文
+          value: "zh-CN"
+        - label: 繁体中文
+          value: "zh-TW"
+        - label: English
+          value: "en"
+        - label: 日本語
+          value: "ja"
+        - label: 한국어
+          value: "ko"
+    - default: Asia/Shanghai
+      envKey: TZ
+      labelEn: Time Zone
+      labelZh: 时区
+      label:
+        en: Time Zone
+        zh: 时区
+        es-es: Zona horaria
+        fa: 'منطقه زمانی'
+        zh-Hant: 時區
+        ja: タイムゾーン
+        ko: 시간대
+        ms: Zon Masa
+        pt-br: Fuso Horário
+        ru: Часовой пояс
+        tr: Saat Dilimi
+      required: true
+      type: text

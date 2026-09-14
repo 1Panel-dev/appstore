@@ -14,11 +14,14 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://verdaccio.org/
     github: https://github.com/verdaccio/verdaccio
     document: https://verdaccio.org/docs/what-is-verdaccio
     description:
         en: Local private NPM registry
+        es-es: Registro NPM privado local
+        fa: 'رجیستری خصوصی محلی NPM'
         zh: 本地私有 NPM 注册中心
         zh-Hant: 本地私有 NPM 註冊中心
         ja: ローカルプライベート NPM レジストリ
@@ -26,6 +29,7 @@ additionalProperties:
         pt-br: Registro NPM privado local
         ru: Локальный частный реестр NPM
         ko: 로컬 개인 NPM 레지스트리
+        tr: Yerel ozel NPM kayit deposu
     architectures:
       - amd64
       - arm64

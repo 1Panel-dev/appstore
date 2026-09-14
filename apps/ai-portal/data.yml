@@ -1,0 +1,32 @@
+name: "1Panel AI 门户"
+tags:
+  - AI
+title: "面向 1Panel 企业版，为用户提供自助式的 API Key 管理、技能市场和 MCP 市场能力"
+description: "面向 1Panel 企业版，为用户提供自助式的 API Key 管理、技能市场和 MCP 市场能力"
+additionalProperties:
+  key: ai-portal
+  name: "1Panel AI 门户"
+  tags:
+    - AI
+  shortDescZh: "面向 1Panel 企业版，为用户提供自助式的 API Key 管理、技能市场和 MCP 市场能力"
+  shortDescEn: "Self-service AI portal for 1Panel Enterprise with API Key management, skill marketplace, and MCP marketplace"
+  description:
+    en: "Self-service AI portal for 1Panel Enterprise with API Key management, skill marketplace, and MCP marketplace"
+    es-es: "Portal de IA de autoservicio para 1Panel Enterprise con gestión de API Key, mercado de habilidades y mercado MCP"
+    ja: "API Key 管理、スキルマーケット、MCP マーケットを提供する 1Panel Enterprise 向けセルフサービス AI ポータル"
+    ms: "Portal AI layan diri untuk 1Panel Enterprise dengan pengurusan API Key, pasaran kemahiran dan pasaran MCP"
+    pt-br: "Portal de IA de autosserviço para o 1Panel Enterprise com gerenciamento de API Key, marketplace de skills e marketplace MCP"
+    ru: "AI-портал самообслуживания для 1Panel Enterprise с управлением API Key, магазином навыков и MCP-маркетом"
+    ko: "API Key 관리, 스킬 마켓, MCP 마켓을 제공하는 1Panel Enterprise용 셀프서비스 AI 포털"
+    zh-Hant: "面向 1Panel 企業版，為使用者提供自助式 API Key 管理、技能市場和 MCP 市場能力"
+    zh: "面向 1Panel 企业版，为用户提供自助式的 API Key 管理、技能市场和 MCP 市场能力"
+    tr: "1Panel Enterprise için API Key yönetimi, beceri pazarı ve MCP pazarı sunan self servis AI portalı"
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  architectures:
+    - amd64
+    - arm64
+  website: https://1panel.cn/enterprise.html
+  github: https://github.com/1Panel-dev/AI-Portal
+  document: https://1panel.cn/enterprise.html

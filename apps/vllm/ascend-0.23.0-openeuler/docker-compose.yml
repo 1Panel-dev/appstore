@@ -1,0 +1,48 @@
+services:
+  vllm:
+    image: ${IMAGE:-quay.io/ascend/vllm-ascend:v0.23.0-openeuler}
+    entrypoint:
+      - vllm
+      - serve
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    privileged: true
+    security_opt:
+      - seccomp=unconfined
+    ipc: host
+    networks:
+      - 1panel-network
+    devices:
+      - /dev/davinci0:/dev/davinci0
+      - /dev/davinci1:/dev/davinci1
+      - /dev/davinci2:/dev/davinci2
+      - /dev/davinci3:/dev/davinci3
+      - /dev/davinci4:/dev/davinci4
+      - /dev/davinci5:/dev/davinci5
+      - /dev/davinci6:/dev/davinci6
+      - /dev/davinci7:/dev/davinci7
+      - /dev/davinci_manager:/dev/davinci_manager
+      - /dev/devmm_svm:/dev/devmm_svm
+      - /dev/hisi_hdc:/dev/hisi_hdc
+    volumes:
+      - ${MODEL_DIR}/:/workspace/${MODEL_NAME}
+      - /root/.cache:/root/.cache
+      - /usr/local/dcmi:/usr/local/dcmi
+      - /usr/local/bin/npu-smi:/usr/local/bin/npu-smi
+      - /usr/local/Ascend/driver/lib64/:/usr/local/Ascend/driver/lib64/
+      - /usr/local/Ascend/driver/version.info:/usr/local/Ascend/driver/version.info
+      - /etc/ascend_install.info:/etc/ascend_install.info
+    environment:
+      - ASCEND_RT_VISIBLE_DEVICES=${ASCEND_RT_VISIBLE_DEVICES}
+      - PYTORCH_NPU_ALLOC_CONF=expandable_segments:True
+      - HCCL_BUFFSIZE=1024
+      - OMP_PROC_BIND=false
+      - OMP_NUM_THREADS=1
+      - TASK_QUEUE_ENABLE=1
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8001
+    working_dir: /workspace
+    command: ${START_COMMAND}
+networks:
+  1panel-network:
+    external: true

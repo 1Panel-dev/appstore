@@ -1,0 +1,147 @@
+additionalProperties:
+  formFields:
+    - default: 8080
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        en: Port
+        es-es: Puerto
+        fa: 'پورت'
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh-Hant: 埠
+        zh: 端口
+        tr: Bağlantı Noktası
+    - default: "mysql"
+      edit: true
+      envKey: DBHUB_DB_TYPE
+      labelEn: DataBase Type
+      labelZh: 数据库类型
+      required: true
+      type: select
+      values:
+        - label: MySQL
+          value: "mysql"
+        - label: MariaDB
+          value: "mariadb"
+        - label: PostgreSQL
+          value: "postgres"
+        - label: SQL Server
+          value: "sqlserver"
+        - label: Oracle
+          value: "oracle"
+      label:
+        en: DataBase Type
+        es-es: Tipo de base de datos
+        fa: 'نوع پایگاه داده'
+        ja: データベースの種類
+        ms: Jenis Pangkalan Data
+        pt-br: Tipo de banco de dados
+        ru: Тип базы данных
+        ko: 데이터베이스 유형
+        zh-Hant: 資料庫類型
+        zh: 数据库类型
+        tr: Veritabanı Türü
+    - default: ""
+      edit: true
+      envKey: DBHUB_DB_NAME
+      labelEn: Database Name
+      labelZh: 数据库名称
+      required: true
+      type: text
+      label:
+        en: Database Name
+        es-es: Nombre de la base de datos
+        fa: 'نام پایگاه داده'
+        ja: データベース名
+        ms: Nama Pangkalan Data
+        pt-br: Nome do Banco de Dados
+        ru: Имя базы данных
+        ko: 데이터베이스 이름
+        zh-hant: 資料庫名稱
+        zh: 数据库名称
+        tr: Veritabanı Adı
+    - default: ""
+      edit: true
+      envKey: DBHUB_DB_USER
+      required: true
+      type: text
+      labelEn: Database User
+      labelZh: 数据库用户
+      label:
+        en: Database User
+        es-es: Usuario de la base de datos
+        fa: 'کاربر پایگاه داده'
+        ja: データベースユーザー
+        ms: Pengguna Pangkalan Data
+        pt-br: Usuário do Banco de Dados
+        ru: Пользователь базы данных
+        ko: 데이터베이스 사용자
+        zh-hant: 資料庫用戶
+        zh: 数据库用户
+        tr: Veritabanı Kullanıcısı
+    - default: ""
+      edit: true
+      envKey: DBHUB_DB_USER_PASSWORD
+      required: true
+      type: password
+      labelEn: Database Password
+      labelZh: 数据库密码
+      label:
+        en: Database Password
+        es-es: Contraseña de la base de datos
+        fa: 'رمز عبور پایگاه داده'
+        ja: データベースのパスワード
+        ms: Kata Laluan Pangkalan Data
+        pt-br: Senha do Banco de Dados
+        ru: Пароль базы данных
+        ko: 데이터베이스 비밀번호
+        zh-hant: 資料庫密碼
+        zh: 数据库密码
+        tr: Veritabanı Parolası
+    - default: ""
+      edit: true
+      envKey: DBHUB_DB_ADDRESS
+      labelEn: Database Address
+      labelZh: 数据库地址
+      required: true
+      type: text
+      label:
+        en: Database Address
+        es-es: Dirección de la base de datos
+        fa: 'آدرس پایگاه داده'
+        ja: データベースのアドレス
+        ms: Alamat Pangkalan Data
+        pt-br: Endereço do Banco de Dados
+        ru: Адрес базы данных
+        ko: 데이터베이스 주소
+        zh-hant: 資料庫地址
+        zh: 数据库地址
+        tr: Veritabanı Adresi
+    - default: ""
+      edit: true
+      envKey: DBHUB_DB_PORT
+      labelEn: Database Port
+      labelZh: 数据库端口
+      required: true
+      type: text
+      label:
+        en: Database Port
+        es-es: Puerto de la base de datos
+        fa: 'پورت پایگاه داده'
+        ja: データベースのポート
+        ms: Pangkalan Data Port
+        pt-br: Porta do Banco de Dados
+        ru: Порт базы данных
+        ko: 데이터베이스 포트
+        zh-hant: 資料庫端口
+        zh: 数据库端口
+        tr: Veritabanı Bağlantı Noktası

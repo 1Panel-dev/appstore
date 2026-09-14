@@ -1,0 +1,17 @@
+{
+  "id":"10035",
+  "state": "on",
+  "name": "Cacti",
+  "cve": "CVE-2022-46169",
+  "type": "rce",
+  "remark": "",
+  "rule": {
+    "method":"GET",
+    "type": "uri",
+    "uri": "/remote_agent.php",
+    "pattern": "eq",
+    "args": {
+      "poller_id": ""
+    }
+  }
+}

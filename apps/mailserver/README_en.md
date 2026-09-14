@@ -1,4 +1,4 @@
-## Instructions
+## Setup Notes
 
 1. Click the **`Containers`** menu on the left
 2. On the right, click the **`Terminal`** button

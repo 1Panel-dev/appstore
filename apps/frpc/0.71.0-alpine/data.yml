@@ -1,0 +1,177 @@
+additionalProperties:
+  formFields:
+    - default: Frp Client
+      envKey: CLIENT_NAME
+      labelEn: Client Name
+      labelZh: 客户端名称
+      label:
+        en: Client Name
+        zh: 客户端名称
+        es-es: Nombre del Cliente
+        fa: 'نام کلاینت'
+        zh-Hant: 用戶端名稱
+        ja: クライアント名
+        ko: 클라이언트 이름
+        ms: Nama Pelanggan
+        pt-br: Nome do Cliente
+        ru: Имя клиента
+        tr: İstemci Adı
+      required: true
+      type: text
+    - default: 127.0.0.1
+      envKey: SERVER_ADDRESS
+      labelEn: Server Address
+      labelZh: 服务端IP
+      label:
+        en: Server Address
+        zh: 服务端IP
+        es-es: Server Dirección
+        fa: 'آدرس سرور'
+        zh-Hant: 服務端地址
+        ja: サーバーアドレス
+        ko: 서버 주소
+        ms: Alamat Pelayan
+        pt-br: Endereço do Servidor
+        ru: Адрес сервера
+        tr: Sunucu Adresi
+      required: true
+      type: text
+    - default: 7000
+      envKey: SERVER_PORT
+      labelEn: Server Port
+      labelZh: 服务端端口
+      label:
+        en: Server Port
+        zh: 服务端端口
+        es-es: Server Puerto
+        fa: 'پورت سرور'
+        zh-Hant: 伺服端埠
+        ja: サーバーポート
+        ko: 서버 포트
+        ms: Port Pelayan
+        pt-br: Porta do Servidor
+        ru: Порт сервера
+        tr: Sunucu Portu
+      required: true
+      type: number
+      rule: paramPort
+    - default: 7400
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Dashboard Port
+      labelZh: Dashboard 端口
+      label:
+        en: Dashboard Port
+        zh: Dashboard 端口
+        es-es: Dashboard Puerto
+        fa: 'پورت داشبورد'
+        zh-Hant: Dashboard 埠
+        ja: ダッシュボードポート
+        ko: 대시보드 포트
+        ms: Port Papan Pemuka
+        pt-br: Porta do Painel
+        ru: Порт панели управления
+        tr: Kontrol Paneli Bağlantı Noktası
+      required: true
+      type: number
+      rule: paramPort
+    - default: admin
+      envKey: USER_NAME
+      labelEn: Dashboard Username
+      labelZh: Dashboard 用户名
+      label:
+        en: Dashboard Username
+        zh: Dashboard 用户名
+        es-es: Dashboard Nombre de usuario
+        fa: 'نام کاربری داشبورد'
+        zh-Hant: 儀表板使用者名稱
+        ja: ダッシュボードユーザー名
+        ko: 대시보드 사용자 이름
+        ms: Nama pengguna papan pemuka
+        pt-br: Nome de usuário do painel
+        ru: Имя пользователя панели
+        tr: Kontrol paneli kullanıcı adı
+      required: true
+      type: text
+    - default: admin
+      envKey: PASSWORD
+      labelEn: Dashboard Password
+      labelZh: Dashboard 密码
+      label:
+        en: Dashboard Password
+        zh: Dashboard 密码
+        es-es: Dashboard Contraseña
+        fa: 'رمز عبور داشبورد'
+        zh-Hant: Dashboard 密碼
+        ja: ダッシュボードのパスワード
+        ko: 대시보드 비밀번호
+        ms: Kata Laluan Papan Pemuka
+        pt-br: Senha do Painel
+        ru: Пароль панели управления
+        tr: Kontrol Paneli Parolası
+      required: true
+      random: true
+      rule: paramComplexity
+      type: password
+    - default: 'token123456'
+      envKey: AUTH_TOKEN
+      labelEn: Auth Token
+      labelZh: 密钥
+      label:
+        en: Auth Token
+        zh: 密钥
+        es-es: Token de autenticación
+        fa: 'توکن احراز هویت'
+        zh-Hant: 驗證 Token
+        ja: 認証トークン
+        ko: 인증 토큰
+        ms: Token pengesahan
+        pt-br: Token de autenticação
+        ru: Токен аутентификации
+        tr: Kimlik doğrulama tokenı
+      required: true
+      type: text
+    - default: "false"
+      envKey: ENABLE_VIRTUAL_NET
+      labelEn: Enable Virtual Network
+      labelZh: 启用虚拟网络
+      label:
+        en: Enable Virtual Network
+        zh: 启用虚拟网络
+        es-es: Habilitar red virtual
+        fa: 'فعال‌سازی شبکه مجازی'
+        zh-Hant: 啟用虛擬網絡
+        ja: 仮想ネットワークを有効にする
+        ko: 가상 네트워크 활성화
+        ms: Dayakan rangkaian maya
+        pt-br: Habilitar rede virtual
+        ru: Включить виртуальную сеть
+        tr: Sanal ağı etkinleştir
+      required: true
+      type: select
+      values:
+        - label: "开启"
+          value: "true"
+        - label: "关闭"
+          value: "false"
+    - default: "10.0.0.1/24"
+      envKey: VIRTUAL_NET_IP
+      labelEn: Virtual Network IP (CIDR)
+      labelZh: 虚拟网络IP (CIDR)（仅启用虚拟网络时生效）
+      label:
+        en: Virtual Network IP (CIDR)
+        zh: 虚拟网络IP (CIDR)（仅启用虚拟网络时生效）
+        es-es: IP de red virtual (CIDR)
+        fa: 'آدرس شبکه مجازی (CIDR)'
+        zh-Hant: 虛擬網絡IP (CIDR)（僅啟用虛擬網絡時生效）
+        ja: 仮想ネットワークIP (CIDR)
+        ko: 가상 네트워크 IP (CIDR)
+        ms: IP rangkaian maya (CIDR)
+        pt-br: IP da rede virtual (CIDR)
+        ru: IP виртуальной сети (CIDR)
+        tr: Sanal ağ IP'si (CIDR)
+      required: true
+      type: text
+
+
+
+

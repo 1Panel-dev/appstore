@@ -14,11 +14,14 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://www.qbittorrent.org/
     github: https://github.com/qbittorrent/qBittorrent
     document: http://wiki.qbittorrent.org/
     description:
         en: Cross-platform open source BitTorrent client
+        es-es: Cross-plataforma de código abierto BitTorrent cliente
+        fa: 'کلاینت BitTorrent متن باز و چندسکویی'
         zh: 跨平台的开源 BitTorrent 客户端
         zh-Hant: 跨平台的開源 BitTorrent 客戶端
         ja: クロスプラットフォームのオープンソース BitTorrent クライアント
@@ -26,6 +29,7 @@ additionalProperties:
         pt-br: Cliente BitTorrent de código aberto multiplataforma
         ru: Кроссплатформенный клиент BitTorrent с открытым исходным кодом
         ko: 크로스 플랫폼 오픈 소스 BitTorrent 클라이언트
+        tr: Cross-platform open source BitTorrent istemci
     architectures:
       - amd64
       - arm64

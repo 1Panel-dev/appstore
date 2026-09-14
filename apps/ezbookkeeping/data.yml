@@ -13,6 +13,8 @@ additionalProperties:
   shortDescEn: A lightweight, self-hosted personal finance app
   description:
     en: A lightweight, self-hosted personal finance app
+    es-es: Aplicacion ligera y autoalojada de finanzas personales
+    fa: 'برنامه مالی شخصی سبک و خودمیزبان'
     ja: 軽量でセルフホスト型の個人向け家計簿アプリ
     ms: Aplikasi kewangan peribadi yang ringan dan dihoskan sendiri
     pt-br: Um aplicativo de finanças pessoais leve e auto-hospedado
@@ -23,6 +25,7 @@ additionalProperties:
     zh: 轻量级、自托管的个人财务应用
   crossVersionUpdate: true
   limit: 0
+  batchInstallSupport: true
   website: https://ezbookkeeping.mayswind.net/
   github: https://github.com/mayswind/ezbookkeeping
   document: https://ezbookkeeping.mayswind.net/

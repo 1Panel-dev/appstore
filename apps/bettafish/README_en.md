@@ -1,4 +1,4 @@
-## Configuration and Usage Instructions
+## Setup and Usage
 
 After launching the application, please configure all large language model-related parameters properly to ensure the system can connect to the large model service you have chosen.
 

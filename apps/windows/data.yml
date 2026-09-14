@@ -12,6 +12,8 @@ additionalProperties:
     shortDescEn: Windows inside a Docker container
     description:
         en: Windows inside a Docker container
+        es-es: Windows dentro de un contenedor Docker
+        fa: 'Windows داخل یک کانتینر Docker'
         ja: Docker コンテナ内の Windows
         ms: Docker 容器內的 Windows
         pt-br: Windows dentro de um contêiner Docker
@@ -19,10 +21,12 @@ additionalProperties:
         ko: Docker 컨테이너 내의 Windows
         zh-Hant: Docker 容器內的 Windows
         zh: Docker 容器内的 Windows
+        tr: Docker konteyneri icinde Windows
     type: tool
     crossVersionUpdate: true
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://github.com/dockur/windows
     github: https://github.com/dockur/windows
     document: https://github.com/dockur/windows

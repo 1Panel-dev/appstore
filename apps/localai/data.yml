@@ -14,11 +14,14 @@ additionalProperties:
     crossVersionUpdate: false
     limit: 0
     recommend: 0
+    batchInstallSupport: true
     website: https://localai.io/
     github: https://github.com/mudler/LocalAI/
     document: https://localai.io/
     description:
         en: The free, Open Source OpenAI alternative
+        es-es: The free, De código abierto OpenAI alternative
+        fa: 'جایگزین رایگان و متن باز OpenAI'
         zh: 免费的开源 OpenAI 替代品
         zh-Hant: 免費的開源 OpenAI 替代品
         ja: 無料のオープンソース OpenAI 代替品
@@ -26,6 +29,7 @@ additionalProperties:
         pt-br: A alternativa gratuita e de código aberto ao OpenAI
         ru: Бесплатная альтернатива OpenAI с открытым исходным кодом
         ko: 무료 오픈 소스 OpenAI 대안
+        tr: Ucretsiz, acik kaynakli OpenAI alternatifi
     architectures:
       - amd64
       - arm64

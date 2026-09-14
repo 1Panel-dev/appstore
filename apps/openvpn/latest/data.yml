@@ -7,6 +7,8 @@ additionalProperties:
       labelZh: 控制台端口
       label:
         en: Console Port
+        es-es: Console Puerto
+        fa: 'پورت کنسول'
         ja: コンソールポート
         ms: Port Konsol
         pt-br: Porta do Console
@@ -14,6 +16,7 @@ additionalProperties:
         ko: 콘솔 포트
         zh: 控制台端口
         zh-Hant: 控制台埠
+        tr: Console Bağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -24,6 +27,8 @@ additionalProperties:
       labelZh: HTTPS 端口
       label:
         en: HTTPS Port
+        es-es: Puerto HTTPS
+        fa: 'پورت HTTPS'
         ja: HTTPSポート
         ms: Port HTTPS
         pt-br: Porta HTTPS
@@ -31,6 +36,7 @@ additionalProperties:
         ko: HTTPS 포트
         zh: HTTPS 端口
         zh-Hant: HTTPS 埠
+        tr: HTTPS Bağlantı Noktası
       required: true
       rule: paramPort
       type: number
@@ -41,6 +47,8 @@ additionalProperties:
       labelZh: UDP 端口
       label:
         en: UDP Port
+        es-es: Puerto UDP
+        fa: 'پورت UDP'
         ja: UDPポート
         ms: Port UDP
         pt-br: Porta UDP
@@ -48,6 +56,7 @@ additionalProperties:
         ko: UDP 포트
         zh: UDP 端口
         zh-Hant: UDP 埠
+        tr: UDP Bağlantı Noktası
       required: true
       rule: paramPort
       type: number

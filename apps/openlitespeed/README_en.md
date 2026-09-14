@@ -1,4 +1,4 @@
-## Instructions
+## Setup Notes
 
 After installation, connect to the container terminal from the container interface and execute the following command to create an administrator account password:
 

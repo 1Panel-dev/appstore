@@ -1,0 +1,560 @@
+# ═══════════════════════════════════════════════════════════════
+#                   TrendRadar Timeline Configuration
+#                      Version: 1.2.0
+# ═══════════════════════════════════════════════════════════════
+#
+# This file controls "what to do, and when".
+#
+# Most people don't need to edit this file.
+# Just pick a preset template in config.yaml:
+#
+#   schedule:
+#     preset: "morning_evening"    ← change it here
+#
+#
+# Visual config editor: https://sansan0.github.io/TrendRadar/
+#
+#
+# ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
+# 📖 Core concepts (to help you understand the config below)
+# ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
+#
+#
+# 🔁 How does the program run?
+#
+#   TrendRadar doesn't run in the background constantly; it's woken up periodically by a "timer alarm":
+#
+#     GitHub Actions users → triggered by the cron in .github/workflows/crawler.yml
+#                           runs once per hour by default (e.g. at minute 33 of each hour)
+#
+#     Docker users         → triggered by CRON_SCHEDULE in docker/.env
+#                           runs every 30 minutes by default
+#
+#   Each time it's woken, the program runs through three phases in order:
+#
+#     1️⃣ Collect
+#        Crawl the latest data from hot-list platforms + RSS feeds, store it in the database
+#
+#                  ⬇
+#
+#     2️⃣ Analyze
+#        Call an AI model to deeply analyze the collected news (optional; needs an API key)
+#
+#                  ⬇
+#
+#     3️⃣ Push
+#        Send the organized hot news + AI analysis to your notification channels
+#        (Feishu, DingTalk, Telegram, email, etc.)
+#
+#   All three phases can be toggled independently. This file controls:
+#   "in which time periods, which phases are on/off".
+#
+#
+# 🔌 Master switches in config.yaml vs. timeline period switches
+#
+#   config.yaml has several "master switches" that take precedence over this file:
+#
+#     platforms.enabled: false   → never crawl hot lists (regardless of timeline)
+#     rss.enabled: false         → never crawl RSS (same)
+#     notification.enabled: false → never push (same)
+#     ai_analysis.enabled: false  → never analyze (same)
+#
+#   A period switch only takes effect when its master switch is true.
+#   In other words: the master switch decides "can it happen"; timeline decides "when".
+#
+#
+# ⏰ What are "periods" and "silent periods"?
+#
+#   Picture a day as a timeline divided into several "periods".
+#   Each period has its own behavior toggles (collect? analyze? push?).
+#
+#   Time not inside any period is a "silent period" (uses the default config).
+#   Silent periods must usually still collect, so data keeps accumulating,
+#   and when it's time to push, a complete report can be assembled.
+#
+#
+#   💡 The longer the silent periods, the richer the accumulated data (rank trajectories,
+#   entry/exit times, etc.), and the more complete the context fed to the AI for analysis,
+#   yielding higher-quality analysis. Compared to the MCP Server, this approach's all-day data
+#   shows fuller hotness trends and change arcs.
+#
+#
+# ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
+# 📋 Preset templates at a glance (just pick one)
+# ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
+#
+#   1️⃣ always_on        Always on, push whenever there's new (default)
+#   2️⃣ morning_evening  Push all day + an evening summary (recommended for most)
+#   3️⃣ office_hours     Three-block workday: onboarding brief → noon hot → wrap-up summary
+#   4️⃣ night_owl        Afternoon brief + late-night full-day summary
+#   5️⃣ custom           Fully custom (edit the custom section at the bottom of this file)
+#
+# Want to customize? Two ways:
+#   1. Jump straight to the "Custom mode" section at the bottom of this file
+#   2. Add your own preset template in the presets below
+#      (just keep the key unique, then put your template name in config.yaml)
+#
+# ⚠️ Notes on period design:
+#   GitHub Actions: a timer interval ≥ 2 hours is recommended. Since system triggers have random
+#   latency, too-short intervals may cause missed runs.
+#   Docker users: cron timing is exact, no such limit; set as needed.
+#
+#
+# ═══════════════════════════════════════════════════════════════
+
+
+# ───────────────────────────────────────────────────────────────
+# Preset templates
+# ───────────────────────────────────────────────────────────────
+presets:
+
+  # ───────────────────────────────────────────────────────────
+  # 1️⃣ always_on - always-on monitoring
+  #
+  # Simplest mode: collect + push all day; notify you as soon as anything new appears.
+  # No periods; one config for the whole day.
+  # For: power users, real-time public-opinion monitoring
+  #
+  # All day: push ✓ | AI analysis ✗ | unlimited pushes
+  # ───────────────────────────────────────────────────────────
+  always_on:
+    name: "Always-on Monitoring"
+    description: "Monitors all day; pushes immediately on anything new. For power users."
+
+    # Default config ── used when not inside any period
+    # Since this mode has no periods, default is the all-day behavior
+    default:
+      collect: true                # Collect data (crawl hot lists + RSS)
+      analyze: false               # No AI analysis (saves API cost)
+      ai_mode: "current"           # AI analyzes the current ranking
+      push: true                   # Push when there's new content
+      report_mode: "incremental"   # Push only new content to avoid duplication
+      once:                        # Limit to once per period
+        analyze: false             #   no limit on analysis count
+        push: false                #   no limit on push count
+
+    # No periods defined; the whole day uses default
+    #
+    # Syntax note: {} is YAML's "empty map", meaning nothing inside.
+    # It's equivalent to writing it multi-line but filling in nothing. [] below is the same, an "empty list".
+    periods: {}
+    day_plans:
+      all_day:
+        periods: []                   # Empty list = no periods active this day
+    week_map:
+      1: "all_day"                 # Mon
+      2: "all_day"                 # Tue
+      3: "all_day"                 # Wed
+      4: "all_day"                 # Thu
+      5: "all_day"                 # Fri
+      6: "all_day"                 # Sat
+      7: "all_day"                 # Sun
+
+
+  # ───────────────────────────────────────────────────────────
+  # 2️⃣ morning_evening - morning/evening summary (recommended)
+  #
+  # Push current hotspots all day + a full-day summary in the evening.
+  # For: most people
+  #
+  # Default (all day): push ✓ | AI analysis ✓ | unlimited pushes
+  # Evening summary: push ✓ | AI analysis ✓ | push/analyze once
+  # ───────────────────────────────────────────────────────────
+  morning_evening:
+    name: "Morning/Evening Summary"
+    description: "Push all day + an evening same-day summary. For most people."
+
+    # Default config ── behavior when no period matches
+    default:
+      collect: true                # Always collect
+      analyze: true                # AI analyzes the current ranking
+      ai_mode: "current"           # AI analyzes the current ranking
+      push: true                   # Push current on-list hotspots each time
+      report_mode: "current"       # Currently-on-list news
+      # frequency_file: "xxx.txt"               # Keyword file (optional, in config/custom/keyword/)
+      # interests_file: "xxx.txt"                # AI interest file (optional, in config/custom/ai/)
+      # filter_method: "keyword"                # Filter strategy (optional: keyword | ai; empty → global filter.method)
+      once:
+        analyze: false             # No limit on analysis count
+        push: false                # No limit on push count
+
+    # Period definitions ── only the evening summary needs special handling
+    periods:
+      evening_summary:
+        name: "Evening Summary"
+        start: "20:00"
+        end: "22:00"
+        # frequency_file: "xxx.txt"               # Keyword file (optional, in config/custom/keyword/)
+        # interests_file: "xxx.txt"                # AI interest file (optional, in config/custom/ai/)
+        # filter_method: "keyword"                # Filter strategy (optional: keyword | ai; empty → global filter.method)
+        analyze: true              # AI analysis in the evening
+        ai_mode: "daily"           # AI summarizes the whole day
+        report_mode: "daily"       # Switch to all-news-of-the-day summary
+        once:
+          analyze: true            # Analyze once within the window
+          push: true               # Push once within the window
+
+    # Day plan ── assemble periods into a day's schedule
+    day_plans:
+      all_day:
+        periods: ["evening_summary"]
+
+    # Week map ── which day plan each day uses (1=Mon ... 7=Sun)
+    week_map:
+      1: "all_day"
+      2: "all_day"
+      3: "all_day"
+      4: "all_day"
+      5: "all_day"
+      6: "all_day"
+      7: "all_day"
+
+
+  # ───────────────────────────────────────────────────────────
+  # 3️⃣ office_hours - office-hours push
+  #
+  # Three-block push on workdays, free incremental on weekends.
+  # For: office workers, enterprise users
+  #
+  # Default (silent): push ✗ | AI analysis ✗
+  # Onboarding brief: push ✓ | AI analysis ✓ | once
+  # Noon hot: push ✓ | AI analysis ✗ | once
+  # Wrap-up summary: push ✓ | AI analysis ✓ | once
+  # Weekend free: push ✓ | AI analysis ✗ | unlimited pushes
+  # ───────────────────────────────────────────────────────────
+  office_hours:
+    name: "Office Hours"
+    description: "Three-block workday push (onboarding → noon → wrap-up); free incremental on weekends."
+
+    default:
+      collect: true
+      analyze: false
+      ai_mode: "current"
+      push: false                  # No push by default
+      report_mode: "current"
+      once:
+        analyze: true              # Analyze once per period
+        push: true                 # Push once per period
+
+    periods:
+      morning_briefing:
+        name: "Morning Briefing"
+        start: "09:00"
+        end: "11:00"
+        analyze: true              # AI analyzes current hotspots
+        ai_mode: "current"         # AI analyzes the current ranking
+        push: true                 # See current hotspots after arriving
+        report_mode: "current"     # Currently-on-list news
+        # once inherits default (analyze: true, push: true) → push/analyze once
+
+      noon_update:
+        name: "Noon Hot"
+        start: "13:00"
+        end: "15:00"
+        push: true                 # Push current on-list hotspots at noon
+        report_mode: "current"     # Currently-on-list news
+        # analyze inherits default: false → no AI analysis at noon, saves API
+        # once inherits default (push: true) → push once
+
+      closing_summary:
+        name: "Wrap-up Summary"
+        start: "17:00"
+        end: "19:00"
+        analyze: true              # AI does a full-day summary analysis
+        ai_mode: "daily"           # AI analyzes the whole day
+        push: true                 # Push the full same-day summary before leaving
+        report_mode: "daily"       # All-news-of-the-day summary
+        # once inherits default (analyze: true, push: true) → push/analyze once
+
+      weekend_free:
+        name: "Weekend Free"
+        start: "08:00"
+        end: "23:00"
+        ai_mode: "current"         # AI analyzes the current ranking
+        push: true                 # Push when there's new
+        report_mode: "incremental" # Incremental: push only on new; otherwise quiet
+        once:
+          analyze: false           # No limit on analysis count
+          push: false              # No limit on push count
+
+    # Workdays use the three-block push; weekends use the free incremental mode
+    day_plans:
+      workday:
+        periods: ["morning_briefing", "noon_update", "closing_summary"]
+      weekend:
+        periods: ["weekend_free"]  # Weekend: push only new content; avoids disturbing sleep
+
+    week_map:
+      1: "workday"                 # Mon → workday plan
+      2: "workday"
+      3: "workday"
+      4: "workday"
+      5: "workday"
+      6: "weekend"                 # Sat → weekend plan
+      7: "weekend"                 # Sun → weekend plan
+
+
+  # ───────────────────────────────────────────────────────────
+  # 4️⃣ night_owl - night-owl mode
+  #
+  # Quiet by day; one push each in the afternoon and late at night.
+  # For: night workers, users in different time zones, freelancers
+  #
+  # Default (day silent): push ✗ | AI analysis ✗
+  # Afternoon brief: push ✓ | AI analysis ✓ | once
+  # Late-night summary: push ✓ | AI analysis ✓ | once
+  # ───────────────────────────────────────────────────────────
+  night_owl:
+    name: "Night Owl"
+    description: "Afternoon brief + late-night full-day summary. For night workers and international users."
+
+    default:
+      collect: true
+      analyze: false
+      ai_mode: "current"
+      push: false
+      report_mode: "current"
+      once:
+        analyze: true              # Analyze once per period
+        push: true                 # Push once per period
+
+    periods:
+      afternoon_peek:
+        name: "Afternoon Brief"
+        start: "15:00"
+        end: "17:00"
+        analyze: true              # AI analyzes current hotspots
+        ai_mode: "current"         # AI analyzes the current ranking
+        push: true                 # See current hotspots in the afternoon
+        report_mode: "current"     # Currently-on-list news
+        # once inherits default (analyze: true, push: true) → push/analyze once
+
+      late_night:
+        name: "Late-night Summary"
+        start: "22:00"
+        end: "01:00"               # start > end → auto-detected as cross-midnight
+        analyze: true              # AI does a full-day summary analysis
+        ai_mode: "daily"           # AI analyzes the whole day
+        push: true                 # Push the full same-day summary late at night
+        report_mode: "daily"       # All-news-of-the-day summary
+        # once inherits default (analyze: true, push: true) → push/analyze once
+
+    day_plans:
+      all_day:
+        periods: ["afternoon_peek", "late_night"]
+    week_map:
+      1: "all_day"
+      2: "all_day"
+      3: "all_day"
+      4: "all_day"
+      5: "all_day"
+      6: "all_day"
+      7: "all_day"
+
+
+# ═══════════════════════════════════════════════════════════════
+#
+# 5️⃣ Custom Mode
+#
+# When config.yaml sets schedule.preset: "custom",
+# the system reads the config block below.
+#
+# If the presets above don't fit your needs, define your own freely here.
+#
+# ═══════════════════════════════════════════════════════════════
+#
+# The idea behind a custom config is simple — like building blocks:
+#
+#   Step 1: Define "blocks" (periods)
+#            Each block = a time period + what to do in it
+#            e.g. morning 08-10 push, evening 19-21 summary
+#
+#   Step 2: Assemble "a day's plan" (day_plans)
+#            Combine blocks into a day's schedule
+#            e.g. workday uses [morning, evening], weekend uses [evening]
+#
+#   Step 3: Assign "which plan each day uses" (week_map)
+#            Mon–Sun each map to a day plan
+#            e.g. Mon–Fri use workday, Sat–Sun use weekend
+#
+#   There's also a "default config" — used when a moment isn't inside any block.
+#   Fields not written inside a block also fall back to the default.
+#
+#
+# Below is a full custom example with different schedules for workdays and weekends:
+#
+#   Workday periods:
+#     Late-night quiet 23:00-06:00 (cross-midnight): collect ✓ | analyze ✓ | push ✗
+#     Workday morning 08:00-10:00: push ✓ | incremental
+#     Evening summary 19:00-21:00: push ✓ | analyze ✓ | daily
+#     Other times use the default config (silent collect)
+#
+#   Weekend periods:
+#     Late-night quiet 23:00-06:00 (cross-midnight): collect ✓ | analyze ✓ | push ✗
+#     Weekend morning 10:00-12:00: push ✓ | daily
+#     Evening summary 19:00-21:00: push ✓ | analyze ✓ | daily
+#     Other times use the default config (silent collect)
+
+custom:
+  name: "Custom"
+  description: "Freely define periods, day plans, and the week map."
+
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # Default config
+  #
+  # Used when the current moment isn't inside any period (block).
+  # Fields not written in a period also fall back here.
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  default:
+    collect: true                  # Collect data (crawl hot lists + RSS)
+    analyze: false                 # Run AI analysis
+    ai_mode: "current"            # AI analysis mode:
+                                   #   follow_report → follow report_mode
+                                   #   daily         → force full-day summary
+                                   #   current       → force current ranking
+                                   #   incremental   → force incremental mode
+    push: false                    # Send push notifications
+    report_mode: "current"         # Report mode:
+                                   #   daily       → summary of all news of the day
+                                   #   current     → currently-on-list news
+                                   #   incremental → push only new content
+
+
+    # frequency_file: "general.txt"
+                                   # Keyword file (optional, in config/custom/keyword/)
+                                   # Empty → uses the default config/frequency_words.txt
+                                   # A period can also set this to override the default
+                                   # e.g. the evening summary uses a tech keyword library:
+                                   #   frequency_file: "tech.txt"
+                                   # Note: only effective when filter_method is keyword
+
+    # interests_file: "finance.txt"
+                                   # AI interest description file (optional, in config/custom/ai/)
+                                   # Empty → uses the default config/ai_interests.txt
+                                   # A period can also set this to override the default
+                                   # e.g. the evening summary uses finance interests:
+                                   #   interests_file: "finance.txt"
+                                   # Note: only effective when filter_method is ai
+
+    # filter_method: "keyword"     # Filter strategy (optional: keyword | ai)
+                                   # Empty → uses the global config.yaml filter.method
+                                   # A period can also set this to override
+                                   # e.g. the evening summary uses AI filtering:
+                                   #   filter_method: "ai"
+    once:
+      analyze: true                # Analyze once within the period (saves API cost)
+      push: true                   # Push once within the period (fewer interruptions)
+
+
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # Step 1: Define blocks (periods)
+  #
+  # Each period has a unique key (e.g. deep_quiet),
+  # and start / end for its active time range.
+  #
+  # Only write "fields that differ from default"; the rest inherit default.
+  # e.g. weekday_morning doesn't write collect, so it inherits default's collect: true.
+  #
+  # Tip: if start > end (e.g. 22:00 → 07:00),
+  #       it's auto-detected as a cross-midnight period.
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  periods:
+
+    deep_quiet:
+      name: "Late-night Quiet"
+      start: "23:00"
+      end: "06:00"                 # 23:00 → 06:00 next day (cross-midnight period)
+      # frequency_file: "xxx.txt"               # Keyword file (optional, in config/custom/keyword/)
+      # interests_file: "xxx.txt"                # AI interest file (optional, in config/custom/ai/)
+      # filter_method: "keyword"                # Filter strategy (optional: keyword | ai; empty → global filter.method)
+      collect: true                # Keep collecting at night
+      analyze: true                # AI analysis can run at night (no push anyway)
+      push: false                  # No push late at night to avoid disturbance
+
+    weekday_morning:
+      name: "Workday Morning"
+      start: "08:00"
+      end: "10:00"                 # 2h span, ample trigger margin
+      # frequency_file: "xxx.txt"               # Keyword file (optional, in config/custom/keyword/)
+      # interests_file: "xxx.txt"                # AI interest file (optional, in config/custom/ai/)
+      # filter_method: "keyword"                # Filter strategy (optional: keyword | ai; empty → global filter.method)
+      push: true                   # One push in the morning
+      report_mode: "incremental"   # Push only new content
+      # once inherits default (push: true) → push once within the window
+
+    weekend_morning:
+      name: "Weekend Morning"
+      start: "10:00"
+      end: "12:00"                 # 2h span
+      # frequency_file: "xxx.txt"               # Keyword file (optional, in config/custom/keyword/)
+      # interests_file: "xxx.txt"                # AI interest file (optional, in config/custom/ai/)
+      # filter_method: "keyword"                # Filter strategy (optional: keyword | ai; empty → global filter.method)
+      push: true
+      report_mode: "daily"         # Weekend: see the all-day summary
+      # once inherits default (push: true) → push once within the window
+
+    evening_summary:
+      name: "Evening Summary"
+      start: "19:00"
+      end: "21:00"
+      # frequency_file: "xxx.txt"               # Keyword file (optional, in config/custom/keyword/)
+      # interests_file: "xxx.txt"                # AI interest file (optional, in config/custom/ai/)
+      # filter_method: "keyword"                # Filter strategy (optional: keyword | ai; empty → global filter.method)
+      analyze: true                # AI analysis in the evening
+      ai_mode: "daily"             # AI analyzes the whole day
+      push: true                   # Evening push
+      report_mode: "daily"         # All-news-of-the-day summary
+      # once inherits default (analyze: true, push: true) → analyze/push once
+
+
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # Step 2: Assemble blocks into day plans
+  #
+  # Combine the periods above into a day's schedule.
+  # You can define multiple day plans (e.g. workday and weekend),
+  # then assign them to different weekdays in the week_map in Step 3.
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  day_plans:
+    workday:                       # Workday plan
+      periods: ["deep_quiet", "weekday_morning", "evening_summary"]
+    weekend:                       # Weekend plan (swap weekday_morning for weekend_morning)
+      periods: ["deep_quiet", "weekend_morning", "evening_summary"]
+
+
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # Step 3: Assign which day plan each day uses
+  #
+  # 1=Mon  2=Tue  3=Wed  4=Thu  5=Fri  6=Sat  7=Sun
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  week_map:
+    1: "workday"                   # Mon → workday plan
+    2: "workday"                   # Tue
+    3: "workday"                   # Wed
+    4: "workday"                   # Thu
+    5: "workday"                   # Fri
+    6: "weekend"                   # Sat → weekend plan
+    7: "weekend"                   # Sun
+
+
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # Overlap policy (usually no need to change)
+  #
+  # What is an "overlap"?
+  #   If two of your periods overlap (e.g. A is 08:00-12:00, B is 10:00-14:00),
+  #   then 10:00-12:00 belongs to both A and B — an overlap.
+  #   The program then needs to know: which one wins?
+  #
+  # Two options:
+  #
+  #   error_on_overlap (recommended)
+  #     Returns an error immediately, prompting you to fix the config.
+  #     For most people — overlapping periods are usually mistakes; an error catches them early.
+  #
+  #   last_wins
+  #     In the day_plans periods list, the later one wins.
+  #     e.g. periods: ["A", "B"] → on overlap, B takes effect.
+  #     For cases: you want a wide period as the base, then a later small one to override.
+  #
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  overlap:
+    policy: "error_on_overlap"

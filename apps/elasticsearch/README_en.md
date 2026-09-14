@@ -1,4 +1,4 @@
-## Default Account
+## Default Credentials
 
 Account: `elastic`
 

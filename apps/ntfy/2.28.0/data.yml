@@ -1,0 +1,99 @@
+additionalProperties:
+  formFields:
+    - default: "40265"
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      label:
+        en: Port
+        es-es: Puerto
+        fa: 'پورت'
+        ja: ポート
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        ko: 포트
+        zh: 端口
+        zh-Hant: 埠
+        tr: Bağlantı Noktası
+      required: true
+      rule: paramPort
+      type: number
+    - default: "80"
+      edit: true
+      envKey: APP_PORT_INTERNAL
+      labelEn: Internal Container Ports
+      labelZh: 容器内部端口
+      label:
+        en: Internal Container Ports
+        es-es: Internal Container Puertos
+        fa: 'پورت های داخلی کانتینر'
+        ja: 内部コンテナポート
+        ms: Port Dalaman Kontena
+        pt-br: Portas Internas do Contêiner
+        ru: Внутренние порты контейнера
+        ko: 내부 컨테이너 포트
+        zh: 容器内部端口
+        zh-Hant: 容器內部埠
+        tr: Dahili Konteyner Bağlantı Noktaları
+      required: true
+      rule: paramPort
+      type: number
+    - default: "Asia/Shanghai"
+      edit: true
+      envKey: TIME_ZONE
+      labelEn: Time Zone
+      labelZh: 时区
+      label:
+        en: Time Zone
+        es-es: Zona horaria
+        fa: 'منطقه زمانی'
+        ja: タイムゾーン
+        ms: Zon Masa
+        pt-br: Fuso Horário
+        ru: Часовой пояс
+        ko: 시간대
+        zh: 时区
+        zh-Hant: 時區
+        tr: Saat Dilimi
+      required: true
+      type: text
+    - default: "1000"
+      edit: true
+      envKey: PUID
+      labelEn: User ID
+      labelZh: 用户 ID
+      label:
+        en: User ID
+        es-es: Usuario ID
+        fa: 'شناسه کاربر'
+        ja: ユーザー ID
+        ms: ID Pengguna
+        pt-br: ID do Usuário
+        ru: ID пользователя
+        ko: 사용자 ID
+        zh: 用户 ID
+        zh-Hant: 用戶 ID
+        tr: Kullanıcı ID
+      required: true
+      type: number
+    - default: "1000"
+      edit: true
+      envKey: PGID
+      labelEn: Group ID
+      labelZh: 组 ID
+      label:
+        en: Group ID
+        es-es: ID de grupo
+        fa: 'شناسه گروه'
+        ja: グループ ID
+        ms: ID Kumpulan
+        pt-br: ID do Grupo
+        ru: ID группы
+        ko: 그룹 ID
+        zh: 组 ID
+        zh-Hant: 組 ID
+        tr: Grup kimligi
+      required: true
+      type: number

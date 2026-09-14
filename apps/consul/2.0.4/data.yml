@@ -1,0 +1,42 @@
+additionalProperties:
+    formFields:
+        - default: 8500
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: HTTP Port
+          labelZh: HTTP端口
+          required: true
+          rule: paramPort
+          type: number
+          label:
+            en: HTTP Port
+            es-es: Puerto HTTP
+            fa: 'پورت HTTP'
+            ja: HTTPポート
+            ms: Port HTTP
+            pt-br: Porta HTTP
+            ru: HTTP порт
+            ko: HTTP 포트
+            zh: HTTP端口
+            zh-Hant: HTTP連接埠
+            tr: HTTP Bağlantı Noktası
+        - default: 8600
+          edit: true
+          envKey: PANEL_APP_PORT_DNS
+          labelEn: DNS Port
+          labelZh: DNS端口
+          required: true
+          rule: paramPort
+          type: number
+          label:
+            en: DNS Port
+            es-es: DNS Puerto
+            fa: 'پورت DNS'
+            ja: DNSポート
+            ms: Port DNS
+            pt-br: Porta DNS
+            ru: DNS порт
+            ko: DNS 포트
+            zh: DNS端口
+            zh-Hant: DNS連接埠
+            tr: DNS Bağlantı Noktası

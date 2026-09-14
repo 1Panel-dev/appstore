@@ -1,0 +1,162 @@
+additionalProperties:
+  formFields:
+    - default: 10051
+      edit: true
+      envKey: PANEL_APP_PORT_RECEIVE
+      labelEn: Data receiving port
+      labelZh: 数据接收端口
+      label:
+        en: Data Receiving Port
+        es-es: Puerto de recepción de datos
+        fa: پورت دریافت داده
+        ja: データ受信ポート
+        ko: 데이터 수신 포트
+        ms: Port Penerimaan Data
+        pt-br: Porta de Recebimento de Dados
+        ru: Порт приема данных
+        tr: Veri Alma Portu
+        zh-Hant: 資料接收埠
+        zh: 数据接收端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: zabbix-proxy
+      envKey: ZABBIX_PROXY_HOSTNAME
+      labelEn: Proxy Name
+      labelZh: Proxy 名称
+      label:
+        en: Proxy Name
+        es-es: Nombre del proxy
+        fa: نام پروکسی
+        ja: プロキシ名
+        ko: 프록시 이름
+        ms: Nama Proksi
+        pt-br: Nome do Proxy
+        ru: Имя прокси
+        tr: Proxy Adı
+        zh-Hant: Proxy 名稱
+        zh: Proxy 名称
+      required: true
+      type: text
+    - default: ""
+      envKey: ZABBIX_SERVER
+      labelEn: Zabbix Server Address (host[:port])
+      labelZh: Zabbix 服务端地址（host[:port]）
+      label:
+        en: Zabbix Server Address (host[:port])
+        zh: Zabbix 服务端地址（host[:port]）
+        es-es: Dirección del servidor Zabbix (host[:port])
+        fa: آدرس سرور Zabbix (host[:port])
+        zh-Hant: Zabbix 伺服器位址（host[:port]）
+        ja: Zabbix サーバーアドレス (host[:port])
+        ko: Zabbix 서버 주소 (host[:port])
+        ms: Alamat Pelayan Zabbix (host[:port])
+        pt-br: Endereço do servidor Zabbix (host[:port])
+        ru: Адрес сервера Zabbix (host[:port])
+        tr: Zabbix Sunucu Adresi (host[:port])
+      required: true
+      type: text
+    - child:
+        default: ""
+        envKey: PANEL_DB_HOST
+        required: true
+        type: service
+      default: mysql
+      labelEn: Database Service
+      labelZh: 数据库服务
+      label:
+        en: Database Service
+        zh: 数据库服务
+        es-es: Servicio de base de datos
+        fa: سرویس پایگاه داده
+        zh-Hant: 資料庫服務
+        ja: データベースサービス
+        ko: 데이터베이스 서비스
+        ms: Perkhidmatan Pangkalan Data
+        pt-br: Serviço de banco de dados
+        ru: Служба базы данных
+        tr: Veritabanı Hizmeti
+      required: true
+      type: apps
+      values:
+        - label: MySQL
+          value: mysql
+        - label: MariaDB
+          value: mariadb
+    - default: ""
+      envKey: PANEL_DB_ROOT_PASSWORD
+      labelEn: Root Password
+      labelZh: Root 密码
+      label:
+        en: Root Password
+        es-es: Contraseña de root
+        fa: رمز عبور root
+        ja: ルートパスワード
+        ko: 루트 비밀번호
+        ms: Kata Laluan Root
+        pt-br: Senha Root
+        ru: Пароль root
+        tr: Root Parolası
+        zh-Hant: Root 密碼
+        zh: Root 密码
+      required: true
+      type: password
+    - default: zabbix_proxy
+      envKey: PANEL_DB_NAME
+      labelEn: Database name
+      labelZh: 数据库名称
+      label:
+        en: Database Name
+        es-es: Nombre de la base de datos
+        fa: نام پایگاه داده
+        ja: データベース名
+        ko: 데이터베이스 이름
+        ms: Nama Pangkalan Data
+        pt-br: Nome do Banco de Dados
+        ru: Имя базы данных
+        tr: Veritabanı Adı
+        zh-Hant: 資料庫名稱
+        zh: 数据库名称
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: zabbix
+      envKey: PANEL_DB_USER
+      labelEn: Database username
+      labelZh: 数据库用户
+      label:
+        en: Database User
+        es-es: Usuario de la base de datos
+        fa: کاربر پایگاه داده
+        ja: データベースユーザー
+        ko: 데이터베이스 사용자
+        ms: Pengguna Pangkalan Data
+        pt-br: Usuário do Banco de Dados
+        ru: Пользователь базы данных
+        tr: Veritabanı Kullanıcısı
+        zh-Hant: 資料庫用戶
+        zh: 数据库用户
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: zabbix@123
+      envKey: PANEL_DB_USER_PASSWORD
+      labelEn: Database Password
+      labelZh: 数据库密码
+      label:
+        en: Database Password
+        es-es: Contraseña de la base de datos
+        fa: رمز عبور پایگاه داده
+        ja: データベースのパスワード
+        ko: 데이터베이스 비밀번호
+        ms: Kata Laluan Pangkalan Data
+        pt-br: Senha do Banco de Dados
+        ru: Пароль базы данных
+        tr: Veritabanı Parolası
+        zh-Hant: 資料庫密碼
+        zh: 数据库密码
+      random: true
+      required: true
+      type: password

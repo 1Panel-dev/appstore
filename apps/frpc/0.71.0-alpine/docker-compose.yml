@@ -1,0 +1,14 @@
+services:
+  frpc:
+    image: snowdreamtech/frpc:0.71.0-alpine
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    cap_add:
+      - NET_ADMIN
+    network_mode: host
+    devices:
+      - "/dev/net/tun:/dev/net/tun"
+    volumes:
+      - ./data:/etc/frp
+    labels:
+      createdBy: "Apps"

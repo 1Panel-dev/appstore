@@ -1,4 +1,4 @@
-## Instructions
+## Setup Notes
 
 ### Enable HTTPS
 

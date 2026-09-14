@@ -1,0 +1,33 @@
+name: Sub2API
+tags:
+  - AI
+title: AI API 网关平台，支持订阅配额分发与管理
+description: AI API 网关平台，支持订阅配额分发与管理
+additionalProperties:
+  key: sub2api
+  name: Sub2API
+  tags:
+    - AI
+  shortDescZh: AI API 网关平台，支持订阅配额分发与管理
+  shortDescEn: AI API gateway platform for subscription quota distribution and management
+  description:
+    en: AI API gateway platform for subscription quota distribution and management
+    es-es: Plataforma de puerta de enlace de IA para distribuir y gestionar cuotas de suscripción
+    ja: サブスクリプション枠の配布と管理に対応する AI API ゲートウェイプラットフォーム
+    ms: Platform gerbang API AI untuk pengagihan dan pengurusan kuota langganan
+    pt-br: Plataforma de gateway de API de IA para distribuição e gerenciamento de cotas de assinatura
+    ru: Платформа AI API-шлюза для распределения и управления квотами подписки
+    ko: 구독 할당량 배포 및 관리를 위한 AI API 게이트웨이 플랫폼
+    zh-Hant: 支援訂閱額度分發與管理的 AI API 閘道平台
+    zh: AI API 网关平台，支持订阅配额分发与管理
+    tr: Abonelik kotalarını dağıtmak ve yönetmek için yapay zeka API ağ geçidi platformu
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://github.com/Wei-Shaw/sub2api
+  github: https://github.com/Wei-Shaw/sub2api
+  document: https://github.com/Wei-Shaw/sub2api
+  architectures:
+    - amd64
+    - arm64

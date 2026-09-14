@@ -14,11 +14,14 @@ additionalProperties:
     crossVersionUpdate: false
     limit: 1
     recommend: 0
+    batchInstallSupport: true
     website: https://github.com/containrrr/watchtower
     github: https://github.com/containrrr/watchtower
     document: https://containrrr.dev/watchtower/
     description:
         en: Tool to automatically update Docker container base images
+        es-es: Herramienta para actualizar automáticamente las imágenes base de contenedores Docker
+        fa: 'ابزاری برای به روزرسانی خودکار image پایه کانتینرهای Docker'
         zh: 自动更新 Docker 容器基础镜像的工具
         zh-Hant: 自動更新 Docker 容器基礎鏡像的工具
         ja: Docker コンテナのベースイメージを自動更新するツール
@@ -26,6 +29,7 @@ additionalProperties:
         pt-br: Ferramenta para atualizar automaticamente as imagens base dos contêineres Docker
         ru: Инструмент для автоматического обновления базовых образов контейнеров Docker
         ko: Docker 컨테이너 기본 이미지를 자동으로 업데이트하는 도구
+        tr: Docker konteyner temel imajlarini otomatik guncelleme araci
     architectures:
       - amd64
       - arm64

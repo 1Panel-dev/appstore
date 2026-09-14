@@ -1,0 +1,38 @@
+name: Zabbix Proxy
+tags:
+  - 监控
+title: Zabbix分布式监控代理组件
+description: Zabbix分布式监控代理，适用于多机房、内网隔离监控场景
+additionalProperties:
+  key: zabbix-proxy
+  name: Zabbix Proxy
+  tags:
+    - Tool
+    - Server
+  shortDescZh: Zabbix分布式监控代理，适用于多机房、内网隔离场景
+  shortDescEn: Distributed monitoring proxy for Zabbix, support isolated intranet deployment
+  description:
+    en: Distributed monitoring proxy for Zabbix, support isolated intranet deployment
+    zh: Zabbix分布式监控代理，适用于多机房、内网隔离监控场景
+    es-es: Proxy de monitoreo distribuido para Zabbix, compatible con implementaciones de intranet aislada
+    fa: پروکسی مانیتورینگ توزیع شده برای Zabbix، پشتیبانی از استقرار شبکه داخلی مجزا
+    zh-Hant: Zabbix分散式監控代理，適用於多機房、內網隔離監控場景
+    ja: Zabbixの分散監視プロキシ、隔離されたイントラネットへの導入に対応
+    ko: Zabbix 분산 모니터링 프록시, 격리된 인트라넷 배포 지원
+    ms: Proksi pemantauan teragih untuk Zabbix, menyokong penggunaan intranet terpencil
+    pt-br: Proxy de monitoramento distribuído para Zabbix, compatível com implantação de intranet isolada
+    ru: Распределенный прокси мониторинга для Zabbix, поддерживает развертывание в изолированных внутренних сетях
+    tr: Zabbix için dağıtık izleme proxy'si, izole intranet dağıtımını destekler
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 45
+  website: https://www.zabbix.com/
+  github: https://github.com/zabbix/zabbix
+  document: https://www.zabbix.com/documentation/7.4/en/manual/distributed_monitoring/proxies
+  memoryRequired: 512
+  architectures:
+    - amd64
+    - arm64
+    - ppc64le
+    - s390x

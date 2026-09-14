@@ -14,11 +14,14 @@ additionalProperties:
   crossVersionUpdate: true
   limit: 0
   recommend: 0
+  batchInstallSupport: true
   website: https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/
   github: https://github.com/cloudflare/cloudflared
   document: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/
   description:
     en: Cloudflare Tunnel client
+    es-es: Cloudflare Tunnel cliente
+    fa: 'کلاینت Cloudflare Tunnel'
     zh: Cloudflare Tunnel 客户端
     zh-Hant: Cloudflare Tunnel 客戶端
     ja: Cloudflare トンネルクライアント
@@ -26,6 +29,7 @@ additionalProperties:
     pt-br: Cliente do Cloudflare Tunnel
     ru: Клиент Cloudflare Tunnel
     ko: Cloudflare 터널 클라이언트
+    tr: Cloudflare Tunnel istemcisi
   architectures:
     - amd64
     - arm64
