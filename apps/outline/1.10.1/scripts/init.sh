@@ -148,6 +148,18 @@ OIDC_SCOPES=openid profile email
 OIDCENV
 chmod 600 "${DATA_DIR}/oidc.env"
 
+# Keycloak ships far fewer translations than Outline. Follow the requested
+# language for Chinese and fall back to English for everything else, so the
+# sign-in page is never forced to Chinese for non-Chinese installs.
+# Mirrors the ${PANEL_LANGUAGE:-zh_CN} fallback used in docker-compose.yml,
+# so installations upgraded from a package without the field stay aligned.
+panel_language="$(read_env_value PANEL_LANGUAGE)"
+panel_language="${panel_language:-zh_CN}"
+case "${panel_language}" in
+    zh*) keycloak_default_locale="zh-CN" ;;
+    *) keycloak_default_locale="en" ;;
+esac
+
 # Keycloak cannot configure the master realm through realm import, so the
 # container applies the admin console localization itself after startup. This
 # keeps the package to two long-running containers: 1Panel treats exited
@@ -171,7 +183,7 @@ for _ in $(seq 1 60); do
         "${KCADM}" update realms/master --config "${CFG}" \
             -s internationalizationEnabled=true \
             -s 'supportedLocales=["zh-CN","en"]' \
-            -s defaultLocale=zh-CN >/dev/null 2>&1 || true
+            -s defaultLocale="${KC_DEFAULT_LOCALE:-zh-CN}" >/dev/null 2>&1 || true
         break
     fi
     sleep 3
@@ -185,6 +197,7 @@ cat >"${DATA_DIR}/keycloak.env" <<KCENV
 KC_BOOTSTRAP_ADMIN_USERNAME=${admin_username}
 KC_BOOTSTRAP_ADMIN_PASSWORD=${env_admin_password}
 KC_HTTP_ENABLED=true
+KC_DEFAULT_LOCALE=${keycloak_default_locale}
 KC_HOSTNAME=${keycloak_public_url}
 KC_HOSTNAME_STRICT=false
 KC_PROXY_HEADERS=xforwarded
@@ -215,7 +228,7 @@ cat >"${REALM_FILE}" <<REALM
   "loginWithEmailAllowed": true,
   "internationalizationEnabled": true,
   "supportedLocales": ["zh-CN", "en"],
-  "defaultLocale": "zh-CN",
+  "defaultLocale": "${keycloak_default_locale}",
   "duplicateEmailsAllowed": false,
   "resetPasswordAllowed": true,
   "editUsernameAllowed": false,

@@ -34,6 +34,7 @@
 | Outline 公网地址 | `http://服务器IP:12115` | 浏览器实际访问地址 |
 | Keycloak 管理员账号 | `admin` | 同时作为初始 Outline 账号 |
 | Keycloak 管理员密码 | `outline-admin` | 同时作为初始 Outline 账号密码，**建议修改** |
+| Outline 新用户的界面语言 | `zh_CN` | 下拉选择，可选项为 Outline 官方支持的全部 26 种语言 |
 
 数据库名、数据库用户、数据库密码由 1Panel 自动生成。
 
@@ -51,27 +52,27 @@ Keycloak 的公开地址、OIDC 客户端密钥和回调地址都由安装脚本
 
 不需要创建工作者、不需要收邮件、不需要点击任何确认链接。
 
-## 界面语言（中文）
+## 界面语言
 
-登录页默认就是**简体中文**，Keycloak 会自动按浏览器语言显示。
+安装参数里的「Outline 新用户的界面语言」决定新用户的默认界面语言，默认 `zh_CN`（简体中文），可选项是 Outline 官方支持的全部 26 种语言。
 
-Keycloak 管理控制台的界面语言可以这样切换：
+Keycloak 的语言会自动跟随，不需要手工配置：
 
-1. 用安装时设置的管理员账号登录 `http://<服务器IP或组网IP>:12116`
-2. 右上角点当前用户名 → `Manage account`（或控制台内的语言下拉框）
-3. 在 `Account security` → `Signing in` 页面把语言改为「中文(简体)」
+| 场景 | 登录页语言 |
+| --- | --- |
+| 浏览器语言在支持列表内（如简体中文、英文） | 跟随浏览器 |
+| 浏览器语言不在支持列表内 | 跟随安装参数：中文安装为中文，其他一律英文 |
 
-两类页面都默认中文：
+Keycloak 自带的翻译远少于 Outline，所以非中文安装统一回退到英文，不会出现中文登录页。登录页右下角始终提供语言选择器，用户可以自行切换。
 
-- **用户登录页**（从 12115 跳转过去）：由 `outline` realm 的默认语言决定，安装即中文。
-- **管理控制台**（12116）：Keycloak 无法通过 realm 导入配置 master realm，因此 Keycloak 容器在启动后会自动调用管理接口开启中文支持。整个过程在同一个容器内完成，不会产生额外的或已退出的容器。
+Keycloak 管理控制台（12116）的默认语言同样跟随安装参数，由 Keycloak 容器启动后自动写入 master realm。整个过程在同一个容器内完成，不会产生额外的或已退出的容器。
 
-如果初始化容器没能完成（例如你后来改过管理员密码），可以手动开启：
+如果自动配置没有生效（例如你后来改过管理员密码），可以手工开启：
 
 1. 登录 12116 控制台
 2. 左上角切到 `master` realm
 3. `Realm settings` → `Localization` → 打开 `Internationalization`
-4. `Supported locales` 勾选「中文(简体)」，`Default locale` 选择「中文(简体)」
+4. 按需勾选 `Supported locales`，并设置 `Default locale`
 5. 保存后刷新页面，登录页就会出现语言选择器
 
 ## 添加成员
@@ -139,6 +140,19 @@ proxy_send_timeout 600s;
 ## 文件存储
 
 默认使用本地文件存储，附件位于应用目录的 `data/outline`。默认上传、导入和工作区导入限制均为 250 MiB，需要和反向代理的 `client_max_body_size` 保持一致。
+
+## 自定义环境变量
+
+`env/docker.env` 是留给用户的自定义环境变量文件，默认是空的，可以直接写入 Outline 官方支持的任意变量：
+
+```
+LOG_LEVEL=debug
+OIDC_USERNAME_CLAIM=email
+```
+
+它会在生成配置（`data/oidc.env`）之后加载，因此可以覆盖 OIDC 等由脚本生成的变量。
+
+但 `docker-compose.yml` 里 `environment:` 段已声明的变量优先级最高，例如 `DEFAULT_LANGUAGE`、`FILE_STORAGE_UPLOAD_MAX_SIZE`、`RATE_LIMITER_ENABLED`。要改这些请使用安装参数或直接编辑 compose 文件，写进 `env/docker.env` 不会生效。
 
 ## 备份与升级
 

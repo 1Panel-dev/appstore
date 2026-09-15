@@ -26,7 +26,7 @@ services:
       REDIS_URL: redis://:${PANEL_REDIS_ROOT_PASSWORD}@${PANEL_REDIS_HOST}:6379
       SECRET_KEY_FILE: /run/secrets/outline-secret-key
       UTILS_SECRET_FILE: /run/secrets/outline-utils-secret
-      DEFAULT_LANGUAGE: zh_CN
+      DEFAULT_LANGUAGE: ${PANEL_LANGUAGE:-zh_CN}
       URL: ${PANEL_APP_URL}
       PORT: 3000
       PGSSLMODE: disable
