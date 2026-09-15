@@ -9,8 +9,13 @@ services:
       - 1panel-network
     depends_on:
       - keycloak
+    # ./data/oidc.env carries the generated OIDC settings. ./env/docker.env is
+    # the empty extension point shipped by the previous package layout; it is
+    # still loaded so that variables users added there keep working. Note that
+    # keys declared in the environment block below win over both files.
     env_file:
       - ./data/oidc.env
+      - ./env/docker.env
     volumes:
       - ./data/outline:/var/lib/outline/data
       - ./data/secrets/outline-secret-key:/run/secrets/outline-secret-key:ro

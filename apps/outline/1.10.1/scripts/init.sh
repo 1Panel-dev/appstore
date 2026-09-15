@@ -15,6 +15,12 @@ REALM_NAME="outline"
 CLIENT_ID="outline"
 
 mkdir -p "${OUTLINE_DATA_DIR}" "${SECRETS_DIR}" "${KEYCLOAK_IMPORT_DIR}"
+
+# docker-compose.yml loads ./env/docker.env last so that user overrides win.
+# Compose refuses to start when a referenced env file is missing, so make
+# sure it exists even for installations upgraded from an older layout.
+mkdir -p ./env
+touch ./env/docker.env
 chmod 700 "${DATA_DIR}" "${SECRETS_DIR}"
 touch .env
 chmod 600 .env
