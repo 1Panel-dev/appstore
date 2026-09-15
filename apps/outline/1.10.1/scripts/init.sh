@@ -55,7 +55,11 @@ write_secret() {
 outline_url="$(read_env_value PANEL_APP_URL)"
 keycloak_port="$(read_env_value PANEL_APP_PORT_HTTP_KEYCLOAK)"
 container_name="$(read_env_value CONTAINER_NAME)"
+admin_username="$(read_env_value KEYCLOAK_ADMIN_USERNAME)"
 admin_password="$(read_env_value KEYCLOAK_ADMIN_PASSWORD)"
+if [[ -z "${admin_username}" ]]; then
+    admin_username="admin"
+fi
 
 if [[ -z "${outline_url}" ]]; then
     echo "PANEL_APP_URL must be set to the browser-facing Outline URL" >&2
@@ -71,6 +75,10 @@ if [[ -z "${admin_password}" ]]; then
 fi
 if [[ -z "${container_name}" ]]; then
     echo "CONTAINER_NAME must be set" >&2
+    exit 1
+fi
+if [[ ! "${admin_username}" =~ ^[A-Za-z0-9._-]{1,64}$ ]]; then
+    echo "KEYCLOAK_ADMIN_USERNAME must be 1-64 characters using letters, digits or . _ -" >&2
     exit 1
 fi
 if [[ ! "${admin_password}" =~ ^[A-Za-z0-9._@#%+=:!-]{6,64}$ ]]; then
@@ -162,7 +170,7 @@ STARTSCRIPT
 chmod 700 "${DATA_DIR}/keycloak-start.sh"
 
 cat >"${DATA_DIR}/keycloak.env" <<KCENV
-KC_BOOTSTRAP_ADMIN_USERNAME=admin
+KC_BOOTSTRAP_ADMIN_USERNAME=${admin_username}
 KC_BOOTSTRAP_ADMIN_PASSWORD=${admin_password}
 KC_HTTP_ENABLED=true
 KC_HOSTNAME=${keycloak_public_url}
@@ -225,10 +233,10 @@ cat >"${REALM_FILE}" <<REALM
   ],
   "users": [
     {
-      "username": "admin",
+      "username": "${admin_username}",
       "enabled": true,
       "emailVerified": true,
-      "email": "admin@outline.local",
+      "email": "${admin_username}@outline.local",
       "firstName": "Outline",
       "lastName": "Admin",
       "credentials": [

@@ -32,6 +32,7 @@
 | PostgreSQL 服务 | 选择已有实例 | Outline 数据库 |
 | Redis 服务 | 选择已有实例 | 缓存与队列 |
 | Outline 公网地址 | `http://服务器IP:12115` | 浏览器实际访问地址 |
+| Keycloak 管理员账号 | `admin` | 同时作为初始 Outline 账号 |
 | Keycloak 管理员密码 | `outline-admin` | 同时作为初始 Outline 账号密码，**建议修改** |
 
 数据库名、数据库用户、数据库密码由 1Panel 自动生成。
@@ -44,7 +45,7 @@ Keycloak 的公开地址、OIDC 客户端密钥和回调地址都由安装脚本
 
 1. 浏览器打开 `http://<服务器IP或组网IP>:12115`。
 2. 页面会自动跳转到登录页，输入：
-   - 用户名：`admin`
+   - 用户名：安装时填写的 Keycloak 管理员账号
    - 密码：安装时填写的 Keycloak 管理员密码
 3. 登录成功后自动进入 Outline，工作区和管理员账号会自动创建。
 
@@ -56,7 +57,7 @@ Keycloak 的公开地址、OIDC 客户端密钥和回调地址都由安装脚本
 
 Keycloak 管理控制台的界面语言可以这样切换：
 
-1. 用 `admin` 登录 `http://<服务器IP或组网IP>:12116`
+1. 用安装时设置的管理员账号登录 `http://<服务器IP或组网IP>:12116`
 2. 右上角点当前用户名 → `Manage account`（或控制台内的语言下拉框）
 3. 在 `Account security` → `Signing in` 页面把语言改为「中文(简体)」
 
@@ -76,7 +77,7 @@ Keycloak 管理控制台的界面语言可以这样切换：
 ## 添加成员
 
 1. 打开 `http://<服务器IP或组网IP>:12116`，进入 Keycloak 管理控制台。
-2. 使用 `admin` 和安装时设置的管理员密码登录。
+2. 使用安装时设置的管理员账号和密码登录。
 3. 左上角切换到 `outline` 这个 realm。
 4. 进入 `Users`，点击 `Add user`，填写：
    - Username
@@ -92,7 +93,7 @@ Keycloak 管理控制台的界面语言可以这样切换：
 
 初始密码只在第一次安装时写入 Keycloak。安装完成后要改密码，请在 Keycloak 控制台修改：
 
-- Keycloak 控制台管理员：`Realm settings` → `Users` → `admin` → `Credentials`
+- Keycloak 控制台管理员：`Realm settings` → `Users` → 安装时设置的管理员账号 → `Credentials`
 - Outline 登录用户：realm 切到 `outline` → `Users` → 对应用户 → `Credentials`
 
 直接在 1Panel 表单里修改密码不会覆盖已经初始化过的 Keycloak 数据。

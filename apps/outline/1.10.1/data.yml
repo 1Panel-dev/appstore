@@ -179,6 +179,26 @@ additionalProperties:
         zh-Hant: "Outline 公開網址，例如 http://SERVER_IP:12115"
         zh: "Outline 公网地址，例如 http://服务器IP:12115"
         tr: "Outline genel erişim URL'si, örn. http://SERVER_IP:12115"
+    - default: "admin"
+      edit: true
+      envKey: KEYCLOAK_ADMIN_USERNAME
+      labelEn: "Keycloak admin and initial Outline username"
+      labelZh: "Keycloak 管理员账号，同时作为初始 Outline 账号"
+      required: true
+      rule: paramCommon
+      type: text
+      label:
+        en: "Keycloak admin and initial Outline username"
+        es-es: "Usuario administrador de Keycloak y usuario inicial de Outline"
+        fa: "نام کاربری مدیر Keycloak و کاربر اولیه Outline"
+        ja: "Keycloak 管理者と初期 Outline ユーザーのユーザー名"
+        ms: "Nama pengguna admin Keycloak dan pengguna awal Outline"
+        pt-br: "Usuário administrador do Keycloak e usuário inicial do Outline"
+        ru: "Имя администратора Keycloak и первого пользователя Outline"
+        ko: "Keycloak 관리자 및 초기 Outline 사용자 이름"
+        zh-Hant: "Keycloak 管理員帳號，同時作為初始 Outline 帳號"
+        zh: "Keycloak 管理员账号，同时作为初始 Outline 账号"
+        tr: "Keycloak yönetici ve ilk Outline kullanıcı adı"
     - default: "outline-admin"
       edit: true
       envKey: KEYCLOAK_ADMIN_PASSWORD
