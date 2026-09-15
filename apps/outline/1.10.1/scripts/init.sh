@@ -128,6 +128,39 @@ OIDC_SCOPES=openid profile email
 OIDCENV
 chmod 600 "${DATA_DIR}/oidc.env"
 
+# Keycloak cannot configure the master realm through realm import, so the
+# container applies the admin console localization itself after startup. This
+# keeps the package to two long-running containers: 1Panel treats exited
+# containers as an application error.
+cat >"${DATA_DIR}/keycloak-start.sh" <<'STARTSCRIPT'
+#!/bin/bash
+set -u
+
+/opt/keycloak/bin/kc.sh start-dev --import-realm &
+keycloak_pid=$!
+
+trap 'kill -TERM "${keycloak_pid}" 2>/dev/null || true' TERM INT
+
+KCADM=/opt/keycloak/bin/kcadm.sh
+CFG=/tmp/kcadm.config
+for _ in $(seq 1 60); do
+    if "${KCADM}" config credentials --config "${CFG}" \
+        --server http://localhost:8080 --realm master \
+        --user "${KC_BOOTSTRAP_ADMIN_USERNAME:-admin}" \
+        --password "${KC_BOOTSTRAP_ADMIN_PASSWORD:-}" >/dev/null 2>&1; then
+        "${KCADM}" update realms/master --config "${CFG}" \
+            -s internationalizationEnabled=true \
+            -s 'supportedLocales=["zh-CN","en"]' \
+            -s defaultLocale=zh-CN >/dev/null 2>&1 || true
+        break
+    fi
+    sleep 3
+done
+
+wait "${keycloak_pid}"
+STARTSCRIPT
+chmod 700 "${DATA_DIR}/keycloak-start.sh"
+
 cat >"${DATA_DIR}/keycloak.env" <<KCENV
 KC_BOOTSTRAP_ADMIN_USERNAME=admin
 KC_BOOTSTRAP_ADMIN_PASSWORD=${admin_password}
@@ -214,6 +247,7 @@ chmod 600 "${REALM_FILE}"
 # The official images run as fixed non-root users that need writable data.
 chown -R 1001:1001 "${OUTLINE_DATA_DIR}"
 chown -R 1000:1000 "${KEYCLOAK_DATA_DIR}"
+chown 1000:1000 "${DATA_DIR}/keycloak-start.sh"
 chown 1001:1001 "${SECRETS_DIR}/outline-secret-key" "${SECRETS_DIR}/outline-utils-secret"
 chmod 600 "${SECRETS_DIR}"/*
 chmod 750 "${OUTLINE_DATA_DIR}"

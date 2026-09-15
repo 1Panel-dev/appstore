@@ -61,7 +61,7 @@ To switch the Keycloak admin console to Chinese:
 Both surfaces default to Chinese:
 
 - **User sign-in page** (reached from 12115): controlled by the `outline` realm default locale, Chinese from installation.
-- **Admin console** (12116): Keycloak cannot configure the master realm through realm import, so the package starts a one-shot init container that enables Chinese for the master realm. It exits when done and does not affect app status.
+- **Admin console** (12116): Keycloak cannot configure the master realm through realm import, so the Keycloak container enables Chinese through the admin API right after startup. This happens inside the same container, so the package never leaves an extra or exited container behind.
 
 If the init container could not complete (for example after you change the admin password), enable it manually:
 

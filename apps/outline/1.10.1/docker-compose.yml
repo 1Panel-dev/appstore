@@ -52,9 +52,7 @@ services:
     image: quay.io/keycloak/keycloak:26.3
     container_name: ${CONTAINER_NAME}-keycloak
     restart: always
-    command:
-      - start-dev
-      - --import-realm
+    entrypoint: ["/bin/bash", "/opt/keycloak/start-localized.sh"]
     ports:
       - ${PANEL_APP_PORT_HTTP_KEYCLOAK}:8080
     networks:
@@ -63,44 +61,7 @@ services:
       - ./data/keycloak.env
     volumes:
       - ./data/keycloak:/opt/keycloak/data
-    labels:
-      createdBy: Apps
-
-  # One-shot helper: Keycloak cannot configure the master realm through realm
-  # import, so the admin console localization is applied through the Admin API.
-  # It exits after the update and does not affect the app status.
-  keycloak-init:
-    image: quay.io/keycloak/keycloak:26.3
-    container_name: ${CONTAINER_NAME}-keycloak-init
-    restart: "no"
-    entrypoint: ["/bin/bash", "-c"]
-    command:
-      - |
-        set -u
-        KCADM=/opt/keycloak/bin/kcadm.sh
-        CFG=/tmp/kcadm.config
-        for _ in $$(seq 1 60); do
-          if $$KCADM config credentials --config "$$CFG" \
-              --server http://${CONTAINER_NAME}-keycloak:8080 \
-              --realm master --user "$$KC_BOOTSTRAP_ADMIN_USERNAME" \
-              --password "$$KC_BOOTSTRAP_ADMIN_PASSWORD" >/dev/null 2>&1; then
-            $$KCADM update realms/master --config "$$CFG" \
-              -s internationalizationEnabled=true \
-              -s 'supportedLocales=["zh-CN","en"]' \
-              -s defaultLocale=zh-CN >/dev/null 2>&1 || true
-            echo "master realm localization applied"
-            exit 0
-          fi
-          sleep 3
-        done
-        echo "skipped: could not authenticate against the bundled Keycloak" >&2
-        exit 0
-    env_file:
-      - ./data/keycloak.env
-    networks:
-      - 1panel-network
-    depends_on:
-      - keycloak
+      - ./data/keycloak-start.sh:/opt/keycloak/start-localized.sh:ro
     labels:
       createdBy: Apps
 
