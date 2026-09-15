@@ -77,12 +77,13 @@ if [[ -z "${container_name}" ]]; then
     echo "CONTAINER_NAME must be set" >&2
     exit 1
 fi
-if [[ ! "${admin_username}" =~ ^[A-Za-z0-9._-]{1,64}$ ]]; then
-    echo "KEYCLOAK_ADMIN_USERNAME must be 1-64 characters using letters, digits or . _ -" >&2
+if (( ${#admin_password} < 6 )) || (( ${#admin_password} > 64 )) \
+    || ! printf '%s' "${admin_password}" | LC_ALL=C grep -qE '^[!-~]+$'; then
+    echo "KEYCLOAK_ADMIN_PASSWORD must be 6-64 printable ASCII characters without spaces (any of ! through ~)" >&2
     exit 1
 fi
-if [[ ! "${admin_password}" =~ ^[A-Za-z0-9._@#%+=:!-]{6,64}$ ]]; then
-    echo "KEYCLOAK_ADMIN_PASSWORD must be 6-64 characters using letters, digits or . _ @ # % + = : ! -" >&2
+if [[ ! "${admin_username}" =~ ^[A-Za-z0-9._-]{1,64}$ ]]; then
+    echo "KEYCLOAK_ADMIN_USERNAME must be 1-64 characters using letters, digits or . _ -" >&2
     exit 1
 fi
 
@@ -119,6 +120,11 @@ if [[ -z "${keycloak_client_secret}" ]]; then
 fi
 write_secret "${SECRETS_DIR}/keycloak-client-secret" "${keycloak_client_secret}"
 keycloak_client_secret="$(cat "${SECRETS_DIR}/keycloak-client-secret")"
+
+# Compose interpolates values in env files, so a literal "$" must be doubled;
+# the realm import is JSON, so backslashes and quotes must be escaped there.
+env_admin_password="$(printf '%s' "${admin_password}" | sed -e 's/\$/$$/g')"
+json_admin_password="$(printf '%s' "${admin_password}" | sed -e 's/\\/\\\\/g' -e 's/"/\\"/g')"
 
 # Runtime configuration for the containers lives in dedicated env files so that
 # 1Panel parameter updates (which rewrite .env) can never drop the generated
@@ -171,7 +177,7 @@ chmod 700 "${DATA_DIR}/keycloak-start.sh"
 
 cat >"${DATA_DIR}/keycloak.env" <<KCENV
 KC_BOOTSTRAP_ADMIN_USERNAME=${admin_username}
-KC_BOOTSTRAP_ADMIN_PASSWORD=${admin_password}
+KC_BOOTSTRAP_ADMIN_PASSWORD=${env_admin_password}
 KC_HTTP_ENABLED=true
 KC_HOSTNAME=${keycloak_public_url}
 KC_HOSTNAME_STRICT=false
@@ -242,7 +248,7 @@ cat >"${REALM_FILE}" <<REALM
       "credentials": [
         {
           "type": "password",
-          "value": "${admin_password}",
+          "value": "${json_admin_password}",
           "temporary": false
         }
       ]
