@@ -1,6 +1,6 @@
 services:
   arcadia:
-    image: supermanito/arcadia:1.0.1
+    image: supermanito/arcadia:1.1.0
     container_name: "${CONTAINER_NAME}"
     hostname: "${CONTAINER_NAME}"
     restart: always
