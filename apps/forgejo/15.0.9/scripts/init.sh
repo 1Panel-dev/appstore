@@ -10,7 +10,7 @@ if [[ -f "${ENV_FILE}" ]] && grep -Eq "^PANEL_DB_TYPE=['\"]?mariadb['\"]?$" "${E
 fi
 
 # renovate: datasource=docker depName=forgejo/forgejo
-IMAGE=codeberg.org/forgejo/forgejo:15.0.3
+IMAGE=codeberg.org/forgejo/forgejo:15.0.9
 
 if [ "${ROOTLESS}" = "true" ]; then
     IMAGE="${IMAGE}-rootless"
