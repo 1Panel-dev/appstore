@@ -32,7 +32,7 @@ jobs:
           IFS=' ' read -ra files <<< "${{ steps.updated-files.outputs.files }}"
 
           for file in "${files[@]}"; do
-            if [[ $file == *"docker-compose.yml"* ]]; then
+            if [[ $file == *"docker-compose.yml"* || $file == apps/*/*/scripts/init.sh ]]; then
               app_name=$(echo $file | cut -d'/' -f 2)
               old_version=$(echo $file | cut -d'/' -f 3)
               chmod +x .github/workflows/renovate-app-version.sh
@@ -45,7 +45,7 @@ jobs:
           IFS=' ' read -ra files <<< "${{ steps.updated-files.outputs.files }}"
 
           for file in "${files[@]}"; do
-            if [[ $file == *"docker-compose.yml"* ]]; then
+            if [[ $file == *"docker-compose.yml"* || $file == apps/*/*/scripts/init.sh ]]; then
               app_name=$(echo $file | cut -d'/' -f 2)
               git add "apps/$app_name/*" && git commit -m "Update app version [skip ci]" --no-verify && git push || true
             fi
