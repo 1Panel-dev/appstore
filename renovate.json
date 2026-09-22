@@ -10,6 +10,16 @@
     "apps/redis-cluster/**",
     "apps/postgresql-cluster/**"
   ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Update image tags set in app scripts, marked with a '# renovate:' comment",
+      "managerFilePatterns": ["/^apps/[^/]+/[^/]+/scripts/[^/]+\\.sh$/"],
+      "matchStrings": [
+        "#\\s*renovate:\\s*datasource=(?<datasource>[a-z-]+)\\s+depName=(?<depName>\\S+)\\s*\\n\\s*[A-Za-z_][A-Za-z0-9_]*=[\"']?[^\\s\"']+:(?<currentValue>[^\\s\"':]+)"
+      ]
+    }
+  ],
   "packageRules": [
     {
       "packageNames": ["docker-compose"],
@@ -235,6 +245,14 @@
     {
       "matchFileNames": ["apps/valkey/7.2.*/*.yml"],
       "allowedVersions": "/^7.2.*/"
+    },
+    {
+      "matchFileNames": ["apps/forgejo/15.*/scripts/*.sh"],
+      "allowedVersions": "/^15.*/"
+    },
+    {
+      "matchFileNames": ["apps/forgejo/16.*/scripts/*.sh"],
+      "allowedVersions": "/^16.*/"
     }
   ],
   "prCreation": "immediate"

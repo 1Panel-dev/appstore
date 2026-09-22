@@ -14,6 +14,12 @@ do
 
 	image=$(yq .services.$first_service.image $docker_compose_file)
 
+	# Fall back to the IMAGE set in scripts/init.sh when the compose file uses a variable (e.g. ${IMAGE})
+	init_script=apps/$app_name/$old_version/scripts/init.sh
+	if [[ "$image" != *":"* && -f "$init_script" ]]; then
+	  image=$(grep -m1 -E '^IMAGE=' "$init_script" | cut -d "=" -f2- | tr -d "\"'")
+	fi
+
 	# Only apply changes if the format is <image>:<version>
 	if [[ "$image" == *":"* ]]; then
 	  version=$(cut -d ":" -f2- <<< "$image")
