@@ -1,6 +1,6 @@
 services:
   onedev:
-    image: 1dev/server:16.6.4
+    image: 1dev/server:16.7.2
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
