@@ -1,0 +1,240 @@
+additionalProperties:
+  formFields:
+    - default: 8080
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: HTTP Port
+      labelZh: HTTP 端口
+      label:
+        en: HTTP Port
+        es-es: Puerto HTTP
+        ja: HTTP ポート
+        ms: Port HTTP
+        pt-br: Porta HTTP
+        ru: HTTP-порт
+        ko: HTTP 포트
+        zh-Hant: HTTP 埠
+        zh: HTTP 端口
+        tr: HTTP Bağlantı Noktası
+      required: true
+      rule: paramPort
+      type: number
+    - default: ""
+      envKey: PANEL_DB_HOST
+      key: mysql
+      labelEn: MySQL Service
+      labelZh: MySQL 服务
+      label:
+        en: MySQL Service
+        es-es: Servicio MySQL
+        ja: MySQL サービス
+        ms: Perkhidmatan MySQL
+        pt-br: Serviço MySQL
+        ru: Сервис MySQL
+        ko: MySQL 서비스
+        zh-Hant: MySQL 服務
+        zh: MySQL 服务
+        tr: MySQL Hizmeti
+      required: true
+      type: service
+    - default: wstats
+      envKey: PANEL_DB_NAME
+      labelEn: Database
+      labelZh: 数据库名
+      label:
+        en: Database
+        es-es: Base de datos
+        ja: データベース
+        ms: Pangkalan Data
+        pt-br: Banco de Dados
+        ru: База данных
+        ko: 데이터베이스
+        zh-Hant: 資料庫名稱
+        zh: 数据库名
+        tr: Veritabanı
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: wstats
+      envKey: PANEL_DB_USER
+      labelEn: User
+      labelZh: 数据库用户
+      label:
+        en: User
+        es-es: Usuario
+        ja: ユーザー
+        ms: Pengguna
+        pt-br: Usuário
+        ru: Пользователь
+        ko: 사용자
+        zh-Hant: 資料庫使用者
+        zh: 数据库用户
+        tr: Kullanıcı
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: wstats
+      envKey: PANEL_DB_USER_PASSWORD
+      labelEn: Password
+      labelZh: 数据库用户密码
+      label:
+        en: Password
+        es-es: Contraseña
+        ja: パスワード
+        ms: Kata laluan
+        pt-br: Senha
+        ru: Пароль
+        ko: 비밀번호
+        zh-Hant: 資料庫使用者密碼
+        zh: 数据库用户密码
+        tr: Parola
+      random: true
+      required: true
+      type: password
+    - default: ""
+      envKey: PANEL_REDIS_HOST
+      key: redis
+      labelEn: Redis Service
+      labelZh: Redis 服务
+      label:
+        en: Redis Service
+        es-es: Servicio Redis
+        ja: Redis サービス
+        ms: Perkhidmatan Redis
+        pt-br: Serviço Redis
+        ru: Сервис Redis
+        ko: Redis 서비스
+        zh-Hant: Redis 服務
+        zh: Redis 服务
+        tr: Redis Hizmeti
+      required: true
+      type: service
+    - default: ""
+      disabled: true
+      envKey: PANEL_REDIS_ROOT_PASSWORD
+      labelEn: Redis Password
+      labelZh: Redis 密码
+      label:
+        en: Redis Password
+        es-es: Contraseña de Redis
+        ja: Redis パスワード
+        ms: Kata laluan Redis
+        pt-br: Senha do Redis
+        ru: Пароль Redis
+        ko: Redis 비밀번호
+        zh-Hant: Redis 密碼
+        zh: Redis 密码
+        tr: Redis Parolası
+      required: true
+      type: text
+    - default: admin@example.com
+      edit: true
+      envKey: WSTAT_ADMIN_EMAIL
+      labelEn: Admin Email
+      labelZh: 管理员邮箱
+      label:
+        en: Admin Email
+        es-es: Correo del administrador
+        ja: 管理者メールアドレス
+        ms: E-mel Admin
+        pt-br: E-mail do administrador
+        ru: Почта администратора
+        ko: 관리자 이메일
+        zh-Hant: 管理員信箱
+        zh: 管理员邮箱
+        tr: Yönetici E-postası
+      required: true
+      type: text
+    - default: Wstats@2026
+      edit: true
+      envKey: WSTAT_ADMIN_PASS
+      labelEn: Admin Password
+      labelZh: 管理员密码
+      label:
+        en: Admin Password
+        es-es: Contraseña del administrador
+        ja: 管理者パスワード
+        ms: Kata laluan admin
+        pt-br: Senha do administrador
+        ru: Пароль администратора
+        ko: 관리자 비밀번호
+        zh-Hant: 管理員密碼
+        zh: 管理员密码
+        tr: Yönetici Parolası
+      required: true
+      rule: paramComplexity
+      type: password
+    - default: Asia/Shanghai
+      envKey: WSTAT_TZ
+      labelEn: Timezone
+      labelZh: 时区
+      label:
+        en: Timezone
+        es-es: Zona horaria
+        ja: タイムゾーン
+        ms: Zon waktu
+        pt-br: Fuso horário
+        ru: Часовой пояс
+        ko: 시간대
+        zh-Hant: 時區
+        zh: 时区
+        tr: Saat Dilimi
+      required: true
+      type: select
+      values:
+        - label: Asia/Shanghai
+          value: Asia/Shanghai
+        - label: Asia/Hong_Kong
+          value: Asia/Hong_Kong
+        - label: Asia/Taipei
+          value: Asia/Taipei
+        - label: UTC
+          value: UTC
+    - default: remote_addr
+      envKey: WSTAT_IP_SOURCE
+      labelEn: Visitor IP Source
+      labelZh: 访客 IP 取值来源
+      label:
+        en: Visitor IP Source
+        es-es: Origen de la IP del visitante
+        ja: 訪問者 IP の取得元
+        ms: Sumber IP Pelawat
+        pt-br: Origem do IP do visitante
+        ru: Источник IP посетителя
+        ko: 방문자 IP 소스
+        zh-Hant: 訪客 IP 取值來源
+        zh: 访客 IP 取值来源
+        tr: Ziyaretçi IP Kaynağı
+      required: true
+      type: select
+      values:
+        - label: REMOTE_ADDR
+          value: remote_addr
+        - label: X-Real-IP
+          value: x_real_ip
+        - label: X-Forwarded-For
+          value: x_forwarded_for
+    - default: "0"
+      envKey: WSTAT_ALLOW_REGISTER
+      labelEn: Allow Registration
+      labelZh: 开放注册
+      label:
+        en: Allow Registration
+        es-es: Permitir registro
+        ja: 新規登録を許可
+        ms: Benarkan pendaftaran
+        pt-br: Permitir registro
+        ru: Разрешить регистрацию
+        ko: 회원가입 허용
+        zh-Hant: 開放註冊
+        zh: 开放注册
+        tr: Kayıt İzni
+      required: true
+      type: select
+      values:
+        - label: "false"
+          value: "0"
+        - label: "true"
+          value: "1"

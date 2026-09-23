@@ -1,0 +1,34 @@
+name: WebStats
+tags:
+  - 实用工具
+  - 建站
+title: 私有化部署的网站统计系统
+description: 网站流量统计与访客行为分析，数据完全自持
+additionalProperties:
+  key: wstats
+  name: WebStats
+  tags:
+    - Tool
+    - WebSite
+  shortDescZh: 私有化部署的网站统计系统，数据完全自持
+  shortDescEn: Self-hosted website analytics that keeps every byte of your traffic data
+  description:
+    en: Self-hosted website analytics platform. Pageviews, visitors, sources, sessions, geolocation and conversion funnels, all on your own server.
+    es-es: Plataforma de analítica web autoalojada. Visitas, visitantes, fuentes, sesiones, geolocalización y embudos de conversión, todo en tu propio servidor.
+    ja: セルフホスト型のアクセス解析プラットフォーム。PV・訪問者・参照元・セッション・地域・コンバージョンファネルを、すべて自社サーバーで管理できます。
+    ms: Platform analitik laman web layan diri. Paparan halaman, pelawat, sumber, sesi, geolokasi dan funnel penukaran, semuanya pada pelayan anda sendiri.
+    pt-br: Plataforma de análise de sites auto-hospedada. Visualizações, visitantes, origens, sessões, geolocalização e funis de conversão, tudo no seu próprio servidor.
+    ru: Самостоятельно размещаемая платформа веб-аналитики. Просмотры, посетители, источники, сессии, геолокация и воронки конверсии — всё на вашем сервере.
+    ko: 자체 호스팅 웹 분석 플랫폼입니다. 페이지뷰, 방문자, 유입 경로, 세션, 지역, 전환 퍼널을 모두 자체 서버에서 관리합니다.
+    zh-Hant: 私有化部署的網站統計系統。瀏覽量、訪客、來源、工作階段、地域與轉換漏斗，資料完全自持。
+    zh: 私有化部署的网站统计系统。浏览量、访客、来源、会话、地域与转化漏斗，数据完全自持。
+    tr: Kendi sunucunuzda barındırılan web analitik platformu. Sayfa görüntülemeleri, ziyaretçiler, kaynaklar, oturumlar, konum ve dönüşüm hunileri.
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://wstats.kfw.cc
+  github: https://github.com/kfwcc/wstats
+  document: https://github.com/kfwcc/wstats#readme
+  architectures:
+    - amd64

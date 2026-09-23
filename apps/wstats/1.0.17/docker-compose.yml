@@ -1,0 +1,83 @@
+services:
+  wstats:
+    image: ghcr.io/kfwcc/wstats:latest
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:80"
+    environment:
+      TZ: ${WSTAT_TZ}
+      WSTAT_TZ: ${WSTAT_TZ}
+      WSTAT_DB_HOST: ${PANEL_DB_HOST}
+      WSTAT_DB_PORT: ${PANEL_DB_PORT:-3306}
+      WSTAT_DB_NAME: ${PANEL_DB_NAME}
+      WSTAT_DB_USER: ${PANEL_DB_USER}
+      WSTAT_DB_PASS: ${PANEL_DB_USER_PASSWORD}
+      WSTAT_REDIS_HOST: ${PANEL_REDIS_HOST}
+      WSTAT_REDIS_PORT: ${PANEL_REDIS_PORT:-6379}
+      WSTAT_REDIS_AUTH: ${PANEL_REDIS_ROOT_PASSWORD}
+      WSTAT_IP_SOURCE: ${WSTAT_IP_SOURCE}
+      WSTAT_AUTO_INSTALL: "1"
+      WSTAT_ADMIN_EMAIL: ${WSTAT_ADMIN_EMAIL}
+      WSTAT_ADMIN_PASS: ${WSTAT_ADMIN_PASS}
+      WSTAT_ALLOW_REGISTER: ${WSTAT_ALLOW_REGISTER}
+    volumes:
+      - ./data:/var/www/html/data
+    labels:
+      createdBy: "Apps"
+
+  worker:
+    image: ghcr.io/kfwcc/wstats:latest
+    container_name: ${CONTAINER_NAME}-worker
+    restart: always
+    networks:
+      - 1panel-network
+    depends_on:
+      - wstats
+    command: ["php", "scripts/worker.php"]
+    environment:
+      TZ: ${WSTAT_TZ}
+      WSTAT_TZ: ${WSTAT_TZ}
+      WSTAT_DB_HOST: ${PANEL_DB_HOST}
+      WSTAT_DB_PORT: ${PANEL_DB_PORT:-3306}
+      WSTAT_DB_NAME: ${PANEL_DB_NAME}
+      WSTAT_DB_USER: ${PANEL_DB_USER}
+      WSTAT_DB_PASS: ${PANEL_DB_USER_PASSWORD}
+      WSTAT_REDIS_HOST: ${PANEL_REDIS_HOST}
+      WSTAT_REDIS_PORT: ${PANEL_REDIS_PORT:-6379}
+      WSTAT_REDIS_AUTH: ${PANEL_REDIS_ROOT_PASSWORD}
+    volumes:
+      - ./data:/var/www/html/data
+    labels:
+      createdBy: "Apps"
+
+  cron:
+    image: ghcr.io/kfwcc/wstats:latest
+    container_name: ${CONTAINER_NAME}-cron
+    restart: always
+    networks:
+      - 1panel-network
+    depends_on:
+      - wstats
+    command: ["wstat-cron"]
+    environment:
+      TZ: ${WSTAT_TZ}
+      WSTAT_TZ: ${WSTAT_TZ}
+      WSTAT_DB_HOST: ${PANEL_DB_HOST}
+      WSTAT_DB_PORT: ${PANEL_DB_PORT:-3306}
+      WSTAT_DB_NAME: ${PANEL_DB_NAME}
+      WSTAT_DB_USER: ${PANEL_DB_USER}
+      WSTAT_DB_PASS: ${PANEL_DB_USER_PASSWORD}
+      WSTAT_REDIS_HOST: ${PANEL_REDIS_HOST}
+      WSTAT_REDIS_PORT: ${PANEL_REDIS_PORT:-6379}
+      WSTAT_REDIS_AUTH: ${PANEL_REDIS_ROOT_PASSWORD}
+    volumes:
+      - ./data:/var/www/html/data
+    labels:
+      createdBy: "Apps"
+
+networks:
+  1panel-network:
+    external: true
