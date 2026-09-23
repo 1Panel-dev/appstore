@@ -1,0 +1,32 @@
+name: "Laya Server"
+tags:
+  - AI
+title: "Jev 开源替代：自托管的 Laya 决策引擎 API 与控制台"
+description: "Jev 开源替代：自托管的 Laya 决策引擎 API 与控制台"
+additionalProperties:
+  key: laya-server
+  name: "Laya Server"
+  tags:
+    - AI
+  shortDescZh: "Jev 开源替代：自托管的 Laya 决策引擎 API 与控制台"
+  shortDescEn: "A self-hosted API and web interface for Laya's structured decision models, compatible with the TypeSafe Jev API format"
+  description:
+    en: "A self-hosted API and web interface for Laya's structured decision models, compatible with the TypeSafe Jev API format"
+    es-es: "Una API autoalojada y una interfaz web para los modelos de decisión estructurada de Laya, compatible con el formato de la API TypeSafe Jev"
+    ja: "Laya の構造化意思決定モデル向けのセルフホスト型 API と Web インターフェース。TypeSafe Jev API 形式に対応"
+    ms: "API hos kendiri dan antara muka web untuk model keputusan berstruktur Laya, serasi dengan format API TypeSafe Jev"
+    pt-br: "Uma API auto-hospedada e interface web para os modelos de decisão estruturada do Laya, compatível com o formato da API TypeSafe Jev"
+    ru: "Самостоятельно размещаемый API и веб-интерфейс для структурированных моделей принятия решений Laya, совместимые с форматом TypeSafe Jev API"
+    ko: "Laya의 구조화된 의사 결정 모델을 위한 셀프 호스팅 API 및 웹 인터페이스이며, TypeSafe Jev API 형식과 호환됩니다"
+    zh-Hant: "Jev 開源替代：自託管的 Laya 決策引擎 API 與控制台"
+    zh: "Jev 开源替代：自托管的 Laya 决策引擎 API 与控制台"
+    tr: "Laya'nın yapılandırılmış karar modelleri için kendi sunucunuzda barındırılan API ve web arayüzü; TypeSafe Jev API biçimiyle uyumludur"
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  architectures:
+    - amd64
+    - arm64
+  recommend: 2
+  github: https://github.com/1Panel-dev/laya-server
+  document: https://github.com/1Panel-dev/laya-server/blob/main/README.md

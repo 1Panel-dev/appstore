@@ -1,0 +1,69 @@
+additionalProperties:
+  formFields:
+    - default: 8080
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: "Web UI Port"
+      labelZh: "Web UI 端口"
+      label:
+        en: "Web UI Port"
+        es-es: "Puerto web"
+        ja: "Web UIポート"
+        ms: "Port Web UI"
+        pt-br: "Porta da Web UI"
+        ru: "Порт веб-интерфейса"
+        ko: "웹 UI 포트"
+        zh-Hant: "Web UI 埠"
+        zh: "Web UI 端口"
+        tr: "Web UI Bağlantı Noktası"
+      required: true
+      rule: paramPort
+      type: number
+    - default: admin
+      envKey: LAYA_ADMIN_USERNAME
+      labelEn: "Admin Username"
+      labelZh: "管理员用户名"
+      required: true
+      rule: paramCommon
+      type: text
+      label:
+        en: "Admin Username"
+        es-es: "Admin Username"
+        ja: "Admin Username"
+        ms: "Admin Username"
+        pt-br: "Admin Username"
+        ru: "Admin Username"
+        ko: "Admin Username"
+        zh-Hant: "管理员用户名"
+        zh: "管理员用户名"
+        tr: "Admin Username"
+    - default: laya
+      envKey: LAYA_ADMIN_PASSWORD
+      labelEn: "Admin Password"
+      labelZh: "管理员密码"
+      description:
+        en: "Use at least 10 characters"
+        es-es: "Usa al menos 10 caracteres"
+        ja: "10文字以上で入力してください"
+        ms: "Gunakan sekurang-kurangnya 10 aksara"
+        pt-br: "Use pelo menos 10 caracteres"
+        ru: "Используйте не менее 10 символов"
+        ko: "10자 이상 입력하세요"
+        zh-Hant: "至少 10 個字元"
+        zh: "至少 10 个字符"
+        tr: "En az 10 karakter kullanın"
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+      label:
+        en: "Admin Password"
+        es-es: "Admin Password"
+        ja: "Admin Password"
+        ms: "Admin Password"
+        pt-br: "Admin Password"
+        ru: "Admin Password"
+        ko: "Admin Password"
+        zh-Hant: "管理员密码"
+        zh: "管理员密码"
+        tr: "Admin Password"
