@@ -1,6 +1,6 @@
 services:
   laya-server:
-    image: 1panel/laya-server:v0.1.0
+    image: 1panel/laya-server:v0.1.1
     container_name: "${CONTAINER_NAME}"
     restart: always
     networks:
