@@ -1,6 +1,6 @@
 services:
   rustfs:
-    image: rustfs/rustfs:latest
+    image: rustfs/rustfs:1.0.0
     container_name: ${CONTAINER_NAME}
     ports:
       - ${PANEL_APP_PORT_API}:9000
