@@ -1,0 +1,61 @@
+services:
+  lanqin-email:
+    image: ghcr.io/lanqin996/lanqin-email:1.1.6
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:80"
+      - "${PANEL_APP_PORT_SMTP}:25"
+      - "${PANEL_APP_PORT_SMTPS}:465"
+      - "${PANEL_APP_PORT_SUBMISSION}:587"
+      - "${PANEL_APP_PORT_IMAPS}:993"
+      - "${PANEL_APP_PORT_POP3S}:995"
+    environment:
+      TZ: Asia/Shanghai
+      LANQIN_PUBLIC_HOSTNAME: ${LANQIN_PUBLIC_HOSTNAME}
+      LANQIN_PUBLIC_BASE_URL: ${LANQIN_PUBLIC_BASE_URL}
+      LANQIN_ADMIN_EMAIL: ${LANQIN_ADMIN_EMAIL}
+      LANQIN_ADMIN_PASSWORD: ${LANQIN_ADMIN_PASSWORD}
+      LANQIN_NOTIFICATION_SECRET_KEY: ${LANQIN_NOTIFICATION_SECRET_KEY}
+      LANQIN_ADDR: 127.0.0.1:8080
+      LANQIN_DATA_DIR: /data
+      LANQIN_DB_DRIVER: sqlite
+      LANQIN_DB_PATH: /data/lanqin.db
+      LANQIN_MAILDIR_ROOT: /var/mail/vhosts
+      LANQIN_SMTP_HOST: 127.0.0.1
+      LANQIN_SMTP_PORT: "25"
+      LANQIN_SMTP_REQUIRE_TLS: "false"
+      LANQIN_ALLOW_INSECURE_HTTP: "false"
+      LANQIN_TRUSTED_PROXY_COUNT: "1"
+      LANQIN_OPEN_REGISTRATION: "false"
+      LANQIN_TLS_CERT_FILE: /etc/lanqin/tls/fullchain.pem
+      LANQIN_TLS_KEY_FILE: /etc/lanqin/tls/privkey.pem
+    volumes:
+      - ./data:/data
+      - ./mail:/var/mail/vhosts
+      - ./dkim:/var/lib/rspamd/dkim
+      - type: bind
+        source: ${LANQIN_TLS_DIR}
+        target: /etc/lanqin/tls
+        read_only: true
+        bind:
+          create_host_path: false
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - >-
+          curl --fail --silent --show-error http://127.0.0.1/readyz >/dev/null
+          && postfix status >/dev/null 2>&1
+          && doveadm service status >/dev/null 2>&1
+          && rspamadm control stat >/dev/null 2>&1
+      interval: 10s
+      timeout: 5s
+      retries: 6
+      start_period: 30s
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true
