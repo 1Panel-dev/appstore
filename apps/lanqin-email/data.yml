@@ -1,0 +1,27 @@
+name: LanQin Email
+tags:
+  - 邮件服务
+title: 集成 Webmail 与管理后台的自建邮件服务
+description: 集成 Webmail 与管理后台的自建邮件服务
+additionalProperties:
+  key: lanqin-email
+  name: LanQin Email
+  tags:
+    - Email
+  shortDescZh: 集成 Webmail 与管理后台的自建邮件服务
+  shortDescEn: Self-hosted mail server with Webmail and administration
+  description:
+    en: Self-hosted mail server with Webmail and administration
+    zh: 集成 Webmail 与管理后台的自建邮件服务
+    zh-Hant: 整合 Webmail 與管理後台的自架郵件服務
+  type: website
+  crossVersionUpdate: false
+  limit: 1
+  recommend: 0
+  batchInstallSupport: false
+  website: https://github.com/LanQin996/LanQin-Email
+  github: https://github.com/LanQin996/LanQin-Email
+  document: https://github.com/LanQin996/LanQin-Email/blob/v1.1.6/deploy/README.md
+  architectures:
+    - amd64
+    - arm64

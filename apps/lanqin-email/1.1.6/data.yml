@@ -1,0 +1,100 @@
+additionalProperties:
+  formFields:
+    - default: "mail.example.com"
+      envKey: LANQIN_PUBLIC_HOSTNAME
+      label:
+        zh: "邮件服务器域名"
+        en: "Mail hostname"
+      required: true
+      type: text
+    - default: "https://mail.example.com"
+      envKey: LANQIN_PUBLIC_BASE_URL
+      label:
+        zh: "Webmail HTTPS 地址"
+        en: "Webmail HTTPS URL"
+      required: true
+      type: text
+      rule: paramExtUrl
+    - default: ""
+      envKey: LANQIN_ADMIN_EMAIL
+      label:
+        zh: "初始管理员邮箱"
+        en: "Initial administrator email"
+      required: true
+      type: text
+    - default: ""
+      envKey: LANQIN_ADMIN_PASSWORD
+      label:
+        zh: "初始管理员密码"
+        en: "Initial administrator password"
+      required: true
+      type: password
+      rule: paramComplexity
+    - default: ""
+      envKey: LANQIN_NOTIFICATION_SECRET_KEY
+      label:
+        zh: "加密主密钥（至少 32 位随机字符，请备份）"
+        en: "Encryption key (32+ random characters; back up)"
+      required: true
+      type: password
+    - default: ""
+      envKey: LANQIN_TLS_DIR
+      label:
+        zh: "宿主机证书目录（含 fullchain.pem 和 privkey.pem）"
+        en: "Host certificate directory (fullchain.pem and privkey.pem)"
+      required: true
+      type: text
+    - default: 8088
+      envKey: PANEL_APP_PORT_HTTP
+      label:
+        zh: "Web HTTP 端口"
+        en: "Web HTTP port"
+      required: true
+      type: number
+      rule: paramPort
+      edit: true
+    - default: 25
+      envKey: PANEL_APP_PORT_SMTP
+      label:
+        zh: "SMTP 端口"
+        en: "SMTP port"
+      required: true
+      type: number
+      rule: paramPort
+      edit: true
+    - default: 465
+      envKey: PANEL_APP_PORT_SMTPS
+      label:
+        zh: "SMTP TLS 端口"
+        en: "SMTP TLS port"
+      required: true
+      type: number
+      rule: paramPort
+      edit: true
+    - default: 587
+      envKey: PANEL_APP_PORT_SUBMISSION
+      label:
+        zh: "SMTP STARTTLS 端口"
+        en: "SMTP STARTTLS port"
+      required: true
+      type: number
+      rule: paramPort
+      edit: true
+    - default: 993
+      envKey: PANEL_APP_PORT_IMAPS
+      label:
+        zh: "IMAP TLS 端口"
+        en: "IMAP TLS port"
+      required: true
+      type: number
+      rule: paramPort
+      edit: true
+    - default: 995
+      envKey: PANEL_APP_PORT_POP3S
+      label:
+        zh: "POP3 TLS 端口"
+        en: "POP3 TLS port"
+      required: true
+      type: number
+      rule: paramPort
+      edit: true
