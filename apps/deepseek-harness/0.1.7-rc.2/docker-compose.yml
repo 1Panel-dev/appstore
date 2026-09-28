@@ -11,6 +11,7 @@ services:
       DSH_AUTH_PASSWORD: ${DSH_AUTH_PASSWORD}
       DSH_HOME: /data/dsh
       DSH_TELEMETRY_DISABLED: "1"
+      NARB_DISABLE_NATIVE_CACHE: "1"
     volumes:
       - ./data/dsh:/data/dsh
       - ./data/workspace:/workspace
