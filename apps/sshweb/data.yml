@@ -1,0 +1,35 @@
+name: SSHWeb
+tags:
+  - 实用工具
+title: 开源服务器探针监控面板，辅以 SSH 网页终端管理
+description: 开源服务器探针监控面板，辅以 SSH 网页终端管理
+additionalProperties:
+  key: sshweb
+  name: SSHWeb
+  tags:
+    - Tool
+  shortDescZh: 开源服务器探针监控面板，辅以 SSH 网页终端管理
+  shortDescEn: Open-source server probe monitoring panel with web SSH management
+  description:
+    en: Open-source server probe monitoring panel with web SSH management
+    es-es: Panel de monitoreo de sondas de servidor con gestión SSH web
+    fa: 'پنل مانیتورینگ پروب سرور متن باز با مدیریت SSH تحت وب'
+    ja: オープンソースのサーバープローブ監視パネル、Web SSH 管理付き
+    ms: Panel pemantauan prob pelayan sumber terbuka dengan pengurusan SSH web
+    pt-br: Painel de monitoramento de sondas de servidor com gerenciamento SSH web
+    ru: Панель мониторинга серверных пробников с веб-управлением SSH
+    ko: 오픈 소스 서버 프로브 모니터링 패널, 웹 SSH 관리 지원
+    tr: Web SSH yönetimli açık kaynak sunucu prob izleme paneli
+    zh-Hant: 開源伺服器探針監控面板，輔以 SSH 網頁終端管理
+    zh: 开源服务器探针监控面板，辅以 SSH 网页终端管理
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  batchInstallSupport: true
+  website: https://github.com/baiduxc/sshweb
+  github: https://github.com/baiduxc/sshweb
+  document: https://github.com/baiduxc/sshweb#readme
+  architectures:
+    - amd64
+    - arm64

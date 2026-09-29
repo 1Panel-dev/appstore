@@ -1,0 +1,43 @@
+additionalProperties:
+  formFields:
+    - default: 45678
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: WebUI Port
+      labelZh: 网页端口
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        en: WebUI Port
+        es-es: Puerto web
+        fa: 'پورت WebUI'
+        ja: WebUI ポート
+        ms: Port WebUI
+        pt-br: Porta WebUI
+        ru: Порт WebUI
+        ko: WebUI 포트
+        zh-Hant: WebUI 埠
+        zh: WebUI 端口
+        tr: WebUI portu
+    - default: sshweb
+      edit: true
+      envKey: SSHWEB_PASSWORD
+      labelEn: Admin Password
+      labelZh: 管理密码
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+      label:
+        en: Admin Password
+        es-es: Contraseña de administrador
+        fa: 'رمز عبور مدیر'
+        ja: 管理者パスワード
+        ms: Kata Laluan Admin
+        pt-br: Senha de administrador
+        ru: Пароль администратора
+        ko: 관리자 비밀번호
+        zh-Hant: 管理密碼
+        zh: 管理密码
+        tr: Yönetici Şifresi
