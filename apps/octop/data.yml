@@ -1,0 +1,32 @@
+name: Octop
+tags:
+  - AI
+title: "腾讯云开源的自托管 AI 助手"
+description: "更智能、可自托管的 AI 助手——支持多用户、多代理"
+additionalProperties:
+  key: octop
+  name: Octop
+  tags:
+    - AI
+  shortDescZh: "更智能、可自托管的 AI 助手——支持多用户、多代理"
+  shortDescEn: "A smarter, self-hosted AI assistant — multi-user, multi-agent"
+  description:
+    en: "A smarter, self-hosted AI assistant — multi-user, multi-agent"
+    es-es: "Un asistente de IA mas inteligente y autoalojado: multiusuario, multiagente"
+    ja: "よりスマートなセルフホスト型 AI アシスタント — マルチユーザー・マルチエージェント"
+    ms: "Pembantu AI yang lebih pintar dan boleh dihoskan sendiri — berbilang pengguna, berbilang ejen"
+    pt-br: "Um assistente de IA mais inteligente e auto-hospedado — multiusuario, multiagente"
+    ru: "Более умный саморазмещаемый ИИ-ассистент — многопользовательский, мультиагентный"
+    ko: "더 똑똑한 셀프 호스팅 AI 어시스턴트 — 다중 사용자, 다중 에이전트"
+    zh-Hant: "更聰明、可自託管的 AI 助理——支援多使用者、多代理"
+    zh: "更智能、可自托管的 AI 助手——支持多用户、多代理"
+    tr: "Daha akilli, kendi sunucunuzda barindirilan yapay zeka asistani — cok kullanici, cok ajan"
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  architectures:
+    - amd64
+  website: https://octop.cloud
+  github: https://github.com/TencentCloud/Octop
+  document: https://github.com/TencentCloud/Octop/tree/main/docs
+  memoryRequired: 2048
