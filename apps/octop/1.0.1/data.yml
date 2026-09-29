@@ -1,0 +1,87 @@
+additionalProperties:
+  formFields:
+    - default: admin
+      envKey: OCTOP_ADMIN_USERNAME
+      labelEn: "Admin username"
+      labelZh: "管理员用户名"
+      label:
+        en: "Admin username"
+        es-es: "Nombre de usuario del administrador"
+        ja: "管理者ユーザー名"
+        ms: "Nama pengguna pentadbir"
+        pt-br: "Nome de usuário do administrador"
+        ru: "Имя пользователя администратора"
+        ko: "관리자 사용자 이름"
+        zh-Hant: "管理員使用者名稱"
+        zh: "管理员用户名"
+        tr: "Yönetici Kullanıcı Adı"
+      required: true
+      rule: paramCommon
+      type: text
+    - default: Octop@2026
+      envKey: OCTOP_DEFAULT_PASSWORD
+      labelEn: "Admin password"
+      labelZh: "管理员密码"
+      label:
+        en: "Admin password"
+        es-es: "Contraseña del administrador"
+        ja: "管理者パスワード"
+        ms: "Kata laluan pentadbir"
+        pt-br: "Senha do administrador"
+        ru: "Пароль администратора"
+        ko: "관리자 비밀번호"
+        zh-Hant: "管理員密碼"
+        zh: "管理员密码"
+        tr: "Yönetici Parolası"
+      description:
+        en: "At least 8 characters with both letters and digits, and not a common password (e.g. Octop123, admin123). If rejected, the container falls back to a random password: on success it is written to credential.txt in the app data directory; if the setup wizard starts, the one-time startup password is printed in the container log."
+        zh: "至少 8 位且同时包含字母和数字，且不能是常见弱密码（如 Octop123、admin123）。若密码不满足规则，容器会改用随机密码：初始化成功时可在应用数据目录 credential.txt 查看；若进入初始化向导，请在容器日志中查看一次性启动密码。"
+        zh-Hant: "至少 8 位且同時包含字母和數字，且不能是常見弱密碼（如 Octop123、admin123）。若密碼不滿足規則，容器會改用隨機密碼：初始化成功時可在應用資料目錄 credential.txt 查看；若進入初始化精靈，請在容器日誌中查看一次性啟動密碼。"
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+    - default: info
+      envKey: OCTOP_LOG_LEVEL
+      labelEn: "Log level"
+      labelZh: "日志级别"
+      label:
+        en: "Log level"
+        es-es: "Nivel de registro"
+        ja: "ログレベル"
+        ms: "Tahap log"
+        pt-br: "Nível de log"
+        ru: "Уровень журнала"
+        ko: "로그 레벨"
+        zh-Hant: "日誌級別"
+        zh: "日志级别"
+        tr: "Günlük Seviyesi"
+      required: true
+      type: select
+      values:
+        - label: debug
+          value: debug
+        - label: info
+          value: info
+        - label: warning
+          value: warning
+        - label: error
+          value: error
+    - default: 8088
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: "HTTP Port"
+      labelZh: "HTTP 端口"
+      label:
+        en: "HTTP Port"
+        es-es: "Puerto HTTP"
+        ja: "HTTP ポート"
+        ms: "Port HTTP"
+        pt-br: "HTTP Porta"
+        ru: "HTTP Порт"
+        ko: "HTTP 포트"
+        zh-Hant: "HTTP 埠"
+        zh: "HTTP 端口"
+        tr: "HTTP Bağlantı Noktası"
+      required: true
+      rule: paramPort
+      type: number
