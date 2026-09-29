@@ -1,6 +1,6 @@
 services:
   alist:
-    image: archivebox/archivebox:0.9.70
+    image: archivebox/archivebox:0.9.71
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
