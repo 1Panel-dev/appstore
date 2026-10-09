@@ -9,3 +9,9 @@
 - **灵活的数据模型**：使用度量（measurement）、字段（field）和标签（tag）进行数据存储，支持复杂的查询和过滤。
 - **SQL 类似查询语言**：提供 **InfluxQL** 或 **Flux** 查询语言，具有类似 SQL 的语法，用于高效的数据查询和操作。
 - **高可用性和横向扩展**：支持分布式架构和数据复制，增强系统的可靠性和伸缩性，适合大规模数据处理。
+
+## 版本说明
+
+- **2.x（端口 8086）**：内置 Web UI，安装时通过用户名/密码/组织/存储桶完成初始化，支持 InfluxQL 与 Flux。
+- **3.x（InfluxDB 3 Core，端口 8181）**：无内置 Web UI，使用 Token 鉴权；安装时自动生成 admin token，可在安装目录的 `data/admin-token.json` 中查看，数据存储于 `data/<node-id>`。可通过 HTTP API、`influxdb3` CLI 或 InfluxDB 3 Explorer / Grafana 使用。
+- 两个大版本的数据格式互不兼容，不支持跨大版本升级。

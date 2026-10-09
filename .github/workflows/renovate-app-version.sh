@@ -36,6 +36,11 @@ do
         esac
       fi
 
+      # InfluxDB 3 uses a "-core" image tag suffix (e.g. 3.12.0-core)
+      if [[ "$app_name" == "influxdb" && "$trimmed_version" == *-core ]]; then
+        target_version="${trimmed_version%-core}"
+      fi
+
       mv apps/$app_name/$old_version apps/$app_name/$target_version
     fi
 done

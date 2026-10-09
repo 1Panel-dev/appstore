@@ -1,0 +1,44 @@
+additionalProperties:
+  formFields:
+    - default: 8181
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      label:
+        en: Port
+        es-es: Puerto
+        fa: 'پورت'
+        ja: ポート
+        ko: 포트
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        tr: Bağlantı Noktası
+        zh: 端口
+        zh-Hant: 埠
+      required: true
+      rule: paramPort
+      type: number
+    - default: node0
+      envKey: INFLUXDB3_NODE_ID
+      labelEn: Node ID
+      labelZh: 节点 ID
+      label:
+        en: Node ID
+        es-es: ID de nodo
+        fa: 'شناسه نود'
+        ja: ノード ID
+        ko: 노드 ID
+        ms: ID Nod
+        pt-br: ID do nó
+        ru: ID узла
+        tr: Düğüm Kimliği
+        zh: 节点 ID
+        zh-Hant: 節點 ID
+      description:
+        en: A unique identifier for this InfluxDB 3 node. Data is stored under <data-dir>/<node-id> and cannot be changed after installation.
+        zh: 该 InfluxDB 3 节点的唯一标识，数据存储于 <data-dir>/<node-id> 目录下，安装后不可修改。
+        zh-Hant: 該 InfluxDB 3 節點的唯一識別碼，資料儲存於 <data-dir>/<node-id> 目錄下，安裝後不可修改。
+      required: true
+      rule: paramCommon
+      type: text
