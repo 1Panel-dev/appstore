@@ -253,6 +253,14 @@
     {
       "matchFileNames": ["apps/forgejo/16.*/scripts/*.sh"],
       "allowedVersions": "/^16.*/"
+    },
+    {
+      "matchFileNames": ["apps/influxdb/2.*/*.yml"],
+      "allowedVersions": "/^2.*/"
+    },
+    {
+      "matchFileNames": ["apps/influxdb/3.*/*.yml"],
+      "allowedVersions": "/^3\\.[0-9]+\\.[0-9]+-core$/"
     }
   ],
   "prCreation": "immediate"

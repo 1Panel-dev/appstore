@@ -11,7 +11,7 @@ additionalProperties:
     shortDescZh: 用于指标、事件和实时分析的可扩展数据存储
     shortDescEn: Scalable datastore for metrics, events, and real-time analytics
     type: website
-    crossVersionUpdate: true
+    crossVersionUpdate: false
     limit: 0
     recommend: 0
     batchInstallSupport: true
