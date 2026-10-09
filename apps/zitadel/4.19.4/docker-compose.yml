@@ -1,6 +1,6 @@
 services:
   zitadel:
-    image: ghcr.io/zitadel/zitadel:v4.17.0
+    image: ghcr.io/zitadel/zitadel:v4.19.4
     container_name: ${CONTAINER_NAME}
     restart: always
     command: start-from-init --masterkeyFromEnv

@@ -1,6 +1,6 @@
 services:
   zitadel:
-    image: ghcr.io/zitadel/zitadel:v2.71.13
+    image: ghcr.io/zitadel/zitadel:v2.71.19
     container_name: ${CONTAINER_NAME}
     restart: always
     networks: 
