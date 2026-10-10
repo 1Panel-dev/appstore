@@ -26,9 +26,9 @@ additionalProperties:
   crossVersionUpdate: true
   limit: 0
   recommend: 0
-  website: https://www.mliev.com/
+  website: https://www.mliev.com/products/dwz
   github: https://github.com/muleiwu/dwz-server
-  document: https://www.mliev.com/docs/dwz
+  document: https://mdoc.cc/mliev/dwz
   memoryRequired: 1024
   architectures:
     - amd64
