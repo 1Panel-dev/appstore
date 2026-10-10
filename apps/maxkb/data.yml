@@ -25,7 +25,7 @@ additionalProperties:
     type: website
     crossVersionUpdate: false
     limit: 0
-    recommend: 13
+    recommend: 2
     batchInstallSupport: true
     website: https://github.com/1Panel-dev/MaxKB
     github: https://github.com/1Panel-dev/MaxKB
