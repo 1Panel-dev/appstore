@@ -27,7 +27,7 @@ additionalProperties:
   architectures:
     - amd64
     - arm64
-  recommend: 2
+  recommend: 0
   website: https://1panel.cn/
   github: https://github.com/1Panel-dev/laya-server
   document: https://github.com/1Panel-dev/laya-server/blob/main/README.md
