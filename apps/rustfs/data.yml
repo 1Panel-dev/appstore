@@ -1,14 +1,14 @@
 name: RustFS
 tags:
-    - 中间件
-title: 分布式存储系统
-description: 分布式存储系统
+    - 云存储
+title: 开源分布式对象存储系统
+description: 兼容 S3 协议的开源分布式对象存储系统
 additionalProperties:
     key: rustfs
     name: RustFS
     tags:
-      - Middleware
-    shortDescZh: 分布式存储系统
+      - Storage
+    shortDescZh: 开源分布式对象存储系统
     shortDescEn: Distributed Storage System
     description:
       en: Distributed Storage System
