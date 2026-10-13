@@ -1,0 +1,35 @@
+name: MLiev IAM
+tags:
+  - 安全
+title: 企业级身份认证与访问管理平台
+description: 企业级身份认证与访问管理平台
+additionalProperties:
+  key: mliev-iam
+  name: MLiev IAM
+  tags:
+    - Security
+  shortDescZh: 企业级身份认证与访问管理平台
+  shortDescEn: Enterprise identity and access management platform
+  description:
+    en: Enterprise identity and access management platform
+    es-es: Plataforma empresarial de gestión de identidades y accesos
+    fa: پلتفرم سازمانی مدیریت هویت و دسترسی
+    ja: エンタープライズ向けIDおよびアクセス管理プラットフォーム
+    ms: Platform pengurusan identiti dan akses perusahaan
+    pt-br: Plataforma empresarial de gerenciamento de identidade e acesso
+    ru: Корпоративная платформа управления идентификацией и доступом
+    ko: 엔터프라이즈 ID 및 액세스 관리 플랫폼
+    zh-hant: 企業級身分認證與存取管理平台
+    zh: 企业级身份认证与访问管理平台
+    tr: Kurumsal kimlik ve erişim yönetimi platformu
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://www.mliev.com/products/iam
+  github: https://cnb.cool/mliev/iam/mliev-iam
+  document: https://cnb.cool/mliev/iam/mliev-iam/-/blob/master/docs/installation-guide.zh-CN.md
+  memoryRequired: 1024
+  architectures:
+    - amd64
+    - arm64

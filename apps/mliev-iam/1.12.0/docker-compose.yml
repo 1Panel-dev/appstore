@@ -1,0 +1,31 @@
+services:
+  mliev-iam:
+    container_name: ${CONTAINER_NAME}
+    image: docker.cnb.cool/mliev/iam/mliev-iam:v1.12.0
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8080
+    volumes:
+      - ./config:/app/config
+      - ./logs:/app/logs
+    environment:
+      TZ: ${TIME_ZONE}
+      IAM_SETUP_DB_DRIVER: ${PANEL_DB_TYPE}
+      IAM_SETUP_DB_HOST: ${PANEL_DB_HOST}
+      IAM_SETUP_DB_PORT: ${PANEL_DB_PORT}
+      IAM_SETUP_DB_DATABASE: ${PANEL_DB_NAME}
+      IAM_SETUP_DB_USERNAME: ${PANEL_DB_USER}
+      IAM_SETUP_DB_PASSWORD: ${PANEL_DB_USER_PASSWORD}
+      IAM_SETUP_DB_CHARSET: utf8mb4
+      IAM_SETUP_REDIS_HOST: ${PANEL_REDIS_HOST}
+      IAM_SETUP_REDIS_PORT: "6379"
+      IAM_SETUP_REDIS_PASSWORD: ${PANEL_REDIS_ROOT_PASSWORD}
+      IAM_SETUP_REDIS_DB: "0"
+    labels:
+      createdBy: Apps
+
+networks:
+  1panel-network:
+    external: true
