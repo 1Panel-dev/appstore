@@ -1,0 +1,76 @@
+services:
+  pigeonbox:
+    image: ghcr.io/pigeonbox/server:1.24.1
+    container_name: "${CONTAINER_NAME}"
+    restart: always
+    networks:
+      - 1panel-network
+    environment:
+      PB_SERVER_MODE: release
+      PB_PRODUCTION: 1
+      PB_ADMIN_PASSWORD: "${PB_ADMIN_PASSWORD}"
+      PB_SERVER_BASE_URL: "${PB_SERVER_BASE_URL:-}"
+      PB_USER_ALLOW_REGISTRATION: "false"
+      PB_TRUSTED_PROXIES: "${PB_TRUSTED_PROXIES:-}"
+    volumes:
+      - ./data:/app/data
+    entrypoint:
+      - /bin/sh
+      - -c
+      - |
+        if [ -z "$$PB_JWT_SECRET" ] && [ -f /app/data/.jwt_secret ]; then
+          PB_JWT_SECRET=$$(cat /app/data/.jwt_secret)
+          export PB_JWT_SECRET
+        fi
+        if [ -z "$$PB_JWT_SECRET" ]; then
+          PB_JWT_SECRET=$$(tr -dc 'A-Za-z0-9' < /dev/urandom | head -c 48)
+          export PB_JWT_SECRET
+          printf '%s' "$$PB_JWT_SECRET" > /app/data/.jwt_secret
+          chmod 600 /app/data/.jwt_secret
+        fi
+        exec ./server --config ./config/config.yaml
+    healthcheck:
+      test:
+        - CMD
+        - wget
+        - "-q"
+        - "-O"
+        - /dev/null
+        - http://localhost:12345/live
+      interval: 15s
+      timeout: 3s
+      start_period: 15s
+      retries: 5
+    labels:
+      createdBy: Apps
+  frontend:
+    image: ghcr.io/pigeonbox/frontend:1.24.1
+    container_name: "${CONTAINER_NAME}-frontend"
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:8080"
+    environment:
+      BACKEND_HOST: pigeonbox
+      BACKEND_PORT: 12345
+      CLIENT_MAX_BODY_SIZE: 1024m
+    depends_on:
+      - pigeonbox
+    healthcheck:
+      test:
+        - CMD
+        - wget
+        - "-q"
+        - "-O"
+        - /dev/null
+        - http://127.0.0.1:8080/
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+    labels:
+      createdBy: Apps
+networks:
+  1panel-network:
+    external: true

@@ -1,0 +1,75 @@
+additionalProperties:
+  formFields:
+    - default: ""
+      envKey: PB_ADMIN_PASSWORD
+      labelEn: "Admin Password"
+      labelZh: "管理员密码"
+      label:
+        en: "Admin Password"
+        es-es: "Contraseña del administrador"
+        ja: "管理者パスワード"
+        ms: "Kata Laluan Pentadbir"
+        pt-br: "Senha do Administrador"
+        ru: "Пароль администратора"
+        ko: "관리자 비밀번호"
+        zh-Hant: "管理員密碼"
+        zh: "管理员密码"
+        tr: "Yönetici Parolası"
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+    - default: ""
+      edit: true
+      envKey: PB_SERVER_BASE_URL
+      labelEn: "Site URL"
+      labelZh: "站点地址"
+      label:
+        en: "Site URL"
+        es-es: "URL del sitio"
+        ja: "サイトURL"
+        ms: "URL Laman"
+        pt-br: "URL do Site"
+        ru: "URL сайта"
+        ko: "사이트 URL"
+        zh-Hant: "網站地址"
+        zh: "站点地址"
+        tr: "Site URL'si"
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: PB_TRUSTED_PROXIES
+      labelEn: "Trusted Proxy CIDRs"
+      labelZh: "可信代理网段"
+      label:
+        en: "Trusted Proxy CIDRs"
+        es-es: "CIDR de proxies de confianza"
+        ja: "信頼できるプロキシCIDR"
+        ms: "CIDR Proksi Dipercayai"
+        pt-br: "CIDRs de Proxy Confiáveis"
+        ru: "Доверенные CIDR прокси"
+        ko: "신뢰할 수 있는 프록시 CIDR"
+        zh-Hant: "可信代理網段"
+        zh: "可信代理网段"
+        tr: "Güvenilir Proxy CIDR'leri"
+      required: false
+      type: text
+    - default: 12345
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: "端口"
+      label:
+        en: Port
+        es-es: Puerto
+        ja: "ポート"
+        ms: Port
+        pt-br: Porta
+        ru: "Порт"
+        ko: "포트"
+        zh-Hant: "埠"
+        zh: "端口"
+        tr: "Bağlantı Noktası"
+      required: true
+      rule: paramPort
+      type: number

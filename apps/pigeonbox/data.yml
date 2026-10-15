@@ -1,0 +1,33 @@
+name: PigeonBox
+tags:
+  - 云存储
+title: 文件快递柜：匿名口令分享文本与文件
+description: 匿名口令分享文本与文件的开源自托管文件快递柜
+additionalProperties:
+  key: pigeonbox
+  name: PigeonBox
+  tags:
+    - Storage
+  shortDescZh: 匿名口令分享文本与文件的自托管文件快递柜
+  shortDescEn: Self-hosted file locker for anonymous passcode-based text and file sharing
+  description:
+    en: "Open-source self-hosted file express cabinet: share text and files anonymously via pickup passcodes"
+    es-es: "Plataforma autoalojada de código abierto tipo taquilla de archivos: comparte texto y archivos de forma anónima con un código de recogida"
+    ja: "オープンソースのセルフホスト型「ファイル宅配ロッカー」：受取パスコードでテキストやファイルを匿名共有"
+    ms: "Loker ekspres fail sumber terbuka terhos-sendiri: kongsi teks dan fail secara tanpa nama dengan kod pengambilan"
+    pt-br: "Armário de encomendas de arquivos de código aberto e auto-hospedado: compartilhe texto e arquivos anonimamente com um código de retirada"
+    ru: "Открытая самостоятельная «файл-ячейка» платформа: анонимный обмен текстом и файлами по коду получения"
+    ko: "오픈소스 셀프호스팅 파일 익스프레스 로커: 수령 암호 코드로 텍스트와 파일을 익명 공유"
+    zh-Hant: "開源檔案快遞櫃：憑取件口令匿名分享文字與檔案的自託管平台"
+    zh: "匿名口令分享文本与文件的开源自托管文件快递柜"
+    tr: "Açık kaynaklı, kendi kendine barındırılan dosya dolabı: metin ve dosyaları alma koduyla anonim paylaşın"
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  batchInstallSupport: true
+  website: https://github.com/pigeonbox/pigeonbox
+  github: https://github.com/pigeonbox/pigeonbox
+  architectures:
+    - amd64
+    - arm64
