@@ -1,6 +1,6 @@
 services:
   influxdb:
-    image: influxdb:3.12.0-core
+    image: influxdb:3.12.1-core
     container_name: ${CONTAINER_NAME}
     restart: always
     command:
