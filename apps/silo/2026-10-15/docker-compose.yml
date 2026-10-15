@@ -1,0 +1,31 @@
+services:
+  silo:
+    image: pgsty/silo:RELEASE.2026-10-15T00-00-00Z
+    container_name: ${CONTAINER_NAME}
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:9001
+      - ${PANEL_APP_PORT_API}:9000
+    restart: always
+    command: "server /data --console-address :9001 --address :9000"
+    environment:
+      MINIO_ROOT_USER: ${PANEL_MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${PANEL_MINIO_ROOT_PASSWORD}
+      MINIO_BROWSER_SESSION_DURATION: ${MINIO_BROWSER_SESSION_DURATION}
+      MINIO_BROWSER: ${MINIO_BROWSER}
+      MINIO_BROWSER_LOGIN_ANIMATION: ${MINIO_BROWSER_LOGIN_ANIMATION}
+      MINIO_UPDATE: "off"
+    logging:
+      options:
+        max-size: "5M"
+        max-file: "10"
+      driver: json-file
+    networks:
+      - 1panel-network
+    volumes:
+      - ./data:/data
+      - ./certs:/tmp/.minio/certs
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true

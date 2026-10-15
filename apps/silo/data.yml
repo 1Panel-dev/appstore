@@ -1,0 +1,36 @@
+name: Silo
+tags:
+  - 中间件
+title: 高性能 S3 兼容对象存储服务
+description: 高性能 S3 兼容对象存储服务
+additionalProperties:
+  key: silo
+  name: Silo
+  tags:
+    - Middleware
+  shortDescZh: 高性能 S3 兼容对象存储服务
+  shortDescEn: High-performance S3-compatible object storage
+  description:
+    en: Silo is a community-maintained fork of MinIO, providing high-performance, S3-compatible object storage for AI, analytics and application data workloads.
+    es-es: Silo es un fork de MinIO mantenido por la comunidad que ofrece almacenamiento de objetos de alto rendimiento compatible con S3.
+    fa: 'Silo یک فورک MinIO است که توسط جامعه نگهداری می‌شود و ذخیره‌سازی شیء سازگار با S3 و پرکارایی را ارائه می‌دهد.'
+    ja: Silo はコミュニティが保守する MinIO のフォークで、高性能で S3 互換のオブジェクトストレージを提供します。
+    ko: Silo는 커뮤니티가 유지 관리하는 MinIO 포크로, 고성능 S3 호환 객체 스토리지를 제공합니다.
+    ms: Silo ialah fork MinIO yang diselenggara oleh komuniti, menyediakan storan objek serasi S3 berprestasi tinggi.
+    pt-br: Silo é um fork do MinIO mantido pela comunidade, oferecendo armazenamento de objetos de alto desempenho compatível com S3.
+    ru: Silo — поддерживаемый сообществом форк MinIO, обеспечивающий высокопроизводительное объектное хранилище, совместимое с S3.
+    tr: Silo, topluluk tarafından sürdürülen bir MinIO çatalıdır; yüksek performanslı, S3 uyumlu nesne depolama sunar.
+    zh-Hant: Silo 是由社群維護的 MinIO 分支，提供高效能、相容 S3 的物件儲存服務。
+    zh: Silo 是由 Pigsty 社区维护的 MinIO 分支，提供高性能、兼容 S3 的对象存储服务。
+  type: website
+  crossVersionUpdate: true
+  limit: 1
+  recommend: 0
+  batchInstallSupport: true
+  website: https://silo.pgsty.com/
+  github: https://github.com/pgsty/silo
+  document: https://silo.pgsty.com/zh/docs/
+  memoryRequired: 2048
+  architectures:
+    - amd64
+    - arm64
