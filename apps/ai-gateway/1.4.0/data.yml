@@ -1,0 +1,70 @@
+additionalProperties:
+  formFields:
+    - default: admin
+      disabled: true
+      envKey: AI_GATEWAY_INITIAL_ADMIN_USERNAME
+      labelEn: Username
+      labelZh: "用户名"
+      label:
+        en: Username
+        es-es: Usuario
+        ja: "ユーザー名"
+        ms: Pengguna
+        pt-br: "Usuário"
+        ru: "Имя пользователя"
+        ko: "사용자 이름"
+        zh-Hant: "使用者名稱"
+        zh: "用户名"
+        tr: "Kullanıcı adı"
+      required: true
+      rule: paramCommon
+      type: text
+    - default: 1PanelAI
+      envKey: AI_GATEWAY_INITIAL_ADMIN_PASSWORD
+      labelEn: "Initial Admin Password"
+      labelZh: "初始管理员密码"
+      label:
+        en: "Initial Admin Password"
+        es-es: "Initial Admin Password"
+        ja: "Initial Admin Password"
+        ms: "Initial Admin Password"
+        pt-br: "Initial Admin Password"
+        ru: "Initial Admin Password"
+        ko: "Initial Admin Password"
+        zh-Hant: "初始管理員密碼"
+        zh: "初始管理员密码"
+        tr: "Initial Admin Password"
+      description:
+        en: "Password length must be between 12 and 128 bytes"
+        es-es: "La longitud de la contraseña debe ser de entre 12 y 128 bytes"
+        ja: "パスワードの長さは12～128バイトである必要があります"
+        ms: "Panjang kata laluan mestilah antara 12 hingga 128 bait"
+        pt-br: "O comprimento da senha deve ser de 12 a 128 bytes"
+        ru: "Длина пароля должна составлять от 12 до 128 байт"
+        ko: "비밀번호 길이는 12~128바이트여야 합니다"
+        zh-Hant: "密碼長度須為 12 至 128 位元組"
+        zh: "密码长度须为 12 至 128 字节"
+        tr: "Parola uzunluğu 12 ile 128 bayt arasında olmalıdır"
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+    - default: 8080
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: "Web UI Port"
+      labelZh: "Web UI 端口"
+      label:
+        en: "Web UI Port"
+        es-es: "Puerto web"
+        ja: "Web UIポート"
+        ms: "Port Web UI"
+        pt-br: "Porta da Web UI"
+        ru: "Порт веб-интерфейса"
+        ko: "웹 UI 포트"
+        zh-Hant: "Web UI 埠"
+        zh: "Web UI 端口"
+        tr: "Web UI Bağlantı Noktası"
+      required: true
+      rule: paramPort
+      type: number
