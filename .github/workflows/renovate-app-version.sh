@@ -36,6 +36,11 @@ do
         esac
       fi
 
+      # AI Gateway variants share one image tag; keep the PostgreSQL directory suffix.
+      if [[ "$app_name" == "ai-gateway" && "$old_version" == *-postgres ]]; then
+        target_version="$trimmed_version-postgres"
+      fi
+
       # InfluxDB 3 uses a "-core" image tag suffix (e.g. 3.12.0-core)
       if [[ "$app_name" == "influxdb" && "$trimmed_version" == *-core ]]; then
         target_version="${trimmed_version%-core}"

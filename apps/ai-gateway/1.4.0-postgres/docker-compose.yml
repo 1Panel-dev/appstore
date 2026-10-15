@@ -1,0 +1,35 @@
+services:
+  ai-gateway:
+    image: 1panel/ai-gateway:v1.4.0
+    container_name: "${CONTAINER_NAME}"
+    restart: always
+    entrypoint: ["/usr/bin/ai-gateway"]
+    command: []
+    stop_grace_period: 70s
+    networks:
+      - 1panel-network
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:8080"
+    environment:
+      AI_GATEWAY_DATABASE_DRIVER: postgres
+      # Keyword DSN preserves allowed password characters such as @ and % without URL encoding.
+      AI_GATEWAY_DATABASE_POSTGRES_DSN: "host='${PANEL_DB_HOST}' port=${PANEL_DB_PORT} user='${PANEL_DB_USER}' password='${PANEL_DB_USER_PASSWORD}' dbname='${PANEL_DB_NAME}' sslmode=disable"
+      AI_GATEWAY_INITIAL_ADMIN_USERNAME: "${AI_GATEWAY_INITIAL_ADMIN_USERNAME}"
+      AI_GATEWAY_INITIAL_ADMIN_PASSWORD: "${AI_GATEWAY_INITIAL_ADMIN_PASSWORD}"
+    volumes:
+      - ./data:/opt/ai-gateway/data
+      - /etc/1panel:/opt/ai-gateway/1panel
+      - /etc/machine-id:/etc/machine-id:ro
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - "wget -q -O - http://127.0.0.1:8080/health/ready >/dev/null || exit 1"
+      interval: 30s
+      timeout: 5s
+      start_period: 10s
+      retries: 3
+    labels:
+      createdBy: Apps
+networks:
+  1panel-network:
+    external: true
