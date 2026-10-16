@@ -1,0 +1,144 @@
+additionalProperties:
+  formFields:
+    - default: silo
+      envKey: PANEL_MINIO_ROOT_USER
+      labelEn: User
+      labelZh: 用户
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+      label:
+        en: User
+        es-es: Usuario
+        fa: 'کاربر'
+        ja: ユーザー
+        ko: 사용자
+        ms: Pengguna
+        pt-br: Usuário
+        ru: Пользователь
+        tr: Kullanıcı
+        zh-Hant: 用戶
+        zh: 用户
+    - default: silo
+      envKey: PANEL_MINIO_ROOT_PASSWORD
+      labelEn: Password
+      labelZh: 密码
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+      label:
+        en: Password
+        es-es: Contraseña
+        fa: 'رمز عبور'
+        ja: パスワード
+        ko: 비밀번호
+        ms: Kata laluan
+        pt-br: Senha
+        ru: Пароль
+        tr: Parola
+        zh-Hant: 密碼
+        zh: 密码
+    - default: 9001
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Console Port
+      labelZh: 控制台端口
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        en: Console Port
+        es-es: Puerto de consola
+        fa: 'پورت کنسول'
+        ja: コンソールポート
+        ko: 콘솔 포트
+        ms: Port konsol
+        pt-br: Porta do console
+        ru: Порт консоли
+        tr: Konsol Bağlantı Noktası
+        zh-Hant: 控制台埠
+        zh: 控制台端口
+    - default: 9000
+      envKey: PANEL_APP_PORT_API
+      labelEn: API Port
+      labelZh: API 端口
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        en: API Port
+        es-es: Puerto API
+        fa: 'پورت API'
+        ja: API ポート
+        ko: API 포트
+        ms: Port API
+        pt-br: Porta API
+        ru: Порт API
+        tr: API Bağlantı Noktası
+        zh-Hant: API 埠
+        zh: API 端口
+    - default: "12h"
+      envKey: MINIO_BROWSER_SESSION_DURATION
+      labelEn: Session duration (s/m/h/d)
+      labelZh: 会话持续时间 (s/秒 m/分钟 h/小时 d/天)
+      required: true
+      type: text
+      label:
+        en: Session duration (s/m/h/d)
+        es-es: Duración de la sesión (s/m/h/d)
+        fa: 'مدت نشست (s/m/h/d)'
+        ja: セッション期間 (s/m/h/d)
+        ko: 세션 지속 시간 (s/m/h/d)
+        ms: Tempoh sesi (s/m/h/d)
+        pt-br: Duração da sessão (s/m/h/d)
+        ru: Длительность сессии (s/m/h/d)
+        tr: Oturum süresi (s/m/h/d)
+        zh-Hant: 會話持續時間 (s/秒 m/分鐘 h/小時 d/天)
+        zh: 会话持续时间 (s/秒 m/分钟 h/小时 d/天)
+    - default: "on"
+      envKey: MINIO_BROWSER
+      labelEn: Enable WebUI
+      labelZh: 启用 WebUI
+      required: true
+      type: select
+      values:
+        - label: "ON"
+          value: "on"
+        - label: "OFF"
+          value: "off"
+      label:
+        en: Enable WebUI
+        es-es: Habilitar WebUI
+        fa: 'فعال‌سازی WebUI'
+        ja: WebUI を有効にする
+        ko: WebUI 활성화
+        ms: Aktifkan WebUI
+        pt-br: Habilitar WebUI
+        ru: Включить WebUI
+        tr: WebUI'yi etkinleştir
+        zh-Hant: 啟用 WebUI
+        zh: 启用 WebUI
+    - default: "on"
+      envKey: MINIO_BROWSER_LOGIN_ANIMATION
+      labelEn: WebUI login animation
+      labelZh: WebUI 登录动画
+      required: true
+      type: select
+      values:
+        - label: "ON"
+          value: "on"
+        - label: "OFF"
+          value: "off"
+      label:
+        en: WebUI login animation
+        es-es: Animación de inicio de sesión de WebUI
+        fa: 'انیمیشن ورود WebUI'
+        ja: WebUI ログインアニメーション
+        ko: WebUI 로그인 애니메이션
+        ms: Animasi log masuk WebUI
+        pt-br: Animação de login do WebUI
+        ru: Анимация входа в WebUI
+        tr: WebUI giriş animasyonu
+        zh-Hant: WebUI 登入動畫
+        zh: WebUI 登录动画
