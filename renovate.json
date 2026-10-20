@@ -26,6 +26,10 @@
       "automerge": true
     },
     {
+      "matchPackageNames": ["1panel/hermes-agent"],
+      "allowedVersions": "!/^v?[0-9]{4}\\./"
+    },
+    {
       "matchFileNames": ["apps/mysql/5.6.*/*.yml"],
       "allowedVersions": "/^5.6.*/"
     },
