@@ -1,0 +1,22 @@
+additionalProperties:
+  key: zpush
+  name: zPush
+  tags:
+    - Tool
+  shortDescZh: 自托管 Webhook 事件路由与通知推送
+  shortDescEn: Self-hosted webhook router & notification pusher
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  website: https://github.com/z1zhang/zpush
+  github: https://github.com/z1zhang/zpush
+  document: https://github.com/z1zhang/zpush/blob/master/README.md
+  description:
+    en: Self-hosted webhook event routing and notification push system. Receives webhooks, applies field mapping, rule matching and template rendering, then delivers to DingTalk / Feishu / WeCom / Email / HTTP.
+    zh: 自托管 Webhook 事件路由与通知推送系统。接收外部 Webhook，经字段映射、规则匹配、模板渲染后投递到钉钉、飞书、企业微信、邮件及 HTTP 渠道
+    zh-Hant: 自託管 Webhook 事件路由與通知推送系統
+    ja: セルフホストの Webhook イベントルーティングと通知配信システム
+    ms: Sistem penghalaan acara webhook dan penghantaran pemberitahuan kendiri
+    pt-br: Sistema auto-hospedado de roteamento de webhooks e envio de notificações
+    ru: Самостоятельная система маршрутизации вебхуков и отправки уведомлений
+    ko: 자체 호스팅 웹훅 이벤트 라우팅 및 알림 푸시 시스템

@@ -1,0 +1,71 @@
+additionalProperties:
+  formFields:
+    - default: 9003
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: ""
+      edit: true
+      envKey: ENCRYPTION_MASTER_KEY
+      labelEn: "Encryption Master Key (format v1:base64, run openssl rand -base64 32 and prefix v1:)"
+      labelZh: "加密主密钥（格式 v1:base64，生成命令 openssl rand -base64 32，前面加 v1:）"
+      required: true
+      type: password
+    - default: admin
+      edit: true
+      envKey: ADMIN_INITIAL_USER
+      labelEn: Initial Admin Username
+      labelZh: 初始管理员用户名
+      required: true
+      rule: paramCommon
+      type: text
+    - default: admin
+      edit: true
+      envKey: ADMIN_INITIAL_PASSWORD
+      labelEn: Initial Admin Password
+      labelZh: 初始管理员密码
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+    - default: ""
+      envKey: PANEL_DB_HOST
+      key: mysql
+      labelEn: Database Service
+      labelZh: 数据库服务
+      required: true
+      type: service
+    - default: 3306
+      envKey: PANEL_DB_PORT
+      labelEn: Database Port
+      labelZh: 数据库端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: zpush
+      envKey: PANEL_DB_NAME
+      labelEn: Database Name
+      labelZh: 数据库名
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: zpush
+      envKey: PANEL_DB_USER
+      labelEn: Database User
+      labelZh: 数据库用户
+      required: true
+      rule: paramCommon
+      type: text
+    - default: zpush123
+      envKey: PANEL_DB_PASSWORD
+      labelEn: Database Password
+      labelZh: 数据库密码
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
