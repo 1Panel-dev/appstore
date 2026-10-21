@@ -1,0 +1,30 @@
+services:
+  zpush:
+    image: zhangz1o/zpush:v0.7.2
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:9003
+    environment:
+      - DB_HOST=${PANEL_DB_HOST}
+      - DB_PORT=${PANEL_DB_PORT}
+      - DB_USER=${PANEL_DB_USER}
+      - DB_PASSWORD=${PANEL_DB_PASSWORD}
+      - DB_NAME=${PANEL_DB_NAME}
+      - ENCRYPTION_MASTER_KEY=${ENCRYPTION_MASTER_KEY}
+      - ADMIN_INITIAL_USER=${ADMIN_INITIAL_USER}
+      - ADMIN_INITIAL_PASSWORD=${ADMIN_INITIAL_PASSWORD}
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost:9003/healthz"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    labels:
+      createdBy: "Apps"
+
+networks:
+  1panel-network:
+    external: true
