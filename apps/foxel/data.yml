@@ -1,0 +1,36 @@
+name: Foxel
+tags:
+  - 云存储
+  - 实用工具
+title: 支持多存储和 AI 语义搜索的私有云盘
+description: 支持多存储和 AI 语义搜索的私有云盘
+additionalProperties:
+  key: foxel
+  name: Foxel
+  tags:
+    - Storage
+    - Tool
+  shortDescZh: 支持多存储和 AI 语义搜索的私有云盘
+  shortDescEn: Private cloud storage with multiple backends and AI semantic search
+  description:
+    en: Private cloud storage with multiple backends and AI semantic search
+    zh: 支持多存储和 AI 语义搜索的私有云盘
+    zh-Hant: 支援多儲存後端與 AI 語意搜尋的私有雲端硬碟
+    ja: 複数のストレージと AI セマンティック検索に対応したプライベートクラウドストレージ
+    ko: 다양한 저장소와 AI 의미 검색을 지원하는 프라이빗 클라우드 스토리지
+    ms: Storan awan peribadi dengan berbilang storan dan carian semantik AI
+    pt-br: Armazenamento em nuvem privada com múltiplos provedores e busca semântica por IA
+    ru: Частное облачное хранилище с несколькими провайдерами и семантическим поиском на базе ИИ
+    tr: Birden fazla depolama kaynağı ve yapay zeka anlamsal araması sunan özel bulut depolama
+    es-es: Almacenamiento en nube privada con múltiples proveedores y búsqueda semántica con IA
+    fa: فضای ذخیره‌سازی ابری خصوصی با چندین سرویس ذخیره‌سازی و جستجوی معنایی هوش مصنوعی
+  type: website
+  crossVersionUpdate: false
+  limit: 0
+  recommend: 0
+  website: https://foxel.cc/
+  github: https://github.com/DrizzleTime/Foxel
+  document: https://github.com/DrizzleTime/Foxel/blob/main/README_zh.md
+  architectures:
+    - amd64
+    - arm64

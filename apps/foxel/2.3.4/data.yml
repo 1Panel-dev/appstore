@@ -1,0 +1,99 @@
+additionalProperties:
+  formFields:
+    - default: 8088
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: WebUI Port
+      labelZh: 网页端口
+      label:
+        en: WebUI Port
+        zh: 网页端口
+        zh-Hant: 網頁連接埠
+        ja: WebUI ポート
+        ko: WebUI 포트
+        ms: Port WebUI
+        pt-br: Porta WebUI
+        ru: Порт веб-интерфейса
+        tr: Web arayüzü bağlantı noktası
+        es-es: Puerto de la interfaz web
+        fa: پورت رابط وب
+      required: true
+      rule: paramPort
+      type: number
+    - default: ""
+      envKey: SECRET_KEY
+      labelEn: Authentication Secret
+      labelZh: 身份认证密钥
+      label:
+        en: Authentication Secret
+        zh: 身份认证密钥
+        zh-Hant: 身分驗證金鑰
+        ja: 認証シークレット
+        ko: 인증 비밀키
+        ms: Rahsia Pengesahan
+        pt-br: Segredo de autenticação
+        ru: Секрет аутентификации
+        tr: Kimlik doğrulama anahtarı
+        es-es: Clave de autenticación
+        fa: کلید احراز هویت
+      random: true
+      required: true
+      type: password
+    - default: ""
+      envKey: TEMP_LINK_SECRET_KEY
+      labelEn: Temporary Link Secret
+      labelZh: 临时链接签名密钥
+      label:
+        en: Temporary Link Secret
+        zh: 临时链接签名密钥
+        zh-Hant: 臨時連結簽章金鑰
+        ja: 一時リンクのシークレット
+        ko: 임시 링크 비밀키
+        ms: Rahsia Pautan Sementara
+        pt-br: Segredo de links temporários
+        ru: Секрет временных ссылок
+        tr: Geçici bağlantı anahtarı
+        es-es: Clave de enlaces temporales
+        fa: کلید پیوند موقت
+      random: true
+      required: true
+      type: password
+    - default: ""
+      edit: true
+      envKey: APP_DOMAIN
+      labelEn: Public URL (Optional)
+      labelZh: 公开访问地址（可选）
+      label:
+        en: Public URL (Optional)
+        zh: 公开访问地址（可选）
+        zh-Hant: 公開存取網址（選填）
+        ja: 公開 URL（任意）
+        ko: 공개 URL (선택 사항)
+        ms: URL Awam (Pilihan)
+        pt-br: URL pública (opcional)
+        ru: Публичный URL (необязательно)
+        tr: Genel URL (isteğe bağlı)
+        es-es: URL pública (opcional)
+        fa: نشانی عمومی (اختیاری)
+      required: false
+      rule: paramExtUrl
+      type: text
+    - default: Asia/Shanghai
+      edit: true
+      envKey: TIME_ZONE
+      labelEn: Time Zone
+      labelZh: 时区
+      label:
+        en: Time Zone
+        zh: 时区
+        zh-Hant: 時區
+        ja: タイムゾーン
+        ko: 시간대
+        ms: Zon Masa
+        pt-br: Fuso horário
+        ru: Часовой пояс
+        tr: Saat dilimi
+        es-es: Zona horaria
+        fa: منطقه زمانی
+      required: true
+      type: text

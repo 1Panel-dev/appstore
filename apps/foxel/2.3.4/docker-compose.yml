@@ -1,0 +1,22 @@
+services:
+  foxel:
+    image: ghcr.io/drizzletime/foxel:v2.3.4
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:80"
+    environment:
+      TZ: ${TIME_ZONE}
+      FOXEL_PORT: "80"
+      SECRET_KEY: ${SECRET_KEY}
+      TEMP_LINK_SECRET_KEY: ${TEMP_LINK_SECRET_KEY}
+      APP_DOMAIN: ${APP_DOMAIN}
+    volumes:
+      - ./data:/app/data
+    networks:
+      - 1panel-network
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true
