@@ -1,6 +1,6 @@
 services:
   kodbox:
-    image: kodcloud/kodbox:v1.4505
+    image: kodcloud/kodbox:1.70.03
     container_name: ${CONTAINER_NAME}
     ports:
       - ${PANEL_APP_PORT_HTTP}:80
