@@ -32,8 +32,4 @@ additionalProperties:
   document: https://docs.kodcloud.com/
   architectures:
     - amd64
-    - arm/v6
-    - arm/v7
     - arm64
-    - ppc64le
-    - s390x
