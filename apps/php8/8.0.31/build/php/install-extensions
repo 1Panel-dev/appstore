@@ -1,0 +1,16 @@
+#!/bin/sh
+set -eu
+set -f
+
+# v1 serializes selected extensions as a comma-separated list.
+extensions=$(printf '%s' "${PHP_EXTENSIONS:-}" | tr ',' ' ')
+set -- $extensions
+[ "$#" -gt 0 ] || exit 0
+for extension do
+    case "$extension" in
+        -*|*[!a-zA-Z0-9_-]*) echo "Invalid PHP extension: $extension" >&2; exit 1 ;;
+    esac
+done
+
+# Keep the base image's installer: it detects Debian and the real PHP version.
+install-php-extensions "$@"
