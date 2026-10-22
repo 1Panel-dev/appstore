@@ -7,7 +7,14 @@ require 'tmpdir'
 require 'fileutils'
 
 ROOT = File.expand_path('..', __dir__)
-VERSIONS = {
+LEGACY_VERSIONS = {
+  '5.6.41' => ['php5', '5.6.40'],
+  '7.0.34' => ['php7', '7.0.33'],
+  '7.1.34' => ['php7', '7.1.33'],
+  '7.2.35' => ['php7', '7.2.34'],
+  '7.3.34' => ['php7', '7.3.33']
+}.freeze
+VERSIONS = LEGACY_VERSIONS.merge({
   '7.4.34' => ['php7', '7.4.33'],
   '8.0.31' => ['php8', '8.0.30'],
   '8.1.35' => ['php8', '8.1.34'],
@@ -15,7 +22,7 @@ VERSIONS = {
   '8.3.36' => ['php8', '8.3.36'],
   '8.4.27' => ['php8', '8.4.27'],
   '8.5.12' => ['php8', '8.5.12']
-}.freeze
+}).freeze
 
 def check(value, message)
   raise message unless value
@@ -26,6 +33,7 @@ def yaml(path)
 end
 
 templates = nil
+legacy_templates = nil
 VERSIONS.each do |tag, (app, internal)|
   package = File.join(ROOT, 'apps', app, tag)
   build = File.join(package, 'build')
@@ -57,7 +65,8 @@ VERSIONS.each do |tag, (app, internal)|
   pool = File.read(File.join(package, 'conf/php-fpm.conf'))
   check(pool.match?(/^\[www\]$/) && pool.match?(/^listen = 9000$/), "#{tag}: FPM pool/listener")
   dockerfile = File.read(File.join(build, 'php', 'Dockerfile'))
-  check(dockerfile.include?('ENTRYPOINT ["docker-php-entrypoint"]') && dockerfile.include?('CMD ["php-fpm", "-F"]'), "#{tag}: direct foreground FPM")
+  entrypoint = LEGACY_VERSIONS.key?(tag) ? 'ENTRYPOINT []' : 'ENTRYPOINT ["docker-php-entrypoint"]'
+  check(dockerfile.include?(entrypoint) && dockerfile.include?('CMD ["php-fpm", "-F"]'), "#{tag}: direct foreground FPM")
   check(dockerfile.include?('php-fpm -t') && dockerfile.include?('PHP_VERSION === $argv[1]'), "#{tag}: build-time validation")
   check(!dockerfile.match?(/^(?:ARG|ENV) PHP_VERSION\b/) && !dockerfile.include?('apk '), "#{tag}: preserve internal PHP version / Debian")
   check(dockerfile.include?('ENV COMPOSER_HOME=/tmp/composer'), "#{tag}: composer home")
@@ -70,8 +79,13 @@ VERSIONS.each do |tag, (app, internal)|
   end
   check(File.read(File.join(package, 'conf/php.ini')).include?('yaf.use_spl_autoload=1'), "#{tag}: retain inherited PHP settings")
   current = %w[Dockerfile configure-source install-extensions].map { |f| File.read(File.join(build, 'php', f)) }
-  templates ||= current
-  check(current == templates, "#{tag}: template drift")
+  if LEGACY_VERSIONS.key?(tag)
+    legacy_templates ||= current
+    check(current == legacy_templates, "#{tag}: legacy template drift")
+  else
+    templates ||= current
+    check(current == templates, "#{tag}: template drift")
+  end
   %w[configure-source install-extensions].each do |name|
     _, err, status = Open3.capture3('sh', '-n', File.join(build, 'php', name))
     check(status.success?, "#{tag}: shell syntax #{err}")
@@ -79,10 +93,11 @@ VERSIONS.each do |tag, (app, internal)|
   yaml(File.join(package, 'data.yml'))
 end
 
-%w[php7 php8].each do |app|
+%w[php5 php7 php8].each do |app|
   properties = yaml(File.join(ROOT, 'apps', app, 'data.yml')).fetch('additionalProperties')
   check(properties.fetch('deprecated') == 2.0, "#{app}: preserve v1 metadata")
-  check(properties.fetch('architectures') == %w[amd64 arm64 arm/v7], "#{app}: supported image platforms")
+  architectures = app == 'php5' ? %w[amd64] : %w[amd64 arm64 arm/v7]
+  check(properties.fetch('architectures') == architectures, "#{app}: supported image platforms")
 end
 
 Dir.mktmpdir('v1-php-check') do |tmp|
@@ -112,6 +127,8 @@ Dir.mktmpdir('v1-php-check') do |tmp|
       check(status.exitstatus == 17, 'installer failure must propagate')
     end
   end
+
+  check(legacy_templates[2] == templates[2], 'legacy extension installer must reuse the checked argument handling')
 
   source = File.join(tmp, 'configure-source')
   File.write(source, templates[1].gsub('/etc/', tmp + '/etc/').gsub('/usr/local/bin/prepare-apt', File.join(bin, 'prepare-apt')))
@@ -144,6 +161,29 @@ Dir.mktmpdir('v1-php-check') do |tmp|
       check(File.read(legacy) == original, 'active mirrors must not overwrite EOL archive configuration')
     end
   end
+
+  # Bullseye PHP 5.6/7.0-7.2 bases do not ship prepare-apt.
+  File.write(source, legacy_templates[1].gsub('/etc/', tmp + '/etc/').gsub('/usr/local/bin/prepare-apt', File.join(bin, 'prepare-apt')))
+  File.write(File.join(tmp, 'etc/os-release'), "ID=debian\nVERSION_CODENAME=bullseye\n")
+  FileUtils.rm_f(log)
+  _, err, status = Open3.capture3(shell_env.merge('CONTAINER_PACKAGE_URL' => 'mirrors.ustc.edu.cn'), 'sh', source)
+  check(status.success? && !File.exist?(log), "Bullseye must not require prepare-apt: #{err}")
+  check(File.read(legacy) == "deb [check-valid-until=no] https://archive.debian.org/debian bullseye main\ndeb [check-valid-until=no] https://archive.debian.org/debian-security bullseye-security main\n", 'Bullseye must retain signed archive sources')
+  File.write(File.join(tmp, 'etc/os-release'), "ID=debian\nVERSION_CODENAME=buster\n")
+  _, _, status = Open3.capture3(shell_env, 'sh', source)
+  check(status.success? && File.exist?(log), 'PHP 7.3 Buster must still invoke inherited prepare-apt')
 end
 
-puts 'PASS: seven v1 package layouts, forms, image/baseline mapping, mounts, FPM startup, architecture scope, shell syntax, extension argument/failure behavior, mirror conversion/defaults/signature preservation, and EOL archive dispatch.'
+LEGACY_VERSIONS.each do |tag, (app, internal)|
+  major = tag.split('.').first
+  fields = yaml(File.join(ROOT, 'apps', 'php', major, 'data.yml')).fetch('additionalProperties').fetch('formFields')
+  build = yaml(File.join(ROOT, 'apps', 'php', major, 'docker-compose.yml')).fetch('services').fetch('php').fetch('build')
+  check(build.fetch('args').fetch('PHP_IMAGE') == '1panel/php:${PHP_VERSION}-fpm', "#{tag}: v2 image reference")
+  field = fields.find { |f| f['envKey'] == 'PHP_VERSION' }
+  choice = field.fetch('values').find { |v| v['value'] == tag }
+  check(choice && choice.fetch('label') == "#{tag} (1Panel patched; PHP #{internal})", "#{tag}: v2 maintenance label/baseline")
+  check(field.fetch('values').none? { |v| v['value'] == internal }, "#{tag}: v2 old baseline choice")
+  check(field['default'] == tag, 'PHP 5.6 default must select maintenance image') if app == 'php5'
+end
+
+puts 'PASS: twelve v1 package layouts, forms, image/baseline mapping, mounts, FPM configuration, architecture scope, shell syntax, extension argument/failure behavior, mirror conversion/defaults/signature preservation, and EOL archive dispatch.'

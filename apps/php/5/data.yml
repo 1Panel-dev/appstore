@@ -80,7 +80,7 @@ additionalProperties:
             - label: imagick
               value: imagick
           envKey: PHP_EXTENSIONS
-        - default: 5.6.40
+        - default: 5.6.41
           envKey: PHP_VERSION
           labelEn: PHP Version
           labelZh: PHP 版本
@@ -99,8 +99,8 @@ additionalProperties:
           required: true
           type: select
           values:
-            - label: "5.6.40"
-              value: "5.6.40"
+            - label: "5.6.41 (1Panel patched; PHP 5.6.40)"
+              value: "5.6.41"
         - default: https://mirrors.tuna.tsinghua.edu.cn
           envKey: CONTAINER_PACKAGE_URL
           labelEn: Package Source

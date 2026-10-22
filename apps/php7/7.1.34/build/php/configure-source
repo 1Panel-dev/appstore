@@ -1,0 +1,55 @@
+#!/bin/sh
+set -eu
+
+. /etc/os-release
+[ "$ID" = debian ] || { echo 'This template requires a Debian PHP image.' >&2; exit 1; }
+
+# EOL PHP bases need signed Debian archives, not an active Alpine/Debian mirror.
+case "${VERSION_CODENAME:-}" in
+    bullseye)
+        # PHP 5.6/7.0-7.2 images have signed archives but no prepare-apt helper.
+        printf '%s\n' \
+            'deb [check-valid-until=no] https://archive.debian.org/debian bullseye main' \
+            'deb [check-valid-until=no] https://archive.debian.org/debian-security bullseye-security main' \
+            > /etc/apt/sources.list
+        echo 'Using signed Debian archives for this EOL base; the v1 mirror selection is not applied.'
+        exit 0
+        ;;
+    buster)
+        sh /usr/local/bin/prepare-apt
+        echo 'Using signed Debian archives for this EOL base; the v1 mirror selection is not applied.'
+        exit 0
+        ;;
+esac
+
+mirror=${CONTAINER_PACKAGE_URL:-}
+mirror=${mirror%/}
+case "$mirror" in
+    ''|dl-cdn.alpinelinux.org|http://dl-cdn.alpinelinux.org|https://dl-cdn.alpinelinux.org|deb.debian.org|http://deb.debian.org|https://deb.debian.org)
+        exit 0
+        ;;
+esac
+case "$mirror" in
+    *://*) ;;
+    *) mirror="https://$mirror" ;;
+esac
+case "$mirror" in
+    http://*|https://*) ;;
+    *) echo 'Package source must use HTTP or HTTPS.' >&2; exit 1 ;;
+esac
+case "$mirror" in
+    *[!a-zA-Z0-9:./_-]*) echo 'Invalid package source.' >&2; exit 1 ;;
+esac
+mirror=${mirror%/alpine}
+mirror=${mirror%/debian}
+
+# v1 sends a mirror hostname; support both Debian source file formats.
+for source_file in /etc/apt/sources.list /etc/apt/sources.list.d/debian.sources; do
+    [ -f "$source_file" ] || continue
+    sed \
+        -e "s|https\{0,1\}://deb.debian.org/debian-security|$mirror/debian-security|g" \
+        -e "s|https\{0,1\}://security.debian.org/debian-security|$mirror/debian-security|g" \
+        -e "s|https\{0,1\}://deb.debian.org/debian|$mirror/debian|g" \
+        "$source_file" > "$source_file.tmp"
+    mv "$source_file.tmp" "$source_file"
+done
