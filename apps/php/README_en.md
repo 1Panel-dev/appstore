@@ -14,3 +14,7 @@
 - **Cross-Platform**: PHP runs on multiple operating systems, including Windows, Linux, and macOS, making it highly versatile.
 - **Open Source and Community Support**: As an open-source project, PHP has a vast developer community offering libraries, extensions, and support.
 - **OOP Support**: PHP supports Object-Oriented Programming (OOP) and provides numerous built-in modules and extensions to simplify the development process.
+
+## Security maintenance images
+
+These 1Panel image tags backport CVE-2026-109618 / CVE-2026-109619 and are not new official PHP releases: `5.6.41` → PHP `5.6.40`, `7.0.34` → PHP `7.0.33`, `7.1.34` → PHP `7.1.33`, `7.2.35` → PHP `7.2.34`, and `7.3.34` → PHP `7.3.33`. Select them when creating a runtime; synchronizing the app store does not patch existing runtimes. Rebuild and validate the website before switching.

@@ -17,7 +17,7 @@
 
 ## v1 security runtime versions
 
-`7.4.34` is a 1Panel maintenance image tag, internally PHP `7.4.33`, with backports for CVE-2026-109618 / CVE-2026-109619. It is not a new official PHP release.
+`7.0.34` / `7.1.34` / `7.2.35` / `7.3.34` / `7.4.34` are 1Panel maintenance image tags, internally PHP `7.0.33` / `7.1.33` / `7.2.34` / `7.3.33` / `7.4.33`, respectively, with backports for CVE-2026-109618 / CVE-2026-109619. They are not new official PHP releases.
 
 These new templates use Debian-based `1panel/php:<version>-fpm` images and preserve v1's local build and mount layout for amd64, arm64, and arm/v7. Extensions use the base image's `install-php-extensions`; availability depends on PHP version, architecture, and upstream support. Do not reuse old binary `.so` extensions. The v1 Alpine default source keeps Debian's defaults; other mirror hostnames select Debian repositories. EOL bases keep signed Debian archive repositories.
 
