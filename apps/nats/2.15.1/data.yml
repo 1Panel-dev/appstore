@@ -1,0 +1,40 @@
+additionalProperties:
+  formFields:
+    - default: 8222
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: "Monitoring Port"
+      labelZh: "监控端口"
+      label:
+        en: "Monitoring Port"
+        es-es: "Puerto de monitoreo"
+        ja: "モニタリングポート"
+        ms: "Port Pemantauan"
+        pt-br: "Porta de Monitoramento"
+        ru: "Порт мониторинга"
+        ko: "모니터링 포트"
+        zh-Hant: "監控埠"
+        zh: "监控端口"
+        tr: "İzleme Bağlantı Noktası"
+      required: true
+      rule: paramPort
+      type: number
+    - default: 4222
+      edit: true
+      envKey: PANEL_APP_PORT_NATS
+      labelEn: "Client Port"
+      labelZh: "客户端端口"
+      label:
+        en: "Client Port"
+        es-es: "Puerto de cliente"
+        ja: "クライアントポート"
+        ms: "Port Klien"
+        pt-br: "Porta do Cliente"
+        ru: "Порт клиента"
+        ko: "클라이언트 포트"
+        zh-Hant: "客戶端埠"
+        zh: "客户端端口"
+        tr: "İstemci Bağlantı Noktası"
+      required: true
+      rule: paramPort
+      type: number

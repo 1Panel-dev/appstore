@@ -1,0 +1,36 @@
+name: NATS
+tags:
+  - 中间件
+title: "高性能云原生消息系统"
+description: "开源、高性能的云原生消息系统"
+additionalProperties:
+  key: nats
+  name: NATS
+  tags:
+    - Middleware
+  shortDescZh: "开源、高性能的云原生消息系统"
+  shortDescEn: "An open-source, high-performance, cloud native messaging system"
+  description:
+    en: "An open-source, high-performance, cloud native messaging system"
+    es-es: "Sistema de mensajeria nativo de la nube, de alto rendimiento y codigo abierto"
+    ja: "オープンソースの高性能クラウドネイティブメッセージングシステム"
+    ms: "Sistem pemesejan asli awan sumber terbuka berprestasi tinggi"
+    pt-br: "Sistema de mensagens nativo da nuvem, de alto desempenho e codigo aberto"
+    ru: "Открытая высокопроизводительная облачная система обмена сообщениями"
+    ko: "오픈 소스 고성능 클라우드 네이티브 메시징 시스템"
+    zh-Hant: "開源、高效能的雲原生訊息系統"
+    zh: "开源、高性能的云原生消息系统"
+    tr: "Acik kaynak, yuksek performansli bulut yerel mesajlasma sistemi"
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  architectures:
+    - amd64
+    - arm/v6
+    - arm/v7
+    - arm64
+    - ppc64le
+    - s390x
+  website: https://nats.io/
+  github: https://github.com/nats-io/nats-server
+  document: https://docs.nats.io/
