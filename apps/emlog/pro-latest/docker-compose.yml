@@ -1,6 +1,6 @@
 services:
   emlog:
-    image: emlog/emlog:pro-latest-php8.2-nginx
+    image: emlog/emlog:pro-latest
     container_name: ${CONTAINER_NAME}
     restart: always
     environment:
