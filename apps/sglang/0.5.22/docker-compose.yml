@@ -1,0 +1,45 @@
+services:
+  sglang:
+    image: lmsysorg/sglang:v0.5.22
+    container_name: "${CONTAINER_NAME}"
+    restart: always
+    ipc: host
+    shm_size: 32g
+    ulimits:
+      memlock: -1
+      stack: 67108864
+    networks:
+      - 1panel-network
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:30000"
+    environment:
+      MODEL_PATH: "${MODEL_PATH}"
+      TP_SIZE: "${TP_SIZE}"
+      API_KEY: "${API_KEY}"
+      HF_TOKEN: "${HF_TOKEN}"
+      SGLANG_USE_MODELSCOPE: "${SGLANG_USE_MODELSCOPE}"
+      TRUST_REMOTE_CODE: "${TRUST_REMOTE_CODE}"
+      CUSTOM_ARGS: "${CUSTOM_ARGS}"
+    volumes:
+      - ./data/huggingface:/root/.cache/huggingface
+      - ./data/modelscope:/root/.cache/modelscope
+      - ./data/models:/models
+    command:
+      - |
+        exec python3 -m sglang.launch_server --model-path "$${MODEL_PATH}" --host 0.0.0.0 --port 30000 --tp "$${TP_SIZE}" --api-key "$${API_KEY}" $$( [ "$${TRUST_REMOTE_CODE}" = "true" ] && echo --trust-remote-code ) $${CUSTOM_ARGS}
+    entrypoint:
+      - bash
+      - "-lc"
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - "curl -f http://localhost:30000/health || exit 1"
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 1200s
+    labels:
+      createdBy: Apps
+networks:
+  1panel-network:
+    external: true
