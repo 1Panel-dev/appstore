@@ -1,0 +1,37 @@
+name: SGLang
+tags:
+  - AI
+title: "高性能大模型推理框架"
+description: "开源的大语言模型、视觉语言模型与扩散模型推理框架"
+additionalProperties:
+  key: sglang
+  name: SGLang
+  tags:
+    - AI
+  shortDescZh: "开源的大语言模型、视觉语言模型与扩散模型推理框架"
+  shortDescEn: "An open-source inference framework for large language, vision-language, and diffusion models"
+  description:
+    en: "An open-source inference framework for large language, vision-language, and diffusion models"
+    es-es: "Un framework de inferencia de codigo abierto para modelos de lenguaje, vision-lenguaje y difusion"
+    fa: "یک چارچوب استنتاج متن‌باز برای مدل‌های زبانی بزرگ، بینایی-زبان و انتشار"
+    ja: "大規模言語モデル、視覚言語モデル、拡散モデル向けのオープンソース推論フレームワーク"
+    ms: "Rangka kerja inferens sumber terbuka untuk model bahasa, bahasa-visual dan resapan"
+    pt-br: "Um framework de inferencia de codigo aberto para modelos de linguagem, visao-linguagem e difusao"
+    ru: "Открытый фреймворк вывода для больших языковых, визуально-языковых и диффузионных моделей"
+    ko: "대규모 언어 모델, 비전 언어 모델 및 확산 모델을 위한 오픈 소스 추론 프레임워크"
+    zh-Hant: "開源的大語言模型、視覺語言模型與擴散模型推理框架"
+    zh: "开源的大语言模型、视觉语言模型与扩散模型推理框架"
+    tr: "Buyuk dil, gorsel-dil ve difuzyon modelleri icin acik kaynakli bir cikarim cercevesi"
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  batchInstallSupport: true
+  architectures:
+    - amd64
+    - arm64
+  website: https://www.sglang.io/
+  github: https://github.com/sgl-project/sglang
+  document: https://docs.sglang.io/
+  gpuSupport: true
+  memoryRequired: 4096

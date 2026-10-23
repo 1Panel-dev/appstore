@@ -1,0 +1,251 @@
+additionalProperties:
+  formFields:
+    - default: 30000
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: "API Port"
+      labelZh: "API 端口"
+      label:
+        en: "API Port"
+        es-es: "Puerto de API"
+        fa: "پورت API"
+        ja: "API ポート"
+        ms: "Port API"
+        pt-br: "Porta da API"
+        ru: "Порт API"
+        ko: "API 포트"
+        zh-Hant: "API 埠"
+        zh: "API 端口"
+        tr: "API Bağlantı Noktası"
+      required: true
+      rule: paramPort
+      type: number
+    - default: Qwen/Qwen3.5-4B
+      envKey: MODEL_PATH
+      labelEn: "Model Path"
+      labelZh: "模型路径"
+      label:
+        en: "Model Path"
+        es-es: "Ruta del modelo"
+        fa: "مسیر مدل"
+        ja: "モデルパス"
+        ms: "Laluan Model"
+        pt-br: "Caminho do Modelo"
+        ru: "Путь к модели"
+        ko: "모델 경로"
+        zh-Hant: "模型路徑"
+        zh: "模型路径"
+        tr: "Model Yolu"
+      required: true
+      type: text
+      edit: true
+      description:
+        en: "Hugging Face model ID or local model path.\nFor Hugging Face, enter the model ID, for example Qwen/Qwen3.5-4B (the current default).\nFor a local model, first place it under data/models/ in the application installation directory (mounted as /models in the container), then enter /models/ plus the model directory name, for example /models/Qwen3.5-4B."
+        es-es: "ID de modelo de Hugging Face o ruta de modelo local.\nPara Hugging Face, introduzca el ID del modelo, por ejemplo Qwen/Qwen3.5-4B (valor predeterminado actual).\nPara un modelo local, coloquelo primero en data/models/ del directorio de instalacion (montado como /models en el contenedor) y luego introduzca /models/ seguido del nombre del directorio del modelo, por ejemplo /models/Qwen3.5-4B."
+        fa: "شناسه مدل Hugging Face یا مسیر مدل محلی.\nبرای Hugging Face، شناسه مدل را وارد کنید، برای مثال Qwen/Qwen3.5-4B (مقدار پیش‌فرض فعلی).\nبرای مدل محلی، ابتدا آن را در data/models/ در دایرکتوری نصب برنامه قرار دهید (در کانتینر به /models نگاشت می‌شود)، سپس /models/ به همراه نام پوشه مدل را وارد کنید، برای مثال /models/Qwen3.5-4B."
+        ja: "Hugging Face のモデル ID、またはローカルモデルのパス。\nHugging Face の場合はモデル ID を入力してください（例: Qwen/Qwen3.5-4B、現在の既定値）。\nローカルモデルの場合は、まずアプリのインストールディレクトリの data/models/ に配置し（コンテナ内では /models にマウント）、/models/ に続けてモデルディレクトリ名を入力してください（例: /models/Qwen3.5-4B）。"
+        ms: "ID model Hugging Face atau laluan model setempat.\nUntuk Hugging Face, masukkan ID model, contohnya Qwen/Qwen3.5-4B (nilai lalai semasa).\nUntuk model setempat, letakkan model di bawah data/models/ dalam direktori pemasangan aplikasi (dipasang sebagai /models dalam kontena), kemudian masukkan /models/ diikuti nama direktori model, contohnya /models/Qwen3.5-4B."
+        pt-br: "ID do modelo Hugging Face ou caminho de modelo local.\nPara Hugging Face, informe o ID do modelo, por exemplo Qwen/Qwen3.5-4B (valor padrao atual).\nPara um modelo local, coloque-o em data/models/ no diretorio de instalacao do aplicativo (montado como /models no conteiner) e informe /models/ seguido do nome do diretorio do modelo, por exemplo /models/Qwen3.5-4B."
+        ru: "Идентификатор модели Hugging Face или путь к локальной модели.\nДля Hugging Face укажите идентификатор модели, например Qwen/Qwen3.5-4B (текущее значение по умолчанию).\nДля локальной модели сначала разместите ее в data/models/ в каталоге установки приложения (в контейнере монтируется как /models), затем укажите /models/ и имя каталога модели, например /models/Qwen3.5-4B."
+        ko: "Hugging Face 모델 ID 또는 로컬 모델 경로입니다.\nHugging Face의 경우 모델 ID를 입력하세요(예: Qwen/Qwen3.5-4B, 현재 기본값).\n로컬 모델의 경우 먼저 애플리케이션 설치 디렉터리의 data/models/에 모델을 두고(컨테이너에서는 /models로 마운트됨), /models/ 뒤에 모델 디렉터리 이름을 입력하세요(예: /models/Qwen3.5-4B)."
+        zh-Hant: "Hugging Face 模型 ID 或本機模型路徑。\n使用 Hugging Face 時填寫模型 ID，例如 Qwen/Qwen3.5-4B（目前預設值）。\n使用本機模型時，先將模型放入應用安裝目錄的 data/models/（容器內為 /models），再填寫 /models/ 加模型目錄名，例如 /models/Qwen3.5-4B。"
+        zh: "Hugging Face 模型 ID 或本地模型路径。\n使用 Hugging Face 时填写模型 ID，例如 Qwen/Qwen3.5-4B（当前默认值）。\n使用本地模型时，先将模型放入应用安装目录的 data/models/（容器内为 /models），再填写 /models/ 加模型目录名，例如 /models/Qwen3.5-4B。"
+        tr: "Hugging Face model kimligi veya yerel model yolu.\nHugging Face icin model kimligini girin, ornegin Qwen/Qwen3.5-4B (mevcut varsayilan).\nYerel model icin modeli once uygulama kurulum dizinindeki data/models/ altina koyun (konteynerde /models olarak baglanir), ardindan /models/ ve model dizini adini girin, ornegin /models/Qwen3.5-4B."
+    - default: 1
+      envKey: TP_SIZE
+      labelEn: "GPU Count (TP)"
+      labelZh: "GPU 数量（TP）"
+      label:
+        en: "GPU Count (TP)"
+        es-es: "Numero de GPUs (TP)"
+        fa: "تعداد GPU (TP)"
+        ja: "GPU 数（TP）"
+        ms: "Bilangan GPU (TP)"
+        pt-br: "Numero de GPUs (TP)"
+        ru: "Количество GPU (TP)"
+        ko: "GPU 수 (TP)"
+        zh-Hant: "GPU 數量（TP）"
+        zh: "GPU 数量（TP）"
+        tr: "GPU Sayısı (TP)"
+      required: true
+      type: number
+      edit: true
+      description:
+        en: "Number of GPUs used for tensor parallelism (--tp). Use 1 for a single GPU; set it to the actual GPU count for multi-GPU."
+        es-es: "Numero de GPUs utilizadas para el paralelismo de tensor (--tp). Use 1 para una sola GPU; para varias GPUs, indique el numero real de GPUs."
+        ja: "テンソル並列に使用する GPU 数（--tp）。単一 GPU の場合は 1、複数 GPU の場合は実際の GPU 数を指定してください。"
+        ms: "Bilangan GPU yang digunakan untuk selari tensor (--tp). Gunakan 1 untuk satu GPU; untuk berbilang GPU, masukkan bilangan GPU sebenar."
+        pt-br: "Numero de GPUs usadas para paralelismo de tensor (--tp). Use 1 para uma unica GPU; para varias GPUs, informe o numero real de GPUs."
+        ru: "Количество GPU, используемых для тензорного параллелизма (--tp). Для одной GPU укажите 1; для нескольких GPU укажите фактическое количество."
+        ko: "텐서 병렬 처리에 사용할 GPU 수(--tp). 단일 GPU는 1, 여러 GPU는 실제 GPU 수를 입력하세요."
+        tr: "Tensör paralelliği için kullanılan GPU sayısı (--tp). Tek GPU için 1, birden fazla GPU için gerçek GPU sayısını girin."
+        zh: "张量并行使用的 GPU 数量（--tp）。单卡填 1；多卡请填实际 GPU 数量。"
+        zh-Hant: "張量並行使用的 GPU 數量（--tp）。單卡填 1；多卡請填實際 GPU 數量。"
+        fa: "تعداد GPUهای مورد استفاده برای موازی‌سازی تنسور (--tp). برای یک GPU مقدار 1 و برای چند GPU تعداد واقعی GPUها را وارد کنید."
+    - default: sglang
+      envKey: API_KEY
+      labelEn: "API Key"
+      labelZh: "API 密钥"
+      label:
+        en: "API Key"
+        es-es: "Clave API"
+        fa: "کلید API"
+        ja: "API キー"
+        ms: "Kunci API"
+        pt-br: "Chave de API"
+        ru: "API-ключ"
+        ko: "API 키"
+        zh-Hant: "API 金鑰"
+        zh: "API 密钥"
+        tr: "API Anahtari"
+      required: true
+      type: password
+      edit: true
+      rule: paramComplexity
+      random: true
+      description:
+        en: "API key for the OpenAI-compatible API (--api-key)."
+        es-es: "Clave API para la API compatible con OpenAI (--api-key)."
+        ja: "OpenAI 互換 API の API キー（--api-key）。"
+        ms: "Kunci API untuk API serasi OpenAI (--api-key)."
+        pt-br: "Chave de API para a API compativel com OpenAI (--api-key)."
+        ru: "API-ключ для API, совместимого с OpenAI (--api-key)."
+        ko: "OpenAI 호환 API용 API 키(--api-key)."
+        tr: "OpenAI uyumlu API icin API anahtari (--api-key)."
+        zh: "OpenAI 兼容接口使用的 API Key（--api-key）。"
+        zh-Hant: "OpenAI 相容介面使用的 API Key（--api-key）。"
+        fa: "کلید API برای رابط سازگار با OpenAI (--api-key)."
+    - default: ""
+      envKey: HF_TOKEN
+      labelEn: "Hugging Face Token"
+      labelZh: "Hugging Face Token"
+      label:
+        en: "Hugging Face Token"
+        es-es: "Token de Hugging Face"
+        fa: "توکن Hugging Face"
+        ja: "Hugging Face Token"
+        ms: "Token Hugging Face"
+        pt-br: "Token do Hugging Face"
+        ru: "Токен Hugging Face"
+        ko: "Hugging Face 토큰"
+        zh-Hant: "Hugging Face Token"
+        zh: "Hugging Face Token"
+        tr: "Hugging Face Token"
+      required: false
+      type: password
+      edit: true
+      description:
+        en: "Optional. Required for gated or private models. Exported as HF_TOKEN."
+        es-es: "Opcional. Necesario para modelos restringidos o privados. Se exporta como HF_TOKEN."
+        ja: "任意。制限付きまたはプライベートモデルに必要です。HF_TOKEN として渡されます。"
+        ms: "Pilihan. Diperlukan untuk model terhad atau peribadi. Dieksport sebagai HF_TOKEN."
+        pt-br: "Opcional. Necessario para modelos restritos ou privados. Exportado como HF_TOKEN."
+        ru: "Необязательно. Требуется для закрытых или приватных моделей. Передается как HF_TOKEN."
+        ko: "선택 사항. 제한되거나 비공개 모델에 필요합니다. HF_TOKEN으로 전달됩니다."
+        tr: "Istege bagli. Kisitli veya ozel modeller icin gereklidir. HF_TOKEN olarak aktarilir."
+        zh: "可选。访问受限或私有模型时需要，作为 HF_TOKEN 传入。"
+        zh-Hant: "可選。存取受限或私有模型時需要，作為 HF_TOKEN 傳入。"
+        fa: "اختیاری. برای مدل‌های محدود یا خصوصی لازم است. به‌عنوان HF_TOKEN ارسال می‌شود."
+    - default: "false"
+      envKey: SGLANG_USE_MODELSCOPE
+      labelEn: "Use ModelScope"
+      labelZh: "使用 ModelScope"
+      label:
+        en: "Use ModelScope"
+        es-es: "Usar ModelScope"
+        fa: "استفاده از ModelScope"
+        ja: "ModelScope を使用"
+        ms: "Guna ModelScope"
+        pt-br: "Usar ModelScope"
+        ru: "Использовать ModelScope"
+        ko: "ModelScope 사용"
+        zh-Hant: "使用 ModelScope"
+        zh: "使用 ModelScope"
+        tr: "ModelScope Kullan"
+      required: true
+      type: select
+      edit: true
+      description:
+        en: "Download models from ModelScope instead of Hugging Face."
+        es-es: "Descargar modelos desde ModelScope en lugar de Hugging Face."
+        ja: "Hugging Face の代わりに ModelScope からモデルをダウンロードします。"
+        ms: "Muat turun model daripada ModelScope dan bukan Hugging Face."
+        pt-br: "Baixar modelos do ModelScope em vez do Hugging Face."
+        ru: "Загружать модели из ModelScope вместо Hugging Face."
+        ko: "Hugging Face 대신 ModelScope에서 모델을 다운로드합니다."
+        tr: "Modelleri Hugging Face yerine ModelScope'dan indirin."
+        zh: "从 ModelScope 而不是 Hugging Face 下载模型。"
+        zh-Hant: "從 ModelScope 而不是 Hugging Face 下載模型。"
+        fa: "مدل‌ها را به‌جای Hugging Face از ModelScope دانلود کنید."
+      values:
+        - label: "True"
+          value: "true"
+        - label: "False"
+          value: "false"
+    - default: "false"
+      envKey: TRUST_REMOTE_CODE
+      labelEn: "Trust Remote Code"
+      labelZh: "信任远程代码"
+      label:
+        en: "Trust Remote Code"
+        es-es: "Confiar en codigo remoto"
+        fa: "اعتماد به کد راه دور"
+        ja: "リモートコードを信頼"
+        ms: "Percaya Kod Jauh"
+        pt-br: "Confiar em Codigo Remoto"
+        ru: "Доверять удаленному коду"
+        ko: "원격 코드 신뢰"
+        zh-Hant: "信任遠端程式碼"
+        zh: "信任远程代码"
+        tr: "Uzak Koda Guven"
+      required: true
+      type: select
+      edit: true
+      description:
+        en: "Allow models to execute custom code from their repository (--trust-remote-code). Enable only for models that require it."
+        es-es: "Permitir que los modelos ejecuten codigo personalizado de su repositorio (--trust-remote-code). Actívelo solo para modelos que lo requieran."
+        ja: "モデルがリポジトリ内のカスタムコードを実行することを許可します（--trust-remote-code）。必要なモデルのみ有効にしてください。"
+        ms: "Benarkan model melaksanakan kod tersuai daripada repositorinya (--trust-remote-code). Aktifkan hanya untuk model yang memerlukannya."
+        pt-br: "Permitir que os modelos executem codigo personalizado do seu repositorio (--trust-remote-code). Ative apenas para modelos que exigem isso."
+        ru: "Разрешить моделям выполнять пользовательский код из их репозитория (--trust-remote-code). Включайте только для моделей, которым это нужно."
+        ko: "모델이 저장소의 사용자 지정 코드를 실행하도록 허용합니다(--trust-remote-code). 필요한 모델에만 활성화하세요."
+        tr: "Modellerin depolarindaki ozel kodu calistirmasina izin verin (--trust-remote-code). Yalnizca gerektiren modeller icin etkinlestirin."
+        zh: "允许模型执行其仓库中的自定义代码（--trust-remote-code）。仅对需要的模型开启。"
+        zh-Hant: "允許模型執行其儲存庫中的自訂程式碼（--trust-remote-code）。僅對需要的模型開啟。"
+        fa: "اجازه اجرای کد سفارشی مخزن مدل (--trust-remote-code). فقط برای مدل‌های نیازمند فعال کنید."
+      values:
+        - label: "True"
+          value: "true"
+        - label: "False"
+          value: "false"
+    - default: ""
+      envKey: CUSTOM_ARGS
+      labelEn: "Custom Arguments"
+      labelZh: "自定义参数"
+      label:
+        en: "Custom Arguments"
+        es-es: "Argumentos personalizados"
+        fa: "آرگومان‌های سفارشی"
+        ja: "カスタム引数"
+        ms: "Argumen Tersuai"
+        pt-br: "Argumentos Personalizados"
+        ru: "Дополнительные аргументы"
+        ko: "사용자 지정 인수"
+        zh-Hant: "自訂參數"
+        zh: "自定义参数"
+        tr: "Ozel Argumanlar"
+      required: false
+      type: text
+      edit: true
+      description:
+        en: "Optional extra server arguments, for example: --context-length 32768 --mem-fraction-static 0.85 --quantization fp8"
+        es-es: "Argumentos adicionales opcionales del servidor, por ejemplo: --context-length 32768 --mem-fraction-static 0.85 --quantization fp8"
+        ja: "任意の追加サーバー引数。例: --context-length 32768 --mem-fraction-static 0.85 --quantization fp8"
+        ms: "Argumen pelayan tambahan pilihan, contohnya: --context-length 32768 --mem-fraction-static 0.85 --quantization fp8"
+        pt-br: "Argumentos adicionais opcionais do servidor, por exemplo: --context-length 32768 --mem-fraction-static 0.85 --quantization fp8"
+        ru: "Необязательные дополнительные аргументы сервера, например: --context-length 32768 --mem-fraction-static 0.85 --quantization fp8"
+        ko: "선택적 추가 서버 인수입니다. 예: --context-length 32768 --mem-fraction-static 0.85 --quantization fp8"
+        tr: "Istege bagli ek sunucu argumanlari, ornegin: --context-length 32768 --mem-fraction-static 0.85 --quantization fp8"
+        zh: "可选，追加的服务启动参数，例如：--context-length 32768 --mem-fraction-static 0.85 --quantization fp8"
+        zh-Hant: "可選，追加的服務啟動參數，例如：--context-length 32768 --mem-fraction-static 0.85 --quantization fp8"
+        fa: "آرگومان‌های اضافی سرور، برای مثال: --context-length 32768 --mem-fraction-static 0.85 --quantization fp8"
