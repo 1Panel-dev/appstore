@@ -1,0 +1,33 @@
+name: PostGIS
+tags:
+  - 数据库
+title: "PostGIS 空间数据库"
+description: "基于 PostgreSQL 的空间数据库，内置 PostGIS 扩展。"
+additionalProperties:
+  key: postgis
+  name: PostGIS
+  tags:
+    - Database
+  shortDescZh: "基于 PostgreSQL 的空间数据库，内置 PostGIS 扩展。"
+  shortDescEn: "A PostgreSQL-based spatial database with the PostGIS extension."
+  description:
+    en: "A PostgreSQL-based spatial database with the PostGIS extension."
+    es-es: "Base de datos espacial basada en PostgreSQL con la extension PostGIS."
+    ja: "PostGIS 拡張機能を備えた PostgreSQL ベースの空間データベース。"
+    ms: "Pangkalan data spatial berasaskan PostgreSQL dengan sambungan PostGIS."
+    pt-br: "Banco de dados espacial baseado em PostgreSQL com a extensao PostGIS."
+    ru: "Пространственная база данных на основе PostgreSQL с расширением PostGIS."
+    ko: "PostGIS 확장을 포함한 PostgreSQL 기반 공간 데이터베이스."
+    zh-Hant: "基於 PostgreSQL 的空間資料庫，內建 PostGIS 擴充功能。"
+    zh: "基于 PostgreSQL 的空间数据库，内置 PostGIS 扩展。"
+    tr: "PostGIS uzantili PostgreSQL tabanli mekansal veritabani."
+  type: runtime
+  crossVersionUpdate: false
+  limit: 0
+  batchInstallSupport: true
+  architectures:
+    - amd64
+  website: https://postgis.net/
+  github: https://github.com/postgis/postgis
+  document: https://postgis.net/documentation/
+  memoryRequired: 1024
