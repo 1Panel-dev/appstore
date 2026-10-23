@@ -1,0 +1,19 @@
+services:
+  nats:
+    image: nats:2.15.1
+    container_name: "${CONTAINER_NAME}"
+    restart: always
+    command: ["--config", "/etc/nats/nats-server.conf"]
+    networks:
+      - 1panel-network
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:8222"
+      - "${PANEL_APP_PORT_NATS}:4222"
+    volumes:
+      - ./conf:/etc/nats:ro
+      - ./data:/data
+    labels:
+      createdBy: Apps
+networks:
+  1panel-network:
+    external: true
