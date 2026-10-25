@@ -14,6 +14,11 @@ do
 
 	image=$(yq .services.$first_service.image $docker_compose_file)
 
+	# Use the default value when the image is set as ${VAR:-<image>:<version>}
+	if [[ "$image" =~ ^\$\{[A-Za-z_][A-Za-z0-9_]*:-(.+)\}$ ]]; then
+	  image=${BASH_REMATCH[1]}
+	fi
+
 	# Fall back to the IMAGE set in scripts/init.sh when the compose file uses a variable (e.g. ${IMAGE})
 	init_script=apps/$app_name/$old_version/scripts/init.sh
 	if [[ "$image" != *":"* && -f "$init_script" ]]; then
@@ -33,6 +38,7 @@ do
           vllm/vllm-openai:*) target_version="nvidia-$trimmed_version" ;;
           intel/llm-scaler-vllm:*) target_version="intel-$trimmed_version" ;;
           quay.io/ascend/vllm-ascend:*) target_version="ascend-$trimmed_version" ;;
+          1panel/vllm-gb10-dspark:*) target_version="nvidia-gb10-dspark-$trimmed_version" ;;
         esac
       fi
 
