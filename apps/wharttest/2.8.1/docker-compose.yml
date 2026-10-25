@@ -1,0 +1,134 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: wharttest-postgres
+    command: postgres -c max_connections=500
+    environment:
+      - TZ=${TIME_ZONE}
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=${WHARTTEST_DB_PASSWORD}
+      - POSTGRES_DB=wharttest
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+    networks:
+      - 1panel-network
+    labels:
+      createdBy: "Apps"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: wharttest-redis
+    command: redis-server --appendonly yes
+    environment:
+      - TZ=${TIME_ZONE}
+    volumes:
+      - ./data/redis:/data
+    networks:
+      - 1panel-network
+    labels:
+      createdBy: "Apps"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: wharttest-qdrant
+    environment:
+      - TZ=${TIME_ZONE}
+    volumes:
+      - ./data/qdrant:/qdrant/storage
+    networks:
+      - 1panel-network
+    labels:
+      createdBy: "Apps"
+    restart: unless-stopped
+
+  backend:
+    image: ghcr.io/mgdaaslab/wharttest-backend:latest
+    container_name: wharttest-backend
+    environment:
+      - TZ=${TIME_ZONE}
+      - DATABASE_TYPE=postgres
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PORT=5432
+      - POSTGRES_DB=wharttest
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=${WHARTTEST_DB_PASSWORD}
+      - MEDIA_ROOT=/app/data/media
+      - LANGGRAPH_CHECKPOINT_SQLITE_PATH=/app/data/chat_history.sqlite
+      - DJANGO_DEBUG=False
+      - DJANGO_SECRET_KEY=${WHARTTEST_SECRET_KEY}
+      - DJANGO_ALLOWED_HOSTS=*
+      - DJANGO_CORS_ALLOWED_ORIGINS=*
+      - USER_AGENT=WHartTest/2.8.1-ce
+      - DJANGO_ADMIN_USERNAME=admin
+      - DJANGO_ADMIN_EMAIL=admin@example.com
+      - DJANGO_ADMIN_PASSWORD=${WHARTTEST_ADMIN_PASSWORD}
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://redis:6379/0
+      - QDRANT_URL=http://qdrant:6333
+    ports:
+      - "${PANEL_APP_PORT_API}:8000"
+    volumes:
+      - ./data/backend:/app/data
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      qdrant:
+        condition: service_started
+    networks:
+      - 1panel-network
+    labels:
+      createdBy: "Apps"
+    restart: unless-stopped
+
+  frontend:
+    image: ghcr.io/mgdaaslab/wharttest-frontend:latest
+    container_name: wharttest-frontend
+    environment:
+      - TZ=${TIME_ZONE}
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:80"
+    depends_on:
+      - backend
+    networks:
+      - 1panel-network
+    labels:
+      createdBy: "Apps"
+    restart: unless-stopped
+
+  mcp:
+    image: ghcr.io/mgdaaslab/wharttest-mcp:latest
+    container_name: wharttest-mcp
+    user: root
+    environment:
+      - TZ=${TIME_ZONE}
+      - WHARTTEST_BACKEND_URL=http://backend:8000
+      - WHARTTEST_API_KEY=wharttest-default-mcp-key-2025
+    ports:
+      - "${PANEL_APP_PORT_MCP}:8006"
+    volumes:
+      - ./data/mcp-screenshots:/tmp/playwright-output
+    depends_on:
+      - backend
+    networks:
+      - 1panel-network
+    labels:
+      createdBy: "Apps"
+    restart: unless-stopped
+
+networks:
+  1panel-network:
+    external: true
