@@ -1,0 +1,32 @@
+name: WHartTest
+tags:
+  - AI
+title: AI 驱动的智能测试自动化平台
+description: AI 驱动的智能测试自动化平台
+additionalProperties:
+  key: wharttest
+  name: WHartTest
+  tags:
+    - AI
+  shortDescZh: AI 驱动的智能测试自动化平台
+  shortDescEn: AI-driven intelligent test automation platform
+  description:
+    en: An AI-driven test automation platform that generates functional, API and UI test cases from requirement documents, with automated execution and AI failure analysis.
+    zh: AI 驱动的测试自动化平台，从需求文档自动生成功能/接口/UI 测试用例，支持自动执行与失败归因分析
+    zh-Hant: AI 驅動的測試自動化平台，從需求文檔自動生成功能/接口/UI 測試用例
+    ja: 要件ドキュメントから機能/API/UI テストケースを自動生成する AI テスト自動化プラットフォーム
+    ko: 요구사항 문서에서 기능/API/UI 테스트 케이스를 자동 생성하는 AI 테스트 자동화 플랫폼
+    ru: Платформа автоматизации тестирования на базе ИИ: генерация функциональных, API и UI тест-кейсов из требований
+    es-es: Plataforma de automatización de pruebas con IA que genera casos de prueba funcionales, API y UI a partir de requisitos
+    pt-br: Plataforma de automação de teste com IA que gera casos de teste funcionais, API e UI a partir de requisitos
+    ms: Platform automasi ujian berasaskan AI yang menjana kes ujian fungsi, API dan UI daripada dokumen keperluan
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  batchInstallSupport: true
+  website: https://wharttest.mgdaas.com/
+  github: https://github.com/MGdaasLab/WHartTest
+  document: https://docs.wharttest.mgdaas.com/
+  architectures:
+    - amd64
