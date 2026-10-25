@@ -1,0 +1,66 @@
+additionalProperties:
+  formFields:
+    - default: 8913
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: WebUI Port
+      labelZh: WebUI 端口
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        en: WebUI Port
+        zh: WebUI 端口
+    - default: 8912
+      edit: true
+      envKey: PANEL_APP_PORT_API
+      labelEn: Backend API Port
+      labelZh: 后端 API 端口
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        en: Backend API Port
+        zh: 后端 API 端口
+    - default: 8914
+      edit: true
+      envKey: PANEL_APP_PORT_MCP
+      labelEn: MCP Tools Port
+      labelZh: MCP 工具端口
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        en: MCP Tools Port
+        zh: MCP 工具端口
+    - default: WhartTest@2026
+      edit: true
+      envKey: WHARTTEST_ADMIN_PASSWORD
+      labelEn: Admin Password (user: admin)
+      labelZh: 管理员密码（账号 admin）
+      required: true
+      type: password
+      label:
+        en: Admin Password (user: admin)
+        zh: 管理员密码（账号 admin）
+    - default: WhartTest_DB_2026
+      edit: true
+      envKey: WHARTTEST_DB_PASSWORD
+      labelEn: Database Password
+      labelZh: 数据库密码
+      required: true
+      type: password
+      label:
+        en: Database Password
+        zh: 数据库密码
+    - default: wharttest-1panel-secret-key
+      edit: true
+      envKey: WHARTTEST_SECRET_KEY
+      labelEn: Django Secret Key
+      labelZh: Django 密钥
+      required: true
+      type: password
+      label:
+        en: Django Secret Key
+        zh: Django 密钥
+
