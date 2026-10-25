@@ -4,7 +4,7 @@
 
 # Default image name without pre-install environment
 # renovate: datasource=docker depName=openlistteam/openlist
-IMAGE=openlistteam/openlist:v4.2.8
+IMAGE=openlistteam/openlist:v4.2.9
 
 {
   # Retain the original environment variables
