@@ -1,3 +1,7 @@
+## Upgrading from 0.16 to 1.0
+
+Stalwart 1.0 uses a new database format and cannot open a 0.16 data store, so this app disables direct cross-version upgrades. Back up the configuration and data, then follow the [official migration guide](https://stalw.art/docs/migration/upgrade-0-16/) to copy the old data into a new 1.0 store with `stalwart-migrate`. Verify the migration before switching services; do not point the 1.0 container at the old data directory.
+
 ## Introduction
 
 **Stalwart Mail Server** is an open-source mail server solution with JMAP, IMAP4, POP3, and SMTP support and a wide range of modern features. It is written in Rust and designed to be secure, fast, robust and scalable.

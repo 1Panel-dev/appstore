@@ -23,7 +23,7 @@ additionalProperties:
     zh: 安全且现代的一体化邮件服务器
     tr: Guvenli ve modern hepsi bir arada posta sunucusu
   type: website
-  crossVersionUpdate: true
+  crossVersionUpdate: false
   limit: 1
   recommend: 0
   batchInstallSupport: true
