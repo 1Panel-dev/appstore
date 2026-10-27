@@ -1,6 +1,6 @@
 services:
   archivebox:
-    image: archivebox/archivebox:0.9.73
+    image: archivebox/archivebox:0.9.76
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
