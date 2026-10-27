@@ -1,4 +1,5 @@
 additionalProperties:
+  supportVersion: 2.5
   formFields:
     - default: 18789
       edit: true
