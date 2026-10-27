@@ -1,0 +1,14 @@
+{
+  "id": "10064",
+  "state": "on",
+  "name": "JetBrains TeamCity",
+  "cve": "CVE-2024-27198",
+  "type": "aa",
+  "remark": "拦截 jsp 参数指向 REST API 且带分号 JSP 后缀的已知鉴权绕过特征；不替代升级。来源：https://www.rapid7.com/blog/post/ra-cve-2024-27198-analysis/",
+  "rule": {
+    "method": "POST",
+    "type": "request_uri",
+    "uri": "^[^?]*\\?(?:[^#]*&)?jsp=(?:/|%2f)app(?:/|%2f)rest(?:/|%2f)[^&]*(?:;|%3b)[^&]*(?:\\.|%2e)jsp(?:&|$)",
+    "pattern": "regex"
+  }
+}
