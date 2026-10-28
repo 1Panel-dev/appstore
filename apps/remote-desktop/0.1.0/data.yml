@@ -1,0 +1,120 @@
+additionalProperties:
+  formFields:
+    - default: ''
+      edit: true
+      envKey: PUBLIC_IP
+      labelEn: Public IP
+      labelZh: 公网 IP
+      label:
+        en: Public IP
+        es-es: IP pública
+        fa: 'آدرس IP عمومی'
+        ja: パブリック IP
+        ms: IP awam
+        pt-br: IP público
+        ru: Публичный IP
+        ko: 공인 IP
+        zh-Hant: 公網 IP
+        zh: 公网 IP
+        tr: Genel IP
+      required: true
+      type: text
+    - default: 3000
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Signaling HTTP port
+      labelZh: 信令 HTTP 端口
+      label:
+        en: Signaling HTTP port
+        es-es: Puerto HTTP de señalización
+        fa: 'پورت HTTP سیگنالینگ'
+        ja: シグナリング HTTP ポート
+        ms: Port HTTP penandaan
+        pt-br: Porta HTTP de sinalização
+        ru: HTTP-порт сигнализации
+        ko: 시그널링 HTTP 포트
+        zh-Hant: 信令 HTTP 埠
+        zh: 信令 HTTP 端口
+        tr: Sinyallesme HTTP baglanti noktasi
+      required: true
+      rule: paramPort
+      type: number
+    - default: 3478
+      edit: true
+      envKey: PANEL_APP_PORT_TURN
+      labelEn: TURN port (UDP+TCP)
+      labelZh: TURN 端口（UDP+TCP）
+      label:
+        en: TURN port (UDP+TCP)
+        es-es: Puerto TURN (UDP+TCP)
+        fa: 'پورت TURN (UDP+TCP)'
+        ja: TURN ポート（UDP+TCP）
+        ms: Port TURN (UDP+TCP)
+        pt-br: Porta TURN (UDP+TCP)
+        ru: Порт TURN (UDP+TCP)
+        ko: TURN 포트 (UDP+TCP)
+        zh-Hant: TURN 埠（UDP+TCP）
+        zh: TURN 端口（UDP+TCP）
+        tr: TURN baglanti noktasi (UDP+TCP)
+      required: true
+      rule: paramPort
+      type: number
+    - default: rdpass
+      edit: true
+      envKey: POSTGRES_PASSWORD
+      labelEn: Postgres password
+      labelZh: Postgres 密码
+      label:
+        en: Postgres password
+        es-es: Contraseña de Postgres
+        fa: 'رمز عبور Postgres'
+        ja: Postgres パスワード
+        ms: Kata laluan Postgres
+        pt-br: Senha do Postgres
+        ru: Пароль Postgres
+        ko: Postgres 비밀번호
+        zh-Hant: Postgres 密碼
+        zh: Postgres 密码
+        tr: Postgres sifresi
+      random: true
+      required: true
+      type: password
+    - default: turnsecretturnsecretturnsecret12
+      edit: true
+      envKey: TURN_SECRET
+      labelEn: TURN secret (≥32 chars)
+      labelZh: TURN 密钥（≥32 位）
+      label:
+        en: TURN secret (≥32 chars)
+        es-es: Secreto TURN (≥32 caracteres)
+        fa: 'رمز TURN (≥۳۲ کاراکتر)'
+        ja: TURN シークレット（32 文字以上）
+        ms: Rahsia TURN (≥32 aksara)
+        pt-br: Segredo TURN (≥32 caracteres)
+        ru: Секрет TURN (≥32 символа)
+        ko: TURN 시크릿 (≥32자)
+        zh-Hant: TURN 密鑰（≥32 位）
+        zh: TURN 密钥（≥32 位）
+        tr: TURN gizli anahtari (≥32 karakter)
+      random: true
+      required: true
+      type: password
+    - default: ''
+      edit: true
+      envKey: ACCOUNT_SECRET_KEY
+      labelEn: Account secret (64 hex)
+      labelZh: 账号密钥（64 位 hex）
+      label:
+        en: Account secret (64 hex)
+        es-es: Secreto de cuenta (64 hex)
+        fa: 'رمز حساب (۶۴ هگز)'
+        ja: アカウント秘密鍵（64 桁 hex）
+        ms: Rahsia akaun (64 heks)
+        pt-br: Segredo da conta (64 hex)
+        ru: Секрет аккаунта (64 hex)
+        ko: 계정 시크릿 (64 hex)
+        zh-Hant: 帳號密鑰（64 位 hex）
+        zh: 账号密钥（64 位 hex）
+        tr: Hesap gizli anahtari (64 hex)
+      required: true
+      type: password

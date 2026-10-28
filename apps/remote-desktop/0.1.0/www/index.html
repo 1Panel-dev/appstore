@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>远程桌面 — 下载客户端</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #eaf6ff;
+        --ink: #163a56;
+        --muted: #5d7f99;
+        --accent: #2bb4f0;
+        --panel: #ffffff;
+        --edge: rgba(56, 152, 210, 0.22);
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font: 15px/1.6 "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(800px 420px at 10% -10%, rgba(120, 210, 255, 0.55), transparent 55%),
+          var(--bg);
+      }
+      main { max-width: 760px; margin: 0 auto; padding: 48px 20px 64px; }
+      h1 { margin: 0 0 8px; font-size: 28px; }
+      .lead { color: var(--muted); margin: 0 0 28px; }
+      .panel {
+        background: var(--panel);
+        border: 1px solid var(--edge);
+        border-radius: 14px;
+        padding: 20px 22px;
+        margin-bottom: 16px;
+        box-shadow: 0 12px 28px rgba(46, 140, 190, 0.08);
+      }
+      h2 { margin: 0 0 12px; font-size: 16px; }
+      ol { margin: 0; padding-left: 1.2em; color: var(--muted); }
+      ol strong { color: var(--ink); }
+      .downloads { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+      a.btn, button.btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 140px;
+        padding: 11px 14px;
+        border-radius: 10px;
+        border: 0;
+        background: var(--accent);
+        color: #fff;
+        text-decoration: none;
+        font: inherit;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      a.btn.secondary, button.btn.secondary {
+        background: #fff;
+        border: 1px solid var(--edge);
+        color: var(--ink);
+      }
+      .mono, code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 13px;
+      }
+      .hint { margin: 12px 0 0; color: var(--muted); font-size: 13px; }
+      .cfg {
+        margin-top: 12px;
+        padding: 12px;
+        border-radius: 10px;
+        background: #f3faff;
+        border: 1px solid var(--edge);
+        word-break: break-all;
+      }
+      .row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>远程桌面</h1>
+      <p class="lead">下载客户端 → 启用被控 → 用设备 ID 与密码连接。账号登录不是必需。</p>
+
+      <section class="panel">
+        <h2>下载安装包</h2>
+        <div class="downloads">
+          <a class="btn" href="https://github.com/jiayuexin/remote-desktop-releases/releases/download/v0.1.0/rd-desktop-0.1.0-mac-arm64.dmg">Mac（Apple Silicon）</a>
+          <a class="btn" href="https://github.com/jiayuexin/remote-desktop-releases/releases/download/v0.1.0/rd-desktop-0.1.0-mac-x64.dmg">Mac（Intel）</a>
+          <a class="btn secondary" href="https://github.com/jiayuexin/remote-desktop-releases/releases/latest">Windows / Linux / 全部版本</a>
+        </div>
+        <p class="hint">
+          产物命名约定：
+          <span class="mono">rd-desktop-*-mac-arm64.dmg</span> /
+          <span class="mono">rd-desktop-*-mac-x64.dmg</span> /
+          <span class="mono">rd-desktop-*-win-x64.exe</span> /
+          <span class="mono">rd-desktop-*-linux-x64.AppImage</span> /
+          <span class="mono">rd-desktop-*-linux-x64.deb</span>。
+          Linux 包上传后会出现在 Releases；也可放到本站 <span class="mono">/updates/</span>。
+        </p>
+      </section>
+
+      <section class="panel">
+        <h2>三步上手</h2>
+        <ol>
+          <li><strong>安装客户端</strong>（Windows 安装一般不需要管理员）。</li>
+          <li>若本机要被控：点「启用被控端」——仅此时可能弹出 UAC；然后查看本机 ID / 密码。</li>
+          <li>另一台机器填对方 ID 与密码，点连接。</li>
+        </ol>
+      </section>
+
+      <section class="panel">
+        <h2>自建信令（本机部署后配置）</h2>
+        <p class="hint">默认客户端指向演示服。若此页来自你的服务器，请按下面配置（设置 → 应用 → 高级 / 管理员）：</p>
+        <div class="cfg mono" id="cfg">
+          信令 URL：wss://__PUBLIC_IP__:8443/ws<br />
+          证书指纹：用 openssl 查看网站证书 SHA-256 后粘贴
+        </div>
+        <div class="row">
+          <button type="button" class="btn secondary" id="copy-url">复制信令 URL</button>
+          <button type="button" class="btn secondary" id="copy-all">复制配置说明</button>
+        </div>
+        <p class="hint">
+          若网站反代在 443 且有域名，URL 多为 <span class="mono">wss://你的域名/ws</span>。
+          查询参数也可预填本页：<span class="mono">?signaling=wss://…</span>（仅展示，仍需在客户端高级项保存）。
+        </p>
+      </section>
+    </main>
+    <script>
+      (function () {
+        var params = new URLSearchParams(location.search);
+        var signaling = params.get('signaling') || 'wss://__PUBLIC_IP__:8443/ws';
+        var cert = params.get('cert') || '';
+        var cfg = document.getElementById('cfg');
+        cfg.innerHTML =
+          '信令 URL：' + signaling + '<br />' +
+          (cert ? '证书指纹：' + cert : '证书指纹：用 openssl x509 -in &lt;证书&gt; -noout -fingerprint -sha256 查看后粘贴');
+        function copy(text) {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            return navigator.clipboard.writeText(text);
+          }
+          var ta = document.createElement('textarea');
+          ta.value = text;
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          document.body.removeChild(ta);
+          return Promise.resolve();
+        }
+        document.getElementById('copy-url').onclick = function () {
+          copy(signaling).then(function () { alert('已复制信令 URL'); });
+        };
+        document.getElementById('copy-all').onclick = function () {
+          var text = '信令 URL：' + signaling + (cert ? '\n证书指纹：' + cert : '\n证书指纹：（请填写）') +
+            '\n\n打开客户端 → 设置 → 应用 → 高级 / 管理员 → 粘贴并保存。';
+          copy(text).then(function () { alert('已复制配置说明'); });
+        };
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+name: 远程桌面
+tags:
+  - 实用工具
+title: 自建远程桌面信令与 TURN 中继
+description: 自建远程桌面信令与 TURN 中继
+additionalProperties:
+  key: remote-desktop
+  name: 远程桌面
+  tags:
+    - Tool
+  shortDescZh: 自建远程桌面信令与 TURN 中继
+  shortDescEn: Self-hosted remote desktop signaling with TURN
+  description:
+    en: Self-hosted remote desktop signaling with TURN relay
+    es-es: Señalización de escritorio remoto autoalojada con relé TURN
+    fa: 'سیگنالینگ دسکتاپ راه دور خودمیزبان با رله TURN'
+    ja: セルフホスト型リモートデスクトップのシグナリングと TURN 中継
+    ms: Penandaan desktop jauh hos kendiri dengan geganti TURN
+    pt-br: Sinalização de área de trabalho remota auto-hospedada com retransmissão TURN
+    ru: Самостоятельно размещаемая сигнализация удалённого рабочего стола с TURN
+    ko: 셀프 호스팅 원격 데스크톱 시그널링 및 TURN 중계
+    zh-Hant: 自建遠端桌面信令與 TURN 中繼
+    zh: 自建远程桌面信令与 TURN 中继
+    tr: Kendi barindirilan uzak masaustu sinyalizasyonu ve TURN aktarimi
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  batchInstallSupport: true
+  website: https://github.com/jiayuexin/remote-desktop
+  github: https://github.com/jiayuexin/remote-desktop
+  document: https://github.com/jiayuexin/remote-desktop/blob/main/infra/1panel/README-zh.md
+  memoryRequired: 512
+  architectures:
+    - amd64
+    - arm64

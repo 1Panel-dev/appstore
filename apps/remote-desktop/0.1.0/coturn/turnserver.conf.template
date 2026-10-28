@@ -1,0 +1,37 @@
+# Rendered by scripts/init.sh — placeholders __TURN_SECRET__ / __PUBLIC_IP__ / __RELAY_*__.
+# Inside the container TURN always listens on 3478; host maps ${PANEL_APP_PORT_TURN}:3478.
+listening-port=3478
+listening-ip=0.0.0.0
+realm=remote-desktop
+fingerprint
+use-auth-secret
+static-auth-secret=__TURN_SECRET__
+
+# Bridge network: advertise the host public IP; relay UDP range must be published in compose.
+external-ip=__PUBLIC_IP__
+
+min-port=__RELAY_MIN__
+max-port=__RELAY_MAX__
+
+bps-capacity=500000
+max-bps=375000
+total-quota=40
+stale-nonce=600
+
+no-tls
+no-dtls
+no-cli
+no-multicast-peers
+no-tcp-relay
+
+denied-peer-ip=0.0.0.0-0.255.255.255
+denied-peer-ip=10.0.0.0-10.255.255.255
+denied-peer-ip=100.64.0.0-100.127.255.255
+denied-peer-ip=127.0.0.0-127.255.255.255
+denied-peer-ip=169.254.0.0-169.254.255.255
+denied-peer-ip=172.16.0.0-172.31.255.255
+denied-peer-ip=192.0.0.0-192.0.0.255
+denied-peer-ip=192.168.0.0-192.168.255.255
+denied-peer-ip=198.18.0.0-198.19.255.255
+denied-peer-ip=::1
+denied-peer-ip=fc00::-fdff:ffff:ffff:ffff:ffff:ffff:ffff:ffff

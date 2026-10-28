@@ -1,0 +1,72 @@
+# Official / custom-source ready: public image only (no docker load / local build).
+# Image: ghcr.io/jiayuexin/rd-server:0.1.0
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: ${CONTAINER_NAME}-postgres
+    restart: always
+    networks:
+      - 1panel-network
+    environment:
+      POSTGRES_USER: rd
+      POSTGRES_DB: rd
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    command: ['postgres', '-c', 'shared_buffers=64MB', '-c', 'max_connections=30']
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U rd -d rd']
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    labels:
+      createdBy: Apps
+
+  server:
+    image: ghcr.io/jiayuexin/rd-server:0.1.0
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    environment:
+      HOST: 0.0.0.0
+      PORT: 3000
+      TRUST_PROXY: 'true'
+      DATABASE_URL: postgresql://rd:${POSTGRES_PASSWORD}@postgres:5432/rd
+      STUN_URLS: stun:${PUBLIC_IP}:${PANEL_APP_PORT_TURN}
+      TURN_ENABLED: 'true'
+      TURN_URLS: turn:${PUBLIC_IP}:${PANEL_APP_PORT_TURN}?transport=udp,turn:${PUBLIC_IP}:${PANEL_APP_PORT_TURN}?transport=tcp
+      TURN_SECRET: ${TURN_SECRET}
+      TURN_TTL_SECONDS: 600
+      ACCOUNT_SECRET_KEY: ${ACCOUNT_SECRET_KEY}
+      LOG_LEVEL: info
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:3000
+    volumes:
+      - ./data/www:/var/www/rd-downloads:ro
+    depends_on:
+      postgres:
+        condition: service_healthy
+    labels:
+      createdBy: Apps
+
+  coturn:
+    image: coturn/coturn:4.6
+    container_name: ${CONTAINER_NAME}-coturn
+    restart: always
+    networks:
+      - 1panel-network
+    volumes:
+      - ./data/coturn/turnserver.conf:/etc/coturn/turnserver.conf:ro
+    command: ['-c', '/etc/coturn/turnserver.conf']
+    ports:
+      - ${PANEL_APP_PORT_TURN}:3478/udp
+      - ${PANEL_APP_PORT_TURN}:3478/tcp
+      # Relay media range (host networking alternative if cloud UDP mapping is awkward)
+      - 49160-49200:49160-49200/udp
+    labels:
+      createdBy: Apps
+
+networks:
+  1panel-network:
+    external: true
