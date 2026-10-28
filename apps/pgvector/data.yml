@@ -1,0 +1,37 @@
+name: pgvector
+tags:
+  - 数据库
+  - AI
+title: "pgvector 向量数据库"
+description: "基于 PostgreSQL 的向量数据库，内置 pgvector 扩展。"
+additionalProperties:
+  key: pgvector
+  name: pgvector
+  tags:
+    - Database
+    - AI
+  shortDescZh: "基于 PostgreSQL 的向量数据库，内置 pgvector 扩展。"
+  shortDescEn: "A PostgreSQL-based vector database with the pgvector extension for similarity search."
+  description:
+    en: "A PostgreSQL-based vector database with the pgvector extension for similarity search."
+    es-es: "Base de datos vectorial basada en PostgreSQL con la extension pgvector para busqueda por similitud."
+    ja: "pgvector 拡張機能を備えた PostgreSQL ベースのベクトルデータベース。"
+    ms: "Pangkalan data vektor berasaskan PostgreSQL dengan sambungan pgvector untuk carian kesamaan."
+    pt-br: "Banco de dados vetorial baseado em PostgreSQL com a extensao pgvector para busca por similaridade."
+    ru: "Векторная база данных на основе PostgreSQL с расширением pgvector для поиска по сходству."
+    ko: "pgvector 확장을 포함한 PostgreSQL 기반 벡터 데이터베이스."
+    zh-Hant: "基於 PostgreSQL 的向量資料庫，內建 pgvector 擴充功能。"
+    zh: "基于 PostgreSQL 的向量数据库，内置 pgvector 扩展。"
+    tr: "pgvector uzantili PostgreSQL tabanli vektor veritabani."
+  type: runtime
+  crossVersionUpdate: false
+  limit: 0
+  batchInstallSupport: true
+  architectures:
+    - amd64
+    - arm64
+  recommend: 200
+  website: https://github.com/pgvector/pgvector
+  github: https://github.com/pgvector/pgvector
+  document: "https://github.com/pgvector/pgvector#readme"
+  memoryRequired: 1024
