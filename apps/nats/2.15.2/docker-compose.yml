@@ -1,6 +1,6 @@
 services:
   nats:
-    image: nats:2.15.1
+    image: nats:2.15.2
     container_name: "${CONTAINER_NAME}"
     restart: always
     command: ["--config", "/etc/nats/nats-server.conf"]
