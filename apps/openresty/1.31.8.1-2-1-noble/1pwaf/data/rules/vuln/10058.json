@@ -1,0 +1,14 @@
+{
+  "id": "10058",
+  "state": "on",
+  "name": "PHP-CGI",
+  "cve": "CVE-2024-4577",
+  "type": "rce",
+  "remark": "拦截常见 PHP-CGI 命令行参数注入特征；不覆盖所有编码及其他 PHP 漏洞，不替代升级。来源：https://github.com/php/php-src/security/advisories/GHSA-3qgc-jrrr-25jv",
+  "rule": {
+    "method": "POST",
+    "type": "request_uri",
+    "uri": "^[^?]*\\?(?:%ad|%c2%ad|\\xAD|\\xC2\\xAD|-|%2d)(?:d(?:\\+|%20|%09|\\s)+(?:allow_url_include|auto_prepend_file)(?:=|%3d)|s(?:$|[+&\\s]|%20))",
+    "pattern": "regex"
+  }
+}

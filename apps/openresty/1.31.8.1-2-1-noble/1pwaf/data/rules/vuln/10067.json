@@ -1,0 +1,14 @@
+{
+  "id": "10067",
+  "state": "on",
+  "name": "PHP 会话上传进度（缓解）",
+  "cve": "CVE-2026-109619",
+  "type": "rce",
+  "remark": "缓解会话上传进度入口：POST multipart 同时含默认 PHP_SESSION_UPLOAD_PROGRESS 字段和 PHPSESSID Cookie/表单字段时命中，不依赖 fileExt。也可缓解 CVE-2026-115560 的该入口；会影响依赖原生上传进度的业务。不覆盖自定义字段/Cookie 名及其他跨请求状态路径，不能替代升级 PHP 和关闭 session.upload_progress.enabled。需要新版 WAF 引擎。来源：https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp 及 https://aws.amazon.com/blogs/security/using-aws-waf-to-apply-mitigations-for-php2shell-rce-vulnerabilities-cve-2026-109618-and-cve-2026-109619/",
+  "rule": {
+    "method": "POST",
+    "type": "multipart",
+    "uri": "(?:^|\\n)session_upload_progress(?:\\n|$)",
+    "pattern": "regex"
+  }
+}
