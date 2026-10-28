@@ -138,6 +138,30 @@
       "allowedVersions": "/^18-.*/"
     },
     {
+      "matchFileNames": ["apps/pgvector/*-pg13/*.yml"],
+      "allowedVersions": "/^\\d+\\.\\d+\\.\\d+-pg13$/"
+    },
+    {
+      "matchFileNames": ["apps/pgvector/*-pg14/*.yml"],
+      "allowedVersions": "/^\\d+\\.\\d+\\.\\d+-pg14$/"
+    },
+    {
+      "matchFileNames": ["apps/pgvector/*-pg15/*.yml"],
+      "allowedVersions": "/^\\d+\\.\\d+\\.\\d+-pg15$/"
+    },
+    {
+      "matchFileNames": ["apps/pgvector/*-pg16/*.yml"],
+      "allowedVersions": "/^\\d+\\.\\d+\\.\\d+-pg16$/"
+    },
+    {
+      "matchFileNames": ["apps/pgvector/*-pg17/*.yml"],
+      "allowedVersions": "/^\\d+\\.\\d+\\.\\d+-pg17$/"
+    },
+    {
+      "matchFileNames": ["apps/pgvector/*-pg18/*.yml"],
+      "allowedVersions": "/^\\d+\\.\\d+\\.\\d+-pg18$/"
+    },
+    {
       "matchFileNames": ["apps/elasticsearch/9.*/*.yml"],
       "allowedVersions": "/^9.*/"
     },
