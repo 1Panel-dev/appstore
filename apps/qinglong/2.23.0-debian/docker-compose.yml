@@ -1,6 +1,6 @@
 services:
   qinglong:
-    image: whyour/qinglong:2.23.0-debian
+    image: whyour/qinglong:2.24.0-debian
     container_name: ${CONTAINER_NAME}
     networks:
       - 1panel-network
