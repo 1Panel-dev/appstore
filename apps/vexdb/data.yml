@@ -22,7 +22,7 @@ additionalProperties:
         zh-hant: 融合關係數據能力、多路語義檢索能力的向量數據庫
         zh: 融合关系数据能力、多路语义检索能力的向量数据库
         tr: Vector veritabanı with relational data and semantic search
-    type: runtime
+    type: tool
     crossVersionUpdate: false
     limit: 0
     recommend: 0

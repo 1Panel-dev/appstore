@@ -22,7 +22,7 @@ additionalProperties:
         zh-Hant: GreatSQL 是源自 GreatDB 的 MySQL 分支
         zh: 可作为 MySQL 或 Percona Server for MySQL 的理想可选替换
         tr: GreatSQL, GreatDB kokenli bir MySQL dalidir
-    type: runtime
+    type: tool
     crossVersionUpdate: false
     limit: 0
     recommend: 0
