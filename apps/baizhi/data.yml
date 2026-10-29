@@ -1,0 +1,21 @@
+name: 百智办公
+tags:
+  - 工具
+title: 团队 AI 办公工作台
+description: 面向团队的开源 AI 办公工作台
+additionalProperties:
+  key: baizhi
+  name: 百智办公
+  tags:
+    - Tool
+  shortDescZh: 团队 AI 办公工作台
+  shortDescEn: Open-source team AI workspace
+  description:
+    en: Open-source team AI workspace for office, coding and design
+    zh: 面向团队的开源 AI 办公工作台
+  type: tool
+  crossVersionUpdate: false
+  limit: 0
+  website: https://work.baizhi.cloud/
+  github: https://github.com/chaitin/MonkeyCode
+  document: https://work.docs.baizhi.cloud/
