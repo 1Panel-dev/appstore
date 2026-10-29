@@ -22,7 +22,7 @@ additionalProperties:
     pt-br: Um fork multithread do Redis
     ru: Многопоточный форк Redis
     tr: Redis’in çok iş parçacıklı bir çatalı
-  type: runtime
+  type: tool
   crossVersionUpdate: true
   limit: 0
   recommend: 0

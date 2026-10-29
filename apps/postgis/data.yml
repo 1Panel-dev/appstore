@@ -21,7 +21,7 @@ additionalProperties:
     zh-Hant: "基於 PostgreSQL 的空間資料庫，內建 PostGIS 擴充功能。"
     zh: "基于 PostgreSQL 的空间数据库，内置 PostGIS 扩展。"
     tr: "PostGIS uzantili PostgreSQL tabanli mekansal veritabani."
-  type: runtime
+  type: tool
   crossVersionUpdate: false
   limit: 0
   batchInstallSupport: true

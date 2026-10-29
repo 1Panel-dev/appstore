@@ -22,7 +22,7 @@ additionalProperties:
     pt-br: Banco de dados integrado nacional de código aberto compatível com MySQL e com suporte a arquitetura distribuída de nó único
     ru: Интегрированная отечественная открытая база данных, совместимая с MySQL и поддерживающая одноузловую распределённую архитектуру
     tr: MySQL ile uyumlu ve tek düğümlü dağıtık mimariyi destekleyen entegre yerli açık kaynaklı veritabanı
-  type: runtime
+  type: tool
   crossVersionUpdate: false
   limit: 0
   recommend: 0

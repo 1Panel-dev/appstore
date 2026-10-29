@@ -10,7 +10,7 @@ additionalProperties:
     - Database
   shortDescZh: 世界领先的图数据库
   shortDescEn: The world’s leading Graph Database
-  type: runtime
+  type: tool
   crossVersionUpdate: true
   limit: 0
   recommend: 0
