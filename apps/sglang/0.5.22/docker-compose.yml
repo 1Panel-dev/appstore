@@ -1,6 +1,6 @@
 services:
   sglang:
-    image: lmsysorg/sglang:v0.5.22
+    image: lmsysorg/sglang:v0.5.23
     container_name: "${CONTAINER_NAME}"
     restart: always
     ipc: host
