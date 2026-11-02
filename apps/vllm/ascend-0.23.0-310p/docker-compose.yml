@@ -1,6 +1,6 @@
 services:
   vllm:
-    image: ${IMAGE:-quay.io/ascend/vllm-ascend:v0.23.0-310p}
+    image: ${IMAGE:-quay.io/ascend/vllm-ascend:v0.30.0-310p}
     entrypoint:
       - bash
       - -lc
