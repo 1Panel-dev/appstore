@@ -19,7 +19,7 @@ additionalProperties:
         zh: 端口
         ko: 포트
         tr: Bağlantı Noktası
-    - default: /data01/models
+    - default: ./models
       edit: true
       envKey: MODEL_DIR
       labelEn: Model directory
@@ -37,7 +37,7 @@ additionalProperties:
         zh: 模型目录
         ko: 모델 디렉터리
         tr: Model dizini
-    - default: Qwen3.6-35B-A3B
+    - default: model
       edit: true
       envKey: MODEL_NAME
       labelEn: Model name
@@ -55,7 +55,7 @@ additionalProperties:
         zh: 模型名称
         ko: 모델 이름
         tr: Model adı
-    - default: 0,1
+    - default: 0,1,2,3
       edit: true
       envKey: ASCEND_RT_VISIBLE_DEVICES
       labelEn: Ascend visible devices
@@ -74,10 +74,7 @@ additionalProperties:
         ko: Ascend 표시 장치
         tr: Ascend görünür cihazlar
     - default: >-
-        /workspace/Qwen3.6-35B-A3B --served-model-name Qwen3.6-35B-A3B --host 0.0.0.0 --port 8001 --data-parallel-size 1 --tensor-parallel-size 2 --max-num-seqs 64 --max-model-len 262144 --max-num-batched-tokens 16384 --async-scheduling --trust-remote-code --gpu-memory-utilization 0.75 --enable-prefix-caching --enable-auto-tool-choice --enable-expert-parallel --tool-call-parser qwen3_coder --reasoning-parser qwen3
-        --speculative-config '{"method":"qwen3_5_mtp","num_speculative_tokens":3,"enforce_eager":true}'
-        --compilation-config '{"cudagraph_mode":"FULL_DECODE_ONLY"}'
-        --additional-config '{"enable_cpu_binding":true,"multistream_overlap_shared_expert":true}'
+        /models/model --served-model-name model --host 0.0.0.0 --port 8000 --tensor-parallel-size 4 --max_num_seqs 16 --max-model-len 16384 --gpu_memory_utilization 0.80 --dtype float16 --additional-config '{"ascend_compilation_config": {"fuse_norm_quant": false}}' --compilation-config '{"cudagraph_mode": "FULL_DECODE_ONLY", "cudagraph_capture_sizes": [1,4]}' --allowed-local-media-path /
       edit: true
       envKey: START_COMMAND
       labelEn: Start command
