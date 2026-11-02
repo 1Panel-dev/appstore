@@ -1,6 +1,6 @@
 services:
   astrbot:
-    image: soulter/astrbot:v4.29.3
+    image: soulter/astrbot:v4.29.4
     container_name: astrbot
     restart: always
     ports:
