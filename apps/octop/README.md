@@ -2,6 +2,10 @@
 
 **Octop** 是腾讯云开源的自托管 AI 助手，面向个人、家庭与小团队，提供多用户、多 Agent 协作，内置长期记忆、知识库与多渠道接入，数据保存在本机。
 
+**扫码加入交流群**
+
+<img alt="扫码加入交流群" src="https://resource.fit2cloud.com/1panel/img/wechat.png" width="150" height="150">
+
 ## 主要功能
 
 - **多用户多 Agent**：一个实例内创建多个用户与 Agent，内置专家库与专家市场，按场景切换专业角色。

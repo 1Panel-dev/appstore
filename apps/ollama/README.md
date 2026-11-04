@@ -6,6 +6,10 @@
 ollama run deepseek-r1:1.5b
 ```
 
+**扫码加入交流群**
+
+<img alt="扫码加入交流群" src="https://resource.fit2cloud.com/1panel/img/wechat.png" width="150" height="150">
+
 ## 模型库
 
 Ollama 支持 [ollama.com/library](https://ollama.com/library) 上提供的一系列模型
