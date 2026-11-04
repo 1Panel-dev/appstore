@@ -4,6 +4,10 @@
 
 当前版本为开发者预览版。Harness 可以在工作区中执行命令和修改文件，请设置强密码，并避免挂载宿主机根目录、Docker Socket 或其他敏感目录。
 
+**扫码加入交流群**
+
+<img alt="扫码加入交流群" src="https://resource.fit2cloud.com/1panel/img/wechat.png" width="150" height="150">
+
 ## 访问方式
 
 安装后通过以下地址访问：
