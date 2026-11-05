@@ -20,4 +20,10 @@ services:
     shm_size: 32g
     volumes:
       - ${MODEL_DIR}/:/models/${MODEL_NAME}
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:8001/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 600s
     command: ${START_COMMAND}

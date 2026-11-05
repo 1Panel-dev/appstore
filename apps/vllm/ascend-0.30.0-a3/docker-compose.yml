@@ -24,6 +24,12 @@ services:
     ports:
       - ${PANEL_APP_PORT_HTTP}:8000
     shm_size: 1g
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:8000/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 600s
     command:
       - /bin/bash
       - -lc
