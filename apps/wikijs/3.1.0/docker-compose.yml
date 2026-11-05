@@ -8,7 +8,6 @@ services:
     ports:
       - ${PANEL_APP_PORT_HTTP}:3000
     environment:
-      DB_TYPE: ${PANEL_DB_TYPE}
       DB_HOST: ${PANEL_DB_HOST}
       DB_PORT: ${PANEL_DB_PORT}
       DB_USER: ${PANEL_DB_USER}

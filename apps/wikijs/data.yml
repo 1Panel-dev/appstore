@@ -16,7 +16,7 @@ additionalProperties:
     recommend: 0
     website: https://js.wiki/
     github: https://github.com/requarks/wiki
-    document: https://docs.requarks.io/
+    document: https://docs.js.wiki/
     description:
         en: A modern and powerful wiki app built on Node.js
         es-es: Aplicacion wiki moderna y potente construida sobre Node.js
