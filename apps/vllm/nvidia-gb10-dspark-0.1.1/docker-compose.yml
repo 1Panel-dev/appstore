@@ -9,6 +9,14 @@ services:
     # Issue #38/#39: bring a crashed worker back. Keep grace short — vLLM
     # ignores SIGTERM while loading and a long period hangs `compose stop`.
     restart: ${DSPARK_RESTART_POLICY:-unless-stopped}
+    runtime: nvidia
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
     stop_grace_period: ${DSPARK_STOP_GRACE:-10s}
 
     # Only rank 0 serves HTTP; the worker runs HEADLESS with no :8000 listener.
@@ -27,7 +35,6 @@ services:
       memlock: -1
       stack: 67108864
 
-    gpus: all
 
     devices:
       - /dev/infiniband:/dev/infiniband
