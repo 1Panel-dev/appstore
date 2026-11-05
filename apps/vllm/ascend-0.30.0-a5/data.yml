@@ -55,7 +55,7 @@ additionalProperties:
         zh: 模型名称
         ko: 모델 이름
         tr: Model adı
-    - default: 0,1,2,3
+    - default: 0
       edit: true
       envKey: ASCEND_RT_VISIBLE_DEVICES
       labelEn: Ascend visible devices
@@ -74,7 +74,7 @@ additionalProperties:
         ko: Ascend 표시 장치
         tr: Ascend görünür cihazlar
     - default: >-
-        /models/model --served-model-name model --host 0.0.0.0 --port 8000 --tensor-parallel-size 4 --max_num_seqs 16 --max-model-len 16384 --gpu_memory_utilization 0.80 --dtype float16 --additional-config '{"ascend_compilation_config": {"fuse_norm_quant": false}}' --compilation-config '{"cudagraph_mode": "FULL_DECODE_ONLY", "cudagraph_capture_sizes": [1,4]}' --allowed-local-media-path /
+        /models/model --served-model-name model --host 0.0.0.0 --port 8000 --trust-remote-code
       edit: true
       envKey: START_COMMAND
       labelEn: Start command
