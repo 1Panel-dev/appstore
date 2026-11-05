@@ -1,7 +1,9 @@
 additionalProperties:
     formFields:
-        - default: mysql
-          envKey: PANEL_DB_TYPE
+        - default: ""
+          envKey: PANEL_DB_HOST
+          key: postgresql
+          minVersion: "17"
           labelEn: Database Service
           labelZh: 数据库服务
           label:
@@ -16,20 +18,20 @@ additionalProperties:
             zh: 数据库服务
             zh-Hant: 數據庫 服務
             tr: Veritabanı Hizmeti
+          description:
+            en: Wiki.js v3 requires PostgreSQL 17 or later.
+            es-es: Wiki.js v3 requiere PostgreSQL 17 o posterior.
+            fa: Wiki.js v3 به PostgreSQL 17 یا جدیدتر نیاز دارد.
+            ja: Wiki.js v3 には PostgreSQL 17 以降が必要です。
+            ms: Wiki.js v3 memerlukan PostgreSQL 17 atau lebih baharu.
+            pt-br: O Wiki.js v3 requer PostgreSQL 17 ou posterior.
+            ru: Для Wiki.js v3 требуется PostgreSQL 17 или новее.
+            ko: Wiki.js v3에는 PostgreSQL 17 이상이 필요합니다.
+            zh: Wiki.js v3 仅支持 PostgreSQL 17 及以上版本。
+            zh-Hant: Wiki.js v3 僅支援 PostgreSQL 17 及以上版本。
+            tr: Wiki.js v3, PostgreSQL 17 veya üstünü gerektirir.
           required: true
-          type: apps
-          child:
-            default: ""
-            envKey: PANEL_DB_HOST
-            required: true
-            type: service
-          values:
-            - label: MySQL
-              value: mysql
-            - label: MariaDB
-              value: mariadb
-            - label: PostgreSQL
-              value: postgres
+          type: service
         - default: wiki
           envKey: PANEL_DB_NAME
           labelEn: Database
