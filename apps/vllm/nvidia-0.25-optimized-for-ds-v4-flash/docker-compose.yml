@@ -1,6 +1,6 @@
 services:
   vllm-dspark:
-    image: ${DSPARK_VLLM_IMAGE:-1panel/vllm-gb10-dspark:0.1.1}
+    image: ${DSPARK_VLLM_IMAGE:-1panel/vllm-gb10-dual-node:0.25-optimized-for-ds-v4-flash}
     pull_policy: ${IMAGE_PULL_POLICY:-if_not_present}
     entrypoint: []
     network_mode: host

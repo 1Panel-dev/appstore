@@ -17,7 +17,9 @@
 
 4. 安装 nvidia-container-runtime 和 nvidia-docker2 组件。
 
-### NVIDIA GB10 DSpark 版本
+### NVIDIA GB10 双节点版本
+
+使用 1Panel 维护的定制镜像 `1panel/vllm-gb10-dual-node:0.25-optimized-for-ds-v4-flash`。
 
 1. 仅适用于两台固定配置的 NVIDIA GB10 服务器，主节点为 `10.0.1.1`，工作节点为 `10.0.1.2`。
 2. 主节点必须能够免密 SSH 到 `10.0.1.2`，两台机器都需要安装 Docker、NVIDIA Container Toolkit，并提供可用的 RoCE/InfiniBand 设备。

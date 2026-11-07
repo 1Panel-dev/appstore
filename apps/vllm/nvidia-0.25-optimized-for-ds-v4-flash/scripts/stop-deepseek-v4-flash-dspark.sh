@@ -7,7 +7,6 @@ ENV_FILE="${ENV_FILE:-$APP_DIR/.env.dspark}"
 COMPOSE_FILE="${COMPOSE_FILE:-$APP_DIR/docker-compose.dspark.yml}"
 SIDECAR_COMPOSE_FILE="${SIDECAR_COMPOSE_FILE:-$APP_DIR/docker-compose.vl-sidecar.yml}"
 PROJECT_NAME="${PROJECT_NAME:-deepseek-v4-flash}"
-LEGACY_PROJECT_NAME="${LEGACY_PROJECT_NAME:-$(basename "$APP_DIR" | tr '[:upper:]' '[:lower:]')}"
 
 if [ -f "$ENV_FILE" ]; then
   set -a
@@ -194,9 +193,6 @@ stop_project() {
 }
 
 stop_project "$PROJECT_NAME"
-if [ "$LEGACY_PROJECT_NAME" != "$PROJECT_NAME" ]; then
-  stop_project "$LEGACY_PROJECT_NAME"
-fi
 
 if [ "$STOP_FAILURES" -gt 0 ]; then
   echo "WARN: $STOP_FAILURES remote stop step(s) failed on ${WORKER_HOST}; the worker may still be serving a stale rank (restart: unless-stopped restores it on reboot). Re-run ./scripts/stop.sh once the worker is reachable." >&2
