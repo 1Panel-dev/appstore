@@ -17,7 +17,9 @@
 
 4. Install the nvidia-container-runtime and nvidia-docker2 components.
 
-### NVIDIA GB10 DSpark Version
+### NVIDIA GB10 Dual Node Version
+
+Uses the custom image `1panel/vllm-gb10-dual-node:0.25-optimized-for-ds-v4-flash` maintained by 1Panel.
 
 1. This version targets two fixed NVIDIA GB10 servers: head `10.0.1.1` and worker `10.0.1.2`.
 2. The head must have passwordless SSH access to `10.0.1.2`. Both hosts require Docker, NVIDIA Container Toolkit, and a working RoCE/InfiniBand device.

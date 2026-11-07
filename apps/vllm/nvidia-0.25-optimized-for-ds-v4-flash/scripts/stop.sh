@@ -11,7 +11,7 @@ set -a
 source "$ENV_FILE"
 set +a
 
-export PROJECT_NAME="${PROJECT_NAME:-vllm-gb10-dspark}"
+export PROJECT_NAME="${PROJECT_NAME:-vllm-gb10-dual-node}"
 
 case "${DSPARK_DEPLOY_PROFILE:-flash-0731}" in
   flash-0731|vision-exp) ;;
@@ -21,4 +21,4 @@ case "${DSPARK_DEPLOY_PROFILE:-flash-0731}" in
     ;;
 esac
 
-exec bash "$APP_DIR/scripts/start-deepseek-v4-flash-dspark.sh" "$@"
+exec bash "$APP_DIR/scripts/stop-deepseek-v4-flash-dspark.sh" "$@"
