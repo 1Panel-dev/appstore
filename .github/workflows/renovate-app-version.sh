@@ -35,7 +35,7 @@ do
       target_version=$trimmed_version
       if [[ "$app_name" == "vllm" ]]; then
         case "$image" in
-          vllm/vllm-openai:*) target_version="nvidia-$trimmed_version" ;;
+          vllm/vllm-openai:*|1panel/vllm:*) target_version="nvidia-$trimmed_version" ;;
           intel/llm-scaler-vllm:*) target_version="intel-$trimmed_version" ;;
           quay.io/ascend/vllm-ascend:*) target_version="ascend-$trimmed_version" ;;
           1panel/vllm-gb10-dual-node:*)
