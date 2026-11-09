@@ -1,16 +1,19 @@
 services:
-  glance:
-    image: glanceapp/glance:v0.8.7
+  dashy:
     container_name: ${CONTAINER_NAME}
+    image: lissy93/dashy:4.9.16
     restart: always
     networks:
       - 1panel-network
     ports:
       - "${PANEL_APP_PORT_HTTP}:8080"
     volumes:
-      - ./data/glance.yml:/app/config/glance.yml
-      - /etc/timezone:/etc/timezone:ro
-      - /etc/localtime:/etc/localtime:ro
+      - ./data/user-data/conf.yml:/app/user-data/conf.yml
+      - ./data/item-icons:/app/user-data/item-icons
+    environment:
+      - NODE_ENV=production
+      - UID=1000
+      - GID=1000
     labels:  
       createdBy: "Apps"
 networks:  

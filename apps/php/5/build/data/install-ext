@@ -48,9 +48,8 @@ is_extension_installed() {
 
 install_php_extensions() {
      local extension=$1
-     install-php-extensions $extension
-     
-     if is_extension_installed "$extension"; then
+     local check_name=${2:-$extension}
+     if install-php-extensions "$extension" && is_extension_installed "$check_name"; then
         echo "------ install-php-extensions $extension succeeded ------"
         return 0
      fi
@@ -309,7 +308,7 @@ install_extension() {
         install_php_extensions amqp
     elif [ "$extension" = "zookeeper" ]; then
         install_php_extensions zookeeper
-    elif [ "$extension" = "ionCube" ]; then
+    elif [[ "$extension" == "ionCube" || "$extension" == "ioncube" || "$extension" == "ioncube_loader" ]]; then
         install_php_extensions ioncube_loader "ionCube Loader"
     elif [ "$extension" = "pdo_sqlsrv" ]; then  
         install_php_extensions pdo_sqlsrv
@@ -335,14 +334,14 @@ install_extension() {
 extension=$1
 
 if [[ $extension == *,* ]]; then
-    echo "${extension}" | tr ',' '\n' | while read -r extension; do
-        install_extension $extension
-    done
+    while read -r extension; do
+        install_extension "$extension"
+    done < <(printf '%s\n' "$extension" | tr ',' '\n')
 else
-    install_extension $extension
-    if [ $ERROR_CODE -ne 0 ]; then
-        exit $ERROR_CODE
-    fi
+    install_extension "$extension"
+fi
+if [ "$ERROR_CODE" -ne 0 ]; then
+    exit "$ERROR_CODE"
 fi
 
 docker-php-source delete 
