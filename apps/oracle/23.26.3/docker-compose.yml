@@ -1,0 +1,34 @@
+services:
+  oracle:
+    image: gvenzl/oracle-free:23.26.3
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:1521
+    environment:
+      ORACLE_PASSWORD: ${ORACLE_PASSWORD}
+      APP_USER: ${APP_USER}
+      APP_USER_PASSWORD: ${APP_USER_PASSWORD}
+      ORACLE_DATABASE: ${ORACLE_DATABASE}
+    volumes:
+      - ./data:/opt/oracle/oradata
+      - ./initdb:/container-entrypoint-initdb.d
+    shm_size: "1g"
+    healthcheck:
+      test: ["CMD", "healthcheck.sh"]
+      interval: 30s
+      timeout: 10s
+      retries: 20
+      start_period: 180s
+    logging:
+      options:
+        max-size: "5M"
+        max-file: "10"
+      driver: json-file
+    networks:
+      - 1panel-network
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true

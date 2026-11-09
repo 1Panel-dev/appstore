@@ -1,0 +1,102 @@
+additionalProperties:
+  formFields:
+    - default: oracle
+      envKey: ORACLE_PASSWORD
+      labelEn: SYS / SYSTEM Password
+      labelZh: SYS / SYSTEM 密码
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+      description:
+        zh: SYS 与 SYSTEM 账号的密码，仅在首次初始化时生效，修改需进入容器执行 resetPassword
+        en: Password for the SYS and SYSTEM users. Only applied on first initialization; use resetPassword inside the container to change it later.
+        ja: SYS および SYSTEM ユーザーのパスワード。初回初期化時のみ有効で、変更はコンテナ内の resetPassword を使用します。
+        ko: SYS 및 SYSTEM 사용자의 비밀번호입니다. 최초 초기화 시에만 적용되며, 변경은 컨테이너 내부의 resetPassword를 사용하십시오.
+        ru: Пароль пользователей SYS и SYSTEM. Применяется только при первой инициализации; для смены используйте resetPassword внутри контейнера.
+        pt-br: Senha dos usuários SYS e SYSTEM. Aplicada apenas na primeira inicialização; use resetPassword dentro do contêiner para alterá-la.
+        zh-Hant: SYS 與 SYSTEM 帳號的密碼，僅在首次初始化時生效，修改需進入容器執行 resetPassword
+      label:
+        en: SYS / SYSTEM Password
+        zh: SYS / SYSTEM 密码
+        zh-Hant: SYS / SYSTEM 密碼
+        ja: SYS / SYSTEM パスワード
+        ko: SYS / SYSTEM 비밀번호
+        pt-br: Senha de SYS / SYSTEM
+        ru: Пароль SYS / SYSTEM
+    - default: appuser
+      envKey: APP_USER
+      labelEn: Application User
+      labelZh: 业务用户
+      required: true
+      rule: paramCommon
+      type: text
+      description:
+        zh: 在 FREEPDB1（或自定义 PDB）中创建的普通用户，用于应用连接
+        en: Regular user created in FREEPDB1 (or the custom PDB) for application connections.
+        ja: アプリケーション接続用に FREEPDB1（またはカスタム PDB）に作成される一般ユーザー。
+        ko: 애플리케이션 접속용으로 FREEPDB1(또는 사용자 지정 PDB)에 생성되는 일반 사용자입니다.
+        ru: Обычный пользователь, создаваемый в FREEPDB1 (или в указанной PDB) для подключения приложений.
+        pt-br: Usuário comum criado no FREEPDB1 (ou no PDB personalizado) para conexões da aplicação.
+        zh-Hant: 在 FREEPDB1（或自訂 PDB）中建立的一般使用者，用於應用程式連線
+      label:
+        en: Application User
+        zh: 业务用户
+        zh-Hant: 業務用戶
+        ja: アプリケーションユーザー
+        ko: 애플리케이션 사용자
+        pt-br: Usuário da aplicação
+        ru: Пользователь приложения
+    - default: oracle
+      envKey: APP_USER_PASSWORD
+      labelEn: Application User Password
+      labelZh: 业务用户密码
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+      label:
+        en: Application User Password
+        zh: 业务用户密码
+        zh-Hant: 業務用戶密碼
+        ja: アプリケーションユーザーのパスワード
+        ko: 애플리케이션 사용자 비밀번호
+        pt-br: Senha do usuário da aplicação
+        ru: Пароль пользователя приложения
+    - default: 1521
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        en: Port
+        zh: 端口
+        zh-Hant: 埠
+        ja: ポート
+        ko: 포트
+        pt-br: Porta
+        ru: Порт
+    - default: ""
+      envKey: ORACLE_DATABASE
+      labelEn: Additional PDB name (optional)
+      labelZh: 额外 PDB 名称（可选）
+      required: false
+      type: text
+      description:
+        zh: 留空则只使用内置的 FREEPDB1；填写后会额外创建一个同名 PDB，首次启动时间明显变长
+        en: Leave empty to use the built-in FREEPDB1. A value creates an additional PDB with that name and noticeably increases first startup time.
+        ja: 空欄の場合は組み込みの FREEPDB1 のみを使用します。値を指定すると同名の PDB が追加作成され、初回起動時間が長くなります。
+        ko: 비워 두면 내장 FREEPDB1만 사용합니다. 값을 입력하면 같은 이름의 PDB가 추가 생성되어 최초 기동 시간이 길어집니다.
+        ru: Оставьте пустым, чтобы использовать встроенную FREEPDB1. Значение создаст дополнительную PDB с этим именем и заметно увеличит время первого запуска.
+        pt-br: Deixe vazio para usar apenas o FREEPDB1 interno. Um valor cria um PDB adicional com esse nome e aumenta bastante o tempo da primeira inicialização.
+        zh-Hant: 留空則只使用內建的 FREEPDB1；填寫後會額外建立同名 PDB，首次啟動時間明顯變長
+      label:
+        en: Additional PDB name (optional)
+        zh: 额外 PDB 名称（可选）
+        zh-Hant: 額外 PDB 名稱（可選）
+        ja: 追加 PDB 名（任意）
+        ko: 추가 PDB 이름 (선택)
+        pt-br: Nome do PDB adicional (opcional)
+        ru: Имя дополнительной PDB (необязательно)

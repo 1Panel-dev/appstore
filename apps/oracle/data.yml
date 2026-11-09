@@ -1,0 +1,32 @@
+name: Oracle Database Free
+tags:
+  - 数据库
+title: Oracle 官方免费版关系型数据库（23ai Free）
+description: Oracle AI Database 23ai Free 容器化部署，免费额度 2 CPU / 2 GB 内存 / 12 GB 用户数据
+additionalProperties:
+  key: oracle
+  name: Oracle Database Free
+  tags:
+    - Database
+  shortDescZh: Oracle 官方免费版关系型数据库（23ai Free）
+  shortDescEn: Free edition of Oracle Database (23ai Free)
+  description:
+    en: Oracle AI Database 23ai Free is the free edition of Oracle Database, containerized and ready to use. It supports relational, JSON, graph and vector data in a single converged database, with a free allowance of 2 CPU threads, 2 GB RAM and 12 GB of user data.
+    zh: Oracle AI Database 23ai Free 是 Oracle 官方提供的免费数据库版本，以容器方式开箱即用。单一融合数据库同时支持关系型、JSON、图与向量数据，免费额度为 2 CPU 线程 / 2 GB 内存 / 12 GB 用户数据。
+    zh-Hant: Oracle AI Database 23ai Free 是 Oracle 官方提供的免費資料庫版本，以容器方式開箱即用。單一融合資料庫同時支援關聯式、JSON、圖與向量資料，免費額度為 2 CPU 執行緒 / 2 GB 記憶體 / 12 GB 使用者資料。
+    ja: Oracle AI Database 23ai Free は Oracle 公式の無償データベース版です。コンテナとしてすぐに利用でき、リレーショナル・JSON・グラフ・ベクトルデータを 1 つの統合データベースで扱えます。無償枠は 2 CPU スレッド / 2 GB メモリ / 12 GB のユーザーデータです。
+    ko: Oracle AI Database 23ai Free는 Oracle이 제공하는 무료 데이터베이스 버전으로, 컨테이너로 즉시 사용할 수 있습니다. 관계형, JSON, 그래프, 벡터 데이터를 하나의 통합 데이터베이스에서 지원하며 무료 한도는 2 CPU 스레드 / 2 GB 메모리 / 12 GB 사용자 데이터입니다.
+    pt-br: O Oracle AI Database 23ai Free é a edição gratuita do Oracle Database, pronta para uso em contêiner. Suporta dados relacionais, JSON, grafos e vetores em um único banco convergente, com limite gratuito de 2 threads de CPU, 2 GB de RAM e 12 GB de dados de usuário.
+    ru: Oracle AI Database 23ai Free — бесплатная редакция Oracle Database, готовая к работе в контейнере. Поддерживает реляционные, JSON, графовые и векторные данные в одной конвергентной базе; бесплатный лимит — 2 потока CPU, 2 ГБ ОЗУ и 12 ГБ пользовательских данных.
+  type: runtime
+  crossVersionUpdate: false
+  limit: 0
+  recommend: 0
+  batchInstallSupport: true
+  website: https://www.oracle.com/database/free/
+  github: https://github.com/gvenzl/oci-oracle-free
+  document: https://github.com/gvenzl/oci-oracle-free
+  memoryRequired: 2048
+  architectures:
+    - amd64
+    - arm64
