@@ -1,6 +1,6 @@
 services:
   vllm:
-    image: ${IMAGE:-1panel/vllm:v0.32.0-optimized-for-ds-4.1-flash}
+    image: ${IMAGE:-1panel/vllm:v0.32.0-optimized-for-ds-v4.1-flash}
     container_name: ${CONTAINER_NAME}
     restart: always
     runtime: nvidia
