@@ -8,6 +8,7 @@ additionalProperties:
         zh: Web UI 端口
         zh-Hant: Web UI 埠
         en: Web UI Port
+        es-es: Web UI Puerto
         ja: Web UIポート
         ko: 웹 UI 포트
         ms: Port Web UI
@@ -25,6 +26,7 @@ additionalProperties:
         zh: Web 界面密钥
         zh-Hant: Web 介面金鑰
         en: Web Key
+        es-es: Web Key
         ja: Web Key
         ko: Web Key
         ms: Web Key
@@ -55,16 +57,18 @@ additionalProperties:
         zh: 对外访问地址
         zh-Hant: 對外存取位址
         en: Public URL
+        es-es: URL pública
         ja: Public URL
         ko: Public URL
-        ms: Public URL
-        pt-br: Public URL
-        ru: Public URL
-        tr: Public URL
+        ms: URL Awam
+        pt-br: URL Pública
+        ru: Публичный URL
+        tr: Genel URL
       description:
         zh: 例如反向代理的 Base URL
         zh-Hant: 例如反向代理的 Base URL
         en: e.g., the Base URL of the reverse proxy
+        es-es: p. ej., la Base URL del proxy inverso
         ja: 例：リバースプロキシのベースURL
         ko: "예: 리버스 프록시의 Base URL"
         ms: "Contoh: Base URL bagi proksi terbalik"
