@@ -1,0 +1,65 @@
+additionalProperties:
+  formFields:
+    - default: 3430
+      envKey: PANEL_APP_PORT_HTTP
+      labelZh: Web UI 端口
+      labelEn: Web UI Port
+      label:
+        zh: Web UI 端口
+        zh-Hant: Web UI 埠
+        en: Web UI Port
+        ja: Web UIポート
+        ko: 웹 UI 포트
+        ms: Port Web UI
+        pt-br: Porta da Web UI
+        ru: Порт веб-интерфейса
+        tr: Web UI Bağlantı Noktası
+      required: true
+      type: number
+      rule: paramPort
+    - default: magpie-web-key
+      envKey: MAGPIE_WEB_KEY
+      labelZh: Web 界面密钥
+      labelEn: Web Key
+      label:
+        zh: Web 界面密钥
+        zh-Hant: Web 介面金鑰
+        en: Web Key
+        ja: Web Key
+        ko: Web Key
+        ms: Web Key
+        pt-br: Web Key
+        ru: Web Key
+        tr: Web Key
+      required: true
+      type: password
+      edit: true
+      random: true
+    - default: ""
+      envKey: MAGPIE_PUBLIC_URL
+      labelZh: 对外访问地址
+      labelEn: Public URL
+      label:
+        zh: 对外访问地址
+        zh-Hant: 對外存取位址
+        en: Public URL
+        ja: Public URL
+        ko: Public URL
+        ms: Public URL
+        pt-br: Public URL
+        ru: Public URL
+        tr: Public URL
+      description:
+        zh: 例如反向代理的 Base URL
+        zh-Hant: 例如反向代理的 Base URL
+        en: e.g., the Base URL of the reverse proxy
+        ja: 例：リバースプロキシのベースURL
+        ko: "예: 리버스 프록시의 Base URL"
+        ms: "Contoh: Base URL bagi proksi terbalik"
+        pt-br: "Ex.: a Base URL do proxy reverso"
+        ru: "Например: базовый URL обратного прокси"
+        tr: "Örneğin: ters proxy'nin Temel URL'si"
+      required: false
+      type: text
+      edit: true
+      rule: paramExtUrl

@@ -1,0 +1,24 @@
+services:
+  magpie:
+    image: ghcr.io/yetone/magpie:0.1.3490
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:3430
+    environment:
+      MAGPIE_WEB_KEY: ${MAGPIE_WEB_KEY}
+      MAGPIE_PUBLIC_URL: ${MAGPIE_PUBLIC_URL}
+    volumes:
+      - ./config:/config
+    command:
+      - web
+      - --addr
+      - 0.0.0.0:3430
+      - --no-open
+    labels:
+      createdBy: Apps
+networks:
+  1panel-network:
+    external: true
