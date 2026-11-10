@@ -17,7 +17,7 @@ additionalProperties:
       required: true
       type: number
       rule: paramPort
-    - default: magpie-web-key
+    - default: magpie_web_key
       envKey: MAGPIE_WEB_KEY
       labelZh: Web 界面密钥
       labelEn: Web Key
