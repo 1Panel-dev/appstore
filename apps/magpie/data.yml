@@ -23,7 +23,7 @@ additionalProperties:
     tr: Tüm ajanlarınızın modellerini ve sağlayıcılarını tek bir yerde yöneten birleşik bir AI ağ geçidi.
   type: website
   crossVersionUpdate: true
-  limit: 0
+  limit: 1
   website: https://usemagpie.ai
   github: https://github.com/yetone/magpie
   document: https://usemagpie.ai/docs/zh/docker
