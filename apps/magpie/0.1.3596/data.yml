@@ -1,0 +1,81 @@
+additionalProperties:
+  formFields:
+    - default: 3430
+      envKey: PANEL_APP_PORT_HTTP
+      labelZh: Web UI 端口
+      labelEn: Web UI Port
+      label:
+        zh: Web UI 端口
+        zh-Hant: Web UI 埠
+        en: Web UI Port
+        es-es: Web UI Puerto
+        ja: Web UIポート
+        ko: 웹 UI 포트
+        ms: Port Web UI
+        pt-br: Porta da Web UI
+        ru: Порт веб-интерфейса
+        tr: Web UI Bağlantı Noktası
+      required: true
+      type: number
+      rule: paramPort
+    - default: magpie_web_key
+      envKey: MAGPIE_WEB_KEY
+      labelZh: Web 界面密钥
+      labelEn: Web Key
+      label:
+        zh: Web 界面密钥
+        zh-Hant: Web 介面金鑰
+        en: Web Key
+        es-es: Web Key
+        ja: Web Key
+        ko: Web Key
+        ms: Web Key
+        pt-br: Web Key
+        ru: Web Key
+        tr: Web Key
+      description:
+        zh: Web 界面密钥至少 16 个字符，且仅允许字母、数字和 - . _ ~
+        zh-Hant: Web 介面金鑰至少 16 個字元，且僅允許字母、數字和 - . _ ~
+        en: Web key must be at least 16 characters and may contain only letters, digits and - . _ ~
+        es-es: La clave Web debe tener al menos 16 caracteres y solo admite letras, dígitos y - . _ ~
+        ja: Web 画面のキーは 16 文字以上で、使用できるのは英字・数字と - . _ ~ のみです
+        ko: Web 인터페이스 키는 16자 이상이어야 하며 영문자, 숫자, - . _ ~ 만 사용할 수 있습니다
+        ms: Kunci Web mestilah sekurang-kurangnya 16 aksara dan hanya membenarkan huruf, digit dan - . _ ~
+        pt-br: A chave Web deve ter no mínimo 16 caracteres e aceita apenas letras, dígitos e - . _ ~
+        ru: Ключ веб-интерфейса — не менее 16 символов; допускаются только буквы, цифры и - . _ ~
+        tr: Web anahtarı en az 16 karakter olmalı ve yalnızca harf, rakam ve - . _ ~ içermelidir
+      required: true
+      type: password
+      edit: true
+      rule: paramComplexity
+      random: true
+    - default: ""
+      envKey: MAGPIE_PUBLIC_URL
+      labelZh: 对外访问地址
+      labelEn: Public URL
+      label:
+        zh: 对外访问地址
+        zh-Hant: 對外存取位址
+        en: Public URL
+        es-es: URL pública
+        ja: Public URL
+        ko: Public URL
+        ms: URL Awam
+        pt-br: URL Pública
+        ru: Публичный URL
+        tr: Genel URL
+      description:
+        zh: 例如反向代理的 Base URL
+        zh-Hant: 例如反向代理的 Base URL
+        en: e.g., the Base URL of the reverse proxy
+        es-es: p. ej., la Base URL del proxy inverso
+        ja: 例：リバースプロキシのベースURL
+        ko: "예: 리버스 프록시의 Base URL"
+        ms: "Contoh: Base URL bagi proksi terbalik"
+        pt-br: "Ex.: a Base URL do proxy reverso"
+        ru: "Например: базовый URL обратного прокси"
+        tr: "Örneğin: ters proxy'nin Temel URL'si"
+      required: false
+      type: text
+      edit: true
+      rule: paramExtUrl

@@ -1,0 +1,32 @@
+name: magpie
+tags:
+  - AI
+title: 一处管理所有 Agent 的模型与供应商的 AI 网关。
+description: 一处管理所有 Agent 的模型与供应商的 AI 网关。
+additionalProperties:
+  key: magpie
+  name: magpie
+  tags:
+    - AI
+  shortDescZh: 一处管理所有 Agent 的模型与供应商的 AI 网关。
+  shortDescEn: A unified AI gateway for all your agents' models and providers
+  description:
+    en: A unified AI gateway that manages models and providers for all your agents in one place.
+    es-es: Una puerta de enlace de IA unificada que gestiona los modelos y proveedores de todos tus agentes en un solo lugar.
+    zh: 一处管理所有 Agent 的模型与供应商的 AI 网关。
+    zh-Hant: 在一處管理所有 Agent 的模型與供應商的 AI 閘道。
+    ja: すべてのエージェントのモデルとプロバイダーを一か所で管理する統合 AI ゲートウェイ。
+    ms: Gerbang AI bersatu yang mengurus model dan penyedia untuk semua ejen anda di satu tempat.
+    pt-br: Um gateway de IA unificado que gerencia modelos e provedores de todos os seus agentes em um só lugar.
+    ru: Единый AI-шлюз для управления моделями и провайдерами всех ваших агентов в одном месте.
+    ko: 모든 에이전트의 모델과 공급자를 한곳에서 관리하는 통합 AI 게이트웨이.
+    tr: Tüm ajanlarınızın modellerini ve sağlayıcılarını tek bir yerde yöneten birleşik bir AI ağ geçidi.
+  type: website
+  crossVersionUpdate: true
+  limit: 1
+  website: https://usemagpie.ai
+  github: https://github.com/yetone/magpie
+  document: https://usemagpie.ai/docs/zh/docker
+  architectures:
+    - amd64
+    - arm64
