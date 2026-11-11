@@ -1,0 +1,14 @@
+{
+  "id": "10066",
+  "state": "on",
+  "name": "PHP multipart 结构限制（缓解）",
+  "cve": "CVE-2026-109618",
+  "type": "rce",
+  "remark": "缓解 multipart 内存放大入口：每个分段头部最多 16 KiB/32 行、最多 200 个分段（含空文件名）、字段嵌套最多 64 层；解析失败也命中。仅检查 POST，不依赖 fileExt。可能影响超限表单，不限制完整请求大小，不覆盖应用自身内存分配，不能替代升级 PHP。需要支持 multipart 匹配的新版 WAF 引擎。来源：https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w",
+  "rule": {
+    "method": "POST",
+    "type": "multipart",
+    "uri": "(?:^|\\n)(?:invalid_boundary|invalid_headers|too_many_parts|invalid_disposition|invalid_name|invalid_filename|unexpected_eof|read_error)(?:\\n|$)",
+    "pattern": "regex"
+  }
+}

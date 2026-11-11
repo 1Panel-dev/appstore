@@ -1,0 +1,17 @@
+{
+  "id": "10061",
+  "state": "on",
+  "name": "GitLab",
+  "cve": "CVE-2026-85706",
+  "type": "afr",
+  "remark": "拦截仓库提交/文件 API 中客户端伪造的 file.path 参数，保留正常 file_path 参数；仅覆盖查询参数、表单和 JSON，不覆盖所有上传/编码变体。来源：https://gitlab.com/gitlab-org/gitlab/-/commit/0ff7b6b2911723389f2271b10362591b0a69a166",
+  "rule": {
+    "method": "PUT",
+    "type": "uri",
+    "uri": "^/(?:[^/]+/)*api/v4/projects/.+/repository/(?:commits|files)(?:/|$)",
+    "pattern": "regex",
+    "params": {
+      "file.path": ""
+    }
+  }
+}

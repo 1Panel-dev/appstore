@@ -1,0 +1,14 @@
+{
+  "id": "10065",
+  "state": "on",
+  "name": "Atlassian Confluence",
+  "cve": "CVE-2023-22515",
+  "type": "aa",
+  "remark": "拦截通过 action 查询参数将 setupComplete 重置为 false/0 的已知利用步骤；不封禁正常 setup 页面，不替代升级。来源：https://www.rapid7.com/blog/post/ra-cve-2023-22515-analysis/",
+  "rule": {
+    "method": "GET",
+    "type": "request_uri",
+    "uri": "^[^?]*\\.action\\?(?:[^#]*&)?bootstrapStatusProvider(?:\\.|%2e)applicationConfig(?:\\.|%2e)setupComplete=(?:false|0)(?:&|$)",
+    "pattern": "regex"
+  }
+}

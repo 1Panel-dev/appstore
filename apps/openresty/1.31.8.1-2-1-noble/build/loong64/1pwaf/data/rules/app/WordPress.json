@@ -1,0 +1,37 @@
+{
+  "name":"WordPress",
+  "state": "on",
+  "rules": [
+    {
+      "type": "whiteUrl",
+      "pattern": "eq",
+      "method": "POST",
+      "values": [
+        "/wp-admin/admin-ajax.php",
+        "/wp-admin/post.php",
+        "/wp-admin/admin.php",
+        "/wp-admin/async-upload.php",
+        "/wp-admin/post-new.php",
+        "/wp-admin/site-editor.php",
+        "/wp-admin/edit.php"
+      ],
+      "check": {
+        "type": "cookie",
+        "pattern": "startWith",
+        "values": ["wordpress_logged_in_"]
+      }
+    },
+    {
+      "type": "whiteUrl",
+      "pattern": "startWith",
+      "values": [
+        "/index.php?rest_route=/wp/v2/templates/"
+      ],
+      "check": {
+        "type": "cookie",
+        "pattern": "startWith",
+        "values": ["wordpress_logged_in_"]
+      }
+    }
+  ]
+} 

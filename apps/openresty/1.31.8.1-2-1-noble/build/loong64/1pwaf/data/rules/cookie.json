@@ -1,0 +1,10 @@
+{
+  "rules": [
+    {
+      "state":"on",
+      "name":"scannerFilter1",
+      "rule":"(CustomCookie|acunetixCookie)",
+      "type": "scannerFilter"
+    }
+  ]
+}

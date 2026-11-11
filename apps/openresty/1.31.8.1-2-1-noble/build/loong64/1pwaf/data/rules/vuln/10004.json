@@ -1,0 +1,14 @@
+{
+  "id":"10004",
+  "state": "on",
+  "name": "Jira",
+  "cve": "CVE-2019-8451",
+  "type": "ssrf",
+  "remark": "",
+  "rule": {
+    "method":"GET",
+    "type": "request_uri",
+    "uri": "/plugins/servlet/gadgets/makeRequest\\?url",
+    "pattern": "contain"
+  }
+}
