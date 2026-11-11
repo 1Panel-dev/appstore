@@ -11,7 +11,6 @@ additionalProperties:
         fa: 'پورت تست نوع NAT'
         ja: NATタイプテストポート
         ms: Port ujian jenis NAT
-        t-br: Porta de teste de tipo NAT
         ru: Порт теста типа NAT
         ko: NAT 유형 테스트 포트
         zh-hant: NAT 類型測試埠
