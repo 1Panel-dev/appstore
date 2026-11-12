@@ -1,8 +1,14 @@
+x-logging: &logging
+  driver: json-file
+  options:
+    max-size: "20m"
+    max-file: "5"
 services:
   baizhi:
     image: chaitin-registry.cn-hangzhou.cr.aliyuncs.com/monkeycode/monkeyai-admin:v26111102
     container_name: ${CONTAINER_NAME}
     restart: always
+    logging: *logging
     init: true
     read_only: true
     tmpfs:
@@ -33,6 +39,7 @@ services:
     image: chaitin-registry.cn-hangzhou.cr.aliyuncs.com/monkeycode/monkeyai-backend:v26111102
     container_name: ${CONTAINER_NAME}-backend
     restart: always
+    logging: *logging
     init: true
     read_only: true
     tmpfs:
@@ -77,6 +84,7 @@ services:
     image: chaitin-registry.cn-hangzhou.cr.aliyuncs.com/basic/postgres:18.6
     container_name: ${CONTAINER_NAME}-db
     restart: always
+    logging: *logging
     environment:
       POSTGRES_DB: "monkeyai"
       POSTGRES_USER: "monkeyai"
@@ -98,6 +106,7 @@ services:
     container_name: ${CONTAINER_NAME}-migrate
     # 数据库迁移完成后应退出，不能像常驻服务一样自动重启。
     restart: "no"
+    logging: *logging
     depends_on:
       baizhi-db:
         condition: service_healthy
@@ -114,6 +123,7 @@ services:
     image: chaitin-registry.cn-hangzhou.cr.aliyuncs.com/basic/rustfs:v1.0.0-rc.5
     container_name: ${CONTAINER_NAME}-rustfs
     restart: always
+    logging: *logging
     user: "10001:10001"
     environment:
       RUSTFS_ACCESS_KEY: "monkeyai"
