@@ -1,0 +1,134 @@
+additionalProperties:
+  formFields:
+    - default: 8080
+      envKey: PANEL_APP_PORT_HTTP
+      required: true
+      edit: true
+      rule: paramPort
+      type: number
+      label:
+        en: "HTTP Port"
+        es-es: "Puerto HTTP"
+        fa: "پورت HTTP"
+        ja: "HTTP ポート"
+        ms: "Port HTTP"
+        pt-br: "Porta HTTP"
+        ru: "HTTP-порт"
+        ko: "HTTP 포트"
+        zh-Hant: "HTTP 連接埠"
+        zh: "HTTP 端口"
+        tr: "HTTP Bağlantı Noktası"
+    - default: "http://localhost:8080"
+      envKey: MONKEYAI_PUBLIC_URL
+      required: true
+      edit: true
+      rule: paramExtUrl
+      type: text
+      label:
+        en: "Public URL"
+        es-es: "URL pública"
+        fa: "نشانی عمومی"
+        ja: "外部アクセス URL"
+        ms: "URL Awam"
+        pt-br: "URL pública"
+        ru: "Внешний URL"
+        ko: "외부 접속 URL"
+        zh-Hant: "對外存取位址"
+        zh: "对外访问地址"
+        tr: "Genel Erişim URL’si"
+      description:
+        zh: "填写客户端和浏览器实际访问的根地址；使用 1Panel HTTPS 反向代理时填写对应的 HTTPS 地址，不要包含路径。"
+        en: "Use the externally reachable root URL. When using an HTTPS reverse proxy in 1Panel, enter its HTTPS URL without a path."
+    - default: "admin@example.com"
+      envKey: MONKEYAI_INITIAL_ADMIN_EMAIL
+      required: true
+      type: text
+      label:
+        en: "Initial Admin Email"
+        es-es: "Correo del administrador inicial"
+        fa: "ایمیل مدیر اولیه"
+        ja: "初期管理者メール"
+        ms: "E-mel Pentadbir Awal"
+        pt-br: "E-mail do administrador inicial"
+        ru: "Email первого администратора"
+        ko: "초기 관리자 이메일"
+        zh-Hant: "初始管理員信箱"
+        zh: "初始管理员邮箱"
+        tr: "İlk Yönetici E-postası"
+    - default: "baizhi"
+      envKey: MONKEYAI_INITIAL_ADMIN_PASSWORD
+      required: true
+      random: true
+      rule: paramComplexity
+      type: password
+      label:
+        en: "Initial Admin Password"
+        es-es: "Contraseña del administrador inicial"
+        fa: "رمز مدیر اولیه"
+        ja: "初期管理者パスワード"
+        ms: "Kata Laluan Pentadbir Awal"
+        pt-br: "Senha do administrador inicial"
+        ru: "Пароль первого администратора"
+        ko: "초기 관리자 비밀번호"
+        zh-Hant: "初始管理員密碼"
+        zh: "初始管理员密码"
+        tr: "İlk Yönetici Parolası"
+    - default: "baizhidb"
+      envKey: MONKEYAI_DB_PASSWORD
+      required: true
+      random: true
+      rule: paramCommon
+      type: password
+      label:
+        en: "Database Password"
+        es-es: "Contraseña de la base de datos"
+        fa: "رمز پایگاه داده"
+        ja: "データベースパスワード"
+        ms: "Kata Laluan Pangkalan Data"
+        pt-br: "Senha do banco de dados"
+        ru: "Пароль базы данных"
+        ko: "데이터베이스 비밀번호"
+        zh-Hant: "資料庫密碼"
+        zh: "数据库密码"
+        tr: "Veritabanı Parolası"
+      description:
+        zh: "连接字符串使用此密码；仅使用字母、数字、点、下划线和连字符，保留随机生成值即可。"
+        en: "Used in the database connection URL. Keep the generated password or use only letters, digits, dots, underscores and hyphens."
+    - default: "baizhifs"
+      envKey: MONKEYAI_RUSTFS_SECRET_KEY
+      required: true
+      random: true
+      rule: paramComplexity
+      type: password
+      label:
+        en: "Object Storage Secret Key"
+        es-es: "Clave secreta del almacenamiento"
+        fa: "کلید محرمانه فضای ذخیره‌سازی"
+        ja: "オブジェクトストレージ秘密キー"
+        ms: "Kunci Rahsia Storan Objek"
+        pt-br: "Chave secreta do armazenamento"
+        ru: "Секретный ключ хранилища"
+        ko: "오브젝트 스토리지 비밀 키"
+        zh-Hant: "物件儲存密鑰"
+        zh: "对象存储密钥"
+        tr: "Nesne Depolama Gizli Anahtarı"
+    - default: ""
+      envKey: MONKEYAI_TRUSTED_PROXY_CIDRS
+      required: false
+      edit: true
+      type: text
+      label:
+        en: "Trusted Proxy IP/CIDR"
+        es-es: "IP/CIDR del proxy de confianza"
+        fa: "IP/CIDR پراکسی مورد اعتماد"
+        ja: "信頼するプロキシ IP/CIDR"
+        ms: "IP/CIDR Proksi Dipercayai"
+        pt-br: "IP/CIDR do proxy confiável"
+        ru: "IP/CIDR доверенного прокси"
+        ko: "신뢰할 프록시 IP/CIDR"
+        zh-Hant: "可信任代理 IP/CIDR"
+        zh: "可信代理 IP/CIDR"
+        tr: "Güvenilen Proxy IP/CIDR"
+      description:
+        zh: "可留空；需要记录真实来源 IP 时，仅填写直接连接此应用的可信代理 IP/CIDR，多个地址用逗号分隔。"
+        en: "Optional. Set only the IP/CIDR of the trusted proxy directly connecting to this application; separate entries with commas."

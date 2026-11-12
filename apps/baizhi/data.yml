@@ -1,0 +1,36 @@
+name: 百智办公
+tags:
+  - AI
+  - 工具
+title: 团队 AI 办公工作台
+description: 支持办公、编程与设计的团队 AI 工作台
+additionalProperties:
+  key: baizhi
+  name: 百智办公
+  tags:
+    - AI
+    - Tool
+  shortDescZh: 团队 AI 办公工作台
+  shortDescEn: Team AI workspace
+  description:
+    en: "Team AI workspace for office work, coding and design"
+    es-es: "Espacio de trabajo de IA para oficina, programación y diseño"
+    fa: "فضای کاری هوش مصنوعی تیمی برای کار اداری، برنامه‌نویسی و طراحی"
+    ja: "オフィス業務・開発・デザイン向けチーム AI ワークスペース"
+    ms: "Ruang kerja AI pasukan untuk pejabat, pengekodan dan reka bentuk"
+    pt-br: "Espaço de trabalho de IA para escritório, programação e design"
+    ru: "Командное ИИ-пространство для офисных задач, разработки и дизайна"
+    ko: "사무·코딩·디자인을 위한 팀 AI 작업 공간"
+    zh-Hant: "支援辦公、程式開發與設計的團隊 AI 工作台"
+    zh: "支持办公、编程与设计的团队 AI 工作台"
+    tr: "Ofis işleri, kodlama ve tasarım için ekip yapay zekâ çalışma alanı"
+  type: website
+  crossVersionUpdate: false
+  limit: 0
+  website: https://work.baizhi.cloud/
+  github: https://github.com/chaitin/MonkeyCode
+  document: https://work.docs.baizhi.cloud/
+  memoryRequired: 1024
+  architectures:
+    - amd64
+    - arm64
