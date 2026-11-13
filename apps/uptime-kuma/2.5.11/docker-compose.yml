@@ -1,6 +1,6 @@
 services:
   uptime-kuma:
-    image: louislam/uptime-kuma:2.5.9
+    image: louislam/uptime-kuma:2.5.11
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
