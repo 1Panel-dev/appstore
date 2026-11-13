@@ -19,7 +19,7 @@ AI 应用只需配置统一的 Base URL 和 API Key，即可通过标准接口�
 
 ## 数据库版本选择
 
-- `1.6.0`：使用 SQLite，适合单机部署，已有 SQLite 实例可沿此版本线升级。
-- `1.6.0-postgres`：使用 PostgreSQL，需要 1Panel v2.4.0 及以上版本和 PostgreSQL 18。安装时选择已在 1Panel 中配置的 PostgreSQL 服务，由面板创建并关联应用数据库。
-- 两个版本均使用 `1panel/ai-gateway:v1.6.0` 镜像，通过数据库配置区分。应用目录保存配置等持久化数据；PG 版的数据库由所选 PostgreSQL 服务保存，备份请使用 1Panel 的应用备份功能以包含关联数据库。
+- `1.7.0`：使用 SQLite，适合单机部署，已有 SQLite 实例可沿此版本线升级。
+- `1.7.0-postgres`：使用 PostgreSQL，需要 1Panel v2.4.0 及以上版本和 PostgreSQL 18。安装时选择已在 1Panel 中配置的 PostgreSQL 服务，由面板创建并关联应用数据库。
+- 两个版本均使用 `1panel/ai-gateway:v1.7.0` 镜像，通过数据库配置区分。应用目录保存配置等持久化数据；PG 版的数据库由所选 PostgreSQL 服务保存，备份请使用 1Panel 的应用备份功能以包含关联数据库。
 - SQLite 与 PostgreSQL 版本之间不能直接升级或交叉恢复备份。切换数据库类型需要单独迁移数据。
