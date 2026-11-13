@@ -15,7 +15,7 @@ Applications only need a unified Base URL and API key to access public cloud API
 
 ## Database variants
 
-- `1.6.0`: SQLite for single-host deployments. Existing SQLite installations can upgrade along this version line.
-- `1.6.0-postgres`: PostgreSQL, requiring 1Panel v2.4.0 or later and PostgreSQL 18. Select a PostgreSQL service configured in 1Panel; the panel creates and associates the application database.
-- Both variants use `1panel/ai-gateway:v1.6.0` with different database settings. The application directory contains persistent configuration and other files; PostgreSQL data resides in the selected database service. Use 1Panel application backups to include the associated database.
+- `1.7.0`: SQLite for single-host deployments. Existing SQLite installations can upgrade along this version line.
+- `1.7.0-postgres`: PostgreSQL, requiring 1Panel v2.4.0 or later and PostgreSQL 18. Select a PostgreSQL service configured in 1Panel; the panel creates and associates the application database.
+- Both variants use `1panel/ai-gateway:v1.7.0` with different database settings. The application directory contains persistent configuration and other files; PostgreSQL data resides in the selected database service. Use 1Panel application backups to include the associated database.
 - Direct upgrades and cross-type backup restores between SQLite and PostgreSQL are not supported. Switching database types requires a separate data migration.
