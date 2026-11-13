@@ -1,7 +1,7 @@
 services:
   copaw:
     container_name: ${CONTAINER_NAME}
-    image: agentscope/qwenpaw:v2.2.2
+    image: agentscope/qwenpaw:v2.3.0
     init: true
     restart: always
     networks:
