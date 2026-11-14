@@ -1,0 +1,58 @@
+additionalProperties:
+  formFields:
+  - default: 8000
+    envKey: PANEL_APP_PORT_HTTP
+    labelEn: Port
+    labelZh: 端口
+    label:
+      en: Port
+      es-es: Puerto
+      ja: ポート
+      ms: Port
+      pt-br: Porta
+      ru: Порт
+      ko: 포트
+      zh-Hant: 埠
+      zh: 端口
+      tr: Bağlantı Noktası
+    required: true
+    rule: paramPort
+    type: number
+    disabled: true
+    edit: false
+  - default: eugr/spark-vllm-b12x:latest
+    envKey: IMAGE_NAME
+    labelEn: Image Name
+    labelZh: 镜像名称
+    required: true
+    edit: true
+    type: text
+    label:
+      en: Image Name
+      es-es: Image Nombre
+      ja: イメージ名
+      ms: Nama Imej
+      pt-br: Nome da imagem
+      ru: Имя образа
+      ko: 이미지 이름
+      zh-Hant: 鏡像名稱
+      zh: 镜像名称
+      tr: Image Adı
+  - default: /opt/deepseek-ai/DeepSeek-V4.1-Flash
+    envKey: DSPARK_MODEL_HOST
+    labelEn: Model directory
+    labelZh: 模型目录
+    required: true
+    edit: true
+    type: text
+    label:
+      en: Model directory
+      es-es: Directorio del modelo
+      ja: モデルディレクトリ
+      ms: Direktori model
+      pt-br: Diretório do modelo
+      ru: Каталог модели
+      zh-Hant: 模型目錄
+      zh: 模型目录
+      ko: 모델 디렉터리
+      tr: Model dizini
