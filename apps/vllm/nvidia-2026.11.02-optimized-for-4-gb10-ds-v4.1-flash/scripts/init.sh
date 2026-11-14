@@ -16,9 +16,5 @@ test -d "$DSPARK_MODEL_HOST" || {
   echo "Missing model directory on head: $DSPARK_MODEL_HOST" >&2
   exit 1
 }
-docker image inspect "$DSPARK_VLLM_IMAGE" >/dev/null || {
-  echo "Missing local application image: $DSPARK_VLLM_IMAGE" >&2
-  exit 1
-}
 chmod 0600 "$ENV_FILE"
 chmod 0755 "$APP_DIR/launch-cluster.sh" "$APP_DIR/appliance/"*.sh "$APP_DIR/scripts/"*.sh

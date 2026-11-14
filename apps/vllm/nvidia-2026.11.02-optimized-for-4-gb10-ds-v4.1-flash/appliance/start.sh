@@ -17,7 +17,6 @@ die() { echo "Error: $*" >&2; exit 1; }
 [[ -d "$DSPARK_MODEL_HOST" ]] || die "Model directory not found: $DSPARK_MODEL_HOST"
 [[ -f "$LAUNCH_SCRIPT" ]] || die "Launch script not found: $LAUNCH_SCRIPT"
 command -v docker >/dev/null 2>&1 || die "docker is not installed."
-docker image inspect "$DSPARK_VLLM_IMAGE" >/dev/null 2>&1 || die "Docker image '$DSPARK_VLLM_IMAGE' not found locally. Load it with: docker load -i <image.tar>"
 
 # launch-cluster.sh reads CONTAINER_NAME from .env; use the same value for the
 # already-running guard below.

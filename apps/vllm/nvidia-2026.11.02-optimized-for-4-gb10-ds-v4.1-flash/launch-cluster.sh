@@ -354,6 +354,7 @@ PYENV
 fi
 
 # Apply .env configuration (CLI args take precedence)
+IMAGE_PULL_POLICY="${DOTENV_IMAGE_PULL_POLICY:-${IMAGE_PULL_POLICY:-if_not_present}}"
 if [[ -z "$NODES_ARG" && -n "$DOTENV_CLUSTER_NODES" ]]; then
     NODES_ARG="$DOTENV_CLUSTER_NODES"
 fi
@@ -1536,6 +1537,27 @@ start_cluster() {
         fi
         return
     fi
+
+    local image_command node
+    case "$IMAGE_PULL_POLICY" in
+        always) printf -v image_command 'docker pull %q' "$IMAGE_NAME" ;;
+        if_not_present) printf -v image_command 'docker image inspect %q >/dev/null 2>&1 || docker pull %q' "$IMAGE_NAME" "$IMAGE_NAME" ;;
+        never) printf -v image_command 'docker image inspect %q >/dev/null' "$IMAGE_NAME" ;;
+        *) echo "Error: Unsupported IMAGE_PULL_POLICY: $IMAGE_PULL_POLICY" >&2; return 1 ;;
+    esac
+    local image_executor
+    for node in "$HEAD_IP" "${PEER_NODES[@]}"; do
+        echo "Preparing image $IMAGE_NAME on $node (policy: $IMAGE_PULL_POLICY)..."
+        if [[ "$node" == "$HEAD_IP" ]]; then
+            image_executor=(bash -c)
+        else
+            image_executor=(ssh -o BatchMode=yes -o ConnectTimeout=10 "$node")
+        fi
+        if ! "${image_executor[@]}" "$image_command"; then
+            echo "Error: Could not prepare image $IMAGE_NAME on $node." >&2
+            return 1
+        fi
+    done
 
     verify_cluster_image_consistency || return 1
     prepare_vllm_pr_mods || return 1
