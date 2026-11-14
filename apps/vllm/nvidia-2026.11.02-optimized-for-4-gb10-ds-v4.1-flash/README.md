@@ -4,7 +4,7 @@
 应用版本中的 `2026.11.02` 表示镜像构建日期。
 vLLM 完整运行版本为 `0.1.dev21830+g8244d1c44.d20261102`，
 对应 `local-inference-lab/vllm` 提交 `8244d1c44348ae8a5bbfc9f1b607021652283ed4`。
-仅适配镜像名称和模型宿主路径变量，原始脚本执行逻辑和推理参数保持不变。
+沿用 1pds41 四机编排及 B12X/DSpark 推理参数，应用配置统一使用现有 GB10 的环境变量。
 运行文件校验清单位于 `scripts/source.sha256`。
 
 部署前，四台设备均需准备相同的实测镜像，以及位于相同宿主路径的完整模型目录。
@@ -14,15 +14,34 @@ vLLM 完整运行版本为 `0.1.dev21830+g8244d1c44.d20261102`，
 并确保执行脚本的用户可以免密 SSH 到其余三台设备并操作 Docker。
 1Panel 以 root 执行时，需要准备 root 用户的免密 SSH。
 
-外层脚本通过 `APP_DIR` 定位应用目录，通过 `ENV_FILE` 读取该目录的 `.env`。
-`IMAGE_NAME` 为镜像配置，默认 `eugr/spark-vllm-b12x:latest`；初始化检查、Compose 元数据
-和原始启动脚本使用同一值。
-`DSPARK_MODEL_HOST` 为模型宿主目录，初始化检查和四节点只读挂载使用同一值，
-容器内路径仍为 `/models/DeepSeek-V4.1-Flash`。
-目录须使用不含空格、冒号或 Shell 特殊字符的绝对路径，符合原始启动器的路径格式要求。
+所有入口通过 `scripts/config.sh` 读取应用目录的 `.env`，以该文件为配置来源。
+修改 `.env` 后，直接执行 `appliance/start.sh` 与通过 `scripts/start.sh` 启动使用同一组配置。
+
+| 变量 | 默认值 | 用途 |
+| --- | --- | --- |
+| `DSPARK_VLLM_IMAGE` | `eugr/spark-vllm-b12x:latest` | 镜像检查和四节点启动 |
+| `DSPARK_MODEL_HOST` | `/opt/deepseek-ai/DeepSeek-V4.1-Flash` | 四节点模型宿主目录 |
+| `DSPARK_MODEL_CONTAINER` | `/models` | 只读挂载目标和 vLLM 模型路径 |
+| `CONTAINER_NAME` | `vllm_node` | 四节点容器名称及停止、健康检查 |
+| `VLLM_PORT` | `8000` | API 监听端口、端口占用检查和健康检查 |
+| `VLLM_API_KEY` | 空 | 通过容器环境传递，并作为 vLLM 的 API Key 参数；空值不启用鉴权 |
+| `SERVED_MODEL_NAME` | `DeepSeek-V4.1-Flash` | OpenAI API 模型名称 |
+
+`data.yml` 的镜像、模型宿主目录、端口和 API Key 表单直接写入上述同名变量。
+与现有 GB10 表单对接时，继续使用其 `DSPARK_*`、`VLLM_PORT` 和 `VLLM_API_KEY` 参数；
+`PANEL_APP_PORT_HTTP` 是面板端口元数据，实际服务端口以 `VLLM_PORT` 为准，两者应由面板保持一致。
+旧包的 `IMAGE_NAME`、`MODEL_CONTAINER_PATH` 不再作为应用配置入口，更新已有配置时应迁移到上述变量。
+配置缺失或端口、路径不合法时会在启动前报错。
+
+容器内模型路径默认统一为 `/models`，挂载和推理命令同时读取 `DSPARK_MODEL_CONTAINER`；
+模型内容与原脚本不变。模型目录须使用不含空格、冒号或 Shell 特殊字符的绝对路径，
+符合原始启动器的路径格式要求。四机专用推理参数仍保留在 `appliance/deepseek-v4.1-flash.sh` 中，
+不会读取旧两机版本的 `START_COMMAND`、`MTP_NUM_TOKENS` 或 `MAX_NUM_SEQS`。
 
 默认主节点为 `10.0.1.1`，其余节点为 `10.0.1.2`、`10.0.1.3`、`10.0.1.4`。
-API 端口固定为 `8000`，模型名称为 `DeepSeek-V4.1-Flash`。
+保留 `.env` 中的 `CLUSTER_NODES`、`LOCAL_IP`、`ETH_IF`、`IB_IF`、`MASTER_PORT` 及
+`CONTAINER_*` 运行环境配置。额外容器环境仍使用 `CONTAINER_变量名` 形式；
+单独修改 Compose 的 `environment` 不会修改脚本创建的容器。
 
 在主节点应用目录执行 `bash scripts/init.sh` 后，使用以下生命周期入口：
 
@@ -32,8 +51,8 @@ bash scripts/stop.sh
 bash scripts/restart.sh
 ```
 
-启动入口在后台执行原始 `appliance/start.sh`，等待健康检查通过后返回。
-运行日志位于 `logs/appliance.log`。停止和卸载入口调用原始 `appliance/stop.sh`，
+启动入口在后台执行 `appliance/start.sh`，等待健康检查通过后返回。
+运行日志位于 `logs/appliance.log`。停止和卸载入口调用 `appliance/stop.sh`，
 并核验四节点的目标容器均已停止。
 
 本次仅提供应用包。面板四机版本识别及生命周期调用需另行适配；

@@ -1,7 +1,7 @@
 additionalProperties:
   formFields:
   - default: 8000
-    envKey: PANEL_APP_PORT_HTTP
+    envKey: VLLM_PORT
     labelEn: Port
     labelZh: 端口
     label:
@@ -18,10 +18,9 @@ additionalProperties:
     required: true
     rule: paramPort
     type: number
-    disabled: true
-    edit: false
+    edit: true
   - default: eugr/spark-vllm-b12x:latest
-    envKey: IMAGE_NAME
+    envKey: DSPARK_VLLM_IMAGE
     labelEn: Image Name
     labelZh: 镜像名称
     required: true
@@ -56,3 +55,23 @@ additionalProperties:
       zh: 模型目录
       ko: 모델 디렉터리
       tr: Model dizini
+  - default: ""
+    edit: true
+    envKey: VLLM_API_KEY
+    labelEn: API Key
+    labelZh: API Key
+    required: false
+    type: password
+    label:
+      en: API Key
+      es-es: Clave API
+      fa: 'کلید API'
+      ja: APIキー
+      lo: API Key
+      ms: Kunci API
+      pt-br: Chave da API
+      ru: API-ключ
+      zh-Hant: API 金鑰
+      zh: API Key
+      ko: API 키
+      tr: API Anahtarı

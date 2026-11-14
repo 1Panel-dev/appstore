@@ -1,15 +1,19 @@
 services:
-  vllm:
-    image: ${IMAGE_NAME:-eugr/spark-vllm-b12x:latest}
+  vllm-dspark:
+    image: ${DSPARK_VLLM_IMAGE}
     pull_policy: never
     container_name: ${CONTAINER_NAME}
     profiles:
       - lifecycle
-    networks:
-      - 1panel-network
+    network_mode: host
     volumes:
-      - ${DSPARK_MODEL_HOST:-/opt/deepseek-ai/DeepSeek-V4.1-Flash}:/models/DeepSeek-V4.1-Flash:ro
+      - ${DSPARK_MODEL_HOST}:${DSPARK_MODEL_CONTAINER}:ro
     ipc: host
+    environment:
+      DSPARK_MODEL_CONTAINER: ${DSPARK_MODEL_CONTAINER}
+      SERVED_MODEL_NAME: ${SERVED_MODEL_NAME}
+      VLLM_PORT: ${VLLM_PORT}
+      VLLM_API_KEY: ${VLLM_API_KEY:-}
     entrypoint: []
     command:
       - bash
@@ -17,6 +21,3 @@ services:
       - 'echo "Start this application through scripts/start.sh on the head node." >&2; exit 1'
     labels:
       createdBy: Apps
-networks:
-  1panel-network:
-    external: true

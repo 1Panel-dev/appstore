@@ -2,17 +2,7 @@
 set -euo pipefail
 
 APP_DIR="$(cd "$(dirname "$0")/.." && pwd)"
-export ENV_FILE="$APP_DIR/.env"
-
-test -f "$ENV_FILE" || {
-  echo "Missing application environment file: $ENV_FILE" >&2
-  exit 1
-}
-set -a
-source "$ENV_FILE"
-set +a
-export IMAGE_NAME="${IMAGE_NAME:-eugr/spark-vllm-b12x:latest}"
-MODEL_HOST_DIR="${DSPARK_MODEL_HOST:-/opt/deepseek-ai/DeepSeek-V4.1-Flash}"
+source "$APP_DIR/scripts/config.sh"
 
 test "$(uname -s)" = Linux
 for command in docker ssh python3 curl nohup setsid flock timeout awk; do
@@ -22,12 +12,12 @@ for command in docker ssh python3 curl nohup setsid flock timeout awk; do
   }
 done
 
-test -d "$MODEL_HOST_DIR" || {
-  echo "Missing model directory on head: $MODEL_HOST_DIR" >&2
+test -d "$DSPARK_MODEL_HOST" || {
+  echo "Missing model directory on head: $DSPARK_MODEL_HOST" >&2
   exit 1
 }
-docker image inspect "$IMAGE_NAME" >/dev/null || {
-  echo "Missing local application image: $IMAGE_NAME" >&2
+docker image inspect "$DSPARK_VLLM_IMAGE" >/dev/null || {
+  echo "Missing local application image: $DSPARK_VLLM_IMAGE" >&2
   exit 1
 }
 chmod 0600 "$ENV_FILE"

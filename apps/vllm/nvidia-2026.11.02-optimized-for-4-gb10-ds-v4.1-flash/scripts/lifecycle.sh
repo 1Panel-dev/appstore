@@ -2,19 +2,8 @@
 set -euo pipefail
 
 APP_DIR="$(cd "$(dirname "$0")/.." && pwd)"
-export ENV_FILE="$APP_DIR/.env"
-test -f "$ENV_FILE" || {
-  echo "Missing application environment file: $ENV_FILE" >&2
-  exit 1
-}
-set -a
-source "$ENV_FILE"
-set +a
-export IMAGE_NAME="${IMAGE_NAME:-eugr/spark-vllm-b12x:latest}"
+source "$APP_DIR/scripts/config.sh"
 
-: "${CONTAINER_NAME:?CONTAINER_NAME must be set in .env}"
-: "${CLUSTER_NODES:?CLUSTER_NODES must be set in .env}"
-: "${LOCAL_IP:?LOCAL_IP must be set in .env}"
 IFS=, read -r -a NODES <<< "$CLUSTER_NODES"
 if [ "${#NODES[@]}" -ne 4 ] || [ "${NODES[0]}" != "$LOCAL_IP" ]; then
   echo "Configure four CLUSTER_NODES with LOCAL_IP as the first (head) node." >&2
@@ -102,8 +91,8 @@ start_cluster() {
     return 1
   fi
   check_cluster_stopped || return 1
-  python3 -c 'import socket; sock = socket.socket(); sock.bind(("0.0.0.0", 8000)); sock.close()' 2>/dev/null || {
-    echo "Port 8000 is already in use." >&2
+  python3 -c 'import socket, sys; sock = socket.socket(); sock.bind(("0.0.0.0", int(sys.argv[1]))); sock.close()' "$VLLM_PORT" 2>/dev/null || {
+    echo "Port $VLLM_PORT is already in use." >&2
     return 1
   }
 
@@ -124,9 +113,9 @@ start_cluster() {
       return 1
     fi
     if [ "$(timeout --kill-after=1s 2s docker inspect --format '{{.State.Running}}' "$CONTAINER_NAME" 2>/dev/null)" = true ] &&
-      curl --noproxy '*' -fsS --connect-timeout 1 --max-time 1 http://127.0.0.1:8000/health >/dev/null 2>&1 && launcher_running; then
+      curl --noproxy '*' -fsS --connect-timeout 1 --max-time 1 "http://127.0.0.1:$VLLM_PORT/health" >/dev/null 2>&1 && launcher_running; then
       trap - EXIT INT TERM
-      echo "DeepSeek-V4.1-Flash is ready on port 8000."
+      echo "DeepSeek-V4.1-Flash is ready on port $VLLM_PORT."
       return 0
     fi
     sleep 5

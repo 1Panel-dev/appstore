@@ -7,12 +7,19 @@
 # or --distributed-executor-backend here.
 #
 # The model is bind-mounted read-only by appliance/start.sh at the path below.
-# Keep this path in sync with MODEL_CONTAINER_PATH in start.sh.
+# The mount and vLLM use DSPARK_MODEL_CONTAINER from .env.
 
-vllm serve /models/DeepSeek-V4.1-Flash \
-    --served-model-name DeepSeek-V4.1-Flash \
+set -euo pipefail
+
+API_KEY_ARGS=()
+if [ -n "${VLLM_API_KEY:-}" ]; then
+    API_KEY_ARGS=("--api-key=$VLLM_API_KEY")
+fi
+
+vllm serve "${DSPARK_MODEL_CONTAINER:?}" \
+    --served-model-name "${SERVED_MODEL_NAME:?}" \
     --host 0.0.0.0 \
-    --port 8000 \
+    --port "${VLLM_PORT:?}" \
     --dtype bfloat16 \
     --tensor-parallel-size 4 \
     --load-format b12x \
@@ -31,4 +38,5 @@ vllm serve /models/DeepSeek-V4.1-Flash \
     --speculative-config '{"method":"dspark","num_speculative_tokens":7,"draft_tensor_parallel_size":4,"attention_backend":"B12X","draft_sample_method":"probabilistic","rejection_sample_method":"standard","enable_adaptive_verification":true}' \
     --reasoning-parser deepseek_v41 \
     --tool-call-parser deepseek_v41 \
+    ${API_KEY_ARGS[@]+"${API_KEY_ARGS[@]}"} \
     --enable-auto-tool-choice
