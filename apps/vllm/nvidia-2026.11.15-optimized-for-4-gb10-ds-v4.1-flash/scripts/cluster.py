@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+from concurrent.futures import ThreadPoolExecutor
 import hashlib
 import ipaddress
 import json
@@ -187,6 +188,15 @@ def render_configs():
     return configs
 
 
+def prepare_image(node, image, policy):
+    print(f"Preparing image {image} on {node} (policy: {policy})...", flush=True)
+    present = run(node, ["docker", "image", "inspect", "--format", "{{.Id}}", image],
+                  capture=True, check=False)
+    if policy == "always" or (policy == "if_not_present" and present.returncode):
+        run(node, ["docker", "pull", image], timeout=3000)
+    return json.loads(run(node, ["docker", "image", "inspect", image], capture=True).stdout)
+
+
 def start():
     wait_attempts = int(os.environ.get("WAIT_ATTEMPTS", "180"))
     wait_seconds = int(os.environ.get("WAIT_SECONDS", "10"))
@@ -206,15 +216,13 @@ def start():
         if configs[node]["services"]["vllm-dspark"]["image"] != image:
             raise RuntimeError("All ranks must use the same image")
 
+    with ThreadPoolExecutor(max_workers=len(NODES)) as executor:
+        prepared_images = [executor.submit(prepare_image, node, image, policy) for node in NODES]
+
     head_id = None
     head_fingerprint = None
-    for node in NODES:
-        print(f"Preparing image {image} on {node} (policy: {policy})...", flush=True)
-        present = run(node, ["docker", "image", "inspect", "--format", "{{.Id}}", image],
-                      capture=True, check=False)
-        if policy == "always" or (policy == "if_not_present" and present.returncode):
-            run(node, ["docker", "pull", image], timeout=3000)
-        metadata = json.loads(run(node, ["docker", "image", "inspect", image], capture=True).stdout)
+    for node, prepared in zip(NODES, prepared_images):
+        metadata = prepared.result()
         if metadata[0].get("Architecture") != "arm64" or metadata[0].get("Os") != "linux":
             raise RuntimeError(f"Expected the Linux ARM64 image on {node}")
         if head_id is None:
