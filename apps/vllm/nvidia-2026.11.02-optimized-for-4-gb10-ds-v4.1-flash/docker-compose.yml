@@ -3,21 +3,80 @@ services:
     image: ${DSPARK_VLLM_IMAGE}
     pull_policy: ${IMAGE_PULL_POLICY:-if_not_present}
     container_name: ${CONTAINER_NAME}
-    profiles:
-      - lifecycle
     network_mode: host
-    volumes:
-      - ${DSPARK_MODEL_HOST}:${DSPARK_MODEL_CONTAINER}:ro
     ipc: host
-    environment:
-      DSPARK_MODEL_CONTAINER: ${DSPARK_MODEL_CONTAINER}
-      SERVED_MODEL_NAME: ${SERVED_MODEL_NAME}
-      VLLM_PORT: ${VLLM_PORT}
-      VLLM_API_KEY: ${VLLM_API_KEY:-}
+    privileged: true
+    runtime: nvidia
+    restart: unless-stopped
+    stop_grace_period: 10s
     entrypoint: []
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: ${VLLM_SPARK_NOFILE_LIMIT:-1048576}
+        hard: ${VLLM_SPARK_NOFILE_LIMIT:-1048576}
+    healthcheck:
+      test: ["CMD-SHELL", "if [ -n \"$$HEADLESS\" ]; then exit 0; fi; curl -fsS \"http://127.0.0.1:$$VLLM_PORT/health\" || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 480s
+    volumes:
+      - ${DSPARK_MODEL_HOST}:${DSPARK_MODEL_CONTAINER:-/models}:ro
+      - ${HF_CACHE:-${HOME}/.cache/huggingface}:/root/.cache/huggingface
+      - ${VLLM_CACHE:-${HOME}/.cache/vllm}:/root/.cache/vllm
+      - ${FLASHINFER_CACHE:-${HOME}/.cache/flashinfer}:/root/.cache/flashinfer
+      - ${B12X_CACHE:-${HOME}/.cache/b12x}:/root/.cache/b12x
+      - ${TRITON_CACHE:-${HOME}/.triton}:/root/.triton
+      - ${TILELANG_CACHE:-${HOME}/.tilelang}:/root/.tilelang
+    env_file:
+      - ./container.env
     command:
       - bash
       - -c
-      - 'echo "Start this application through scripts/start.sh on the head node." >&2; exit 1'
+      - |
+        set -euo pipefail
+        API_KEY_ARGS=()
+        if [ -n "$${VLLM_API_KEY:-}" ]; then
+          API_KEY_ARGS=("--api-key=$$VLLM_API_KEY")
+        fi
+        exec vllm serve "$${DSPARK_MODEL_CONTAINER:?}" \
+          --served-model-name "$${SERVED_MODEL_NAME:?}" \
+          --host 0.0.0.0 \
+          --port "$${VLLM_PORT:?}" \
+          --dtype bfloat16 \
+          --tensor-parallel-size 4 \
+          --load-format b12x \
+          --block-size 256 \
+          --enable-prefix-caching \
+          --gpu-memory-utilization 0.85 \
+          --default-chat-template-kwargs '{"enable_thinking":false}' \
+          --max-model-len auto \
+          --max-num-seqs 4 \
+          --max-num-batched-tokens 4096 \
+          --limit-mm-per-prompt '{"image":1}' \
+          --engram-config '{"cpu_offload":false,"table_memory":"disk"}' \
+          --linear-backend b12x \
+          --moe-backend b12x \
+          --attention-backend b12x \
+          --speculative-config '{"method":"dspark","num_speculative_tokens":7,"draft_tensor_parallel_size":4,"attention_backend":"B12X","draft_sample_method":"probabilistic","rejection_sample_method":"standard","enable_adaptive_verification":true}' \
+          --reasoning-parser deepseek_v41 \
+          --tool-call-parser deepseek_v41 \
+          $${API_KEY_ARGS[@]+"$${API_KEY_ARGS[@]}"} \
+          --enable-auto-tool-choice \
+          --nnodes 4 \
+          --node-rank ${NODE_RANK:-0} \
+          --master-addr ${MASTER_ADDR:-${LOCAL_IP:-10.0.1.1}} \
+          --master-port ${MASTER_PORT:-29501} \
+          ${HEADLESS:+--headless}
     labels:
       createdBy: Apps

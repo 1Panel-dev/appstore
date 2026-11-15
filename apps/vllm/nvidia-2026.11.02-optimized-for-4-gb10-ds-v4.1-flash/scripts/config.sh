@@ -18,6 +18,7 @@ for name in DSPARK_VLLM_IMAGE DSPARK_MODEL_HOST DSPARK_MODEL_CONTAINER VLLM_PORT
   fi
 done
 export VLLM_API_KEY="${VLLM_API_KEY:-}"
+export IMAGE_PULL_POLICY="${IMAGE_PULL_POLICY:-if_not_present}"
 if [[ ! "$VLLM_PORT" =~ ^[1-9][0-9]{0,4}$ ]] || ((VLLM_PORT > 65535)); then
   echo "VLLM_PORT must be an integer between 1 and 65535." >&2
   exit 1
