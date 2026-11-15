@@ -246,7 +246,9 @@ def start():
                    "    sock = socket.socket(); sock.bind(('0.0.0.0', int(port))); sockets.append(sock)",
                    os.environ["VLLM_PORT"], os.environ["MASTER_PORT"]])
 
+    cache_dir = str(Path(os.environ["CACHE_ROOT"]) / CONTAINER_NAME)
     for node, config in configs.items():
+        run(node, ["mkdir", "-p", "--", cache_dir])
         target = str(CONFIG_PATHS[node])
         directory = str(CONFIG_PATHS[node].parent)
         payload = json.dumps(config, ensure_ascii=False) + "\n"
