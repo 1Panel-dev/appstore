@@ -1,6 +1,6 @@
 name: NPC
 tags:
-  - Tool
+  - 实用工具
 title: 内网穿透代理服务器 NPS 的客户端
 description: 内网穿透代理服务器 NPS 的客户端
 additionalProperties:

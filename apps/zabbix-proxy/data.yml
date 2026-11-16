@@ -1,6 +1,6 @@
 name: Zabbix Proxy
 tags:
-  - 监控
+  - 实用工具
 title: Zabbix分布式监控代理组件
 description: Zabbix分布式监控代理，适用于多机房、内网隔离监控场景
 additionalProperties:
