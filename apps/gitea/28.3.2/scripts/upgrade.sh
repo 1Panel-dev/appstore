@@ -1,10 +1,17 @@
 #!/bin/bash
 
-if [[ -f ./.env ]]; then
-  if grep -q "PANEL_DB_TYPE" ./.env; then
-    echo "PANEL_DB_TYPE 已存在"
+ENV_FILE="./.env"
+
+if [[ -f "$ENV_FILE" ]]; then
+  if grep -q "PANEL_DB_TYPE" "$ENV_FILE"; then
+    if grep -q "^PANEL_DB_TYPE=['\"]mariadb['\"]" "$ENV_FILE"; then
+      sed -i -E "s/^PANEL_DB_TYPE=['\"]?mariadb['\"]?/PANEL_DB_TYPE='mysql'/" "$ENV_FILE"
+      echo "已将 PANEL_DB_TYPE 修改为 mysql"
+    else
+      echo "PANEL_DB_TYPE 已存在"
+    fi
   else
-    echo 'PANEL_DB_TYPE="mysql"' >> ./.env
+    echo 'PANEL_DB_TYPE="mysql"' >> "$ENV_FILE"
   fi
 else
   echo ".env 文件不存在"
