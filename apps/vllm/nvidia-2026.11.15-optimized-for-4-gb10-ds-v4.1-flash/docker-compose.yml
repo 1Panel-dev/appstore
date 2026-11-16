@@ -155,6 +155,7 @@ services:
       --load-format direct
       --block-size 256
       --enable-prefix-caching
+      --enable-prompt-tokens-details
       --enable-chunked-prefill
       --max-model-len 1048576
       --max-num-seqs 8
