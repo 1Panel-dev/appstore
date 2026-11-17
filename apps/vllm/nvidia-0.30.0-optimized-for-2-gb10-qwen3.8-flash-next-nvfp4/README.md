@@ -1,6 +1,6 @@
 # Qwen3.8-Flash-Next NVFP4 双机 GB10
 
-应用版本：`nvidia-0.30.0-optimized-for-2-gb10-qwen3.8-flash-next`。
+应用版本：`nvidia-0.30.0-optimized-for-2-gb10-qwen3.8-flash-next-nvfp4`。
 本版本将 `qwen38-dual-share` 的推理配置与补丁接入 vLLM 应用，使用两个 GB10 节点，TP2 + EP + MTP3。
 
 ## 部署准备

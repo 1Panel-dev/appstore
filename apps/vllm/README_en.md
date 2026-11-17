@@ -28,7 +28,7 @@ Uses the custom image `1panel/vllm-gb10-dual-node:0.25-optimized-for-ds-v4-flash
 
 ### NVIDIA GB10 Dual Node Qwen3.8 Version
 
-Version `nvidia-0.30.0-optimized-for-2-gb10-qwen3.8-flash-next` uses `vllm/vllm-openai:v0.30.0` with the official NVIDIA Qwen3.8-Flash-Next-NVFP4 weights, preserving TP2 + EP + MTP3 and the bundled patches.
+Version `nvidia-0.30.0-optimized-for-2-gb10-qwen3.8-flash-next-nvfp4` uses `vllm/vllm-openai:v0.30.0` with the official NVIDIA Qwen3.8-Flash-Next-NVFP4 weights, preserving TP2 + EP + MTP3 and the bundled patches.
 
 1. Prepare complete weights on both hosts at `/opt/1panel/ai/models/nvidia/Qwen3.8-Flash-Next-NVFP4`; the model directory is not the legacy HF cache root.
 2. Configure `CLUSTER_NODES`, `LOCAL_IP`, and both RoCE interfaces in `.env`. The head root account needs passwordless SSH access to the worker.

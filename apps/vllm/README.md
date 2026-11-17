@@ -28,7 +28,7 @@
 
 ### NVIDIA GB10 双节点 Qwen3.8 版本
 
-版本 `nvidia-0.30.0-optimized-for-2-gb10-qwen3.8-flash-next` 使用 `vllm/vllm-openai:v0.30.0`，部署 NVIDIA 官方 Qwen3.8-Flash-Next-NVFP4，保留 TP2 + EP + MTP3 配置及补丁。
+版本 `nvidia-0.30.0-optimized-for-2-gb10-qwen3.8-flash-next-nvfp4` 使用 `vllm/vllm-openai:v0.30.0`，部署 NVIDIA 官方 Qwen3.8-Flash-Next-NVFP4，保留 TP2 + EP + MTP3 配置及补丁。
 
 1. 两端各准备完整权重，默认目录 `/opt/1panel/ai/models/nvidia/Qwen3.8-Flash-Next-NVFP4`；不直接使用旧包的 HF 缓存根目录。
 2. 在 `.env` 配置 `CLUSTER_NODES`、`LOCAL_IP` 和两端 RoCE 网卡；主节点 root 需要免密 SSH 到 worker。
