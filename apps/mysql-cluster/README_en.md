@@ -2,6 +2,8 @@
 
 Available in 1Panel v2.0.4 and above.
 
+Master and replica packages named with a full database patch version use `1panel/mysql-cluster` images and require 1Panel v2.6.0 or later. Existing series-version packages are retained for historical installations; replacing an image alone does not complete migration of an existing cluster.
+
 ## Introduction
 
 **MySQL** is a popular open-source RDBMS (Relational Database Management System) that offers a rich set of features suitable for various application scenarios.

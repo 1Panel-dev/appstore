@@ -2,6 +2,8 @@
 
 Available in 1Panel v2.0.4 and above.
 
+Master and replica packages named with a full database patch version use `1panel/redis-cluster` images and require 1Panel v2.6.0 or later. Existing series-version packages are retained for historical installations; replacing an image alone does not complete migration of an existing cluster.
+
 ## Introduction
 
 **Redis (Remote Dictionary Server)** is an open-source in-memory database, commonly used as a caching system or key-value store database.

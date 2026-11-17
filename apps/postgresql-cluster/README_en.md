@@ -2,6 +2,8 @@
 
 Available in 1Panel v2.0.4 and above.
 
+Master and replica packages named with a full database patch version use `1panel/postgresql-cluster` images and require 1Panel v2.6.0 or later. Existing series-version packages are retained for historical installations; replacing an image alone does not complete migration of an existing cluster.
+
 ## Introduction
 
 PostgreSQL is a powerful open-source relational database management system (RDBMS) known for its reliability, scalability, and advanced features. It is widely used across various applications and industries.
