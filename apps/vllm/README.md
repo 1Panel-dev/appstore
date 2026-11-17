@@ -26,6 +26,16 @@
 3. 两台机器都必须提前准备模型目录 `/opt/1panel/ai/DeepSeek-V4-Flash-0731`。
 4. 启动参数、网卡和节点地址保存在应用版本目录的 `.env`，双机启动和停止分别使用 `scripts/start.sh` 与 `scripts/stop.sh`。
 
+### NVIDIA GB10 双节点 Qwen3.8 版本
+
+版本 `nvidia-0.30.0-optimized-for-2-gb10-qwen3.8-flash-next` 使用 `vllm/vllm-openai:v0.30.0`，部署 NVIDIA 官方 Qwen3.8-Flash-Next-NVFP4，保留 TP2 + EP + MTP3 配置及补丁。
+
+1. 两端各准备完整权重，默认目录 `/opt/1panel/ai/models/nvidia/Qwen3.8-Flash-Next-NVFP4`；不直接使用旧包的 HF 缓存根目录。
+2. 在 `.env` 配置 `CLUSTER_NODES`、`LOCAL_IP` 和两端 RoCE 网卡；主节点 root 需要免密 SSH 到 worker。
+3. 表单配置端口、镜像、模型目录和 API Key；默认端口 8000，镜像不可随意升级。
+4. 使用 `scripts/init.sh`、`start.sh`、`stop.sh`、`restart.sh`、`uninstall.sh` 管理双机。首次冷启动可能超过 40 分钟，默认就绪等待约 50 分钟。
+5. 详细依赖、模型目录结构和缓存路径见版本目录的 `README.md`。
+
 ### Ascend 310P 版本
 
 1. 宿主机需要已安装 Ascend 驱动/CANN，执行 `npu-smi info` 能正常看到 NPU。

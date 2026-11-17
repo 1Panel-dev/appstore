@@ -26,6 +26,16 @@ Uses the custom image `1panel/vllm-gb10-dual-node:0.25-optimized-for-ds-v4-flash
 3. The model must already exist at `/opt/1panel/ai/DeepSeek-V4-Flash-0731` on both hosts.
 4. Runtime parameters, interfaces, and node addresses are stored in the version `.env`; use `scripts/start.sh` and `scripts/stop.sh` for the two-node lifecycle.
 
+### NVIDIA GB10 Dual Node Qwen3.8 Version
+
+Version `nvidia-0.30.0-optimized-for-2-gb10-qwen3.8-flash-next` uses `vllm/vllm-openai:v0.30.0` with the official NVIDIA Qwen3.8-Flash-Next-NVFP4 weights, preserving TP2 + EP + MTP3 and the bundled patches.
+
+1. Prepare complete weights on both hosts at `/opt/1panel/ai/models/nvidia/Qwen3.8-Flash-Next-NVFP4`; the model directory is not the legacy HF cache root.
+2. Configure `CLUSTER_NODES`, `LOCAL_IP`, and both RoCE interfaces in `.env`. The head root account needs passwordless SSH access to the worker.
+3. The form exposes the port, image, model directory, and API key. The default port is 8000; do not upgrade the patched vLLM image without validation.
+4. Use `scripts/init.sh`, `start.sh`, `stop.sh`, `restart.sh`, and `uninstall.sh` for the two-node lifecycle. Initial autotuning can exceed 40 minutes; readiness waits for approximately 50 minutes by default.
+5. See the version README for prerequisites, model layout, and persistent cache paths.
+
 ### Ascend 310P version
 
 1. The host must have the Ascend driver/CANN installed, and `npu-smi info` must list the NPU correctly.
