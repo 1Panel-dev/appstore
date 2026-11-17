@@ -1,6 +1,6 @@
 services:
   filecodebox:
-    image: lanol/filecodebox:2.8.5
+    image: lanol/filecodebox:2.9.0
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
