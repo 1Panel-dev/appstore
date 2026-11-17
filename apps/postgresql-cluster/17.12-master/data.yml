@@ -1,5 +1,4 @@
 additionalProperties:
-  supportVersion: 2.6
   formFields:
     - default: postgres
       envKey: PANEL_DB_ROOT_USER

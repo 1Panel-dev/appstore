@@ -1,5 +1,4 @@
 additionalProperties:
-  supportVersion: 2.6
   formFields:
     - default: mysql
       envKey: PANEL_DB_ROOT_PASSWORD

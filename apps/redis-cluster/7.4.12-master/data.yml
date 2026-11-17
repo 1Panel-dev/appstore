@@ -1,5 +1,4 @@
 additionalProperties:
-  supportVersion: 2.6
   formFields:
     - default: redis
       envKey: PANEL_REDIS_ROOT_PASSWORD
