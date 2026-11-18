@@ -196,12 +196,14 @@ def run(node, args, *, capture=False, input=None, timeout=60, check=True, env=No
     return result
 
 
-def inspect_container(node):
+def inspect_container(node, deadline=None):
     names = run(node, ["docker", "ps", "-a", "--filter", f"name=^/{CONTAINER_NAME}$",
-                       "--format", "{{.Names}}"], capture=True).stdout.splitlines()
+                       "--format", "{{.Names}}"], capture=True,
+                timeout=60 if deadline is None else max(0.001, min(60, deadline - time.monotonic()))).stdout.splitlines()
     if CONTAINER_NAME not in names:
         return None
-    container = json.loads(run(node, ["docker", "inspect", CONTAINER_NAME], capture=True).stdout)[0]
+    container = json.loads(run(node, ["docker", "inspect", CONTAINER_NAME], capture=True,
+                               timeout=60 if deadline is None else max(0.001, min(60, deadline - time.monotonic()))).stdout)[0]
     labels = container.get("Config", {}).get("Labels") or {}
     if labels.get("com.docker.compose.project") != PROJECT_NAME or labels.get("com.docker.compose.service") != "vllm-dspark":
         raise RuntimeError(f"Container {CONTAINER_NAME} on {node} belongs to another deployment")
@@ -287,7 +289,10 @@ def prepare_image(node, image, policy):
     present = run(node, ["docker", "image", "inspect", "--format", "{{.Id}}", image],
                   capture=True, check=False)
     if policy == "always" or (policy == "if_not_present" and present.returncode):
-        run(node, ["docker", "pull", image], timeout=3000)
+        if node == NODES[0]:
+            run(node, ["docker", "pull", image], timeout=3000)
+        else:
+            run(node, ["timeout", "--signal=KILL", "3000", "docker", "pull", image], timeout=3010)
     return json.loads(run(node, ["docker", "image", "inspect", image], capture=True).stdout)
 
 
@@ -382,17 +387,18 @@ def start():
             started.append(node)
             compose(node, "up", "-d", "--pull", "never", "--no-build", "vllm-dspark")
         print("Waiting for Docker healthchecks on both nodes...", flush=True)
-        for _ in range(wait_attempts):
+        deadline = time.monotonic() + wait_attempts * wait_seconds
+        while time.monotonic() < deadline:
             healthy = True
             for node in NODES:
-                container = inspect_container(node)
+                container = inspect_container(node, deadline)
                 if not container or not container["State"]["Running"] or container["State"].get("Restarting"):
                     raise RuntimeError(f"vLLM exited on {node}; inspect Docker logs for {CONTAINER_NAME}")
                 healthy = healthy and container["State"].get("Health", {}).get("Status") == "healthy"
-            if healthy:
+            if healthy and time.monotonic() < deadline:
                 print(f"Qwen3.8-Flash-Next is ready on port {os.environ['VLLM_PORT']}.", flush=True)
                 return
-            time.sleep(wait_seconds)
+            time.sleep(max(0, min(wait_seconds, deadline - time.monotonic())))
         raise RuntimeError("Timed out waiting for Docker healthchecks")
     except Exception:
         print("Startup failed; containers are retained. Run scripts/stop.sh before retrying.", file=sys.stderr)

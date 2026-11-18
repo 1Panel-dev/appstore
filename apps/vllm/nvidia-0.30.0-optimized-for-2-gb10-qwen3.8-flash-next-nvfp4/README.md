@@ -6,7 +6,7 @@
 ## 部署准备
 
 - 两台 Linux ARM64 GB10（DGX Spark），每台约 128 GB 统一内存，提供可用的 RoCEv2 互联。
-- 两端安装 Docker Compose v2、NVIDIA Container Toolkit、Python 3.10+、iproute2（提供 `ip` 和 `ss`），主节点另需 `flock`。
+- 两端安装 Docker Compose v2、NVIDIA Container Toolkit、Python 3.10+、iproute2（提供 `ip` 和 `ss`），主节点另需 `flock`，worker 另需 GNU coreutils（提供 `timeout`）。
 - 由主节点 root 执行生命周期脚本，提前配置到 worker 的免密 SSH，并确认 SSH 主机密钥。
 - 两端准备同版本镜像 `vllm/vllm-openai:v0.30.0`。MTP 补丁绑定此版本，镜像字段仅用于填写相同镜像的仓库镜像地址，不应直接升级 vLLM。
 - 两端各准备完整的 NVIDIA 官方 `nvidia/Qwen3.8-Flash-Next-NVFP4` 权重，默认路径为 `/opt/1panel/ai/models/nvidia/Qwen3.8-Flash-Next-NVFP4`。不支持直接替换为 RadixArk 版。
@@ -32,7 +32,7 @@
 | `WORKER_DIR` | worker 配置与补丁目录的根路径，默认 `/opt/1pqw` |
 | `CACHE_ROOT` | 两端缓存根路径，默认 `/opt/1pqw/cache`，按容器名隔离 |
 | `IMAGE_PULL_POLICY` | `if_not_present`、`always` 或 `never`；离线可选 `never` |
-| `WAIT_ATTEMPTS` / `WAIT_SECONDS` | 就绪检查次数和间隔，默认 200 × 15 秒 |
+| `WAIT_ATTEMPTS` / `WAIT_SECONDS` | 乘积为就绪等待的实际时间预算，默认 200 × 15 秒（50 分钟）；检查间隔为 `WAIT_SECONDS` |
 
 GID 处理沿用 0.25 双机版本的规则：默认 `NCCL_IB_GID_AUTO=1`，每次启动分别在 head 和 worker 上读取通信接口 IPv4，扫描所选 HCA 的活动端口，跳过空槽及非 RoCE v2 项。优先匹配通信 IP，也允许匹配端口所属网络接口的 IPv4；同一节点选择多个端口时取可用索引的交集。找不到共同索引时明确报错，不继续启动。
 
@@ -60,7 +60,7 @@ bash scripts/uninstall.sh
 
 原包报告有缓存时冷启动约 11 分钟，首次 autotune 可能超过 40 分钟，本包默认就绪等待约 50 分钟。worker 健康检查仅确认容器运行，head `/health` 用于判断双机推理引擎就绪。
 
-配套 1Panel 的 Qwen 双 GB10 启动、重启任务总超时为 2 小时，覆盖镜像拉取最多 50 分钟和默认就绪等待约 50 分钟，并留出部署开销。此调整需要同步更新 1Panel 后端，旧版后端仍受 1 小时上限约束。自定义等待时间时需计入镜像拉取等阶段，不能超过面板任务的总时间预算。
+配套 1Panel 对单次 Qwen 双 GB10 启动、重启脚本限制为 2 小时，覆盖两节点并行拉取镜像（每节点最多 50 分钟）、默认就绪等待 50 分钟及其他部署开销；重启的停止阶段也占用这 2 小时。就绪等待包含检查命令耗时，容器启动时不再拉取镜像。本机拉取直接由 Python 限时；远端拉取限时 50 分钟，主节点额外留出 10 秒等待远端退出和 SSH 收尾。升级保留 1Panel 停服前预拉取或检查本机镜像的原有流程，每镜像拉取超时为 24 小时；随后启动脚本仍按已保存策略处理两节点镜像，远端拉取可能占用停机时间。安装、升级任务外层没有固定总超时。此调整需要同步更新 1Panel 后端，旧版后端仍受 1 小时上限约束。自定义等待时间时需计入镜像拉取等阶段，不能超过面板任务的总时间预算。
 
 ```bash
 curl -f http://<HEAD_IP>:8000/health
