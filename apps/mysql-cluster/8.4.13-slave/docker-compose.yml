@@ -12,7 +12,6 @@ services:
       MYSQL_MASTER_PORT_NUMBER: ${MASTER_PORT}
       MYSQL_MASTER_ROOT_PASSWORD: ${MASTER_ROOT_PASSWORD}
       MYSQL_REPLICATION_SLAVE_DUMP: true
-      MYSQL_AUTHENTICATION_PLUGIN: mysql_native_password
     networks:
       - 1panel-network
     ports:

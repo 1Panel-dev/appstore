@@ -8,7 +8,6 @@ services:
       MYSQL_REPLICATION_USER: ${REPLICATION_USER}
       MYSQL_REPLICATION_PASSWORD: ${REPLICATION_PASSWORD}
       MYSQL_ROOT_PASSWORD: ${PANEL_DB_ROOT_PASSWORD}
-      MYSQL_AUTHENTICATION_PLUGIN: mysql_native_password
     networks:
       - 1panel-network
     ports:
