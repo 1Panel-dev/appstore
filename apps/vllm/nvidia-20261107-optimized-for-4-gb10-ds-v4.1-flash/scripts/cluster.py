@@ -198,8 +198,8 @@ def prepare_image(node, image, policy):
 
 
 def start():
-    wait_attempts = int(os.environ.get("WAIT_ATTEMPTS", "180"))
-    wait_seconds = int(os.environ.get("WAIT_SECONDS", "10"))
+    wait_attempts = int(os.environ.get("WAIT_ATTEMPTS", "200"))
+    wait_seconds = int(os.environ.get("WAIT_SECONDS", "15"))
     if wait_attempts < 1 or wait_seconds < 1:
         raise ValueError("WAIT_ATTEMPTS and WAIT_SECONDS must be positive integers")
     policy = os.environ.get("IMAGE_PULL_POLICY", "if_not_present")
