@@ -16,11 +16,13 @@ APP_DIR = Path(__file__).resolve().parent.parent
 
 
 PREFLIGHT = r"""
+import ipaddress
 import json
 from pathlib import Path
+import subprocess
 import sys
 
-model, interface, hcas, gid = sys.argv[1:]
+model, interface, hcas, gid, auto, match_ip, node = sys.argv[1:]
 model = Path(model)
 for path in (model / "config.json", model / "model.safetensors.index.json"):
     if not path.is_file():
@@ -37,10 +39,97 @@ for shard in shards:
 for path in (Path("/dev/infiniband"), Path("/sys/class/net") / interface):
     if not path.exists():
         raise SystemExit(f"Missing device or interface: {path}")
+
+
+def read_attribute(path):
+    try:
+        return path.read_text().strip()
+    except OSError:
+        return ""
+
+
+addresses = {}
+
+
+def interface_ipv4(name):
+    if name not in addresses:
+        try:
+            output = subprocess.check_output(["ip", "-j", "-4", "addr", "show", "dev", name],
+                                             text=True, stderr=subprocess.DEVNULL)
+        except (OSError, subprocess.CalledProcessError):
+            addresses[name] = []
+        else:
+            addresses[name] = [entry["local"] for device in json.loads(output)
+                               for entry in device.get("addr_info", [])
+                               if entry.get("family") == "inet"]
+    return addresses[name]
+
+
+if auto == "1":
+    local_addresses = interface_ipv4(interface)
+    match_ip = match_ip or (local_addresses[0] if local_addresses else node)
+    try:
+        ipaddress.IPv4Address(match_ip)
+    except ValueError:
+        raise SystemExit(f"Invalid RoCE IPv4 on {node}: {match_ip}")
+
+members = {}
+preferred = set()
 for hca in hcas.split(","):
-    path = Path("/sys/class/infiniband") / hca / "ports/1/gid_attrs/types" / gid
-    if not path.is_file() or "v2" not in path.read_text():
-        raise SystemExit(f"Missing RoCEv2 GID: {path}")
+    ports = Path("/sys/class/infiniband") / hca / "ports"
+    if not ports.is_dir():
+        raise SystemExit(f"Missing HCA on {node}: {hca}")
+    for port in sorted(ports.iterdir()):
+        state = read_attribute(port / "state").split(":")[-1].strip()
+        if state and state != "ACTIVE":
+            continue
+        if read_attribute(port / "link_layer") not in ("", "Ethernet", "InfiniBand"):
+            continue
+        types = port / "gid_attrs/types"
+        usable = set()
+        try:
+            entries = list(types.iterdir())
+        except OSError as error:
+            raise SystemExit(f"Cannot inspect RoCEv2 GIDs on {node}, {hca}:{port.name}: {error}")
+        for entry in entries:
+            if not entry.name.isdigit() or read_attribute(entry) != "RoCE v2":
+                continue
+            index = int(entry.name)
+            if auto == "0":
+                usable.add(index)
+                continue
+            try:
+                address = ipaddress.IPv6Address(read_attribute(port / "gids" / entry.name)).ipv4_mapped
+            except ipaddress.AddressValueError:
+                continue
+            if address is None:
+                continue
+            address = str(address)
+            if address == match_ip:
+                preferred.add(index)
+            else:
+                netdev = read_attribute(port / "gid_attrs/ndevs" / entry.name)
+                if not netdev or address not in interface_ipv4(netdev):
+                    continue
+            usable.add(index)
+        members[f"{hca}:{port.name}"] = usable
+
+if not members:
+    raise SystemExit(f"No active HCA ports on {node}: {hcas}")
+detail = "; ".join(f"{member}={','.join(map(str, sorted(indexes))) or 'none'}"
+                   for member, indexes in members.items())
+common = set.intersection(*members.values())
+if auto == "1":
+    if not common:
+        raise SystemExit(f"No common IPv4 RoCEv2 GID index on {node} (match {match_ip}): {detail}. "
+                         "Check the network configuration or narrow IB_IF / WORKER_IB_IF.")
+    gid = str(min(common & preferred or common))
+elif not gid.isdecimal() or int(gid) not in common:
+    raise SystemExit(f"Invalid RoCEv2 GID on {node}, index {gid}. Readable RoCEv2 indexes: {detail}. "
+                     "Check GID_INDEX (head) or WORKER_GID_INDEX (worker).")
+print(f"RoCEv2 GID on {node}: {gid} (HCA {hcas}, interface {interface}, "
+      f"{'match ' + match_ip if auto == '1' else 'manual'})", file=sys.stderr)
+print(gid)
 """
 
 
@@ -93,6 +182,9 @@ def fingerprint(result):
 
 
 def run(node, args, *, capture=False, input=None, timeout=60, check=True, env=None):
+    command = shlex.join(args).replace("\n", "\\n")
+    if len(command) > 200:
+        command = command[:200] + "..."
     if node != NODES[0]:
         args = ["ssh", "-o", "BatchMode=yes", "-o", "ConnectTimeout=10",
                 "-o", "ServerAliveInterval=5", "-o", "ServerAliveCountMax=3",
@@ -100,7 +192,7 @@ def run(node, args, *, capture=False, input=None, timeout=60, check=True, env=No
     result = subprocess.run(args, input=input, stdout=subprocess.PIPE if capture else None,
                             text=True, timeout=timeout, env=env)
     if check and result.returncode:
-        raise RuntimeError(f"Command failed on {node}: {shlex.join(args[-1:] if node != NODES[0] else args)}")
+        raise RuntimeError(f"Command failed on {node}: {command}")
     return result
 
 
@@ -200,13 +292,26 @@ def prepare_image(node, image, policy):
 
 
 def start():
-    wait_attempts = int(os.environ.get("WAIT_ATTEMPTS", "180"))
-    wait_seconds = int(os.environ.get("WAIT_SECONDS", "10"))
+    wait_attempts = int(os.environ.get("WAIT_ATTEMPTS", "200"))
+    wait_seconds = int(os.environ.get("WAIT_SECONDS", "15"))
     if wait_attempts < 1 or wait_seconds < 1:
         raise ValueError("WAIT_ATTEMPTS and WAIT_SECONDS must be positive integers")
     policy = os.environ.get("IMAGE_PULL_POLICY", "if_not_present")
     if policy not in ("always", "if_not_present", "never"):
         raise RuntimeError(f"Unsupported IMAGE_PULL_POLICY: {policy}")
+    auto = os.environ.get("NCCL_IB_GID_AUTO", "1")
+    if auto not in ("0", "1"):
+        raise ValueError("NCCL_IB_GID_AUTO must be 0 or 1")
+    for node in NODES:
+        prefix = "WORKER_" if node != NODES[0] else ""
+        network = [os.environ.get(prefix + key) or os.environ.get(key, "")
+                   for key in ("ETH_IF", "IB_IF", "GID_INDEX")]
+        resolved = run(node, ["python3", "-c", PREFLIGHT, os.environ["DSPARK_MODEL_HOST"],
+                              *network, auto, os.environ.get(prefix + "NCCL_IB_GID_MATCH_IP", ""), node],
+                       capture=True).stdout.strip()
+        if not re.fullmatch(r"[0-9]+", resolved):
+            raise RuntimeError(f"Invalid GID resolver output from {node}: {resolved}")
+        os.environ[prefix + "GID_INDEX"] = resolved
     configs = render_configs()
     image = configs[NODES[0]]["services"]["vllm-dspark"]["image"]
     for node in NODES:
@@ -234,20 +339,16 @@ def start():
             raise RuntimeError(f"Docker image on {node} does not match the head node")
 
     for node in NODES:
-        run(node, ["python3", "-c", PREFLIGHT,
-                   os.environ["DSPARK_MODEL_HOST"],
-                   *[(os.environ.get("WORKER_" + key) or os.environ[key]) if node != NODES[0]
-                     else os.environ[key] for key in ("ETH_IF", "IB_IF", "GID_INDEX")]])
         processes = run(node, ["nvidia-smi", "--query-compute-apps=pid", "--format=csv,noheader"],
                         capture=True).stdout.strip()
         if processes:
             raise RuntimeError(f"GPU compute processes are already running on {node}: {processes}")
 
-    run(NODES[0], ["python3", "-c",
-                   "import socket, sys; sockets = []\n"
-                   "for port in sys.argv[1:]:\n"
-                   "    sock = socket.socket(); sock.bind(('0.0.0.0', int(port))); sockets.append(sock)",
-                   os.environ["VLLM_PORT"], os.environ["MASTER_PORT"]])
+    listeners = run(NODES[0], ["ss", "-H", "-ltn",
+                               f"( sport = :{os.environ['VLLM_PORT']} or sport = :{os.environ['MASTER_PORT']} )"],
+                    capture=True).stdout.strip()
+    if listeners:
+        raise RuntimeError(f"API or master port is already listening on {NODES[0]}: {listeners}")
 
     cache_dir = str(Path(os.environ["CACHE_ROOT"]) / CONTAINER_NAME)
     for node, config in configs.items():

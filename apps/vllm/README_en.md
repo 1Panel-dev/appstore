@@ -25,6 +25,7 @@ Uses the custom image `1panel/vllm-gb10-dual-node:0.25-optimized-for-ds-v4-flash
 2. The head must have passwordless SSH access to `10.0.1.2`. Both hosts require Docker, NVIDIA Container Toolkit, and a working RoCE/InfiniBand device.
 3. The model must already exist at `/opt/1panel/ai/DeepSeek-V4-Flash-0731` on both hosts.
 4. Runtime parameters, interfaces, and node addresses are stored in the version `.env`; use `scripts/start.sh` and `scripts/stop.sh` for the two-node lifecycle.
+5. Readiness is checked every 15 seconds for up to 200 attempts, approximately 50 minutes. The matching 1Panel backend allows 2 hours for GB10 start and restart tasks; update the backend alongside the app package.
 
 ### NVIDIA GB10 Dual Node Qwen3.8 Version
 

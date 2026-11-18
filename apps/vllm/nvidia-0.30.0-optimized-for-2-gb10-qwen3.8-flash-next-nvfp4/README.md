@@ -6,7 +6,7 @@
 ## 部署准备
 
 - 两台 Linux ARM64 GB10（DGX Spark），每台约 128 GB 统一内存，提供可用的 RoCEv2 互联。
-- 两端安装 Docker Compose v2、NVIDIA Container Toolkit、Python 3.10+，主节点另需 `flock`。
+- 两端安装 Docker Compose v2、NVIDIA Container Toolkit、Python 3.10+、iproute2（提供 `ip` 和 `ss`），主节点另需 `flock`。
 - 由主节点 root 执行生命周期脚本，提前配置到 worker 的免密 SSH，并确认 SSH 主机密钥。
 - 两端准备同版本镜像 `vllm/vllm-openai:v0.30.0`。MTP 补丁绑定此版本，镜像字段仅用于填写相同镜像的仓库镜像地址，不应直接升级 vLLM。
 - 两端各准备完整的 NVIDIA 官方 `nvidia/Qwen3.8-Flash-Next-NVFP4` 权重，默认路径为 `/opt/1panel/ai/models/nvidia/Qwen3.8-Flash-Next-NVFP4`。不支持直接替换为 RadixArk 版。
@@ -16,21 +16,29 @@
 
 ## 配置
 
-应用表单与四机 GB10 版本一致：端口 `VLLM_PORT`（默认 8000）、镜像 `DSPARK_VLLM_IMAGE`、模型目录 `DSPARK_MODEL_HOST`、`VLLM_API_KEY`。API Key 留空时不鉴权。
+应用表单包含端口 `VLLM_PORT`（默认 8000）、镜像 `DSPARK_VLLM_IMAGE`、模型目录 `DSPARK_MODEL_HOST`、`VLLM_API_KEY`。API Key 留空时不鉴权。GID 默认在启动时自动识别，无需在表单中填写索引。
 其余参数保存在应用版本 `.env`：
 
 | 变量 | 含义 |
 | --- | --- |
 | `CLUSTER_NODES` | 两个不同的 IPv4 地址，以逗号分隔，第一项为 head |
 | `LOCAL_IP` | head 的 RoCE 网络 IPv4 地址，必须等于第一项 |
-| `ETH_IF` / `IB_IF` / `GID_INDEX` | head 网络接口、HCA 名称和 RoCEv2 GID；HCA 不带 `=` 前缀 |
+| `ETH_IF` / `IB_IF` | head 网络接口和 HCA 名称；HCA 不带 `=` 前缀 |
+| `NCCL_IB_GID_AUTO` | 默认 `1`，启动时自动识别 GID；`0` 使用手动索引 |
+| `GID_INDEX` | head 手动 GID 索引，仅在自动识别关闭时生效 |
 | `WORKER_ETH_IF` / `WORKER_IB_IF` / `WORKER_GID_INDEX` | worker 的对应网络配置，留空时使用 head 值 |
 | `MASTER_PORT` | 双机通信端口，默认 50000，不能与 API 端口相同 |
 | `CONTAINER_NAME` | 两端容器名，所有操作只管理当前应用所属容器 |
 | `WORKER_DIR` | worker 配置与补丁目录的根路径，默认 `/opt/1pqw` |
 | `CACHE_ROOT` | 两端缓存根路径，默认 `/opt/1pqw/cache`，按容器名隔离 |
 | `IMAGE_PULL_POLICY` | `if_not_present`、`always` 或 `never`；离线可选 `never` |
-| `WAIT_ATTEMPTS` / `WAIT_SECONDS` | 就绪检查次数和间隔，默认 300 × 10 秒 |
+| `WAIT_ATTEMPTS` / `WAIT_SECONDS` | 就绪检查次数和间隔，默认 200 × 15 秒 |
+
+GID 处理沿用 0.25 双机版本的规则：默认 `NCCL_IB_GID_AUTO=1`，每次启动分别在 head 和 worker 上读取通信接口 IPv4，扫描所选 HCA 的活动端口，跳过空槽及非 RoCE v2 项。优先匹配通信 IP，也允许匹配端口所属网络接口的 IPv4；同一节点选择多个端口时取可用索引的交集。找不到共同索引时明确报错，不继续启动。
+
+可用 `NCCL_IB_GID_MATCH_IP` / `WORKER_NCCL_IB_GID_MATCH_IP` 分别指定匹配的 IPv4；未指定时优先取对应 `ETH_IF` 的第一个 IPv4，无法获取时使用节点地址。自动模式忽略 `.env` 中旧的固定 GID，不将识别结果写回文件。
+
+如需手动指定，在 `.env` 中设置 `NCCL_IB_GID_AUTO=0`，并填写 `GID_INDEX` 和 `WORKER_GID_INDEX`；worker 留空时使用 head 值。手动模式也会检查索引在所选活动端口上是否为可读的 RoCE v2。可用 `show_gids`（如已安装）核对索引对应的网卡和 IP。
 
 主节点 API 监听 `0.0.0.0`，使用 host 网络。两台机器的模型路径相同，缓存分别保存在各自宿主机；worker 不启动 API 服务。
 保留原包默认推理参数：显存比例 0.80、最大并发 64、单批 8192 tokens、上下文 262144、MTP 3 tokens、`FULL_DECODE_ONLY`。JSON 参数统一由 `.env` 提供，两端共用。
@@ -51,6 +59,8 @@ bash scripts/uninstall.sh
 同名但不属于本应用的容器会导致操作失败，不会被强制删除。启动失败保留容器和日志供排查，再次启动前执行停止；worker 不可达时停止/卸载会明确报错。
 
 原包报告有缓存时冷启动约 11 分钟，首次 autotune 可能超过 40 分钟，本包默认就绪等待约 50 分钟。worker 健康检查仅确认容器运行，head `/health` 用于判断双机推理引擎就绪。
+
+配套 1Panel 的 Qwen 双 GB10 启动、重启任务总超时为 2 小时，覆盖镜像拉取最多 50 分钟和默认就绪等待约 50 分钟，并留出部署开销。此调整需要同步更新 1Panel 后端，旧版后端仍受 1 小时上限约束。自定义等待时间时需计入镜像拉取等阶段，不能超过面板任务的总时间预算。
 
 ```bash
 curl -f http://<HEAD_IP>:8000/health

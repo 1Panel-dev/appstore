@@ -25,6 +25,7 @@
 2. 主节点必须能够免密 SSH 到 `10.0.1.2`，两台机器都需要安装 Docker、NVIDIA Container Toolkit，并提供可用的 RoCE/InfiniBand 设备。
 3. 两台机器都必须提前准备模型目录 `/opt/1panel/ai/DeepSeek-V4-Flash-0731`。
 4. 启动参数、网卡和节点地址保存在应用版本目录的 `.env`，双机启动和停止分别使用 `scripts/start.sh` 与 `scripts/stop.sh`。
+5. 默认每 15 秒检查一次就绪状态，最多 200 次，等待约 50 分钟。配套 1Panel 的 GB10 启动、重启总超时为 2 小时，需同步更新后端。
 
 ### NVIDIA GB10 双节点 Qwen3.8 版本
 
