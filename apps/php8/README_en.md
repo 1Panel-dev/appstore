@@ -17,7 +17,7 @@
 
 ## v1 security runtime versions
 
-Adds official PHP versions `8.2.35`, `8.3.36`, `8.4.27`, and `8.5.12`. `8.0.31` and `8.1.35` are 1Panel maintenance image tags, internally PHP `8.0.30` and `8.1.34`, with backports for CVE-2026-109618 / CVE-2026-109619. They are not new official PHP releases.
+Adds official PHP versions `8.2.36`, `8.3.37`, `8.4.28`, and `8.5.13`. `8.0.31` and `8.1.35` are 1Panel maintenance image tags, internally PHP `8.0.30` and `8.1.34`, with backports for CVE-2026-109618 / CVE-2026-109619. They are not new official PHP releases.
 
 These new templates use Debian-based `1panel/php:<version>-fpm` images and preserve v1's local build and mount layout for amd64, arm64, and arm/v7. Extensions use the base image's `install-php-extensions`; availability depends on PHP version, architecture, and upstream support. Do not reuse old binary `.so` extensions. The v1 Alpine default source keeps Debian's defaults; other mirror hostnames select Debian repositories. EOL bases keep signed Debian archive repositories.
 
