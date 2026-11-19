@@ -99,6 +99,8 @@ additionalProperties:
           required: true
           type: select
           values:
+            - label: "8.6.0"
+              value: "8.6.0"
             - label: "8.5.13"
               value: "8.5.13"
             - label: "8.4.28"
