@@ -1,6 +1,6 @@
 ARG RESTY_IMAGE_BASE="ubuntu"
 ARG RESTY_IMAGE_TAG="noble"
-ARG PANEL_OPENRESTY_VERSION="1.31.8.1-2-1-noble"
+ARG PANEL_OPENRESTY_VERSION="1.31.8.1-2-2-noble"
 
 FROM 1panel/openresty:${PANEL_OPENRESTY_VERSION} AS panel-openresty
 
@@ -32,13 +32,16 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update \
 
 COPY tmp /tmp
 COPY --from=panel-openresty /usr/local/openresty/modules/ngx_brotli /usr/local/openresty/modules/ngx_brotli
+COPY --from=panel-openresty /usr/local/openresty/patches/nginx-1.31.8-security-20261118.patch /usr/local/openresty/patches/
 
 RUN bash /tmp/module-pre.sh \
     && cd /tmp \
     && tar xzf openresty-${RESTY_VERSION}.tar.gz \
     && cd /tmp/openresty-${RESTY_VERSION} \
+    && echo "740316cc5e82b42ec85537dcbb158cd75a440ac2860e5ed7f73d864d0074c160  /usr/local/openresty/patches/nginx-1.31.8-security-20261118.patch" | sha256sum -c - \
+    && git -C bundle/nginx-1.31.8 apply /usr/local/openresty/patches/nginx-1.31.8-security-20261118.patch \
     && mapfile -t MODULE_CONFIG < /tmp/module-config.args \
-    && ./configure -j${RESTY_J} --with-compat --with-http_ssl_module --with-stream --with-stream_ssl_module --with-http_realip_module --with-http_dav_module "${MODULE_CONFIG[@]}" \
+    && ./configure --build=1Panel-security-20261118 -j${RESTY_J} --with-compat --with-http_ssl_module --with-stream --with-stream_ssl_module --with-http_realip_module --with-http_dav_module "${MODULE_CONFIG[@]}" \
     && NGINX_BUILD_DIR="$(find build -mindepth 1 -maxdepth 1 -type d -name 'nginx-*' | head -n 1)" \
     && test -n "${NGINX_BUILD_DIR}" \
     && make -C "${NGINX_BUILD_DIR}" -j${RESTY_J} modules \
