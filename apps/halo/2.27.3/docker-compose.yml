@@ -3,6 +3,7 @@ services:
     image: halohub/halo-pro:2.27.3
     container_name: ${CONTAINER_NAME}
     restart: always
+    stop_grace_period: 120s
     networks:
       - 1panel-network
     volumes:
