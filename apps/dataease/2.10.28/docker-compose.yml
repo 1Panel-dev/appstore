@@ -11,17 +11,9 @@ services:
       - ./data/static-resource:/opt/dataease2.0/data/static-resource
       - ./cache:/opt/dataease2.0/cache
       - ./data/geo:/opt/dataease2.0/data/geo
-      - ./data/map:/opt/dataease2.0/data/map
-      - ./data/appearance:/opt/dataease2.0/data/appearance
       - ./data/exportData:/opt/dataease2.0/data/exportData
-      - ./data/plugin:/opt/dataease2.0/data/plugin
       - ./data/font:/opt/dataease2.0/data/font
-      - ./data/i18n:/opt/dataease2.0/data/i18n
-      - ./data/report:/opt/dataease2.0/data/report
-      - ./data/report-artifacts:/opt/dataease2.0/data/report-artifacts
     environment:
-      DE_SYNC_AUTH_ENABLED: ${DE_SYNC_AUTH_ENABLED:-false}
-      DE_SYNC_AUTH_SECRET: ${DE_SYNC_AUTH_SECRET:-}
       PANEL_DB_HOST: ${PANEL_DB_HOST}
       PANEL_DB_PORT: ${PANEL_DB_PORT}
       PANEL_DB_USER: ${PANEL_DB_USER}
