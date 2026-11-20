@@ -25,6 +25,7 @@ services:
     environment:
       DE_SYNC_AUTH_ENABLED: ${DE_SYNC_AUTH_ENABLED:-false}
       DE_SYNC_AUTH_SECRET: ${DE_SYNC_AUTH_SECRET:-}
+      JAVA_OPTIONS: "-Dfile.encoding=utf-8 -Dloader.path=/opt/dataease3.0/data/driver/mariadb-java-client-3.3.7.jar,/opt/apps,/opt/dataease3.0/data/driver/ -Dspring.config.additional-location=/opt/apps/config/"
       JAVA_TOOL_OPTIONS: "${JAVA_TOOL_OPTIONS:-} -XX:-UseBASE64Intrinsics"
       PANEL_DB_HOST: ${PANEL_DB_HOST}
       PANEL_DB_PORT: ${PANEL_DB_PORT}
