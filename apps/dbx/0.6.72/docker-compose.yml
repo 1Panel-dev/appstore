@@ -1,6 +1,6 @@
 services:
   dbx:
-    image: t8y2/dbx:0.6.71
+    image: t8y2/dbx:0.6.72
     container_name: ${CONTAINER_NAME}
     restart: unless-stopped
     networks:
