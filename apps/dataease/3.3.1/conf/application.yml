@@ -43,3 +43,10 @@ dataease:
     dataset:
       limit: 100000
   origin-list: http://localhost:8000
+task:
+  executor:
+    auth:
+      secret: ${DE_SYNC_AUTH_SECRET:}
+    address: http://sync-task-actuator:9001
+    log:
+      path: /opt/dataease3.0/logs/sync-task/task-handler-log

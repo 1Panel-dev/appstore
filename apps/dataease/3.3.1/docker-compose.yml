@@ -1,6 +1,6 @@
 services:
   dataease:
-    image: registry.cn-qingdao.aliyuncs.com/dataease/dataease:v3.1.0
+    image: registry.cn-qingdao.aliyuncs.com/dataease/dataease:v3.3.1
     restart: always
     container_name: ${CONTAINER_NAME}
     stop_signal: SIGTERM
@@ -21,7 +21,11 @@ services:
       - ./data/driver:/opt/dataease3.0/data/driver
       - ./data/i18n:/opt/dataease3.0/data/i18n
       - ./data/report:/opt/dataease3.0/data/report
+      - ./data/report-artifacts:/opt/dataease3.0/data/report-artifacts
     environment:
+      DE_SYNC_AUTH_ENABLED: ${DE_SYNC_AUTH_ENABLED:-false}
+      DE_SYNC_AUTH_SECRET: ${DE_SYNC_AUTH_SECRET:-}
+      JAVA_TOOL_OPTIONS: "${JAVA_TOOL_OPTIONS:-} -XX:-UseBASE64Intrinsics"
       PANEL_DB_HOST: ${PANEL_DB_HOST}
       PANEL_DB_PORT: ${PANEL_DB_PORT}
       PANEL_DB_USER: ${PANEL_DB_USER}
