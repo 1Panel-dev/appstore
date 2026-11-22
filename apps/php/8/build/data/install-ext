@@ -3,14 +3,8 @@
 export MC="-j$(nproc)"
 ERROR_CODE=0
 
-pear config-set php_ini '' || exit 1
-extension_dir=$(php -d display_errors=stderr -r 'echo ini_get("extension_dir");') || exit 1
-config_dir="${PHP_INI_DIR:-/usr/local/etc/php}/conf.d"
-if [ -z "$extension_dir" ]; then
-    echo "Unable to determine the PHP extension directory." >&2
-    exit 1
-fi
-mkdir -p -- "$extension_dir" "$config_dir" || exit 1
+pear config-set php_ini ''
+mkdir -p "$(php -d display_errors=stderr -r 'echo ini_get("extension_dir");')"
 
 echo
 echo "============================================"
@@ -35,13 +29,7 @@ installExtensionFromTgz()
 
 is_extension_installed() {
     local extension=$1
-    local module=$extension
-    case "$extension" in
-        opcache) module="Zend OPcache" ;;
-        ionCube|ioncube|ioncube_loader) module="ionCube Loader" ;;
-        sg16|sourceguardian) module="SourceGuardian" ;;
-    esac
-    if php -m | grep -Fixq -- "$module"; then
+    if php -m | grep -q "^$extension$"; then
         echo "------ $extension is already installed ------"
         return 0
     else
@@ -64,6 +52,23 @@ install_php_extensions() {
      echo "------ install-php-extensions $extension failed ------"
      ERROR_CODE=1
      return 1
+}
+
+install_php_extensions_batch() {
+    local extension
+
+    install-php-extensions "$@"
+
+    for extension in "$@"; do
+        if is_extension_installed "$extension"; then
+            continue
+        fi
+        echo "------ install-php-extensions $* failed ------"
+        ERROR_CODE=1
+        return 1
+    done
+
+    echo "------ install-php-extensions $* succeeded ------"
 }
 
 pecl_install() {
@@ -97,23 +102,18 @@ docker_php_ext_install() {
 
 install_extension_default() {
     local extension=$1
-    if [[ "$extension" =~ ^([[:alnum:]_]+)-[0-9][[:alnum:]._-]*$ ]]; then
-        install_php_extensions "$extension" "${BASH_REMATCH[1]}"
-        return $?
-    fi
-
-    printf "\n" | pecl install "$extension"
+    printf "\n" | pecl install $extension
     if [ $? -eq 0 ]; then
-       docker-php-ext-enable "$extension" || return 1
+       docker-php-ext-enable $extension
        echo "------ pecl install $extension succeeded ------"
     else
        echo "------ pecl install $extension failed use docker-php-ext-install------"
-       docker-php-ext-install ${MC} "$extension"
+       docker-php-ext-install ${MC} $extension
        if [ $? -eq 0 ]; then
          echo "------ docker-php-ext-install install $extension succeeded ------"
        else
          echo "------ docker-php-ext-install install $extension failed use install-php-extensions------"
-         install-php-extensions "$extension"
+         install-php-extensions $extension
          if [ $? -eq 0 ]; then
            echo "------ install-php-extensions $extension succeeded ------"
          else
@@ -168,7 +168,7 @@ install_protobuf() {
       pecl install protobuf
   else
       pecl install protobuf-3.24.4
-  fi && docker-php-ext-enable protobuf
+  fi
 }
 
 trim_extension() {
@@ -308,7 +308,7 @@ install_extension() {
         install_php_extensions amqp
     elif [ "$extension" = "zookeeper" ]; then
         install_php_extensions zookeeper
-    elif [[ "$extension" == ionCube || "$extension" == ioncube || "$extension" == ioncube_loader ]]; then
+    elif [ "$extension" = "ionCube" ]; then
         install_php_extensions ioncube_loader "ionCube Loader"
     elif [ "$extension" = "pdo_sqlsrv" ]; then  
         install_php_extensions pdo_sqlsrv
@@ -327,57 +327,20 @@ install_extension() {
     elif [ "$extension" = "event" ]; then  
         install_php_extensions event           
     else 
-        install_extension_default "$extension"
+        install_extension_default $extension
     fi 
 }
 
-install_extension_safely() (
-    local extension=$1
-    local installer=$2
-    local backup ini main_ini
-    local status=0
-    backup=$(mktemp -d) || return 2
-    trap 'rm -rf -- "$backup"' EXIT
-    mkdir "$backup/conf.d" && cp -a "$config_dir/." "$backup/conf.d/" || return 2
-    main_ini=$(php -d display_errors=stderr -r 'echo php_ini_loaded_file();') || return 2
-    if [ -n "$main_ini" ]; then
-        cp -p -- "$main_ini" "$backup/php.ini" || return 2
-    fi
-
-    ERROR_CODE=0
-    "$installer" "$extension" || status=$?
-    if [[ "$extension" =~ ^[[:alnum:]_]+$ ]]; then
-        if is_extension_installed "$extension" >/dev/null; then
-            return 0
-        fi
-    elif [ "$status" -eq 0 ] && [ "$ERROR_CODE" -eq 0 ]; then
-        # Installer arguments such as a versioned extension or @composer are not module names.
-        return 0
-    fi
-
-    # Restore the PHP configuration from before this attempt; earlier successful installs stay enabled.
-    for ini in "$config_dir"/*.ini; do
-        if [[ ( -f "$ini" || -L "$ini" ) && ! -e "$backup/conf.d/${ini##*/}" && ! -L "$backup/conf.d/${ini##*/}" ]]; then
-            rm -f -- "$ini" || return 2
-        fi
-    done
-    cp -a "$backup/conf.d/." "$config_dir/" || return 2
-    if [ -n "$main_ini" ] && ! cmp -s -- "$main_ini" "$backup/php.ini"; then
-        cp -p -- "$backup/php.ini" "$main_ini" || return 2
-    fi
-    echo "------ install extension $extension failed ------"
-    return 1
-)
-
 install_extension_list() {
     local extension_list=$1
-    local extension installer status
+    local extension=
     local has_redis=0
     local has_igbinary=0
     local has_msgpack=0
     local extension_array=()
     local extensions=()
     local remaining_extensions=()
+    local redis_extensions=()
 
     IFS=',' read -r -a extension_array <<< "$extension_list"
 
@@ -404,49 +367,69 @@ install_extension_list() {
         esac
     done
 
-    if [ $has_redis -eq 1 ]; then
-        # The installer enables Redis serializers based on the modules PHP has loaded.
-        extensions=("${remaining_extensions[@]}")
-        [ "$has_igbinary" -eq 0 ] || extensions+=(igbinary)
-        [ "$has_msgpack" -eq 0 ] || extensions+=(msgpack)
-        extensions+=(redis)
+    if [ $has_redis -eq 0 ]; then
+        for extension in "${extensions[@]}"; do
+            install_extension "$extension"
+            if [ $ERROR_CODE -ne 0 ]; then
+                return 1
+            fi
+        done
+        return 0
     fi
 
-    for extension in "${extensions[@]}"; do
-        if [[ "$extension" == -* ]]; then
-            failed_extensions+=("$extension")
-            continue
+    for extension in "${remaining_extensions[@]}"; do
+        install_extension "$extension"
+        if [ $ERROR_CODE -ne 0 ]; then
+            return 1
         fi
-        if is_extension_installed "$extension"; then
-            continue
-        fi
-        installer=install_extension
-        if [ "$has_redis" -eq 1 ] && [[ "$extension" == igbinary || "$extension" == msgpack ]]; then
-            installer=install_php_extensions
-        fi
-        status=0
-        install_extension_safely "$extension" "$installer" || status=$?
-        case "$status" in
-            0) ;;
-            1) failed_extensions+=("$extension") ;;
-            *) return "$status" ;;
-        esac
     done
+
+    if [ $has_redis -eq 1 ] && ([ $has_igbinary -eq 1 ] || [ $has_msgpack -eq 1 ]); then
+        if [ $has_igbinary -eq 1 ] && ! is_extension_installed igbinary; then
+            redis_extensions+=("igbinary")
+        fi
+        if [ $has_msgpack -eq 1 ] && ! is_extension_installed msgpack; then
+            redis_extensions+=("msgpack")
+        fi
+        redis_extensions+=("redis")
+        install_php_extensions_batch "${redis_extensions[@]}"
+        return $?
+    fi
+
+    if [ $has_igbinary -eq 1 ]; then
+        install_extension igbinary
+        if [ $ERROR_CODE -ne 0 ]; then
+            return 1
+        fi
+    fi
+    if [ $has_msgpack -eq 1 ]; then
+        install_extension msgpack
+        if [ $ERROR_CODE -ne 0 ]; then
+            return 1
+        fi
+    fi
+    if [ $has_redis -eq 1 ]; then
+        install_extension redis
+        if [ $ERROR_CODE -ne 0 ]; then
+            return 1
+        fi
+    fi
 }
 
-failed_extensions=()
-install_extension_list "$1" || exit 1
-docker-php-source delete || exit 1
+extension=$1
 
-if [ "${#failed_extensions[@]}" -eq 0 ]; then
-    exit 0
+if [[ $extension == *,* ]]; then
+    install_extension_list "$extension"
+    if [ $ERROR_CODE -ne 0 ]; then
+        exit $ERROR_CODE
+    fi
+else
+    install_extension "$extension"
+    if [ $ERROR_CODE -ne 0 ]; then
+        exit $ERROR_CODE
+    fi
 fi
 
-printf 'Failed PHP extensions: %s\n' "${failed_extensions[*]}"
-if [ "${2:-}" != "--allow-partial" ]; then
-    exit 1
-fi
+docker-php-source delete
 
-# Older panels and manual installs still receive a failure exit status unless they opt in.
-failures=$(php -n -r 'echo json_encode(array_slice($argv, 1), JSON_THROW_ON_ERROR);' -- "${failed_extensions[@]}") || exit 1
-printf '1PANEL_PHP_EXTENSION_FAILURES=%s\n' "$failures"
+exit 0
