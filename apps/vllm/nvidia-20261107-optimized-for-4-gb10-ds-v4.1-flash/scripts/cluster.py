@@ -207,17 +207,24 @@ def start():
         raise RuntimeError(f"Unsupported IMAGE_PULL_POLICY: {policy}")
     configs = render_configs()
     image = configs[NODES[0]]["services"]["vllm-dspark"]["image"]
+    running = {}
     for node in NODES:
         container = inspect_container(node)
-        if container and (container["State"]["Running"] or container["State"].get("Restarting")):
-            raise RuntimeError(f"Container {CONTAINER_NAME} is already running on {node}; stop it first")
+        if container and (container["State"].get("Restarting") or container["State"].get("Paused")):
+            raise RuntimeError(f"Container {CONTAINER_NAME} on {node} is restarting or paused; restart the cluster")
+        if container and container["State"]["Running"]:
+            running[node] = container
+            print(f"Container {CONTAINER_NAME} is already running on {node}; skipping startup.", flush=True)
+            continue
         run(node, ["docker", "compose", "version"])
         run(node, ["test", "-d", os.environ["DSPARK_MODEL_HOST"]])
         if configs[node]["services"]["vllm-dspark"]["image"] != image:
             raise RuntimeError("All ranks must use the same image")
 
     with ThreadPoolExecutor(max_workers=len(NODES)) as executor:
-        prepared_images = [executor.submit(prepare_image, node, image, policy) for node in NODES]
+        prepared_images = [executor.submit(prepare_image, node,
+                                            running[node]["Image"] if node in running else image,
+                                            "never" if node in running else policy) for node in NODES]
 
     head_id = None
     head_fingerprint = None
@@ -232,6 +239,8 @@ def start():
             raise RuntimeError(f"Docker image on {node} does not match the head node")
 
     for node in NODES:
+        if node in running:
+            continue
         run(node, ["python3", "-c", PREFLIGHT,
                    os.environ["DSPARK_MODEL_HOST"], os.environ["DRI_CARD"],
                    os.environ["ETH_IF"], os.environ["IB_IF"], os.environ["GID_INDEX"]])
@@ -240,14 +249,17 @@ def start():
         if processes:
             raise RuntimeError(f"GPU compute processes are already running on {node}: {processes}")
 
-    run(NODES[0], ["python3", "-c",
-                   "import socket, sys; sockets = []\n"
-                   "for port in sys.argv[1:]:\n"
-                   "    sock = socket.socket(); sock.bind(('0.0.0.0', int(port))); sockets.append(sock)",
-                   os.environ["VLLM_PORT"], os.environ["MASTER_PORT"]])
+    if NODES[0] not in running:
+        run(NODES[0], ["python3", "-c",
+                       "import socket, sys; sockets = []\n"
+                       "for port in sys.argv[1:]:\n"
+                       "    sock = socket.socket(); sock.bind(('0.0.0.0', int(port))); sockets.append(sock)",
+                       os.environ["VLLM_PORT"], os.environ["MASTER_PORT"]])
 
     cache_dir = str(Path(os.environ["CACHE_ROOT"]) / CONTAINER_NAME)
     for node, config in configs.items():
+        if node in running:
+            continue
         run(node, ["mkdir", "-p", "--", cache_dir])
         target = str(CONFIG_PATHS[node])
         directory = str(CONFIG_PATHS[node].parent)
@@ -266,6 +278,8 @@ def start():
     started = []
     try:
         for node in NODES[1:] + NODES[:1]:
+            if node in running:
+                continue
             print(f"Starting rank {NODES.index(node)} on {node}...", flush=True)
             started.append(node)
             compose(node, "up", "-d", "--pull", "never", "--no-build", "vllm-dspark")
@@ -283,7 +297,7 @@ def start():
             time.sleep(wait_seconds)
         raise RuntimeError("Timed out waiting for Docker healthchecks")
     except Exception:
-        print("Startup failed; containers are retained. Run scripts/stop.sh before retrying.", file=sys.stderr)
+        print("Startup failed; containers are retained. Inspect their logs and run scripts/restart.sh to restart all nodes.", file=sys.stderr)
         for node in started:
             print(f"Recent rank {NODES.index(node)} logs on {node}:", file=sys.stderr)
             try:
