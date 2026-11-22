@@ -42,6 +42,14 @@ is_extension_installed() {
         sg16|sourceguardian) module="SourceGuardian" ;;
     esac
     if php -m | grep -Fixq -- "$module"; then
+        if [ -n "${2:-}" ]; then
+            local version
+            version=$(php -d display_errors=stderr -r 'echo phpversion($argv[1]);' -- "$module") || return 1
+            if [ "$version" != "$2" ]; then
+                printf 'Requested %s %s, but PHP loaded %s.\n' "$extension" "$2" "$version" >&2
+                return 1
+            fi
+        fi
         echo "------ $extension is already installed ------"
         return 0
     else
@@ -51,12 +59,12 @@ is_extension_installed() {
 
 install_php_extensions() {
      local extension=$1
-     install-php-extensions $extension
+     install-php-extensions "$extension"
      local check_name=$2
      if [ -z "$check_name" ]; then
          check_name=$extension
      fi
-     if is_extension_installed "$check_name"; then
+     if is_extension_installed "$check_name" "${3:-}"; then
         echo "------ install-php-extensions $extension succeeded ------"
         return
      fi
@@ -98,7 +106,7 @@ docker_php_ext_install() {
 install_extension_default() {
     local extension=$1
     if [[ "$extension" =~ ^([[:alnum:]_]+)-[0-9][[:alnum:]._-]*$ ]]; then
-        install_php_extensions "$extension" "${BASH_REMATCH[1]}"
+        install_php_extensions "$extension" "${BASH_REMATCH[1]}" "${extension#*-}"
         return $?
     fi
 
@@ -334,39 +342,52 @@ install_extension() {
 install_extension_safely() (
     local extension=$1
     local installer=$2
-    local backup ini main_ini
+    local stage main_ini file target
     local status=0
-    backup=$(mktemp -d) || return 2
-    trap 'rm -rf -- "$backup"' EXIT
-    mkdir "$backup/conf.d" && cp -a "$config_dir/." "$backup/conf.d/" || return 2
+    # Keep pending configuration on the same filesystem so it can be published without overwriting live files.
+    stage=$(mktemp -d "$config_dir/.install-ext.XXXXXXXX") || return 2
+    trap 'rm -rf -- "$stage"' EXIT
+    mkdir "$stage/conf.d" || return 2
     main_ini=$(php -d display_errors=stderr -r 'echo php_ini_loaded_file();') || return 2
     if [ -n "$main_ini" ]; then
-        cp -p -- "$main_ini" "$backup/php.ini" || return 2
+        cp -p -- "$main_ini" "$stage/php.ini" || return 2
     fi
 
+    export PHPRC="$stage" PHP_INI_DIR="$stage"
+    export PHP_INI_SCAN_DIR="${PHP_INI_SCAN_DIR-$config_dir}:$stage/conf.d"
     ERROR_CODE=0
     "$installer" "$extension" || status=$?
     if [[ "$extension" =~ ^[[:alnum:]_]+$ ]]; then
-        if is_extension_installed "$extension" >/dev/null; then
-            return 0
+        if ! is_extension_installed "$extension" >/dev/null; then
+            status=1
         fi
-    elif [ "$status" -eq 0 ] && [ "$ERROR_CODE" -eq 0 ]; then
-        # Installer arguments such as a versioned extension or @composer are not module names.
-        return 0
+    fi
+    if [ "$status" -ne 0 ] || [ "$ERROR_CODE" -ne 0 ]; then
+        echo "------ install extension $extension failed ------"
+        return 1
     fi
 
-    # Restore the PHP configuration from before this attempt; earlier successful installs stay enabled.
-    for ini in "$config_dir"/*.ini; do
-        if [[ ( -f "$ini" || -L "$ini" ) && ! -e "$backup/conf.d/${ini##*/}" && ! -L "$backup/conf.d/${ini##*/}" ]]; then
-            rm -f -- "$ini" || return 2
+    shopt -s nullglob
+    local staged_files=("$stage/conf.d/"*)
+    for file in "${staged_files[@]}"; do
+        target="$config_dir/${file##*/}"
+        [[ -f "$file" && ! -L "$file" ]] || return 2
+        # Some extensions reference a companion rules file in their ini.
+        if [[ "$file" == *.ini ]] && grep -Fq -- "$stage/conf.d/" "$file"; then
+            php -n -r '$s=file_get_contents($argv[1]); exit($s === false || file_put_contents($argv[1],str_replace($argv[2],$argv[3],$s)) === false ? 1 : 0);' -- "$file" "$stage/conf.d/" "$config_dir/" || return 2
+        fi
+        if [[ -e "$target" || -L "$target" ]]; then
+            if ! cmp -s -- "$file" "$target"; then
+                printf 'PHP configuration already exists: %s\n' "$target" >&2
+                return 1
+            fi
         fi
     done
-    cp -a "$backup/conf.d/." "$config_dir/" || return 2
-    if [ -n "$main_ini" ] && ! cmp -s -- "$main_ini" "$backup/php.ini"; then
-        cp -p -- "$backup/php.ini" "$main_ini" || return 2
-    fi
-    echo "------ install extension $extension failed ------"
-    return 1
+    for file in "${staged_files[@]}"; do
+        target="$config_dir/${file##*/}"
+        ln -T -- "$file" "$target" 2>/dev/null || cmp -s -- "$file" "$target" || return 2
+    done
+    return 0
 )
 
 install_extension_list() {
