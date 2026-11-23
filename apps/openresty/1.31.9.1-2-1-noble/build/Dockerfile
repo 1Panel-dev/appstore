@@ -4,7 +4,7 @@
 ARG RESTY_IMAGE_BASE="ubuntu"
 ARG RESTY_IMAGE_TAG="noble"
 
-ARG PANEL_OPENRESTY_VERSION="1.31.8.1-2-2-noble"
+ARG PANEL_OPENRESTY_VERSION="1.31.9.1-2-1-noble"
 FROM 1panel/openresty:${PANEL_OPENRESTY_VERSION} as panel-openresty
 
 FROM ${RESTY_IMAGE_BASE}:${RESTY_IMAGE_TAG}
@@ -14,7 +14,8 @@ LABEL maintainer="Evan Wies <evan@neomantra.net>"
 # Docker Build Arguments
 ARG RESTY_IMAGE_BASE="ubuntu"
 ARG RESTY_IMAGE_TAG="noble"
-ARG RESTY_VERSION="1.31.8.1"
+ARG RESTY_VERSION="1.31.9.1"
+ARG RESTY_SHA256="71d49935bdc186dafc1f4b0a8ba44dba1bf4abc8ca52d4621f2039ec8fdcc95f"
 ARG RESTY_LUAROCKS_VERSION="3.13.0"
 
 # https://github.com/openresty/openresty-packaging/blob/master/deb/openresty-openssl3/debian/rules
@@ -129,7 +130,6 @@ RUN if [ -n "${CONTAINER_PACKAGE_URL}" ]; then \
     fi
     
 COPY --from=panel-openresty /usr/local/openresty/modules/ngx_brotli /usr/local/openresty/modules/ngx_brotli
-COPY --from=panel-openresty /usr/local/openresty/patches/nginx-1.31.8-security-20261118.patch /usr/local/openresty/patches/
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
@@ -180,12 +180,11 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update \
     && CFLAGS="-g -O3" make -j${RESTY_J} install \
     && cd /tmp \
 #    && curl -fSL https://openresty.org/download/openresty-${RESTY_VERSION}.tar.gz -o openresty-${RESTY_VERSION}.tar.gz \
+    && echo "${RESTY_SHA256}  openresty-${RESTY_VERSION}.tar.gz" | sha256sum -c - \
     && if [ ! -d openresty-${RESTY_VERSION} ]; then tar xzf openresty-${RESTY_VERSION}.tar.gz; fi \
     && cd /tmp/openresty-${RESTY_VERSION} \
-    && echo "740316cc5e82b42ec85537dcbb158cd75a440ac2860e5ed7f73d864d0074c160  /usr/local/openresty/patches/nginx-1.31.8-security-20261118.patch" | sha256sum -c - \
-    && git -C bundle/nginx-1.31.8 apply /usr/local/openresty/patches/nginx-1.31.8-security-20261118.patch \
     && if [ -n "${RESTY_EVAL_POST_DOWNLOAD_PRE_CONFIGURE}" ]; then eval $(echo ${RESTY_EVAL_POST_DOWNLOAD_PRE_CONFIGURE}); fi \
-    && eval ./configure --build=1Panel-security-20261118 -j${RESTY_J} ${_RESTY_CONFIG_DEPS} ${RESTY_CONFIG_OPTIONS} ${RESTY_CONFIG_OPTIONS_MORE} ${RESTY_LUAJIT_OPTIONS} ${RESTY_PCRE_OPTIONS} \
+    && eval ./configure -j${RESTY_J} ${_RESTY_CONFIG_DEPS} ${RESTY_CONFIG_OPTIONS} ${RESTY_CONFIG_OPTIONS_MORE} ${RESTY_LUAJIT_OPTIONS} ${RESTY_PCRE_OPTIONS} \
     && if [ -n "${RESTY_EVAL_PRE_MAKE}" ]; then eval $(echo ${RESTY_EVAL_PRE_MAKE}); fi \
     && make -j${RESTY_J} \
     && make -j${RESTY_J} install \
