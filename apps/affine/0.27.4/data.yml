@@ -121,7 +121,7 @@ additionalProperties:
       envKey: PANEL_REDIS_ROOT_PASSWORD
       labelEn: Password
       labelZh: redis 密码
-      type: text
+      type: password
       label:
         en: Password
         es-es: Contraseña
