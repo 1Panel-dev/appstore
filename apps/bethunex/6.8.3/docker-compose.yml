@@ -1,0 +1,85 @@
+services:
+  zcloud:
+    image: docker.io/bethunex/bethunex-core:6.8.3
+    container_name: "${CONTAINER_NAME}"
+    restart: always
+    labels:
+      createdBy: "Apps"
+    networks:
+      - 1panel-network
+    # chroot 组件需要在各 rootfs 内 bind mount /proc /dev /sys：需要 SYS_ADMIN；
+    # privileged 经实测不必要（去特权后 45/45、aiteam/milvus 均正常）
+    cap_add:
+      - SYS_ADMIN
+    security_opt:
+      - apparmor=unconfined
+      - seccomp=unconfined
+    init: true
+    stop_grace_period: 300s
+    tmpfs:
+      - /run
+    ports:
+      - "0.0.0.0:${PANEL_APP_PORT_HTTP}:8080"
+      - "0.0.0.0:${PANEL_APP_PORT_MYSQL}:3306"
+      - "0.0.0.0:${PANEL_APP_PORT_PROXY_8200}:8200"
+      - "0.0.0.0:${PANEL_APP_PORT_PROXY_8202}:8202"
+      - "0.0.0.0:${PANEL_APP_PORT_PROXY_8203}:8203"
+      - "0.0.0.0:${PANEL_APP_PORT_PROXY_8204}:8204"
+      - "0.0.0.0:${PANEL_APP_PORT_PROXY_8205}:8205"
+      - "0.0.0.0:${PANEL_APP_PORT_PROXY_8211}:8211"
+      - "0.0.0.0:${PANEL_APP_PORT_PROXY_8212}:8212"
+      - "0.0.0.0:${PANEL_APP_PORT_PROXY_8214}:8214"
+      - "0.0.0.0:${PANEL_APP_PORT_PROXY_8215}:8215"
+      - "0.0.0.0:${PANEL_APP_PORT_PROXY_8216}:8216"
+      - "0.0.0.0:${PANEL_APP_PORT_PROXY_8217}:8217"
+      - "0.0.0.0:${PANEL_APP_PORT_PROXY_8218}:8218"
+      - "0.0.0.0:${PANEL_APP_PORT_PROXY_8219}:8219"
+      - "0.0.0.0:${PANEL_APP_PORT_PROXY_8220}:8220"
+      - "0.0.0.0:${PANEL_APP_PORT_PROXY_8221}:8221"
+      # 采集器端口必须发布：registration-hub 按 os_host.host_ip 把 proxy 注册成
+      # zdbmon/slowmon collector（host_ip 是安装期宿主 IP，多容器与原生安装下
+      # 该地址从宿主直连可用）。单容器里 proxy 与 mgr 同处本容器、走 bridge，
+      # 不发布时容器内连宿主 9914/9070 必然超时：t_collector.is_active 恒为 0，
+      # 采集器探活/配置下发/重新采集与实例分配全部失败。
+      #
+      # 这三个端口在表单里不可改、compose 内写死：平台侧采集器地址里的端口是
+      # 固定值（注册中心按 collector.port=9914 / slowmon.collector.port=9070 拼
+      # 地址，mgr 查指标时把 addr 的 :9914 换成 :9915），宿主端口一旦被改成别的
+      # 值，平台仍连 9914/9915 就会拒连且无配置报错，只表现为采集器探活超时、
+      # 监控页无数据。
+      - "0.0.0.0:9914:9914"
+      - "0.0.0.0:9915:9915"
+      - "0.0.0.0:9070:9070"
+    environment:
+      HOST_IP: ${ZCLOUD_HOST_IP}
+      # 固定口令（决策：表单不暴露、装后不可改）；留成变量会让 ./data 里的 MySQL
+      # 初始化口令与平台连接口令不一致，首启直接失败
+      DB_PASSWORD: dbaas@123
+      TZ: Asia/Shanghai
+    volumes:
+      - ./data/mysql:/opt/rootfs/mysql/home/mysql/data
+      - ./data/shared:/data/shared
+      - ./data/proxy/images:/opt/rootfs/proxy/zcloud/proxy/images
+      - ./data/proxy/log:/opt/rootfs/proxy/zcloud/proxy/log
+      - ./data/proxy/jvm.cfg.user:/opt/rootfs/proxy/zcloud/proxy/jvm.cfg.user:ro
+      - ./data/shared:/opt/rootfs/proxy/data/shared
+      - ./data/shared/dbaas/paasdata:/opt/rootfs/proxy/paasdata
+      - ./data/aiteam/config.json:/opt/rootfs/aiteam/app/config.json
+      - ./data/aiteam/workspace:/opt/rootfs/aiteam/app/workspace
+      - ./data/aiteam/confirm:/opt/rootfs/aiteam/app/confirm
+      - ./data/aiteam/logs:/opt/rootfs/aiteam/app/logs
+      - ./data/aiteam/webui:/opt/rootfs/aiteam/app/webui
+      - ./data/aiteam/zcl-data:/opt/rootfs/aiteam/app/zcl-data
+      - ./data/aiteam/backup:/opt/rootfs/aiteam/app/backup
+      - ./data/milvus/standalone:/opt/rootfs/milvus/var/lib/milvus
+      - ./data/milvus/etcd:/opt/rootfs/etcd/etcd
+      - ./data/milvus/minio:/opt/rootfs/minio/minio_data
+    healthcheck:
+      test: ["CMD", "/opt/zcloud/bin/healthcheck.sh"]
+      interval: 30s
+      timeout: 20s
+      retries: 5
+      start_period: 1800s
+networks:
+  1panel-network:
+    external: true
