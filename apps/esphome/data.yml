@@ -1,0 +1,33 @@
+name: ESPHome
+tags:
+  - 实用工具
+title: "智能家居设备配置与固件管理工具"
+description: "智能家居设备配置与固件管理工具"
+additionalProperties:
+  key: esphome
+  name: ESPHome
+  tags:
+    - Tool
+  shortDescZh: "智能家居设备配置与固件管理工具"
+  shortDescEn: "Smart home device configuration and firmware management"
+  description:
+    en: "Smart home device configuration and firmware management"
+    es-es: "Configuración de dispositivos domésticos inteligentes y gestión de firmware"
+    ja: "スマートホーム機器の設定とファームウェア管理"
+    ms: "Konfigurasi peranti rumah pintar dan pengurusan perisian tegar"
+    pt-br: "Configuração de dispositivos de casa inteligente e gerenciamento de firmware"
+    ru: "Настройка устройств умного дома и управление прошивками"
+    ko: "스마트 홈 기기 설정 및 펌웨어 관리"
+    zh-Hant: "智慧家居裝置設定與韌體管理工具"
+    zh: "智能家居设备配置与固件管理工具"
+    tr: "Akıllı ev cihazı yapılandırması ve donanım yazılımı yönetimi"
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  architectures:
+    - amd64
+    - arm64
+  recommend: 0
+  website: https://esphome.io/
+  github: https://github.com/esphome/esphome
+  document: https://esphome.io/install/docker/
