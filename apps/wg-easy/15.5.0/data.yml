@@ -1,0 +1,85 @@
+additionalProperties:
+  formFields:
+    - default: 51821
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: "Web UI Port"
+      labelZh: "Web UI 端口"
+      label:
+        en: "Web UI Port"
+        es-es: "Puerto de la interfaz web"
+        ja: "Web UIポート"
+        ms: "Port Web UI"
+        pt-br: "Porta da interface web"
+        ru: "Порт веб-интерфейса"
+        ko: "웹 UI 포트"
+        zh-Hant: "Web UI 埠"
+        zh: "Web UI 端口"
+        tr: "Web arayüzü bağlantı noktası"
+      required: true
+      rule: paramPort
+      type: number
+    - default: 51820
+      edit: false
+      envKey: PANEL_APP_PORT_UDP
+      labelEn: "UDP Port"
+      labelZh: "UDP 端口"
+      label:
+        en: "UDP Port"
+        es-es: "Puerto UDP"
+        ja: "UDPポート"
+        ms: "Port UDP"
+        pt-br: "Porta UDP"
+        ru: "UDP-порт"
+        ko: "UDP 포트"
+        zh-Hant: "UDP 埠"
+        zh: "UDP 端口"
+        tr: "UDP Bağlantı Noktası"
+      required: true
+      rule: paramPort
+      type: number
+      description:
+        en: "Set the same port in the wg-easy setup wizard, then restart the application after setup."
+        es-es: "Configure el mismo puerto en el asistente de wg-easy y reinicie la aplicación después de la configuración."
+        ja: "wg-easy の初期設定で同じポートを指定し、設定完了後にアプリを再起動してください。"
+        ms: "Tetapkan port yang sama dalam persediaan wg-easy, kemudian mulakan semula aplikasi selepas persediaan."
+        pt-br: "Defina a mesma porta no assistente do wg-easy e reinicie a aplicação após a configuração."
+        ru: "Укажите тот же порт в мастере настройки wg-easy и перезапустите приложение после настройки."
+        ko: "wg-easy 초기 설정에서 같은 포트를 지정하고 설정 완료 후 애플리케이션을 다시 시작하세요."
+        zh-Hant: "首次在 wg-easy 初始化精靈中填寫相同連接埠，完成初始化後重新啟動應用程式。"
+        zh: "首次在 wg-easy 初始化向导中填写相同端口，完成初始化后重启应用。"
+        tr: "wg-easy kurulum sihirbazında aynı bağlantı noktasını ayarlayın ve kurulumdan sonra uygulamayı yeniden başlatın."
+    - default: "true"
+      edit: true
+      envKey: INSECURE
+      labelEn: "Allow HTTP Access"
+      labelZh: "允许 HTTP 访问"
+      label:
+        en: "Allow HTTP Access"
+        es-es: "Permitir acceso HTTP"
+        ja: "HTTPアクセスを許可"
+        ms: "Benarkan Akses HTTP"
+        pt-br: "Permitir acesso HTTP"
+        ru: "Разрешить доступ по HTTP"
+        ko: "HTTP 접근 허용"
+        zh-Hant: "允許 HTTP 存取"
+        zh: "允许 HTTP 访问"
+        tr: "HTTP erişimine izin ver"
+      description:
+        en: "Allow HTTP only on a trusted local network. For public access, configure an HTTPS reverse proxy and set this to false."
+        es-es: "Permita HTTP solo en una red local de confianza. Para acceso público, configure un proxy inverso HTTPS y seleccione false."
+        ja: "HTTP は信頼できるローカルネットワークでのみ使用してください。外部公開時は HTTPS リバースプロキシを設定し、false にしてください。"
+        ms: "Benarkan HTTP hanya pada rangkaian setempat yang dipercayai. Untuk akses awam, sediakan proksi songsang HTTPS dan tetapkan kepada false."
+        pt-br: "Permita HTTP apenas em uma rede local confiável. Para acesso público, configure um proxy reverso HTTPS e selecione false."
+        ru: "Разрешайте HTTP только в доверенной локальной сети. Для публичного доступа настройте обратный прокси HTTPS и выберите false."
+        ko: "HTTP는 신뢰할 수 있는 로컬 네트워크에서만 허용하세요. 외부에 공개할 때는 HTTPS 리버스 프록시를 설정하고 false로 변경하세요."
+        zh-Hant: "僅在可信任的區域網路中允許 HTTP；對外存取時請設定 HTTPS 反向代理，並改為 false。"
+        zh: "仅在可信的局域网中允许 HTTP；对外访问时请配置 HTTPS 反向代理，并改为 false。"
+        tr: "HTTP erişimini yalnızca güvenilir yerel ağda açın. Genel erişim için HTTPS ters proxy yapılandırın ve false seçin."
+      required: true
+      type: select
+      values:
+        - label: "true"
+          value: "true"
+        - label: "false"
+          value: "false"

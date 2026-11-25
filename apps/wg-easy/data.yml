@@ -1,0 +1,35 @@
+name: wg-easy
+tags:
+  - 实用工具
+  - 安全
+title: "带 Web 管理界面的 WireGuard VPN"
+description: "带 Web 管理界面的 WireGuard VPN"
+additionalProperties:
+  key: wg-easy
+  name: wg-easy
+  tags:
+    - Tool
+    - Security
+  shortDescZh: "带 Web 管理界面的 WireGuard VPN"
+  shortDescEn: "WireGuard VPN with a web administration interface"
+  description:
+    en: "WireGuard VPN with a web administration interface"
+    es-es: "VPN WireGuard con interfaz de administración web"
+    ja: "Web管理画面を備えたWireGuard VPN"
+    ms: "VPN WireGuard dengan antara muka pentadbiran web"
+    pt-br: "VPN WireGuard com interface de administração web"
+    ru: "WireGuard VPN с веб-интерфейсом управления"
+    ko: "웹 관리 인터페이스를 제공하는 WireGuard VPN"
+    zh-Hant: "具備 Web 管理介面的 WireGuard VPN"
+    zh: "带 Web 管理界面的 WireGuard VPN"
+    tr: "Web yönetim arayüzüne sahip WireGuard VPN"
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  architectures:
+    - amd64
+    - arm64
+  recommend: 0
+  website: https://wg-easy.github.io/wg-easy/latest/
+  github: https://github.com/wg-easy/wg-easy
+  document: https://wg-easy.github.io/wg-easy/latest/getting-started/
