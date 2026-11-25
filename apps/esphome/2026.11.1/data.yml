@@ -1,0 +1,60 @@
+additionalProperties:
+  formFields:
+    - default: 6052
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: "Web UI Port"
+      labelZh: "Web UI 端口"
+      label:
+        en: "Web UI Port"
+        es-es: "Puerto de la interfaz web"
+        ja: "Web UIポート"
+        ms: "Port Web UI"
+        pt-br: "Porta da interface web"
+        ru: "Порт веб-интерфейса"
+        ko: "웹 UI 포트"
+        zh-Hant: "Web UI 埠"
+        zh: "Web UI 端口"
+        tr: "Web arayüzü bağlantı noktası"
+      required: true
+      rule: paramPort
+      type: number
+    - default: admin
+      edit: true
+      envKey: ESPHOME_USERNAME
+      labelEn: Username
+      labelZh: "用户名"
+      label:
+        en: Username
+        es-es: "Nombre de usuario"
+        ja: "ユーザー名"
+        ms: "Nama pengguna"
+        pt-br: "Nome de usuário"
+        ru: "Имя пользователя"
+        ko: "사용자 이름"
+        zh-Hant: "用戶名"
+        zh: "用户名"
+        tr: "Kullanıcı Adı"
+      required: true
+      rule: paramCommon
+      type: text
+    - default: password
+      edit: true
+      envKey: ESPHOME_PASSWORD
+      labelEn: Password
+      labelZh: "密码"
+      label:
+        en: Password
+        es-es: "Contraseña"
+        ja: "パスワード"
+        ms: "Kata laluan"
+        pt-br: Senha
+        ru: "Пароль"
+        ko: "비밀번호"
+        zh-Hant: "密碼"
+        zh: "密码"
+        tr: Parola
+      required: true
+      random: true
+      rule: paramComplexity
+      type: password

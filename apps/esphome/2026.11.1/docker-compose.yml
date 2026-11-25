@@ -1,0 +1,31 @@
+services:
+  esphome:
+    image: ghcr.io/esphome/esphome:2026.11.1
+    container_name: "${CONTAINER_NAME}"
+    restart: always
+    network_mode: host
+    environment:
+      ESPHOME_USERNAME: "${ESPHOME_USERNAME}"
+      ESPHOME_PASSWORD: "${ESPHOME_PASSWORD}"
+    volumes:
+      - ./data:/config
+      - /etc/localtime:/etc/localtime:ro
+    command:
+      - dashboard
+      - /config
+      - "--port"
+      - "${PANEL_APP_PORT_HTTP}"
+    healthcheck:
+      test:
+        - CMD
+        - curl
+        - "--fail"
+        - "--silent"
+        - "http://127.0.0.1:${PANEL_APP_PORT_HTTP}/version"
+        - "-A"
+        - HealthCheck
+      interval: 30s
+      timeout: 30s
+      retries: 3
+    labels:
+      createdBy: Apps
