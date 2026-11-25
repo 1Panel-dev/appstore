@@ -3,6 +3,15 @@
 export MC="-j$(nproc)"
 ERROR_CODE=0
 
+pear config-set php_ini '' || exit 1
+extension_dir=$(php -d display_errors=stderr -r 'echo ini_get("extension_dir");') || exit 1
+config_dir="${PHP_INI_DIR:-/usr/local/etc/php}/conf.d"
+if [ -z "$extension_dir" ]; then
+    echo "Unable to determine the PHP extension directory." >&2
+    exit 1
+fi
+mkdir -p -- "$extension_dir" "$config_dir" || exit 1
+
 echo
 echo "============================================"
 echo "PHP version               : ${PHP_VERSION}"
@@ -38,7 +47,13 @@ isPhpVersionGreaterOrEqual() {
 
 is_extension_installed() {
     local extension=$1
-    if php -m | grep -q "^$extension$"; then
+    local module=$extension
+    case "$extension" in
+        opcache) module="Zend OPcache" ;;
+        ionCube|ioncube|ioncube_loader) module="ionCube Loader" ;;
+        sg11|sourceguardian) module="SourceGuardian" ;;
+    esac
+    if php -m | grep -Fixq -- "$module"; then
         echo "------ $extension is already installed ------"
         return 0
     else
@@ -90,18 +105,18 @@ docker_php_ext_install() {
 
 install_extension_default() {
     local extension=$1
-    printf "\n" | pecl install $extension
+    printf "\n" | pecl install "$extension"
     if [ $? -eq 0 ]; then
-       docker-php-ext-enable $extension
+       docker-php-ext-enable "$extension" || return 1
        echo "------ pecl install $extension succeeded ------"
     else
        echo "------ pecl install $extension failed use docker-php-ext-install------"
-       docker-php-ext-install ${MC} $extension
+       docker-php-ext-install ${MC} "$extension"
        if [ $? -eq 0 ]; then
          echo "------ docker-php-ext-install install $extension succeeded ------"
        else
          echo "------ docker-php-ext-install install $extension failed use install-php-extensions------"
-         install-php-extensions $extension
+         install-php-extensions "$extension"
          if [ $? -eq 0 ]; then
            echo "------ install-php-extensions $extension succeeded ------"
          else
@@ -185,6 +200,15 @@ EOF
     docker_php_ext_install intl
 }
 
+
+trim_extension() {
+    local extension=$1
+
+    extension="${extension#"${extension%%[![:space:]]*}"}"
+    extension="${extension%"${extension##*[![:space:]]}"}"
+
+    printf '%s' "$extension"
+}
 
 install_extension() {
     local extension=$1
@@ -327,23 +351,99 @@ install_extension() {
     elif [ "$extension" = "zmq" ]; then
         install_php_extensions zmq             
     else 
-        install_extension_default $extension
+        install_extension_default "$extension"
     fi 
 }
 
-extension=$1
+install_extension_safely() (
+    local extension=$1
+    local stage main_ini file target
+    local status=0
+    # Keep pending configuration on the same filesystem so it can be published without overwriting live files.
+    stage=$(mktemp -d "$config_dir/.install-ext.XXXXXXXX") || return 2
+    trap 'rm -rf -- "$stage"' EXIT
+    mkdir "$stage/conf.d" || return 2
+    main_ini=$(php -d display_errors=stderr -r 'echo php_ini_loaded_file();') || return 2
+    if [ -n "$main_ini" ]; then
+        cp -p -- "$main_ini" "$stage/php.ini" || return 2
+    fi
 
-if [[ $extension == *,* ]]; then
-    while read -r extension; do
-        install_extension "$extension"
-    done < <(printf '%s\n' "$extension" | tr ',' '\n')
-else
-    install_extension "$extension"
+    export PHPRC="$stage" PHP_INI_DIR="$stage"
+    export PHP_INI_SCAN_DIR="${PHP_INI_SCAN_DIR-$config_dir}:$stage/conf.d"
+    ERROR_CODE=0
+    install_extension "$extension" || status=$?
+    if [[ "$extension" =~ ^[[:alnum:]_]+$ ]]; then
+        if ! is_extension_installed "$extension" >/dev/null; then
+            status=1
+        fi
+    fi
+    if [ "$status" -ne 0 ] || [ "$ERROR_CODE" -ne 0 ]; then
+        echo "------ install extension $extension failed ------"
+        return 1
+    fi
+
+    shopt -s nullglob
+    local staged_files=("$stage/conf.d/"*)
+    for file in "${staged_files[@]}"; do
+        target="$config_dir/${file##*/}"
+        [[ -f "$file" && ! -L "$file" ]] || return 2
+        # Some extensions reference a companion rules file in their ini.
+        if [[ "$file" == *.ini ]] && grep -Fq -- "$stage/conf.d/" "$file"; then
+            php -n -r '$s=file_get_contents($argv[1]); exit($s === false || file_put_contents($argv[1],str_replace($argv[2],$argv[3],$s)) === false ? 1 : 0);' -- "$file" "$stage/conf.d/" "$config_dir/" || return 2
+        fi
+        if [[ -e "$target" || -L "$target" ]]; then
+            if ! cmp -s -- "$file" "$target"; then
+                printf 'PHP configuration already exists: %s\n' "$target" >&2
+                return 1
+            fi
+        fi
+    done
+    for file in "${staged_files[@]}"; do
+        target="$config_dir/${file##*/}"
+        ln -T -- "$file" "$target" 2>/dev/null || cmp -s -- "$file" "$target" || return 2
+    done
+    return 0
+)
+
+install_extension_list() {
+    local extension status
+    local extension_array=()
+    IFS=',' read -r -a extension_array <<< "$1"
+    for extension in "${extension_array[@]}"; do
+        extension=$(trim_extension "$extension")
+        if [ -z "$extension" ]; then
+            continue
+        fi
+        if [[ "$extension" == -* ]]; then
+            failed_extensions+=("$extension")
+            continue
+        fi
+        if is_extension_installed "$extension"; then
+            continue
+        fi
+        status=0
+        install_extension_safely "$extension" || status=$?
+        case "$status" in
+            0) ;;
+            1) failed_extensions+=("$extension") ;;
+            *) return "$status" ;;
+        esac
+    done
+}
+
+failed_extensions=()
+install_extension_list "$1" || exit 1
+docker-php-source delete || exit 1
+
+if [ "${#failed_extensions[@]}" -eq 0 ]; then
+    exit 0
 fi
-if [ "$ERROR_CODE" -ne 0 ]; then
-    exit "$ERROR_CODE"
+
+printf 'Failed PHP extensions: %s\n' "${failed_extensions[*]}"
+if [ "${2:-}" != "--allow-partial" ]; then
+    exit 1
 fi
 
-docker-php-source delete 
-
-exit 0
+# Older panels and manual installs still receive a failure exit status unless they opt in.
+failures=$(php -n -r '$json = json_encode(array_slice($argv, 1)); if ($json === false) { exit(1); } echo $json;' -- "${failed_extensions[@]}") || exit 1
+printf '1PANEL_PHP_EXTENSION_FAILURES=%s\n' "$failures"
