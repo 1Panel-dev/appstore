@@ -1,0 +1,141 @@
+additionalProperties:
+  formFields:
+    - child:
+        default: ""
+        envKey: PANEL_DB_HOST
+        required: true
+        type: service
+      default: mariadb
+      envKey: PANEL_DB_TYPE
+      labelEn: "Database Service"
+      labelZh: "数据库服务"
+      label:
+        en: "Database Service"
+        es-es: "Servicio de base de datos"
+        fa: "سرویس پایگاه داده"
+        ja: "データベースサービス"
+        ms: "Perkhidmatan Pangkalan Data"
+        pt-br: "Serviço de Banco de Dados"
+        ru: "Сервис баз данных"
+        ko: "데이터베이스 서비스"
+        zh-Hant: "資料庫服務"
+        zh: "数据库服务"
+        tr: "Veritabanı Hizmeti"
+      required: true
+      type: apps
+      values:
+        - label: MariaDB
+          value: mariadb
+        - label: "MySQL (≥ 5.7)"
+          value: mysql
+    - default: snipeit
+      envKey: PANEL_DB_NAME
+      labelEn: Database
+      labelZh: "数据库"
+      label:
+        en: Database
+        es-es: "Base de datos"
+        fa: "پایگاه داده"
+        ja: "データベース"
+        ms: "Pangkalan Data"
+        pt-br: "Banco de Dados"
+        ru: "База данных"
+        ko: "데이터베이스"
+        zh-Hant: "資料庫"
+        zh: "数据库"
+        tr: "Veritabanı"
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: snipeit
+      envKey: PANEL_DB_USER
+      labelEn: "Database User"
+      labelZh: "数据库用户"
+      label:
+        en: "Database User"
+        es-es: "Usuario de la base de datos"
+        fa: "کاربر پایگاه داده"
+        ja: "データベースユーザー"
+        ms: "Pengguna Pangkalan Data"
+        pt-br: "Usuário do Banco de Dados"
+        ru: "Пользователь базы данных"
+        ko: "데이터베이스 사용자"
+        zh-Hant: "資料庫用戶"
+        zh: "数据库用户"
+        tr: "Veritabanı Kullanıcısı"
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: snipeit
+      envKey: PANEL_DB_USER_PASSWORD
+      labelEn: "Database Password"
+      labelZh: "数据库密码"
+      label:
+        en: "Database Password"
+        es-es: "Contraseña de la base de datos"
+        fa: "رمز عبور پایگاه داده"
+        ja: "データベースのパスワード"
+        ms: "Kata Laluan Pangkalan Data"
+        pt-br: "Senha do Banco de Dados"
+        ru: "Пароль базы данных"
+        ko: "데이터베이스 비밀번호"
+        zh-Hant: "資料庫密碼"
+        zh: "数据库密码"
+        tr: "Veritabanı Parolası"
+      random: true
+      required: true
+      type: password
+    - default: 8000
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: "端口"
+      label:
+        en: Port
+        es-es: Puerto
+        fa: "پورت"
+        ja: "ポート"
+        ms: Port
+        pt-br: Porta
+        ru: "Порт"
+        ko: "포트"
+        zh-Hant: "埠"
+        zh: "端口"
+        tr: "Bağlantı Noktası"
+      required: true
+      rule: paramPort
+      type: number
+      edit: true
+    - default: ""
+      edit: true
+      envKey: APP_URL
+      labelEn: "APP URL"
+      labelZh: "外部地址"
+      label:
+        en: "APP URL"
+        es-es: "URL de la aplicación"
+        fa: "URL برنامه"
+        ja: "アプリURL"
+        ms: "URL APLIKASI"
+        pt-br: "URL DO APLICATIVO"
+        ru: "URL ПРИЛОЖЕНИЯ"
+        ko: "앱 URL"
+        zh-Hant: "外部地址"
+        zh: "外部地址"
+        tr: "Uygulama URL'si"
+      description:
+        en: "Enter the address used in your browser, including http:// or https:// and any nonstandard port, e.g. http://192.168.1.10:8000."
+        es-es: "Introduce la dirección que usas en el navegador, con http:// o https:// y el puerto si no es el predeterminado."
+        fa: "نشانی مورد استفاده در مرورگر را با http:// یا https:// و در صورت نیاز پورت وارد کنید."
+        ja: "ブラウザーで使用するアドレスを http:// または https:// から入力してください。標準以外のポートも指定します。"
+        ms: "Masukkan alamat pelayar dengan http:// atau https:// serta port jika bukan port lalai."
+        pt-br: "Informe o endereço usado no navegador, incluindo http:// ou https:// e a porta, se não for a padrão."
+        ru: "Введите адрес для доступа через браузер, включая http:// или https:// и нестандартный порт, если он используется."
+        ko: "브라우저에서 사용할 주소를 http:// 또는 https://로 시작해 입력하세요. 기본 포트가 아니면 포트도 포함하세요."
+        zh-Hant: "填寫瀏覽器實際使用的完整網址。直接透過 IP 存取時請帶上連接埠，使用反向代理時請填寫對外網址。"
+        zh: "填写浏览器实际使用的完整地址，如 http://192.168.1.10:8000。使用反向代理时填写对外访问地址。"
+        tr: "Tarayıcıda kullandığınız adresi http:// veya https:// ile girin. Standart dışı bağlantı noktasını da ekleyin."
+      required: true
+      rule: paramHttp
+      type: text

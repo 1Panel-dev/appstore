@@ -1,0 +1,34 @@
+name: Snipe-IT
+tags:
+  - 实用工具
+title: "开源 IT 资产管理系统"
+description: "开源 IT 资产管理系统"
+additionalProperties:
+  key: snipe-it
+  name: Snipe-IT
+  tags:
+    - Tool
+  shortDescZh: "开源 IT 资产管理系统"
+  shortDescEn: "Open-source IT asset management system"
+  description:
+    en: "Open-source IT asset management system"
+    es-es: "Sistema de gestión de activos de TI de código abierto"
+    fa: "سامانه متن‌باز مدیریت دارایی‌های فناوری اطلاعات"
+    ja: "オープンソースの IT 資産管理システム"
+    ms: "Sistem pengurusan aset IT sumber terbuka"
+    pt-br: "Sistema de gestão de ativos de TI de código aberto"
+    ru: "Система управления ИТ-активами с открытым исходным кодом"
+    ko: "오픈 소스 IT 자산 관리 시스템"
+    zh-Hant: "開源 IT 資產管理系統"
+    zh: "开源 IT 资产管理系统"
+    tr: "Açık kaynaklı BT varlık yönetim sistemi"
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  architectures:
+    - amd64
+    - arm64
+  recommend: 0
+  website: https://snipeitapp.com
+  github: https://github.com/grokability/snipe-it
+  document: https://snipe-it.readme.io/docs
