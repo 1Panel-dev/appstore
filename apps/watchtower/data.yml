@@ -15,9 +15,9 @@ additionalProperties:
     limit: 1
     recommend: 0
     batchInstallSupport: true
-    website: https://github.com/containrrr/watchtower
-    github: https://github.com/containrrr/watchtower
-    document: https://containrrr.dev/watchtower/
+    website: https://github.com/nicholas-fedor/watchtower
+    github: https://github.com/nicholas-fedor/watchtower
+    document: https://watchtower.nickfedor.com/
     description:
         en: Tool to automatically update Docker container base images
         es-es: Herramienta para actualizar automáticamente las imágenes base de contenedores Docker
