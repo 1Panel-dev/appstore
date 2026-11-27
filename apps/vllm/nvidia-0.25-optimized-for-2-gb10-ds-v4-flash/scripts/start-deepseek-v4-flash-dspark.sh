@@ -7,7 +7,7 @@ ENV_FILE="${ENV_FILE:-$APP_DIR/.env.dspark}"
 COMPOSE_FILE="${COMPOSE_FILE:-$APP_DIR/docker-compose.dspark.yml}"
 VISION_ASSET_DIR="$APP_DIR/scripts/vision-exp"
 PROJECT_NAME="${PROJECT_NAME:-deepseek-v4-flash}"
-WAIT_ATTEMPTS="${WAIT_ATTEMPTS:-100}"
+WAIT_ATTEMPTS="${WAIT_ATTEMPTS:-200}"
 WAIT_SECONDS="${WAIT_SECONDS:-15}"
 ENABLE_VLLM_GB10_PATCH="${ENABLE_VLLM_GB10_PATCH:-0}"
 CLI_VLLM_HOST=""
@@ -716,11 +716,11 @@ compose_base() {
     GB10_HYBRID_NVFP4_M_THRESHOLD="${GB10_HYBRID_NVFP4_M_THRESHOLD:-128}" \
     NODE_RANK="$1" \
     HEADLESS="$2" \
-    docker compose -p "$PROJECT_NAME" --env-file "$COMPOSE_ENV_FILE" -f "$COMPOSE_FILE" "${@:3}"
+    python3 "$SCRIPT_DIR/run-with-timeout.py" "$BASHPID" "${COMPOSE_TIMEOUT:-120}" docker compose -p "$PROJECT_NAME" --env-file "$COMPOSE_ENV_FILE" -f "$COMPOSE_FILE" "${@:3}"
 }
 
 remote_compose() {
-  ssh "$WORKER_HOST" "$REMOTE_COMPOSE $(remote_nccl_env) $*"
+  python3 "$SCRIPT_DIR/run-with-timeout.py" "$BASHPID" "${COMPOSE_TIMEOUT:-120}" ssh "$WORKER_HOST" "$REMOTE_COMPOSE $(remote_nccl_env) $*"
 }
 
 log_since() {
@@ -728,23 +728,17 @@ log_since() {
 }
 
 print_startup_logs() {
-  local since="$1"
+  local remote_options
+  printf -v remote_options '%q ' "$@"
 
-  compose_base 0 "" logs --since "$since" vllm-dspark || true
-  remote_compose "docker compose -p '$PROJECT_NAME' --env-file .env.dspark -f docker-compose.dspark.yml logs --since '$since' vllm-dspark" || true
-}
-
-wait_with_startup_logs() {
-  local since
-  since="$(log_since)"
-
-  sleep "$WAIT_SECONDS"
-  print_startup_logs "$since"
-}
-
-print_initial_startup_logs() {
-  compose_base 0 "" logs --tail=100 vllm-dspark || true
-  remote_compose "docker compose -p '$PROJECT_NAME' --env-file .env.dspark -f docker-compose.dspark.yml logs --tail=100 vllm-dspark" || true
+  local remaining=$((WAIT_DEADLINE - SECONDS))
+  if ((remaining > 0)); then
+    COMPOSE_TIMEOUT="$((remaining < 5 ? remaining : 5))" compose_base 0 "" logs "$@" vllm-dspark || true
+  fi
+  remaining=$((WAIT_DEADLINE - SECONDS))
+  if ((remaining > 0)); then
+    COMPOSE_TIMEOUT="$((remaining < 5 ? remaining : 5))" remote_compose "docker compose -p '$PROJECT_NAME' --env-file .env.dspark -f docker-compose.dspark.yml logs $remote_options vllm-dspark" || true
+  fi
 }
 
 print_failure_logs() {
@@ -841,6 +835,18 @@ need_cmd docker
 need_cmd ssh
 need_cmd scp
 need_cmd curl
+need_cmd python3
+
+if [[ ! "$WAIT_ATTEMPTS" =~ ^[1-9][0-9]*$ || ! "$WAIT_SECONDS" =~ ^[1-9][0-9]*$ ]]; then
+  echo "WAIT_ATTEMPTS and WAIT_SECONDS must be positive integers." >&2
+  exit 1
+fi
+case "${IMAGE_PULL_POLICY:-if_not_present}" in
+  always) PULL_POLICY=always ;;
+  if_not_present) PULL_POLICY=missing ;;
+  never) PULL_POLICY=never ;;
+  *) echo "Unsupported IMAGE_PULL_POLICY: $IMAGE_PULL_POLICY" >&2; exit 1 ;;
+esac
 
 if [ "$ENABLE_VLLM_GB10_PATCH" != "0" ] && [ "$ENABLE_VLLM_GB10_PATCH" != "1" ]; then
   echo "ENABLE_VLLM_GB10_PATCH must be 0 or 1." >&2
@@ -922,11 +928,43 @@ if [ -f "$SIDECAR_COMPOSE_FILE" ]; then
 fi
 validate_compose
 
+if [ "$PULL_POLICY" != "never" ]; then
+  echo "Preparing DSpark images on both nodes (policy: $PULL_POLICY)..."
+  PULL_DEADLINE=$((SECONDS + 3000))
+  (
+    COMPOSE_TIMEOUT=3000 compose_base 0 "" pull --policy "$PULL_POLICY" || exit $?
+    if [ "${ENABLE_VL_SIDECAR:-0}" = "1" ] && [ -f "$SIDECAR_COMPOSE_FILE" ]; then
+      remaining=$((PULL_DEADLINE - SECONDS))
+      ((remaining > 0)) || exit 124
+      env -u NODE_RANK -u HEADLESS COMPOSE_DISABLE_ENV_FILE=1 NODE_RANK=0 \
+        python3 "$SCRIPT_DIR/run-with-timeout.py" "$BASHPID" "$remaining" docker compose -p "$PROJECT_NAME" \
+        --env-file "$COMPOSE_ENV_FILE" -f "$SIDECAR_COMPOSE_FILE" pull --policy "$PULL_POLICY" || exit $?
+    fi
+  ) &
+  head_pull_pid=$!
+  (
+    COMPOSE_TIMEOUT=3010 remote_compose "NODE_RANK=1 HEADLESS=1 HF_CACHE='$WORKER_HF_CACHE' VLLM_HOST_IP='$WORKER_VLLM_HOST_IP' GPU_MEMORY_UTILIZATION='$GPU_MEMORY_UTILIZATION' DSPARK_MODEL='$DSPARK_MODEL' DSPARK_REVISION='${DSPARK_REVISION:-}' ENABLE_VLLM_GB10_PATCH='$ENABLE_VLLM_GB10_PATCH' GB10_HYBRID_NVFP4_M_THRESHOLD='${GB10_HYBRID_NVFP4_M_THRESHOLD:-128}' timeout --signal=KILL 3000 docker compose -p '$PROJECT_NAME' --env-file .env.dspark -f docker-compose.dspark.yml pull --policy '$PULL_POLICY'" || exit $?
+    if [ "${ENABLE_VL_SIDECAR:-0}" = "1" ] && [ -f "$SIDECAR_COMPOSE_FILE" ]; then
+      remaining=$((PULL_DEADLINE - SECONDS))
+      ((remaining > 0)) || exit 124
+      COMPOSE_TIMEOUT="$((remaining + 10))" remote_compose "MASTER_ADDR='$MASTER_ADDR' NODE_RANK=1 HEADLESS=1 HF_CACHE='$WORKER_HF_CACHE' timeout --signal=KILL '$remaining' docker compose -p '$PROJECT_NAME' --env-file .env.dspark -f docker-compose.vl-sidecar.yml pull --policy '$PULL_POLICY'" || exit $?
+    fi
+  ) &
+  worker_pull_pid=$!
+  pull_status=0
+  wait "$head_pull_pid" || pull_status=$?
+  wait "$worker_pull_pid" || pull_status=$?
+  if [ "$pull_status" -ne 0 ]; then
+    echo "Failed to prepare DSpark images within the 50-minute pull budget." >&2
+    exit "$pull_status"
+  fi
+fi
+
 echo "Starting DSpark worker on ${WORKER_HOST}..."
-remote_compose "NODE_RANK=1 HEADLESS=1 HF_CACHE='$WORKER_HF_CACHE' VLLM_HOST_IP='$WORKER_VLLM_HOST_IP' GPU_MEMORY_UTILIZATION='$GPU_MEMORY_UTILIZATION' DSPARK_MODEL='$DSPARK_MODEL' DSPARK_REVISION='${DSPARK_REVISION:-}' ENABLE_VLLM_GB10_PATCH='$ENABLE_VLLM_GB10_PATCH' GB10_HYBRID_NVFP4_M_THRESHOLD='${GB10_HYBRID_NVFP4_M_THRESHOLD:-128}' docker compose -p '$PROJECT_NAME' --env-file .env.dspark -f docker-compose.dspark.yml up -d"
+remote_compose "NODE_RANK=1 HEADLESS=1 HF_CACHE='$WORKER_HF_CACHE' VLLM_HOST_IP='$WORKER_VLLM_HOST_IP' GPU_MEMORY_UTILIZATION='$GPU_MEMORY_UTILIZATION' DSPARK_MODEL='$DSPARK_MODEL' DSPARK_REVISION='${DSPARK_REVISION:-}' ENABLE_VLLM_GB10_PATCH='$ENABLE_VLLM_GB10_PATCH' GB10_HYBRID_NVFP4_M_THRESHOLD='${GB10_HYBRID_NVFP4_M_THRESHOLD:-128}' docker compose -p '$PROJECT_NAME' --env-file .env.dspark -f docker-compose.dspark.yml up -d --pull never --no-build"
 
 echo "Starting DSpark head..."
-compose_base 0 "" up -d
+compose_base 0 "" up -d --pull never --no-build
 
 # VL TP=2 sidecar is launched AFTER the main API is healthy (see wait loop):
 # DeepSeek and VL must not GPU-profile concurrently. VL uses a separate
@@ -945,9 +983,12 @@ fi
 echo "Issue #22 / v0.27 .sh hotfixes run in the compose entrypoint before vllm (no mid-boot stop)."
 
 echo "Waiting for DSpark vLLM API..."
-print_initial_startup_logs
-for _ in $(seq 1 "$WAIT_ATTEMPTS"); do
-  if curl -fsS --max-time 5 "${AUTH_HEADER_ARGS[@]}" "$API_URL" >/dev/null 2>&1; then
+WAIT_DEADLINE=$((SECONDS + WAIT_ATTEMPTS * WAIT_SECONDS))
+startup_log_args=(--tail=100)
+while ((SECONDS < WAIT_DEADLINE)); do
+  remaining=$((WAIT_DEADLINE - SECONDS))
+  ((remaining > 0)) || break
+  if curl -fsS --max-time "$((remaining < 5 ? remaining : 5))" "${AUTH_HEADER_ARGS[@]}" "$API_URL" >/dev/null 2>&1 && ((SECONDS < WAIT_DEADLINE)); then
     echo "DeepSeek V4 Flash DSpark is running: $API_URL"
     compose_base 0 "" ps
     remote_compose "docker compose -p '$PROJECT_NAME' --env-file .env.dspark -f docker-compose.dspark.yml ps"
@@ -958,11 +999,11 @@ for _ in $(seq 1 "$WAIT_ATTEMPTS"); do
       VL_MASTER_PORT="${VL_SIDECAR_MASTER_PORT:-25100}"
       echo "Starting VL sidecar TP=${VL_SIDECAR_TP_SIZE:-2} (${VL_SIDECAR_MODEL:-cyankiwi/Qwen3-VL-4B-Instruct-AWQ-4bit}, port ${VL_SIDECAR_PORT:-8889}, master-port ${VL_MASTER_PORT})..."
       echo "  VL worker first on ${WORKER_HOST}..."
-      remote_compose "MASTER_ADDR='$MASTER_ADDR' NODE_RANK=1 HEADLESS=1 HF_CACHE='$WORKER_HF_CACHE' docker compose -p '$PROJECT_NAME' --env-file .env.dspark -f docker-compose.vl-sidecar.yml up -d"
+      remote_compose "MASTER_ADDR='$MASTER_ADDR' NODE_RANK=1 HEADLESS=1 HF_CACHE='$WORKER_HF_CACHE' docker compose -p '$PROJECT_NAME' --env-file .env.dspark -f docker-compose.vl-sidecar.yml up -d --pull never --no-build"
       echo "  VL head (API rank)..."
       env -u NODE_RANK -u HEADLESS COMPOSE_DISABLE_ENV_FILE=1 \
         NODE_RANK=0 \
-        docker compose -p "$PROJECT_NAME" --env-file "$COMPOSE_ENV_FILE" -f "$SIDECAR_COMPOSE_FILE" up -d
+        python3 "$SCRIPT_DIR/run-with-timeout.py" "$BASHPID" 120 docker compose -p "$PROJECT_NAME" --env-file "$COMPOSE_ENV_FILE" -f "$SIDECAR_COMPOSE_FILE" up -d --pull never --no-build
       SIDECAR_MODELS_URL="http://127.0.0.1:${VL_SIDECAR_PORT:-8889}/v1/models"
       SIDECAR_READY=0
       for _sidecar_i in $(seq 1 "${VL_SIDECAR_WAIT_ATTEMPTS:-90}"); do
@@ -1029,7 +1070,12 @@ for _ in $(seq 1 "$WAIT_ATTEMPTS"); do
     fi
     exit 0
   fi
-  wait_with_startup_logs
+  startup_log_since="$(log_since)"
+  print_startup_logs "${startup_log_args[@]}"
+  startup_log_args=(--since "$startup_log_since")
+  remaining=$((WAIT_DEADLINE - SECONDS))
+  ((remaining > 0)) || break
+  sleep "$((remaining < WAIT_SECONDS ? remaining : WAIT_SECONDS))"
 done
 
 echo "Timed out waiting for DSpark API. Recent head logs:" >&2

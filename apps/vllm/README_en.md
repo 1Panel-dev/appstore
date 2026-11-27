@@ -25,6 +25,18 @@ Uses the custom image `1panel/vllm-gb10-dual-node:0.25-optimized-for-ds-v4-flash
 2. The head must have passwordless SSH access to `10.0.1.2`. Both hosts require Docker, NVIDIA Container Toolkit, and a working RoCE/InfiniBand device.
 3. The model must already exist at `/opt/1panel/ai/DeepSeek-V4-Flash-0731` on both hosts.
 4. Runtime parameters, interfaces, and node addresses are stored in the version `.env`; use `scripts/start.sh` and `scripts/stop.sh` for the two-node lifecycle.
+5. Qwen and DS scripts prepare images on both nodes in parallel, with a 50-minute pull timeout per node. The worker requires GNU coreutils (`timeout`); the DS head also requires Python 3. When VL sidecar is enabled and its configuration is present, DS also prepares its images; the main and sidecar images share the same 50-minute budget per node. Container startup then disables further image pulls. A local DS supervisor cleans up the entire command process group when its deadline expires or the parent script exits. Remote pulls retain their 50-minute limit, with 10 additional seconds on the head for remote termination and SSH cleanup. Readiness uses elapsed time, including checks and log reads, with a budget of `WAIT_ATTEMPTS × WAIT_SECONDS`: 200 × 15 seconds (50 minutes) by default. Health is checked before reading logs; each node’s log read is capped at 5 seconds and the remaining readiness budget. 1Panel limits each start/restart script to 2 hours, covering stop (for restart), pulls, deployment, readiness, and subsequent warmup.
+6. GB10 upgrades retain the existing flow: before stopping the old service, 1Panel pulls or checks local images according to the upgrade form, with a 24-hour timeout per image pull. After cutover, the startup script still prepares images on each node using the saved `IMAGE_PULL_POLICY`, with a 50-minute script pull timeout. Remote images are not prepared before shutdown. Install and upgrade tasks have no fixed outer timeout; the 2-hour limit applies to each start/restart script. Update the backend alongside the app package.
+
+### NVIDIA GB10 Dual Node Qwen3.8 Version
+
+Version `nvidia-0.30.0-optimized-for-2-gb10-qwen3.8-flash-next-nvfp4` uses `vllm/vllm-openai:v0.30.0` with the official NVIDIA Qwen3.8-Flash-Next-NVFP4 weights, preserving TP2 + EP + MTP3 and the bundled patches.
+
+1. Prepare complete weights on both hosts at `/opt/1panel/ai/models/nvidia/Qwen3.8-Flash-Next-NVFP4`; the model directory is not the legacy HF cache root.
+2. Configure `CLUSTER_NODES`, `LOCAL_IP`, and both RoCE interfaces in `.env`. The head root account needs passwordless SSH access to the worker.
+3. The form exposes the port, image, model directory, and API key. The default port is 8000; do not upgrade the patched vLLM image without validation.
+4. Use `scripts/init.sh`, `start.sh`, `stop.sh`, `restart.sh`, and `uninstall.sh` for the two-node lifecycle. Initial autotuning can exceed 40 minutes; readiness waits for approximately 50 minutes by default.
+5. See the version README for prerequisites, model layout, and persistent cache paths.
 
 ### Ascend 310P version
 
