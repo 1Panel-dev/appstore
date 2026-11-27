@@ -180,7 +180,7 @@
       "allowedVersions": "/^\\d+\\.\\d+\\.\\d+-pg17$/"
     },
     {
-      "matchFileNames": ["apps/pgvector/*-pg18/*.yml"],
+      "matchFileNames": ["apps/pgvector/*-pg18/*.yml", "apps/timescaledb/*-pg18/*.yml"],
       "allowedVersions": "/^\\d+\\.\\d+\\.\\d+-pg18$/"
     },
     {

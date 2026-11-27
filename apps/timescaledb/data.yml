@@ -1,0 +1,34 @@
+name: TimescaleDB
+tags:
+  - 数据库
+title: "TimescaleDB 时序数据库"
+description: "基于 PostgreSQL 的时序数据库，用于存储和分析带时间戳的数据。"
+additionalProperties:
+  key: timescaledb
+  name: TimescaleDB
+  tags:
+    - Database
+  shortDescZh: "基于 PostgreSQL 的时序数据库，用于存储和分析带时间戳的数据。"
+  shortDescEn: "A PostgreSQL time-series database for storing and analyzing timestamped data."
+  description:
+    en: "A PostgreSQL time-series database for storing and analyzing timestamped data."
+    es-es: "Base de datos de series temporales basada en PostgreSQL para almacenar y analizar datos con marcas de tiempo."
+    ja: "タイムスタンプ付きデータの保存と分析に使える、PostgreSQL ベースの時系列データベース。"
+    ms: "Pangkalan data siri masa berasaskan PostgreSQL untuk menyimpan dan menganalisis data bercap masa."
+    pt-br: "Banco de dados de séries temporais baseado em PostgreSQL para armazenar e analisar dados com marcação de tempo."
+    ru: "База данных временных рядов на основе PostgreSQL для хранения и анализа данных с метками времени."
+    ko: "타임스탬프가 있는 데이터를 저장하고 분석하는 PostgreSQL 기반 시계열 데이터베이스."
+    zh-Hant: "基於 PostgreSQL 的時序資料庫，用於儲存和分析帶有時間戳記的資料。"
+    zh: "基于 PostgreSQL 的时序数据库，用于存储和分析带时间戳的数据。"
+    tr: "Zaman damgalı verileri depolamak ve analiz etmek için PostgreSQL tabanlı zaman serisi veritabanı."
+  type: runtime
+  crossVersionUpdate: false
+  limit: 0
+  batchInstallSupport: true
+  architectures:
+    - amd64
+    - arm64
+  recommend: 0
+  website: https://www.tigerdata.com/timescaledb
+  github: https://github.com/timescale/timescaledb
+  document: https://www.tigerdata.com/docs/get-started/choose-your-path/install-timescaledb
