@@ -1,0 +1,328 @@
+additionalProperties:
+  architectures:
+    - amd64
+    - arm64
+  formFields:
+    - default: ""
+      envKey: ZCLOUD_HOST_IP
+      labelEn: "Host IP (optional, auto-detect when empty)"
+      labelZh: "宿主 IP（留空自动探测）"
+      label:
+        en: "Host IP (optional, auto-detect when empty)"
+        es-es: "IP del host (opcional, autodetectada si se deja vacia)"
+        ja: "ホスト IP（空欄の場合は自動検出）"
+        ms: "IP hos (pilihan, dikesan automatik jika kosong)"
+        pt-br: "IP do host (opcional, detectado automaticamente se vazio)"
+        ru: "IP хоста (необязательно, определяется автоматически)"
+        ko: "호스트 IP(비워 두면 자동 감지)"
+        zh-Hant: "宿主 IP（留空自動偵測）"
+        zh: "宿主 IP（留空自动探测）"
+        tr: "Ana makine IP (bos ise otomatik algilanir)"
+      required: false
+      type: text
+    - default: 8080
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: "HTTP port 8080"
+      labelZh: "HTTP 端口 8080"
+      label:
+        en: "HTTP Port 8080"
+        es-es: "HTTP Puerto 8080"
+        ja: "HTTP ポート 8080"
+        ms: "HTTP Port 8080"
+        pt-br: "HTTP Porta 8080"
+        ru: "HTTP Порт 8080"
+        ko: "HTTP 포트 8080"
+        zh-Hant: "HTTP 埠 8080"
+        zh: "HTTP 端口 8080"
+        tr: "HTTP Bağlantı Noktası 8080"
+      required: true
+      rule: paramPort
+      type: number
+    - default: 3306
+      envKey: PANEL_APP_PORT_MYSQL
+      labelEn: "MySQL port 3306"
+      labelZh: "MySQL 端口 3306"
+      label:
+        en: "MySQL Port 3306"
+        es-es: "MySQL Puerto 3306"
+        ja: "MySQL ポート 3306"
+        ms: "MySQL Port 3306"
+        pt-br: "MySQL Porta 3306"
+        ru: "MySQL Порт 3306"
+        ko: "MySQL 포트 3306"
+        zh-Hant: "MySQL 埠 3306"
+        zh: "MySQL 端口 3306"
+        tr: "MySQL Bağlantı Noktası 3306"
+      required: true
+      rule: paramPort
+      type: number
+    - default: 8200
+      envKey: PANEL_APP_PORT_PROXY_8200
+      labelEn: "Proxy port 8200"
+      labelZh: "Proxy 端口 8200"
+      label:
+        en: "Proxy Port 8200"
+        es-es: "Proxy Puerto 8200"
+        ja: "Proxy ポート 8200"
+        ms: "Proxy Port 8200"
+        pt-br: "Proxy Porta 8200"
+        ru: "Proxy Порт 8200"
+        ko: "Proxy 포트 8200"
+        zh-Hant: "Proxy 埠 8200"
+        zh: "Proxy 端口 8200"
+        tr: "Proxy Bağlantı Noktası 8200"
+      required: true
+      rule: paramPort
+      type: number
+    - default: 8202
+      envKey: PANEL_APP_PORT_PROXY_8202
+      labelEn: "Proxy port 8202"
+      labelZh: "Proxy 端口 8202"
+      label:
+        en: "Proxy Port 8202"
+        es-es: "Proxy Puerto 8202"
+        ja: "Proxy ポート 8202"
+        ms: "Proxy Port 8202"
+        pt-br: "Proxy Porta 8202"
+        ru: "Proxy Порт 8202"
+        ko: "Proxy 포트 8202"
+        zh-Hant: "Proxy 埠 8202"
+        zh: "Proxy 端口 8202"
+        tr: "Proxy Bağlantı Noktası 8202"
+      required: true
+      rule: paramPort
+      type: number
+    - default: 8203
+      envKey: PANEL_APP_PORT_PROXY_8203
+      labelEn: "Proxy port 8203"
+      labelZh: "Proxy 端口 8203"
+      label:
+        en: "Proxy Port 8203"
+        es-es: "Proxy Puerto 8203"
+        ja: "Proxy ポート 8203"
+        ms: "Proxy Port 8203"
+        pt-br: "Proxy Porta 8203"
+        ru: "Proxy Порт 8203"
+        ko: "Proxy 포트 8203"
+        zh-Hant: "Proxy 埠 8203"
+        zh: "Proxy 端口 8203"
+        tr: "Proxy Bağlantı Noktası 8203"
+      required: true
+      rule: paramPort
+      type: number
+    - default: 8204
+      envKey: PANEL_APP_PORT_PROXY_8204
+      labelEn: "Proxy port 8204"
+      labelZh: "Proxy 端口 8204"
+      label:
+        en: "Proxy Port 8204"
+        es-es: "Proxy Puerto 8204"
+        ja: "Proxy ポート 8204"
+        ms: "Proxy Port 8204"
+        pt-br: "Proxy Porta 8204"
+        ru: "Proxy Порт 8204"
+        ko: "Proxy 포트 8204"
+        zh-Hant: "Proxy 埠 8204"
+        zh: "Proxy 端口 8204"
+        tr: "Proxy Bağlantı Noktası 8204"
+      required: true
+      rule: paramPort
+      type: number
+    - default: 8205
+      envKey: PANEL_APP_PORT_PROXY_8205
+      labelEn: "Proxy port 8205"
+      labelZh: "Proxy 端口 8205"
+      label:
+        en: "Proxy Port 8205"
+        es-es: "Proxy Puerto 8205"
+        ja: "Proxy ポート 8205"
+        ms: "Proxy Port 8205"
+        pt-br: "Proxy Porta 8205"
+        ru: "Proxy Порт 8205"
+        ko: "Proxy 포트 8205"
+        zh-Hant: "Proxy 埠 8205"
+        zh: "Proxy 端口 8205"
+        tr: "Proxy Bağlantı Noktası 8205"
+      required: true
+      rule: paramPort
+      type: number
+    - default: 8211
+      envKey: PANEL_APP_PORT_PROXY_8211
+      labelEn: "Proxy port 8211"
+      labelZh: "Proxy 端口 8211"
+      label:
+        en: "Proxy Port 8211"
+        es-es: "Proxy Puerto 8211"
+        ja: "Proxy ポート 8211"
+        ms: "Proxy Port 8211"
+        pt-br: "Proxy Porta 8211"
+        ru: "Proxy Порт 8211"
+        ko: "Proxy 포트 8211"
+        zh-Hant: "Proxy 埠 8211"
+        zh: "Proxy 端口 8211"
+        tr: "Proxy Bağlantı Noktası 8211"
+      required: true
+      rule: paramPort
+      type: number
+    - default: 8212
+      envKey: PANEL_APP_PORT_PROXY_8212
+      labelEn: "Proxy port 8212"
+      labelZh: "Proxy 端口 8212"
+      label:
+        en: "Proxy Port 8212"
+        es-es: "Proxy Puerto 8212"
+        ja: "Proxy ポート 8212"
+        ms: "Proxy Port 8212"
+        pt-br: "Proxy Porta 8212"
+        ru: "Proxy Порт 8212"
+        ko: "Proxy 포트 8212"
+        zh-Hant: "Proxy 埠 8212"
+        zh: "Proxy 端口 8212"
+        tr: "Proxy Bağlantı Noktası 8212"
+      required: true
+      rule: paramPort
+      type: number
+    - default: 8214
+      envKey: PANEL_APP_PORT_PROXY_8214
+      labelEn: "Proxy port 8214"
+      labelZh: "Proxy 端口 8214"
+      label:
+        en: "Proxy Port 8214"
+        es-es: "Proxy Puerto 8214"
+        ja: "Proxy ポート 8214"
+        ms: "Proxy Port 8214"
+        pt-br: "Proxy Porta 8214"
+        ru: "Proxy Порт 8214"
+        ko: "Proxy 포트 8214"
+        zh-Hant: "Proxy 埠 8214"
+        zh: "Proxy 端口 8214"
+        tr: "Proxy Bağlantı Noktası 8214"
+      required: true
+      rule: paramPort
+      type: number
+    - default: 8215
+      envKey: PANEL_APP_PORT_PROXY_8215
+      labelEn: "Proxy port 8215"
+      labelZh: "Proxy 端口 8215"
+      label:
+        en: "Proxy Port 8215"
+        es-es: "Proxy Puerto 8215"
+        ja: "Proxy ポート 8215"
+        ms: "Proxy Port 8215"
+        pt-br: "Proxy Porta 8215"
+        ru: "Proxy Порт 8215"
+        ko: "Proxy 포트 8215"
+        zh-Hant: "Proxy 埠 8215"
+        zh: "Proxy 端口 8215"
+        tr: "Proxy Bağlantı Noktası 8215"
+      required: true
+      rule: paramPort
+      type: number
+    - default: 8216
+      envKey: PANEL_APP_PORT_PROXY_8216
+      labelEn: "Proxy port 8216"
+      labelZh: "Proxy 端口 8216"
+      label:
+        en: "Proxy Port 8216"
+        es-es: "Proxy Puerto 8216"
+        ja: "Proxy ポート 8216"
+        ms: "Proxy Port 8216"
+        pt-br: "Proxy Porta 8216"
+        ru: "Proxy Порт 8216"
+        ko: "Proxy 포트 8216"
+        zh-Hant: "Proxy 埠 8216"
+        zh: "Proxy 端口 8216"
+        tr: "Proxy Bağlantı Noktası 8216"
+      required: true
+      rule: paramPort
+      type: number
+    - default: 8217
+      envKey: PANEL_APP_PORT_PROXY_8217
+      labelEn: "Proxy port 8217"
+      labelZh: "Proxy 端口 8217"
+      label:
+        en: "Proxy Port 8217"
+        es-es: "Proxy Puerto 8217"
+        ja: "Proxy ポート 8217"
+        ms: "Proxy Port 8217"
+        pt-br: "Proxy Porta 8217"
+        ru: "Proxy Порт 8217"
+        ko: "Proxy 포트 8217"
+        zh-Hant: "Proxy 埠 8217"
+        zh: "Proxy 端口 8217"
+        tr: "Proxy Bağlantı Noktası 8217"
+      required: true
+      rule: paramPort
+      type: number
+    - default: 8218
+      envKey: PANEL_APP_PORT_PROXY_8218
+      labelEn: "Proxy port 8218"
+      labelZh: "Proxy 端口 8218"
+      label:
+        en: "Proxy Port 8218"
+        es-es: "Proxy Puerto 8218"
+        ja: "Proxy ポート 8218"
+        ms: "Proxy Port 8218"
+        pt-br: "Proxy Porta 8218"
+        ru: "Proxy Порт 8218"
+        ko: "Proxy 포트 8218"
+        zh-Hant: "Proxy 埠 8218"
+        zh: "Proxy 端口 8218"
+        tr: "Proxy Bağlantı Noktası 8218"
+      required: true
+      rule: paramPort
+      type: number
+    - default: 8219
+      envKey: PANEL_APP_PORT_PROXY_8219
+      labelEn: "Proxy port 8219"
+      labelZh: "Proxy 端口 8219"
+      label:
+        en: "Proxy Port 8219"
+        es-es: "Proxy Puerto 8219"
+        ja: "Proxy ポート 8219"
+        ms: "Proxy Port 8219"
+        pt-br: "Proxy Porta 8219"
+        ru: "Proxy Порт 8219"
+        ko: "Proxy 포트 8219"
+        zh-Hant: "Proxy 埠 8219"
+        zh: "Proxy 端口 8219"
+        tr: "Proxy Bağlantı Noktası 8219"
+      required: true
+      rule: paramPort
+      type: number
+    - default: 8220
+      envKey: PANEL_APP_PORT_PROXY_8220
+      labelEn: "Proxy port 8220"
+      labelZh: "Proxy 端口 8220"
+      label:
+        en: "Proxy Port 8220"
+        es-es: "Proxy Puerto 8220"
+        ja: "Proxy ポート 8220"
+        ms: "Proxy Port 8220"
+        pt-br: "Proxy Porta 8220"
+        ru: "Proxy Порт 8220"
+        ko: "Proxy 포트 8220"
+        zh-Hant: "Proxy 埠 8220"
+        zh: "Proxy 端口 8220"
+        tr: "Proxy Bağlantı Noktası 8220"
+      required: true
+      rule: paramPort
+      type: number
+    - default: 8221
+      envKey: PANEL_APP_PORT_PROXY_8221
+      labelEn: "Proxy port 8221"
+      labelZh: "Proxy 端口 8221"
+      label:
+        en: "Proxy Port 8221"
+        es-es: "Proxy Puerto 8221"
+        ja: "Proxy ポート 8221"
+        ms: "Proxy Port 8221"
+        pt-br: "Proxy Porta 8221"
+        ru: "Proxy Порт 8221"
+        ko: "Proxy 포트 8221"
+        zh-Hant: "Proxy 埠 8221"
+        zh: "Proxy 端口 8221"
+        tr: "Proxy Bağlantı Noktası 8221"
+      required: true
+      rule: paramPort
+      type: number

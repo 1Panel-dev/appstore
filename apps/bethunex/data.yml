@@ -1,0 +1,34 @@
+name: Bethune X
+version: 6.8.3
+tags:
+  - Database
+title: "Bethune X 数据库云管平台（单容器）"
+description: "Bethune X 社区版单容器（6.8.3）：42 个进程同容器（MySQL、proxy、AI 助手、Milvus×3、VictoriaMetrics×3），提供数据库云管能力。"
+additionalProperties:
+  key: bethunex
+  name: Bethune X
+  tags:
+    - Database
+  shortDescZh: "Bethune X 数据库云管平台（单容器）"
+  shortDescEn: "Bethune X Database Cloud Management Platform (single container)"
+  description:
+    en: "Bethune X Community Edition single container (6.8.3): 42 processes in one container (MySQL, proxy, AI Assistant, Milvus x3, VictoriaMetrics x3) for database cloud management."
+    es-es: "Bethune X Community Edition en un solo contenedor (6.8.3): 42 procesos (MySQL, proxy, asistente de IA, Milvus x3, VictoriaMetrics x3) para la gestion de bases de datos."
+    ja: "Bethune X コミュニティ版 シングルコンテナ（6.8.3）：42 プロセスを 1 コンテナに収容（MySQL、proxy、AI アシスタント、Milvus ×3、VictoriaMetrics ×3）。"
+    ms: "Bethune X Community Edition dalam satu kontena (6.8.3): 42 proses dalam satu kontena (MySQL, proxy, pembantu AI, Milvus x3, VictoriaMetrics x3) untuk pengurusan pangkalan data."
+    pt-br: "Bethune X Community Edition em um unico contêiner (6.8.3): 42 processos (MySQL, proxy, assistente de IA, Milvus x3, VictoriaMetrics x3) para gestao de bancos de dados."
+    ru: "Bethune X Community Edition в одном контейнере (6.8.3): 42 процесса (MySQL, proxy, ИИ-помощник, Milvus x3, VictoriaMetrics x3) для управления базами данных."
+    ko: "Bethune X 커뮤니티 에디션 단일 컨테이너(6.8.3): 42개 프로세스(MySQL, proxy, AI 어시스턴트, Milvus x3, VictoriaMetrics x3)를 하나의 컨테이너에서 제공합니다."
+    zh-Hant: "Bethune X 社群版單一容器（6.8.3）：42 個程序同容器（MySQL、proxy、AI 助手、Milvus×3、VictoriaMetrics×3），提供資料庫雲端管理。"
+    zh: "Bethune X 社区版单容器（6.8.3）：42 个进程同容器（MySQL、proxy、AI 助手、Milvus×3、VictoriaMetrics×3），提供数据库云管能力。"
+    tr: "Bethune X Community Edition tek konteyner (6.8.3): 42 surec (MySQL, proxy, YZ asistani, Milvus x3, VictoriaMetrics x3) veritabani yonetimi icin."
+  type: tool
+  crossVersionUpdate: false
+  limit: 0
+  recommend: 0
+  website: https://bethunex.enmotech.com/
+  github: ""
+  document: "https://bethunex.enmotech.com/docs"
+  architectures:
+    - amd64
+    - arm64
