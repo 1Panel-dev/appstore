@@ -1,0 +1,60 @@
+additionalProperties:
+  formFields:
+    - default: 7456
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: "HTTP Port"
+      labelZh: "HTTP端口"
+      label:
+        en: "HTTP Port"
+        es-es: "Puerto HTTP"
+        fa: پورت HTTP
+        ja: "HTTPポート"
+        ms: "Port HTTP"
+        pt-br: "Porta HTTP"
+        ru: "HTTP-порт"
+        ko: "HTTP 포트"
+        zh-Hant: "HTTP連接埠"
+        zh: "HTTP端口"
+        tr: "HTTP Bağlantı Noktası"
+      required: true
+      rule: paramPort
+      type: number
+    - default: ""
+      edit: true
+      envKey: OD_API_TOKEN
+      labelEn: "API Token"
+      labelZh: "API 令牌"
+      label:
+        en: "API Token"
+        es-es: "Token de API"
+        fa: توکن API
+        ja: "APIトークン"
+        ms: "Token API"
+        pt-br: "Token de API"
+        ru: "Токен API"
+        ko: "API 토큰"
+        zh-Hant: "API 權杖"
+        zh: "API 令牌"
+        tr: "API Belirteci"
+      required: true
+      type: password
+    - default: ""
+      edit: true
+      envKey: OD_ALLOWED_ORIGINS
+      labelEn: "Allowed Origins"
+      labelZh: "允许的来源"
+      label:
+        en: "Allowed Origins"
+        es-es: "Orígenes permitidos"
+        fa: مبدأهای مجاز
+        ja: "許可するオリジン"
+        ms: "Asal yang dibenarkan"
+        pt-br: "Origens permitidas"
+        ru: "Разрешённые источники"
+        ko: "허용된 출처"
+        zh-Hant: "允許的來源"
+        zh: "允许的来源"
+        tr: "İzin verilen kaynaklar"
+      required: false
+      type: text

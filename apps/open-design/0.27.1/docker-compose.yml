@@ -1,0 +1,36 @@
+services:
+  open-design:
+    image: ghcr.io/nexu-io/od:0.27.1
+    container_name: "${CONTAINER_NAME}"
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - "127.0.0.1:${PANEL_APP_PORT_HTTP}:7456"
+    environment:
+      OD_WEB_PORT: "${PANEL_APP_PORT_HTTP}"
+      OD_API_TOKEN: "${OD_API_TOKEN:?Set an Open Design API token}"
+      OD_ALLOWED_ORIGINS: "${OD_ALLOWED_ORIGINS:-}"
+    volumes:
+      - ./data:/app/.od
+    read_only: true
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+    pids_limit: 256
+    healthcheck:
+      test:
+        - CMD
+        - node
+        - "-e"
+        - "fetch('http://127.0.0.1:7456/api/health').then(response => process.exit(response.ok ? 0 : 1)).catch(() => process.exit(1))"
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+    labels:
+      createdBy: Apps
+networks:
+  1panel-network:
+    external: true
