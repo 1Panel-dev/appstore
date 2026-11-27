@@ -1,0 +1,39 @@
+services:
+  xinference:
+    image: xprobe/xinference:v4.3.0
+    container_name: "${CONTAINER_NAME}"
+    restart: always
+    shm_size: 8gb
+    networks:
+      - 1panel-network
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:9997"
+    environment:
+      XINFERENCE_MODEL_SRC: auto
+    volumes:
+      - ./data/xinference:/root/.xinference
+      - ./data/huggingface:/root/.cache/huggingface
+      - ./data/modelscope:/root/.cache/modelscope
+    command:
+      - xinference-local
+      - "-H"
+      - 0.0.0.0
+      - "--port"
+      - "9997"
+      - "--log-level"
+      - info
+    healthcheck:
+      test:
+        - CMD
+        - python3
+        - "-c"
+        - "from urllib.request import urlopen; urlopen('http://127.0.0.1:9997/status', timeout=3).close()"
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 60s
+    labels:
+      createdBy: Apps
+networks:
+  1panel-network:
+    external: true

@@ -1,0 +1,34 @@
+name: Xinference
+tags:
+  - AI
+title: "Xinference 模型推理服务"
+description: "可部署大语言模型、嵌入模型和其他 AI 模型的推理平台。"
+additionalProperties:
+  key: xinference
+  name: Xinference
+  tags:
+    - AI
+  shortDescZh: "可部署大语言模型、嵌入模型和其他 AI 模型的推理平台。"
+  shortDescEn: "An inference platform for serving large language, embedding, and other AI models."
+  description:
+    en: "An inference platform for serving large language, embedding, and other AI models."
+    es-es: "Plataforma de inferencia para servir modelos de lenguaje, embeddings y otros modelos de IA."
+    fa: "بستر استنتاج برای ارائه مدل‌های زبانی بزرگ، مدل‌های تعبیه و سایر مدل‌های هوش مصنوعی."
+    ja: "大規模言語モデルや埋め込みモデルなどの AI モデルを提供する推論プラットフォーム。"
+    ms: "Platform inferens untuk menyediakan model bahasa besar, model pembenaman dan model AI lain."
+    pt-br: "Plataforma de inferência para servir modelos de linguagem, embeddings e outros modelos de IA."
+    ru: "Платформа инференса для больших языковых моделей, моделей эмбеддингов и других моделей ИИ."
+    ko: "대규모 언어 모델, 임베딩 모델 등 AI 모델을 제공하는 추론 플랫폼."
+    zh-Hant: "可部署大型語言模型、嵌入模型及其他 AI 模型的推論平台。"
+    zh: "可部署大语言模型、嵌入模型和其他 AI 模型的推理平台。"
+    tr: "Büyük dil modellerini, gömme modellerini ve diğer yapay zekâ modellerini sunan bir çıkarım platformu."
+  type: website
+  gpuSupport: true
+  crossVersionUpdate: false
+  limit: 0
+  architectures:
+    - amd64
+  recommend: 0
+  website: https://inference.readthedocs.io/
+  github: https://github.com/xorbitsai/inference
+  document: https://inference.readthedocs.io/en/stable/getting_started/using_docker_compose.html

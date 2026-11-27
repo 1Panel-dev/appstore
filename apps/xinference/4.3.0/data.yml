@@ -1,0 +1,22 @@
+additionalProperties:
+  formFields:
+    - default: 9997
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: "API Port"
+      labelZh: "API 端口"
+      label:
+        en: "API Port"
+        es-es: "Puerto de API"
+        fa: "پورت API"
+        ja: "API ポート"
+        ms: "Port API"
+        pt-br: "Porta da API"
+        ru: "Порт API"
+        ko: "API 포트"
+        zh-Hant: "API 埠"
+        zh: "API 端口"
+        tr: "API Bağlantı Noktası"
+      required: true
+      rule: paramPort
+      type: number
