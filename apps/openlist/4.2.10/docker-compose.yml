@@ -1,6 +1,9 @@
 services:
   openlist:
     image: ${OPENLIST_IMAGE}
+    extends:
+      file: ./scripts/ports.yml
+      service: ${OPENLIST_PORT_MODE:-none}
     container_name: ${CONTAINER_NAME}
     restart: always
     user: "0:0"

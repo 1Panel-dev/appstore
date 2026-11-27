@@ -1,0 +1,14 @@
+# The selected service supplies extra ports to OpenList. HOST_IP follows 1Panel's external access setting.
+services:
+  none: {}
+  ftp:
+    ports:
+      - "[${HOST_IP:-0.0.0.0}]:${OPENLIST_FTP_PORT:-5221}:5221"
+      - "[${HOST_IP:-0.0.0.0}]:${OPENLIST_FTP_PASSIVE_PORTS:-50000-50009}:${OPENLIST_FTP_PASSIVE_PORTS:-50000-50009}"
+  sftp:
+    ports:
+      - &sftp-port "[${HOST_IP:-0.0.0.0}]:${OPENLIST_SFTP_PORT:-5222}:5222"
+  ftp-sftp:
+    extends: ftp
+    ports:
+      - *sftp-port

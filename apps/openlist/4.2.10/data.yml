@@ -40,6 +40,93 @@ additionalProperties:
         zh-Hant: S3 埠
         zh: S3 端口
         tr: S3 Bağlantı Noktası
+    - default: none
+      edit: true
+      envKey: OPENLIST_PORT_MODE
+      labelEn: Additional port mappings
+      labelZh: 额外端口映射
+      required: true
+      type: select
+      label:
+        en: Additional port mappings
+        es-es: Mapeos de puertos adicionales
+        fa: نگاشت پورت‌های اضافی
+        ja: 追加のポートマッピング
+        ms: Pemetaan port tambahan
+        pt-br: Mapeamentos de portas adicionais
+        ru: Дополнительный проброс портов
+        ko: 추가 포트 매핑
+        zh-Hant: 額外連接埠映射
+        zh: 额外端口映射
+        tr: Ek port eşlemeleri
+      values:
+        - label: 关闭
+          value: none
+        - label: FTP
+          value: ftp
+        - label: SFTP
+          value: sftp
+        - label: FTP + SFTP
+          value: ftp-sftp
+    - default: 5221
+      edit: true
+      envKey: OPENLIST_FTP_PORT
+      labelEn: FTP port
+      labelZh: FTP 端口
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        en: FTP port
+        es-es: Puerto FTP
+        fa: پورت FTP
+        ja: FTP ポート
+        ms: Port FTP
+        pt-br: Porta FTP
+        ru: Порт FTP
+        ko: FTP 포트
+        zh-Hant: FTP 埠
+        zh: FTP 端口
+        tr: FTP portu
+    - default: 5222
+      edit: true
+      envKey: OPENLIST_SFTP_PORT
+      labelEn: SFTP port
+      labelZh: SFTP 端口
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        en: SFTP port
+        es-es: Puerto SFTP
+        fa: پورت SFTP
+        ja: SFTP ポート
+        ms: Port SFTP
+        pt-br: Porta SFTP
+        ru: Порт SFTP
+        ko: SFTP 포트
+        zh-Hant: SFTP 埠
+        zh: SFTP 端口
+        tr: SFTP portu
+    - default: '50000-50009'
+      edit: true
+      envKey: OPENLIST_FTP_PASSIVE_PORTS
+      labelEn: FTP passive port range
+      labelZh: FTP 被动端口范围
+      required: true
+      type: text
+      label:
+        en: FTP passive port range
+        es-es: Rango de puertos FTP pasivos
+        fa: محدوده پورت‌های حالت غیرفعال FTP
+        ja: FTP パッシブポート範囲
+        ms: Julat port pasif FTP
+        pt-br: Intervalo de portas passivas FTP
+        ru: Диапазон пассивных портов FTP
+        ko: FTP 패시브 포트 범위
+        zh-Hant: FTP 被動連接埠範圍
+        zh: FTP 被动端口范围
+        tr: FTP pasif port aralığı
     - default: ""
       envKey: PRE_INSTALLED
       required: false
