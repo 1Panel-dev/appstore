@@ -1,0 +1,27 @@
+services:
+  searxng:
+    image: ghcr.io/searxng/searxng:2026.11.26-b5605b8f2
+    container_name: "${CONTAINER_NAME}"
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:8080"
+    volumes:
+      - ./config:/etc/searxng
+      - ./data:/var/cache/searxng
+    healthcheck:
+      test:
+        - CMD
+        - /usr/local/searxng/.venv/bin/python
+        - "-c"
+        - "from urllib.request import urlopen; urlopen('http://127.0.0.1:8080/healthz', timeout=3).close()"
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+    labels:
+      createdBy: Apps
+networks:
+  1panel-network:
+    external: true
