@@ -1,6 +1,6 @@
 ## 产品介绍
 
-**Kafka** 一个分布式流处理平台
+**Kafka (Bitnami)** 使用 Bitnami 的 `bitnamilegacy/kafka` 镜像运行 Apache Kafka 分布式事件流平台。如需使用 Apache 官方镜像，请在应用商店中选择 **Kafka (Apache)**。
 
 ## 主要功能
 

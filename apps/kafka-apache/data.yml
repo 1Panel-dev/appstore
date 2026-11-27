@@ -1,0 +1,34 @@
+name: "Kafka (Apache)"
+tags:
+  - 中间件
+title: "采用 Apache Kafka 官方镜像的事件流平台"
+description: "采用 Apache Kafka 官方镜像的事件流平台"
+additionalProperties:
+  key: kafka-apache
+  name: "Kafka (Apache)"
+  tags:
+    - Middleware
+  shortDescZh: "采用 Apache Kafka 官方镜像的事件流平台"
+  shortDescEn: "Event streaming platform using the official Apache Kafka image"
+  description:
+    en: "Event streaming platform using the official Apache Kafka image"
+    es-es: "Plataforma de transmisión de eventos con la imagen oficial de Apache Kafka"
+    fa: "پلتفرم پردازش جریان رویدادها با ایمیج رسمی Apache Kafka"
+    ja: "Apache Kafka 公式イメージを使用するイベントストリーミング基盤"
+    ms: "Platform penstriman acara yang menggunakan imej rasmi Apache Kafka"
+    pt-br: "Plataforma de streaming de eventos com a imagem oficial do Apache Kafka"
+    ru: "Платформа потоковой передачи событий на базе официального образа Apache Kafka"
+    ko: "Apache Kafka 공식 이미지를 사용하는 이벤트 스트리밍 플랫폼"
+    zh-Hant: "採用 Apache Kafka 官方映像檔的事件串流平台"
+    zh: "采用 Apache Kafka 官方镜像的事件流平台"
+    tr: "Resmî Apache Kafka imajını kullanan olay akışı platformu"
+  type: tool
+  crossVersionUpdate: false
+  limit: 0
+  architectures:
+    - amd64
+    - arm64
+  website: https://kafka.apache.org/
+  github: https://github.com/apache/kafka
+  document: https://kafka.apache.org/documentation/
+  memoryRequired: 1024

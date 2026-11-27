@@ -1,6 +1,6 @@
 ## Introduction
 
-**Kafka** is a distributed stream processing platform.
+**Kafka (Bitnami)** runs Apache Kafka using Bitnami’s `bitnamilegacy/kafka` image. To use the official Apache image, select **Kafka (Apache)** in the app store.
 
 ## Features
 
