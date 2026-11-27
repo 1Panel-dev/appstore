@@ -1,0 +1,112 @@
+additionalProperties:
+  formFields:
+    - envKey: PANEL_APP_PORT_HTTP
+      labelEn: "Web Port"
+      labelZh: "Web 端口"
+      label:
+        en: "Web Port"
+        es-es: "Puerto web"
+        ja: "Web ポート"
+        ms: "Port Web"
+        pt-br: "Porta Web"
+        ru: "Веб-порт"
+        ko: "웹 포트"
+        zh-Hant: "Web 埠"
+        zh: "Web 端口"
+        tr: "Web Bağlantı Noktası"
+      default: 8502
+      required: true
+      rule: paramPort
+      type: number
+      edit: true
+    - envKey: PANEL_APP_PORT_API
+      labelEn: "API Port"
+      labelZh: "API 端口"
+      label:
+        en: "API Port"
+        es-es: "Puerto API"
+        ja: "API ポート"
+        ms: "Port API"
+        pt-br: "Porta API"
+        ru: "Порт API"
+        ko: "API 포트"
+        zh-Hant: "API 埠"
+        zh: "API 端口"
+        tr: "API Bağlantı Noktası"
+      default: 5055
+      required: true
+      rule: paramPort
+      type: number
+      edit: true
+    - envKey: API_URL
+      labelEn: "Base URL"
+      labelZh: "Base URL"
+      label:
+        en: "Base URL"
+        es-es: "URL base"
+        ja: "Base URL"
+        ms: "Base URL"
+        pt-br: "Base URL"
+        ru: "Base URL"
+        ko: "Base URL"
+        zh-Hant: "Base URL"
+        zh: "Base URL"
+        tr: "Temel URL"
+      default: ""
+      required: false
+      type: text
+      edit: true
+    - envKey: OPEN_NOTEBOOK_PASSWORD
+      labelEn: Password
+      labelZh: "密码"
+      label:
+        en: Password
+        es-es: "Contraseña"
+        ja: "パスワード"
+        ms: "Kata laluan"
+        pt-br: Senha
+        ru: "Пароль"
+        ko: "비밀번호"
+        zh-Hant: "密碼"
+        zh: "密码"
+        tr: Parola
+      default: ""
+      required: true
+      rule: paramComplexity
+      type: password
+      edit: true
+    - envKey: OPEN_NOTEBOOK_ENCRYPTION_KEY
+      labelEn: "Encryption Key"
+      labelZh: "加密密钥"
+      label:
+        en: "Encryption Key"
+        es-es: "Clave de cifrado"
+        ja: "暗号化キー"
+        ms: "Kunci Penyulitan"
+        pt-br: "Chave de criptografia"
+        ru: "Ключ шифрования"
+        ko: "암호화 키"
+        zh-Hant: "加密金鑰"
+        zh: "加密密钥"
+        tr: "Şifreleme Anahtarı"
+      default: ""
+      required: true
+      type: password
+    - envKey: SURREAL_PASSWORD
+      labelEn: "Database Password"
+      labelZh: "数据库密码"
+      label:
+        en: "Database Password"
+        es-es: "Contraseña de la base de datos"
+        ja: "データベースのパスワード"
+        ms: "Kata Laluan Pangkalan Data"
+        pt-br: "Senha do Banco de Dados"
+        ru: "Пароль базы данных"
+        ko: "데이터베이스 비밀번호"
+        zh-Hant: "資料庫密碼"
+        zh: "数据库密码"
+        tr: "Veritabanı Parolası"
+      default: ""
+      required: true
+      rule: paramComplexity
+      type: password

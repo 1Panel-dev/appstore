@@ -1,0 +1,32 @@
+name: "Open Notebook"
+tags:
+  - AI
+title: "Open Notebook AI 笔记"
+description: "用于整理和探索资料的开源 AI 研究笔记工具。"
+additionalProperties:
+  key: open-notebook
+  name: "Open Notebook"
+  tags:
+    - AI
+  shortDescZh: "用于整理和探索资料的开源 AI 研究笔记工具。"
+  shortDescEn: "An open-source AI research notebook for organizing and exploring your sources."
+  description:
+    en: "An open-source AI research notebook for organizing and exploring your sources."
+    es-es: "Cuaderno de investigación con IA de código abierto para organizar y explorar fuentes."
+    ja: "資料を整理して調べるためのオープンソース AI リサーチノート。"
+    ms: "Buku nota penyelidikan AI sumber terbuka untuk menyusun dan meneroka sumber."
+    pt-br: "Caderno de pesquisa com IA de código aberto para organizar e explorar fontes."
+    ru: "Открытый исследовательский блокнот с ИИ для организации и изучения источников."
+    ko: "자료를 정리하고 탐색할 수 있는 오픈 소스 AI 리서치 노트북."
+    zh-Hant: "用於整理和探索資料的開源 AI 研究筆記工具。"
+    zh: "用于整理和探索资料的开源 AI 研究笔记工具。"
+    tr: "Kaynakları düzenlemek ve incelemek için açık kaynaklı bir yapay zekâ araştırma defteri."
+  type: website
+  crossVersionUpdate: false
+  limit: 0
+  architectures:
+    - amd64
+    - arm64
+  website: https://www.open-notebook.ai
+  github: https://github.com/lfnovo/open-notebook
+  document: https://github.com/lfnovo/open-notebook/tree/main/docs

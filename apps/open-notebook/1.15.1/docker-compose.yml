@@ -1,0 +1,72 @@
+services:
+  open-notebook:
+    image: lfnovo/open_notebook:1.15.1
+    container_name: "${CONTAINER_NAME}"
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:8502"
+      - "${PANEL_APP_PORT_API}:5055"
+    environment:
+      API_URL: "${API_URL:-}"
+      OPEN_NOTEBOOK_PASSWORD: "${OPEN_NOTEBOOK_PASSWORD:?Set the Open Notebook password}"
+      OPEN_NOTEBOOK_ENCRYPTION_KEY: "${OPEN_NOTEBOOK_ENCRYPTION_KEY:?Set the Open Notebook encryption key}"
+      SURREAL_URL: "ws://${CONTAINER_NAME}-surrealdb:8000/rpc"
+      SURREAL_USER: root
+      SURREAL_PASSWORD: "${SURREAL_PASSWORD:?Set the SurrealDB password}"
+      SURREAL_NAMESPACE: open_notebook
+      SURREAL_DATABASE: open_notebook
+    volumes:
+      - ./data:/app/data
+    depends_on:
+      surrealdb:
+        condition: service_healthy
+    healthcheck:
+      test:
+        - CMD
+        - curl
+        - "-fsS"
+        - http://127.0.0.1:5055/health
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+    labels:
+      createdBy: Apps
+  surrealdb:
+    image: surrealdb/surrealdb:v2.7.0
+    container_name: "${CONTAINER_NAME}-surrealdb"
+    restart: always
+    networks:
+      - 1panel-network
+    environment:
+      SURREAL_EXPERIMENTAL_GRAPHQL: "true"
+    volumes:
+      - ./surreal_data:/mydata
+    command:
+      - start
+      - "--log"
+      - info
+      - "--user"
+      - root
+      - "--pass"
+      - "${SURREAL_PASSWORD:?Set the SurrealDB password}"
+      - rocksdb:/mydata/mydatabase.db
+    healthcheck:
+      test:
+        - CMD
+        - /surreal
+        - is-ready
+        - "--endpoint"
+        - http://127.0.0.1:8000
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 15s
+    user: root
+    labels:
+      createdBy: Apps
+networks:
+  1panel-network:
+    external: true
