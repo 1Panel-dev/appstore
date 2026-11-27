@@ -23,7 +23,7 @@ additionalProperties:
       ru: Универсальный проект онлайн-просмотра файлов на базе Spring-Boot
       tr: Spring-Boot tabanlı evrensel çevrimiçi dosya önizleme projesi
     type: website
-    crossVersionUpdate: true
+    crossVersionUpdate: false
     limit: 0
     recommend: 0
     batchInstallSupport: true

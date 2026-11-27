@@ -1,0 +1,41 @@
+additionalProperties:
+  formFields:
+    - default: 40145
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      label:
+        en: Port
+        zh: 端口
+        es-es: Puerto
+        fa: 'پورت'
+        zh-Hant: 埠
+        ja: ポート
+        ko: 포트
+        ms: Port
+        pt-br: Porta
+        ru: Порт
+        tr: Bağlantı Noktası
+      required: true
+      rule: paramPort
+      type: number
+    - default: ""
+      edit: true
+      envKey: KK_TRUST_HOST
+      labelEn: Trusted file hosts (comma-separated)
+      labelZh: 可信文件来源主机（用英文逗号分隔）
+      label:
+        en: Trusted file hosts (comma-separated)
+        zh: 可信文件来源主机（用英文逗号分隔）
+        es-es: Hosts de archivos de confianza (separados por comas)
+        fa: میزبان‌های مورد اعتماد فایل (با کامای انگلیسی جدا کنید)
+        zh-Hant: 信任的檔案來源主機（以半形逗號分隔）
+        ja: 信頼するファイル配信元ホスト（カンマ区切り）
+        ko: 신뢰할 수 있는 파일 호스트 (쉼표로 구분)
+        ms: Hos fail yang dipercayai (dipisahkan dengan koma)
+        pt-br: Hosts de arquivos confiáveis (separados por vírgulas)
+        ru: Доверенные хосты файлов (через запятую)
+        tr: Güvenilen dosya sunucuları (virgülle ayırın)
+      required: false
+      type: text
