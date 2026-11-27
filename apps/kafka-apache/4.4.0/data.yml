@@ -1,0 +1,41 @@
+additionalProperties:
+  formFields:
+    - default: 9092
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: "TCP port"
+      labelZh: "TCP 端口"
+      label:
+        en: "TCP port"
+        es-es: "Puerto TCP"
+        fa: "پورت TCP"
+        ja: "TCP ポート"
+        ms: "Port TCP"
+        pt-br: "Porta TCP"
+        ru: "TCP-порт"
+        ko: "TCP 포트"
+        zh-Hant: "TCP 連接埠"
+        zh: "TCP 端口"
+        tr: "TCP bağlantı noktası"
+      required: true
+      edit: true
+      type: number
+      rule: paramPort
+    - default: 127.0.0.1
+      envKey: KAFKA_ADVERTISED_HOST
+      labelEn: "Client access host (IP or domain)"
+      labelZh: "客户端访问主机（IP 或域名）"
+      label:
+        en: "Client access host (IP or domain)"
+        es-es: "Host de acceso de los clientes (IP o dominio)"
+        fa: "میزبان دسترسی کلاینت (IP یا دامنه)"
+        ja: "クライアント接続先（IP またはドメイン）"
+        ms: "Hos akses klien (IP atau domain)"
+        pt-br: "Host de acesso dos clientes (IP ou domínio)"
+        ru: "Адрес для клиентов (IP или домен)"
+        ko: "클라이언트 접속 호스트 (IP 또는 도메인)"
+        zh-Hant: "用戶端連線主機（IP 或網域）"
+        zh: "客户端访问主机（IP 或域名）"
+        tr: "İstemci erişim adresi (IP veya alan adı)"
+      required: true
+      edit: true
+      type: text

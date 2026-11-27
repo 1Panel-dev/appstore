@@ -1,15 +1,15 @@
-name: Kafka
+name: Kafka (Bitnami)
 tags:
     - 中间件
-title: 开源分布式事件流平台
-description: 开源分布式事件流平台
+title: 采用 Bitnami Kafka 镜像的事件流平台
+description: 采用 Bitnami Kafka 镜像的事件流平台
 additionalProperties:
     key: kafka
-    name: Kafka
+    name: Kafka (Bitnami)
     tags:
         - Middleware
-    shortDescZh: 开源分布式事件流平台
-    shortDescEn: open-source distributed event streaming platform
+    shortDescZh: 采用 Bitnami Kafka 镜像的事件流平台
+    shortDescEn: Event streaming platform using the Bitnami Kafka image
     type: tool
     crossVersionUpdate: false
     limit: 0
@@ -18,17 +18,17 @@ additionalProperties:
     github: https://github.com/apache/kafka
     document: https://kafka.apache.org/documentation/
     description:
-        en: Open-source distributed event streaming platform
-        es-es: Open-source distribuido event streaming plataforma
-        fa: 'پلتفرم متن باز و توزیع شده استریم رویداد'
-        zh: 开源分布式事件流平台
-        zh-Hant: 開源分佈式事件流平台
-        ja: オープンソースの分散イベントストリーミングプラットフォーム
-        ms: Platform penstriman acara teragih sumber terbuka
-        pt-br: Plataforma de streaming de eventos distribuída de código aberto
-        ru: Открытая распределённая платформа потоковой передачи событий
-        ko: 오픈 소스 분산 이벤트 스트리밍 플랫폼
-        tr: Open-source dağıtık event streaming platform
+        en: Event streaming platform using the Bitnami Kafka image
+        es-es: Plataforma de transmisión de eventos con la imagen de Kafka de Bitnami
+        fa: پلتفرم پردازش جریان رویدادها با ایمیج Bitnami Kafka
+        zh: 采用 Bitnami Kafka 镜像的事件流平台
+        zh-Hant: 採用 Bitnami Kafka 映像檔的事件串流平台
+        ja: Bitnami Kafka イメージを使用するイベントストリーミング基盤
+        ms: Platform penstriman acara yang menggunakan imej Bitnami Kafka
+        pt-br: Plataforma de streaming de eventos com a imagem Kafka da Bitnami
+        ru: Платформа потоковой передачи событий на базе образа Kafka от Bitnami
+        ko: Bitnami Kafka 이미지를 사용하는 이벤트 스트리밍 플랫폼
+        tr: Bitnami Kafka imajını kullanan olay akışı platformu
     memoryRequired: 1024
     architectures:
       - amd64
