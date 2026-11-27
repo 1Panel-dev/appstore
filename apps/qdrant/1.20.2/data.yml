@@ -1,0 +1,62 @@
+additionalProperties:
+  formFields:
+    - envKey: PANEL_APP_PORT_HTTP
+      default: 6333
+      labelEn: "HTTP Port"
+      labelZh: "HTTP 端口"
+      label:
+        en: "HTTP Port"
+        es-es: "Puerto HTTP"
+        fa: "پورت HTTP"
+        ja: "HTTP ポート"
+        ms: "Port HTTP"
+        pt-br: "Porta HTTP"
+        ru: "Порт HTTP"
+        ko: "HTTP 포트"
+        zh-Hant: "HTTP 連接埠"
+        zh: "HTTP 端口"
+        tr: "HTTP Bağlantı Noktası"
+      edit: true
+      required: true
+      type: number
+      rule: paramPort
+    - envKey: PANEL_APP_PORT_GRPC
+      default: 6334
+      labelEn: "gRPC Port"
+      labelZh: "gRPC 端口"
+      label:
+        en: "gRPC Port"
+        es-es: "Puerto gRPC"
+        fa: "پورت gRPC"
+        ja: "gRPC ポート"
+        ms: "Port gRPC"
+        pt-br: "Porta gRPC"
+        ru: "Порт gRPC"
+        ko: "gRPC 포트"
+        zh-Hant: "gRPC 連接埠"
+        zh: "gRPC 端口"
+        tr: "gRPC Bağlantı Noktası"
+      edit: true
+      required: true
+      type: number
+      rule: paramPort
+    - envKey: QDRANT_API_KEY
+      default: qdrant
+      labelEn: "API Key"
+      labelZh: "API 密钥"
+      label:
+        en: "API Key"
+        es-es: "Clave de API"
+        fa: "کلید API"
+        ja: "API キー"
+        ms: "Kunci API"
+        pt-br: "Chave de API"
+        ru: "Ключ API"
+        ko: "API 키"
+        zh-Hant: "API 金鑰"
+        zh: "API 密钥"
+        tr: "API Anahtarı"
+      type: password
+      required: true
+      random: true
+      edit: true

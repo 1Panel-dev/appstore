@@ -1,0 +1,20 @@
+services:
+  qdrant:
+    image: qdrant/qdrant:v1.20.2
+    container_name: "${CONTAINER_NAME}"
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:6333"
+      - "${PANEL_APP_PORT_GRPC}:6334"
+    environment:
+      QDRANT__SERVICE__API_KEY: "${QDRANT_API_KEY:?QDRANT_API_KEY is required}"
+    volumes:
+      - ./data:/qdrant/storage
+      - ./snapshots:/qdrant/snapshots
+    labels:
+      createdBy: Apps
+networks:
+  1panel-network:
+    external: true

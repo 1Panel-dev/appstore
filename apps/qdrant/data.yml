@@ -1,0 +1,33 @@
+name: Qdrant
+tags:
+  - 数据库
+title: "支持相似度检索和元数据过滤的向量数据库"
+description: "支持相似度检索和元数据过滤的向量数据库"
+additionalProperties:
+  key: qdrant
+  name: Qdrant
+  tags:
+    - Database
+  shortDescZh: "支持相似度检索和元数据过滤的向量数据库"
+  shortDescEn: "Vector database for similarity search and metadata filtering"
+  description:
+    en: "Vector database for similarity search and metadata filtering"
+    es-es: "Base de datos vectorial para búsquedas por similitud y filtros de metadatos"
+    fa: "پایگاه داده برداری برای جستجوی شباهت و فیلتر کردن فراداده"
+    ja: "類似検索とメタデータによる絞り込みに対応したベクトルデータベース"
+    ms: "Pangkalan data vektor untuk carian keserupaan dan penapisan metadata"
+    pt-br: "Banco de dados vetorial para buscas por similaridade e filtragem por metadados"
+    ru: "Векторная база данных с поиском по сходству и фильтрацией по метаданным"
+    ko: "유사도 검색과 메타데이터 필터링을 지원하는 벡터 데이터베이스"
+    zh-Hant: "支援相似度搜尋和中繼資料篩選的向量資料庫"
+    zh: "支持相似度检索和元数据过滤的向量数据库"
+    tr: "Benzerlik araması ve üst veri filtreleme için vektör veritabanı"
+  type: website
+  crossVersionUpdate: false
+  limit: 0
+  architectures:
+    - amd64
+    - arm64
+  website: https://qdrant.tech/
+  github: https://github.com/qdrant/qdrant
+  document: https://qdrant.tech/documentation/
