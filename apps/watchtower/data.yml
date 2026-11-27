@@ -1,11 +1,11 @@
-name: watchtower
+name: Watchtower
 tags:
     - 实用工具
 title: 自动更新 Docker 容器基础镜像的工具
 description: 自动更新 Docker 容器基础镜像的工具
 additionalProperties:
     key: watchtower
-    name: watchtower
+    name: Watchtower
     tags:
         - Tool
     shortDescZh: 自动更新 Docker 容器基础镜像的工具
