@@ -1,0 +1,34 @@
+name: OpenObserve
+tags:
+  - DevOps
+title: "OpenObserve 可观测性平台"
+description: "用于收集和查询日志、指标及链路追踪数据的可观测性平台。"
+additionalProperties:
+  key: openobserve
+  name: OpenObserve
+  tags:
+    - DevOps
+  shortDescZh: "用于收集和查询日志、指标及链路追踪数据的可观测性平台。"
+  shortDescEn: "An observability platform for collecting and querying logs, metrics, and traces."
+  description:
+    en: "An observability platform for collecting and querying logs, metrics, and traces."
+    es-es: "Plataforma de observabilidad para recopilar y consultar registros, métricas y trazas."
+    fa: "سکوی مشاهده‌پذیری برای گردآوری و جست‌وجوی لاگ‌ها، سنجه‌ها و ردگیری‌ها."
+    ja: "ログ、メトリクス、トレースを収集・検索するオブザーバビリティ基盤。"
+    ms: "Platform kebolehcerapan untuk mengumpul dan membuat pertanyaan pada log, metrik dan jejak."
+    pt-br: "Plataforma de observabilidade para coletar e consultar logs, métricas e rastreamentos."
+    ru: "Платформа наблюдаемости для сбора и поиска журналов, метрик и трассировок."
+    ko: "로그, 메트릭, 트레이스를 수집하고 조회하는 관측 가능성 플랫폼."
+    zh-Hant: "用於收集與查詢日誌、指標及追蹤資料的可觀測性平台。"
+    zh: "用于收集和查询日志、指标及链路追踪数据的可观测性平台。"
+    tr: "Günlükleri, metrikleri ve izleri toplamak ve sorgulamak için gözlemlenebilirlik platformu."
+  type: website
+  crossVersionUpdate: false
+  limit: 0
+  architectures:
+    - amd64
+    - arm64
+  recommend: 0
+  website: https://openobserve.ai/
+  github: https://github.com/openobserve/openobserve
+  document: https://openobserve.ai/docs/getting-started/
