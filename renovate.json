@@ -296,6 +296,16 @@
       "allowedVersions": "/^19.*/"
     },
     {
+      "matchFileNames": ["apps/jumpserver/4.*/docker-compose.yml"],
+      "matchPackageNames": ["jumpserver/jms_all"],
+      "allowedVersions": "/^v4\\.\\d+\\.\\d+$/"
+    },
+    {
+      "matchFileNames": ["apps/jumpserver/5.*/docker-compose.yml"],
+      "matchPackageNames": ["jumpserver/jms_all"],
+      "allowedVersions": "/^v5\\.\\d+\\.\\d+$/"
+    },
+    {
       "matchFileNames": ["apps/uptime-kuma/1.*/*.yml"],
       "allowedVersions": "/^1.*/"
     },
