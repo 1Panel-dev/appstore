@@ -1,0 +1,33 @@
+name: Dragonfly
+tags:
+  - 数据库
+title: "兼容 Redis 和 Memcached 的内存数据库"
+description: "兼容 Redis 和 Memcached 的内存数据库"
+additionalProperties:
+  key: dragonfly
+  name: Dragonfly
+  tags:
+    - Database
+  shortDescZh: "兼容 Redis 和 Memcached 的内存数据库"
+  shortDescEn: "In-memory database compatible with Redis and Memcached"
+  description:
+    en: "In-memory database compatible with Redis and Memcached"
+    fa: "پایگاه داده درون‌حافظه‌ای سازگار با Redis و Memcached"
+    es-es: "Base de datos en memoria compatible con Redis y Memcached"
+    ja: "Redis および Memcached と互換性のあるインメモリデータベース"
+    ms: "Pangkalan data dalam memori yang serasi dengan Redis dan Memcached"
+    pt-br: "Banco de dados em memória compatível com Redis e Memcached"
+    ru: "База данных в памяти, совместимая с Redis и Memcached"
+    ko: "Redis 및 Memcached와 호환되는 인메모리 데이터베이스"
+    zh-Hant: "相容於 Redis 與 Memcached 的記憶體資料庫"
+    zh: "兼容 Redis 和 Memcached 的内存数据库"
+    tr: "Redis ve Memcached ile uyumlu bellek içi veritabanı"
+  type: tool
+  crossVersionUpdate: false
+  limit: 0
+  architectures:
+    - amd64
+    - arm64
+  website: https://www.dragonflydb.io/
+  github: https://github.com/dragonflydb/dragonfly
+  document: https://www.dragonflydb.io/docs/
