@@ -8,10 +8,9 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
       - TZ=Asia/Shanghai
-      - DOCKER_API_VERSION=1.52
       - ${ENV1}
     command: ${COMMAND1}
-    image: containrrr/watchtower
+    image: nickfedor/watchtower:1.24.2
     labels:
       createdBy: "Apps"
 networks:
