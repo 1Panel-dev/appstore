@@ -1,0 +1,35 @@
+name: SearXNG
+tags:
+  - 中间件
+title: "SearXNG 元搜索引擎"
+description: "聚合多个搜索服务结果的元搜索引擎。"
+additionalProperties:
+  key: searxng
+  name: SearXNG
+  tags:
+    - Middleware
+  shortDescZh: "聚合多个搜索服务结果的元搜索引擎。"
+  shortDescEn: "A metasearch engine that aggregates results from multiple search services."
+  description:
+    en: "A metasearch engine that aggregates results from multiple search services."
+    es-es: "Metabuscador que reúne resultados de varios servicios de búsqueda."
+    fa: "موتور فراجست‌وجو که نتایج چند سرویس جست‌وجو را گردآوری می‌کند."
+    ja: "複数の検索サービスの結果をまとめるメタ検索エンジン。"
+    ms: "Enjin metacarian yang menghimpunkan hasil daripada beberapa perkhidmatan carian."
+    pt-br: "Metabuscador que reúne resultados de vários serviços de pesquisa."
+    ru: "Метапоисковая система, объединяющая результаты нескольких поисковых сервисов."
+    ko: "여러 검색 서비스의 결과를 모아 보여 주는 메타 검색 엔진."
+    zh-Hant: "彙整多個搜尋服務結果的元搜尋引擎。"
+    zh: "聚合多个搜索服务结果的元搜索引擎。"
+    tr: "Birden fazla arama hizmetinden gelen sonuçları birleştiren bir meta arama motoru."
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  batchInstallSupport: true
+  architectures:
+    - amd64
+    - arm64
+  recommend: 0
+  website: https://searxng.org
+  github: https://github.com/searxng/searxng
+  document: https://docs.searxng.org/

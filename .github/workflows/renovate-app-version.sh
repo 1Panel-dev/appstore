@@ -55,6 +55,22 @@ do
         target_version="${trimmed_version%-core}"
       fi
 
+      if [[ "$app_name" == "searxng" ]]; then
+        if [[ "$version" =~ ^([0-9]{4}\.[0-9]{1,2}\.[0-9]{1,2})-[0-9a-f]{8,40}$ ]]; then
+          target_version="${BASH_REMATCH[1]}"
+        else
+          printf 'Invalid SearXNG image tag: %s\n' "$version" >&2
+          exit 1
+        fi
+        if [[ "$target_version" == "$old_version" ]]; then
+          continue
+        fi
+        if [[ -e "apps/$app_name/$target_version" ]]; then
+          printf 'SearXNG version directory already exists: %s\n' "$target_version" >&2
+          exit 1
+        fi
+      fi
+
       mv apps/$app_name/$old_version apps/$app_name/$target_version
     fi
 done

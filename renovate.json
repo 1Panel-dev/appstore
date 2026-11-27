@@ -52,6 +52,11 @@
       "versioning": "semver"
     },
     {
+      "matchFileNames": ["apps/searxng/*/docker-compose.yml"],
+      "matchPackageNames": ["ghcr.io/searxng/searxng"],
+      "versioning": "regex:^(?<major>[0-9]{4})\\.(?<minor>[0-9]{1,2})\\.(?<patch>[0-9]{1,2})-[0-9a-f]{8,40}$"
+    },
+    {
       "matchFileNames": ["apps/mysql/5.6.*/*.yml"],
       "allowedVersions": "/^5.6.*/"
     },
