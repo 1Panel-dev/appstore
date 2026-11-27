@@ -20,6 +20,12 @@
       ]
     }
   ],
+  "customDatasources": {
+    "n8n-stable": {
+      "defaultRegistryUrlTemplate": "https://raw.githubusercontent.com/n8n-io/n8n/refs/tags/stable/packages/cli/package.json",
+      "transformTemplates": ["{'releases': [{'version': version}]}"]
+    }
+  },
   "packageRules": [
     {
       "packageNames": ["docker-compose"],
@@ -28,6 +34,12 @@
     {
       "matchPackageNames": ["1panel/hermes-agent"],
       "allowedVersions": "!/^v?[0-9]{4}\\./"
+    },
+    {
+      "matchFileNames": ["apps/n8n/*/docker-compose.yml"],
+      "matchPackageNames": ["n8nio/n8n"],
+      "overrideDatasource": "custom.n8n-stable",
+      "versioning": "semver"
     },
     {
       "matchFileNames": ["apps/mysql/5.6.*/*.yml"],
