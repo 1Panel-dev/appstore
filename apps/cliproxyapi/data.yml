@@ -1,0 +1,33 @@
+name: CLIProxyAPI
+tags:
+  - AI
+title: "CLIProxyAPI AI 接口代理"
+description: "通过兼容的 API 接口访问 AI 服务商的代理服务。"
+additionalProperties:
+  key: cliproxyapi
+  name: CLIProxyAPI
+  tags:
+    - AI
+  shortDescZh: "通过兼容的 API 接口访问 AI 服务商的代理服务。"
+  shortDescEn: "A proxy that exposes AI providers through compatible API interfaces."
+  description:
+    en: "A proxy that exposes AI providers through compatible API interfaces."
+    es-es: "Proxy que ofrece acceso a proveedores de IA mediante interfaces de API compatibles."
+    ja: "互換 API インターフェースを通じて AI プロバイダーを利用できるプロキシ。"
+    ms: "Proksi untuk mengakses penyedia AI melalui antara muka API yang serasi."
+    pt-br: "Proxy que oferece acesso a provedores de IA por interfaces de API compatíveis."
+    ru: "Прокси для доступа к поставщикам ИИ через совместимые интерфейсы API."
+    ko: "호환 API 인터페이스를 통해 AI 공급자에 연결하는 프록시."
+    zh-Hant: "透過相容的 API 介面存取 AI 供應商的代理服務。"
+    zh: "通过兼容的 API 接口访问 AI 服务商的代理服务。"
+    tr: "Yapay zekâ sağlayıcılarına uyumlu API arayüzleri üzerinden erişim sunan proxy."
+  type: website
+  crossVersionUpdate: false
+  limit: 0
+  architectures:
+    - amd64
+    - arm64
+  recommend: 0
+  website: https://help.router-for.me/
+  github: https://github.com/router-for-me/CLIProxyAPI
+  document: https://help.router-for.me/
