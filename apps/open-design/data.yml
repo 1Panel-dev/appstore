@@ -1,0 +1,34 @@
+name: "Open Design"
+tags:
+  - AI
+title: "Open Design 开源 AI 设计工具"
+description: "用于制作原型、演示文稿和设计素材的开源 AI 工作空间。"
+additionalProperties:
+  key: open-design
+  name: "Open Design"
+  tags:
+    - AI
+  shortDescZh: "用于制作原型、演示文稿和设计素材的开源 AI 工作空间。"
+  shortDescEn: "An open-source AI workspace for creating prototypes, presentations, and design assets."
+  description:
+    en: "An open-source AI workspace for creating prototypes, presentations, and design assets."
+    es-es: "Espacio de trabajo de IA de código abierto para crear prototipos, presentaciones y recursos de diseño."
+    fa: "فضای کار متن‌باز مبتنی بر هوش مصنوعی برای ساخت نمونه‌های اولیه، ارائه‌ها و دارایی‌های طراحی."
+    ja: "プロトタイプやプレゼンテーション、デザイン素材を制作できるオープンソースの AI ワークスペース。"
+    ms: "Ruang kerja AI sumber terbuka untuk menghasilkan prototaip, pembentangan dan aset reka bentuk."
+    pt-br: "Espaço de trabalho de IA de código aberto para criar protótipos, apresentações e materiais de design."
+    ru: "Рабочая среда с открытым исходным кодом и ИИ для создания прототипов, презентаций и материалов для дизайна."
+    ko: "프로토타입, 프레젠테이션, 디자인 자료를 제작하는 오픈 소스 AI 작업 공간."
+    zh-Hant: "用於製作原型、簡報及設計素材的開源 AI 工作空間。"
+    zh: "用于制作原型、演示文稿和设计素材的开源 AI 工作空间。"
+    tr: "Prototipler, sunumlar ve tasarım varlıkları oluşturmak için açık kaynaklı bir yapay zekâ çalışma alanı."
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  architectures:
+    - amd64
+    - arm64
+  recommend: 0
+  website: https://open-design.ai/
+  github: https://github.com/nexu-io/open-design
+  document: https://github.com/nexu-io/open-design/blob/open-design-v0.27.1/docs/deployment/docker.md
