@@ -1,0 +1,35 @@
+name: ZeroClaw
+tags:
+  - AI
+title: "使用 Rust 编写的自托管个人 AI 助手"
+description: "使用 Rust 编写的自托管个人 AI 助手"
+additionalProperties:
+  key: zeroclaw
+  name: ZeroClaw
+  tags:
+    - AI
+  shortDescZh: "使用 Rust 编写的自托管个人 AI 助手"
+  shortDescEn: "A self-hosted personal AI assistant written in Rust"
+  description:
+    en: "A self-hosted personal AI assistant written in Rust"
+    es-es: "Asistente personal de IA autoalojado escrito en Rust"
+    fa: "دستیار شخصی هوش مصنوعی خودمیزبان نوشته‌شده با Rust"
+    ja: "Rust で書かれたセルフホスト型のパーソナル AI アシスタント"
+    ms: "Pembantu AI peribadi hos sendiri yang ditulis dalam Rust"
+    pt-br: "Assistente pessoal de IA auto-hospedado escrito em Rust"
+    ru: "Персональный ИИ-ассистент на Rust для самостоятельного размещения"
+    ko: "Rust로 작성한 자체 호스팅 개인 AI 비서"
+    zh-Hant: "以 Rust 編寫的自架個人 AI 助手"
+    zh: "使用 Rust 编写的自托管个人 AI 助手"
+    tr: "Rust ile yazılmış, kendi sunucunuzda barındırabileceğiniz kişisel bir yapay zekâ asistanı"
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  batchInstallSupport: true
+  architectures:
+    - amd64
+    - arm64
+  recommend: 0
+  website: https://www.zeroclaw.com/
+  github: https://github.com/zeroclaw-labs/zeroclaw
+  document: https://docs.zeroclaw.com/stable/en/setup/container.html

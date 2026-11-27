@@ -1,0 +1,20 @@
+services:
+  zeroclaw:
+    image: ghcr.io/zeroclaw-labs/zeroclaw:v0.9.0
+    container_name: "${CONTAINER_NAME}"
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:42617"
+    environment:
+      ZEROCLAW_gateway__host: 0.0.0.0
+      ZEROCLAW_gateway__allow_public_bind: "true"
+      ZEROCLAW_gateway__require_pairing: "true"
+    volumes:
+      - ./data:/zeroclaw-data
+    labels:
+      createdBy: Apps
+networks:
+  1panel-network:
+    external: true
