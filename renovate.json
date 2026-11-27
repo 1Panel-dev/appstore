@@ -24,6 +24,10 @@
     "n8n-stable": {
       "defaultRegistryUrlTemplate": "https://raw.githubusercontent.com/n8n-io/n8n/refs/tags/stable/packages/cli/package.json",
       "transformTemplates": ["{'releases': [{'version': version}]}"]
+    },
+    "magpie-stable": {
+      "defaultRegistryUrlTemplate": "https://usemagpie.ai/api/latest?channel=stable",
+      "transformTemplates": ["{'releases': [{'version': version}]}"]
     }
   },
   "packageRules": [
@@ -39,6 +43,12 @@
       "matchFileNames": ["apps/n8n/*/docker-compose.yml"],
       "matchPackageNames": ["n8nio/n8n"],
       "overrideDatasource": "custom.n8n-stable",
+      "versioning": "semver"
+    },
+    {
+      "matchFileNames": ["apps/magpie/*/docker-compose.yml"],
+      "matchPackageNames": ["ghcr.io/yetone/magpie"],
+      "overrideDatasource": "custom.magpie-stable",
       "versioning": "semver"
     },
     {
