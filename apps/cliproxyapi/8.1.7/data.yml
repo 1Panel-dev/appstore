@@ -1,0 +1,59 @@
+additionalProperties:
+  formFields:
+    - default: 8317
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: "HTTP Port"
+      labelZh: "HTTP端口"
+      label:
+        en: "HTTP Port"
+        es-es: "Puerto HTTP"
+        ja: "HTTPポート"
+        ms: "Port HTTP"
+        pt-br: "Porta HTTP"
+        ru: "HTTP-порт"
+        ko: "HTTP 포트"
+        zh-Hant: "HTTP連接埠"
+        zh: "HTTP端口"
+        tr: "HTTP Bağlantı Noktası"
+      required: true
+      rule: paramPort
+      type: number
+    - default: ""
+      edit: true
+      envKey: PANEL_CLI_PROXY_MANAGEMENT_KEY
+      labelEn: "Management Key"
+      labelZh: "管理密钥"
+      label:
+        en: "Management Key"
+        es-es: "Clave de administración"
+        ja: "管理キー"
+        ms: "Kunci Pengurusan"
+        pt-br: "Chave de gerenciamento"
+        ru: "Ключ управления"
+        ko: "관리 키"
+        zh-Hant: "管理金鑰"
+        zh: "管理密钥"
+        tr: "Yönetim Anahtarı"
+      required: true
+      rule: paramComplexity
+      type: password
+    - default: ""
+      edit: false
+      envKey: PANEL_CLI_PROXY_API_KEY
+      labelEn: "API Key"
+      labelZh: "API 密钥"
+      label:
+        en: "API Key"
+        es-es: "Clave API"
+        ja: "API キー"
+        ms: "Kunci API"
+        pt-br: "Chave da API"
+        ru: "Ключ API"
+        ko: "API 키"
+        zh-Hant: "API 金鑰"
+        zh: "API 密钥"
+        tr: "API Anahtarı"
+      required: true
+      rule: paramComplexity
+      type: password
