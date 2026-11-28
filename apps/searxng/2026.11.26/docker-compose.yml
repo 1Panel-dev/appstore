@@ -1,6 +1,6 @@
 services:
   searxng:
-    image: ghcr.io/searxng/searxng:2026.11.26-b5605b8f2
+    image: ghcr.io/searxng/searxng:2026.11.28-d96f0ec9b
     container_name: "${CONTAINER_NAME}"
     restart: always
     networks:
